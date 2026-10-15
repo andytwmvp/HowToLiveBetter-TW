@@ -66,7 +66,12 @@ jobs:
           if test -n "$(git diff --name-only -- .github/workflows)"; then
             echo '遷移不得透過執行器變更工作流程檔案'; exit 1
           fi
-          git add -A -- . ':!.github/workflows' ':!dist' ':!node_modules' ':!**/__pycache__/**'
+          python3 - <<'PY'
+          import os, subprocess
+          paths=subprocess.check_output(['git','ls-files','-z','--cached','--others','--exclude-standard']).split(b'\0')
+          eligible=sorted({p for p in paths if p and not p.startswith((b'.github/workflows/',b'dist/',b'node_modules/')) and b'__pycache__' not in p and not p.endswith((b'.pyc',b'.ttf',b'.otf',b'.ttc',b'.woff',b'.woff2'))})
+          if eligible:subprocess.run(['git','add','-A','--pathspec-from-file=-','--pathspec-file-nul'],input=b'\0'.join(eligible)+b'\0',check=True,env={**os.environ,'GIT_LITERAL_PATHSPECS':'1'})
+          PY
           git diff --cached --check
           if ! git diff --cached --quiet; then
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat(zh-TW): traditionalize full corpus, interface, paths and cover assets'
