@@ -1,0 +1,25 @@
+{
+  "sources": [
+    ["lsa", "勞動基準法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001", "本批核對第44至48條童工及未成年保護；其他章節引用仍須逐項檢查。"],
+    ["pdpa", "個人資料保護法：權利、必要性、告知及非公務機關蒐用", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021", "本批核對第2、3、5、8、10、11、13、14、19、20條；不把全部最新修正當成已施行。"],
+    ["pdpaeffective", "個人資料保護法：部分條文尚未施行的狀態說明", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021", "2025-11-11部分修正、增訂及刪除條文的施行日仍未定；逐條核對，不直接套用新第12條等待施行規範。"],
+    ["finconsumer", "金融消費者保護法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226", "本批核對第3、4、13、24條的當事人範圍、先申訴、30日處理、60日申請及不受理條件；不是退款或勝訴保證。"],
+    ["govai", "行政院及所屬機關（構）使用生成式AI參考指引", "https://www.sme.gov.tw/article-tw-2391-11626", "本批核對公開指引對機密、個資、判斷責任及機關作業限制；適用對象不能擴張成所有私人的法定禁令。"],
+    ["account_nist", "NIST SP 800-63B-4：驗證器要求", "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/", "密碼管理、定期換密碼限制、OOB非抗釣魚及具驗證端綁定的抗釣魚機制；不是台灣法定密碼長度規則。"],
+    ["account_recovery_nist", "NIST SP 800-63B-4：驗證器生命週期與復原", "https://pages.nist.gov/800-63-4/sp800-63b.html", "驗證器管理與復原方式；不能把單一電話改號流程當成所有服務的保證。"],
+    ["account_sim", "Apple台灣：在iPhone或iPad上使用SIM PIN", "https://support.apple.com/zh-tw/118228", "SIM及eSIM PIN用途、重啟與移卡保護、不得猜PIN或PUK、錯誤次數可能鎖卡。"],
+    ["account_lost_apple", "Apple台灣：如何尋找遺失的iPhone或iPad", "https://support.apple.com/zh-tw/101593", "標示遺失、聯絡電信業者、遠端清除與不可移除尋找啟用鎖定；Apple不會通知已找回裝置。"],
+    ["account_lost_android", "Google：尋找、鎖定或清除遺失的Android裝置", "https://support.google.com/android/answer/6160491?hl=zh-Hant", "尋找中心的條件；遠端清除可能不含SD卡，清除後無法再透過該服務定位。"],
+    ["account_password", "Google：變更或重設密碼", "https://support.google.com/accounts/answer/41078?hl=en", "換密碼後登出有例外，包含驗證用裝置、部分第三方應用程式及部分家用裝置。"],
+    ["account_apps", "Google：管理與第三方的連結", "https://support.google.com/accounts/answer/13533235?hl=en", "移除連結或授權與刪除第三方已持有資料不同；移除存取也可能影響功能。"],
+    ["account_recovery", "Google：設定救援選項", "https://support.google.com/accounts/answer/183723?hl=zh-Hant", "變更備援電話或信箱後可能向舊資料送碼7天；刪除備援電話不等於刪除其他服務的電話用途。"],
+    ["account_card", "臺中市財政局：信用卡被盜刷怎麼辦", "https://www.finance.taichung.gov.tw/29537/30002/30005/30023/1054461", "頁面支持先聯繫銀行列為爭議帳款；不從2018年宣導推定目前全部契約期限或責任分配。"],
+    ["account_foi", "金融消費評議中心：如何申請評議", "https://www.foi.org.tw/article.aspx?Arti=44&Lang=1", "先向金融服務業申訴、準備申請文件；具體法定期限另對照金融消費者保護法第13及24條。"],
+    ["account_biometric_gym", "健身房臉部辨識函釋：發法字1090017059號", "https://www.pdpc.gov.tw/News_Content/102/415/", "完整告知資料類型並審查契約必要性；不推定每一情境一定可拒絕而照常使用。"],
+    ["account_biometric_iris", "生物特徵與告知函釋：個資籌法字1140002435號", "https://www.pdpc.gov.tw/News_Content/102/1095/", "虹膜不屬第6條列舉特種個資並不免除一般個資義務；須依具體利用及告知同意判斷。"],
+    ["account_jcic", "聯合徵信中心：個人信用報告及資料更正入口", "https://www.jcic.org.tw/main_ch/index.aspx", "只核對首頁確有報告及更正入口，不作所有財產、帳號範圍或免費次數的證明。"],
+    ["account_ncc", "NCC首頁防範冒名詐騙提醒", "https://www.ncc.gov.tw/", "核對首頁提醒不會主動通知門號涉詐或來電要求個資；疑慮可向165確認。不用首頁支持不存在的一站式名下帳號查詢。"],
+    ["skills_certificate", "技術士技能檢定及發證辦法第47條", "https://laws.mol.gov.tw/FLAW/PrintFLAWDOC01.aspx?flno=47&id=FL015100", "技能檢定合格後發給技術士證；不把民間結訓證明當同等資格，也不推定所有民間認證不合法。"],
+    ["skills_training", "勞發署職訓業務：產業人才投資方案及失業職訓", "https://course.taiwanjobs.gov.tw/about/recommended", "在職補助80%或特定資格100%，每人3年最高新臺幣10萬元；開訓日年齡、投保及身分條件，先行付款與結訓合格申領。失業職訓另有對象與招生條件。"]
+  ]
+}

@@ -11,11 +11,11 @@ import assets_and_browser as assets
 
 class PolicyTests(unittest.TestCase):
     def test_valid_taiwan_wording(self):
-        for value in ('台灣與臺灣','雇主及勞雇關係','公布與發布法令','依法占有','核准與獲准','只有必要資料','不是只拿底薪','平台設定'):
+        for value in ('台灣與臺灣','雇主及勞雇關係','公布與發布法令','依法占有','核准與獲准','只有必要資料','不是只拿底薪','平台設定','不明扣款先通知銀行'):
             with self.subTest(value=value):
                 self.assertEqual(policy.canonical(value),policy.canonical(text.normalized(value,[])))
     def test_simplified_is_rejected(self):
-        for value in ('立即\u5371\u9669','\u5199清條件','工作\u65f6間','\u5f53作保證','修改\u5185容'):
+        for value in ('立即\u5371\u9669','\u5199清條件','工作\u65f6間','\u5f53作保證','修改\u5185容','\u94f6\u884c扣款'):
             with self.subTest(value=value):
                 self.assertNotEqual(policy.canonical(value),policy.canonical(text.normalized(value,[])))
     def test_urls_are_preserved(self):
