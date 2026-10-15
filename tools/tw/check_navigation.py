@@ -22,7 +22,7 @@ def check_navigation(page, context, url, review):
     assert set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==expected
     assert not any('/book/' in request or '/chapters/' in request for request in requests),'臺灣預設頁讀取了原作或草稿'
     assert page.locator('[data-id^="TW-14-"]').count()==12
-    assert page.locator('[data-id^="TW-19-"]').count()==13
+    assert page.locator('[data-id^="TW-19-"]').count()==sum(e['id'].startswith('TW-19-') for e in data['items'])
     labor=page.locator('#TW-19-004')
     assert labor.locator('h3').count()==5 and '50,000' in labor.inner_text()
     assert labor.locator('a[href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020"]').count()>=1

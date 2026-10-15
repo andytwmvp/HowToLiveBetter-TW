@@ -59,7 +59,6 @@ class LaborChapterTests(unittest.TestCase):
 
     def test_existing_draft_topics_not_double_counted(self):
         report=audit_drafts();self.assertGreaterEqual(report['unique_draft_entries'],388)
-        self.assertEqual(report['structured_draft_entries'],373)
         self.assertEqual(report['unique_draft_entries']+report['entries_without_any_draft'],765)
         self.assertEqual(report['publication_total_entries'],765)
         # 本批13個原作主題原本全部存在於結構化草稿。

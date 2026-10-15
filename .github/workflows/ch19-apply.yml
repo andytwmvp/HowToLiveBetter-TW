@@ -1,4 +1,4 @@
-name: 第19章正文核對與閱讀整合驗證
+name: 第19章來源摘要校正與最終隔離驗證
 on:
   push:
     branches: [tw/ch19-labor-reviewed-20261016]
@@ -22,7 +22,30 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - name: 準備固定版本依賴
+      - name: 校正來源摘要，不改正文或已核對資料
+        run: |
+          set -euo pipefail
+          test "$(git remote get-url origin)" = 'https://github.com/andytwmvp/HowToLiveBetter-TW'
+          test "$(git branch --show-current)" = 'tw/ch19-labor-reviewed-20261016'
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path.cwd()
+          old='第11、12條保留舊年資、新制半年基數及30日給付期限。'
+          new='第11、12條保留舊年資；新制每滿1年給半個月平均工資，最高6個月，終止後30日內給付。'
+          batch=root/'localization/tw-edition/ch19-reviewed.json'
+          review=root/'localization/reviews/TW-19-004.json'
+          data=json.loads(batch.read_text(encoding='utf-8'));e=next(e for e in data['entries'] if e['id']=='TW-19-004')
+          assert e['source_claims']['pension']==old
+          record=json.loads(review.read_text(encoding='utf-8'));s=record['source_checks'][0]
+          assert old in s['claim'] and old in s['supporting_passage']
+          e['source_claims']['pension']=new
+          s['claim']=s['claim'].replace(old,new);s['supporting_passage']=s['supporting_passage'].replace(old,new)
+          batch.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          review.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+          git add -- localization/tw-edition/ch19-reviewed.json localization/reviews/TW-19-004.json
+      - name: 準備依賴
         run: |
           set -euo pipefail
           python3 -m venv "$RUNNER_TEMP/ch19-venv"
@@ -30,16 +53,7 @@ jobs:
           echo "$RUNNER_TEMP/ch19-venv/bin" >> "$GITHUB_PATH"
           echo "TW_REVIEW_DIR=$RUNNER_TEMP/ch19-review" >> "$GITHUB_ENV"
           npm ci --prefix tools/epub
-      - name: 核對內容版本並整合到指定分支
-        run: |
-          set -euo pipefail
-          test "$(git hash-object tools/tw/_ch19_content.py)" = 'ef6ef02f15a97e1a54ea68fb9b6c330684ec4a5e'
-          test "$(git hash-object tools/tw/_apply_ch19.py)" = '433c4d54f3304a9d17516ad18e582f3fd9fb2b61'
-          test "$(git hash-object tools/tw/tests/test_ch19_content.py)" = '643f921813669a692137765a9a31b78514ca6c34'
-          python3 tools/tw/_ch19_content.py
-          python3 tools/tw/_apply_ch19.py
-          git add -A
-      - name: 正文、來源與全部回歸
+      - name: 來源、正文與回歸
         run: |
           set -euo pipefail
           mkdir -p "$TW_REVIEW_DIR"
@@ -50,7 +64,7 @@ jobs:
           node tools/check-split.mjs
           node tools/sync-stats.mjs --check
           python3 tools/tw/image_copy.py --check
-      - name: 兩類實際匯出及內部連結
+      - name: 兩類匯出與內部連結
         run: |
           set -euo pipefail
           node tools/offline/build.mjs dist/tw-source-preview.html
@@ -62,7 +76,7 @@ jobs:
           python3 tools/tw/check_link_outputs.py
           python3 tools/tw/link_policy.py --report "$TW_REVIEW_DIR/link-audit.json"
           python3 tools/tw/check_export_integrity.py dist/HowToLiveBetter-TW.html dist/tw-source-preview.html dist/HowToLiveBetter-TW.epub dist/HowToLiveBetter-source-preview.epub --report "$TW_REVIEW_DIR/export-integrity.json"
-      - name: 實際瀏覽器與正文呈現
+      - name: 真實瀏覽器操作
         run: |
           set -euo pipefail
           python3 -m playwright install --with-deps chromium > "$RUNNER_TEMP/ch19-install.log" 2>&1
@@ -70,23 +84,24 @@ jobs:
           python3 tools/tw/assets_and_browser.py --browser
           git diff --exit-code
           test -z "$(git ls-files --others --exclude-standard)"
-      - name: 全部通過後僅提交本工作分支
+      - name: 全部通過後只提交两份摘要校正
         run: |
           set -euo pipefail
-          test "$(git branch --show-current)" = 'tw/ch19-labor-reviewed-20261016'
-          test "$(git remote get-url origin)" = 'https://github.com/andytwmvp/HowToLiveBetter-TW'
-          test -z "$(git diff --cached --name-only -- .github/workflows)"
-          test -z "$(git diff --cached --name-only -- book docs LICENSE LICENSE-CODE og.png)"
           git diff --cached --check
-          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat(tw-content): integrate 13 reviewed labor-rights entries with source and runtime records'
+          python3 - <<'PY'
+          import subprocess
+          paths=set(subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines())
+          assert paths=={'localization/tw-edition/ch19-reviewed.json','localization/reviews/TW-19-004.json'}
+          PY
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'fix(content): clarify half-month-per-year severance source summary'
           git push origin HEAD:refs/heads/tw/ch19-labor-reviewed-20261016
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: ch19-review-${{ github.run_id }}
+          name: ch19-final-review-${{ github.run_id }}
           path: ${{ runner.temp }}/ch19-review/
           retention-days: 2
           if-no-files-found: ignore
-      - name: 清除本次暫存與未發布產物
+      - name: 清理暫存
         if: always()
         run: rm -rf -- dist "$RUNNER_TEMP/ch19-review" "$RUNNER_TEMP/ch19-venv" "$RUNNER_TEMP/ch19-install.log"
