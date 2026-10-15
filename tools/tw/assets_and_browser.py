@@ -68,6 +68,21 @@ def audit_assets(rendered: bool) -> None:
         for match in re.finditer(r'<svg\b.*?</svg>', text, re.S):
             contains = bool(re.search(r'<(?:text|tspan)\b', match.group()))
             inline.append({'path': path, 'contains_text': contains, 'status': 'text_checked' if contains else 'no_text_icon'})
+    # CI_READONLY_INVENTORY：保留審閱狀態，不以實際檔案反向覆寫預期值。
+    if not rendered:
+        saved = json.loads(read('localization/assets-inventory.json'))
+        old = {p['path']:p for p in saved['raster_and_vector_files']}
+        if len(old) != len(pictures): raise RuntimeError('圖片數量與盤點不同')
+        for item in pictures:
+            prior = old.get(item['path'])
+            if prior is None or any(prior.get(k)!=item.get(k) for k in ('sha256','width','height','contains_text')):
+                raise RuntimeError('圖片已變更但盤點未更新：'+item['path'])
+        if [(b['path'],b['url']) for b in saved['dynamic_badges']] != [(b['path'],b['url']) for b in badges]:
+            raise RuntimeError('徽章與盤點不同步')
+        if [(v['path'],v['contains_text']) for v in saved['inline_svg']] != [(v['path'],v['contains_text']) for v in inline]:
+            raise RuntimeError('SVG 與盤點不同步')
+        print('PASS：圖片稽核一致，沒有覆寫盤點清單。')
+        return
     dump('localization/assets-inventory.json', {'scope': 'Git 追蹤與本次新增的圖片、HTML 內嵌 SVG、Shields 動態徽章', 'raster_and_vector_files': pictures, 'dynamic_badges': badges, 'inline_svg': inline, 'note': '沒有任意恢復已刪除廣告。圖片文字的語系與台灣制度查核不同；尚未完成人工內容精校。'})
 
 
