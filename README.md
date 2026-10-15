@@ -13,9 +13,9 @@
 
 <div align="center">
 
-<img src="og.png" alt="高性價比人生指南 —— 用最少的錢、時間和精力，換回最多的壽命、金錢和人身自由" width="820">
+<img src="og.png" alt="高效益人生指南，臺灣在地化編修中。用更少的花費、時間與心力，把生活過得更好、更安心。圖片中的建議數、證據分級與來源數皆為原作統計，不代表已完成臺灣內容查核。" width="820">
 
-# 高性價比人生指南
+# 高效益人生指南｜臺灣在地化
 
 講怎麼活得久、怎麼少生病，出了意外怎麼救。講怎麼少花冤枉錢，哪些事會讓人被騙、攤上官司。講沒工作沒錢時能去領什麼，開店、開公司、做網站要辦什麼手續。也講戀愛結婚生孩子、出國和學手藝。法律、醫保、社保這些制度上的內容，按中國大陸的現行規定寫。<br>
 765 條建議，每條寫明花掉什麼、換回什麼、證據有多硬，來源只引期刊論文和官方文件，少數官方不公開的案件引署名的原創新聞報道並附網頁存檔。
@@ -26,12 +26,12 @@
 
 **本項目從未發行、也不會發行任何代幣或數字資產。** 用本項目名字發的幣都和本項目無關，作者不領取、不認領任何相關收益。看到這類幣請當作騙局，別買，見[第 5 節第 45 條（別買虛擬貨幣）](book/05-不要浪費錢.md)。
 
-[![線上檢索](https://img.shields.io/badge/%E7%B7%9A%E4%B8%8A%E6%AA%A2%E7%B4%A2-%E9%BB%9E%E9%80%99%E8%A3%A1%E6%89%93%E9%96%8B-3451b2?style=flat-square)](index.html)
-[![條目](https://img.shields.io/badge/%E6%A2%9D%E7%9B%AE-765%20%E6%A2%9D-18794e?style=flat-square)](#目錄)
-[![證據分級](https://img.shields.io/badge/%E8%AD%89%E6%93%9A%E5%88%86%E7%B4%9A-A%20495%20%C2%B7%20B%20218%20%C2%B7%20C%2052-915930?style=flat-square)](#證據分級)
-[![原始文獻](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8D%BB-2508%20%E6%A2%9D%E9%80%A3%E7%B5%90-565a5f?style=flat-square)](docs/核實記錄/)
-[![許可](https://img.shields.io/badge/%E8%A8%B1%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square)](#許可)
-[![Claude Code 協助編寫](https://img.shields.io/badge/Claude%20Code-%E5%8D%94%E5%8A%A9%E7%B7%A8%E5%AF%AB-D97757?style=flat-square&logo=claude&logoColor=white)](https://claude.com/claude-code)
+[![閱讀工作稿：臺灣在地化中](https://img.shields.io/badge/%E9%96%B1%E8%AE%80%E5%B7%A5%E4%BD%9C%E7%A8%BF-%E8%87%BA%E7%81%A3%E5%9C%A8%E5%9C%B0%E5%8C%96%E4%B8%AD-3451b2?style=flat-square)](locales/zh-TW/README.md)
+[![原作建議：765 則](https://img.shields.io/badge/%E5%8E%9F%E4%BD%9C%E5%BB%BA%E8%AD%B0-765%20%E5%89%87-18794e?style=flat-square)](#目錄)
+[![原作證據分級：A 495 · B 218 · C 52](https://img.shields.io/badge/%E5%8E%9F%E4%BD%9C%E8%AD%89%E6%93%9A%E5%88%86%E7%B4%9A-A%20495%20%C2%B7%20B%20218%20%C2%B7%20C%2052-915930?style=flat-square)](#證據分級)
+[![原作參考來源：2508 筆連結](https://img.shields.io/badge/%E5%8E%9F%E4%BD%9C%E5%8F%83%E8%80%83%E4%BE%86%E6%BA%90-2508%20%E7%AD%86%E9%80%A3%E7%B5%90-565a5f?style=flat-square)](docs/核實記錄/)
+[![授權條款：CC BY 4.0](https://img.shields.io/badge/%E6%8E%88%E6%AC%8A%E6%A2%9D%E6%AC%BE-CC%20BY%204.0-565a5f?style=flat-square)](ATTRIBUTION.md)
+[![編修進度：臺灣內容待查核](https://img.shields.io/badge/%E7%B7%A8%E4%BF%AE%E9%80%B2%E5%BA%A6-%E8%87%BA%E7%81%A3%E5%85%A7%E5%AE%B9%E5%BE%85%E6%9F%A5%E6%A0%B8-915930?style=flat-square)](PROJECT_STATE.md)
 
 ### [打開線上檢索頁](index.html) · [讓 AI 照書回答（skill）](skills/life-decision-guide/README.md)
 

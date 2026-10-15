@@ -85,9 +85,9 @@ console.log('');
 
 const EDITS = [
   ['README.md', '首屏條目數', /(\d+) 條建議/g, `${entries} 條建議`],
-  ['README.md', '條目徽章', /%E6%A2%9D%E7%9B%AE-(\d+)%20%E6%A2%9D/g, `%E6%A2%9D%E7%9B%AE-${entries}%20%E6%A2%9D`],
+  ['README.md', '條目徽章', /%E5%8E%9F%E4%BD%9C%E5%BB%BA%E8%AD%B0-(\d+)%20%E5%89%87/g, `%E5%8E%9F%E4%BD%9C%E5%BB%BA%E8%AD%B0-${entries}%20%E5%89%87`],
   ['README.md', '證據分級徽章', /A%20(\d+)%20%C2%B7%20B%20\d+%20%C2%B7%20C%20\d+/g, `A%20${grade.A}%20%C2%B7%20B%20${grade.B}%20%C2%B7%20C%20${grade.C}`],
-  ['README.md', '文獻連結徽章', /-(\d+)%20%E6%A2%9D%E9%80%A3%E7%B5%90/g, `-${links}%20%E6%A2%9D%E9%80%A3%E7%B5%90`],
+  ['README.md', '文獻連結徽章', /-(\d+)%20%E7%AD%86%E9%80%A3%E7%B5%90/g, `-${links}%20%E7%AD%86%E9%80%A3%E7%B5%90`],
   ['README.md', '怎麼讀裡的 A 級數', /大型試驗的 (\d+) 條/g, `大型試驗的 ${grade.A} 條`],
   ['README.md', '怎麼讀裡的極高條數', /勾選性價比「極高」，得到 (\d+) 條/g, `勾選性價比「極高」，得到 ${ratio['極高']} 條`],
   ['README.md', '證據分級段', /全書 (\d+) 條中 A 級 \d+ 條、B 級 \d+ 條、C 級 \d+ 條，另有 \d+ 條標註了爭議、\d+ 處/g,
@@ -99,9 +99,9 @@ const EDITS = [
   ['index.html', 'numberOfPages', /numberOfPages":(\d+)/g, `numberOfPages":${entries}`],
   ['index.html', '頁頭條目數', /\d+ 節 (\d+) 條/g, `${sections} 節 ${entries} 條`],
   ['index.html', '頁腳文件數', /下的 (\d+) 個文件/g, `下的 ${sections} 個文件`],
-  ['tools/og.html', 'og 條目數', /<b>(\d+)<\/b> 條建議/g, `<b>${entries}</b> 條建議`],
-  ['tools/og.html', 'og A 級數', /A 級證據 <b>(\d+)<\/b> 條/g, `A 級證據 <b>${grade.A}</b> 條`],
-  ['tools/og.html', 'og 連結數', /<b>(\d+)<\/b> 條原始文獻連結/g, `<b>${links}</b> 條原始文獻連結`],
+  ['tools/og.html', 'og 條目數', /<b data-stat="entries">(\d+)<\/b>/g, `<b data-stat="entries">${entries}</b>`],
+  ['tools/og.html', 'og A 級數', /<b data-stat="grade-a">(\d+)<\/b>/g, `<b data-stat="grade-a">${grade.A}</b>`],
+  ['tools/og.html', 'og 連結數', /<b data-stat="links">(\d+)<\/b>/g, `<b data-stat="links">${links}</b>`],
 ];
 
 const texts = new Map();
