@@ -85,8 +85,8 @@ class ImageTests(unittest.TestCase):
 
 class RuntimeTests(unittest.TestCase):
     def test_runtime_checked_sources(self):
-        data=contract.validate_runtime();self.assertEqual(len(data['items']),9)
-        self.assertEqual(len({e['id'] for e in data['items']}),9)
+        data=contract.validate_runtime();self.assertEqual(len(data['items']),21)
+        self.assertEqual({e['id'] for e in data['items']},{f'TW-NAV-{n:03}' for n in range(1,10)}|{f'TW-14-{n:03}' for n in range(1,13)})
     def test_missing_source_rejected(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);p=root/'localization/tw-edition/runtime.json';p.parent.mkdir(parents=True)
@@ -102,7 +102,7 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(rows['TW-NAV-004']['eligibility'],{'sex':'f','min_age':40,'max_age':74})
         self.assertEqual(rows['TW-NAV-005']['eligibility'],{'sex':'f','min_age':25,'max_age':29})
         self.assertEqual(rows['TW-NAV-006']['eligibility'],{'sex':'f','min_age':30})
-    def test_exports_use_same_nine_ids(self):
+    def test_exports_use_same_catalog_ids(self):
         data=contract.validate_runtime();ids={e['id'] for e in data['items']}
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)
@@ -122,7 +122,7 @@ class RuntimeTests(unittest.TestCase):
                 self.assertEqual(db.execute('PRAGMA integrity_check').fetchone()[0],'ok')
                 rows=db.execute('SELECT guid,data,flds FROM notes').fetchall()
                 self.assertEqual({r[1] for r in rows},ids)
-                self.assertTrue(all(r[0].startswith('hltb-tw-TW-NAV-') for r in rows))
+                self.assertTrue(all(r[0] == 'hltb-tw-' + r[1] for r in rows))
                 self.assertTrue(all('https://' in r[2] for r in rows))
 
 if __name__=='__main__':unittest.main()

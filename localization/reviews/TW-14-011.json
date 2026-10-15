@@ -1,0 +1,26 @@
+{
+  "id": "TW-14-011",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立法律或資安專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2027-01-15",
+  "target_path": "locales/zh-TW/book/ch14/TW-14-011.md",
+  "target_sha256": "e602f62d7a46950a5f2eb8bb03a4e573ba8b2ab3ee77ea5056f1c0be173a8b60",
+  "source_checks": [
+    {
+      "url": "https://member.jcic.org.tw/report/home.html?pid=74&uid=79",
+      "claim": "盤點名下門號與信用資料，疑似冒名先要求查明：信用資料有揭露期限；疑似遭冒名貸款或辦信用卡，可向報送機構要求查明，或檢附身分證明及證據書面向聯徵中心反映。不能任意刪除真實信用資料。",
+      "supporting_passage": "編者摘要（非逐字引文）：信用資料有揭露期限；疑似遭冒名貸款或辦信用卡，可向報送機構要求查明，或檢附身分證明及證據書面向聯徵中心反映。不能任意刪除真實信用資料。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.cht.com.tw/home/consumer/member/mobileservice",
+      "claim": "盤點名下門號與信用資料，疑似冒名先要求查明：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "supporting_passage": "編者摘要（非逐字引文）：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "用臺灣業者及聯徵中心各自範圍取代中國一證通查；不把取消冒名帳戶當作唯一處理。",
+  "legal_scope": null,
+  "review_method": "逐一開啟第一手來源核對；先分清制度、標準、廠商操作與編者建議，再作台灣改寫。不是自動爬到網址即升級狀態。"
+}

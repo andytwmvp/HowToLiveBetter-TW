@@ -103,9 +103,23 @@
       return /^TW-(?:NAV-\d{3}|\d{2}-\d{3})$/.test(id) ? id : null;
     } catch (_) { return null; }
   }
+  // 本專案正文格式只接受段落、二級標題與獨立HTTPS來源連結，不執行原始HTML。
+  function bodyBlocks(entry) {
+    if (!entry.target_path) return [{tag: 'p', text: entry.body}];
+    const blocks = [];
+    for (const chunk of entry.body.trim().split(/\n\s*\n/)) {
+      if (chunk === '# ' + entry.title || chunk === '<!-- TW-ID: ' + entry.id + ' -->') continue;
+      if (chunk.startsWith('## ') && !chunk.includes('\n')) {
+        blocks.push({tag: 'h3', text: chunk.slice(3)}); continue;
+      }
+      const match = /^\[([^\]\n]+)\]\((https:\/\/[^\s<>]+)\)$/.exec(chunk);
+      blocks.push(match ? {tag: 'p', text: match[1], url: match[2]} : {tag: 'p', text: chunk});
+    }
+    return blocks;
+  }
   // Node與瀏覽器測試同一個實際驗證函式；不複製測試專用版本。
   if (typeof module === 'object' && module.exports) {
-    module.exports = {validate, taipeiToday, decodeTarget, parseRuntimeJson};
+    module.exports = {validate, taipeiToday, decodeTarget, parseRuntimeJson, bodyBlocks};
     return;
   }
   // 僅相容本repo舊原作書籤；不接受任意外站或查詢參數重定向。
@@ -149,7 +163,15 @@
     const container = byId('cards'); container.replaceChildren();
     for (const e of rows) {
       const article = node('article', undefined, 'q'); article.id = e.id; article.dataset.id = e.id;
-      article.append(node('h2', e.title), node('p', e.body), node('p', e.limits));
+      article.append(node('h2', e.title));
+      for (const block of bodyBlocks(e)) {
+        const part = node(block.tag);
+        if (block.url) {
+          const link = node('a', block.text); link.href = block.url; link.rel = 'noopener noreferrer'; part.append(link);
+        } else part.textContent = block.text;
+        article.append(part);
+      }
+      article.append(node('p', e.limits));
       const stale = today > e.review_due_at;
       article.append(node('p', `${e.id}｜來源核對：${e.reviewed_at}｜下次檢查：${e.review_due_at}${stale ? '｜資料已到複查日期，請向官方確認現況' : ''}`, 'meta'));
       const refs = node('p', '依據：');
@@ -172,7 +194,7 @@
       }
       container.append(article);
     }
-    byId('status').textContent = `顯示 ${rows.length}／${catalog.items.length} 則已核對導航。未填的條件不作資格判定；這不是全書完成數。`;
+    byId('status').textContent = `顯示 ${rows.length}／${catalog.items.length} 項已核對內容。未填的條件不作資格判定；這不是全書完成數。`;
     if (!rows.length) container.append(node('p', '沒有符合目前篩選的已核對項目；不會改以原作或未審閱草稿填補。'));
   }
   function showFailure(error) {

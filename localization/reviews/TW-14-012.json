@@ -1,0 +1,26 @@
+{
+  "id": "TW-14-012",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立法律或資安專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2027-01-15",
+  "target_path": "locales/zh-TW/book/ch14/TW-14-012.md",
+  "target_sha256": "2a5f7894630189ef2d8e75943ed5d5c3ac8e88c2a14be39271b86b1677d1059d",
+  "source_checks": [
+    {
+      "url": "https://support.google.com/accounts/answer/183723?hl=zh-Hant",
+      "claim": "換號前逐項更新聯絡、登入與復原資料，再處理舊門號：變更備援資料後7天內仍可能傳碼至先前資訊；移除備援門號不代表其他Google服務不再使用該號碼；組織帳戶需另向管理員確認。",
+      "supporting_passage": "編者摘要（非逐字引文）：變更備援資料後7天內仍可能傳碼至先前資訊；移除備援門號不代表其他Google服務不再使用該號碼；組織帳戶需另向管理員確認。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.cht.com.tw/home/consumer/member/mobileservice",
+      "claim": "換號前逐項更新聯絡、登入與復原資料，再處理舊門號：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "supporting_passage": "編者摘要（非逐字引文）：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "加入臺灣服務逐項更新與Google舊復原資訊過渡期，不依中國欠費或換號規則推論。",
+  "legal_scope": null,
+  "review_method": "逐一開啟第一手來源核對；先分清制度、標準、廠商操作與編者建議，再作台灣改寫。不是自動爬到網址即升級狀態。"
+}

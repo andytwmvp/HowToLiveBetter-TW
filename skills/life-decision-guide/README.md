@@ -6,9 +6,9 @@
 
 ```sh
 python3 tools/tw/edition.py --list
-python3 tools/tw/edition.py --id TW-NAV-001
+python3 tools/tw/edition.py --id TW-14-003
 ```
 
-目前只有9則急救求助與公費篩檢導航，不是全書765條臺灣定稿。缺少主題時須明確說明未核對，再另行研究官方來源。每次使用檢查資料版本、適用限制與複查日期。
+目前有第14章帳號與資訊安全12條正文，加9則急救與篩檢補充導航，共21項，不是全書765條臺灣定稿。缺少主題時須明確說明未核對，再另行研究官方來源。每次使用檢查資料版本、適用限制與複查日期。
 
 [臺灣版閱讀說明](../../locales/zh-TW/README.md) · [來源與授權](../../ATTRIBUTION.md)

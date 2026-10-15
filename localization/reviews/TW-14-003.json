@@ -1,0 +1,26 @@
+{
+  "id": "TW-14-003",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立法律或資安專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2027-01-15",
+  "target_path": "locales/zh-TW/book/ch14/TW-14-003.md",
+  "target_sha256": "29b4ee4b469931415786e4fa22906ef39a481156d755e4c939ea77a149dba318",
+  "source_checks": [
+    {
+      "url": "https://support.apple.com/zh-tw/118228",
+      "claim": "螢幕鎖定與SIM PIN分開設定，不猜預設碼或PUK：開啟SIM PIN後須依電信業者提供的資料設定；不知道預設碼時不可猜測，鎖住後向業者取得PUK及解鎖協助。",
+      "supporting_passage": "編者摘要（非逐字引文）：開啟SIM PIN後須依電信業者提供的資料設定；不知道預設碼時不可猜測，鎖住後向業者取得PUK及解鎖協助。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.cht.com.tw/home/consumer/member/mobileservice",
+      "claim": "螢幕鎖定與SIM PIN分開設定，不猜預設碼或PUK：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "supporting_passage": "編者摘要（非逐字引文）：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "移除1234／0000猜碼建議，加入臺灣業者PUK入口及SIM與帳號防護界線。",
+  "legal_scope": null,
+  "review_method": "逐一開啟第一手來源核對；先分清制度、標準、廠商操作與編者建議，再作台灣改寫。不是自動爬到網址即升級狀態。"
+}

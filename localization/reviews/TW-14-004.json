@@ -1,0 +1,32 @@
+{
+  "id": "TW-14-004",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立法律或資安專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2027-01-15",
+  "target_path": "locales/zh-TW/book/ch14/TW-14-004.md",
+  "target_sha256": "0b45cc73a219f25bc5d33e7455304b7f2167bd0677f41c38d522c0f2239b4c38",
+  "source_checks": [
+    {
+      "url": "https://support.apple.com/zh-tw/101593",
+      "claim": "手機遺失時並行止損，不把停卡排在固定流程最後：可標示遺失、停用電信服務及回報警方；遠端清除須審慎，不可從尋找移除而解除啟用鎖定；未預先啟用尋找或裝置離線時有功能限制。",
+      "supporting_passage": "編者摘要（非逐字引文）：可標示遺失、停用電信服務及回報警方；遠端清除須審慎，不可從尋找移除而解除啟用鎖定；未預先啟用尋找或裝置離線時有功能限制。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.cht.com.tw/home/consumer/member/mobileservice",
+      "claim": "手機遺失時並行止損，不把停卡排在固定流程最後：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "supporting_passage": "編者摘要（非逐字引文）：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://eycc.ey.gov.tw/Page/9FAC64F67005E355/d37e1865-9f11-4413-8a0f-3fdddff7473b",
+      "claim": "手機遺失時並行止損，不把停卡排在固定流程最後：說明釣魚簡訊與OTP風險，要求核對交易幣別、金額、目的；未操作卻收到信用卡綁定通知時應儘速聯繫發卡機構，可向165查證詐騙。",
+      "supporting_passage": "編者摘要（非逐字引文）：說明釣魚簡訊與OTP風險，要求核對交易幣別、金額、目的；未操作卻收到信用卡綁定通知時應儘速聯繫發卡機構，可向165查證詐騙。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "取消掛失、報警、銀行停卡的僵化次序與預設立即清空資料。",
+  "legal_scope": null,
+  "review_method": "逐一開啟第一手來源核對；先分清制度、標準、廠商操作與編者建議，再作台灣改寫。不是自動爬到網址即升級狀態。"
+}

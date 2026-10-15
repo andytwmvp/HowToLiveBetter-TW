@@ -66,6 +66,12 @@ def audit_drafts():
     if not (covered|legacy).issubset(all_ids): raise ValueError('草稿含不存在的原作ID')
     report = {'schema_version':2,'scope':'草稿結構盤點，不代表內容查核完成','json_files_checked':len(json_files),'original_entries':len(all_ids),'structured_draft_chapters':len(chapters),'structured_draft_entries':len(covered),'legacy_markdown_draft_entries':len(legacy),'unique_draft_entries':len(covered|legacy),'entries_without_any_draft':len(all_ids-covered-legacy),'registry_sources':len(registry),'unresolved_source_ids':dict(sorted(unresolved.items())),'unresolved_reference_occurrences':sum(unresolved.values()),'chapters':chapters}
     report.update(publication_report(base.ROOT,manifest))
+    # 已有內容與完成審閱的核心正文分開計數，不把導航或重複稿件充作新主題。
+    reviewed={e['id'] for e in manifest['entries'] if e['status']=='verified'}
+    report.update(topics_with_any_content=len(covered|legacy),
+                  topics_with_unreviewed_content=len((covered|legacy)-reviewed),
+                  topics_without_content=len(all_ids-covered-legacy),
+                  core_reviewed_entries=report['publication_completed_entries'])
     print(f"PASS：{len(json_files)}份JSON；{len(chapters)}章／{len(covered)}條結構化草稿。未完成來源ID：{len(unresolved)}；全書驗收：{report['publication_ready']}。")
     return report
 
