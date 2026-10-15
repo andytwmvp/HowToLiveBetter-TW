@@ -1,8 +1,11 @@
-# 僅讀取隔離分支，驗證產物並保存本次重現資料；不推送、不部署、不發行。
-name: 匯出內部連結隔離驗證
+# 本次隔離分支先核對精確修改並完整驗證，成功後才提交；不部署或發行。
+name: 匯出識別與內部連結隔離驗證
 on:
   push:
     branches: [fix/export-integrity-20261015]
+    paths:
+      - .github/workflows/export-audit.yml
+      - tools/tw/_apply_export_identity.py
 permissions:
   contents: read
 env:
@@ -11,21 +14,26 @@ jobs:
   audit:
     if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
-          persist-credentials: false
+          ref: fix/export-integrity-20261015
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - name: 準備檢查依賴
+      - name: 核對精確修改與準備工具
         run: |
           set -euo pipefail
+          python3 tools/tw/_apply_export_identity.py
+          git add -- tools/anki/source-preview.mjs tools/epub/source-preview.mjs
           python3 -m venv "$RUNNER_TEMP/tw-export-venv"
-          "$RUNNER_TEMP/tw-export-venv/bin/python" -m pip install -q 'OpenCC==1.1.9'
+          "$RUNNER_TEMP/tw-export-venv/bin/python" -m pip install -q 'OpenCC==1.1.9' 'playwright==1.55.0'
           echo "$RUNNER_TEMP/tw-export-venv/bin" >> "$GITHUB_PATH"
+          echo "TW_REVIEW_DIR=$RUNNER_TEMP/tw-export-review" >> "$GITHUB_ENV"
           npm ci --prefix tools/epub
       - name: 既有與新增回歸
         run: |
@@ -47,9 +55,32 @@ jobs:
           node tools/epub/build.mjs --source-preview dist/HowToLiveBetter-source-preview.epub
           node tools/anki/build.mjs --source-preview dist/HowToLiveBetter-source-preview.apkg
           python3 tools/tw/check_link_outputs.py
-          python3 tools/tw/link_policy.py --report "$RUNNER_TEMP/tw-export-review/link-audit.json"
-          python3 tools/tw/check_export_integrity.py dist/HowToLiveBetter-TW.html dist/tw-source-preview.html dist/HowToLiveBetter-TW.epub dist/HowToLiveBetter-source-preview.epub --report "$RUNNER_TEMP/tw-export-review/export-integrity.json"
-      - name: 保存重現用工作樹與產物
+          python3 tools/tw/link_policy.py --report "$TW_REVIEW_DIR/link-audit.json"
+          python3 tools/tw/check_export_integrity.py dist/HowToLiveBetter-TW.html dist/tw-source-preview.html dist/HowToLiveBetter-TW.epub dist/HowToLiveBetter-source-preview.epub --report "$TW_REVIEW_DIR/export-integrity.json"
+      - name: 瀏覽器與工作樹唯讀性
+        run: |
+          set -euo pipefail
+          python3 -m playwright install --with-deps chromium > "$RUNNER_TEMP/tw-export-install.log" 2>&1
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk >> "$RUNNER_TEMP/tw-export-install.log" 2>&1
+          python3 tools/tw/assets_and_browser.py --browser
+          git diff --exit-code
+          test -z "$(git ls-files --others --exclude-standard)"
+      - name: 全部通過後僅提交來源匯出模組
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'fix/export-integrity-20261015'
+          test "$(git remote get-url origin)" = 'https://github.com/andytwmvp/HowToLiveBetter-TW'
+          git diff --cached --check
+          python3 - <<'PY'
+          import subprocess
+          changed=set(subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines())
+          assert changed.issubset({'tools/anki/source-preview.mjs','tools/epub/source-preview.mjs'}),changed
+          PY
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'fix(exports): isolate fork source identities and label Taiwan scope accurately'
+            git push origin HEAD:refs/heads/fix/export-integrity-20261015
+          fi
+      - name: 保存重現用工作樹与驗證證據
         if: always()
         run: |
           mkdir -p "$RUNNER_TEMP/tw-export-review"
@@ -62,12 +93,6 @@ jobs:
               for name in paths:
                   p=root/name
                   if name and p.is_file() and p.suffix.lower() not in {'.ttf','.otf','.ttc','.woff','.woff2'}:z.write(p,name)
-          with zipfile.ZipFile(out/'export-evidence.zip','w',zipfile.ZIP_DEFLATED) as z:
-              for p in (root/'dist').glob('*'):
-                  if p.suffix in {'.epub','.html','.apkg'}:z.write(p,p.name)
-              for path in ['tools/epub/node_modules/marked/package.json','tools/epub/node_modules/marked/lib/marked.esm.js']:
-                  p=root/path
-                  if p.is_file():z.write(p,path)
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
@@ -78,4 +103,4 @@ jobs:
           if-no-files-found: ignore
       - name: 清除本次暫存與未發布產物
         if: always()
-        run: rm -rf -- dist "$RUNNER_TEMP/tw-export-review" "$RUNNER_TEMP/tw-export-venv"
+        run: rm -rf -- dist "$RUNNER_TEMP/tw-export-review" "$RUNNER_TEMP/tw-export-venv" "$RUNNER_TEMP/tw-export-install.log"
