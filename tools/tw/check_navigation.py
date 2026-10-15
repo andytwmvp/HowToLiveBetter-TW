@@ -40,5 +40,9 @@ def check_navigation(page, context, url, review):
     page.goto(out.as_uri(),wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     assert set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==expected
+    page.goto(url+'index.html#e-14-1',wait_until='domcontentloaded')
+    page.wait_for_url('**/source.html#e-14-1')
+    page.wait_for_function("document.querySelectorAll('.card').length === 765",timeout=120000)
+    assert page.url == url+'source.html#e-14-1'
     page.remove_listener('request',capture)
     return ['臺灣預設閱讀與自查共用9則已核對導航；未讀取原作或草稿','乳癌40／74、子宮頸抹片25／29／30歲與大腸癌家族史邊界通過','手機版、自查操作、離線同一資料及來源失敗不回退測試通過']

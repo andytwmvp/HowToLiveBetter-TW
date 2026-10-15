@@ -42,64 +42,10 @@ def protected_paths():
     return sorted({p for p in base.current_files() if any(ord(c)>127 for c in p)}, key=len, reverse=True)
 
 
-def apply():
-    assert base.git('branch', '--show-current').decode().strip() == base.BRANCH
-    assert base.git('remote', 'get-url', 'origin').decode().strip().removesuffix('.git') == 'https://github.com/' + base.REPO
-    # 修復先前把 Markdown 的 )]( 編進 Shields URL 的六個徽章。
-    text = base.read('README.md')
-    lines = text.splitlines()
-    repaired = 0
-    for i, line in enumerate(lines):
-        if line.startswith('[![') and '%29%5D%28' in line:
-            left, right = line.split('%29%5D%28', 1)
-            assert right.endswith('%29'), '徽章結尾不符，停止'
-            lines[i] = left + ')](' + unquote(right[:-3]) + ')'
-            repaired += 1
-    text = '\n'.join(lines) + '\n'
-    text = text.replace('](https://eternity4719.github.io/HowToLiveBetter/selfcheck.html)', '](selfcheck.html)')
-    text = text.replace('](https://eternity4719.github.io/HowToLiveBetter/)', '](index.html)')
-    text = re.sub(r'\[離線單文件 HTML\]\(https://github\.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter\.html\)', '[繁體工作稿離線建置說明](locales/zh-TW/README.md)', text)
-    base.write('README.md', text)
-    changed = []
-    paths = protected_paths()
-    for path in targets():
-        before = base.read(path)
-        after = normalized(before, paths)
-        assert Counter(URL.findall(before)) == Counter(URL.findall(after)), f'來源網址變動：{path}'
-        assert re.findall(r'\d+', before) == re.findall(r'\d+', after), f'數字變動：{path}'
-        if after != before:
-            base.write(path, after); changed.append(path)
-    code = base.read('tools/tw/traditionalize.py')
-    before_line = next(line for line in code.splitlines() if line.startswith('URL = re.compile('))
-    code = code.replace(before_line, 'URL = re.compile(' + repr(URL.pattern) + ')')
-    base.write('tools/tw/traditionalize.py', code)
-    base.dump('localization/text-integrity-report.json', {'badge_markup_repaired': repaired, 'additional_normalized_files': len(changed), 'files': changed, 'source_urls_and_numbers_preserved': True, 'note': '修正網址後方漏轉文字、Markdown 圖片語法及繁體異體字正規化；仍未完成逐句人工精校。'})
-    print(f'修復 {repaired} 個徽章語法；正規化 {len(changed)} 份文件。')
-
-
 def check():
-    paths = protected_paths(); errors = []
-    # 台灣與臺灣均可用於繁體中文，不能把此差異判成簡體字殘留。
-    canonical = lambda value: value.replace('臺', '台')
-    for path in targets():
-        text = base.read(path)
-        if canonical(normalized(text, paths)) != canonical(text): errors.append(path)
-    if errors: raise RuntimeError('仍有待正規化文案：' + ', '.join(errors))
-    md = base.read('README.md')
-    badges = BADGE.findall(md)
-    assert len(badges) == 6, f'可解析徽章數不是 6：{len(badges)}'
-    assert '%29%5D%28' not in md, 'Markdown 邊界仍被誤編碼'
-    for label, url, dest in badges:
-        assert not re.search(r'[\[\]()]', unquote(url)), '圖片 URL 混入 Markdown 邊界'
-        assert canonical(base.cc().convert(label)) == canonical(label)
-        if not dest.startswith(('https:', 'http:', '#')):
-            assert (base.ROOT / unquote(dest)).exists(), dest
-    fixture = '[閱讀](https://example.org/a)：\u8fd9\u4e2a\u9875\u9762'
-    assert URL.findall(fixture) == ['https://example.org/a']
-    assert URL.findall('<https://doi.org/10.1016/S0140-6736(20)30367-6>') == ['https://doi.org/10.1016/S0140-6736(20)30367-6']
-    assert normalized(fixture, []) != fixture
-    assert canonical(normalized('台灣與臺灣', [])) == canonical('台灣與臺灣')
-    print(f'PASS：{len(targets())} 份文案、6 個 Markdown 圖片徽章、網址邊界與 DOI 括號回歸測試。')
+    # 日常驗證委派給目前政策；不再使用已退休遷移的全檔差異比較。
+    from ci_language_policy import check as current_check
+    current_check()
 
 
 if __name__ == '__main__':
@@ -107,5 +53,5 @@ if __name__ == '__main__':
     parser.add_argument('--apply', action='store_true'); parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
     if not (args.apply or args.check): parser.error('請指定 --apply 或 --check')
-    if args.apply: apply()
+    if args.apply: parser.error('--apply 已退休；不可覆寫後續連結與內容')
     if args.check: check()

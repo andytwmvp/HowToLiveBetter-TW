@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "upstream_repository": "eternity4719/HowToLiveBetter",
+  "upstream_site_host": "eternity4719.github.io",
+  "unpublished_site_host": "andytwmvp.github.io",
+  "issues_enabled": false,
+  "release_assets": [],
+  "metadata_verified_at": "2026-10-15",
+  "upstream_exceptions": [
+    {
+      "path": "ATTRIBUTION.md",
+      "url": "https://github.com/eternity4719/HowToLiveBetter",
+      "occurrences": 1,
+      "reason": "CC BY原作署名與作品來源；不作閱讀或下載入口"
+    },
+    {
+      "path": "docs/核實記錄/追加-尿酸結石與膽囊結石.md",
+      "url": "https://github.com/eternity4719/HowToLiveBetter/issues/16",
+      "occurrences": 1,
+      "reason": "原作歷史研究起因；不得把issue編號移植到另一個repo造成錯誤引用"
+    }
+  ],
+  "local_navigation_files": [
+    "README.md",
+    "REPOSITORY_GUIDE.md",
+    "SUPPORT.md",
+    "ATTRIBUTION.md",
+    "AGENTS.md",
+    "index.html",
+    "selfcheck.html",
+    "source.html",
+    "locales/zh-TW/README.md",
+    ".claude/skills/life-decision-guide/SKILL.md",
+    "skills/life-decision-guide/SKILL.md",
+    "skills/life-decision-guide/README.md"
+  ],
+  "code_url_prefixes": [
+    {
+      "path": "source.html",
+      "url": "https://github.com/andytwmvp/HowToLiveBetter-TW/blob/main/",
+      "reason": "來源閱讀器組裝檔案網址用前綴；不是href。"
+    },
+    {
+      "path": "tools/tw/edition.py",
+      "url": "https://github.com/andytwmvp/HowToLiveBetter-TW/blob/main/",
+      "reason": "離線匯出將相對路徑改為repo檔案連結的前綴。"
+    }
+  ]
+}

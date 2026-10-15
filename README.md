@@ -17,14 +17,13 @@
 
 # 高效益人生指南｜臺灣在地化
 
-講怎麼活得久、怎麼少生病，出了意外怎麼救。講怎麼少花冤枉錢，哪些事會讓人被騙、攤上官司。講沒工作沒錢時能去領什麼，開店、開公司、做網站要辦什麼手續。也講戀愛結婚生孩子、出國和學手藝。法律、醫保、社保這些制度上的內容，按中國大陸的現行規定寫。<br>
-765 條建議，每條寫明花掉什麼、換回什麼、證據有多硬，來源只引期刊論文和官方文件，少數官方不公開的案件引署名的原創新聞報道並附網頁存檔。
+這是 `andytwmvp/HowToLiveBetter-TW` 的繁體中文與臺灣在地化工作區。原作共 765 條建議，目前的臺灣預設閱讀只包含已核對來源的導航；其餘草稿與原作來源稿分開保存，不代表全書已完成臺灣查核。
 
-不用全做：這是一份備選單，不是任務清單——挑走一兩條就算數，作者自己也沒做到其中大部分。
+**閱讀入口：**[臺灣版閱讀與本地開啟方式](REPOSITORY_GUIDE.md#reading)、[原作繁體來源稿的使用限制](REPOSITORY_GUIDE.md#source-preview)、[編修進度](PROJECT_STATE.md)。GitHub 上的 `.html` 連結是原始碼檔，不是已部署網站。
 
-書裡的內容可能過時，也可能有錯。不少政策各地執行不一樣。真去辦事、看病、打官司時，以當地部門、醫生和律師的說法為準。發現寫錯了，歡迎[提 issue](https://github.com/andytwmvp/HowToLiveBetter-TW/issues)。
+本 repo 目前沒有啟用 GitHub Pages、沒有發布正式 Release，也未啟用 Issues。需要回報或提出修正，請依[本 repo 的回報方式](SUPPORT.md)處理；不要轉往原作者的 Issues、PR 或其他聯絡管道。
 
-**本項目從未發行、也不會發行任何代幣或數字資產。** 用本項目名字發的幣都和本項目無關，作者不領取、不認領任何相關收益。看到這類幣請當作騙局，別買，見[第 5 節第 45 條（別買虛擬貨幣）](book/05-不要浪費錢.md)。
+本專案沒有發行任何代幣，也不提供獲利、醫療結果或補助核准保證。署名、授權與修改說明保留於 [ATTRIBUTION.md](ATTRIBUTION.md)。
 
 [![閱讀工作稿：臺灣在地化中](https://img.shields.io/badge/%E9%96%B1%E8%AE%80%E5%B7%A5%E4%BD%9C%E7%A8%BF-%E8%87%BA%E7%81%A3%E5%9C%A8%E5%9C%B0%E5%8C%96%E4%B8%AD-3451b2?style=flat-square)](locales/zh-TW/README.md)
 [![原作建議：765 則](https://img.shields.io/badge/%E5%8E%9F%E4%BD%9C%E5%BB%BA%E8%AD%B0-765%20%E5%89%87-18794e?style=flat-square)](#目錄)
@@ -33,9 +32,9 @@
 [![授權條款：CC BY 4.0](https://img.shields.io/badge/%E6%8E%88%E6%AC%8A%E6%A2%9D%E6%AC%BE-CC%20BY%204.0-565a5f?style=flat-square)](ATTRIBUTION.md)
 [![編修進度：臺灣內容待查核](https://img.shields.io/badge/%E7%B7%A8%E4%BF%AE%E9%80%B2%E5%BA%A6-%E8%87%BA%E7%81%A3%E5%85%A7%E5%AE%B9%E5%BE%85%E6%9F%A5%E6%A0%B8-915930?style=flat-square)](PROJECT_STATE.md)
 
-### [打開線上檢索頁](index.html) · [讓 AI 照書回答（skill）](skills/life-decision-guide/README.md)
+### [開啟臺灣閱讀工作區](REPOSITORY_GUIDE.md#reading) · [臺灣資料 Skill](skills/life-decision-guide/README.md)
 
-AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔保籤不籤」，它先查書裡的條目再回答，並註明出自第幾節第幾條。
+Skill 只使用本 repo 已核對的臺灣資料；沒有相關內容時會明確說明缺漏，不會改抓上游或把草稿當成已查核結論。
 
 <table>
 <tr><td align="right"><b>下載</b></td><td align="left">臺灣版尚未正式發行。請先閱讀上方的臺灣版工作區；原文與臺灣版不得混稱。</td></tr>
@@ -46,7 +45,7 @@ AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔
 </td></tr>
 <tr><td align="right"><b>自查</b></td><td align="left">
 
-[生活自查](selfcheck.html)：回答幾十道是否題，看看書裡哪些事你還沒做到、先做哪幾件
+[生活自查原始碼](selfcheck.html)：與臺灣導航共用已核對內容；[本地開啟方式](REPOSITORY_GUIDE.md#reading)。
 
 </td></tr>
 <tr><td align="right"><b>長文</b></td><td align="left">
@@ -54,23 +53,14 @@ AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔
 [結婚劃不划算](docs/結婚劃不划算.md) · [家庭應急裝備清單](docs/家庭應急裝備清單.md) · [遇到陌生人出事該不該停](docs/遇到陌生人出事該不該停.md) · [做平臺要辦哪些證](docs/做平臺要辦哪些證.md) · [生物鐘和夜班](docs/生物鐘和夜班.md) · [被裁了之後先做什麼](docs/被裁了之後先做什麼.md) · [孩子出生前後要辦的事](docs/孩子出生前後要辦的事.md) · [剛確診慢性病之後](docs/剛確診慢性病之後.md) · [換工作、換城市之前](docs/換工作、換城市之前.md)
 
 </td></tr>
-<tr><td align="right"><b>其他語言</b></td><td align="left">
+<tr><td align="right"><b>開發與回報</b></td><td align="left">
 
-[English](https://book.dlgrv.com/en/) · [Русский](https://book.dlgrv.com/ru/) · [Español](https://book.dlgrv.com/es/) · [Português](https://book.dlgrv.com/pt/) · [العربية](https://book.dlgrv.com/ar/) · [Bahasa Indonesia](https://book.dlgrv.com/id/)，[dlgrv](https://github.com/dlgrv) 維護的翻譯（[倉庫](https://github.com/dlgrv/HowToLiveBetter)）
-
-[English（The Evidence-Based Life）](https://parveen0029.github.io/The-Evidence-Based-Life/)，[parveen0029](https://github.com/parveen0029) 維護的另一份英文翻譯（[倉庫](https://github.com/parveen0029/The-Evidence-Based-Life)）
-
-[Tiếng Việt](https://chuanman2707.github.io/HowToLiveBetter/)，[chuanman2707](https://github.com/chuanman2707) 維護的越南語翻譯（[倉庫](https://github.com/chuanman2707/HowToLiveBetter)）
-
-</td></tr>
-<tr><td align="right"><b>衍生工具</b></td><td align="left">
-
-讀者做的網站、App、小程序、瀏覽器插件和數據集，見[衍生項目](衍生項目.md)
+[閱讀與建置說明](REPOSITORY_GUIDE.md) · [回報方式](SUPPORT.md) · [連結處理紀錄](localization/link-audit.md)
 
 </td></tr>
 </table>
 
-<sub>其他語言和衍生工具由他人維護，內容可能落後，以本倉庫中文原文為準。</sub>
+<sub>本 repo 僅維護繁體中文與臺灣在地化；不將其他人的翻譯或衍生服務標示成本版成果。</sub>
 
 </div>
 
@@ -120,20 +110,14 @@ AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔
 
 ## 怎麼讀
 
-- **不用全做**：這是一份備選單，不是任務清單。挑走一兩條就算數，剩下的放著，需要時再回來查。「說著容易做著難」這個評價是對的——作者自己也沒做到其中大部分，寫下來是為了要用的時候找得到。想挑省力的，看下面「只想看最值得做的」那條。
-- **想讓 AI 幫你查**：倉庫裡帶了一箇中文 skill（[skills/life-decision-guide](skills/life-decision-guide/)），Claude Code 和 Codex 都能裝。裝上以後直接問「替朋友擔保籤不籤」「每天通勤兩小時值不值」。它會先把相關條目從正文裡查出來，再照書裡的算賬方式排序回答，並註明出自第幾節第幾條。查不到就說查不到，不自己編數字。裝法見 [那個目錄的說明](skills/life-decision-guide/README.md)。
-- **想按條件挑**：打開[線上檢索頁](index.html)，可以按關鍵詞、章節、證據等級來篩，也可以按「花不花錢、花多少時間、要不要毅力」這三樣篩，幾個條件能疊著用。頁面上的內容直接取自 book/ 目錄裡的正文，正文一改，頁面跟著改。
-- **條目之間會互相指路**（「見第 8 節第 17 條」這種）：在檢索頁裡，這種指路帶一條虛線。點一下，就地顯示被指的那條的標題和「說人話」。想真的翻過去，再按「跳過去」。那一條正好被篩選條件藏起來了，頁面會自動把篩選清掉。在 GitHub 上直接讀正文點不動，但每處指路後面都寫著指向什麼（「見第 18 條（借錢寫清借條）」）。不翻過去也知道說的是哪條。
-- **想按順序讀**：每節內的先後順序不代表性價比高低。條目多的節開頭有一段分組導覽，按主題挑著看就行。
-- **想離線看、想發給別人**：下載 [繁體工作稿離線建置說明](locales/zh-TW/README.md)，整本書連同檢索和篩選都在這一個文件裡，雙擊就開，不用服務器也不用聯網，微信裡也能直接傳。
-- **想打印或在手機上翻**：下載 [PDF](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf)，A4 排版、兩百多頁，帶目錄頁碼和書籤，每節另起一頁。
-- **想在 Kindle 或其他閱讀器上讀**：下載 [EPUB 電子書](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub)，Kindle 用 Send to Kindle 發過去即可。
-- **想記住、隔幾天複習一遍**：下載 [Anki 牌組](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.apkg)，用 Anki 打開就導入。一條一張卡，按節分成子牌組。正面是建議，背面是說人話、成本和證據等級。可以只學其中幾節，也可以按「性價比極高」這類標籤篩。以後重新下載再導入一次，卡片內容會更新，複習記錄不丟。
-- **這四樣都是正文每次更新後自動重新生成的**，下載連結固定不變；轉發出去的那一份不會跟著更新，以線上版為準。
-- **看不懂那串數字**：每條都有一行「說人話」。它把「收益」欄裡那些研究裡的寫法，翻成「同期死亡的概率低約兩成」「拘留幾日、罰多少錢」這樣的日常說法。它只用「收益」欄已經寫到的內容，不添新數字。只看這一行就夠拿主意。「收益」欄裡原樣留著全部數字，想自己核對就看那一欄。
-- **只想看結論最硬的**：在檢索頁裡勾選證據等級 A，只留下有具體數字、來自薈萃分析或大型試驗的 495 條。
-- **只想看最值得做的**：勾選性價比「極高」，得到 122 條既不花錢、不花時間、不需要毅力，收益又落在最大一檔的條目。再疊加一個「換回什麼」，就是該口徑下的優先清單。
-- **看到「不要」開頭的節標題不用緊張**：節標題說的是這一節想防住的事（不要早死、不要浪費時間），不是說底下每條都在讓你別幹什麼。真正要做的動作寫在條目標題裡，一律動詞開頭，自己就寫清了是「做什麼」還是「別做什麼」。同一節裡兩種都有：第 4 節既有「把『打算做』寫成『幾點、在哪、遇到什麼就做什麼』」，也有「不看電視和滾動新聞」。按條目標題讀，不用往節標題的語氣上套。
+臺灣已核對導航、原作繁體來源稿與未審閱草稿是三種不同內容，不能混稱。請先看[閱讀說明](REPOSITORY_GUIDE.md#reading)。臺灣導航與自查只顯示 `runtime.json` 內已核對的項目；沒有資料時不使用原作填補。
+
+需要離線 HTML、EPUB 或 Anki，請依[本地匯出說明](REPOSITORY_GUIDE.md#exports)產生目前的臺灣導航。沒有可下載的正式台灣全書 Release，也沒有正式臺灣版 PDF；不提供原作者的下載網址冒充本 repo 產物。
+
+原作完整閱讀請在本地開啟 `source.html`，保留搜尋、章節、證據與成本篩選。以下只是**原作分級的操作說明，不是臺灣查核結果或個人建議**：
+
+- 在原作來源頁勾選 A 級，可查看原作所列薈萃分析或大型試驗的 495 條。
+- 在原作來源頁勾選性價比「極高」，得到 122 條原作分級項目；分級不可當成臺灣制度或個人效益的保證。
 
 每條建議長這樣：
 
@@ -149,28 +133,17 @@ AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔
 
 ## 自己跑一份
 
-多數人用不著部署：[線上檢索頁](index.html)是現成的，要離線就下[離線單文件 HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html)，雙擊就開。
+請從**你的 fork**取得程式，在儲存庫根目錄執行：
 
-真要在自己電腦或伺服器上跑：
-
-```bash
-git clone https://github.com/eternity4719/HowToLiveBetter.git
-cd HowToLiveBetter
-python -m http.server 8000
+```sh
+git clone https://github.com/andytwmvp/HowToLiveBetter-TW.git
+cd HowToLiveBetter-TW
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-然後瀏覽器開 `http://localhost:8000/`。檢索頁是純靜態的，`README.md` 和 `book/` 就是它的數據，沒有後端、沒有數據庫、不用裝依賴；把整個目錄丟給任何靜態伺服器（Nginx、GitHub Pages、對象存儲）效果一樣。注意 `index.html` 必須經 http 打開，直接雙擊本地文件會空白——瀏覽器不許網頁讀本地文件，那種場景請用上面的離線單文件版。
+在瀏覽器開啟 `http://127.0.0.1:8000/`；自查使用 `/selfcheck.html`，原作來源預覽使用 `/source.html`。伺服器只綁定本機，不需要啟用 Pages。離線檔、依賴與產物範圍見[建置說明](REPOSITORY_GUIDE.md#exports)。
 
-想自己生成這四樣（平時用不著，Release 裡的就是自動生成的）：
-
-```bash
-cd tools/epub && npm ci && npm run build   # EPUB
-node tools/offline/build.mjs               # 離線單文件 HTML
-node tools/pdf/build.mjs                   # PDF，另需 pandoc ≥ 3.1 和 typst ≥ 0.13
-node tools/anki/build.mjs                  # Anki 牌組，要 Node ≥ 22.13（用自帶的 node:sqlite）
-```
-
-產物都在 `dist/`。
+下方保留原作分類、術語與目錄，僅供來源對照，不代表臺灣制度定稿。
 
 ## 四種資源
 
@@ -311,19 +284,17 @@ A 級只說明「有具體數字、出處可核」，不說明這個數字一定
 
 「不要早死」「不要浪費時間」這類節標題說的是這一節想防住的結果，條目本身要做還是別做，以條目標題為準。長文另見 [docs/家庭應急裝備清單.md](docs/家庭應急裝備清單.md)、[docs/做平臺要辦哪些證.md](docs/做平臺要辦哪些證.md)、[docs/結婚劃不划算.md](docs/結婚劃不划算.md) 、[docs/遇到陌生人出事該不該停.md](docs/遇到陌生人出事該不該停.md)、[docs/生物鐘和夜班.md](docs/生物鐘和夜班.md)，以及四份按時間排的場景清單：[docs/被裁了之後先做什麼.md](docs/被裁了之後先做什麼.md)、[docs/孩子出生前後要辦的事.md](docs/孩子出生前後要辦的事.md)、[docs/剛確診慢性病之後.md](docs/剛確診慢性病之後.md) 和 [docs/換工作、換城市之前.md](docs/換工作、換城市之前.md)。每條來源的核實過程記錄在 [docs/核實記錄](docs/核實記錄/)。
 
-本書在 Claude Code 協助下編寫：查找原始文獻、逐條核對數字與原文是否一致、維護交叉引用和構建腳本。選題、取捨和最終審定由作者負責，每條數字都能在來源欄的原文裡找到。
-
-倉庫根目錄的 `index.html` 是線上檢索頁：按關鍵詞、章節、證據等級和成本維度（花錢、花時間、要毅力）篩選條目，數據直接讀本文件。在倉庫設置裡開啟 GitHub Pages（Deploy from a branch，分支 main，目錄 /）後即可訪問。`tools/epub/` 是電子書生成腳本，`cd tools/epub && npm ci && npm run build` 在本地出一本 EPUB 到 `dist/`；GitHub Actions 在正文改動後自動跑同一個腳本並更新 Release。
+上方是原作內容與編輯架構的來源對照；本 repo 的取材規則、編修與驗證以 [AGENTS.md](AGENTS.md) 為準。預設 `index.html` 不載入未審閱的全書，來源閱讀器改為 `source.html`。工作流程只做檢查或手動工程預覽，不會自動發布正式電子書。
 
 ## 正文
 
-正文按節拆成 34 個文件放在 [book/](book/)，點上面目錄裡的節名進入。拆開是因為單文件已經超過 GitHub 渲染 Markdown 的 512 KB 上限，後面的節顯示不出來；[線上檢索頁](index.html)會把這些文件合起來讀，用法不變。
+正文按節拆成 34 個文件放在 [book/](book/)，點上面目錄裡的節名進入。拆開是因為單文件已經超過 GitHub 渲染 Markdown 的 512 KB 上限，後面的節顯示不出來；[原作來源頁原始碼](source.html)會把這些文件合起來讀；請依[本地開啟方式](REPOSITORY_GUIDE.md#source-preview)使用，不當成臺灣預設建議。
 
 ## 許可
 
 正文用 [CC BY 4.0](LICENSE) 發佈，範圍是 book/、docs/ 和本 README 的文字。你可以轉載、改編、商用，不用來問作者，但要做到三件事：
 
-- 寫明出處：「高性價比人生指南」，附上倉庫連結 https://github.com/eternity4719/HowToLiveBetter 。
+- 寫明出處：「高性價比人生指南」，保留[原作署名及原始作品連結](ATTRIBUTION.md)，並說明此版本來自[臺灣 fork](https://github.com/andytwmvp/HowToLiveBetter-TW)。
 - 附上許可證連結 https://creativecommons.org/licenses/by/4.0/ 。
 - 改過內容的要寫明改過。書裡的法條、補貼標準和截止日期經常更新，建議同時寫上你同步的是哪一天的版本。
 

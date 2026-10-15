@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: 臺灣版工作區與查核狀態
-    url: https://github.com/andytwmvp/HowToLiveBetter-TW/blob/tw/bootstrap-and-remove-ads/locales/zh-TW/README.md
+    url: https://github.com/andytwmvp/HowToLiveBetter-TW/blob/main/SUPPORT.md
     about: 臺灣版仍在逐條翻譯與查核；請在此 fork 回報問題，不向原作者儲存庫提出 PR 或問題。

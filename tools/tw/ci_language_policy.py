@@ -81,6 +81,8 @@ def check():
         if canonical(base.cc().convert(label))!=canonical(label): raise ValueError('徽章含待轉文字')
         if not dest.startswith(('https:','http:','#')) and not (base.ROOT/unquote(dest)).exists(): raise ValueError('徽章目標不存在')
     validate_runtime(base.ROOT)
+    from link_policy import audit as check_repo_links
+    check_repo_links(base.ROOT)
     print(f'PASS：{len(text.targets())}份文案、6個圖片徽章及臺灣導航資料。')
 
 if __name__ == '__main__':

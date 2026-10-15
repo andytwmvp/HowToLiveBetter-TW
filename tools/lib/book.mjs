@@ -7,11 +7,13 @@ import { execSync } from 'node:child_process';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const REPO = 'https://github.com/andytwmvp/HowToLiveBetter-TW';
-export const SITE = 'https://andytwmvp.github.io/HowToLiveBetter-TW/';
+// 尚未部署網站；匯出文件只指向可存取的 repo 使用說明。
+export const GUIDE = `${REPO}/blob/main/REPOSITORY_GUIDE.md`;
+export const SITE = GUIDE;
 // 封面與電子書共用本地文案規格，不再以舊書名綁定 README 的解析。
 const imageCopy = JSON.parse(readFileSync(resolve(ROOT, 'localization/image-copy.zh-TW.json'), 'utf8'));
 export const TITLE = imageCopy.title;
-export const RELEASE = `${REPO}/releases/download/epub-latest`;
+export const SOURCE_GUIDE = `${GUIDE}#source-preview`;
 
 // 一律按 LF 交給各套構建：Windows 上 core.autocrlf=true 檢出的是 CRLF，離線版腳本
 // 拿 '\n' 寫的 needle 去 index.html 裡找錨點就一個都找不著，本地構建直接報「找不到

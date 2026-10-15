@@ -1,6 +1,12 @@
 /* 臺灣閱讀、自查與離線輸出共用資料；禁止退回未查核原作。 */
 (function () {
   'use strict';
+  // 僅相容本repo舊原作書籤；不接受任意外站或查詢參數重定向。
+  const legacy = /^#e-([1-9]|[12]\d|3[0-4])-([1-9]\d{0,2})$/.test(location.hash);
+  if (legacy && /^https?:$/.test(location.protocol)) {
+    location.replace('source.html' + location.hash);
+    return;
+  }
   const answers = new Map();
   const byId = id => document.getElementById(id);
   let catalog;

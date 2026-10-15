@@ -18,7 +18,7 @@ import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
 import { zip } from '../lib/zip.mjs';
-import { ROOT, SITE, TITLE, read, readBook, COST_W, ratioOf, gitCommit, buildStamp } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, TITLE, read, readBook, COST_W, ratioOf, gitCommit, buildStamp } from '../lib/book.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.apkg');
 const NOW = new Date();
@@ -55,7 +55,7 @@ function parseSection(md) {
 }
 
 const { bookFiles } = readBook();
-const sections = bookFiles.map(f => parseSection(read(f)));
+const sections = bookFiles.map(f => ({ ...parseSection(read(f)), file: f }));
 
 // ---------- 字段 ----------
 const esc = s => String(s ?? '').replace(/\*\*/g, '').replace(/\\([*_])/g, '$1')
@@ -78,14 +78,14 @@ for (const s of sections) {
       e.口徑 && `口徑：${e.口徑}`,
       grade && `證據 ${grade} 級${dispute ? '（有爭議）' : ''}`,
     ].filter(Boolean).join(' · ');
-    const url = `${SITE}#e-${s.sec}-${e.n}`;
+    const url = `${REPO}/blob/main/${encodeURI(s.file)}`;
     const fields = [
       `第 ${s.sec} 節 · ${esc(s.name)} · 第 ${e.n} 條`,
       esc(e.title),
       esc(e.human || ''),
       esc(e.cost || ''),
       esc(points),
-      `<a href="${url}">線上版看全文和來源</a>`,
+      `<a href="${url}">本repo原作章節與來源</a>`,
     ];
     const tags = [`第${pad(s.sec)}節`, grade && `證據${grade}`, ratio && `性價比${ratio}`, e.口徑 && `口徑${e.口徑}`, dispute && '爭議']
       .filter(Boolean);
@@ -131,7 +131,7 @@ const deck = (id, name, desc = '') => ({
 });
 const commit = gitCommit();
 const rootDesc = `《${TITLE}》全書條目，一條一張卡，按節分子牌組。生成於 ${buildStamp()}（北京時間）`
-  + `${commit ? `，正文提交 ${commit.slice(0, 7)}` : ''}。正文會繼續更新，以 <a href="${SITE}">線上版</a> 為準；`
+  + `${commit ? `，正文提交 ${commit.slice(0, 7)}` : ''}。正文會繼續更新，閱讀方式見 <a href="${SITE}#source-preview">本 repo 來源預覽說明</a>；`
   + '重新下載導入會更新卡片內容，複習記錄保留。';
 const decks = {
   1: deck(1, 'Default'),
