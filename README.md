@@ -26,14 +26,14 @@
 
 **本項目從未發行、也不會發行任何代幣或數字資產。** 用本項目名字發的幣都和本項目無關，作者不領取、不認領任何相關收益。看到這類幣請當作騙局，別買，見[第 5 節第 45 條（別買虛擬貨幣）](book/05-不要浪費錢.md)。
 
-[![線上檢索](https://img.shields.io/badge/%E7%B7%9A%E4%B8%8A%E6%AA%A2%E7%B4%A2-%E9%BB%9E%E9%80%99%E8%A3%A1%E6%89%93%E9%96%8B-3451b2?style=flat-square%29%5D%28https://eternity4719.github.io/HowToLiveBetter/%29
-[![條目](https://img.shields.io/badge/%E6%A2%9D%E7%9B%AE-765%20%E6%A2%9D-18794e?style=flat-square%29%5D%28#%E7%9B%AE%E9%8C%84%29
-[![證據分級](https://img.shields.io/badge/%E8%AD%89%E6%93%9A%E5%88%86%E7%B4%9A-A%20495%20%C2%B7%20B%20218%20%C2%B7%20C%2052-915930?style=flat-square%29%5D%28#%E8%AD%89%E6%93%9A%E5%88%86%E7%B4%9A%29
-[![原始文獻](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8D%BB-2508%20%E6%A2%9D%E9%80%A3%E7%B5%90-565a5f?style=flat-square%29%5D%28docs/%E6%A0%B8%E5%AF%A6%E8%A8%98%E9%8C%84/%29
-[![許可](https://img.shields.io/badge/%E8%A8%B1%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square%29%5D%28#%E8%A8%B1%E5%8F%AF%29
-[![Claude Code 協助編寫](https://img.shields.io/badge/Claude%20Code-%E5%8D%94%E5%8A%A9%E7%B7%A8%E5%AF%AB-D97757?style=flat-square&logo=claude&logoColor=white%29%5D%28https://claude.com/claude-code%29
+[![線上檢索](https://img.shields.io/badge/%E7%B7%9A%E4%B8%8A%E6%AA%A2%E7%B4%A2-%E9%BB%9E%E9%80%99%E8%A3%A1%E6%89%93%E9%96%8B-3451b2?style=flat-square)](index.html)
+[![條目](https://img.shields.io/badge/%E6%A2%9D%E7%9B%AE-765%20%E6%A2%9D-18794e?style=flat-square)](#目錄)
+[![證據分級](https://img.shields.io/badge/%E8%AD%89%E6%93%9A%E5%88%86%E7%B4%9A-A%20495%20%C2%B7%20B%20218%20%C2%B7%20C%2052-915930?style=flat-square)](#證據分級)
+[![原始文獻](https://img.shields.io/badge/%E5%8E%9F%E5%A7%8B%E6%96%87%E7%8D%BB-2508%20%E6%A2%9D%E9%80%A3%E7%B5%90-565a5f?style=flat-square)](docs/核實記錄/)
+[![許可](https://img.shields.io/badge/%E8%A8%B1%E5%8F%AF-CC%20BY%204.0-565a5f?style=flat-square)](#許可)
+[![Claude Code 協助編寫](https://img.shields.io/badge/Claude%20Code-%E5%8D%94%E5%8A%A9%E7%B7%A8%E5%AF%AB-D97757?style=flat-square&logo=claude&logoColor=white)](https://claude.com/claude-code)
 
-### [打開線上檢索頁](https://eternity4719.github.io/HowToLiveBetter/) · [讓 AI 照書回答（skill）](skills/life-decision-guide/README.md)
+### [打開線上檢索頁](index.html) · [讓 AI 照書回答（skill）](skills/life-decision-guide/README.md)
 
 AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔保籤不籤」，它先查書裡的條目再回答，並註明出自第幾節第幾條。
 
@@ -46,7 +46,7 @@ AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔
 </td></tr>
 <tr><td align="right"><b>自查</b></td><td align="left">
 
-[生活自查](https://eternity4719.github.io/HowToLiveBetter/selfcheck.html)：回答几十道是否题，看看书里哪些事你还没做到、先做哪几件
+[生活自查](selfcheck.html)：回答幾十道是否題，看看書裡哪些事你還沒做到、先做哪幾件
 
 </td></tr>
 <tr><td align="right"><b>長文</b></td><td align="left">
@@ -122,10 +122,10 @@ AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔
 
 - **不用全做**：這是一份備選單，不是任務清單。挑走一兩條就算數，剩下的放著，需要時再回來查。「說著容易做著難」這個評價是對的——作者自己也沒做到其中大部分，寫下來是為了要用的時候找得到。想挑省力的，看下面「只想看最值得做的」那條。
 - **想讓 AI 幫你查**：倉庫裡帶了一箇中文 skill（[skills/life-decision-guide](skills/life-decision-guide/)），Claude Code 和 Codex 都能裝。裝上以後直接問「替朋友擔保籤不籤」「每天通勤兩小時值不值」。它會先把相關條目從正文裡查出來，再照書裡的算賬方式排序回答，並註明出自第幾節第幾條。查不到就說查不到，不自己編數字。裝法見 [那個目錄的說明](skills/life-decision-guide/README.md)。
-- **想按條件挑**：打開[線上檢索頁](https://eternity4719.github.io/HowToLiveBetter/)，可以按关键词、章节、证据等级来筛，也可以按「花不花钱、花多少时间、要不要毅力」这三样筛，几个条件能叠着用。页面上的内容直接取自 book/ 目錄裡的正文，正文一改，頁面跟著改。
+- **想按條件挑**：打開[線上檢索頁](index.html)，可以按關鍵詞、章節、證據等級來篩，也可以按「花不花錢、花多少時間、要不要毅力」這三樣篩，幾個條件能疊著用。頁面上的內容直接取自 book/ 目錄裡的正文，正文一改，頁面跟著改。
 - **條目之間會互相指路**（「見第 8 節第 17 條」這種）：在檢索頁裡，這種指路帶一條虛線。點一下，就地顯示被指的那條的標題和「說人話」。想真的翻過去，再按「跳過去」。那一條正好被篩選條件藏起來了，頁面會自動把篩選清掉。在 GitHub 上直接讀正文點不動，但每處指路後面都寫著指向什麼（「見第 18 條（借錢寫清借條）」）。不翻過去也知道說的是哪條。
 - **想按順序讀**：每節內的先後順序不代表性價比高低。條目多的節開頭有一段分組導覽，按主題挑著看就行。
-- **想離線看、想發給別人**：下載 [離線單文件 HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html)，整本书连同检索和筛选都在这一个文件里，双击就开，不用服务器也不用联网，微信里也能直接传。
+- **想離線看、想發給別人**：下載 [繁體工作稿離線建置說明](locales/zh-TW/README.md)，整本書連同檢索和篩選都在這一個文件裡，雙擊就開，不用服務器也不用聯網，微信裡也能直接傳。
 - **想打印或在手機上翻**：下載 [PDF](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf)，A4 排版、兩百多頁，帶目錄頁碼和書籤，每節另起一頁。
 - **想在 Kindle 或其他閱讀器上讀**：下載 [EPUB 電子書](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub)，Kindle 用 Send to Kindle 發過去即可。
 - **想記住、隔幾天複習一遍**：下載 [Anki 牌組](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.apkg)，用 Anki 打開就導入。一條一張卡，按節分成子牌組。正面是建議，背面是說人話、成本和證據等級。可以只學其中幾節，也可以按「性價比極高」這類標籤篩。以後重新下載再導入一次，卡片內容會更新，複習記錄不丟。
@@ -149,7 +149,7 @@ AI 助手 skill 支持 Claude Code 和 Codex。裝上後直接問「替朋友擔
 
 ## 自己跑一份
 
-多數人用不著部署：[線上檢索頁](https://eternity4719.github.io/HowToLiveBetter/)是现成的，要离线就下[离线单文件 HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html)，双击就开。
+多數人用不著部署：[線上檢索頁](index.html)是現成的，要離線就下[離線單文件 HTML](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html)，雙擊就開。
 
 真要在自己電腦或伺服器上跑：
 
@@ -317,7 +317,7 @@ A 級只說明「有具體數字、出處可核」，不說明這個數字一定
 
 ## 正文
 
-正文按節拆成 34 個文件放在 [book/](book/)，點上面目錄裡的節名進入。拆開是因為單文件已經超過 GitHub 渲染 Markdown 的 512 KB 上限，後面的節顯示不出來；[線上檢索頁](https://eternity4719.github.io/HowToLiveBetter/)会把这些文件合起来读，用法不变。
+正文按節拆成 34 個文件放在 [book/](book/)，點上面目錄裡的節名進入。拆開是因為單文件已經超過 GitHub 渲染 Markdown 的 512 KB 上限，後面的節顯示不出來；[線上檢索頁](index.html)會把這些文件合起來讀，用法不變。
 
 ## 許可
 

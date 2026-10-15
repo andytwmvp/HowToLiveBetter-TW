@@ -48,7 +48,7 @@ ${commitLine}
 
 正文裡指向倉庫內其他文件的連結已改成書內跳轉；指向核實記錄、許可證這類沒收進書的文件的連結改成了 GitHub 網址。
 
-正文以 CC BY 4.0 發佈（https://creativecommons.org/licenses/by/4.0/）。可以转载、改编、商用，要写明出处「高性价比人生指南」并附仓库链接，改过内容的要注明改过。`;
+正文以 CC BY 4.0 發佈（https://creativecommons.org/licenses/by/4.0/）。可以轉載、改編、商用，要寫明出處「高性價比人生指南」並附倉庫鏈接，改過內容的要註明改過。`;
 }
 
 // ---------- Markdown → XHTML ----------
