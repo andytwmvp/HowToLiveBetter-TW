@@ -42,6 +42,8 @@ node tools/epub/build.mjs --source-preview dist/HowToLiveBetter-source-preview.e
 node tools/anki/build.mjs --source-preview dist/HowToLiveBetter-source-preview.apkg
 ```
 
+本fork來源Anki及EPUB現在使用獨立識別碼。第一次匯入此版Anki可能新增獨立來源牌組，不會自動遷移、合併或刪除既有原作／舊版預覽的學習紀錄。請先備份，再確認匯入選項；這不是所有版本皆相容的保證。[匯出識別、測試與限制](localization/export-integrity.md)記錄完整處理方式。
+
 原作 PDF 工具是 `tools/pdf/build.mjs`，另需該工具記載的 Pandoc 與 Typst 依賴；它仍是原作來源預覽，不是臺灣全書。手動原作工作流程也不發布 Release 或部署網站。
 
 <a id="contributing"></a>

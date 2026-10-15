@@ -12,7 +12,7 @@ from zipfile import ZipFile, ZIP_STORED
 
 class HtmlReferences(HTMLParser):
     def __init__(self):
-        super().__init__();self.links=[];self.invalid=[]
+        super().__init__();self.links=[];self.invalid=[];self.dependencies=[]
     def handle_starttag(self,tag,attrs):
         values=dict(attrs)
         if any(key.startswith(('https:','http:')) for key in values):
@@ -20,10 +20,14 @@ class HtmlReferences(HTMLParser):
         for key in ('href','src'):
             value=values.get(key)
             if value is not None:self.links.append((tag,key,value))
+            if value is not None and ((key=='src' and tag in {'script','img','source','iframe','audio','video','embed'}) or (tag=='link' and 'stylesheet' in values.get('rel','').split())):
+                self.dependencies.append(value)
 
 def check_html(path: Path) -> dict:
     parser=HtmlReferences();parser.feed(path.read_text(encoding='utf-8'))
     errors=list(parser.invalid)
+    for value in parser.dependencies:
+        if not value.startswith('data:'):errors.append('離線HTML仍需外部資源：'+value)
     for tag,key,value in parser.links:
         if not value or value.startswith('#'):continue
         parts=urlsplit(value)

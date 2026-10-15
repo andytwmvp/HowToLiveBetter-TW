@@ -21,6 +21,10 @@ class ExportIntegrityTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.html_fixture('<a https://github.com/a/b>回報</a>')
     def test_offline_relative_dependency_rejected(self):
         with self.assertRaises(ValueError):self.html_fixture('<script src="missing.js"></script>')
+    def test_offline_remote_script_rejected(self):
+        with self.assertRaises(ValueError):self.html_fixture('<script src="https://example.org/remote.js"></script>')
+    def test_offline_remote_stylesheet_rejected(self):
+        with self.assertRaises(ValueError):self.html_fixture('<link rel="stylesheet" href="https://example.org/main.css">')
     def test_valid_absolute_and_fragment(self):
         self.assertEqual(self.html_fixture('<a href="#cards">目錄</a><a href="https://example.org/guide">說明</a>')['html_references'],2)
     def test_source_html_real_output(self):
