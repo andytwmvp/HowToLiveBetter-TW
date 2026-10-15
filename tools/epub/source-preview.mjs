@@ -1,5 +1,5 @@
 // 把 README + book/*.md + docs/*.md 打成一本 EPUB 3。
-// 用法：node tools/epub/build.mjs [輸出路徑]   預設輸出 dist/HowToLiveBetter.epub
+// 用法：node tools/epub/build.mjs --source-preview [輸出路徑]；此模組只建立原作繁體來源預覽。
 // 只依賴 marked；zip 用 tools/lib/zip.mjs 自己打（EPUB 要求 mimetype 第一個且不壓縮，通用 zip 庫不一定保證）。
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname, posix } from 'node:path';
@@ -8,9 +8,9 @@ import { Marked, Tokenizer } from 'marked';
 import { splitLongItems } from '../lib/split-items.mjs';
 import { ROOT, REPO, SITE, TITLE, read, readBook, gitCommit, buildStamp, stripBackLink } from '../lib/book.mjs';
 
-const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.epub');
+const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter-source-preview.epub');
 const BUILD_GUIDE = `${REPO}/blob/main/REPOSITORY_GUIDE.md#exports`;
-const BOOK_ID = 'urn:uuid:5c0c1c0e-6a5c-4d2b-9b1e-7d1f0a4e8c31';
+const BOOK_ID = 'urn:uuid:cee8db2b-5e19-59ea-ad9f-b3f59b53f469';
 const NOW = new Date();
 const COMMIT = gitCommit();
 
@@ -171,9 +171,10 @@ const opf = `<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" xml:lang="zh-TW">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
 <dc:identifier id="pub-id">${BOOK_ID}</dc:identifier>
-<dc:title>${TITLE}</dc:title>
+<dc:title>${TITLE}（本repo原作繁體來源預覽）</dc:title>
 <dc:language>zh-TW</dc:language>
 <dc:creator>eternity4719</dc:creator>
+<dc:contributor>andytwmvp/HowToLiveBetter-TW（繁體來源預覽編修）</dc:contributor>
 <dc:description>${esc(description)}</dc:description>
 <dc:source>${REPO}</dc:source>
 <dc:rights>CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）</dc:rights>

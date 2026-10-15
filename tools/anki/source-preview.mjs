@@ -1,17 +1,15 @@
 // 把全書條目做成一副 Anki 牌組（.apkg），一條一張問答卡，按節分子牌組（issue #97）。
-// 用法：node tools/anki/build.mjs [輸出路徑]   預設輸出 dist/HowToLiveBetter.apkg
+// 用法：node tools/anki/build.mjs --source-preview [輸出路徑]；此模組只建立原作繁體來源預覽。
 //
-// 卡片正面是節名和條目標題，背面是說人話、成本、性價比、收益量級、口徑和證據等級，再給一個線上版連結。
+// 卡片正面是節名和條目標題，背面是說人話、成本、性價比、收益量級、口徑和證據等級，再附本repo來源章節連結。
 // 標題本身就是建議，所以正面不挖空；複習時回想的是「為什麼值得做、代價多大」。
 // 挖空要逐條人工標，新增條目也得跟著標，維護不起，所以只做自動生成的這一種。
 //
-// 零依賴：.apkg 就是一個 zip，裡面一個 SQLite 庫（Anki 2.1 的舊版庫結構，各版本 Anki 都能導入）
+// 零依賴：.apkg 就是一個 zip，裡面一個 SQLite 庫（Anki 2.1 的舊版庫結構，用戶端匯入相容性另行驗證）
 // 加一個媒體清單。庫用 Node 自帶的 node:sqlite 寫，zip 用 tools/lib/zip.mjs。
 //
-// 重新導入時 Anki 按筆記的 guid 認「同一張卡」：內容更新、複習記錄保留。guid 取「節號-條號」，
-// 所以條目只追加在節末（CLAUDE.md 本來就這麼要求）就不會串；刪條目讓後面的條號整體減一時，
-// 老使用者那邊的卡會對到新內容上，複習記錄跟著錯位一條，這個代價能接受。
-// 牌組、筆記類型的 id 寫死，也是為了重新導入時合進原來那副牌，不另起一副。
+// 本fork來源預覽採獨立且穩定的牌組／筆記識別碼，不與原作或臺灣導航共用。
+// 首次改用新版會形成獨立牌組，不會自動遷移或刪除先前版本的學習紀錄。
 import { writeFileSync, readFileSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -20,16 +18,16 @@ import { DatabaseSync } from 'node:sqlite';
 import { zip } from '../lib/zip.mjs';
 import { ROOT, REPO, SITE, TITLE, read, readBook, COST_W, ratioOf, gitCommit, buildStamp } from '../lib/book.mjs';
 
-const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.apkg');
+const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter-source-preview.apkg');
 const NOW = new Date();
 const NOW_S = Math.floor(NOW.getTime() / 1000);
 const NOW_MS = NOW.getTime();
 
-const MODEL_ID = 1759900000001;
-const ROOT_DECK_ID = 1759900000100;
+const MODEL_ID = 1792060000001;
+const ROOT_DECK_ID = 1792060000100;
 const deckId = sec => ROOT_DECK_ID + Number(sec);
-const noteId = (sec, n) => 1759900100000 + Number(sec) * 1000 + Number(n);
-const cardId = (sec, n) => 1759900200000 + Number(sec) * 1000 + Number(n);
+const noteId = (sec, n) => 1792060100000 + Number(sec) * 1000 + Number(n);
+const cardId = (sec, n) => 1792060200000 + Number(sec) * 1000 + Number(n);
 
 // ---------- 讀條目 ----------
 const FIELD = { 成本: 'cost', 說人話: 'human', 證據等級: 'grade', 備註: 'note' };
@@ -61,7 +59,7 @@ const sections = bookFiles.map(f => ({ ...parseSection(read(f)), file: f }));
 const esc = s => String(s ?? '').replace(/\*\*/g, '').replace(/\\([*_])/g, '$1')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const pad = n => String(n).padStart(2, '0');
-const deckName = s => `${TITLE}::${pad(s.sec)} ${s.name}`;
+const deckName = s => `${TITLE}｜原作繁體來源預覽::${pad(s.sec)} ${s.name}`;
 
 const FIELDS = ['節', '標題', '說人話', '成本', '要點', '連結'];
 const notes = [];
@@ -107,10 +105,12 @@ a { color: #3451b2; }
 .nightMode a, .night_mode a { color: #a8b1ff; }
 .nightMode .sec, .nightMode .hint, .nightMode .label { color: #98989f; }`;
 
-const QFMT = `<div class="sec">{{節}}</div>
+const QFMT = `<div class="hint">原作繁體來源預覽；非臺灣制度定稿。</div>
+<div class="sec">{{節}}</div>
 <div class="q">{{標題}}</div>
 <div class="hint">想一想：為什麼值得做，要花多少代價？</div>`;
-const AFMT = `<div class="sec">{{節}}</div>
+const AFMT = `<div class="hint">原作繁體來源預覽；非臺灣制度定稿。</div>
+<div class="sec">{{節}}</div>
 <div class="q">{{標題}}</div>
 <hr id="answer">
 {{#說人話}}<div class="label">說人話</div><div>{{說人話}}</div>{{/說人話}}
@@ -119,7 +119,7 @@ const AFMT = `<div class="sec">{{節}}</div>
 <div class="link">{{連結}}</div>`;
 
 const model = {
-  id: MODEL_ID, name: `${TITLE}（問答卡）`, type: 0, mod: NOW_S, usn: -1, sortf: 1, did: ROOT_DECK_ID,
+  id: MODEL_ID, name: `${TITLE}（本repo原作來源卡）`, type: 0, mod: NOW_S, usn: -1, sortf: 1, did: ROOT_DECK_ID,
   tmpls: [{ name: '問答', ord: 0, qfmt: QFMT, afmt: AFMT, did: null, bqfmt: '', bafmt: '' }],
   flds: FIELDS.map((name, ord) => ({ name, ord, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] })),
   css: CSS, latexPre: '', latexPost: '', latexsvg: false, req: [[0, 'any', [1]]], tags: [], vers: [],
@@ -130,12 +130,12 @@ const deck = (id, name, desc = '') => ({
   newToday: [0, 0], revToday: [0, 0], lrnToday: [0, 0], timeToday: [0, 0], extendNew: 0, extendRev: 0,
 });
 const commit = gitCommit();
-const rootDesc = `《${TITLE}》全書條目，一條一張卡，按節分子牌組。生成於 ${buildStamp()}（北京時間）`
+const rootDesc = `《${TITLE}》原作繁體來源預覽（非臺灣制度定稿），全書條目，一條一張卡，按節分子牌組。生成於 ${buildStamp()}（臺北時間）`
   + `${commit ? `，正文提交 ${commit.slice(0, 7)}` : ''}。正文會繼續更新，閱讀方式見 <a href="${SITE}#source-preview">本 repo 來源預覽說明</a>；`
-  + '重新下載導入會更新卡片內容，複習記錄保留。';
+  + '本fork來源卡採獨立識別碼；第一次匯入新版不自動遷移舊版或原作的學習紀錄。請先備份，再依Anki匯入選項處理。';
 const decks = {
   1: deck(1, 'Default'),
-  [ROOT_DECK_ID]: deck(ROOT_DECK_ID, TITLE, rootDesc),
+  [ROOT_DECK_ID]: deck(ROOT_DECK_ID, `${TITLE}｜原作繁體來源預覽`, rootDesc),
   ...Object.fromEntries(sections.map(s => [deckId(s.sec), deck(deckId(s.sec), deckName(s))])),
 };
 
@@ -191,7 +191,7 @@ const insCard = db.prepare('INSERT INTO cards VALUES (?, ?, ?, 0, ?, -1, 0, 0, ?
 db.exec('BEGIN');
 for (const { s, e, fields, tags, due } of notes) {
   const sortField = fields[model.sortf];
-  insNote.run(noteId(s.sec, e.n), `hltb-${s.sec}-${e.n}`, MODEL_ID, NOW_S, ` ${tags.join(' ')} `,
+  insNote.run(noteId(s.sec, e.n), `hltb-tw-source-v1-${s.sec}-${e.n}`, MODEL_ID, NOW_S, ` ${tags.join(' ')} `,
     fields.join('\x1f'), stripHtml(sortField), csum(sortField));
   insCard.run(cardId(s.sec, e.n), noteId(s.sec, e.n), deckId(s.sec), NOW_S, due);
 }
