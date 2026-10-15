@@ -1,0 +1,69 @@
+name: 台灣分支初始化與驗證
+
+on:
+  push:
+    branches: [tw/bootstrap-and-remove-ads]
+    paths:
+      - tools/tw/bootstrap.py
+      - .github/workflows/tw-bootstrap.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tw-bootstrap-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  bootstrap:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW' && github.ref == 'refs/heads/tw/bootstrap-and-remove-ads'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tw/bootstrap-and-remove-ads
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 確認目標並套用初始化
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = 'andytwmvp/HowToLiveBetter-TW'
+          test "$GITHUB_REF" = 'refs/heads/tw/bootstrap-and-remove-ads'
+          python3 tools/tw/bootstrap.py --apply --check
+      - name: 驗證原文解析與離線閱讀版
+        run: |
+          set -euo pipefail
+          node --input-type=module -e "import {readBook} from './tools/lib/book.mjs'; const b=readBook(); if(b.bookFiles.length!==34) throw Error('chapter count'); console.log('PASS: 34 source chapters parsed');"
+          node tools/check-refs.mjs --check
+          node tools/check-split.mjs
+          node tools/offline/build.mjs dist/tw-bootstrap-source-preview.html
+          python3 - <<'PY'
+          from pathlib import Path
+          text = Path('dist/tw-bootstrap-source-preview.html').read_text(encoding='utf-8')
+          for token in ['4.mcyyy.com', 'ads/wechat-reward.png', 'id="tip-mask"', 'G-NTPGXCLMP6']:
+              if token in text:
+                  raise SystemExit('FAIL: forbidden advertising or tracking in generated preview')
+          print('PASS: offline preview contains no known advertising or author tracking')
+          PY
+      - name: 只提交到此 fork 的工作分支
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'tw/bootstrap-and-remove-ads'
+          git add -- README.md index.html tools/offline/build.mjs tools/lib/book.mjs AGENTS.md ATTRIBUTION.md PROJECT_STATE.md locales/zh-TW/README.md localization/manifest.json
+          git add -u -- .github/FUNDING.yml ads tools/ad-mcyyy-bg.webp tools/ad-mcyyy-side.html tools/ad-mcyyy.html
+          if git diff --cached --quiet; then
+            echo '無新初始化變更'
+          else
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'chore(tw): remove author advertising and bootstrap localization ledger'
+            git push origin HEAD:refs/heads/tw/bootstrap-and-remove-ads
+          fi
+          echo '未建立上游 PR；未合併 main；未發布或部署。' >> "$GITHUB_STEP_SUMMARY"
+      - name: 清除建置中間產物
+        if: always()
+        run: rm -f dist/tw-bootstrap-source-preview.html
