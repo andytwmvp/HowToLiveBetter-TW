@@ -53,12 +53,17 @@ jobs:
               for start,end,replacement in reversed(change['edits']):lines[start:end]=replacement.splitlines(keepends=True)
               updated=''.join(lines).encode('utf-8') if change['after'] is not None else None
               assert (digest(updated) if updated is not None else None)==change['after'],f'目標雜湊不符：{name}'
+              if name=='tools/offline/source-preview.mjs':
+                  text=updated.decode('utf-8')
+                  assert text.count('${SITE}selfcheck.html')==1
+                  updated=text.replace('${SITE}selfcheck.html','${SITE}#reading').encode('utf-8')
+                  assert digest(updated)=='77b6e7e26f7e13ca054789c4127f18d924eeb526b3cf113beb645d8e65dedb65'
               prepared.append((path,updated))
           for path,updated in prepared:
               if updated is None:path.unlink()
               else:path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(updated)
           for i in range(3):(root/f'tools/tw/_link-update.{i}').unlink()
-          print(f'PASS：{len(prepared)}份修改與本地已測試雜湊完全一致。')
+          print(f'PASS：{len(prepared)}份修改及離線自查目的地與本地雜湊一致。')
           PY
           git add -A
       - name: 準備文字與瀏覽器工具
