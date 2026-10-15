@@ -1,4 +1,11 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://andytwmvp.github.io/HowToLiveBetter-TW/sitemap.xml
+Disallow: /HowToLiveBetter-TW/source.html
+Disallow: /HowToLiveBetter-TW/book/
+Disallow: /HowToLiveBetter-TW/docs/
+Disallow: /HowToLiveBetter-TW/localization/
+Disallow: /HowToLiveBetter-TW/locales/zh-TW/book/
+Disallow: /source.html
+Disallow: /book/
+Disallow: /docs/
+Disallow: /localization/
+Disallow: /locales/zh-TW/book/

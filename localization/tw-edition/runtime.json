@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "locale": "zh-TW",
+  "jurisdiction": "TW",
+  "title": "高效益人生指南｜臺灣安全導航",
+  "scope": "目前僅收錄已核對來源的急救求助與篩檢導航，不是765條全書臺灣定稿，也不是專業診斷或資格核定。",
+  "updated_at": "2026-10-15",
+  "review_due_at": "2027-01-15",
+  "sources": [
+    {"id":"hpa_emergency","title":"國民健康署：本週2波冷氣團接力，春日護心3招抗溫差","url":"https://www.mohw.gov.tw/cp-2704-85748-1.html","published_at":"2026-03-11","accessed_at":"2026-10-15","supports":"疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。"},
+    {"id":"mohw_1925","title":"衛生福利部：安心專線正式單軌使用1925","url":"https://www.mohw.gov.tw/cp-2704-50587-1.html","published_at":"2019-12-19","accessed_at":"2026-10-15","supports":"1925提供全年無休、24小時免付費心理諮詢；與緊急救護不同。"},
+    {"id":"taipei_screening","title":"臺北市政府衛生局：整合性篩檢預約平臺","url":"https://scbooking.health.gov.taipei/","published_at":null,"accessed_at":"2026-10-15","supports":"頁面明列乳癌、子宮頸癌、HPV及大腸癌公費篩檢年齡與間隔；實際資格由院所核對。"}
+  ],
+  "items": [
+    {"id":"TW-NAV-001","title":"疑似中風：立即撥打119","body":"突然出現臉部歪斜、單側手臂無力或說話不清楚等中風警訊，立即撥打119並記下發作時間，不自行開車就醫。","limits":"這是辨識與求助資訊，不是診斷工具。不要等待症狀自行消失，也不要為了完成自查而延誤求助。","source_ids":["hpa_emergency"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{},"question":"我已瞭解「疑似中風：立即撥打119」的做法與適用限制。"},
+    {"id":"TW-NAV-002","title":"疑似心臟急症：不要等待才求救","body":"出現胸悶、胸痛、呼吸困難等疑似心臟病徵兆，立即撥打119並記下發作時間，不自行開車就醫。","limits":"不設「先等滿15分鐘」的求助門檻。本頁不判斷病因，不指示自行服用未經醫師開立的藥物。","source_ids":["hpa_emergency"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{},"question":"我已瞭解「疑似心臟急症：不要等待才求救」的做法與適用限制。"},
+    {"id":"TW-NAV-003","title":"心理困擾可撥1925安心專線","body":"在臺灣有情緒困擾、壓力或自殺意念時，可撥打1925安心專線，取得24小時免付費心理諮詢與支持。","limits":"若已服毒、受傷或有立即危及生命的情況，優先撥打119；心理諮詢不替代緊急救護。可請可信任的人陪同尋求協助。","source_ids":["mohw_1925"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{},"question":"我已瞭解「心理困擾可撥1925安心專線」的做法與適用限制。"},
+    {"id":"TW-NAV-004","title":"乳癌篩檢：40至74歲女性","body":"40至74歲女性，每2年補助1次乳房X光攝影檢查，可向篩檢院所確認資格與安排。","limits":"有症狀或高風險狀況時應由醫師評估，不等到下一次例行篩檢；超出公費年齡不等於不需就醫。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","min_age":40,"max_age":74},"question":"我已瞭解「乳癌篩檢：40至74歲女性」的做法與適用限制。"},
+    {"id":"TW-NAV-005","title":"子宮頸抹片：25至29歲女性","body":"25至29歲女性，每3年補助1次子宮頸抹片檢查。","limits":"公費資格與個別檢查需要不同；相關病史、器官狀況與檢查時機請與醫療人員討論。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","min_age":25,"max_age":29},"question":"我已瞭解「子宮頸抹片：25至29歲女性」的做法與適用限制。"},
+    {"id":"TW-NAV-006","title":"子宮頸抹片：30歲以上女性","body":"30歲以上女性，每年補助1次子宮頸抹片檢查。","limits":"這是公費補助間隔，不是所有人的個別醫療指示；症狀或異常追蹤應依醫囑處理。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","min_age":30},"question":"我已瞭解「子宮頸抹片：30歲以上女性」的做法與適用限制。"},
+    {"id":"TW-NAV-007","title":"HPV檢測：35、45及65歲女性","body":"35歲、45歲及65歲女性，在該年齡各補助1次人類乳突病毒檢測。","limits":"HPV檢測與疫苗接種不同，也不等於省略醫療人員建議的子宮頸抹片或後續追蹤。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","ages":[35,45,65]},"question":"我已瞭解「HPV檢測：35、45及65歲女性」的做法與適用限制。"},
+    {"id":"TW-NAV-008","title":"大腸癌篩檢：45至74歲民眾","body":"45至74歲民眾，每2年補助1次糞便潛血檢查。","limits":"本頁不以大腸鏡取代公費糞便潛血檢查條件；檢查異常或已有症狀應由院所安排評估。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"min_age":45,"max_age":74},"question":"我已瞭解「大腸癌篩檢：45至74歲民眾」的做法與適用限制。"},
+    {"id":"TW-NAV-009","title":"大腸癌篩檢：40至44歲且有家族史","body":"40至44歲，且父母、兄弟姊妹或子女曾患有大腸癌者，每2年補助1次糞便潛血檢查。","limits":"須同時符合年齡及家族史條件，由院所核對；沒有填寫資料時，本頁只顯示資格說明，不判定是否符合。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"min_age":40,"max_age":44,"family_history":true},"question":"我已瞭解「大腸癌篩檢：40至44歲且有家族史」的做法與適用限制。"}
+  ]
+}
