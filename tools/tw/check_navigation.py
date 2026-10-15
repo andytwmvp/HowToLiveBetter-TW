@@ -4,6 +4,15 @@ import json
 from edition import build_html
 from review_contract import ROOT, validate_runtime
 
+def mock_json_response(body):
+    """回呼只收一個route參數，避免第二個Request蓋掉測試回應文字。"""
+    if not isinstance(body, str):
+        raise TypeError('測試HTTP回應必須為原始JSON文字')
+    def handler(route):
+        route.fulfill(status=200, content_type='application/json', body=body)
+    return handler
+
+
 def check_navigation(page, context, url, review):
     data=validate_runtime();expected={e['id'] for e in data['items']};requests=[]
     def capture(request):requests.append(request.url)
@@ -53,8 +62,7 @@ def check_navigation(page, context, url, review):
     raw_invalid.append(original.replace('"review_status": "source_checked"', '"review_status": "draft", "review_status": "source_checked"', 1))
     raw_invalid.append(original.replace('"schema_version": 1', '"schema_version": 1, "overflow": 1e309', 1))
     for body in raw_invalid:
-        def serve_bad(route, body=body):
-            route.fulfill(status=200,content_type='application/json',body=body)
+        serve_bad=mock_json_response(body)
         context.route('**/localization/tw-edition/runtime.json',serve_bad)
         try:
             requests.clear();page.goto(url,wait_until='domcontentloaded')
