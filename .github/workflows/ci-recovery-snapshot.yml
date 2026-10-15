@@ -1,0 +1,33 @@
+name: 修復用唯讀快照
+on:
+  push:
+    branches: [fix/ci-localization-recovery]
+    paths: [.github/workflows/ci-recovery-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: 匯出原始碼與固定字形工具
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ci-recovery"
+          git bundle create "$RUNNER_TEMP/ci-recovery/source.bundle" --all
+          python3 -m pip download --no-deps --only-binary=:all: --platform manylinux2014_x86_64 --python-version 313 --implementation cp --abi cp313 --dest "$RUNNER_TEMP/ci-recovery" 'OpenCC==1.1.9'
+          git rev-parse HEAD > "$RUNNER_TEMP/ci-recovery/snapshot-commit.txt"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ci-recovery-snapshot
+          path: ${{ runner.temp }}/ci-recovery/
+          retention-days: 1
+      - name: 清理暫存
+        if: always()
+        run: rm -rf -- "$RUNNER_TEMP/ci-recovery"
