@@ -1,80 +1,61 @@
-name: 台灣分支初始化與驗證
+# 初始化已完成。此後只驗證；不執行 --apply、不提交、不推送、不建立 PR。
+name: 台灣分支唯讀檢查
 
 on:
   push:
-    branches: [tw/bootstrap-and-remove-ads]
-    paths:
-      - tools/tw/bootstrap.py
-      - .github/workflows/tw-bootstrap.yml
+    branches: [main, 'tw/**']
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: tw-bootstrap-${{ github.ref }}
-  cancel-in-progress: false
+  group: tw-check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  bootstrap:
-    if: github.repository == 'andytwmvp/HowToLiveBetter-TW' && github.ref == 'refs/heads/tw/bootstrap-and-remove-ads'
+  validate:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          ref: tw/bootstrap-and-remove-ads
           fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - name: 確認目標並套用初始化
+      - name: 原文、授權、索引與已知廣告殘留
         run: |
           set -euo pipefail
           test "$GITHUB_REPOSITORY" = 'andytwmvp/HowToLiveBetter-TW'
-          test "$GITHUB_REF" = 'refs/heads/tw/bootstrap-and-remove-ads'
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path('tools/tw/bootstrap.py')
-          text = path.read_text(encoding='utf-8')
-          before = "dest.write_text(text, encoding='utf-8', newline='\\n')"
-          after = "dest.write_text(text.rstrip() + '\\n', encoding='utf-8', newline='\\n')"
-          if text.count(before) == 1:
-              path.write_text(text.replace(before, after), encoding='utf-8')
-          elif after not in text:
-              raise SystemExit('write() 已有未預期變動，拒絕修補')
-          PY
-          python3 tools/tw/bootstrap.py --apply --check
-      - name: 驗證原文解析與離線閱讀版
+          python3 tools/tw/bootstrap.py --check
+          git diff --check 3f59f98be11305902681a8f20ed073c4c4588eee HEAD
+      - name: 來源解析、交叉引用與拆分規則
         run: |
           set -euo pipefail
           node --input-type=module -e "import {readBook} from './tools/lib/book.mjs'; const b=readBook(); if(b.bookFiles.length!==34) throw Error('chapter count'); console.log('PASS: 34 source chapters parsed');"
           node tools/check-refs.mjs --check
           node tools/check-split.mjs
-          node tools/offline/build.mjs dist/tw-bootstrap-source-preview.html
+      - name: 離線建置與廣告檢查
+        run: |
+          set -euo pipefail
+          node tools/offline/build.mjs dist/tw-source-preview.html
           python3 - <<'PY'
           from pathlib import Path
-          text = Path('dist/tw-bootstrap-source-preview.html').read_text(encoding='utf-8')
-          for token in ['4.mcyyy.com', 'ads/wechat-reward.png', 'id="tip-mask"', 'G-NTPGXCLMP6']:
+          text = Path('dist/tw-source-preview.html').read_text(encoding='utf-8')
+          for token in ['4.mcyyy.com', 'ads/wechat-reward.png', 'id="tip-mask"', 'G-NTPGXCLMP6', 'googletagmanager.com', 'google-analytics.com']:
               if token in text:
                   raise SystemExit('FAIL: forbidden advertising or tracking in generated preview')
           print('PASS: offline preview contains no known advertising or author tracking')
           PY
-      - name: 只提交到此 fork 的工作分支
+      - name: 結果範圍
         run: |
-          set -euo pipefail
-          test "$(git branch --show-current)" = 'tw/bootstrap-and-remove-ads'
-          git add -- tools/tw/bootstrap.py README.md index.html tools/offline/build.mjs tools/lib/book.mjs AGENTS.md ATTRIBUTION.md PROJECT_STATE.md locales/zh-TW/README.md localization/manifest.json
-          git add -u -- .github/FUNDING.yml ads tools/ad-mcyyy-bg.webp tools/ad-mcyyy-side.html tools/ad-mcyyy.html
-          if git diff --cached --quiet; then
-            echo '無新初始化變更'
-          else
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'chore(tw): remove author advertising and bootstrap localization ledger'
-            git push origin HEAD:refs/heads/tw/bootstrap-and-remove-ads
-          fi
-          echo '未建立上游 PR；未合併 main；未發布或部署。' >> "$GITHUB_STEP_SUMMARY"
+          echo '已檢查來源索引、原文與授權保留、已知廣告與追蹤殘留、JavaScript 語法、交叉引用、拆分規則與離線建置。' >> "$GITHUB_STEP_SUMMARY"
+          echo '這不等於台灣內容查核完成，也不包括實際瀏覽器操作測試或 PDF／EPUB 出版驗收。未提交、推送、建立 PR 或部署。' >> "$GITHUB_STEP_SUMMARY"
       - name: 清除建置中間產物
         if: always()
-        run: rm -f dist/tw-bootstrap-source-preview.html
+        run: rm -f dist/tw-source-preview.html
