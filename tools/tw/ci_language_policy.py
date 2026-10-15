@@ -10,7 +10,8 @@ from urllib.parse import unquote
 import traditionalize as base
 import text_integrity as text
 from review_contract import publication_report, validate_runtime
-EQUIVALENTS = [('臺','台'),('僱','雇'),('佔','占'),('裡','裏'),('公佈','公布'),('宣佈','宣布'),('發佈','發布'),('獲準','獲准'),('核準','核准'),('隻','只'),('衹','只')]
+# OpenCC可能把金融用語「扣款」轉為「釦款」；只校正這個詞，不豁免整份正文或其他簡體字。
+EQUIVALENTS = [('臺','台'),('僱','雇'),('佔','占'),('裡','裏'),('公佈','公布'),('宣佈','宣布'),('發佈','發布'),('獲準','獲准'),('核準','核准'),('隻','只'),('衹','只'),('釦款','扣款')]
 
 def canonical(value):
     for old, new in EQUIVALENTS: value = value.replace(old, new)
