@@ -1,0 +1,81 @@
+# 僅讀取隔離分支，驗證產物並保存本次重現資料；不推送、不部署、不發行。
+name: 匯出內部連結隔離驗證
+on:
+  push:
+    branches: [fix/export-integrity-20261015]
+permissions:
+  contents: read
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+jobs:
+  audit:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: 準備檢查依賴
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/tw-export-venv"
+          "$RUNNER_TEMP/tw-export-venv/bin/python" -m pip install -q 'OpenCC==1.1.9'
+          echo "$RUNNER_TEMP/tw-export-venv/bin" >> "$GITHUB_PATH"
+          npm ci --prefix tools/epub
+      - name: 既有與新增回歸
+        run: |
+          set -euo pipefail
+          python3 tools/tw/traditionalize.py --check
+          python3 tools/tw/ci_language_policy.py --check --audit
+          python3 -m unittest discover -s tools/tw/tests -v
+          node tools/check-refs.mjs --check
+          node tools/check-split.mjs
+          node tools/sync-stats.mjs --check
+          python3 tools/tw/image_copy.py --check
+      - name: 實際輸出與內部目的地
+        run: |
+          set -euo pipefail
+          node tools/offline/build.mjs dist/tw-source-preview.html
+          node tools/offline/build.mjs
+          node tools/epub/build.mjs
+          node tools/anki/build.mjs
+          node tools/epub/build.mjs --source-preview dist/HowToLiveBetter-source-preview.epub
+          node tools/anki/build.mjs --source-preview dist/HowToLiveBetter-source-preview.apkg
+          python3 tools/tw/check_link_outputs.py
+          python3 tools/tw/link_policy.py --report "$RUNNER_TEMP/tw-export-review/link-audit.json"
+          python3 tools/tw/check_export_integrity.py dist/HowToLiveBetter-TW.html dist/tw-source-preview.html dist/HowToLiveBetter-TW.epub dist/HowToLiveBetter-source-preview.epub --report "$RUNNER_TEMP/tw-export-review/export-integrity.json"
+      - name: 保存重現用工作樹與產物
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/tw-export-review"
+          python3 - <<'PY'
+          import os,subprocess,zipfile
+          from pathlib import Path
+          root=Path.cwd();out=Path(os.environ['RUNNER_TEMP'])/'tw-export-review'
+          paths=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          with zipfile.ZipFile(out/'worktree.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for name in paths:
+                  p=root/name
+                  if name and p.is_file() and p.suffix.lower() not in {'.ttf','.otf','.ttc','.woff','.woff2'}:z.write(p,name)
+          with zipfile.ZipFile(out/'export-evidence.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in (root/'dist').glob('*'):
+                  if p.suffix in {'.epub','.html','.apkg'}:z.write(p,p.name)
+              for path in ['tools/epub/node_modules/marked/package.json','tools/epub/node_modules/marked/lib/marked.esm.js']:
+                  p=root/path
+                  if p.is_file():z.write(p,path)
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: export-review-${{ github.run_id }}
+          path: ${{ runner.temp }}/tw-export-review/
+          retention-days: 1
+          if-no-files-found: ignore
+      - name: 清除本次暫存與未發布產物
+        if: always()
+        run: rm -rf -- dist "$RUNNER_TEMP/tw-export-review" "$RUNNER_TEMP/tw-export-venv"
