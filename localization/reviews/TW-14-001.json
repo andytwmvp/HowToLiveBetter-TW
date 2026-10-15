@@ -1,0 +1,26 @@
+{
+  "id": "TW-14-001",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立法律或資安專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2027-01-15",
+  "target_path": "locales/zh-TW/book/ch14/TW-14-001.md",
+  "target_sha256": "71f2cb3bb68bc6c90775d50c3263d9424a3d0409c794a164859b11d83d1417fd",
+  "source_checks": [
+    {
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "claim": "信箱與重要帳號啟用多因素驗證，優先考慮抗釣魚方式：第3.1.1、3.2.5與第8節：WebAuthn/FIDO2的網域綁定提供抗釣魚能力；OTP非抗釣魚；鼓勵不同服務使用獨立密碼及密碼管理器。這是美國技術指引，不是臺灣法律。",
+      "supporting_passage": "編者摘要（非逐字引文）：第3.1.1、3.2.5與第8節：WebAuthn/FIDO2的網域綁定提供抗釣魚能力；OTP非抗釣魚；鼓勵不同服務使用獨立密碼及密碼管理器。這是美國技術指引，不是臺灣法律。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://safety.google/intl/zh-TW_ALL/safety/authentication/",
+      "claim": "信箱與重要帳號啟用多因素驗證，優先考慮抗釣魚方式：說明密碼金鑰的FIDO/W3C公開金鑰機制、裝置解鎖與同步，以及不重複密碼、密碼管理器的用途。產品說明不代表全體平臺同樣支援。",
+      "supporting_passage": "編者摘要（非逐字引文）：說明密碼金鑰的FIDO/W3C公開金鑰機制、裝置解鎖與同步，以及不重複密碼、密碼管理器的用途。產品說明不代表全體平臺同樣支援。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "改掉把手機彈窗一律列為最優的排序，區分抗釣魚驗證與一般第二步驟。",
+  "legal_scope": null,
+  "review_method": "逐一開啟第一手來源核對；先分清制度、標準、廠商操作與編者建議，再作台灣改寫。不是自動爬到網址即升級狀態。"
+}

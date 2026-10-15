@@ -3,6 +3,7 @@
 from __future__ import annotations
 import argparse
 from contextlib import closing
+from body_renderer import body_html
 import hashlib
 import html
 import json
@@ -46,7 +47,7 @@ def build_epub(output: Path, data: dict) -> None:
     parts = [f'<h1>{esc(data["title"])}</h1><p>{esc(data["scope"])}</p>']
     for e in data['items']:
         links = '；'.join(f'<a href="{esc(s["url"],quote=True)}">{esc(s["title"])}</a>' for s in refs(e,data))
-        parts.append(f'<section id="{e["id"]}"><h2>{esc(e["title"])}</h2><p>{esc(e["body"])}</p><p>{esc(e["limits"])}</p><p>來源核對：{e["reviewed_at"]}；複查日期：{e["review_due_at"]}</p><p>{links}</p></section>')
+        parts.append(f'<section id="{e["id"]}"><h2>{esc(e["title"])}</h2>{body_html(e)}<p>{esc(e["limits"])}</p><p>來源核對：{e["reviewed_at"]}；複查日期：{e["review_due_at"]}</p><p>{links}</p></section>')
     parts.append('<p>非官方改編。原作為eternity4719與貢獻者的HowToLiveBetter；本導航由臺灣分支編修，依CC BY 4.0分享，不表示原作者背書。</p><p><a href="https://github.com/andytwmvp/HowToLiveBetter-TW/blob/main/ATTRIBUTION.md">原作、授權與修改說明</a></p>')
     document = '<?xml version="1.0" encoding="utf-8"?><html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW" xml:lang="zh-TW"><head><title>'+esc(data['title'])+'</title><meta charset="utf-8"/></head><body>'+''.join(parts)+'</body></html>'
     nav = '<?xml version="1.0" encoding="utf-8"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-TW"><head><title>目錄</title></head><body><nav epub:type="toc" id="toc"><h1>目錄</h1><ol>'+''.join(f'<li><a href="content.xhtml#{e["id"]}">{esc(e["title"])}</a></li>' for e in data['items'])+'</ol></nav></body></html>'
@@ -86,7 +87,7 @@ def build_anki(output: Path, data: dict) -> None:
             for order,e in enumerate(data['items']):
                 identity = int.from_bytes(hashlib.sha256(e['id'].encode()).digest()[:6],'big')
                 nid = 1792100000000 + identity
-                body = html.escape(e['body'])+'<br>'+html.escape(e['limits'])+f'<br>來源核對：{e["reviewed_at"]}；複查日期：{e["review_due_at"]}'
+                body = body_html(e)+'<br>'+html.escape(e['limits'])+f'<br>來源核對：{e["reviewed_at"]}；複查日期：{e["review_due_at"]}'
                 links = '<br>'.join(f'<a href="{html.escape(s["url"],quote=True)}">{html.escape(s["title"])}</a>' for s in refs(e,data))
                 flds = '\x1f'.join([html.escape(e['title']),body,links])
                 checksum = int(hashlib.sha1(e['title'].encode()).hexdigest()[:8],16)
@@ -112,6 +113,6 @@ def main():
     if not args.format or not args.output: parser.error('請指定格式與輸出路徑，或使用--list／--id')
     output=args.output if args.output.is_absolute() else ROOT/args.output
     {'html':build_html,'epub':build_epub,'anki':build_anki}[args.format](output,data)
-    print(f'PASS：{output}；{len(data["items"])}則臺灣來源核對導航，非765條全書定稿。')
+    print(f'PASS：{output}；{len(data["items"])}項臺灣來源核對內容，非765條全書定稿。')
 
 if __name__=='__main__':main()

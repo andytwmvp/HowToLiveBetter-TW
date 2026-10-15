@@ -3,23 +3,530 @@
   "locale": "zh-TW",
   "jurisdiction": "TW",
   "title": "高效益人生指南｜臺灣安全導航",
-  "scope": "目前僅收錄已核對來源的急救求助與篩檢導航，不是765條全書臺灣定稿，也不是專業診斷或資格核定。",
-  "updated_at": "2026-10-15",
+  "scope": "本版收錄第14章帳號與資訊安全12條台灣實質改寫，以及9則急救／篩檢補充導航，共21項。全書765條僅12條完成本批AI輔助來源核對與閱讀整合，其餘尚未定稿；不等於獨立專業審閱或法律個案意見。",
+  "updated_at": "2026-10-16",
   "review_due_at": "2027-01-15",
   "sources": [
-    {"id":"hpa_emergency","title":"國民健康署：本週2波冷氣團接力，春日護心3招抗溫差","url":"https://www.mohw.gov.tw/cp-2704-85748-1.html","published_at":"2026-03-11","accessed_at":"2026-10-15","supports":"疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。"},
-    {"id":"mohw_1925","title":"衛生福利部：安心專線正式單軌使用1925","url":"https://www.mohw.gov.tw/cp-2704-50587-1.html","published_at":"2019-12-19","accessed_at":"2026-10-15","supports":"1925提供全年無休、24小時免付費心理諮詢；與緊急救護不同。"},
-    {"id":"taipei_screening","title":"臺北市政府衛生局：整合性篩檢預約平臺","url":"https://scbooking.health.gov.taipei/","published_at":null,"accessed_at":"2026-10-15","supports":"頁面明列乳癌、子宮頸癌、HPV及大腸癌公費篩檢年齡與間隔；實際資格由院所核對。"}
+    {
+      "id": "hpa_emergency",
+      "title": "國民健康署：本週2波冷氣團接力，春日護心3招抗溫差",
+      "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+      "published_at": "2026-03-11",
+      "accessed_at": "2026-10-15",
+      "supports": "疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。"
+    },
+    {
+      "id": "mohw_1925",
+      "title": "衛生福利部：安心專線正式單軌使用1925",
+      "url": "https://www.mohw.gov.tw/cp-2704-50587-1.html",
+      "published_at": "2019-12-19",
+      "accessed_at": "2026-10-15",
+      "supports": "1925提供全年無休、24小時免付費心理諮詢；與緊急救護不同。"
+    },
+    {
+      "id": "taipei_screening",
+      "title": "臺北市政府衛生局：整合性篩檢預約平臺",
+      "url": "https://scbooking.health.gov.taipei/",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "supports": "頁面明列乳癌、子宮頸癌、HPV及大腸癌公費篩檢年齡與間隔；實際資格由院所核對。"
+    },
+    {
+      "id": "ch14_nist",
+      "title": "NIST SP 800-63B-4：驗證方式與密碼管理",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "第3.1.1、3.2.5與第8節：WebAuthn/FIDO2的網域綁定提供抗釣魚能力；OTP非抗釣魚；鼓勵不同服務使用獨立密碼及密碼管理器。這是美國技術指引，不是臺灣法律。",
+      "evidence_type": "政府技術標準"
+    },
+    {
+      "id": "ch14_google_auth",
+      "title": "Google安全中心：驗證工具與密碼管理",
+      "url": "https://safety.google/intl/zh-TW_ALL/safety/authentication/",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "說明密碼金鑰的FIDO/W3C公開金鑰機制、裝置解鎖與同步，以及不重複密碼、密碼管理器的用途。產品說明不代表全體平臺同樣支援。",
+      "evidence_type": "官方操作文件"
+    },
+    {
+      "id": "ch14_apple_sim",
+      "title": "Apple：為SIM卡或eSIM設定SIM PIN",
+      "url": "https://support.apple.com/zh-tw/118228",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "開啟SIM PIN後須依電信業者提供的資料設定；不知道預設碼時不可猜測，鎖住後向業者取得PUK及解鎖協助。",
+      "evidence_type": "官方操作文件"
+    },
+    {
+      "id": "ch14_cht_service",
+      "title": "中華電信：行動自助服務",
+      "url": "https://www.cht.com.tw/home/consumer/member/mobileservice",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。",
+      "evidence_type": "官方操作文件"
+    },
+    {
+      "id": "ch14_apple_lost",
+      "title": "Apple：如何尋找遺失的iPhone或iPad",
+      "url": "https://support.apple.com/zh-tw/101593",
+      "published_at": "2025-12-17",
+      "accessed_at": "2026-10-16",
+      "supports": "可標示遺失、停用電信服務及回報警方；遠端清除須審慎，不可從尋找移除而解除啟用鎖定；未預先啟用尋找或裝置離線時有功能限制。",
+      "evidence_type": "官方操作文件"
+    },
+    {
+      "id": "ch14_fsc_fraud",
+      "title": "金管會防詐提醒（行政院中部聯合服務中心轉載）",
+      "url": "https://eycc.ey.gov.tw/Page/9FAC64F67005E355/d37e1865-9f11-4413-8a0f-3fdddff7473b",
+      "published_at": "2024-02-06",
+      "accessed_at": "2026-10-16",
+      "supports": "說明釣魚簡訊與OTP風險，要求核對交易幣別、金額、目的；未操作卻收到信用卡綁定通知時應儘速聯繫發卡機構，可向165查證詐騙。",
+      "evidence_type": "政府防詐說明"
+    },
+    {
+      "id": "ch14_financial_law",
+      "title": "金融消費者保護法：第4、5、13條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
+      "published_at": "2023-12-06",
+      "accessed_at": "2026-10-16",
+      "supports": "適用金融消費爭議先向金融服務業申訴，業者30日內處理；不接受結果或逾期未處理者，自收受結果或期限屆滿日起60日內可申請評議。不是30日內一定賠償。",
+      "evidence_type": "臺灣法律"
+    },
+    {
+      "id": "ch14_apple_devices",
+      "title": "Apple：透過帳號裝置列表查看登入裝置",
+      "url": "https://support.apple.com/zh-tw/102649",
+      "published_at": "2025-12-23",
+      "accessed_at": "2026-10-16",
+      "supports": "帳號設定可查看裝置資訊並移除不再使用或無法辨識的裝置；遺失裝置另須依尋找流程處理，不應把解除啟用鎖定當成例行登出。",
+      "evidence_type": "官方操作文件"
+    },
+    {
+      "id": "ch14_google_connections",
+      "title": "Google：第三方應用程式的帳戶資料存取權",
+      "url": "https://support.google.com/accounts/answer/3466521?hl=zh-Hant",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "授權可允許第三方複製、修改或刪除資料；撤銷存取後第三方不能再存取，但已取得資料可能須另請對方刪除。",
+      "evidence_type": "官方操作文件"
+    },
+    {
+      "id": "ch14_pdpa",
+      "title": "個人資料保護法：公佈內容與生效狀態",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+      "published_at": "2025-11-11",
+      "accessed_at": "2026-10-16",
+      "supports": "查閱時頁首明示部分條文未生效。第2、3、5、8、10、11、13、14、19、20條用於本章；不將新主管機關與尚未施行條文當成現行通則。",
+      "evidence_type": "臺灣法律與生效註記"
+    },
+    {
+      "id": "ch14_pdpa_effective",
+      "title": "個資法：官方「連結舊法規內容」比對頁",
+      "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+      "published_at": "2023-05-31",
+      "accessed_at": "2026-10-16",
+      "supports": "本章援用的既有條文經新舊頁比對：必要範圍、告知、資料權利及例外、準駁期限、必要成本費用、非公務機關蒐集與利用要件。未生效的第1-1條等不援為現行義務。",
+      "evidence_type": "官方法規版本比對"
+    },
+    {
+      "id": "ch14_ai_guideline",
+      "title": "中小及新創企業署：生成式AI參考指引全文",
+      "url": "https://www.sme.gov.tw/article-tw-2391-11626",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "轉載2023-10-03函頒的行政院及所屬機關指引：機密與個人資料輸入限制、產出需人員判斷與機關內控；不能說成所有私人使用者一律適用的禁止法。",
+      "evidence_type": "政府使用指引"
+    },
+    {
+      "id": "ch14_jcic",
+      "title": "聯徵中心：讀懂當事人綜合信用報告與資料更正",
+      "url": "https://member.jcic.org.tw/report/home.html?pid=74&uid=79",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "信用資料有揭露期限；疑似遭冒名貸款或辦信用卡，可向報送機構要求查明，或檢附身分證明及證據書面向聯徵中心反映。不能任意刪除真實信用資料。",
+      "evidence_type": "金融基礎機構官方說明"
+    },
+    {
+      "id": "ch14_google_recovery",
+      "title": "Google：設定與變更救援選項",
+      "url": "https://support.google.com/accounts/answer/183723?hl=zh-Hant",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "supports": "變更備援資料後7天內仍可能傳碼至先前資訊；移除備援門號不代表其他Google服務不再使用該號碼；組織帳戶需另向管理員確認。",
+      "evidence_type": "官方操作文件"
+    }
   ],
   "items": [
-    {"id":"TW-NAV-001","title":"疑似中風：立即撥打119","body":"突然出現臉部歪斜、單側手臂無力或說話不清楚等中風警訊，立即撥打119並記下發作時間，不自行開車就醫。","limits":"這是辨識與求助資訊，不是診斷工具。不要等待症狀自行消失，也不要為了完成自查而延誤求助。","source_ids":["hpa_emergency"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{},"question":"我已瞭解「疑似中風：立即撥打119」的做法與適用限制。"},
-    {"id":"TW-NAV-002","title":"疑似心臟急症：不要等待才求救","body":"出現胸悶、胸痛、呼吸困難等疑似心臟病徵兆，立即撥打119並記下發作時間，不自行開車就醫。","limits":"不設「先等滿15分鐘」的求助門檻。本頁不判斷病因，不指示自行服用未經醫師開立的藥物。","source_ids":["hpa_emergency"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{},"question":"我已瞭解「疑似心臟急症：不要等待才求救」的做法與適用限制。"},
-    {"id":"TW-NAV-003","title":"心理困擾可撥1925安心專線","body":"在臺灣有情緒困擾、壓力或自殺意念時，可撥打1925安心專線，取得24小時免付費心理諮詢與支持。","limits":"若已服毒、受傷或有立即危及生命的情況，優先撥打119；心理諮詢不替代緊急救護。可請可信任的人陪同尋求協助。","source_ids":["mohw_1925"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{},"question":"我已瞭解「心理困擾可撥1925安心專線」的做法與適用限制。"},
-    {"id":"TW-NAV-004","title":"乳癌篩檢：40至74歲女性","body":"40至74歲女性，每2年補助1次乳房X光攝影檢查，可向篩檢院所確認資格與安排。","limits":"有症狀或高風險狀況時應由醫師評估，不等到下一次例行篩檢；超出公費年齡不等於不需就醫。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","min_age":40,"max_age":74},"question":"我已瞭解「乳癌篩檢：40至74歲女性」的做法與適用限制。"},
-    {"id":"TW-NAV-005","title":"子宮頸抹片：25至29歲女性","body":"25至29歲女性，每3年補助1次子宮頸抹片檢查。","limits":"公費資格與個別檢查需要不同；相關病史、器官狀況與檢查時機請與醫療人員討論。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","min_age":25,"max_age":29},"question":"我已瞭解「子宮頸抹片：25至29歲女性」的做法與適用限制。"},
-    {"id":"TW-NAV-006","title":"子宮頸抹片：30歲以上女性","body":"30歲以上女性，每年補助1次子宮頸抹片檢查。","limits":"這是公費補助間隔，不是所有人的個別醫療指示；症狀或異常追蹤應依醫囑處理。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","min_age":30},"question":"我已瞭解「子宮頸抹片：30歲以上女性」的做法與適用限制。"},
-    {"id":"TW-NAV-007","title":"HPV檢測：35、45及65歲女性","body":"35歲、45歲及65歲女性，在該年齡各補助1次人類乳突病毒檢測。","limits":"HPV檢測與疫苗接種不同，也不等於省略醫療人員建議的子宮頸抹片或後續追蹤。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"sex":"f","ages":[35,45,65]},"question":"我已瞭解「HPV檢測：35、45及65歲女性」的做法與適用限制。"},
-    {"id":"TW-NAV-008","title":"大腸癌篩檢：45至74歲民眾","body":"45至74歲民眾，每2年補助1次糞便潛血檢查。","limits":"本頁不以大腸鏡取代公費糞便潛血檢查條件；檢查異常或已有症狀應由院所安排評估。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"min_age":45,"max_age":74},"question":"我已瞭解「大腸癌篩檢：45至74歲民眾」的做法與適用限制。"},
-    {"id":"TW-NAV-009","title":"大腸癌篩檢：40至44歲且有家族史","body":"40至44歲，且父母、兄弟姊妹或子女曾患有大腸癌者，每2年補助1次糞便潛血檢查。","limits":"須同時符合年齡及家族史條件，由院所核對；沒有填寫資料時，本頁只顯示資格說明，不判定是否符合。","source_ids":["taipei_screening"],"review_status":"source_checked","reviewed_at":"2026-10-15","review_due_at":"2027-01-15","eligibility":{"min_age":40,"max_age":44,"family_history":true},"question":"我已瞭解「大腸癌篩檢：40至44歲且有家族史」的做法與適用限制。"}
+    {
+      "id": "TW-NAV-001",
+      "title": "疑似中風：立即撥打119",
+      "body": "突然出現臉部歪斜、單側手臂無力或說話不清楚等中風警訊，立即撥打119並記下發作時間，不自行開車就醫。",
+      "limits": "這是辨識與求助資訊，不是診斷工具。不要等待症狀自行消失，也不要為了完成自查而延誤求助。",
+      "source_ids": [
+        "hpa_emergency"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "question": "我已瞭解「疑似中風：立即撥打119」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-002",
+      "title": "疑似心臟急症：不要等待才求救",
+      "body": "出現胸悶、胸痛、呼吸困難等疑似心臟病徵兆，立即撥打119並記下發作時間，不自行開車就醫。",
+      "limits": "不設「先等滿15分鐘」的求助門檻。本頁不判斷病因，不指示自行服用未經醫師開立的藥物。",
+      "source_ids": [
+        "hpa_emergency"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "question": "我已瞭解「疑似心臟急症：不要等待才求救」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-003",
+      "title": "心理困擾可撥1925安心專線",
+      "body": "在臺灣有情緒困擾、壓力或自殺意念時，可撥打1925安心專線，取得24小時免付費心理諮詢與支持。",
+      "limits": "若已服毒、受傷或有立即危及生命的情況，優先撥打119；心理諮詢不替代緊急救護。可請可信任的人陪同尋求協助。",
+      "source_ids": [
+        "mohw_1925"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "question": "我已瞭解「心理困擾可撥1925安心專線」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-004",
+      "title": "乳癌篩檢：40至74歲女性",
+      "body": "40至74歲女性，每2年補助1次乳房X光攝影檢查，可向篩檢院所確認資格與安排。",
+      "limits": "有症狀或高風險狀況時應由醫師評估，不等到下一次例行篩檢；超出公費年齡不等於不需就醫。",
+      "source_ids": [
+        "taipei_screening"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {
+        "sex": "f",
+        "min_age": 40,
+        "max_age": 74
+      },
+      "question": "我已瞭解「乳癌篩檢：40至74歲女性」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-005",
+      "title": "子宮頸抹片：25至29歲女性",
+      "body": "25至29歲女性，每3年補助1次子宮頸抹片檢查。",
+      "limits": "公費資格與個別檢查需要不同；相關病史、器官狀況與檢查時機請與醫療人員討論。",
+      "source_ids": [
+        "taipei_screening"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {
+        "sex": "f",
+        "min_age": 25,
+        "max_age": 29
+      },
+      "question": "我已瞭解「子宮頸抹片：25至29歲女性」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-006",
+      "title": "子宮頸抹片：30歲以上女性",
+      "body": "30歲以上女性，每年補助1次子宮頸抹片檢查。",
+      "limits": "這是公費補助間隔，不是所有人的個別醫療指示；症狀或異常追蹤應依醫囑處理。",
+      "source_ids": [
+        "taipei_screening"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {
+        "sex": "f",
+        "min_age": 30
+      },
+      "question": "我已瞭解「子宮頸抹片：30歲以上女性」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-007",
+      "title": "HPV檢測：35、45及65歲女性",
+      "body": "35歲、45歲及65歲女性，在該年齡各補助1次人類乳突病毒檢測。",
+      "limits": "HPV檢測與疫苗接種不同，也不等於省略醫療人員建議的子宮頸抹片或後續追蹤。",
+      "source_ids": [
+        "taipei_screening"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {
+        "sex": "f",
+        "ages": [
+          35,
+          45,
+          65
+        ]
+      },
+      "question": "我已瞭解「HPV檢測：35、45及65歲女性」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-008",
+      "title": "大腸癌篩檢：45至74歲民眾",
+      "body": "45至74歲民眾，每2年補助1次糞便潛血檢查。",
+      "limits": "本頁不以大腸鏡取代公費糞便潛血檢查條件；檢查異常或已有症狀應由院所安排評估。",
+      "source_ids": [
+        "taipei_screening"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {
+        "min_age": 45,
+        "max_age": 74
+      },
+      "question": "我已瞭解「大腸癌篩檢：45至74歲民眾」的做法與適用限制。"
+    },
+    {
+      "id": "TW-NAV-009",
+      "title": "大腸癌篩檢：40至44歲且有家族史",
+      "body": "40至44歲，且父母、兄弟姊妹或子女曾患有大腸癌者，每2年補助1次糞便潛血檢查。",
+      "limits": "須同時符合年齡及家族史條件，由院所核對；沒有填寫資料時，本頁只顯示資格說明，不判定是否符合。",
+      "source_ids": [
+        "taipei_screening"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-15",
+      "review_due_at": "2027-01-15",
+      "eligibility": {
+        "min_age": 40,
+        "max_age": 44,
+        "family_history": true
+      },
+      "question": "我已瞭解「大腸癌篩檢：40至44歲且有家族史」的做法與適用限制。"
+    },
+    {
+      "id": "TW-14-001",
+      "title": "信箱與重要帳號啟用多因素驗證，優先考慮抗釣魚方式",
+      "body": "# 信箱與重要帳號啟用多因素驗證，優先考慮抗釣魚方式\n\n<!-- TW-ID: TW-14-001 -->\n\n## 適用與目標\n\n適用於個人信箱、社群、購物及可由自己管理驗證方式的帳號；公司帳號先遵守管理員政策。優先保護用來接收其他帳號重設通知的信箱。\n\n## 實際做法\n\n從自己保存的官方網址或App進入安全設定。平臺支援時，考慮使用符合FIDO/WebAuthn的通行金鑰（Google稱密碼金鑰）或安全金鑰；先準備另一個可信任裝置或復原方式，再測試登入。平臺只提供驗證器、推播或簡訊時，先啟用可用方式，但不要因收到推播就一律核准，也不要把驗證碼交給自稱客服的人。\n\n## 成本與效益\n\n先用現有裝置支援的功能；是否另購安全金鑰、訂閱或跨裝置同步，依實際需求及方案計費。編者建議先逐一處理重要帳號，不承諾每個帳號幾分鐘就能完成。降低密碼外洩被直接用來登入的風險，不保證不會被盜。\n\n## 證據與限制\n\nNIST區分抗釣魚的網域綁定與可被轉送的驗證碼。一般推播確認、OTP與簡訊不能一概當成抗釣魚。這不是臺灣強制採購或驗證規範；不沿用原作2019年研究的攔截百分比作為目前個人帳號的保證。\n\n## 已核對來源\n\n[NIST SP 800-63B-4：驗證方式與密碼管理](https://pages.nist.gov/800-63-4/sp800-63b.html)\n\n[Google安全中心：驗證工具與密碼管理](https://safety.google/intl/zh-TW_ALL/safety/authentication/)\n",
+      "limits": "多因素驗證仍受裝置安全、復原管道與服務實作影響；不要只保留一個會隨手機遺失的登入方式。",
+      "source_ids": [
+        "ch14_nist",
+        "ch14_google_auth"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-001.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「信箱與重要帳號啟用多因素驗證，優先考慮抗釣魚方式」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-002",
+      "title": "主要信箱使用獨立密碼，建立可復原的密碼管理方式",
+      "body": "# 主要信箱使用獨立密碼，建立可復原的密碼管理方式\n\n<!-- TW-ID: TW-14-002 -->\n\n## 適用與目標\n\n適用於仍須密碼登入的帳號。信箱、金融與社群不能因方便而共用同一組；已採通行金鑰的服務，也要保護其同步與復原帳號。\n\n## 實際做法\n\n先替主要信箱換成未曾在其他服務使用的長密碼，再分批處理其他重要帳號。使用可信任密碼管理器產生及保存不同密碼，並保護管理器本身的解鎖與復原方式。依各平臺實際限制操作，不把短而重複的密碼加一個驚嘆號當成新的獨立密碼。\n\n## 成本與效益\n\n既有裝置的密碼管理功能可先評估；付費管理器不是必要前提。不要為此停用可用的多因素驗證。主要投入是整理與測試復原的時間；可降低同一外洩密碼在其他網站被重試的影響，沒有個人損失金額或成功率保證。\n\n## 證據與限制\n\nNIST支持每個服務使用不同密碼、密碼管理器與避免沒有理由的週期性換密碼。若確有洩漏、可疑登入或共用情形，仍應更換。不要把美國驗證系統的長度規定說成臺灣每個網站的法定最低要求。\n\n## 已核對來源\n\n[NIST SP 800-63B-4：驗證方式與密碼管理](https://pages.nist.gov/800-63-4/sp800-63b.html)\n\n[Google安全中心：驗證工具與密碼管理](https://safety.google/intl/zh-TW_ALL/safety/authentication/)\n",
+      "limits": "帳號清單可記用途與復原路徑，但不要把明文密碼、完整復原碼或私鑰放進公開文件、對話或repo。",
+      "source_ids": [
+        "ch14_nist",
+        "ch14_google_auth"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-002.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「主要信箱使用獨立密碼，建立可復原的密碼管理方式」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-003",
+      "title": "螢幕鎖定與SIM PIN分開設定，不猜預設碼或PUK",
+      "body": "# 螢幕鎖定與SIM PIN分開設定，不猜預設碼或PUK\n\n<!-- TW-ID: TW-14-003 -->\n\n## 適用與目標\n\n螢幕鎖定保護手機操作；SIM PIN保護支援此功能的SIM卡或eSIM行動服務。它們不是同一組密碼，也不同於電信帳號的服務密碼。\n\n## 實際做法\n\n先設定不易猜測的螢幕解鎖碼，再依手機與電信業者文件檢查SIM PIN。iPhone可從行動服務進入SIM PIN，多門號要分別確認。從未設定過且不知道預設碼時，先聯繫目前電信業者或查看卡片文件，不試猜常見數字。卡片被鎖住時停止嘗試，透過業者正式管道處理PUK。\n\n## 臺灣入口與效益\n\n例如中華電信行動自助服務提供SIM卡PUK解鎖入口；其他電信依各自官方App、網站或門市核對。保護SIM可降低他人直接挪用卡片收取簡訊的機會；它無法處理所有冒名補卡、客服詐騙或已登入的網路服務。\n\n## 成本與風險\n\n使用內建設定不等於後續解鎖、補卡一律免費；費用及身分核對依業者。把復原資料保存於本人可安全取得、而非只放在同一支手機的位置。設定前先瞭解忘碼的復原途徑，不能以提高安全為由讓自己完全無法登入。\n\n## 已核對來源\n\n[Apple：為SIM卡或eSIM設定SIM PIN](https://support.apple.com/zh-tw/118228)\n\n[中華電信：行動自助服務](https://www.cht.com.tw/home/consumer/member/mobileservice)\n",
+      "limits": "連續錯誤輸入可能鎖卡，PUK也不可猜。SIM PIN不取代停話、帳號復原或金融交易停用。",
+      "source_ids": [
+        "ch14_apple_sim",
+        "ch14_cht_service"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-003.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「螢幕鎖定與SIM PIN分開設定，不猜預設碼或PUK」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-004",
+      "title": "手機遺失時並行止損，不把停卡排在固定流程最後",
+      "body": "# 手機遺失時並行止損，不把停卡排在固定流程最後\n\n<!-- TW-ID: TW-14-004 -->\n\n## 先處理正在發生的風險\n\n先確保人身安全。若已收到不是自己操作的綁卡或交易通知，立即從可信任管道聯繫發卡機構，不必等報案或遠端鎖機完成。另一個人協助時，可以分工聯繫電信業者停用門號，並以可信任裝置處理帳號。以下是編者整理的風險優先次序，不是法定唯一順序。\n\n## 裝置與帳號\n\n依手機原廠功能標示遺失或鎖定，查閱復原信箱及金融帳號的異常情形，必要時撤銷可疑登入並改密碼。iPhone須原先已開啟尋找，離線時遠端操作可能等待連線；不要把按下按鈕當成裝置已確實鎖住。不同品牌須依原廠流程，不能套用相同按鈕。\n\n## 報案與清除前\n\n保存遺失時間、裝置序號、異常通知及已採取措施的紀錄，需要時向警方報案。先判斷備份、敏感資料、尋回可能及公司設備政策，再決定是否遠端清除。Apple明示不要從尋找移除遺失裝置，以免解除啟用鎖定；也不要把密碼或驗證碼交給聲稱找到手機的人。\n\n## 成本與限制\n\n停話、補卡、替換設備與帳號復原的成本依個案，沒有十幾分鐘一定完成或保證零損失的說法。臺灣業者聯絡方式從自己的帳單、官方App或網站取得，不使用原作的中國客服號碼。\n\n## 已核對來源\n\n[Apple：如何尋找遺失的iPhone或iPad](https://support.apple.com/zh-tw/101593)\n\n[中華電信：行動自助服務](https://www.cht.com.tw/home/consumer/member/mobileservice)\n\n[金管會防詐提醒（行政院中部聯合服務中心轉載）](https://eycc.ey.gov.tw/Page/9FAC64F67005E355/d37e1865-9f11-4413-8a0f-3fdddff7473b)\n",
+      "limits": "遠端清除可能不可回復，且停話不會自動登出所有App；不要親自追查或取回疑似遭竊裝置而暴露於危險。",
+      "source_ids": [
+        "ch14_apple_lost",
+        "ch14_cht_service",
+        "ch14_fsc_fraud"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-004.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「手機遺失時並行止損，不把停卡排在固定流程最後」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-005",
+      "title": "疑似信用卡盜刷先聯繫發卡機構，保留證據並走臺灣爭議程序",
+      "body": "# 疑似信用卡盜刷先聯繫發卡機構，保留證據並走臺灣爭議程序\n\n<!-- TW-ID: TW-14-005 -->\n\n## 立即止損\n\n以卡背、帳單或已知官方App上的管道聯繫發卡機構，說明不是自己操作的交易或綁定，請其依事件停卡、阻擋後續交易並建立爭議紀錄。保存交易通知、帳單、聯繫時間與案件編號，依需要報案；不要為了證明卡在手上而另做不必要交易。\n\n## 釐清責任與帳單\n\n如實說明卡片保管、簡訊驗證碼、手機綁定及是否曾點擊連結。詢問需提交哪些文件、各項期限與爭議款項如何處理；不要自行停止繳付整張帳單，也不照陌生客服指示轉帳。是否由銀行、持卡人或其他人負擔損失，要依適用契約、法規與證據判斷，不能保證報案後銀行一定全賠。\n\n## 臺灣申訴與評議\n\n適用金融消費者保護法的金融消費爭議，先向金融服務業申訴，業者應於收受日起30日內處理並回覆。不接受結果或逾期未處理者，可於收到結果或期限屆滿日起60日內申請評議。這些不是盜刷必賠期限，亦不能取代發卡契約的爭議申請時限；仍有疑義時向金融消費評議中心確認程序。\n\n## 成本、效益與證據\n\n先整理證據通常比反覆口頭爭辯有助釐清爭點，但整理、郵寄或專業協助仍可能有成本。金管會提醒核對OTP內的幣別、金額及目的，未綁卡卻收到成功通知應儘速聯繫銀行；165供詐騙查證，不是銀行停卡系統。\n\n## 已核對來源\n\n[金管會防詐提醒（行政院中部聯合服務中心轉載）](https://eycc.ey.gov.tw/Page/9FAC64F67005E355/d37e1865-9f11-4413-8a0f-3fdddff7473b)\n\n[金融消費者保護法：第4、5、13條](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226)\n",
+      "limits": "本條處理信用卡疑似未授權交易；匯款、金融卡、電子支付及已授權但商品未交付的爭議，不能一律套用相同責任。",
+      "source_ids": [
+        "ch14_fsc_fraud",
+        "ch14_financial_law"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-005.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「疑似信用卡盜刷先聯繫發卡機構，保留證據並走臺灣爭議程序」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-006",
+      "title": "清理登入裝置與第三方授權，要分清登出、撤銷與刪除資料",
+      "body": "# 清理登入裝置與第三方授權，要分清登出、撤銷與刪除資料\n\n<!-- TW-ID: TW-14-006 -->\n\n## 定期與事件後檢查\n\n收到異常登入、換手機、停止使用App或交還工作裝置時，查看信箱及主要帳號的安全設定、登入裝置與第三方連結。可自行選擇定期檢查時點，但不是法定每月義務。先辨識是否為自己使用的瀏覽器或裝置，再撤銷不需要的連結。\n\n## 實際入口\n\nApple帳號可從設定中的裝置列表核對機型及其他資訊，對不再使用或不認得的裝置依官方流程處理。Google第三方連結則要另外查看獲準讀取、複製、編輯或刪除哪些資料，停止不再需要的存取權。公司管理帳號及共用流程先請管理員確認影響，避免中斷必要工作。\n\n## 不要混成一個動作\n\n遠端登出、撤銷第三方授權、刪除第三方帳號與刪除其已取得資料，是不同處理。Google明示撤銷權限不會自動收回第三方先前取得的副本。若是自己遺失的Apple裝置，先依遺失處理，不因清理列表而誤將它從尋找移除、解除啟用鎖定。\n\n## 成本與效益\n\n清理通常利用既有設定即可，但重新授權、登入或恢復同步需要時間。先列出用途再操作；有助減少不必要的存取面，不能保證已外洩資料被追回。\n\n## 已核對來源\n\n[Apple：透過帳號裝置列表查看登入裝置](https://support.apple.com/zh-tw/102649)\n\n[Apple：如何尋找遺失的iPhone或iPad](https://support.apple.com/zh-tw/101593)\n\n[Google：第三方應用程式的帳戶資料存取權](https://support.google.com/accounts/answer/3466521?hl=zh-Hant)\n",
+      "limits": "確認連結的業務用途及資料復原方式後再撤銷；不以粗暴刪除所有裝置或授權作為固定安全流程。",
+      "source_ids": [
+        "ch14_apple_devices",
+        "ch14_apple_lost",
+        "ch14_google_connections"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-006.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「清理登入裝置與第三方授權，要分清登出、撤銷與刪除資料」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-007",
+      "title": "App權限按用途開啟，個資蒐集另看臺灣法律依據",
+      "body": "# App權限按用途開啟，個資蒐集另看臺灣法律依據\n\n<!-- TW-ID: TW-14-007 -->\n\n## 實際做法\n\n安裝或首次使用時，逐項判斷相機、定位、通訊錄等權限是否與要使用的功能相關。可先不開啟不需要的權限，使用到該功能時再依系統提供的單次或使用期間選項調整。同時查看服務的個資告知，不把作業系統跳出的允許按鈕當成全部法律說明。\n\n## 臺灣制度\n\n個資法第5條要求不得超過特定目的必要範圍；第8條原則上要求告知蒐集者、用途、資料類別、利用期間等及不提供的影響，另有免告知例外。非公務機關蒐集與利用還須符合第19、20條等依據；不是所有處理都只能以同意為基礎。\n\n## 被要求過多資料時\n\n可具體詢問「這項資料支援哪個功能、是否必要、能否只用部分服務」，保存當時告知文字及回覆。不能把原作中國個人信息保護法的「不同意也不能拒絕服務」句子直接用在臺灣所有App；服務是否可以拒絕及資料是否必要，仍須依個案與特別法判斷。\n\n## 成本、效益與版本\n\n主要成本是閱讀設定及和服務方溝通；必要功能可能因此暫時不能用。可減少不必要揭露，但不是所有權限都應關閉。查閱時個資法頁面標示部分修法未生效，本條僅援用經新舊版本核對的既有條文，不把尚未施行條文當成現行義務。\n\n## 已核對來源\n\n[個人資料保護法：公佈內容與生效狀態](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021)\n\n[個資法：官方「連結舊法規內容」比對頁](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021)\n",
+      "limits": "本條為個資與權限管理的通則導引，特殊金融、醫療或公務服務可能另有法定依據；不保證每種服務都能匿名或無資料使用。",
+      "source_ids": [
+        "ch14_pdpa",
+        "ch14_pdpa_effective"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-007.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「App權限按用途開啟，個資蒐集另看臺灣法律依據」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-008",
+      "title": "申請閱覽、更正或刪除個資，寫清楚範圍與臺灣法定例外",
+      "body": "# 申請閱覽、更正或刪除個資，寫清楚範圍與臺灣法定例外\n\n<!-- TW-ID: TW-14-008 -->\n\n## 如何提出\n\n向持有資料的機關或業者，經安全身分核對後，寫明帳號、資料期間及要查詢、複製、更正、停止處理或刪除的範圍；保存送達及回覆紀錄。只提供核身必要資料，不在公開留言張貼證件或完整帳號。\n\n## 權利不是無條件全部刪除\n\n個資法第3條列出相關權利；第10、11條規定實際行使及例外。目的消失、期限屆滿或違法處理時，可依規定要求處理，但因職務、業務必要等可能仍須保留。不能保證撤回一次同意、刪除App或註銷帳號就會清除所有紀錄及所有外流副本。\n\n## 期限與費用\n\n依第13條，依第10條提出的請求原則15日內作準駁決定，必要延長不得超過15日；第11條請求原則30日，必要延長不得超過30日，延長原因須書面通知。這是決定期限，不是保證所有資料在同一期限實際刪完。依第14條，查詢、閱覽或製給複製本可酌收必要成本。\n\n## 後續處理\n\n要求對方說明處理範圍與保留依據；若仍有爭議，依事件尋求主管機關協助或法律諮詢，不承諾申訴等於勝訴。前述條文已對照官方舊法頁；未生效的新主管機關規定不在本條作為申訴管轄的依據。\n\n## 已核對來源\n\n[個人資料保護法：公佈內容與生效狀態](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021)\n\n[個資法：官方「連結舊法規內容」比對頁](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021)\n",
+      "limits": "費用、請求種類、核身與合法保存義務要分開確認；資訊安全措施不能取代個別法律判斷。",
+      "source_ids": [
+        "ch14_pdpa",
+        "ch14_pdpa_effective"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-008.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「申請閱覽、更正或刪除個資，寫清楚範圍與臺灣法定例外」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-009",
+      "title": "被要求臉部辨識時，先查用途、保存方式與替代方案",
+      "body": "# 被要求臉部辨識時，先查用途、保存方式與替代方案\n\n<!-- TW-ID: TW-14-009 -->\n\n## 先分辨資料交給誰\n\n手機在本機解鎖，與社區、健身房、僱主或App收集臉部資料，並不相同。先問蒐集者、用途、保存時間、傳輸對象、外部廠商及停用時如何處理；可要求說明刷卡、密碼或人工核對等替代方式。這是風險溝通建議，不是宣告臺灣所有服務都有一律提供替代方式的法定義務。\n\n## 臺灣法律判斷\n\n可辨識個人的臉部特徵可涉及個資法第2條所稱個人資料；蒐集仍須檢查第5條必要範圍、第8條告知及第19、20條等適用依據。也不能因為是臉部資料，就直接說全部屬於第6條列舉的病歷、醫療、基因等特種資料。\n\n## 如何做選擇\n\n對方只說「系統規定」時，請其提出具體目的與規範，保存書面回覆；衡量不提供的影響後再決定是否使用。職場、租屋或金融服務涉及不同關係與規定，遇到強迫或疑慮可取得個案諮詢，不能拿中國的人臉辨識辦法要求臺灣業者照辦。\n\n## 成本與效益\n\n提問與比較替代方式需要時間，也可能無法立即取得服務。目標是減少不可任意更換的生物特徵被不必要蒐集，不承諾任何特定保存方式或移除動作可消除全部風險。\n\n## 已核對來源\n\n[個人資料保護法：公佈內容與生效狀態](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021)\n\n[個資法：官方「連結舊法規內容」比對頁](https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021)\n",
+      "limits": "不直接套用中國14歲同意、備案門檻、不得上網傳輸等規定；臺灣個資法未生效修正與現行適用仍須分清。",
+      "source_ids": [
+        "ch14_pdpa",
+        "ch14_pdpa_effective"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-009.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「被要求臉部辨識時，先查用途、保存方式與替代方案」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-010",
+      "title": "使用AI服務或代理工具前，先限制資料與可執行權限",
+      "body": "# 使用AI服務或代理工具前，先限制資料與可執行權限\n\n<!-- TW-ID: TW-14-010 -->\n\n## 先確認服務與資料流向\n\n使用模型官方服務、組織核准的平臺或代理服務之前，查清楚實際營運者、資料是否經其他供應商、保存與訓練使用條款，以及管理和刪除方式。官方品牌、便宜價格或自稱不留紀錄，都不等於已完成對你的資料用途評估。\n\n## 可立即採取的做法\n\n先使用公開或去識別後的資料，避免送出API金鑰、密碼、客戶個資、未公開程式碼與工作機密；必要工作資料先取得適當授權。AI能操作終端、郵件或檔案時，編者建議以獨立測試資料和最小權限開始；寄送、刪除、付款或公開發布前保留人工確認，不因模型文字看似可信就直接執行。\n\n## 臺灣依據與範圍\n\n行政院及所屬機關的生成式AI參考指引，要求保護機密與個人資料、保有人員判斷，不能完全信任輸出。它有特定公部門適用範圍，不是對所有私人使用者一律禁止AI的法律；私人組織另須遵守適用法律、契約與內規。本條以它作風險管理參考，不冒稱獲主管機關認證。\n\n## 成本與效益\n\n資料整理、權限限制和覆核需要時間；核准工具或安全金鑰等可能另有費用。若已疑似洩漏憑證，先停止相關存取並依服務正式流程撤銷或換發、查閱使用紀錄。這是降低外洩與錯誤操作範圍的措施，不提供未核對的中轉站惡意比例或損失保證。\n\n## 已核對來源\n\n[中小及新創企業署：生成式AI參考指引全文](https://www.sme.gov.tw/article-tw-2391-11626)\n\n[NIST SP 800-63B-4：驗證方式與密碼管理](https://pages.nist.gov/800-63-4/sp800-63b.html)\n",
+      "limits": "最小權限與人工確認是本章實作建議，並非政府指引逐字規定的特定工具設定；本章不評選廠商。",
+      "source_ids": [
+        "ch14_ai_guideline",
+        "ch14_nist"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-010.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「使用AI服務或代理工具前，先限制資料與可執行權限」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-011",
+      "title": "盤點名下門號與信用資料，疑似冒名先要求查明",
+      "body": "# 盤點名下門號與信用資料，疑似冒名先要求查明\n\n<!-- TW-ID: TW-14-011 -->\n\n## 分開建立自己的清單\n\n先整理自己實際申辦的行動門號、信用卡、借款及往來銀行，使用各業者的正式帳單、App或門市查證。電信業者的自助服務只處理其服務範圍；不要把原作中國跨平臺查卡功能當成臺灣也有相同入口。\n\n## 信用資料有什麼用途\n\n可透過聯徵中心正式程序申請及解讀自己的信用報告，對照借貸、信用卡及查詢等紀錄。若發現不屬於自己的貸款或信用卡，先向報送機構要求查明，或附核身文件與相關證據書面向聯徵中心反映。保存案件編號，涉及冒名或詐騙時也要向警方求助。\n\n## 不能把沒有看到當成全部安全\n\n聯徵中心說明資料有揭露期限，部分項目須另外申請；不能據此保證列出所有金融資產、所有電信門號或所有年代的帳戶。真實信用紀錄也不能任意刪除。發現疑似冒名時先查明與更正，不直接認債、付款給代辦或只辦停用便當作責任已消失。\n\n## 成本與檢查時機\n\n收費與所需證件依申請項目、管道及當時規則確認，本條不承諾跨平臺免費一次查全。可在證件遺失、資料外洩、收到陌生帳單或自行安排的定期檢查時進行；每年一次是可選的自我管理頻率，不是本章證實的法定義務。\n\n## 已核對來源\n\n[聯徵中心：讀懂當事人綜合信用報告與資料更正](https://member.jcic.org.tw/report/home.html?pid=74&uid=79)\n\n[中華電信：行動自助服務](https://www.cht.com.tw/home/consumer/member/mobileservice)\n",
+      "limits": "一般信用報告、存款資產盤點、門號清單與警示資料查詢的範圍不同；拒絕有付費就保證消除紀錄的說法。",
+      "source_ids": [
+        "ch14_jcic",
+        "ch14_cht_service"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-011.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「盤點名下門號與信用資料，疑似冒名先要求查明」的做法、來源與適用限制。"
+    },
+    {
+      "id": "TW-14-012",
+      "title": "換號前逐項更新聯絡、登入與復原資料，再處理舊門號",
+      "body": "# 換號前逐項更新聯絡、登入與復原資料，再處理舊門號\n\n<!-- TW-ID: TW-14-012 -->\n\n## 先分清換號與換業者\n\n實際換了電話號碼，就要盤點信箱、銀行、支付、社群、工作及其他服務的聯絡與復原用途。保留原號碼換業者與真的換號不同，但仍需檢查新卡是否正常接收驗證資訊；不要只看App個人檔案顯示新號碼就認定全部完成。\n\n## 編者建議的遷移順序\n\n在舊號仍由自己掌握時，先確保主要信箱及密碼管理器有替代復原方式，再依各家官方程序變更金融與支付資料，接著處理社群及其他服務。分別核對通知電話、登入電話、簡訊驗證與帳戶復原；完成後測試可登入並保存變更紀錄。舊號如何停用或解約另向電信業者確認，不能以欠費停機代替完整遷移。\n\n## Google的具體例子\n\nGoogle說明，刪除備援電話號碼後，該號碼仍可能用於其他Google服務；變更備援資訊後的7天內也仍可能把驗證碼傳到先前資訊。這是Google的保護機制，不是所有臺灣銀行都通用的7天期限。組織帳號還可能須由管理員協助。\n\n## 成本與限制\n\n門號重疊期間、換補卡、跨境通話或金融機構臨櫃，可能有時間及金錢成本。號碼已失效或已被他人取得時，改走正式帳戶復原，勿請陌生新持有人代收驗證碼。這份清單協助降低遺漏，不保證單次操作能更新所有服務。\n\n## 已核對來源\n\n[Google：設定與變更救援選項](https://support.google.com/accounts/answer/183723?hl=zh-Hant)\n\n[中華電信：行動自助服務](https://www.cht.com.tw/home/consumer/member/mobileservice)\n",
+      "limits": "銀行與支付方式依各機構實際流程，不因修改Google資訊就視為同步更新金融帳戶；停話前確定仍有可用復原管道。",
+      "source_ids": [
+        "ch14_google_recovery",
+        "ch14_cht_service"
+      ],
+      "review_status": "source_checked",
+      "reviewed_at": "2026-10-16",
+      "review_due_at": "2027-01-15",
+      "eligibility": {},
+      "target_path": "locales/zh-TW/book/ch14/TW-14-012.md",
+      "chapter": 14,
+      "evidence_type": "第一手來源核對與台灣適用性改寫；非獨立專業簽證",
+      "question": "我已瞭解「換號前逐項更新聯絡、登入與復原資料，再處理舊門號」的做法、來源與適用限制。"
+    }
   ]
 }

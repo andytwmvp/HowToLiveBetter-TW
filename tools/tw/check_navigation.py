@@ -21,7 +21,19 @@ def check_navigation(page, context, url, review):
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     assert set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==expected
     assert not any('/book/' in request or '/chapters/' in request for request in requests),'臺灣預設頁讀取了原作或草稿'
+    assert page.locator('[data-id^="TW-14-"]').count()==12
+    chapter=page.locator('#TW-14-003')
+    assert chapter.locator('h3').count()==5
+    assert 'TW-ID:' not in chapter.inner_text() and '## ' not in chapter.inner_text()
+    assert chapter.locator('a[href="https://support.apple.com/zh-tw/118228"]').count()>=1
+    page.locator('#q').fill('SIM PIN')
+    assert page.locator('#TW-14-003').count()==1
+    page.locator('#reset').click()
     page.screenshot(path=str(review/'taiwan-reader.png'),animations='disabled')
+    page.goto(url+'index.html#TW-14-003',wait_until='domcontentloaded')
+    page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
+    page.locator('#TW-14-003').scroll_into_view_if_needed()
+    page.screenshot(path=str(review/'chapter14-sim-pin.png'),animations='disabled')
     # 損壞百分比編碼只忽略錨點，不清空可用的安全導航。
     page.goto(url+'index.html#%EF',wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
@@ -79,4 +91,4 @@ def check_navigation(page, context, url, review):
     page.wait_for_function("document.querySelectorAll('.card').length === 765",timeout=120000)
     assert page.url == url+'source.html#e-14-1'
     page.remove_listener('request',capture)
-    return ['臺灣預設閱讀與自查共用9則已核對導航；未讀取原作或草稿','乳癌40／74、子宮頸抹片25／29／30歲與大腸癌家族史邊界通過','手機版、自查、離線資料一致、HTTP503及HTTP200錯誤資料（含重複JSON欄位／非有限數值）均不回退；損壞錨點不阻斷閱讀']
+    return ['臺灣預設閱讀與自查共用12條核心正文及9則補充導航；未讀取原作或草稿','乳癌40／74、子宮頸抹片25／29／30歲與大腸癌家族史邊界通過','手機版、自查、離線資料一致、HTTP503及HTTP200錯誤資料（含重複JSON欄位／非有限數值）均不回退；損壞錨點不阻斷閱讀']

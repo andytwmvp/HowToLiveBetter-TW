@@ -19,7 +19,7 @@ ROOT = contract.ROOT
 
 
 def fixture():
-    return json.loads((ROOT / 'localization/tw-edition/runtime.json').read_text(encoding='utf-8'))
+    return json.loads(subprocess.check_output(['git', 'show', '37d33f484ee85736170694754528f4392e8ee94d:localization/tw-edition/runtime.json'], cwd=ROOT, text=True))
 
 
 class RuntimeValidationTests(unittest.TestCase):
