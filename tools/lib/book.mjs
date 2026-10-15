@@ -8,7 +8,9 @@ import { execSync } from 'node:child_process';
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const REPO = 'https://github.com/andytwmvp/HowToLiveBetter-TW';
 export const SITE = 'https://andytwmvp.github.io/HowToLiveBetter-TW/';
-export const TITLE = '高性價比人生指南';
+// 封面與電子書共用本地文案規格，不再以舊書名綁定 README 的解析。
+const imageCopy = JSON.parse(readFileSync(resolve(ROOT, 'localization/image-copy.zh-TW.json'), 'utf8'));
+export const TITLE = imageCopy.title;
 export const RELEASE = `${REPO}/releases/download/epub-latest`;
 
 // 一律按 LF 交給各套構建：Windows 上 core.autocrlf=true 檢出的是 CRLF，離線版腳本
@@ -45,7 +47,9 @@ export function readBook() {
     if (a < 0 || b < 0) throw new Error(`README 裡找不到 ${from} 到 ${to} 這一段`);
     return lines.slice(a, b).join('\n');
   };
-  const description = between('# 高性價比人生指南', '[![')
+  const descriptionHeading = lines.find(l => l === `# ${TITLE}` || l.startsWith(`# ${TITLE}｜`) || l === '# 高性價比人生指南');
+  if (!descriptionHeading) throw new Error('README 找不到對應圖片文案規格的書名標題');
+  const description = between(descriptionHeading, '[![')
     .split('\n').slice(1).map(l => l.replace(/<[^>]+>/g, '').trim()).filter(Boolean).join('');
   const frontMd = between('## 這本書想回答的問題', '## 目錄');
   const contentsMd = between('## 目錄', '## 正文')
