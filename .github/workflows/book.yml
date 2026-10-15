@@ -56,11 +56,11 @@ jobs:
       - run: npm ci
         working-directory: tools/epub
       - name: EPUB
-        run: node tools/epub/build.mjs
+        run: node tools/epub/build.mjs --source-preview dist/HowToLiveBetter.epub
       - name: 離線單檔 HTML
-        run: node tools/offline/build.mjs
+        run: node tools/offline/build.mjs --source-preview dist/HowToLiveBetter.html
       - name: Anki 牌組
-        run: node tools/anki/build.mjs
+        run: node tools/anki/build.mjs --source-preview dist/HowToLiveBetter.apkg
       - name: 安裝原文 PDF 建置工具
         run: |
           set -euo pipefail

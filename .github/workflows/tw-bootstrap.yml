@@ -51,9 +51,14 @@ jobs:
         run: |
           set -euo pipefail
           node tools/offline/build.mjs dist/tw-source-preview.html
+          node tools/offline/build.mjs
           npm ci --prefix tools/epub
           node tools/epub/build.mjs
           node tools/anki/build.mjs
+          node tools/epub/build.mjs --source-preview dist/HowToLiveBetter-source-preview.epub
+          node tools/anki/build.mjs --source-preview dist/HowToLiveBetter-source-preview.apkg
+          python3 tools/tw/check_link_outputs.py
+          python3 tools/tw/link_policy.py --report "$TW_REVIEW_DIR/link-audit.json"
           node --input-type=module - <<'JS'
           import {readFileSync} from 'node:fs';
           import {marked} from './tools/epub/node_modules/marked/lib/marked.esm.js';
