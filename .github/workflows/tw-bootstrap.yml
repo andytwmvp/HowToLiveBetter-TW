@@ -1,4 +1,4 @@
-# 日常檢查僅讀取儲存庫；不執行遷移、不推送、不合併、不發行、不部署。
+# 日常檢查僅讀取儲存庫，不執行遷移、推送、合併、發行或部署。
 name: 繁體中文與閱讀功能檢查
 on:
   push:
@@ -34,40 +34,34 @@ jobs:
           "$RUNNER_TEMP/tw-venv/bin/python" -m playwright install --with-deps chromium > "$RUNNER_TEMP/tw-install.log" 2>&1
           sudo apt-get install -y --no-install-recommends fonts-noto-cjk >> "$RUNNER_TEMP/tw-install.log" 2>&1
           echo "$RUNNER_TEMP/tw-venv/bin" >> "$GITHUB_PATH"
-      - name: 原始來源、授權、數字、語法與連結
+      - name: 來源、授權、字形、Markdown 圖片與連結
         run: |
+          set -euo pipefail
           python3 tools/tw/traditionalize.py --check
+          python3 tools/tw/text_integrity.py --check
           git diff --check 1271250f082732b50b1fda851453d4b4b8f1eefd..HEAD
           node tools/check-refs.mjs --check
           node tools/check-split.mjs
           node tools/sync-stats.mjs --check
-      - name: 繁體字形殘留檢查
-        run: |
-          python3 - <<'PY'
-          import sys
-          from pathlib import Path
-          sys.path.insert(0,'tools/tw')
-          from traditionalize import current_files,read,cc,URL,SUFFIXES
-          problems=[];count=0
-          canonical=lambda text:text.replace('臺','台')
-          for path in current_files():
-              if Path(path).suffix not in SUFFIXES or path.startswith('tools/tw/') or path.endswith('package-lock.json'):continue
-              text=URL.sub('',read(path));count+=1
-              if canonical(cc().convert(text))!=canonical(text):problems.append(path)
-          if problems:raise SystemExit('仍有待檢查字形：'+', '.join(problems))
-          print(f'PASS：{count} 份文字檔；原始網址與遷移工具的比對字串排除，台／臺均接受。此檢查不等於逐句人工精校。')
-          PY
       - name: 離線閱讀、EPUB 與 Anki 工程建置
         run: |
+          set -euo pipefail
           node tools/offline/build.mjs dist/tw-source-preview.html
           npm ci --prefix tools/epub
           node tools/epub/build.mjs
           node tools/anki/build.mjs
+          node --input-type=module - <<'JS'
+          import {readFileSync} from 'node:fs';
+          import {marked} from './tools/epub/node_modules/marked/lib/marked.esm.js';
+          const html=marked.parse(readFileSync('README.md','utf8'));
+          const images=[...html.matchAll(/<img[^>]+src="(https:\/\/img\.shields\.io\/badge\/[^"]+)"/g)];
+          if(images.length!==6)throw Error('README 實際 Markdown 渲染的徽章不是 6 個');
+          console.log('PASS：README 實際渲染出 6 個徽章圖片。');
+          JS
       - name: 圖片盤點與桌機、手機、離線互動
         run: python3 tools/tw/assets_and_browser.py --browser
       - name: 檢查範圍
-        run: |
-          echo '通過的是繁體字形、來源保留及閱讀功能檢查；不代表台灣制度、醫療或法律審閱完成。未部署、未發行、未合併。' >> "$GITHUB_STEP_SUMMARY"
+        run: echo '通過的是字形、來源保留及閱讀功能檢查；不代表逐句人工精校或台灣制度、醫療、法律審閱完成。未部署、未發行、未合併。' >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -75,6 +69,6 @@ jobs:
           path: ${{ runner.temp }}/tw-review/
           retention-days: 5
           if-no-files-found: ignore
-      - name: 清除暫存與未發布的產物
+      - name: 清除暫存與未發布產物
         if: always()
         run: rm -rf -- dist "$RUNNER_TEMP/tw-review" "$RUNNER_TEMP/tw-venv" "$RUNNER_TEMP/tw-install.log"
