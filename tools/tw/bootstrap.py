@@ -25,7 +25,7 @@ def read(path: str) -> str:
 def write(path: str, text: str) -> None:
     dest = ROOT / path
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(text, encoding='utf-8', newline='\n')
+    dest.write_text(text.rstrip() + '\n', encoding='utf-8', newline='\n')
 
 def sub_once(text: str, pattern: str, replacement: str, label: str) -> str:
     result, count = re.subn(pattern, lambda _m: replacement, text, flags=re.S)

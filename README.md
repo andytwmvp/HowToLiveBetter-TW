@@ -1,3 +1,16 @@
+<!-- tw-bootstrap-v1 -->
+# HowToLiveBetter-TW｜台灣在地化工作區
+
+非官方繁體中文／台灣在地化改編版。對話負責協作，GitHub 負責保存正文、依據與進度。
+
+[台灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
+
+**僅在此 fork 維護；禁止向原作者 repo 建立 PR。移除廣告、打賞與原作者追蹤碼，但保留原作署名與授權。**
+
+> **台灣版尚在逐條改寫與查證。** 下方保留的是中國大陸原文工作底稿，不是台灣現行醫療、法律、金融或福利指南。台灣版內容與查核狀態另見工作區。
+
+---
+
 <div align="center">
 
 <img src="og.png" alt="高性价比人生指南 —— 用最少的钱、时间和精力，换回最多的寿命、金钱和人身自由" width="820">
@@ -9,7 +22,7 @@
 
 不用全做：这是一份备选单，不是任务清单——挑走一两条就算数，作者自己也没做到其中大部分。
 
-书里的内容可能过时，也可能有错。不少政策各地执行不一样。真去办事、看病、打官司时，以当地部门、医生和律师的说法为准。发现写错了，欢迎[提 issue](https://github.com/eternity4719/HowToLiveBetter/issues)。
+书里的内容可能过时，也可能有错。不少政策各地执行不一样。真去办事、看病、打官司时，以当地部门、医生和律师的说法为准。发现写错了，欢迎[提 issue](https://github.com/andytwmvp/HowToLiveBetter-TW/issues)。
 
 **本项目从未发行、也不会发行任何代币或数字资产。** 用本项目名字发的币都和本项目无关，作者不领取、不认领任何相关收益。看到这类币请当作骗局，别买，见[第 5 节第 45 条（别买虚拟货币）](book/05-不要浪费钱.md)。
 
@@ -25,11 +38,7 @@
 AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「替朋友担保签不签」，它先查书里的条目再回答，并注明出自第几节第几条。
 
 <table>
-<tr><td align="right"><b>下载</b></td><td align="left">
-
-[PDF](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf) · [EPUB](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub) · [离线单文件（HTML）](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html) · [Anki 牌组](https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.apkg)
-
-</td></tr>
+<tr><td align="right"><b>下載</b></td><td align="left">台灣版尚未正式發行。請先閱讀上方的台灣版工作區；原文與台灣版不得混稱。</td></tr>
 <tr><td align="right"><b>查阅</b></td><td align="left">
 
 [目录](#目录) · [术语表](#读懂数字术语表) · [核实记录](docs/核实记录/)
@@ -43,11 +52,6 @@ AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「替朋友担
 <tr><td align="right"><b>长文</b></td><td align="left">
 
 [结婚划不划算](docs/结婚划不划算.md) · [家庭应急装备清单](docs/家庭应急装备清单.md) · [遇到陌生人出事该不该停](docs/遇到陌生人出事该不该停.md) · [做平台要办哪些证](docs/做平台要办哪些证.md) · [生物钟和夜班](docs/生物钟和夜班.md) · [被裁了之后先做什么](docs/被裁了之后先做什么.md) · [孩子出生前后要办的事](docs/孩子出生前后要办的事.md) · [刚确诊慢性病之后](docs/刚确诊慢性病之后.md) · [换工作、换城市之前](docs/换工作、换城市之前.md)
-
-</td></tr>
-<tr><td align="right"><b>交流</b></td><td align="left">
-
-[QQ 群 582670354](https://qm.qq.com/q/P1RNw3Rnqg)（点击加群）
 
 </td></tr>
 <tr><td align="right"><b>其他语言</b></td><td align="left">
@@ -73,6 +77,9 @@ AI 助手 skill 支持 Claude Code 和 Codex。装上后直接问「替朋友担
 ---
 
 ## 这本书想回答的问题
+
+> **台灣版尚在逐條改寫與查證。** 下方保留的是中國大陸原文工作底稿，不是台灣現行醫療、法律、金融或福利指南。台灣版內容與查核狀態另見工作區。
+
 
 | 问题 | 去哪看 |
 | --- | --- |
@@ -321,21 +328,3 @@ A 级只说明「有具体数字、出处可核」，不说明这个数字一定
 - 改过内容的要写明改过。书里的法条、补贴标准和截止日期经常更新，建议同时写上你同步的是哪一天的版本。
 
 代码用 [MIT](LICENSE-CODE)，范围是 tools/、skills/、index.html 和 .github/。
-
-## Star 走势
-
-[![Star History Chart](https://api.star-history.com/svg?repos=eternity4719/HowToLiveBetter&type=Date)](https://star-history.com/#eternity4719/HowToLiveBetter&Date)
-
-## 赞赏
-
-觉得有用，可以用微信扫码请作者喝杯咖啡。给不给都行，不影响任何内容。
-
-<img src="ads/wechat-reward.png" alt="微信赞赏码" width="240">
-
-## 广告位
-
-<a href="https://4.mcyyy.com"><img src="ads/mcyyy.webp" alt="永恒世界 Minecraft 服务器，游戏地址 1.mcyyy.com" width="820"></a>
-
-## 商务合作
-
-邮箱 [admin@mcyyy.com](mailto:admin@mcyyy.com)

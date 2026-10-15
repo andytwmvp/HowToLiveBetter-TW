@@ -6,8 +6,8 @@ import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-export const REPO = 'https://github.com/eternity4719/HowToLiveBetter';
-export const SITE = 'https://eternity4719.github.io/HowToLiveBetter/';
+export const REPO = 'https://github.com/andytwmvp/HowToLiveBetter-TW';
+export const SITE = 'https://andytwmvp.github.io/HowToLiveBetter-TW/';
 export const TITLE = '高性价比人生指南';
 export const RELEASE = `${REPO}/releases/download/epub-latest`;
 
@@ -26,9 +26,9 @@ export function gitCommit() {
 }
 
 // 正文一天可能改好几轮，只给日期分不出是哪一版，所以精确到分钟。
-// CI 跑在 UTC 上，统一按北京时间显示，免得下载的人按自己那边的日期对不上。
+// CI 跑在 UTC 上，统一按台北時間显示，免得下载的人按自己那边的日期对不上。
 export function buildStamp() {
-  return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Shanghai', dateStyle: 'short', timeStyle: 'short' }).format(new Date());
+  return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Taipei', dateStyle: 'short', timeStyle: 'short' }).format(new Date());
 }
 
 export function stripBackLink(md) {
