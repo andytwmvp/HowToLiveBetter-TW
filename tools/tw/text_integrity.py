@@ -56,10 +56,8 @@ def apply():
             lines[i] = left + ')](' + unquote(right[:-3]) + ')'
             repaired += 1
     text = '\n'.join(lines) + '\n'
-    # 閱讀入口留在繁體分支，不把讀者送回原作的簡體與廣告頁面。
     text = text.replace('](https://eternity4719.github.io/HowToLiveBetter/selfcheck.html)', '](selfcheck.html)')
     text = text.replace('](https://eternity4719.github.io/HowToLiveBetter/)', '](index.html)')
-    # 尚未出版的檔案指向建置說明，不宣稱已存在下載版。
     text = re.sub(r'\[離線單文件 HTML\]\(https://github\.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter\.html\)', '[繁體工作稿離線建置說明](locales/zh-TW/README.md)', text)
     base.write('README.md', text)
     changed = []
@@ -71,7 +69,6 @@ def apply():
         assert re.findall(r'\d+', before) == re.findall(r'\d+', after), f'數字變動：{path}'
         if after != before:
             base.write(path, after); changed.append(path)
-    # 原始來源驗證也使用正確邊界，不能把 URL 後的中文敘述算成 URL。
     code = base.read('tools/tw/traditionalize.py')
     before_line = next(line for line in code.splitlines() if line.startswith('URL = re.compile('))
     code = code.replace(before_line, 'URL = re.compile(' + repr(URL.pattern) + ')')
@@ -82,9 +79,11 @@ def apply():
 
 def check():
     paths = protected_paths(); errors = []
+    # 台灣與臺灣均可用於繁體中文，不能把此差異判成簡體字殘留。
+    canonical = lambda value: value.replace('臺', '台')
     for path in targets():
         text = base.read(path)
-        if normalized(text, paths) != text: errors.append(path)
+        if canonical(normalized(text, paths)) != canonical(text): errors.append(path)
     if errors: raise RuntimeError('仍有待正規化文案：' + ', '.join(errors))
     md = base.read('README.md')
     badges = BADGE.findall(md)
@@ -92,14 +91,14 @@ def check():
     assert '%29%5D%28' not in md, 'Markdown 邊界仍被誤編碼'
     for label, url, dest in badges:
         assert not re.search(r'[\[\]()]', unquote(url)), '圖片 URL 混入 Markdown 邊界'
-        assert base.cc().convert(label) == label
+        assert canonical(base.cc().convert(label)) == canonical(label)
         if not dest.startswith(('https:', 'http:', '#')):
             assert (base.ROOT / unquote(dest)).exists(), dest
-    # 真實網址必須能保留 DOI 圓括號，且不得吞入連結後方的中文文案。
     fixture = '[閱讀](https://example.org/a)：\u8fd9\u4e2a\u9875\u9762'
     assert URL.findall(fixture) == ['https://example.org/a']
     assert URL.findall('<https://doi.org/10.1016/S0140-6736(20)30367-6>') == ['https://doi.org/10.1016/S0140-6736(20)30367-6']
     assert normalized(fixture, []) != fixture
+    assert canonical(normalized('台灣與臺灣', [])) == canonical('台灣與臺灣')
     print(f'PASS：{len(targets())} 份文案、6 個 Markdown 圖片徽章、網址邊界與 DOI 括號回歸測試。')
 
 
