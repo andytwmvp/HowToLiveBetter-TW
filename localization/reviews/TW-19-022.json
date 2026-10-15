@@ -1,0 +1,32 @@
+{
+  "id": "TW-19-022",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師審閱、法院判斷或個案法律意見）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-022.md",
+  "target_sha256": "084b43c863e98b8d5dae1c915cbb42d5f3fb730b1a3ec51f97ab3e6267e286d8",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "claim": "離職違約金、最低服務年限與競業禁止逐項審查：第9-1、15-1及26條：競業四要件、最長2年、最低服務年限及禁止預扣。",
+      "supporting_passage": "編者摘要（非逐字引文）：第9-1、15-1及26條：競業四要件、最長2年、最低服務年限及禁止預扣。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002",
+      "claim": "離職違約金、最低服務年限與競業禁止逐項審查：第7-1至7-3條：書面範圍及合理補償綜合要件，50%不是唯一門檻。",
+      "supporting_passage": "編者摘要（非逐字引文）：第7-1至7-3條：書面範圍及合理補償綜合要件，50%不是唯一門檻。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "claim": "離職違約金、最低服務年限與競業禁止逐項審查：秘密取得、使用及洩漏責任並不因競業條款無效即消失。",
+      "supporting_passage": "編者摘要（非逐字引文）：秘密取得、使用及洩漏責任並不因競業條款無效即消失。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "分開三類條款，不沿用外國限定違約金名稱的說法，補充合理補償不是只看50%。",
+  "legal_scope": "以2026-10-16可讀的現行法規及官方說明核對本條主張；受僱身分、工時制度與個案終止事由另判斷。2026最低工資不預先套用後續年度。",
+  "review_method": "逐一開啟第一手法規及主管機關說明，核對各款條件；支持段落是AI輔助編者摘要，不是逐字引文或獨立法律專業簽證。"
+}

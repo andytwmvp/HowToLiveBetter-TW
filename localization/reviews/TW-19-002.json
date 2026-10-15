@@ -1,0 +1,26 @@
+{
+  "id": "TW-19-002",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師審閱、法院判斷或個案法律意見）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-002.md",
+  "target_sha256": "f82ab6b09307677082fa850fb60dcd3e540bdc5813c93bcdad507b18222ad256",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "claim": "特休依適用年資取得，滿10年為16日而非仍維持15日：第10、20、38及39條：年資併計與承認、特休各門檻、排休及未休結清。",
+      "supporting_passage": "編者摘要（非逐字引文）：第10、20、38及39條：年資併計與承認、特休各門檻、排休及未休結清。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002",
+      "claim": "特休依適用年資取得，滿10年為16日而非仍維持15日：第5、24及24-1條：年資及年度選擇、一日工資計算。",
+      "supporting_passage": "編者摘要（非逐字引文）：第5、24及24-1條：年資及年度選擇、一日工資計算。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "補正10年16日門檻，移除外國未休三倍算法。",
+  "legal_scope": "以2026-10-16可讀的現行法規及官方說明核對本條主張；受僱身分、工時制度與個案終止事由另判斷。2026最低工資不預先套用後續年度。",
+  "review_method": "逐一開啟第一手法規及主管機關說明，核對各款條件；支持段落是AI輔助編者摘要，不是逐字引文或獨立法律專業簽證。"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "TW-19-008",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師審閱、法院判斷或個案法律意見）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-008.md",
+  "target_sha256": "087a7c03941e79d001f131c3a42f1b5ebc55f615d4ff5cadd52c318e4c2fb954",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "claim": "離職留證限於合法可取得資料，不整批搬走公司機密：第23、30條：工資明細、出勤五年保存與副本請求。",
+      "supporting_passage": "編者摘要（非逐字引文）：第23、30條：工資明細、出勤五年保存與副本請求。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010064",
+      "claim": "離職留證限於合法可取得資料，不整批搬走公司機密：第35及38條：提出依法應備文件與出勤時間推定，不排除反證。",
+      "supporting_passage": "編者摘要（非逐字引文）：第35及38條：提出依法應備文件與出勤時間推定，不排除反證。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+      "claim": "離職留證限於合法可取得資料，不整批搬走公司機密：第2、10及13-1條：秘密構成要件與不法取得、使用等責任。",
+      "supporting_passage": "編者摘要（非逐字引文）：第2、10及13-1條：秘密構成要件與不法取得、使用等責任。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "以合法取證替代無差別備份公司資料；不把自保當成越權下載的許可。",
+  "legal_scope": "以2026-10-16可讀的現行法規及官方說明核對本條主張；受僱身分、工時制度與個案終止事由另判斷。2026最低工資不預先套用後續年度。",
+  "review_method": "逐一開啟第一手法規及主管機關說明，核對各款條件；支持段落是AI輔助編者摘要，不是逐字引文或獨立法律專業簽證。"
+}

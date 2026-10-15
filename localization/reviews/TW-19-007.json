@@ -1,0 +1,32 @@
+{
+  "id": "TW-19-007",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師審閱、法院判斷或個案法律意見）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-007.md",
+  "target_sha256": "f1bbcbfb8ec3f8010425fdd6778b8b568bf28252981443865c007324e353ce6a",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "claim": "離職原因照實記載，不因催促就簽自願離職或概括放棄：第14條終止事由、限定款次的30日期間及準用資遣規則。",
+      "supporting_passage": "編者摘要（非逐字引文）：第14條終止事由、限定款次的30日期間及準用資遣規則。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+      "claim": "離職原因照實記載，不因催促就簽自願離職或概括放棄：第11、23及25條：非自願離職等資格、離職事由爭議與證明替代程序。",
+      "supporting_passage": "編者摘要（非逐字引文）：第11、23及25條：非自願離職等資格、離職事由爭議與證明替代程序。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
+      "claim": "離職原因照實記載，不因催促就簽自願離職或概括放棄：可向勞務提供地地方政府申請調解，依法整理請求與資料。",
+      "supporting_passage": "編者摘要（非逐字引文）：可向勞務提供地地方政府申請調解，依法整理請求與資料。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "避免把簽自願離職當成無影響的行政流程，亦禁止偽造非自願事由。",
+  "legal_scope": "以2026-10-16可讀的現行法規及官方說明核對本條主張；受僱身分、工時制度與個案終止事由另判斷。2026最低工資不預先套用後續年度。",
+  "review_method": "逐一開啟第一手法規及主管機關說明，核對各款條件；支持段落是AI輔助編者摘要，不是逐字引文或獨立法律專業簽證。"
+}
