@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 先搜一下书里有没有
-    url: https://eternity4719.github.io/HowToLiveBetter/
-    about: 在线检索页能按关键词、章节、证据等级筛。想问的事多半已经有条目了。
+  - name: 台灣版工作區與查核狀態
+    url: https://github.com/andytwmvp/HowToLiveBetter-TW/blob/tw/bootstrap-and-remove-ads/locales/zh-TW/README.md
+    about: 台灣版仍在逐條翻譯與查核；請在此 fork 回報問題，不向原作者儲存庫提出 PR 或問題。
