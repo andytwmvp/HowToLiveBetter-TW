@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-15",
+  "sources": [
+    ["tenancyact", "租賃住宅市場發展及管理條例", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125", "住宅租賃、押金、修繕、轉租、提前終止、租賃住宅服務業及免費調處；不把適用範圍外的短租旅宿當一般住宅租賃。"],
+    ["rentalstandard", "行政院：住宅租賃定型化契約應記載及不得記載事項", "https://www.ey.gov.tw/File/43BC094940995CFC?A=C", "114年4月18日版本；審閱至少3日、押金最高2個月、電費、修繕及終止規則。"],
+    ["lease425", "民法第425條：租賃物所有權移轉", "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=425", "交付後占有中的租約對受讓人原則繼續；未公證逾5年或不定期限的例外須另辨識。"],
+    ["landpre", "土地法第79條之1：預告登記", "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=79-1", "保全登記請求權的預告登記及對徵收、判決與強制執行的限制。"],
+    ["presalestandard", "行政院：預售屋買賣定型化契約應記載及不得記載事項", "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C", "112年7月1日生效文本；面積找補、履約擔保、付款、驗收、保固及貸款不足；不把另行預告草案當已生效規則。"],
+    ["presaleaudit2026", "行政院消保處：預售屋買賣契約查核", "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/b33a579c-c999-4426-bd87-826e6188f32d", "115年查核與驗收義務、契約應記載事項的實際執行。"],
+    ["youthloan3", "行政院：青年安心成家購屋優惠貸款3.0方案", "https://www.ey.gov.tw/Page/448DE008087A1971/1cb37b62-d127-4876-9cce-95016f49bcbe", "115年7月16日方案；115年8月1日至118年7月31日，資格、一般及婚育上限與3+3利息補貼。個別利率及成數仍由銀行核貸。"],
+    ["condominium", "公寓大廈管理條例", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070118", "共用部分、用途、管理費、管委會權限及法定追償程序。"],
+    ["condopowers", "法務部：管委會，可管不可罰", "https://www.moj.gov.tw/2204/2528/2547/2576/15126/", "管理權與公權力、強制限制住戶權利的區分；須配合現行條例及具體事實。"],
+    ["farmland", "農業部：臺灣農地資訊服務網", "https://talis.moa.gov.tw/talis/", "查詢農地使用、法規及土地資訊的官方入口；不以土地可買賣推定可興建住宅。"],
+    ["farmhouse", "我的E政府：興建自用農舍資格審查", "https://www.gov.tw/News_Content_2_786828", "農業用地興建農舍須另作資格與用地審查；地方申辦資料不當成全國統一收費。"]
+  ]
+}

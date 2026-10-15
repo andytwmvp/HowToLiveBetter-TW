@@ -1,9 +1,29 @@
-# 台灣版閱讀說明
+# 臺灣版閱讀與編修入口
 
-本版不是簡轉繁，也不是全書摘要。每一條會保留原文對應、重新處理台灣制度與取得可核對來源；原文 book/ 是工作底稿，不能直接作為台灣法律、健保、勞動或福利建議。
+[臺灣安全導航](../../index.html) · [臺灣自查](../../selfcheck.html) · [完整工作狀態](../../PROJECT_STATE.md)
 
-目前階段：建立完整盤點、移除原作者廣告、準備分批翻譯。尚未完成的條目會留在清單，不以不存在的譯文充數。第一批優先處理第 14 章帳號與資訊安全，再處理急難應變、勞動、醫療與生活支持等高風險制度差異。
+目前預設頁面是9則已核對官方來源的急救求助與公費篩檢導航，不是765條全書臺灣版。資料、適用條件、來源與查核日期集中於 [runtime.json](../../localization/tw-edition/runtime.json)，網站、自查、Skill、HTML、EPUB與Anki共用同一份資料。無符合項目或來源載入失敗時，不會改讀未查核草稿填補。
 
-處理方式：保留翻譯、台灣改寫、台灣新增、不適用且附理由。查核狀態：待處理、草稿、來源已核對、待專業審閱、需重新查核。查核日、資料發布日與制度生效日分開記錄；來源未載日期就註明未載，不能以抓取日充當發布日。
+## 原作與草稿分開
 
-[正式工作進度](../../PROJECT_STATE.md) · [逐條清單](../../localization/manifest.json) · [原作與授權](../../ATTRIBUTION.md)
+[原作繁體來源稿](../../source.html)保留34章、765條與原有搜尋、分級及長文功能，僅供原作研究背景查閱，不能當作臺灣現行制度。原始版本與授權仍可追溯。
+
+[結構化臺灣草稿](../../localization/tw-edition/chapters/)及本目錄的book/尚在編修。14章、373條結構化草稿；合併其他草稿去重為385個主題，380個尚無草稿。另有168個來源ID尚未登錄，涉及662處引用。這些不是正式查核完成數，亦不是已確認失效網址數。
+
+## 本地閱讀與匯出
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+# 瀏覽 http://127.0.0.1:8000/ ，停止時按 Ctrl+C。
+node tools/offline/build.mjs
+node tools/epub/build.mjs
+node tools/anki/build.mjs
+```
+
+預設產物為dist/HowToLiveBetter-TW.html、.epub、.apkg，僅含目前9則已核對導航。HTML可離線使用；EPUB與Anki已做結構／資料驗證，不宣稱已完成所有閱讀器與Anki用戶端匯入驗收。
+
+明確需要原作工程預覽時，另加 `--source-preview`；EPUB來源版仍需先安裝原有marked依賴。來源預覽與臺灣版不可混稱，原作產物不要當成正式臺灣建議發布。
+
+全書正式完成門檻：`python3 tools/tw/review_contract.py --require-complete`。目前應回報未完成，不會因一般CI綠燈自動改成完成。
+
+[本輪修正與驗收](../../localization/audit-fixes.md) · [署名與授權](../../ATTRIBUTION.md)

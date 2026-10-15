@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-15",
+  "sources": [
+    ["copyright", "著作權法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017", "受僱與出資著作、合理使用、技術保護措施、網路服務提供者民事免責及通知回復。"],
+    ["tradesecret", "營業秘密法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028", "秘密性、經濟價值及合理保密措施三要件；取得、使用、洩漏與職務開發歸屬。"],
+    ["epayment", "電子支付機構管理條例", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380237", "第4、5條業務及許可、代收付限額例外；不能把所有第三方支付與電子支付視為同一監管制度。"],
+    ["thirdpay", "數發部：第三方支付業監理措施", "https://moda.gov.tw/ADI/news/latest-news/16388", "未完成洗錢防制及服務能量登錄不得提供第三方支付；查核、KYC及疑似交易監控。"],
+    ["companyact", "公司法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001", "公司型態、負責人、資本及公司資訊申報；登記不等於取得其他業務許可。"],
+    ["childact", "兒童及少年福利與權益保障法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001", "兒少保護、網路防護及平台義務，非中國大陸實名或直播年齡規則。"],
+    ["copyrightnotice", "智慧局：著作權法第90條之9", "https://www.tipo.gov.tw/tw/copyright/694-17493.html", "回復通知後轉送權利人；10個工作日提出訴訟證明及14個工作日回復的個別起算點。"],
+    ["adverify", "數發部：廣告平台身分驗證與透明度報告", "https://moda.gov.tw/press/bulletin/14534", "2024年11月30日生效的廣告平台規範；適用對象須另核對法定規模與公告。"],
+    ["adtakedown", "數發部：詐騙廣告通知處置期限", "https://moda.gov.tw/press/bulletin/14538", "主管機關通知詐騙廣告後24小時處置，不概括所有網路留言均適用。"],
+    ["airules", "行政院：人工智慧基本法施行規劃", "https://www.ey.gov.tw/Page/448DE008087A1971/f784469b-fe42-438b-8788-18846a53cec4", "2026年已公布施行的基本法及各機關工作；基本法、產業指引與個別法律義務應分開。"],
+    ["renewaldraft", "數發部：網路零售定型化契約修正預告", "https://join.gov.tw/policies/detail/866671a7-5a37-4989-aa3d-50f5799deab5", "2026年1月草案預告頁，僅證明修法討論，不能當作所有訂閱已一律適用的新法。"],
+    ["ticketlaw", "高檢署：藝文表演票券黃牛條款", "https://www.tph.moj.gov.tw/4421/4475/632364/1100858/post", "加價販售及以虛偽資料或其他不正方式利用電腦取得訂票、取票憑證；體育票券須另查運動主管法規。"]
+  ]
+}

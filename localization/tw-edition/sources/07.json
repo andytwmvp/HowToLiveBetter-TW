@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-15",
+  "sources": [
+    ["ifthen", "Gollwitzer與Sheeran（2006）：Implementation Intentions and Goal Achievement", "https://doi.org/10.1016/S0065-2601(06)38002-1", "已核對出版者摘要；支持具體情境—行動計畫的研究方向，不把平均效應量當個人的成功率或臺灣工作場合實測。"],
+    ["sunkcost", "Roth等（2015）：On the sunk-cost effect in economic decision-making", "https://link.springer.com/article/10.1007/s40685-014-0014-8", "已核對公開論文摘要與討論；決策類型及調節因素不同，不概括宣稱所有影響隨時間下降。"],
+    ["meetings", "Leach等（2009）：Perceived Meeting Effectiveness", "https://link.springer.com/article/10.1007/s10869-009-9092-6", "會議設計與自陳有效性研究；不代表站立一定提高產能或任何無議程會議均無用。"],
+    ["unpack", "Kruger與Evans（2004）：Unpacking reduces the planning fallacy", "https://www.sciencedirect.com/science/article/pii/S002210310300177X", "核對出版者摘要及實驗討論節錄；拆分複合任務可減少估時偏短，沒有臺灣通用節省百分比。"],
+    ["procrastination", "Steel（2007）：The nature of procrastination", "https://pubmed.ncbi.nlm.nih.gov/17201571/", "相關性統合研究；任務厭惡、自我效能與分心等關聯，不等於個別精神疾病診斷。"],
+    ["habit", "Lally等（2010）：How are habits formed", "https://onlinelibrary.wiley.com/doi/10.1002/ejsp.674", "核對研究摘要：簡單生活行為、固定情境、自陳自動化；不能把21天或其他單一天數當所有習慣期限。"],
+    ["cbtprocrastination", "Rozental等（2015）：Internet-based CBT for procrastination", "https://pubmed.ncbi.nlm.nih.gov/25939016/", "瑞典隨機試驗、特定10週介入；不是任何中文自助書等同治療，也不是未顯著組間差異就證明完全等效。"],
+    ["buytime", "Whillans等（2017）：Buying time promotes happiness", "https://pmc.ncbi.nlm.nih.gov/articles/PMC5559044/", "核對公開論文；購買省時服務與幸福感，非臺灣家務時數統計，也不表示所有休閒時間都能換成薪資。"],
+    ["proximity", "Cochrane（2019）：改變食物可得性與距離", "https://www.cochrane.org/evidence/CD012573_altering-availability-or-proximity-food-alcohol-and-tobacco-products-change-their-selection-and", "低或極低確定性、主要食物環境試驗；搬用到手機與工作環境時標為實務推論。"],
+    ["incentives", "Halpern等（2015）：Four financial-incentive programs for smoking cessation", "https://pubmed.ncbi.nlm.nih.gov/25970009/", "戒菸隨機試驗；押金接受度低，整體結果不能只取願意接受者的效果；不推薦以生活費押注。"],
+    ["shortcuts", "Lane等（2005）：Hidden Costs of Graphical User Interfaces", "https://www.tandfonline.com/doi/abs/10.1207/s15327590ijhc1802_1", "出版者摘要支持快捷鍵與操作效率方向；不宣稱任何現代軟體及任務都節省固定秒數。"],
+    ["commuting", "Chatterjee等（2020）：Commuting and wellbeing", "https://doi.org/10.1080/01441647.2019.1649317", "公開文獻綜覽；通勤壓力、滿意度與方式的差異，不能推定縮短通勤必然延壽或增加收入。"]
+  ]
+}

@@ -1,0 +1,44 @@
+"""實際瀏覽器驗證臺灣預設來源、自查年齡邊界與離線資料一致性。"""
+from edition import build_html
+from review_contract import ROOT, validate_runtime
+
+def check_navigation(page, context, url, review):
+    data=validate_runtime();expected={e['id'] for e in data['items']};requests=[]
+    def capture(request):requests.append(request.url)
+    page.on('request',capture)
+    page.goto(url,wait_until='domcontentloaded')
+    page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
+    assert set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==expected
+    assert not any('/book/' in request or '/chapters/' in request for request in requests),'臺灣預設頁讀取了原作或草稿'
+    page.screenshot(path=str(review/'taiwan-reader.png'),animations='disabled')
+    page.locator('#q').fill('乳癌');assert page.locator('.q').count()==1
+    page.goto(url+'selfcheck.html',wait_until='domcontentloaded')
+    page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
+    page.locator('#sex').select_option('f')
+    for age,ids in [(24,set()),(25,{'TW-NAV-005'}),(29,{'TW-NAV-005'}),(30,{'TW-NAV-006'}),(39,{'TW-NAV-006'}),(40,{'TW-NAV-004','TW-NAV-006'}),(74,{'TW-NAV-004','TW-NAV-006'}),(75,{'TW-NAV-006'})]:
+        page.locator('#age').fill(str(age))
+        visible=set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))
+        assert visible & {'TW-NAV-004','TW-NAV-005','TW-NAV-006'}==ids,(age,visible)
+    page.locator('#age').fill('44');page.locator('#family').select_option('n');assert not page.locator('#TW-NAV-009').count()
+    page.locator('#family').select_option('y');assert page.locator('#TW-NAV-009').count()==1
+    page.locator('#age').fill('45');assert not page.locator('#TW-NAV-009').count()
+    page.locator('#reset').click();page.locator('.seg button.yes').first.click()
+    assert page.locator('.seg button.yes').first.get_attribute('aria-pressed')=='true'
+    assert page.evaluate('localStorage.getItem("selfcheck-v1")') is None
+    page.set_viewport_size({'width':390,'height':844})
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1')
+    page.screenshot(path=str(review/'taiwan-selfcheck-mobile.png'),animations='disabled')
+    def fail(route):route.fulfill(status=503,body='unavailable')
+    context.route('**/localization/tw-edition/runtime.json',fail)
+    try:
+        requests.clear();page.goto(url,wait_until='domcontentloaded')
+        page.wait_for_function('window.TWRuntime && window.TWRuntime.failed')
+        assert page.locator('.q').count()==0
+        assert not any('/book/' in request or '/chapters/' in request for request in requests)
+    finally:context.unroute('**/localization/tw-edition/runtime.json',fail)
+    out=ROOT/'dist/tw-navigation.html';build_html(out,data)
+    page.goto(out.as_uri(),wait_until='domcontentloaded')
+    page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
+    assert set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==expected
+    page.remove_listener('request',capture)
+    return ['臺灣預設閱讀與自查共用9則已核對導航；未讀取原作或草稿','乳癌40／74、子宮頸抹片25／29／30歲與大腸癌家族史邊界通過','手機版、自查操作、離線同一資料及來源失敗不回退測試通過']

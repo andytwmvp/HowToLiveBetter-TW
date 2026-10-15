@@ -1,0 +1,31 @@
+name: 台灣在地化整合前快照
+on:
+  push:
+    branches: [tw/zh-hant-ui-and-assets]
+    paths: [.github/workflows/tw-completion-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: 封裝已追蹤來源與版本，不包含憑證、字型或相依套件
+        run: |
+          mkdir -p "$RUNNER_TEMP/tw-completion"
+          git archive --format=zip -o "$RUNNER_TEMP/tw-completion/source.zip" HEAD
+          git rev-parse HEAD > "$RUNNER_TEMP/tw-completion/commit.txt"
+          git branch -r > "$RUNNER_TEMP/tw-completion/branches.txt"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: tw-completion-source
+          path: ${{ runner.temp }}/tw-completion/
+          retention-days: 1
+      - name: 清除暫存
+        if: always()
+        run: rm -rf -- "$RUNNER_TEMP/tw-completion"

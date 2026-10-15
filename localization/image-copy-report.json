@@ -1,0 +1,25 @@
+{
+  "base_commit": "510111a8bd1003fff5e9adef8b95f6ffc489afba",
+  "scope": "圖片文案臺灣在地化；非正文制度查核",
+  "image": "og.png",
+  "image_sha256": "db57013fbb000b939448c8d6177dfade840144169598213e532fd449eaafe468",
+  "template": "tools/og.html",
+  "template_sha256": "303814c2872ede062a5cb9fcb0868dc178eb7b01526314a6d4112b5a4cd87196",
+  "spec_sha256": "a554b7f33fc9415f73205a40ce73174c8e1aef8532e5baad9565e7f4cff2e3f5",
+  "dimensions": [
+    1200,
+    630
+  ],
+  "dynamic_badges": 6,
+  "source_statistics": {
+    "entries": 765,
+    "A": 495,
+    "B": 218,
+    "C": 52,
+    "links": 2508
+  },
+  "taiwan_verified_entries_changed": false,
+  "render_checks": [
+    "og.png 已由繁體模板重製；1200×630；文字無超出畫布或區塊重疊"
+  ]
+}

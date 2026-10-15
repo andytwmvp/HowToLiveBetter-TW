@@ -1,12 +1,12 @@
 $--
-$-- pandoc 的 typst 模板（只认 $body$ 和几个 -V 变量），不用 pandoc 自带的 conf()：
-$-- 自带模板把页面设置锁在 conf() 里，改不了页眉页脚，所以这里自己排。
-$-- 开头到 divider 那段是 pandoc 生成的正文要用的辅助定义，照抄自 `pandoc -D typst`，别删。
+$-- pandoc 的 typst 模板（只認 $body$ 和幾個 -V 變量），不用 pandoc 自帶的 conf()：
+$-- 自帶模板把頁面設置鎖在 conf() 裡，改不了頁眉頁腳，所以這裡自己排。
+$-- 開頭到 divider 那段是 pandoc 生成的正文要用的輔助定義，照抄自 `pandoc -D typst`，別刪。
 $--
 #set terms(hanging-indent: 1.5em)
 
 #set table(inset: 6pt, stroke: none)
-// pandoc 把表格塞进 align(center) 里，单元格会跟着居中，中文表格左对齐才好读
+// pandoc 把表格塞進 align(center) 裡，單元格會跟著居中，中文表格左對齊才好讀
 #show table.cell: it => align(left, it)
 
 #let horizontalRule = line(start: (25%, 0%), end: (75%, 0%))
@@ -14,15 +14,15 @@ $--
 
 #show figure.where(kind: table): set figure.caption(position: top)
 #show figure.where(kind: image): set figure.caption(position: bottom)
-// 长表格要能跨页，否则整块挤不下就留一页白
+// 長表格要能跨頁，否則整塊擠不下就留一頁白
 #show figure: set block(breakable: true)
 #set smartquote(enabled: false)
 
 // ---------- 版面 ----------
 #set document(title: "$booktitle$", author: "eternity4719")
 #set text(
-  // 西文用 typst 自带的 Libertinus，中文按可用性往后找：CI 上是 Noto，本机是雅黑
-  font: ("Libertinus Serif", "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", "Noto Sans CJK SC", "Microsoft YaHei", "SimSun"),
+  // 西文用 typst 自帶的 Libertinus，中文按可用性往後找：CI 上是 Noto，本機是雅黑
+  font: ("Libertinus Serif", "Noto Serif CJK TC", "Noto Serif SC", "Source Han Serif SC", "Noto Sans CJK TC", "Microsoft JhengHei", "SimSun"),
   size: 10.5pt, lang: "zh", region: "cn",
 )
 #set par(justify: false, leading: 0.78em, spacing: 0.9em)
@@ -33,10 +33,10 @@ $--
 #show heading.where(level: 1): set text(19pt)
 #show heading.where(level: 2): set text(14pt)
 #show heading.where(level: 3): set text(11.5pt)
-// 每节另起一页；weak 保证前一页正好排满时不多出一张空页
+// 每節另起一頁；weak 保證前一頁正好排滿時不多出一張空頁
 #show heading.where(level: 1): it => { pagebreak(weak: true); it }
 
-// 页眉：左边书名，右边当前节名；一节的头一页不打页眉
+// 頁眉：左邊書名，右邊當前節名；一節的頭一頁不打頁眉
 #let running-head = context {
   let next = query(selector(heading.where(level: 1)).after(here())).at(0, default: none)
   if next != none and next.location().page() == here().page() { return }
@@ -56,15 +56,15 @@ $--
   #block(width: 80%)[#text(11.5pt, fill: luma(60))[$subtitle$]]
   #v(2cm)
   #text(10pt, fill: luma(90))[
-    生成于 $builddate$（北京时间）　·　正文提交 $commit$ \
-    正文每天都在改，以在线版为准：$site$ \
-    在线检索、EPUB 与本 PDF 的最新版都在 $repo$
+    生成於 $builddate$（北京時間）　·　正文提交 $commit$ \
+    正文每天都在改，以線上版為準：$site$ \
+    線上檢索、EPUB 與本 PDF 的最新版都在 $repo$
   ]
 ]
 
-// ---------- 目录 ----------
+// ---------- 目錄 ----------
 #pagebreak()
-#outline(title: [目录], depth: 1, indent: 1em)
+#outline(title: [目錄], depth: 1, indent: 1em)
 
 // ---------- 正文 ----------
 #pagebreak(weak: true)

@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-15",
+  "sources": [
+    ["noncompete", "勞動部：離職後競業禁止條款之約定", "https://www.mol.gov.tw/1607/28162/28296/28340/28342/28358/", "四要件、最長2年及離職後合理補償的綜合考量，不能套用中國連續3月未付即可解除的通則。"],
+    ["gpl", "GNU GPL v3授權全文（OSI收錄）", "https://opensource.org/license/gpl-3.0", "GPL允許收費商用，傳遞受涵蓋作品須依規定提供相應原始碼及授權；不等於任何執行輸出或獨立程式都受感染。"],
+    ["agpl", "GNU AGPL v3授權全文（OSI收錄）", "https://opensource.org/license/agpl-3.0", "第13節對修改後程式的網路互動原始碼提供要求；須按實際版本與整合關係確認。"],
+    ["vulnpolicy", "TWCERT/CC漏洞揭露政策", "https://www.twcert.org.tw/tw/cp-103-2924-7b930-1.html", "協調揭露政策與處理，通報不是事前授權測試所有第三方系統。"],
+    ["vulnreport", "TWCERT/CC漏洞通報", "https://www.twcert.org.tw/tw/sp-cve-declare-1.html", "通報必要資訊與聯絡入口，不在公開報告暴露使用者個資或可直接濫用的秘密。"]
+  ]
+}

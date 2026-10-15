@@ -1,0 +1,27 @@
+name: 糾錯：條目寫錯了或過時了
+description: 數字不對、法規改了、來源打不開、說法有誤
+title: "第 X 節第 Y 條："
+labels: ["糾錯"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: 哪一條
+      description: 寫節號和條號，比如「第 32 節第 2 條」。
+      placeholder: 第 X 節第 Y 條
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 哪裡不對
+      description: 把原文那句抄過來，再說應該是什麼。
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 依據
+      description: 期刊論文（DOI 或 PubMed 連結）、法條原文、政府或官方機構網頁。知乎、公眾號、百家號這類轉述用不了。
+    validations:
+      required: true
