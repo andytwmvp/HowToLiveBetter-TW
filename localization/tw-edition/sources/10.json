@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-15",
+  "sources": [
+    ["taxnet", "財政部：境內網路交易應注意事項", "https://www.etax.nat.gov.tw/etwmain/tax-info/network-transaction-taxtation-area/seller/notice", "115年9月15日更新；純網路銷售稅籍、營業稅與所得稅分開，貨物10萬元、勞務5萬元起徵點及發票規定；官方稅務諮詢0800-000-321。"],
+    ["companyannual", "商業發展署：115年公司負責人及主要股東年度申報", "https://www.aoc.gov.tw/showPublic/579", "2026年2月13日公告；3月1日至31日，非公開發行等適用公司，停業不當然免申報。"],
+    ["accounting", "商業會計法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080009", "真實記帳、憑證與帳冊保存，憑證至少5年、帳簿及財報至少10年的起算及例外。"],
+    ["foodact", "食品安全衛生管理法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040001", "食品業者登錄、衛生安全、追溯、自主檢查、標示及不得宣稱醫療效能；不得把中國刑期或許可分類照搬。"],
+    ["foodlabel", "食藥署：食品標示諮詢服務平台", "https://foodlabel.fda.gov.tw/FdaFrontEndApp/", "按食品類型核對包裝、營養、過敏原與其他法定標示，非任意改成中文即合格。"],
+    ["bankact", "銀行法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380001", "第29、29之1條收受存款與非法吸金；第47之1條信用卡循環利率上限。"],
+    ["fairtrade", "公平交易法", "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0150002", "不實廣告、欺罔或顯失公平交易；加盟揭露仍需核對主管機關具體處理原則。"],
+    ["franchise", "公平會：加盟資訊透明與處理原則背景", "https://www.ftc.gov.tw/upload/ftc30e-book/files/basic-html/page59.html", "官方歷史說明支持簽約前揭露費用、限制、協助及終止條件；不是2026年全部期限的現行法規全文，故正文不據此訂死日數。"],
+    ["depositlaw", "民法第249條：定金", "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=249", "依約定與可歸責事由判斷返還、沒收或加倍返還，不以訂金或定金字樣單獨認定。"],
+    ["companycapital", "公司法第7條：資本額查核簽證", "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=7", "公司設立與變更資本的會計師查核文件要求，非中國認繳5年制度。"],
+    ["limitedcompany", "公司法第99條：有限公司股東責任", "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080001&flno=99", "責任以出資為限及濫用法人地位例外，不免除個人保證、侵權或犯罪責任。"]
+  ]
+}
