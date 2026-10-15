@@ -1,0 +1,38 @@
+{
+  "id": "TW-19-004",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師審閱、法院判斷或個案法律意見）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-004.md",
+  "target_sha256": "6455e139461610d099b71c2957e57379773276f7801dca0e971c5e0a8c673d2c",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
+      "claim": "資遣費拆分新舊年資，以平均工資而非只用本薪計算：第11、12條保留舊年資、新制半年基數及30日給付期限。",
+      "supporting_passage": "編者摘要（非逐字引文）：第11、12條保留舊年資、新制半年基數及30日給付期限。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "claim": "資遣費拆分新舊年資，以平均工資而非只用本薪計算：第2條工資與平均工資，第17、18條舊制資遣及不得請領情形。",
+      "supporting_passage": "編者摘要（非逐字引文）：第2條工資與平均工資，第17、18條舊制資遣及不得請領情形。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002",
+      "claim": "資遣費拆分新舊年資，以平均工資而非只用本薪計算：第2條平均工資排除期間與第5條年資；不能只看固定本薪。",
+      "supporting_passage": "編者摘要（非逐字引文）：第2條平均工資排除期間與第5條年資；不能只看固定本薪。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
+      "claim": "資遣費拆分新舊年資，以平均工資而非只用本薪計算：地方調解為免費且不同於法院程序。",
+      "supporting_passage": "編者摘要（非逐字引文）：地方調解為免費且不同於法院程序。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "移除單用月薪乘年資及所有離職都能領資遣費的簡化。",
+  "legal_scope": "以2026-10-16可讀的現行法規及官方說明核對本條主張；受僱身分、工時制度與個案終止事由另判斷。2026最低工資不預先套用後續年度。",
+  "review_method": "逐一開啟第一手法規及主管機關說明，核對各款條件；支持段落是AI輔助編者摘要，不是逐字引文或獨立法律專業簽證。"
+}
