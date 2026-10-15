@@ -1,4 +1,6 @@
 """實際瀏覽器驗證臺灣預設來源、自查年齡邊界與離線資料一致性。"""
+import copy
+import json
 from edition import build_html
 from review_contract import ROOT, validate_runtime
 
@@ -11,6 +13,10 @@ def check_navigation(page, context, url, review):
     assert set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==expected
     assert not any('/book/' in request or '/chapters/' in request for request in requests),'臺灣預設頁讀取了原作或草稿'
     page.screenshot(path=str(review/'taiwan-reader.png'),animations='disabled')
+    # 損壞百分比編碼只忽略錨點，不清空可用的安全導航。
+    page.goto(url+'index.html#%EF',wait_until='domcontentloaded')
+    page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
+    assert page.locator('.q').count()==len(expected)
     page.locator('#q').fill('乳癌');assert page.locator('.q').count()==1
     page.goto(url+'selfcheck.html',wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
@@ -36,6 +42,26 @@ def check_navigation(page, context, url, review):
         assert page.locator('.q').count()==0
         assert not any('/book/' in request or '/chapters/' in request for request in requests)
     finally:context.unroute('**/localization/tw-edition/runtime.json',fail)
+    # 伺服器成功回傳HTTP200，也必須驗證內容與日期，不能只檢查HTTP狀態。
+    invalid=[]
+    bad=copy.deepcopy(data);bad['items'][8]['eligibility']['family_history']='false';invalid.append(bad)
+    bad=copy.deepcopy(data);bad['sources'][0]['url']='https:///missing-host';invalid.append(bad)
+    bad=copy.deepcopy(data);bad['review_due_at']='2000-01-01';invalid.append(bad)
+    raw_invalid=[json.dumps(payload) for payload in invalid]
+    # 不先轉成物件：必須驗證伺服器實際回傳的重複欄位及數值溢位。
+    original=json.dumps(data)
+    raw_invalid.append(original.replace('"review_status": "source_checked"', '"review_status": "draft", "review_status": "source_checked"', 1))
+    raw_invalid.append(original.replace('"schema_version": 1', '"schema_version": 1, "overflow": 1e309', 1))
+    for body in raw_invalid:
+        def serve_bad(route, body=body):
+            route.fulfill(status=200,content_type='application/json',body=body)
+        context.route('**/localization/tw-edition/runtime.json',serve_bad)
+        try:
+            requests.clear();page.goto(url,wait_until='domcontentloaded')
+            page.wait_for_function('window.TWRuntime && window.TWRuntime.failed && !window.TWRuntime.ready')
+            assert page.locator('.q').count()==0
+            assert not any('/book/' in request or '/chapters/' in request for request in requests)
+        finally:context.unroute('**/localization/tw-edition/runtime.json',serve_bad)
     out=ROOT/'dist/tw-navigation.html';build_html(out,data)
     page.goto(out.as_uri(),wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
@@ -45,4 +71,4 @@ def check_navigation(page, context, url, review):
     page.wait_for_function("document.querySelectorAll('.card').length === 765",timeout=120000)
     assert page.url == url+'source.html#e-14-1'
     page.remove_listener('request',capture)
-    return ['臺灣預設閱讀與自查共用9則已核對導航；未讀取原作或草稿','乳癌40／74、子宮頸抹片25／29／30歲與大腸癌家族史邊界通過','手機版、自查操作、離線同一資料及來源失敗不回退測試通過']
+    return ['臺灣預設閱讀與自查共用9則已核對導航；未讀取原作或草稿','乳癌40／74、子宮頸抹片25／29／30歲與大腸癌家族史邊界通過','手機版、自查、離線資料一致、HTTP503及HTTP200錯誤資料（含重複JSON欄位／非有限數值）均不回退；損壞錨點不阻斷閱讀']
