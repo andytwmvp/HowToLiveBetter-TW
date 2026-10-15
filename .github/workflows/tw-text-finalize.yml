@@ -1,0 +1,84 @@
+# 一次性文案修整；驗證後只提交指定工作分支，不合併、不發行、不部署。
+name: 繁體文案收尾驗證
+on:
+  push:
+    branches: [tw/zh-hant-ui-and-assets]
+    paths: ['.github/workflows/tw-text-finalize.yml', 'tools/tw/text_integrity.py']
+permissions:
+  contents: read
+concurrency:
+  group: tw-text-finalize
+  cancel-in-progress: false
+jobs:
+  finalize:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW' && github.ref == 'refs/heads/tw/zh-hant-ui-and-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - run: echo "TW_REVIEW_DIR=$RUNNER_TEMP/tw-review" >> "$GITHUB_ENV"
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: tw/zh-hant-ui-and-assets
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: 安裝檢查依賴
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/tw-venv"
+          "$RUNNER_TEMP/tw-venv/bin/python" -m pip install -q 'OpenCC==1.1.9' 'playwright==1.55.0'
+          "$RUNNER_TEMP/tw-venv/bin/python" -m playwright install --with-deps chromium > "$RUNNER_TEMP/tw-install.log" 2>&1
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk >> "$RUNNER_TEMP/tw-install.log" 2>&1
+          echo "$RUNNER_TEMP/tw-venv/bin" >> "$GITHUB_PATH"
+      - name: 修正文案、徽章與圖片盤點
+        run: |
+          set -euo pipefail
+          python3 tools/tw/text_integrity.py --apply --check
+          python3 tools/tw/traditionalize.py --check
+          python3 tools/tw/assets_and_browser.py --render
+          node tools/check-refs.mjs --check
+          node tools/check-split.mjs
+          node tools/sync-stats.mjs --check
+      - name: 工程建置與瀏覽器驗證
+        run: |
+          set -euo pipefail
+          node tools/offline/build.mjs dist/tw-source-preview.html
+          npm ci --prefix tools/epub
+          node tools/epub/build.mjs
+          node tools/anki/build.mjs
+          python3 tools/tw/assets_and_browser.py --browser
+          node --input-type=module - <<'JS'
+          import {readFileSync} from 'node:fs';
+          import {marked} from './tools/epub/node_modules/marked/lib/marked.esm.js';
+          const html=marked.parse(readFileSync('README.md','utf8'));
+          const images=[...html.matchAll(/<img[^>]+src="(https:\/\/img\.shields\.io\/badge\/[^"]+)"/g)];
+          if(images.length!==6)throw Error('README 徽章渲染錯誤');
+          console.log('PASS：6 個徽章實際渲染成圖片。');
+          JS
+      - name: 僅提交工作分支
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = 'andytwmvp/HowToLiveBetter-TW'
+          test "$(git branch --show-current)" = 'tw/zh-hant-ui-and-assets'
+          test "$(git remote get-url origin)" = 'https://github.com/andytwmvp/HowToLiveBetter-TW'
+          test -z "$(git diff --name-only -- .github/workflows)"
+          git add -u
+          git add localization/text-integrity-report.json
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'fix(zh-TW): finalize visible text, reader entry points and image badges'
+            git push origin HEAD:refs/heads/tw/zh-hant-ui-and-assets
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: zh-TW-final-review-${{ github.run_id }}
+          path: ${{ runner.temp }}/tw-review/
+          retention-days: 5
+          if-no-files-found: ignore
+      - name: 清除暫存
+        if: always()
+        run: rm -rf -- dist "$RUNNER_TEMP/tw-review" "$RUNNER_TEMP/tw-venv" "$RUNNER_TEMP/tw-install.log"
