@@ -1,20 +1,23 @@
-# 日常檢查僅讀取儲存庫，不執行遷移、推送、合併、發行或部署。
+# 每次 PR 更新只跑一輪；main 保留合併後驗證，不關閉真正失敗的告警。
 name: 繁體中文與閱讀功能檢查
 on:
   push:
-    branches: [main, 'tw/**']
+    branches: [main]
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: tw-readonly-${{ github.head_ref || github.ref_name }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
 jobs:
   validate:
     if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: 初始化暫存位置
@@ -26,23 +29,24 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - name: 安裝固定版本檢查工具
+      - name: 安裝文字檢查工具
         run: |
           set -euo pipefail
           python3 -m venv "$RUNNER_TEMP/tw-venv"
-          "$RUNNER_TEMP/tw-venv/bin/python" -m pip install -q 'OpenCC==1.1.9' 'playwright==1.55.0'
-          "$RUNNER_TEMP/tw-venv/bin/python" -m playwright install --with-deps chromium > "$RUNNER_TEMP/tw-install.log" 2>&1
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk >> "$RUNNER_TEMP/tw-install.log" 2>&1
+          "$RUNNER_TEMP/tw-venv/bin/python" -m pip install -q 'OpenCC==1.1.9'
           echo "$RUNNER_TEMP/tw-venv/bin" >> "$GITHUB_PATH"
-      - name: 來源、授權、字形、Markdown 圖片與連結
+      - name: 文字、JSON、來源與回歸測試
         run: |
           set -euo pipefail
+          mkdir -p "$TW_REVIEW_DIR"
           python3 tools/tw/traditionalize.py --check
-          python3 tools/tw/text_integrity.py --check
+          python3 tools/tw/ci_language_policy.py --check --audit --report "$TW_REVIEW_DIR/draft-coverage.json"
+          python3 -m unittest discover -s tools/tw/tests -v
           git diff --check 1271250f082732b50b1fda851453d4b4b8f1eefd..HEAD
           node tools/check-refs.mjs --check
           node tools/check-split.mjs
           node tools/sync-stats.mjs --check
+          python3 tools/tw/image_copy.py --check
       - name: 離線閱讀、EPUB 與 Anki 工程建置
         run: |
           set -euo pipefail
@@ -58,16 +62,28 @@ jobs:
           if(images.length!==6)throw Error('README 實際 Markdown 渲染的徽章不是 6 個');
           console.log('PASS：README 實際渲染出 6 個徽章圖片。');
           JS
-      - name: 圖片盤點與桌機、手機、離線互動
-        run: python3 tools/tw/assets_and_browser.py --browser
+      - name: 安裝瀏覽器檢查工具
+        run: |
+          set -euo pipefail
+          python3 -m pip install -q 'playwright==1.55.0'
+          python3 -m playwright install --with-deps chromium > "$RUNNER_TEMP/tw-install.log" 2>&1
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk >> "$RUNNER_TEMP/tw-install.log" 2>&1
+      - name: 桌機、手機、自查與離線互動
+        run: |
+          set -euo pipefail
+          python3 tools/tw/assets_and_browser.py --browser
+          git diff --exit-code
+          test -z "$(git ls-files --others --exclude-standard)"
       - name: 檢查範圍
-        run: echo '通過的是字形、來源保留及閱讀功能檢查；不代表逐句人工精校或台灣制度、醫療、法律審閱完成。未部署、未發行、未合併。' >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo '來源保留、文字、JSON、回歸、圖片與閱讀功能檢查通過；沒有省略檢查。' >> "$GITHUB_STEP_SUMMARY"
+          echo '尚未完成的草稿與來源引用另見 draft-coverage.json；CI 綠燈不代表全書台灣在地化完成。' >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: zh-TW-browser-${{ github.run_id }}
+          name: zh-TW-checks-${{ github.run_id }}
           path: ${{ runner.temp }}/tw-review/
-          retention-days: 5
+          retention-days: 2
           if-no-files-found: ignore
       - name: 清除暫存與未發布產物
         if: always()
