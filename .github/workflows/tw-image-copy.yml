@@ -1,0 +1,82 @@
+# 一次性圖片文案處理；僅寫入本 fork 的指定工作分支，不合併、不部署、不發行。
+name: 臺灣圖片文案產圖與驗證
+on:
+  push:
+    branches: [tw/zh-hant-ui-and-assets]
+    paths:
+      - localization/image-copy.zh-TW.json
+      - tools/tw/image_copy.py
+      - .github/workflows/tw-image-copy.yml
+permissions:
+  contents: read
+concurrency:
+  group: tw-image-copy-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  artwork:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW' && github.ref == 'refs/heads/tw/zh-hant-ui-and-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - run: echo "TW_REVIEW_DIR=$RUNNER_TEMP/tw-image-review" >> "$GITHUB_ENV"
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: tw/zh-hant-ui-and-assets
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: 安裝既有固定版本的檢查工具
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/tw-image-venv"
+          "$RUNNER_TEMP/tw-image-venv/bin/python" -m pip install -q 'OpenCC==1.1.9' 'playwright==1.55.0'
+          "$RUNNER_TEMP/tw-image-venv/bin/python" -m playwright install --with-deps chromium > "$RUNNER_TEMP/tw-image-install.log" 2>&1
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk >> "$RUNNER_TEMP/tw-image-install.log" 2>&1
+          echo "$RUNNER_TEMP/tw-image-venv/bin" >> "$GITHUB_PATH"
+      - name: 同步文案並實際重新產生圖片
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = 'andytwmvp/HowToLiveBetter-TW'
+          test "$GITHUB_REF" = 'refs/heads/tw/zh-hant-ui-and-assets'
+          python3 tools/tw/image_copy.py --apply
+          python3 tools/tw/assets_and_browser.py --render
+          python3 tools/tw/image_copy.py --record
+      - name: 正文保留、圖片用語、統計及工程測試
+        run: |
+          set -euo pipefail
+          python3 tools/tw/traditionalize.py --check
+          python3 tools/tw/text_integrity.py --check
+          node tools/check-refs.mjs --check
+          node tools/check-split.mjs
+          node tools/sync-stats.mjs --check
+          node tools/offline/build.mjs dist/tw-source-preview.html
+          npm ci --prefix tools/epub
+          node tools/epub/build.mjs
+          node tools/anki/build.mjs
+          python3 tools/tw/assets_and_browser.py --browser
+          python3 tools/tw/image_copy.py --check
+          git diff --check
+      - name: 僅提交指定圖片及文案檔案
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'tw/zh-hant-ui-and-assets'
+          test "$(git remote get-url origin)" = 'https://github.com/andytwmvp/HowToLiveBetter-TW'
+          git add -- og.png tools/og.html README.md index.html tools/sync-stats.mjs PROJECT_STATE.md localization/assets-inventory.json localization/image-copy-report.json
+          git diff --cached --check
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat(zh-TW): apply Taiwan-localized cover, badge and sharing copy'
+          git push origin HEAD:refs/heads/tw/zh-hant-ui-and-assets
+          git archive --format=zip -o "$TW_REVIEW_DIR/source.zip" HEAD
+          echo '已重新產生封面並提交本 fork 的 PR 工作分支；正文查核狀態未變，未合併 main 或部署。' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: tw-image-copy-${{ github.run_id }}
+          path: ${{ env.TW_REVIEW_DIR }}/
+          retention-days: 3
+          if-no-files-found: ignore
+      - name: 清除未發布產物及暫存
+        if: always()
+        run: rm -rf -- dist "$RUNNER_TEMP/tw-image-review" "$RUNNER_TEMP/tw-image-venv" "$RUNNER_TEMP/tw-image-install.log"
