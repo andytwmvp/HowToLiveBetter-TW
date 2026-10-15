@@ -13,7 +13,7 @@ let html=read('source.html');
 if(/googletagmanager|google-analytics/.test(html))throw Error('來源預覽不得包含追蹤碼');
 const must=(needle)=>{if(!html.includes(needle))throw Error('source.html缺少預期標記：'+needle);};
 for(const needle of ['href="README.md"','href="book/"','href="selfcheck.html"'])must(needle);
-html=html.replaceAll('href="README.md"',`href="${REPO}/blob/main/README.md"`).replaceAll('href="selfcheck.html"',`href="${SITE}selfcheck.html"`).replaceAll('href="book/"',`href="${REPO}/tree/main/book"`).replaceAll('<a class="title" href="./"',`<a class="title" href="${SITE}"`);
+html=html.replaceAll('href="README.md"',`href="${REPO}/blob/main/README.md"`).replaceAll('href="selfcheck.html"',`href="${SITE}#reading"`).replaceAll('href="book/"',`href="${REPO}/tree/main/book"`).replaceAll('href="SUPPORT.md"',`href="${REPO}/blob/main/SUPPORT.md"`).replaceAll('href="ATTRIBUTION.md"',`href="${REPO}/blob/main/ATTRIBUTION.md"`).replaceAll('<a class="title" href="./"',`<a class="title" href="${SITE}"`);
 const foot='<div class="foot">';must(foot);
 html=html.replace(foot,`${foot}原作繁體來源預覽（非臺灣制度定稿），${buildStamp()}（臺北時間），提交${gitCommit().slice(0,7)}。<br>`);
 const mainScript='\n<script>\n/* ---------- 調試面板';must(mainScript);

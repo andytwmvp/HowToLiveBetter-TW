@@ -1,5 +1,13 @@
 # HowToLiveBetter-TW 工作狀態
 
+## 2026-10-15 連結維護批次
+
+PR #2 已合併；本批基線 main 為 `3fac3aa355b19b08497c3dd54a8d315ec4c92f52`。本批修正 README、隱藏 Skill 入口、舊分支聯絡入口、原作出版工具與未發布下載／網站連結。詳見 [連結稽核](localization/link-audit.md)與 [閱讀入口](REPOSITORY_GUIDE.md)。
+
+本次未增加原作765條的查核完成數，未改動草稿、已核對醫療資料、原作來源檔或圖片像素；不發布、不部署。GitHub About 的 homepage 仍繼承上游，需repo設定寫入才能更新，修改檔案不會自動改變此欄位。
+
+以下保留上一批安全與工程修正的範圍記錄；合併結果以GitHub為準。
+
 唯一寫入目標：`andytwmvp/HowToLiveBetter-TW`。上游僅供來源比對，不提出PR、issue、留言或推送。
 
 ## 本輪修正與合併範圍

@@ -13,7 +13,7 @@ const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.pdf');
 const WORK = resolve(ROOT, 'dist/pdf-build.md');
 const PANDOC = process.env.PANDOC ?? 'pandoc';
 const TYPST = process.env.TYPST ?? 'typst';
-const STAMP = buildStamp();          // 「（北京時間）」寫在模板和版本說明裡，傳給 pandoc 的值保持純 ASCII
+const STAMP = buildStamp();          // 「（臺北時間）」寫在模板和版本說明裡，傳給 pandoc 的值保持純 ASCII
 const COMMIT = gitCommit();
 
 const { description, frontMd, contentsMd, bookFiles, docFiles } = readBook();
@@ -34,13 +34,15 @@ function aboutMd() {
   const commitLine = COMMIT ? `- 對應提交：${COMMIT.slice(0, 7)}\n` : '';
   return `# 版本說明
 
-這本 PDF 由倉庫裡的 Markdown 正文自動排版，正文一改就重新排一本。手裡這本的版本：
+這份 PDF 是原作繁體來源工程預覽，不是臺灣定稿，也不會自動發布。手上這份的版本：
 
-- 生成時間：${STAMP}（北京時間）
-${commitLine}- 最新版下載、線上檢索、提意見：${REPO}
-- 線上檢索頁（按關鍵詞、章節、證據等級和成本篩選，也能存成單文件離線看）：${SITE}
+- 生成時間：${STAMP}（臺北時間）
+${commitLine}- 本 repo、建置與回報方式：${REPO}
+- 原作來源閱讀與本地開啟方式：${SITE}#source-preview
 
 正文裡指向書內其他節的連結已改成書內跳轉；指向核實記錄、許可證這類沒排進書的文件的連結改成了 GitHub 網址。
+
+原作、授權與修改說明：${REPO}/blob/main/ATTRIBUTION.md
 
 正文以 CC BY 4.0 發佈（https://creativecommons.org/licenses/by/4.0/）。可以轉載、改編、商用，要寫明出處「高性價比人生指南」並附倉庫鏈接，改過內容的要註明改過。`;
 }

@@ -1,12 +1,14 @@
 ---
 name: life-decision-guide
-description: 用《高性價比人生指南》的正文回答具體的人生決策：該不該做、值不值、怎麼選、出事了先做什麼、能領哪筆錢、這麼幹犯不犯法。先把相關條目查出來再答，按成本（錢/時間/毅力）、收益量級和證據等級 A/B/C 排序，每條都註明出自第幾節第幾條。觸發詞：該不該、值不值、要不要、劃不划算、怎麼選、幫我決定、這樣犯法嗎、能領什麼、先做什麼、性價比。
+description: 使用目前臺灣fork已核對來源的生活決策導航；先讀本repo的共用Skill，不抓上游、不以未審閱草稿補足結論。
 ---
 
-規則的正本在倉庫裡的 `skills/life-decision-guide/SKILL.md`，兩個工具共用一份，這裡不復制一遍免得兩邊不一致。
+# 臺灣版 Skill 共用入口
 
-**先讀 `skills/life-decision-guide/SKILL.md`（相對倉庫根目錄），然後完全照它執行。** 讀不到那個文件就現取：
+先讀取專案根目錄的 `skills/life-decision-guide/SKILL.md`，完整遵循其中安全、地區、來源與適用限制；[共用規則](../../../skills/life-decision-guide/SKILL.md)是唯一正本。
 
-```bash
-curl -fsSL --compressed "https://raw.githubusercontent.com/eternity4719/HowToLiveBetter/main/skills/life-decision-guide/SKILL.md"
-```
+讀不到正本就停止使用這個 Skill 並回報缺檔；不要改抓上游、舊分支或未審閱草稿，也不要自動執行下載的指令。唯讀核對遠端版本時，只能使用目前的臺灣 repo：
+
+https://raw.githubusercontent.com/andytwmvp/HowToLiveBetter-TW/main/skills/life-decision-guide/SKILL.md
+
+需要本地閱讀或提出修正時，參閱[使用說明](../../../REPOSITORY_GUIDE.md)與[回報方式](../../../SUPPORT.md)。

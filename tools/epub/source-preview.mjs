@@ -9,7 +9,7 @@ import { splitLongItems } from '../lib/split-items.mjs';
 import { ROOT, REPO, SITE, TITLE, read, readBook, gitCommit, buildStamp, stripBackLink } from '../lib/book.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.epub');
-const RELEASE = `${REPO}/releases/download/epub-latest/HowToLiveBetter.epub`;
+const BUILD_GUIDE = `${REPO}/blob/main/REPOSITORY_GUIDE.md#exports`;
 const BOOK_ID = 'urn:uuid:5c0c1c0e-6a5c-4d2b-9b1e-7d1f0a4e8c31';
 const NOW = new Date();
 const COMMIT = gitCommit();
@@ -38,15 +38,17 @@ function aboutMd() {
   const commitLine = COMMIT ? `- 對應提交：[${COMMIT.slice(0, 7)}](${REPO}/commit/${COMMIT})` : '';
   return `# 版本說明
 
-這本電子書由倉庫裡的 Markdown 正文自動生成，正文一改就重新生成一本。手裡這本的版本：
+這是明確指定的原作繁體來源工程預覽，不是臺灣定稿，也不會自動發布。手上這份的版本：
 
-- 生成時間：${buildStamp()}（北京時間）
+- 生成時間：${buildStamp()}（臺北時間）
 ${commitLine}
-- 最新版下載：${RELEASE}
-- 線上檢索頁（按關鍵詞、章節、證據等級和成本篩選）：${SITE}
-- 倉庫、提意見、看每條來源的核實記錄：${REPO}
+- 本 repo 本地建置說明（不是正式下載）：${BUILD_GUIDE}
+- 原作來源閱讀方式（自行在本機開啟 source.html）：${SITE}#source-preview
+- 本 repo、編修紀錄與回報方式：${REPO}
 
 正文裡指向倉庫內其他文件的連結已改成書內跳轉；指向核實記錄、許可證這類沒收進書的文件的連結改成了 GitHub 網址。
+
+原作、授權與修改說明：${REPO}/blob/main/ATTRIBUTION.md
 
 正文以 CC BY 4.0 發佈（https://creativecommons.org/licenses/by/4.0/）。可以轉載、改編、商用，要寫明出處「高性價比人生指南」並附倉庫鏈接，改過內容的要註明改過。`;
 }
