@@ -1,0 +1,30 @@
+# 僅確認本輪傳輸資料；這不是內容或功能驗收，不套用或提交修改。
+name: 連結修正傳輸快照
+on:
+  push:
+    branches: [tw/link-governance-20261015]
+    paths: [.github/workflows/link-repair.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: 匯出待核對的傳輸片段
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/link-transport"
+          cp tools/tw/_link-update.* "$RUNNER_TEMP/link-transport/"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: link-transport
+          path: ${{ runner.temp }}/link-transport/
+          retention-days: 1
+      - name: 清理
+        if: always()
+        run: rm -rf -- "$RUNNER_TEMP/link-transport"
