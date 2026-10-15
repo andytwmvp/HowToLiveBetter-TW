@@ -12,6 +12,7 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from review_contract import ROOT, validate_runtime, publication_report
+from content_validation import validate_runtime_data
 
 
 def data_json(data):
@@ -19,6 +20,7 @@ def data_json(data):
 
 
 def build_html(output: Path, data: dict) -> None:
+    validate_runtime_data(data)
     page = (ROOT/'index.html').read_text(encoding='utf-8')
     script = (ROOT/'assets/tw-runtime.js').read_text(encoding='utf-8')
     payload = data_json(data).replace('<', '\\u003c')
@@ -39,6 +41,7 @@ def refs(entry: dict, data: dict) -> list[dict]:
 
 
 def build_epub(output: Path, data: dict) -> None:
+    validate_runtime_data(data)
     esc = html.escape
     parts = [f'<h1>{esc(data["title"])}</h1><p>{esc(data["scope"])}</p>']
     for e in data['items']:
@@ -68,6 +71,7 @@ CREATE INDEX ix_notes_usn on notes (usn); CREATE INDEX ix_cards_usn on cards (us
 
 
 def build_anki(output: Path, data: dict) -> None:
+    validate_runtime_data(data)
     now = int(datetime.now(timezone.utc).timestamp()); mid, did = 1792000000001,1792000000100
     model = {'id':mid,'name':'臺灣安全導航（來源核對卡）','type':0,'mod':now,'usn':-1,'sortf':0,'did':did,'tmpls':[{'name':'導航','ord':0,'qfmt':'{{題目}}','afmt':'{{FrontSide}}<hr id="answer">{{內容}}<br>{{來源}}','did':None,'bqfmt':'','bafmt':''}],'flds':[{'name':name,'ord':i,'sticky':False,'rtl':False,'font':'Arial','size':20,'media':[]} for i,name in enumerate(['題目','內容','來源'])],'css':'.card{font-family:system-ui,sans-serif;font-size:18px;line-height:1.8;text-align:left}','latexPre':'','latexPost':'','latexsvg':False,'req':[[0,'any',[0]]],'tags':[],'vers':[]}
     def deck(key, name):
