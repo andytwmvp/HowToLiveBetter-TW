@@ -1,40 +1,16 @@
-# 正文一改就重新生成四样，挂到固定的 Release「epub-latest」上，下载链接不变：
-#   EPUB        https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.epub
-#   PDF         https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.pdf
-#   离线单文件  https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.html
-#   Anki 牌组  https://github.com/eternity4719/HowToLiveBetter/releases/download/epub-latest/HowToLiveBetter.apkg
-# PR 只生成并校验，不发布，产物在 Actions 页面的 artifact 里。
-name: 电子书
+# 保留原文電子書建置能力，但不得把尚未在地化的 book/ 自動發行為台灣版。
+# 僅接受手動執行；沒有 tag、push、Release 或 Pages 部署步驟。
+# 日常分支與 PR 檢查另由 tw-bootstrap.yml 的唯讀流程負責。
+name: 原文電子書預覽（僅手動、不發行）
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - README.md
-      - index.html
-      - og.png
-      - ads/**
-      - book/**
-      - docs/*.md
-      - tools/**
-      - .github/workflows/book.yml
-  pull_request:
-    paths:
-      - README.md
-      - index.html
-      - og.png
-      - ads/**
-      - book/**
-      - docs/*.md
-      - tools/**
-      - .github/workflows/book.yml
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: book-${{ github.ref }}
+  group: source-preview-${{ github.ref }}
   cancel-in-progress: true
 
 env:
@@ -42,128 +18,85 @@ env:
   TYPST_VERSION: '0.15.1'
 
 jobs:
-  # 交叉引用检查。单独一个 job，不挂在 build 里：锚点没补好不该连累 EPUB、PDF 和
-  # 离线单文件的发布，那是两回事。PR 上照样红，main 上该发的还是发出去。
-  # 本地那条链路（sync-stats.mjs）要记得跑才会跑，
-  # 外部 PR 更是完全跑不到，所以这道检查得在 CI 里有一份。零依赖，几秒钟。
-  refs:
-    name: 交叉引用检查
+  checks:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        command:
+          - node tools/check-refs.mjs --check
+          - node tools/check-plain.mjs
+          - node tools/check-split.mjs
+          - node tools/sync-stats.mjs --check
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
-      - run: node tools/check-refs.mjs --check
-
-  # 说人话检查：长度、研究行话、抽象说法。理由同上，单独一个 job，不挡发布。
-  plain:
-    name: 说人话检查
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: node tools/check-plain.mjs
-
-  # 拆分规则一致性检查：超长收益、备注和来源的拆分规则有两份（tools/lib/split-items.mjs 给 EPUB、PDF，
-  # index.html 里 <split-rules> 那段给网页和离线版），只改了一边就会四个出口长得不一样。理由同上，不挡发布。
-  split:
-    name: 拆分规则一致性检查
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: node tools/check-split.mjs
-
-  # 统计数字检查：README、index.html、og.html 里的条目数、A/B/C 数、链接数等是否和 book/ 对得上。
-  # 本地 sync-stats.mjs 要记得跑才会更新，网页上直接合并的 PR 完全经过不了它。理由同上，不挡发布。
-  # 只查不改：让 CI 往 main 推提交会和本地分叉，而且 Ubuntu 没有微软雅黑，og.png 截不对。
-  stats:
-    name: 统计数字检查
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: node tools/sync-stats.mjs --check
+      - run: ${{ matrix.command }}
 
   build:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    needs: checks
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: tools/epub/package-lock.json
-
       - run: npm ci
         working-directory: tools/epub
-
       - name: EPUB
         run: node tools/epub/build.mjs
-
-      - name: 离线单文件 HTML
+      - name: 離線單檔 HTML
         run: node tools/offline/build.mjs
-
-      - name: Anki 牌组
+      - name: Anki 牌組
         run: node tools/anki/build.mjs
-
-      - name: 装 pandoc、typst 和中文字体
+      - name: 安裝原文 PDF 建置工具
         run: |
+          set -euo pipefail
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends fonts-noto-cjk
-          curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
-          curl -sSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" | tar xJ
+          curl -fsSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" | tar xz
+          curl -fsSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" | tar xJ
           echo "$PWD/pandoc-${PANDOC_VERSION}/bin" >> "$GITHUB_PATH"
           echo "$PWD/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
-
       - name: PDF
-        run: |
-          typst fonts | grep -i -E 'noto (serif|sans) cjk' || echo '没找到 Noto CJK，PDF 会退到别的字体，检查 fonts-noto-cjk 这一步'
-          node tools/pdf/build.mjs
-
+        run: node tools/pdf/build.mjs
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '21'
-
-      - name: epubcheck
+      - name: EPUB 結構驗證
         run: |
-          curl -sSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
+          set -euo pipefail
+          curl -fsSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
           unzip -q epubcheck.zip
           java -jar epubcheck-5.4.0/epubcheck.jar dist/HowToLiveBetter.epub
-
+      - name: 標示非台灣正式版
+        run: |
+          printf '%s\n' '此產物使用未完成台灣在地化的原文 book/，僅供工程驗證，不是台灣正式版，也不代表法規、醫療或金融內容已查核。' > dist/READ-BEFORE-USE.txt
+          echo '只產生原文工程預覽；未建立 PR、未推送、未部署、未發布 Release。' >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
-          name: HowToLiveBetter
+          name: SOURCE-ONLY-NOT-TAIWAN-EDITION
+          retention-days: 7
           path: |
+            dist/READ-BEFORE-USE.txt
             dist/HowToLiveBetter.epub
             dist/HowToLiveBetter.pdf
             dist/HowToLiveBetter.html
             dist/HowToLiveBetter.apkg
-
-      - name: 发布到 Release epub-latest
-        if: github.event_name != 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: 清除工作目錄產物與工具解壓檔
+        if: always()
         run: |
-          git tag -f epub-latest
-          git push -f origin epub-latest
-          notes="正文提交 ${GITHUB_SHA::7}，生成于 $(date -u -d '+8 hours' +'%Y-%m-%d %H:%M')（北京时间）。EPUB、PDF、离线单文件 HTML、Anki 牌组四样，正文每次更新后自动重新生成，下载链接固定不变。"
-          if gh release view epub-latest >/dev/null 2>&1; then
-            gh release edit epub-latest --title "电子书（EPUB / PDF / 离线 HTML / Anki，自动更新）" --notes "$notes"
-          else
-            gh release create epub-latest --title "电子书（EPUB / PDF / 离线 HTML / Anki，自动更新）" --notes "$notes" --latest=false
-          fi
-          gh release upload epub-latest \
-            dist/HowToLiveBetter.epub \
-            dist/HowToLiveBetter.pdf \
-            dist/HowToLiveBetter.html \
-            dist/HowToLiveBetter.apkg --clobber
+          rm -rf dist epubcheck.zip epubcheck-5.4.0 "pandoc-${PANDOC_VERSION}" typst-x86_64-unknown-linux-musl
