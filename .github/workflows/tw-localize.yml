@@ -24,9 +24,9 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: write
-    env:
-      TW_REVIEW_DIR: ${{ runner.temp }}/tw-review
     steps:
+      - name: 初始化暫存位置
+        run: echo "TW_REVIEW_DIR=$RUNNER_TEMP/tw-review" >> "$GITHUB_ENV"
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
