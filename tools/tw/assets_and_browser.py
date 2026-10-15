@@ -36,7 +36,7 @@ p{margin-top:20px;font-size:20px;white-space:normal;line-height:1.7;max-width:10
 '''
         text = text.replace('</style>', '</style>\n' + override, 1)
         text += '\n<div class="tw-note">繁體中文工作稿｜台灣制度查核中；非官方改編，非正式出版定稿。</div>\n</html>\n'
-        write('tools/og.html', text)
+        write('tools/og.html', cc().convert(text))
 
 
 def audit_assets(rendered: bool) -> None:

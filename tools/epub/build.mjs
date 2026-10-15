@@ -1,6 +1,6 @@
 // 把 README + book/*.md + docs/*.md 打成一本 EPUB 3。
-// 用法：node tools/epub/build.mjs [输出路径]   默认输出 dist/HowToLiveBetter.epub
-// 只依赖 marked；zip 用 tools/lib/zip.mjs 自己打（EPUB 要求 mimetype 第一个且不压缩，通用 zip 库不一定保证）。
+// 用法：node tools/epub/build.mjs [輸出路徑]   預設輸出 dist/HowToLiveBetter.epub
+// 只依賴 marked；zip 用 tools/lib/zip.mjs 自己打（EPUB 要求 mimetype 第一個且不壓縮，通用 zip 庫不一定保證）。
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname, posix } from 'node:path';
 import { zip } from '../lib/zip.mjs';
@@ -17,48 +17,48 @@ const COMMIT = gitCommit();
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const plain = html => html.replace(/<[^>]+>/g, '');
 
-// ---------- 从 README 取内容与文件清单 ----------
+// ---------- 從 README 取內容與文件清單 ----------
 const book = readBook();
 const { description, frontMd, bookFiles, docFiles } = book;
-const contentsMd = book.contentsMd.replace(/^## 目录/, '# 各节简介');
+const contentsMd = book.contentsMd.replace(/^## 目錄/, '# 各節簡介');
 
-// ---------- 页面清单 ----------
-// 每页：xhtml 文件名、来源 md 的仓库路径（用来解析相对链接）、md 正文
+// ---------- 頁面清單 ----------
+// 每頁：xhtml 文件名、來源 md 的倉庫路徑（用來解析相對連結）、md 正文
 const pages = [
   { file: 'front.xhtml', src: 'README.md', title: '前言', md: `# ${TITLE}\n\n${description}\n\n${frontMd}` },
-  { file: 'contents.xhtml', src: 'README.md', title: '各节简介', md: contentsMd },
+  { file: 'contents.xhtml', src: 'README.md', title: '各節簡介', md: contentsMd },
   ...bookFiles.map((src, i) => ({ file: `ch${String(i + 1).padStart(2, '0')}.xhtml`, src, md: splitLongItems(stripBackLink(read(src))) })),
   ...docFiles.map((src, i) => ({ file: `doc${i + 1}.xhtml`, src, md: splitLongItems(stripBackLink(read(src))) })),
-  { file: 'about.xhtml', src: 'README.md', title: '版本说明', md: aboutMd() },
+  { file: 'about.xhtml', src: 'README.md', title: '版本說明', md: aboutMd() },
 ];
 const pageByPath = new Map(pages.map(p => [p.src, p.file]));
 pageByPath.set('README.md', 'front.xhtml');
 
 function aboutMd() {
-  const commitLine = COMMIT ? `- 对应提交：[${COMMIT.slice(0, 7)}](${REPO}/commit/${COMMIT})` : '';
-  return `# 版本说明
+  const commitLine = COMMIT ? `- 對應提交：[${COMMIT.slice(0, 7)}](${REPO}/commit/${COMMIT})` : '';
+  return `# 版本說明
 
-这本电子书由仓库里的 Markdown 正文自动生成，正文一改就重新生成一本。手里这本的版本：
+這本電子書由倉庫裡的 Markdown 正文自動生成，正文一改就重新生成一本。手裡這本的版本：
 
-- 生成时间：${buildStamp()}（北京时间）
+- 生成時間：${buildStamp()}（北京時間）
 ${commitLine}
-- 最新版下载：${RELEASE}
-- 在线检索页（按关键词、章节、证据等级和成本筛选）：${SITE}
-- 仓库、提意见、看每条来源的核实记录：${REPO}
+- 最新版下載：${RELEASE}
+- 線上檢索頁（按關鍵詞、章節、證據等級和成本篩選）：${SITE}
+- 倉庫、提意見、看每條來源的核實記錄：${REPO}
 
-正文里指向仓库内其他文件的链接已改成书内跳转；指向核实记录、许可证这类没收进书的文件的链接改成了 GitHub 网址。
+正文裡指向倉庫內其他文件的連結已改成書內跳轉；指向核實記錄、許可證這類沒收進書的文件的連結改成了 GitHub 網址。
 
-正文以 CC BY 4.0 发布（https://creativecommons.org/licenses/by/4.0/）。可以转载、改编、商用，要写明出处「高性价比人生指南」并附仓库链接，改过内容的要注明改过。`;
+正文以 CC BY 4.0 發佈（https://creativecommons.org/licenses/by/4.0/）。可以转载、改编、商用，要写明出处「高性价比人生指南」并附仓库链接，改过内容的要注明改过。`;
 }
 
 // ---------- Markdown → XHTML ----------
-let current = null; // 正在转换的页
+let current = null; // 正在轉換的頁
 let headingSeq = 0;
 const marked = new Marked({ gfm: true });
 marked.use({
-  // GFM 的裸网址自动链接只在空白处断开，「www.12333.gov.cn网页、手机12333客户端」这种
-  // 中文紧贴网址的写法会把后面整串中文都吞进链接，epubcheck 判为非法 URL（RSC-020）。
-  // 裸网址里本来就不该有非 ASCII 字符，遇到就截在那里，截下的前半段照常按默认规则建链接。
+  // GFM 的裸網址自動連結只在空白處斷開，「www.12333.gov.cn網頁、手機12333客戶端」這種
+  // 中文緊貼網址的寫法會把後面整串中文都吞進連結，epubcheck 判為非法 URL（RSC-020）。
+  // 裸網址裡本來就不該有非 ASCII 字符，遇到就截在那裡，截下的前半段照常按預設規則建連結。
   tokenizer: {
     url(src) {
       const tok = Tokenizer.prototype.url.call(this, src);
@@ -102,7 +102,7 @@ function toXhtml(body) {
 
 function wrap(title, body) {
   return `<?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="zh-CN" lang="zh-CN">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="zh-TW" lang="zh-TW">
 <head>
 <meta charset="utf-8"/>
 <title>${esc(title)}</title>
@@ -122,7 +122,7 @@ for (const p of pages) {
   p.xhtml = wrap(p.title, `<section epub:type="chapter">\n${body}</section>\n`);
 }
 
-// ---------- 导航 ----------
+// ---------- 導航 ----------
 const navItems = pages.map(p => {
   const [first, ...rest] = p.headings;
   const top = first?.depth === 1 ? { href: `${p.file}#${first.id}`, text: p.title } : { href: p.file, text: p.title };
@@ -130,8 +130,8 @@ const navItems = pages.map(p => {
   return { ...top, subs };
 });
 
-const navXhtml = wrap('目录', `<nav epub:type="toc" id="toc">
-<h1>目录</h1>
+const navXhtml = wrap('目錄', `<nav epub:type="toc" id="toc">
+<h1>目錄</h1>
 <ol>
 ${navItems.map(n => `<li><a href="${n.href}">${n.text}</a>${n.subs.length ? `\n<ol>\n${n.subs.map(s => `<li><a href="${s.href}">${s.text}</a></li>`).join('\n')}\n</ol>\n` : ''}</li>`).join('\n')}
 </ol>
@@ -147,7 +147,7 @@ ${navItems.map(n => `<li><a href="${n.href}">${n.text}</a>${n.subs.length ? `\n<
 let play = 0;
 const navPoint = n => `<navPoint id="np${++play}" playOrder="${play}"><navLabel><text>${n.text}</text></navLabel><content src="${n.href}"/>${n.subs?.map(navPoint).join('') ?? ''}</navPoint>`;
 const ncx = `<?xml version="1.0" encoding="UTF-8"?>
-<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="zh-CN">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="zh-TW">
 <head>
 <meta name="dtb:uid" content="${BOOK_ID}"/>
 <meta name="dtb:depth" content="2"/>
@@ -166,11 +166,11 @@ const coverXhtml = wrap(TITLE, `<div class="cover"><img src="cover.png" alt="${e
 const modified = NOW.toISOString().replace(/\.\d{3}Z$/, 'Z');
 const manifestPages = pages.map(p => `<item id="${p.file.replace('.xhtml', '')}" href="${p.file}" media-type="application/xhtml+xml"/>`);
 const opf = `<?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" xml:lang="zh-CN">
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" xml:lang="zh-TW">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
 <dc:identifier id="pub-id">${BOOK_ID}</dc:identifier>
 <dc:title>${TITLE}</dc:title>
-<dc:language>zh-CN</dc:language>
+<dc:language>zh-TW</dc:language>
 <dc:creator>eternity4719</dc:creator>
 <dc:description>${esc(description)}</dc:description>
 <dc:source>${REPO}</dc:source>
@@ -214,5 +214,4 @@ const entries = [
 mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, zip(entries, NOW));
 const entryCount = pages.filter(p => p.file.startsWith('ch')).reduce((n, p) => n + p.headings.filter(h => h.depth === 3).length, 0);
-console.log(`已生成 ${OUT}：${bookFiles.length} 节 ${entryCount} 条，附录 ${docFiles.length} 篇，${(entries.reduce((n, e) => n + e.data.length, 0) / 1024 | 0)} KB 未压缩`);
-
+console.log(`已生成 ${OUT}：${bookFiles.length} 節 ${entryCount} 條，附錄 ${docFiles.length} 篇，${(entries.reduce((n, e) => n + e.data.length, 0) / 1024 | 0)} KB 未壓縮`);

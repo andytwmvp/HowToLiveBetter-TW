@@ -8,6 +8,7 @@ import re
 import subprocess
 import sys
 from collections import Counter
+from functools import lru_cache
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
@@ -55,6 +56,7 @@ def current_files() -> list[str]:
     return sorted({p for p in git('ls-files', '-z', '--cached', '--others', '--exclude-standard').decode().split('\0') if p and (ROOT / p).is_file()})
 
 
+@lru_cache(maxsize=1)
 def cc():
     from opencc import OpenCC
     return OpenCC('s2tw.json')
@@ -321,7 +323,7 @@ def check() -> None:
         # 原作歷史工作筆記中的命令示例不作網站入口測試；正文與公開頁面嚴格檢查。
         if p.startswith('docs/') and '/'+cc().convert('\u6838\u5b9e\u8bb0\u5f55')+'/' in p: continue
         if p in {'CLAUDE.md'}: continue
-        candidates = re.findall(r'!?\[[^\]\n]*\]\(([^\s)]+)\)', text)
+        candidates = re.findall(r'!?\[[^\]\n]*\]\(([^\s)]+)\)', text) if p.endswith('.md') else []
         if p.endswith('.html'):
             parser = Links(); parser.feed(text); candidates += parser.links
         for link in candidates:

@@ -1,5 +1,5 @@
-// 自己打 zip：EPUB 和 Anki 牌组两套构建共用。
-// EPUB 要求 mimetype 第一个且不压缩，通用 zip 库不一定保证，所以每个文件可以单独指定 store。
+// 自己打 zip：EPUB 和 Anki 牌組兩套構建共用。
+// EPUB 要求 mimetype 第一個且不壓縮，通用 zip 庫不一定保證，所以每個文件可以單獨指定 store。
 import { deflateRawSync } from 'node:zlib';
 
 const crcTable = new Int32Array(256).map((_, n) => {

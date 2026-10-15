@@ -1,0 +1,12 @@
+{
+  "base_commit": "1271250f082732b50b1fda851453d4b4b8f1eefd",
+  "branch": "tw/zh-hant-ui-and-assets",
+  "converter": "OpenCC 1.1.9 / s2tw.json",
+  "text_files_processed": 308,
+  "text_files_changed": 306,
+  "renamed_files": 275,
+  "source_chapters": 34,
+  "script_converted_entries": 765,
+  "taiwan_verified_entries": 0,
+  "scope": "字形轉換；不宣稱制度查核、部署或出版完成"
+}
