@@ -1,0 +1,110 @@
+# 一次性繁體化遷移，僅允許指定工作分支；不合併、不發行、不部署、不向上游寫入。
+name: 繁體中文遷移與圖片驗證
+
+on:
+  push:
+    branches: [tw/zh-hant-ui-and-assets]
+    paths:
+      - tools/tw/traditionalize.py
+      - tools/tw/assets_and_browser.py
+      - .github/workflows/tw-localize.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tw-localize-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW' && github.ref == 'refs/heads/tw/zh-hant-ui-and-assets'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      TW_REVIEW_DIR: ${{ runner.temp }}/tw-review
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: tw/zh-hant-ui-and-assets
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: 安裝固定版本轉換與瀏覽器工具
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/tw-venv"
+          "$RUNNER_TEMP/tw-venv/bin/python" -m pip install 'OpenCC==1.1.9' 'playwright==1.55.0'
+          "$RUNNER_TEMP/tw-venv/bin/python" -m playwright install --with-deps chromium
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk
+          echo "$RUNNER_TEMP/tw-venv/bin" >> "$GITHUB_PATH"
+      - name: 僅套用在授權工作分支
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = 'andytwmvp/HowToLiveBetter-TW'
+          test "$GITHUB_REF" = 'refs/heads/tw/zh-hant-ui-and-assets'
+          python3 tools/tw/traditionalize.py --apply
+          python3 tools/tw/assets_and_browser.py --render
+      - name: 來源、語法、交叉引用、統計與離線版
+        run: |
+          set -euo pipefail
+          python3 tools/tw/traditionalize.py --check
+          node tools/check-refs.mjs --check
+          node tools/check-split.mjs
+          node tools/sync-stats.mjs --check
+          node tools/offline/build.mjs dist/tw-source-preview.html
+      - name: EPUB 與 Anki 工程建置
+        run: |
+          set -euo pipefail
+          npm ci --prefix tools/epub
+          node tools/epub/build.mjs
+          node tools/anki/build.mjs
+      - name: 桌機、手機、自查與離線互動驗證
+        run: python3 tools/tw/assets_and_browser.py --browser
+      - name: 通過後只提交本 fork 工作分支
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = 'tw/zh-hant-ui-and-assets'
+          test "$(git remote get-url origin)" = 'https://github.com/andytwmvp/HowToLiveBetter-TW'
+          if test -n "$(git diff --name-only -- .github/workflows)"; then
+            echo '遷移不得透過執行器變更工作流程檔案'; exit 1
+          fi
+          git add -A -- . ':!.github/workflows' ':!dist' ':!node_modules'
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat(zh-TW): traditionalize full corpus, interface, paths and cover assets'
+            git push origin HEAD:refs/heads/tw/zh-hant-ui-and-assets
+          fi
+          echo '本次僅提交工作分支。未合併 main、未部署、未發布電子書、未寫入上游。' >> "$GITHUB_STEP_SUMMARY"
+      - name: 保存本次檢視用原始碼與報告
+        if: always()
+        run: |
+          mkdir -p "$TW_REVIEW_DIR"
+          python3 - <<'PY'
+          import os, subprocess, zipfile
+          from pathlib import Path
+          root = Path.cwd()
+          out = Path(os.environ['TW_REVIEW_DIR'])
+          paths = subprocess.check_output(['git','ls-files','-z','--cached','--others','--exclude-standard']).decode().split('\0')
+          with zipfile.ZipFile(out/'worktree.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for name in sorted(set(paths)):
+                  p=root/name
+                  if name and p.is_file() and not name.startswith(('dist/','node_modules/')) and p.suffix.lower() not in {'.ttf','.otf','.ttc','.woff','.woff2'}:
+                      z.write(p,name)
+          (out/'diff.txt').write_bytes(subprocess.check_output(['git','diff','--stat','1271250f082732b50b1fda851453d4b4b8f1eefd']))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: zh-TW-review-${{ github.run_id }}
+          path: ${{ runner.temp }}/tw-review/
+          retention-days: 5
+      - name: 清除暫存與未發布的建置產物
+        if: always()
+        run: |
+          rm -rf -- dist "$RUNNER_TEMP/tw-review" "$RUNNER_TEMP/tw-venv"
