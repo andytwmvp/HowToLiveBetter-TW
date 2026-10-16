@@ -11,9 +11,9 @@ cd HowToLiveBetter-TW
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-在瀏覽器開啟 `http://127.0.0.1:8000/` 閱讀臺灣導航，`http://127.0.0.1:8000/selfcheck.html` 使用自查。完成後按 Ctrl+C 停止伺服器。預設資料來自 [runtime.json](localization/tw-edition/runtime.json)，包含第7章23條、第14章12條、第15章18條、第19章24條、第23章25條與第25章12條臺灣改寫，以及9則急救／篩檢補充導航；核心進度為114／765，不代表全書已完成。
+在瀏覽器開啟 `http://127.0.0.1:8000/` 閱讀臺灣導航，`http://127.0.0.1:8000/selfcheck.html` 使用自查。完成後按 Ctrl+C 停止伺服器。預設資料來自 [runtime.json](localization/tw-edition/runtime.json)，包含第7章23條、第14章12條、第15章18條、第19章24條、第21章13條、第23章25條與第25章12條臺灣改寫，以及9則急救／篩檢補充導航；核心進度為127／765，不代表全書已完成。
 
-[第14章12條正文](locales/zh-TW/book/ch14/README.md) · [第15章18條正文](locales/zh-TW/book/ch15/README.md) · [第19章24條正文](locales/zh-TW/book/ch19/README.md) · [第23章25條正文](locales/zh-TW/book/ch23/README.md) · [第25章12條正文](locales/zh-TW/book/ch25/README.md) · [第7章23條正文](locales/zh-TW/book/ch07/README.md)。這是AI輔助來源核對與編修，不是獨立法律或資安專業簽證。
+[第14章12條正文](locales/zh-TW/book/ch14/README.md) · [第15章18條正文](locales/zh-TW/book/ch15/README.md) · [第19章24條正文](locales/zh-TW/book/ch19/README.md) · [第21章13條正文](locales/zh-TW/book/ch21/README.md) · [第23章25條正文](locales/zh-TW/book/ch23/README.md) · [第25章12條正文](locales/zh-TW/book/ch25/README.md) · [第7章23條正文](locales/zh-TW/book/ch07/README.md)。這是AI輔助來源核對與編修，不是獨立法律或資安專業簽證。
 
 <a id="exports"></a>
 ## 本地匯出
