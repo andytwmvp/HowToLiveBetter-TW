@@ -1,0 +1,34 @@
+# 本次內容編修的唯讀快照，不改正文、不部署或發行。
+name: 第21章唯讀編修基線
+on:
+  push:
+    branches: [tw/ch21-travel-safety-20261017]
+    paths: [.github/workflows/ch21-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: 匯出來源與驗證依賴
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ch21-source"
+          git bundle create "$RUNNER_TEMP/ch21-source/source.bundle" --all
+          npm ci --prefix tools/epub
+          cp tools/epub/node_modules/marked/lib/marked.esm.js "$RUNNER_TEMP/ch21-source/marked.esm.js"
+          cp tools/epub/node_modules/marked/package.json "$RUNNER_TEMP/ch21-source/marked-package.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ch21-baseline-source
+          path: ${{ runner.temp }}/ch21-source/
+          retention-days: 1
+      - name: 清除專用暫存
+        if: always()
+        run: rm -rf -- "$RUNNER_TEMP/ch21-source"
