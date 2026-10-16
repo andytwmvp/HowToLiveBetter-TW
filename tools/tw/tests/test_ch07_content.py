@@ -11,11 +11,11 @@ from content_validation import load_json
 from review_contract import ROOT,validate_runtime,validate_entry
 from ci_language_policy import audit_drafts
 BASE='4dfb5f7b92c7e3c06863d52d1b5f77fb4eee2900'
-INTEGRATED=None  # 隔離整合通過提交後，替換成該固定SHA供歷史保全測試。
+INTEGRATED='b58d2b845fee53aa8e0ecf91c39249630a311cdb'  # 僅固定本次整合保全，不凍結日後其他章節進度。
 IDS={f'TW-07-{n:03}' for n in range(1,24)}
 def read(path):return load_json(ROOT/path)
 def at(ref,path):return json.loads(subprocess.check_output(['git','show',ref+':'+path],cwd=ROOT,text=True))
-def snapshot(path):return at(INTEGRATED,path) if INTEGRATED else read(path)
+def snapshot(path):return at(INTEGRATED,path)
 def bodies():return {e['id']:e['body'] for e in validate_runtime()['items']}
 class LivingSupportChapterTests(unittest.TestCase):
  def test_23_independent_bodies_reviews_and_runtime_match(self):
