@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "chapter": 7,
+  "base_commit": "4dfb5f7b92c7e3c06863d52d1b5f77fb4eee2900",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "title": "收入中斷時，先穩住基本生活",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或社福專業簽證）",
+  "sources": [
+    {
+      "id": "ch07_jobinsurance",
+      "title": "就業保險法：第11、16、17、23及25條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+      "supports": "非自願離職、前三年就保滿一年及14日推介條件；60%給付與6或9個月上限；工作收入與其他津貼限制。第25條規定離職退保後二年內辦理求職登記，離職證明難以取得可經同意書面釋明。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "unemploypay",
+      "title": "勞保局：失業給付請領資格及給付標準",
+      "url": "https://www.bli.gov.tw/0005071.html",
+      "supports": "失業給付以平均月投保薪資計算；離職退保時45歲或領身心障礙證明者最長9個月。扶養無工作收入的合格眷屬每人加給10%，最多20%；須符合實際資格而非人人固定領同額。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "employmentact",
+      "title": "就業服務法：第5、13、24及34至40條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+      "supports": "公立就業服務以免費為原則；僱主不得扣留求職者證件、收取保證金或違法要求隱私資料。第24條列特定協助對象，民間就服另須許可並遵守收費規範。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "jobservice",
+      "title": "就業服務法第13條：公立就業服務費用",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001",
+      "supports": "公立就業服務機構辦理就業服務以免費為原則；僱主委託招考人才所需費用得向僱主收取，不等於要求一般求職者交押金。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "jobportal",
+      "title": "臺灣就業通：職缺、訓練與公立就服入口",
+      "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
+      "supports": "提供職缺、訓練及就服據點查找；0800-777-888客服服務時間為週一至週五08:30至18:30，國定假日除外。入口及服務不保證錄用或補助核准。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_mediation",
+      "title": "勞動部：勞資爭議調解",
+      "url": "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
+      "supports": "勞資爭議可向勞務提供地主管機關申請調解；成立後按合意履行，得依法聲請裁定強制執行。行政申訴、調解、訴訟及強制執行是不同程序。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_wagefund",
+      "title": "勞保局：公司倒閉與積欠工資墊償基金",
+      "url": "https://www.bli.gov.tw/0109116.html",
+      "supports": "墊償須符合適用勞基法、僱主歇業清算或破產等條件與檢附文件。範圍為前6個月工資及合計6個月平均工資限額內退休金／資遣費，不保證所有欠款都由政府承擔。",
+      "evidence_type": "政府行政說明",
+      "published_at": "2025-05-27",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "laf",
+      "title": "法律扶助基金會：預約及申請準備",
+      "url": "https://www.laf.org.tw/service-flow1",
+      "supports": "向就近分會預約審查，不必找案件所在地分會；電話412-8518，手機加02，轉3洽分會。須按需求備身分、資力及案件資料，預約不等於扶助核准。",
+      "evidence_type": "法定扶助機構服務說明",
+      "published_at": "2023-10-26",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "lafphone",
+      "title": "法律扶助基金會：全國專線分機",
+      "url": "https://www.laf.org.tw/tel-ext",
+      "supports": "412-8518手機加02；法律諮詢、分會申請與檢警訊問陪同有不同分機及時段，不將特定全天服務泛化成全部申請24小時有人受理。",
+      "evidence_type": "法定扶助機構服務說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_laf_cost",
+      "title": "法律扶助基金會：費用說明",
+      "url": "https://www.laf.org.tw/expense-des",
+      "supports": "法律諮詢及申請律師的申請過程不收費，電話仍依電信費率。扶助核准後可能涉及分擔金、訴訟費用或代墊等規定，不應宣稱一切費用必然全免。",
+      "evidence_type": "法定扶助機構服務說明",
+      "published_at": "2023-10-26",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "socialaid",
+      "title": "社會救助法：家庭計算、工作收入、遊民及急難救助",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078",
+      "supports": "第4至5條低收、中低收須依家庭收入財產及法定人口範圍；第5條之1無工作而有工作能力者原則推計基本工資，公立就服認定失業等情形例外。第17條遊民處理由地方規範；第21條列急難救助事由。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_income_imputation",
+      "title": "社會救助法第5條之1：收入與失業例外",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=5-1&pcode=D0050078",
+      "supports": "有工作能力未就業原則以基本工資核算；經公立就服認定失業、55歲以上經三次媒合未成或參加政府全日制訓練等情形有例外，但實際失業給付／職訓津貼仍列其他收入。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "supportlines",
+      "title": "衛福部：1957福利諮詢專線服務時段",
+      "url": "https://www.mohw.gov.tw/cp-6654-77519-1.html",
+      "supports": "1957免付費福利諮詢每天08:00至22:00，提供福利資訊及轉介；不是24小時緊急救護、即時床位保證或核定補助窗口。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_urgent_household",
+      "title": "衛福部社救司：急難救助",
+      "url": "https://dep.mohw.gov.tw/DOSAASW/cp-594-5082-103.html",
+      "supports": "社會救助法第21條的急難救助，依死亡重病失業及其他致生活陷困等事由，向戶籍地主管機關／公所詢問申請；與急難紓困方案之居住地受理分開。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "urgentresidence",
+      "title": "衛福部：強化社會安全網急難紓困方案（2026年修正）",
+      "url": "https://www.mohw.gov.tw/dl-86267-27a4eeb1-89b9-4dca-9908-20df855a2d29.html",
+      "supports": "2026-06-24修正文字列收入中斷及福利尚未核准等急難；依居住地受理訪視。救助金依實際急迫需求審認1至3萬元，急迫個案得先給5000元；不是全民給付或申請後一律24小時匯款。",
+      "evidence_type": "行政方案",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對官方PDF文字層第1至4頁的方案本文；頁面截圖工具失敗，不宣稱已檢視附表版面，也未以附表細項計算補助。"
+    },
+    {
+      "id": "ch07_disability",
+      "title": "身心障礙者權益保障法：證明、需求評估與經濟補助",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050046",
+      "supports": "身心障礙鑑定與需求評估分開；第71條經濟補助包括生活、照顧、輔具及居家改善等，依需求與相關資格分別申請，不是持證即自動領全部補助。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_aids",
+      "title": "新北市輔具資源中心：輔具補助申請流程",
+      "url": "https://atrc.aihsin.ntpc.gov.tw/Service/1",
+      "supports": "新北市流程先申請、評估及核定後購置／請款；本文只用以提示事前核準的重要性，不把地方補助期限或金額當全國規定。",
+      "evidence_type": "地方政府委託服務流程",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "nhicategories",
+      "title": "健保署：轉換職場後健保怎麼保",
+      "url": "https://www.nhi.gov.tw/ch/cp-1438-8ae58-3255-1.html",
+      "supports": "全民健保屬強制保險並依身分順位投保。待業無合法會員或眷屬資格者向戶籍公所銜接；未及時辦理可能產生中斷保費，並有APP加保及官方客服。",
+      "evidence_type": "政府行政說明",
+      "published_at": "2023-02-15",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "nhidebt",
+      "title": "健保署：保費分期繳納",
+      "url": "https://www.nhi.gov.tw/ch/cp-4491-11c56-2652-1.html",
+      "supports": "無力一次繳清的保險對象可依欠費、紀錄及程序申請分期；已移送行政執行者須先取得執行機關同意。分期不是免除欠費，需準備第一期款及身分資料。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_nhiloan",
+      "title": "健保署：紓困基金貸款",
+      "url": "https://www.nhi.gov.tw/ch/cp-5771-2352d-2349-1.html",
+      "supports": "經濟困難且符合資格者得申請紓困基金貸款以繳欠費或自付額，須經審核並償還，不是一般生活現金補助或免還健保費。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "catastrophic",
+      "title": "健保署：重大傷病免部分負擔適用範圍",
+      "url": "https://www.nhi.gov.tw/ch/cp-5185-17079-2744-1.html",
+      "supports": "經核准重大傷病證明，其相關傷病就醫免部分負擔；住院期間申請或診斷符合有相應程序，不等於其他疾病、病房差額及自費項目一律免付。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "idloss",
+      "title": "我的E政府：國民身分證遺失掛失與補領",
+      "url": "https://www.gov.tw/News_Content_26_608877",
+      "supports": "遺失身分證先辦掛失，再由本人依規定備妥證明及照片補領；掛失是證件管理措施，不是銀行停卡或冒名爭議已消除。",
+      "evidence_type": "政府辦理指南",
+      "published_at": "2025-05-27",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "idreplace",
+      "title": "內政部戶政司：國民身分證補領",
+      "url": "https://www.ris.gov.tw/documents/html/2/3/5/388.html",
+      "supports": "年滿14歲者原則本人辦理，備戶口名簿或有照片身分證明、最近2年照片及簽章；依規定可至任一戶政事務所，未成年人代理及身分確認另有程序。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_idfee",
+      "title": "臺中市民政局：國民身分證遺失辦理說明",
+      "url": "https://www.civil.taichung.gov.tw/21804/21813/21950/22013/92738",
+      "supports": "國民身分證補領規費新臺幣200元，年滿14歲原則本人攜資料辦理；文件與照片資格仍須符合戶政規定。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "training",
+      "title": "勞保局：非自願離職全日制職訓生活津貼",
+      "url": "https://events.bli.gov.tw/Activities/202504_05/",
+      "supports": "由公立就服安排合格全日制職訓，生活津貼按退保前6月平均投保薪資60%，同一事故合計最長6月；資格、出席及未就業條件須維持，不能同領失業給付。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "fraud165",
+      "title": "警政署保安警察第三總隊：求職防詐7不3要",
+      "url": "https://www.3spc.npa.gov.tw/ch/app/data/view?id=18710&module=govinfo&serno=0305c623-5e65-4512-91cb-c23b660ac4a4",
+      "supports": "求職不任意繳費、交證件、辦卡或購買商品；應查明職缺、陪同及留意安全。防詐措施不是對所有私人合法服務收費的法律判決。",
+      "evidence_type": "警政機關防詐指引",
+      "published_at": "2025-04-14",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "rent2026",
+      "title": "我的E政府：中央擴大租金補貼申請說明",
+      "url": "https://www.gov.tw/News_Content_37_561179",
+      "supports": "115年度中央擴大租金補貼申請期間至2026-12-31 17:00；須依年度資格及實際租屋審核。申請入口、資格與住宅條件不能用2025資料直接替代。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "rentbuilding",
+      "title": "國立虎尾科技大學賃居平臺：轉知115年租金補貼住宅要件",
+      "url": "https://house.nfu.edu.tw/announce/4831",
+      "supports": "轉知內政部國土管理署115-04-27函：第5點規範稅籍、保存登記或合法證明及住宅用途；114年已核定且同址續租者有115年過渡處理。新申請或換址不得套用舊案例外。",
+      "evidence_type": "政府函文之國立大學公告",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對國立大學公開轉載之主管機關函文正文；中央申請站本次拒絕連線，未將轉載當成已完成線上申請測試，也未宣稱讀取未取得附件。"
+    },
+    {
+      "id": "ch07_nationalpension",
+      "title": "勞保局：國民年金納保對象",
+      "url": "https://www.bli.gov.tw/0013590.html",
+      "supports": "原則25歲至未滿65歲、在臺設戶籍且未參加其他法定社會保險者，依國民年金法及已領老年給付等排除條件核定；不是所有離職者均可自由選擇參加。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_retirement",
+      "title": "勞保局：勞工退休金個人專戶查詢及試算",
+      "url": "https://www.bli.gov.tw/0012942.htm",
+      "supports": "新制勞退個人專戶金額屬於勞工，可依法查詢；不是離職即歸零或可隨時提領的帳戶。預估試算不等於實際核發，與勞保老年給付不同。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_reentry",
+      "title": "臺灣雲林地檢署：更生保護服務流程",
+      "url": "https://www.ulc.moj.gov.tw/10682/1028622/10836/10842/249147/",
+      "supports": "依更生保護法第2條之特定受保護對象，可由矯正、觀護、衛生社政等單位轉介；與法院消費者債務更生程序不同，並非所有欠債者直接符合更生保護資格。",
+      "evidence_type": "司法保護機關說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得官方搜尋索引所示服務對象與轉介來源文字；本文不引用未讀流程圖、各類補助金額或床位數。"
+    },
+    {
+      "id": "ch07_reentry_choice",
+      "title": "臺灣臺東地檢署：更生保護的申請與協助",
+      "url": "https://www.ttc.moj.gov.tw/294601/294650/294653/558080/",
+      "supports": "更生保護依受保護人意願提出申請，由分會按個人情況與需要協助輔導；不等於服刑完畢即自動有住房或工作保證。",
+      "evidence_type": "司法保護機關說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對官方搜尋索引中的更生保護對象與自願申請段落；未以未取得附件或服務統計推算資格、給付或安置期間。"
+    },
+    {
+      "id": "ch07_insurance",
+      "title": "保險法第64及127條：告知義務及已在疾病",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002",
+      "supports": "投保人應對書面詢問據實回答，解除契約權另有條件、因果例外與期間；契約訂立時已在疾病或妊娠的責任依第127條處理，不等於過二年所有既往症均理賠。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_contract",
+      "title": "勞動部：勞動契約認定指導原則說明",
+      "url": "https://www.mol.gov.tw/1607/1632/1640/12431/",
+      "supports": "以人格、經濟與組織從屬性作實質整體判斷，不受承攬契約等名稱拘束；25項檢核不是勾一項就確定所有責任。",
+      "evidence_type": "政府法律適用說明",
+      "published_at": "2019-11-19",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "debtcleanup",
+      "title": "司法院：消費者債務清理制度",
+      "url": "https://www.judicial.gov.tw/tw/cp-1453-56942-7af0e-1.html",
+      "supports": "對金融機構負債者，於更生或清算前先向最大債權金融機構協商，或向住居所法院／鄉鎮市區調解委員會申請債務清理調解；程序、方案及免責須依法律，不保證一概免還。",
+      "evidence_type": "政府行政說明",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    },
+    {
+      "id": "ch07_debtlaw",
+      "title": "消費者債務清理條例：司法院法學資料檢索",
+      "url": "https://legal.judicial.gov.tw/FLAW/dat02.aspx?lsid=FL043662",
+      "supports": "條例規範消費者及清理程序適用，財產收入資料與還款方案、免責由法院審理；第151條金融債務前置協商或調解，非一般債務代辦保證銷帳。",
+      "evidence_type": "法律條文",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+    }
+  ],
+  "limits": [
+    "支持段落均為編者摘要，非逐字引文；法規、行政方案及服務說明不等於臨床或因果研究，不沿用原作A級或外國成效百分比作保證。",
+    "部分法規取得頁面之整編截止早於本批查閱日；辦理前仍須核對主管機關公告、年度與地方條件。查閱日不是施行日，也不是已獲準補助。",
+    "急難紓困方案使用2026-06-24修正版PDF文字層本文，截圖工具失敗，未宣稱已檢視表格影像或依附表計算個案金額。",
+    "中央租補申請站本次拒絕連線，以我的E政府與國立大學轉知主管機關正文交叉限定說明；未宣稱完成線上申請、讀取所有附件或所有地區條件。",
+    "更生保護兩筆來源核對官方搜尋索引中的明確服務對象與申請文字；未使用未讀流程圖、床位、給付金額或保護期間。",
+    "第7章23個主題原本均已有結構化草稿；本批是完成來源審閱及閱讀整合，不重複增加主題覆蓋數。補齊來源ID也不代表其他章節對同來源的主張均完成核對。"
+  ]
+}
