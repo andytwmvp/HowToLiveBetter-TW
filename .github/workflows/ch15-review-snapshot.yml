@@ -1,0 +1,35 @@
+# 本輪合併前的唯讀快照；不更動正文、不部署或發布。
+name: 第15章合併前唯讀快照
+on:
+  push:
+    branches: [tw/ch15-housing-20261017]
+    paths: [.github/workflows/ch15-review-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: 匯出固定版本與本地驗證依賴
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ch15-final-source"
+          git bundle create "$RUNNER_TEMP/ch15-final-source/source.bundle" --all
+          npm ci --prefix tools/epub
+          cp tools/epub/node_modules/marked/lib/marked.esm.js "$RUNNER_TEMP/ch15-final-source/marked.esm.js"
+          cp tools/epub/node_modules/marked/package.json "$RUNNER_TEMP/ch15-final-source/marked-package.json"
+          python3 -m pip download --no-deps --only-binary=:all: --platform manylinux2014_x86_64 --python-version 313 --implementation cp --abi cp313 --dest "$RUNNER_TEMP/ch15-final-source" 'opencc-python-reimplemented==0.1.7'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ch15-final-source
+          path: ${{ runner.temp }}/ch15-final-source/
+          retention-days: 1
+      - name: 清除專用暫存
+        if: always()
+        run: rm -rf -- "$RUNNER_TEMP/ch15-final-source"
