@@ -1,0 +1,21 @@
+{
+  "id": "TW-23-007",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch23/TW-23-007.md",
+  "target_sha256": "1513e9b2a21a38ea2c437b419c61087e2dc3e5ba1b0756d82ecdb0f384c578da",
+  "source_checks": [
+    {
+      "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/442521523465644318",
+      "claim": "2018年跨國歷史教育報酬綜整的約9%平均估計，只作研究背景，不支持臺灣個人或短期課程保證報酬。",
+      "supporting_passage": "編者摘要（非逐字引文）：2018年跨國歷史教育報酬綜整的約9%平均估計，只作研究背景，不支持臺灣個人或短期課程保證報酬。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "以世界銀行原始文獻登錄及官方教育資料頁搜尋索引摘要核對作者、年份與平均估計；動態頁未提供可通讀全文，未宣稱逐篇重算估計值。"
+    }
+  ],
+  "localization_changes": "保留研究而移除保證年利率解讀，加入年份、方法與官方索引摘要取材限制。",
+  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+}

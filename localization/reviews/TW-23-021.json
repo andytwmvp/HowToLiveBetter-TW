@@ -1,0 +1,28 @@
+{
+  "id": "TW-23-021",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch23/TW-23-021.md",
+  "target_sha256": "dfe3559aa9e495704c8edecd768d6e3df70fe6e8e8659cffb693480bea881e86",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=R0040045",
+      "claim": "第4條提供會計師報考學歷及指定修課途徑，不適用中國會計職稱的年資表。",
+      "supporting_passage": "編者摘要（非逐字引文）：第4條提供會計師報考學歷及指定修課途徑，不適用中國會計職稱的年資表。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得官方HTML並核對第4條及相關報考規則；未判定個人成績單或所有梯次報名日期。"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340110",
+      "claim": "記帳士的考試、證書、登錄與業務範圍不同，13條對查核簽證申報及訴願等有排除。",
+      "supporting_passage": "編者摘要（非逐字引文）：記帳士的考試、證書、登錄與業務範圍不同，13條對查核簽證申報及訴願等有排除。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得官方HTML並核對第2、7、13、17及19條指定內容；未提供個案執業核准。"
+    }
+  ],
+  "localization_changes": "以臺灣會計師及記帳士制度取代初中級職稱，保留個人修課及執業範圍待認定。",
+  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+}

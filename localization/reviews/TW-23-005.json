@@ -1,0 +1,21 @@
+{
+  "id": "TW-23-005",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch23/TW-23-005.md",
+  "target_sha256": "409238fbcbb42af20ea0c30a9a4c93f9cd7caaa8461c835ebf641a4305820367",
+  "source_checks": [
+    {
+      "url": "https://www.techadmi.edu.tw/manual.php",
+      "claim": "官方宣導入口確有五專、四技二專及二技等不同進路資料；本批沒有查核全部簡章內文或截止日。",
+      "supporting_passage": "編者摘要（非逐字引文）：官方宣導入口確有五專、四技二專及二技等不同進路資料；本批沒有查核全部簡章內文或截止日。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得主辦單位入口HTML及各類手冊名稱；未將未開啟的PDF內文、截止日期或個人資格當成已核對。"
+    }
+  ],
+  "localization_changes": "以臺灣官方多元入學入口取代中國招生制度，明列只核對入口與個人資格仍待查。",
+  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+}

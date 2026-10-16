@@ -106,6 +106,8 @@ def run(render: bool,browser_test: bool) -> None:
         if browser_test:
             from check_navigation import check_navigation
             result['checks'].extend(check_navigation(page,context,url,review))
+            from check_ch23_browser import check_ch23_browser
+            result['checks'].extend(check_ch23_browser(page,context,url,review))
             page.set_viewport_size({'width':1440,'height':1000});page.goto(url+'source.html',wait_until='domcontentloaded')
             page.wait_for_function("document.querySelectorAll('.card').length === 765",timeout=120000)
             assert page.locator('html').get_attribute('lang')=='zh-TW'
