@@ -45,6 +45,25 @@ def check_navigation(page, context, url, review):
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     page.locator('#TW-19-022').scroll_into_view_if_needed()
     page.screenshot(path=str(review/'chapter19-employment-terms.png'),animations='disabled')
+    page.goto(url+'index.html#TW-19-009',wait_until='domcontentloaded')
+    page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
+    health=page.locator('#TW-19-009')
+    assert health.locator('h3').count()==5 and '2028-01-01' in health.inner_text()
+    assert health.locator('a[href*="LawOldVer.aspx"]').count()>=1
+    page.locator('#q').fill('191,000')
+    assert page.locator('#TW-19-018').count()==1
+    assert '不是稅額' in page.locator('#TW-19-018').inner_text()
+    page.locator('#reset').click()
+    page.set_viewport_size({'width':390,'height':844})
+    page.goto(url+'index.html#TW-19-016',wait_until='domcontentloaded')
+    page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
+    bullying=page.locator('#TW-19-016')
+    assert '最高負責人' in bullying.inner_text() and '2026-07-01' in bullying.inner_text()
+    bullying.scroll_into_view_if_needed()
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1')
+    page.screenshot(path=str(review/'chapter19-occupational-rights.png'),animations='disabled')
+    page.set_viewport_size({'width':1440,'height':1000})
+
     # 損壞百分比編碼只忽略錨點，不清空可用的安全導航。
     page.goto(url+'index.html#%EF',wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')

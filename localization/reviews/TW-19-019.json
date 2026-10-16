@@ -1,0 +1,44 @@
+{
+  "id": "TW-19-019",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師、醫師或稅務專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-019.md",
+  "target_sha256": "922c0535c4af3905398da33d9cb9e2399dbd2c8ecd8822e15b80122978b58cc2",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
+      "claim": "換工作或搬縣市先接續健保與提繳，不付跨省年資轉移費：第6條個人專戶、第16及18條提繳起訖與申報、第24條前後提繳年資合併；不等同勞基法同僱主年資。",
+      "supporting_passage": "編者摘要（非逐字引文）：第6條個人專戶、第16及18條提繳起訖與申報、第24條前後提繳年資合併；不等同勞基法同僱主年資。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
+      "claim": "換工作或搬縣市先接續健保與提繳，不付跨省年資轉移費：第11至12條異動申報及前後保險年資合併，並不代表未申報的空窗自動有保。",
+      "supporting_passage": "編者摘要（非逐字引文）：第11至12條異動申報及前後保險年資合併，並不代表未申報的空窗自動有保。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060001",
+      "claim": "換工作或搬縣市先接續健保與提繳，不付跨省年資轉移費：第10至15條身分、順位與投保單位，法定身分不能任意挑選。",
+      "supporting_passage": "編者摘要（非逐字引文）：第10至15條身分、順位與投保單位，法定身分不能任意挑選。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.nhi.gov.tw/ch/cp-1438-8ae58-3255-1.html",
+      "claim": "換工作或搬縣市先接續健保與提繳，不付跨省年資轉移費：新職場與名下眷屬接續，待業不具其他適法身分且無可依附眷屬者由戶籍地公所銜接。",
+      "supporting_passage": "編者摘要（非逐字引文）：新職場與名下眷屬接續，待業不具其他適法身分且無可依附眷屬者由戶籍地公所銜接。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+      "claim": "換工作或搬縣市先接續健保與提繳，不付跨省年資轉移費：第5、6、11條就保資格、申報起訖與失業給付另外的條件。",
+      "supporting_passage": "編者摘要（非逐字引文）：第5、6、11條就保資格、申報起訖與失業給付另外的條件。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "移除跨省轉移、任意工會掛保及換工作專戶歸零的錯誤類比。",
+  "legal_scope": "逐項核對2026-10-16可讀的法規及官方說明。健檢須分期施行、退職所得按115年度；職災與身分依個案認定，不代替醫師、律師或國稅局。",
+  "review_method": "開啟第一手全文及歷史生效條文交叉核對；支持段落為AI輔助編者摘要，未假稱獨立專業簽證。"
+}
