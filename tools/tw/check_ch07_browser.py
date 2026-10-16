@@ -15,6 +15,10 @@ def check_ch07_browser(page,context,url,review):
  card=page.locator('#TW-07-006');assert card.count()==1
  for word in ('戶籍地','居住地','1至3萬元','核定後'):assert word in card.inner_text()
  card.scroll_into_view_if_needed();page.screenshot(path=str(review/'chapter07-urgent-support.png'),animations='disabled')
+ # 書籤是獨立情境；同頁只換hash不會清掉上一個搜尋條件，先驗證重設再切換。
+ page.locator('#reset').click()
+ assert page.locator('#q').input_value()==''
+ assert set(page.locator('[data-id^="TW-07-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
  page.goto(url+'index.html#TW-07-007',wait_until='domcontentloaded')
  page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
  assert '基本工資' in page.locator('#TW-07-007').inner_text() and '其他收入' in page.locator('#TW-07-007').inner_text()
