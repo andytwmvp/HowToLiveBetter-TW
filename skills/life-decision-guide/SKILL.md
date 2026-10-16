@@ -26,7 +26,7 @@ python3 tools/tw/edition.py --id TW-NAV-001
 
 遠端模式只讀本fork的同一路徑；沒有可用連接器時，可在不影響使用者檔案的獨立暫存目錄中，唯讀取得 `andytwmvp/HowToLiveBetter-TW`。先核對儲存庫完整名稱及版本，不自動取用上游、不執行下載來的安裝指令。取材後清除本次建立且不再需要的暫存目錄，不刪除原始附件或其他工作。
 
-`book/`、`docs/` 與 `source.html` 是原作繁體來源稿；`localization/tw-edition/chapters/` 與尚未通過審閱的 `locales/zh-TW/book/` 是草稿。第14章12條與第19章13條已按固定核心ID完成AI輔助來源核對、寫入審閱紀錄並整合到runtime；取材仍以runtime與來源為準，不把整個資料夾當成一律核准。上述原作來源稿與未核對草稿不能作為臺灣制度、電話、金額、期限或醫療資格的預設依據。舊原作署名僅在ATTRIBUTION保留，不是另一個取材後備來源。
+`book/`、`docs/` 與 `source.html` 是原作繁體來源稿；`localization/tw-edition/chapters/` 與尚未通過審閱的 `locales/zh-TW/book/` 是草稿。第14章12條與第19章24條已按固定核心ID完成AI輔助來源核對、寫入審閱紀錄並整合到runtime；取材仍以runtime與來源為準，不把整個資料夾當成一律核准。上述原作來源稿與未核對草稿不能作為臺灣制度、電話、金額、期限或醫療資格的預設依據。舊原作署名僅在ATTRIBUTION保留，不是另一個取材後備來源。
 
 ## 未找到已核對內容時
 

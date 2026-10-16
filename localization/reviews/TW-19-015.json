@@ -1,0 +1,26 @@
+{
+  "id": "TW-19-015",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師、醫師或稅務專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-015.md",
+  "target_sha256": "23c925850c6d4b9f2c7e06e4755d2f9e660cc14bf7711f5a5d4d2d93decc1956",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+      "claim": "職災死亡分開申請殯葬與遺屬給付，別把所有補償直接相加：第37條給付請求期間、第49至53條喪葬、遺屬形式與順序，須按資格及同順位規則審查；第103條過渡。",
+      "supporting_passage": "編者摘要（非逐字引文）：第37條給付請求期間、第49至53條喪葬、遺屬形式與順序，須按資格及同順位規則審查；第103條過渡。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "claim": "職災死亡分開申請殯葬與遺屬給付，別把所有補償直接相加：第59條5個月喪葬費與40個月死亡補償及遺屬順位，第59至61條抵充、損害賠償及2年補償期間。",
+      "supporting_passage": "編者摘要（非逐字引文）：第59條5個月喪葬費與40個月死亡補償及遺屬順位，第59至61條抵充、損害賠償及2年補償期間。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "將保險、僱主補償、殯葬支出人與遺屬順位分開，不使用外國統一賠償公式。",
+  "legal_scope": "逐項核對2026-10-16可讀的法規及官方說明。健檢須分期施行、退職所得按115年度；職災與身分依個案認定，不代替醫師、律師或國稅局。",
+  "review_method": "開啟第一手全文及歷史生效條文交叉核對；支持段落為AI輔助編者摘要，未假稱獨立專業簽證。"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "TW-19-021",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師、醫師或稅務專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-021.md",
+  "target_sha256": "f2cb108407b3f00ff8d8e5b6a3450c3dce2a8d7140e43fb9e946ed013aeebf84",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
+      "claim": "漏保或薪資低報分制度查核，補申報與損失請求不是同一件事：第6至8條小型單位分類與續保，第14條月投保薪資，第72條漏保低報與勞工損失賠償，不是罰鍰直接付勞工。",
+      "supporting_passage": "編者摘要（非逐字引文）：第6至8條小型單位分類與續保，第14條月投保薪資，第72條漏保低報與勞工損失賠償，不是罰鍰直接付勞工。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
+      "claim": "漏保或薪資低報分制度查核，補申報與損失請求不是同一件事：第14至16、21及31條提繳基礎、更正追溯、提供紀錄與損害請求。",
+      "supporting_passage": "編者摘要（非逐字引文）：第14至16、21及31條提繳基礎、更正追溯、提供紀錄與損害請求。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060001",
+      "claim": "漏保或薪資低報分制度查核，補申報與損失請求不是同一件事：第20至21條健保投保所得、調整與不得低於其他法定申報基礎的前提。",
+      "supporting_passage": "編者摘要（非逐字引文）：第20至21條健保投保所得、調整與不得低於其他法定申報基礎的前提。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+      "claim": "漏保或薪資低報分制度查核，補申報與損失請求不是同一件事：第6與13條災保強制範圍及效力不等同普通勞保，漏報事故須另依給付規則查明。",
+      "supporting_passage": "編者摘要（非逐字引文）：第6與13條災保強制範圍及效力不等同普通勞保，漏報事故須另依給付規則查明。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+      "claim": "漏保或薪資低報分制度查核，補申報與損失請求不是同一件事：第5、6條就業保險受僱資格與申報，不以普通勞保5人門檻取代。",
+      "supporting_passage": "編者摘要（非逐字引文）：第5、6條就業保險受僱資格與申報，不以普通勞保5人門檻取代。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "claim": "漏保或薪資低報分制度查核，補申報與損失請求不是同一件事：第14條勞工終止須符合具體法定事由及適用期間，不因任何保險差異自動成立。",
+      "supporting_passage": "編者摘要（非逐字引文）：第14條勞工終止須符合具體法定事由及適用期間，不因任何保險差異自動成立。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "將漏報、低報、申報級距、罰鍰、補提繳及個別損害分開，不承諾自動補償或資遣。",
+  "legal_scope": "逐項核對2026-10-16可讀的法規及官方說明。健檢須分期施行、退職所得按115年度；職災與身分依個案認定，不代替醫師、律師或國稅局。",
+  "review_method": "開啟第一手全文及歷史生效條文交叉核對；支持段落為AI輔助編者摘要，未假稱獨立專業簽證。"
+}

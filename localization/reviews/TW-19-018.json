@@ -1,0 +1,26 @@
+{
+  "id": "TW-19-018",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立律師、醫師或稅務專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch19/TW-19-018.md",
+  "target_sha256": "9c03a2f42c12b83441acfa5b8066438f51d2a69b63c66b92493738a8351ee60e",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340003",
+      "claim": "資遣與退職所得用領取年度額度，應稅所得額不等於要繳的稅：第14條第1項第9類所得範圍、自提已課稅部分例外、尾數年資、兼領比例及物價調整規定；原始基準額需搭配年度公告。",
+      "supporting_passage": "編者摘要（非逐字引文）：第14條第1項第9類所得範圍、自提已課稅部分例外、尾數年資、兼領比例及物價調整規定；原始基準額需搭配年度公告。",
+      "accessed_at": "2026-10-16"
+    },
+    {
+      "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/taxation-scope/which-income/O9EmLJZ",
+      "claim": "資遣與退職所得用領取年度額度，應稅所得額不等於要繳的稅：官方115年說明：206,000／414,000年資分段與894,000分期減除額，與113至114年不同。",
+      "supporting_passage": "編者摘要（非逐字引文）：官方115年說明：206,000／414,000年資分段與894,000分期減除額，與113至114年不同。",
+      "accessed_at": "2026-10-16"
+    }
+  ],
+  "localization_changes": "移除中國平均薪資三倍免稅說法，區分所得年度、申報年度、免計所得門檻及最終稅額。",
+  "legal_scope": "逐項核對2026-10-16可讀的法規及官方說明。健檢須分期施行、退職所得按115年度；職災與身分依個案認定，不代替醫師、律師或國稅局。",
+  "review_method": "開啟第一手全文及歷史生效條文交叉核對；支持段落為AI輔助編者摘要，未假稱獨立專業簽證。"
+}
