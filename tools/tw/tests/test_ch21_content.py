@@ -7,11 +7,11 @@ from content_validation import load_json
 from ci_language_policy import audit_drafts
 from body_renderer import body_blocks
 BASE='5b9341aba7d85ab00a9602ebaa34f97cc9a362c1'
-INTEGRATED=None  # 合併前固定本次整合SHA，不限制日後其他章節推進。
+INTEGRATED='abe1ee5030e16aa6fb4b5896f1d58872b04a181f'  # 僅固定本批整合快照，不限制後續章節進度。
 IDS={f'TW-21-{n:03}' for n in range(1,14)}
 def read(p):return load_json(ROOT/p)
 def at(ref,p):return json.loads(subprocess.check_output(['git','show',ref+':'+p],cwd=ROOT,text=True))
-def integrated(p):return at(INTEGRATED,p) if INTEGRATED else read(p)
+def integrated(p):return at(INTEGRATED,p)
 def bodies():return {e['id']:e['body'] for e in validate_runtime()['items']}
 class TravelChapterTests(unittest.TestCase):
  def test_thirteen_bodies_reviews_and_rendered_sources(self):
