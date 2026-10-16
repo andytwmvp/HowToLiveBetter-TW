@@ -1,0 +1,136 @@
+{
+  "sources": [
+    [
+      "ch23_labor",
+      "勞動基準法：童工、工資約定及最低服務年限",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+      "第44至48條分開規定未滿15歲例外、童工工時及未滿18歲保護；第21條工資議定及第15-1條訓練服務年限有條件。"
+    ],
+    [
+      "ch23_mortality",
+      "IHME-CHAIN Collaborators（2024）：受教育與成人死亡率系統性回顧",
+      "https://pubmed.ncbi.nlm.nih.gov/38278172/",
+      "603項研究、59國資料的合併分析顯示教育年數與較低死亡風險有關聯；不能當成個人因果處方或每年延壽幅度。"
+    ],
+    [
+      "ch23_education",
+      "內政部：115年第14週國人教育程度統計",
+      "https://www.moi.gov.tw/News_Content.aspx?n=9&s=337608",
+      "2025年底15歲以上戶籍人口大專以上佔51.4%；25至34歲為81.9%。大專以上、年齡範圍及戶籍人口母體不可省略。"
+    ],
+    [
+      "ch23_tuition",
+      "國教署：高中職全面免學費常見問答",
+      "https://www.k12ea.gov.tw/Tw/Unique/FAQDetail?Keywords=&cate1_id=C0C06A62-A856-48BB-A410-9E9C361BE503&filter=C49CFCC1-11D8-49BD-AFB8-95856E82E58D&page=0",
+      "112學年度第2學期起具中華民國國籍高中職學生免學費，重讀及私立學校獨立招生有例外；免學費不等於免雜費及其他費用。"
+    ],
+    [
+      "ch23_admission",
+      "技專校院招生策略委員會：115學年度多元入學宣導入口",
+      "https://www.techadmi.edu.tw/manual.php",
+      "入口列有115學年度五專、四技二專及二技進路手冊與學習歷程資料；只證明查詢入口，不代表已核准個人報名或所有梯次仍開放。"
+    ],
+    [
+      "ch23_salary",
+      "勞動部：114年職類別薪資調查統計結果",
+      "https://www.mol.gov.tw/1607/1632/1633/90814/",
+      "月薪統計為2025年7月經常性薪資，年薪為2024年全年薪資所得；母體為工業服務業全時受僱者，不等於新鮮人或自營者收入。"
+    ],
+    [
+      "ch23_returns",
+      "Psacharopoulos與Patrinos（2018）：Returns to Investment in Education",
+      "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/442521523465644318",
+      "世界銀行政策研究工作論文8402彙整跨國歷史教育報酬估計，平均額外一年教育約9%；不是課程本金保證年利率，也非臺灣個人薪資承諾。"
+    ],
+    [
+      "ch23_certificate",
+      "技術士技能檢定及發證辦法",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
+      "第5至8條區分甲乙丙、單一級及各級報考條件，第47條規定檢定合格後發證；課程結訓本身不是取得技術士證。"
+    ],
+    [
+      "ch23_training",
+      "勞發署職業訓練整合網：產投及失業者職訓",
+      "https://course.taiwanjobs.gov.tw/about/recommended",
+      "在職方案一般80%或特定資格100%，每人3年內最高10萬元；開訓日資格、先行繳費及結訓申領須分開，失業職訓另有條件。"
+    ],
+    [
+      "ch23_ai",
+      "ILO Working Paper 140（2025）：生成式AI職業暴露指標",
+      "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "任務層級資料及專家評估形成生成式AI暴露指標，主要解讀為工作轉型的可能性，不是特定職務失業率或永久安全職業名單。"
+    ],
+    [
+      "ch23_vacancies",
+      "勞動部：115年6月底職位空缺概況調查",
+      "https://www.mol.gov.tw/1607/1632/1633/99227/",
+      "官方明確區分職位空缺與勞動力短缺，須併看職缺率、招募時間及進退出率；不能把職缺數當高薪或立即錄取證明。"
+    ],
+    [
+      "ch23_retrieval",
+      "Yang等（2021）：Testing (quizzing) boosts classroom learning",
+      "https://pubmed.ncbi.nlm.nih.gov/33683913/",
+      "222項研究、48,478位學生的課堂測驗統合分析，效果受回饋、測驗形式及內容一致性等因素影響；標準化效果量不是成績百分比。"
+    ],
+    [
+      "ch23_spacing",
+      "Cepeda等（2006）：Distributed Practice in Verbal Recall Tasks",
+      "https://digitalcommons.usf.edu/psy_facpub/1771/",
+      "184篇文章中的317項實驗綜整指出，練習間距及測試延遲共同影響記憶，較長保留目標常需較長間距；沒有人人適用的固定排程。"
+    ],
+    [
+      "ch23_techniques",
+      "Dunlosky等（2013）：Improving Students’ Learning With Effective Learning Techniques",
+      "https://journals.sagepub.com/doi/10.1177/1529100612453266",
+      "研究綜整評估十種學習技巧；練習測驗及分散練習的適用證據較廣，畫線、重讀及摘要的限制需按任務判斷，不代表完全無用。"
+    ],
+    [
+      "ch23_interleave",
+      "Brunmair與Richter（2019）：Similarity matters—interleaved learning",
+      "https://pubmed.ncbi.nlm.nih.gov/31556629/",
+      "交錯練習的59項研究統合分析發現效果依材料而變；文字材料未見一致優勢，單字資料甚至可由區塊練習較佳。"
+    ],
+    [
+      "ch23_styles",
+      "Pashler等：Learning Styles—Concepts and Evidence",
+      "https://journals.sagepub.com/doi/10.1111/j.1539-6053.2009.01038.x",
+      "缺少足以支持按視覺型或聽覺型標籤配對教學的適當交互作用證據；學習偏好存在不等於配對成效已成立。"
+    ],
+    [
+      "ch23_transfer",
+      "Pan與Rickard（2018）：Transfer of test-enhanced learning",
+      "https://pubmed.ncbi.nlm.nih.gov/29733621/",
+      "122項實驗的綜整顯示測驗練習可有遷移，但程度依任務一致性、精緻化與初次表現等而變；不保證遠距遷移到任何工作。"
+    ],
+    [
+      "ch23_teacher",
+      "專科以上學校教師資格審定辦法",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030024",
+      "第2條等規定聘任、任教及經學校申請資格審定，不能把民間職稱或補習班證明等同教師法定資格。"
+    ],
+    [
+      "ch23_cpaexam",
+      "專門職業及技術人員高等考試會計師考試規則",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=R0040045",
+      "第4條列會計師報考的學歷及指定修課途徑；非相關科系有指定科目及學分要求，不照搬中國初中級職稱年資條件。"
+    ],
+    [
+      "ch23_bookkeeper",
+      "記帳士法",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340110",
+      "考試、證書、執業登錄及公會等程序不同；第13條列業務範圍且排除查核簽證申報與訴願、行政訴訟，不等同會計師。"
+    ],
+    [
+      "ch23_degree",
+      "學位授予法：碩博士學位及撤銷",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030010",
+      "第3、7、9、17條分別處理學位、碩博士要求及不實舞弊撤銷；頁面標示第4條及第5條第1項修正尚未施行，本批不採用該等待生效內容。"
+    ],
+    [
+      "ch23_phdhealth",
+      "Satinsky等（2021）：PhD students depression and anxiety systematic review",
+      "https://www.nature.com/articles/s41598-021-93687-7",
+      "博士生研究的合併估計有高度研究間異質性；研究提醒支持資源重要，不能推出就讀博士造成個人的疾病或臺灣現行盛行率。"
+    ]
+  ]
+}

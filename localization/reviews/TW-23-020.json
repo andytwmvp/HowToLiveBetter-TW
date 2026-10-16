@@ -1,0 +1,28 @@
+{
+  "id": "TW-23-020",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch23/TW-23-020.md",
+  "target_sha256": "dfd450b8e38220504d7b57e02b3fe6ec6683b6565cd7303660922d62ddb8f5c3",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030024",
+      "claim": "教師資格審定有聘任、實際任教及經學校申請等要件，不由一般研習結訓證明取代。",
+      "supporting_passage": "編者摘要（非逐字引文）：教師資格審定有聘任、實際任教及經學校申請等要件，不由一般研習結訓證明取代。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得官方HTML並核對本批指定條文；未判定任何個人的資格或審閱全部附表。"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
+      "claim": "技術士由檢定及發證制度規範，不能與公司內部職稱混成同一法律資格。",
+      "supporting_passage": "編者摘要（非逐字引文）：技術士由檢定及發證制度規範，不能與公司內部職稱混成同一法律資格。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得官方HTML並核對本批指定條文；個別職類及梯次簡章仍需另外確認。"
+    }
+  ],
+  "localization_changes": "以臺灣教師、技術士及僱主職級分流取代中國職稱系列，避免假資格與加薪推論。",
+  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+}

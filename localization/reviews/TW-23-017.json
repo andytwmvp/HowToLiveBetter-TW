@@ -1,0 +1,21 @@
+{
+  "id": "TW-23-017",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch23/TW-23-017.md",
+  "target_sha256": "e55c3c6358295711e6f6bedfb452d8bcba6640da40b2cfcea2f2f96020cf4831",
+  "source_checks": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31556629/",
+      "claim": "59項研究的統合分析發現交錯效果有材料差異，文字未有一致優勢，單字資料可能較支持區塊練習。",
+      "supporting_passage": "編者摘要（非逐字引文）：59項研究的統合分析發現交錯效果有材料差異，文字未有一致優勢，單字資料可能較支持區塊練習。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "以PubMed第一手文獻搜尋索引摘要核對材料差異與主要結果；直接頁面驗證受限，未通讀全文。"
+    }
+  ],
+  "localization_changes": "加入材料反例與基礎能力條件，區分交錯、區塊及分心多工。",
+  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+}

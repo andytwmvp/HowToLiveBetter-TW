@@ -1,0 +1,21 @@
+{
+  "id": "TW-23-015",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch23/TW-23-015.md",
+  "target_sha256": "e05b1973b33a7ee9ce45ee74dd68fb45a1b75f32da5045197a74f22bb7275494",
+  "source_checks": [
+    {
+      "url": "https://digitalcommons.usf.edu/psy_facpub/1771/",
+      "claim": "分散練習的317項實驗綜整顯示練習間距與保留間隔共同影響記憶，不支持單一固定日程適用所有情境。",
+      "supporting_passage": "編者摘要（非逐字引文）：分散練習的317項實驗綜整顯示練習間距與保留間隔共同影響記憶，不支持單一固定日程適用所有情境。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得作者所屬大學典藏的文獻摘要及書目，出版月份為2006-05；未取得出版社全文，published_at不虛填精確日。"
+    }
+  ],
+  "localization_changes": "保留分散練習，將固定排程改成可調整的編者範例並揭露記憶任務外推限制。",
+  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "TW-23-008",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-16",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch23/TW-23-008.md",
+  "target_sha256": "00ea8a73c7bfe56210f034aad0fee43d8cc7261921701e5d2818aae29800c8d3",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
+      "claim": "第47條是技能檢定合格後發給技術士證，不能與民間課程結訓證明混同。",
+      "supporting_passage": "編者摘要（非逐字引文）：第47條是技能檢定合格後發給技術士證，不能與民間課程結訓證明混同。",
+      "accessed_at": "2026-10-16",
+      "retrieval_method": "已取得官方HTML並核對本批指定條文；個別職類及梯次簡章仍需另外確認。"
+    }
+  ],
+  "localization_changes": "沿用既有主題但建立臺灣資格分類，分開合法性、僱主採認及成本判斷。",
+  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+}

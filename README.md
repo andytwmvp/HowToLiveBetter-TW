@@ -3,7 +3,7 @@
 
 非官方繁體中文／臺灣在地化改編版。對話負責協作，GitHub 負責保存正文、依據與進度。
 
-[第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
+[第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [第23章：學習技能與職涯發展（25條）](locales/zh-TW/book/ch23/README.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
 
 **僅在此 fork 維護；禁止向原作者 repo 建立 PR。移除廣告、打賞與原作者追蹤碼，但保留原作署名與授權。**
 
@@ -17,7 +17,7 @@
 
 # 高效益人生指南｜臺灣在地化
 
-這是 `andytwmvp/HowToLiveBetter-TW` 的繁體中文與臺灣在地化工作區。原作共 765 條建議，目前的臺灣預設閱讀包含第14章12條與第19章24條實質改寫，加9則已核對來源的補充導航，共45項；其餘草稿與原作來源稿分開保存，不代表全書已完成臺灣查核。
+這是 `andytwmvp/HowToLiveBetter-TW` 的繁體中文與臺灣在地化工作區。原作共 765 條建議，目前的臺灣預設閱讀包含第14章12條、第19章24條與第23章25條實質改寫，加9則補充導航，共70項；其餘草稿與原作來源稿分開保存，不代表全書已完成臺灣查核。
 
 **閱讀入口：**[臺灣版閱讀與本地開啟方式](REPOSITORY_GUIDE.md#reading)、[原作繁體來源稿的使用限制](REPOSITORY_GUIDE.md#source-preview)、[編修進度](PROJECT_STATE.md)。GitHub 上的 `.html` 連結是原始碼檔，不是已部署網站。
 
