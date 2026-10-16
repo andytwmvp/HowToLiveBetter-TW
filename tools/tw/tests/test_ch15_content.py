@@ -11,11 +11,11 @@ from review_contract import ROOT,validate_runtime,validate_entry
 from body_renderer import body_blocks
 from ci_language_policy import audit_drafts
 BASE='8607d4dbcaf6bd54a891b227faa0f0b3f711409d'
-INTEGRATED=None  # 通過整合後固定快照，不凍結後續其他章節。
+INTEGRATED='6eb1e418183b46f7174edc3595dcee5f8e0caef0'  # 固定本次初始整合保全，不凍結後續正文修訂。
 IDS={f'TW-15-{n:03}' for n in range(1,19)}
 def read(path):return load_json(ROOT/path)
 def at(ref,path):return json.loads(subprocess.check_output(['git','show',ref+':'+path],cwd=ROOT,text=True))
-def snapshot(path):return at(INTEGRATED,path) if INTEGRATED else read(path)
+def snapshot(path):return at(INTEGRATED,path)
 def bodies():return {e['id']:e['body'] for e in validate_runtime()['items']}
 class HousingChapterTests(unittest.TestCase):
  def test_all_18_bodies_reviews_and_runtime(self):
@@ -90,6 +90,21 @@ class HousingChapterTests(unittest.TestCase):
   code=(ROOT/'tools/tw/assets_and_browser.py').read_text()
   for hook in ('check_navigation','check_ch07_browser','check_ch23_browser','check_ch25_browser','check_ch15_browser'):
    self.assertIn(f'{hook}(page,context,url,review)',code)
-  for path in ('tools/tw/apply_ch15.py','.github/workflows/ch15-integrate.yml','.github/workflows/ch15-snapshot.yml'):
+  for path in ('tools/tw/apply_ch15.py','.github/workflows/ch15-integrate.yml','.github/workflows/ch15-snapshot.yml','.github/workflows/ch15-review-snapshot.yml','.github/workflows/ch15-final-review.yml','tools/tw/apply_ch15_final_review.py'):
    self.assertFalse((ROOT/path).exists())
+ def test_case_facts_are_not_rewritten_as_fee_collection(self):
+  text=bodies()['TW-15-017']
+  for phrase in ('外牆鐵窗','不是欠管理費案件','第21條'):self.assertIn(phrase,text)
+  self.assertNotIn('限制欠費住戶門禁的爭議案例',text)
+  batch=read('localization/ch15-batch.json')
+  entry=next(e for e in batch['entries'] if e['id']=='TW-15-017')
+  self.assertIn('不是欠管理費',entry['source_claims']['condopowers'])
+  review=read('localization/reviews/TW-15-017.json')
+  self.assertTrue(any('不是欠管理費' in s['claim'] for s in review['source_checks']))
+ def test_loan_shortfall_choices_retain_contract_scope(self):
+  text=bodies()['TW-15-011']
+  for phrase in ('買賣雙方得選擇','雙方均不可歸責','不得少於7年','所有核貸不足均可任意取消'):self.assertIn(phrase,text)
+  self.assertNotIn('買方得選依原承諾利率',text)
+  review=read('localization/reviews/TW-15-011.json')
+  self.assertTrue(any('雙方均不可歸責' in s['claim'] for s in review['source_checks']))
 if __name__=='__main__':unittest.main()
