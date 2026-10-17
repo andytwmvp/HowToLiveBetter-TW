@@ -1,0 +1,31 @@
+{
+  "chapter": 13,
+  "part": 2,
+  "date": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "completed_ids": [
+    "TW-13-002",
+    "TW-13-012",
+    "TW-13-014",
+    "TW-13-024"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 8,
+  "core_completed_after": 190,
+  "total_core": 765,
+  "runtime_total_after": 199,
+  "new_source_ids": [
+    "ch13_fall_hpa",
+    "ch13_fall_fire",
+    "ch13_bleeding_mnd",
+    "ch13_bleeding_nfa",
+    "ch13_burn_mohw",
+    "ch13_burn_prior",
+    "ch13_fire_nfa2026",
+    "ch13_fire_nfa2"
+  ],
+  "publication_ready": false,
+  "retrieval": "2026年臺灣政府HTML來源的AI輔助核對（部分為政府線上救護教材HTML）；未檢視的附件不可宣稱完整讀取。",
+  "risk_notes": "嚴重出血止血帶僅供危及生命的四肢出血；長者跌倒不得硬拉；燙傷沖15至30分鐘須防失溫；火場不應硬闖濃煙。",
+  "published_to_public_website": false
+}
