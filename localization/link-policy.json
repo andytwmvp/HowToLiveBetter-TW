@@ -33,7 +33,8 @@
     "locales/zh-TW/README.md",
     ".claude/skills/life-decision-guide/SKILL.md",
     "skills/life-decision-guide/SKILL.md",
-    "skills/life-decision-guide/README.md"
+    "skills/life-decision-guide/README.md",
+    "localization/TAIWAN_REUSE_POLICY.md"
   ],
   "code_url_prefixes": [
     {

@@ -1,3 +1,6 @@
+# 機器人自願遵守的路徑建議，不是著作權限制或存取控制。
+# 本 fork 尚未啟用 GitHub Pages；僅在 repo 有 robots.txt 不等於已封鎖網站。
+# 將來若自行部署，須在網域根目錄 /robots.txt 供應後才可能對遵守者生效。
 User-agent: *
 Disallow: /HowToLiveBetter-TW/source.html
 Disallow: /HowToLiveBetter-TW/book/
@@ -9,3 +12,27 @@ Disallow: /book/
 Disallow: /docs/
 Disallow: /localization/
 Disallow: /locales/zh-TW/book/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YisouSpider
+Disallow: /
+
+User-agent: 360Spider
+Disallow: /

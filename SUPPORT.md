@@ -7,3 +7,7 @@
 提出程式或文件修改時，先在工作分支完成驗證，再開本 repo 內部 PR，base 必須是 `andytwmvp/HowToLiveBetter-TW` 的 `main`。不建立上游 PR，也不把上游歷史 issue 編號套成這裡的新 issue 編號。
 
 [閱讀與建置說明](REPOSITORY_GUIDE.md) · [工作進度](PROJECT_STATE.md) · [原作與授權](ATTRIBUTION.md)
+
+## 未署名大量重製或混淆出處
+
+發現疑似未按既有授權保留必要署名、把臺灣資料抄成其他法域現行指引，或冒稱政府／原作者背書時，可提交公開網址、比對檔案、日期與 Git commit SHA，由維護者先核對來源與授權義務。依 [臺灣內容治理政策](localization/TAIWAN_REUSE_POLICY.md)，**合法重製或學習公開事實本身不必然違法**。通報不得包含病歷、私密地址、憑證或未公開敏感資訊。

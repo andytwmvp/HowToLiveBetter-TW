@@ -12,3 +12,5 @@ description: 使用目前臺灣fork已核對來源的生活決策導航；先讀
 https://raw.githubusercontent.com/andytwmvp/HowToLiveBetter-TW/main/skills/life-decision-guide/SKILL.md
 
 需要本地閱讀或提出修正時，參閱[使用說明](../../../REPOSITORY_GUIDE.md)與[回報方式](../../../SUPPORT.md)。
+
+使用共用 Skill 之際，必須一併遵守臺灣原創與跨境再利用規範 `localization/TAIWAN_REUSE_POLICY.md`；保留已核對來源及原作授權，不可拿中國行政程序或未審閱稿件當成臺灣答案，也不可聲稱公開 GitHub 已實施地區封鎖。
