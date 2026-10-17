@@ -41,7 +41,10 @@ class ChapterContentTests(unittest.TestCase):
     def test_supplemental_medical_items_not_rewritten(self):
         old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
         new=validate_runtime()
-        self.assertEqual(old['items'],[e for e in new['items'] if e['id'].startswith('TW-NAV-')])
+        previous_nav={e['id']:e for e in old['items']}
+        current_nav={e['id']:e for e in new['items'] if e['id'].startswith('TW-NAV-')}
+        self.assertTrue(set(previous_nav).issubset(current_nav))
+        for key, previous in previous_nav.items(): self.assertEqual(previous, current_nav[key])
         self.assertEqual(old['sources'],[s for s in new['sources'] if s['id'] in {source['id'] for source in old['sources']}])
 
     def test_core_metadata_preserves_upstream_provenance(self):

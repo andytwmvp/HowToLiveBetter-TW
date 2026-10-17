@@ -1,0 +1,73 @@
+{
+  "id": "TW-NAV-010",
+  "reviewer": "ChatGPT（AI輔助官方網站逐頁事實核對、另核對PDF二版授權頁，非官方授權重製或獨立醫療／民防專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/guides/全民安全與防災準備.md",
+  "target_sha256": "a14a644db3ddd24a9cb217e28eaeb08cb8ce94e763c2cf72ce83c58aeaaba843",
+  "source_checks": [
+    {
+      "url": "https://prepare.mnd.gov.tw/",
+      "claim": "TW-NAV-010：官方內容區分居家儲備、緊急避難包、災害應對、急救、資訊查證及心理準備。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：官方內容區分居家儲備、緊急避難包、災害應對、急救、資訊查證及心理準備。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/emergency-supplies/household-supplies",
+      "claim": "TW-NAV-010：以家庭為單位準備至少七天；飲用水每人每日建議至少三公升，物資需輪替並依照護需求調整。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：以家庭為單位準備至少七天；飲用水每人每日建議至少三公升，物資需輪替並依照護需求調整。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/emergency-supplies/go-bag",
+      "claim": "TW-NAV-010：以個人為單位準備一至三天的可攜物品，每半年檢查、依可負擔重量調整，另準備紙本地圖及聯絡資訊。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：以個人為單位準備一至三天的可攜物品，每半年檢查、依可負擔重量調整，另準備紙本地圖及聯絡資訊。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/emergency-responses",
+      "claim": "TW-NAV-010：地震、空襲、颱風、海嘯、核子事故等應依不同警報及實際環境選擇避難，不應混用程序。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：地震、空襲、颱風、海嘯、核子事故等應依不同警報及實際環境選擇避難，不應混用程序。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+      "claim": "TW-NAV-010：提供燒燙傷、大量出血、失去意識及毒化事故等基本救護判斷，嚴重傷患仍需119專業支援。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：提供燒燙傷、大量出血、失去意識及毒化事故等基本救護判斷，嚴重傷患仍需119專業支援。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/misinformation-prevention",
+      "claim": "TW-NAV-010：危機時核對權責機關與可信來源，不貿然轉傳未查核消息、可疑連結或檔案，平時備妥離線資訊。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：危機時核對權責機關與可信來源，不貿然轉傳未查核消息、可疑連結或檔案，平時備妥離線資訊。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/mental-preparedness",
+      "claim": "TW-NAV-010：平時溝通家人聯繫與照護安排、控制高壓資訊攝取、照顧孩子情緒，必要時尋求專業心理支持。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：平時溝通家人聯繫與照護安排、控制高壓資訊攝取、照顧孩子情緒，必要時尋求專業心理支持。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/download-pdf",
+      "claim": "TW-NAV-010：2025年11月二版PDF載有非商用及不得修改等再利用限制；本站僅引用來源與獨立撰寫的核對摘要。",
+      "supporting_passage": "編者對公開官方網頁所作獨立文字摘要，非原書逐字引述：2025年11月二版PDF載有非商用及不得修改等再利用限制；本站僅引用來源與獨立撰寫的核對摘要。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對官方HTML與教育部典藏2025-11-19二版PDF授權頁；未複製原PDF、封面、清單版面或第三方圖片。"
+    }
+  ],
+  "localization_changes": "獨立新作：把官方民防、防災、物資與資訊查證資料轉為一般家戶可使用的分流、成本及複查提示；原作765個核心條目不計數。",
+  "review_method": "公開官方網站的AI輔助摘要，非原書直接改作；民防及救護內容需要依當日警報與專業單位重新查核。",
+  "limits": [
+    "官方手冊限制未經書面許可改作或商用，本導航不納入該PDF原始素材。",
+    "是否撤離、設施開放與醫療急救均需依當日主管機關及現場專業判斷，不得以工程CI代表官方認證。"
+  ]
+}
