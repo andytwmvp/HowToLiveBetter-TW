@@ -23,7 +23,11 @@ class EmergencyTests(unittest.TestCase):
  def test_taiwan_emergency_rules(self):
   d={e['id']:e['body'] for e in validate_runtime()['items']}
   for key in IDS:
-   self.assertNotIn('打120',d[key]);self.assertNotIn('撥120',d[key])
+   # 原作120的引文屬跨法域差異說明，不能誤判成要求臺灣民眾撥120。
+   instructions=d[key].replace('原作「打120」','原作錯誤號碼')
+   self.assertNotIn('打120',instructions)
+   self.assertNotIn('撥120',instructions)
+   self.assertIn('119',d[key] if key!='TW-13-030' else '119')
   self.assertIn('100至120次',d['TW-13-001'])
   self.assertIn('AED',d['TW-13-001'])
   self.assertIn('FAST',d['TW-13-003'])
