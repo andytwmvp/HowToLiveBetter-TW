@@ -1,0 +1,54 @@
+{
+  "chapter": 13,
+  "part": 4,
+  "date": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "completed_ids": [
+    "TW-13-015",
+    "TW-13-016",
+    "TW-13-017",
+    "TW-13-018",
+    "TW-13-026",
+    "TW-13-029",
+    "TW-13-040",
+    "TW-13-041"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 24,
+  "chapter_pending": 24,
+  "core_completed_after": 206,
+  "core_total": 765,
+  "runtime_items_after": 216,
+  "navigation": 10,
+  "new_sources_count": 14,
+  "new_source_ids": [
+    "ch13_ana_hch",
+    "ch13_ana_ntuh",
+    "ch13_seizure_tpe",
+    "ch13_seizure_ntuh",
+    "ch13_hypo_hpa",
+    "ch13_hypo_vghtpe",
+    "ch13_electric_nhi",
+    "ch13_electric_vghtpe",
+    "ch13_choke_hccg",
+    "ch13_choke_vghtpe",
+    "ch13_snake_mohw",
+    "ch13_snake_cdc",
+    "ch13_impaled_tainan",
+    "ch13_fracture_nhi"
+  ],
+  "reused_source_ids": [
+    "ch13_bleeding_mnd"
+  ],
+  "publication_ready": false,
+  "source_method": "2026-10-18獨立核對臺灣政府及公立醫院公開HTML；未讀PDF、圖片、影音及附件不冒充已全文審閱。",
+  "taiwan_specific_limits": [
+    "119為臺灣緊急救護電話，任何急救口訣不能取代派遣員指示。",
+    "嚴重過敏處方針與低血糖口服糖的適用狀況有重大限制。",
+    "高壓與未知電源不使用木棍冒險施救。",
+    "蛇咬傷不緊綁、不割不吸，血清需專業評估且庫存非即時。",
+    "異物穿刺不拔，骨折不由民眾自行復位。"
+  ],
+  "professional_review": "AI assisted public HTML source audit, not independently credentialed medical or first-aid signoff",
+  "published_to_public_website": false
+}
