@@ -1,0 +1,31 @@
+{
+  "id": "TW-16-007",
+  "reviewer": "ChatGPT（AI輔助原始來源與臺灣制度核對，非執業醫師、藥師或獨立醫療專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch16/TW-16-007.md",
+  "target_sha256": "328d5ecb10120976d5596ac6e0c1fbd678fd887504ada8be759af5df10668577",
+  "source_checks": [
+    {
+      "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S261/163919/12-Retinopathy-Neuropathy-and-Foot-Care-Standards",
+      "claim": "TW-16-007：第2型初診即安排眼底檢查，依檢查結果調整；全面足部評估一般每年至少一次，高風險更頻繁。",
+      "supporting_passage": "編者核對摘要，非逐字引文：第2型初診即安排眼底檢查，依檢查結果調整；全面足部評估一般每年至少一次，高風險更頻繁。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對公開官方網頁或可查的專業學會／期刊主要內容；未讀付費全文及附件不作已查全文保證。"
+    },
+    {
+      "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management",
+      "claim": "TW-16-007：第2型糖尿病及第1型病程至少5年者每年檢查UACR與eGFR；確診腎病者按分期增加監測。",
+      "supporting_passage": "編者核對摘要，非逐字引文：第2型糖尿病及第1型病程至少5年者每年檢查UACR與eGFR；確診腎病者按分期增加監測。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對公開官方網頁或可查的專業學會／期刊主要內容；未讀付費全文及附件不作已查全文保證。"
+    }
+  ],
+  "localization_changes": "依臺灣健保與醫療服務流程重寫；國際臨床指引只作適用條件明確的證據來源，原作中國醫保備案、固定12週領藥、人人每半年肝癌監測與一律固定喝水量不再套用。",
+  "review_method": "AI輔助對照2026-10-17政府官方HTML、研究摘要及公開專業指引；非獨立醫療決策或健保核付認證。",
+  "limits": [
+    "「所有糖尿病每年只查一次眼底」不對：有病變或懷孕時可能需更密集追蹤；長期檢查正常者也可能由醫師調整到1至2年。突發視力明顯變差、足部新傷口合併感染、發黑或循環不足需迅速就醫。",
+    "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。"
+  ]
+}
