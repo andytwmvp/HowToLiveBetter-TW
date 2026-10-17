@@ -1,0 +1,32 @@
+{
+  "id": "TW-26-009",
+  "reviewer": "ChatGPT（AI輔助來源核對；非獨立法律、支付、稅務、個資或資安專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch26/TW-26-009.md",
+  "target_sha256": "eb8c93dcabefdd5dd330512ffe65aead655b6befd8c45a79667eb55a7050db5c",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+      "claim": "TW-26-009：受僱與出資著作、合理使用、技術保護措施、網路服務提供者民事免責及通知回復。",
+      "supporting_passage": "編者摘要（非逐字引文）：受僱與出資著作、合理使用、技術保護措施、網路服務提供者民事免責及通知回復。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/tw/copyright/694-17493.html",
+      "claim": "TW-26-009：回復通知後轉送權利人；10個工作日提出訴訟證明及14個工作日回復的個別起算點。",
+      "supporting_passage": "編者摘要（非逐字引文）：回復通知後轉送權利人；10個工作日提出訴訟證明及14個工作日回復的個別起算點。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+    }
+  ],
+  "localization_changes": "按臺灣支付、稅籍、消保、著作權、兒少、個資及資安情境重寫；草案與法定義務分開。",
+  "review_method": "AI輔助逐條對讀官方來源與適用範圍，非獨立專業簽證。",
+  "limits": [
+    "個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。",
+    "第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。",
+    "2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強製法規。"
+  ]
+}

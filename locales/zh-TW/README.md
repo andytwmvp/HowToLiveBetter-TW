@@ -1,8 +1,8 @@
 # 臺灣版正文、來源與閱讀入口
 
-[第7章生活支持](book/ch07/README.md) · [第14章帳號安全](book/ch14/README.md) · [第15章租屋與買房](book/ch15/README.md) · [第19章勞動、職災與離職權益](book/ch19/README.md) · [第21章旅行與境外安全](book/ch21/README.md) · [第23章學習技能與職涯發展](book/ch23/README.md) · [第25章親友離世後的處理](book/ch25/README.md) · [本地閱讀與匯出](../../REPOSITORY_GUIDE.md)
+[第7章生活支持](book/ch07/README.md) · [第14章帳號安全](book/ch14/README.md) · [第15章租屋與買房](book/ch15/README.md) · [第19章勞動、職災與離職權益](book/ch19/README.md) · [第21章旅行與境外安全](book/ch21/README.md) · [第23章學習技能與職涯發展](book/ch23/README.md) · [第25章親友離世後的處理](book/ch25/README.md) · [第26章網站與平台經營](book/ch26/README.md) · [本地閱讀與匯出](../../REPOSITORY_GUIDE.md)
 
-目前第7章23條、第14章12條、第15章18條、第19章24條、第21章13條、第23章25條與第25章12條核心正文具AI輔助來源核對、逐條審閱紀錄與閱讀整合，加原有9則補充導航，共136項。核心完成127／765，不把補充導航算成核心正文，也不把其他未審閱草稿列為完成。
+目前第7章23條、第14章12條、第15章18條、第19章24條、第21章13條、第23章25條、第25章12條與第26章13條核心正文具AI輔助來源核對、逐條審閱紀錄與閱讀整合，加原有9則補充導航，共149項。核心完成140／765，不把補充導航算成核心正文，也不把其他未審閱草稿列為完成。
 
 網站、自查、Skill及HTML／EPUB／Anki使用同一份[runtime.json](../../localization/tw-edition/runtime.json)。第19章新內容已區分健檢現行頻率與2028年新規、職災保險與僱主補償、2026年已施行的霸凌規定，以及115年度退職所得額度。這些是AI輔助編修，不是獨立法律、醫療或稅務專業簽證。[來源與時效記錄](../../localization/ch19-completion.md)逐項說明限制。
 
@@ -20,7 +20,7 @@ node tools/epub/build.mjs
 node tools/anki/build.mjs
 ```
 
-三種產物含相同127條核心正文與9則補充導航。原作預覽必須依[來源建置說明](../../REPOSITORY_GUIDE.md#source-preview)明確指定`--source-preview`。不把結構測試當成所有閱讀器或Anki用戶端匯入驗收；不發布全書定稿。
+三種產物含相同140條核心正文與9則補充導航。原作預覽必須依[來源建置說明](../../REPOSITORY_GUIDE.md#source-preview)明確指定`--source-preview`。不把結構測試當成所有閱讀器或Anki用戶端匯入驗收；不發布全書定稿。
 
 [工作進度](../../PROJECT_STATE.md) · [原作與授權](../../ATTRIBUTION.md)
 
@@ -33,3 +33,5 @@ node tools/anki/build.mjs
 第15章完成租金押金、代理收款、買賣不破租賃例外、預售貸款差額、面積找補、交屋期限、青安3.0及瑕疵期間分流。[本批來源與限制](../../localization/ch15-batch.json)明列政策草案、正式契約版本與個案專業核對的差別。
 
 第21章新增13個原先尚無臺灣稿的主題，包含領務求助、出國登錄、失照、保險、駕車、帶藥與返臺檢疫；不照搬中國的電話、提款或禁止品名單。[本批來源](../../localization/ch21-batch.json)區分目的地例子及未讀附件。
+
+第26章補齊平台支付資格、稅籍、訂閱、侵權反通知、兒少內容處置及個資施行差異。[來源摘要](../../localization/ch26-batch.json)不代替實際業者許可與個案專業查核。
