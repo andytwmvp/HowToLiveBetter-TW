@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/guides/全民安全與防災準備.md",
-  "target_sha256": "dd793b02f0a4daee989ed70ac8a155d6aac52c36dc69e89380cae8007af598c4",
+  "target_sha256": "a14a644db3ddd24a9cb217e28eaeb08cb8ce94e763c2cf72ce83c58aeaaba843",
   "source_checks": [
     {
       "url": "https://prepare.mnd.gov.tw/",
