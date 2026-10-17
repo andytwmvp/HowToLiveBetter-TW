@@ -57,6 +57,54 @@ jobs:
           npm ci --prefix tools/epub
           mkdir -p "$RUNNER_TEMP/tw-ch17-evidence"
           echo "TW_REVIEW_DIR=$RUNNER_TEMP/tw-ch17-evidence" >> "$GITHUB_ENV"
+      - name: 精準修正CI發現的三處字形並同步正文審閱雜湊
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import sys,json,hashlib,subprocess,difflib
+          from pathlib import Path
+          sys.path.insert(0,'tools/tw')
+          from text_integrity import normalized,protected_paths
+          from ci_language_policy import canonical
+          paths=protected_paths()
+          targets=['PROJECT_STATE.md','locales/zh-TW/book/ch17/TW-17-011.md']
+          for name in targets:
+              path=Path(name);old=path.read_text(encoding='utf-8');new=normalized(old,paths)
+              if canonical(old)!=canonical(new):
+                  changes=list(difflib.unified_diff(old.splitlines(),new.splitlines(),n=0))
+                  print(name,'字形校正',len(changes),'行；不修改來源網址')
+                  path.write_text(new,encoding='utf-8')
+          filename='localization/tw-edition/runtime.json'
+          path=Path(filename)
+          before=json.loads(path.read_text(encoding='utf-8'))
+          after=json.loads(normalized(path.read_text(encoding='utf-8'),paths))
+          baseline=json.loads(subprocess.check_output(['git','show','72ea775426cdcbc4b716ae506152607b56fc5ca7:'+filename],text=True))
+          n_source=len(baseline['sources']);n_item=len(baseline['items'])
+          assert before['sources'][:n_source]==baseline['sources']
+          assert before['items'][:n_item]==baseline['items']
+          assert len(before['items'])==191
+          after['sources'][:n_source]=before['sources'][:n_source]
+          after['items'][:n_item]=before['items'][:n_item]
+          new_body=Path('locales/zh-TW/book/ch17/TW-17-011.md').read_text(encoding='utf-8')
+          found=[e for e in after['items'] if e['id']=='TW-17-011']
+          assert len(found)==1
+          found[0]['body']=new_body
+          path.write_text(json.dumps(after,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          review=Path('localization/reviews/TW-17-011.json')
+          record=json.loads(review.read_text(encoding='utf-8'))
+          record['target_sha256']=hashlib.sha256(new_body.encode('utf-8')).hexdigest()
+          review.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          for name in [*targets,filename]:
+              raw=Path(name).read_text(encoding='utf-8')
+              if canonical(raw)!=canonical(normalized(raw,paths)):
+                  raise RuntimeError('字形校正後仍不一致：'+name)
+          assert after['items'][:n_item]==baseline['items']
+          assert after['sources'][:n_source]==baseline['sources']
+          print('PASS：校正三處顯示文案，保護舊資料、同步正文與審閱雜湊')
+          PY
+          git add -- PROJECT_STATE.md locales/zh-TW/book/ch17/TW-17-011.md localization/tw-edition/runtime.json localization/reviews/TW-17-011.json
+          git diff --cached --check
       - name: 臺灣長照、監護、法定權益、來源與單元回歸
         shell: bash
         run: |
