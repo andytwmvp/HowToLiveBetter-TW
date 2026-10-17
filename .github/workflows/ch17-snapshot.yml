@@ -1,0 +1,32 @@
+name: 第17章長者照護唯讀來源快照
+on:
+  push:
+    branches: [tw/ch17-elder-care-20261017]
+    paths: [.github/workflows/ch17-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-24.04
+    if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - name: 匯出repo工作樹，不含任何私密資訊
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ch17-worktree"
+          git archive --format=zip HEAD -o "$RUNNER_TEMP/ch17-worktree/source.zip"
+          git rev-parse HEAD > "$RUNNER_TEMP/ch17-worktree/source-sha.txt"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ch17-source-worktree
+          path: ${{ runner.temp }}/ch17-worktree/
+          retention-days: 1
+      - name: 清理暫存
+        if: always()
+        run: rm -rf -- "$RUNNER_TEMP/ch17-worktree"
