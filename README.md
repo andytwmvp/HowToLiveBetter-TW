@@ -299,3 +299,5 @@ A 級只說明「有具體數字、出處可核」，不說明這個數字一定
 - 改過內容的要寫明改過。書裡的法條、補貼標準和截止日期經常更新，建議同時寫上你同步的是哪一天的版本。
 
 代碼用 [MIT](LICENSE-CODE)，範圍是 tools/、skills/、index.html 和 .github/。
+
+臺灣已核對正文新增：[第24章就醫與健保](locales/zh-TW/book/ch24/README.md)。

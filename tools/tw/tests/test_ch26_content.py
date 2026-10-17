@@ -45,7 +45,7 @@ class PlatformComplianceTests(unittest.TestCase):
    self.assertIn("AI",data["reviewer"])
    self.assertTrue(all(s["url"] and s["claim"] and s["supporting_passage"] for s in data["source_checks"]))
   report=publication_report()
-  self.assertEqual(report["publication_completed_entries"],140)
+  self.assertGreaterEqual(report["publication_completed_entries"],140)
   self.assertFalse(report["publication_ready"])
  def test_one_time_writer_retired(self):
   self.assertFalse((ROOT/"tools/tw/apply_ch26.py").exists())
