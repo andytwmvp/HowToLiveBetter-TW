@@ -14,6 +14,17 @@ class PolicyTests(unittest.TestCase):
         for value in ('台灣與臺灣','雇主及勞雇關係','公布與發布法令','依法占有','核准與獲准','只有必要資料','不是只拿底薪','平台設定','不明扣款先通知銀行'):
             with self.subTest(value=value):
                 self.assertEqual(policy.canonical(value),policy.canonical(text.normalized(value,[])))
+    def test_official_taiwan_water_rescue_slogan_is_preserved(self):
+        # 消防署「叫、叫、伸、拋、划」固定用語不應被機械式字形轉換誤判。
+        examples = ('叫叫伸拋划', '叫、叫、伸、拋、划', '『划』', '，划是利用大型浮具')
+        for value in examples:
+            with self.subTest(value=value):
+                self.assertEqual(policy.canonical(value), policy.canonical(text.normalized(value, [])))
+
+    def test_official_term_exception_is_not_a_global_waiver(self):
+        self.assertNotEqual(policy.canonical('任意划分任務'), policy.canonical('任意劃分任務'))
+        self.assertNotEqual(policy.canonical('划出錯誤的路線'), policy.canonical('劃出錯誤的路線'))
+
     def test_simplified_is_rejected(self):
         for value in ('立即\u5371\u9669','\u5199清條件','工作\u65f6間','\u5f53作保證','修改\u5185容','\u94f6\u884c扣款'):
             with self.subTest(value=value):

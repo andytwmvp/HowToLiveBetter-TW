@@ -1,0 +1,46 @@
+{
+  "sources": [
+    [
+      "ch13_heat_firstaid",
+      "國健署：熱傷害急救處理",
+      "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10751&sid=18379",
+      "嚴重熱傷害須立即求援並快速降溫，只有意識清楚可安全吞嚥者才能飲水，119求援不可拖延。"
+    ],
+    [
+      "ch13_heat_diagnosis",
+      "國健署：熱傷害診斷與處置",
+      "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10746",
+      "熱中暑可伴隨意識障礙，無汗不是必要診斷條件，部分患者仍會流汗。"
+    ],
+    [
+      "ch13_heat_2026",
+      "國健署：2026年夏季熱傷害預防",
+      "https://www.hpa.gov.tw/5020/20255/n",
+      "2026年夏季宣導少量多次補水，大量出汗時可適度補電解質；嚴重症狀應立即就醫。"
+    ],
+    [
+      "ch13_drown_wda",
+      "勞動部：2026年救溺五步多語宣導",
+      "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b0f39b7019b118405f00bd5",
+      "救溺五步叫、叫、伸、拋、划，通報119或118等救援單位，應先確保自身安全，不可貿然入水。"
+    ],
+    [
+      "ch13_drown_nfa",
+      "消防署：水域安全與救溺",
+      "https://www.nfa.gov.tw/pro/index.php?code=list&ids=484",
+      "有人溺水先大聲呼救、向119或海巡118求援，利用岸上延伸物及漂浮物協助，不應貿然下水。"
+    ],
+    [
+      "ch13_cold_vgh",
+      "臺北榮總：低體溫之照護",
+      "https://ihealth.vghtpe.gov.tw/media/330",
+      "低體溫應移往溫暖處、換乾衣、防風保暖並輕柔搬動，避免直接泡熱水或按摩肢體。"
+    ],
+    [
+      "ch13_cold_nfa",
+      "消防署：低溫登山失溫風險",
+      "https://www.nfa.gov.tw/cht/index.php?article_id=20218&code=list&flag=detail&ids=1468",
+      "消防署提醒高山低溫、強風、降雪及通訊不良增加失溫風險，須備防水乾衣、定位通訊及保暖用品。"
+    ]
+  ]
+}

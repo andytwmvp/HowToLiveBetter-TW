@@ -1,0 +1,53 @@
+{
+  "chapter": 13,
+  "part": 3,
+  "date": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "completed_ids": [
+    "TW-13-013",
+    "TW-13-019",
+    "TW-13-020",
+    "TW-13-021",
+    "TW-13-022",
+    "TW-13-023",
+    "TW-13-025",
+    "TW-13-028"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 16,
+  "chapter_pending": 32,
+  "core_completed_after": 198,
+  "core_total": 765,
+  "runtime_items_after": 208,
+  "navigation": 10,
+  "new_sources_count": 15,
+  "new_source_ids": [
+    "ch13_rabies_qna",
+    "ch13_rabies_2026",
+    "ch13_co_fire2026",
+    "ch13_co_hospital",
+    "ch13_poison_pcc",
+    "ch13_poison_nhi",
+    "ch13_chemical_vgh",
+    "ch13_chemical_nfa",
+    "ch13_heat_firstaid",
+    "ch13_heat_diagnosis",
+    "ch13_heat_2026",
+    "ch13_drown_wda",
+    "ch13_drown_nfa",
+    "ch13_cold_vgh",
+    "ch13_cold_nfa"
+  ],
+  "publication_ready": false,
+  "source_method": "2026-10-17對臺灣政府與公立醫院HTML公開正文AI輔助核對；另有附件PDF者僅確認附件入口及更新日，不宣稱閱讀附件全文。",
+  "taiwan_specific": [
+    "犬貓狂犬病疫苗非一律施打，按動物與暴露風險判斷。",
+    "熱中暑可能仍有汗；意識異常者不能強迫飲水。",
+    "一般化學品沖洗與遇水反應性乾粉的處置不同。",
+    "疑似一氧化碳中毒時先撤離，切勿冒險折返。",
+    "救溺遵循叫叫伸拋划及119／118，施救者先自保。",
+    "失溫須輕柔保暖，意識異常避免飲食。"
+  ],
+  "professional_review": "AI assisted publicly accessible HTML review, not independent medical or rescue certification",
+  "published_to_public_website": false
+}
