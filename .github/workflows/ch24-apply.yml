@@ -110,7 +110,12 @@ jobs:
           test "$(git branch --show-current)" = "tw/ch24-care-navigation-20261017"
           git rm -f .github/workflows/ch24-apply.yml .ci-tmp/ch24_patch0.b64 .ci-tmp/ch24_patch1.b64 .ci-tmp/ch24_patch2.b64 .ci-tmp/ch24_patch3.b64 .ci-tmp/ch24_patch4.b64
           git diff --cached --check
-          test -z "$(git diff --cached --name-only -- .github/workflows)"
+          python3 - <<'PY'
+          import subprocess
+          paths=set(subprocess.check_output(['git','diff','--cached','--name-only','--','.github/workflows'],text=True).splitlines())
+          expected={'.github/workflows/ch24-snapshot.yml','.github/workflows/ch24-apply.yml'}
+          assert paths==expected, f'不允許修改其他工作流程：{sorted(paths)}'
+          PY
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat(tw-medical): verify and integrate 15 Taiwan healthcare core entries'
           git push origin HEAD:refs/heads/tw/ch24-care-navigation-20261017
           echo '第24章15條已完成工程及來源紀錄驗證，僅提交到fork工作分支；未部署或發行。' >> "$GITHUB_STEP_SUMMARY"
