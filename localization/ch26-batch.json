@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "chapter": 26,
+  "base_commit": "212f9e3019a3f8682113a6dcb880817cc44074a3",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "title": "經營網站與平台：金流、交易、內容與資料治理",
+  "reviewer": "ChatGPT（AI輔助來源核對；非獨立法律、支付、稅務、個資或資安專業簽證）",
+  "sources": [
+    {
+      "id": "ch26_vat",
+      "title": "財政部：境內網路交易應注意事項",
+      "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/network-transaction-taxtation-area/seller/notice",
+      "supports": "114年起純網路銷售貨物每月10萬元及勞務5萬元為特定稅籍起徵點；所得申報、商業登記及統一發票義務另依身分判斷。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ch26_consumer",
+      "title": "消費者保護法第18及19條：通訊交易揭露與解除",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+      "supports": "通訊交易應揭露經營者、價格、付款、解除權及申訴方式；7日解除權有法定合理例外，不是所有數位服務均一律不得退費。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ch26_exception",
+      "title": "通訊交易解除權合理例外情事適用準則",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170012",
+      "supports": "無形數位內容或提供即完成的線上服務，須事先同意提供及告知排除7日解除權等前提，不能因商品是數位的就一概免除。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ch26_aml",
+      "title": "數發部：第三方支付洗錢防制及服務能量登錄辦法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080063",
+      "supports": "提供第三方支付須依法具備營業登記、登錄及內控要求；與經金管會許可的電子支付機構業務須依實際金流分別判斷。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ch26_stream",
+      "title": "智慧財產局：網路直播翻唱涉及公開傳輸及重製",
+      "url": "https://www.tipo.gov.tw/tw/copyright/692-63396.html",
+      "supports": "直播演唱他人歌曲涉及公開傳輸，提供回看另涉重製；音樂、錄音及表演權利範圍不能混同。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ch26_childsexual",
+      "title": "兒童及少年性剝削防制條例第8條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050023",
+      "supports": "法定條件下網路業者24小時內限制瀏覽或移除兒少性剝削犯罪相關內容，並保存特定資料180日；不適用為所有留言通用保留期。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ch26_siarc",
+      "title": "衛福部性影像處理中心：下架及當事人協助",
+      "url": "https://siarc.mohw.gov.tw/service.php",
+      "supports": "非法性影像處理含保留網址線索、隱私保護、通知平台移除及法律轉介；成人與兒少防護途徑有不同要求。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ransomware",
+      "title": "國家資通安全研究院：共通資安及營運持續參考指引",
+      "url": "https://www.nics.nat.gov.tw/cybersecurity_resources/reference_guide/Common_Standards/",
+      "supports": "提供系統安全、備援、事件應變與營運持續等實務參考；不等於所有民間小站都有相同法定標準，也不保證付贖金可恢復。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    },
+    {
+      "id": "ch26_pdpa_status",
+      "title": "個資委員會籌備處：現行個資法及尚未施行修正",
+      "url": "https://www.pdpc.gov.tw/News_Html/100/",
+      "supports": "114年11月修正個資法部分條文包括新第12條尚待施行；當事人通知、業別通報及時限須按實際生效條文處理。",
+      "published_at": null,
+      "accessed_at": "2026-10-17",
+      "evidence_type": "法規、政府說明或技術指引"
+    }
+  ],
+  "entries": [
+    {
+      "id": "TW-26-001",
+      "title": "替他人收款再撥款，先確認支付業務資格",
+      "source_ids": [
+        "epayment",
+        "thirdpay",
+        "ch26_aml"
+      ]
+    },
+    {
+      "id": "TW-26-002",
+      "title": "網站收費前，核對商業、稅籍及特定業務要求",
+      "source_ids": [
+        "ch26_vat",
+        "ch26_consumer",
+        "companyact"
+      ]
+    },
+    {
+      "id": "TW-26-003",
+      "title": "影音、音樂與直播先處理授權和兒少保護",
+      "source_ids": [
+        "copyright",
+        "ch26_stream",
+        "childact"
+      ]
+    },
+    {
+      "id": "TW-26-004",
+      "title": "伺服器放哪裡，決定的是風險與適用規範，不是全部法律",
+      "source_ids": [
+        "pdpa",
+        "ch26_pdpa_status",
+        "ransomware"
+      ]
+    },
+    {
+      "id": "TW-26-005",
+      "title": "平臺先確認賣家與責任，交易紀錄按實際法規保存",
+      "source_ids": [
+        "ch26_consumer",
+        "ch26_vat",
+        "pdpa"
+      ]
+    },
+    {
+      "id": "TW-26-006",
+      "title": "開放投稿與留言，就建立檢舉、處置與申復流程",
+      "source_ids": [
+        "ch26_childsexual",
+        "ch26_siarc",
+        "copyrightnotice",
+        "adtakedown"
+      ]
+    },
+    {
+      "id": "TW-26-007",
+      "title": "身分驗證採必要程度，不把所有使用者都強制交證件",
+      "source_ids": [
+        "pdpa",
+        "ch26_pdpa_status",
+        "adverify"
+      ]
+    },
+    {
+      "id": "TW-26-008",
+      "title": "未成年人直播、工作與付費要分開檢查",
+      "source_ids": [
+        "childact",
+        "lsa",
+        "ch26_consumer"
+      ]
+    },
+    {
+      "id": "TW-26-009",
+      "title": "著作權通知與回復，使用臺灣法定流程",
+      "source_ids": [
+        "copyright",
+        "copyrightnotice"
+      ]
+    },
+    {
+      "id": "TW-26-010",
+      "title": "個資跨境先查告知、必要性、契約及產業限制",
+      "source_ids": [
+        "pdpa",
+        "ch26_pdpa_status"
+      ]
+    },
+    {
+      "id": "TW-26-011",
+      "title": "主機先從可維護、可復原的小規模開始",
+      "source_ids": [
+        "ransomware",
+        "govai",
+        "pdpa"
+      ]
+    },
+    {
+      "id": "TW-26-012",
+      "title": "資料外洩先止損、保全紀錄，再依法通知與通報",
+      "source_ids": [
+        "pdpa",
+        "ch26_pdpa_status",
+        "ransomware"
+      ]
+    },
+    {
+      "id": "TW-26-013",
+      "title": "訂閱把價格、續扣與取消說清楚",
+      "source_ids": [
+        "ch26_consumer",
+        "ch26_exception",
+        "renewaldraft"
+      ]
+    }
+  ],
+  "limits": [
+    "草案、尚未施行條文與法定義務分開。",
+    "來源摘述並非逐字引文，AI輔助查核不是法律或資安簽證。",
+    "原有13個草稿主題進入閱讀整合，覆蓋數不重複增加。"
+  ]
+}

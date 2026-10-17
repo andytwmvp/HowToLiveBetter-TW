@@ -1,0 +1,39 @@
+{
+  "id": "TW-26-003",
+  "reviewer": "ChatGPT（AI輔助來源核對；非獨立法律、支付、稅務、個資或資安專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch26/TW-26-003.md",
+  "target_sha256": "50341f97a885bfe9dfd4c4221a3349f596f7f82c43358faeb0b1c6d70d79ecb1",
+  "source_checks": [
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+      "claim": "TW-26-003：受僱與出資著作、合理使用、技術保護措施、網路服務提供者民事免責及通知回復。",
+      "supporting_passage": "編者摘要（非逐字引文）：受僱與出資著作、合理使用、技術保護措施、網路服務提供者民事免責及通知回復。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+    },
+    {
+      "url": "https://www.tipo.gov.tw/tw/copyright/692-63396.html",
+      "claim": "TW-26-003：直播演唱他人歌曲涉及公開傳輸，提供回看另涉重製；音樂、錄音及表演權利範圍不能混同。",
+      "supporting_passage": "編者摘要（非逐字引文）：直播演唱他人歌曲涉及公開傳輸，提供回看另涉重製；音樂、錄音及表演權利範圍不能混同。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001",
+      "claim": "TW-26-003：兒少保護、網路防護及平臺義務，非中國大陸實名或直播年齡規則。",
+      "supporting_passage": "編者摘要（非逐字引文）：兒少保護、網路防護及平臺義務，非中國大陸實名或直播年齡規則。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+    }
+  ],
+  "localization_changes": "按臺灣支付、稅籍、消保、著作權、兒少、個資及資安情境重寫；草案與法定義務分開。",
+  "review_method": "AI輔助逐條對讀官方來源與適用範圍，非獨立專業簽證。",
+  "limits": [
+    "個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。",
+    "第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。",
+    "2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強製法規。"
+  ]
+}
