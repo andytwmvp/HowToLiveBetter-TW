@@ -1,4 +1,5 @@
-# Temporary isolated integration: writes only to the user's fork staging branch after complete checks.
+# Temporary isolated integration: normalize newly authored content and compute matching review hashes before checks.
+# Writes only to the user's fork staging branch after all validations succeed.
 name: 第26章平台合規整合與驗證
 on:
   push:
