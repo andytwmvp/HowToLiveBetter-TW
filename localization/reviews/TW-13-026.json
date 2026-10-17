@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-18",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-026.md",
-  "target_sha256": "181d3c2f592c089eb0e528912b2408474e8f16c76bc9616449a0f5806baeaace",
+  "target_sha256": "8790372c3b2fcc6a13c121de062f9284ddb591b5fcac1ec082ed651eb96a6df6",
   "source_checks": [
     {
       "url": "https://119.hccg.gov.tw/chhcfd/app/data/view?id=36&module=disasterKnowledge&serno=32552b2a-d77d-4b65-8a76-beb991607b69",
