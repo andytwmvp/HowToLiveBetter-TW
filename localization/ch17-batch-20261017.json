@@ -1,0 +1,37 @@
+{
+  "chapter": 17,
+  "date": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "core_completed_increment": 13,
+  "core_completed_after": 182,
+  "total_core": 765,
+  "runtime_total_after": 191,
+  "sources_new": 17,
+  "entry_ids": [
+    "TW-17-001",
+    "TW-17-002",
+    "TW-17-003",
+    "TW-17-004",
+    "TW-17-005",
+    "TW-17-006",
+    "TW-17-007",
+    "TW-17-008",
+    "TW-17-009",
+    "TW-17-010",
+    "TW-17-011",
+    "TW-17-012",
+    "TW-17-013"
+  ],
+  "publication_ready": false,
+  "source_methods": "官方法律資料庫、長照1966、衛福部、勞動部、金管會、警政署及醫院衛教公開HTML AI輔助對照。部分行政網頁連至PDF附件，未另讀取附件全文。",
+  "cross_jurisdiction_notes": [
+    "臺灣意定監護需公證並於法院監護宣告後生效；後遺囑只對抵觸部分發生撤回效果。",
+    "臺灣以房養老包含銀行逆向抵押貸款，非中國保險試辦唯一選項。",
+    "2026長照3.0從1966與照管評估起步，非中國長護險報銷比例。",
+    "住宿式長照機構保證金通常不得逾兩個月長照費（依適用機構類型）；非中國12個月床位費。",
+    "115年家庭照顧假可以按小時計，不限獨生子女。",
+    "國際研究平均效益不等於個別台灣長者必然獲益。"
+  ],
+  "professional_review": "AI-assisted public-source review; not independent medical, legal, financial or social-work certification",
+  "published_to_public_website": false
+}

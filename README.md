@@ -1,9 +1,11 @@
+> **台灣版新增：** [第17章長者照護13條](locales/zh-TW/book/ch17/README.md)，已核對核心182／765，網站與匯出191項（含9則安全導航）。其餘章節舊統計為歷史紀錄。
+
 <!-- tw-bootstrap-v1 -->
 # HowToLiveBetter-TW｜臺灣在地化工作區
 
 非官方繁體中文／臺灣在地化改編版。對話負責協作，GitHub 負責保存正文、依據與進度。
 
-[第7章：收入中斷與基本生活支持（23條）](locales/zh-TW/book/ch07/README.md) · [第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第16章：慢性病照護（14條）](locales/zh-TW/book/ch16/README.md) · [第15章：租屋、買房與房貸（18條）](locales/zh-TW/book/ch15/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [第21章：出國、旅行與境外安全（13條）](locales/zh-TW/book/ch21/README.md) · [第23章：學習技能與職涯發展（25條）](locales/zh-TW/book/ch23/README.md) · [第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [第26章：網站與平台經營（13條）](locales/zh-TW/book/ch26/README.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
+[第7章：收入中斷與基本生活支持（23條）](locales/zh-TW/book/ch07/README.md) · [第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第16章：慢性病照護（14條）](locales/zh-TW/book/ch16/README.md) · [第17章：長者照護（13條）](locales/zh-TW/book/ch17/README.md) · [第15章：租屋、買房與房貸（18條）](locales/zh-TW/book/ch15/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [第21章：出國、旅行與境外安全（13條）](locales/zh-TW/book/ch21/README.md) · [第23章：學習技能與職涯發展（25條）](locales/zh-TW/book/ch23/README.md) · [第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [第26章：網站與平台經營（13條）](locales/zh-TW/book/ch26/README.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
 
 **僅在此 fork 維護；禁止向原作者 repo 建立 PR。移除廣告、打賞與原作者追蹤碼，但保留原作署名與授權。**
 
