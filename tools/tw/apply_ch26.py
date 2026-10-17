@@ -5,6 +5,7 @@ import hashlib
 import json
 import subprocess
 from pathlib import Path
+import text_integrity as guard
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = "212f9e3019a3f8682113a6dcb880817cc44074a3"
@@ -71,6 +72,12 @@ def put(path, value):
     raw=value if isinstance(value,str) else json.dumps(value,ensure_ascii=False,indent=2)+"\n"
     p.write_text(raw,encoding="utf-8")
 
+def norm(value):
+    if isinstance(value,str):return guard.normalized(value,guard.protected_paths())
+    if isinstance(value,list):return [norm(x) for x in value]
+    if isinstance(value,dict):return {k:norm(v) for k,v in value.items()}
+    return value
+
 def replace(path, old, new):
     p=ROOT/path
     raw=p.read_text(encoding="utf-8")
@@ -118,24 +125,24 @@ def main():
               f"## 限制與容易誤讀的地方\n\n{limits}\n\n"
               f"## 來源與改寫說明\n\n本條將原作中國網站許可、支付及內容審查規則改成臺灣按實際業務與生效條文核對；技術指引、行政草案與法律不得混為一談。\n\n"
               f"{source_text}\n\n來源核對日：{DAY}；複查期限：{DUE}。上述為編者來源摘要而非逐字引文，AI輔助核對不是獨立專業認證；遇個案前需核實官方現行公告與法域。\n")
-        body=body.replace("不是隻","不是只").replace("到賬","入帳")
+        body=guard.normalized(body.replace("不是隻","不是只").replace("到賬","入帳"),guard.protected_paths())
         if len(body)<880:raise RuntimeError("Body too short: "+id+" "+str(len(body)))
         put(target,body)
         source_checks=[dict(url=registry[s][2],claim=f"{id}：{registry[s][3]}",supporting_passage="編者摘要（非逐字引文）："+registry[s][3],accessed_at=DAY,retrieval_method="官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。") for s in refs]
         review=dict(id=id,reviewer=reviewer,jurisdiction="TW",reviewed_at=DAY,review_due_at=DUE,target_path=target,target_sha256=hashlib.sha256(body.encode()).hexdigest(),source_checks=source_checks,localization_changes="按臺灣支付、稅籍、消保、著作權、兒少、個資及資安情境重寫；草案與法定義務分開。",review_method="AI輔助逐條對讀官方來源與適用範圍，非獨立專業簽證。",limits=["個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。","第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。","2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強制法規。"])
-        put(f"localization/reviews/{id}.json",review)
+        put(f"localization/reviews/{id}.json",norm(review))
         record[id].update(status="verified",treatment="rewritten",target_path=target,verified_at=DAY,sources=[registry[s][2] for s in refs])
-        runtime["items"].append(dict(id=id,title=title,body=body,limits=limits,question="已核對「"+title+"」的法域、適用對象、官方來源與時間條件嗎？",review_status="source_checked",reviewed_at=DAY,review_due_at=DUE,source_ids=refs,eligibility={},target_path=target))
+        runtime["items"].append(norm(dict(id=id,title=title,body=body,limits=limits,question="已核對「"+title+"」的法域、適用對象、官方來源與時間條件嗎？",review_status="source_checked",reviewed_at=DAY,review_due_at=DUE,source_ids=refs,eligibility={},target_path=target)))
         links.append(f"- [{id} {title}]({id}.md)")
     for id in sorted(set(" ".join(REFS.values()).split())):
         if id in source_runtime:continue
         r=registry[id]
-        runtime["sources"].append(dict(id=id,title=r[1],url=r[2],supports=r[3],published_at=None,accessed_at=DAY,evidence_type="官方法律、行政說明或非強制技術參考",retrieval_method="已核對本章所需條文與適用範圍，未讀附件未作判斷。"))
+        runtime["sources"].append(norm(dict(id=id,title=r[1],url=r[2],supports=r[3],published_at=None,accessed_at=DAY,evidence_type="官方法律、行政說明或非強制技術參考",retrieval_method="已核對本章所需條文與適用範圍，未讀附件未作判斷。")))
     runtime["scope"]="140條核心臺灣正文加9則補充導航，共149項；其餘尚在逐條編修，未完成全書正式出版或專業審閱。"
     runtime["updated_at"]=DAY
     put("localization/manifest.json",manifest)
     put("localization/tw-edition/runtime.json",runtime)
-    put("localization/tw-edition/sources/21-platform-compliance.json",{"sources":[list(s) for s in NEW]})
+    put("localization/tw-edition/sources/21-platform-compliance.json",norm({"sources":[list(s) for s in NEW]}))
     put("localization/ch26-batch.json",{"schema_version":1,"chapter":26,"base_commit":BASE,"reviewed_at":DAY,"review_due_at":DUE,"title":"經營網站與平台：金流、交易、內容與資料治理","reviewer":reviewer,"sources":[dict(id=s[0],title=s[1],url=s[2],supports=s[3],published_at=None,accessed_at=DAY,evidence_type="法規、政府說明或技術指引") for s in NEW],"entries":[dict(id=f"TW-26-{e[0]:03}",title=e[1],source_ids=REFS[e[0]].split()) for e in draft["entries"]],"limits":["草案、尚未施行條文與法定義務分開。","來源摘述並非逐字引文，AI輔助查核不是法律或資安簽證。","原有13個草稿主題進入閱讀整合，覆蓋數不重複增加。"]})
     put("locales/zh-TW/book/ch26/README.md","# 第26章：在臺灣經營網站與平台\n\n13條核心正文已完成AI輔助來源核對與閱讀整合，但不是專業合規簽證。支付、稅務、消保、兒少與個資法依真實業務及施行狀態分開。\n\n"+"\n".join(links)+"\n\n[來源限制](../../../../localization/ch26-batch.json) · [臺灣閱讀說明](../../README.md)\n")
     replace("README.md","[第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [臺灣版閱讀說明]","[第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [第26章：網站與平台經營（13條）](locales/zh-TW/book/ch26/README.md) · [臺灣版閱讀說明]")
