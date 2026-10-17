@@ -1,0 +1,31 @@
+{
+  "id": "TW-13-016",
+  "reviewer": "ChatGPT（AI輔助臺灣官方／公立醫院HTML來源核對，非獨立醫療、救護或急診專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch13/TW-13-016.md",
+  "target_sha256": "e6d2f76adb5d98bcd8283d8e2c05184bab93ec93add6eaec5a822d6e662bb82f",
+  "source_checks": [
+    {
+      "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=E92E871BC6BADD4B&sms=87415A8B9CE81B16",
+      "claim": "TW-13-016：清除周圍危險物、不強行約束或塞物，超過五分鐘、連續發作或受傷應撥119。",
+      "supporting_passage": "編者依臺灣主管機關或公立醫院公開HTML正文轉述（非逐字引文）：清除周圍危險物、不強行約束或塞物，超過五分鐘、連續發作或受傷應撥119。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18公開HTML可見正文AI輔助對讀；未檢視的附件、圖片、PDF及影音不宣稱已閱讀全文。"
+    },
+    {
+      "url": "https://www.hch.gov.tw/?aid=626&iid=393&page_name=detail&pid=55",
+      "claim": "TW-13-016：兒科衛教指示保護頭部、側頭防嗆、不塞入口腔，記錄發作時間與恢復情形。",
+      "supporting_passage": "編者依臺灣主管機關或公立醫院公開HTML正文轉述（非逐字引文）：兒科衛教指示保護頭部、側頭防嗆、不塞入口腔，記錄發作時間與恢復情形。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18公開HTML可見正文AI輔助對讀；未檢視的附件、圖片、PDF及影音不宣稱已閱讀全文。"
+    }
+  ],
+  "localization_changes": "參照臺北市消防局與新竹臺大醫院兒科的公開急救步驟，加入五分鐘門檻及發作後呼吸判斷，排除塞嘴、硬壓與不當搬動。",
+  "review_method": "臺灣官方網頁實際公開正文與來源限制的AI輔助比對；各種臨床情境由119及醫療團隊判斷。",
+  "limits": [
+    "不往嘴巴塞筷子、毛巾、手指或飲料；強行固定肢體可能造成受傷。發作停止不代表已排除所有危險，須繼續留意意識、呼吸與外傷。病人恢復後不必強迫立即站立，更不應用拍打、捏人中等方式強行喚醒。遇到水、火、道路交通或高度危險，施救者應先確保自身與周邊人員安全。",
+    "非個案醫療建議；不得以網站文字取代醫師與119派遣指示，費用及預後不可保證。"
+  ]
+}

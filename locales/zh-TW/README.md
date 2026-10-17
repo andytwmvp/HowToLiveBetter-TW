@@ -1,4 +1,4 @@
-> **最新內容（2026-10-17）：** 第13章「緊急應變與急救」已完成16／48，核心 **198／765**，共用閱讀 **208項**（含10則補充導航）；有稿466主題、無稿299主題。後續段落含歷史數字，請以 [coverage.json](../../localization/tw-edition/coverage.json) 為準。
+> **最新內容（2026-10-18）：** 第13章「緊急應變與急救」已完成24／48，核心 **206／765**，共用閱讀 **216項**（含10則補充導航）；有稿474主題、無稿291主題。後續段落含歷史數字，請以 [coverage.json](../../localization/tw-edition/coverage.json) 為準。
 
 > **最新進度（2026-10-17）：** 第16章慢性病照護14條完成臺灣實質改寫、AI輔助來源核對與閱讀整合，核心 **169／765 條**，共用網站、Skill、自查、HTML／EPUB／Anki共 **178 項**。其餘章節中的歷史數字以最新 [coverage.json](../../localization/tw-edition/coverage.json) 為準。
 
@@ -8,7 +8,7 @@
 
 # 臺灣版正文、來源與閱讀入口
 
-[第7章生活支持](book/ch07/README.md) · [第14章帳號安全](book/ch14/README.md) · [第15章租屋與買房](book/ch15/README.md) · [第13章急救16／48](book/ch13/README.md) · [第16章慢性病照護](book/ch16/README.md) · [第17章長者照護](book/ch17/README.md) · [第19章勞動、職災與離職權益](book/ch19/README.md) · [第21章旅行與境外安全](book/ch21/README.md) · [第23章學習技能與職涯發展](book/ch23/README.md) · [第24章就醫與健保](book/ch24/README.md) · [第25章親友離世後的處理](book/ch25/README.md) · [第26章網站與平台經營](book/ch26/README.md) · [小橘書延伸：臺灣安全與防災準備](guides/全民安全與防災準備.md) · [本地閱讀與匯出](../../REPOSITORY_GUIDE.md)
+[第7章生活支持](book/ch07/README.md) · [第14章帳號安全](book/ch14/README.md) · [第15章租屋與買房](book/ch15/README.md) · [第13章急救24／48](book/ch13/README.md) · [第16章慢性病照護](book/ch16/README.md) · [第17章長者照護](book/ch17/README.md) · [第19章勞動、職災與離職權益](book/ch19/README.md) · [第21章旅行與境外安全](book/ch21/README.md) · [第23章學習技能與職涯發展](book/ch23/README.md) · [第24章就醫與健保](book/ch24/README.md) · [第25章親友離世後的處理](book/ch25/README.md) · [第26章網站與平台經營](book/ch26/README.md) · [小橘書延伸：臺灣安全與防災準備](guides/全民安全與防災準備.md) · [本地閱讀與匯出](../../REPOSITORY_GUIDE.md)
 
 以下為第17章完成時的歷史紀錄：第7章23條、第14章12條、第15章18條、第16章14條、第17章13條、第19章24條、第21章13條、第23章25條、第24章15條、第25章12條與第26章13條核心正文已完成AI輔助來源核對、逐條審閱與閱讀整合，合計核心182／765；加原有9則補充導航，共191項。不將未審閱草稿列為已完成。
 
