@@ -1,0 +1,35 @@
+{
+  "chapter": 16,
+  "date": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "core_completed_increment": 14,
+  "core_completed_after": 169,
+  "total_core": 765,
+  "runtime_total_after": 178,
+  "source_count_new": 17,
+  "entry_ids": [
+    "TW-16-001",
+    "TW-16-002",
+    "TW-16-003",
+    "TW-16-004",
+    "TW-16-005",
+    "TW-16-006",
+    "TW-16-007",
+    "TW-16-008",
+    "TW-16-009",
+    "TW-16-010",
+    "TW-16-011",
+    "TW-16-012",
+    "TW-16-013",
+    "TW-16-014"
+  ],
+  "cross_jurisdiction_notes": [
+    "臺灣沒有原作中國慢特病認定與異地備案的一般制度；慢箋90日須分次調劑。",
+    "腎結石的2.5公升一般是尿量目標而非人人固定飲水量；痛風、B肝、糖尿病、COPD與術後運動須按病況分層。",
+    "國際指引及試驗的效益不自動成為臺灣給付標準或個人結果保證。"
+  ],
+  "review_status": "AI-assisted source checked; not independent medical certification",
+  "publication_ready": false,
+  "published_to_public_website": false,
+  "source_methods": "逐項對讀政府官方頁面、官方計畫內容及國際學會／期刊公開研究摘要；沒有逐頁讀取所有全文付費附件。"
+}

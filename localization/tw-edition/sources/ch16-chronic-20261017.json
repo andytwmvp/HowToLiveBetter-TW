@@ -1,0 +1,106 @@
+{
+  "sources": [
+    [
+      "ch16_hpa_bp",
+      "國健署：血壓控制住了能停藥嗎",
+      "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4992&pid=19278",
+      "高血壓遵醫囑用藥，不因自覺良好自行停藥；以量測紀錄和醫師討論調整。"
+    ],
+    [
+      "ch16_fda_meds",
+      "食藥署：慢性病春節用藥提醒（2026）",
+      "https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t624124",
+      "慢性病藥物按處方持續，遇不適或交互作用疑慮向醫藥人員確認，不因作息改變自行停藥。"
+    ],
+    [
+      "ch16_hpa_722",
+      "國健署：高血壓服藥及居家量測722原則",
+      "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=14499",
+      "血壓記錄提供回診判斷依據；一般居家722量測與藥物調整應由醫師依個案評估。"
+    ],
+    [
+      "ch16_fda_supp",
+      "食藥署：慢性病長期用藥與保健食品的交互作用",
+      "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=19717",
+      "保健類食品可能和藥品交互作用，不能代替處方藥；慢性病患者應先向醫師藥師諮詢。"
+    ],
+    [
+      "ch16_nhi_rx",
+      "健保署：慢性病連續處方箋與調劑",
+      "https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html",
+      "醫師按病況開慢箋，最長90日、分次調劑，每次不超過30日；不是全數一次交付。"
+    ],
+    [
+      "ch16_nhi_fam",
+      "健保署：115年家庭醫師整合性照護計畫公告",
+      "https://www.nhi.gov.tw/ch/cp-19992-048aa-3258-1.html",
+      "臺灣家醫整合照護為健保計畫，參與院所與照護對象依計畫規定；不是中國家庭醫生簽約制。"
+    ],
+    [
+      "ch16_nhi_famsearch",
+      "健保署：家庭醫師整合性照護參與院所查詢",
+      "https://info.nhi.gov.tw/INAE1000/INAE1040S01?type=app",
+      "提供參與計畫院所與社區醫療群查詢，實際掛號及自費服務應另向院所詢問。"
+    ],
+    [
+      "ch16_ada_eyefoot",
+      "ADA 2026：糖尿病視網膜、神經與足部照護指引",
+      "https://diabetesjournals.org/care/article/49/Supplement_1/S261/163919/12-Retinopathy-Neuropathy-and-Foot-Care-Standards",
+      "第2型初診即安排眼底檢查，依檢查結果調整；全面足部評估一般每年至少一次，高風險更頻繁。"
+    ],
+    [
+      "ch16_aua_stones",
+      "美國泌尿科醫學會：腎結石醫療管理指引",
+      "https://www.auajournals.org/doi/abs/10.1016/j.juro.2014.05.006",
+      "結石預防強調足夠飲水，使每日尿量達到至少2.5公升；不等於所有患者固定每天飲水2.5公升。"
+    ],
+    [
+      "ch16_acr_gout",
+      "ACR 2020：痛風藥物治療與血尿酸目標",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/",
+      "痛風石、影像損傷或一年至少兩次發作時強烈建議考慮降尿酸治療；持續監測血尿酸目標低於6 mg/dL。"
+    ],
+    [
+      "ch16_cdc_gout",
+      "美國CDC：痛風生活型態與高普林食物",
+      "https://www.cdc.gov/arthritis/gout/",
+      "高普林來源包括部分內臟、紅肉、海鮮及酒，需限制與個人病情相關的觸發因素，飲食不能代替藥物。"
+    ],
+    [
+      "ch16_hpa_hbv",
+      "國健署：慢性B、C型肝炎定期回診及追蹤",
+      "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4809&pid=18092",
+      "慢性B、C肝患者依醫囑約3至6個月追蹤血液肝指數與腹部超音波等；抗病毒治療按適應症及健保條件評估。"
+    ],
+    [
+      "ch16_aasld_hcc",
+      "AASLD：2023肝細胞癌高危險群監測指引",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10663390/",
+      "高風險肝癌族群以每6個月超音波與AFP監測為主要做法，並須依風險及影像品質調整；非所有HBsAg陽性者可一律套用。"
+    ],
+    [
+      "ch16_gold_copd",
+      "GOLD 2026：慢性阻塞性肺病全球診療策略",
+      "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
+      "COPD治療強調吸入器選擇與技術、急性惡化後追蹤、戒菸及肺復健；依病情與可近性安排。"
+    ],
+    [
+      "ch16_ada_kidney",
+      "ADA 2026：糖尿病慢性腎臟病風險管理",
+      "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management",
+      "第2型糖尿病及第1型病程至少5年者每年檢查UACR與eGFR；確診腎病者按分期增加監測。"
+    ],
+    [
+      "ch16_kdigo_2024",
+      "KDIGO 2024：慢性腎臟病評估與治療指引",
+      "https://kdigo.org/guidelines/cKD-Evaluation-and-Management/",
+      "有腎病風險者評估尿蛋白／白蛋白與eGFR並確認持續異常；不能單一肌酸酐數字直接判斷慢性腎病。"
+    ],
+    [
+      "ch16_nejm_challenge",
+      "NEJM 2025：CHALLENGE大腸癌術後運動隨機試驗",
+      "https://pubmed.ncbi.nlm.nih.gov/40450658/",
+      "研究納入完成術後輔助化療的特定結腸癌患者，三年結構化運動組疾病無事件存活較好，但肌肉骨骼不良事件較多。"
+    ]
+  ]
+}

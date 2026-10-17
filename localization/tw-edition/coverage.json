@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "scope": "草稿結構盤點，不代表內容查核完成",
-  "json_files_checked": 210,
+  "json_files_checked": 226,
   "original_entries": 765,
   "structured_draft_chapters": 14,
   "structured_draft_entries": 373,
-  "legacy_markdown_draft_entries": 155,
-  "unique_draft_entries": 423,
-  "entries_without_any_draft": 342,
-  "registry_sources": 295,
+  "legacy_markdown_draft_entries": 169,
+  "unique_draft_entries": 437,
+  "entries_without_any_draft": 328,
+  "registry_sources": 312,
   "unresolved_source_ids": {
     "adultcheck": 5,
     "afib": 1,
@@ -228,7 +228,7 @@
     }
   ],
   "publication_ready": false,
-  "publication_completed_entries": 155,
+  "publication_completed_entries": 169,
   "publication_total_entries": 765,
   "publication_blockers": [
     "TW-01-001:尚未完成來源審閱",
@@ -651,20 +651,6 @@
     "TW-13-046:尚未完成來源審閱",
     "TW-13-047:尚未完成來源審閱",
     "TW-13-048:尚未完成來源審閱",
-    "TW-16-001:尚未完成來源審閱",
-    "TW-16-002:尚未完成來源審閱",
-    "TW-16-003:尚未完成來源審閱",
-    "TW-16-004:尚未完成來源審閱",
-    "TW-16-005:尚未完成來源審閱",
-    "TW-16-006:尚未完成來源審閱",
-    "TW-16-007:尚未完成來源審閱",
-    "TW-16-008:尚未完成來源審閱",
-    "TW-16-009:尚未完成來源審閱",
-    "TW-16-010:尚未完成來源審閱",
-    "TW-16-011:尚未完成來源審閱",
-    "TW-16-012:尚未完成來源審閱",
-    "TW-16-013:尚未完成來源審閱",
-    "TW-16-014:尚未完成來源審閱",
     "TW-17-001:尚未完成來源審閱",
     "TW-17-002:尚未完成來源審閱",
     "TW-17-003:尚未完成來源審閱",
@@ -843,8 +829,8 @@
     "TW-34-012:尚未完成來源審閱"
   ],
   "publication_scope": "驗證資料結構、審閱紀錄與閱讀一致性；不代表獨立事實查核或醫療法律專業簽證。",
-  "topics_with_any_content": 423,
+  "topics_with_any_content": 437,
   "topics_with_unreviewed_content": 268,
-  "topics_without_content": 342,
-  "core_reviewed_entries": 155
+  "topics_without_content": 328,
+  "core_reviewed_entries": 169
 }

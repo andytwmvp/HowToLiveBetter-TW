@@ -1,0 +1,31 @@
+{
+  "id": "TW-16-013",
+  "reviewer": "ChatGPT（AI輔助原始來源與臺灣制度核對，非執業醫師、藥師或獨立醫療專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch16/TW-16-013.md",
+  "target_sha256": "3cabc5170b8bf851c9e7b520ade7f5f4b04418dca58c0417fda84667d8c59636",
+  "source_checks": [
+    {
+      "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management",
+      "claim": "TW-16-013：第2型糖尿病及第1型病程至少5年者每年檢查UACR與eGFR；確診腎病者按分期增加監測。",
+      "supporting_passage": "編者核對摘要，非逐字引文：第2型糖尿病及第1型病程至少5年者每年檢查UACR與eGFR；確診腎病者按分期增加監測。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對公開官方網頁或可查的專業學會／期刊主要內容；未讀付費全文及附件不作已查全文保證。"
+    },
+    {
+      "url": "https://kdigo.org/guidelines/cKD-Evaluation-and-Management/",
+      "claim": "TW-16-013：有腎病風險者評估尿蛋白／白蛋白與eGFR並確認持續異常；不能單一肌酸酐數字直接判斷慢性腎病。",
+      "supporting_passage": "編者核對摘要，非逐字引文：有腎病風險者評估尿蛋白／白蛋白與eGFR並確認持續異常；不能單一肌酸酐數字直接判斷慢性腎病。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17核對公開官方網頁或可查的專業學會／期刊主要內容；未讀付費全文及附件不作已查全文保證。"
+    }
+  ],
+  "localization_changes": "依臺灣健保與醫療服務流程重寫；國際臨床指引只作適用條件明確的證據來源，原作中國醫保備案、固定12週領藥、人人每半年肝癌監測與一律固定喝水量不再套用。",
+  "review_method": "AI輔助對照2026-10-17政府官方HTML、研究摘要及公開專業指引；非獨立醫療決策或健保核付認證。",
+  "limits": [
+    "感染、運動、發燒及短期血糖異常可能影響UACR；需依專業指示重複驗證，腎病通常要求持續性證據，不能看一次升高就確診。慢性腎病用藥劑量、含鉀藥物及顯影劑安排都須醫師核對；出現無尿或急性不適立刻就醫。",
+    "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。"
+  ]
+}
