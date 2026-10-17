@@ -1,0 +1,31 @@
+{
+  "id": "TW-13-003",
+  "reviewer": "ChatGPT（AI輔助核對臺灣官方公開HTML，非醫療、救護或災防專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch13/TW-13-003.md",
+  "target_sha256": "b86cc359b6489f7b5cbdd513dbb0227c46248d3a0735c72c362bab6be3a4df6e",
+  "source_checks": [
+    {
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=631&pid=15126&sid=1185",
+      "claim": "TW-13-003：嘴角歪斜、單側手部無力及說話不清，任一異常便應撥119。",
+      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：嘴角歪斜、單側手部無力及說話不清，任一異常便應撥119。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17 核對官方HTML頁面可見正文，不假裝閱讀未取得的附件或個案資料。"
+    },
+    {
+      "url": "https://mohw.gov.tw/cp-2704-44431-1.html",
+      "claim": "TW-13-003：FAST代表臉、手、說話與時間，記錄發作時間並儘速通知119。",
+      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：FAST代表臉、手、說話與時間，記錄發作時間並儘速通知119。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17 核對官方HTML頁面可見正文，不假裝閱讀未取得的附件或個案資料。"
+    }
+  ],
+  "localization_changes": "改採臺灣衛福部FAST及119求援，記錄最後正常時間，避免把治療窗口當個案保證。",
+  "review_method": "臺灣主管機關公開網頁AI輔助對照；非專業實際操作、臨床或個案認證。",
+  "limits": [
+    "在排除吞嚥異常與出血性中風前，不要強迫喝水、吞藥、吃食物或自行服用阿斯匹靈；不要花時間查網路偏方、針刺放血或等待血壓自行恢復。單靠FAST不能確診，症狀消退也不可排除重大疾病。原作使用120，臺灣急救電話應為119；也不應把中國醫院分級及特殊治療時間直接套用到臺灣。",
+    "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。"
+  ]
+}

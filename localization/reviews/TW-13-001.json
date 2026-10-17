@@ -1,0 +1,31 @@
+{
+  "id": "TW-13-001",
+  "reviewer": "ChatGPT（AI輔助核對臺灣官方公開HTML，非醫療、救護或災防專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch13/TW-13-001.md",
+  "target_sha256": "44ba105e5a8179e96dc97892345809894abcd2b4263ccd5526fa3484eb99802b",
+  "source_checks": [
+    {
+      "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
+      "claim": "TW-13-001：民眾口訣叫叫壓電：判斷反應、撥119、胸部按壓並依AED語音指示操作。",
+      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：民眾口訣叫叫壓電：判斷反應、撥119、胸部按壓並依AED語音指示操作。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17 核對官方HTML頁面可見正文，不假裝閱讀未取得的附件或個案資料。"
+    },
+    {
+      "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
+      "claim": "TW-13-001：成人胸部按壓每分鐘100至120次、深度5至6公分，盡量持續不中斷。",
+      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：成人胸部按壓每分鐘100至120次、深度5至6公分，盡量持續不中斷。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "2026-10-17 核對官方HTML頁面可見正文，不假裝閱讀未取得的附件或個案資料。"
+    }
+  ],
+  "localization_changes": "原作120改為臺灣119，加入叫叫壓電及AED語音流程，區分成人、嬰幼兒與未訓練施救者。",
+  "review_method": "臺灣主管機關公開網頁AI輔助對照；非專業實際操作、臨床或個案認證。",
+  "limits": [
+    "如傷者清醒或仍有正常呼吸，不能任意施行胸壓；應依119指示密切觀察。疑似心跳停止時CPR有肋骨受傷可能，但不應因此拖延。嬰兒、兒童、溺水及嚴重創傷的急救有個別差異，成人按壓深度與單純胸壓不能直接套用。AED不一定每次都建議電擊。原作「打120」是中國大陸緊急救護電話，不適用臺灣。",
+    "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。"
+  ]
+}
