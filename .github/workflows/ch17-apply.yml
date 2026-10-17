@@ -87,9 +87,13 @@ jobs:
           after['sources'][:n_source]=before['sources'][:n_source]
           after['items'][:n_item]=before['items'][:n_item]
           new_body=Path('locales/zh-TW/book/ch17/TW-17-011.md').read_text(encoding='utf-8')
-          found=[e for e in after['items'] if e['id']=='TW-17-011']
-          assert len(found)==1
-          found[0]['body']=new_body
+          by_id={e['id']:e for e in after['items']}
+          for number in range(1,14):
+              key=f'TW-17-{number:03d}'
+              source=Path(f'locales/zh-TW/book/ch17/{key}.md')
+              assert key in by_id and source.is_file()
+              by_id[key]['body']=source.read_text(encoding='utf-8')
+          assert by_id['TW-17-011']['body']==new_body
           path.write_text(json.dumps(after,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           review=Path('localization/reviews/TW-17-011.json')
           record=json.loads(review.read_text(encoding='utf-8'))
