@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-030.md",
-  "target_sha256": "d11527ab4ef0bd8350fa625bb8161bddd100a0c42cd50a6b44c2115949044d10",
+  "target_sha256": "a981e44db7b1b45efe865209ab3d5aa55309ab4d39b8c51fc8ab35d5cbb945f3",
   "source_checks": [
     {
       "url": "https://scweb.cwa.gov.tw/zh-tw/page/intro/11",
@@ -16,8 +16,8 @@
     },
     {
       "url": "https://www.nfa.gov.tw/cht/index.php?article_id=16075&code=list&flag=detail&ids=21",
-      "claim": "TW-13-030：地震先護住頭頸，趴下掩護穩住，並在平時固定家具與準備防災物資。",
-      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：地震先護住頭頸，趴下掩護穩住，並在平時固定家具與準備防災物資。",
+      "claim": "TW-13-030：地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
+      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
       "accessed_at": "2026-10-17",
       "retrieval_method": "2026-10-17 核對官方HTML頁面可見正文，不假裝閱讀未取得的附件或個案資料。"
     }
