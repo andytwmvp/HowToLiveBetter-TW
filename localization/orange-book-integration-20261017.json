@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "edition": "2025-11-19 第二版一刷（依教育部典藏版末頁出版資訊）",
+  "title": "當危機來臨時：臺灣全民安全指引",
+  "publisher": "國防部全民防衛動員署／國防部",
+  "official_site": "https://prepare.mnd.gov.tw/",
+  "official_pdf_index": "https://prepare.mnd.gov.tw/download-pdf",
+  "pdf_copyright": "僅允許下載教學用，禁止未經書面許可的修改或商業利用；此專案不複製或夾帶原書媒體。",
+  "original_guide_id": "TW-NAV-010",
+  "original_guide_path": "locales/zh-TW/guides/全民安全與防災準備.md",
+  "source_ids": [
+    "orange_origin",
+    "orange_household",
+    "orange_gobag",
+    "orange_response",
+    "orange_casualty",
+    "orange_verify",
+    "orange_mental",
+    "orange_pdf_rights"
+  ],
+  "counted_in_core_765": false,
+  "core_completed_after": 190,
+  "navigation_items_after": 10,
+  "runtime_items_after": 200,
+  "integration_topics": [
+    "居家七日儲備",
+    "一至三日避難包",
+    "不同警報與避難場所分流",
+    "家人失聯與離線資訊",
+    "資安假訊息",
+    "醫療與長者兒童寵物照護",
+    "成本與複查"
+  ],
+  "links_in_project": [
+    "README.md",
+    "locales/zh-TW/README.md",
+    "locales/zh-TW/book/ch13/README.md",
+    "locales/zh-TW/book/ch14/README.md",
+    "locales/zh-TW/book/ch17/README.md"
+  ],
+  "publication_ready": false,
+  "scope": "獨立原創導航、AI輔助官方來源事實核對及授權邊界稽核；未取得手冊原文或圖像改作許可，不是國防部合作或背書。"
+}

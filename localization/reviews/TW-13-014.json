@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-014.md",
-  "target_sha256": "605fdc0b6557569c98812ba1ff0c5b9a602f5ca7329d16fec94b6ba4cdba6324",
+  "target_sha256": "2530532ce2ba3f096ddf672a9c679e25bd9a7f2b15e752045184715a264986d5",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-7172-84404-1.html",

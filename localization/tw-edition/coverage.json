@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "scope": "草稿結構盤點，不代表內容查核完成",
-  "json_files_checked": 253,
+  "json_files_checked": 256,
   "original_entries": 765,
   "structured_draft_chapters": 14,
   "structured_draft_entries": 373,
   "legacy_markdown_draft_entries": 190,
   "unique_draft_entries": 458,
   "entries_without_any_draft": 307,
-  "registry_sources": 345,
+  "registry_sources": 353,
   "unresolved_source_ids": {
     "adultcheck": 5,
     "afib": 1,
