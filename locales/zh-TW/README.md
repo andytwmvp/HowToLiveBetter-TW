@@ -4,6 +4,8 @@
 
 > **最新內容：** 第24章「就醫與健保」新增15份正文與來源紀錄，已核對核心 **155／765**，網站／匯出合計 **164項**（含9則補充導航）。其他章節內標示的數字為過去批次紀錄，請以最新[工作狀態](../../PROJECT_STATE.md)及[coverage.json](../../localization/tw-edition/coverage.json)為準。
 
+> **全書在地來源與再利用治理：** [臺灣原創、作者出處、合法重製及爬蟲排除界線](../../localization/TAIWAN_REUSE_POLICY.md)；不將中國制度的文字轉換稿作臺灣正式建議，也不虛稱公開資料無法被其他地區學習。
+
 # 臺灣版正文、來源與閱讀入口
 
 [第7章生活支持](book/ch07/README.md) · [第14章帳號安全](book/ch14/README.md) · [第15章租屋與買房](book/ch15/README.md) · [第13章急救8／48](book/ch13/README.md) · [第16章慢性病照護](book/ch16/README.md) · [第17章長者照護](book/ch17/README.md) · [第19章勞動、職災與離職權益](book/ch19/README.md) · [第21章旅行與境外安全](book/ch21/README.md) · [第23章學習技能與職涯發展](book/ch23/README.md) · [第24章就醫與健保](book/ch24/README.md) · [第25章親友離世後的處理](book/ch25/README.md) · [第26章網站與平台經營](book/ch26/README.md) · [小橘書延伸：臺灣安全與防災準備](guides/全民安全與防災準備.md) · [本地閱讀與匯出](../../REPOSITORY_GUIDE.md)
