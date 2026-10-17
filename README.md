@@ -1,11 +1,11 @@
-> **台灣版新增：** [第17章長者照護13條](locales/zh-TW/book/ch17/README.md)，已核對核心182／765，網站與匯出191項（含9則安全導航）。其餘章節舊統計為歷史紀錄。
+> **臺灣版最新進度：** [第13章緊急應變首批4條](locales/zh-TW/book/ch13/README.md)，已核對核心186／765，閱讀共195項（含9則補充導航）。第13章另44條尚待審閱，以下舊數字為歷史紀錄。
 
 <!-- tw-bootstrap-v1 -->
 # HowToLiveBetter-TW｜臺灣在地化工作區
 
 非官方繁體中文／臺灣在地化改編版。對話負責協作，GitHub 負責保存正文、依據與進度。
 
-[第7章：收入中斷與基本生活支持（23條）](locales/zh-TW/book/ch07/README.md) · [第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第16章：慢性病照護（14條）](locales/zh-TW/book/ch16/README.md) · [第17章：長者照護（13條）](locales/zh-TW/book/ch17/README.md) · [第15章：租屋、買房與房貸（18條）](locales/zh-TW/book/ch15/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [第21章：出國、旅行與境外安全（13條）](locales/zh-TW/book/ch21/README.md) · [第23章：學習技能與職涯發展（25條）](locales/zh-TW/book/ch23/README.md) · [第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [第26章：網站與平台經營（13條）](locales/zh-TW/book/ch26/README.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
+[第7章：收入中斷與基本生活支持（23條）](locales/zh-TW/book/ch07/README.md) · [第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第13章：緊急應變首批4／48條](locales/zh-TW/book/ch13/README.md) · [第16章：慢性病照護（14條）](locales/zh-TW/book/ch16/README.md) · [第17章：長者照護（13條）](locales/zh-TW/book/ch17/README.md) · [第15章：租屋、買房與房貸（18條）](locales/zh-TW/book/ch15/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [第21章：出國、旅行與境外安全（13條）](locales/zh-TW/book/ch21/README.md) · [第23章：學習技能與職涯發展（25條）](locales/zh-TW/book/ch23/README.md) · [第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [第26章：網站與平台經營（13條）](locales/zh-TW/book/ch26/README.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
 
 **僅在此 fork 維護；禁止向原作者 repo 建立 PR。移除廣告、打賞與原作者追蹤碼，但保留原作署名與授權。**
 
@@ -19,7 +19,7 @@
 
 # 高效益人生指南｜臺灣在地化
 
-這是 `andytwmvp/HowToLiveBetter-TW` 的繁體中文與臺灣在地化工作區。原作共 765 條建議，目前臺灣預設閱讀納入第7、14、15、16、19、21、23、24、25、26章，共169條具AI輔助來源核對與逐條閱讀整合的核心內容，加9則補充導航，共178項；尚有596條核心內容未完成，其他草稿與原作來源稿分開保存，不能視為臺灣現行制度定稿。
+這是 `andytwmvp/HowToLiveBetter-TW` 的繁體中文與臺灣在地化工作區。原作共 765 條建議，目前臺灣預設閱讀納入第7、13（首批4條）、14、15、16、17、19、21、23、24、25、26章，共186條具AI輔助來源核對與逐條閱讀整合的核心內容，加9則補充導航，共195項；尚有579條核心內容未完成，其他草稿與原作來源稿分開保存，不能視為臺灣現行制度定稿。
 
 **閱讀入口：**[臺灣版閱讀與本地開啟方式](REPOSITORY_GUIDE.md#reading)、[原作繁體來源稿的使用限制](REPOSITORY_GUIDE.md#source-preview)、[編修進度](PROJECT_STATE.md)。GitHub 上的 `.html` 連結是原始碼檔，不是已部署網站。
 

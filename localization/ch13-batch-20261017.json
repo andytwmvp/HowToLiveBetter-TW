@@ -1,0 +1,30 @@
+{
+  "chapter": 13,
+  "date": "2026-10-17",
+  "review_due_at": "2026-12-31",
+  "completed_ids": [
+    "TW-13-001",
+    "TW-13-003",
+    "TW-13-007",
+    "TW-13-030"
+  ],
+  "chapter_total": 48,
+  "core_completed_after": 186,
+  "total_core": 765,
+  "runtime_total_after": 195,
+  "new_source_ids": [
+    "ch13_cpr_fire",
+    "ch13_cpr_faq",
+    "ch13_stroke_hpa",
+    "ch13_stroke_mohw",
+    "ch13_heart_mohw",
+    "ch13_heart_fire",
+    "ch13_quake_cwa",
+    "ch13_quake_nfa"
+  ],
+  "publication_ready": false,
+  "source_methods": "AI輔助核對臺灣消防局、國健署、衛福部、中央氣象署和消防署的官方HTML公開正文，未讀附件不稱全文核對。",
+  "cross_jurisdiction": "臺灣119取代中國120；FAST不是個人診斷，胸痛不等15分鐘；地震不得依中國建築設防決定搖晃時奔逃。",
+  "published_to_public_website": false,
+  "professional_review": "AI-assisted; not independently certified"
+}
