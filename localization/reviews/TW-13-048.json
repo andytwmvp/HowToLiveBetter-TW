@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-18",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-048.md",
-  "target_sha256": "865eb1159ce57ff55070c75f7b367611a51fcc27ea1b2364713cb98d421488d5",
+  "target_sha256": "4d78e8a72c7dbc4aa1c6b4fa05ebc2147c6f930d604efb0a9aa34716e5b05c0e",
   "source_checks": [
     {
       "url": "https://ihealth.vghtpe.gov.tw/media/622",
