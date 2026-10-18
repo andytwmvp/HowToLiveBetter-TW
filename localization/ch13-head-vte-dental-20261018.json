@@ -1,0 +1,42 @@
+{
+  "chapter": 13,
+  "part": 7,
+  "date": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "a1b2e1953ab740c24d560d9cefb81586e9c04cf1",
+  "completed_ids": [
+    "TW-13-010",
+    "TW-13-011",
+    "TW-13-047",
+    "TW-13-048"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 36,
+  "chapter_pending": 12,
+  "core_completed_after": 218,
+  "core_total": 765,
+  "runtime_items_after": 228,
+  "navigation": 10,
+  "new_sources_count": 8,
+  "new_source_ids": [
+    "head_2026_vghtc",
+    "head_er_vghtc",
+    "dvt_care_vghtpe",
+    "dvt_tph_mohw",
+    "amputated_vghtpe",
+    "avulsed_tooth_vghtpe",
+    "pediatric_dental_vghtpe",
+    "dental_iadt_2024"
+  ],
+  "reused_source_ids": [],
+  "publication_ready": false,
+  "source_method": "2026-10-18 臺中榮總、臺北榮總、衛福部臺北醫院及IADT／ASD 2024原始研究公開HTML AI輔助核對，不虛稱閱讀圖片、PDF或附件。",
+  "taiwan_specific_limits": [
+    "TW-13-010：沒有立即昏迷、沒有頭皮傷口，不能排除顱內問題。腦中風、代謝問題、感染及藥物因素也可能造成類似症狀，不以網路測驗確診。勿擅自停服或加倍抗凝血藥、用止痛藥掩蓋惡化、按摩頭頸，亦不能要求每名撞頭長者均接受相",
+    "TW-13-011：衛福部臺北醫院已註明Homan徵象不準確，不能靠扳腳尖是否引發疼痛自行確診。**不要按摩腫痛腿部、用力熱敷或強迫運動，也不可自行服用抗凝血藥或阿斯匹靈。**蜂窩性組織炎、關節肌肉傷害等也會腿腫；壓力襪",
+    "TW-13-047：不可以將斷指放入冰塊堆、直接浸泡冰水、酒精或消毒藥劑，亦不能冷凍或用止血帶綁已離體組織。未完全斷離不能自行割斷，不能硬拉復位。醫院文章的接合時間並非超過後就放棄就醫的界線；患者持續失血和意識、呼吸危險",
+    "TW-13-048：乳牙不可植回來自IADT原始專業指引，不是台灣法律規定；臺北榮總亦提醒乳牙與恆牙胚密切相鄰，乳牙受外傷仍須就醫。不能確定乳恆牙、牙齒只是折斷或被撞入牙槽、嚴重顎顏面外傷或意識不清時，不要自行放回。**"
+  ],
+  "professional_review": "AI assisted source check only; NOT a professional medical or dental signoff",
+  "published_to_public_website": false
+}
