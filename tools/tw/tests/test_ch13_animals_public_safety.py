@@ -44,7 +44,8 @@ class Chapter13AnimalsPublicSafetyTests(unittest.TestCase):
  def test_dynamic_progress(self):
   c=load("localization/tw-edition/coverage.json");p=publication_report();rt=validate_runtime()
   self.assertFalse(p["publication_ready"]);self.assertEqual(p["publication_total_entries"],765)
-  self.assertEqual(p["publication_completed_entries"],230)
+  # 230是完成第十批時的下界，不可阻礙後續新增已核對核心條目。
+  self.assertGreaterEqual(p["publication_completed_entries"],230)
   self.assertEqual(c["core_reviewed_entries"],p["publication_completed_entries"])
   self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+10)
   self.assertEqual(c["unique_draft_entries"]+c["entries_without_any_draft"],765)
