@@ -1,0 +1,42 @@
+{
+  "chapter": 13,
+  "part": 6,
+  "date": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "completed_ids": [
+    "TW-13-008",
+    "TW-13-043",
+    "TW-13-044",
+    "TW-13-045"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 32,
+  "chapter_pending": 16,
+  "core_completed_after": 214,
+  "core_total": 765,
+  "runtime_items_after": 224,
+  "navigation": 10,
+  "new_sources_count": 9,
+  "new_source_ids": [
+    "ch13_aorta_hch",
+    "ch13_aorta_vghtpe",
+    "ch13_infant_choke_tpe",
+    "ch13_infant_choke_faq_tpe",
+    "ch13_infant_cpr_vghtc",
+    "ch13_infant_cpr_video_vghtc",
+    "ch13_swallow_wanfang",
+    "ch13_swallow_ntuh",
+    "ch13_swallow_bsmi"
+  ],
+  "reused_source_ids": [],
+  "publication_ready": false,
+  "source_method": "2026-10-18臺灣公立醫院、臺北市消防局及經濟部標準檢驗局官方公開HTML可見文字獨立核對；未觀看影片或讀取PDF及圖片附件不可冒充已全文閱覽。",
+  "taiwan_specific_limits": [
+    "突然劇烈胸背痛及神經異常應立即119，不能由民眾自行診斷主動脈剝離或服藥。",
+    "一歲以下嬰兒嚴重哽塞採適合嬰兒的五次拍背與五次胸部衝擊；不能使用成人腹部衝擊。",
+    "嬰兒無反應且不正常呼吸時依119啟動CPR；有手機可打119擴音，不因單人教材延誤可立即發出的求援。",
+    "鈕扣電池及強力磁鐵的兒科誤食不催吐、不強迫進食，不等待自行排出，診療由兒科急診評估。"
+  ],
+  "professional_review": "AI assisted public HTML source audit, no independent certified pediatric resuscitation, emergency medicine or vascular surgery professional signoff",
+  "published_to_public_website": false
+}
