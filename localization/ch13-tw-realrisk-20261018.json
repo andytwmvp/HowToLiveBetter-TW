@@ -1,0 +1,39 @@
+{
+  "chapter": 13,
+  "part": 8,
+  "date": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "5224a052adb08c66356257cdc2bfa94c410c567c",
+  "completed_ids": [
+    "TW-13-027",
+    "TW-13-032",
+    "TW-13-038",
+    "TW-13-042"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 40,
+  "chapter_pending": 8,
+  "core_completed_after": 222,
+  "core_total": 765,
+  "runtime_items_after": 232,
+  "navigation": 10,
+  "new_sources_count": 11,
+  "new_source_ids": [
+    "mountain_nps_rescue_109",
+    "mountain_forest_signal_115",
+    "mountain_nfa_dataset",
+    "lightning_taipei_fire",
+    "lightning_nps_2025",
+    "hiv_pep_cdc_2026",
+    "hiv_pep_cdc_faq",
+    "assault_mohw_care",
+    "assault_113_dops",
+    "assault_mohw_medical_113",
+    "assault_taipei_police"
+  ],
+  "publication_ready": false,
+  "frequency_method": "僅引用具年份與定義的臺灣救援案件、指定醫療機構到院人數或行政統計；沒有母數即明列無法推算個人發生率。109年消防山域事故455件、113年性侵害驗傷到院3665人與診斷書3123人都不是台灣人口發生率。",
+  "source_method": "2026-10-18 臺灣國家公園、林業保育署、臺北市消防局、衛福部保護服務司、疾管署與臺北市警察局可見官方HTML／統計表AI輔助核對；未宣稱獨立專業簽證或閱讀PDF附件。",
+  "professional_review": "AI-assisted publicly visible source checks; not official medical, legal, police, or emergency professional signoff",
+  "published_to_public_website": false
+}
