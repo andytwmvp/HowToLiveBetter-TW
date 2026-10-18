@@ -1,13 +1,13 @@
 > **臺灣原創、著作權與跨境再利用：** 所有正式內容依 [臺灣來源溯源與再利用政策](localization/TAIWAN_REUSE_POLICY.md) 製作，優先臺灣實際法令、醫療、社福、費用與服務程序；原作 CC BY 4.0／MIT 授權不變。公開 GitHub 無法真正封鎖中國或其他地區閱讀、複製、學習；機器人排除屬未部署站台的自願要求，不是保證。
 
-> **臺灣版最新進度：** [第13章緊急應變累計24／48條](locales/zh-TW/book/ch13/README.md)，核心206／765，網站與匯出合計216項（含10則補充導航）；本章剩餘24條待審閱。下方歷史批次進度不代表目前最新統計。
+> **臺灣版最新進度：** [第13章緊急應變累計28／48條](locales/zh-TW/book/ch13/README.md)，核心210／765，網站與匯出合計220項（含10則補充導航）；本章剩餘20條待審閱。下方歷史批次進度不代表目前最新統計。
 
 <!-- tw-bootstrap-v1 -->
 # HowToLiveBetter-TW｜臺灣在地化工作區
 
 非官方繁體中文／臺灣在地化改編版。對話負責協作，GitHub 負責保存正文、依據與進度。
 
-[第7章：收入中斷與基本生活支持（23條）](locales/zh-TW/book/ch07/README.md) · [第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第13章：緊急應變24／48條](locales/zh-TW/book/ch13/README.md) · [第16章：慢性病照護（14條）](locales/zh-TW/book/ch16/README.md) · [第17章：長者照護（13條）](locales/zh-TW/book/ch17/README.md) · [第15章：租屋、買房與房貸（18條）](locales/zh-TW/book/ch15/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [第21章：出國、旅行與境外安全（13條）](locales/zh-TW/book/ch21/README.md) · [第23章：學習技能與職涯發展（25條）](locales/zh-TW/book/ch23/README.md) · [第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [第26章：網站與平台經營（13條）](locales/zh-TW/book/ch26/README.md) · [小橘書延伸：臺灣全民安全實作指南](locales/zh-TW/guides/全民安全與防災準備.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
+[第7章：收入中斷與基本生活支持（23條）](locales/zh-TW/book/ch07/README.md) · [第14章：帳號與資訊安全（12條台灣改寫）](locales/zh-TW/book/ch14/README.md) · [第13章：緊急應變28／48條](locales/zh-TW/book/ch13/README.md) · [第16章：慢性病照護（14條）](locales/zh-TW/book/ch16/README.md) · [第17章：長者照護（13條）](locales/zh-TW/book/ch17/README.md) · [第15章：租屋、買房與房貸（18條）](locales/zh-TW/book/ch15/README.md) · [第19章：勞動、職災與離職權益（24條）](locales/zh-TW/book/ch19/README.md) · [第21章：出國、旅行與境外安全（13條）](locales/zh-TW/book/ch21/README.md) · [第23章：學習技能與職涯發展（25條）](locales/zh-TW/book/ch23/README.md) · [第25章：親友離世後的處理（12條）](locales/zh-TW/book/ch25/README.md) · [第26章：網站與平台經營（13條）](locales/zh-TW/book/ch26/README.md) · [小橘書延伸：臺灣全民安全實作指南](locales/zh-TW/guides/全民安全與防災準備.md) · [臺灣版閱讀說明](locales/zh-TW/README.md) · [工作進度](PROJECT_STATE.md) · [逐條對照](localization/manifest.json) · [協作規則](AGENTS.md) · [原作與授權](ATTRIBUTION.md)
 
 **僅在此 fork 維護；禁止向原作者 repo 建立 PR。移除廣告、打賞與原作者追蹤碼，但保留原作署名與授權。**
 
@@ -21,7 +21,7 @@
 
 # 高效益人生指南｜臺灣在地化
 
-這是 `andytwmvp/HowToLiveBetter-TW` 的繁體中文與臺灣在地化工作區。原作共 765 條建議，目前臺灣預設閱讀納入第7、13（累計16條）、14、15、16、17、19、21、23、24、25、26章，共198條具AI輔助來源核對與逐條閱讀整合的核心內容，加10則補充導航，共208項；尚有567條核心內容未完成，其他草稿與原作來源稿分開保存，不能視為臺灣現行制度定稿。
+這是 `andytwmvp/HowToLiveBetter-TW` 的繁體中文與臺灣在地化工作區。原作共 765 條建議，目前臺灣預設閱讀納入第7、13（累計28條）、14、15、16、17、19、21、23、24、25、26章，共210條具AI輔助來源核對與逐條閱讀整合的核心內容，加10則補充導航，共220項；尚有555條核心內容未完成，其他草稿與原作來源稿分開保存，不能視為臺灣現行制度定稿。
 
 **閱讀入口：**[臺灣版閱讀與本地開啟方式](REPOSITORY_GUIDE.md#reading)、[原作繁體來源稿的使用限制](REPOSITORY_GUIDE.md#source-preview)、[編修進度](PROJECT_STATE.md)。GitHub 上的 `.html` 連結是原始碼檔，不是已部署網站。
 
