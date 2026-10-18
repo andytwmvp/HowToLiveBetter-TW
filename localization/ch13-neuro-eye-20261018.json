@@ -1,0 +1,39 @@
+{
+  "chapter": 13,
+  "part": 5,
+  "date": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "completed_ids": [
+    "TW-13-004",
+    "TW-13-005",
+    "TW-13-006",
+    "TW-13-009"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 28,
+  "chapter_pending": 20,
+  "core_completed_after": 210,
+  "core_total": 765,
+  "runtime_items_after": 220,
+  "navigation": 10,
+  "new_sources_count": 6,
+  "new_source_ids": [
+    "ch13_cerebellar_tpe",
+    "ch13_cerebellar_vghtpe",
+    "ch13_amaurosis_tpe",
+    "ch13_glaucoma_tpe",
+    "ch13_glaucoma_vghtpe",
+    "ch13_thunderclap_ntuh"
+  ],
+  "reused_source_ids": [],
+  "publication_ready": false,
+  "source_method": "2026-10-18 臺北市立聯合醫院、臺北榮民總醫院及臺大醫院公開HTML可見段落AI輔助核對；不將未讀的PDF、圖表、附件當作正文，亦未複製小橘書圖文。",
+  "taiwan_specific_limits": [
+    "突發失衡與複視不能單靠FAST陰性排除中風，應立即撥119。",
+    "單眼短暫黑矇即使恢復也必須及時急診評估。",
+    "嚴重紅眼、眼痛、光暈和視力下降需急診評估，民眾不可自行用藥。",
+    "雷擊性頭痛不必等待滿一小時，檢查由醫師依個案決定。"
+  ],
+  "professional_review": "AI assisted public HTML evidence audit; not an independent accredited ophthalmology, neurology, emergency medicine, or rescue signoff",
+  "published_to_public_website": false
+}
