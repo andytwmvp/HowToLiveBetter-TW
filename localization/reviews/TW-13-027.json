@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-18",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-027.md",
-  "target_sha256": "fbec8a4c357067be4a4c9aacee1372f86775fe5500c59fa3bb9199b05d18055e",
+  "target_sha256": "2ad0dc1a74764fa6625c1c76594c39447965880e67c65d8953621596dead6a62",
   "source_checks": [
     {
       "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18576.html",
