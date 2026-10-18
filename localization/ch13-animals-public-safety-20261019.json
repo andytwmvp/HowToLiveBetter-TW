@@ -1,0 +1,41 @@
+{
+  "chapter": 13,
+  "part": 10,
+  "date": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "51c8b3c0148b31f833d5a79b7af16e5d94516fb7",
+  "completed_ids": [
+    "TW-13-031",
+    "TW-13-036",
+    "TW-13-037",
+    "TW-13-039"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 48,
+  "chapter_pending": 0,
+  "core_completed_after": 230,
+  "core_total": 765,
+  "runtime_items_after": 240,
+  "navigation": 10,
+  "new_sources_count": 13,
+  "new_source_ids": [
+    "animal_bear_forest_2024",
+    "animal_boar_taipei_zoo",
+    "animal_dog_ntpc_2016",
+    "animal_dog_tcapo_1959",
+    "violence_ntpc_robbery",
+    "violence_npa_114cases",
+    "violence_npa_110",
+    "violence_victim_witness",
+    "aid_ems_law_14_2",
+    "aid_civil_law_150",
+    "aid_victim_law_2023",
+    "aid_moj_services_2026",
+    "aid_avs_0800"
+  ],
+  "publication_ready": false,
+  "frequency_method": "114年警政署暴力犯罪503件，其中強盜130及搶奪118件，非戶外遭搶人次；野生動物目擊及犬群個案無全臺遭遇分母；球場鬥毆及一般救人受傷沒有共同分子母數，不臆估個人發生率。",
+  "source_method": "2026-10-19林業及自然保育署、臺北市立動物園、新北市政府、臺北市動保處、警政署、法務部及國家法規官方可見HTML／統計摘要AI輔助核對。",
+  "professional_review": "AI-assisted public-source review only, not legal, medical, police, wildlife, or emergency professional signoff",
+  "published_to_public_website": false
+}
