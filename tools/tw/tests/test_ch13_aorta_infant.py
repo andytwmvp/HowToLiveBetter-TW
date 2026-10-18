@@ -34,6 +34,16 @@ class Chapter13AortaInfantTests(unittest.TestCase):
                 self.assertEqual(sum(x["tag"] == "h3" for x in body_blocks(items[key])), 5)
                 self.assertEqual({x["url"] for x in review["source_checks"]},
                                  {sources[s]["url"] for s in items[key]["source_ids"]})
+    def test_official_taiwan_wording_survives_opencc_without_general_exemption(self):
+        # 臺灣托嬰機構名稱與「干預」不可為通過字形檢查而錯改。
+        from ci_language_policy import canonical
+        from traditionalize import cc
+        for phrase in ("托嬰中心", "托嬰人員", "干預"):
+            with self.subTest(phrase=phrase):
+                self.assertEqual(canonical(cc().convert(phrase)), canonical(phrase))
+        # 只修正上述詞組，不對其他真正的簡體字放行。
+        self.assertNotEqual(canonical(cc().convert("医疗服务")), canonical("医疗服务"))
+
     def test_infant_specific_safety_and_taiwan_119(self):
         d = {e["id"]: e["body"].split("## 官方來源及改寫說明")[0] for e in validate_runtime()["items"]}
         for key in IDS:
