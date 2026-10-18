@@ -11,7 +11,7 @@ cd HowToLiveBetter-TW
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-在瀏覽器開啟 `http://127.0.0.1:8000/` 閱讀臺灣導航，`http://127.0.0.1:8000/selfcheck.html` 使用自查。完成後按 Ctrl+C 停止伺服器。預設資料只讀 [runtime.json](localization/tw-edition/runtime.json)。截至 2026-10-18，已完成臺灣核心218／765條與10則補充導航，共228項；未來增修請以 [coverage.json](localization/tw-edition/coverage.json) 和 runtime 實際數字為準，不依歷史文字凍結完成數。原作繁體來源稿與未審閱草稿不能充當臺灣現行制度建議。
+在瀏覽器開啟 `http://127.0.0.1:8000/` 閱讀臺灣導航，`http://127.0.0.1:8000/selfcheck.html` 使用自查。完成後按 Ctrl+C 停止伺服器。預設資料只讀 [runtime.json](localization/tw-edition/runtime.json)。截至 2026-10-18，已完成臺灣核心222／765條與10則補充導航，共232項；未來增修請以 [coverage.json](localization/tw-edition/coverage.json) 和 runtime 實際數字為準，不依歷史文字凍結完成數。原作繁體來源稿與未審閱草稿不能充當臺灣現行制度建議。
 
 [第14章12條正文](locales/zh-TW/book/ch14/README.md) · [第15章18條正文](locales/zh-TW/book/ch15/README.md) · [第19章24條正文](locales/zh-TW/book/ch19/README.md) · [第21章13條正文](locales/zh-TW/book/ch21/README.md) · [第23章25條正文](locales/zh-TW/book/ch23/README.md) · [第25章12條正文](locales/zh-TW/book/ch25/README.md) · [第26章13條正文](locales/zh-TW/book/ch26/README.md) · [第7章23條正文](locales/zh-TW/book/ch07/README.md)。這是AI輔助來源核對與編修，不是獨立法律或資安專業簽證。
 
