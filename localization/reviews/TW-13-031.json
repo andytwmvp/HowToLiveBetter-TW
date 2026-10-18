@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-031.md",
-  "target_sha256": "e72bd998547b73258411ea42c4ab404ace66d3d8be28d2f3249daf3a719e7daf",
+  "target_sha256": "83ba84d60c9e72f9a5fd738185b2916e3be4100c7dec35cbbcf46904b2791aef",
   "source_checks": [
     {
       "url": "https://www.forest.gov.tw/about/news/0073795",

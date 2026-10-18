@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-039.md",
-  "target_sha256": "b2dcb3efc8d93c4de4b17db61e09717562dee305c4e7e4e8d97d72e00fbeef25",
+  "target_sha256": "d386bb1652f9d6e8d67ef66c4a28a6c6256681c0f78aebb824c130d608d9e136",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020045",
