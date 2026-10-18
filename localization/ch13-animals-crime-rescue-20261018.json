@@ -1,0 +1,38 @@
+{
+  "chapter": 13,
+  "part": 10,
+  "date": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "51c8b3c0148b31f833d5a79b7af16e5d94516fb7",
+  "completed_ids": [
+    "TW-13-031",
+    "TW-13-036",
+    "TW-13-037",
+    "TW-13-039"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 48,
+  "chapter_pending": 0,
+  "core_completed_after": 230,
+  "core_total": 765,
+  "runtime_items_after": 240,
+  "navigation": 10,
+  "new_sources_count": 10,
+  "new_source_ids": [
+    "forest_bear_202609",
+    "stray_lukang_202606",
+    "stray_moa_202501",
+    "crime_police_ntpc_2017",
+    "crime_npa_2025",
+    "npa_110_service",
+    "brawl_moi_2022",
+    "law_crime_tw",
+    "law_civil_tw",
+    "law_ems_tw"
+  ],
+  "publication_ready": false,
+  "frequency_method": "113年全臺遊蕩犬141584隻是族群推估；114年暴力犯罪503件、強盜130件及搶奪118件是警方案件；111年每月平均移送115件聚眾案件不是2026年發生率；善意救助者受傷缺全國可比較母數。",
+  "source_method": "2026-10-18核對政府HTML公開資料與法規來源，未假稱已審查PDF附件全文。",
+  "professional_review": "AI-assisted source review, not independent professional signoff",
+  "published_to_public_website": false
+}

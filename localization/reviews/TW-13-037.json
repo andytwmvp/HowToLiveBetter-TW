@@ -1,0 +1,38 @@
+{
+  "id": "TW-13-037",
+  "reviewer": "ChatGPT（臺灣政府與法規HTML之AI輔助核對；非醫療、警消或法律專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch13/TW-13-037.md",
+  "target_sha256": "af721e7e6ef3ee48ba771761d688118dd0568b5c9859d87504f73537ab6b5acb",
+  "source_checks": [
+    {
+      "url": "https://www.moi.gov.tw/News_Content.aspx?n=2&s=274231",
+      "claim": "TW-13-037：111年刑法149、150條相關案件每月平均移送115件，屬移送口徑而非所有打架事件。",
+      "supporting_passage": "臺灣政府官方公開HTML原意獨立編寫摘要：111年刑法149、150條相關案件每月平均移送115件，屬移送口徑而非所有打架事件。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18官方HTML可見文字AI輔助查核；不宣稱已取得未開啟的PDF或現場專業簽證。"
+    },
+    {
+      "url": "https://www.npa.gov.tw/ch/app/artwebsite/view%3Fmodule%3Dartwebsite%26id%3D1048%26serno%3De3ad2889-4dee-41cf-aef8-9b9d26dc6950",
+      "claim": "TW-13-037：臺灣遇治安與警察協助事宜可撥110。",
+      "supporting_passage": "臺灣政府官方公開HTML原意獨立編寫摘要：臺灣遇治安與警察協助事宜可撥110。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18官方HTML可見文字AI輔助查核；不宣稱已取得未開啟的PDF或現場專業簽證。"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0000001",
+      "claim": "TW-13-037：刑法正當防衛及聚眾犯罪有各自構成要件，不可把拉架直接視為犯罪或無條件免責。",
+      "supporting_passage": "臺灣政府官方公開HTML原意獨立編寫摘要：刑法正當防衛及聚眾犯罪有各自構成要件，不可把拉架直接視為犯罪或無條件免責。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18官方HTML可見文字AI輔助查核；不宣稱已取得未開啟的PDF或現場專業簽證。"
+    }
+  ],
+  "localization_changes": "加入臺灣球場與站區、111年移送件數與臺灣刑法。",
+  "review_method": "官方臺灣情境、警政統計口徑與救援法律條件AI輔助核對；非專業簽證。",
+  "limits": [
+    "「勸架」、「旁觀」、「參與鬥毆」、「防衛」在法律上不是相同身分，不能斷言善意接觸他人就必然犯罪或一律免責。中華民國刑法第23條及第149、150條有具體構成要件，是否涉及正當防衛、傷害或妨害秩序，應由司法依證據判斷。2022年**每月平均移送115件**不能冒充2026年最新犯罪率。即使現場有人呼救，也應先確定有沒有刀械、槍聲或可能波及的車輛，危險處置交給警方。",
+    "警方案件數、動物族群估值及移送數不可當作個人發生率，無可靠分母不推估。"
+  ]
+}

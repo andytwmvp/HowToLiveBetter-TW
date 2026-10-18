@@ -1,0 +1,38 @@
+{
+  "id": "TW-13-036",
+  "reviewer": "ChatGPT（臺灣政府與法規HTML之AI輔助核對；非醫療、警消或法律專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch13/TW-13-036.md",
+  "target_sha256": "298878b15f707863bbd9fb6cece01b91fd1838e838ed290082cd180afa771e94",
+  "source_checks": [
+    {
+      "url": "https://www.police.ntpc.gov.tw/cp-3361-31379-1.html",
+      "claim": "TW-13-036：遇搶劫以安全為先，避免不必要正面衝突，脫險後報警。",
+      "supporting_passage": "臺灣政府官方公開HTML原意獨立編寫摘要：遇搶劫以安全為先，避免不必要正面衝突，脫險後報警。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18官方HTML可見文字AI輔助查核；不宣稱已取得未開啟的PDF或現場專業簽證。"
+    },
+    {
+      "url": "https://data.gov.tw/dataset/177667",
+      "claim": "TW-13-036：114年暴力犯罪503件，其中強盜130件及搶奪118件，為警政案件分類統計。",
+      "supporting_passage": "臺灣政府官方公開HTML原意獨立編寫摘要：114年暴力犯罪503件，其中強盜130件及搶奪118件，為警政案件分類統計。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18官方HTML可見文字AI輔助查核；不宣稱已取得未開啟的PDF或現場專業簽證。"
+    },
+    {
+      "url": "https://www.npa.gov.tw/ch/app/artwebsite/view%3Fmodule%3Dartwebsite%26id%3D1048%26serno%3De3ad2889-4dee-41cf-aef8-9b9d26dc6950",
+      "claim": "TW-13-036：臺灣遇治安與警察協助事宜可撥110。",
+      "supporting_passage": "臺灣政府官方公開HTML原意獨立編寫摘要：臺灣遇治安與警察協助事宜可撥110。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18官方HTML可見文字AI輔助查核；不宣稱已取得未開啟的PDF或現場專業簽證。"
+    }
+  ],
+  "localization_changes": "改寫臺灣警政114年案件及110、119的報案救護分流。",
+  "review_method": "官方臺灣情境、警政統計口徑與救援法律條件AI輔助核對；非專業簽證。",
+  "limits": [
+    "**2025年強盜130件是警政案件數，不是個人受害率。**遭到搶劫不代表事後追打一定符合正當防衛；中華民國刑法第23條的「現在不法侵害」與防衛過當等仍須就案情認定。本章不是教人對抗刀械或槍械，現場安全優先於蒐證與保護財物；如有第三人生命威脅，依警察及救護機關現場指示處理。原作中國量刑、刑法條號、司法責任不能直接用於臺灣。",
+    "警方案件數、動物族群估值及移送數不可當作個人發生率，無可靠分母不推估。"
+  ]
+}
