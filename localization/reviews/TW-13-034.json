@@ -1,0 +1,38 @@
+{
+  "id": "TW-13-034",
+  "reviewer": "ChatGPT（臺灣政府及醫院公開HTML原始資訊之AI輔助核對；非專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch13/TW-13-034.md",
+  "target_sha256": "7d368a5478110227957e0c764d4ad22fae8ebfcac306d6d0cfd8ad9161256904",
+  "source_checks": [
+    {
+      "url": "https://www.cdc.gov.tw/En/Category/ListContent/kpBYBdd1WKIy8ATJWSWKww?uaid=kEDGe_ZPotUYmqikBePlHQ",
+      "claim": "TW-13-034：2026年3月宣布新增1例SFTS，蜱蟲在臺灣主要於4月至10月活動；1例不是所有蜱叮咬的統計。",
+      "supporting_passage": "官方公開HTML原意獨立編輯摘要（非逐字引用）：2026年3月宣布新增1例SFTS，蜱蟲在臺灣主要於4月至10月活動；1例不是所有蜱叮咬的統計。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18政府或臺灣醫院HTML可見文字AI輔助核對，不聲稱已閱讀未取得的PDF與附件。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/Page/-BXxXFCs_EDa3eOOpcJ4zg",
+      "claim": "TW-13-034：蜱媒病毒可能導致發燒、噁心等症狀，須按活動地點與暴露史就醫評估；潛伏期約7至14天。",
+      "supporting_passage": "官方公開HTML原意獨立編輯摘要（非逐字引用）：蜱媒病毒可能導致發燒、噁心等症狀，須按活動地點與暴露史就醫評估；潛伏期約7至14天。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18政府或臺灣醫院HTML可見文字AI輔助核對，不聲稱已閱讀未取得的PDF與附件。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/QAPage/8rz8HFwRBkAvSA9pl9OhWg",
+      "claim": "TW-13-034：蜱蟲應以鑷子夾住口器小心移除，再以肥皂清洗；有發燒不適應告知醫師暴露史。",
+      "supporting_passage": "官方公開HTML原意獨立編輯摘要（非逐字引用）：蜱蟲應以鑷子夾住口器小心移除，再以肥皂清洗；有發燒不適應告知醫師暴露史。",
+      "accessed_at": "2026-10-18",
+      "retrieval_method": "2026-10-18政府或臺灣醫院HTML可見文字AI輔助核對，不聲稱已閱讀未取得的PDF與附件。"
+    }
+  ],
+  "localization_changes": "採用疾管署2026年蜱媒疾病公告與臺灣4至10月環境風險，清楚區分病例公告和人口發生率。",
+  "review_method": "獨立臺灣案例、風險操作與官方統計口徑核對；非醫療或主管機關確認。",
+  "limits": [
+    "**不要塗油、凡士林、酒精或精油逼蟲退出，也不能點火、壓爆或用指甲挖出**。蜱蟲與傳播恙蟲病的恙蟎不相同，兩類疾病不能混算；4至10月是活動較明顯的季節，並非其餘月份絕無風險。SFTS、萊姆病等疾病是否存在感染風險由醫師評估，不能因網路照片自行確診。2026年單次報告新增1例沒有蜱叮咬總人次的母數，**不能推估每個人的感染機率**。",
+    "沒有可重算母數的歷史通報或舊估值，不升格成2026年全臺個人發生率。"
+  ]
+}
