@@ -12,6 +12,10 @@ import text_integrity as text
 from review_contract import publication_report, validate_runtime
 # OpenCC可能把金融用語「扣款」轉為「釦款」；只校正這個詞，不豁免整份正文或其他簡體字。
 EQUIVALENTS = [('臺','台'),('僱','雇'),('佔','占'),('裡','裏'),('公佈','公布'),('宣佈','宣布'),('發佈','發布'),('獲準','獲准'),('核準','核准'),('隻','只'),('衹','只'),('釦款','扣款')]
+# OpenCC 的通用 s2tw 字典會將臺灣法定服務名稱「托嬰中心／托嬰人員」
+# 誤轉成「託嬰」，也會將語意為不介入的「干預」誤轉成「幹預」。
+# 只對明確詞組校正，不豁免單獨的「托」、「干」或其餘簡體字。
+OFFICIAL_TAIWAN_CONTEXT_TERMS = [('託嬰', '托嬰'), ('幹預', '干預')]
 # 「叫、叫、伸、拋、划」是消防署及教育部正式救溺口訣。
 # OpenCC s2tw 把獨立的「划」改為「劃」會破壞官方原文；僅對該口訣和語境做精確對等，
 # 不把所有「划／劃」視為同字，也不放寬簡體或其他字形的全檔檢查。
@@ -24,7 +28,7 @@ OFFICIAL_WATER_RESCUE_TERMS = [
 ]
 
 def canonical(value):
-    for old, new in EQUIVALENTS + OFFICIAL_WATER_RESCUE_TERMS:
+    for old, new in EQUIVALENTS + OFFICIAL_WATER_RESCUE_TERMS + OFFICIAL_TAIWAN_CONTEXT_TERMS:
         value = value.replace(old, new)
     return value
 
@@ -87,11 +91,30 @@ def audit_drafts():
     return report
 
 def check():
-    paths = text.protected_paths(); problems = []
+    paths = text.protected_paths(); problems = []; details = []
     for path in text.targets():
         before = base.read(path); after = text.normalized(before,paths)
-        if canonical(before) != canonical(after): problems.append(path)
-    if problems: raise RuntimeError('仍有簡體字或待校閱用字：'+', '.join(problems))
+        original, converted = canonical(before), canonical(after)
+        if original != converted:
+            problems.append(path)
+            # 不降低驗證嚴格度；在日誌列出字形差異供逐條修訂，避免盲改或擴大白名單。
+            if len(original) < 12000 and len(converted) < 12000:
+                import difflib
+                differences = [
+                    (original[i:j], converted[k:l])
+                    for kind,i,j,k,l in difflib.SequenceMatcher(
+                        None, original, converted, autojunk=False).get_opcodes()
+                    if kind != 'equal'
+                ]
+                details.append(path + ': ' + repr(differences[:12]))
+            else:
+                index = next((i for i,(a,b) in enumerate(zip(original,converted)) if a != b),
+                             min(len(original), len(converted)))
+                details.append(path + ': 位置' + str(index) + '：'
+                               + repr(original[max(index-18, 0):index+30]) + ' → '
+                               + repr(converted[max(index-18, 0):index+30]))
+    if problems: raise RuntimeError('仍有簡體字或待校閱用字：'+', '.join(problems)
+                                    + '；差異：' + '; '.join(details))
     md = base.read('README.md'); badges = text.BADGE.findall(md)
     if len(badges)!=6 or '%29%5D%28' in md: raise ValueError('Markdown徽章數量或語法錯誤')
     for label,url,dest in badges:
