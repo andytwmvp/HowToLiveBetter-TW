@@ -1,0 +1,38 @@
+{
+  "chapter": 13,
+  "part": 9,
+  "date": "2026-10-18",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "b1caf71c8cd99fff72ae915b4d983d9726115257",
+  "completed_ids": [
+    "TW-13-033",
+    "TW-13-034",
+    "TW-13-035",
+    "TW-13-046"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 44,
+  "chapter_pending": 4,
+  "core_completed_after": 226,
+  "core_total": 765,
+  "runtime_items_after": 236,
+  "navigation": 10,
+  "new_sources_count": 10,
+  "new_source_ids": [
+    "altitude_nps_202609",
+    "altitude_yushan_hist_2017",
+    "tick_cdc_202603",
+    "tick_cdc_sfts",
+    "tick_cdc_faq",
+    "water_tfda_202602",
+    "water_tfda_noro_2016",
+    "water_mohw_flood",
+    "alcohol_cch_202512",
+    "alcohol_tpech_202606"
+  ],
+  "publication_ready": false,
+  "frequency_method": "2017玉山36％舊估值缺可重算母數；2026 SFTS新增1例不等同蜱叮咬率；2015至2016山泉水3起調查案例不等於全臺水源汙染率；酒精中毒無本批可核母數。",
+  "source_method": "2026-10-18國家公園署、衛福部、疾管署、食藥署、彰基與臺北市立聯合醫院公開HTML AI輔助核對",
+  "professional_review": "AI assisted source review only, not medical or emergency professional signoff",
+  "published_to_public_website": false
+}
