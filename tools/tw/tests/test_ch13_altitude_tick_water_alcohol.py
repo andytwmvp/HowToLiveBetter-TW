@@ -27,7 +27,9 @@ class Chapter13AltitudeTickWaterAlcoholTests(unittest.TestCase):
   self.assertIn("119",b["TW-13-046"]);self.assertIn("CPR",b["TW-13-046"])
   for k in IDS:
    self.assertNotIn("撥120",b[k]);self.assertNotIn("打120",b[k])
-   self.assertIn("發生率",b[k])
+   self.assertTrue("發生率" in b[k] or "發生頻率" in b[k],f"{k} 必須交代臺灣統計口徑或無法取得發生頻率的限制")
+  self.assertIn("不能推算每年有多少登山客會感染",b["TW-13-035"])
+  self.assertIn("不是全臺溪水採樣分母",b["TW-13-035"])
  def test_old_runtime_preserved(self):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))
   rt=validate_runtime();ii={x["id"]:x for x in rt["items"]};ss={x["id"]:x for x in rt["sources"]}
