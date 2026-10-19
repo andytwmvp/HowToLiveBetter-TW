@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "scope": "草稿結構盤點，不代表內容查核完成",
-  "json_files_checked": 344,
+  "json_files_checked": 350,
   "original_entries": 765,
   "structured_draft_chapters": 14,
   "structured_draft_entries": 373,
-  "legacy_markdown_draft_entries": 250,
+  "legacy_markdown_draft_entries": 254,
   "unique_draft_entries": 498,
   "entries_without_any_draft": 267,
-  "registry_sources": 483,
+  "registry_sources": 499,
   "unresolved_source_ids": {
     "adultcheck": 5,
     "afib": 1,
@@ -228,13 +228,9 @@
     }
   ],
   "publication_ready": false,
-  "publication_completed_entries": 250,
+  "publication_completed_entries": 254,
   "publication_total_entries": 765,
   "publication_blockers": [
-    "TW-01-021:尚未完成來源審閱",
-    "TW-01-022:尚未完成來源審閱",
-    "TW-01-023:尚未完成來源審閱",
-    "TW-01-024:尚未完成來源審閱",
     "TW-01-025:尚未完成來源審閱",
     "TW-01-026:尚未完成來源審閱",
     "TW-01-027:尚未完成來源審閱",
@@ -749,7 +745,7 @@
   ],
   "publication_scope": "驗證資料結構、審閱紀錄與閱讀一致性；不代表獨立事實查核或醫療法律專業簽證。",
   "topics_with_any_content": 498,
-  "topics_with_unreviewed_content": 248,
+  "topics_with_unreviewed_content": 244,
   "topics_without_content": 267,
-  "core_reviewed_entries": 250
+  "core_reviewed_entries": 254
 }

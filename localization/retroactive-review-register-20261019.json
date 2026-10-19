@@ -967,9 +967,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "查核來源未附全國外傷大量出血定義、事件人數與曝險母數；不以全體車禍死亡數推算失血風險，資料不足但致命性仍優先急救。"
     },
     {
       "id": "TW-13-013",
@@ -1007,9 +1007,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "兩份國健署公告是預防與處置宣導，未提供定義一致全國燒燙傷發生率；不以兒童單案或全體火災數推估。"
     },
     {
       "id": "TW-13-015",
@@ -1027,9 +1027,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "新竹臺大是一名兒童案例，臺大2%至10%為全球食物過敏概述，皆非臺灣嚴重全身過敏發生率；未取得可比全國母數。"
     },
     {
       "id": "TW-13-016",
@@ -1227,9 +1227,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "2025消防救溺1056人，溪河415、海邊228；行政救援範圍含自傷及其他類，不代表純戲水意外或全國人口個人風險。"
     },
     {
       "id": "TW-13-026",
@@ -7910,6 +7910,168 @@
         "不冒充醫師、救護教官或主管機關正式簽證，不保證個案療效或費用。",
         "沒有相同母群與結局定義的臺灣嬰兒院外心跳停止資料，不拿成人存活率或嬰兒猝死率替代。",
         "本次為AI輔助來源再核對，急救專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-012",
+      "before_sha256": "07d904e6cd12973a27debaa94586a7bc109b9114ee3f945b56f2c6dcf3bcc882",
+      "after_sha256": "aad805f91eacd196fe87a871ae5efee8d8f6b07b1035bb910c23accb488e86cf",
+      "prior_revision": "b5c80a47faf877ec966396f3618731d59f8caf5b",
+      "prior_review_sha256": "8baa676a5a66d7d420f8bcb05537ebc3f7258af54dceb6bd5017cd8dd2ecaf90",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣機車／工安及居家刀玻璃傷，先避險、119、持續加壓，不因找止血帶延誤。",
+      "frequency_assessment": "查核來源未附全國外傷大量出血定義、事件人數與曝險母數；不以全體車禍死亡數推算失血風險，資料不足但致命性仍優先急救。",
+      "changes": "補上先119與加壓的明確急救先行、解釋5至8公分非所有部位通則；揭露消防教科書TLS重取失敗。",
+      "source_checks": [
+        {
+          "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+          "claim": "TW-13-012：大量出血應立即打119並先加壓止血；危及生命的四肢大量出血可用止血帶，頭頸不可用止血帶。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：大量出血應立即打119並先加壓止血；危及生命的四肢大量出血可用止血帶，頭頸不可用止血帶。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際重新讀取官方HTML文字，核對具體主張；未看影片／圖片手法不稱專業驗證。"
+        },
+        {
+          "url": "https://ebook.nfa.gov.tw/1140527/files/basic-html/page142.html",
+          "claim": "TW-13-012：直接加壓止血；危及生命的四肢大量出血可考慮創傷用止血帶置於近心端5至8公分並標記使用時間。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：直接加壓止血；危及生命的四肢大量出血可考慮創傷用止血帶置於近心端5至8公分並標記使用時間。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "2026-10-19重取TLS憑證失敗；accessed_at保留先前實讀日期，不冒稱本日成功。現行正文另由可讀官方來源支持，專業審閱仍待取得。"
+        }
+      ],
+      "limits": [
+        "止血帶僅供適當的四肢嚴重出血情境，不可綁頸部、胸腹軀幹，也不能在輕微擦傷上任意套用。頭頸傷口、嵌入異物、深部傷口各有不同技術及風險，對疑似頭部骨折位置不可隨意猛壓；帶著刺入身體的物體不得直接拔除。對不熟悉的繩索或細線尤其不應自行當成合格止血帶，以免失效或傷及神經。原作120是中國急救專線，臺灣應使用119。",
+        "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
+        "查核來源未附全國外傷大量出血定義、事件人數與曝險母數；不以全體車禍死亡數推算失血風險，資料不足但致命性仍優先急救。",
+        "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-014",
+      "before_sha256": "2530532ce2ba3f096ddf672a9c679e25bd9a7f2b15e752045184715a264986d5",
+      "after_sha256": "f60beb66b93e5a74658f604e7a4349a8c25bab15f6b1987270d8c3623a0b5dea",
+      "prior_revision": "b5c80a47faf877ec966396f3618731d59f8caf5b",
+      "prior_review_sha256": "0d8f3a03b8ed629fe4e9e91c35c7e4a61c43d476f5cb46e70d7ef28c5af098a3",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "家庭火鍋、熱湯、電暖器與浴室幼童；局部降溫不能拖延呼吸危急或大面積燒傷送醫。",
+      "frequency_assessment": "兩份國健署公告是預防與處置宣導，未提供定義一致全國燒燙傷發生率；不以兒童單案或全體火災數推估。",
+      "changes": "補充局部冷卻、全身保暖與送醫優先，指出官方泡水時長差異不採固定累加；明列全國頻率不足。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-7172-84404-1.html",
+          "claim": "TW-13-014：2026年1月更新：沖冷水15至30分鐘、脫去不沾黏衣物、覆蓋乾淨紗布並儘速就醫。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：2026年1月更新：沖冷水15至30分鐘、脫去不沾黏衣物、覆蓋乾淨紗布並儘速就醫。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際重新讀取官方HTML文字，核對具體主張；未看影片／圖片手法不稱專業驗證。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-2704-81443-1.html",
+          "claim": "TW-13-014：衛福部宣導沖脫泡蓋送；燒燙傷沖冷水15至30分鐘，避免粗暴撕扯傷處衣物。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：衛福部宣導沖脫泡蓋送；燒燙傷沖冷水15至30分鐘，避免粗暴撕扯傷處衣物。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際重新讀取官方HTML文字，核對具體主張；未看影片／圖片手法不稱專業驗證。"
+        },
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/201210/child_2.html",
+          "claim": "自來水降溫、保留沾黏衣物，廣大面積與老幼避免長時浸泡導致失溫或延誤；舊演講病例不當全國頻率或2026統計。",
+          "supporting_passage": "實讀相關官方正文後之語意摘要，非逐字引文：自來水降溫、保留沾黏衣物，廣大面積與老幼避免長時浸泡導致失溫或延誤；舊演講病例不當全國頻率或2026統計。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立摘要；非附件、影片或專業簽證。"
+        }
+      ],
+      "limits": [
+        "不要用冰塊、冰水長時間冰敷，不塗牙膏、醬油、奶油、藥酒或未經專業確認的偏方，以免增加刺激與感染風險。大面積燒傷及嬰幼兒長時間沖水可能導致失溫，須依救護指示調整冷卻方式。化學或電傷亦有其他特殊處置，不能單憑『沖水20分鐘』就延誤送醫；水泡不要自行弄破。衛福部宣導為15至30分鐘，並非強制所有情境固定只有20分鐘。",
+        "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
+        "兩份國健署公告是預防與處置宣導，未提供定義一致全國燒燙傷發生率；不以兒童單案或全體火災數推估。",
+        "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。",
+        "官方泡水時長15／30分鐘不同，不累加固定等待；失溫與緊急送醫優先。"
+      ]
+    },
+    {
+      "id": "TW-13-015",
+      "before_sha256": "8a29e4818ab6102a38c70cb31e4fa8d12e3f2d0aabae97e4df5f008401afa980",
+      "after_sha256": "c0c09f47c907af72c41a7bbe425aa39a1545ccb7f2f39e676a8d86ac90e6b566",
+      "prior_revision": "b5c80a47faf877ec966396f3618731d59f8caf5b",
+      "prior_review_sha256": "96598cbe573c302a3f885fbe711b97e4d80f0892136bff544f61552c08458820",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "家庭及學校用餐、服藥與螫傷後的快速惡化；不能要求等皮疹及低血壓齊全才求援。",
+      "frequency_assessment": "新竹臺大是一名兒童案例，臺大2%至10%為全球食物過敏概述，皆非臺灣嚴重全身過敏發生率；未取得可比全國母數。",
+      "changes": "強化無紅疹也不能排除嚴重急症，說明案例與全球食物過敏率不能當臺灣過敏性休克率；修正文末重複標點。",
+      "source_checks": [
+        {
+          "url": "https://www.hch.gov.tw/?aid=503&iid=490&page_name=detail&pid=0",
+          "claim": "TW-13-015：2026年5月兒急案例說明全身紅疹合併臉或眼皮腫脹可能迅速惡化，應及時醫療評估。",
+          "supporting_passage": "編者依臺灣主管機關或公立醫院公開HTML正文轉述（非逐字引文）：2026年5月兒急案例說明全身紅疹合併臉或眼皮腫脹可能迅速惡化，應及時醫療評估。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際重新讀取官方HTML文字，核對具體主張；未看影片／圖片手法不稱專業驗證。"
+        },
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/202301/child_1.html",
+          "claim": "TW-13-015：有嚴重全身過敏反應病史的患者應由醫師評估腎上腺素自動注射器，依醫囑在急性發作時使用。",
+          "supporting_passage": "編者依臺灣主管機關或公立醫院公開HTML正文轉述（非逐字引文）：有嚴重全身過敏反應病史的患者應由醫師評估腎上腺素自動注射器，依醫囑在急性發作時使用。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際重新讀取官方HTML文字，核對具體主張；未看影片／圖片手法不稱專業驗證。"
+        }
+      ],
+      "limits": [
+        "不要把抗組織胺或自行吃成藥當作已處理嚴重全身過敏，也不要未受訓就模仿注射劑量。沒有紅疹並不能排除其他嚴重呼吸道或循環急症；喘、胸痛、虛弱或昏厥可能有心臟、肺部等其他原因，不應自行診斷。復原後仍可能需要醫院觀察與追蹤；原作120不是臺灣的救護電話。",
+        "非個案醫療建議；不得以網站文字取代醫師與119派遣指示，費用及預後不可保證。",
+        "新竹臺大是一名兒童案例，臺大2%至10%為全球食物過敏概述，皆非臺灣嚴重全身過敏發生率；未取得可比全國母數。",
+        "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-025",
+      "before_sha256": "19378debda298be8d7a4eac60674dd9046f045af5b96c435c1f0e11576ccb132",
+      "after_sha256": "8de50afb2b0fe6e4224b8c7cc595f98cff4dc590ba34838cb4ae56dbc320448f",
+      "prior_revision": "b5c80a47faf877ec966396f3618731d59f8caf5b",
+      "prior_review_sha256": "aedfd0ba465f185d5aa76a4ab2225396c2549d52ea2e7769513b6fe6abf6137b",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣溪河、海邊、垂釣及泳池，不把泳技當救生訓練，先岸上安全及119／118。",
+      "frequency_assessment": "2025消防救溺1056人，溪河415、海邊228；行政救援範圍含自傷及其他類，不代表純戲水意外或全國人口個人風險。",
+      "changes": "加入2025消防救援統計及分母／分類限制，119 CPR先行，依臺北消防局改為所有溺水者獲救後均應送醫，不只症狀持續才送醫；未展開專業通氣技術。",
+      "source_checks": [
+        {
+          "url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b0f39b7019b118405f00bd5",
+          "claim": "TW-13-025：救溺五步叫、叫、伸、拋、划，通報119或118等救援單位，應先確保自身安全，不可貿然入水。",
+          "supporting_passage": "據官方公開HTML相關段落之編者摘要，非逐字引文：救溺五步叫、叫、伸、拋、划，通報119或118等救援單位，應先確保自身安全，不可貿然入水。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際重新讀取官方HTML文字，核對具體主張；未看影片／圖片手法不稱專業驗證。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/pro/index.php?code=list&ids=484",
+          "claim": "TW-13-025：有人溺水先大聲呼救、向119或海巡118求援，利用岸上延伸物及漂浮物協助，不應貿然下水。",
+          "supporting_passage": "據官方公開HTML相關段落之編者摘要，非逐字引文：有人溺水先大聲呼救、向119或海巡118求援，利用岸上延伸物及漂浮物協助，不應貿然下水。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "2026-10-19重取TLS憑證失敗；accessed_at保留先前實讀日期，不冒稱本日成功。現行正文另由可讀官方來源支持，專業審閱仍待取得。"
+        },
+        {
+          "url": "https://mag.nfa.gov.tw/article.php?id=4128",
+          "claim": "2025年消防救溺1056人，溪河415、海邊228；行政救援含其他及自傷類，不等於純戲水意外或個人年風險；分類調整與跨年修訂限制。",
+          "supporting_passage": "實讀相關官方正文後之語意摘要，非逐字引文：2025年消防救溺1056人，溪河415、海邊228；行政救援含其他及自傷類，不等於純戲水意外或個人年風險；分類調整與跨年修訂限制。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立摘要；非附件、影片或專業簽證。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=3B5D9F8767B3E60C&sms=87415A8B9CE81B16",
+          "claim": "安全救上岸後檢查意識呼吸、CPR與保暖，所有溺水者獲救後應送醫；不是只在出現持續喘後才評估。",
+          "supporting_passage": "實讀官方文字後語意摘要：安全救上岸後檢查意識呼吸、CPR與保暖，所有溺水者獲救後應送醫；不是只在出現持續喘後才評估。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際核對官方HTML相關正文，不採未閱手法影片或盲目清除口腔異物。"
+        }
+      ],
+      "limits": [
+        "『划』須有適當大型浮具、可控水況及操作能力，不能靠玩具浮圈自行衝入急流；未經訓練者切勿貿然入水。上岸後若有持續喘、胸痛、咳嗽、昏睡或呼吸異常，須儘速醫療評估。夜間、強浪與陌生深水區會改變救援方式；不要為撿手機、隨身物品或個人物品冒險接近水邊。中國120不是臺灣當地救溺電話。",
+        "救援須以現場119派遣與專業醫療指示為準，費用由實際醫療服務及健保條件決定。",
+        "2025消防救溺1056人，溪河415、海邊228；行政救援範圍含自傷及其他類，不代表純戲水意外或全國人口個人風險。",
+        "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。"
       ]
     }
   ]

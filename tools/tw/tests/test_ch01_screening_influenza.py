@@ -8,6 +8,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
 from body_renderer import body_blocks
+from retroactive_audit import assert_preserved_or_rechecked
 
 class ScreeningInfluenzaTests(unittest.TestCase):
     def test_new_bodies_sources_and_review_hash(self):
@@ -38,7 +39,7 @@ class ScreeningInfluenzaTests(unittest.TestCase):
     def test_all_prior_items_and_sources_unchanged(self):
         old=json.loads(subprocess.check_output(['git','show','4d3080f84f778fa55d070cf66ea75de80c56f988:localization/tw-edition/runtime.json'],cwd=ROOT))
         rt=validate_runtime();items={x['id']:x for x in rt['items']};sources={x['id']:x for x in rt['sources']}
-        for row in old['items']:self.assertEqual(row,items[row['id']])
+        for row in old['items']:assert_preserved_or_rechecked(self,row,items[row['id']])
         for row in old['sources']:self.assertEqual(row,sources[row['id']])
         self.assertFalse(publication_report()['publication_ready'])
 if __name__=='__main__':unittest.main()

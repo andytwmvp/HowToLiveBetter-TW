@@ -1,0 +1,124 @@
+{
+  "base_sha": "b5c80a47faf877ec966396f3618731d59f8caf5b",
+  "new_core_ids": [
+    "TW-01-021",
+    "TW-01-022",
+    "TW-01-023",
+    "TW-01-024"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-012",
+    "TW-13-014",
+    "TW-13-015",
+    "TW-13-025"
+  ],
+  "professional_review": "pending",
+  "sources_added": 16,
+  "source_limits": [
+    "消防教科書及水域舊頁TLS讀取失敗，保留先前查閱日期並標示，不偽造本日讀取。",
+    "2017帶狀皰疹健保申報為舊就醫人數，非2026發生率；幽門盛行率原公告缺期間母數，不作精確值。",
+    "月份專欄只知月份，published_at留null並另記publication_month，不虛構刊日。",
+    "政府動態監測以公告截點為準，未重算微資料；未獲醫療專業簽證。"
+  ],
+  "statistics": [
+    {
+      "topic": "IPD",
+      "value": 347,
+      "unit": "監測確定病例",
+      "period": "2025年，2026-01-13公告截點",
+      "scope": "臺灣",
+      "population": "侵襲性肺炎鏈球菌感染症確定病例",
+      "numerator": 347,
+      "denominator": null,
+      "deaths_within_cases": 36,
+      "definition": "監測確定病例，不是全部肺炎",
+      "method": "行政監測公告",
+      "accessed_at": "2026-10-19",
+      "source": "https://www.cdc.gov.tw/Category/ListContent/Hh094B49-DRwe2RR4eFfrQ?uaId=Ay1_7PLUOICQg6JClwYiTA",
+      "limits": "非全感染分母、不估個人發生率或一般肺炎致死率"
+    },
+    {
+      "topic": "溺水救援",
+      "value": 1056,
+      "unit": "人",
+      "period": "2025年",
+      "scope": "各級消防機關轄內救援",
+      "population": "消防救溺民眾",
+      "numerator": {
+        "溪河": 415,
+        "海邊": 228
+      },
+      "denominator": 1056,
+      "definition": "救援溺水人數，非純意外或僅死亡",
+      "method": "消防行政勤務統計",
+      "accessed_at": "2026-10-19",
+      "source": "https://mag.nfa.gov.tw/article.php?id=4128",
+      "limits": "含自傷其他類；分類與跨年數字修訂，不用舊875與本版873直接作同比"
+    },
+    {
+      "topic": "帶狀皰疹就醫",
+      "value": 244000,
+      "unit": "約就醫人數",
+      "period": "2017年，2018-11-15公告",
+      "scope": "臺灣健保申報",
+      "population": "申報帶狀皰疹就醫者",
+      "numerator": 244000,
+      "denominator": null,
+      "subgroup": "約67%為50歲以上",
+      "definition": "就醫患者，不是所有新發或未就醫者",
+      "method": "健保申報摘要",
+      "source": "https://mohw.gov.tw/cp-2704-45249-1.html",
+      "accessed_at": "2026-10-19",
+      "limits": "未附去重細節及人口母數，非2026發生率；不採該頁舊藥價、給付或神經痛比例"
+    },
+    {
+      "topic": "肺癌篩檢服務",
+      "value": 277306,
+      "unit": "累計人次",
+      "period": "計畫起至2025-12-31，2026-01-29公告",
+      "scope": "臺灣公費肺癌篩檢計畫",
+      "population": "符合計畫的受檢高風險者",
+      "numerator": 3139,
+      "denominator": 277306,
+      "definition": "人次服務量與確診人數，不是全國病例率",
+      "method": "行政篩檢統計公告",
+      "source": "https://www.mohw.gov.tw/cp-7395-85289-1.html",
+      "accessed_at": "2026-10-19",
+      "limits": "人次可重複，選定高風險非全人口；早期期別不證明個人死亡效益"
+    }
+  ],
+  "policy_dates": {
+    "ipd": {
+      "announced": "2026-07-28",
+      "effective": "2026-08-10",
+      "qa_updated": "2026-08-07"
+    },
+    "hp": {
+      "announced": "2026-01-27",
+      "effective": "2026-01-01"
+    },
+    "ldct": {
+      "current_confirmation": "2026-01-29",
+      "scope": "臺灣公費每兩年，2025擴大20包年等資格"
+    },
+    "zoster": {
+      "cdc_updated": "2023-06-14",
+      "scope": "自費建議，非中央公費生效公告"
+    }
+  },
+  "actual_progress": {
+    "core_before": 250,
+    "core_after": 254,
+    "chapter1_before": 20,
+    "chapter1_after": 24,
+    "runtime_before": 260,
+    "runtime_after": 264,
+    "source_registry_before": 483,
+    "source_registry_after": 499,
+    "draft_union": 498,
+    "no_draft": 267,
+    "unreviewed_drafts_after": 244,
+    "unregistered_source_ids": 115,
+    "unresolved_references": 306
+  }
+}
