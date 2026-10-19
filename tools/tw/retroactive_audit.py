@@ -56,7 +56,30 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
     prior_ids, new_ids = old.get("source_ids", []), new.get("source_ids", [])
     if (not isinstance(prior_ids, list) or not isinstance(new_ids, list)
             or not all(isinstance(v, str) and v for v in new_ids)
-            or len(set(new_ids)) != len(new_ids) or new_ids[:len(prior_ids)] != prior_ids):
+            or len(set(new_ids)) != len(new_ids)):
+        return False
+    retired = record.get("retired_sources", [])
+    if not isinstance(retired, list):
+        return False
+    retired_ids = []
+    for row in retired:
+        if not isinstance(row, dict):
+            return False
+        key, replacements = row.get("id"), row.get("replacement_ids")
+        if (not isinstance(key, str) or key not in prior_ids or key in new_ids
+                or not isinstance(row.get("reason"), str) or not row["reason"].strip()
+                or not isinstance(row.get("prior_source_sha256"), str)
+                or not re.fullmatch(r"[0-9a-f]{64}", row["prior_source_sha256"])
+                or not isinstance(replacements, list) or not replacements
+                or any(not isinstance(s, str) or s not in new_ids for s in replacements)
+                or len(set(replacements)) != len(replacements)):
+            return False
+        retired_ids.append(key)
+    retained = [s for s in prior_ids if s not in retired_ids]
+    # 退役須逐項留證，保留來源的順序仍不可任意變動。
+    if (len(set(retired_ids)) != len(retired_ids)
+            or set(prior_ids) - set(new_ids) != set(retired_ids)
+            or new_ids[:len(retained)] != retained):
         return False
     if {k: v for k, v in old.items() if k not in allowed} != {k: v for k, v in new.items() if k not in allowed}:
         return False
@@ -115,6 +138,15 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
         raise ValueError("再審原始審閱 SHA 不符：" + key)
     if not documented_revision(old, new, record):
         raise ValueError("實質再審證據或前後正文 SHA 不符：" + key)
+    if record.get("retired_sources"):
+        prior_sources = {s["id"]: s for s in before["sources"]}
+        current_sources = {s["id"]: s for s in load(root, "localization/tw-edition/runtime.json")["sources"]}
+        for row in record["retired_sources"]:
+            source = prior_sources.get(row["id"])
+            digest = hashlib.sha256(json.dumps(source, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+            if (source is None or current_sources.get(row["id"]) != source
+                    or row["prior_source_sha256"] != digest):
+                raise ValueError("退役引用的歷史來源物件或 SHA 未保全：" + row["id"])
     current_review = load(root, "localization/reviews/" + key + ".json")
     if new.get("source_ids", []) != old.get("source_ids", []):
         runtime = load(root, "localization/tw-edition/runtime.json")
