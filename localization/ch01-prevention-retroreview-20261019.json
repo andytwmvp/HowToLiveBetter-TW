@@ -1,0 +1,43 @@
+{
+  "base_sha": "6b85081cd806bea348523d486bf9e87efb686117",
+  "new_core_ids": [
+    "TW-01-013",
+    "TW-01-014",
+    "TW-01-015",
+    "TW-01-016"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-001",
+    "TW-13-026",
+    "TW-13-043",
+    "TW-13-044"
+  ],
+  "professional_review": "pending",
+  "sources_added": 9,
+  "limits": [
+    "國健署直連TLS失敗及403，正式證據改讀衛福部同文及地方官方頁。",
+    "未閱附件、影片、統計微資料與未獲專業簽證不冒稱完成。",
+    "破傷風2026-10-19監測當年累計4例非全年、非傷口感染率；其餘統計口徑與限制詳正文。"
+  ],
+  "baseline_inventory_recalculated": {
+    "revision": "6b85081cd806bea348523d486bf9e87efb686117",
+    "stored_coverage": {
+      "topics_with_any_content": 506,
+      "topics_without_content": 259,
+      "topics_with_unreviewed_content": 264
+    },
+    "git_tree_recalculation": {
+      "structured_draft_ids": 373,
+      "markdown_draft_ids": 242,
+      "unique_content_ids": 498,
+      "topics_without_content": 267,
+      "topics_with_unreviewed_content": 256
+    },
+    "after_batch": {
+      "unique_content_ids": 498,
+      "topics_without_content": 267,
+      "topics_with_unreviewed_content": 252
+    },
+    "method": "逐檔讀取基線Git樹localization/tw-edition/chapters/*.json與locales/zh-TW/book/**/*.md固定ID取聯集；新四篇ID已存在結構化草稿，不重複計數。沒有刪除任何舊稿或變更舊結構化草稿。"
+  }
+}

@@ -6,6 +6,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_entry, validate_runtime, publication_report
 from body_renderer import body_blocks
 
@@ -65,7 +66,7 @@ class Chapter13AortaInfantTests(unittest.TestCase):
         ss = {source["id"]: source for source in rt["sources"]}
         self.assertEqual(len(old["items"]), 220)
         for item in old["items"]:
-            self.assertEqual(item, ii[item["id"]])
+            assert_preserved_or_rechecked(self,item,ii[item["id"]])
         for source in old["sources"]:
             self.assertEqual(source, ss[source["id"]])
     def test_counts_remain_dynamic_and_full_book_is_not_ready(self):

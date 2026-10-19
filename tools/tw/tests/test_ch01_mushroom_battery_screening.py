@@ -2,6 +2,7 @@
 import hashlib,json,subprocess,unittest,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from body_renderer import body_blocks
 BASE="7a53257e911c0e5632ef59b522142ded3dfd46dc"
@@ -31,7 +32,7 @@ class Chapter01SecondBatchTests(unittest.TestCase):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))
   rt=validate_runtime();items={x["id"]:x for x in rt["items"]};sources={x["id"]:x for x in rt["sources"]}
   self.assertEqual(len(old["items"]),244)
-  for x in old["items"]:self.assertEqual(x,items[x["id"]])
+  for x in old["items"]:assert_preserved_or_rechecked(self,x,items[x["id"]])
   for x in old["sources"]:self.assertEqual(x,sources[x["id"]])
  def test_dynamic_coverage(self):
   c=load("localization/tw-edition/coverage.json");p=publication_report();rt=validate_runtime()
