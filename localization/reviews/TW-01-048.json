@@ -1,0 +1,33 @@
+{
+  "id": "TW-01-048",
+  "reviewer": "ChatGPT（AI輔助指定公開段落與台灣情境再核對，非獨立專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-048.md",
+  "target_sha256": "db844882cfd276f8586e0abcb00f44a8ae9d57eb3da31b52c21309ad3ac893ec",
+  "source_checks": [
+    {
+      "url": "https://www.fda.gov.tw/TC/PublishOtherEpaperContent.aspx?id=1522&r=664640862&tid=4852",
+      "claim": "邦克列酸耐熱，清洗烹煮不能可靠去除；木耳冷藏復水，2024公告抽驗110件均未檢出。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：邦克列酸耐熱，清洗烹煮不能可靠去除；木耳冷藏復水，2024公告抽驗110件均未檢出。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀987期HTML；110件為2024-05-20啟動至2024-08-16公告的特定米麵濕製品抽樣，不外推零風險。"
+    },
+    {
+      "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f638563772690774149&iid=13043&type=3",
+      "claim": "復水冷藏、料理後儘速食用或冷藏；疑似中毒儘速就醫並保留食物。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：復水冷藏、料理後儘速食用或冷藏；疑似中毒儘速就醫並保留食物。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "web實讀3頁PDF，2024-07-12訂定；與987期毒素耐熱交叉，不把充分加熱當已形成毒素可去除。"
+    }
+  ],
+  "localization_changes": "由不過夜口訣改成台灣冷鏈與復水控時、毒素耐熱及求醫；特定抽驗未檢出不外推。",
+  "review_method": "逐主張核對實讀HTML、PDF指定頁及圖表，分開頻率口徑、來源失敗與專業限制。",
+  "limits": [
+    "台灣統計證據：食藥署2024年8月16日週報，5月20日啟動抽驗至該公告時110件米麵濕製品均未檢出邦克列酸。110件為特定抽樣，抽樣框、重複批次與全市場總量未確認，不是全台零汙染、個人中毒率或2026現況。單一群聚不能代表所有木耳或米製品；致命風險仍須預防。官方家用指引2024年7月12日訂定，沒有對所有食材、冰箱條件給統一安全天數；不把「隔夜」當唯一界線。",
+    "獨立醫療、職安、消防及法律專業審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "b0221d0920e275e849ec008a120c031c50299a161552f18d3122d3bc0947e56b"
+}

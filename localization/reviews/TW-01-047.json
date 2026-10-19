@@ -1,0 +1,54 @@
+{
+  "id": "TW-01-047",
+  "reviewer": "ChatGPT（AI輔助指定公開段落與台灣情境再核對，非獨立專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-047.md",
+  "target_sha256": "c9cce286ae31543c6314cd19d72a34a6ff416c6dd5d290727d3f89e1e3bda273",
+  "source_checks": [
+    {
+      "url": "https://www.mohw.gov.tw/cp-16-80244-1.html",
+      "claim": "上消化道症狀、家族史等高風險者由醫師評估胃鏡，非侵入HP篩檢與胃鏡不同。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：上消化道症狀、家族史等高風險者由醫師評估胃鏡，非侵入HP篩檢與胃鏡不同。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀官方HTML；不移植未附原始母數的歸因比例、地方受檢人數或年齡作全國胃鏡普篩規則。"
+    },
+    {
+      "url": "https://mohw.gov.tw/cp-16-85392-1.html",
+      "claim": "2026-01-01起45至74歲終生一次公費HP糞便抗原，陽性回診除菌或進一步評估，不等於胃鏡公費普篩。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：2026-01-01起45至74歲終生一次公費HP糞便抗原，陽性回診除菌或進一步評估，不等於胃鏡公費普篩。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀2026-02-16公告；未採缺明確癌登年度母數的每年概述及歸因比例。"
+    },
+    {
+      "url": "https://www.ntuh.gov.tw/DIDT/Fpage.action?fid=6631&muid=6138",
+      "claim": "胃鏡可造成咽喉不適，切片後若出血加劇、腹痛或黑便需就醫。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：胃鏡可造成咽喉不適，切片後若出血加劇、腹痛或黑便需就醫。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀HTML；禁食與用藥以當次檢查團隊指示，不把同頁大腸鏡準備套胃鏡。"
+    },
+    {
+      "url": "https://www.ntuh.gov.tw/Ane/Fpage.action?fid=9499&muid=",
+      "claim": "鎮靜須麻醉評估，確認用藥與禁食、安排陪同，當天不開車、不操作機械。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：鎮靜須麻醉評估，確認用藥與禁食、安排陪同，當天不開車、不操作機械。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀HTML麻醉風險、準備及事後注意，不採固定小時數作所有患者醫囑。"
+    },
+    {
+      "url": "https://www.ntuh.gov.tw/OPD/checkDoc/inst126.pdf",
+      "claim": "上消化道內視鏡可能出血、穿孔及呼吸相關併發症，切片治療與個別風險需說明。",
+      "supporting_passage": "相關指定段落的獨立摘要：上消化道內視鏡可能出血、穿孔及呼吸相關併發症，切片治療與個別風險需說明。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "web實讀實際PDF前2頁內視鏡同意書，非工具誤顯之心導管標題；不採未附研究母數的0.5%等比例為全台個人風險，未讀第3頁地圖。"
+    }
+  ],
+  "localization_changes": "台灣症狀與高風險個別胃鏡、HP糞便公費及鎮靜安全分開；不套中國普篩年齡。",
+  "review_method": "逐主張核對實讀HTML、PDF指定頁及圖表，分開頻率口徑、來源失敗與專業限制。",
+  "limits": [
+    "胃鏡可能不適，並有出血、穿孔及鎮靜呼吸風險，須個別權衡；檢查正常也非永遠不會得癌。頻率限制：本輪官方宣導的每年病例、HP歸因與存活概述未附本篇可核對的癌登年度、分母與調整方法，未當個人罹癌機率或固定篩檢間隔；地方受檢人數也非全國胃癌率。完整癌登原表與胃鏡個人淨效益仍待後續專業核對。",
+    "獨立醫療、職安、消防及法律專業審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "8884b6fd87bd5e2c241041efd5a62faad419bc139de77dcfa88b010e4f9b0dcf"
+}

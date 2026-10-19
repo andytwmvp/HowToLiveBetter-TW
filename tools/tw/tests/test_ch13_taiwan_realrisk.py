@@ -42,7 +42,7 @@ class Chapter13TaiwanRealRiskTests(unittest.TestCase):
   c=load("localization/tw-edition/coverage.json");p=publication_report();rt=validate_runtime()
   self.assertFalse(p["publication_ready"]);self.assertEqual(p["publication_total_entries"],765)
   self.assertEqual(p["publication_completed_entries"],c["core_reviewed_entries"])
-  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+10)
+  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+sum(i['id'].startswith('TW-NAV-') for i in rt['items']))
   self.assertEqual(c["unique_draft_entries"]+c["entries_without_any_draft"],765)
   self.assertGreaterEqual(c["registry_sources"],len(rt["sources"]))
   self.assertEqual(len(load("localization/tw-edition/sources/ch13-tw-realrisk-20261018.json")["sources"]),11)

@@ -1,0 +1,146 @@
+{
+  "base_sha": "91c2b57512020cc80ddd84afdeaeedbe0d296895",
+  "new_core_ids": [
+    "TW-01-045",
+    "TW-01-046",
+    "TW-01-047",
+    "TW-01-048"
+  ],
+  "new_navigation_ids": [
+    "TW-NAV-011"
+  ],
+  "risk_research_order": [
+    "TW-01-046",
+    "TW-01-048",
+    "TW-01-045",
+    "TW-01-047"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-028",
+    "TW-13-029",
+    "TW-13-045",
+    "TW-13-046"
+  ],
+  "professional_review": "pending",
+  "sources_added": 19,
+  "source_limits": [
+    "HPA及消防頁TLS失敗，未繞過憑證；國健署2026原函與第6版問答由醫師公會實讀指定頁。",
+    "完整癌登原表、蛇咬原始疫情報導、松德酒精PDF及熱危害指引附件未讀，不假稱全部資料專業核實。",
+    "蜂蜜減傷有條件，未作台灣個案劑量處方；海外電話、醫療制度及族群比率不移植。",
+    "原有115未登錄來源ID／306引用維持待處理，不用新來源數抵銷。"
+  ],
+  "statistics": [
+    {
+      "value": 2,
+      "unit": "重大職災件；同年死亡2人",
+      "period": "2024年",
+      "scope": "台灣局限空間重大職災",
+      "definition": "官方圖表113年職災件數及死亡人數",
+      "numerator": "2件／2名死者不同單位，不相除作致死率",
+      "denominator": "沒有全體進入作業人次或工作人時",
+      "method": "行政職災統計圖，實際目視末欄",
+      "source": "https://www.osha.gov.tw/48110/48207/48299/48301/50484/?cprint=pt",
+      "accessed_at": "2026-10-19",
+      "limits": "非2026現況，非全部民間非職業意外"
+    },
+    {
+      "value": 110,
+      "unit": "受檢件",
+      "period": "2024-05-20啟動至2024-08-16公告",
+      "scope": "台灣餐飲米麵濕製品特定抽驗",
+      "definition": "受檢樣品邦克列酸未檢出",
+      "numerator": "檢出0件",
+      "denominator": "抽驗110件，非全市場樣品",
+      "method": "行政抽樣檢驗",
+      "source": "https://www.fda.gov.tw/TC/PublishOtherEpaperContent.aspx?id=1522&r=664640862&tid=4852",
+      "accessed_at": "2026-10-19",
+      "limits": "非2026汙染率、零風險或個人中毒率，抽樣框與檢出限未逐案取得"
+    },
+    {
+      "value": 979,
+      "unit": "平均每年使用血清者",
+      "period": "2017至2021年",
+      "scope": "台灣健保蛇咬血清使用者",
+      "definition": "因蛇咬而接受抗蛇毒血清",
+      "numerator": "年平均約979人，原始逐年人數未讀",
+      "denominator": "非全體蛇咬者或登山人次",
+      "method": "官方對健保行政資料分析摘要",
+      "source": "https://www.mohw.gov.tw/cp-16-83220-1.html",
+      "accessed_at": "2026-10-19",
+      "limits": "不含所有未就醫／未給血清者，非個人發生率或2026數"
+    },
+    {
+      "value": 259,
+      "unit": "重大職災死者",
+      "period": "2025年",
+      "scope": "台灣勞檢接獲通報並調查的死亡職災",
+      "definition": "含墜落滾落136人",
+      "numerator": 259,
+      "denominator": "非全體工作者／工作人時",
+      "method": "行政通報調查，部分待認定案排除",
+      "source": "https://www.osha.gov.tw/media/b54h1fj3/114%E5%B9%B4%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+      "accessed_at": "2026-10-19",
+      "limits": "非全職災傷病或個人死亡率"
+    }
+  ],
+  "legal_dates": [
+    {
+      "rule": "B、C肝擴大補助",
+      "announced_at": "2025-07-30",
+      "effective_at": "2025-08-01",
+      "basis": "https://www.tma.tw/files/meeting/N202626114115_001.pdf",
+      "limits": "2026-02第6版另說明原住民2026年40至79與終身一次"
+    },
+    {
+      "rule": "2025修訂職安法",
+      "announced_at": "2025-12-19",
+      "effective_order_at": "2026-06-09",
+      "effective_at": "2026-07-01",
+      "basis": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001"
+    },
+    {
+      "rule": "設施規則2026修訂",
+      "announced_at": "2026-06-30",
+      "effective_at": "2026-07-01",
+      "exceptions": "21-3、57、116、185-1至185-4為2027-01-01",
+      "basis": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060009"
+    },
+    {
+      "rule": "HP糞便抗原公費（不是胃鏡）",
+      "announced_at": "2026-02-16",
+      "effective_at": "2026-01-01",
+      "limits": "此日期是本篇查閱宣導公告，非創設制度原始命令公告日",
+      "basis": "https://mohw.gov.tw/cp-16-85392-1.html"
+    }
+  ],
+  "counts": {
+    "core_before": 274,
+    "core_after": 278,
+    "chapter1_before": 44,
+    "chapter1_after": 48,
+    "navigation_before": 10,
+    "navigation_after": 11,
+    "runtime_before": 284,
+    "runtime_after": 289,
+    "source_registry_before": 563,
+    "source_registry_after": 582,
+    "runtime_source_objects_after": 501,
+    "draft_union": 498,
+    "no_draft": 267,
+    "unreviewed_after": 220,
+    "unregistered_source_ids": 115,
+    "unresolved_references": 306
+  },
+  "pdf_retrievals": [
+    {
+      "file": "osha-fatal.pdf",
+      "sha256": "4d7239d740b8565f89f1a3fbd6e992c5cdb18cf14521e14e03ff1d41655a8cb0",
+      "bytes": 343553
+    },
+    {
+      "file": "qa.pdf",
+      "sha256": "4087ae7490b9f0c7e99e240f4550253d1a88d8cb09644c5064d2393dc7285106",
+      "bytes": 528615
+    }
+  ]
+}

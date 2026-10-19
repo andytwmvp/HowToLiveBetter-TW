@@ -113,11 +113,13 @@ def run(render: bool,browser_test: bool) -> None:
             from check_risk_response_browser import check_risk_response_browser
             from check_gambling_prep_bone_browser import check_gambling_prep_bone_browser
             from check_ice_tools_crisis_af_browser import check_ice_tools_crisis_af_browser
+            from check_hepatitis_confined_food_browser import check_hepatitis_confined_food_browser
             result['checks'].extend(check_crisis_symptoms_browser(page,context,url,review))
             result['checks'].extend(check_hiv_prevention_browser(page,context,url,review))
             result['checks'].extend(check_risk_response_browser(page,context,url,review))
             result['checks'].extend(check_gambling_prep_bone_browser(page,context,url,review))
             result['checks'].extend(check_ice_tools_crisis_af_browser(page,context,url,review))
+            result['checks'].extend(check_hepatitis_confined_food_browser(page,context,url,review))
             from check_ch23_browser import check_ch23_browser
             result['checks'].extend(check_ch23_browser(page,context,url,review))
             from check_ch25_browser import check_ch25_browser

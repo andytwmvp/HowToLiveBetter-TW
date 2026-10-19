@@ -38,7 +38,7 @@ class Chapter01SecondBatchTests(unittest.TestCase):
   c=load("localization/tw-edition/coverage.json");p=publication_report();rt=validate_runtime()
   self.assertFalse(p["publication_ready"]);self.assertGreaterEqual(p["publication_completed_entries"],238)
   self.assertEqual(c["core_reviewed_entries"],p["publication_completed_entries"])
-  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+10)
+  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+sum(i['id'].startswith('TW-NAV-') for i in rt['items']))
   self.assertEqual(c["unique_draft_entries"]+c["entries_without_any_draft"],765)
   self.assertEqual(len(load("localization/tw-edition/sources/ch01-mushroom-battery-screening-20261019.json")["sources"]),8)
 if __name__=="__main__":unittest.main()

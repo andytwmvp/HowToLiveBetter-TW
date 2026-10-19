@@ -41,7 +41,7 @@ class Chapter13AltitudeTickWaterAlcoholTests(unittest.TestCase):
   c=load("localization/tw-edition/coverage.json");p=publication_report();rt=validate_runtime()
   self.assertFalse(p["publication_ready"]);self.assertEqual(p["publication_total_entries"],765)
   self.assertEqual(c["core_reviewed_entries"],p["publication_completed_entries"])
-  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+10)
+  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+sum(i['id'].startswith('TW-NAV-') for i in rt['items']))
   self.assertEqual(c["unique_draft_entries"]+c["entries_without_any_draft"],765)
   self.assertEqual(len(load("localization/tw-edition/sources/ch13-altitude-tick-water-alcohol-20261018.json")["sources"]),10)
   self.assertEqual(load("localization/ch13-altitude-tick-water-alcohol-20261018.json")["chapter_cumulative"],44)
