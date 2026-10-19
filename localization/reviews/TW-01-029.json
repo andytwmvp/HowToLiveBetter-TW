@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-029.md",
-  "target_sha256": "fcaca944b6783eba64d09477096b0ec2f645eb3e72d8c78f6f54ea6d2baa5095",
+  "target_sha256": "5f38eff8800c29e1cd6ce11feaccd3388c667971638ea8f6dd1aca7e31c1ac1f",
   "source_checks": [
     {
       "url": "https://epaper.ntuh.gov.tw/health/201511/project_3.html",
