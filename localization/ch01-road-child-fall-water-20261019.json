@@ -1,0 +1,36 @@
+{
+  "chapter": 1,
+  "part": 3,
+  "date": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "254a5edb32fc4aee5ba881c0cdf1521f4e66d462",
+  "completed_ids": [
+    "TW-01-009",
+    "TW-01-010",
+    "TW-01-011",
+    "TW-01-012"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 12,
+  "chapter_pending": 36,
+  "core_completed_after": 242,
+  "core_total": 765,
+  "runtime_items_after": 252,
+  "navigation": 10,
+  "new_sources_count": 8,
+  "new_source_ids": [
+    "ch01_motc_dui_2025",
+    "ch01_moj_road_act_2026",
+    "ch01_motc_childseat_2020",
+    "ch01_hpa_childbook_202606",
+    "ch01_mohw_childaccident_2016",
+    "ch01_tpe_child_fall_precaution",
+    "ch01_hpa_child_drown_2025",
+    "ch01_tpe_firedrown_2025"
+  ],
+  "publication_ready": false,
+  "frequency_method": "2025涉酒駕事故143人30日死亡≠分心或疲勞事故；2025道路交通總死者2858人≠幼童未繫保護裝置；2016年兒少多事故合計239人≠兒童墜樓數；2023年與2024年1至5歲溺死8與1是死亡人數非戲水者事故率。",
+  "source_method": "2026-10-19 交通部168、法規資料庫、衛福部與地方消防局官方公開HTML AI輔助核對；部分舊型防墜宣導僅作歷史安全背景，未假稱已核對官方PDF正文。",
+  "professional_review": "AI-assisted official-source comparison, not certified medical, rescue, legal, road safety or epidemiological review",
+  "published_to_public_website": false
+}
