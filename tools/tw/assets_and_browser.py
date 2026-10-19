@@ -108,6 +108,8 @@ def run(render: bool,browser_test: bool) -> None:
             result['checks'].extend(check_navigation(page,context,url,review))
             from check_prevention_rechecks_browser import check_prevention_rechecks_browser
             result['checks'].extend(check_prevention_rechecks_browser(page,context,url,review))
+            from check_crisis_symptoms_browser import check_crisis_symptoms_browser
+            result['checks'].extend(check_crisis_symptoms_browser(page,context,url,review))
             from check_ch23_browser import check_ch23_browser
             result['checks'].extend(check_ch23_browser(page,context,url,review))
             from check_ch25_browser import check_ch25_browser

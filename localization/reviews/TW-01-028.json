@@ -1,0 +1,33 @@
+{
+  "id": "TW-01-028",
+  "reviewer": "ChatGPT（AI輔助臺灣官方HTML與指定PDF表圖核對，非醫師、心理師、消防或藥師簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-028.md",
+  "target_sha256": "49691a84716eeba569015114ed70a577b5aad2b77070ce798ddbe4aee4ec79e2",
+  "source_checks": [
+    {
+      "url": "https://epaper.ntuh.gov.tw/health/202610/project_2.html",
+      "claim": "勃起功能障礙可有血管、神經、荷爾蒙、心理或藥物多重原因；評估血糖血脂與心血管，非人人已有冠心病；硝酸鹽藥不可併用PDE5藥。",
+      "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：勃起功能障礙可有血管、神經、荷爾蒙、心理或藥物多重原因；評估血糖血脂與心血管，非人人已有冠心病；硝酸鹽藥不可併用PDE5藥。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀2026年10月衛教相關段落，不採七成或2至5年為臺灣個人風險，不宣稱已閱引用研究全文。"
+    },
+    {
+      "url": "https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1608&r=631958882&tid=5542",
+      "claim": "2026-02-27第1067期：處方評估，PDE5與硝酸鹽不可併用；勃起超過4小時、胸痛、視聽異常等立即就醫，不能加倍自行購藥。",
+      "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：2026-02-27第1067期：處方評估，PDE5與硝酸鹽不可併用；勃起超過4小時、胸痛、視聽異常等立即就醫，不能加倍自行購藥。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立語意摘要；未閱附件、圖片手法或影片不稱已驗證。"
+    }
+  ],
+  "localization_changes": "獨立依臺灣危機求援、消防與症狀分流改寫，保留統計、臨床與器材限制。",
+  "review_method": "實讀相關官方正文；死因簡報17至18頁文字及表圖核對，失敗網址不冒稱已讀。",
+  "limits": [
+    "勃起困難不是單一心血管診斷，也不應責備自己或伴侶。未經評估不自行補睪固酮、接受注射或使用處方助勃藥，不能把一般衛教當個人劑量與停藥表。本文不推薦特定品牌、新興療程或抄錄未核對原始研究的效果，尚待泌尿、心臟及藥師獨立專業審閱。",
+    "未取得專業獨立審閱，未重算統計原始微資料。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "d3449a4c41172a545fd6ecbdb922aec60b6a3ba4745e192d9aa483d931fdeb69"
+}

@@ -1,0 +1,84 @@
+{
+  "base_sha": "ca40db0a8744b2661c07f61931f21515f7a38db8",
+  "new_core_ids": [
+    "TW-01-025",
+    "TW-01-026",
+    "TW-01-027",
+    "TW-01-028"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-003",
+    "TW-13-007",
+    "TW-13-020",
+    "TW-13-024"
+  ],
+  "professional_review": "pending",
+  "sources_added": 13,
+  "source_limits": [
+    "hotline連接工具已查得臺灣1925全天免費；工具網站本次404未加入正式來源，與現行衛生所頁交叉核對。正式正文不用任何追蹤參數。",
+    "HPA及兩個既有NFA頁TLS重取失敗，保留原查閱日期，不稱失效或重讀成功；另附可讀官方頁。",
+    "台灣e院、桃園及部分web讀取失敗者不登錄作新證據，改採可讀原始官方正文。",
+    "僅核對死因簡報17至18頁表圖；不稱36頁全部逐項核實，不採自傷方法資料。",
+    "臺大2026文章七成與2至5年、健保署中毒超過一半年齡概述及舊血尿4%等未具可用全國母數，未套為個人風險。"
+  ],
+  "hotline_verification": {
+    "provider": "本次連接hotline工具與臺灣衛生所現行服務資訊",
+    "country": "Taiwan",
+    "number": "1925",
+    "availability": "24小時、免費",
+    "website": "工具所附網站404，本篇正式來源不使用",
+    "privacy": "不加入追蹤參數，不提供其他未列專線"
+  },
+  "statistics": [
+    {
+      "topic": "自殺死亡",
+      "value": 3951,
+      "unit": "人",
+      "period": "2025年",
+      "scope": "臺灣全國死因統計",
+      "population": "全人口死亡登記",
+      "numerator": 3951,
+      "denominator": "官方公布之人口率，每十萬人口16.9；未另重算人口數",
+      "definition": "自殺死亡登記，不含所有未遂或意念",
+      "crude_per_100000": 16.9,
+      "age_standardized_per_100000": 12.9,
+      "method": "死因登記行政統計",
+      "source": "https://www.mohw.gov.tw/dl-100916-73f4ce53-0d62-4d3e-86bf-0f0af23e9349.html",
+      "accessed_at": "2026-10-19",
+      "limits": "標準化率供年齡結構比較；非憂鬱症盛行率或個人危機機率；兩頁原圖實讀未重算微資料"
+    },
+    {
+      "topic": "建築物火災",
+      "value": 4514,
+      "unit": "次",
+      "period": "2025年",
+      "scope": "全國建築物類別",
+      "population": "消防行政火災事件",
+      "numerator": {
+        "獨立住宅": 1688,
+        "集合住宅": 1483
+      },
+      "denominator": 4514,
+      "definition": "建築物火災次數，非家戶人口風險",
+      "method": "行政事件分類統計",
+      "source": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+      "accessed_at": "2026-10-19",
+      "limits": "沒有家戶分母，不可推裝備效力或個人存活率"
+    }
+  ],
+  "counts": {
+    "core_before": 254,
+    "core_after": 258,
+    "chapter1_before": 24,
+    "chapter1_after": 28,
+    "runtime_before": 264,
+    "runtime_after": 268,
+    "source_registry_before": 499,
+    "source_registry_after": 512,
+    "draft_union": 498,
+    "no_draft": 267,
+    "unreviewed_after": 240,
+    "unregistered_source_ids": 115,
+    "unresolved_references": 306
+  }
+}
