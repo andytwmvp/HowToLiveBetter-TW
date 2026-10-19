@@ -1,0 +1,47 @@
+{
+  "id": "TW-01-034",
+  "reviewer": "ChatGPT（AI輔助臺灣公開資料、指定PDF文字與統計表圖核對，非專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-034.md",
+  "target_sha256": "fdc80026b6bb38cc797b388e88c90c1a36e61e186673265504d17fd60f32efaa",
+  "source_checks": [
+    {
+      "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=BF739CEA16BBDEA6&sms=87415A8B9CE81B16",
+      "claim": "懷疑脊椎受傷、四肢麻痺、明顯骨折或意識不清時，不可隨意搬動傷者，並撥119。",
+      "supporting_passage": "本次實讀相關段落的獨立語意摘要，非逐字引文：懷疑脊椎受傷、四肢麻痺、明顯骨折或意識不清時，不可隨意搬動傷者，並撥119。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實讀官方HTML相關正文，不宣稱影片、圖片或附件均經驗證。"
+    },
+    {
+      "url": "https://ihealth.vghtc.gov.tw/media/340",
+      "claim": "2026年修訂衛教提醒頭傷可能影響意識、記憶與步態，數月後症狀仍須留意，影像由醫師決定。",
+      "supporting_passage": "本次實讀相關段落的獨立語意摘要，非逐字引文：2026年修訂衛教提醒頭傷可能影響意識、記憶與步態，數月後症狀仍須留意，影像由醫師決定。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實讀官方HTML相關正文，不宣稱影片、圖片或附件均經驗證。"
+    },
+    {
+      "url": "https://www.osha.gov.tw/media/b54h1fj3/114%E5%B9%B4%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+      "claim": "2026-02-05更新：2025經勞檢調查重大職災死亡259人，其中墜落、滾落136人（營造75、製造26）。非全國所有墜落事件或個人致死率。",
+      "supporting_passage": "本次實讀相關段落的獨立語意摘要，非逐字引文：2026-02-05更新：2025經勞檢調查重大職災死亡259人，其中墜落、滾落136人（營造75、製造26）。非全國所有墜落事件或個人致死率。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實下載PDF，讀第1至2頁方法及第4頁附表2文字，並目視渲染第4頁；不稱逐項驗證第3頁縣市表或重算通報微資料。"
+    },
+    {
+      "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
+      "claim": "呼叫119、無反應且沒有正常呼吸時CPR及取得AED，依派遣指導。",
+      "supporting_passage": "實讀臺北消防CPR問答HTML之呼叫及急救鏈，獨立摘要，未以文字宣稱手法訓練合格。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實讀官方HTML相關文字；不另給個人未受訓操作認證。"
+    }
+  ],
+  "localization_changes": "獨立依臺灣中毒創傷求援、無償器官規定與核安通報編寫；不採原作威嚇、傷害方法或未核實比例。",
+  "review_method": "實讀相關HTML；職災PDF讀1、2、4頁並目視第4頁，腎捐贈說明書讀兩頁文字。",
+  "limits": [
+    "**臺灣頻率背景：**職安署2026年2月5日更新的2025統計列經勞檢調查之重大職災死亡259人，其中墜落、滾落136人，含營造75人及製造26人。為全國勞檢死亡案件行政統計，未判定是否因工作引起的少數案件尚未計入；沒有全部墜落受傷者分母，**不是墜落者致死率**，也不涵蓋所有居家、休閒或其他原因墜落。不能把「跌倒」與「墜落、滾落」兩類混算，或由此推算個人存活及終身障礙機率。",
+    "專業醫療、法律、移植及輻防獨立審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "19252dba953a8c66c1fb60d5be2c7bf4ca7ee3047079c5e7002071662d65fda2"
+}

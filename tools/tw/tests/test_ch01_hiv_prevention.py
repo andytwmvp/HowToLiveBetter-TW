@@ -29,10 +29,13 @@ class HivPreventionTests(unittest.TestCase):
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
   rt=validate_runtime();batch=read('localization/ch01-hiv-prevention-20261019.json');counts=batch['counts']
-  self.assertEqual(counts['source_registry_after'],audit_drafts()['registry_sources'])
-  self.assertEqual(counts['runtime_after'],len(rt['items']))
+  # 批次數字是歷史快照；後續合法增修不能被舊總數凍結。
+  self.assertEqual(counts['source_registry_after'],counts['source_registry_before']+batch['sources_added'])
+  self.assertGreaterEqual(audit_drafts()['registry_sources'],counts['source_registry_after'])
+  self.assertEqual(counts['runtime_after'],counts['runtime_before']+len(batch['new_core_ids']))
+  self.assertGreaterEqual(len(rt['items']),counts['runtime_after'])
   core=sum(not x['id'].startswith('TW-NAV-') for x in rt['items'])
-  self.assertEqual(counts['core_after'],core);self.assertIn(str(core)+'條',rt['scope']);self.assertIn(str(len(rt['items']))+'項',rt['scope'])
+  self.assertEqual(counts['core_after'],counts['core_before']+len(batch['new_core_ids']));self.assertGreaterEqual(core,counts['core_after']);self.assertIn(str(core)+'條',rt['scope']);self.assertIn(str(len(rt['items']))+'項',rt['scope'])
  def test_all_prior_content_and_actual_review_history(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();ii={x['id']:x for x in rt['items']};ss={s['id']:s for s in rt['sources']}
   for row in old['items']:assert_preserved_or_rechecked(self,row,ii[row['id']])
