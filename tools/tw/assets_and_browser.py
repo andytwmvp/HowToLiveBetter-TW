@@ -116,6 +116,7 @@ def run(render: bool,browser_test: bool) -> None:
             from check_hepatitis_confined_food_browser import check_hepatitis_confined_food_browser
             from check_disaster_altitude_trauma_browser import check_disaster_altitude_trauma_browser
             from check_bites_ticks_water_assault_amputation_browser import check_bites_ticks_water_assault_amputation_browser
+            from check_pep_fracture_dental_wildlife_browser import check_pep_fracture_dental_wildlife_browser
             result['checks'].extend(check_crisis_symptoms_browser(page,context,url,review))
             result['checks'].extend(check_hiv_prevention_browser(page,context,url,review))
             result['checks'].extend(check_risk_response_browser(page,context,url,review))
@@ -124,6 +125,7 @@ def run(render: bool,browser_test: bool) -> None:
             result['checks'].extend(check_hepatitis_confined_food_browser(page,context,url,review))
             result['checks'].extend(check_disaster_altitude_trauma_browser(page,context,url,review))
             result['checks'].extend(check_bites_ticks_water_assault_amputation_browser(page,context,url,review))
+            result['checks'].extend(check_pep_fracture_dental_wildlife_browser(page,context,url,review))
             from check_ch23_browser import check_ch23_browser
             result['checks'].extend(check_ch23_browser(page,context,url,review))
             from check_ch25_browser import check_ch25_browser

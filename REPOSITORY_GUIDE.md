@@ -64,3 +64,5 @@ node tools/anki/build.mjs --source-preview dist/HowToLiveBetter-source-preview.a
 本 fork 是公開 GitHub 儲存庫，跨地區讀取及依法複製的權利不能只靠 `robots.txt` 停止。詳細授權、臺灣獨立寫作、追溯和未公開資料保護見 [再利用政策](localization/TAIWAN_REUSE_POLICY.md)。目前沒有部署 Pages，來源檔案中的爬蟲要求不代表已經對任何地區、公司或模型提供存取控制，也不會妨礙既有合法離線匯出。
 
 獨立工作安全閱讀：[職業安全與健康](locales/zh-TW/guides/職業安全與健康.md)（TW-NAV-011），與個別機械、局限空間及急救條目分開，仍共用正式runtime。
+
+2026-10-20接續：[PEP、骨折、牙齒與遇獸四篇實質再審](localization/pep-fracture-dental-wildlife-20261020.json)，累計45筆AI來源再核對且專業待審；核心278／765不變，612來源登錄。
