@@ -1,0 +1,40 @@
+{
+  "id": "TW-01-043",
+  "reviewer": "ChatGPT（AI輔助逐主張公開來源實讀與臺灣適用核對，非獨立專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-043.md",
+  "target_sha256": "30856ea3ceb7b3479edd6cfd0702d1b4b3faf83d793a9f293337f675697d7cc2",
+  "source_checks": [
+    {
+      "url": "https://www.mlshb.gov.tw/nc/article?id=bb1fc655-fe83-4c9e-a908-37080a98692f",
+      "claim": "以一問二應三轉介支持；平靜直接詢問、傾聽，不嘲諷、不責備、不承諾保密。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：以一問二應三轉介支持；平靜直接詢問、傾聽，不嘲諷、不責備、不承諾保密。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "web後續逾時，直接HTTPS成功實讀HTML；不採未附母數之服務個案比例，也不把口頭不自傷承諾當安全保證。"
+    },
+    {
+      "url": "https://www.nimh.nih.gov/health/publications/suicide-faq",
+      "claim": "直接詢問自殺念頭不會因問話而增加念頭；危機時需陪伴、轉介與後續支持。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：直接詢問自殺念頭不會因問話而增加念頭；危機時需陪伴、轉介與後續支持。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀HTML詢問、警訊與求助段落；為國外研究綜整，不聲稱台灣試驗或移植美國電話。"
+    },
+    {
+      "url": "https://www.mohw.gov.tw/cp-16-19209-1.html",
+      "claim": "1925為免費全天情緒支持；生命立即危險仍須119。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：1925為免費全天情緒支持；生命立即危險仍須119。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "本輪先以專線工具核對1925，再實讀衛福部HTML；正式內容不用工具追蹤參數。"
+    }
+  ],
+  "localization_changes": "不保密、不責備、不以口頭承諾取代安全計畫與專業支持，電話先核對。",
+  "review_method": "實讀指定HTML與PDF頁段，逐條比對正文與台灣生活情境；取回失敗、統計分母與專業限制分項保留。",
+  "limits": [
+    "資料限制：苗栗衛生局衛教有服務個案比例，未附本篇可核對的統計期間、樣本與母數，不當台灣全國比例。NIMH指出直接問自殺念頭不會因問話而增加念頭，但這是國外研究綜整，不是台灣對話成功率；本輪未取得台灣同定義個人介入效果的原始研究。不把「答應不自傷」、暫時平靜或否認念頭當安全保證，也不以死亡統計替個人打分；重大風險優先轉介與救援。",
+    "獨立醫療、心理、職安、消防及法律專業審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "e984699c74df0948fa2e469fa1fb48e40f2a8b77da0d4224bcdf790f2bf24915"
+}
