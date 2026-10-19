@@ -47,7 +47,7 @@ class RetroactiveAuditTests(unittest.TestCase):
             )
 
     def test_heuristic_is_a_marker_not_an_incidence_certificate(self):
-        sample = "臺灣2025年資料顯示，2025年事件統計100件，但母數未知。"
+        sample = "臺灣2025年官方統計資料顯示，2025年事件100件，但母數未知。"
         marks = audit.cues(sample)
         self.assertTrue(marks["frequency_term_marker"])
         self.assertTrue(marks["tw_context_marker"])
