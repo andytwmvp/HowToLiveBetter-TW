@@ -1,0 +1,33 @@
+{
+  "id": "TW-01-041",
+  "reviewer": "ChatGPT（AI輔助逐主張公開來源實讀與臺灣適用核對，非獨立專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-041.md",
+  "target_sha256": "b99262cb87d1695fd8c6b772412f24d045662f5538912a876f55bc57c1bc0614",
+  "source_checks": [
+    {
+      "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3567",
+      "claim": "115年雪季期間為2026年1月1日至3月31日，雪地行程要求裝備與領隊能力查核。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：115年雪季期間為2026年1月1日至3月31日，雪地行程要求裝備與領隊能力查核。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀公告HTML；此期間已過，不推定116年雪季沿用，未把附件所有路線開放狀態當即時核實。"
+    },
+    {
+      "url": "https://www.destinationontario.com/en-ca/articles/ice-safety-3-steps-could-save-your-life",
+      "claim": "冰況受水流、積雪及天候影響；應查當地管理與冰況，不把單一厚度當通行保證。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：冰況受水流、積雪及天候影響；應查當地管理與冰況，不把單一厚度當通行保證。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀2026-05-13更新HTML，只採一般冰況變異原則；不移植加拿大厚度分級或求救電話。"
+    }
+  ],
+  "localization_changes": "移除鑽孔與15公分安全保證，改為管理開放、能力與救援邊界。",
+  "review_method": "實讀指定HTML與PDF頁段，逐條比對正文與台灣生活情境；取回失敗、統計分母與專業限制分項保留。",
+  "limits": [
+    "不以15公分或任何單點厚度保證整片冰安全，也不教未受訓者先上冰鑽孔。海外官方指出水流、積雪和氣溫會改變冰況；其厚度分級與電話不能直接移植台灣。頻率資料不足：本輪未取得台灣同定義野外薄冰事故的全國件數及上冰人次；一般山域救援數不能當冰湖事故率。雪季管制與實際入園資格須查最新公告。",
+    "獨立醫療、心理、職安、消防及法律專業審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "992bad24c60b44660ac3d00c11a8f56f9ae737f34592e1c4a96007ca262383d3"
+}

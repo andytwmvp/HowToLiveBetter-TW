@@ -1,0 +1,120 @@
+{
+  "base_sha": "69da58f9df6e4f5046d71b9c7b9112efe7bc9f62",
+  "new_core_ids": [
+    "TW-01-041",
+    "TW-01-042",
+    "TW-01-043",
+    "TW-01-044"
+  ],
+  "risk_research_order": [
+    "TW-01-043",
+    "TW-01-044",
+    "TW-01-042",
+    "TW-01-041"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-021",
+    "TW-13-022",
+    "TW-13-023",
+    "TW-13-027"
+  ],
+  "professional_review": "pending",
+  "sources_added": 18,
+  "source_limits": [
+    "Makita手冊403未採；Bosch僅指定頁與機型，不假稱全機型核准。",
+    "HPA與消防教材取回失敗保留前審閱日；新增可讀來源交叉核對。",
+    "熱傷害CSV及較新年度山域分析未取回，不自造總量；舊115來源ID／306引用未解。",
+    "AF接受稿本地403但web讀指定方法頁，未下載不造檔案雜湊；未做2026外推。",
+    "專線先以專用工具查核再讀衛福部；正文純數字與無追蹤來源。"
+  ],
+  "statistics": [
+    {
+      "value": 1.51,
+      "unit": "新診斷／1000人年",
+      "period": "2011年",
+      "scope": "台灣20歲以上健保資料",
+      "definition": "排除既有AF；ICD-9-CM 427.31一次住院出院或兩次門診",
+      "numerator": "2011年新診斷數未另讀原表；2000至2011合計289559人不當年度分子",
+      "denominator": "研究風險人年，2011年確切總量未確認，不倒算",
+      "method": "健保行政診斷原始隊列研究",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/29017957/",
+      "accessed_at": "2026-10-19",
+      "limits": "漏診及就醫選擇；非2026即時發生率、心悸者機率或跨國可比率"
+    },
+    {
+      "value": 17,
+      "unit": "通報病例",
+      "period": "2021至2024年",
+      "scope": "台灣人造石產業職業疾病通報",
+      "definition": "人造石矽肺通報個案",
+      "numerator": 17,
+      "denominator": "全部暴露人口未取得；非補助健檢人數",
+      "method": "行政職業病通報，非全人口主動調查",
+      "source": "https://www.mol.gov.tw/1607/1632/1640/79520/post",
+      "accessed_at": "2026-10-19",
+      "limits": "非砂輪機割傷數，可能漏報，不能算個人發生率"
+    },
+    {
+      "value": null,
+      "unit": "監測人次，未報總量",
+      "period": "資源標籤截至2026-10-11；頁更新2026-10-14",
+      "scope": "部分醫院",
+      "definition": "多類熱傷害診斷，非僅熱中暑",
+      "numerator": "CSV未取回",
+      "denominator": "非全國人口，無適當個人率分母",
+      "method": "監測metadata實讀",
+      "source": "https://data.gov.tw/dataset/157637",
+      "accessed_at": "2026-10-19",
+      "limits": "人次非唯一病人，非全國病例，未作跨年比較"
+    }
+  ],
+  "legal_dates": [
+    {
+      "rule": "職安設施規則2026修訂（非第62條新設）",
+      "announced_at": "2026-06-30",
+      "effective_at": "2026-07-01",
+      "exceptions": "21-3、57、116、185-1至185-4條為2027-01-01",
+      "basis": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060009"
+    },
+    {
+      "rule": "115年雪霸雪季管理公告期間",
+      "announced_at": null,
+      "effective_at": "2026-01-01",
+      "ends_at": "2026-03-31",
+      "limits": "已結束，不推定下一年度相同",
+      "basis": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3567"
+    }
+  ],
+  "pdf_retrievals": [
+    {
+      "file": "grinder-bosch",
+      "url": "https://media.vn.bosch-pt.com/binary/manualsmedia/o484989v21_160992AA7J_202410.pdf",
+      "sha256": "dceaa3517d1367b5c1bfbf4643b2f962c5b2c182da91114ab4ad901b63e7b83f",
+      "bytes": 6229126,
+      "read_pages": [
+        21,
+        22,
+        23
+      ],
+      "visually_inspected_pages": [
+        23
+      ]
+    }
+  ],
+  "counts": {
+    "core_before": 270,
+    "core_after": 274,
+    "chapter1_before": 40,
+    "chapter1_after": 44,
+    "runtime_before": 280,
+    "runtime_after": 284,
+    "source_registry_before": 545,
+    "source_registry_after": 563,
+    "runtime_source_objects_after": 482,
+    "draft_union": 498,
+    "no_draft": 267,
+    "unreviewed_after": 224,
+    "unregistered_source_ids": 115,
+    "unresolved_references": 306
+  }
+}

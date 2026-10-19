@@ -1,0 +1,54 @@
+{
+  "id": "TW-01-044",
+  "reviewer": "ChatGPT（AI輔助逐主張公開來源實讀與臺灣適用核對，非獨立專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-044.md",
+  "target_sha256": "b98b75fb6e270f7fbf776dab85383abb87d852933f3a1b77ed9ba1bb3383d10e",
+  "source_checks": [
+    {
+      "url": "https://ihealth.vghtpe.gov.tw/media/432",
+      "claim": "心房顫動可增加血栓與中風風險，症狀、心率控制與預防中風須分開評估，不自行停藥。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：心房顫動可增加血栓與中風風險，症狀、心率控制與預防中風須分開評估，不自行停藥。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "web實讀HTML，本地HTTPS403；不採互動測驗內的錯誤選項，也不把所有患者套同一治療。"
+    },
+    {
+      "url": "https://ihealth.vghtc.gov.tw/media/1694",
+      "claim": "阿斯匹靈為抗血小板藥，心房顫動等心因性中風可能需抗凝血劑，不能自行改劑量頻率。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：阿斯匹靈為抗血小板藥，心房顫動等心因性中風可能需抗凝血劑，不能自行改劑量頻率。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀2026-09-11更新HTML；不採測驗中的相對效果百分比當台灣個人保證。"
+    },
+    {
+      "url": "https://www.ntuh.gov.tw/telehealth/Fpage.action?fid=1549",
+      "claim": "心房顫動與中風風險相關，應由醫師進一步檢查與治療，可依需要安排心電圖與長時間紀錄。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：心房顫動與中風風險相關，應由醫師進一步檢查與治療，可依需要安排心電圖與長時間紀錄。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "直接HTTPS及web實讀HTML；不把每位患者均須同一檢查或均有結構性心臟病當定論。"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29017957/",
+      "claim": "台灣健保資料2000至2011年20歲以上新診斷289559人；2011年1.51／1000人年。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：台灣健保資料2000至2011年20歲以上新診斷289559人；2011年1.51／1000人年。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀PubMed摘要與出版資料，2017-10-07線上發表、2018年2月卷期；不當2026估計。"
+    },
+    {
+      "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/45167139/Chao_et_al_Lifetime_risks_projected_numbers_and_adverse_outcomes_CHEST_2017.pdf",
+      "claim": "新AF定義為ICD-9-CM 427.31一次住院出院或兩次門診診斷；排除既有AF後計新診斷，不含所有未被診斷個案。",
+      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：新AF定義為ICD-9-CM 427.31一次住院出院或兩次門診診斷；排除既有AF後計新診斷，不含所有未被診斷個案。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "本地403，web成功讀38頁PDF之第4與6至7頁相關文字；未下載、未聲稱檔案雜湊或逐頁全文審查。"
+    }
+  ],
+  "localization_changes": "保留原作不以阿斯匹靈代替抗凝血的原則，補台灣診斷與急症分流、個別治療及2011健保原始研究限制；不誤稱原作鼓勵自行服藥。",
+  "review_method": "實讀指定HTML與PDF頁段，逐條比對正文與台灣生活情境；取回失敗、統計分母與專業限制分項保留。",
+  "limits": [
+    "台灣頻率證據：Chao等使用健保行政資料，2000至2011年20歲以上新診斷心房顫動共289,559人，2011年診斷發生率1.51／1,000人年。研究以一次住院出院或兩次門診ICD-9-CM 427.31辨識病例，依既有診斷排除計算；289,559不是2011年分子，2011年實際分子與風險人年總量本輪未另讀表確認，不倒推。行政資料會漏掉未就醫或未診斷者，不能當2026年即時發生率、盛行率或心悸者罹病機率。研究2050年推估也不是已發生事實；不把海外藥效百分比直接當個人保證。",
+    "獨立醫療、心理、職安、消防及法律專業審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "1f4081c28f123b95fee3244c548b608d2057d1599590fd2a0b28f164ac4017cd"
+}
