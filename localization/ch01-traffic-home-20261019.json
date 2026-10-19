@@ -1,0 +1,36 @@
+{
+  "chapter": 1,
+  "part": 1,
+  "date": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "0aa02aa0bf6f8ae32177c5d4fc88f5db24c10b44",
+  "completed_ids": [
+    "TW-01-001",
+    "TW-01-002",
+    "TW-01-003",
+    "TW-01-004"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 4,
+  "chapter_pending": 44,
+  "core_completed_after": 234,
+  "core_total": 765,
+  "runtime_items_after": 244,
+  "navigation": 10,
+  "new_sources_count": 8,
+  "new_source_ids": [
+    "ch01_motc_2025_30day",
+    "ch01_motc_belt_rule",
+    "ch01_moj_micro_helmet",
+    "ch01_bsmi_helmet_202607",
+    "ch01_nfa_fire_2025",
+    "ch01_nfa_smoke_alarm",
+    "ch01_nfa_co_2019_2023",
+    "ch01_ftc_gas_sales"
+  ],
+  "publication_ready": false,
+  "frequency_method": "2025道路交通全類別30日死亡2,858人並非未繫帶／未戴帽率；標檢局2026年10件抽樣1件不符非全臺不合格率；2025建築物火災4,514次中住宅類3,171次非家戶風險率；2019-2023 CO中毒118件/16死亡/323送醫為歷史行政事件、缺家戶母數。",
+  "source_method": "2026-10-19臺灣交通部、全國法規資料庫、經濟部標檢局、內政部消防署及公平交易委員會可見官方公開HTML AI輔助逐項核對",
+  "professional_review": "AI-assisted public-source review only, not independent traffic engineering, fire safety, legal or medical signoff",
+  "published_to_public_website": false
+}

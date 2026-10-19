@@ -1,0 +1,31 @@
+{
+  "id": "TW-01-003",
+  "reviewer": "ChatGPT（臺灣中央主管機關原始公開HTML AI輔助來源核對；非獨立專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-003.md",
+  "target_sha256": "9671ed2a118f16727341c9883782ff39ed91e828ed46f554b47b6c98bf91c5a1",
+  "source_checks": [
+    {
+      "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+      "claim": "TW-01-003：2025年建築物火災4,514次，其中獨立住宅1,688次及集合住宅1,483次；僅是按建築類別事件次數，沒有住宅戶數分母。",
+      "supporting_passage": "2026-10-19原始臺灣官方公開HTML獨立語意摘要（非逐字引文）：2025年建築物火災4,514次，其中獨立住宅1,688次及集合住宅1,483次；僅是按建築類別事件次數，沒有住宅戶數分母。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19 臺灣交通部、全國法規資料庫、標檢局、消防署或公平會公開HTML可見文字之AI輔助核對；不聲稱讀取未取得之PDF附件、統計原始資料庫或個案資料。"
+    },
+    {
+      "url": "https://www.nfa.gov.tw/cht/index.php?article_id=6003&code=list&flag=detail&ids=1083&site_id=1",
+      "claim": "TW-01-003：臥室、樓梯、走道及廚房依偵煙或定溫選用合適住警器，依說明書安裝、測試；警報先避難並119。",
+      "supporting_passage": "2026-10-19原始臺灣官方公開HTML獨立語意摘要（非逐字引文）：臥室、樓梯、走道及廚房依偵煙或定溫選用合適住警器，依說明書安裝、測試；警報先避難並119。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19 臺灣交通部、全國法規資料庫、標檢局、消防署或公平會公開HTML可見文字之AI輔助核對；不聲稱讀取未取得之PDF附件、統計原始資料庫或個案資料。"
+    }
+  ],
+  "localization_changes": "以臺灣透天及集合住宅、租屋與2025年建築物火災分類統計撰寫住警器安裝及避難，區分住警器與CO偵測。",
+  "review_method": "臺灣真實場景、風險行動、法規或事件統計口徑核對；非醫療／交通鑑定／消防或法律專業證明。",
+  "limits": [
+    "2025年3,171次住宅類建築火災不是每戶住宅年度起火率；警報器不能取代逃生動線與CO風險防護。",
+    "來源來自官方公開HTML；若法規或官方數值更動須重新查驗，緊急救援先119。"
+  ]
+}
