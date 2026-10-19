@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-001.md",
-  "target_sha256": "8736621b915c75e6163f7d4f30f2b0f0d1cc9e5d7c927f7d7849f2ee32a5a47b",
+  "target_sha256": "11f6acfed3e08612713472b585f26e1dfa1e4e0f18dfb9efde6f6b2c336c4e58",
   "source_checks": [
     {
       "url": "https://www.motc.gov.tw/ch/app/news_list/view?id=14&module=news&serno=b9b8dd21-c943-495f-a206-be4a47a7d087",
