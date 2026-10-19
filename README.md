@@ -1,3 +1,5 @@
+> **2026-10-20五篇安全再審：** 動物暴露、蜱蟲、野外飲水、性侵後照護及斷肢已逐主張再核對；累計41篇AI來源實質再審，專業審閱仍待取得。[本批證據](localization/bites-ticks-water-assault-amputation-20261020.json)。
+
 > **2026-10-20安全再審：** 地震、雷擊、高山症與穿刺異物已逐主張再核對；累計36篇AI來源實質再審，專業審閱仍待取得。[本批證據](localization/disaster-altitude-trauma-20261020.json)。
 
 > **獨立職安指引：** [職業安全與健康：多種工作情境、預防、停工與求援](locales/zh-TW/guides/職業安全與健康.md)（TW-NAV-011，另計補充內容）。
