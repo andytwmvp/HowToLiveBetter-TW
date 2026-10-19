@@ -1,0 +1,139 @@
+{
+  "base_sha": "48433c16d9efedabf9f5775d33f06a0597b94750",
+  "new_core_ids": [],
+  "ai_rechecked_ids": [
+    "TW-13-013",
+    "TW-13-034",
+    "TW-13-035",
+    "TW-13-042",
+    "TW-13-047"
+  ],
+  "risk_research_order": [
+    "TW-13-047",
+    "TW-13-042",
+    "TW-13-013",
+    "TW-13-034",
+    "TW-13-035"
+  ],
+  "risk_order_basis": "失血與時間敏感處置優先；非宣稱已知發生率排名。",
+  "professional_review": "pending",
+  "sources_added": 11,
+  "source_limits": [
+    "最新取得防檢署2026-09-30指定頁：1至9月動物抗原監測1146件、41陽性（39鼬獾2白鼻心），不含人類暴露分母；2023至2026年1月新聞2597／137是不同期間摘要，不能相加或計算個人率。未核對整份歷年地域圖及微資料。",
+    "2026-03-17新增1例新聞是單次確診公告；4至10月為活動季節，不是全年病例、叮咬人次或每人感染率。國外5至15%概述缺台灣分母不套用。",
+    "2015至2016上半年3起調查案例檢出諾羅病毒，無全體溪水或用水人次分母；2026食品安全提醒不是水質普查。",
+    "實際目視官方110至114年服務統計圖：2025年到院3643人、開證3078人；2024年3665／3123作歷史對照。服務利用非事件、通報、定罪或個人率；圖沒有重複服務處理與各院完整率，不能推估漏報或發生率趨勢。",
+    "榮總與勞動部為保存衛教，沒有台灣同定義斷指／斷肢暴露分母；不拿全體職災死亡或單院接合成功率替代。"
+  ],
+  "statistics": [
+    {
+      "id": "latest_animal_antigen",
+      "value": 41,
+      "unit": "動物抗原監測陽性件",
+      "period": "2026-01至2026-09-30",
+      "scope": "台灣各類送驗動物，含邊境及其他動物",
+      "numerator": 41,
+      "denominator": 1146,
+      "definition": "115年1至9月合計送驗1146，陽性41；39鼬獾2白鼻心",
+      "method": "動物行政抗原監測；實讀目視PDF第1、2、5頁指定當年欄，非隨機抽樣",
+      "source": "https://www.aphia.gov.tw/upload/aphia/files/web_structure/10980/Rabies%20ppt%201150930%281%29.pdf",
+      "accessed_at": "2026-10-20",
+      "limits": "非人類病例或所有動物盛行率；不能與不同期間新聞相加／比較；未讀完整歷年地域圖及微資料。"
+    },
+    {
+      "id": "animal_monitoring",
+      "value": 137,
+      "unit": "陽性送驗件",
+      "period": "2023年至2026年1月",
+      "scope": "台灣動物行政監測",
+      "numerator": 137,
+      "denominator": 2597,
+      "definition": "2597監測件中137陽性；136鼬獾及1白鼻心",
+      "method": "疾管署及防檢署聯合新聞摘要，未重讀全體動物原始檢驗資料",
+      "source": "https://www.cdc.gov.tw/En/Category/ListContent/Sfl3Z4bGwA8hoZiiEI1k1A?uaid=EIzPUZsJx4y2Ana1D4soeg",
+      "accessed_at": "2026-10-20",
+      "limits": "選樣非隨機，不當人類暴露或所有動物發生率；不是10月最新累計。"
+    },
+    {
+      "id": "assault_arrivals",
+      "value": 3643,
+      "unit": "到院人",
+      "period": "2025年",
+      "scope": "台灣性侵害驗傷採證服務",
+      "numerator": 3643,
+      "denominator": null,
+      "definition": "圖例到院人數",
+      "method": "官方掃描統計圖目視；無完整率與跨院重複計算說明",
+      "source": "https://www.mohw.gov.tw/dl-96556-1afa2718-2686-4329-bd13-0e6cb5cd7afe.html",
+      "accessed_at": "2026-10-20",
+      "limits": "醫療服務利用，不是事件、通報、定罪或個人率，不能和開證數相減當未報案。"
+    },
+    {
+      "id": "assault_certificates",
+      "value": 3078,
+      "unit": "開證人",
+      "period": "2025年",
+      "scope": "台灣性侵害驗傷採證服務",
+      "numerator": 3078,
+      "denominator": null,
+      "definition": "開具性侵害驗傷診斷書人數",
+      "method": "官方掃描統計圖目視",
+      "source": "https://www.mohw.gov.tw/dl-96556-1afa2718-2686-4329-bd13-0e6cb5cd7afe.html",
+      "accessed_at": "2026-10-20",
+      "limits": "非採證成功率或全部性侵事件；無全體暴露人口母數。"
+    },
+    {
+      "id": "sfts_news",
+      "value": 1,
+      "unit": "單次新增確診病例",
+      "period": "2026-03-17公告",
+      "scope": "台灣北部個案",
+      "numerator": 1,
+      "denominator": null,
+      "definition": "當次公布SFTS確診",
+      "method": "法定傳染病確診新聞，非全年監測表",
+      "source": "https://www.cdc.gov.tw/En/Category/ListContent/kpBYBdd1WKIy8ATJWSWKww?uaid=kEDGe_ZPotUYmqikBePlHQ",
+      "accessed_at": "2026-10-20",
+      "limits": "非全年總數、所有蜱叮咬人次或個人感染率。"
+    },
+    {
+      "id": "water_noro",
+      "value": 3,
+      "unit": "檢出案例",
+      "period": "2015年至2016上半年",
+      "scope": "食藥署調查中毒事件環境用水",
+      "numerator": 3,
+      "denominator": null,
+      "definition": "山泉或混用水環境檢體檢出諾羅病毒",
+      "method": "特定事件環境檢驗摘要；原附件未讀",
+      "source": "https://mohw.gov.tw/cp-2631-14760-1.html",
+      "accessed_at": "2026-10-20",
+      "limits": "無全國水樣或用水人口母數，非2026感染率。"
+    }
+  ],
+  "legal_effective_dates": {
+    "assault_promulgated_at": "2023-02-15",
+    "assault_selected_articles": "2023-02-17",
+    "selected_articles": [
+      11,
+      14,
+      17,
+      28
+    ],
+    "basis": "第56條、沿革及中央法規標準法13條；第13條延後六個月不混用",
+    "rabies_main_criteria": "2019-05-03",
+    "rabies_yellow_throated_marten": "2021-07-01",
+    "rabies_portal_updated": "2026-09-02"
+  },
+  "counts": {
+    "core_before": 278,
+    "core_after": 278,
+    "runtime_before": 289,
+    "runtime_after": 289,
+    "source_registry_before": 591,
+    "source_registry_after": 602,
+    "rechecks_before": 36,
+    "rechecks_after": 41
+  },
+  "research_date": "2026-10-20"
+}
