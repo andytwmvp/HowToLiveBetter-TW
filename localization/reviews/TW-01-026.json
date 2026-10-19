@@ -1,0 +1,47 @@
+{
+  "id": "TW-01-026",
+  "reviewer": "ChatGPT（AI輔助臺灣官方HTML與指定PDF表圖核對，非醫師、心理師、消防或藥師簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-026.md",
+  "target_sha256": "19964adaac22b43a59a846ef3fca3db64f9c4349412f9a3b3a40aea4497ac597",
+  "source_checks": [
+    {
+      "url": "https://www.tfdp.com.tw/cht/index.php?article_id=1741&code=list&flag=detail&ids=55",
+      "claim": "依火災類型選合格滅火器、拉瞄壓掃與定期維護；大火濃煙撤離關門119。僅採安全操作通則，不採所有情境整罐噴完或一律灑水。",
+      "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：依火災類型選合格滅火器、拉瞄壓掃與定期維護；大火濃煙撤離關門119。僅採安全操作通則，不採所有情境整罐噴完或一律灑水。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立語意摘要；未閱附件、圖片手法或影片不稱已驗證。"
+    },
+    {
+      "url": "https://eoc.gov.taipei/News/Detail/624?MenuId=51",
+      "claim": "無煙安全往外往下，濃煙阻斷關門119報位，不躲浴廁；放棄失控滅火，住警器及每半年家庭演練。",
+      "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：無煙安全往外往下，濃煙阻斷關門119報位，不躲浴廁；放棄失控滅火，住警器及每半年家庭演練。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立語意摘要；未閱附件、圖片手法或影片不稱已驗證。"
+    },
+    {
+      "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=F43BEDAC6BC194D4&sms=87415A8B9CE81B16",
+      "claim": "至少每半年檢查避難包與藥品保存，簡易急救用品依家庭需求及可負重準備，不代表所有器材只需一年檢查。",
+      "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：至少每半年檢查避難包與藥品保存，簡易急救用品依家庭需求及可負重準備，不代表所有器材只需一年檢查。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "web開啟失敗，以Python HTTPS取得完整官方HTML；核對正文與文章更新日，未把全站頁尾日期當刊日。"
+    },
+    {
+      "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+      "claim": "2025年建築物火災4,514次，其中獨立住宅1,688次及集合住宅1,483次；僅是按建築類別事件次數，沒有住宅戶數分母。",
+      "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：2025年建築物火災4,514次，其中獨立住宅1,688次及集合住宅1,483次；僅是按建築類別事件次數，沒有住宅戶數分母。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19重新核對官方統計HTML表格，保留原登錄物件。"
+    }
+  ],
+  "localization_changes": "獨立依臺灣危機求援、消防與症狀分流改寫，保留統計、臨床與器材限制。",
+  "review_method": "實讀相關官方正文；死因簡報17至18頁文字及表圖核對，失敗網址不冒稱已讀。",
+  "limits": [
+    "本次未取得支持每戶一律必買「滅火毯加逃生呼吸面罩」的臺灣官方適用依據，不照搬原作四件套。是否選購須先確認產品用途、限制與訓練；不能把面罩或毯當穿越濃煙的許可。不同火災不能一律灑水，器材不合用或火煙擴大就放棄滅火、避難求援；本文不採官方單頁中「所有情境整罐噴完再灑水」的泛化語句。尚待消防專業獨立審閱。",
+    "未取得專業獨立審閱，未重算統計原始微資料。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "a969d1ec7154ddd576e99e888b6788e4695b3538ff0bd0f0cd5fea06b522fa03"
+}

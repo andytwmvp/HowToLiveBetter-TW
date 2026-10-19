@@ -788,9 +788,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "原衛福部2018頁引用2017死亡數與類型占比，不能當2026全國中風發生率；本次未取得同定義新發病例及曝險母數，亦不把全部腦血管死亡當新發中風。"
     },
     {
       "id": "TW-13-004",
@@ -868,9 +868,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "2016衛福部引用2014心臟病死亡數不等於急性心肌梗塞；2026新竹臺大不到20%救護車就醫概述缺研究年份及母數，不作全國率或個人存活率。"
     },
     {
       "id": "TW-13-008",
@@ -1127,9 +1127,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "健保署頁稱超過一半中毒在6歲以下，未附年份、範圍與資料母數，不能當臺灣現行全國占比或發生率；諮詢中心來電亦非全國事件分母。"
     },
     {
       "id": "TW-13-021",
@@ -1207,9 +1207,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "2025全國建築物火災4514次，獨立住宅1688、集合住宅1483，行政事件次數無家戶分母；不能算個人穿煙存活率或裝備效益。"
     },
     {
       "id": "TW-13-025",
@@ -8072,6 +8072,174 @@
         "救援須以現場119派遣與專業醫療指示為準，費用由實際醫療服務及健保條件決定。",
         "2025消防救溺1056人，溪河415、海邊228；行政救援範圍含自傷及其他類，不代表純戲水意外或全國人口個人風險。",
         "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-003",
+      "before_sha256": "b86cc359b6489f7b5cbdd513dbb0227c46248d3a0735c72c362bab6be3a4df6e",
+      "after_sha256": "1e8920c5ca1bda1efaa035b752bd28ad7dd28a603c8a5cd588d2d9788a8fb855",
+      "prior_revision": "ca40db0a8744b2661c07f61931f21515f7a38db8",
+      "prior_review_sha256": "269e20879272d177863fd997e183f10d8200d82f4a4a9dba0196dad90617237f",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣家庭、職場突發神經症狀，先119與最後正常時間，不自駕。",
+      "frequency_assessment": "原衛福部2018頁引用2017死亡數與類型占比，不能當2026全國中風發生率；本次未取得同定義新發病例及曝險母數，亦不把全部腦血管死亡當新發中風。",
+      "changes": "強化FAST任一警訊即119，揭露舊統計與3小時宣導非截止門檻；補可讀公立醫院佐證，原HPA TLS失敗保留日期。",
+      "source_checks": [
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=631&pid=15126&sid=1185",
+          "claim": "TW-13-003：嘴角歪斜、單側手部無力及說話不清，任一異常便應撥119。",
+          "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：嘴角歪斜、單側手部無力及說話不清，任一異常便應撥119。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "2026-10-19 web及直接HTTPS重取未成功（TLS）；accessed_at保留上次實讀日，不冒稱本日重讀。修訂另由可讀官方頁支持，專業審閱仍pending。"
+        },
+        {
+          "url": "https://mohw.gov.tw/cp-2704-44431-1.html",
+          "claim": "TW-13-003：FAST代表臉、手、說話與時間，記錄發作時間並儘速通知119。",
+          "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：FAST代表臉、手、說話與時間，記錄發作時間並儘速通知119。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新讀取官方HTML相關段落，未以首頁或檢索摘要替代，不採舊數據作現況。"
+        },
+        {
+          "url": "https://802.mnd.gov.tw/articles/stroke?locale=zh-TW",
+          "claim": "臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
+          "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "實際核對官方HTML；頁首2026-02-26與文內初刊2024-03-18分列，不採70至75%作全國發生率。"
+        }
+      ],
+      "limits": [
+        "在排除吞嚥異常與出血性中風前，不要強迫喝水、吞藥、吃食物或自行服用阿斯匹靈；不要花時間查網路偏方、針刺放血或等待血壓自行恢復。單靠FAST不能確診，症狀消退也不可排除重大疾病。原作使用120，臺灣急救電話應為119；也不應把中國醫院分級及特殊治療時間直接套用到臺灣。",
+        "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。",
+        "原衛福部2018頁引用2017死亡數與類型占比，不能當2026全國中風發生率；本次未取得同定義新發病例及曝險母數，亦不把全部腦血管死亡當新發中風。",
+        "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-007",
+      "before_sha256": "1f3aeef93249c7935d1e6922f7572ba7bf501feb9bd29bafd61dc04122141d08",
+      "after_sha256": "a8a85cb4edc31490ef2b96d5d2d02c624a19b36d7779fc80c6649282927333e2",
+      "prior_revision": "ca40db0a8744b2661c07f61931f21515f7a38db8",
+      "prior_review_sha256": "0252cf08ce9190b620f7e68f6e93e0f6afa42d71e64e4c221d12e9db101e0f63",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "工作、夜間、家中及臺灣機車通勤情境，胸痛喘冷汗停止活動、119，不自騎車。",
+      "frequency_assessment": "2016衛福部引用2014心臟病死亡數不等於急性心肌梗塞；2026新竹臺大不到20%救護車就醫概述缺研究年份及母數，不作全國率或個人存活率。",
+      "changes": "補心臟病與心肌梗塞數據界線及2026救護鏈佐證；即使平常年輕健康也不延誤。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-2625-19381-1.html",
+          "claim": "TW-13-007：急性胸悶、呼吸困難、冒冷汗等疑似心肌梗塞症狀應迅速求援、撥119送醫。",
+          "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：急性胸悶、呼吸困難、冒冷汗等疑似心肌梗塞症狀應迅速求援、撥119送醫。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新讀取官方HTML相關段落，未以首頁或檢索摘要替代，不採舊數據作現況。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=0EDB9C505FE8B199&s=43B58A0BD64C7620&sms=18AF49168D1E8B97",
+          "claim": "TW-13-007：胸悶痛合併喘、冒冷汗或噁心嘔吐等症狀應立即撥119。",
+          "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：胸悶痛合併喘、冒冷汗或噁心嘔吐等症狀應立即撥119。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新讀取官方HTML相關段落，未以首頁或檢索摘要替代，不採舊數據作現況。"
+        },
+        {
+          "url": "https://www.hch.gov.tw/?aid=503&iid=458&page_name=detail&pid=0",
+          "claim": "胸痛喘冷汗立即119與院前院內接力；不到20%由119送醫概述缺樣本期間母數，不拿來算患者全國就醫機率。",
+          "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：胸痛喘冷汗立即119與院前院內接力；不到20%由119送醫概述缺樣本期間母數，不拿來算患者全國就醫機率。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "實際讀取2026活動官方HTML正文；排除個案、手術量及不具期間母數比例作全國發生率。"
+        }
+      ],
+      "limits": [
+        "胸痛也可能來自主動脈剝離、肺栓塞及非心臟疾病，不能靠按摩、刮痧或網路測驗在家鑑別。不建議不分情況自行加倍服藥、喝酒、忍痛運動；阿斯匹靈等用藥需留意出血、過敏及其他疾病風險，是否施用要聽取救護或專業醫療判斷。沒有典型胸痛並非絕對安全。原作120應改為臺灣119，且不能把十五分鐘當成必等門檻。",
+        "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。",
+        "2016衛福部引用2014心臟病死亡數不等於急性心肌梗塞；2026新竹臺大不到20%救護車就醫概述缺研究年份及母數，不作全國率或個人存活率。",
+        "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-020",
+      "before_sha256": "70436a2a2304b1b97926e690ea1786e9bd63e8a094f48eb3459759bad253a5cf",
+      "after_sha256": "399042245365b21c67f091a4f7680f8b01b514a17fc05d4edc867c4e1634fe63",
+      "prior_revision": "ca40db0a8744b2661c07f61931f21515f7a38db8",
+      "prior_review_sha256": "016d848594ca227e820424fe801270e3d879361e20041f50fbf71403fb19bf2a",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣幼兒誤拿、長者多重用藥與家庭清潔農藥原包裝管理；危急先119。",
+      "frequency_assessment": "健保署頁稱超過一半中毒在6歲以下，未附年份、範圍與資料母數，不能當臺灣現行全國占比或發生率；諮詢中心來電亦非全國事件分母。",
+      "changes": "釐清任何潛在危險也需即時專業判斷，不等症狀、勿喝牛奶解毒；排除未具口徑年齡占比。",
+      "source_checks": [
+        {
+          "url": "https://www.pcc-vghtpe.tw/active-detail1260.htm",
+          "claim": "TW-13-020：口服毒物勿催吐；嚴重意識或呼吸異常撥119，保存容器、暴露時間及症狀供醫療人員參考，中心提供24小時諮詢。",
+          "supporting_passage": "據臺灣官方網頁可見段落的編者摘要，非逐字引文：口服毒物勿催吐；嚴重意識或呼吸異常撥119，保存容器、暴露時間及症狀供醫療人員參考，中心提供24小時諮詢。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新讀取官方HTML相關段落，未以首頁或檢索摘要替代，不採舊數據作現況。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-2765-532c8-2951-1.html",
+          "claim": "TW-13-020：藥物、清潔用品及農藥都有中毒風險，應儘速詢問毒藥物專業機構，勿自行催吐。",
+          "supporting_passage": "據臺灣官方網頁可見段落的編者摘要，非逐字引文：藥物、清潔用品及農藥都有中毒風險，應儘速詢問毒藥物專業機構，勿自行催吐。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新讀取官方HTML相關段落，未以首頁或檢索摘要替代，不採舊數據作現況。"
+        }
+      ],
+      "limits": [
+        "食入、吸入、眼睛與皮膚接觸的初步處置不同，不能因口服不可催吐，就忽略其他接觸部位的沖洗。鈕扣電池、強磁珠、尖銳異物另有急診程序，不可等到症狀惡化才就醫。毒藥物中心不取代119及醫師處置，也不是核定所有中毒治療費用的政府窗口。",
+        "急救與疫苗資格由119派遣、主管機關與醫師依實際情境及最新制度判斷。",
+        "健保署頁稱超過一半中毒在6歲以下，未附年份、範圍與資料母數，不能當臺灣現行全國占比或發生率；諮詢中心來電亦非全國事件分母。",
+        "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-024",
+      "before_sha256": "c9e5b89cb6dbc248e04ac5c892dc0b7b0b0d1b4363ab4e3881e27ef28621e443",
+      "after_sha256": "56ff1437c2501918e7c13a1ce6690615ce92f70e22bee378859f0e9d20962446",
+      "prior_revision": "ca40db0a8744b2661c07f61931f21515f7a38db8",
+      "prior_review_sha256": "57c409d0b137057dd4c82525d0cd93bd0fd1966dfd529a770acb6618145503d6",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣集合住宅、租屋、老人與行動不便者路線；無煙安全才逃，濃煙阻斷關門119報位。",
+      "frequency_assessment": "2025全國建築物火災4514次，獨立住宅1688、集合住宅1483，行政事件次數無家戶分母；不能算個人穿煙存活率或裝備效益。",
+      "changes": "補2026可讀臺北避難指引與2025事件定義，硬闖濃煙禁忌及裝備不能保證；兩個舊NFA頁TLS失敗明列。",
+      "source_checks": [
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20255&code=list&flag=detail&ids=1468",
+          "claim": "TW-13-024：2026年1月發布：無煙逃生路線往下往外，濃煙阻路改向相對安全空間關門打119，勿搭電梯、躲浴室或找濕毛巾延誤。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：2026年1月發布：無煙逃生路線往下往外，濃煙阻路改向相對安全空間關門打119，勿搭電梯、躲浴室或找濕毛巾延誤。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "2026-10-19 web及直接HTTPS重取未成功（TLS）；accessed_at保留上次實讀日，不冒稱本日重讀。修訂另由可讀官方頁支持，專業審閱仍pending。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=21677&code=list&flag=detail&ids=1468",
+          "claim": "TW-13-024：2026年9月發布：進入公共場所先辨識兩方向逃生出口，火場不能硬闖濃煙，應找替代路線或關門求救。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：2026年9月發布：進入公共場所先辨識兩方向逃生出口，火場不能硬闖濃煙，應找替代路線或關門求救。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "2026-10-19 web及直接HTTPS重取未成功（TLS）；accessed_at保留上次實讀日，不冒稱本日重讀。修訂另由可讀官方頁支持，專業審閱仍pending。"
+        },
+        {
+          "url": "https://eoc.gov.taipei/News/Detail/624?MenuId=51",
+          "claim": "無煙安全往外往下，濃煙阻斷關門119報位，不躲浴廁；放棄失控滅火，住警器及每半年家庭演練。",
+          "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：無煙安全往外往下，濃煙阻斷關門119報位，不躲浴廁；放棄失控滅火，住警器及每半年家庭演練。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立語意摘要；未閱附件、圖片手法或影片不稱已驗證。"
+        },
+        {
+          "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+          "claim": "2025年建築物火災4,514次，其中獨立住宅1,688次及集合住宅1,483次；僅是按建築類別事件次數，沒有住宅戶數分母。",
+          "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：2025年建築物火災4,514次，其中獨立住宅1,688次及集合住宅1,483次；僅是按建築類別事件次數，沒有住宅戶數分母。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新核對官方統計HTML表格，保留原登錄物件。"
+        }
+      ],
+      "limits": [
+        "濃煙中濕毛巾不能有效阻絕一氧化碳，不應浪費時間找或打濕毛巾；也不要躲廁所、浴室或跳樓。已見濃煙的安全梯、燙手門把或高溫通道都不能勉強通過，若被困要關門並持續報位。身上著火有停躺滾等其他程序，但與一般室內逃生不同；也不能把水或濕布阻擋煙害的效果當保命保證。原作消防或警察電話不可照搬，臺灣火災通報使用119。",
+        "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
+        "2025全國建築物火災4514次，獨立住宅1688、集合住宅1483，行政事件次數無家戶分母；不能算個人穿煙存活率或裝備效益。",
+        "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
       ]
     }
   ]
