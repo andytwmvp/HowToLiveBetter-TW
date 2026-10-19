@@ -1,0 +1,31 @@
+{
+  "id": "TW-01-006",
+  "reviewer": "ChatGPT（臺灣中央主管機關公開HTML AI輔助來源核對；非獨立醫療、消防或法律專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-006.md",
+  "target_sha256": "8282adf1cccce2037543f4d4b43573df120bfb9ff709ed3b183b2a00f7e9200e",
+  "source_checks": [
+    {
+      "url": "https://www.bsmi.gov.tw/wSite/ct?ctNode=8026&mp=6&xItem=124016",
+      "claim": "TW-01-006：行動電源邊境抽驗比例提高10倍為驗證政策，不是國內鋰電池起火件數增加10倍；BSMI檢驗標識、避免無人看管充電與不再使用膨脹破損產品。",
+      "supporting_passage": "2026-10-19官方公開HTML獨立摘要（非逐字引文）：行動電源邊境抽驗比例提高10倍為驗證政策，不是國內鋰電池起火件數增加10倍；BSMI檢驗標識、避免無人看管充電與不再使用膨脹破損產品。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19臺灣食藥署、經濟部標準檢驗局或國健署原始公開HTML文字AI輔助對讀，非PDF及附件全文核對。"
+    },
+    {
+      "url": "https://www.bsmi.gov.tw/bsmiGIP/wSite/ct?ctNode=8745&mp=1&xItem=125448",
+      "claim": "TW-01-006：確認商品檢驗標識、標示及電池外觀；避免高溫、陽光曝曬、短路、擠壓與自行拆修。",
+      "supporting_passage": "2026-10-19官方公開HTML獨立摘要（非逐字引文）：確認商品檢驗標識、標示及電池外觀；避免高溫、陽光曝曬、短路、擠壓與自行拆修。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19臺灣食藥署、經濟部標準檢驗局或國健署原始公開HTML文字AI輔助對讀，非PDF及附件全文核對。"
+    }
+  ],
+  "localization_changes": "以臺灣行動電源BSMI檢驗標識、租屋走道和電動二輪車充電安全，拆開10倍抽驗政策與起火統計。",
+  "review_method": "臺灣官方公開資訊原始HTML AI輔助核對；發生率、盛行率、政策抽驗與服務使用週期分開處理。",
+  "limits": [
+    "2025年行動電源邊境抽驗比例提高10倍是抽查政策，非2025-2026年鋰電池起火事故件數或風險增加10倍。",
+    "行政事件、送驗資料與抽樣研究不直接外推個人風險，醫療處置仍應依專業判斷。"
+  ]
+}

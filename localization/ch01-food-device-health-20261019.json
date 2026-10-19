@@ -1,0 +1,36 @@
+{
+  "chapter": 1,
+  "part": 2,
+  "date": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "7a53257e911c0e5632ef59b522142ded3dfd46dc",
+  "completed_ids": [
+    "TW-01-005",
+    "TW-01-006",
+    "TW-01-007",
+    "TW-01-008"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 8,
+  "chapter_pending": 40,
+  "core_completed_after": 238,
+  "core_total": 765,
+  "runtime_items_after": 248,
+  "navigation": 10,
+  "new_sources_count": 8,
+  "new_source_ids": [
+    "ch01_tfda_wild_202411",
+    "ch01_tfda_wildguide",
+    "ch01_bsmi_powerbank_202511",
+    "ch01_bsmi_battery_202601",
+    "ch01_hpa_bp2017_2020",
+    "ch01_hpa_bp722_2026",
+    "ch01_hpa_adultcheck_202607",
+    "ch01_hpa_adultcheck_scope"
+  ],
+  "publication_ready": false,
+  "frequency_method": "食藥署近年4例送驗不代表全國中毒率；標檢局邊境抽驗增加10倍不是起火事故率；2017-2020年20歲以上高血壓盛行率27.3%不是新發率；2026成人公費健檢每5年／3年／每年是服務資格而非疾病發生頻率。",
+  "source_method": "2026-10-19食藥署、標檢局、國健署原始官方HTML查閱",
+  "professional_review": "AI-assisted review, not clinical, toxicology, product certification or benefit eligibility signoff",
+  "published_to_public_website": false
+}
