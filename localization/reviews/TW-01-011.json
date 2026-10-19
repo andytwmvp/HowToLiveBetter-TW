@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-011.md",
-  "target_sha256": "5240ae07b4188ddedb4ff872eb67f1e7f081f47bf6e64350596fbf4a492bb9ee",
+  "target_sha256": "c46b4d7c2abd04bd9ea089bf368c3120ee31baa1342f3d0655b58a8f9bdc19b1",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-16-39532-1.html",
@@ -16,8 +16,8 @@
     },
     {
       "url": "https://tspc-health.gov.taipei/News_Content.aspx?n=57C6A1B2A9853535&s=6C9DF381D843900C&sms=D16A85F18B089B61",
-      "claim": "TW-01-011：臺北市官方既有防墜宣導提醒檢查窗戶陽台護欄、欄杆間隙及可攀爬家具；不是全國最新法定尺寸或墜落案件統計。",
-      "supporting_passage": "2026-10-19臺灣政府原始公開HTML可見資料之獨立語意摘要（非逐字引文）：臺北市官方既有防墜宣導提醒檢查窗戶陽台護欄、欄杆間隙及可攀爬家具；不是全國最新法定尺寸或墜落案件統計。",
+      "claim": "TW-01-011：臺北市官方既有防墜宣導提醒檢查窗戶陽台護欄、欄杆間隙及可攀爬傢俱；不是全國最新法定尺寸或墜落案件統計。",
+      "supporting_passage": "2026-10-19臺灣政府原始公開HTML可見資料之獨立語意摘要（非逐字引文）：臺北市官方既有防墜宣導提醒檢查窗戶陽台護欄、欄杆間隙及可攀爬傢俱；不是全國最新法定尺寸或墜落案件統計。",
       "accessed_at": "2026-10-19",
       "retrieval_method": "2026-10-19核對官方公開HTML頁面，未宣稱取得或核閱未下載之PDF附件及個案資料。"
     }
