@@ -1,0 +1,38 @@
+{
+  "base_sha": "4d3080f84f778fa55d070cf66ea75de80c56f988",
+  "prior_pr": 36,
+  "prior_main_ci": "https://github.com/andytwmvp/HowToLiveBetter-TW/actions/runs/39214230619",
+  "new_ids": [
+    "TW-01-017",
+    "TW-01-018",
+    "TW-01-019",
+    "TW-01-020"
+  ],
+  "sources_added": 11,
+  "source_limits": [
+    "臺北榮總2026表格乳癌腸癌上限75與中央74不同，未採其衝突欄；以中央現行74及潭子當期表核對。",
+    "潭子檢索摘要9月已過時，直接取得頁為9月29日更新之10月活動；不依檢索舊摘要寫場次。",
+    "國健署直連失敗時尋找可取得的官方正文或醫院PDF，不假稱已核閱失敗頁。",
+    "萬芳及高雄榮總舊衛教只採檢測意義與陽性追蹤，不採過時年齡、疾病順位與篩檢效能比例。"
+  ],
+  "statistics": [
+    {
+      "year": 2023,
+      "scope": "全國",
+      "type": "癌症登記、不含原位癌",
+      "standard_population": "2000年世界標準人口",
+      "female_breast_cases": 17779,
+      "female_breast_standardized_per_100000_females": 91.2,
+      "cervix_cases": 1429,
+      "cervix_standardized_per_100000_females": 7.4,
+      "colorectal_cases_both_sexes": 19074,
+      "colorectal_standardized_per_100000_population": 43.1,
+      "denominator_limit": "標準化率由分齡人口權重組成；不以病例數除標準化率反推人口或個人風險。",
+      "source_url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+      "accessed_at": "2026-10-19"
+    }
+  ],
+  "retroactive_review": "本批續做新增四篇；上批四篇AI來源再審與專業pending完整保留，沒有宣稱新增四篇歷史再審。",
+  "professional_review": "pending",
+  "browser_regression_change": "乳癌搜尋不再硬編碼1筆，逐項比對runtime應命中ID集合、總筆數與原TW-NAV-004存在；其餘年齡及失敗不回退流程保留。"
+}
