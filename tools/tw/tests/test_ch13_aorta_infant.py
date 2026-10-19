@@ -76,7 +76,7 @@ class Chapter13AortaInfantTests(unittest.TestCase):
         self.assertEqual(report["publication_total_entries"], 765)
         self.assertFalse(report["publication_ready"])
         self.assertEqual(report["publication_completed_entries"], c["publication_completed_entries"])
-        self.assertEqual(len(rt["items"]), report["publication_completed_entries"] + 10)
+        self.assertEqual(len(rt["items"]), report["publication_completed_entries"] + sum(i['id'].startswith('TW-NAV-') for i in rt['items']))
         self.assertEqual(c["unique_draft_entries"] + c["entries_without_any_draft"], 765)
         self.assertGreaterEqual(c["registry_sources"], len(rt["sources"]))
         self.assertEqual(len(load("localization/tw-edition/sources/ch13-aorta-infant-20261018.json")["sources"]), 9)

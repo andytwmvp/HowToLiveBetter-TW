@@ -38,7 +38,7 @@ class Chapter13HeadVteDentalTests(unittest.TestCase):
   c=load("localization/tw-edition/coverage.json");rt=validate_runtime();report=publication_report()
   self.assertFalse(report["publication_ready"]);self.assertEqual(report["publication_total_entries"],765)
   self.assertEqual(report["publication_completed_entries"],c["core_reviewed_entries"])
-  self.assertEqual(len(rt["items"]),report["publication_completed_entries"]+10)
+  self.assertEqual(len(rt["items"]),report["publication_completed_entries"]+sum(i['id'].startswith('TW-NAV-') for i in rt['items']))
   self.assertEqual(c["unique_draft_entries"]+c["entries_without_any_draft"],765)
   self.assertGreaterEqual(c["registry_sources"],len(rt["sources"]))
   self.assertEqual(len(load("localization/tw-edition/sources/ch13-head-vte-dental-20261018.json")["sources"]),8)

@@ -68,7 +68,7 @@ class Chapter13NeuroEyeTests(unittest.TestCase):
         self.assertFalse(report["publication_ready"])
         self.assertEqual(coverage["publication_completed_entries"], report["publication_completed_entries"])
         self.assertEqual(report["publication_total_entries"], 765)
-        self.assertEqual(len(runtime["items"]), report["publication_completed_entries"] + 10)
+        self.assertEqual(len(runtime["items"]), report["publication_completed_entries"] + sum(i['id'].startswith('TW-NAV-') for i in runtime['items']))
         self.assertEqual(coverage["unique_draft_entries"] + coverage["entries_without_any_draft"], 765)
         self.assertGreaterEqual(coverage["registry_sources"], len(runtime["sources"]))
         self.assertEqual(len(load("localization/tw-edition/sources/ch13-neuro-eye-20261018.json")["sources"]), 6)

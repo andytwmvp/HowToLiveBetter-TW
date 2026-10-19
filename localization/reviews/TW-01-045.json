@@ -1,0 +1,61 @@
+{
+  "id": "TW-01-045",
+  "reviewer": "ChatGPT（AI輔助指定公開段落與台灣情境再核對，非獨立專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-045.md",
+  "target_sha256": "780f1186eb811738f37eedf4ea9b29665e1308b24cb746c585cf0746d4b904f3",
+  "source_checks": [
+    {
+      "url": "https://www.tma.tw/files/meeting/N202626114115_001.pdf",
+      "claim": "1986年含以前出生至79歲、原住民2026年回歸40至79歲終身一次；抗體陽性可依院所流程接續RNA。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：1986年含以前出生至79歲、原住民2026年回歸40至79歲終身一次；抗體陽性可依院所流程接續RNA。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "直接下載12頁PDF，實讀原函、PDF第3頁資格及第12頁reflex testing；目視第3頁。附件自標1至10頁不同於PDF頁碼，非整份申報專業審核。"
+    },
+    {
+      "url": "https://health.gov.taipei/cp.aspx?n=DEF47383FCC783F2&s=3AC4ACF21B5C9080",
+      "claim": "檢查項目補助與掛號費分開，可單獨篩檢，不需因肝炎抽血空腹，院所核對既往紀錄。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：檢查項目補助與掛號費分開，可單獨篩檢，不需因肝炎抽血空腹，院所核對既往紀錄。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀HTML資格、費用、空腹與查詢段落；不採無統計期間的B肝15%或舊帶原率概述。"
+    },
+    {
+      "url": "https://epaper.ntuh.gov.tw/health/201806/project_3.html",
+      "claim": "抗體與HCV RNA判斷不同；醫師評估肝功能、纖維化及用藥。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：抗體與HCV RNA判斷不同；醫師評估肝功能、纖維化及用藥。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀診斷及治療目標段，歷史衛教不作2026盛行率或現行給付條件；舊3至4%與F3門檻不採。"
+    },
+    {
+      "url": "https://epaper.ntuh.gov.tw/health/201811/story_2.html",
+      "claim": "完成療程後12週檢測不到病毒量作治癒判斷；需完成追蹤。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：完成療程後12週檢測不到病毒量作治癒判斷；需完成追蹤。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀HTML，僅採SVR12概念；不採文中舊纖維化門檻、2017治療率或雲林樣本當2026全台資料。"
+    },
+    {
+      "url": "https://www.cdc.gov/hepatitis-c/about/index.html",
+      "claim": "多數口服療程8至12週，治癒後仍可再感染；沒有C肝疫苗。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：多數口服療程8至12週，治癒後仍可再感染；沒有C肝疫苗。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀2025-09-02 HTML醫學段落；不將美國全民篩檢建議、病例或療效百分比當台灣制度及個人保證。"
+    },
+    {
+      "url": "https://mohw.gov.tw/cp-16-88169-1.html",
+      "claim": "截至2025年12月B、C肝篩檢逾786萬人；DAA已納健保，2019起不限纖維化程度。",
+      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：截至2025年12月B、C肝篩檢逾786萬人；DAA已納健保，2019起不限纖維化程度。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀2026年10月公告，不把篩檢人數當C肝感染者或盛行率；未讀Lancet來函全文，不宣稱正式WHO消除認證。"
+    }
+  ],
+  "localization_changes": "依台灣出生年、公費及院所流程獨立寫作；將抗體、RNA、治療與再感染分開。",
+  "review_method": "逐主張核對實讀HTML、PDF指定頁及圖表，分開頻率口徑、來源失敗與專業限制。",
+  "limits": [
+    "治癒後仍可能重新感染，也沒有C肝疫苗；避免共用針具或可能沾血的個人用品。台灣頻率限制：衛福部2026公告，截至2025年底逾786萬人接受B、C肝篩檢，這是累計服務人數，不是C肝感染人數、當年發生率或盛行率。歷史醫院3至4%概述缺本輪可用母數與年份，不作2026估計；國外治癒百分比不當台灣個人保證。未符公費仍可評估醫療必要檢查，不以資格延誤診治。",
+    "獨立醫療、職安、消防及法律專業審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "b0691b8b811239cb3dbfbe96962d187cc8e45692a05998b3d19a8689050188e1"
+}

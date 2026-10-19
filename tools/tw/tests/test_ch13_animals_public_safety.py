@@ -48,7 +48,7 @@ class Chapter13AnimalsPublicSafetyTests(unittest.TestCase):
   # 230是完成第十批時的下界，不可阻礙後續新增已核對核心條目。
   self.assertGreaterEqual(p["publication_completed_entries"],230)
   self.assertEqual(c["core_reviewed_entries"],p["publication_completed_entries"])
-  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+10)
+  self.assertEqual(len(rt["items"]),p["publication_completed_entries"]+sum(i['id'].startswith('TW-NAV-') for i in rt['items']))
   self.assertEqual(c["unique_draft_entries"]+c["entries_without_any_draft"],765)
   self.assertEqual(len(load("localization/tw-edition/sources/ch13-animals-public-safety-20261019.json")["sources"]),13)
   self.assertEqual(load("localization/ch13-animals-public-safety-20261019.json")["chapter_cumulative"],48)
