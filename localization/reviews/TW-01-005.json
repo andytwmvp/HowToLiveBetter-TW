@@ -1,0 +1,31 @@
+{
+  "id": "TW-01-005",
+  "reviewer": "ChatGPT（臺灣政府官方公開HTML AI輔助來源核對；非獨立醫療、消防或公共衛生簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-005.md",
+  "target_sha256": "1aa1028acd56ac388839da32112df3e66dbff7c69b6070aaeaa43dc58dcef82a",
+  "source_checks": [
+    {
+      "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=t623202",
+      "claim": "TW-01-005：2024年公告稱近年受理4例野菇中毒送驗，3例綠褶菇、1例擬灰花紋鵝膏，未提供可計算全臺發生率的期間與暴露人口。",
+      "supporting_passage": "2026-10-19政府原始公開HTML可見段落之獨立語意摘要：2024年公告稱近年受理4例野菇中毒送驗，3例綠褶菇、1例擬灰花紋鵝膏，未提供可計算全臺發生率的期間與暴露人口。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19臺灣衛福部、消防局、國健署官方公開HTML逐項AI輔助核對；未宣稱閱讀未取得之PDF及未公開統計母數。"
+    },
+    {
+      "url": "https://www.fda.gov.tw/tc/csmnewsContent.aspx?id=t634623&mid=267",
+      "claim": "TW-01-005：2026年8月高雄通報一家3口疑似食用轉贈不明野菇後嘔吐、腹瀉、頭痛，屬單一家庭事件。",
+      "supporting_passage": "2026-10-19政府原始公開HTML可見段落之獨立語意摘要：2026年8月高雄通報一家3口疑似食用轉贈不明野菇後嘔吐、腹瀉、頭痛，屬單一家庭事件。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19臺灣衛福部、消防局、國健署官方公開HTML逐項AI輔助核對；未宣稱閱讀未取得之PDF及未公開統計母數。"
+    }
+  ],
+  "localization_changes": "臺灣雨後公園、社區轉贈野菇與2024送驗及2026高雄通報；不拿個案數冒充年發生率。",
+  "review_method": "臺灣生活情境、事件統計分母與分子、民眾行動及緊急119分流之AI輔助核對，非獨立專業簽證。",
+  "limits": [
+    "2024近年4例為食藥署送驗案例，2026高雄一家3口為單次通報，沒有全臺暴露分母。",
+    "來源可見官方公開HTML；無可比全臺暴露母數則不推算個人風險；高風險情況不等待統計驗算。"
+  ]
+}
