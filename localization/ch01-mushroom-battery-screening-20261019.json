@@ -1,0 +1,36 @@
+{
+  "chapter": 1,
+  "part": 2,
+  "date": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "base_main_sha": "7a53257e911c0e5632ef59b522142ded3dfd46dc",
+  "completed_ids": [
+    "TW-01-005",
+    "TW-01-006",
+    "TW-01-007",
+    "TW-01-008"
+  ],
+  "chapter_total": 48,
+  "chapter_cumulative": 8,
+  "chapter_pending": 40,
+  "core_completed_after": 238,
+  "core_total": 765,
+  "runtime_items_after": 248,
+  "navigation": 10,
+  "new_sources_count": 8,
+  "new_source_ids": [
+    "ch01_fda_wildmushroom_202411",
+    "ch01_khh_wildmushroom_202608",
+    "ch01_ntpc_twheelfire_202601",
+    "ch01_tpe_evfire_2018_2024",
+    "ch01_hpa_722_2026",
+    "ch01_hpa_3040_triple_2026",
+    "ch01_hpa_adultprevent_202607",
+    "ch01_hpa_adultprevent_202501"
+  ],
+  "publication_ready": false,
+  "frequency_method": "食藥署近年野菇4例送驗和高雄一家3口為不同個案口徑；新北二輪車火災71／242是案件占比，臺北49與30為另一縣市及期間；2019至2023年30至39歲高血壓9.7%、高血糖2.5%為分齡盛行率非年發生率。",
+  "source_method": "2026-10-19臺灣政府原始公開HTML AI輔助核對，未假稱閱讀未取得PDF與原始個案。",
+  "professional_review": "AI-assisted public-source review only, not independent medical, firefighting or epidemiological signoff",
+  "published_to_public_website": false
+}
