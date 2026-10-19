@@ -68,7 +68,14 @@ def check_navigation(page, context, url, review):
     page.goto(url+'index.html#%EF',wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     assert page.locator('.q').count()==len(expected)
-    page.locator('#q').fill('乳癌');assert page.locator('.q').count()==1
+    page.locator('#q').fill('乳癌')
+    # 新增合法正文後可能有多個命中；逐項核對真正應命中的 ID，不凍結為一筆。
+    expected_search = {e['id'] for e in data['items']
+                       if '乳癌' in ' '.join(e[k] for k in ('title', 'body', 'limits'))}
+    actual_search = set(page.locator('.q').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))
+    assert actual_search == expected_search
+    assert page.locator('.q').count() == len(expected_search)
+    assert 'TW-NAV-004' in actual_search
     page.goto(url+'selfcheck.html',wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     page.locator('#sex').select_option('f')
