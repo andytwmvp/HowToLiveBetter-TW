@@ -49,6 +49,7 @@ jobs:
           node tools/sync-stats.mjs --check
           python3 tools/tw/image_copy.py --check
           python3 tools/tw/reuse_policy.py --check
+          python3 tools/tw/retroactive_audit.py --check --report "$TW_REVIEW_DIR/retroactive-audit.json"
       - name: 臺灣與原作匯出物及內部連結
         run: |
           set -euo pipefail
