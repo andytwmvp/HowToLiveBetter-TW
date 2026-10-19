@@ -111,9 +111,11 @@ def run(render: bool,browser_test: bool) -> None:
             from check_crisis_symptoms_browser import check_crisis_symptoms_browser
             from check_hiv_prevention_browser import check_hiv_prevention_browser
             from check_risk_response_browser import check_risk_response_browser
+            from check_gambling_prep_bone_browser import check_gambling_prep_bone_browser
             result['checks'].extend(check_crisis_symptoms_browser(page,context,url,review))
             result['checks'].extend(check_hiv_prevention_browser(page,context,url,review))
             result['checks'].extend(check_risk_response_browser(page,context,url,review))
+            result['checks'].extend(check_gambling_prep_bone_browser(page,context,url,review))
             from check_ch23_browser import check_ch23_browser
             result['checks'].extend(check_ch23_browser(page,context,url,review))
             from check_ch25_browser import check_ch25_browser

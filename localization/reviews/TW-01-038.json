@@ -1,0 +1,54 @@
+{
+  "id": "TW-01-038",
+  "reviewer": "ChatGPT（AI輔助臺灣公開原始資料及指定PDF段落核對，非專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-038.md",
+  "target_sha256": "c0d56062ecb5dd4fd47ef3b2e51d5697ce1066a7a2c9e0f11cbf4ea914b0f4be",
+  "source_checks": [
+    {
+      "url": "https://www.cdc.gov.tw/Category/MPage/tXBKgpeVZ9l9929TEdZGJw",
+      "claim": "PrEP先確認無HIV感染並經醫師評估；非百分之百保護且不能取代保險套；公費及自費名單分列。",
+      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：PrEP先確認無HIV感染並經醫師評估；非百分之百保護且不能取代保險套；公費及自費名單分列。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀HTML資源說明、名單版本及附件入口，實際PDF另行追取；不把頁面各區更新日當每份指引修訂日。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/QAPage/pzjkJa4dgVjdk6emQjM-3g",
+      "claim": "HIV陰性經高風險評估之本國籍35歲含以下、感染者相異配偶／伴侶與特定例外，受名額限制；不符者可評估自費。",
+      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：HIV陰性經高風險評估之本國籍35歲含以下、感染者相異配偶／伴侶與特定例外，受名額限制；不符者可評估自費。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "直接HTTPS及web實讀各問答；資格項標示2025-01-06，計畫延續項2024-12-31；不冒稱全份2026新公告。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Uploads/4d8e6888-b89e-4596-a78e-9a49b9a5bda5.pdf",
+      "claim": "使用前評估HIV、腎功能、肝炎、用藥與懷孕；口服用藥定期HIV檢查；不同藥物及使用方式適用族群不同，B肝須注意停藥追蹤。",
+      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：使用前評估HIV、腎功能、肝炎、用藥與懷孕；口服用藥定期HIV檢查；不同藥物及使用方式適用族群不同，B肝須注意停藥追蹤。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "由File/Get的內嵌PDF追至Uploads，實讀PDF第5、17、18、38至40、81至82頁文字，目視81頁流程；非全篇專業指引驗證，不採77頁誤寫無法預防HIV或82頁一律自費句。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Uploads/51c787f5-6b22-45eb-892b-6dfdd91da2e4.pdf",
+      "claim": "提供各地合作醫療入口，表首註記僅供參考、實際時段依機構公告。",
+      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：提供各地合作醫療入口，表首註記僅供參考、實際時段依機構公告。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "由File/Get內嵌追取實際PDF，實讀首頁表首與臺北列；未逐院核實、未確認即時名額，不抄全冊電話或門診時間。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/MPage/uo89XT3izngK6IY0wv8BNg",
+      "claim": "非職業體液暴露先由醫師評估風險，PEP應於72小時內且24小時內最佳，療程一般28天，服務院所名單於115年8月27日更新。",
+      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：非職業體液暴露先由醫師評估風險，PEP應於72小時內且24小時內最佳，療程一般28天，服務院所名單於115年8月27日更新。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實讀相關公開HTML正文；圖像影片不宣稱已驗證。"
+    }
+  ],
+  "localization_changes": "依台灣危機、PrEP及骨鬆服務獨立撰寫，移除密碼交付、國外單一效果保證及自動給付假設。",
+  "review_method": "逐頁實讀相關原始公開資訊，圖表、附件與取得限制分項記錄。",
+  "limits": [
+    "**台灣頻率與效果限制：**公費加入人數、推估避免感染數或HIV診斷通報，都不是台灣PrEP使用者的隨機試驗或個人單次暴露風險。2025學會指引彙整國際研究，不能把試驗結果直接當台灣每個人的效果。資格問答2025-01-06更新、計畫年度延續規則與2026名冊版本分開；指引不是補助公告，也不表示其中每種產品都已公費提供。",
+    "未取得相關獨立專業審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "deac6d5100e373ab72084a3ee509bccc07c5b91e2b4ffce5e0ea063a39bf0361"
+}
