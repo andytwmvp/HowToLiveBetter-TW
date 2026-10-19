@@ -9043,6 +9043,201 @@
         "酒味不能用來排除腦中風、頭傷、低血糖或其他藥物中毒，務必由醫護鑑別。**側臥不取代CPR**：若無正常呼吸或只有不正常喘息，必須依119指示急救。皮膚冰冷、反覆嘔吐等要警覺惡化；不能放人『睡過去』。臺灣急救電話為119而非原作120。現有兩份臺灣醫院公開衛教並沒有全國急性酒精中毒的發生率母數，不能據此創造固定年發生數。\n\n本輪重讀彰基HTML與松德介紹頁，後者酒精中毒PDF僅見入口，未冒稱讀全文。美國NIAAA只採持續吸收與危急原則，不移植美國杯數、族群風險或發生率；台灣急性中毒分母仍不足。",
         "獨立醫療、職安、消防及法律專業審閱仍待取得。"
       ]
+    },
+    {
+      "id": "TW-13-030",
+      "before_sha256": "a981e44db7b1b45efe865209ab3d5aa55309ab4d39b8c51fc8ab35d5cbb945f3",
+      "after_sha256": "005faff80eebc65da89534c908b9f86112caa117de4f9dab9723459d6e2829b1",
+      "prior_revision": "c530f53fbf97b9c90ba6e90824e57b36cb2bafcb",
+      "prior_review_sha256": "aefd0f92f8ac1ca01c6aa7a34c92c65b3326c4d87a7d8617ff6bfd7e42c46872",
+      "reviewed_at": "2026-10-20",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣住宅、公共場所、機車與沿海遊憩；停搖及海嘯自然警訊分開。",
+      "frequency_assessment": "實讀氣象署地震頻率頁，監測能力與範圍改變影響件數。概括年均4萬、其中有感1千未交代平均期間，不採為當年固定值或個人傷亡率；圖表未讀，未虛構住宅暴露分母。",
+      "changes": "補海嘯自然警訊不等待警報，強震不為關瓦斯移動、機車安全停車與震後避開受損建物；加監測件數界線。",
+      "source_checks": [
+        {
+          "url": "https://scweb.cwa.gov.tw/zh-tw/page/intro/11",
+          "claim": "地震發生時室內採趴下、掩護、穩住；保護頭頸，不要慌張衝往室外。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：地震發生時室內採趴下、掩護、穩住；保護頭頸，不要慌張衝往室外。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=16075&code=list&flag=detail&ids=21",
+          "claim": "TW-13-030：地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
+          "supporting_passage": "前次主張，本輪未重讀：TW-13-030：地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "本輪web與直接HTTPS均失敗（TLS憑證），保留前查閱日；交叉核對可讀氣象署及臺中消防正文。"
+        },
+        {
+          "url": "https://scweb.cwa.gov.tw/zh-tw/guidance/faqdetail/107",
+          "claim": "海邊劇烈搖晃、海水異常或海嘯警報須離開水域、往高處或內陸，不等警報確認。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：海邊劇烈搖晃、海水異常或海嘯警報須離開水域、往高處或內陸，不等警報確認。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://scweb.cwa.gov.tw/zh-TW/Guidance/FAQdetail/55",
+          "claim": "監測設備提升會改變偵測量；頁面概括年均量未列平均期間，不當個人受傷機率。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：監測設備提升會改變偵測量；頁面概括年均量未列平均期間，不當個人受傷機率。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://www.taichung.gov.tw/1391133/1391134/1391160/nodeCp?nodeId=3338813",
+          "claim": "劇烈搖晃先掩護，不急著關瓦斯；停搖確認安全後再檢查，公共場所避免推擠與折返。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：劇烈搖晃先掩護，不急著關瓦斯；停搖確認安全後再檢查，公共場所避免推擠與折返。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        }
+      ],
+      "limits": [
+        "趴下、掩護、穩住是一般情境優先原則，不是建物結構鑑定，也不能保證嚴重受損建築仍安全。若遇火災、瓦斯洩漏或海嘯威脅，須依現場及權責機關指示處理；停搖後當心餘震，切勿貿然回到已受損建築。戶外、山區、行車及行動不便者的避難方式因情境不同，需要另行判斷。\n\n台灣事件頻率：氣象署說明監測設備與涵蓋範圍會改變可偵測件數；概括年均數沒有交代完整平均期間，不當成2026年固定次數。地震事件數不是個人受傷機率，也不能據此判斷某屋齡建物會否倒塌；本輪未讀年次圖表或逐屋結構資料。",
+        "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-032",
+      "before_sha256": "0f7c129660b1da5136041c8d06e69f752acc22b985653d72e69a8bd7ec963ef0",
+      "after_sha256": "feed0e37c0ed976a8bb8127eb5a4feb1baa8ad02d82bb0b3e873890a7af886ec",
+      "prior_revision": "c530f53fbf97b9c90ba6e90824e57b36cb2bafcb",
+      "prior_review_sha256": "d5d6c408c374cf7a0d4b34173fd340a95eb906c1a195d15d35933ad8deb35696",
+      "reviewed_at": "2026-10-20",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "山稜、球場、農作與機車通勤雷雨，可靠室內與硬頂車及傷者急救。",
+      "frequency_assessment": "台北及國家公園安全頁為一般情境宣導，不是全國雷擊傷亡統計；NWS只採一般安全原則，不移植美國傷亡數。",
+      "changes": "校正30分鐘歸因與最後雷聲或閃電重算；補不殘留電荷、室內水管電線限制與懸崖下方的突出遮蔽處不可靠，不採睡墊絕緣保證。",
+      "source_checks": [
+        {
+          "url": "https://fsm.119.gov.taipei/w/fsm119/OtherDisasters_21103020191025470",
+          "claim": "聽見雷聲或雲層接近應進入堅固建築物或汽車、公車內部，避開稜線、山頂涼亭、孤立樹木、空曠地與水域。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：聽見雷聲或雲層接近應進入堅固建築物或汽車、公車內部，避開稜線、山頂涼亭、孤立樹木、空曠地與水域。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "web擷取未顯示正文；直接驗證HTTPS實讀HTML文字。不把蹲低當安全保證。"
+        },
+        {
+          "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/news/26824.html",
+          "claim": "台灣山區午後雷雨及坍方風險；原頁山洞、睡墊與閃電停止後說法不直接作可靠防護保證。",
+          "supporting_passage": "獨立編輯摘要及差異紀錄：台灣山區午後雷雨及坍方風險；原頁山洞、睡墊與閃電停止後說法不直接作可靠防護保證。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://www.weather.gov/safety/lightning-safety-overview",
+          "claim": "可靠封閉建物與硬頂車、室內避電線水管、最後雷聲或閃電後至少30分鐘；傷者不帶殘餘電荷。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：可靠封閉建物與硬頂車、室內避電線水管、最後雷聲或閃電後至少30分鐘；傷者不帶殘餘電荷。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://www.weather.gov/safety/lightning-tips",
+          "claim": "雷雨無安全戶外處；避孤樹、水域、峭壁及懸崖下方的突出遮蔽處，不以低姿勢或睡墊保證安全。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：雷雨無安全戶外處；避孤樹、水域、峭壁及懸崖下方的突出遮蔽處，不以低姿勢或睡墊保證安全。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        }
+      ],
+      "limits": [
+        "不要以「沒有下雨就不會雷擊」、「附近最高是避雷針就能待在戶外」、「一棵大樹可以擋雷」作保證。雨傘、相機腳架或自行車等不應在開闊地繼續使用，但並非只要移除金屬就安全；**離開雷雨暴露環境才是核心**。臺灣地形、季節和活動類型各異，不能由一般午後雷陣雨資訊推算每人雷擊機率。\n\n本輪重讀國家公園2025舊頁，其山洞、乾睡墊及「閃電停止後」說法未直接採為安全保證；以NWS的可靠封閉掩蔽與最後雷聲或閃電交叉核對。這些來源不是台灣雷擊病例監測，仍無可用的全國同定義傷亡與活動人次分母。",
+        "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-033",
+      "before_sha256": "11d14023a65011c198da829eec8adacd1afcb85b09470349f98db498f2bf403c",
+      "after_sha256": "ab16b756027219451f3b17c110fe3917b4c7a4d125039f0d2e1ec16d3f518441",
+      "prior_revision": "c530f53fbf97b9c90ba6e90824e57b36cb2bafcb",
+      "prior_review_sha256": "430bdb463e90f68ed5de3470a8692ac0f0f96b2001ab8d6ba454d87eeff1ed01",
+      "reviewed_at": "2026-10-20",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "玉山排雲及快速搭車至合歡山等高海拔，夜宿海拔、同行與山屋待援。",
+      "frequency_assessment": "原始2010研究摘要36%對應2007至2008排雲1066問卷，確切分子與評分閾值未在摘要交代；2026研究摘要為2023至2024醫療站871就醫者、558臨床AMS。抽樣對象及評分不同，不跨年比較或推論全國風險；均未讀全文。",
+      "changes": "追到36%原始摘要並加最新醫療站樣本不同分母；補症狀不往更高處過夜、血氧不能單獨放行、氧氣罐不代替救援。",
+      "source_checks": [
+        {
+          "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/news/33929.html",
+          "claim": "高山症即使體能好也可能發生；惡化、喘、意識或步態異常須停止上升，盡速下撤並求援；PAC僅為暫時輔助。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：高山症即使體能好也可能發生；惡化、喘、意識或步態異常須停止上升，盡速下撤並求援；PAC僅為暫時輔助。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/news/27365",
+          "claim": "2017年舊公告曾引用玉山山友36%估值，但沒有完整樣本、期間與定義，不是2026年全臺登山發生率。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：2017年舊公告曾引用玉山山友36%估值，但沒有完整樣本、期間與定義，不是2026年全臺登山發生率。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html",
+          "claim": "有症狀不往更高處過夜，惡化需下降；嚴重症狀要減少用力，氧氣小罐與加壓袋不取代撤離。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：有症狀不往更高處過夜，惡化需下降；嚴重症狀要減少用力，氧氣小罐與加壓袋不取代撤離。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20367488/",
+          "claim": "2007年4月至2008年3月排雲山莊1066份問卷，以Lake Louise評估，摘要報告36%樣本盛行比例；非全國現況。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：2007年4月至2008年3月排雲山莊1066份問卷，以Lake Louise評估，摘要報告36%樣本盛行比例；非全國現況。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "PubMed頁遇機器驗證；透過NCBI官方E-utilities efetch XML實讀該PMID原始摘要與書目，未讀全文，不冒稱完整研究方法及原始數據審查。"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41643499/",
+          "claim": "2023至2024排雲醫療站871名就醫者中558人臨床診斷AMS（64.1%），並以2018 Lake Louise核對；非全體登山者。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：2023至2024排雲醫療站871名就醫者中558人臨床診斷AMS（64.1%），並以2018 Lake Louise核對；非全體登山者。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "PubMed頁遇機器驗證；透過NCBI官方E-utilities efetch XML實讀該PMID原始摘要與書目，未讀全文，不冒稱完整研究方法及原始數據審查。"
+        }
+      ],
+      "limits": [
+        "低血糖、感染、脫水與失溫可能出現類似症狀，不由同伴自行確診或保證藥物有效。頭痛止痛藥不代表已適應海拔；症狀持續或加劇絕不可勉強上升。2017年36％公告本身沒有原研究引文，2026年『多起』沒有精確件數；新補的兩個原研究摘要也有不同選樣限制，**不能當成個別登山者今年的發生率**。下撤若遇夜間暴雨、崩壁或雷擊危險，應由119評估更安全的待援與撤離方式。\n\n原始摘要未提供完整抽樣拒訪、所有評分閾值與資料清理流程，本輪未驗證全文、原始問卷或重算結果；原研究就醫者樣本不能推廣至未就醫者。國外高山病處置只採一般原則，不移植美國發生率、處方劑量或氧氣供應制度。",
+        "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-040",
+      "before_sha256": "622d5a91f9c40fe72e6abf1e3b0c05b3ca0c91841217db33dfe3729c6a595141",
+      "after_sha256": "d667fb25d81480236d75efa581923ef0d0ebe2ba6849fdf6a965c2ebc84ecc70",
+      "prior_revision": "c530f53fbf97b9c90ba6e90824e57b36cb2bafcb",
+      "prior_review_sha256": "004e7ec2aa95e559a690010ec9e7c509a0903a979c53aa3003dffa8625523f8a",
+      "reviewed_at": "2026-10-20",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "工地鋼筋、交通玻璃與家用工具穿刺，部位與大出血處置分開。",
+      "frequency_assessment": "台南消防與國防HTML是急救原則，無台灣同定義嵌入異物病例及暴露分母；不用全部外傷或職災數推估。",
+      "changes": "校正四肢大量出血非一律輕壓，與胸腹頸眼分流；不為沖洗延誤止血，不自行截短搬運固定鋼筋；補頻率不足。",
+      "source_checks": [
+        {
+          "url": "https://119.tainan.gov.tw/News_Content.aspx?n=25539&s=8545256",
+          "claim": "2026年更新的消防局止血教學指出鐵釘、玻璃刺入不可擅自拔除，應穩定並用布料固定周圍。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：2026年更新的消防局止血教學指出鐵釘、玻璃刺入不可擅自拔除，應穩定並用布料固定周圍。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "web擷取未顯示正文；直接驗證HTTPS取得HTML並實讀相關文字。台南原上版2023-05-05、修改2026-08-19，頁尾更新不是首發日期。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+          "claim": "大量出血應立即打119並先加壓止血；危及生命的四肢大量出血可用止血帶，頭頸不可用止血帶。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：大量出血應立即打119並先加壓止血；危及生命的四肢大量出血可用止血帶，頭頸不可用止血帶。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        },
+        {
+          "url": "https://www.nhs.uk/conditions/cuts-and-grazes/",
+          "claim": "仍嵌入的物體不可取出或壓本體；傷口兩側加壓與乾淨敷料，適用一般外傷，不取代胸腹特殊處置。",
+          "supporting_passage": "獨立編輯摘要，非逐字引文：仍嵌入的物體不可取出或壓本體；傷口兩側加壓與乾淨敷料，適用一般外傷，不取代胸腹特殊處置。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+        }
+      ],
+      "limits": [
+        "穿刺異物和一般淺表割傷不同，不應直接用力壓住仍插在身體的刀柄或玻璃，也不該以止血帶繞頸、胸或腹部。眼球穿刺、重物壓傷或電鋸受傷需另依專門急救規範；不要誤把大出血教學的直接壓迫用到嵌入異物本體。即使暫時沒流血，仍需依專業救護決定送醫方式。\n\n台灣事件頻率資料不足：消防及全民安全指引提供處置原則，沒有全國同定義嵌入異物病例與暴露分母；不以全部外傷、所有職災或單一新聞病例推算個人率。本輪只讀國防部HTML指定傷患段落，未複製小橘書PDF、圖表或影片。",
+        "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
+      ]
     }
   ]
 }
