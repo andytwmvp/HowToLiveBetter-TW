@@ -1,0 +1,47 @@
+{
+  "id": "TW-01-036",
+  "reviewer": "ChatGPT（AI輔助臺灣公開資料、指定PDF文字與統計表圖核對，非專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-036.md",
+  "target_sha256": "d75455275b1749b5945e3328ac6891da5018de715c39a913ac0d5feb1c7f2350",
+  "source_checks": [
+    {
+      "url": "https://www.nusc.gov.tw/%E4%BF%9D%E5%AE%89%E6%87%89%E8%AE%8A/%E6%A0%B8%E5%AE%89%E7%9B%A3%E7%AE%A1%E5%85%A8%E5%B9%B4%E7%84%A1%E4%BC%91--5484_5489_5501.html",
+      "claim": "監管中心全天24小時受理核安輻安疑慮與事件，通報專線0800-088-928。",
+      "supporting_passage": "本次實讀相關段落的獨立語意摘要，非逐字引文：監管中心全天24小時受理核安輻安疑慮與事件，通報專線0800-088-928。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀官方HTML事件通報窗口及專線段落；不引用固定監測站數作無遺失射源證明。"
+    },
+    {
+      "url": "https://erss.nusc.gov.tw/law/LawContent.aspx?id=GL000036",
+      "claim": "2023-12-13修正，鋼鐵及準用之回收業隔離管制、通報及專業協助；不得任意退運或轉給其他業者。",
+      "supporting_passage": "本次實讀相關段落的獨立語意摘要，非逐字引文：2023-12-13修正，鋼鐵及準用之回收業隔離管制、通報及專業協助；不得任意退運或轉給其他業者。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "第一次web逾時後重取成功並實讀HTML；屬業者作業導則，劑量偵測門檻及2／48小時程序不套為民眾可等待或自行操作之標準。"
+    },
+    {
+      "url": "https://gnssn.iaea.org/CSN/Scrap/SitePages/Prevention%20and%20Response.aspx",
+      "claim": "疑似失控放射源或設備不觸碰、離開周邊並避免他人接近、增加距離並通知主管機關；標誌可能很小或看不見。",
+      "supporting_passage": "本次實讀相關段落的獨立語意摘要，非逐字引文：疑似失控放射源或設備不觸碰、離開周邊並避免他人接近、增加距離並通知主管機關；標誌可能很小或看不見。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實讀IAEA原始HTML一般防護原則；台灣通報另依核安會，不以其5公尺概述作現場安全距離保證，不採停留幾分鐘可能安全之泛化句。"
+    },
+    {
+      "url": "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029236/ch07/type2/gov61/num32/Eg.pdf",
+      "claim": "核輻字第11200186972號令修正鋼鐵業者輻射異常物通報處理導則，2023-12-13公布並自即日生效。",
+      "supporting_passage": "web工具實讀原始官方PDF第1頁修正令之獨立摘要：2023-12-13修正導則並自同日生效；本地下載及HTML仍受403限制。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "HTML及本地直接HTTPS讀取遭403；web工具可讀原始官方PDF，實讀第1頁修正令文字確認2023-12-13及自即日生效，並與核安會現行導則／沿革交叉核對。未宣稱下載成功或審核附錄表格。"
+    }
+  ],
+  "localization_changes": "獨立依臺灣中毒創傷求援、無償器官規定與核安通報編寫；不採原作威嚇、傷害方法或未核實比例。",
+  "review_method": "實讀相關HTML；職災PDF讀1、2、4頁並目視第4頁，腎捐贈說明書讀兩頁文字。",
+  "limits": [
+    "**臺灣頻率資料限制：**核安會公開管制及支援偵測資訊不是民眾撿到失控射源的全國發生率；本次未取得同定義案件與全暴露人口分母，不估個人機率。低頻率不代表可以自行試驗。本文引用IAEA一般防護原則，台灣通報與業者規範另依核安會；不複製其器材照片、標籤或以國外事件推算台灣風險。",
+    "專業醫療、法律、移植及輻防獨立審閱仍待取得。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "be965b045d6b49878c7ecbfa3877ec784f3a070ca1656c75289db2cdb447dab6"
+}

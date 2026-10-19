@@ -888,9 +888,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：新竹臺大2021衛教所稱每年1至2例為單院以心肌梗塞表現之個案，無全國胸痛患者分母，不是台灣主動脈剝離發生率；年齡及性別概述不能排除年輕人或女性急症。"
     },
     {
       "id": "TW-13-009",
@@ -907,9 +907,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：臺大2024演講概述90%與10%未列抽樣母數及期間，且談全部頭痛，不能拿來計算雷擊性頭痛者出血機率或當作不就醫理由。"
     },
     {
       "id": "TW-13-010",
@@ -927,9 +927,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：兩篇頭部外傷照護無可用台灣撞頭長者全體分母及同期間延遲出血病例數，無法估算個人幾週後血腫機率，不能將急診返家衛教當全國發生率。"
     },
     {
       "id": "TW-13-011",
@@ -947,9 +947,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：臺北醫院所述80%位置分佈及病例增加趨勢沒有可用台灣全國樣本期間與分母；不是單腿腫痛者罹DVT機率，也不能由所有血栓死亡估肺栓塞發生率。"
     },
     {
       "id": "TW-13-012",
@@ -8408,6 +8408,139 @@
         "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
         "頻率限制：2020聯醫頁40歲以上2%與全人口0.5%概述未有同一調查期間及樣本，且涵蓋各型青光眼，不能換算急性隅角閉鎖發生率或個人失明率。",
         "AI輔助來源再核對，專業再審待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-008",
+      "before_sha256": "279dcc00b85cce371298e2401874528d7037a7dc6b99819d3d78ecf481657f28",
+      "after_sha256": "075ea55ae2545ce276bdd1ed98305032cad75dc314ba7f9eb04527a5056d0fe1",
+      "prior_revision": "aa3aa1c19a1c88b6e1ecf95424086fa59da965e4",
+      "prior_review_sha256": "aeb81de61ebe71d96311a8ba6c58359623c4af07d92ee0ebedc9c49e0f779135",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣家中、通勤與工作突發胸背痛，先119不等自行量雙手血壓。",
+      "frequency_assessment": "頻率限制：新竹臺大2021衛教所稱每年1至2例為單院以心肌梗塞表現之個案，無全國胸痛患者分母，不是台灣主動脈剝離發生率；年齡及性別概述不能排除年輕人或女性急症。",
+      "changes": "補單院個案與全國頻率界線，不以血壓比較、典型痛或數小時演變作等待理由。",
+      "source_checks": [
+        {
+          "url": "https://www.hch.gov.tw/?aid=626&iid=48&page_name=detail&pid=5",
+          "claim": "TW-13-008：新竹臺大分院心臟血管內科衛教載明主動脈剝離可能突然出現劇烈胸、背或腹痛，伴隨昏厥、手腳無力或呼吸困難。",
+          "supporting_passage": "臺灣官方／公立醫院HTML可見內容之編輯摘要（非逐字引文）：新竹臺大分院心臟血管內科衛教載明主動脈剝離可能突然出現劇烈胸、背或腹痛，伴隨昏厥、手腳無力或呼吸困難。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北醫院DVT以直接HTTPS讀取成功，不以web失敗當來源失效。只核對相關段落，非全部療程／圖像／影片專業審查。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/684",
+          "claim": "TW-13-008：臺北榮總2025年主動脈疾病照護衛教說明剝離分型與專業手術／藥物治療判斷，不能自行決定處置。",
+          "supporting_passage": "臺灣官方／公立醫院HTML可見內容之編輯摘要（非逐字引文）：臺北榮總2025年主動脈疾病照護衛教說明剝離分型與專業手術／藥物治療判斷，不能自行決定處置。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北醫院DVT以直接HTTPS讀取成功，不以web失敗當來源失效。只核對相關段落，非全部療程／圖像／影片專業審查。"
+        }
+      ],
+      "limits": [
+        "主動脈剝離不能只靠疼痛是否『撕裂』判定或排除，心肌梗塞、肺栓塞等亦可能急性胸痛，少數剝離可能以昏厥或神經症狀為主。不要自行服用阿斯匹靈、抗凝血藥或擅自加倍降血壓藥；也不要按摩胸背、跑動、自己開車或以網路症狀表決定送哪一科。心電圖或初步抽血結果不能由一般民眾拿來排除所有主動脈急症。",
+        "個案病情、費用與結果不作保證，也不冒充醫師、急救教官、消防或其他正式專業簽證。",
+        "頻率限制：新竹臺大2021衛教所稱每年1至2例為單院以心肌梗塞表現之個案，無全國胸痛患者分母，不是台灣主動脈剝離發生率；年齡及性別概述不能排除年輕人或女性急症。",
+        "AI輔助來源實質再核對，獨立專業審閱待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-009",
+      "before_sha256": "0ba6a74497e2560369da421b03bed8cc8b6b82c0e7b975b99a1c3797cc7b1570",
+      "after_sha256": "49131df09fbd7bcdcf2e9865104d4192ea7de1925a2eca21cecacab6788d4db1",
+      "prior_revision": "aa3aa1c19a1c88b6e1ecf95424086fa59da965e4",
+      "prior_review_sha256": "75470161033e1371f73347a72bed1e8ead922a35c496bf936646cad37a1e975f",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "突然爆炸性頭痛停止開車騎車、記起始時間，疼痛減輕仍急診。",
+      "frequency_assessment": "頻率限制：臺大2024演講概述90%與10%未列抽樣母數及期間，且談全部頭痛，不能拿來計算雷擊性頭痛者出血機率或當作不就醫理由。",
+      "changes": "補一般頭痛百分比不能套雷擊性急症，且神經檢查及影像由醫師評估。",
+      "source_checks": [
+        {
+          "url": "https://www.ntuh.gov.tw/RMC/Fpage.action?fid=8028&muid=",
+          "claim": "TW-13-009：臺大神經部衛教指雷擊性頭痛可在約一分鐘達高峰，應考慮蜘蛛膜下腔出血等血管急症；檢查由醫師決定。",
+          "supporting_passage": "臺灣公立醫院公開HTML可見段落之編輯摘要（非逐字引文）：臺大神經部衛教指雷擊性頭痛可在約一分鐘達高峰，應考慮蜘蛛膜下腔出血等血管急症；檢查由醫師決定。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北醫院DVT以直接HTTPS讀取成功，不以web失敗當來源失效。只核對相關段落，非全部療程／圖像／影片專業審查。"
+        }
+      ],
+      "limits": [
+        "突然最劇烈頭痛不一定是蜘蛛膜下腔出血，其他血管性與非血管性疾病也可能出現相似表現。不是頭痛超過一小時才算緊急，也不能要求每個人必做指定的電腦斷層檢查；影像、必要的進一步檢查與用藥由急診醫師依個案判斷。不要自行服用阿斯匹靈或抗凝血藥企圖急救、按摩頸部、拖延至隔日門診。",
+        "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
+        "頻率限制：臺大2024演講概述90%與10%未列抽樣母數及期間，且談全部頭痛，不能拿來計算雷擊性頭痛者出血機率或當作不就醫理由。",
+        "AI輔助來源實質再核對，獨立專業審閱待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-010",
+      "before_sha256": "c005d7fef0db2dc7ba20961fcb3d43e6fbf59f99d5287617db4c242f16b000ff",
+      "after_sha256": "1ddad277fbe68b5a272c00dce99d46d95f8b262bb27f2c0101a1b35a424e46f2",
+      "prior_revision": "aa3aa1c19a1c88b6e1ecf95424086fa59da965e4",
+      "prior_review_sha256": "8cae679b1eb7bb730b43fead7dd129a959f47c0d2a1c155d4e50618f67c590fc",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "獨居長者、照顧者與慢性病用藥者在返家後追蹤新發認知與步態變化。",
+      "frequency_assessment": "頻率限制：兩篇頭部外傷照護無可用台灣撞頭長者全體分母及同期間延遲出血病例數，無法估算個人幾週後血腫機率，不能將急診返家衛教當全國發生率。",
+      "changes": "補返家照護與重症再就醫界線，明示772急症圖未納本次具體症狀驗證，改由340可讀正文支持。",
+      "source_checks": [
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/340",
+          "claim": "TW-13-010：2026年修訂衛教提醒頭傷可能影響意識、記憶與步態，數月後症狀仍須留意，影像由醫師決定。",
+          "supporting_passage": "指定原始公開HTML頁面可見資訊之編輯摘要（非逐字引文）：2026年修訂衛教提醒頭傷可能影響意識、記憶與步態，數月後症狀仍須留意，影像由醫師決定。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北醫院DVT以直接HTTPS讀取成功，不以web失敗當來源失效。只核對相關段落，非全部療程／圖像／影片專業審查。原文受傷發生前24小時句疑誤不採，未抄其時數作保證。"
+        },
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/772",
+          "claim": "可讀文字提醒頭傷後觀察、避免再撞與發現變化就醫；急症警訊圖未讀，不將其列具體症狀已驗證。",
+          "supporting_passage": "相關HTML獨立摘要：陪伴觀察意識變化、避免騎車及再撞、發現變化儘速就醫；具體嘔吐、叫不醒等依同條340頁正文支持。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北醫院DVT以直接HTTPS讀取成功，不以web失敗當來源失效。只核對相關段落，非全部療程／圖像／影片專業審查。"
+        }
+      ],
+      "limits": [
+        "沒有立即昏迷、沒有頭皮傷口，不能排除顱內問題。腦中風、代謝問題、感染及藥物因素也可能造成類似症狀，不以網路測驗確診。勿擅自停服或加倍抗凝血藥、用止痛藥掩蓋惡化、按摩頭頸，亦不能要求每名撞頭長者均接受相同CT。嚴重意識變化是急症，現場依119與醫療團隊判斷。",
+        "診療、藥物、影像、實際費用及健保資格由主管醫療人員依個案判定，緊急求救優先119。",
+        "頻率限制：兩篇頭部外傷照護無可用台灣撞頭長者全體分母及同期間延遲出血病例數，無法估算個人幾週後血腫機率，不能將急診返家衛教當全國發生率。",
+        "AI輔助來源實質再核對，獨立專業審閱待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-011",
+      "before_sha256": "cf9261a9bf9bb0a8ba8b4a0df20e5c1d284dd98f4747f982268ae8d79a6786e7",
+      "after_sha256": "d803b2d7678141cfdded16b5043ee699ffd7c1ed66a185f7ace50bf4fc2489fb",
+      "prior_revision": "aa3aa1c19a1c88b6e1ecf95424086fa59da965e4",
+      "prior_review_sha256": "fc47d153e0c5ddb49a406ab298433fa54a1f0db464181694721c434e199d62e1",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣久坐通勤、術後返家、產後與癌症治療者新發單腿腫痛先就醫。",
+      "frequency_assessment": "頻率限制：臺北醫院所述80%位置分佈及病例增加趨勢沒有可用台灣全國樣本期間與分母；不是單腿腫痛者罹DVT機率，也不能由所有血栓死亡估肺栓塞發生率。",
+      "changes": "重讀兩院文字差異，保留霍門氏自測不準確與治療需個別化，不採一律臥床3至5天或固定藥期。",
+      "source_checks": [
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/1151",
+          "claim": "TW-13-011：深部靜脈血栓可能造成單側腿腫、疼痛及危及生命的肺栓塞。",
+          "supporting_passage": "指定原始公開HTML頁面可見資訊之編輯摘要（非逐字引文）：深部靜脈血栓可能造成單側腿腫、疼痛及危及生命的肺栓塞。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北醫院DVT以直接HTTPS讀取成功，不以web失敗當來源失效。只核對相關段落，非全部療程／圖像／影片專業審查。"
+        },
+        {
+          "url": "https://www.tph.mohw.gov.tw/?aid=63&iid=3&pid=2",
+          "claim": "TW-13-011：單側腿部突然腫痛是血栓警訊，肺栓塞可能危及生命，Homan徵象並不準確。",
+          "supporting_passage": "指定原始公開HTML頁面可見資訊之編輯摘要（非逐字引文）：單側腿部突然腫痛是血栓警訊，肺栓塞可能危及生命，Homan徵象並不準確。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北醫院DVT以直接HTTPS讀取成功，不以web失敗當來源失效。只核對相關段落，非全部療程／圖像／影片專業審查。"
+        }
+      ],
+      "limits": [
+        "衛福部臺北醫院已註明Homan徵象不準確，不能靠扳腳尖是否引發疼痛自行確診。**不要按摩腫痛腿部、用力熱敷或強迫運動，也不可自行服用抗凝血藥或阿斯匹靈。**蜂窩性組織炎、關節肌肉傷害等也會腿腫；壓力襪、臥床與醫囑抗凝血療程需要專業評估，不能將個別舊衛教機械套用成所有人的急救指示。",
+        "診療、藥物、影像、實際費用及健保資格由主管醫療人員依個案判定，緊急求救優先119。",
+        "頻率限制：臺北醫院所述80%位置分佈及病例增加趨勢沒有可用台灣全國樣本期間與分母；不是單腿腫痛者罹DVT機率，也不能由所有血栓死亡估肺栓塞發生率。",
+        "AI輔助來源實質再核對，獨立專業審閱待取得。"
       ]
     }
   ]

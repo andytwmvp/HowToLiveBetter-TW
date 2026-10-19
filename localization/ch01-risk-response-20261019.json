@@ -1,0 +1,97 @@
+{
+  "base_sha": "aa3aa1c19a1c88b6e1ecf95424086fa59da965e4",
+  "new_core_ids": [
+    "TW-01-033",
+    "TW-01-034",
+    "TW-01-035",
+    "TW-01-036"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-008",
+    "TW-13-009",
+    "TW-13-010",
+    "TW-13-011"
+  ],
+  "professional_review": "pending",
+  "sources_added": 10,
+  "source_limits": [
+    "IAEA僅一般不觸碰撤離通報原則，台灣服務與業者規範依核安會；不採5公尺作保證。",
+    "器官條例第8仍特別規定20歲以上，不能以一般民法成年18歲改寫活腎資格；2021公布修正指定2023施行。",
+    "捐腎PDF僅風險種類與自由意願，未採不具原始母數文獻率作台灣發生率。",
+    "772急症警訊圖未驗證，明列限制並由可讀340正文支持具體症狀。",
+    "不讀取或複製國防手冊及其他著作圖像；無新增器材圖，無未公開資訊。",
+    "HTML及本地直接HTTPS讀取遭403；web工具可讀原始官方PDF，實讀第1頁修正令文字確認2023-12-13及自即日生效，並與核安會現行導則／沿革交叉核對。未宣稱下載成功或審核附錄表格。"
+  ],
+  "statistics": [
+    {
+      "topic": "重大職災死亡之墜落滾落",
+      "value": 136,
+      "unit": "人",
+      "period": "2025年",
+      "scope": "台灣全國勞檢機構職業災害死亡調查",
+      "population": "接獲通報後經現場檢查及報告之死亡職災案件",
+      "numerator": 136,
+      "denominator": "全產業重大職災死亡259人；不是全部墜落受傷者或勞工人年",
+      "definition": "死亡人數按墜落滾落分類，另有跌倒類，不等同所有住院或急診",
+      "method": "行政通報及勞檢調查，未能確認工作因果的極少案件待解剖認定未計",
+      "source": "https://www.osha.gov.tw/media/b54h1fj3/114%E5%B9%B4%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+      "published_at": "2026-02-05",
+      "accessed_at": "2026-10-19",
+      "limits": "缺全體墜落者分母，不能算致死率／個人復工；非所有非職業墜落；未重算微資料",
+      "pdf_sha256": "4d7239d740b8565f89f1a3fbd6e992c5cdb18cf14521e14e03ff1d41655a8cb0",
+      "read_text_pages": [
+        1,
+        2,
+        4
+      ],
+      "viewed_table_pages": [
+        4
+      ]
+    }
+  ],
+  "legal_dates": [
+    {
+      "law": "人體器官移植條例",
+      "articles": [
+        9,
+        12,
+        16
+      ],
+      "promulgated_at": "2015-07-01",
+      "effective_at": "2015-07-03",
+      "basis": "第25條及中央法規標準法第13條計算"
+    },
+    {
+      "law": "人體器官移植條例",
+      "articles": [
+        8,
+        25
+      ],
+      "promulgated_at": "2021-01-20",
+      "effective_at": "2023-01-01",
+      "basis": "沿革及第25條指定"
+    },
+    {
+      "law": "鋼鐵業者發現輻射異常物之通報及處理作業導則",
+      "promulgated_at": "2023-12-13",
+      "effective_at": "2023-12-13",
+      "basis": "行政院公報核輻字第11200186972號令明定自即日生效"
+    }
+  ],
+  "counts": {
+    "core_before": 262,
+    "core_after": 266,
+    "chapter1_before": 32,
+    "chapter1_after": 36,
+    "runtime_before": 272,
+    "runtime_after": 276,
+    "source_registry_before": 520,
+    "source_registry_after": 530,
+    "runtime_source_objects_after": 449,
+    "draft_union": 498,
+    "no_draft": 267,
+    "unreviewed_after": 232,
+    "unregistered_source_ids": 115,
+    "unresolved_references": 306
+  }
+}
