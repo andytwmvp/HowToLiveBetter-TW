@@ -56,6 +56,33 @@ class SubstantiveReviewTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, '原始審閱 SHA'):
                 audit.audit()
 
+    def test_recheck_may_append_sources_but_never_remove_or_reorder_prior_sources(self):
+        old, new, record = self.fixture()
+        old['source_ids'] = ['prior_a', 'prior_b']
+        new['source_ids'] = ['prior_a', 'prior_b', 'new_statistics']
+        self.assertTrue(audit.documented_revision(old, new, record))
+        for ids in (['prior_b', 'prior_a'], ['prior_a'], ['prior_a', 'prior_b', 'prior_a']):
+            with self.subTest(ids=ids):
+                self.assertFalse(audit.documented_revision(old, dict(new, source_ids=ids), record))
+
+    def test_appended_source_must_exist_and_match_manifest_and_review(self):
+        record = next(r for r in audit.load(audit.ROOT, 'localization/retroactive-review-register-20261019.json')['substantive_rechecks'] if r['id'] == 'TW-13-014')
+        item = next(i for i in audit.load(audit.ROOT, 'localization/tw-edition/runtime.json')['items'] if i['id'] == record['id'])
+        original = audit.load
+        for target in ('registry', 'manifest', 'review'):
+            def altered(root, path):
+                data = original(root, path)
+                if target == 'registry' and path == 'localization/tw-edition/runtime.json':
+                    data['sources'] = [s for s in data['sources'] if s['id'] != item['source_ids'][-1]]
+                if target == 'manifest' and path == 'localization/manifest.json':
+                    next(e for e in data['entries'] if e['id'] == item['id'])['sources'] = item['source_ids'][:-1]
+                if target == 'review' and path == 'localization/reviews/' + item['id'] + '.json':
+                    data['source_checks'] = data['source_checks'][:-1]
+                return data
+            with self.subTest(target=target), patch.object(audit, 'load', side_effect=altered):
+                with self.assertRaisesRegex(ValueError, '追加來源'):
+                    audit.validate_recheck_history(audit.ROOT, record, item)
+
     def test_date_only_update_never_counts_as_substantive_review(self):
         old, new, record = self.fixture()
         unchanged = dict(old, reviewed_at='2026-10-19')

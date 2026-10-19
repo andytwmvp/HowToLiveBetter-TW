@@ -1,0 +1,40 @@
+{
+  "id": "TW-01-022",
+  "reviewer": "ChatGPT（AI輔助臺灣官方HTML核對，非醫師、藥師或公衛專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-022.md",
+  "target_sha256": "2364f33794f026582f44577329c453437abb8ba862c47e1dd674c541bbf25128",
+  "source_checks": [
+    {
+      "url": "https://www.cdc.gov.tw/Category/ListContent/Hh094B49-DRwe2RR4eFfrQ?uaId=vwMq9VkXIaV7FHyJgpk-5w",
+      "claim": "2026-08-10起公費成人肺鏈疫苗提供PCV20或PCV21，與原接種史銜接，不再沿用舊PCV13加PPV23作現在預設。",
+      "supporting_passage": "實讀相關官方正文後之語意摘要，非逐字引文：2026-08-10起公費成人肺鏈疫苗提供PCV20或PCV21，與原接種史銜接，不再沿用舊PCV13加PPV23作現在預設。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立摘要；非附件、影片或專業簽證。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/QAPage/CY4qDyIrTM1YPhfOHX-76g",
+      "claim": "Q1以接種年減出生年，Q3／4依舊劑與1年或8週間隔分流，65歲前高風險及自費完成者另有5年例外；不是所有慢性病均符合19至64歲IPD公費。",
+      "supporting_passage": "實讀相關官方正文後之語意摘要，非逐字引文：Q1以接種年減出生年，Q3／4依舊劑與1年或8週間隔分流，65歲前高風險及自費完成者另有5年例外；不是所有慢性病均符合19至64歲IPD公費。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立摘要；非附件、影片或專業簽證。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/ListContent/Hh094B49-DRwe2RR4eFfrQ?uaId=Ay1_7PLUOICQg6JClwYiTA",
+      "claim": "2026-01-13公告2025累計347例IPD確定病例、其中36例死亡；非所有肺炎。政策採8月新規，本來源只採有日期監測數。",
+      "supporting_passage": "實讀相關官方正文後之語意摘要，非逐字引文：2026-01-13公告2025累計347例IPD確定病例、其中36例死亡；非所有肺炎。政策採8月新規，本來源只採有日期監測數。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "web抽取僅選單；本次以Python HTTPS取得完整官方HTML並核對正文與發布日。"
+    }
+  ],
+  "localization_changes": "按2026臺灣資格、接種史與篩檢後續獨立改寫，區分政策生效日及統計截點。",
+  "review_method": "實讀公開HTML相關段落；不以檢索摘要替代讀取，不抄處方或推算個人風險。",
+  "limits": [
+    "19至64歲「IPD高風險」有特定定義，如免疫功能不全、脾臟功能缺損、人工耳、腦脊髓液滲漏、特定腫瘤治療／移植等，不能把所有高血壓、糖尿病等慢性病自動視為符合該公費身分。孩童常規疫苗不套成人本篇。接種不保證不感染；急性呼吸困難應先就醫。產品禁忌及特殊接種史需醫師判斷，尚待疫苗專業獨立審閱。",
+    "尚未取得專業獨立審閱，統計原始微資料未重算。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "de86e94773dcdfbe722e97785d55fc6d5d2f363185b550799b0c5394b6617820"
+}

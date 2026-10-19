@@ -36,7 +36,12 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
         return False
     if old.get("body") == new.get("body"):
         return False
-    allowed = {"body", "reviewed_at"}
+    allowed = {"body", "reviewed_at", "source_ids"}
+    prior_ids, new_ids = old.get("source_ids", []), new.get("source_ids", [])
+    if (not isinstance(prior_ids, list) or not isinstance(new_ids, list)
+            or not all(isinstance(v, str) and v for v in new_ids)
+            or len(set(new_ids)) != len(new_ids) or new_ids[:len(prior_ids)] != prior_ids):
+        return False
     if {k: v for k, v in old.items() if k not in allowed} != {k: v for k, v in new.items() if k not in allowed}:
         return False
     for field, item in (("before_sha256", old), ("after_sha256", new)):
@@ -95,6 +100,16 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
     if not documented_revision(old, new, record):
         raise ValueError("實質再審證據或前後正文 SHA 不符：" + key)
     current_review = load(root, "localization/reviews/" + key + ".json")
+    if new.get("source_ids", []) != old.get("source_ids", []):
+        runtime = load(root, "localization/tw-edition/runtime.json")
+        sources = {s["id"]: s for s in runtime["sources"]}
+        manifest = load(root, "localization/manifest.json")
+        entry = next(e for e in manifest["entries"] if e["id"] == key)
+        urls = {c["url"] for c in current_review["source_checks"]}
+        if (entry.get("sources") != new["source_ids"]
+                or any(s not in sources for s in new["source_ids"])
+                or {sources[s]["url"] for s in new["source_ids"]} != urls):
+            raise ValueError("再審追加來源未完整登錄或對應審閱：" + key)
     if record["source_checks"] != current_review["source_checks"] or record["limits"] != current_review["limits"]:
         raise ValueError("實質再審與現行審閱不同步：" + key)
 
