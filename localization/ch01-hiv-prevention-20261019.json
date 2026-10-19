@@ -1,0 +1,63 @@
+{
+  "base_sha": "9f6861bf68628a12a4984059c58bc39506a4db4a",
+  "new_core_ids": [
+    "TW-01-029",
+    "TW-01-030",
+    "TW-01-031",
+    "TW-01-032"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-002",
+    "TW-13-004",
+    "TW-13-005",
+    "TW-13-006"
+  ],
+  "professional_review": "pending",
+  "sources_added": 8,
+  "source_limits": [
+    "專線先由hotline工具核對；正文僅使用1925服務資訊，不加入追蹤參數；未使用工具附失效網站。",
+    "HIV索引File/Get為HTML包裝頁，追至官方內嵌PDF後核對第1至2頁文字及原表影像，非11頁全審。",
+    "匿名篩檢及PEP名冊附件只核對HTML版本標籤，未逐院實讀或電話核對時間，不宣稱即時服務保證。",
+    "舊榮總眼科網址403／web本文缺漏保留前次讀取日期，補可讀455；其餘相關HTML實讀。",
+    "HPA戒菸候選頁TLS／web失敗，不登錄新來源或承諾用藥補助；臺大舊2015僅用生活型態，不用藥物處方與盛行率。"
+  ],
+  "statistics": [
+    {
+      "topic": "本國籍HIV診斷個案",
+      "value": 679,
+      "unit": "人",
+      "period": "2026-01-01至2026-09-30",
+      "scope": "臺灣法定傳染病行政統計，通報時本國籍",
+      "population": "按HIV診斷日分析之本國籍感染個案，含AIDS發病及死亡者",
+      "numerator": 679,
+      "denominator": "個案計數無全人口／全部暴露者分母，不計算人口發生率",
+      "definition": "診斷個案非推估感染時間或單次暴露風險",
+      "method": "行政通報與診斷日期統計，資料擷取2026-10-01",
+      "source": "https://www.cdc.gov.tw/Uploads/files/63977f46-f489-456e-9ea9-a03ae5f90f3a.pdf",
+      "accessed_at": "2026-10-19",
+      "comparison_2025_full_year": 879,
+      "limits": "未診斷及通報延遲影響；9個月與全年不可直接推趨勢；未重新運算微資料",
+      "pdf_sha256": "5ee0ed2f6d26f615138f8a5dd3c0669005acb34c6467384842c85e430b28aa33",
+      "read_pages": [
+        1,
+        2
+      ]
+    }
+  ],
+  "counts": {
+    "core_before": 258,
+    "core_after": 262,
+    "chapter1_before": 28,
+    "chapter1_after": 32,
+    "runtime_before": 268,
+    "runtime_after": 272,
+    "source_registry_before": 512,
+    "source_registry_after": 520,
+    "draft_union": 498,
+    "no_draft": 267,
+    "unreviewed_after": 236,
+    "unregistered_source_ids": 115,
+    "unresolved_references": 306,
+    "runtime_source_objects_after": 439
+  }
+}

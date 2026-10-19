@@ -768,9 +768,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：原2023官方新聞引2017調查長者曾跌倒比例，及2021跌倒死亡數，並非2026跌倒後骨折或頭部出血機率，未取得本次原始調查母數，不套成現行個人風險。"
     },
     {
       "id": "TW-13-003",
@@ -808,9 +808,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：兩個症狀衛教沒有可用全國後循環中風病例與眩暈就診分母，不能用所有腦血管疾病死亡數當眩暈者中風機率。"
     },
     {
       "id": "TW-13-005",
@@ -828,9 +828,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：聯醫騎士黑矇案例不是全國發生率，未有同方法臺灣母體分母，不能由該例推論每位患者都有頸動脈狹窄或一定中風。"
     },
     {
       "id": "TW-13-006",
@@ -848,9 +848,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "reviewed_with_limits",
+      "official_statistics_and_denominators": "頻率限制：2020聯醫頁40歲以上2%與全人口0.5%概述未有同一調查期間及樣本，且涵蓋各型青光眼，不能換算急性隅角閉鎖發生率或個人失明率。"
     },
     {
       "id": "TW-13-007",
@@ -8240,6 +8240,174 @@
         "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
         "2025全國建築物火災4514次，獨立住宅1688、集合住宅1483，行政事件次數無家戶分母；不能算個人穿煙存活率或裝備效益。",
         "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-002",
+      "before_sha256": "2a745db37a146a596585604910bd80f19af7b1e459f00b7ed1311f10de084ff0",
+      "after_sha256": "d7f1c40dc6f8bc91ced850ca98f4aef8936409ded551d5201f63210fc000ba30",
+      "prior_revision": "9f6861bf68628a12a4984059c58bc39506a4db4a",
+      "prior_review_sha256": "c70e686fd4b63467a1eb26ca3729a4831388d50710853e0d4129002a11c6bb11",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "居家與戶外跌倒，避免拉扯；提醒抗凝血用藥、頭部撞擊及延遲惡化。",
+      "frequency_assessment": "頻率限制：原2023官方新聞引2017調查長者曾跌倒比例，及2021跌倒死亡數，並非2026跌倒後骨折或頭部出血機率，未取得本次原始調查母數，不套成現行個人風險。",
+      "changes": "補跌倒後頭部症狀惡化與救護優先、區分舊頻率與急症嚴重度。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-2704-73952-1.html",
+          "claim": "TW-13-002：發現長者跌倒先不要急著拉起；檢查意識、外傷及出血，意識不清或大量出血時叫救護車。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：發現長者跌倒先不要急著拉起；檢查意識、外傷及出血，意識不清或大量出血時叫救護車。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=BF739CEA16BBDEA6&sms=87415A8B9CE81B16",
+          "claim": "TW-13-002：懷疑脊椎受傷、四肢麻痺、明顯骨折或意識不清時，不可隨意搬動傷者，並撥119。",
+          "supporting_passage": "據官方公開網頁HTML內容的編者摘要，非逐字引用：懷疑脊椎受傷、四肢麻痺、明顯骨折或意識不清時，不可隨意搬動傷者，並撥119。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        },
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/340",
+          "claim": "頭部外傷後意識改變、持續嘔吐或症狀惡化就醫，依醫囑使用藥物；抗凝血或抗炎藥需醫師許可，不自行調整。",
+          "supporting_passage": "實讀臺中榮總340頁2026-06-25版本：症狀惡化、難喚醒及持續嘔吐就醫，按醫師指示服藥。獨立摘要，不採頁面「受傷發生前24小時」疑誤文字，也不抄未讀原始論文。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "實讀HTML相關正文，不抄醒來頻率或所有檢查操作作通則。"
+        }
+      ],
+      "limits": [
+        "若傷者無反應、也沒有正常呼吸，應先啟動119、CPR與AED流程，不能只停在固定姿勢等待。清醒仍可能有髖部骨折、頭部延遲出血或中風；服用抗凝血藥、有撞到頭或症狀持續惡化時，要特別提高警覺。遇到陌生人，不應推論臺灣一律禁止協助或『停下來就違法』；責任仍需依行為及具體法律事實判定，本文不構成個案法律判決。",
+        "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
+        "頻率限制：原2023官方新聞引2017調查長者曾跌倒比例，及2021跌倒死亡數，並非2026跌倒後骨折或頭部出血機率，未取得本次原始調查母數，不套成現行個人風險。",
+        "AI輔助來源再核對，專業再審待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-004",
+      "before_sha256": "d3969868db4085f77d37bb1ba3998c10b0a506117f728260cf821debf58c98ee",
+      "after_sha256": "3df20ca978c776526ca57217730b0a851418895e893ad5f54598944a6cb1ee61",
+      "prior_revision": "9f6861bf68628a12a4984059c58bc39506a4db4a",
+      "prior_review_sha256": "29bea24bdddbbe7ce1c90e7a739578be80cb2aff542743cd7bff034392bb75a3",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣通勤與公共場所突發眩暈、複視或失衡，停止騎車並記最後正常時間。",
+      "frequency_assessment": "頻率限制：兩個症狀衛教沒有可用全國後循環中風病例與眩暈就診分母，不能用所有腦血管疾病死亡數當眩暈者中風機率。",
+      "changes": "補不以年輕或FAST陰性排除，保留舊2018症狀來源的治療飲食限制。",
+      "source_checks": [
+        {
+          "url": "https://sdm.tpech.gov.tw/xmdoc/cont?sid=0I348761069595303797&xsmsid=0I334591562045174688",
+          "claim": "TW-13-004：突發眩暈、步態不穩及複視可能是腦中風表現；使用其症狀段落而非舊藥物處置建議。",
+          "supporting_passage": "臺灣公立醫院公開HTML可見段落之編輯摘要（非逐字引文）：突發眩暈、步態不穩及複視可能是腦中風表現；使用其症狀段落而非舊藥物處置建議。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。此2018頁只用症狀；舊飲食、藥物、被動運動及抽搐操作未採作當前通則。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/513",
+          "claim": "TW-13-004：2025年修訂衛教列出突然失衡、看東西兩個影像、眼睛突然看不見等警訊，檢查需醫師評估。",
+          "supporting_passage": "臺灣公立醫院公開HTML可見段落之編輯摘要（非逐字引文）：2025年修訂衛教列出突然失衡、看東西兩個影像、眼睛突然看不見等警訊，檢查需醫師評估。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        },
+        {
+          "url": "https://802.mnd.gov.tw/articles/stroke?locale=zh-TW",
+          "claim": "臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
+          "supporting_passage": "實讀相關正文後的獨立語意摘要，非逐字引文：臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        }
+      ],
+      "limits": [
+        "突然眩暈也可能來自內耳等非中風原因，但一般民眾無法只靠是否嘴歪或是否頭痛排除後循環中風。不要要求傷者閉眼行走、做平衡挑戰或自行騎車就醫；也不要自行服用阿斯匹靈、降血壓藥或強迫吞水。任何檢查或治療時間窗都須由急診神經醫療團隊決定。",
+        "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
+        "頻率限制：兩個症狀衛教沒有可用全國後循環中風病例與眩暈就診分母，不能用所有腦血管疾病死亡數當眩暈者中風機率。",
+        "AI輔助來源再核對，專業再審待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-005",
+      "before_sha256": "297eec918ebb3dff15b716830d7c7fc827d2a2c03ba46ab5db11a3e1274c797c",
+      "after_sha256": "5ca84d54efaed7abd2959e74cbf7bac011a016fd337a7b7f3495d7bb946f5a3f",
+      "prior_revision": "9f6861bf68628a12a4984059c58bc39506a4db4a",
+      "prior_review_sha256": "1c8bbde92ec29b8f848fd083ce2d4e4d703ee49c8f23eb6475ad03a4a3c2f3ba",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "機車、汽車駕駛與獨居者突發單眼黑矇先停止移動，恢復仍緊急就醫。",
+      "frequency_assessment": "頻率限制：聯醫騎士黑矇案例不是全國發生率，未有同方法臺灣母體分母，不能由該例推論每位患者都有頸動脈狹窄或一定中風。",
+      "changes": "補案例與頻率差異及症狀緩解不可等待；保留多科診斷限制。",
+      "source_checks": [
+        {
+          "url": "https://lowvision.tpech.gov.tw/w/LowVision/knowledge_21040915144089462",
+          "claim": "TW-13-005：短暫單眼如窗簾遮住的失明需警覺眼與腦血管狹窄及中風風險，症狀消失仍不可忽略。",
+          "supporting_passage": "臺灣公立醫院公開HTML可見段落之編輯摘要（非逐字引文）：短暫單眼如窗簾遮住的失明需警覺眼與腦血管狹窄及中風風險，症狀消失仍不可忽略。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/513",
+          "claim": "TW-13-005：2025年修訂衛教列出突然失衡、看東西兩個影像、眼睛突然看不見等警訊，檢查需醫師評估。",
+          "supporting_passage": "臺灣公立醫院公開HTML可見段落之編輯摘要（非逐字引文）：2025年修訂衛教列出突然失衡、看東西兩個影像、眼睛突然看不見等警訊，檢查需醫師評估。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        },
+        {
+          "url": "https://802.mnd.gov.tw/articles/stroke?locale=zh-TW",
+          "claim": "臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
+          "supporting_passage": "實讀相關正文後的獨立語意摘要，非逐字引文：臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        }
+      ],
+      "limits": [
+        "不能把所有一瞬間視線變暗都判定為眼中風；乾眼、角膜、視網膜或其他原因也可能有視覺症狀。單眼或雙眼、持續時間、是否有閃光飛蚊、頭痛或肢體無力應告知醫療人員，但不要因此延誤就醫；也不可自行點來路不明的眼藥水、吃阿斯匹靈或等待第二次發作。",
+        "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
+        "頻率限制：聯醫騎士黑矇案例不是全國發生率，未有同方法臺灣母體分母，不能由該例推論每位患者都有頸動脈狹窄或一定中風。",
+        "AI輔助來源再核對，專業再審待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-006",
+      "before_sha256": "9907233605ee4d9f37394f450216eb47c89e056fa9d82857a5f128487b02e8b8",
+      "after_sha256": "427fffd2b572c512ccd780e464bd2b720a94057d0603485ded15e426b6508d26",
+      "prior_revision": "9f6861bf68628a12a4984059c58bc39506a4db4a",
+      "prior_review_sha256": "58e0b53af084dd3f86668318aa5fa284dcd09c04a0245404cd82d9b72b4b9e4f",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "夜間、假日或偏鄉突然紅眼劇痛與視力改變，不因無專科門診而延誤。",
+      "frequency_assessment": "頻率限制：2020聯醫頁40歲以上2%與全人口0.5%概述未有同一調查期間及樣本，且涵蓋各型青光眼，不能換算急性隅角閉鎖發生率或個人失明率。",
+      "changes": "補可讀榮總455來源，明示舊網址403／解析限制，不用夜間概述排除白天急症。",
+      "source_checks": [
+        {
+          "url": "https://lowvision.tpech.gov.tw/w/LowVision/disease_20120814591781867",
+          "claim": "TW-13-006：急性隅角閉鎖可突然眼紅痛、視力模糊、頭痛與噁心嘔吐，不能混同慢性青光眼。",
+          "supporting_passage": "臺灣公立醫院公開HTML可見段落之編輯摘要（非逐字引文）：急性隅角閉鎖可突然眼紅痛、視力模糊、頭痛與噁心嘔吐，不能混同慢性青光眼。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        },
+        {
+          "url": "https://w99.vghtpe.gov.tw/vghtpe/Fpage.action?fid=1140&muid=6",
+          "claim": "TW-13-006：急性隅角閉鎖型青光眼可能眼球劇痛、虹暈與噁心嘔吐，是需儘快就診的眼科急症。",
+          "supporting_passage": "臺灣公立醫院公開HTML可見段落之編輯摘要（非逐字引文）：急性隅角閉鎖型青光眼可能眼球劇痛、虹暈與噁心嘔吐，是需儘快就診的眼科急症。",
+          "accessed_at": "2026-10-18",
+          "retrieval_method": "2026-10-19直接HTTPS為403，web回傳未含相關本文；保留上次實讀日期，不以搜尋摘要冒稱重讀，改由可讀455頁支持急症警訊。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/455",
+          "claim": "急性紅痛、視力模糊、頭痛及噁心嘔吐須就醫；慢性常無感。未用多數或較少見作臺灣分型發生率，不把夜間概述當白天可排除。",
+          "supporting_passage": "實讀相關正文後的獨立語意摘要，非逐字引文：急性紅痛、視力模糊、頭痛及噁心嘔吐須就醫；慢性常無感。未用多數或較少見作臺灣分型發生率，不把夜間概述當白天可排除。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19實讀相關HTML正文；臺北聯醫青光眼另以直接HTTPS正文核對；不稱已審影片或附件。"
+        }
+      ],
+      "limits": [
+        "不是看到任何光暈就代表急性青光眼，偏頭痛、角膜疾病及其他眼科急症也可能造成部分相似症狀；急性青光眼也不必每次都有所有症狀。眼壓正常與否、是否需使用降眼壓藥水或雷射，應由眼科醫師依檢查判斷。不得自行照網路處方使用縮瞳劑、散瞳劑或口服降眼壓藥，也不能把一般慢性青光眼追蹤流程當成急性發作的替代。",
+        "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
+        "頻率限制：2020聯醫頁40歲以上2%與全人口0.5%概述未有同一調查期間及樣本，且涵蓋各型青光眼，不能換算急性隅角閉鎖發生率或個人失明率。",
+        "AI輔助來源再核對，專業再審待取得。"
       ]
     }
   ]
