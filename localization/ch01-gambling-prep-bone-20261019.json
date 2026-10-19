@@ -1,0 +1,77 @@
+{
+  "base_sha": "201fd64e138880528ce6d9effc86d06fe67f36cb",
+  "new_core_ids": [
+    "TW-01-037",
+    "TW-01-038",
+    "TW-01-039",
+    "TW-01-040"
+  ],
+  "ai_rechecked_ids": [
+    "TW-13-016",
+    "TW-13-017",
+    "TW-13-018",
+    "TW-13-019"
+  ],
+  "professional_review": "pending",
+  "sources_added": 15,
+  "source_limits": [
+    "國健署調查原始報告及低血糖HTML取回失敗，不冒稱重讀，骨鬆摘要另由衛福部原始公告鏡像核對。",
+    "PrEP指引PDF與名冊追至實際Uploads，非只讀File/Get包裝頁；未宣稱逐院名額或整冊專業審查。",
+    "健保5.6.1附件本機403，但web讀兩頁修訂後欄與生效日；沒有用新聞概述代替正式條件。",
+    "台灣賭博、低血糖、抽搐、觸電與遲發CO風險缺本輪可用分母，未自行估算。",
+    "專線先經專用工具核對；正文使用純數字與無追蹤官方來源，無個資或憑證。"
+  ],
+  "statistics": [
+    {
+      "value": 14.1,
+      "unit": "%",
+      "period": "2017-2020年",
+      "scope": "台灣65歲以上國民營養健康狀況變遷調查",
+      "definition": "至少一部位量測有骨質疏鬆之盛行比例",
+      "numerator": "符合量測骨鬆定義者，實際人數未確認",
+      "denominator": "符合調查分析條件之65歲以上受測者；樣本數與加權細節未取得",
+      "method": "官方抽樣調查摘要，不是行政診斷人次或年度骨折率",
+      "source": "https://www.mohw.gov.tw/cp-5270-70579-1.html",
+      "accessed_at": "2026-10-19",
+      "limits": "未讀原始報告，部位、抽樣與權重限制未解；無2026即時外推或跨口徑比較"
+    }
+  ],
+  "legal_dates": [
+    {
+      "rule": "5.6.1抗骨質再吸收劑給付規定本次修訂",
+      "announced_at": "2026-07-15",
+      "effective_at": "2026-08-01",
+      "basis": "https://www.nhi.gov.tw/ch/dl-100477-6c03207371494c4ab4e1dfe13ed38265-1.pdf"
+    }
+  ],
+  "pdf_retrievals": [
+    {
+      "file": "prep-guide",
+      "url": "https://www.cdc.gov.tw/Uploads/4d8e6888-b89e-4596-a78e-9a49b9a5bda5.pdf",
+      "sha256": "85891d090614cdbe6a80d87514b67f9d7c2c4e31dfdbc214ef79c9dfebbf3121",
+      "bytes": 1467638
+    },
+    {
+      "file": "prep-public",
+      "url": "https://www.cdc.gov.tw/Uploads/51c787f5-6b22-45eb-892b-6dfdd91da2e4.pdf",
+      "sha256": "579df2060fe237e72ab3755aec5bbba7b89b616f4b48c4e82317dc5477e948a3",
+      "bytes": 523969
+    }
+  ],
+  "counts": {
+    "core_before": 266,
+    "core_after": 270,
+    "chapter1_before": 36,
+    "chapter1_after": 40,
+    "runtime_before": 276,
+    "runtime_after": 280,
+    "source_registry_before": 530,
+    "source_registry_after": 545,
+    "runtime_source_objects_after": 464,
+    "draft_union": 498,
+    "no_draft": 267,
+    "unreviewed_after": 228,
+    "unregistered_source_ids": 115,
+    "unresolved_references": 306
+  }
+}

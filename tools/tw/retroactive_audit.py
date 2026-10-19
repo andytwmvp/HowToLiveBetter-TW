@@ -36,7 +36,23 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
         return False
     if old.get("body") == new.get("body"):
         return False
-    allowed = {"body", "reviewed_at", "source_ids"}
+    allowed = {"body", "reviewed_at", "source_ids", "title", "limits", "question"}
+    # 只允許隨本次實質正文修訂同步更新顯示標題與審閱限制。
+    # ID、路徑、資格、狀態及其他資料仍須完整保全。
+    if new.get("title") != old.get("title"):
+        title = new.get("title")
+        if not isinstance(title, str) or not title.strip() or [line for line in new.get("body", "").splitlines() if line.startswith("# ")] != ["# " + title]:
+            return False
+    if new.get("question") != old.get("question"):
+        question, prior_title, title = old.get("question"), old.get("title"), new.get("title")
+        if (not all(isinstance(v, str) and v.strip() for v in (question, prior_title, title))
+                or prior_title == title or prior_title not in question
+                or new["question"] != question.replace(prior_title, title)):
+            return False
+    if new.get("limits") != old.get("limits"):
+        limits = new.get("limits")
+        if not isinstance(limits, str) or not limits.strip() or not isinstance(record.get("limits"), list) or limits not in record["limits"]:
+            return False
     prior_ids, new_ids = old.get("source_ids", []), new.get("source_ids", [])
     if (not isinstance(prior_ids, list) or not isinstance(new_ids, list)
             or not all(isinstance(v, str) and v for v in new_ids)
