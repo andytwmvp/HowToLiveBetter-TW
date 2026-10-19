@@ -1,0 +1,58 @@
+{
+  "base_sha": "c530f53fbf97b9c90ba6e90824e57b36cb2bafcb",
+  "new_core_ids": [],
+  "ai_rechecked_ids": [
+    "TW-13-030",
+    "TW-13-032",
+    "TW-13-033",
+    "TW-13-040"
+  ],
+  "professional_review": "pending",
+  "sources_added": 9,
+  "source_limits": [
+    "實讀氣象署地震頻率頁，監測能力與範圍改變影響件數。概括年均4萬、其中有感1千未交代平均期間，不採為當年固定值或個人傷亡率；圖表未讀，未虛構住宅暴露分母。",
+    "台北及國家公園安全頁為一般情境宣導，不是全國雷擊傷亡統計；NWS只採一般安全原則，不移植美國傷亡數。",
+    "原始2010研究摘要36%對應2007至2008排雲1066問卷，確切分子與評分閾值未在摘要交代；2026研究摘要為2023至2024醫療站871就醫者、558臨床AMS。抽樣對象及評分不同，不跨年比較或推論全國風險；均未讀全文。",
+    "台南消防與國防HTML是急救原則，無台灣同定義嵌入異物病例及暴露分母；不用全部外傷或職災數推估。",
+    "兩篇原始研究只讀摘要，未讀全文；消防署舊頁TLS取回失敗保留原查閱日。"
+  ],
+  "statistics": [
+    {
+      "value": 36,
+      "unit": "樣本盛行百分比",
+      "period": "2007-04至2008-03",
+      "scope": "玉山排雲山莊受訪登山者",
+      "numerator": null,
+      "denominator": 1066,
+      "definition": "Lake Louise評估；摘要未列確切評分閾值與病例分子",
+      "method": "前瞻觀察問卷；只讀原始摘要",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/20367488/",
+      "accessed_at": "2026-10-20",
+      "limits": "不得反推分子、當2026全國率或與就醫樣本跨年比較。"
+    },
+    {
+      "value": 64.1,
+      "unit": "就醫樣本臨床AMS百分比",
+      "period": "2023至2024",
+      "scope": "排雲醫療站871名就醫者",
+      "numerator": 558,
+      "denominator": 871,
+      "definition": "臨床AMS，並用2018 Lake Louise評分核對",
+      "method": "前瞻觀察；只讀原始摘要",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/41643499/",
+      "accessed_at": "2026-10-20",
+      "limits": "就醫選樣與臨床診斷，不能擴及全體登山者，非全國發生率。"
+    }
+  ],
+  "counts": {
+    "core_before": 278,
+    "core_after": 278,
+    "runtime_before": 289,
+    "runtime_after": 289,
+    "source_registry_before": 582,
+    "source_registry_after": 591,
+    "rechecks_before": 32,
+    "rechecks_after": 36
+  },
+  "research_date": "2026-10-20"
+}

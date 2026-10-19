@@ -1,3 +1,5 @@
+> **2026-10-20安全再審：** 地震、雷擊、高山症與穿刺異物已逐主張再核對；累計36篇AI來源實質再審，專業審閱仍待取得。[本批證據](localization/disaster-altitude-trauma-20261020.json)。
+
 # 臺灣 repo 閱讀、建置與連結入口
 
 <a id="reading"></a>
