@@ -1,0 +1,33 @@
+{
+  "id": "TW-01-016",
+  "reviewer": "ChatGPT（AI輔助官方公開HTML來源核對，非醫療、法律或公共衛生專業簽證）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-10-19",
+  "review_due_at": "2026-12-31",
+  "target_path": "locales/zh-TW/book/ch01/TW-01-016.md",
+  "target_sha256": "9d03304e60fc79f140f4c3212938a14d3aa8eede44fed9ad9e70ba5cf96ec535",
+  "source_checks": [
+    {
+      "url": "https://www.mohw.gov.tw/cp-16-83470-1.html",
+      "claim": "2025-08-12宣布同年9月擴及國中男生；當時113年入學，2026須查當學年度。15歲以下兩劑間隔至少6月，疫苗不能治療既有疾病。",
+      "supporting_passage": "公開HTML可見正文之獨立語意摘要（非逐字引文）：2025-08-12宣布同年9月擴及國中男生；當時113年入學，2026須查當學年度。15歲以下兩劑間隔至少6月，疫苗不能治療既有疾病。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實際核對官方公開HTML文字；國健署直連失敗時採衛福部同文正式頁，不宣稱讀取附件、圖片或影片。"
+    },
+    {
+      "url": "https://tijphc.chshb.gov.tw/Pages/NewsPost/Y2hjc2hyaHNoaG53ajY%3D/Y2thNg%3D%3D",
+      "claim": "2026-09-08地方資訊：國二男女校園兩劑間隔至少6月、留觀15至30分鐘；已接種仍需子宮頸篩檢。地方例非全國截止日或統一留觀規範。",
+      "supporting_passage": "公開HTML可見正文之獨立語意摘要（非逐字引文）：2026-09-08地方資訊：國二男女校園兩劑間隔至少6月、留觀15至30分鐘；已接種仍需子宮頸篩檢。地方例非全國截止日或統一留觀規範。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "實際核對官方公開HTML文字；國健署直連失敗時採衛福部同文正式頁，不宣稱讀取附件、圖片或影片。"
+    }
+  ],
+  "localization_changes": "依臺灣實際情境、官方服務與統計口徑獨立改寫；原作固定ID與來源雜湊保全。",
+  "review_method": "逐項比對官方可見文字、適用資格、時間與統計分子母數，未以機器關鍵字代替內容判讀。",
+  "limits": [
+    "未取得可比較全國感染發生率；公費及補接種核對當學年，地方方案不當全國通則。",
+    "AI輔助審閱，尚未取得獨立醫療專業簽證。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "54ca67015b95823051c2532632ef7c71fbffc6d6f6fce3d6312d24bf6e5dfec1"
+}

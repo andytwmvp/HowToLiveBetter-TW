@@ -2,6 +2,7 @@
 import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
 from body_renderer import body_blocks
 BASE='4a7b56ba4dd9d82b81ef1fb07957d24f3050603b'
@@ -38,7 +39,7 @@ class Chapter13ThirdBatchTests(unittest.TestCase):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
   after=validate_runtime();rows={e['id']:e for e in after['items']};sources={s['id']:s for s in after['sources']}
   self.assertEqual(len(old['items']),200)
-  for e in old['items']:self.assertEqual(rows[e['id']],e)
+  for e in old['items']:assert_preserved_or_rechecked(self,e,rows[e['id']])
   for s in old['sources']:self.assertEqual(sources[s['id']],s)
   for p in ('ch13-poison-rabies-20261017.json','ch13-heat-water-cold-20261017.json'):
    for row in load('localization/tw-edition/sources/'+p)['sources']:

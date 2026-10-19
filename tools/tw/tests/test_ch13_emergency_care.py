@@ -2,6 +2,7 @@
 import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
 from body_renderer import body_blocks
 BASE='bc75deaf3a7ff804ee7f8fcc5bf9bbd8565cc912'
@@ -31,7 +32,7 @@ class Chapter13EmergencyCareTests(unittest.TestCase):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
   now=validate_runtime();items={e['id']:e for e in now['items']};sources={s['id']:s for s in now['sources']}
   self.assertEqual(len(old['items']),208)
-  for e in old['items']:self.assertEqual(items[e['id']],e)
+  for e in old['items']:assert_preserved_or_rechecked(self,e,items[e['id']])
   for e in old['sources']:self.assertEqual(sources[e['id']],e)
  def test_new_registry_and_unfinished_core(self):
   report=publication_report();cov=load('localization/tw-edition/coverage.json');rt=validate_runtime()

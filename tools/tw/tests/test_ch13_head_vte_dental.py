@@ -2,6 +2,7 @@
 import json,hashlib,subprocess,unittest,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from body_renderer import body_blocks
 BASE="a1b2e1953ab740c24d560d9cefb81586e9c04cf1"
@@ -31,7 +32,7 @@ class Chapter13HeadVteDentalTests(unittest.TestCase):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))
   current=validate_runtime();ii={x["id"]:x for x in current["items"]};ss={x["id"]:x for x in current["sources"]}
   self.assertEqual(len(old["items"]),224)
-  for x in old["items"]:self.assertEqual(x,ii[x["id"]])
+  for x in old["items"]:assert_preserved_or_rechecked(self,x,ii[x["id"]])
   for x in old["sources"]:self.assertEqual(x,ss[x["id"]])
  def test_dynamic_coverage_not_publication(self):
   c=load("localization/tw-edition/coverage.json");rt=validate_runtime();report=publication_report()

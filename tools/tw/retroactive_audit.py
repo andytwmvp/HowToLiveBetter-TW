@@ -8,6 +8,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 ID = re.compile(r"TW-\d{2}-\d{3}\Z")
@@ -27,6 +28,86 @@ NUMERIC_CASE = re.compile(
 )
 HIGH_RISK = {1, 13}
 ELEVATED_RISK = {7, 16, 17, 19, 23, 24, 25}
+
+
+def documented_revision(old: dict, new: dict, record: dict) -> bool:
+    # 相同正文或只改日期，不能取得實質再審的修訂資格。
+    if not isinstance(record, dict) or old.get("id") != new.get("id") or record.get("id") != old.get("id"):
+        return False
+    if old.get("body") == new.get("body"):
+        return False
+    allowed = {"body", "reviewed_at"}
+    if {k: v for k, v in old.items() if k not in allowed} != {k: v for k, v in new.items() if k not in allowed}:
+        return False
+    for field, item in (("before_sha256", old), ("after_sha256", new)):
+        if record.get(field) != hashlib.sha256(item.get("body", "").encode("utf-8")).hexdigest():
+            return False
+    if record.get("status") != "ai_source_rechecked_professional_pending":
+        return False
+    for field, length in (("prior_revision", 40), ("prior_review_sha256", 64)):
+        if not re.fullmatch(r"[0-9a-f]{" + str(length) + r"}", record.get(field, "")):
+            return False
+    for field in ("taiwan_context", "frequency_assessment", "changes"):
+        if not isinstance(record.get(field), str) or not record[field].strip():
+            return False
+    if not isinstance(record.get("limits"), list) or not record["limits"] or not all(isinstance(v, str) and v.strip() for v in record["limits"]):
+        return False
+    from datetime import date
+    try:
+        checked = date.fromisoformat(record["reviewed_at"])
+        due = date.fromisoformat(record["review_due_at"])
+        from content_validation import taipei_today
+        if checked > taipei_today() or due < checked or new.get("reviewed_at") != checked.isoformat():
+            return False
+    except (KeyError, TypeError, ValueError):
+        return False
+    checks = record.get("source_checks")
+    if not isinstance(checks, list) or not checks:
+        return False
+    from content_validation import source_url
+    for check in checks:
+        if not isinstance(check, dict) or any(not isinstance(check.get(k), str) or not check[k].strip() for k in ("url", "claim", "supporting_passage", "accessed_at")):
+            return False
+        try:
+            source_url(check["url"])
+            if date.fromisoformat(check["accessed_at"]) > checked:
+                return False
+        except (ValueError, TypeError):
+            return False
+    return True
+
+
+def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
+    key = new["id"]
+    revision = record.get("prior_revision", "")
+    if not re.fullmatch(r"[0-9a-f]{40}", revision):
+        raise ValueError("實質再審原版本不符")
+    try:
+        before = json.loads(subprocess.check_output(
+            ["git", "show", revision + ":localization/tw-edition/runtime.json"], cwd=root))
+        old = next(i for i in before["items"] if i["id"] == key)
+        prior_review = subprocess.check_output(
+            ["git", "show", revision + ":localization/reviews/" + key + ".json"], cwd=root)
+    except (subprocess.CalledProcessError, StopIteration, KeyError, ValueError) as error:
+        raise ValueError("無法核對再審的歷史正文與審閱：" + key) from error
+    if record.get("prior_review_sha256") != hashlib.sha256(prior_review).hexdigest():
+        raise ValueError("再審原始審閱 SHA 不符：" + key)
+    if not documented_revision(old, new, record):
+        raise ValueError("實質再審證據或前後正文 SHA 不符：" + key)
+    current_review = load(root, "localization/reviews/" + key + ".json")
+    if record["source_checks"] != current_review["source_checks"] or record["limits"] != current_review["limits"]:
+        raise ValueError("實質再審與現行審閱不同步：" + key)
+
+
+def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
+    """歷史保全測試僅允許具完整證據且已核對前後版本的正文修訂。"""
+    if old == new:
+        return
+    register = load(ROOT, "localization/retroactive-review-register-20261019.json")
+    records = [r for r in register.get("substantive_rechecks", []) if r.get("id") == old.get("id")]
+    case.assertEqual(len(records), 1, "正文變更必須有唯一再審紀錄")
+    case.assertTrue(documented_revision(old, new, records[0]), "未登錄、證據缺漏或雜湊不同的正文修訂")
+    validate_recheck_history(ROOT, records[0], new)
 
 
 def load(root: Path, relative: str) -> dict:
@@ -160,6 +241,20 @@ def audit(root: Path = ROOT) -> dict:
         raise ValueError("動態 coverage 核心完成數與來源不符")
     if coverage["original_entries"] != len(entries):
         raise ValueError("動態 coverage 核心原始總數與來源不符")
+    register = load(root, "localization/retroactive-review-register-20261019.json")
+    rechecks = register.get("substantive_rechecks", [])
+    if not isinstance(rechecks, list):
+        raise ValueError("實質再審紀錄必須為清單")
+    seen = set()
+    for record in rechecks:
+        key = record.get("id")
+        if key not in published_map or key in seen:
+            raise ValueError("實質再審 ID 不存在或重複")
+        seen.add(key)
+        revision = record.get("prior_revision", "")
+        if not re.fullmatch(r"[0-9a-f]{40}", revision):
+            raise ValueError("實質再審原版本不符")
+        validate_recheck_history(root, record, published_map[key])
     return {
         "schema_version": 1,
         "standard": "PR #27：臺灣情境、發生頻率、原始來源與風險分流",
@@ -178,8 +273,10 @@ def audit(root: Path = ROOT) -> dict:
             "draft_topics": coverage["unique_draft_entries"],
             "topics_without_any_draft": coverage["entries_without_any_draft"],
             "previously_reviewed_items_still_needing_new_standard_substantive_recheck": len(reviewed) + len(nav),
+            "ai_source_rechecked_professional_pending": len(rechecks),
             "publication_ready": False,
         },
+        "ai_source_rechecks": rechecks,
         "per_chapter": [{"chapter": n, **v} for n, v in sorted(per_chapter.items())],
         "core": result,
         "navigation": nav,

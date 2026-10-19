@@ -6,6 +6,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_entry, validate_runtime, publication_report
 from body_renderer import body_blocks
 
@@ -56,7 +57,7 @@ class Chapter13NeuroEyeTests(unittest.TestCase):
         sources = {s["id"]: s for s in now["sources"]}
         self.assertEqual(len(old["items"]), 216)
         for entry in old["items"]:
-            self.assertEqual(entry, items[entry["id"]])
+            assert_preserved_or_rechecked(self,entry,items[entry["id"]])
         for source in old["sources"]:
             self.assertEqual(source, sources[source["id"]])
 

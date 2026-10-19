@@ -2,6 +2,7 @@
 import hashlib, json, subprocess, unittest, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from body_renderer import body_blocks
 BASE="51c8b3c0148b31f833d5a79b7af16e5d94516fb7"
@@ -39,7 +40,7 @@ class Chapter13AnimalsPublicSafetyTests(unittest.TestCase):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))
   rt=validate_runtime();ii={x["id"]:x for x in rt["items"]};ss={x["id"]:x for x in rt["sources"]}
   self.assertEqual(len(old["items"]),236)
-  for x in old["items"]:self.assertEqual(x,ii[x["id"]])
+  for x in old["items"]:assert_preserved_or_rechecked(self,x,ii[x["id"]])
   for x in old["sources"]:self.assertEqual(x,ss[x["id"]])
  def test_dynamic_progress(self):
   c=load("localization/tw-edition/coverage.json");p=publication_report();rt=validate_runtime()

@@ -2,6 +2,7 @@
 import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
 from body_renderer import body_blocks
 BASE='538e88ead8dab2d7c6720fe101bd6af17d898d56'
@@ -34,7 +35,7 @@ class Chapter13SafetyTests(unittest.TestCase):
  def test_previous_195_items_unchanged(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
   now=validate_runtime();ii={e['id']:e for e in now['items']};ss={s['id']:s for s in now['sources']}
-  for e in old['items']:self.assertEqual(e,ii[e['id']])
+  for e in old['items']:assert_preserved_or_rechecked(self,e,ii[e['id']])
   for e in old['sources']:self.assertEqual(e,ss[e['id']])
   batch=read('localization/tw-edition/sources/ch13-safety-20261017.json')['sources']
   self.assertEqual(len(batch),8)

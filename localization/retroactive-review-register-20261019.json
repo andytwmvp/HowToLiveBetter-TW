@@ -748,9 +748,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "relevant_but_comparable_taiwan_denominator_not_obtained",
+      "official_statistics_and_denominators": "缺全國同一定義成人院外心跳停止暴露及結局資料，本次不估個人風險或CPR成功率。"
     },
     {
       "id": "TW-13-002",
@@ -1247,9 +1247,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "relevant_but_comparable_taiwan_denominator_not_obtained",
+      "official_statistics_and_denominators": "取得衛教非全國監測；沒有哽塞與用餐／吞嚥障礙族群母數，不能估全國發生率。"
     },
     {
       "id": "TW-13-027",
@@ -1598,9 +1598,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "relevant_but_comparable_taiwan_denominator_not_obtained",
+      "official_statistics_and_denominators": "沒有全國未滿一歲哽塞暴露分母；不能用兒童事故死亡合計充當哽塞率。"
     },
     {
       "id": "TW-13-044",
@@ -1618,9 +1618,9 @@
         "frequency_term_marker": false,
         "year_marker": true
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "relevant_but_comparable_taiwan_denominator_not_obtained",
+      "official_statistics_and_denominators": "沒有相同母群與結局定義的臺灣嬰兒院外心跳停止資料，不拿成人存活率或嬰兒猝死率替代。"
     },
     {
       "id": "TW-13-045",
@@ -7769,5 +7769,148 @@
     "prior_verified_core": 242,
     "prior_navigation": 10,
     "unpublished_core": 523
-  }
+  },
+  "substantive_rechecks": [
+    {
+      "id": "TW-13-001",
+      "before_sha256": "44ba105e5a8179e96dc97892345809894abcd2b4263ccd5526fa3484eb99802b",
+      "after_sha256": "fd1ddff7d78d82539a771eceb1a14d99f3e73aea90d0289e6bb8e11c45c388b1",
+      "prior_revision": "6b85081cd806bea348523d486bf9e87efb686117",
+      "prior_review_sha256": "51369e8631ae4a696503c94b91ad9a41ce4236cc9066843fd97c5581654a0c13",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "急救先行；臺灣家中、公眾場所辨識無反應與瀕死喘息，報樓層並分工AED。",
+      "frequency_assessment": "缺全國同一定義成人院外心跳停止暴露及結局資料，本次不估個人風險或CPR成功率。",
+      "changes": "補充頻率與成功率統計界線，成人流程不套用嬰兒。",
+      "source_checks": [
+        {
+          "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
+          "claim": "TW-13-001：民眾口訣叫叫壓電：判斷反應、撥119、胸部按壓並依AED語音指示操作。",
+          "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：民眾口訣叫叫壓電：判斷反應、撥119、胸部按壓並依AED語音指示操作。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新對讀原官方公開HTML文字；未閱影片、圖片手法或附件不宣稱專業驗證。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
+          "claim": "TW-13-001：成人胸部按壓每分鐘100至120次、深度5至6公分，盡量持續不中斷。",
+          "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：成人胸部按壓每分鐘100至120次、深度5至6公分，盡量持續不中斷。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新對讀原官方公開HTML文字；未閱影片、圖片手法或附件不宣稱專業驗證。"
+        }
+      ],
+      "limits": [
+        "如傷者清醒或仍有正常呼吸，不能任意施行胸壓；應依119指示密切觀察。疑似心跳停止時CPR有肋骨受傷可能，但不應因此拖延。嬰兒、兒童、溺水及嚴重創傷的急救有個別差異，成人按壓深度與單純胸壓不能直接套用。AED不一定每次都建議電擊。原作「打120」是中國大陸緊急救護電話，不適用臺灣。",
+        "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。",
+        "缺全國同一定義成人院外心跳停止暴露及結局資料，本次不估個人風險或CPR成功率。",
+        "本次為AI輔助來源再核對，急救專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-026",
+      "before_sha256": "8790372c3b2fcc6a13c121de062f9284ddb591b5fcac1ec082ed651eb96a6df6",
+      "after_sha256": "33512bda59568bda3a4263b67b3c09eca9d80463a8d34aefb5d035989f1209c9",
+      "prior_revision": "6b85081cd806bea348523d486bf9e87efb686117",
+      "prior_review_sha256": "b93fd9fe2c6ea0deba469d87e7ff75d2b09ce28f8ba618a0483e242720d551bf",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣用餐、吞嚥障礙及照護情境，分有力咳嗽與清醒重度哽塞；119擴音同步施救。",
+      "frequency_assessment": "取得衛教非全國監測；沒有哽塞與用餐／吞嚥障礙族群母數，不能估全國發生率。",
+      "changes": "補回臺北榮總先拍背五次、未排出再腹部衝擊，移除未受訓者可能等待不施救的歧義。",
+      "source_checks": [
+        {
+          "url": "https://119.hccg.gov.tw/chhcfd/app/data/view?id=36&module=disasterKnowledge&serno=32552b2a-d77d-4b65-8a76-beb991607b69",
+          "claim": "TW-13-026：可自主呼吸咳嗽者鼓勵用力咳；重度無法說話、呼吸者應撥119並依哈姆立克指引急救。",
+          "supporting_passage": "編者依臺灣主管機關或公立醫院公開HTML正文轉述（非逐字引文）：可自主呼吸咳嗽者鼓勵用力咳；重度無法說話、呼吸者應撥119並依哈姆立克指引急救。",
+          "accessed_at": "2026-10-18",
+          "retrieval_method": "保留2026-10-18歷史核對；2026-10-19重取回403，未重新取得原文，不宣稱本次已讀。相關安全主張由本次可讀之臺北榮總正文交叉支持。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/327",
+          "claim": "清醒嚴重哽塞先拍背五次，異物未排出再腹部快速衝擊；昏迷改胸壓，119擴音同步指導，不盲挖。",
+          "supporting_passage": "重新對讀臺北榮總公開正文第三節第2、3、5及第4點之語意摘要：嚴重清醒哽塞先拍背五次、再腹部衝擊；昏迷胸壓、只移除可見異物，不熟悉者先119開擴音同步指導。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新對讀原官方公開HTML文字；未閱影片、圖片手法或附件不宣稱專業驗證。"
+        }
+      ],
+      "limits": [
+        "本條只談成人與**年滿一歲**的情況；未滿一歲嬰兒、孕婦或腹部無法環抱者，方式需依相應急救訓練及119指示調整。不能對仍可咳嗽者隨意拍打，不要用手指伸入口中盲挖看不到的異物，也不要強灌飲料；不可宣稱臺灣官方對所有人都規定固定5加5的程序。患者失去意識時重點轉向119及適當CPR。",
+        "非個案醫療建議；不得以網站文字取代醫師與119派遣指示，費用及預後不可保證。",
+        "取得衛教非全國監測；沒有哽塞與用餐／吞嚥障礙族群母數，不能估全國發生率。",
+        "本次為AI輔助來源再核對，急救專業審閱仍待取得。",
+        "新竹市消防局原來源本次403，連結仍待重取；本次實質修訂依臺北榮總第三節，不以失敗頁作為新增證據。"
+      ]
+    },
+    {
+      "id": "TW-13-043",
+      "before_sha256": "fc6a0ede614e1408dfaec9346b1e62cb21a5ef6630acb128e6366554535705eb",
+      "after_sha256": "87574468b0cce62c62b0079ecd75c4ef935a65ac152e67c8d2afa616c9adcb7d",
+      "prior_revision": "6b85081cd806bea348523d486bf9e87efb686117",
+      "prior_review_sha256": "7a0671cdc514f6f4809d703d41a9d54e1941beb56d6d87e6244d675bd4a14b19",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "家庭與托嬰副食品、小物哽塞；未滿一歲不能腹部衝擊，無反應轉CPR。",
+      "frequency_assessment": "沒有全國未滿一歲哽塞暴露分母；不能用兒童事故死亡合計充當哽塞率。",
+      "changes": "補充缺乏分齡哽塞率及來源手法文字差異，不把五加五當嬰兒CPR節奏。",
+      "source_checks": [
+        {
+          "url": "https://www.119.gov.taipei/cp.aspx?n=0878BEC80AC87B33",
+          "claim": "TW-13-043：臺北市消防局民眾異物哽塞急救頁明列一歲以下嬰兒翻轉頭部微低，拍背五次、胸部按壓五次反覆，並呼叫119。",
+          "supporting_passage": "臺灣官方／公立醫院HTML可見內容之編輯摘要（非逐字引文）：臺北市消防局民眾異物哽塞急救頁明列一歲以下嬰兒翻轉頭部微低，拍背五次、胸部按壓五次反覆，並呼叫119。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新對讀原官方公開HTML文字；未閱影片、圖片手法或附件不宣稱專業驗證。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=C30134A2D4E0AA11&sms=87415A8B9CE81B16",
+          "claim": "TW-13-043：臺北市消防局2026年更新FAQ提醒嬰兒先五次拍背、翻面做五次胸部按壓，絕不可改用腹部推擠。",
+          "supporting_passage": "臺灣官方／公立醫院HTML可見內容之編輯摘要（非逐字引文）：臺北市消防局2026年更新FAQ提醒嬰兒先五次拍背、翻面做五次胸部按壓，絕不可改用腹部推擠。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新對讀原官方公開HTML文字；未閱影片、圖片手法或附件不宣稱專業驗證。"
+        }
+      ],
+      "limits": [
+        "本條只適用未滿一歲、清醒卻無法有效呼吸、哭或咳的嚴重哽塞；一般咳嗽或哭聲清楚時不應任意拍背或拍打。絕不可對嬰兒做成人的腹部衝擊，也不應盲目把手伸入嘴裡挖異物、倒吊搖晃、餵水或強迫吞食。若嬰兒失去反應，應轉為CPR與119派遣指引；新生兒剛出生的復甦另屬專業處置，不套用本指南。",
+        "個案病情、費用與結果不作保證，也不冒充醫師、急救教官、消防或其他正式專業簽證。",
+        "沒有全國未滿一歲哽塞暴露分母；不能用兒童事故死亡合計充當哽塞率。",
+        "本次為AI輔助來源再核對，急救專業審閱仍待取得。"
+      ]
+    },
+    {
+      "id": "TW-13-044",
+      "before_sha256": "80f88d9dd40d861798d4551f631fbcadf2ca22ba9fa2cb366898fe492694ccde",
+      "after_sha256": "37b6afc48c5369f515348ea6748323e350a14d4b16dfa5a736a69c4e75e1f21e",
+      "prior_revision": "6b85081cd806bea348523d486bf9e87efb686117",
+      "prior_review_sha256": "35a1c5c9791bfdaa4849317944edfe4f633ef647c25fddbb077923b411c58cf0",
+      "reviewed_at": "2026-10-19",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "家庭嬰兒無反應無正常呼吸，手機在旁即119擴音；無法原地求援例外需派遣訓練分流。",
+      "frequency_assessment": "沒有相同母群與結局定義的臺灣嬰兒院外心跳停止資料，不拿成人存活率或嬰兒猝死率替代。",
+      "changes": "補充兩人施救比例及單人求援需專業複核的限制，保留人工呼吸重要性與個人風險缺口。",
+      "source_checks": [
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/518",
+          "claim": "TW-13-044：臺中榮總2026年3月更新一歲以下嬰兒CPR文字衛教：先檢查安全與呼吸，30次壓胸、2次人工呼吸，頻率每分鐘100至120次，深度約4公分。",
+          "supporting_passage": "臺灣官方／公立醫院可見HTML之編輯摘要（非逐字引文）：臺中榮總2026年3月更新一歲以下嬰兒CPR文字衛教：先檢查安全與呼吸，30次壓胸、2次人工呼吸，頻率每分鐘100至120次，深度約4公分。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新對讀原官方公開HTML文字；未閱影片、圖片手法或附件不宣稱專業驗證。"
+        },
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/972",
+          "claim": "TW-13-044：臺中榮總2026年修訂的嬰兒CPR影片說明頁含文字版流程與單人無法立即求援時的處置限制。",
+          "supporting_passage": "臺灣官方／公立醫院可見HTML之編輯摘要（非逐字引文）：臺中榮總2026年修訂的嬰兒CPR影片說明頁含文字版流程與單人無法立即求援時的處置限制。",
+          "accessed_at": "2026-10-19",
+          "retrieval_method": "2026-10-19重新對讀原官方公開HTML文字；未閱影片、圖片手法或附件不宣稱專業驗證。"
+        }
+      ],
+      "limits": [
+        "此文適用一般民眾遇見未滿一歲嬰兒失去反應且沒有正常呼吸的院外情況；剛出生新生兒的分娩室復甦有不同專業演算法。只要孩子仍有正常呼吸，就不應把胸外按壓當成單純喚醒方法。操作過度施力或中斷太久都可能造成傷害；AED貼片、吹氣與兩人施救的手法需按受訓教材及119指示，不能用成人的五至六公分胸部深度壓迫嬰兒。",
+        "不冒充醫師、救護教官或主管機關正式簽證，不保證個案療效或費用。",
+        "沒有相同母群與結局定義的臺灣嬰兒院外心跳停止資料，不拿成人存活率或嬰兒猝死率替代。",
+        "本次為AI輔助來源再核對，急救專業審閱仍待取得。"
+      ]
+    }
+  ]
 }

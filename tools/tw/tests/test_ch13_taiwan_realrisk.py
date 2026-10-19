@@ -2,6 +2,7 @@
 import hashlib,json,subprocess,unittest,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from body_renderer import body_blocks
 BASE="5224a052adb08c66356257cdc2bfa94c410c567c"
@@ -35,7 +36,7 @@ class Chapter13TaiwanRealRiskTests(unittest.TestCase):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))
   rt=validate_runtime();ii={x["id"]:x for x in rt["items"]};ss={x["id"]:x for x in rt["sources"]}
   self.assertEqual(len(old["items"]),228)
-  for x in old["items"]:self.assertEqual(x,ii[x["id"]])
+  for x in old["items"]:assert_preserved_or_rechecked(self,x,ii[x["id"]])
   for x in old["sources"]:self.assertEqual(x,ss[x["id"]])
  def test_coverage_dynamic_and_sources_logged(self):
   c=load("localization/tw-edition/coverage.json");p=publication_report();rt=validate_runtime()
