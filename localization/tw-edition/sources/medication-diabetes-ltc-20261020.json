@@ -1,0 +1,34 @@
+{
+  "sources": [
+    [
+      "follow_foot",
+      "臺中榮總：2026年糖尿病足部照護英文衛教",
+      "https://ihealth.vghtc.gov.tw/media/933",
+      "2026-03-12修訂HTML，足部每日觀察、避免赤腳與熱源、勿自行剪繭、有傷口即就醫；未採AI圖片與未讀底層文獻。"
+    ],
+    [
+      "follow_kidney_stats",
+      "衛福部／國健署：2023年成人預防保健腎功能異常比例",
+      "https://www.mohw.gov.tw/cp-16-81762-1.html",
+      "2025-03-07公告、03-10更新，2023年成健受檢者15%腎功能異常；非全臺CKD盛行率，未列原始母數、去重與異常門檻。"
+    ],
+    [
+      "follow_kdigo_pcp",
+      "KDIGO2024：基層醫師腎病評估重點一頁版",
+      "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline-Top-10-Takeaways-for-PCPs-Evaluation.pdf",
+      "官方PDF文字：ACR及GFR、慢性持續性與個別評估；未使用圖中風險比當臺灣發生率，2027用藥更新仍是公開草案。"
+    ],
+    [
+      "follow_nhi_rules",
+      "全民健康保險醫療辦法第22、26、28條",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009",
+      "同成分劑型含量替代須未註不可替代、同價或較低價、藥師調劑及告知；慢箋劑量與個別例外，2024第22條08-01施行。"
+    ],
+    [
+      "follow_ltc_law",
+      "長期照顧服務法第3、66條",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070040",
+      "已達或預期達六個月之定義，非等待期；2015-06-03公布、2017-06-03施行，定義不等於所有政府給付資格。"
+    ]
+  ]
+}
