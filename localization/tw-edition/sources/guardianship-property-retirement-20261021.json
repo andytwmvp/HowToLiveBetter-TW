@@ -1,0 +1,40 @@
+{
+  "sources": [
+    [
+      "property_domestic",
+      "家庭暴力防治法：經濟控制與侵害",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=2",
+      "實讀第2條家庭成員間經濟騷擾、控制、脅迫或其他不法侵害；不把每件家庭金錢爭議自動判為犯罪。"
+    ],
+    [
+      "property_elderlaw",
+      "老人福利法：機構資格、收費與保護",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050037",
+      "實讀第34至39及41條：許可、地方核定收費、書面契約及營運擔保；保護安置依法辦理，不保證任何個案補償。"
+    ],
+    [
+      "property_bot",
+      "臺灣銀行：以房養老樂齡服務說明",
+      "https://wwwap.bot.com.tw/SeniorWeb/House.html",
+      "實讀按月撥貸繳息、本金到期或終止一次清償、律師諮詢及費用；APR範例基準2023-03-27，不能當2026現價或全部銀行規則。"
+    ],
+    [
+      "property_landcount",
+      "土地銀行：普惠金融樂活養老貸款業務量",
+      "https://www.landbank.com.tw/Category/Items/%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D",
+      "直接HTML實讀截至2025年底承作2723件，僅土銀累積行政業務量；非全臺人數、2025新增件數或核貸／失敗機率。"
+    ],
+    [
+      "property_contract",
+      "衛福部：住宿式長照契約應記載及不得記載事項",
+      "https://www.mohw.gov.tw/dl-87922-9417ee81-6592-4abb-8b27-a5d16da7b1dc.html",
+      "實讀10頁PDF第2至5頁條文：服務處所與資格、至少三日及必要例外、方案二保證金一至兩月及專戶、禁止不當推銷與往來；不套全部安養住宅與投資。"
+    ],
+    [
+      "property_contract_notice",
+      "衛福部：2024長照契約公告",
+      "https://www.mohw.gov.tw/dl-87918-530550d6-1944-4a1e-bae2-8e29ef939e59.html",
+      "直接下載PDF並渲染實看掃描公告：2024-03-15衛部顧字1131960464號，明定即日生效；不是發布日起第三日推算。"
+    ]
+  ]
+}
