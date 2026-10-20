@@ -118,6 +118,7 @@ def run(render: bool,browser_test: bool) -> None:
             from check_bites_ticks_water_assault_amputation_browser import check_bites_ticks_water_assault_amputation_browser
             from check_pep_fracture_dental_wildlife_browser import check_pep_fracture_dental_wildlife_browser
             from check_mental_occupational_browser import check_mental_occupational_browser
+            from check_medical_care_browser import check_medical_care_browser
             from check_safety_navigation_browser import check_safety_navigation_browser
             from check_conflict_rescue_rights_browser import check_conflict_rescue_rights_browser
             result['checks'].extend(check_crisis_symptoms_browser(page,context,url,review))
@@ -132,6 +133,7 @@ def run(render: bool,browser_test: bool) -> None:
             result['checks'].extend(check_conflict_rescue_rights_browser(page,context,url,review))
             result['checks'].extend(check_safety_navigation_browser(page,context,url,review))
             result['checks'].extend(check_mental_occupational_browser(page,context,url,review))
+            result['checks'].extend(check_medical_care_browser(page,context,url,review))
             from check_ch23_browser import check_ch23_browser
             result['checks'].extend(check_ch23_browser(page,context,url,review))
             from check_ch25_browser import check_ch25_browser

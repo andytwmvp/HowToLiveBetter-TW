@@ -9076,8 +9076,15 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch16/TW-16-012.md",
-      "sources": [],
-      "verified_at": "2026-10-17",
+      "sources": [
+        "ch16_gold_copd",
+        "ch16_nhi_fam",
+        "care_copd_home",
+        "care_inhaler",
+        "care_oxygen",
+        "care_copd_hpa"
+      ],
+      "verified_at": "2026-10-20",
       "upstream_path_uri": "book/16-%E5%BE%97%E4%BA%86%E6%85%A2%E6%80%A7%E7%97%85%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/16-得了慢性病之後怎麼活.md",
       "source_title_zh_tw": "確診慢阻肺的，複診時讓醫生或藥師看你當面用一遍吸入劑；因為急性加重住過院的，出院後去做肺康復",
@@ -9246,8 +9253,12 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch17/TW-17-008.md",
-      "sources": [],
-      "verified_at": "2026-10-17",
+      "sources": [
+        "ch17_pressure",
+        "ch17_ltc",
+        "care_reposition"
+      ],
+      "verified_at": "2026-10-20",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "家裡有人長期臥床，把壓瘡當頭號敵人：上電動氣墊床、定時翻身、每天看一遍骨頭突出的地方",
@@ -9331,8 +9342,15 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch17/TW-17-013.md",
-      "sources": [],
-      "verified_at": "2026-10-17",
+      "sources": [
+        "ch17_dementia",
+        "ch17_dementiacenter",
+        "ch17_ltc",
+        "care_dementia_survey",
+        "care_dementia_pdf",
+        "care_delirium"
+      ],
+      "verified_at": "2026-10-20",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "老人記性越來越差、開始耽誤過日子，帶去醫院的記憶門診或者神經內科查一次，先排除抑鬱、吃的藥、聽不清看不清這類能改的原因",
@@ -11342,10 +11360,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch24/TW-24-007.md",
       "sources": [
-        "https://www.mohw.gov.tw/cp-16-20446-1.html",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021"
+        "ch24_triage",
+        "ch24_medlaw",
+        "care_ed_flow"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-20",
       "upstream_path_uri": "book/24-%E7%9C%8B%E7%97%85.md",
       "display_path": "book/24-看病.md",
       "source_title_zh_tw": "急重的傷病直奔急診預檢分診臺，別去掛號窗口排隊",
