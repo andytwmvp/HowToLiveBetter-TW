@@ -1,0 +1,28 @@
+{
+  "sources": [
+    [
+      "care_hbv_nursing",
+      "臺北榮總：B型肝炎之照護",
+      "https://ihealth.vghtpe.gov.tw/media/556",
+      "官方衛教HTML：按專科評估追蹤與用藥、避免偏方、血液接觸預防；未取其底層文獻及所有正常肝功能者固定間隔為一體規則。"
+    ],
+    [
+      "care_hbv_program",
+      "健保署：2026-08-19第九版肝炎醫療給付改善方案",
+      "https://www.nhi.gov.tw/ch/dl-101556-795d566e774740e69c809de3cc36cb3f-1.pdf",
+      "官方7頁PDF文字：院所申請、病人同意、轉介及用藥給付另依條件；管理照護費申報間隔不等於病人就醫安全間隔。"
+    ],
+    [
+      "care_hbv_cdc",
+      "疾管署：2026世界肝炎日特寫與孕婦B肝帶原資料",
+      "https://www.cdc.gov.tw/EpidemicTheme/Detail/HN_bvfRk6F9P3-V-G4NJxQ?archiveId=NqaYjcrkeauoxeD77sZ73Q",
+      "2026特寫引用2024孕婦帶原率1.88%；原始分子分母、抽樣與去重未列，非全人口盛行或肝癌個人率。"
+    ],
+    [
+      "care_residential_contract",
+      "行政院：機構住宿式長照定型化契約正式應記載及不得記載事項",
+      "https://www.ey.gov.tw/File/9EF94BA07ED95416?A=C",
+      "正式8頁PDF：2024-03-15公告同日生效、至少3日審閱原則及必要例外、方案二保證金專戶、7工作日退費、緊急事故與轉介義務；不得泛用其他機構類型。"
+    ]
+  ]
+}
