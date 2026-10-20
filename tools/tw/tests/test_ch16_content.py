@@ -2,6 +2,7 @@
 import hashlib, json, subprocess, sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from body_renderer import body_blocks
 BASE='e13a1b7ccef36c8b1fe30ccef25e987e5f8e9f60'
@@ -52,7 +53,8 @@ class Chapter16Tests(unittest.TestCase):
   before=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
   after=validate_runtime()
   self.assertEqual(len(before['items']),164)
-  self.assertEqual(after['items'][:164],before['items'])
+  self.assertEqual([e['id'] for e in after['items'][:164]],[e['id'] for e in before['items']])
+  for previous,current in zip(before['items'],after['items'][:164],strict=True):assert_preserved_or_rechecked(self,previous,current)
   self.assertGreaterEqual(len(after['items']),178)
   b={s['id']:s for s in before['sources']};a={s['id']:s for s in after['sources']}
   self.assertTrue(all(a[k]==v for k,v in b.items()))

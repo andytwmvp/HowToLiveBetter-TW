@@ -8,6 +8,7 @@ import sys
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from body_renderer import body_blocks
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from ci_language_policy import audit_drafts
 BASE='23c6f7b506fa22b98cf0232c1f78c515308f6d6b'
@@ -35,7 +36,9 @@ class LaborChapterTests(unittest.TestCase):
     def test_previous_reviewed_runtime_items_and_sources_are_unchanged(self):
         old=baseline('localization/tw-edition/runtime.json');new=validate_runtime()
         old_ids={e['id'] for e in old['items']};old_sources={s['id'] for s in old['sources']}
-        self.assertEqual(old['items'],[e for e in new['items'] if e['id'] in old_ids])
+        current=[e for e in new['items'] if e['id'] in old_ids]
+        self.assertEqual([e['id'] for e in old['items']],[e['id'] for e in current])
+        for previous,item in zip(old['items'],current,strict=True):assert_preserved_or_rechecked(self,previous,item)
         self.assertEqual(old['sources'],[s for s in new['sources'] if s['id'] in old_sources])
 
     def test_new_sources_have_exact_registered_urls_and_claims(self):

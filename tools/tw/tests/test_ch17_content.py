@@ -2,6 +2,7 @@
 import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime,validate_entry,publication_report
 from body_renderer import body_blocks
 BASE='72ea775426cdcbc4b716ae506152607b56fc5ca7'
@@ -42,7 +43,7 @@ class Chapter17Tests(unittest.TestCase):
   self.assertEqual(len(base['items']),178)
   current_items={x['id']:x for x in after['items']}
   current_sources={x['id']:x for x in after['sources']}
-  for item in base['items']:self.assertEqual(current_items[item['id']],item)
+  for item in base['items']:assert_preserved_or_rechecked(self,item,current_items[item['id']])
   for source in base['sources']:self.assertEqual(current_sources[source['id']],source)
   self.assertTrue(IDS.issubset(current_items))
   self.assertGreaterEqual(len(after['items']),191)

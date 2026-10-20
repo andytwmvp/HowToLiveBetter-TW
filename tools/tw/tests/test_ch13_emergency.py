@@ -2,6 +2,7 @@
 import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from body_renderer import body_blocks
 BASE='5437a44b4d640657f5542a7e259e1e6ea294c9ad'
@@ -37,7 +38,7 @@ class EmergencyTests(unittest.TestCase):
  def test_preserve_all_old_runtime_rows(self):
   base=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
   new=validate_runtime();items={x['id']:x for x in new['items']};sources={s['id']:s for s in new['sources']}
-  for old in base['items']:self.assertEqual(items[old['id']],old)
+  for old in base['items']:assert_preserved_or_rechecked(self,old,items[old['id']])
   for old in base['sources']:self.assertEqual(sources[old['id']],old)
   registry=read('localization/tw-edition/sources/ch13-emergency-20261017.json')['sources']
   self.assertEqual(len(registry),8)

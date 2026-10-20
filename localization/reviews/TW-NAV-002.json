@@ -1,0 +1,39 @@
+{
+  "id": "TW-NAV-002",
+  "jurisdiction": "TW",
+  "reviewer": "ChatGPT（臺灣官方來源之AI輔助核對，非專業簽證）",
+  "reviewed_at": "2026-10-20",
+  "review_due_at": "2027-01-15",
+  "target_path": "localization/tw-edition/runtime.json",
+  "target_sha256": "7f7a9035d3e250f8dbd59a0d35a3240daedc05f62510203adaa6acbc4870a631",
+  "source_checks": [
+    {
+      "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+      "claim": "疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。",
+      "supporting_passage": "編輯摘要（非引文）：疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。",
+      "accessed_at": "2026-10-20",
+      "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+    },
+    {
+      "url": "https://www.mohw.gov.tw/dl-100895-54a44151-2be8-48d7-a1b7-6914bb0ad75d.html",
+      "claim": "2025腦血管疾病死亡12425人、粗死亡率每十萬53.2；心臟疾病（高血壓性疾病除外）22907人、每十萬98.1。非新發中風、急性心肌梗塞或個人機率。",
+      "supporting_passage": "編輯摘要（非引文）：2025腦血管疾病死亡12425人、粗死亡率每十萬53.2；心臟疾病（高血壓性疾病除外）22907人、每十萬98.1。非新發中風、急性心肌梗塞或個人機率。",
+      "accessed_at": "2026-10-20",
+      "retrieval_method": "34頁官方PDF本輪實讀第1至3頁，第3頁表1已目視；不宣稱其餘31頁全文查核。"
+    },
+    {
+      "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+      "claim": "失去意識無反應先請人打119，等待時確認正常呼吸；無呼吸持續CPR、取AED並按語音，僅採失去意識段，不採毒化事故喝水等其他段落。",
+      "supporting_passage": "編輯摘要（非引文）：失去意識無反應先請人打119，等待時確認正常呼吸；無呼吸持續CPR、取AED並按語音，僅採失去意識段，不採毒化事故喝水等其他段落。",
+      "accessed_at": "2026-10-20",
+      "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+    }
+  ],
+  "localization_changes": "不等15分鐘、量測或藥效；無反應且無正常呼吸119及CPR/AED分流；心臟死因不當心肌梗塞率。",
+  "review_method": "台灣實際求救與避難情境、死因統計定義及指定HTML段落實質再核對；非專家驗收。",
+  "limits": [
+    "不設「先等滿15分鐘」的求助門檻。本頁不判斷病因，不指示自行服用未經醫師開立的藥物。",
+    "AI來源核對非醫療、救護、災防、法律或著作權專業簽證；未實測報案、真實避難、App、設施當下開放；不保證治療或救援結果。"
+  ],
+  "target_kind": "runtime_body"
+}

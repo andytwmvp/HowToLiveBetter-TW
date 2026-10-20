@@ -50,7 +50,7 @@ class ReviewTests(unittest.TestCase):
             root,e,_=self.fixture(d);p=root/'localization/tw-edition/runtime.json';p.parent.mkdir(parents=True)
             data=copy.deepcopy(contract.validate_runtime())
             data['sources']=[{'id':'test','url':'https://example.org/source','title':'測試來源','supports':'測試範圍','accessed_at':'2026-10-15','published_at':None}]
-            item=data['items'][0];item.update(id=e['id'],target_path=e['target_path'],body=(root/e['target_path']).read_text(),source_ids=['test'])
+            item=data['items'][0];item.update(id=e['id'],target_path=e['target_path'],body=(root/e['target_path']).read_text(),source_ids=['test'],reviewed_at=e['verified_at'])
             data['items']=[item];p.write_text(json.dumps(data))
             self.assertTrue(contract.publication_report(root,{'entries':[e]})['publication_ready'])
             p.write_text('{"items":[]}')

@@ -6,6 +6,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, publication_report, validate_entry, validate_runtime
 from body_renderer import body_blocks, body_html
 
@@ -44,7 +45,7 @@ class ChapterContentTests(unittest.TestCase):
         previous_nav={e['id']:e for e in old['items']}
         current_nav={e['id']:e for e in new['items'] if e['id'].startswith('TW-NAV-')}
         self.assertTrue(set(previous_nav).issubset(current_nav))
-        for key, previous in previous_nav.items(): self.assertEqual(previous, current_nav[key])
+        for key, previous in previous_nav.items(): assert_preserved_or_rechecked(self,previous,current_nav[key])
         self.assertEqual(old['sources'],[s for s in new['sources'] if s['id'] in {source['id'] for source in old['sources']}])
 
     def test_core_metadata_preserves_upstream_provenance(self):
