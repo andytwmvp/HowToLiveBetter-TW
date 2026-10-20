@@ -1,0 +1,46 @@
+{
+  "sources": [
+    [
+      "conflict_stats_pdf",
+      "警政署：114年暴力犯罪概況原始通報第1至2頁",
+      "https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/E5D19DAD-B536-4FBC-AD3C-27D850E2623A/resource/AA634E74-BC86-4E1D-873E-BB50A90A8216/download",
+      "2025七類暴力犯罪503件、強盜130件、搶奪118件；2024年9月案件認定變更，不與2024全年度直接比較，非鬥毆或旅次風險。"
+    ],
+    [
+      "conflict_criminal24",
+      "中華民國刑法第24條：緊急避難",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=C0000001&flno=24",
+      "緊急危難出於不得已及過當界線須個案判斷，非自動全面免刑責，與費用給付不同。"
+    ],
+    [
+      "conflict_civil176",
+      "民法第176條：無因管理費用、債務與損害請求",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=176",
+      "利於本人及不違反其明示或可得推知意思等條件下的請求權，不是國家固定補助或任何救援必定賠付。"
+    ],
+    [
+      "conflict_ems_history",
+      "緊急醫療救護法沿革：2013增訂14之2",
+      "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0020045",
+      "2013-01-16增訂公布14之2，效力依58條與中央法規標準法13條計算；非值勤救護人員亦適用。"
+    ],
+    [
+      "conflict_victim_history",
+      "犯罪被害人權益保障法沿革與分章施行",
+      "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=I0050005",
+      "2023-02-08公布；第二章服務與第五章補償自2023-07-01施行，不能把所有章一概從公布日算。"
+    ],
+    [
+      "conflict_report_app",
+      "臺中港務警察總隊：110視訊報案的打字功能",
+      "https://www.tchpd.npa.gov.tw/ch/app/news/view?id=2071&module=news&serno=a4ac2af4-7c62-47cc-b30a-54b14dc943b6",
+      "2024-01-23宣導可打字及事先設定靜音；未實測現行App，不當無聲、安全或自動定位保證。"
+    ],
+    [
+      "conflict_civil_history",
+      "民法沿革：總則與債編原施行及現行修法範圍",
+      "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+      "總則1929-05-23公布、10-10施行；債編1929-11-22公布、1930-05-05施行。2026-08-17修正1223非150／176新制。"
+    ]
+  ]
+}

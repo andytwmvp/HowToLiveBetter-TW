@@ -313,3 +313,5 @@ A 級只說明「有具體數字、出處可核」，不說明這個數字一定
 臺灣已核對正文新增：[第24章就醫與健保](locales/zh-TW/book/ch24/README.md)。
 
 2026-10-20接續：[PEP、骨折、牙齒與遇獸四篇實質再審](localization/pep-fracture-dental-wildlife-20261020.json)，累計45筆AI來源再核對且專業待審；核心278／765不變，612來源登錄。
+
+2026-10-20接續：[威脅、鬥毆與施救權益三篇實質再審](localization/conflict-rescue-rights-20261020.json)；第13章48篇均有AI來源再核對紀錄且專業待審，核心278／765不變，619來源登錄。
