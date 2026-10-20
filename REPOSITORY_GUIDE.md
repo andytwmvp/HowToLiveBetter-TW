@@ -66,3 +66,5 @@ node tools/anki/build.mjs --source-preview dist/HowToLiveBetter-source-preview.a
 獨立工作安全閱讀：[職業安全與健康](locales/zh-TW/guides/職業安全與健康.md)（TW-NAV-011），與個別機械、局限空間及急救條目分開，仍共用正式runtime。
 
 2026-10-20接續：[PEP、骨折、牙齒與遇獸四篇實質再審](localization/pep-fracture-dental-wildlife-20261020.json)，累計45筆AI來源再核對且專業待審；核心278／765不變，612來源登錄。
+
+2026-10-20接續：[威脅、鬥毆與施救權益三篇實質再審](localization/conflict-rescue-rights-20261020.json)；第13章48篇均有AI來源再核對紀錄且專業待審，核心278／765不變，619來源登錄。

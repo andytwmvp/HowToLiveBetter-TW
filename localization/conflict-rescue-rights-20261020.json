@@ -1,0 +1,90 @@
+{
+  "base_sha": "ee8f6ed08267350e3808302c8be9dc9f47cad0f9",
+  "new_core_ids": [],
+  "ai_rechecked_ids": [
+    "TW-13-036",
+    "TW-13-037",
+    "TW-13-039"
+  ],
+  "risk_research_order": [
+    "TW-13-037",
+    "TW-13-036",
+    "TW-13-039"
+  ],
+  "risk_order_basis": "先現場暴力與人流、持械脅迫，再受傷後法律權益；非個人發生率排名。",
+  "professional_review": "pending",
+  "sources_added": 7,
+  "statistics": [
+    {
+      "id": "violent_cases_2025",
+      "value": 503,
+      "unit": "警政案件件",
+      "numerator": 503,
+      "denominator": null,
+      "period": "2025年",
+      "scope": "全國指定警政分類",
+      "definition": "七類暴力犯罪",
+      "method": "警政行政案件統計，原始PDF第1頁實讀目視",
+      "source": "https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/E5D19DAD-B536-4FBC-AD3C-27D850E2623A/resource/AA634E74-BC86-4E1D-873E-BB50A90A8216/download",
+      "accessed_at": "2026-10-20",
+      "limits": "不是一般傷害、所有衝突或戶外旅次分母；2024年9月認定變更，不跨年直比或當2026全年／個人機率。"
+    },
+    {
+      "id": "robbery_2025",
+      "value": 130,
+      "unit": "警政案件件",
+      "numerator": 130,
+      "denominator": null,
+      "period": "2025年",
+      "scope": "全國指定警政分類",
+      "definition": "強盜案類",
+      "method": "警政行政案件統計，原始PDF第1頁實讀目視",
+      "source": "https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/E5D19DAD-B536-4FBC-AD3C-27D850E2623A/resource/AA634E74-BC86-4E1D-873E-BB50A90A8216/download",
+      "accessed_at": "2026-10-20",
+      "limits": "不是一般傷害、所有衝突或戶外旅次分母；2024年9月認定變更，不跨年直比或當2026全年／個人機率。"
+    },
+    {
+      "id": "snatch_2025",
+      "value": 118,
+      "unit": "警政案件件",
+      "numerator": 118,
+      "denominator": null,
+      "period": "2025年",
+      "scope": "全國指定警政分類",
+      "definition": "搶奪案類",
+      "method": "警政行政案件統計，原始PDF第1頁實讀目視",
+      "source": "https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/E5D19DAD-B536-4FBC-AD3C-27D850E2623A/resource/AA634E74-BC86-4E1D-873E-BB50A90A8216/download",
+      "accessed_at": "2026-10-20",
+      "limits": "不是一般傷害、所有衝突或戶外旅次分母；2024年9月認定變更，不跨年直比或當2026全年／個人機率。"
+    }
+  ],
+  "frequency_assessments": {
+    "TW-13-036": "原始警政PDF第1至2頁，2025七類案件503／強盜130／搶奪118件，無戶外暴露分母；2024年9月認定改變不跨年直比。",
+    "TW-13-037": "指定七類警政案件不等於所有傷害、聚眾鬥毆或每場活動遭遇率；無同定義活動分母不估算。",
+    "TW-13-039": "法律、服務或119出勤資料沒有全台一般民眾施救次數與受傷事件的共同母數；不以補償核定或表揚人數當受傷率。"
+  },
+  "changes": {
+    "TW-13-036": "不採舊頁拖延歹徒、圍捕與尾隨；核對原PDF七類定義及2024年9月斷點，無聲求援需既有設定與現場安全，非保證。",
+    "TW-13-037": "補安全入口、傷者倒地及兇器資訊，不為蒐證返場；第3／24條心理服務與第50條補償分開，不限一定重大或定罪後才詢問，補2023分章施行。",
+    "TW-13-039": "14之2非值勤人員適用與公布／生效日，刑24不得已及過當、民150責任自致危險與民176費用請求分開；補償重大要件不當所有保護服務門檻。"
+  },
+  "legal_effective_dates": {
+    "ems_promulgated": "2013-01-16",
+    "ems_14_2": "2013-01-18",
+    "victim_promulgated": "2023-02-08",
+    "victim_definition": "2023-02-10",
+    "victim_services_compensation": "2023-07-01",
+    "civil_general_promulgated": "1929-05-23",
+    "civil_general": "1929-10-10",
+    "civil_obligations_promulgated": "1929-11-22",
+    "civil_obligations": "1930-05-05"
+  },
+  "limits": [
+    "只實讀指定法條及沿革、警政PDF第1至2頁，不是全書法律簽證、逐案裁判或個案資格核定。",
+    "2026完整年度尚未結束，未取得同定義最新全部月表，不以2025件數當2026現況或比較部分年。",
+    "NFA頁webtimeout／直接TLS失敗不繞過，119處置另由實讀MNDHTML支持；未用其未讀資料。",
+    "App僅官方HTML功能宣導，未下載／實測、未保證無聲、網路可用或自動精準定位。",
+    "法規資料庫整編截止2026-10-08，未逐一核後續公報；刑法24原始公告施行沿革本輪未完整追核，未將本年修法當該條新規。",
+    "第13章48篇均有AI來源實質再核對紀錄，但全部仍專業待審，非全書出版準備完成。"
+  ]
+}
