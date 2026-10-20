@@ -122,6 +122,7 @@ def run(render: bool,browser_test: bool) -> None:
             from check_medication_diabetes_ltc_browser import check_medication_diabetes_ltc_browser
             from check_hepatitis_prescriptions_contract_browser import check_hepatitis_prescriptions_contract_browser
             from check_bp_supplements_stones_gout_browser import check_bp_supplements_stones_gout_browser
+            from check_cancer_eye_gout_care_leave_browser import check_cancer_eye_gout_care_leave_browser
             from check_safety_navigation_browser import check_safety_navigation_browser
             from check_conflict_rescue_rights_browser import check_conflict_rescue_rights_browser
             result['checks'].extend(check_crisis_symptoms_browser(page,context,url,review))
@@ -140,6 +141,7 @@ def run(render: bool,browser_test: bool) -> None:
             result['checks'].extend(check_medication_diabetes_ltc_browser(page,context,url,review))
             result['checks'].extend(check_hepatitis_prescriptions_contract_browser(page,context,url,review))
             result['checks'].extend(check_bp_supplements_stones_gout_browser(page,context,url,review))
+            result['checks'].extend(check_cancer_eye_gout_care_leave_browser(page,context,url,review))
             from check_ch23_browser import check_ch23_browser
             result['checks'].extend(check_ch23_browser(page,context,url,review))
             from check_ch25_browser import check_ch25_browser
