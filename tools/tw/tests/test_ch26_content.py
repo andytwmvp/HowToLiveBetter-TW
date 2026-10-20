@@ -2,6 +2,7 @@
 import hashlib, json, subprocess, sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from body_renderer import body_blocks
 BASE="212f9e3019a3f8682113a6dcb880817cc44074a3"
@@ -26,7 +27,7 @@ class PlatformComplianceTests(unittest.TestCase):
   previous_items={e["id"]:e for e in now["items"]}
   previous_sources={s["id"]:s for s in now["sources"]}
   self.assertEqual(len(old["items"]),136)
-  for item in old["items"]:self.assertEqual(item,previous_items[item["id"]])
+  for item in old["items"]:assert_preserved_or_rechecked(self,item,previous_items[item["id"]])
   for source in old["sources"]:self.assertEqual(source,previous_sources[source["id"]])
  def test_taiwan_law_distinctions(self):
   items={e["id"]:e["body"] for e in validate_runtime()["items"]}

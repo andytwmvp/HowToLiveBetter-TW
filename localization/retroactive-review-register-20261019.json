@@ -9966,6 +9966,177 @@
         "緊急醫療救護法第14條之2保障的是為免除他人生命急迫危險而施予急救等法定情況，並非做任何救援動作一概免刑事或民事責任；民法第150條亦有限度與責任要件。犯罪被害保護服務、補償金、職災保險及商業保險各有不同資格，不能說救人受傷必定由加害人、健保或國家全額負擔。臺灣沒有一套所有一般民眾通用的「見義勇為申報確認後必然領錢」程序。金錢或法律程序不優先於現場緊急求救。",
         "警察、消防、心理、社工及法律獨立專業審閱待取得；未測報案App或電話、未核對全部個案與裁判；法規資料庫整編截止2026-10-08，未逐筆查其後公報。"
       ]
+    },
+    {
+      "id": "TW-NAV-001",
+      "before_sha256": "b0874b8dcc434f7c35f076032d7c5d68cc292538e1ce8391a2b637db448b60a6",
+      "after_sha256": "21eb3414a4a1742790f0b39baa2bf2eb84efc9b2ad892c3f27c385037c2e6567",
+      "prior_revision": "b5c299375ba3b2a24ec3da72421b826bbabfb11e",
+      "reviewed_at": "2026-10-20",
+      "review_due_at": "2027-01-15",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "一般臺灣家庭、通勤或公共場所遇突發症狀與災害，先119或安全避難，不等自查或備物。",
+      "frequency_assessment": "2025年全國死因行政統計，腦血管疾病12425人、粗死亡率每十萬53.2；年中人口為分母，不反推四捨五入分母，不當中風新發率／致死率。",
+      "changes": "最後正常與發現異常時間分開、不猜睡醒發作時間；FAST陰性不排除中風；先119後死亡統計且非發生率。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+          "claim": "疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。",
+          "supporting_passage": "編輯摘要（非引文）：疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-100895-54a44151-2be8-48d7-a1b7-6914bb0ad75d.html",
+          "claim": "2025腦血管疾病死亡12425人、粗死亡率每十萬53.2；心臟疾病（高血壓性疾病除外）22907人、每十萬98.1。非新發中風、急性心肌梗塞或個人機率。",
+          "supporting_passage": "編輯摘要（非引文）：2025腦血管疾病死亡12425人、粗死亡率每十萬53.2；心臟疾病（高血壓性疾病除外）22907人、每十萬98.1。非新發中風、急性心肌梗塞或個人機率。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "34頁官方PDF本輪實讀第1至3頁，第3頁表1已目視；不宣稱其餘31頁全文查核。"
+        },
+        {
+          "url": "https://www.ntuh.gov.tw/RMC/Fpage.action?fid=7843",
+          "claim": "腦中風辨識要確認最後正常時間並盡速送醫；只採此段，不採同頁先服NTG等候五分鐘、全球推估或舊療程給付。",
+          "supporting_passage": "編輯摘要（非引文）：腦中風辨識要確認最後正常時間並盡速送醫；只採此段，不採同頁先服NTG等候五分鐘、全球推估或舊療程給付。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。 只採中風段的最後正常時間，不採同頁NTG後等五分鐘、全球推估或舊給付時窗。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/513",
+          "claim": "2025年修訂衛教列出突然失衡、看東西兩個影像、眼睛突然看不見等警訊，檢查需醫師評估。",
+          "supporting_passage": "編輯摘要（非引文）：2025年修訂衛教列出突然失衡、看東西兩個影像、眼睛突然看不見等警訊，檢查需醫師評估。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪web工具取得官方HTML文字全文，實讀2025-04-24修訂標示及症狀段（失衡／視物重影）；直接HTTPS另回403，不繞過、不宣稱影片實看。突發症狀不採同頁可門診的泛稱分流。"
+        }
+      ],
+      "limits": [
+        "這是辨識與求助資訊，不是診斷工具。不要等待症狀自行消失，也不要為了完成自查而延誤求助。",
+        "AI來源核對非醫療、救護、災防、法律或著作權專業簽證；未實測報案、真實避難、App、設施當下開放；不保證治療或救援結果。"
+      ],
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "8e95857e5fc8aa382a89dbd24fa43d7d34219ae01c0666822fd47913cac5f45d"
+    },
+    {
+      "id": "TW-NAV-002",
+      "before_sha256": "026fa1a7866a6ee5e7604194b8730c810286e6fd66bc20b3a1eff6b41cdc8118",
+      "after_sha256": "7f7a9035d3e250f8dbd59a0d35a3240daedc05f62510203adaa6acbc4870a631",
+      "prior_revision": "b5c299375ba3b2a24ec3da72421b826bbabfb11e",
+      "reviewed_at": "2026-10-20",
+      "review_due_at": "2027-01-15",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "一般臺灣家庭、通勤或公共場所遇突發症狀與災害，先119或安全避難，不等自查或備物。",
+      "frequency_assessment": "2025年全國心臟疾病（排高血壓性）22907人、每十萬98.1，年中人口分母；非心肌梗塞／心跳停止率，無症狀暴露分母。",
+      "changes": "不等15分鐘、量測或藥效；無反應且無正常呼吸119及CPR/AED分流；心臟死因不當心肌梗塞率。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+          "claim": "疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。",
+          "supporting_passage": "編輯摘要（非引文）：疑似心臟病或中風徵兆，立即撥打119、記下發作時間，不自行開車。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-100895-54a44151-2be8-48d7-a1b7-6914bb0ad75d.html",
+          "claim": "2025腦血管疾病死亡12425人、粗死亡率每十萬53.2；心臟疾病（高血壓性疾病除外）22907人、每十萬98.1。非新發中風、急性心肌梗塞或個人機率。",
+          "supporting_passage": "編輯摘要（非引文）：2025腦血管疾病死亡12425人、粗死亡率每十萬53.2；心臟疾病（高血壓性疾病除外）22907人、每十萬98.1。非新發中風、急性心肌梗塞或個人機率。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "34頁官方PDF本輪實讀第1至3頁，第3頁表1已目視；不宣稱其餘31頁全文查核。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+          "claim": "失去意識無反應先請人打119，等待時確認正常呼吸；無呼吸持續CPR、取AED並按語音，僅採失去意識段，不採毒化事故喝水等其他段落。",
+          "supporting_passage": "編輯摘要（非引文）：失去意識無反應先請人打119，等待時確認正常呼吸；無呼吸持續CPR、取AED並按語音，僅採失去意識段，不採毒化事故喝水等其他段落。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        }
+      ],
+      "limits": [
+        "不設「先等滿15分鐘」的求助門檻。本頁不判斷病因，不指示自行服用未經醫師開立的藥物。",
+        "AI來源核對非醫療、救護、災防、法律或著作權專業簽證；未實測報案、真實避難、App、設施當下開放；不保證治療或救援結果。"
+      ],
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "1e5400b1ac246464b35670333e6fa9872dbe430b963fd5bb0e079902a7b617bf"
+    },
+    {
+      "id": "TW-NAV-010",
+      "before_sha256": "a14a644db3ddd24a9cb217e28eaeb08cb8ce94e763c2cf72ce83c58aeaaba843",
+      "after_sha256": "66c3053f46ab914d1ad0c4e1a8b95a59d940f588b89fa53326b5e9e5909ae8ae",
+      "prior_revision": "b5c299375ba3b2a24ec3da72421b826bbabfb11e",
+      "reviewed_at": "2026-10-20",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "一般臺灣家庭、通勤或公共場所遇突發症狀與災害，先119或安全避難，不等自查或備物。",
+      "frequency_assessment": "官方物資建議屬規劃標準，缺同戶跨危機共同暴露分母；不將警報／地震／演練數替代個人機率；致命情境不等待頻率估計。",
+      "changes": "即時危險先撤離，不等備齊；海嘯不等警報、遠離海岸往內陸高處；規劃數字非發生率，移除剩餘40條舊進度句。",
+      "source_checks": [
+        {
+          "url": "https://prepare.mnd.gov.tw/",
+          "claim": "官方內容區分居家儲備、緊急避難包、災害應對、急救、資訊查證及心理準備。",
+          "supporting_passage": "編輯摘要（非引文）：官方內容區分居家儲備、緊急避難包、災害應對、急救、資訊查證及心理準備。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/emergency-supplies/household-supplies",
+          "claim": "以家庭為單位準備至少七天；飲用水每人每日建議至少三公升，物資需輪替並依照護需求調整。",
+          "supporting_passage": "編輯摘要（非引文）：以家庭為單位準備至少七天；飲用水每人每日建議至少三公升，物資需輪替並依照護需求調整。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/emergency-supplies/go-bag",
+          "claim": "以個人為單位準備一至三天的可攜物品，每半年檢查、依可負擔重量調整，另準備紙本地圖及聯絡資訊。",
+          "supporting_passage": "編輯摘要（非引文）：以個人為單位準備一至三天的可攜物品，每半年檢查、依可負擔重量調整，另準備紙本地圖及聯絡資訊。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/emergency-responses",
+          "claim": "地震、空襲、颱風、海嘯、核子事故等應依不同警報及實際環境選擇避難，不應混用程序。",
+          "supporting_passage": "編輯摘要（非引文）：地震、空襲、颱風、海嘯、核子事故等應依不同警報及實際環境選擇避難，不應混用程序。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+          "claim": "提供燒燙傷、大量出血、失去意識及毒化事故等基本救護判斷，嚴重傷患仍需119專業支援。",
+          "supporting_passage": "編輯摘要（非引文）：提供燒燙傷、大量出血、失去意識及毒化事故等基本救護判斷，嚴重傷患仍需119專業支援。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/misinformation-prevention",
+          "claim": "危機時核對權責機關與可信來源，不貿然轉傳未查核消息、可疑連結或檔案，平時備妥離線資訊。",
+          "supporting_passage": "編輯摘要（非引文）：危機時核對權責機關與可信來源，不貿然轉傳未查核消息、可疑連結或檔案，平時備妥離線資訊。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/mental-preparedness",
+          "claim": "平時溝通家人聯繫與照護安排、控制高壓資訊攝取、照顧孩子情緒，必要時尋求專業心理支持。",
+          "supporting_passage": "編輯摘要（非引文）：平時溝通家人聯繫與照護安排、控制高壓資訊攝取、照顧孩子情緒，必要時尋求專業心理支持。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        },
+        {
+          "url": "https://prepare.mnd.gov.tw/download-pdf",
+          "claim": "2025年11月二版PDF載有非商用及不得修改等再利用限制；本站僅引用來源與獨立撰寫的核對摘要。",
+          "supporting_passage": "編輯摘要（非引文）：2025年11月二版PDF載有非商用及不得修改等再利用限制；本站僅引用來源與獨立撰寫的核對摘要。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "沿用既有2026-10-17授權頁審閱；本輪只重取下載入口HTML，未重讀PDF授權頁，不聲稱新授權。"
+        },
+        {
+          "url": "https://scweb.cwa.gov.tw/zh-tw/guidance/protection/118",
+          "claim": "海邊感覺地震、海水暴退或沿海較大地震，迅速向內陸高處避難；不等待警報或停留觀浪。",
+          "supporting_passage": "編輯摘要（非引文）：海邊感覺地震、海水暴退或沿海較大地震，迅速向內陸高處避難；不等待警報或停留觀浪。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪實讀官方HTML指定相關段落，編者獨立摘要，非逐字引文；未採整頁所有醫療操作。"
+        }
+      ],
+      "limits": [
+        "本指南為獨立AI輔助改寫及導航，非國防部授權重製、緊急救護保證或全書完成證明；手冊原始版權仍屬出版機關。",
+        "AI來源核對非醫療、救護、災防、法律或著作權專業簽證；未實測報案、真實避難、App、設施當下開放；不保證治療或救援結果。"
+      ],
+      "prior_review_sha256": "6aba4237d7968903bf8e82c9306d0255698945a305077e9511023592df23f7d5"
     }
   ]
 }

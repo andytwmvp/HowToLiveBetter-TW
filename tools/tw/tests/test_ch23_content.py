@@ -8,6 +8,7 @@ import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from body_renderer import body_blocks
 from content_validation import load_json
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_runtime,validate_entry
 from ci_language_policy import audit_drafts
 BASE='0c76f150b5979378e04c0fe79bf828f8de460236'
@@ -37,7 +38,7 @@ class SkillsChapterTests(unittest.TestCase):
             for f in fields:self.assertEqual(a[f],b[f])
         previous=old('localization/tw-edition/runtime.json');current=validate_runtime()
         items={e['id']:e for e in current['items']};sources={e['id']:e for e in current['sources']}
-        for e in previous['items']:self.assertEqual(items[e['id']],e)
+        for e in previous['items']:assert_preserved_or_rechecked(self,e,items[e['id']])
         for e in previous['sources']:self.assertEqual(sources[e['id']],e)
     def test_sources_have_matching_registry_claims_and_retrieval_limits(self):
         batch=read('localization/ch23-batch.json');runtime={s['id']:s for s in validate_runtime()['sources']}

@@ -130,8 +130,17 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
         before = json.loads(subprocess.check_output(
             ["git", "show", revision + ":localization/tw-edition/runtime.json"], cwd=root))
         old = next(i for i in before["items"] if i["id"] == key)
-        prior_review = subprocess.check_output(
-            ["git", "show", revision + ":localization/reviews/" + key + ".json"], cwd=root)
+        prior_path = "localization/reviews/" + key + ".json"
+        exists = subprocess.run(["git", "cat-file", "-e", revision + ":" + prior_path], cwd=root, capture_output=True)
+        kind = record.get("prior_review_kind", "review_file")
+        if exists.returncode == 0 and kind == "review_file":
+            prior_review = subprocess.check_output(["git", "show", revision + ":" + prior_path], cwd=root)
+        elif (exists.returncode != 0 and kind == "runtime_item"
+              and key.startswith("TW-NAV-") and not old.get("target_path")):
+            # 早期內嵌導航沒有獨立審閱檔；保全整個舊runtime物件，不能捏造歷史審閱。
+            prior_review = json.dumps(old, ensure_ascii=False, sort_keys=True).encode("utf-8")
+        else:
+            raise ValueError("再審歷史審閱種類或存在狀態不符：" + key)
     except (subprocess.CalledProcessError, StopIteration, KeyError, ValueError) as error:
         raise ValueError("無法核對再審的歷史正文與審閱：" + key) from error
     if record.get("prior_review_sha256") != hashlib.sha256(prior_review).hexdigest():
@@ -152,12 +161,27 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
         runtime = load(root, "localization/tw-edition/runtime.json")
         sources = {s["id"]: s for s in runtime["sources"]}
         manifest = load(root, "localization/manifest.json")
-        entry = next(e for e in manifest["entries"] if e["id"] == key)
+        entry = next((e for e in manifest["entries"] if e["id"] == key), None)
         urls = {c["url"] for c in current_review["source_checks"]}
-        if (entry.get("sources") != new["source_ids"]
+        if ((entry is None and not key.startswith("TW-NAV-"))
+                or (entry is not None and entry.get("sources") != new["source_ids"])
                 or any(s not in sources for s in new["source_ids"])
                 or {sources[s]["url"] for s in new["source_ids"]} != urls):
             raise ValueError("再審追加來源未完整登錄或對應審閱：" + key)
+    if key.startswith("TW-NAV-"):
+        digest = hashlib.sha256(new["body"].encode("utf-8")).hexdigest()
+        if (current_review.get("id") != key or current_review.get("jurisdiction") != "TW"
+                or current_review.get("reviewed_at") != new.get("reviewed_at")
+                or current_review.get("review_due_at") != new.get("review_due_at")
+                or current_review.get("target_sha256") != digest):
+            raise ValueError("導航正文與現行審閱雜湊或日期不符：" + key)
+        if new.get("target_path"):
+            raw = checked_markdown(root, new["target_path"])
+            if raw.decode("utf-8") != new["body"] or current_review.get("target_path") != new["target_path"]:
+                raise ValueError("導航檔案與runtime不同步：" + key)
+        elif (current_review.get("target_kind") != "runtime_body"
+              or current_review.get("target_path") != "localization/tw-edition/runtime.json"):
+            raise ValueError("內嵌導航審閱目標不符：" + key)
     if record["source_checks"] != current_review["source_checks"] or record["limits"] != current_review["limits"]:
         raise ValueError("實質再審與現行審閱不同步：" + key)
 

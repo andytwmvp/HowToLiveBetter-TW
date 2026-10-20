@@ -7,6 +7,7 @@ import sys
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from body_renderer import body_blocks
+from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from ci_language_policy import audit_drafts
 BASE='c2472e69a50b9585b1a9e58576b0654fa238e3e2'
@@ -44,7 +45,9 @@ class Chapter19CompletionTests(unittest.TestCase):
     def test_old_thirty_four_items_and_sources_preserved(self):
         old=before('localization/tw-edition/runtime.json');new=validate_runtime()
         ids={e['id'] for e in old['items']};sources={s['id'] for s in old['sources']}
-        self.assertEqual(old['items'],[e for e in new['items'] if e['id'] in ids])
+        current=[e for e in new['items'] if e['id'] in ids]
+        self.assertEqual([e['id'] for e in old['items']],[e['id'] for e in current])
+        for previous,item in zip(old['items'],current,strict=True):assert_preserved_or_rechecked(self,previous,item)
         self.assertEqual(old['sources'],[s for s in new['sources'] if s['id'] in sources])
         self.assertEqual(len(old['items']),34)
 
