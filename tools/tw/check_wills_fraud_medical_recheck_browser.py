@@ -33,7 +33,7 @@ def check_wills_fraud_medical_recheck_browser(page, context, url, review):
             ('TW-17-002', '2027-02-17起施行'),
             ('TW-17-004', '先掛斷並用獨立管道查證'),
             ('TW-16-006', '2026-07-01'),
-            ('TW-24-001', '先撥119'),
+            ('TW-24-001', '立即撥119'),
         ):
             page.locator('#q').fill(needle)
             article = page.locator('#' + key)

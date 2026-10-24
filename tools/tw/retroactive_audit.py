@@ -129,16 +129,16 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
     if not re.fullmatch(r"[0-9a-f]{40}", revision):
         raise ValueError("實質再審原版本不符")
     try:
-        before = json.loads(subprocess.check_output(
-            ["git", "show", revision + ":localization/tw-edition/runtime.json"], cwd=root))
+        before = _git_json(root, revision, "localization/tw-edition/runtime.json")
         old = next(i for i in before["items"] if i["id"] == key)
         prior_path = "localization/reviews/" + key + ".json"
-        exists = subprocess.run(["git", "cat-file", "-e", revision + ":" + prior_path], cwd=root, capture_output=True)
         kind = record.get("prior_review_kind", "review_file")
-        if exists.returncode == 0 and kind == "review_file":
-            prior_review = subprocess.check_output(["git", "show", revision + ":" + prior_path], cwd=root)
-        elif (exists.returncode != 0 and kind == "runtime_item"
-              and key.startswith("TW-NAV-") and not old.get("target_path")):
+        if kind == "review_file":
+            prior_review = _git_blob(root, revision, prior_path)
+        elif (kind == "runtime_item" and key.startswith("TW-NAV-")
+              and not old.get("target_path")
+              and subprocess.run(["git", "cat-file", "-e", revision + ":" + prior_path],
+                                 cwd=root, capture_output=True).returncode != 0):
             # 早期內嵌導航沒有獨立審閱檔；保全整個舊runtime物件，不能捏造歷史審閱。
             prior_review = json.dumps(old, ensure_ascii=False, sort_keys=True).encode("utf-8")
         else:
@@ -188,15 +188,185 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
         raise ValueError("實質再審與現行審閱不同步：" + key)
 
 
+_HISTORY_EDGE_CACHE: dict[tuple[str, str], list[tuple[dict, dict, dict]]] = {}
+_GIT_OBJECT_CACHE: dict[tuple[str, str, str], bytes] = {}
+_GIT_JSON_CACHE: dict[tuple[str, str, str], dict] = {}
+_HISTORY_REVISIONS_CACHE: dict[tuple[str, str], list[str]] = {}
+
+
+def _git_blob(root: Path, revision: str, path: str) -> bytes:
+    """Read each immutable Git snapshot blob once during a test or audit process."""
+    cache_key = (str(root.resolve()), revision, path)
+    if cache_key not in _GIT_OBJECT_CACHE:
+        _GIT_OBJECT_CACHE[cache_key] = subprocess.check_output(
+            ["git", "show", revision + ":" + path], cwd=root, stderr=subprocess.DEVNULL)
+    return _GIT_OBJECT_CACHE[cache_key]
+
+
+def _git_json(root: Path, revision: str, path: str) -> dict:
+    """Parse each immutable Git JSON snapshot once; callers treat results as read-only."""
+    cache_key = (str(root.resolve()), revision, path)
+    if cache_key not in _GIT_JSON_CACHE:
+        _GIT_JSON_CACHE[cache_key] = json.loads(_git_blob(root, revision, path))
+    return _GIT_JSON_CACHE[cache_key]
+
+
+def _historical_edge_is_valid(root: Path, revision: str, record: dict, old: dict, new: dict) -> bool:
+    """Validate one committed review snapshot without depending on today's register row."""
+    key = new.get("id")
+    if not documented_revision(old, new, record):
+        return False
+    try:
+        prior_revision = record["prior_revision"]
+        prior_path = "localization/reviews/" + key + ".json"
+        if record.get("prior_review_kind", "review_file") == "review_file":
+            prior_review = _git_blob(root, prior_revision, prior_path)
+        elif (record.get("prior_review_kind") == "runtime_item"
+              and key.startswith("TW-NAV-") and not old.get("target_path")):
+            if subprocess.run(["git", "cat-file", "-e", prior_revision + ":" + prior_path],
+                              cwd=root, capture_output=True).returncode == 0:
+                return False
+            prior_review = json.dumps(old, ensure_ascii=False, sort_keys=True).encode("utf-8")
+        else:
+            return False
+        if revision == "WORKTREE":
+            review = load(root, "localization/reviews/" + key + ".json")
+            runtime = load(root, "localization/tw-edition/runtime.json")
+            manifest = load(root, "localization/manifest.json")
+        else:
+            review = _git_json(root, revision, "localization/reviews/" + key + ".json")
+            runtime = _git_json(root, revision, "localization/tw-edition/runtime.json")
+            manifest = _git_json(root, revision, "localization/manifest.json")
+        if hashlib.sha256(prior_review).hexdigest() != record["prior_review_sha256"]:
+            return False
+        digest = hashlib.sha256(new["body"].encode("utf-8")).hexdigest()
+        if (review.get("target_sha256") != digest
+                or review.get("reviewed_at") != record.get("reviewed_at")
+                or review.get("review_due_at") != record.get("review_due_at")
+                or review.get("source_checks") != record.get("source_checks")
+                or review.get("limits") != record.get("limits")):
+            return False
+        runtime_items = {item["id"]: item for item in runtime["items"]}
+        if runtime_items.get(key) != new:
+            return False
+        if new.get("target_path"):
+            if revision == "WORKTREE":
+                raw = (root / new["target_path"]).read_bytes()
+            else:
+                raw = _git_blob(root, revision, new["target_path"])
+            if raw.decode("utf-8") != new["body"] or review.get("target_path") != new["target_path"]:
+                return False
+        if not key.startswith("TW-NAV-"):
+            entries = {item["id"]: item for item in manifest["entries"]}
+            if key not in entries or entries[key].get("sources") != new.get("source_ids", []):
+                return False
+        sources = {item["id"]: item for item in runtime["sources"]}
+        if any(source_id not in sources for source_id in new.get("source_ids", [])):
+            return False
+        if {sources[source_id]["url"] for source_id in new.get("source_ids", [])} != {
+                item["url"] for item in review.get("source_checks", [])}:
+            return False
+        if record.get("retired_sources"):
+            prior_runtime = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+            prior_sources = {item["id"]: item for item in prior_runtime["sources"]}
+            for retired in record["retired_sources"]:
+                source = prior_sources.get(retired["id"])
+                if (source is None or sources.get(retired["id"]) != source
+                        or hashlib.sha256(json.dumps(source, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+                        != retired["prior_source_sha256"]):
+                    return False
+        return True
+    except (KeyError, ValueError, subprocess.CalledProcessError, UnicodeDecodeError):
+        return False
+
+
+def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, dict]]:
+    """Return valid committed revisions for one item, in mainline order."""
+    head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+    cache_key = (str(root.resolve()), key + ":" + head)
+    if cache_key in _HISTORY_EDGE_CACHE:
+        return _HISTORY_EDGE_CACHE[cache_key]
+    revisions_key = (str(root.resolve()), head)
+    if revisions_key not in _HISTORY_REVISIONS_CACHE:
+        _HISTORY_REVISIONS_CACHE[revisions_key] = subprocess.check_output(
+            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--",
+             "localization/retroactive-review-register-20261019.json"], cwd=root, text=True,
+            stderr=subprocess.DEVNULL).splitlines()
+    revisions = _HISTORY_REVISIONS_CACHE[revisions_key]
+    edges: list[tuple[dict, dict, dict]] = []
+    seen: set[tuple[str, str]] = set()
+    runtime_cache: dict[str, dict] = {}
+    for revision in reversed(revisions):
+        try:
+            register = _git_json(root, revision, "localization/retroactive-review-register-20261019.json")
+            record = next((item for item in register.get("substantive_rechecks", [])
+                           if item.get("id") == key), None)
+            if record is None:
+                continue
+            pair = (record.get("before_sha256", ""), record.get("after_sha256", ""))
+            if pair in seen:
+                continue
+            if revision not in runtime_cache:
+                runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
+            prior_revision = record.get("prior_revision", "")
+            if prior_revision not in runtime_cache:
+                runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+            old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
+            new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
+            old, new = old_items.get(key), new_items.get(key)
+            if old is None or new is None or not _historical_edge_is_valid(root, revision, record, old, new):
+                continue
+            seen.add(pair)
+            edges.append((old, new, record))
+        except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+            continue
+    _HISTORY_EDGE_CACHE[cache_key] = edges
+    return edges
+
+
+def _registered_history_connects(root: Path, old: dict, new: dict, record: dict) -> bool:
+    """Allow older regression fixtures to traverse reviewed versions archived in Git."""
+    key = old.get("id")
+    edges = list(_historical_recheck_edges(root, key))
+    prior_revision = record.get("prior_revision", "")
+    try:
+        prior_runtime = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+        latest_old = next(item for item in prior_runtime["items"] if item["id"] == key)
+    except (KeyError, StopIteration, ValueError, subprocess.CalledProcessError):
+        return False
+    current_edge = (latest_old, new, record)
+    if (_historical_edge_is_valid(root, "WORKTREE", record, latest_old, new)
+            and not any(edge[0] == latest_old and edge[1] == new and edge[2] == record for edge in edges)):
+        edges.append(current_edge)
+    current = old
+    seen_states = {hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()}
+    while current != new:
+        candidates = [edge for edge in edges if edge[0] == current]
+        next_edge = next((edge for edge in candidates
+                          if documented_revision(current, edge[1], edge[2])), None)
+        if next_edge is None:
+            return False
+        current = next_edge[1]
+        current_state = hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+        if current_state in seen_states:
+            return False
+        seen_states.add(current_state)
+    return True
+
+
 def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
-    """歷史保全測試僅允許具完整證據且已核對前後版本的正文修訂。"""
+    """Require unchanged content or a complete, evidence-backed Git history chain."""
     if old == new:
         return
     register = load(ROOT, "localization/retroactive-review-register-20261019.json")
     records = [r for r in register.get("substantive_rechecks", []) if r.get("id") == old.get("id")]
     case.assertEqual(len(records), 1, "正文變更必須有唯一再審紀錄")
-    case.assertTrue(documented_revision(old, new, records[0]), "未登錄、證據缺漏或雜湊不同的正文修訂")
-    validate_recheck_history(ROOT, records[0], new)
+    record = records[0]
+    if documented_revision(old, new, record):
+        validate_recheck_history(ROOT, record, new)
+        return
+    case.assertTrue(_registered_history_connects(ROOT, old, new, record), "未登錄、證據缺漏或雜湊不同的正文修訂歷史鏈")
+    validate_recheck_history(ROOT, record, new)
 
 
 def load(root: Path, relative: str) -> dict:

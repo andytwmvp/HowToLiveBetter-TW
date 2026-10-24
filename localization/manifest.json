@@ -9004,7 +9004,7 @@
         "ch16_nhi_fam_faq_20260731",
         "ch24_copay"
       ],
-      "verified_at": "2026-10-24",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/16-%E5%BE%97%E4%BA%86%E6%85%A2%E6%80%A7%E7%97%85%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/16-得了慢性病之後怎麼活.md",
       "source_title_zh_tw": "在社區籤家庭醫生之前，問清楚哪些進醫保、哪些自費",
@@ -9227,7 +9227,7 @@
         "ch17_will_effective_taichung_20260930",
         "ch17_will_fees_20260528"
       ],
-      "verified_at": "2026-10-24",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "把遺囑立了，記住後立的推翻先立的，公證遺囑不再優先",
@@ -9270,10 +9270,10 @@
         "ch17_165",
         "ch17_postfraud",
         "ch17_cib_statistics_20261014",
-        "ch17_npa_110_20250728",
-        "ch17_npa_recovery_20251102"
+        "ch17_npa_recovery_20251102",
+        "violence_npa_110"
       ],
-      "verified_at": "2026-10-24",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "給老人備好一句隨時能說出口的推辭：「我要回去和家裡人商量」",
@@ -11384,9 +11384,10 @@
         "ch24_medlaw",
         "ch24_referral",
         "ch24_copay",
-        "ch24_nfa_119_20220705"
+        "ch24_nfa_119_20220705",
+        "hpa_emergency"
       ],
-      "verified_at": "2026-10-24",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/24-%E7%9C%8B%E7%97%85.md",
       "display_path": "book/24-看病.md",
       "source_title_zh_tw": "常見病先在社區看，經基層逐級轉診上去，住院起付線接著算",
