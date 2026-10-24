@@ -36,8 +36,8 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
         return False
     if old.get("body") == new.get("body"):
         return False
-    allowed = {"body", "reviewed_at", "source_ids", "title", "limits", "question"}
-    # 只允許隨本次實質正文修訂同步更新顯示標題與審閱限制。
+    allowed = {"body", "reviewed_at", "review_due_at", "source_ids", "title", "limits", "question"}
+    # 只允許隨本次實質正文修訂同步更新標題、期限與審閱限制。
     # ID、路徑、資格、狀態及其他資料仍須完整保全。
     if new.get("title") != old.get("title"):
         title = new.get("title")
@@ -49,6 +49,8 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
                 or prior_title == title or prior_title not in question
                 or new["question"] != question.replace(prior_title, title)):
             return False
+    if new.get("review_due_at") != old.get("review_due_at") and new.get("review_due_at") != record.get("review_due_at"):
+        return False
     if new.get("limits") != old.get("limits"):
         limits = new.get("limits")
         if not isinstance(limits, str) or not limits.strip() or not isinstance(record.get("limits"), list) or limits not in record["limits"]:
