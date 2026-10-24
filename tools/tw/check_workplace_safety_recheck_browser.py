@@ -34,16 +34,20 @@ def check_workplace_safety_recheck_browser(page, context, url, review):
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
         searches = (
-            ('TW-19-009', '60歲以上每年'),
-            ('TW-19-010', '重大職災死亡109人'),
-            ('TW-19-011', '前2個月'),
-            ('TW-19-012', '不要自行開車'),
-            ('TW-19-016', '不是所有內部申訴'),
+            ('TW-19-009', '2028-01-01才施行'),
+            ('TW-19-010', '未經主管機關或現場應變負責人確認危害已排除'),
+            ('TW-19-011', '平均月投保薪資發給'),
+            ('TW-19-012', '不自行餵食或給藥'),
+            ('TW-19-016', '30至99人雇主應自收到申訴翌日起4個月內作成決定'),
         )
         for key, phrase in searches:
             page.locator('#q').fill(phrase)
             article = page.locator('#'+key)
             assert article.count() == 1, (key, phrase)
+            page.wait_for_function("document.getElementById('status').textContent.startsWith('顯示 1／')")
+            assert article.is_visible(), (key, phrase)
+            for other in sorted(ids - {key}):
+                assert not page.locator('#'+other).is_visible(), (key, phrase, other)
             article.evaluate('(element)=>element.scrollIntoView({block:"start"})')
             page.screenshot(path=str(review/f'workplace-{key}-{width}.png'), animations='disabled')
         page.locator('#reset').click()

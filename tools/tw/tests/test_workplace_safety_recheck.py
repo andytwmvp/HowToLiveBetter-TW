@@ -42,11 +42,14 @@ class WorkplaceSafetyRecheckTests(unittest.TestCase):
                 review = read(f"localization/reviews/{item_id}.json")
                 before = hashlib.sha256(old["body"].encode("utf-8")).hexdigest()
                 after = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
+                markdown = (ROOT / entries[item_id]["target_path"]).read_bytes()
                 self.assertNotEqual(before, after)
                 self.assertEqual(record["prior_revision"], BASE)
                 self.assertEqual(record["before_sha256"], before)
                 self.assertEqual(record["after_sha256"], after)
-                self.assertEqual(review["target_sha256"], after)
+                self.assertEqual(markdown.decode("utf-8"), current["body"])
+                self.assertEqual(review["target_path"], entries[item_id]["target_path"])
+                self.assertEqual(review["target_sha256"], hashlib.sha256(markdown).hexdigest())
                 self.assertIn("AI", review["reviewer"])
                 self.assertIn("非獨立", review["reviewer"])
                 self.assertEqual(entries[item_id]["sources"], current["source_ids"])
@@ -67,6 +70,23 @@ class WorkplaceSafetyRecheckTests(unittest.TestCase):
                 self.assertEqual(sum(block["tag"] == "h3" for block in body_blocks(runtime[item_id])), 5)
         health_exam = runtime["TW-19-009"]["body"]
         self.assertIn("每年或在變更作業時安排特殊健康檢查", health_exam)
+
+    def test_bullying_forms_and_deadlines_follow_employer_size(self):
+        runtime = {item["id"]: item for item in read("localization/tw-edition/runtime.json")["items"]}
+        body = runtime["TW-19-016"]["body"]
+        for phrase in (
+            "書面申訴及前述紀錄均須申訴人簽名或蓋章",
+            "申訴書須列明姓名、性別、出生日期、身分證明文件字號",
+            "委任代理須附委任書",
+            "100人以上雇主應自受理申訴之日起15個工作日內組成調查小組",
+            "小組成立翌日起2個月完成調查，必要時延長1個月",
+            "處理單位應在調查報告完成後1個月內決定",
+            "30至99人雇主應自收到申訴翌日起4個月內作成決定",
+            "未滿30人則為3個月、必要時延長1個月",
+            "資料不全時依通知期限補正",
+        ):
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, body)
 
 
 if __name__ == "__main__":
