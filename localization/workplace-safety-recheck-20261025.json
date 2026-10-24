@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-25",
+  "base_main_sha": "2174e94843e4b034b18ebe851dbe9663b2ca6342",
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-19-009",
+    "TW-19-010",
+    "TW-19-011",
+    "TW-19-012",
+    "TW-19-016"
+  ],
+  "risk_order_basis": "先處理高處、機械及局限空間等可致命的立即職安危害；再處理職災救治與保險、急性心腦血管救援，最後核對職場霸凌程序。依潛在傷害嚴重度、急迫性與權利期限排序，不代表事件發生率排名。",
+  "professional_review": "pending",
+  "sources_added": 12,
+  "new_source_ids": [
+    "osha_2026h1_fatality_stats",
+    "osha_inspection_agency_directory_2026",
+    "osha_local_labor_authorities_2026",
+    "osha_scaffold_safety_2026",
+    "osha_confined_space_hazards_2026",
+    "osha_high_temperature_work_2026",
+    "osha_bullying_rules_2026",
+    "osha_bullying_highest_authority_2026",
+    "osha_bullying_external_violence_2026",
+    "osha_health_exam_providers_2026q3",
+    "bli_injury_medical_sheet_2026",
+    "bli_injury_sickpay_calculator"
+  ],
+  "reused_source_ids": [
+    "oshact",
+    "oshhealth",
+    "ch19_health_2021",
+    "oshhistory",
+    "hpa_emergency",
+    "occupation",
+    "injurycoverage",
+    "ch19_injury_wage",
+    "ch19_lsa",
+    "injurydiagnosis",
+    "genderwork",
+    "mohw_1925",
+    "violence_npa_110"
+  ],
+  "frequency_assessments": {
+    "TW-19-009": "本條主要是法定檢查頻率而非疾病個人發生率。本輪未找到可同時列出全國職業病病例定義、分子與分母的資料；認可院所清單及健檢人次均不能換算罹病或異常個人機率。2026修正的新第17條年齡頻率尚待2028-01-01施行，2026-10-25仍引用既有頻率。",
+    "TW-19-010": "職安署截至2026-06-30公布全產業重大職災死亡109人、營造業58人，且營造業死亡中墜落占62%。這是行政重大職災死亡人數及產業內死亡原因比例，沒有工作者或工作時數分母，不是事故件數、全行業墜落占比或個人發生率。以嚴重後果和臺灣營造墜落情境排序，不將件數直接當個人機率。",
+    "TW-19-011": "本輪未取得全國一致通勤職災事故定義、通勤人數或里程／工時暴露分母，不能由道路事故件數、重大職災數或保險申請數推估個人通勤職災機率。採取救治與留存證據步驟依可能後果及避免權益逾期排序，不表示事件普遍程度。",
+    "TW-19-012": "本輪未取得具全國工作中發作定義及工作者／工時分母的急性心肌梗塞、中風或工作因果統計。全體疾病死亡、病例或急診數不能換算為工作中發作率或職業因果比例，故不估計個人機率。",
+    "TW-19-016": "截至2026-10-25未找到能以2026-07-01生效後同一法定定義、同一通報期間及全國工作者暴露分母計算職場霸凌發生率的公開官方資料。雇主申訴件數、新聞案例或境外研究都不等於臺灣個人發生率，本文不推估常見程度或個人機率。"
+  },
+  "statistics": [
+    {
+      "item_id": "TW-19-010",
+      "source_id": "osha_2026h1_fatality_stats",
+      "value": 109,
+      "unit": "人",
+      "period": "2026-01-01至2026-06-30",
+      "scope": "臺灣全產業重大職業災害死亡",
+      "population": "職安署公布之重大職災死亡統計對象",
+      "numerator": 109,
+      "denominator": null,
+      "event_definition": "重大職業災害死亡人數，不等於所有職業傷病或事故件數。",
+      "method": "主管機關行政統計；公告未列工作者人數或工作時數分母。",
+      "accessed_at": "2026-10-25",
+      "limitations": "無個人暴露分母，不能換算發生率、個人機率或各行業相對風險。"
+    },
+    {
+      "item_id": "TW-19-010",
+      "source_id": "osha_2026h1_fatality_stats",
+      "value": 58,
+      "unit": "人",
+      "period": "2026-01-01至2026-06-30",
+      "scope": "臺灣營造業重大職業災害死亡",
+      "population": "職安署公布之營造業重大職災死亡統計對象",
+      "numerator": 58,
+      "denominator": null,
+      "event_definition": "營造業重大職災死亡人數。",
+      "method": "主管機關行政統計；公告未列營造業工作者人數或工作時數分母。",
+      "accessed_at": "2026-10-25",
+      "limitations": "不是營造業工作者發生率、死亡率或個人墜落風險。"
+    },
+    {
+      "item_id": "TW-19-010",
+      "source_id": "osha_2026h1_fatality_stats",
+      "value": 62,
+      "unit": "%（營造業重大職災死亡中的墜落比例）",
+      "period": "2026-01-01至2026-06-30",
+      "scope": "臺灣營造業重大職災死亡原因結構",
+      "population": "該期營造業重大職災死亡者",
+      "numerator": null,
+      "denominator": 58,
+      "event_definition": "職安署公告的營造業重大職災死亡中，墜落所占比例；未提供可重算的墜落死亡絕對人數。",
+      "method": "主管機關公布比例；分母為該期營造業重大職災死亡者，非勞工人數或暴露工時。",
+      "accessed_at": "2026-10-25",
+      "limitations": "不能解讀為所有營造事故中62%會死亡、全體工作者墜落發生率或個人機率。"
+    }
+  ],
+  "legal_evidence": [
+    {
+      "law": "職業安全衛生法第6、18、32、37、39條",
+      "announced_at": "2025-12-19",
+      "effective_at": "2026-07-01",
+      "scope": "核對安全預防、立即危險退避、必要安全教育、重大職災八小時通報及申訴保護。八小時為雇主對勞檢機構的通報義務，不是勞工就醫或請領給付期限。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+        "https://www.osha.gov.tw/48110/48713/207079/207115/207278/post"
+      ],
+      "accessed_at": "2026-10-25",
+      "limitations": "不代表已由職安專業人員檢查個別現場；個案風險及法定義務依具體事實判定。"
+    },
+    {
+      "law": "勞工健康保護規則第17及29條",
+      "announced_at": "2026-06-26",
+      "effective_at": "2028-01-01",
+      "scope": "新一般在職健檢頻率的生效日；2026-10-25尚適用既有第17條頻率。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060022",
+        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?lnndate=20211222&lser=001&pcode=N0060022"
+      ],
+      "accessed_at": "2026-10-25",
+      "limitations": "歷史版本只用於確認新條文未生效前的頻率，不主張整份舊規仍全面有效。"
+    },
+    {
+      "law": "職場霸凌防治措施準則及最高負責人外部申訴處理辦法",
+      "announced_at": "2026-06-23",
+      "effective_at": "2026-07-01",
+      "scope": "核對申訴管道、人數門檻、調查期限及最高負責人外部申訴。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060085",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060086",
+        "https://www.osha.gov.tw/48110/48713/207079/207115/207278/post"
+      ],
+      "accessed_at": "2026-10-25",
+      "limitations": "規模、受理地、申訴期限及最高負責人身分須依個案法定要件判斷。"
+    },
+    {
+      "law": "勞工職業災害保險及保護法第37、39、40、42條",
+      "announced_at": "2021-04-30",
+      "effective_at": "2022-05-01",
+      "scope": "核對新制職災醫療書單、核退、傷病給付起算與比例；2022-05-01前事故另查過渡條款。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+        "https://www.bli.gov.tw/0109794.html",
+        "https://www.bli.gov.tw/0107053.html"
+      ],
+      "accessed_at": "2026-10-25",
+      "limitations": "勞保局試算頁最後更新2022-05-09，僅作試算呈現，不取代法條及個案核定。"
+    }
+  ],
+  "unresolved_issues": [
+    "未取得全國職業病、通勤職災或工作中急性心腦血管事件的同口徑個人暴露分母，本文不估算個人發生機率。",
+    "職安署2026上半年重大職災死亡數為行政統計，未有工作者或工時分母；不得推作個人風險率。",
+    "尚未取得職業安全衛生、職業醫學、心臟／神經科、勞動法及職場霸凌調查專業人士獨立簽證；個案處置與法律結論仍待專業審查。",
+    "2026年第3梯次健檢院所附件列認可資格與期間，不代表個別院所目前預約名額或每項檢查可即時提供。"
+  ],
+  "source_gaps": {
+    "新增來源": 12,
+    "新增來源ID": "none duplicate; all page URLs read or verified via current official listing",
+    "retired_sources": [],
+    "unregistered_ids_before": 115,
+    "pending_reference_occurrences_before": 306
+  },
+  "synchronized_files": [
+    "manifest.json",
+    "tw-edition/runtime.json",
+    "tw-edition/coverage.json",
+    "five review records",
+    "retroactive review register",
+    "five Markdown bodies"
+  ]
+}
