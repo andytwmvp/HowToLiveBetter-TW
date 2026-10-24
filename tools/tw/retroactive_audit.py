@@ -218,10 +218,14 @@ def _historical_edge_is_valid(root: Path, revision: str, record: dict, old: dict
         return False
     try:
         prior_revision = record["prior_revision"]
+        prior_path = "localization/reviews/" + key + ".json"
         if record.get("prior_review_kind", "review_file") == "review_file":
-            prior_review = _git_blob(root, prior_revision, "localization/reviews/" + key + ".json")
+            prior_review = _git_blob(root, prior_revision, prior_path)
         elif (record.get("prior_review_kind") == "runtime_item"
               and key.startswith("TW-NAV-") and not old.get("target_path")):
+            if subprocess.run(["git", "cat-file", "-e", prior_revision + ":" + prior_path],
+                              cwd=root, capture_output=True).returncode == 0:
+                return False
             prior_review = json.dumps(old, ensure_ascii=False, sort_keys=True).encode("utf-8")
         else:
             return False
@@ -323,30 +327,30 @@ def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, di
 def _registered_history_connects(root: Path, old: dict, new: dict, record: dict) -> bool:
     """Allow older regression fixtures to traverse reviewed versions archived in Git."""
     key = old.get("id")
-    edges = _historical_recheck_edges(root, key)
+    edges = list(_historical_recheck_edges(root, key))
     prior_revision = record.get("prior_revision", "")
     try:
         prior_runtime = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
         latest_old = next(item for item in prior_runtime["items"] if item["id"] == key)
     except (KeyError, StopIteration, ValueError, subprocess.CalledProcessError):
         return False
-    if _historical_edge_is_valid(root, "WORKTREE", record, latest_old, new):
-        edges.append((latest_old, new, record))
-    current, current_hash = old, hashlib.sha256(old.get("body", "").encode("utf-8")).hexdigest()
-    target_hash = hashlib.sha256(new.get("body", "").encode("utf-8")).hexdigest()
-    seen_hashes = {current_hash}
-    while current_hash != target_hash:
-        candidates = [edge for edge in edges if edge[2].get("before_sha256") == current_hash]
+    current_edge = (latest_old, new, record)
+    if (_historical_edge_is_valid(root, "WORKTREE", record, latest_old, new)
+            and not any(edge[0] == latest_old and edge[1] == new and edge[2] == record for edge in edges)):
+        edges.append(current_edge)
+    current = old
+    seen_states = {hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()}
+    while current != new:
+        candidates = [edge for edge in edges if edge[0] == current]
         next_edge = next((edge for edge in candidates
-                          if edge[2].get("after_sha256") not in seen_hashes
-                          and documented_revision(current, edge[1], edge[2])), None)
+                          if documented_revision(current, edge[1], edge[2])), None)
         if next_edge is None:
             return False
         current = next_edge[1]
-        current_hash = next_edge[2]["after_sha256"]
-        if current_hash in seen_hashes:
+        current_state = hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+        if current_state in seen_states:
             return False
-        seen_hashes.add(current_hash)
+        seen_states.add(current_state)
     return True
 
 

@@ -9,7 +9,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, publication_report, validate_runtime
-from retroactive_audit import assert_preserved_or_rechecked, documented_revision, validate_recheck_history
+from retroactive_audit import (
+    _registered_history_connects,
+    assert_preserved_or_rechecked,
+    documented_revision,
+    validate_recheck_history,
+)
 
 BASE = 'c5e5608bc3cd47da9693878b7e69684393f22312'
 IDS = {'TW-17-002', 'TW-17-004', 'TW-16-006', 'TW-24-001'}
@@ -62,6 +67,17 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         prior = next(item for item in old['items'] if item['id'] == 'TW-24-001')
         current = next(item for item in validate_runtime()['items'] if item['id'] == 'TW-24-001')
         assert_preserved_or_rechecked(self, prior, current)
+
+    def test_history_chain_rejects_same_body_with_unrecorded_metadata(self):
+        current = next(item for item in validate_runtime()['items'] if item['id'] == 'TW-24-001')
+        altered = copy.deepcopy(current)
+        altered['title'] += ' 未登錄的標題異動'
+        self.assertEqual(hashlib.sha256(altered['body'].encode()).hexdigest(),
+                         hashlib.sha256(current['body'].encode()).hexdigest())
+        self.assertNotEqual(altered, current)
+        record = next(row for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
+                      if row['id'] == 'TW-24-001')
+        self.assertFalse(_registered_history_connects(ROOT, altered, current, record))
 
     def test_taiwan_will_law_announcement_effective_date_and_transition(self):
         item = next(item for item in validate_runtime()['items'] if item['id'] == 'TW-17-002')
