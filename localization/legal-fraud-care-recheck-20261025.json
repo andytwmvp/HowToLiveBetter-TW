@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-25",
+  "base_main_sha": "c5e5608bc3cd47da9693878b7e69684393f22312",
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-24-001",
+    "TW-17-004",
+    "TW-17-002",
+    "TW-16-006"
+  ],
+  "risk_order_basis": "危急症狀延誤可能造成生命損害，先明確119求援；其次是限時詐騙匯款與錯誤求警連結；再來是即將施行且涉及身後財產的遺囑法規；家庭醫師服務選擇屬較低急迫度。排序依傷害嚴重性、可逆性與處理時效，不是單純事件頻率排名。",
+  "professional_review": "pending",
+  "sources_added": 0,
+  "frequency_assessments": {
+    "TW-17-002": "事件頻率不適用：遺囑方式與財產安排不能以一般疾病盛行率或個人事件率衡量。未取得同期間、同法域且有有效立遺囑人分母的全臺遺囑瑕疵／訴訟率；法院案件量不能換算立遺囑者的爭議機率。按法律後果及2027-02-17施行時點安排複查。",
+    "TW-17-004": "刑事警察局2026-10-14合作備忘錄公告內文轉引165儀錶板：2026年9月全國電信網路詐騙受理10,775件、彙總財損新臺幣39.3億餘元。對象是警方行政受理案件與總財損，非去重被害人或全部實際事件；未提供個人暴露分母，不能解讀發生率、盛行率、長者專屬風險或個人機率。通報與分類口徑可能影響跨期比較。",
+    "TW-16-006": "不適用疾病盛行率：本條是健保服務選擇與照護聯繫，不是疾病或傷害事件。未核實2026年全國同口徑計畫參與者、實際收案人數及有整合照護需求的母數；舊年度會員或就醫件數不能當個人需要、效益或支出機率。",
+    "TW-24-001": "不適用單一發生率：本條整合多種急症警訊與穩定就醫路徑，不是單一疾病。未取得可比較的2026全國急症事件、延誤或可避免轉診分母；門診人次不能換算個人急症機率。急救行動先於統計背景。"
+  },
+  "statistics": [
+    {
+      "item_id": "TW-17-004",
+      "source_id": "ch17_cib_statistics_20261014",
+      "value": 10775,
+      "unit": "件",
+      "period": "2026年9月",
+      "scope": "臺灣全國電信網路詐騙案件",
+      "population": "165打詐儀錶板之行政總受理案件",
+      "numerator": 10775,
+      "denominator": null,
+      "event_definition": "刑事警察局公告所稱2026年9月電信網路詐騙總受理數；非去重被害人數或全部實際事件。",
+      "method": "警察行政受理資料，非抽樣調查或事件暴露率。",
+      "accessed_at": "2026-10-25",
+      "limitations": "未提供人口、接觸詐騙訊息者或獨立被害人分母；不能換算個人發生率、長者特定率或個人機率。通報及分類口徑影響跨期比較。",
+      "source_context": "刑事警察局合作備忘錄公告內文所引165儀錶板統計"
+    },
+    {
+      "item_id": "TW-17-004",
+      "source_id": "ch17_cib_statistics_20261014",
+      "value": 39.3,
+      "unit": "新臺幣億元以上",
+      "period": "2026年9月",
+      "scope": "臺灣全國電信網路詐騙案件彙總財損",
+      "population": "165打詐儀錶板報告的全國案件財損合計",
+      "numerator": null,
+      "denominator": null,
+      "event_definition": "公告措辭為「總財損金額新臺幣39.3億餘元」，屬下限以上的貨幣總額，非件均損失。",
+      "method": "依行政受理統計公告的彙總財損，非抽樣推估。",
+      "accessed_at": "2026-10-25",
+      "limitations": "沒有分案財損分佈、去重受害者或暴露分母；不得解讀成個人損失、件均金額或個人受騙機率。",
+      "source_context": "刑事警察局合作備忘錄公告內文所引165儀錶板統計"
+    }
+  ],
+  "legal_evidence": [
+    {
+      "law": "民法第1223條及民法繼承編施行法第10、12條",
+      "announced_at": "2026-08-17",
+      "effective_at": "2027-02-17",
+      "scope": "民法第1223條修正於2026-08-17公布、公布六個月後施行；施行法第10條適用施行前訂立但施行後發生效力之遺囑。日期亦由臺中市政府法制局2026-09-30問答交叉核對。",
+      "urls": [
+        "https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=FL001351&TypeSort=2&lawNumber=1186",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=B0000006",
+        "https://www.legal.taichung.gov.tw/30340/23515/3380659"
+      ],
+      "accessed_at": "2026-10-25",
+      "limitations": "法規資料庫整編截止2026-10-16；新條文尚未生效，重大財產及跨施行日個案應由律師／公證人核對。"
+    },
+    {
+      "law": "醫療法第21、22條及健保署門診基本部分負擔表",
+      "announced_at": null,
+      "effective_at": null,
+      "scope": "門診基本部分負擔表列自2017-04-15生效，頁面2025-04-22更新；醫療費用標準由地方主管機關核定，收據列項目與金額。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://www.nhi.gov.tw/ch/cp-5163-9803c-2737-1.html"
+      ],
+      "accessed_at": "2026-10-24",
+      "limitations": "個別掛號、藥品、檢驗、自費及特殊身分例外不包含在表列基本部分負擔。"
+    },
+    {
+      "law": "全民健康保險家庭醫師整合性照護計畫115年版本",
+      "announced_at": "2026-06-26",
+      "effective_at": "2026-01-01",
+      "scope": "年度計畫2026-01-01實施；公告新增兩項院所支付標準自2026-07-01生效。",
+      "urls": [
+        "https://www.nhi.gov.tw/ch/cp-19992-048aa-3258-1.html"
+      ],
+      "accessed_at": "2026-10-25",
+      "limitations": "院所收案資格、民眾費用及實際服務時間須依最新計畫和院所答覆確認。"
+    }
+  ],
+  "changes": {
+    "TW-17-002": "本次重核法務部現行民法及繼承編施行法、臺中市政府法制問答和司法院公證問答；確認2026-08-17為公布日、2027-02-17為第1223條修正施行日，並保留施行法第10條跨施行日適用限制。同步將審閱基準日更新為2026-10-25；未發現應改動的形式或費用主張。",
+    "TW-17-004": "本次實讀可取得的中華郵政及警政署110頁、重核刑事局2026-10-14公告及二次詐騙來源；將2026年9月統計的出處準確標為合作備忘錄公告內文中的165儀錶板引述，列清行政案件數與彙總財損而不推成個人率。發現舊110網址UUID錯誤，HTTP頁面雖可回應但內容為錯誤訊息，改用同庫已登錄的正確警政署來源；舊來源物件及SHA保留。",
+    "TW-16-006": "本次重核健保署115年計畫公告及115年7月31日更新問答頁，確認2026-01-01年度生效、兩項新增院所支付項目2026-07-01生效，並區分院所給付與個人負擔；補強線上院所名單不能保證即時開放收案、掛號或個人資格，應直接向院所核實。其他慢箋、同意退出與費用文字維持已核對的範圍。",
+    "TW-24-001": "本次依國民健康署2026-03-11心臟／中風急救衛教及消防署119一般救護說明，修正原先「撥119或直接到急診」的模糊並列，改為警訊先撥119、記下發作時間、勿自行駕駛前往並依救護指示；危急處置先於轉診和費用。新增hpa_emergency官方來源，其他健保轉診與部分負擔表未變。"
+  },
+  "limits": [
+    "四篇均為AI輔助來源實質再審，法律／公證、反詐／警政、醫療／健保專業簽證仍待取得；publication_ready維持false。",
+    "刑事局9月數值只在2026-10-14合作備忘錄公告內文引述；165首頁最新讀取（2026-10-24）只有JavaScript入口外殼。",
+    "舊錯誤110來源物件仍留存以保留歷史，正文已撤銷該引用並改用已讀取的正確警政署頁面。",
+    "急症、遺囑爭議、家庭醫師照護均無可支持個人機率的同口徑分母；不自行推估。",
+    "本批未辦理公證、詐騙止付／報案、健保收案、急救、就醫或轉診；工程驗證不等同專業簽證。"
+  ],
+  "source_objects_before_after": {
+    "runtime_before": 631,
+    "runtime_after": 631,
+    "registry_before": 712,
+    "registry_after": 712
+  },
+  "source_reference_changes": {
+    "added_references": 2,
+    "retired_references": 1,
+    "net_change": 1,
+    "new_source_objects": 0
+  },
+  "rechecks_cumulative_unique": 100,
+  "source_corrections": [
+    {
+      "retired_source_id": "ch17_npa_110_20250728",
+      "incorrect_url": "https://www.npa.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=1048&serno=e3ad2889-4dee-41a9-a0f8-9b9d26dc6950",
+      "observed_problem": "UUID錯誤；頁面回應錯誤訊息，不能支持110報案服務。",
+      "replacement_source_id": "violence_npa_110",
+      "replacement_url": "https://www.npa.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=1048&serno=e3ad2889-4dee-41cf-aef8-9b9d26dc6950",
+      "prior_source_object_sha256": "5cdb20845214a011756a1d3b2522f1449ab2d79d37d0f1686bf3ae27cddaf138",
+      "historical_object_preserved": true
+    }
+  ],
+  "review_sources": {
+    "TW-17-002": [
+      {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-17-002：民法遺囑能力、法定形式、撤回與特留分規範。"
+      },
+      {
+        "url": "https://mojlaw.moj.gov.tw/LawContent.aspx?LSID=FL001351&TypeSort=2&lawNumber=1186",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-17-002：民法第1186、1189至1198、1219至1223條及第1223條修正公布、施行提示。"
+      },
+      {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=B0000006",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-17-002：施行法第10條與第12條對遺囑生效時點及新特留分施行日的規則。"
+      },
+      {
+        "url": "https://www.legal.taichung.gov.tw/30340/23515/3380659",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-17-002：法制局公告2027-02-17施行，並區分兄弟姊妹的法定繼承順位與特留分。"
+      },
+      {
+        "url": "https://www.judicial.gov.tw/tw/cp-1358-2756-bde3e-1.html",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-17-002：公證程序、準備文件與依標的金額／價額收費的例示。"
+      }
+    ],
+    "TW-17-004": [
+      {
+        "url": "https://165.npa.gov.tw/",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-17-004：165官方網站入口；本輪首頁只能載入JavaScript外殼，未以它支持動態案例或統計。"
+      },
+      {
+        "url": "https://subservices.post.gov.tw/post/internet/Anti-Fraud/common_practices.jsp",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-17-004：中華郵政詐騙手法頁面要求民眾以官方管道查證，勿交付驗證碼、SIM卡及金融帳戶／卡片資料，並提供165查證入口。"
+      },
+      {
+        "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=33d6fe82-407d-4ac7-bf71-493116d124e3",
+        "accessed_at": "2026-10-25",
+        "claim": "2026年9月全國電信網路詐騙行政受理件數與彙總財損。"
+      },
+      {
+        "url": "https://www.pbs.npa.gov.tw/ch/app/news/view?id=18740&module=wg183&serno=e027903f-5995-4aee-9431-973d11b0238c",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-17-004：特殊管道保證追回、代辦費或交付提款卡等可能是二次詐騙，應改循165等官方管道。"
+      },
+      {
+        "url": "https://www.npa.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=1048&serno=e3ad2889-4dee-41cf-aef8-9b9d26dc6950",
+        "accessed_at": "2026-10-25",
+        "claim": "警政署110報案服務可供需警方即時協助的事件使用。"
+      }
+    ],
+    "TW-16-006": [
+      {
+        "url": "https://www.nhi.gov.tw/ch/cp-19992-048aa-3258-1.html",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-16-006：115年計畫自2026-01-01實施，兩項新增院所支付標準自2026-07-01實施；不是個人補助金。"
+      },
+      {
+        "url": "https://info.nhi.gov.tw/INAE1000/INAE1040S01?type=app",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-16-006：健保署提供參與家庭醫師整合照護院所與社區醫療群查詢入口。"
+      },
+      {
+        "url": "https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-16-006：慢性病連續處方箋由醫師按病況評估，計畫收案不會自動產生處方。"
+      },
+      {
+        "url": "https://www.nhi.gov.tw/ch/cp-5380-3e6ca-2888-1.html",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-16-006：115年問答集2026-07-31更新；參與同意及拒絕後院所結案流程，夜間／假日服務實際安排須核對院所。"
+      },
+      {
+        "url": "https://www.nhi.gov.tw/ch/cp-5163-9803c-2737-1.html",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-16-006：一般西醫門診基本部分負擔依醫療層級及轉診不同，並不等於總看診成本。"
+      }
+    ],
+    "TW-24-001": [
+      {
+        "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-24-001：醫療法第21、22條規定醫療費用標準由地方主管機關核定，收據列明項目與金額。"
+      },
+      {
+        "url": "https://www.nhi.gov.tw/ch/cp-7895-303da-3255-1.html",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-24-001：健保署推動基層及醫院雙向轉診；轉診是政策與照護銜接，急症不可等待門診。"
+      },
+      {
+        "url": "https://www.nhi.gov.tw/ch/cp-5163-9803c-2737-1.html",
+        "accessed_at": "2026-10-24",
+        "claim": "TW-24-001：西醫門診表列醫學中心170／420、區域醫院100／240、地區醫院50／80、診所50／50元；只為基本部分負擔，另有例外及其他費用。"
+      },
+      {
+        "url": "https://www.nfa.gov.tw/cht/index.php?article_id=12181&code=list&flag=detail&ids=26",
+        "accessed_at": "2026-10-25",
+        "claim": "TW-24-001：119受理緊急救護，危急時派遣並送往就近適當醫院，不需等待一般門診或轉診。"
+      },
+      {
+        "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+        "accessed_at": "2026-10-25",
+        "claim": "國民健康署對心臟與中風警訊、119求援及記錄發作時間的指引。"
+      }
+    ]
+  },
+  "taiwan_frequency_evidence": {
+    "TW-17-004": {
+      "values": [
+        {
+          "value": 10775,
+          "unit": "件",
+          "period": "2026-09",
+          "scope": "全國電信網路詐騙行政受理案件",
+          "numerator": 10775,
+          "denominator": null,
+          "event_definition": "刑事警察局公告所稱總受理件數，非去重受害者或所有實際事件。"
+        },
+        {
+          "value": 39.3,
+          "unit": "新臺幣億元以上",
+          "period": "2026-09",
+          "scope": "全國行政公告彙總財損",
+          "numerator": null,
+          "denominator": null,
+          "event_definition": "公告措辭為總財損39.3億餘元，非件均損失。"
+        }
+      ],
+      "method": "警察行政受理與彙總財損，透過MOU公告內文引用165儀錶板；非抽樣調查。",
+      "limits": "沒有個人暴露分母、去重受害者或所有實際事件母數；不得換算個人發生率、盛行率、長者專屬風險、件均損失或個人機率。"
+    },
+    "TW-17-002": "沒有適合的遺囑事件個人分母；法院案件數不能換算立遺囑者的個人爭議機率。",
+    "TW-16-006": "沒有可比的全國參與人數及照護需求母數；服務使用量不能代表個人需要或效益。",
+    "TW-24-001": "沒有可比的急症事件或延誤轉診個人暴露分母；門診量不能換算個人急症發生機率。"
+  },
+  "emergency_evidence": {
+    "source_id": "hpa_emergency",
+    "source_url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+    "accessed_at": "2026-10-25",
+    "scope": "國民健康署心臟／中風警訊，立即119、記錄發作時間、不自行駕車；消防署另支持119緊急救護及危急病患後送。",
+    "change": "刪除「先撥119或直接到急診」的模糊並列，改明示警訊先打119並聽從派遣與救護指示；一般就醫與費用資訊置於後。",
+    "limits": "警訊例子不是完整清單或診斷；未取得可比的2026全國急症延誤個人分母，不推估個人風險。"
+  },
+  "progress_before_after": {
+    "before": {
+      "core_verified": 278,
+      "core_total": 765,
+      "unique_draft_topics": 498,
+      "topics_without_any_draft": 267,
+      "topics_with_unreviewed_content": 220,
+      "runtime_source_objects": 631,
+      "registry_sources": 712,
+      "unresolved_source_ids": 115,
+      "unresolved_reference_occurrences": 306,
+      "unique_review_register_rows": 100,
+      "publication_ready": false
+    },
+    "after": {
+      "core_verified": 278,
+      "core_total": 765,
+      "unique_draft_topics": 498,
+      "topics_without_any_draft": 267,
+      "topics_with_unreviewed_content": 220,
+      "runtime_source_objects": 631,
+      "registry_sources": 712,
+      "unresolved_source_ids": 115,
+      "unresolved_reference_occurrences": 306,
+      "unique_review_register_rows": 100,
+      "publication_ready": false
+    },
+    "batch_delta": {
+      "new_core_entries": 0,
+      "substantive_recheck_events": 4,
+      "new_source_objects": 0,
+      "added_source_references": 2,
+      "retired_source_references": 1
+    }
+  }
+}
