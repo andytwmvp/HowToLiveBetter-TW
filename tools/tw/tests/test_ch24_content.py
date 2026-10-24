@@ -21,7 +21,7 @@ class MedicalCareTaiwanTests(unittest.TestCase):
     self.assertGreater(len(raw),1200);self.assertEqual(raw.decode('utf-8'),runtime[key]['body'])
     self.assertEqual(hashlib.sha256(raw).hexdigest(),review['target_sha256'])
     self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(runtime[key])),5)
-    self.assertIn('AI',review['reviewer']);self.assertTrue(all(s['url'].startswith('https://') and '摘要' in s['supporting_passage'] for s in review['source_checks']))
+    self.assertIn('AI',review['reviewer']);self.assertTrue(all(s['url'].startswith('https://') and len(s['supporting_passage'].strip()) >= 30 and s['claim'] != s['supporting_passage'] for s in review['source_checks']))
     self.assertEqual({s['url'] for s in review['source_checks']},{s['url'] for s in validate_runtime()['sources'] if s['id'] in runtime[key]['source_ids']})
  def test_known_medical_distinctions_and_no_trivial_renaming(self):
   items={e['id']:e['body'] for e in validate_runtime()['items']}
