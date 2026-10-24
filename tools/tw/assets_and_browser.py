@@ -126,6 +126,7 @@ def run(render: bool,browser_test: bool) -> None:
             from check_property_care_recheck_browser import check_property_care_recheck_browser
             from check_medical_access_recheck_browser import check_medical_access_recheck_browser
             from check_medical_rights_recheck_browser import check_medical_rights_recheck_browser
+            from check_workplace_safety_recheck_browser import check_workplace_safety_recheck_browser
             from check_safety_navigation_browser import check_safety_navigation_browser
             from check_conflict_rescue_rights_browser import check_conflict_rescue_rights_browser
             from check_wills_fraud_medical_recheck_browser import check_wills_fraud_medical_recheck_browser
@@ -150,6 +151,7 @@ def run(render: bool,browser_test: bool) -> None:
             result['checks'].extend(check_property_care_recheck_browser(page,context,url,review))
             result['checks'].extend(check_medical_access_recheck_browser(page,context,url,review))
             result['checks'].extend(check_medical_rights_recheck_browser(page,context,url,review))
+            result['checks'].extend(check_workplace_safety_recheck_browser(page,context,url,review))
             from check_ch23_browser import check_ch23_browser
             result['checks'].extend(check_ch23_browser(page,context,url,review))
             from check_ch25_browser import check_ch25_browser

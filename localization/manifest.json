@@ -9786,12 +9786,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-009.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060022",
-        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?lnndate=20211222&lser=001&pcode=N0060022",
-        "https://www.osha.gov.tw/48110/48713/207079/207115/207278/post"
+        "oshact",
+        "oshhealth",
+        "ch19_health_2021",
+        "oshhistory",
+        "osha_health_exam_providers_2026q3"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "進有粉塵、噪聲、化學品的崗位之前，先看合同裡寫沒寫危害；三次職業健康檢查由單位安排並掏錢",
@@ -9808,10 +9809,15 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-010.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
-        "https://www.mohw.gov.tw/cp-2704-85748-1.html"
+        "oshact",
+        "hpa_emergency",
+        "osha_2026h1_fatality_stats",
+        "osha_inspection_agency_directory_2026",
+        "osha_scaffold_safety_2026",
+        "osha_confined_space_hazards_2026",
+        "osha_high_temperature_work_2026"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "粉塵、噪聲、化學毒物造成的損傷不少是不可逆的（比如塵肺、噪聲聾）：防護用品單位必須給，沒有防護措施的作業可以拒絕",
@@ -9828,12 +9834,14 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-011.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050008",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
-        "https://www.bli.gov.tw/0107265.html",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001"
+        "occupation",
+        "injurycoverage",
+        "ch19_injury_wage",
+        "ch19_lsa",
+        "bli_injury_medical_sheet_2026",
+        "bli_injury_sickpay_calculator"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "上班受傷、上下班路上被撞，第一件事是做工傷認定，單位不報你自己報",
@@ -9850,11 +9858,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-012.md",
       "sources": [
-        "https://www.mohw.gov.tw/cp-2704-85748-1.html",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050008",
-        "https://www.osha.gov.tw/48110/48363/133456/133462/133511/"
+        "hpa_emergency",
+        "occupation",
+        "injurydiagnosis"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "別信「撐到工位就算工傷」：突發不適先打 120，不是先趕去打卡",
@@ -9935,14 +9943,20 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-016.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
-        "https://www.osha.gov.tw/48110/48713/207079/207115/207278/post",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050008",
-        "https://www.mohw.gov.tw/cp-2704-50587-1.html",
-        "https://www.mohw.gov.tw/cp-2704-85748-1.html"
+        "oshact",
+        "oshhistory",
+        "genderwork",
+        "occupation",
+        "mohw_1925",
+        "hpa_emergency",
+        "osha_bullying_rules_2026",
+        "osha_bullying_highest_authority_2026",
+        "osha_bullying_external_violence_2026",
+        "osha_local_labor_authorities_2026",
+        "osha_inspection_agency_directory_2026",
+        "violence_npa_110"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "在單位長期被欺負、辱罵、刁難，別硬扛：先記下來留證據，再按性質走投訴、報警或者仲裁",
