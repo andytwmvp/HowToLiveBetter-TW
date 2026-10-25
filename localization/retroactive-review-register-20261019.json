@@ -14933,6 +14933,298 @@
         "ch01_confined_osha",
         "ch01_confined_facilities_29"
       ]
+    },
+    {
+      "id": "TW-01-001",
+      "before_sha256": "11f6acfed3e08612713472b585f26e1dfa1e4e0f18dfb9efde6f6b2c336c4e58",
+      "after_sha256": "cc6adfc07490dd2963b31b607d656db0a2d2e8c81fcb299ef4531131aa97e3a9",
+      "prior_revision": "ab51151e3cb4f3fc0e00a32e3f3295ad1bb3d502",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "aafdf98d40e717990c3e67ff01977b575361a89ed736912a5970bba6efe8d0b5",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "適用臺灣自用車、計程車、租車及接駁車乘員，含小型車各座位、兒童座椅與交通事故後求援。把國道未繫帶事故行政數與乘車暴露機率分開，依現行交通部安全帶辦法確認規則。",
+      "frequency_assessment": "交通部168交通安全入口網2026-04-20發布頁引述高公局資料：2025年國道因未繫妥安全帶造成死亡的事故19件、21人死亡。只有事故與死亡件數，沒有乘車旅次或繫帶暴露分母；頁面所列3.6倍比較未附可重算分子分母，不當作個人機率。",
+      "changes": "以2025年國道未繫帶死亡事故19件、21人替換全道路死亡總數；不延伸未提供分母的3.6倍比例為個人風險。重核現行安全帶規則、事故後檢查或更換、孕婦及兒童座椅依車主手冊；加入2026-09-29臺北市車禍求援與勿任意移動脊椎疑慮傷者指引。退役不支持特定繫帶事故的全道路死亡來源ID。",
+      "source_checks": [
+        {
+          "url": "https://168.motc.gov.tw/theme/news/post/2604211154250",
+          "claim": "交通部168交通安全入口網2026-04-20發布頁引述高公局：2025年國道因未繫妥安全帶而導致死亡事故19件、21人死亡；頁面另載約3.6倍，但未供可重算分子與分母，正文不作個人風險估計。",
+          "supporting_passage": "頁面標示發布時間115-04-20，明列2025年國道因未繫妥安全帶導致死亡事故19件、21人死亡及約3.6倍比較；本篇只採直接可核對的事故與死亡數。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取交通部168交通安全入口網新聞正文與發布日期；未取得事故微資料或乘車暴露分母。"
+        },
+        {
+          "url": "https://motclaw.motc.gov.tw/webMotcLaw2018/Law/ArticleContent?LawID=E0099005&akeyword1=7&stype=2&type=1",
+          "claim": "現行辦法第3至5條涵蓋小型車駕駛、前座及後座、腰帶位置、每條一人、孕婦及兒童依車主手冊、事故後檢查或更換及法定例外。",
+          "supporting_passage": "全國法規資料庫現行全文顯示小型車各座位的安全帶使用規則；第4條列孕婦及兒童依手冊使用，事故後應檢查或更換；第5條列可不適用的特定情形。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取交通部法規全文相關條文，未以新聞摘要代替條文。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=BF739CEA16BBDEA6&sms=87415A8B9CE81B16",
+          "claim": "車禍有人受傷時打119及110、請旁人協助；疑似脊椎傷勿任意移動。路上警告標誌先確認自身及現場安全。",
+          "supporting_passage": "臺北市消防局2026-09-29更新FAQ第2至4點；地方頁面建議119、110與勿任意移動，正文把標誌設置加上現場安全前提。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取臺北市消防局FAQ正文與更新日期；不採用可能使民眾冒險進入車流的無條件操作。"
+        }
+      ],
+      "limits": [
+        "2025年國道未繫安全帶死亡事故19件、21人死亡，沒有乘車旅次或安全帶使用暴露分母；交通部所列3.6倍比值未提供可重算分子與分母，本篇不換算個人機率。",
+        "臺北市消防局交通事故FAQ是地方宣導；沒有取得交通鑑定、法律或救護專業獨立審閱。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch01_motc_2025_30day",
+          "reason": "全道路30日死亡總數不能支持未繫安全帶特定事故或風險；保留舊來源物件，改用國道安全帶特定死因統計。",
+          "replacement_ids": [
+            "ch01_motc_unbelted_highway_2025"
+          ],
+          "prior_source_sha256": "7d4c3179a64a27bd05912c6795e48a1adc51dd6723c138c02943c45ac789f5fc",
+          "article_id": "TW-01-001",
+          "current_source_object_unchanged": true
+        }
+      ],
+      "review_path": "localization/reviews/TW-01-001.json",
+      "source_ids": [
+        "ch01_motc_belt_rule",
+        "ch01_motc_unbelted_highway_2025",
+        "ch01_tpe_traffic_faq_202609"
+      ],
+      "review_method": "由ChatGPT依臺灣情境、官方統計定義與分母、現行法規及來源主張逐項比對；AI輔助查核，未取得獨立醫療、職安、消防或法律專業審閱，不代表專業簽證。"
+    },
+    {
+      "id": "TW-01-002",
+      "before_sha256": "2101a9e53b085e4b6217172034a69c5af3999bf64e29d1de48a39bc05d41e28d",
+      "after_sha256": "26b2dcd16595274b94d17171295e4c28954e353500531ffa64c03cf643d96907",
+      "prior_revision": "ab51151e3cb4f3fc0e00a32e3f3295ad1bb3d502",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "6da4b7e16d718fe450e97b2743d156627c9c60569b6638e6a331006df5fc9435",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "適用機車通勤、接送與微型電動二輪車使用者，將一般機車與微型電動二輪車在道路交通安全規則上的安全帽類別分開；納入臺灣通勤及標檢局市售抽測。",
+      "frequency_assessment": "交通部道安總動員頁面：2026年1至7月機車騎士30日死亡932人，頁面註記初估；無騎乘里程或安全帽使用分組。標檢局2026-07-15公告通路購樣10頂，1頂品質項目不符合；彙整表證明缺失是材料規定，不是衝擊吸收。",
+      "changes": "把過時全道路死亡背景替換為交通部2026年1至7月初估機車騎士30日死亡932人；核對2026-06-26現行道路交通安全規則第88條與第115條之7，明分機車與微型電動二輪車。依標檢局公告及附表更正10頂抽購中1頂的材料不符項目，不再稱衝擊吸收失敗；保留舊來源物件並逐筆記錄退役SHA。",
+      "source_checks": [
+        {
+          "url": "https://www.roadsafety.tw/Dashboard/Custom?type=%E6%AF%8F%E6%9C%8830%E6%97%A5%E6%AD%BB%E4%BA%A1%E4%BA%BA%E6%95%B8",
+          "claim": "2026年1至7月機車騎士30日死亡932人，頁面註明115年1至7月為初估；不等於未戴安全帽死亡或個人騎乘風險。",
+          "supporting_passage": "交通部道安總動員可見文字列總死亡1,569人、機車騎士932人並標示該期初估。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取交通部道安總動員頁面可見文字及統計標籤；未取得騎乘里程或安全帽分層資料。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=K0040013",
+          "claim": "現行道路交通安全規則第88條要求機車駕駛與附載座人戴合格機車用安全帽；第115條之7對微型電動二輪車另可使用機車用或自行車用安全帽，但都須檢驗標識、配件完整、扣緊且不遮視線。",
+          "supporting_passage": "2026-06-26修正版本第88條及第115條之7全文明列機車及微型電動二輪車安全帽條件。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取全國法規資料庫現行全文兩條，未將微型電動二輪車規則外推至機車。"
+        },
+        {
+          "url": "https://www.bsmi.gov.tw/bsmiGIP/wSite/ct?ctNode=9689&mp=1&xItem=128246",
+          "claim": "標檢局2026-07-15公告：通路購買10頂機車防護頭盔，1頂品質項目不符；中文標示與商品檢驗標識全數符合。",
+          "supporting_passage": "標檢局公告正文記載購樣10件、品質不符合1件、標示兩項全數符合；抽樣不是全市場機率樣本。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取標檢局公告正文及發布日期。"
+        },
+        {
+          "url": "https://www.bsmi.gov.tw/bsmiGIP/wSite/record/file_act.jsp?ixCuAttach=36547",
+          "claim": "項次6的品質失敗是材料規定，非衝擊吸收；其他列示檢測項目合格。",
+          "supporting_passage": "官方PDF第2頁項次6列材料不符合CNS 2396附錄4第4節，說明活動組合偶件非金屬製造；衝擊吸收列記為合格。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26讀取並核對標檢局5頁官方PDF第2頁項次6及品質欄。"
+        },
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/340",
+          "claim": "撞擊後頭傷可出現意識改變、頭痛、嘔吐、步態或視野變化；嚴重持續頭痛、難喚醒、持續嘔吐或手腳無力需緊急就醫。",
+          "supporting_passage": "臺中榮總最近修訂2026-06-25的頭部外傷衛教列症狀與返家後就醫警訊；正文不以症狀清單代替醫療診斷。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取臺中榮總全文、修訂日期及緊急就醫警訊段落。"
+        }
+      ],
+      "limits": [
+        "2026年1至7月機車騎士30日死亡932人為初估值，沒有騎乘暴露或安全帽使用分母；標檢局10頂通路購樣不是機率抽樣，不能推算全臺不合格率。",
+        "安全帽合規與頭傷警訊依現行法規和公立醫院衛教核對；未取得創傷醫療、商品檢測或監理專業獨立審閱。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch01_motc_2025_30day",
+          "reason": "全道路死亡總數不能支持機車騎士或安全帽主題的特定事故背景，改用有車種分組且標明初估的交通部道安總動員頁面。",
+          "replacement_ids": [
+            "ch01_motc_moto_rider_deaths_2026july"
+          ],
+          "prior_source_sha256": "7d4c3179a64a27bd05912c6795e48a1adc51dd6723c138c02943c45ac789f5fc",
+          "article_id": "TW-01-002",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_bsmi_helmet_202607",
+          "reason": "原登錄錯稱衝擊吸收不符；官方表顯示項次6實為材料規定失敗，改以公告和表格分開核對。",
+          "replacement_ids": [
+            "ch01_bsmi_helmet_retest_report_202607",
+            "ch01_bsmi_helmet_materials_202607"
+          ],
+          "prior_source_sha256": "eb5d382e0873a9bbb0d9c779789f83f7354d0a23da1b7e8308107241353676c7",
+          "article_id": "TW-01-002",
+          "current_source_object_unchanged": true
+        }
+      ],
+      "review_path": "localization/reviews/TW-01-002.json",
+      "source_ids": [
+        "ch01_moj_micro_helmet",
+        "ch01_motc_moto_rider_deaths_2026july",
+        "ch01_moj_motorcycle_helmet_art88",
+        "ch01_bsmi_helmet_retest_report_202607",
+        "ch01_bsmi_helmet_materials_202607",
+        "head_2026_vghtc"
+      ],
+      "review_method": "由ChatGPT依臺灣情境、官方統計定義與分母、現行法規及來源主張逐項比對；AI輔助查核，未取得獨立醫療、職安、消防或法律專業審閱，不代表專業簽證。"
+    },
+    {
+      "id": "TW-01-026",
+      "before_sha256": "19964adaac22b43a59a846ef3fca3db64f9c4349412f9a3b3a40aea4497ac597",
+      "after_sha256": "79915872a692eeb7d8a545a46c04680bb59cc7a3823df5eaa3645e9ca6e02ea0",
+      "prior_revision": "ab51151e3cb4f3fc0e00a32e3f3295ad1bb3d502",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "f1648c1ce85af84061ad7f9aa894c176ba018978ae1181b10d844e165bfe47d3",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "適用臺灣公寓、透天、租屋家庭及照顧者；依住宅火災行政資料、臺北市火場門口煙熱分流、避難包與乾粉滅火器官方保養規定修正，標示地方消防指引適用範圍。",
+      "frequency_assessment": "消防署110至114年（2021至2025）建築物火災25,895次；獨立住宅9,573次、集合住宅8,948次，合計18,521次、占71.5%。此占比以所有建築物火災件數為分母，不是住宅家戶發生率。2025年建築物火災4,514次，其中兩類住宅分別1,688與1,483次。",
+      "changes": "以消防署2021至2025年建築物火災25,895次、住宅類18,521次及71.5%類別占比補足頻率證據，說明沒有住宅分母；重核臺北市開門有煙或門把熱時關門119、路線安全才外出。移除給出年度通用檢查及整罐噴完／灑水操作的消防署滅火器頁面，改用消防署乾粉滅火器三年性能檢查FAQ及地方初期滅火安全指引。",
+      "source_checks": [
+        {
+          "url": "https://eoc.gov.taipei/News/Detail/624?MenuId=51",
+          "claim": "開門見煙或門把溫度高時關門、打119報確切位置並待救；門外無煙且門把正常、逃生路線可用才往外往下。",
+          "supporting_passage": "臺北市2026-06-04火場指引正文說明門口煙熱判斷、關門報119、不冒險穿煙及不可躲浴廁。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取臺北市防災公告全文相關段落；此為地方消防宣導並在正文標明來源地。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=F43BEDAC6BC194D4&sms=87415A8B9CE81B16",
+          "claim": "避難包放在易取處，依家庭需要及可負重準備物品，至少每半年檢查更新。",
+          "supporting_passage": "臺北市消防局FAQ於2026-09-29更新，第1點列至少每半年檢查更新並考慮家庭成員與可背負重量。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取臺北市消防局FAQ正文與更新日期。"
+        },
+        {
+          "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+          "claim": "消防署表列2021至2025年建築物火災25,895次，住宅類合計18,521次、占建築物火災71.5%；2025年建築物火災4,514次，獨立與集合住宅分別1,688及1,483次，沒有住戶分母。",
+          "supporting_passage": "消防署官方完整表逐年列獨立住宅、集合住宅及建築物火災總數，頁面更新115-02-06；其中住宅合計以所有建築物火災事件數為分母。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26以HTTPS取得並閱讀官方完整HTML表格；未推算住宅戶或個人起火機率。"
+        },
+        {
+          "url": "https://fsm.119.gov.taipei/w/fsm119/News_26060811063531767",
+          "claim": "滅火只限尚能安全處理的初期火勢；火勢過大就放棄滅火、立即逃生；平時熟悉滅火器口訣並演練。",
+          "supporting_passage": "臺北市消防局2026年火場頁可見段落講解拉瞄壓掃，明示火勢過大時放棄初期滅火並立即逃生，並建議家庭每6個月演練。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26讀取臺北市消防局官方頁搜尋索引及可見正文摘要，未依賴附件圖片或影片。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/pro/index.php?code=list&ids=483",
+          "claim": "消防署FAQ指出乾粉滅火器現行規定每3年一次性能檢查，委託合格廠商；藥劑檢查正常時不用例行換藥。",
+          "supporting_passage": "消防署專業版FAQ第1題逐項說明每3年性能檢查、合格廠商和正常藥劑續用。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取消防署官方FAQ第1題及場所檢修分類說明；不推及所有家用器材。"
+        }
+      ],
+      "limits": [
+        "2021至2025年建築物火災件數與住宅類別占比沒有家戶、居住人口或住宅暴露分母，不能換算每戶起火機率。乾粉滅火器三年性能檢查說明不得推成所有家戶、場所與器材型式都相同；臺北市消防指引屬地方宣導。",
+        "未取得消防專業獨立審閱；本文不是消防安全檢查、滅火器認證或現場風險評估。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch01_fire_extinguisher_tfdp",
+          "reason": "舊消防署頁面同時含每年通用檢查、整罐噴完及滅後灑水等可能被誤作所有火災操作的指示；正文移除對其依賴，改引用地方初期滅火逃生指引與消防署乾粉滅火器法規FAQ。",
+          "replacement_ids": [
+            "ch01_tpe_fire_initial_response_202606",
+            "ch01_nfa_drypowder_extinguisher_qa"
+          ],
+          "prior_source_sha256": "7e3c1fc8cbd193d1a08e5012c824c344713dd09258619c970898ec3d74677b58",
+          "article_id": "TW-01-026",
+          "current_source_object_unchanged": true
+        }
+      ],
+      "review_path": "localization/reviews/TW-01-026.json",
+      "source_ids": [
+        "ch01_fire_escape_taipei2026",
+        "ch01_gobag_taipei2026",
+        "ch01_nfa_fire_2025",
+        "ch01_nfa_building_fires_2021_2025",
+        "ch01_tpe_fire_initial_response_202606",
+        "ch01_nfa_drypowder_extinguisher_qa"
+      ],
+      "review_method": "由ChatGPT依臺灣情境、官方統計定義與分母、現行法規及來源主張逐項比對；AI輔助查核，未取得獨立醫療、職安、消防或法律專業審閱，不代表專業簽證。"
+    },
+    {
+      "id": "TW-01-034",
+      "before_sha256": "fdc80026b6bb38cc797b388e88c90c1a36e61e186673265504d17fd60f32efaa",
+      "after_sha256": "2e1a05b4ed415d60a4f9e1f04e471a955e40085331ea3ecb712a5ba83d8073c0",
+      "prior_revision": "ab51151e3cb4f3fc0e00a32e3f3295ad1bb3d502",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "00dece70671f2181795a5b8c83d2b6d596b9afba14fff93d64b2c2b8796f6387",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "涵蓋臺灣工地、屋頂、樓梯與家庭修繕等高處墜落求援，也區分工作重大職災死亡統計與所有居家、休閒、非致死跌墜；另連結既有獨立職安指引。",
+      "frequency_assessment": "職安署2025年全產業重大職災死亡259人，其中墜落、滾落136人（營造75、製造26）；2026年1至6月重大職災死亡109人，其中墜落49人（營造36、製造5）。勞檢接報後現場調查，少數待判定案件未列；無工作者或工時分母，且期間與分類不同。",
+      "changes": "重核2025重大職災墜落、滾落136人及2026上半年墜落49人（營造36、製造5）；保留行政調查、未判定案件排除、無暴露分母及類別期間不同等限制。更新急救步驟以119派遣、AED及醫療團隊評估為中心，並連結既有職安單篇指引。",
+      "source_checks": [
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=BF739CEA16BBDEA6&sms=87415A8B9CE81B16",
+          "claim": "車禍或疑似脊椎傷勿任意移動，立即119求援。",
+          "supporting_passage": "臺北市消防局FAQ明列疑似脊椎傷勿任意移動並撥119；正文另以現場迫切危險作為退避例外。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取臺北市消防局交通事故FAQ；未把一般建議當作創傷醫療評估。"
+        },
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/340",
+          "claim": "頭傷警訊及返家後緊急就醫情形。",
+          "supporting_passage": "臺中榮總2026-06-25修訂衛教列意識改變、嚴重持續頭痛、難喚醒、持續嘔吐、視野改變及手腳無力。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取臺中榮總頭傷衛教全文相關段落；不把出院衛教當急救診斷標準。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/media/b54h1fj3/114%E5%B9%B4%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+          "claim": "2025重大職災死亡259人，墜落、滾落136人（營造75、製造26）；屬勞檢接報後調查，少數待判定案件未列。",
+          "supporting_passage": "職安署2026-02-05更新PDF第1至2頁統計口徑及附表2；災害類型為全年墜落、滾落。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26讀取職安署4頁原始PDF方法與災害類型表，未取得工作者或工時分母。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
+          "claim": "無反應且無正常呼吸時求援119、取得AED並依緊急派遣指示施救。",
+          "supporting_passage": "臺北市消防局2026-09-29更新CPR FAQ說明打119、請旁人取AED、持續按壓至AED或救護人員接手。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取臺北市消防局CPR FAQ正文與更新日期；本文依派遣指示，未假裝可由文字取代急救訓練。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/media/1mhphhgq/115%E5%B9%B4%E8%BF%84%E7%AC%AC2%E5%AD%A3%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E8%AA%AA%E6%98%8E.pdf",
+          "claim": "2026年1至6月全產業重大職災死亡109人、墜落49人（營造36、製造5）；無工作者或工時分母。",
+          "supporting_passage": "職安署115年第2季報告第1頁說明截至6/30全產業死亡109人，第3頁災害類型表列墜落49、營造36、製造5，註明勞檢通報現場調查與少數待判定排除。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26讀取職安署3頁PDF摘要、附表和方法註；與2025全年墜落、滾落分類分開呈現。"
+        }
+      ],
+      "limits": [
+        "職安署重大職災死亡統計是勞檢接報後現場調查案件，少數待判定案件未列且沒有工作者或工時分母；2025全年分類為墜落、滾落，2026上半年為墜落，不能直接比較或推估所有工作及非工作墜落風險。",
+        "急救、創傷醫療與職業安全僅做官方來源AI輔助核對，未取得醫療或職安專業獨立審閱；本文不代替119派遣、個案診療或現場職安評估。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-01-034.json",
+      "source_ids": [
+        "ch13_fall_fire",
+        "head_2026_vghtc",
+        "ch01_osha_fall_2025",
+        "ch13_cpr_faq",
+        "support_osh_2026_h1",
+        "ch01_osha_fall_2026h1_breakdown"
+      ],
+      "review_method": "由ChatGPT依臺灣情境、官方統計定義與分母、現行法規及來源主張逐項比對；AI輔助查核，未取得獨立醫療、職安、消防或法律專業審閱，不代表專業簽證。"
     }
   ]
 }
