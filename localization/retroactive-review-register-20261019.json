@@ -13565,6 +13565,328 @@
         "ch25_funeral_sales_reporting",
         "ch25_funeral_lookup"
       ]
+    },
+    {
+      "id": "TW-19-013",
+      "title": "僱主漏報災保不等於失去保障，但須先辨識法定納保身分",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "646cf6ca0a65d439234ec82d0e9d3c34f25ccd5d",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "741048125760d2b1097f75bd0d7b3acf87a299bb9c1031af825d05366430d854",
+      "before_sha256": "b9adeb653cdab4926a572ba32ffb9abed6af03dec81b17e7f860642a607b6272",
+      "after_sha256": "0fdbe5007395f4863522d1eedb706b57cdca3ac47e6f8dca54516508fe122ef0",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "臺灣災保由勞保局承保，依災保法第6條法定雇主類別強制納保，不以普通勞保部分單位5人門檻代替；勞保局依本國薪資級距和到職資料審查。",
+      "frequency_assessment": "主題為強制納保資格及漏報後給付計算，未找到同口徑臺灣漏報員工人數／全部應納保員工分母；不以申訴件數推估個人機率。",
+      "changes": "補明依勞基法受僱工作的未滿15歲者亦適用災保法第6條；將第28條資料缺漏條件精確改為投保單位或被保險人未提具薪資資料時按第一級，保留個案身分與薪資證據限制。",
+      "limits": [
+        "是否屬災保法第6條強制納保、到職效力例外、事故職業關聯及給付金額，仍由勞保局依個案資料認定；薪資資料不足可能使核付級距低於實際所得。",
+        "未申報期間級距上限依事故當時公告；正文不推定具體金額。2022-05-01以前事故及不屬強制納保者須另查過渡或補助規則。",
+        "AI逐項核對官方來源，未取得勞動保險專業或律師獨立簽證；官方未提供全國個人漏報率分母或個案處理天數。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+          "claim": "災保法第6條強制納保對象（含依勞基法規定受僱工作的未滿15歲者）及第28條未申報期間薪資認定、資料缺漏按第一級和級距上限。",
+          "supporting_passage": "編者摘要（非逐字引文）：第6條規定年滿15歲以上的特定受僱者應強制納保，並明定依勞基法規定未滿15歲的受僱工作者亦適用；第28條對第6條勞工未申報期間按月薪資總額對應級距認定並受公告上限限制，投保單位或被保險人未提具相關資料供審核時按第一等級計算。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0105825.html",
+          "claim": "勞保局區分強制納保漏報、其他未加保及特別加保者的職災保障。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞保局職保簡介將受僱強制納保漏報、其他未加保工作者與特殊加保途徑分開說明；本文不把所有工作者推作同一資格。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關官方HTML主文，核對本篇所列指定主張與適用範圍。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/1632/1633/86193/",
+          "claim": "勞動部災保FAQ說明法定雇主強制納保不以5人為門檻。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部常見問答說明災保法第6條雇主與工作者範圍及小型單位納保義務；本文限縮為第6條法定雇主類別。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關官方HTML主文，核對本篇所列指定主張與適用範圍。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0105829.html",
+          "claim": "第6條強制納保員工漏報仍可依法請領多種職災給付；未申報期間現金給付級距受上限限制，投保單位或被保險人未提具薪資資料時按第1級，核付後可在給付額內向雇主追繳。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞保局頁面列出強制納保員工未被申報時的五類職災給付，說明現金給付依實際月薪與級距計並設上限；投保單位或被保險人未提具相關薪資資料供審核時按第一級計算，核付後另向雇主追繳。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關指定HTML正文，核對服務／給付主張及來源頁標示的限制。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-19-013.json",
+      "source_ids": [
+        "injurycoverage",
+        "injuryuninsured",
+        "ch19_insurance_small",
+        "bli_injury_unreported_details_20261025"
+      ]
+    },
+    {
+      "id": "TW-19-014",
+      "title": "職災失能先確認症狀固定，身障證明與失能給付不是同一項認定",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "646cf6ca0a65d439234ec82d0e9d3c34f25ccd5d",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "05027eff394684cbcb134f22b7951dbf4a8bd6dae1c58fa859837d717c4e56fd",
+      "before_sha256": "113f6dd2af5f742b4ee2445534a58979b460f2a21c49e2224f2b5ef1169aa60a",
+      "after_sha256": "c80d5caa3589cbbf2c6f97e5026bf050ec33d0d4b85b1379909de3a445705fcb",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "臺灣職災永久失能由健保特約醫療機構診斷並由勞保局依災保法核定；身心障礙證明另循社政鑑定與需求評估。",
+      "frequency_assessment": "永久失能給付是資格與申請程序議題；沒有可代表全臺且具勞工／工時暴露分母的相同定義失能率，不估發生率。",
+      "changes": "重核永久失能的症狀固定與特約醫療機構診斷，區分身障證明／職災永久失能、一次金／年金及2009年前年資選擇；加註現金給付一般5年請求權及無適用個人率分母。",
+      "limits": [
+        "失能診斷、醫療機構資格、給付標準、投保薪資與年資由醫療機構及勞保局依個案審查；身障證明與災保失能給付不得互換。",
+        "勞保局失能FAQ最後更新2022-03-29；本輪以2026-10-25現行災保法核對核心要件和比例，其他表件異動於申請日再查。",
+        "無合適臺灣個人暴露分母可推算永久失能機率；本輪AI核對不是醫療或法律專業簽證。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=N0050031",
+          "claim": "災保法第43條的永久失能條件、年金比例及同一傷病的給付限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行法規第43條要求治療後症狀固定、無法改善、特約醫療機構診斷永久失能且符合標準；完全、嚴重、部分失能年金為平均月投保薪資70%、50%、20%；領取部分失能年金期間不得同領同一傷病的傷病給付。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+          "claim": "逐項核對災保法第6、12、13、28、37、36至43、49至53及90條在本篇主張範圍內的納保、給付、請求期間與雇主責任。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行條文列明第6條強制納保類別、第12至13條申報與效力、第28條未申報期間薪資級距及無證明按第一級計算、第37條5年現金給付期間、第36條追繳與第90條特定死亡失能差額。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050046",
+          "claim": "身障證明的鑑定、需求評估與證明程序。",
+          "supporting_passage": "編者摘要（非逐字引文）：身心障礙者權益保障法第5至7條另有鑑定、需求評估及證明程序，目的與災保永久失能給付不同。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48363/133456/133462/133511/",
+          "claim": "職業傷病診治及復健醫療服務入口，不是保險給付核准。",
+          "supporting_passage": "編者摘要（非逐字引文）：職安署頁面提供職業傷病診治專責醫院與相關服務資訊；接受職業醫學評估不是保險給付核准。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關官方HTML主文，核對本篇所列指定主張與適用範圍。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+          "claim": "本篇逐項核對勞基法第14、59至61條的適用範圍；不混同不同請求權。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞基法第59條列雇主職災失能、死亡補償；第61條受領補償權自得受領日起2年；第14條限於具體終止事由及期間。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0105976.html",
+          "claim": "勞保局失能FAQ說明症狀固定、永久失能診斷、一次金日數與年金比例，並有FAQ頁標示的眷屬補助條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：FAQ列治療後固定且無法改善、特約醫療機構診斷永久失能的條件；一次金依給付日數表，年金依三種失能程度按投保薪資計算，符合條件的配偶或子女有補助。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關指定HTML正文，核對服務／給付主張及來源頁標示的限制。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=59&pcode=N0030001",
+          "claim": "勞基法第59條第3、4款列失能與死亡補償標準及順位；死亡標準含5個月喪葬費及40個月遺屬補償，仍須合併適用災保法第90條條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：第59條依治療後失能程度訂一次補償；死亡時另列平均工資5個月喪葬費、遺屬40個月補償與五順位。災保法第90條條件須另行套用。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫指定現行條文HTML，核對本筆主張及適用條件。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-19-014.json",
+      "source_ids": [
+        "injurydisability",
+        "injurycoverage",
+        "disabilityact",
+        "injurydiagnosis",
+        "ch19_lsa",
+        "bli_injury_disability_benefit_20261025",
+        "ch19_lsa_death_disability_compensation_20261025"
+      ]
+    },
+    {
+      "id": "TW-19-015",
+      "title": "職災死亡分開申請殯葬與遺屬給付，別把所有補償直接相加",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "646cf6ca0a65d439234ec82d0e9d3c34f25ccd5d",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "5bb1b1a8cd24534d009fbdcf42bf44d8334f79cc54453f4f6af25b8c30338693",
+      "before_sha256": "23c925850c6d4b9f2c7e06e4755d2f9e660cc14bf7711f5a5d4d2d93decc1956",
+      "after_sha256": "072f7ac7b83c3b9e923dc630a4d9922ddcecc4f6a8acfe6631ab36ed159d062b",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "臺灣喪葬支出人與遺屬按災保法不同資格申請，雇主勞基法補償在災保法第90條條件成立時依法按工資差額計算；用2026職安署數據描述嚴重度，不由件數推個人風險。",
+      "frequency_assessment": "職安署截至2026-06-30公布全產業重大職災死亡109人及營造業58人，沒有工作者／工時分母；是重大事故死亡件數，不推成個人風險率。",
+      "changes": "補入2026上半年重大職災死亡109人及營造58人的正確範圍與無分母限制；新增災保法第90條投保繳費／核定前提與平均工資差額計算法，精確分列喪葬、遺屬給付、共同請領和2年／5年權利期間。",
+      "limits": [
+        "遺屬、平均工資、雇主保費繳納狀態及災保法第90條差額均依個案認定；本輪未試算或代辦給付。",
+        "第90條差額公式只在職災致死亡或失能、雇主依法投保繳費且保險人核定事故時適用；其他情形不得直接套用。",
+        "109及58是重大職災死亡行政統計，無工作者或工時分母，不是全部職業死亡、致死率或個人機率；調查通報數可能修正。",
+        "AI核對未取得律師、勞動保險或殯葬專業獨立簽證；官方未承諾個案審理天數。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+          "claim": "逐項核對災保法第6、12、13、28、37、36至43、49至53及90條在本篇主張範圍內的納保、給付、請求期間與雇主責任。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行條文列明第6條強制納保類別、第12至13條申報與效力、第28條未申報期間薪資級距及無證明按第一級計算、第37條5年現金給付期間、第36條追繳與第90條特定死亡失能差額。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+          "claim": "本篇逐項核對勞基法第14、59至61條的適用範圍；不混同不同請求權。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞基法第59條列雇主職災失能、死亡補償；第61條受領補償權自得受領日起2年；第14條限於具體終止事由及期間。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0106921.html",
+          "claim": "喪葬津貼申請人與遺屬給付申請人依不同資格及順序辦理；投保年資會影響可選形式。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞保局分別說明實際支出喪葬費者與法定遺屬的申請資格，並按遺屬順位說明；保險年資不同時可選的給付形式也有差異。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關指定HTML正文，核對服務／給付主張及來源頁標示的限制。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/210997/post",
+          "claim": "職安署截至2026-06-30重大職災死亡109人、營造業58人，沒有勞工或工時分母。",
+          "supporting_passage": "編者摘要（非逐字引文）：職安署2026-08-04公告統計至2026-06-30全產業重大職災死亡109人、營造業58人；是行政死亡人數，無工作者或工時分母。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取職安署統計新聞稿正文，核對公告日、統計期間、範圍、數值及分母限制。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=59&pcode=N0030001",
+          "claim": "勞基法第59條第3、4款列失能與死亡補償標準及順位；死亡標準含平均工資5個月喪葬費及40個月死亡補償，仍須合併適用災保法第90條條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：第59條依治療後失能程度訂補償；死亡時列平均工資5個月喪葬費、40個月死亡補償與受領順位。災保法第90條條件須另行套用，不可將保險給付與雇主補償一律相加。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫指定現行條文HTML，核對本筆主張及適用條件。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=61&pcode=N0030001",
+          "claim": "第59條補償受領權自得受領日起2年不行使而消滅；不同給付及民事請求期間另行判斷。",
+          "supporting_passage": "編者摘要（非逐字引文）：第61條把第59條補償權的起算點連結到「得受領之日」，兩年未行使才消滅；其他保險或民事權利並未一併涵蓋。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫指定現行條文HTML，核對本筆主張及適用條件。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=90&pcode=N0050031",
+          "claim": "災保法第90條第三項限定死亡／失能、雇主投保繳費且保險人核定事故，雇主依第59條補償按平均工資與平均投保薪資差額計算；先付後核依同條抵充／返還。",
+          "supporting_passage": "編者摘要（非逐字引文）：第90條第3項列出死亡或失能、雇主依法投保繳費、保險人核定三項前提，並命雇主依第59條第3、4款用工資與投保薪資差額計算；前兩項另處理先付補償的抵充及返還。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫指定現行條文HTML，核對本筆主張及適用條件。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-19-015.json",
+      "source_ids": [
+        "injurycoverage",
+        "ch19_lsa",
+        "bli_injury_death_benefit_20261025",
+        "osha_2026h1_fatality_stats",
+        "ch19_lsa_death_disability_compensation_20261025",
+        "ch19_lsa_compensation_limitation_20261025",
+        "ch19_disaster_insurance_art90_20261025"
+      ]
+    },
+    {
+      "id": "TW-19-021",
+      "title": "漏保或薪資低報分制度查核，補申報與損失請求不是同一件事",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "646cf6ca0a65d439234ec82d0e9d3c34f25ccd5d",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "2ce4d585947182f41477084c20e07ac6315cbb2eb3b4027ba27de99d341ba082",
+      "before_sha256": "f2cb108407b3f00ff8d8e5b6a3450c3dce2a8d7140e43fb9e946ed013aeebf84",
+      "after_sha256": "fc74472931a78982269008c237507bf6470d5beda0530450c2928fc0b27f1e2d",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "臺灣普通勞保、就保、災保、健保與勞退由不同法規規定；使用勞保局e化查詢、健保快易通及勞保局具體事證檢舉，不移植外國社保門檻。",
+      "frequency_assessment": "薪資低報／漏保投訴和裁罰數無全體受僱者或申報薪資暴露分母；未找到可信同口徑發生率，不自行估算。",
+      "changes": "跨制度核對投保薪資與勞退月提繳工資調整；明確勞退經查證更正按法定提繳日或應調整之次月1日起生效，並保留個案證據與各制度程序限制。",
+      "limits": [
+        "普通勞保、就保、災保、健保及勞退各有身分、薪資基礎與調整規則；薪資項目和追補須主管機關依個案證據判斷。",
+        "勞保局一般保險薪資調整表不能往前追溯；勞退經查證後可溯及法定日期更正，程序不可混用，也不保證損失自動補足。",
+        "無同口徑全國低報案件與受僱者／薪資申報暴露分母；不以投訴數推個人遭遇機率。",
+        "未取得律師或勞動保險專業獨立簽證；未登入使用者帳戶或核對特定雇主個案。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
+          "claim": "普通勞保第6至8條的人數分類、續保及第72條雇主漏保低報責任。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞保條例第6、8條的5人門檻限列舉單位，第7條已加保後人數下降仍須續保；第72條另定漏保低報罰鍰及勞工損失賠償。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
+          "claim": "勞退第14至16、21、31條提繳工資、調整及查證更正追溯。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞退第14、15條依工資與分級表申報；經查證申報不實或漏調整可更正，並依條文溯自提繳日或應調整次月一日。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060001",
+          "claim": "健保法第20、21條受僱者投保金額及法定比較下限。",
+          "supporting_passage": "編者摘要（非逐字引文）：健保法第20、21條列受僱者按薪資所得申報和調整期限；除最高級外不得低於法定比較基礎。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
+          "claim": "逐項核對災保法第6、12、13、28、37、36至43、49至53及90條在本篇主張範圍內的納保、給付、請求期間與雇主責任。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行條文列明第6條強制納保類別、第12至13條申報與效力、第28條未申報期間薪資級距及無證明按第一級計算、第37條5年現金給付期間、第36條追繳與第90條特定死亡失能差額。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+          "claim": "就業保險第5、6、11條適用身分與雇主申報。",
+          "supporting_passage": "編者摘要（非逐字引文）：就業保險法第5、6、11條列被保險人範圍、排除條件及雇主申報，不由普通勞保人數門檻決定全部資格。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+          "claim": "本篇逐項核對勞基法第14、59至61條的適用範圍；不混同不同請求權。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞基法第59條列雇主職災失能、死亡補償；第61條受領補償權自得受領日起2年；第14條限於具體終止事由及期間。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行法規及本篇相關條文，逐項核對條文範圍和效力。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0018662.html",
+          "claim": "一般勞、就、災保薪資調整不可往前追溯；漏保低報可按具體事證申訴，匿名者無法收到查處結果。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞保局把一般調整表效力定在送達次月1日且不可往前追；申訴須列單位聯絡資料與出勤薪資等事證，匿名案件則無法回覆查處結果。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關指定HTML正文，核對服務／給付主張及來源頁標示的限制。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0012986.html",
+          "claim": "e化服務可查個人勞保投保年資與詳細資料、給付資料及勞退提繳異動和個人專戶。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞保局流程頁列投保年資、詳細投保資料、保險給付、勞退提繳異動與個人專戶等查詢選項，需先用頁列憑證方式登入；本輪未登入個人帳戶。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關指定HTML正文，核對服務／給付主張及來源頁標示的限制。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/np-4107-1.html",
+          "claim": "健保快易通APP「健保櫃檯→在保資料總覽」可查目前在保資料、單位、投保金額及欠費資訊。",
+          "supporting_passage": "編者摘要（非逐字引文）：健保署說明在APP首頁進入健保櫃檯，再選「在保資料總覽」可看到目前投保單位、投保金額、欠費及電子繳款設定。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關指定HTML正文，核對服務／給付主張及來源頁標示的限制。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-19-021.json",
+      "source_ids": [
+        "ch19_labor_insurance",
+        "ch19_pension_continuity",
+        "nhiact",
+        "injurycoverage",
+        "ch19_employment_coverage",
+        "ch19_lsa",
+        "bli_wage_insurance_reporting_20261025",
+        "bli_personal_insurance_pension_query_20261025",
+        "nhi_counter_enrollment_record_20261025"
+      ]
     }
   ]
 }

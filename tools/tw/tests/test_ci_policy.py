@@ -25,6 +25,12 @@ class PolicyTests(unittest.TestCase):
         self.assertNotEqual(policy.canonical('任意划分任務'), policy.canonical('任意劃分任務'))
         self.assertNotEqual(policy.canonical('划出錯誤的路線'), policy.canonical('劃出錯誤的路線'))
 
+    def test_generated_reference_excerpt_preserves_xianggan_context(self):
+        # 生成對照表會截斷「不相干」的前文，保留的「干的人下手」仍是正確繁體用字。
+        excerpt = '…干的人下手（第 13 條）'
+        self.assertEqual(policy.canonical(excerpt), policy.canonical(text.normalized(excerpt, [])))
+        self.assertNotEqual(policy.canonical('干活的人'), policy.canonical(text.normalized('干活的人', [])))
+
     def test_simplified_is_rejected(self):
         for value in ('立即\u5371\u9669','\u5199清條件','工作\u65f6間','\u5f53作保證','修改\u5185容','\u94f6\u884c扣款'):
             with self.subTest(value=value):
