@@ -1,0 +1,278 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "38d4c3d44fd164702d5e2ed44c9be2ebc5d788d9",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-01-005",
+      "TW-01-007",
+      "TW-01-008"
+    ],
+    "risk_order": [
+      "TW-01-005",
+      "TW-01-007",
+      "TW-01-008"
+    ],
+    "risk_basis": "依野菇誤食可能造成嚴重且延遲器官傷害、成人無症狀高血壓盛行，以及血糖篩檢資格與異常追蹤之風險排序；不是事件發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 140,
+    "runtime_sources": 707,
+    "source_registry": 788,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 143,
+    "runtime_sources": 715,
+    "source_registry": 796,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": {
+    "TW-01-005": [
+      {
+        "period": "食藥署截至2024-11-06所稱「近年」，起訖期間未明",
+        "jurisdiction": "臺灣各縣市衛生局送驗案件",
+        "population_or_records": "因民眾自行採食野菇、由地方衛生局送食藥署物種鑑別之食品中毒案例",
+        "numerator": {
+          "送驗案例": 4,
+          "鑑定綠褶菇": 3,
+          "鑑定擬灰花紋鵝膏": 1
+        },
+        "denominator": null,
+        "unit": "送驗案例數與物種鑑定結果，不是患者總人數或年度發生率",
+        "event_definition": "食藥署受理地方衛生局送驗，並以DNA方法進行野菇物種鑑定；公告未列「近年」的起訖日期。",
+        "data_type": "官方送驗／實驗室鑑定案例摘要",
+        "source_url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=t623202",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無明確期間",
+          "無採食人口或所有事件分母",
+          "送驗案例數不等於全國實際中毒總數"
+        ]
+      },
+      {
+        "period": "2026-08-21通報；公告日期2026-08-22",
+        "jurisdiction": "高雄市單一家庭通報",
+        "population_or_records": "一家三口疑似食用朋友轉贈的戶外野菇後出現症狀",
+        "numerator": {
+          "疑似不適人數": 3,
+          "其中住院": 1
+        },
+        "denominator": "單一通報家庭；無地區人口或採食暴露分母",
+        "unit": "單一疑似事件中的人數",
+        "event_definition": "高雄市衛生局接獲醫院通報一家三口疑似野菇食物中毒，其中一人症狀較重住院；新聞稿未提供後續實驗室確認。",
+        "data_type": "地方衛生局單一行政通報",
+        "source_url": "https://www.fda.gov.tw/tc/csmnewsContent.aspx?id=t634623&mid=267",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "單一疑似事件",
+          "不能與送驗案例數相加",
+          "不可推估全國或個人機率"
+        ]
+      }
+    ],
+    "TW-01-007": [
+      {
+        "period": "2019至2023年國民營養健康調查",
+        "jurisdiction": "臺灣18歲以上人口",
+        "population_or_records": "國健署國民營養健康調查18歲以上受訪人口；官網摘要未列可重算分母",
+        "numerator": "符合該調查高血壓判定定義之受訪者（原始人數未於摘要公布）",
+        "denominator": "18歲以上調查母群；摘要未提供年齡組樣本數、加權分母或信賴區間",
+        "unit": "高血壓盛行率28.9%",
+        "event_definition": "國健署安心血壓站頁引用2019至2023年國民營養健康調查之18歲以上高血壓盛行率。",
+        "data_type": "官方全國抽樣調查摘要",
+        "source_url": "https://www.safebp.site/",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "未取得原始微資料、樣本數、權重與信賴區間",
+          "盛行率不是年度新發率或個人未來機率"
+        ]
+      },
+      {
+        "period": "2019至2023年國民營養健康調查",
+        "jurisdiction": "臺灣30至39歲人口",
+        "population_or_records": "國健署國民營養健康調查30至39歲受訪者；官網摘要未列可重算分母",
+        "numerator": "符合該調查高血壓判定定義之受訪者（原始人數未於摘要公布）",
+        "denominator": "30至39歲調查母群；摘要未提供樣本數、加權分母或信賴區間",
+        "unit": "高血壓盛行率9.7%",
+        "event_definition": "國健署2019至2023年三高調查公告之30至39歲高血壓盛行率。",
+        "data_type": "官方全國抽樣調查摘要",
+        "source_url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20171",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "未取得原始微資料、樣本數、權重與信賴區間",
+          "不同年齡母群比率不應直接相減"
+        ]
+      }
+    ],
+    "TW-01-008": [
+      {
+        "period": "2019至2023年國民營養健康調查",
+        "jurisdiction": "臺灣30至39歲人口",
+        "population_or_records": "國健署國民營養健康調查30至39歲受訪者；官網摘要未列可重算分母",
+        "numerator": "符合調查高血糖定義之受訪者（原始人數未於摘要公布）",
+        "denominator": "30至39歲調查母群；摘要未提供樣本數、加權分母或信賴區間",
+        "unit": "高血糖盛行率2.5%",
+        "event_definition": "國健署2019至2023年三高調查公告之30至39歲高血糖盛行率；不等同糖尿病確診率。",
+        "data_type": "官方全國抽樣調查摘要",
+        "source_url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20171",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "未取得原始微資料、樣本數、權重與信賴區間",
+          "高血糖調查定義不等同糖尿病確診",
+          "盛行率不是年度新增病例"
+        ]
+      },
+      {
+        "period": "2025年成人預防保健服務",
+        "jurisdiction": "臺灣30至39歲服務使用者",
+        "population_or_records": "2025年接受成人預防保健之約35.5萬名30至39歲民眾",
+        "numerator": "至少一項血壓、血糖或血脂指標異常者約30.8%，其中血糖異常約4.7%；精確人數未公布",
+        "denominator": "約355,000名30至39歲服務使用者，不是全體同齡人口",
+        "unit": "至少一項三高相關指標異常比例30.8%",
+        "event_definition": "國健署公告服務使用者檢查結果；三高指標為合併指標，另公布血糖異常約4.7%；不等同糖尿病確診。",
+        "data_type": "官方成人預防保健行政服務統計",
+        "source_url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20399",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "分母僅為服務使用者",
+          "30.8%是至少一項異常，不是糖尿病確診或單一高血糖比例",
+          "不由約略母數反推精確個案數"
+        ]
+      },
+      {
+        "period": "截至2026年5月首次完成成人預防保健服務之累積資料",
+        "jurisdiction": "臺灣30至39歲成人預防保健首次服務使用者",
+        "population_or_records": "逾475,000名完成首次成人預防保健服務之30至39歲民眾",
+        "numerator": "約3成至少一項三高指標異常；19.3%符合代謝症候群；公告未列精確人數",
+        "denominator": "逾475,000名首次服務使用者；未公布精確分母與信賴區間",
+        "unit": "服務使用者約30%三高任一項異常、19.3%代謝症候群比例",
+        "event_definition": "國健署官方公告截至2026年5月成人預防保健首檢服務使用者統計；這不是全體30至39歲人口抽樣盛行率。",
+        "data_type": "官方成人預防保健行政服務統計摘要",
+        "source_url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20171",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "分母是首次服務使用者且只公布約數",
+          "無精確分子、信賴區間與微資料",
+          "不是全體人口盛行率或糖尿病確診率"
+        ]
+      }
+    ]
+  },
+  "new_source_ids": [
+    "ch01_vghtpe_poison_mushroom_firstaid_202404",
+    "ch01_vghtpe_poison_hotline_202404",
+    "ch01_hpa_safe_bp_station_2026",
+    "ch01_hpa_adultcheck_results_20261015",
+    "ch01_hpa_cardiac_stroke_202603",
+    "ch01_mohw_stroke_202603",
+    "ch01_vghtpe_hyperglycemia_202610",
+    "ch01_hpa_adultcheck_followup_20261026"
+  ],
+  "reused_source_ids": [
+    "ch01_fda_wildmushroom_202411",
+    "ch01_khh_wildmushroom_202608",
+    "ch01_hpa_722_2026",
+    "ch01_hpa_3040_triple_2026",
+    "ch01_hpa_adultprevent_202607",
+    "ch01_hpa_adultprevent_202501"
+  ],
+  "retired_sources": [],
+  "articles": [
+    {
+      "id": "TW-01-005",
+      "title": "雨後野菇不採不食：臺灣公園山區毒菇與中毒急救分流",
+      "before_sha256": "1aa1028acd56ac388839da32112df3e66dbff7c69b6070aaeaa43dc58dcef82a",
+      "after_sha256": "0e99fc38562964d6b0023663cee51c59e5036b4846d6d26fbc4776ecb99e5fe3",
+      "prior_review_sha256": "91740b31bac20bfffec6497f258f8fe4603a8fab4679d39202d1a69314fd9313",
+      "source_ids": [
+        "ch01_fda_wildmushroom_202411",
+        "ch01_khh_wildmushroom_202608",
+        "ch01_vghtpe_poison_mushroom_firstaid_202404",
+        "ch01_vghtpe_poison_hotline_202404"
+      ],
+      "changes": "補入臺北榮總全年無休24小時免費毒物諮詢電話及中毒初步求援；急症先119、不催吐；重核2024送驗4例與2026高雄一家3人通報，保留期間及暴露分母缺口。",
+      "frequency_assessment": "食藥署2024公告稱受理各縣市衛生局送驗野菇中毒案例4例，3例為綠褶菇、1例為擬灰花紋鵝膏；「近年」起訖未明，無全部採食暴露分母。高雄市2026-08-22單一疑似家庭事件3人不適、1人住院；均不得合併推估全臺發生率或個人機率。",
+      "limits": [
+        "食藥署「近年4例」未提供明確期間、全部事件數或採食暴露分母；高雄一家3人為單次疑似通報，不能合併成全國率。毒物諮詢不取代昏迷、抽搐、窒息或呼吸異常時立即119。未取得毒物學、急診或公共衛生專家獨立審閱。"
+      ],
+      "retired_source_ids": []
+    },
+    {
+      "id": "TW-01-007",
+      "title": "在臺灣用722量血壓：正確居家紀錄、安心血壓站與醫師評估",
+      "before_sha256": "cbc52942e9a5a752615be220b4ce68ee588cf2de2feb9c328da28bc1d222c921",
+      "after_sha256": "bf9fcd5f87e71a9154b0693e8958e8e05165f6dee730910249d35f663996cbe7",
+      "prior_review_sha256": "2e75a4178b7c53626a7c6cfc7c0f35b784a5eef92098ab31b68e79628baa16d4",
+      "source_ids": [
+        "ch01_hpa_722_2026",
+        "ch01_hpa_3040_triple_2026",
+        "ch01_hpa_safe_bp_station_2026",
+        "ch01_hpa_cardiac_stroke_202603",
+        "ch01_mohw_stroke_202603"
+      ],
+      "changes": "重核2019至2023年18歲以上28.9%與30至39歲9.7%盛行率的不同母群，更新722步驟及國健署安心血壓站地圖入口；補明官方摘要未提供可重算的樣本分母，不推算個人風險。；補入急性心腦血管／高血糖警訊來源及119或立即就醫分流。",
+      "frequency_assessment": "2019至2023年國民營養健康調查，18歲以上高血壓盛行率28.9%、30至39歲9.7%；兩者為不同年齡母群盛行率，不是年新發率。官方摘要未提供樣本數、加權分母與信賴區間，本次未取得微資料。",
+      "limits": [
+        "2019至2023年調查摘要未提供樣本數、加權細節、信賴區間或個體資料；18歲以上28.9%與30至39歲9.7%是不同年齡分母，不是年發生率。722是量測紀錄方法，不是自行診斷、調藥或急症分流規則。未取得心臟科、高血壓或公共衛生專家獨立審閱。",
+        "國健署心腦血管急症頁搜尋索引可讀到警訊及119內容，但直接開頁本次回傳502；中風症狀及119另由直接讀取的衛福部官方頁交叉核對。未取得心臟科或腦中風專業獨立審閱。"
+      ],
+      "retired_source_ids": []
+    },
+    {
+      "id": "TW-01-008",
+      "title": "臺灣30歲起成人預防保健與血糖：公費年齡間隔、紅字及高風險追蹤",
+      "before_sha256": "81940f6025c3efb962309eee0316fa9a120061b918cb6cbb9ec2c8ffd663612d",
+      "after_sha256": "f01052014ad946bcbd740ec76bcd25b09a038139a4e2ec121b76e84ad0b9c99c",
+      "prior_review_sha256": "c95d9a25e5e965b843eb251f0aa103da527a86841b40221c9a77400170a8cb9a",
+      "source_ids": [
+        "ch01_hpa_3040_triple_2026",
+        "ch01_hpa_adultprevent_202607",
+        "ch01_hpa_adultprevent_202501",
+        "ch01_hpa_adultcheck_results_20261015",
+        "ch01_vghtpe_hyperglycemia_202610",
+        "ch01_hpa_adultcheck_followup_20261026"
+      ],
+      "changes": "依2026年成人預防保健現行資格、院所查詢與費用界線更新服務流程；加入2019至2023調查、2025服務者三高及血糖異常、截至2026年5月首次服務者統計，分開盛行率、行政服務結果與全體人口；更新急症行動。",
+      "frequency_assessment": "2019至2023年30至39歲高血糖調查盛行率2.5%，不等同糖尿病確診率；2025年約35.5萬名成人預防保健服務使用者中30.8%至少一項三高指標異常、血糖異常約4.7%；截至2026年5月逾47.5萬名首次服務使用者中約3成至少一項三高異常、19.3%符合代謝症候群。各資料期間與母群不同，均非全體人口盛行率；公開摘要未提供可重算精確人數、分母或信賴區間。",
+      "limits": [
+        "2019至2023年30至39歲高血糖2.5%公開摘要未附可重算樣本與信賴區間；2025年30.8%為約35.5萬服務使用者中至少一項三高異常，其中血糖異常約4.7%；截至2026年5月逾47.5萬人為首次服務累積統計，約3成有一項異常、19.3%符合代謝症候群。上述均非全體人口盛行率或糖尿病確診率，亦不可由約數反推精確個案。公費資格不取代臨床評估；未取得內分泌、家醫或公共衛生專家獨立審閱。",
+        "國健署成人預防保健兩則來源本次以官方索引摘錄核對，直接頁面回傳Internal Error；未取得國民營養調查微資料、行政統計分項表或信賴區間。臺北榮總護理衛教支持急症症狀及立即就醫，不取代醫師診斷或個別處置。"
+      ],
+      "retired_source_ids": []
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "TW-01-005",
+      "issue": "食藥署野菇送驗公告未明列「近年」起訖期間、全國事件分母與採食暴露人口；不可推估年度個人風險。"
+    },
+    {
+      "id": "TW-01-007",
+      "issue": "2019至2023年國健署抽樣調查公開摘要未附年齡組樣本數、權重與信賴區間；待取得原始資料後再評估是否重算。"
+    },
+    {
+      "id": "TW-01-008",
+      "issue": "30至39歲調查母數及2025年服務者異常精確人數未公開；30.8%合併三高異常，不可當作單獨高血糖率。"
+    },
+    {
+      "id": "all_three",
+      "issue": "本批為AI輔助臺灣官方來源查核；尚未取得毒物／急診、心血管、糖尿病或公共衛生專家獨立簽證。publication_ready維持false。"
+    }
+  ]
+}
