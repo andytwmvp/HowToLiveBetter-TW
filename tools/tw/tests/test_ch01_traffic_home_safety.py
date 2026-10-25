@@ -55,6 +55,23 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
   self.assertGreaterEqual(len(register["substantive_rechecks"]),evidence["counts_after"]["substantive_rechecks"])
   self.assertGreaterEqual(len(rt["sources"]),evidence["counts_after"]["runtime_sources"])
   self.assertGreaterEqual(load("localization/tw-edition/coverage.json")["registry_sources"],evidence["counts_after"]["source_registry"])
+ def test_fire_share_names_building_fire_event_denominator(self):
+  b={x["id"]:x["body"] for x in validate_runtime()["items"]}
+  self.assertIn("18,521次",b["TW-01-026"])
+  self.assertIn("分母是全部25,895次建築物火災事件",b["TW-01-026"])
+  self.assertIn("沒有家戶數、居住人口或住宅暴露時間分母",b["TW-01-026"])
+  self.assertIn("不能換算成每戶起火機率",b["TW-01-026"])
+ def test_fall_death_statistics_are_not_comparable_rates(self):
+  b={x["id"]:x["body"] for x in validate_runtime()["items"]}
+  self.assertIn("沒有工作者人數或工時分母",b["TW-01-034"])
+  self.assertIn("不是墜落者致死率",b["TW-01-034"])
+  self.assertIn("2025全年「墜落、滾落」與2026上半年「墜落」的分類和期間不同",b["TW-01-034"])
+  self.assertIn("不能用來算個人墜落機率或直接比較趨勢",b["TW-01-034"])
+ def test_recheck_batch_added_no_core_articles(self):
+  evidence=load("localization/ch01-p0-transport-fire-fall-recheck-20261026.json")
+  self.assertEqual(evidence["scope"]["new_core_ids"],[])
+  self.assertEqual(evidence["counts_after"]["core_completed"],evidence["counts_before"]["core_completed"])
+  self.assertEqual(evidence["counts_after"]["core_total"],evidence["counts_before"]["core_total"])
  def test_prior_reading_data_preserved(self):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))
   rt=validate_runtime();items={x["id"]:x for x in rt["items"]};sources={x["id"]:x for x in rt["sources"]}
