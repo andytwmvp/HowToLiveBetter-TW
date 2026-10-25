@@ -9981,11 +9981,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-017.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://www.mol.gov.tw/1607/28162/28296/81778/81796/81939/post",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021"
+        "ch19_lsa",
+        "ch19_service",
+        "unemployment",
+        "ch19_service_false_info_2026",
+        "ch19_service_separation_2026"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "離職時找單位要一份離職證明，寫明合同期限、離職日期、崗位和工作年限",
@@ -10045,11 +10047,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-020.md",
       "sources": [
-        "https://www.mol.gov.tw/1607/28162/28296/28340/28342/28344/",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002"
+        "contractwork",
+        "ch19_lsa",
+        "ch19_lsa_rules",
+        "ch19_contract_faq_2026"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "入職滿一個月單位還沒和你籤書面勞動合同，從第二個月起可以要雙倍工資，最多 11 個月；滿一年還不籤，就算簽了無固定期限合同",
@@ -10093,11 +10096,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-022.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028"
+        "ch19_lsa",
+        "ch19_lsa_rules",
+        "ch19_trade_secret",
+        "ch19_minimum_service_faq"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "離職時公司要你賠違約金，先看是哪一種：只有專項培訓的服務期和競業限制能約定違約金，別的名目法律不許約定",
@@ -10135,10 +10139,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-024.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://www.mol.gov.tw/1607/28162/28296/28340/28342/28344/"
+        "ch19_lsa",
+        "contractwork",
+        "ch19_dispatch_guide_2024"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "被勞務派遣到別家公司幹活的，工資要和同類崗位的正式工按同一套辦法算，在幹活的單位受了損害兩家公司一起賠",

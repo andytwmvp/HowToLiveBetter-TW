@@ -23,6 +23,13 @@ NEW_SOURCE_IDS = {
     "bli_personal_insurance_pension_query_20261025",
     "nhi_counter_enrollment_record_20261025",
 }
+EMPLOYMENT_RIGHTS_SOURCE_IDS = {
+    "ch19_service_false_info_2026",
+    "ch19_service_separation_2026",
+    "ch19_contract_faq_2026",
+    "ch19_minimum_service_faq",
+    "ch19_dispatch_guide_2024",
+}
 
 
 def read(path):
@@ -42,7 +49,10 @@ class Ch19InsuranceBenefitsRecheckTests(unittest.TestCase):
             "localization/retroactive-review-register-20261019.json")["substantive_rechecks"]}
 
         self.assertEqual(old_runtime["sources"], [s for s in current_runtime["sources"] if s["id"] in old_sources])
-        self.assertEqual(set(current_sources) - set(old_sources), NEW_SOURCE_IDS)
+        self.assertEqual(
+            set(current_sources) - set(old_sources),
+            NEW_SOURCE_IDS | EMPLOYMENT_RIGHTS_SOURCE_IDS,
+        )
         for item_id in IDS:
             with self.subTest(item_id=item_id):
                 item = current_items[item_id]

@@ -28,7 +28,7 @@ class LaborChapterTests(unittest.TestCase):
                 raw=(ROOT/entry['target_path']).read_bytes();review=read(f"localization/reviews/{entry['id']}.json")
                 self.assertEqual(raw.decode(),runtime[entry['id']]['body']);self.assertGreater(len(raw.decode()),650)
                 self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
-                self.assertEqual(review['review_due_at'],'2026-12-31');self.assertIn('AI',review['reviewer'])
+                self.assertEqual(review['review_due_at'],runtime[entry['id']]['review_due_at']);self.assertIn('AI',review['reviewer'])
                 self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
                 self.assertEqual(len([b for b in body_blocks(runtime[entry['id']]) if b['tag']=='h3']),5)
         self.assertGreaterEqual(publication_report()['publication_completed_entries'],25)
@@ -81,9 +81,9 @@ class LaborChapterTests(unittest.TestCase):
         required={
           'TW-19-003':['未滿3個月不代表','2026-01-01'],
           'TW-19-006':['不是申請即獲准','免費勞資爭議調解'],
-          'TW-19-017':['經公立就業服務機構同意','七日補正'],
-          'TW-19-022':['達50%不等於','最長2年','禁止預扣'],
-          'TW-19-024':['經主管機關處罰或限期給付','90日','10日','30日']}
+          'TW-19-017':['公立就業服務機構同意','7日內補正'],
+          'TW-19-022':['每月補償不得低於勞工離職時一個月平均工資的50%','即使達到50%','最長2年','禁止雇主預扣'],
+          'TW-19-024':['經主管機關處罰','第27條限期給付','90日','10日','30日']}
         for key,phrases in required.items():
             for phrase in phrases:self.assertIn(phrase,entries[key]['body'])
 
