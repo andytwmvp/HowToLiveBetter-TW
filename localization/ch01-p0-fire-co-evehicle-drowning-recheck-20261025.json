@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-25",
+  "base_main_sha": "66b24c548bb3b3731579bd2421e37124d437d303",
+  "risk_order": [
+    "TW-01-004",
+    "TW-01-012",
+    "TW-01-003",
+    "TW-01-006"
+  ],
+  "risk_order_basis": "依危害急迫性、可能致命性、臺灣實際場景及可執行避險安排排序；不同單位、期間與分母的件數不互相比成個人風險率。",
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-01-004",
+    "TW-01-012",
+    "TW-01-003",
+    "TW-01-006"
+  ],
+  "professional_review": "pending",
+  "professional_review_note": "本批為AI輔助逐篇來源再審，未取得消防、醫療、兒科、水域救援、燃氣或法律專業人士獨立簽證。",
+  "statistics": {
+    "TW-01-003": [
+      {
+        "source_id": "ch01_nfa_fire_2025",
+        "period": "2025年",
+        "scope": "臺灣全國",
+        "population": "消防署建築物類火災行政統計，依獨立住宅、集合住宅及其他類別計數",
+        "event_definition": "建築物火災通報次數",
+        "numerator": {
+          "all_building_fires": 4514,
+          "detached_home_fires": 1688,
+          "apartment_collective_fires": 1483,
+          "combined_residential_fire_events": 3171
+        },
+        "denominator": null,
+        "unit": "件（消防署表格用次數）",
+        "method": "官方行政火災統計；非抽樣調查或個人機率",
+        "accessed_at": "2026-10-25",
+        "limitations": "未提供住宅戶數、建物年或使用時數分母；不等於傷亡案件數，不能推算每戶起火率。"
+      }
+    ],
+    "TW-01-004": [
+      {
+        "source_id": "ch01_nfa_co_2024",
+        "period": "2024年",
+        "scope": "臺灣全國",
+        "population": "消防署燃氣熱水器相關一氧化碳事故行政通報",
+        "event_definition": "一氧化碳中毒事故件數；死亡及送醫為人數結果分類",
+        "numerator": {
+          "incidents": 24,
+          "deaths": 4,
+          "sent_to_hospital": 59,
+          "outdoor_heater_poor_ventilation_incidents": 21
+        },
+        "denominator": null,
+        "unit": "事故件數；死亡人數；送醫人數",
+        "method": "消防署行政事故統計",
+        "accessed_at": "2026-10-25",
+        "limitations": "無燃氣熱水器戶數、家庭暴露時數及個人分母；21件為事故成因分類，不是使用戶中毒率。"
+      },
+      {
+        "source_id": "ch01_klfd_co_2025",
+        "period": "2025年",
+        "scope": "臺灣全國（基隆市消防局公告引述消防署114年統計）",
+        "population": "消防署年度一氧化碳事故行政數字之地方政府轉引",
+        "event_definition": "一氧化碳事故件數及死亡／送醫人數",
+        "numerator": {
+          "incidents": 22,
+          "deaths": 5,
+          "sent_to_hospital": 59
+        },
+        "denominator": null,
+        "unit": "事故件數；死亡人數；送醫人數",
+        "method": "地方消防機關公告轉引全國行政統計",
+        "accessed_at": "2026-10-25",
+        "limitations": "地方公告未附成因明細及暴露分母，不可估計個人風險；不以兩年數字判定趨勢。"
+      }
+    ],
+    "TW-01-006": [
+      {
+        "source_id": "ch01_ntpc_twheelfire_202601",
+        "period": "2021至2025年",
+        "scope": "新北市",
+        "population": "二輪車火災案件，含機車及自行車等類別",
+        "event_definition": "二輪車火災；其中電動輔助自行車、微型電動二輪車及電動機車另分類",
+        "numerator": {
+          "all_two_wheel_fire_events": 242,
+          "listed_electric_two_wheel_fire_events": 71,
+          "share_of_two_wheel_fire_events_percent": 29.3
+        },
+        "denominator": {
+          "all_two_wheel_fire_events": 242
+        },
+        "unit": "火災件數；29.3%為案件構成占比",
+        "method": "地方消防機關行政案件統計，不是全市車隊發生率",
+        "accessed_at": "2026-10-25",
+        "limitations": "無車輛數、車輛使用年或充電時數分母，不能推成電動車起火率。"
+      },
+      {
+        "source_id": "ch01_tpe_evfire_2018_2024",
+        "period": "2018至2024年（民國107至113年）",
+        "scope": "臺北市",
+        "population": "電動車輛火災調查案件",
+        "event_definition": "電動車輛火災案件，其中電動自行車為子類別",
+        "numerator": {
+          "electric_vehicle_fire_events": 49,
+          "electric_bicycle_fire_events": 30
+        },
+        "denominator": null,
+        "unit": "火災件數",
+        "method": "地方消防局火災調查統計",
+        "accessed_at": "2026-10-25",
+        "limitations": "無臺北市電動車輛存量、使用時數分母；分類與新北數據不同，不可加總推估全臺。"
+      }
+    ],
+    "TW-01-012": [
+      {
+        "source_id": "ch01_mohw_drowning_age_2025",
+        "period": "2023至2025年（民國112至114年）",
+        "scope": "臺灣全國",
+        "population": "1至5歲兒童死因統計",
+        "event_definition": "死因「意外溺死或淹沒」死亡人數",
+        "numerator": {
+          "2023_deaths": 8,
+          "2024_deaths": 1,
+          "2025_deaths": 3
+        },
+        "denominator": null,
+        "unit": "人（死亡人數）",
+        "method": "衛福部統計處114年年齡別統計表22，官方XLSX下載後讀取；不是所有落水事件或戲水人次抽樣",
+        "accessed_at": "2026-10-25",
+        "limitations": "無水域活動暴露時間、人數及全體溺水事件分母；年度死因數可能修訂，不代表個人機率或政策效果。"
+      }
+    ]
+  },
+  "sources_added": [
+    "ch01_nfa_co_detector_3714",
+    "ch01_wda_co_first_aid_2026",
+    "ch01_vghtpe_inhalation_firstaid",
+    "ch01_nfa_co_2024",
+    "ch01_klfd_co_2025",
+    "ch01_moea_gas_emergency_2025",
+    "ch01_ftc_gas_check_2023",
+    "ch01_nfa_micro_ev_fire_safety",
+    "ch01_mohw_drowning_age_2025",
+    "ch01_nfa_water_rescue_2022",
+    "ch01_moe_rescue_five_2019",
+    "ch01_cga_118_hotline"
+  ],
+  "source_retirements": [
+    {
+      "id": "ch01_nfa_co_2019_2023",
+      "reason": "原來源統計期為2019至2023年，正文改用可查的2024消防署統計與2025年消防署全年統計轉引；舊來源物件與歷史紀錄保留。",
+      "replacement_ids": [
+        "ch01_nfa_co_2024",
+        "ch01_klfd_co_2025"
+      ],
+      "prior_source_sha256": "6c818f9ed10ff41547e6e9a7ff445a824f262020e3f433ab8a20212dfcb42b6c"
+    },
+    {
+      "id": "ch01_ftc_gas_sales",
+      "reason": "改用公平會2023年具體處分與民眾查證建議頁，主張更直接可核對；舊來源物件與歷史紀錄保留。",
+      "replacement_ids": [
+        "ch01_ftc_gas_check_2023"
+      ],
+      "prior_source_sha256": "8d38c167901fe85e18af56612ccc2387bdb46cf440389f9d2b180bbfea452716"
+    },
+    {
+      "id": "ch01_tpe_firedrown_2025",
+      "reason": "臺北市消防局原水域指引頁本輪直接讀取逾時，正文改由消防署、教育部及海巡署可讀的官方指引分別支持救援口訣、岸上救援與118專線；此處不判定舊頁永久失效，舊來源物件保留。",
+      "replacement_ids": [
+        "ch01_nfa_water_rescue_2022",
+        "ch01_moe_rescue_five_2019",
+        "ch01_cga_118_hotline"
+      ],
+      "prior_source_sha256": "d63d476b2f08e29345c99b0ef9158240765903a33a19f11cdc831d9f90478393"
+    }
+  ],
+  "changes": {
+    "TW-01-004": "以2024與2025統計取代2019至2023舊數字，分清事故件數、死亡人數、送醫人數與成因分類並揭露無暴露分母；修正CO與瓦斯漏氣的先期處置，補入安全開門窗／119、無防護不入場、合法業者查證與公平會具體處分。",
+    "TW-01-012": "把救援步驟移至統計前，改用衛福部最新114年年齡別表22更新2023至2025年死亡人數；將消防署／教育部岸上救援、海巡118與119來源分別核對，移除本輪無法重新讀取的臺北消防局水域頁面引用。",
+    "TW-01-003": "把住宅火災統計移到實作步驟之後，讓撤離與119優先；明確區分住警器煙／熱偵測與CO偵測器，要求燃氣設備由合格業者檢查，補上CO撤離、119及救援者防護。",
+    "TW-01-006": "把火災通報、撤離和119置於統計之前；精確限定新北29.3%是二輪車火災類別占比，保留臺北不同期統計界線；依消防署對微型電動二輪車案例補充有人在場、充滿停充拔電、原廠檢查與遠離可燃物，避免機械套用到所有車種。"
+  },
+  "recheck_status": "ai_source_rechecked_professional_pending",
+  "counts_before": {
+    "main_sha": "66b24c548bb3b3731579bd2421e37124d437d303",
+    "core_reviewed_entries": 278,
+    "runtime_core_items": 278,
+    "runtime_items": 289,
+    "runtime_sources": 665,
+    "registry_sources": 746,
+    "substantive_rechecks": 120,
+    "unresolved_source_ids": 115,
+    "unresolved_source_reference_occurrences": 306
+  },
+  "counts_after": {
+    "new_core_ids": 0,
+    "core_reviewed_entries": 278,
+    "runtime_core_items": 278,
+    "runtime_items": 289,
+    "runtime_sources": 677,
+    "registry_sources": 758,
+    "substantive_rechecks": 124,
+    "unresolved_source_ids": 115,
+    "unresolved_source_reference_occurrences": 306
+  }
+}

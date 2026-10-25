@@ -49,9 +49,9 @@ class Ch19InsuranceBenefitsRecheckTests(unittest.TestCase):
             "localization/retroactive-review-register-20261019.json")["substantive_rechecks"]}
 
         self.assertEqual(old_runtime["sources"], [s for s in current_runtime["sources"] if s["id"] in old_sources])
-        self.assertEqual(
-            set(current_sources) - set(old_sources),
-            NEW_SOURCE_IDS | EMPLOYMENT_RIGHTS_SOURCE_IDS,
+        self.assertTrue(
+            (NEW_SOURCE_IDS | EMPLOYMENT_RIGHTS_SOURCE_IDS)
+            <= (set(current_sources) - set(old_sources))
         )
         for item_id in IDS:
             with self.subTest(item_id=item_id):

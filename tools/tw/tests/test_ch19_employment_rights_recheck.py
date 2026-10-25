@@ -37,7 +37,7 @@ class Ch19EmploymentRightsRecheckTests(unittest.TestCase):
         records = {row["id"]: row for row in read(
             "localization/retroactive-review-register-20261019.json")["substantive_rechecks"]}
 
-        self.assertEqual(set(sources) - set(old_sources), NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS <= (set(sources) - set(old_sources)))
         self.assertEqual(old_runtime["sources"], [row for row in runtime["sources"] if row["id"] in old_sources])
         for item_id in IDS:
             with self.subTest(item_id=item_id):
