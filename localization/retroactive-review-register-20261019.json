@@ -12871,6 +12871,298 @@
         }
       ],
       "retired_sources": []
+    },
+    {
+      "id": "TW-25-001",
+      "title": "先確認急救需求，再依死亡情形分流醫療與司法相驗",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "9967aedbeadc57211e57a107154937f6660d8c98",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a32bab34a59d431726ab2fcd14ee89556d3b4acc4dbc25710c721b7def58e5de",
+      "before_sha256": "5b56e4bfa16f4b18dba1a435d65f66adefe0ef05c467e7b4f6b870b398ddddff",
+      "after_sha256": "64d0037759d2b9c441f9ce23b2d258066b7239d1f15a0de76379332875a6198a",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "台灣現場先用119與消防救護體系；急救優先於死亡行政處理。全國消防機關OHCA救護結果數不能直接推算家庭或個人風險。",
+      "frequency_assessment": "消防署2024全國行政救護文字統計列OHCA急救成功6,301人、康復出院1,249人。這是結果人數，不是發生率、盛行率或每人年度機率；本輪未讀取表格圖片中的成功率母數定義，因此不引用34.14%，也沒有個人暴露母數可估計個人風險。",
+      "changes": "改為現場安全後立即119、提供地址與反應呼吸、擴音且不掛斷；新增全國2024 OHCA結果數並限制解讀，不把件數換算個人機率。",
+      "limits": [
+        "需要救援或避開立即危險時以安全為先。其餘情形在警方、醫療人員確認前，不任意搬動、清洗或丟棄現場物品，也不讓陌生業者先把人帶走。獨居、在家或高齡本身，不等於已判定自然死亡或犯罪；境外死亡與傳染病事件另有程序。",
+        "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
+          "claim": "呼叫反應、確認正常呼吸與119求救；正文不以讀者自行觸摸判斷代替救護。",
+          "supporting_passage": "編者非逐字引文：先確認反應及正常呼吸、呼叫119並取得AED；本章只引用求救原則，不轉錄完整急救技術。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://www.gov.tw/News_Content_26_402190",
+          "claim": "依院內、在家自然與意外事故死亡分流證明窗口。",
+          "supporting_passage": "編者非逐字引文：依死亡情形分流死亡證明；公部門或民營接運、各類遺屬給付與勞退入口。文中約7至10日不是全國法定治喪期限。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=218&pcode=C0010001",
+          "claim": "非病死或可疑非病死依法相驗，不要求家屬先證明犯罪。",
+          "supporting_passage": "編者非逐字引文：非病死或可疑為非病死者由檢察官依法相驗，可指揮法定人員辦理；不是所有在家死亡均屬犯罪。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=905&code=list&flag=detail&ids=21",
+          "claim": "119求援、不掛斷、擴音及依派遣員指示；不以此頁作完整CPR教學。",
+          "supporting_passage": "編者非逐字引文：無反應時立即撥119、不要掛斷並開擴音，依派遣員指示；本文不引用完整CPR操作或兒童技術流程。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取消防署官方HTML，核對119求援、不掛斷、擴音與派遣員引導；未以舊版CPR技術流程作臨床教學。"
+        },
+        {
+          "url": "https://mag.nfa.gov.tw/article.php?id=3885",
+          "claim": "2024年全國OHCA急救成功6,301人、康復出院1,249人；行政結果數，不是發生率。",
+          "supporting_passage": "編者非逐字引文：2024年消防機關OHCA急救成功6,301人、康復出院1,249人；為全國行政救護結果計數，不是人口發生率或個人風險。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取消防署消防月刊HTML，核對113年（2024）全國消防機關含港務消防大隊文字統計；表格圖片及母數未用作個人風險推算。"
+        }
+      ],
+      "retired_sources": []
+    },
+    {
+      "id": "TW-25-004",
+      "title": "死因有疑點先提出，證據保全與司法解剖不可混為一談",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "9967aedbeadc57211e57a107154937f6660d8c98",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "c50b507eceb762f5f490e142b00a91960b26f97d060b3b6082df8256c0b2663e",
+      "before_sha256": "914beb05ae2a0ddf25042964bfd2d0ffde742c912f92a445238681fe37db2766",
+      "after_sha256": "d23e541664a29a4761984e6efd50e4340294d81c31028b86429c2ecdef673168",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "依台灣刑事訴訟法及醫療法分開處理相驗、解剖與病歷申請；尚未確認死亡先撥119，不因留證延誤急救。",
+      "frequency_assessment": "此條為法定證據保全程序，不是以人口發生率排序的主題。本輪未找到可支持台灣個人死因爭議機率的同口徑官方母數，不以新聞或個案推估。",
+      "changes": "在首段明列未確認死亡先119、不得為留證延誤救援；重新核對刑事訴訟法第213、217、218條及醫療法第71條，區分法定處分、親屬程序與病歷資格。",
+      "limits": [
+        "家屬提出意見、依法受通知可在場，不等於可用私下同意書取代或否決檢察官依法採取的必要處分；也不是每件相驗都一定解剖。不沿用原作48小時、冷凍後7日的統一時限，亦不宣稱逾時或不同意就自動承擔全部責任。急救需要優先於本段留證安排。",
+        "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=218&pcode=C0010001",
+          "claim": "非病死相驗由檢察機關依法處理。",
+          "supporting_passage": "編者非逐字引文：非病死或可疑為非病死者由檢察官依法相驗，可指揮法定人員辦理；不是所有在家死亡均屬犯罪。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=213&pcode=C0010001",
+          "claim": "檢驗屍體與解剖為法定勘驗處分，不是保證每案必做。",
+          "supporting_passage": "編者非逐字引文：勘驗可以包含檢驗屍體、解剖屍體及檢查相關物件。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=C0010001",
+          "claim": "親屬通知及在場與暫留屍體之規定，不等同同意權。",
+          "supporting_passage": "編者非逐字引文：檢驗或解剖得暫留屍體或一部；應通知配偶或其他同居或較近親屬並許在場，不等於以親屬同意取代法定程序。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=71&pcode=L0020021",
+          "claim": "第71條病人複製病歷及費用；亡者親友申請資格另向院方核對。",
+          "supporting_passage": "編者非逐字引文：病人要求複製病歷之規定及費用負擔；此條本身不直接證明任何親友都可取得亡者全部病歷。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=905&code=list&flag=detail&ids=21",
+          "claim": "119求援、不掛斷、擴音及依派遣員指示；不以此頁作完整CPR教學。",
+          "supporting_passage": "編者非逐字引文：無反應時立即撥119、不要掛斷並開擴音，依派遣員指示；本文不引用完整CPR操作或兒童技術流程。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取消防署官方HTML，核對119求援、不掛斷、擴音與派遣員引導；未以舊版CPR技術流程作臨床教學。"
+        }
+      ],
+      "retired_sources": []
+    },
+    {
+      "id": "TW-25-011",
+      "title": "限定責任與拋棄繼承不同，3個月內要確認法院程序",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "9967aedbeadc57211e57a107154937f6660d8c98",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "3fc6c67f2f12db77468bf5a0125271019fe53fa46a15b011973a2d18ddb462d4",
+      "before_sha256": "d1cce1e2052a73e2c11fac96d68fc1e951bd06e966f65a8e9cac06b1dd1087e4",
+      "after_sha256": "35789bd0a3b02b8fca8129dd6bc9f5c67e96a5d00fc7dac97183a94f58317b6a",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "台灣限定責任、拋棄繼承與遺產清冊是不同程序；順位遞補者以自己知悉得繼承日核算期間。",
+      "frequency_assessment": "拋棄繼承期間是法定程序期限，不是事件頻率。本輪未找到台灣個人繼承債務或順位遞補機率的官方暴露母數，不推算常見程度。",
+      "changes": "新增因他人拋棄而取得順位者的獨立3個月期限，校正為民法第1176條第7項；改用司法院目前可讀取的程序頁並修正錯字。",
+      "limits": [
+        "拋棄是同時放棄繼承財產及債務關係，不是只拒絕負債。私下聲明、家族群組留言或分配協議不能取代法院聲明。第1163條對重大隱匿、清冊重大虛偽或意圖詐害債權人處分遺產，另有失去限定責任利益的規定；第1162條之2對違反清償規則亦可能產生超過遺產範圍的責任。不要把所有遺產支付一概稱為違法，也不要假設怎麼支付都安全。",
+        "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1148&pcode=B0000001",
+          "claim": "限定責任原則，不等於可不管理或任意處分遺產。",
+          "supporting_passage": "編者非逐字引文：繼承財產上權利義務的原則、專屬權利例外，以及對被繼承人債務以所得遺產為限清償。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1174&pcode=B0000001",
+          "claim": "知悉得繼承起3個月書面向法院及通知其他應繼承人。",
+          "supporting_passage": "編者非逐字引文：知悉得繼承起3個月內以書面向法院聲明；原則須書面通知因拋棄而應繼承之人，不能通知者除外。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1156&pcode=B0000001",
+          "claim": "清冊3個月與法院得延展，不能推成拋棄期限可延展。",
+          "supporting_passage": "編者非逐字引文：知悉得繼承起3個月內開具遺產清冊陳報法院；必要時法院得依聲請延展；一人陳報視為其他繼承人已陳報。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1163&pcode=B0000001",
+          "claim": "重大隱匿虛偽或詐害處分之限定利益喪失。",
+          "supporting_passage": "編者非逐字引文：隱匿遺產或清冊虛偽記載且情節重大，以及意圖詐害債權人而處分遺產，不得主張限定責任利益。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1162-2&pcode=B0000001",
+          "claim": "特定不當清償可有超出遺產的責任，非所有支出均當然失權。",
+          "supporting_passage": "編者非逐字引文：違反第1162條之1之清償規則，特定未受償部分可不以遺產為限負責及發生損害賠償；無或限制行為能力人另有例外。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1176&pcode=B0000001",
+          "claim": "因他人拋棄遞補者知悉自己得繼承日起3個月；法源為第1176條第7項。",
+          "supporting_passage": "編者非逐字引文：因他人拋棄繼承而應繼承之人，知悉自己得繼承日起3個月內可以拋棄。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫民法第1176條全文，核對第7項及整編截止日；未誤列為第1176條之2。"
+        },
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1654-57365-92963-1.html",
+          "claim": "司法院現行頁說明死亡時住所地法院、期限及一般申請文件。",
+          "supporting_passage": "編者非逐字引文：向被繼承人死亡時住所地法院辦理，核對3個月期間及聲明文件；程序說明不能取代個案法律判斷。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取司法院目前可用的官方HTML頁面，核對管轄法院、期限與文件；未採用本次無法取得的舊路徑。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch25_waiver",
+          "prior_source_sha256": "8c958491d9af38b2395202e94bc08948b8a06b74d70cb3f095987266464f3407",
+          "reason": "原司法院舊路徑本次無法直接取得，改用目前可讀取官方頁重新核對。",
+          "replacement_ids": [
+            "ch25_waiver_current"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-25-012",
+      "title": "金融遺產查詢、稅務與登記各自追期限，不等家族談妥才開始",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "9967aedbeadc57211e57a107154937f6660d8c98",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "c594adaf43edebff9ec101499a893bed47887ec9d17ae514cc314c5867bbd781",
+      "before_sha256": "92299d8145d1e3623a44e50040091219180f0c01dfbccd1b89f5c1973d6cfa0f",
+      "after_sha256": "72bb3e02d56bb41e2d24bbff8f051b37b5fbee53c5829f9c012ee44e023923c7",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "分開辦理台灣遺產稅、綜所稅、不動產繼承登記；金融遺產單一窗口僅查詢規定範圍，不是全部資產、債務或銀行付款保證。",
+      "frequency_assessment": "稅務申報和登記期限是法定程序，不適用人口發生率。死亡日期、管理人選任、法院判決、跨境身分及過渡規則會改變期限，不能用平均數推估個人情形。",
+      "changes": "依2026-09-11修法校正死亡次日起6個月、特殊起算、補申報、展延、繳納分期、2026-09-13生效換算及第6與30條過渡；補遺有財產即須申報與財政部金融遺產申請身分，分開所得稅和土地登記期限。",
+      "limits": [
+        "別漏掉死亡年度綜合所得稅。除法定免申報外，亡者有配偶時由配偶合併申報；符合受扶養規定者亦依財政部說明辦理。沒有配偶或不符合受扶養規定時，遺囑執行人、繼承人或遺產管理人原則須自死亡日起3個月內申報；特殊情形須在期限屆滿前申請核准展延，且最遲不得超過遺產稅申報期限。這不是遺產稅6個月，也不是拋棄繼承的知悉起算3個月。跨境、特殊遺產管理或爭議案件，實際末日與申請資格向機關確認；保留每一項收件及完成證明。",
+        "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=73&pcode=D0060001",
+          "claim": "6個月繼承登記及由繼承人為全體聲請的規定。",
+          "supporting_passage": "編者非逐字引文：繼承登記得由任何繼承人為全體聲請；自繼承開始起6個月內辦理，逾期有法定登記費罰鍰規定。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=120&pcode=D0060003",
+          "claim": "部分人未會同仍可依法為全體辦公同共有，不是單方分割。",
+          "supporting_passage": "編者非逐字引文：部分繼承人不能會同時，一人或數人可為全體利益申請公同共有；全體同意才可依該條申請分別共有，登記後通知其他繼承人。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/file-procedure/kJBoQMA",
+          "claim": "所得稅配偶或扶養合併與另須死亡日起3個月申報的區分。",
+          "supporting_passage": "編者非逐字引文：除法定免申報外，有配偶或符合受扶養規定者合併申報；否則遺囑執行人、繼承人或遺產管理人原則死亡日起3個月內申報，另有展延規範。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "已取得官方HTML並核對本筆指定條文或段落；查閱日不等於法規整編或發布日，不宣稱個案已獲準。"
+        },
+        {
+          "url": "https://www.mof.gov.tw/singlehtml/979b54e408fb499eae3c1d9efe978868?cntId=b8fa14f7ccb645f29e095565341c25b1",
+          "claim": "未拋棄繼承之繼承人、遺囑執行人及遺產管理人可備證向稽徵機關櫃檯或官方線上系統申請。",
+          "supporting_passage": "編者非逐字引文：未拋棄繼承的繼承人、遺囑執行人及遺產管理人備妥證明，可向稽徵機關櫃檯或官方線上系統申請。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取財政部官方HTML，核對申請人、櫃檯與線上申請入口；頁面未顯示可確認發布日期，不另行推定。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340072",
+          "claim": "修法後申報、補申報、展延、繳納分期及移轉限制，依公告與個案日期適用。",
+          "supporting_passage": "編者非逐字引文：現行第6、23、26、28、30、41、41條之1及59條：申報期限、特別起算與補申報、展延、繳納分期、移轉限制及施行日。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "核對全國法規資料庫2026-09-11修正後條文與整編截止日2026-10-16；條文內容、公布與生效日分別交叉核對。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=199701",
+          "claim": "2026年9月11日修法公布與第6、30條過渡規則。",
+          "supporting_passage": "編者非逐字引文：核對2026-09-11公布及第6、17條之1、23、26、30、41、51條修正；第6條及第30條含過渡規則。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取修法公告正文，核對公布日、修正清單與過渡文字；不把公布日直接當生效日。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133",
+          "claim": "公布日施行之法律自公布日起算第三日生效；2026年9月13日為依法換算日期。",
+          "supporting_passage": "編者非逐字引文：法律明定自公布日施行時，自公布日起算至第三日起生效；2026-09-13是按此由2026-09-11換算的日期。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接核對全國法規資料庫第13條；本條所列施行日註明依法換算，不是另行公告日期。"
+        },
+        {
+          "url": "https://law-out.mof.gov.tw/LawContent.aspx?id=FL006068",
+          "claim": "死亡時遺有財產應據實申報，不以有無應納稅額為條件。",
+          "supporting_passage": "編者非逐字引文：被繼承人死亡時遺有財產，依法應據實申報，不以最後核定有應納稅額為前提。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取財政部主管法規系統施行細則第20條現行條文；未用未讀附件支持細項。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch25_finance",
+          "prior_source_sha256": "383551d436fb4c9758e164802ffef2333c9f29979bcebdbd0d6cbc099546839a",
+          "reason": "原臺北國稅局來源網址本次直接讀取逾時，改用可讀取的財政部現行申請說明。",
+          "replacement_ids": [
+            "ch25_finance_current"
+          ]
+        },
+        {
+          "id": "ch25_estatetax",
+          "prior_source_sha256": "623d41c8d3d7078725114a5a47496a2cd285d5cd5d8192bf72c880b2f37de8c9",
+          "reason": "2026年9月修法後，舊整合來源不足以支持現行條文、施行日、過渡規則與據實申報；保留舊物件並用現行法、修法公告、施行計算條文及施行細則分項支持。",
+          "replacement_ids": [
+            "ch25_estatetax_current",
+            "ch25_estatetax_revision",
+            "tw_central_law_standard",
+            "ch25_estatetax_rules"
+          ]
+        }
+      ]
     }
   ]
 }

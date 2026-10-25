@@ -1,0 +1,166 @@
+{
+  "review_date": "2026-10-25",
+  "baseline_main_sha": "9967aedbeadc57211e57a107154937f6660d8c98",
+  "items": [
+    "TW-25-001",
+    "TW-25-004",
+    "TW-25-011",
+    "TW-25-012"
+  ],
+  "risk_order": [
+    "TW-25-001",
+    "TW-25-004",
+    "TW-25-011",
+    "TW-25-012"
+  ],
+  "risk_order_reason": "先處理急救延誤的生命風險，再核對死因程序，最後核對繼承順位與稅務期限。",
+  "statistics": [
+    {
+      "value": 6301,
+      "unit": "人（消防署文字統計的OHCA急救成功人數）",
+      "period": "2024年（民國113年）",
+      "scope": "全國消防機關及消防署港務消防大隊",
+      "population": "年度行政救護紀錄中的到院前心肺功能停止個案結果，不是人口追蹤樣本",
+      "numerator": "統計分析文字列急救成功人數6,301",
+      "denominator": "未讀取成功率表格圖片的母數定義；本篇不計算人口發生率或個人風險",
+      "event_definition": "到院前心肺功能停止患者急救成功",
+      "data_type": "行政救護結果統計",
+      "source_id": "ch25_nfa_ohca_stats",
+      "source_url": "https://mag.nfa.gov.tw/article.php?id=3885",
+      "published_at": "2025-02-28",
+      "accessed_at": "2026-10-25",
+      "limitations": "結果人數非發生率、盛行率或每人年度機率；不使用頁面另列34.14%成功率。"
+    },
+    {
+      "value": 1249,
+      "unit": "人（消防署文字統計的OHCA康復出院人數）",
+      "period": "2024年（民國113年）",
+      "scope": "全國消防機關及消防署港務消防大隊",
+      "population": "年度行政救護紀錄中的到院前心肺功能停止個案結果，不是人口追蹤樣本",
+      "numerator": "統計分析文字列康復出院人數1,249",
+      "denominator": "無個人暴露人口或人年母數；不據此換算個人風險",
+      "event_definition": "到院前心肺功能停止個案康復出院",
+      "data_type": "行政救護結果統計",
+      "source_id": "ch25_nfa_ohca_stats",
+      "source_url": "https://mag.nfa.gov.tw/article.php?id=3885",
+      "published_at": "2025-02-28",
+      "accessed_at": "2026-10-25",
+      "limitations": "結果人數非發生率或全台人口存活率；不能換算特定家庭的救援成功機率。"
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch25_nfa_dacpr",
+      "title": "內政部消防署：民眾版成人CPR常見問答",
+      "url": "https://www.nfa.gov.tw/cht/index.php?article_id=905&code=list&flag=detail&ids=21"
+    },
+    {
+      "id": "ch25_nfa_ohca_stats",
+      "title": "內政部消防署：全國消防機關113年緊急救護統計分析",
+      "url": "https://mag.nfa.gov.tw/article.php?id=3885"
+    },
+    {
+      "id": "civil1176_7",
+      "title": "民法第1176條第7項：因他人拋棄而取得繼承順位",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1176&pcode=B0000001"
+    },
+    {
+      "id": "ch25_waiver_current",
+      "title": "司法院：聲明拋棄繼承的程序（現行頁面）",
+      "url": "https://www.judicial.gov.tw/tw/cp-1654-57365-92963-1.html"
+    },
+    {
+      "id": "ch25_finance_current",
+      "title": "財政部：如何申請被繼承人金融遺產資料",
+      "url": "https://www.mof.gov.tw/singlehtml/979b54e408fb499eae3c1d9efe978868?cntId=b8fa14f7ccb645f29e095565341c25b1"
+    },
+    {
+      "id": "ch25_estatetax_current",
+      "title": "遺產及贈與稅法（2026年9月修正後現行條文）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340072"
+    },
+    {
+      "id": "ch25_estatetax_revision",
+      "title": "全國法規資料庫：2026年9月11日遺產及贈與稅法修正公布",
+      "url": "https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=199701"
+    },
+    {
+      "id": "tw_central_law_standard",
+      "title": "中央法規標準法第13條：公布日起施行的生效計算",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+    },
+    {
+      "id": "ch25_estatetax_rules",
+      "title": "遺產及贈與稅法施行細則第20條：遺有財產即應申報",
+      "url": "https://law-out.mof.gov.tw/LawContent.aspx?id=FL006068"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch25_waiver",
+      "replacement_ids": [
+        "ch25_waiver_current"
+      ],
+      "reason": "原司法院舊路徑本次無法直接取得，改用目前可讀取官方頁重新核對。"
+    },
+    {
+      "id": "ch25_finance",
+      "replacement_ids": [
+        "ch25_finance_current"
+      ],
+      "reason": "原臺北國稅局來源網址本次直接讀取逾時，改用可讀取的財政部現行申請說明。"
+    },
+    {
+      "id": "ch25_estatetax",
+      "replacement_ids": [
+        "ch25_estatetax_current",
+        "ch25_estatetax_revision",
+        "tw_central_law_standard",
+        "ch25_estatetax_rules"
+      ],
+      "reason": "2026年9月修法後，舊整合來源不足以支持現行條文、施行日、過渡規則與據實申報；保留舊物件並用現行法、修法公告、施行計算條文及施行細則分項支持。"
+    }
+  ],
+  "item_sources": {
+    "TW-25-001": [
+      "ch25_rescue",
+      "ch25_steps",
+      "ch25_inquest",
+      "ch25_nfa_dacpr",
+      "ch25_nfa_ohca_stats"
+    ],
+    "TW-25-004": [
+      "ch25_inquest",
+      "ch25_autopsy",
+      "ch25_examnotice",
+      "ch25_medrecords",
+      "ch25_nfa_dacpr"
+    ],
+    "TW-25-011": [
+      "civil1148",
+      "civil1174",
+      "ch25_inventory",
+      "ch25_concealment",
+      "ch25_creditors",
+      "civil1176_7",
+      "ch25_waiver_current"
+    ],
+    "TW-25-012": [
+      "ch25_land",
+      "ch25_landcommon",
+      "ch25_income",
+      "ch25_finance_current",
+      "ch25_estatetax_current",
+      "ch25_estatetax_revision",
+      "tw_central_law_standard",
+      "ch25_estatetax_rules"
+    ]
+  },
+  "review_status": "AI輔助來源實質再審；法律、醫療、法醫、稅務與殯葬專業簽證仍待完成。",
+  "open_limits": [
+    "消防署成功率分母表格圖片未重讀，因此不引用34.14%。",
+    "順位遞補、遺產管理人、法院判決後補申報、跨境及修法過渡案件須以個案日期與文件向法院或國稅局確認。",
+    "財政部金融遺產頁未顯示可確認的更新日期；未主張處理時限或完整機構覆蓋。",
+    "全國法規資料庫整編截止2026-10-16；後續公告仍須重新查核。"
+  ]
+}

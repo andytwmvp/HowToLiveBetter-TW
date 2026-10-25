@@ -161,6 +161,60 @@
       "財政部：年度中死亡者的所得稅申報",
       "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/file-procedure/kJBoQMA",
       "除法定免申報外，有配偶或符合受扶養規定者合併申報；否則遺囑執行人、繼承人或遺產管理人原則死亡日起3個月內申報，另有展延規範。"
+    ],
+    [
+      "ch25_nfa_dacpr",
+      "內政部消防署：民眾版成人CPR常見問答",
+      "https://www.nfa.gov.tw/cht/index.php?article_id=905&code=list&flag=detail&ids=21",
+      "無反應時立即撥119、不要掛斷並開擴音，依派遣員指示；本文不引用完整CPR操作或兒童技術流程。"
+    ],
+    [
+      "ch25_nfa_ohca_stats",
+      "內政部消防署：全國消防機關113年緊急救護統計分析",
+      "https://mag.nfa.gov.tw/article.php?id=3885",
+      "2024年消防機關OHCA急救成功6,301人、康復出院1,249人；為全國行政救護結果計數，不是人口發生率或個人風險。"
+    ],
+    [
+      "civil1176_7",
+      "民法第1176條第7項：因他人拋棄而取得繼承順位",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1176&pcode=B0000001",
+      "因他人拋棄繼承而應繼承之人，知悉自己得繼承日起3個月內可以拋棄。"
+    ],
+    [
+      "ch25_waiver_current",
+      "司法院：聲明拋棄繼承的程序（現行頁面）",
+      "https://www.judicial.gov.tw/tw/cp-1654-57365-92963-1.html",
+      "向被繼承人死亡時住所地法院辦理，核對3個月期間及聲明文件；程序說明不能取代個案法律判斷。"
+    ],
+    [
+      "ch25_finance_current",
+      "財政部：如何申請被繼承人金融遺產資料",
+      "https://www.mof.gov.tw/singlehtml/979b54e408fb499eae3c1d9efe978868?cntId=b8fa14f7ccb645f29e095565341c25b1",
+      "未拋棄繼承的繼承人、遺囑執行人及遺產管理人備妥證明，可向稽徵機關櫃檯或官方線上系統申請。"
+    ],
+    [
+      "ch25_estatetax_current",
+      "遺產及贈與稅法（2026年9月修正後現行條文）",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340072",
+      "現行第6、23、26、28、30、41、41條之1及59條：申報期限、特別起算與補申報、展延、繳納分期、移轉限制及施行日。"
+    ],
+    [
+      "ch25_estatetax_revision",
+      "全國法規資料庫：2026年9月11日遺產及贈與稅法修正公布",
+      "https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=199701",
+      "核對2026-09-11公布及第6、17條之1、23、26、30、41、51條修正；第6條及第30條含過渡規則。"
+    ],
+    [
+      "tw_central_law_standard",
+      "中央法規標準法第13條：公布日起施行的生效計算",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133",
+      "法律明定自公布日施行時，自公布日起算至第三日起生效；2026-09-13是按此由2026-09-11換算的日期。"
+    ],
+    [
+      "ch25_estatetax_rules",
+      "遺產及贈與稅法施行細則第20條：遺有財產即應申報",
+      "https://law-out.mof.gov.tw/LawContent.aspx?id=FL006068",
+      "被繼承人死亡時遺有財產，依法應據實申報，不以最後核定有應納稅額為前提。"
     ]
   ]
 }
