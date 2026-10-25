@@ -82,7 +82,12 @@ class AfterDeathChapterTests(unittest.TestCase):
     def test_distinct_deadlines_inventory_and_common_ownership(self):
         texts=bodies()
         for phrase in ('知悉自己得繼承起3個月','住所地法院','清冊不是拋棄繼承','第1162條之2'):self.assertIn(phrase,texts['TW-25-011'])
-        for phrase in ('死亡日起6個月','死亡日起3個月','所得稅','公同共有','不代表登記自動展延','第41條之1'):self.assertIn(phrase,texts['TW-25-012'])
+        self.assertIn('第1176條第7項',texts['TW-25-011']);self.assertIn('不是另列的第1176條之2',texts['TW-25-011'])
+        for phrase in ('死亡次日起算6個月','死亡日起3個月','2026年9月13日','18期','所得稅','公同共有','不代表登記自動展延','第41條之1','不論有無應納稅額'):self.assertIn(phrase,texts['TW-25-012'])
+    def test_ohca_advice_precedes_limited_administrative_statistics(self):
+        texts=bodies();body=texts['TW-25-001']
+        self.assertLess(body.index('立即撥119'),body.index('統計背景與解讀'))
+        for phrase in ('手機開擴音','不要掛斷','6,301人','1,249人','不是全體人口發生率','不據此估計'):self.assertIn(phrase,body)
     def test_browser_wired_and_temporary_integrator_removed(self):
         code=(ROOT/'tools/tw/assets_and_browser.py').read_text()
         for name in ('check_navigation','check_ch23_browser','check_ch25_browser'):self.assertIn(f'{name}(page,context,url,review)',code)

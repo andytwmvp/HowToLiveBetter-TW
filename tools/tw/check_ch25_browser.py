@@ -26,7 +26,7 @@ def check_ch25_browser(page,context,url,review):
     page.locator('#q').fill('死亡年度所得稅')
     card=page.locator('#TW-25-012');assert card.count()==1
     card.locator('.seg button.yes').click();assert card.locator('.seg button.yes').get_attribute('aria-pressed')=='true'
-    for phrase in ('死亡日起3個月','死亡日起6個月','不代表登記自動展延'):assert phrase in card.inner_text()
+    for phrase in ('死亡日起3個月','死亡次日起算6個月','2026年9月13日','18期','不代表登記自動展延'):assert phrase in card.inner_text()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+1')
     card.scroll_into_view_if_needed();page.screenshot(path=str(review/'chapter25-deadlines-mobile.png'),animations='disabled')
     page.goto((ROOT/'dist/HowToLiveBetter-TW.html').as_uri(),wait_until='domcontentloaded')

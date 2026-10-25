@@ -11720,11 +11720,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-001.md",
       "sources": [
-        "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
-        "https://www.gov.tw/News_Content_26_402190",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=218&pcode=C0010001"
+        "ch25_rescue",
+        "ch25_steps",
+        "ch25_inquest",
+        "ch25_nfa_dacpr",
+        "ch25_nfa_ohca_stats"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "人在家裡或外面沒了，先分清正常死亡還是非正常死亡：意外、死因不明、獨居才發現的，立刻報警，遺體和現場不要動",
@@ -11781,12 +11783,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-004.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=218&pcode=C0010001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=213&pcode=C0010001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=217&pcode=C0010001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=71&pcode=L0020021"
+        "ch25_inquest",
+        "ch25_autopsy",
+        "ch25_examnotice",
+        "ch25_medrecords",
+        "ch25_nfa_dacpr"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "對死因有異議，48 小時內提出並進行屍檢，同時封存病歷",
@@ -11924,14 +11927,15 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-011.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1148&pcode=B0000001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1174&pcode=B0000001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1156&pcode=B0000001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1163&pcode=B0000001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1162-2&pcode=B0000001",
-        "https://www.judicial.gov.tw/tw/cp-1303-57365-92963-1.html"
+        "civil1148",
+        "civil1174",
+        "ch25_inventory",
+        "ch25_concealment",
+        "ch25_creditors",
+        "civil1176_7",
+        "ch25_waiver_current"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "親人去世留下欠債，繼承人只用繼承到的遺產去還；不想擔就在分遺產前書面聲明放棄繼承",
@@ -11948,13 +11952,16 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-012.md",
       "sources": [
-        "https://www.ntbt.gov.tw/multiplehtml/d0fb820339664903a443ef214be0bbce",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340072",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=73&pcode=D0060001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=120&pcode=D0060003",
-        "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/file-procedure/kJBoQMA"
+        "ch25_land",
+        "ch25_landcommon",
+        "ch25_income",
+        "ch25_finance_current",
+        "ch25_estatetax_current",
+        "ch25_estatetax_revision",
+        "tw_central_law_standard",
+        "ch25_estatetax_rules"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "家裡人去世後辦繼承，別默認先去公證：一家銀行 5 萬元以內的存款直接去銀行取，房子由全部繼承人一起去不動產登記機構辦",
