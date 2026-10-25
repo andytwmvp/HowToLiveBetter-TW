@@ -1,0 +1,368 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "4275074f15296ee625521834a6cad49d08bef796",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-01-009",
+      "TW-01-010",
+      "TW-01-011",
+      "TW-01-013"
+    ],
+    "risk_order": [
+      "TW-01-009",
+      "TW-01-010",
+      "TW-01-011",
+      "TW-01-013"
+    ],
+    "risk_basis": "依道路駕駛分心與疲勞可能造成多人傷亡、幼童乘車約束、兒童高處墜落及長者跌倒嚴重度與可立即採取的預防行動排序；不是發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 136,
+    "runtime_sources": 696,
+    "source_registry": 777,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 140,
+    "runtime_sources": 707,
+    "source_registry": 788,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": {
+    "TW-01-009": [
+      {
+        "period": "2025全年",
+        "jurisdiction": "臺灣全道路行政事故統計",
+        "population_or_records": "涉及至少一名酒精濃度達0.15mg/L以上駕駛人的道路交通事故；包含事故中死亡或受傷之用路人",
+        "numerator": {
+          "30日死亡人數": 143,
+          "受傷人數": 8751,
+          "酒駕取締件數": 44208,
+          "移送法辦件數": 31700
+        },
+        "denominator": null,
+        "unit": "死亡人數、受傷人數、取締件數、移送件數（分開指標）",
+        "event_definition": "交通部168頁面列示114年酒精濃度達門檻駕駛相關事故與執法數；不代表所有酒駕、分心或疲勞事故。",
+        "data_type": "官方行政事故與執法統計",
+        "source_url": "https://168.motc.gov.tw/Dui",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無全體車輛旅次或里程暴露分母",
+          "死亡與受傷對象、取締及移送程序不可混算",
+          "不能推算單次酒駕個人發生機率"
+        ]
+      },
+      {
+        "period": "2026-01至2026-04",
+        "jurisdiction": "臺灣國道A1",
+        "population_or_records": "國道A1死亡交通事故行政紀錄",
+        "numerator": {
+          "死亡事故件數": 27,
+          "死亡人數": 30,
+          "其中歸因分心駕駛死亡人數": 14
+        },
+        "denominator": null,
+        "unit": "事故件數與死亡人數",
+        "event_definition": "高速公路局新聞稿所列國道A1死亡交通事故與歸因分心死者。",
+        "data_type": "官方道路交通事故行政統計新聞稿",
+        "source_url": "https://www.motc.gov.tw/ch/app/data/view?id=14&module=news&serno=e3c93fac-2213-400e-8980-c5772520a259",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無國道車流、里程或旅次暴露分母",
+          "不涵蓋所有道路及非死亡事故",
+          "新聞稿約五成說法的事故／死亡口徑不清，未使用"
+        ]
+      }
+    ],
+    "TW-01-010": [
+      {
+        "status": "no_suitable_Taiwan_incidence_verified",
+        "assessment": "本次未找到能配對幼童乘車旅次、約束裝置正確使用率及事故結果的全臺資料；未引用2025全道路死亡總數。",
+        "unit": null,
+        "numerator": null,
+        "denominator": null,
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "不得以全道路死者數當作幼童安全椅事件數",
+          "沒有可信暴露分母，不估個人風險或效果百分比"
+        ]
+      }
+    ],
+    "TW-01-011": [
+      {
+        "status": "no_suitable_Taiwan_window_or_balcony_frequency_verified",
+        "assessment": "官方搜尋結果列出衛福部社家署114年0至17歲ICD-10事故傷害死因附件，但直接頁面擷取逾時、附件未讀；未引用任何數字，亦未核實窗戶／陽台特定案件與居住暴露分母。",
+        "unit": null,
+        "numerator": null,
+        "denominator": null,
+        "source_locator": "https://crc.sfaa.gov.tw/Statistics/Detail/232?AspxAutoDetectCookieSupport=1",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "附件未讀，不可引用數值",
+          "死因清單不能自行當成所有非致死窗墜事件",
+          "不以舊2016年多事故類別合計替代"
+        ]
+      }
+    ],
+    "TW-01-013": [
+      {
+        "period": "2021年國民健康訪問調查（衛福部2026摘要再述）",
+        "jurisdiction": "臺灣65歲以上長者調查摘要",
+        "population_or_records": "國健署國民健康訪問調查中65歲以上受訪者；摘要原始樣本數未提供",
+        "numerator": {
+          "曾跌倒": "約每6位1位",
+          "曾因跌倒就醫": "約每12位1位"
+        },
+        "denominator": "抽樣調查之65歲以上受訪者；可重算樣本與加權未知",
+        "unit": "摘要比例，不是通報件數或個人年度率",
+        "event_definition": "衛福部摘要所述受訪長者曾經跌倒及曾因跌倒就醫；公開摘要未完整列出參照期間。",
+        "data_type": "官方抽樣調查摘要",
+        "source_url": "https://mohw.gov.tw/cp-7396-85653-1.html",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "未取得樣本數、權重、信賴區間與原始微資料",
+          "不稱為年發生率或單次活動機率"
+        ]
+      },
+      {
+        "period": "2023全年（民國112年）",
+        "jurisdiction": "臺灣65歲以上人口",
+        "population_or_records": "65歲以上人口死因統計",
+        "numerator": "65歲以上跌倒死亡人數（摘要未列可重算分子）",
+        "denominator": "65歲以上人口；單位每十萬人",
+        "unit": "跌倒死亡率26.4人／十萬名65歲以上人口",
+        "event_definition": "衛福部公布65歲以上跌倒（落）死亡率。",
+        "data_type": "官方死因行政統計率",
+        "source_url": "https://www.mohw.gov.tw/cp-7181-81561-1.html",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "不是跌倒受傷者致死率",
+          "與2021調查摘要母數及年份不同，不相除"
+        ]
+      }
+    ]
+  },
+  "new_source_ids": [
+    "ch01_moj_road_act_handheld_2026",
+    "ch01_motc_distraction_a1_2026janapr",
+    "ch01_moj_child_restraint_2026",
+    "ch01_gazette_childseat_2020",
+    "ch01_moj_child_seatbelt_rule_2026",
+    "ch01_gazette_seatbelt_2022",
+    "ch01_nlma_condo_fall_protection",
+    "ch01_kl_health_child_fall_prevention",
+    "ch01_mnd_casualty_care_2026",
+    "ch01_mohw_fall_prevention_2026",
+    "ch01_mohw_fall_firstaid_2022"
+  ],
+  "reused_source_ids": [
+    "ch01_motc_dui_2025",
+    "ch01_mohw_fall_2025"
+  ],
+  "retired_sources": [
+    {
+      "id": "ch01_moj_road_act_2026",
+      "reason": "舊來源支持泛稱「修法有待施行」但沒有精確對回本篇行動裝置條文，且其查閱日較早；保留原始來源物件，新增現行第31-1條的直接法規查核。",
+      "replacement_ids": [
+        "ch01_moj_road_act_handheld_2026"
+      ],
+      "prior_source_sha256": "8a01e7843f7cfbba44dcc0d08cffb92d03932677f2f24f454a7b4abbc3041fb3",
+      "article_id": "TW-01-009",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_motc_childseat_2020",
+      "reason": "舊交通部列印頁不如現行全國法規全文易於核對車種與條文，改用現行法規全文及正式公報確認修正施行日。",
+      "replacement_ids": [
+        "ch01_moj_child_restraint_2026",
+        "ch01_gazette_childseat_2020"
+      ],
+      "prior_source_sha256": "47827d8500fed1399753b348abba06107d7f1cccd71683d1b05365390ae84f7f",
+      "article_id": "TW-01-010",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_hpa_childbook_202606",
+      "reason": "原引用僅為兒童健康手冊目錄，手冊附件未實讀且並非本文法規主張所需；正文以可直接核對的現行交通法規取代，不再引用未讀附件。",
+      "replacement_ids": [
+        "ch01_moj_child_restraint_2026"
+      ],
+      "prior_source_sha256": "1b8d049fa4676c04d939165e5959c4bd0b0afdd1543a168a1c85fc1de4b7c380",
+      "article_id": "TW-01-010",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_motc_2025_30day",
+      "reason": "全道路、全使用者死亡總數不能支持幼童座椅風險；移除此數字並明示未查得相符乘車／正確使用暴露分母，正文以現行座椅和安全帶法規支持安全行動。",
+      "replacement_ids": [
+        "ch01_moj_child_restraint_2026",
+        "ch01_moj_child_seatbelt_rule_2026"
+      ],
+      "prior_source_sha256": "7d4c3179a64a27bd05912c6795e48a1adc51dd6723c138c02943c45ac789f5fc",
+      "article_id": "TW-01-010",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_mohw_childaccident_2016",
+      "reason": "2016年兒少運輸、墜落、溺水、中毒與火災死亡合計不是窗戶或陽台墜落數；移除舊數字，未以其他總事故數代填。",
+      "replacement_ids": [
+        "ch01_nlma_condo_fall_protection",
+        "ch01_kl_health_child_fall_prevention"
+      ],
+      "prior_source_sha256": "fcbf327d0c3a7387a15fbe8c40d326414f99f3c3893e965679a6883a3f7a7508",
+      "article_id": "TW-01-011",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_tpe_child_fall_precaution",
+      "reason": "臺北市2013年宣導中的20至30公分開窗建議已不同於國土署現行設置原則列示的10公分；退役舊尺寸及舊地方統計，改以國土署現行頁與地方兒童預防指引支持正文。",
+      "replacement_ids": [
+        "ch01_nlma_condo_fall_protection",
+        "ch01_kl_health_child_fall_prevention"
+      ],
+      "prior_source_sha256": "fcf4e9accee29dc4f4a7faf5916a2d2e92040dd6ef28d83c11b0fe69c05607a7",
+      "article_id": "TW-01-011",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_mohw_fall_environment",
+      "reason": "2024年一般防跌衛教已由2026年國健署防跌五部曲更新；保留獨立的2025年統計來源，將環境、用藥與輔具步驟改以新版指引及跌倒後救援來源核對。",
+      "replacement_ids": [
+        "ch01_mohw_fall_prevention_2026",
+        "ch01_mohw_fall_firstaid_2022"
+      ],
+      "prior_source_sha256": "28390e3d42cb25a08d8be93243db3fb6a08f7cc76da474992a79d9ed56d20851",
+      "article_id": "TW-01-013",
+      "current_source_object_unchanged": true
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-01-009",
+      "title": "臺灣通勤與返鄉不酒駕不分心：疲勞、行動裝置與替代交通",
+      "before_sha256": "ee97322629dbe8e4a9f4b0587dd1f8e6ad595d0c43b5a38f809d1d9f9996338f",
+      "after_sha256": "c6335990847b15aad5591f3179eeca0ec189daa37345d16e1061135fd202e61b",
+      "prior_review_sha256": "dd49fb4f7d9c72f1d8b9e9d83fe057197bbe7fab939c0ef761bdceb1d42e6fe1",
+      "source_ids": [
+        "ch01_motc_dui_2025",
+        "ch01_moj_road_act_handheld_2026",
+        "ch01_motc_distraction_a1_2026janapr"
+      ],
+      "changes": "新增2026年國道A1分心死亡事故資料及現行道交條例第31-1條罰則；保留2025酒駕行政統計但拆分死亡、受傷、取締與移送口徑；移除對本篇具體禁令不夠精確的舊法規概括說法。",
+      "frequency_assessment": "交通部168公布2025年酒駕相關事故30日死亡143人、受傷8751人，執法數另列；高公局2026年1至4月國道A1死亡事故27件、死亡30人、14名死者事故歸因分心。均無交通暴露分母，資料區域、期間與事件定義不同，且新聞稿約五成比例口徑不清。",
+      "limits": [
+        "酒駕143名30日死亡、8751名受傷及取締／移送數不能當作疲勞、手機分心事件或個人事故率。",
+        "國道A1 27件死亡事故、30名死者、14名分心歸因死者沒有車流、里程或旅次暴露分母；新聞稿約五成比例口徑不清，未採用。",
+        "駕駛是否適任及事故處理需依個案與派遣指示；AI來源核對不等同交通或醫療專業判斷。"
+      ],
+      "retired_source_ids": [
+        "ch01_moj_road_act_2026"
+      ]
+    },
+    {
+      "id": "TW-01-010",
+      "title": "臺灣幼童搭車用對安全座椅：後向、增高墊與計程車法律差異",
+      "before_sha256": "21d1a7c510dc6b3c7b24ba65552549b3e7036273bbd0b1069972c1583dcc655a",
+      "after_sha256": "2f2643eb5968e7d3a8164625cd2f673e3389c7022b32ea7c6c406a7d4f5349a3",
+      "prior_review_sha256": "369d9c593866ebba2979f5ee28083e449e952fee17e1a8bd8b218dd29adb8e9c",
+      "source_ids": [
+        "ch01_moj_child_restraint_2026",
+        "ch01_gazette_childseat_2020",
+        "ch01_moj_child_seatbelt_rule_2026",
+        "ch01_gazette_seatbelt_2022"
+      ],
+      "changes": "按現行法規精確區分自用／租賃小客車、營業小客車及計程車例外，補正2歲、4歲、18公斤與36公斤條件；加入幼童辦法與安全帶辦法實際修正及施行日期；移除全道路死亡總數和未讀手冊目錄。",
+      "frequency_assessment": "本次未找到幼童乘車旅次、約束裝置使用率與事故結果配對資料；全道路死亡總數不適用，故不報幼童安全椅發生率或個人風險。",
+      "limits": [
+        "沒有幼童乘車旅次、正確座椅使用率及事故結果配對母數，不能估算幼童個人風險或座椅效果百分比。",
+        "計程車屬營業小客車時適用不同條文；叫車平台媒合車種須逐車確認，法規例外不是安全建議。",
+        "產品適配、安裝品質及事故後是否更換依產品說明、車輛手冊及專業建議處理；未取得兒童乘車安全專家簽證。"
+      ],
+      "retired_source_ids": [
+        "ch01_motc_childseat_2020",
+        "ch01_hpa_childbook_202606",
+        "ch01_motc_2025_30day"
+      ]
+    },
+    {
+      "id": "TW-01-011",
+      "title": "紗窗不是兒童防墜網：臺灣公寓與租屋窗邊、陽台及逃生兼顧",
+      "before_sha256": "c46b4d7c2abd04bd9ea089bf368c3120ee31baa1342f3d0655b58a8f9bdc19b1",
+      "after_sha256": "2fbc7e405122659db190334dee21fc54a4aca2013ab1e410c52214fc9dbaff37",
+      "prior_review_sha256": "c9e248896ee6acf236a4cee856644d27b37414c15bd9bf8e64b1c2ab7e7fc99d",
+      "source_ids": [
+        "ch01_nlma_condo_fall_protection",
+        "ch01_kl_health_child_fall_prevention",
+        "ch01_mnd_casualty_care_2026"
+      ],
+      "changes": "以國土署現行公寓大廈指引核對窗型限位與救援開口，加入地方兒童預防與一般傷患求援；移除2016多類事故239人與臺北舊20至30公分尺寸；明確揭露社家署114年附件未讀及窗墜專屬統計缺口。",
+      "frequency_assessment": "本次未能核讀社家署114年0至17歲ICD-10死因附件，也未找到窗戶／陽台特定全國事故及住宅暴露分母；不使用2016年多種事故合計239人代替。",
+      "limits": [
+        "本次未能讀取社家署114年兒少事故傷害死因附件；不據未核讀檔案提供數值，也未驗證窗戶／陽台全國發生率或暴露分母。",
+        "公寓大廈設置原則有其適用法源與窗型，不能推成所有房屋、既有建築均須同一尺寸或同一施工方式。",
+        "防墜設施必須兼顧逃生與消防救援；未取得建築、消防、兒科或急救專業獨立審閱。"
+      ],
+      "retired_source_ids": [
+        "ch01_mohw_childaccident_2016",
+        "ch01_tpe_child_fall_precaution"
+      ]
+    },
+    {
+      "id": "TW-01-013",
+      "title": "長者防跌：先看用藥與行動能力，再改善浴室、走道及樓梯",
+      "before_sha256": "c83750abb2cf44c840a35363fdeec0902f016c380172d46fd6e71bfc61d5218c",
+      "after_sha256": "2ec0a9f27758dd30fff715a4347b6fc68fe37c8b82ec2b23490df2c303855823",
+      "prior_review_sha256": "d6dcfce37af238994e0943922115b7a462cde4375a71a4007b895e4490b56741",
+      "source_ids": [
+        "ch01_mohw_fall_2025",
+        "ch01_mohw_fall_prevention_2026",
+        "ch01_mohw_fall_firstaid_2022",
+        "ch01_mnd_casualty_care_2026"
+      ],
+      "changes": "更新為衛福部2026防跌五部曲及跌倒後求援流程；重核2021調查與2023分齡死亡率，說明抽樣母數與人口分母限制，補充臺灣公寓樓梯、浴室、夜間如廁與用藥情境。",
+      "frequency_assessment": "國健署2021年調查摘要約每6名長者1名曾跌倒、每12名1名曾因跌倒就醫；2023年65歲以上跌倒死亡率每十萬同齡人口26.4人。摘要無原始樣本和加權細節，死亡率與抽樣比例分母不同。",
+      "limits": [
+        "2021調查原始樣本數、加權細節與信賴區間未取得；比例不是個人年度發生率。",
+        "2023年65歲以上跌倒死亡率每十萬同齡人口26.4人，不是跌倒者致死率；不同年份和分母不得相除。",
+        "運動處方、跌倒後處置及居家工程須依個案由醫療、復健或工程專業評估；未取得專業獨立簽證。"
+      ],
+      "retired_source_ids": [
+        "ch01_mohw_fall_environment"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "TW-01-011",
+      "issue": "社家署114年0至17歲ICD-10死因資料附件本次擷取逾時且未讀；不得據此報數。後續如能下載，須先核對具體死因碼是否可辨識窗戶／陽台位置及資料定義。"
+    },
+    {
+      "id": "TW-01-010",
+      "issue": "未找到幼童旅次、座椅正確使用率與傷亡結果可配對資料；維持不估幼童個人風險及效果百分比。"
+    },
+    {
+      "id": "TW-01-013",
+      "issue": "未取得2021調查微資料及權重；仍待醫療與復健專業獨立審閱。"
+    },
+    {
+      "id": "all_four",
+      "issue": "本批為AI輔助臺灣政府來源逐項核對，尚未取得交通安全、兒童乘車、建築防墜、醫療或復健專家獨立簽證；publication_ready維持false。"
+    }
+  ]
+}
