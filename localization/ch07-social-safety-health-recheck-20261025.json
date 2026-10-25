@@ -1,0 +1,218 @@
+{
+  "batch_date": "2026-10-25",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "9714ed9e20980b3fa3221643003ed8cf6bc81eb9",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-07-004",
+      "TW-07-006",
+      "TW-07-009",
+      "TW-07-010"
+    ],
+    "risk_order": [
+      "TW-07-004",
+      "TW-07-006",
+      "TW-07-009",
+      "TW-07-010"
+    ],
+    "risk_basis": "先處理今晚無處可住及保護／救護分流，再核對急難現金流程、健保接續風險，最後檢查重病醫療費及重大傷病免部分負擔範圍；排序依迫切性與權益影響，不代表事件發生率。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 124,
+    "runtime_sources": 677,
+    "source_registry": 758,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 128,
+    "runtime_sources": 680,
+    "source_registry": 761,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": {
+    "TW-07-004": {
+      "period": "民國113年（2024）",
+      "scope": "衛福部臺灣人權指標資料頁列示的遊民人口數；臺灣全國指標頁",
+      "numerator": 2991,
+      "unit": "人",
+      "subgroup": {
+        "numerator": 625,
+        "unit": "人",
+        "definition": "指標資料頁列為身心障礙者，約佔列示人數21%"
+      },
+      "denominator": null,
+      "data_type": "官方指標資料頁列示的人數；可見頁面未說明抽樣設計及可配對居住暴露母數",
+      "cannot_infer": [
+        "全體無固定住所者總數",
+        "年度新發生人數",
+        "任何縣市或個人風險",
+        "當晚床位供需"
+      ],
+      "source_url": "https://service.mohw.gov.tw/HumanRights/housing_theme1.html",
+      "accessed_at": "2026-10-25"
+    },
+    "TW-07-006": {
+      "period": "方案文本列示預期年度效益",
+      "numerator": 6000,
+      "unit": "每年約協助的個人或家庭",
+      "denominator": null,
+      "data_type": "2026-06-24修正版方案的預期效益，不是實際行政統計或已核准個案數",
+      "cannot_infer": [
+        "年度實際案件數",
+        "申請核准率",
+        "個人急難發生機率"
+      ],
+      "source_url": "https://www.mohw.gov.tw/dl-86267-27a4eeb1-89b9-4dca-9908-20df855a2d29.html",
+      "accessed_at": "2026-10-25"
+    },
+    "TW-07-009": {
+      "data_status": "未取得",
+      "reason": "本輪未找到具全臺符合投保資格者分母、中斷投保事件定義及相同觀察期間的資料。",
+      "not_used_as_rate": [
+        "補辦件數",
+        "追繳件數"
+      ],
+      "accessed_at": "2026-10-25"
+    },
+    "TW-07-010": {
+      "data_status": "未取得",
+      "reason": "本輪未找到可將重大傷病患者醫療自付金額與家庭負擔能力連結、且具全國可比較分母的資料。",
+      "not_used_as_rate": [
+        "重大傷病證明核定人數",
+        "醫療費用總額"
+      ],
+      "accessed_at": "2026-10-25"
+    }
+  },
+  "new_source_ids": [
+    "ch07_homeless_admin_2024",
+    "nhi_enrollment_priority",
+    "nhi_interruption"
+  ],
+  "reused_source_ids": [
+    "assault_113_dops",
+    "ch07_insurance",
+    "ch07_nhiloan",
+    "ch07_urgent_household",
+    "ch24_nfa_119_20220705",
+    "nhicategories",
+    "nhidebt",
+    "rights_major_scope",
+    "socialaid",
+    "supportlines",
+    "urgentresidence"
+  ],
+  "retired_source": {
+    "id": "catastrophic",
+    "replacement_id": "rights_major_scope",
+    "reason": "原URL實際是重大傷病住院部分負擔費用核退頁，標題誤寫成一般免部分負擔範圍；來源物件仍保存在runtime與歷史。",
+    "prior_source_sha256": "592df35556e16a193c5ea2d322663dc8cf8597689482af533a267349d9e0e150",
+    "current_source_object_unchanged": true
+  },
+  "articles": [
+    {
+      "id": "TW-07-004",
+      "title": "今晚無處可住時，先處理安全並聯絡所在地社政",
+      "before_sha256": "3722ee28a1df85c3839f35dd4dbf031b4fe6ddedb34fecbf5d6a9a9b03bc5f5f",
+      "after_sha256": "6021a96342bcfac8f8ea57c05c011cc1ea7244d4de1e53eb4b860d32530d52b3",
+      "prior_review_sha256": "ca0149e58490a518a1c085d4102328fd23bd6fc50fd04bca406e0dc9e9d5edb5",
+      "source_ids": [
+        "supportlines",
+        "socialaid",
+        "assault_113_dops",
+        "ch24_nfa_119_20220705",
+        "ch07_homeless_admin_2024"
+      ],
+      "changes": "依臺灣警政、保護、救護、福利諮詢與地方社政分流重寫；新增衛福部113年行政列示人數並清楚限制其不能代表全體無固定住所者、床位或個人發生機率。",
+      "frequency_assessment": "衛福部指標資料頁列示113年2,991人，其中625人（約21%）為身心障礙者；屬官方年度行政人數，頁面沒有全體居住暴露人口分母，不能當作新發生數、完整無家者總數、床位量或個人機率。",
+      "limits": [
+        "指標資料頁列示的是統計頁可見的人數，未揭露可用於計算個人暴露率的分母或完整盤點方法；不推論未登錄者數量。",
+        "各縣市安置規範、夜間值班及機構容量不同；本次未逐縣市查核床位、費用或當晚接案狀態。",
+        "AI輔助核對政府頁面及法規，未取得社工、醫療、消防或法律專業獨立簽證。"
+      ]
+    },
+    {
+      "id": "TW-07-006",
+      "title": "急難救助與急難紓困分清窗口，不等所有給付核定才求助",
+      "before_sha256": "cdd914e02c6fbefb11d5cc275a1431f5a081aa51487184ce891e83278961dd8f",
+      "after_sha256": "4d917ba5bd815f322b384fc91ee21da0656e34518d9b3c7c1e510282934986d2",
+      "prior_review_sha256": "f793dfaa1e9c9fd1a3e79dc639796236945c0f67f0d21779d20e3c3ecfbe6b2d",
+      "source_ids": [
+        "ch07_urgent_household",
+        "urgentresidence",
+        "supportlines",
+        "socialaid"
+      ],
+      "changes": "更新2026-06-24急難紓困方案的居住地窗口、24小時訪視、條件式1至3萬元、5,000元預先給付及核定後餘額時限；將方案每年約6,000個人或家庭標成預期效益，不冒充實際發生率。 另以全國法規資料庫直接支持第21條申請地與法定事由。",
+      "frequency_assessment": "方案列每年約協助6,000個個人或家庭是預期效益而非實際受理/核准；未取得全臺急難暴露人口分母及同口徑實際事件率，不推算個人發生機率。",
+      "limits": [
+        "社會救助法資料庫頁面列修正日期民國104年12月30日；實際申請仍須核對縣市最新受理流程、文件與地方方案。",
+        "方案PDF文字層有讀取，未視覺檢視附表排版；未以附表認定表計算任何個案分數或預測核准。",
+        "每年約6,000人或家庭是方案預期效益，不是實際行政統計或急難風險分母。",
+        "AI輔助核對官方方案，非獨立社福、法律或財務專業簽證。"
+      ]
+    },
+    {
+      "id": "TW-07-009",
+      "title": "待業期間依法銜接健保，欠費協助與投保身分分開處理",
+      "before_sha256": "663cd31585d250ef145906d56f37eea97ca2311b87012f1c2ccecec1d9dd6a00",
+      "after_sha256": "2ffa15840e4f8ca4e6222c1232e6cb1cee7e36eb31bff4ad6556cf45f1bfcb8b",
+      "prior_review_sha256": "56f53074a7be3ad14cef08fd037d603c19b4e06279c164116c10d45c3a8f1bf2",
+      "source_ids": [
+        "nhicategories",
+        "nhidebt",
+        "ch07_nhiloan",
+        "nhi_enrollment_priority",
+        "nhi_interruption"
+      ],
+      "changes": "按健保署現行投保順位重寫離職接續流程；新增中斷投保後就醫墊付、補辦退費及追繳保費說明，並明確不推算個人斷保機率。",
+      "frequency_assessment": "未取得具全臺符合投保資格人口分母、中斷定義和期間的健保中斷統計；補辦或追繳件數不作離職個人的發生率。",
+      "limits": [
+        "健保署順位頁更新日期為113年1月19日，中斷投保頁更新日期為112年12月8日；個人起保日期、特殊居留或首次納保例外須向健保署確認。",
+        "本次未找到可計算待業者個人中斷投保率的全國同口徑分母；未使用追繳或補辦件數推算機率。",
+        "AI輔助核對健保署頁面，非獨立健保、保險或法律專業簽證；本輪未代替個案投保資格查核。"
+      ]
+    },
+    {
+      "id": "TW-07-010",
+      "title": "重病費用先分健保、自費與生活支出，重大傷病不等於所有治療免費",
+      "before_sha256": "33ea59f3970301370478c1f8411f0f63753e1c7427f7147acb217ea994e61c07",
+      "after_sha256": "1085b88154dcb64746c91455d6770ad56718a7392d080d355936ecbd3d07acfd",
+      "prior_review_sha256": "f39878f30458cb260bf7627a19f04bb3030293d764b1508fc3de1aae981c41e8",
+      "source_ids": [
+        "socialaid",
+        "ch07_insurance",
+        "rights_major_scope"
+      ],
+      "changes": "實質核對健保重大傷病免部分負擔範圍；移除誤連到住院費用核退頁的引用，改用2026-10-14更新的現行範圍頁，並補上可用臺灣個人負擔率資料不足界線。",
+      "frequency_assessment": "未取得可將臺灣重大傷病患者自付支出與家庭負擔能力配對、且具全國適用分母的資料；重大傷病證明數或醫療支出總額不替代醫療財務困難率。",
+      "limits": [
+        "健保署重大傷病範圍頁更新日期為2026年10月14日；未讀9月30日罕病名單附件，不以本文判斷個人重大傷病資格。",
+        "健保免部分負擔範圍與商業保險、地方醫療補助及醫療自費各有不同規範；本文不估算個案費用或核准機率。",
+        "未取得臺灣醫療財務困難的可比較全國分母或專業研究，故不提供個人風險率。",
+        "AI輔助核對政府頁面與法規，非獨立醫療、健保、保險或法律專業簽證。"
+      ]
+    }
+  ],
+  "unresolved": {
+    "professional_review": "仍待社福、健保、醫療、法律及保險領域獨立專業審閱；AI來源核對不等於專業簽證。",
+    "local_services": "未逐縣市查核當晚安置床位、地區額外救助資格或實際受理時間。",
+    "attachments": "急難紓困PDF方案本文已讀文字層；未視覺檢查影像表格，也未用附表替個案評分。",
+    "publication_readiness": false
+  }
+}

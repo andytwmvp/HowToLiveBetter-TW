@@ -13,7 +13,7 @@ def check_ch07_browser(page,context,url,review):
   assert card.locator('a[href^="https://"]').count()>=len(expected[key]['source_ids'])
  page.locator('#q').fill('急難紓困')
  card=page.locator('#TW-07-006');assert card.count()==1
- for word in ('戶籍地','居住地','1至3萬元','核定後'):assert word in card.inner_text()
+ for word in ('戶籍地','居住地','1萬至3萬元','5,000元','核定後'):assert word in card.inner_text()
  card.scroll_into_view_if_needed();page.screenshot(path=str(review/'chapter07-urgent-support.png'),animations='disabled')
  # 書籤是獨立情境；同頁只換hash不會清掉上一個搜尋條件，先驗證重設再切換。
  page.locator('#reset').click()

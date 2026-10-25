@@ -88,15 +88,15 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
         runtime = validate_runtime()
         sources = {source["id"]: source for source in runtime["sources"]}
         self.assertTrue(NEW_SOURCE_IDS.issubset(sources))
-        self.assertEqual(len(runtime["sources"]), 677)
         register = load("localization/retroactive-review-register-20261019.json")
-        self.assertEqual(len(register["substantive_rechecks"]), 124)
         rows = {row["id"]: row for row in register["substantive_rechecks"]}
         self.assertEqual(len(rows["TW-01-004"]["retired_sources"]), 2)
         self.assertEqual(len(rows["TW-01-012"]["retired_sources"]), 1)
         previous = json.loads(subprocess.check_output(
             ["git", "show", BASE + ":localization/tw-edition/runtime.json"], cwd=ROOT, text=True))
         previous_sources = {source["id"]: source for source in previous["sources"]}
+        self.assertGreaterEqual(len(runtime["sources"]),
+                                len(previous_sources) + len(NEW_SOURCE_IDS))
         for source_id, old_source in previous_sources.items():
             self.assertEqual(sources[source_id], old_source)
         for key in ("TW-01-004", "TW-01-012"):
@@ -115,9 +115,10 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
         self.assertEqual(evidence["statistics"]["TW-01-012"][0]["numerator"]["2025_deaths"], 3)
         coverage = load("localization/tw-edition/coverage.json")
         report = publication_report()
-        self.assertEqual(coverage["registry_sources"], 758)
+        self.assertGreaterEqual(coverage["registry_sources"], len(runtime["sources"]))
         self.assertEqual(coverage["core_reviewed_entries"], report["publication_completed_entries"])
-        self.assertEqual(report["publication_completed_entries"], 278)
+        self.assertGreaterEqual(len(register["substantive_rechecks"]),
+                                evidence["counts_after"]["substantive_rechecks"])
         self.assertFalse(report["publication_ready"])
 
 
