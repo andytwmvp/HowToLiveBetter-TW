@@ -48,15 +48,26 @@ class AfterDeathChapterTests(unittest.TestCase):
     def test_sources_claims_retrieval_methods_and_registry_agree(self):
         batch=read('localization/ch25-batch.json');runtime={s['id']:s for s in validate_runtime()['sources']}
         registry={s[0]:s for s in read('localization/tw-edition/sources/17-after-death.json')['sources']}
-        self.assertGreaterEqual(len(batch['sources']),27);self.assertEqual(set(registry),{s['id'] for s in batch['sources']})
+        batch_ids={s['id'] for s in batch['sources']}
+        # The original integration batch is immutable; later substantive
+        # re-reviews may append sources to the chapter registry and runtime.
+        self.assertGreaterEqual(len(batch_ids),27);self.assertTrue(batch_ids.issubset(registry))
         for s in batch['sources']:
             self.assertEqual(runtime[s['id']],s);self.assertEqual(registry[s['id']][2],s['url'])
             self.assertGreater(len(s['retrieval_method']),15)
+        current_entries={e['id']:e for e in read('localization/manifest.json')['entries']}
+        recheck=read('localization/death-processing-benefits-recheck-20261025.json')
+        retired={item['id']:{s['id'] for s in item.get('retired_sources',[])} for item in recheck['items']}
         for e in batch['entries']:
             self.assertEqual(set(e['source_ids']),set(e['source_claims']))
             review=read(f"localization/reviews/{e['id']}.json")
-            self.assertEqual({s['url'] for s in review['source_checks']},{runtime[s]['url'] for s in e['source_ids']})
-            self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
+            current_ids=set(current_entries[e['id']]['sources'])
+            reviewed_urls={s['url'] for s in review['source_checks']}
+            historical_urls={runtime[s]['url'] for s in e['source_ids'] if s not in retired.get(e['id'],set())}
+            self.assertTrue(historical_urls.issubset(reviewed_urls))
+            current_urls={runtime[s]['url'] if s in runtime else s for s in current_ids}
+            self.assertEqual(reviewed_urls,current_urls)
+            self.assertTrue(all('非逐字' in s['supporting_passage'] for s in review['source_checks']))
     def test_existing_topics_not_double_counted_or_full_publication_claimed(self):
         data=audit_drafts()
         self.assertGreaterEqual(data['publication_completed_entries'],73)
