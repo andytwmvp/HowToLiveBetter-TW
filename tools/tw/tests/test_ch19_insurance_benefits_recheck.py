@@ -85,6 +85,8 @@ class Ch19InsuranceBenefitsRecheckTests(unittest.TestCase):
         self.assertEqual(evidence["counts_after"]["published_items_pending_new_standard_review"], 289)
         self.assertFalse(evidence["coverage_snapshot"]["publication_ready"])
         self.assertIn("專家審閱仍待取得", evidence["professional_review_status"])
+        unreported_evidence = next(row for row in evidence["items"] if row["id"] == "TW-19-013")
+        self.assertIsInstance(unreported_evidence["changes"], str)
 
     def test_employer_insurance_offset_and_frequency_denominators_are_accurate(self):
         items = {x["id"]: x for x in read("localization/tw-edition/runtime.json")["items"]}
@@ -98,14 +100,19 @@ class Ch19InsuranceBenefitsRecheckTests(unittest.TestCase):
         self.assertIn("不能把45個月和保險金直接相加", death)
         unreported = items["TW-19-013"]["body"]
         self.assertIn("按第1級計算", unreported)
+        self.assertIn("未申報期間的月投保薪資由保險人按被保險人月薪資總額", unreported)
+        self.assertIn("投保單位或被保險人未提具相關薪資資料", unreported)
+        self.assertNotIn("雇主和勞工都未提出", unreported)
         self.assertIn("第6條的強制納保", unreported)
+        self.assertIn("依《勞動基準法》規定受僱工作的未滿15歲者", unreported)
         disability = items["TW-19-014"]["body"]
         self.assertIn("自得請領日起5年", disability)
         self.assertIn("身心障礙證明與災保永久失能", disability)
         wage = items["TW-19-021"]["body"]
         self.assertIn("調整表一般自送達次月1日生效", wage)
-        self.assertIn("勞保局查證後可更正", wage)
+        self.assertIn("勞保局查證後得逕行更正或調整", wage)
         self.assertIn("不能用一般調整申報回溯", wage)
+        self.assertIn("應調整之次月1日起生效", wage)
 
 
 if __name__ == "__main__":

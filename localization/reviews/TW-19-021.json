@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-021.md",
-  "target_sha256": "dcc028d801b8be5614ea95e8e8d9a712eca9500243a48f619ac0845abf6c4c46",
+  "target_sha256": "fc74472931a78982269008c237507bf6470d5beda0530450c2928fc0b27f1e2d",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
@@ -71,7 +71,7 @@
       "retrieval_method": "直接讀取主管機關指定HTML正文，核對服務／給付主張及來源頁標示的限制。"
     }
   ],
-  "localization_changes": "依臺灣各保險制度和勞退法規分開核對人數門檻、薪資申報及追補；補一般調整不得回溯與勞退經查證得溯及法定日期的差異，加入勞保局申訴及健保APP查詢路徑。",
+  "localization_changes": "依臺灣各保險制度分開核對人數門檻、薪資申報及追補；補一般保險調整不得回溯與勞退經查證更正按提繳日或應調整之次月1日起生效的差異，並加入勞保局申訴及健保APP查詢路徑。",
   "legal_scope": "於2026-10-25直接核對臺灣現行法規及主管機關官方頁面，限於正文列明之條文和行政入口；查閱日不等於法規公布日或生效日，TW-19-021不作個案法律、醫療或給付核定。",
   "review_method": "逐一讀取指定現行法規條文及對應中央主管機關HTML正文；記錄支持主張、查閱日與讀取方式。人工重算正文SHA-256並同步manifest與runtime。AI摘要及工程檢查不代表法律、醫療、勞動保險專業簽證或正式機關決定。",
   "limits": [
