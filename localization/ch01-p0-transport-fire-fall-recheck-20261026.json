@@ -1,0 +1,376 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "ab51151e3cb4f3fc0e00a32e3f3295ad1bb3d502",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-01-001",
+      "TW-01-002",
+      "TW-01-026",
+      "TW-01-034"
+    ],
+    "risk_order": [
+      "TW-01-001",
+      "TW-01-002",
+      "TW-01-026",
+      "TW-01-034"
+    ],
+    "risk_basis": "依未繫安全帶事故、機車頭部傷害、居家火場逃生及工作高處墜落的傷害嚴重度與可立即採取的保命行動排序；這是嚴重度與時效排序，不是事件發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 132,
+    "runtime_sources": 686,
+    "source_registry": 767,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 136,
+    "runtime_sources": 696,
+    "source_registry": 777,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": {
+    "TW-01-001": [
+      {
+        "period": "2025全年",
+        "jurisdiction": "臺灣國道",
+        "population_or_records": "高公局國道死亡交通事故行政統計",
+        "numerator": 19,
+        "unit": "因未依規定繫安全帶而導致死亡之事故件數",
+        "deaths": 21,
+        "denominator": null,
+        "event_definition": "國道因未依規定繫妥安全帶而導致死亡的事故；非全道路事故或未繫帶所有事故",
+        "data_type": "交通主管機關新聞稿引述高速公路局行政事故數",
+        "source_url": "https://www.motc.gov.tw/ch/app/news_list/view?id=14&module=news&serno=043b4780-6941-4d3f-8a9c-f77bfe22a577",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無乘車旅次或繫帶暴露分母",
+          "新聞稿3.6倍比較未附可重算分子與分母",
+          "不得換算個人乘車機率"
+        ]
+      }
+    ],
+    "TW-01-002": [
+      {
+        "period": "2026年1月至7月",
+        "jurisdiction": "臺灣全國",
+        "population_or_records": "交通部道安總動員初估30日死亡統計中的機車騎士",
+        "numerator": 932,
+        "unit": "機車騎士30日死亡人數",
+        "denominator": null,
+        "event_definition": "頁面標示為115年1至7月30日死亡的機車騎士數，並註明該期為初估",
+        "data_type": "交通部動態行政統計初估值",
+        "source_url": "https://www.roadsafety.tw/Dashboard/Custom?type=%E6%AF%8F%E6%9C%8830%E6%97%A5%E6%AD%BB%E4%BA%A1%E4%BA%BA%E6%95%B8",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "不分安全帽配戴與否",
+          "無機車里程、旅次或騎士暴露分母",
+          "不等於個人事故或死亡機率"
+        ]
+      },
+      {
+        "period": "2026年7月抽購檢測",
+        "jurisdiction": "臺灣實體販售通路樣品",
+        "population_or_records": "標檢局購買之10頂機車用防護頭盔",
+        "numerator": 1,
+        "unit": "品質項目不符合的樣品頂數",
+        "denominator": 10,
+        "event_definition": "項次6材料項目不符CNS 2396附錄4第4節；不是衝擊吸收試驗不合格",
+        "data_type": "政府市場購樣檢測；未宣稱為機率抽樣",
+        "source_url": "https://www.bsmi.gov.tw/bsmiGIP/wSite/ct?ctNode=9689&mp=1&xItem=128246",
+        "detail_source_url": "https://www.bsmi.gov.tw/bsmiGIP/wSite/record/file_act.jsp?ixCuAttach=36547",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "只代表此次通路樣品",
+          "沒有市場銷售量或抽樣推論母體",
+          "不得推算全臺不合格比例"
+        ]
+      }
+    ],
+    "TW-01-026": [
+      {
+        "period": "2021至2025年",
+        "jurisdiction": "臺灣全國建築物類火災",
+        "population_or_records": "消防署按建築物類型統計的火災事件",
+        "numerator": 25895,
+        "unit": "建築物火災次數",
+        "denominator": null,
+        "event_definition": "建築物類火災事件，不等同住宅家戶或住戶人數",
+        "data_type": "消防署行政火災統計",
+        "source_url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無住宅家戶、人口或居住暴露分母",
+          "重複事件可能來自同一地址或家戶",
+          "不得換算每戶起火機率"
+        ]
+      },
+      {
+        "period": "2021至2025年",
+        "jurisdiction": "臺灣全國建築物類火災",
+        "population_or_records": "該期間全部建築物火災事件",
+        "numerator": 18521,
+        "unit": "獨立住宅與集合住宅火災合計件數",
+        "denominator": 25895,
+        "proportion_percent": 71.5,
+        "event_definition": "獨立住宅9,573次加集合住宅8,948次，占建築物火災總數；屬事件組成占比",
+        "data_type": "消防署年度行政統計加總",
+        "source_url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "分母是建築物火災事件不是住宅戶數",
+          "占比不是住宅起火率或死亡率"
+        ]
+      },
+      {
+        "period": "2025全年",
+        "jurisdiction": "臺灣全國建築物類火災",
+        "population_or_records": "消防署建築物火災事件",
+        "numerator": 4514,
+        "unit": "建築物火災次數",
+        "subcounts": {
+          "獨立住宅": 1688,
+          "集合住宅": 1483
+        },
+        "denominator": null,
+        "event_definition": "消防署按建築物類型統計的2025年火災事件",
+        "data_type": "消防署年度行政統計",
+        "source_url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無家戶或人口分母",
+          "不得當作每戶起火機率"
+        ]
+      }
+    ],
+    "TW-01-034": [
+      {
+        "period": "2025全年",
+        "jurisdiction": "臺灣全產業職業重大職災",
+        "population_or_records": "勞動檢查機構接獲通報後派員調查並撰寫報告的死亡職災案件",
+        "numerator": 136,
+        "unit": "墜落、滾落死亡人數",
+        "deaths_by_industry": {
+          "全產業死亡": 259,
+          "營造業": 75,
+          "製造業": 26
+        },
+        "denominator": null,
+        "event_definition": "職安署2025全年統計類別為墜落、滾落；少數尚待判定案件未列",
+        "data_type": "職安署行政重大職災調查統計",
+        "source_url": "https://www.osha.gov.tw/media/b54h1fj3/114%E5%B9%B4%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無工作者人數或工時分母",
+          "不含全部居家、休閒或非職業墜落",
+          "不等於所有墜落傷者致死率"
+        ]
+      },
+      {
+        "period": "2026年1月1日至6月30日",
+        "jurisdiction": "臺灣全產業職業重大職災",
+        "population_or_records": "勞動檢查機構接獲通報後派員調查並撰寫報告的死亡職災案件",
+        "numerator": 49,
+        "unit": "墜落死亡人數",
+        "deaths_by_industry": {
+          "全產業死亡": 109,
+          "營造業墜落": 36,
+          "製造業墜落": 5
+        },
+        "denominator": null,
+        "event_definition": "職安署2026上半年災害類型表列墜落；不同於2025年全年墜落、滾落合併類別",
+        "data_type": "職安署行政重大職災調查統計，截至6月30日",
+        "source_url": "https://www.osha.gov.tw/media/1mhphhgq/115%E5%B9%B4%E8%BF%84%E7%AC%AC2%E5%AD%A3%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E8%AA%AA%E6%98%8E.pdf",
+        "accessed_at": "2026-10-26",
+        "limitations": [
+          "無工作者人數或工時分母",
+          "少數待判定是否屬工作原因案件未列",
+          "期間與分類不同不可直接比較趨勢"
+        ]
+      }
+    ]
+  },
+  "new_source_ids": [
+    "ch01_motc_unbelted_highway_2025",
+    "ch01_motc_moto_rider_deaths_2026july",
+    "ch01_moj_motorcycle_helmet_art88",
+    "ch01_bsmi_helmet_retest_report_202607",
+    "ch01_bsmi_helmet_materials_202607",
+    "ch01_nfa_building_fires_2021_2025",
+    "ch01_tpe_traffic_faq_202609",
+    "ch01_osha_fall_2026h1_breakdown",
+    "ch01_nfa_drypowder_extinguisher_qa",
+    "ch01_tpe_fire_initial_response_202606"
+  ],
+  "reused_source_ids": [
+    "ch01_fire_escape_taipei2026",
+    "ch01_gobag_taipei2026",
+    "ch01_moj_micro_helmet",
+    "ch01_motc_belt_rule",
+    "ch01_nfa_fire_2025",
+    "ch01_osha_fall_2025",
+    "ch13_cpr_faq",
+    "ch13_fall_fire",
+    "head_2026_vghtc",
+    "support_osh_2026_h1"
+  ],
+  "retired_sources": [
+    {
+      "id": "ch01_motc_2025_30day",
+      "reason": "全道路30日死亡總數不能支持未繫安全帶特定事故或風險；保留舊來源物件，改用國道安全帶特定死因統計。",
+      "replacement_ids": [
+        "ch01_motc_unbelted_highway_2025"
+      ],
+      "prior_source_sha256": "7d4c3179a64a27bd05912c6795e48a1adc51dd6723c138c02943c45ac789f5fc",
+      "article_id": "TW-01-001",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_motc_2025_30day",
+      "reason": "全道路死亡總數不能支持機車騎士或安全帽主題的特定事故背景，改用有車種分組且標明初估的交通部道安總動員。",
+      "replacement_ids": [
+        "ch01_motc_moto_rider_deaths_2026july"
+      ],
+      "prior_source_sha256": "7d4c3179a64a27bd05912c6795e48a1adc51dd6723c138c02943c45ac789f5fc",
+      "article_id": "TW-01-002",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bsmi_helmet_202607",
+      "reason": "原登錄錯稱衝擊吸收不符；官方表顯示項次6實為材料規定失敗，改以公告和表格分開核對。",
+      "replacement_ids": [
+        "ch01_bsmi_helmet_retest_report_202607",
+        "ch01_bsmi_helmet_materials_202607"
+      ],
+      "prior_source_sha256": "eb5d382e0873a9bbb0d9c779789f83f7354d0a23da1b7e8308107241353676c7",
+      "article_id": "TW-01-002",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_fire_extinguisher_tfdp",
+      "reason": "舊消防署頁面同時含每年通用檢查、整罐噴完及滅後灑水等可能被誤作所有火災操作的指示；正文移除對其依賴，改引用地方初期滅火逃生指引與消防署乾粉滅火器法規FAQ。",
+      "replacement_ids": [
+        "ch01_tpe_fire_initial_response_202606",
+        "ch01_nfa_drypowder_extinguisher_qa"
+      ],
+      "prior_source_sha256": "7e3c1fc8cbd193d1a08e5012c824c344713dd09258619c970898ec3d74677b58",
+      "article_id": "TW-01-026",
+      "current_source_object_unchanged": true
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-01-001",
+      "title": "搭車前全車確認安全帶：臺灣汽車前後座、計程車及接駁車都要辨識規則",
+      "before_sha256": "11f6acfed3e08612713472b585f26e1dfa1e4e0f18dfb9efde6f6b2c336c4e58",
+      "after_sha256": "cc6adfc07490dd2963b31b607d656db0a2d2e8c81fcb299ef4531131aa97e3a9",
+      "prior_review_sha256": "aafdf98d40e717990c3e67ff01977b575361a89ed736912a5970bba6efe8d0b5",
+      "source_ids": [
+        "ch01_motc_belt_rule",
+        "ch01_motc_unbelted_highway_2025",
+        "ch01_tpe_traffic_faq_202609"
+      ],
+      "changes": "以2025年國道未繫帶死亡事故19件、21人替換全道路死亡總數；不延伸未提供分母的3.6倍比例為個人風險。重核現行安全帶規則、事故後檢查或更換、孕婦及兒童座椅依車主手冊；加入2026-09-29臺北市車禍求援與勿任意移動脊椎疑慮傷者指引。退役不支持特定繫帶事故的全道路死亡來源ID。",
+      "frequency_assessment": "交通部168交通安全入口網2026-04-20發布頁引述高公局資料：2025年國道因未繫妥安全帶造成死亡的事故19件、21人死亡。只有事故與死亡件數，沒有乘車旅次或繫帶暴露分母；頁面所列3.6倍比較未附可重算分子分母，不當作個人機率。",
+      "limits": [
+        "2025年國道未繫安全帶死亡事故19件、21人死亡，沒有乘車旅次或安全帶使用暴露分母；交通部所列3.6倍比值未提供可重算分子與分母，本篇不換算個人機率。",
+        "臺北市消防局交通事故FAQ是地方宣導；沒有取得交通鑑定、法律或救護專業獨立審閱。"
+      ],
+      "retired_source_ids": [
+        "ch01_motc_2025_30day"
+      ]
+    },
+    {
+      "id": "TW-01-002",
+      "title": "臺灣機車及微型電動二輪車戴對合格安全帽，不能混用車種標準",
+      "before_sha256": "2101a9e53b085e4b6217172034a69c5af3999bf64e29d1de48a39bc05d41e28d",
+      "after_sha256": "26b2dcd16595274b94d17171295e4c28954e353500531ffa64c03cf643d96907",
+      "prior_review_sha256": "6da4b7e16d718fe450e97b2743d156627c9c60569b6638e6a331006df5fc9435",
+      "source_ids": [
+        "ch01_moj_micro_helmet",
+        "ch01_motc_moto_rider_deaths_2026july",
+        "ch01_moj_motorcycle_helmet_art88",
+        "ch01_bsmi_helmet_retest_report_202607",
+        "ch01_bsmi_helmet_materials_202607",
+        "head_2026_vghtc"
+      ],
+      "changes": "把過時全道路死亡背景替換為交通部2026年1至7月初估機車騎士30日死亡932人；核對2026-06-26現行道路交通安全規則第88條與第115條之7，明分機車與微型電動二輪車。依標檢局公告及附表更正10頂抽購中1頂的材料不符項目，不再稱衝擊吸收失敗；保留舊來源物件並逐筆記錄退役SHA。",
+      "frequency_assessment": "交通部道安總動員頁面：2026年1至7月機車騎士30日死亡932人，頁面註記初估；無騎乘里程或安全帽使用分組。標檢局2026-07-15公告通路購樣10頂，1頂品質項目不符合；彙整表證明缺失是材料規定，不是衝擊吸收。",
+      "limits": [
+        "2026年1至7月機車騎士30日死亡932人為初估值，沒有騎乘暴露或安全帽使用分母；標檢局10頂通路購樣不是機率抽樣，不能推算全臺不合格率。",
+        "安全帽合規與頭傷警訊依現行法規和公立醫院衛教核對；未取得創傷醫療、商品檢測或監理專業獨立審閱。"
+      ],
+      "retired_source_ids": [
+        "ch01_motc_2025_30day",
+        "ch01_bsmi_helmet_202607"
+      ]
+    },
+    {
+      "id": "TW-01-026",
+      "title": "居家消防器材按火災種類與維護需求準備，濃煙時優先撤離或關門求救",
+      "before_sha256": "19964adaac22b43a59a846ef3fca3db64f9c4349412f9a3b3a40aea4497ac597",
+      "after_sha256": "2bdf1e2b50400f82fec17251e4675870b9f00a7a01f59e1423116249ea1900a8",
+      "prior_review_sha256": "f1648c1ce85af84061ad7f9aa894c176ba018978ae1181b10d844e165bfe47d3",
+      "source_ids": [
+        "ch01_fire_escape_taipei2026",
+        "ch01_gobag_taipei2026",
+        "ch01_nfa_fire_2025",
+        "ch01_nfa_building_fires_2021_2025",
+        "ch01_tpe_fire_initial_response_202606",
+        "ch01_nfa_drypowder_extinguisher_qa"
+      ],
+      "changes": "以消防署2021至2025年建築物火災25,895次、住宅類18,521次及71.5%類別占比補足頻率證據，說明沒有住宅分母；重核臺北市開門有煙或門把熱時關門119、路線安全才外出。移除給出年度通用檢查及整罐噴完／灑水操作的消防署滅火器頁面，改用消防署乾粉滅火器三年性能檢查FAQ及地方初期滅火安全指引。 審閱後補明71.5%占比的分母為全部25,895次建築物火災事件，並以回歸測試鎖定此口徑。",
+      "frequency_assessment": "消防署110至114年（2021至2025）建築物火災25,895次；獨立住宅9,573次、集合住宅8,948次，合計18,521次、占71.5%。此占比以所有建築物火災件數為分母，不是住宅家戶發生率。2025年建築物火災4,514次，其中兩類住宅分別1,688與1,483次。",
+      "limits": [
+        "2021至2025年建築物火災件數與住宅類別占比沒有家戶、居住人口或住宅暴露分母，不能換算每戶起火機率。乾粉滅火器三年性能檢查說明不得推成所有家戶、場所與器材型式都相同；臺北市消防指引屬地方宣導。",
+        "未取得消防專業獨立審閱；本文不是消防安全檢查、滅火器認證或現場風險評估。"
+      ],
+      "retired_source_ids": [
+        "ch01_fire_extinguisher_tfdp"
+      ]
+    },
+    {
+      "id": "TW-01-034",
+      "title": "高處墜落先119與避免二次傷害，能說話走動也不能自行判定無事",
+      "before_sha256": "fdc80026b6bb38cc797b388e88c90c1a36e61e186673265504d17fd60f32efaa",
+      "after_sha256": "2e1a05b4ed415d60a4f9e1f04e471a955e40085331ea3ecb712a5ba83d8073c0",
+      "prior_review_sha256": "00dece70671f2181795a5b8c83d2b6d596b9afba14fff93d64b2c2b8796f6387",
+      "source_ids": [
+        "ch13_fall_fire",
+        "head_2026_vghtc",
+        "ch01_osha_fall_2025",
+        "ch13_cpr_faq",
+        "support_osh_2026_h1",
+        "ch01_osha_fall_2026h1_breakdown"
+      ],
+      "changes": "重核2025重大職災墜落、滾落136人及2026上半年墜落49人（營造36、製造5）；保留行政調查、未判定案件排除、無暴露分母及類別期間不同等限制。更新急救步驟以119派遣、AED及醫療團隊評估為中心，並連結既有職安單篇指引。",
+      "frequency_assessment": "職安署2025年全產業重大職災死亡259人，其中墜落、滾落136人（營造75、製造26）；2026年1至6月重大職災死亡109人，其中墜落49人（營造36、製造5）。勞檢接報後現場調查，少數待判定案件未列；無工作者或工時分母，且期間與分類不同。",
+      "limits": [
+        "職安署重大職災死亡統計是勞檢接報後現場調查案件，少數待判定案件未列且沒有工作者或工時分母；2025全年分類為墜落、滾落，2026上半年為墜落，不能直接比較或推估所有工作及非工作墜落風險。",
+        "急救、創傷醫療與職業安全僅做官方來源AI輔助核對，未取得醫療或職安專業獨立審閱；本文不代替119派遣、個案診療或現場職安評估。"
+      ],
+      "retired_source_ids": []
+    }
+  ],
+  "unresolved": [
+    "交通部國道新聞稿當次直接開啟逾時，引用官方索引可見的19件及21人；未取得微資料或3.6倍比較的可重算分子、分母。",
+    "機車騎士死亡數為2026年1至7月初估值，無騎乘暴露及安全帽配戴分組。",
+    "消防署建築火災統計和職安署重大職災死亡數沒有住宅家戶、工作者或工時暴露分母，不推估個人機率。",
+    "沒有取得交通安全、創傷醫療、消防或職業安全專業獨立簽核；AI來源核對不等於正式專家審閱。"
+  ]
+}

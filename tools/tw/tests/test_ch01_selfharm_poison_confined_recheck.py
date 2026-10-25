@@ -133,8 +133,10 @@ class Ch01SelfharmPoisonConfinedRecheckTests(unittest.TestCase):
         self.assertEqual(evidence["counts_after"]["substantive_rechecks"], 132)
         self.assertEqual(evidence["counts_after"]["runtime_sources"], 686)
         self.assertEqual(evidence["counts_after"]["source_registry"], 767)
-        self.assertEqual(len(register["substantive_rechecks"]), 132)
-        self.assertEqual(coverage["registry_sources"], 767)
+        # Earlier batch counts remain historical snapshots; later mainline reviews may append rows.
+        self.assertGreaterEqual(len(register["substantive_rechecks"]),
+                                evidence["counts_after"]["substantive_rechecks"])
+        self.assertGreaterEqual(coverage["registry_sources"], evidence["counts_after"]["source_registry"])
         self.assertEqual(coverage["core_reviewed_entries"], report["publication_completed_entries"])
         self.assertFalse(coverage["publication_ready"])
         self.assertFalse(report["publication_ready"])
