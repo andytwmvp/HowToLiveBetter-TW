@@ -1,4 +1,4 @@
-"""第1章第三批：臺灣酒駕事故、幼童車座、居家防墜及防溺，禁止誤用統計母數。"""
+"""第1章第三批及2026實質再審：臺灣道路、幼童車座、防墜與防溺統計契約。"""
 import hashlib,json,subprocess,unittest,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
@@ -22,9 +22,10 @@ class Chapter01ChildSafetyTests(unittest.TestCase):
     self.assertEqual({x["url"] for x in rev["source_checks"]},{sources[x]["url"] for x in items[key]["source_ids"]})
  def test_frequency_denominator_and_local_safety(self):
   b={x["id"]:x["body"] for x in validate_runtime()["items"]}
-  self.assertIn("143人",b["TW-01-009"]);self.assertIn("分心",b["TW-01-009"])
-  self.assertIn("2,858人",b["TW-01-010"]);self.assertIn("後向",b["TW-01-010"])
-  self.assertIn("239人",b["TW-01-011"]);self.assertIn("不是高樓墜落",b["TW-01-011"])
+  self.assertIn("143人",b["TW-01-009"]);self.assertIn("14名死者",b["TW-01-009"]);self.assertIn("沒有車流量",b["TW-01-009"])
+  self.assertIn("後向",b["TW-01-010"]);self.assertIn("兒童乘車旅次",b["TW-01-010"]);self.assertNotIn("2,858人",b["TW-01-010"])
+  self.assertIn("239人",b["TW-01-011"]);self.assertIn("不再以2016年多種事故傷害死亡合計239人代表窗墜發生率",b["TW-01-011"])
+  self.assertIn("窗戶或陽台墜落",b["TW-01-011"]);self.assertIn("全國資料",b["TW-01-011"]);self.assertIn("逃生",b["TW-01-011"])
   self.assertIn("2024年",b["TW-01-012"]);self.assertIn("叫、叫、伸、拋、划",b["TW-01-012"])
   for key in IDS:self.assertIn("119",b[key]);self.assertNotIn("打120",b[key])
  def test_preserve_original_248_entries_and_sources(self):
