@@ -50,10 +50,15 @@ class LivingSupportChapterTests(unittest.TestCase):
   for s in batch['sources']:
    self.assertEqual(runtime[s['id']],s);self.assertEqual(registry[s['id']][2],s['url'])
    self.assertGreater(len(s['supports']),25);self.assertGreater(len(s['retrieval_method']),15)
+  current_items={i['id']:i for i in validate_runtime()['items']}
+  rechecks={r['id']:r for r in read('localization/retroactive-review-register-20261019.json')['substantive_rechecks']}
   for e in batch['entries']:
    self.assertEqual(set(e['source_ids']),set(e['source_claims']))
+   current_ids=set(current_items[e['id']]['source_ids'])
+   retired_ids={r['id'] for r in rechecks.get(e['id'],{}).get('retired_sources',[])}
+   self.assertLessEqual(set(e['source_ids']),current_ids|retired_ids)
    review=read(f"localization/reviews/{e['id']}.json")
-   self.assertEqual({s['url'] for s in review['source_checks']},{runtime[s]['url'] for s in e['source_ids']})
+   self.assertEqual({s['url'] for s in review['source_checks']},{runtime[s]['url'] for s in current_ids})
    self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
  def test_counts_are_real_not_new_draft_duplicates(self):
   data=audit_drafts()
@@ -69,7 +74,7 @@ class LivingSupportChapterTests(unittest.TestCase):
   for phrase in ('100小時','60%','最長6個月','不得與失業給付同時','另有工作'):self.assertIn(phrase,texts['TW-07-013'])
  def test_urgent_aid_and_hotline_scope(self):
   texts=bodies()
-  for phrase in ('戶籍地','居住地','2026-06-24','1至3萬元','5000元','核定後','不是每人'):self.assertIn(phrase,texts['TW-07-006'])
+  for phrase in ('戶籍地','居住地','2026年6月24日','1萬至3萬元','5,000元','核定後','不是每人'):self.assertIn(phrase,texts['TW-07-006'])
   for n in (4,21):
    for phrase in ('08:00至22:00','119','110'):self.assertIn(phrase,texts[f'TW-07-{n:03}'])
  def test_household_income_not_only_self_salary(self):
