@@ -27,7 +27,7 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
   self.assertIn("2,858人",b["TW-01-001"]);self.assertIn("不是未繫安全帶",b["TW-01-001"])
   self.assertIn("10件",b["TW-01-002"]);self.assertIn("全國",b["TW-01-002"])
   self.assertIn("3,171次",b["TW-01-003"]);self.assertIn("不是全臺房屋戶數",b["TW-01-003"])
-  self.assertIn("118件",b["TW-01-004"]);self.assertIn("2019至2023年",b["TW-01-004"])
+  self.assertIn("24件",b["TW-01-004"]);self.assertIn("22件",b["TW-01-004"]);self.assertNotIn("118件",b["TW-01-004"]);self.assertIn("沒有燃氣熱水器使用戶數",b["TW-01-004"])
   for key in IDS:
    self.assertIn("119",b[key]);self.assertTrue("頻率" in b[key] or "分母" in b[key])
    self.assertNotIn("撥120",b[key]);self.assertNotIn("打120",b[key])
