@@ -11807,10 +11807,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-005.md",
       "sources": [
-        "https://www.ris.gov.tw/documents/html/2/3/1/386.html",
-        "https://www.ris.gov.tw/apply-registration/app/awf060220/description"
+        "ch25_deathreg",
+        "ch25_deathonline"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "給去世的人註銷戶口有法定時限：城市在安葬前，農村在一個月以內",
@@ -11827,10 +11827,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-006.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
-        "https://www.guanshan.gov.tw/news/detail/2126"
+        "ch25_funeral",
+        "ch25_funeral_effective"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "殯葬服務分基礎項目和非基礎項目，基礎項目有清單、收費依法制定",
@@ -11847,10 +11847,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-007.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=J0170001"
+        "ch25_funeral",
+        "consumer",
+        "ch25_consumer_process"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "遇到強制搭售、標價外加價、把一項拆成幾項收費，記下來投訴",
@@ -11867,9 +11868,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch25/TW-25-008.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040"
+        "ch25_funeral",
+        "ch25_funeral_sales_reporting",
+        "ch25_funeral_lookup"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md",
       "display_path": "book/25-人走了以後要辦什麼.md",
       "source_title_zh_tw": "殯葬代理、用品代購、策劃主持這類中介，要在縣級民政備案",

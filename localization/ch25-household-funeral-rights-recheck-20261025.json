@@ -1,0 +1,218 @@
+{
+  "review_date": "2026-10-25",
+  "base_main_sha": "392c8b990eb1d172141a61706c2392e9c384337f",
+  "priority_order": [
+    "TW-25-005",
+    "TW-25-006",
+    "TW-25-007",
+    "TW-25-008"
+  ],
+  "selection_basis": "依戶政法定期限及線上流程的可補救時效、殯葬代理／代售詐騙與契約相對人風險、低收入戶特定公立設施減免、消費爭議救濟時序排序；排序是嚴重度及權益時效判斷，不代表事件頻率。",
+  "statistics_assessment": "四篇均為行政程序、設施費用資格或消費契約／業者角色規範，沒有可合理代表台灣個人暴露的分母。消保受理件數、內政部新聞案例、死亡登記及設施使用量均未用來估計個人發生機率。",
+  "items": [
+    {
+      "id": "TW-25-005",
+      "title": "死亡登記原則30日內辦理，線上申請要確認結案",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "392c8b990eb1d172141a61706c2392e9c384337f",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "43690e78aff93e6a23375c21141e2ba419a784741e671454bffe1d8ba14a0c7c",
+      "before_sha256": "b5b9cb13bd284b9d332463e821e16c700164c5b716dbff633ebad3f2a4be4ba9",
+      "after_sha256": "0d15bfc04c7e7904e29c8023cb5177244855f1f5609cbb361da512cfeb8c50f2",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "台灣戶籍死亡登記有全國任一戶所受理及線上申辦兩條實際路徑；自然人憑證、成年及親屬／同戶等資格使線上並非所有家屬都能使用。死亡宣告案件另有裁定確定日的起算，跨機關通知須等戶政登記完成。",
+      "frequency_assessment": "死亡登記、申請退件或線上申辦的行政件數不能作為個人發生率；本條是法定程序與期限，不適用個人暴露分母，未推估機率。",
+      "changes": "明確區分一般死亡登記與死亡宣告線上案件的期限起算；補線上申請資格、聲請人身分、已結案狀態才代表登記完成，並說明跨機關通報在戶政登記完成後轉送且不等於給付核准。",
+      "limits": [
+        "線上申辦資格、系統狀態與跨機關通報依戶政司查閱當日說明；本輪未代辦個案，未逐一核對地方戶所補件要求或境外文件個案。",
+        "戶政登記完成不證明健保退保、保單清查、勞保家屬死亡給付或遺產程序已完成；各權責機關另作處理。",
+        "AI輔助行政來源核對，未取得戶政／法律專業獨立簽證；30日為登記期限而非其他司法、稅務或給付期限。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.ris.gov.tw/documents/html/2/3/1/386.html",
+          "claim": "一般死亡登記期限、全國任一戶所受理、合格申請人、正本文件與證明文件要求。",
+          "supporting_passage": "編者摘要（非逐字）：戶政司申辦須知列自死亡事件發生或死亡事實確定後30日內，死亡證明等應備文件需正本，並可向全國任一戶政事務所辦理；未依法申請可能經催告後逕為登記。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取戶政司官方申辦須知HTML，逐項核對一般死亡登記之期限起算、受理地點、申請人和文件。"
+        },
+        {
+          "url": "https://www.ris.gov.tw/apply-registration/app/awf060220/description",
+          "claim": "線上申辦的成年、憑證及親屬資格、死亡宣告申請人與期限、戶所查證結案及跨機關通報時序。",
+          "supporting_passage": "編者摘要（非逐字）：戶政司線上說明要求成年並持自然人憑證，且限親屬、配偶、同戶人及有機關死亡通報等情形；死亡宣告由聲請人申請並依裁定確定日起算30日，戶所接獲通報查證且顯示已結案才完成，併辦通報之後轉送。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取戶政司線上死亡登記注意事項HTML，核對申請條件、案件狀態與跨機關通報規則。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-25-005.json",
+      "source_ids": [
+        "ch25_deathreg",
+        "ch25_deathonline"
+      ]
+    },
+    {
+      "id": "TW-25-006",
+      "title": "喪葬支出先分必要與選配，公立設施減免不等於全案免費",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "392c8b990eb1d172141a61706c2392e9c384337f",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "cc18deb9ff8788e7ff7b196c0b81f4e7ad564eed97ae854decb05cf182c96995",
+      "before_sha256": "ba570e9399e57c27256780ba6296c9e4a4ec865c3ce24ee579f26498c2c0b074",
+      "after_sha256": "d67095014ea09f7dfac2a95a8c3e05990956f270f05dd12301091c7ad96789c8",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "喪葬支出會同時包含地方公立殯葬設施使用費與私人禮儀／交通／商品服務；法定減免以地方政府列冊身分及指定公立火化、骨灰存放設施為條件，且地方櫃位標準不同。",
+      "frequency_assessment": "法定設施減免是資格與收費規範，非事件發生風險；未找到可對應個別家庭治喪選擇與費用暴露的全國分母，不用設施使用量或殯葬案件數估算個人機率。",
+      "changes": "依現行殯葬管理條例第21條之1逐項限定地方政府列冊低收入戶／中低收入戶、指定公立火化及骨灰（骸）存放設施、使用管理費與地方免費標準；分開其他治喪服務及未列冊者另詢社福扶助。",
+      "limits": [
+        "第21條之1要求各直轄市、縣市政府列冊身分，指定公立設施使用及相關使用管理費；本輪未檢查每一地方政府的櫃位免費標準、申請表或個別費率。",
+        "交通、私人禮儀、商品與其他治喪支出是否有地方扶助須個別詢問；不保證未列冊者或私立設施可減免。",
+        "AI輔助官方法規來源核對，未取得社工、殯葬或法律專業獨立簽證。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
+          "claim": "現行第21條之1列冊資格、指定公立火化及骨灰存放設施、使用管理費減免及地方免費標準；第48、49條價目與書面契約。",
+          "supporting_passage": "編者摘要（非逐字）：現行條文限地方政府列冊低收入戶及中低收入戶，使用公立火化場或骨灰（骸）存放設施免收使用管理相關費用；地方政府制定存放設施免費標準，受委託經營、代理或代管的公立設施也在文字範圍內。另第48、49條規定證照價目展示及書面契約。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫殯葬管理條例HTML，逐項核對第21條之1與第48、49條。"
+        },
+        {
+          "url": "https://www.guanshan.gov.tw/news/detail/2126",
+          "claim": "第21條之1的修正公布日與2026-01-01實際施行日，中低收入戶納入指定設施減免。",
+          "supporting_passage": "編者摘要（非逐字）：關山鎮公所公告轉述行政院函，2025-05-28修正的第21條之1定自2026-01-01施行；施行日期不等於修正公布日期。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取關山鎮公所2025-07-03官方公告，核對條文施行日期與公布日期。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-25-006.json",
+      "source_ids": [
+        "ch25_funeral",
+        "ch25_funeral_effective"
+      ]
+    },
+    {
+      "id": "TW-25-007",
+      "title": "不明加價先對契約留證，申訴處理期限不是退款保證",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "392c8b990eb1d172141a61706c2392e9c384337f",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "9aff6e8b7fa436bd54849d81b36030fd1ee1bde4118ad33489730f0c2acca4cc",
+      "before_sha256": "11428fc7185c8abe749533abb7a16eb25366488281e34d1aabb412155adeaea3",
+      "after_sha256": "4a145228ce25288443ff54de0d074d482da61a2d3f99d516cac3a2ec086ff2b4",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "台灣消費者可向業者、地方消費者服務中心或團體申訴，使用1950或中央線上系統；殯葬契約、追加收費及服務供應商會跨業者與地方主管機關，留下契約和案件編號有助後續處理。",
+      "frequency_assessment": "消費申訴件數是行政受理量，無殯葬服務交易或使用者暴露分母，不能解讀成個人遇到加價的機率；內政部所舉塔位詐騙案例亦沒有全國個人暴露分母。",
+      "changes": "補行政院消保會1950與線上申訴／調解入口、二次申訴及地方調解流程；把15日明確寫為企業經營者妥適處理義務，不寫成退款期限或保證，並說明訴訟無須以完成申訴調解為前提。",
+      "limits": [
+        "消保法第43條的15日是業者妥適處理申訴之義務，不是退款期限、爭議勝負或賠償保證；本輪未審閱任何個別契約、收據或地方消保案件。",
+        "行政院消保會頁說明1950於上班時間且不含午休；實際服務可用性、個別地方受理方式及線上系統狀態應以送件當時資訊為準。",
+        "AI輔助法規及行政流程核對，未取得律師或消保專業獨立簽證；本輪未判定個案請求權及期間。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
+          "claim": "殯葬服務價目公開、書面契約以及契約未載費用的請求限制。",
+          "supporting_passage": "編者摘要（非逐字）：殯葬管理條例第48、49條要求展示證照、服務項目與收費基準，並要求與消費者訂書面契約；未載明費用無請求權，簽約後不得巧立名目強索增加費用。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫現行殯葬管理條例HTML第48、49條。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=J0170001",
+          "claim": "消保法第43條申訴窗口與企業者15日內妥適處理義務，未妥處可向消保官申訴。",
+          "supporting_passage": "編者摘要（非逐字）：消費者可向企業經營者、消保團體或消費者服務中心申訴；企業對消費者申訴須於申訴日起15日內妥適處理，未妥處得再向地方消保官申訴。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫消費者保護法第43條現行條文HTML。"
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/71E988F034956960",
+          "claim": "1950與線上申訴入口、第二次申訴及調解流程；申訴調解不是提起消費訴訟的強制前置程序。",
+          "supporting_passage": "編者摘要（非逐字）：行政院消保會說明可於上班時間（不含午休）撥1950或用線上申訴與調解系統；未妥處可第二次申訴、再申請地方調解，消費訴訟不以先完成申訴調解為必要。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取行政院消費者保護會官方消費爭議程序頁HTML，核對諮詢方式、行政程序階段與訴訟說明。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-25-007.json",
+      "source_ids": [
+        "ch25_funeral",
+        "consumer",
+        "ch25_consumer_process"
+      ]
+    },
+    {
+      "id": "TW-25-008",
+      "title": "查業者許可與真正契約對象，代辦授權不要連財產一起交出",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "392c8b990eb1d172141a61706c2392e9c384337f",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "578824df0f50e0877d8c7705e50edb45f922601986472d792f093ed0991e78e0",
+      "before_sha256": "899ff706f4e9c1fb87122708a637fb2a94a08d6fc53dbfcc8039c702798bc15f",
+      "after_sha256": "0d668943179f2f6796a49316db858c7fc272811af337c582e4c267464bccbf26",
+      "reviewed_at": "2026-10-25",
+      "review_due_at": "2027-01-31",
+      "taiwan_context": "台灣由地方主管機關核發殯葬服務業許可並管理跨縣市營業；一般治喪承作與生前契約／塔位等特定商品代售是不同角色，需核對簽約、收款及實際承作方，防範轉介者越權與塔位投資詐騙。",
+      "frequency_assessment": "內政部公告中的詐騙案例是風險示例，不是發生率或全國案件數；殯葬業者許可與特定商品銷售申報是法定規則，沒有可計算一般民眾個人風險的暴露分母，不推估。",
+      "changes": "將第42條經營許可與第56條特定商品受託銷售備查分開；限縮第56條到生前契約及指定設施單位銷售，避免推成一般轉介／分包均須報備；說明內政部名單查詢範圍並加入內政部警示的塔位與生前契約投資詐騙辨識及165／110查證。",
+      "limits": [
+        "第42條與第56條按業務實質及交易內容適用；本輪未查核具名業者、地方許可資料、個別受託銷售公告或契約代理權。",
+        "內政部全國殯葬資訊入口網在本次直接開啟時逾時；只確認內政部公告所述查詢用途，未實際查驗該站任何業者記錄。一般禮儀服務業許可應向所在地縣市主管機關核對。",
+        "內政部2024年公告舉例塔位投資及代售詐騙，但無個人暴露分母；不把該公告描述作全國個人風險率。",
+        "AI輔助法律及來源核對，未取得律師、殯葬專業或警方針對個案的獨立確認。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
+          "claim": "第42條殯葬服務業經營許可及跨縣市要求、第56條特定受託銷售類別和備查公開；另核對第48至51條牌價契約及生前契約限制。",
+          "supporting_passage": "編者摘要（非逐字）：第42條列所在地許可、公司或商業登記、公會及禮儀服務業跨縣市備查；第56條列禮儀業代售生前契約、設施業代售墓基或骨灰存放單位並將銷售處所及受託者資料備查公開；第48至51條另規定展示、書面契約與生前契約資格／信託。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取全國法規資料庫殯葬管理條例HTML第42、48至51及56條，核對一般營業許可與特定商品受託銷售備查的不同範圍。"
+        },
+        {
+          "url": "https://www.moi.gov.tw/News_Content.aspx?n=2&s=318150",
+          "claim": "全國殯葬資訊入口可查合法生前契約與殯葬設施經營業者；內政部提醒塔位／生前契約非投資商品，代售要求先加購時應查證。",
+          "supporting_passage": "編者摘要（非逐字）：內政部公告建議以實際需求選擇合法業者、書面契約，說明入口網的名單查詢範圍為合法生前契約及殯葬設施經營業者，並提醒塔位與生前契約不是投資商品；遇到代售既有塔位卻要求先買更多商品可撥165或110查證。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取內政部官方公告HTML，核對發布日、名單查詢範圍及具體風險提醒；未將公告案例量推成發生率。"
+        }
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-25-008.json",
+      "source_ids": [
+        "ch25_funeral",
+        "ch25_funeral_sales_reporting",
+        "ch25_funeral_lookup"
+      ]
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch25_consumer_process",
+      "url": "https://cpc.ey.gov.tw/Page/71E988F034956960"
+    },
+    {
+      "id": "ch25_funeral_sales_reporting",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040"
+    }
+  ],
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "runtime_sources": 649,
+    "registry_sources": 730,
+    "ai_source_rechecks": 108
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "runtime_sources": 651,
+    "registry_sources": 732,
+    "ai_source_rechecks": 112
+  },
+  "professional_review": "AI輔助來源核對仍待法律、戶政、殯葬及消保專業獨立審閱；本批工程驗證不等於專家簽證或全書出版核准。",
+  "frequency_limit": "未找到可將相關行政案件或媒體案例轉換成殯葬服務使用者個人風險的全國同口徑暴露分母，故不估計。"
+}
