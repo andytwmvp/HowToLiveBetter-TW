@@ -9879,11 +9879,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-013.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
-        "https://www.bli.gov.tw/0105825.html",
-        "https://www.mol.gov.tw/1607/1632/1633/86193/"
+        "injurycoverage",
+        "injuryuninsured",
+        "ch19_insurance_small",
+        "bli_injury_unreported_details_20261025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "單位沒給你交工傷保險，工傷待遇一樣有，由單位按同樣的標準全額出",
@@ -9900,13 +9901,15 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-014.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=N0050031",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050046",
-        "https://www.osha.gov.tw/48110/48363/133456/133462/133511/",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001"
+        "injurydisability",
+        "injurycoverage",
+        "disabilityact",
+        "injurydiagnosis",
+        "ch19_lsa",
+        "bli_injury_disability_benefit_20261025",
+        "ch19_lsa_death_disability_compensation_20261025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "傷情穩定後去做勞動能力鑑定，傷殘等級直接換算成錢",
@@ -9923,10 +9926,15 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-015.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001"
+        "injurycoverage",
+        "ch19_lsa",
+        "bli_injury_death_benefit_20261025",
+        "osha_2026h1_fatality_stats",
+        "ch19_lsa_death_disability_compensation_20261025",
+        "ch19_lsa_compensation_limitation_20261025",
+        "ch19_disaster_insurance_art90_20261025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "工亡的三筆錢要分清：喪葬補助金、供養親屬撫卹金、一次性工亡補助金",
@@ -10058,14 +10066,17 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-021.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001"
+        "ch19_labor_insurance",
+        "ch19_pension_continuity",
+        "nhiact",
+        "injurycoverage",
+        "ch19_employment_coverage",
+        "ch19_lsa",
+        "bli_wage_insurance_reporting_20261025",
+        "bli_personal_insurance_pension_query_20261025",
+        "nhi_counter_enrollment_record_20261025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-25",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "單位不交或少交社保，先投訴讓它補繳；想因此辭職拿經濟補償，辭職通知裡要寫明是因為單位沒依法繳社保",
