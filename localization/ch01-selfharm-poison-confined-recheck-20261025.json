@@ -1,0 +1,319 @@
+{
+  "batch_date": "2026-10-25",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "ab6470599140fd7ed841aeea33b7f155e54efb3e",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-01-025",
+      "TW-01-033",
+      "TW-01-043",
+      "TW-01-046"
+    ],
+    "risk_order": [
+      "TW-01-025",
+      "TW-01-033",
+      "TW-01-043",
+      "TW-01-046"
+    ],
+    "risk_basis": "優先處理自傷危機及立即求援，再核對疑似中毒與一氧化碳急救、親友守門人及局限空間重大職安傷亡；順序依可能傷害嚴重度與現場決策急迫性，不代表事件發生率。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 128,
+    "runtime_sources": 680,
+    "source_registry": 761,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 132,
+    "runtime_sources": 686,
+    "source_registry": 767,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": {
+    "TW-01-025": [
+      {
+        "period": "2025年1月至9月",
+        "jurisdiction": "臺灣全國",
+        "population_or_records": "自殺防治通報系統所記錄的通報",
+        "numerator": 34612,
+        "unit": "通報人次",
+        "comparison": "較2024年同期減少8%；報告未在引用段提供個人風險分母",
+        "denominator": null,
+        "data_type": "行政通報系統件次／人次，不同於去重個案、所有未遂或意念盛行率",
+        "cannot_infer": [
+          "不同自殺企圖者人數",
+          "自殺意念盛行率",
+          "個人發生機率",
+          "干預成功率"
+        ],
+        "source_url": "https://www.mohw.gov.tw/dl-99692-90bfc131-849a-4f80-861d-78197872aa2d.html",
+        "source_location": "114年全國自殺防治中心成果報告第10頁",
+        "accessed_at": "2026-10-25"
+      },
+      {
+        "period": "2025全年",
+        "jurisdiction": "臺灣全國",
+        "population_or_records": "全國死亡登記",
+        "numerator": 3951,
+        "unit": "自殺死亡人數",
+        "crude_rate_per_100000": 16.9,
+        "standardized_rate_per_100000": 12.9,
+        "denominator": "粗率依統計處年中人口計；年齡標準化率依2000年WHO世界標準人口計算",
+        "data_type": "2025年死亡登記；粗死亡率與年齡標準化死亡率口徑不同，非未遂、意念或疾病盛行率",
+        "cannot_infer": [
+          "個人危機機率",
+          "自殺未遂數",
+          "守門人介入成效"
+        ],
+        "source_url": "https://www.mohw.gov.tw/dl-100916-73f4ce53-0d62-4d3e-86bf-0f0af23e9349.html",
+        "source_location": "114年死因統計簡報第17至18頁",
+        "accessed_at": "2026-10-25",
+        "standard_population": "2000年WHO世界標準人口"
+      }
+    ],
+    "TW-01-033": [
+      {
+        "period": "2024全年",
+        "jurisdiction": "臺灣全國",
+        "population_or_records": "消防署公布的燃氣熱水器相關一氧化碳中毒事故",
+        "numerator": 24,
+        "unit": "事故件數",
+        "deaths": 4,
+        "hospital_transports": 59,
+        "denominator": null,
+        "data_type": "消防行政事故／傷亡數；未附設備使用戶數或暴露人次分母",
+        "cannot_infer": [
+          "所有一氧化碳暴露件數",
+          "農藥或職業中毒數",
+          "個人發生率或致死率"
+        ],
+        "source_url": "https://www.nfa.gov.tw/cht/index.php?article_id=18200&code=list&flag=detail&ids=1468",
+        "accessed_at": "2026-10-25"
+      },
+      {
+        "period": "2025-01-01至2025-03-16",
+        "jurisdiction": "臺灣全國",
+        "population_or_records": "消防署公告截至3月16日的CO事故累計",
+        "numerator": 14,
+        "unit": "事故件數",
+        "deaths": 1,
+        "hospital_transports": 41,
+        "denominator": null,
+        "data_type": "部分年度行政事故／傷亡數，不是全年結果；公告未列使用戶數分母",
+        "cannot_infer": [
+          "2025全年總數",
+          "個人發生率",
+          "農藥中毒發生率"
+        ],
+        "source_url": "https://www.nfa.gov.tw/cht/index.php?article_id=18200&code=list&flag=detail&ids=1468",
+        "accessed_at": "2026-10-25"
+      },
+      {
+        "data_status": "未取得可合併率",
+        "reason": "本輪未找到同年度、同事件定義且具全暴露者分母的農藥、職業、誤食、火場及燃氣設備合併全國統計；不把不同通報件數相加或估算個人機率。",
+        "accessed_at": "2026-10-25"
+      }
+    ],
+    "TW-01-043": [
+      {
+        "period": "2025年1月至9月",
+        "jurisdiction": "臺灣全國",
+        "population_or_records": "自殺防治通報系統記錄",
+        "numerator": 34612,
+        "unit": "通報人次",
+        "comparison": "較2024年同期減少8%；不是不同個案或介入成功數",
+        "denominator": null,
+        "data_type": "行政通報人次，沒有可用個人暴露分母",
+        "cannot_infer": [
+          "自殺意念盛行率",
+          "個人風險",
+          "直接詢問成功率"
+        ],
+        "source_url": "https://www.mohw.gov.tw/dl-99692-90bfc131-849a-4f80-861d-78197872aa2d.html",
+        "source_location": "第10頁",
+        "accessed_at": "2026-10-25"
+      },
+      {
+        "period": "2025全年",
+        "jurisdiction": "臺灣全國",
+        "population_or_records": "死亡登記",
+        "numerator": 3951,
+        "unit": "自殺死亡人數",
+        "crude_rate_per_100000": 16.9,
+        "standardized_rate_per_100000": 12.9,
+        "denominator": "粗率依統計處年中人口計；年齡標準化率依2000年WHO世界標準人口計算",
+        "data_type": "2025年死亡登記；粗死亡率與年齡標準化死亡率口徑不同，非未遂、意念或疾病盛行率",
+        "cannot_infer": [
+          "親友個人危機機率",
+          "直接詢問之因果成效"
+        ],
+        "source_url": "https://www.mohw.gov.tw/dl-100916-73f4ce53-0d62-4d3e-86bf-0f0af23e9349.html",
+        "accessed_at": "2026-10-25",
+        "standard_population": "2000年WHO世界標準人口"
+      }
+    ],
+    "TW-01-046": [
+      {
+        "period": "民國100至113年（2011至2024）；末年2024",
+        "jurisdiction": "臺灣職業重大災害行政統計圖表",
+        "numerator": 2,
+        "unit": "局限空間重大職災件數",
+        "deaths": 2,
+        "denominator": null,
+        "data_type": "職安署重大職業災害事件與死亡人數，不含所有民間事故或非職業暴露",
+        "cannot_infer": [
+          "所有局限空間事故",
+          "勞工個人致死率",
+          "每次進入或每工時發生率"
+        ],
+        "source_url": "https://www.osha.gov.tw/48110/48207/48299/48301/50484/?cprint=pt",
+        "accessed_at": "2026-10-25"
+      }
+    ]
+  },
+  "new_source_ids": [
+    "ch01_crisis_mohw_1925_2026",
+    "ch01_suicide_reports_2026",
+    "ch01_crisis_mohw_online_2026",
+    "ch01_poison_center_contact",
+    "ch01_co_nfa_2025",
+    "ch01_confined_facilities_29"
+  ],
+  "reused_source_ids": [
+    "ch01_confined_osha",
+    "ch01_crisis_gatekeeper_2026",
+    "ch01_crisis_mlshb",
+    "ch01_crisis_nimh_ask",
+    "ch01_crisis_vgh_safety",
+    "ch01_death_2025_brief",
+    "ch01_pesticide_vgh704",
+    "ch13_co_fire2026",
+    "ch13_co_hospital",
+    "ch13_cpr_faq",
+    "ch13_poison_pcc"
+  ],
+  "retired_sources": [
+    {
+      "id": "ch01_gambling_mental",
+      "reason": "該來源是較舊的衛福部安心專線公告；本篇已直接改引心理健康司現行1925服務頁，避免相同服務主張同時依賴重複且較舊的入口。",
+      "replacement_ids": [
+        "ch01_crisis_mohw_1925_2026"
+      ],
+      "prior_source_sha256": "fdc42653614e8f3a07f9a874c246247e8a11c8c3b443963cb24cc143719c7343",
+      "article_id": "TW-01-043",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_grinder_facilities",
+      "reason": "原來源雖連到同一法規，登錄支持內容只涵蓋研磨輪第62條，並不支持局限空間第29-1至29-7條；保留原物件，改用按本篇條文範圍登錄的新來源ID。",
+      "replacement_ids": [
+        "ch01_confined_facilities_29"
+      ],
+      "prior_source_sha256": "01032b718e7cbd62495b5d9691ff8e05f6f3cb28ff5ae0f5ef8c7c3ef7495481",
+      "article_id": "TW-01-046",
+      "current_source_object_unchanged": true
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-01-025",
+      "title": "出現自傷念頭先讓自己安全並找人陪伴，立即危險直接求救",
+      "before_sha256": "df78552e00be85c80d43c629316b844c73e3e8684fb50331426f09fd57686122",
+      "after_sha256": "dbcff70932577104d2c4498692d33cf3ee98bacea1722f899686483bb1f09976",
+      "prior_review_sha256": "3851036ae89db863fc605750fdd3635ebe127a75991c72cb4d33e8b63a99b867",
+      "source_ids": [
+        "ch01_crisis_gatekeeper_2026",
+        "ch01_crisis_vgh_safety",
+        "ch01_death_2025_brief",
+        "ch01_crisis_mohw_1925_2026",
+        "ch01_suicide_reports_2026"
+      ],
+      "changes": "更新1925資訊至心理健康司現行頁；補入2025年1至9月通報人次與2025自殺死亡統計，逐一區分通報人次、死亡數、粗率與標準化率，避免換算個人危機機率。",
+      "frequency_assessment": "衛福部委託成果報告第10頁：2025年1至9月通報系統34,612人次，較2024年同期少8%；為行政通報人次而非不同個案或人口分母。2025死因統計：自殺死亡3,951人，粗死亡率16.9/10萬人口、年齡標準化死亡率12.9/10萬標準人口；不可推論個人風險。",
+      "limits": [
+        "照顧者不是心理治療師，陪伴不能保證風險解除；即使表面突然平靜，仍需要持續關懷與專業判斷。不將某種身分、性別或疾病視為必然危險，也不把求救看作操弄。本文不提供傷害方法、劑量或一個可自行排除危險的分數。專線資訊為臺灣適用，尚未取得精神醫療、心理與危機介入專業獨立審閱。",
+        "AI輔助核對官方與公立醫院公開來源，未取得精神醫療、心理、急救或危機介入專業獨立審閱；本文不是個案診療、危機評估或安全保證。"
+      ]
+    },
+    {
+      "id": "TW-01-033",
+      "title": "疑似農藥或燃燒廢氣中毒先安全求援，治療後仍依醫囑追蹤",
+      "before_sha256": "9ee99517eea9b4f16f3ad96a39c3579562fd5fb56801239d4e99d178767512f3",
+      "after_sha256": "aa103c75710ab01c2f3161ec7ce843959c103cfcb4ae02197acbc1132d8c62e9",
+      "prior_review_sha256": "c626e92038c2dab429fef34e2e3999969d770979113bbcf2c8d3981d30eb329d",
+      "source_ids": [
+        "ch01_pesticide_vgh704",
+        "ch13_co_hospital",
+        "ch13_co_fire2026",
+        "ch13_poison_pcc",
+        "ch13_cpr_faq",
+        "ch01_poison_center_contact",
+        "ch01_co_nfa_2025"
+      ],
+      "changes": "補入臺北榮總毒物中心現行電話、24小時免費服務與來電準備資訊；更新一氧化碳遲發神經症狀；加入消防署2024全年及2025截至3月16日公告數，清楚限制燃氣設備範圍、部分年度與缺少暴露分母。",
+      "frequency_assessment": "消防署2025-03-25公告：2024年全國燃氣熱水器相關一氧化碳事故24件、死亡4人、送醫59人；同公告另載2025截至3月16日事故14件、死亡1人、送醫41人，屬部分年度。沒有燃氣設備使用戶數／暴露人次分母；不代表所有CO暴露或農藥中毒。未找到可把農藥、職業、誤食、火場與燃氣事故合併的同年全國暴露率。",
+      "limits": [
+        "**臺灣頻率背景（急救後閱讀）：**消防署2025年公告記載，2024年全國燃氣熱水器相關一氧化碳中毒事故24件、死亡4人、送醫59人；同一公告另列2025年截至3月16日14件、死亡1人、送醫41人，這是年初累計，不代表2025全年。這些是消防通報事故／傷亡人數，沒有燃氣設備使用戶數或暴露人次分母；不等於所有一氧化碳暴露，更不包括農藥、職業中毒等全部中毒病例，不能推算個人機率。本次未找到同年度、可合併且有全暴露者分母的農藥與各類中毒全國資料。當下恢復清醒不保證之後無神經或器官傷害；傷害程度及追蹤須由醫療團隊判斷。",
+        "毒物中心與消防來源不能替代119、急診診療或現場測量；未取得毒物、急診、消防、職安或法律專業獨立審閱，無法確認個案預後、現場可進入性或2025完整全年統計。"
+      ]
+    },
+    {
+      "id": "TW-01-043",
+      "title": "擔心親友自殺時平靜直接詢問、陪伴並接上協助，立即危險先119",
+      "before_sha256": "30856ea3ceb7b3479edd6cfd0702d1b4b3faf83d793a9f293337f675697d7cc2",
+      "after_sha256": "ac5f888db2ca905e8d46693ea57124911b20b00004c467e6b7055e4512a923dc",
+      "prior_review_sha256": "9f3ae6aa0497c2787554169d539943205e2726c6d92ea5ecdfd988eeb48a128d",
+      "source_ids": [
+        "ch01_crisis_mlshb",
+        "ch01_crisis_nimh_ask",
+        "ch01_crisis_mohw_online_2026",
+        "ch01_crisis_mohw_1925_2026",
+        "ch01_suicide_reports_2026"
+      ],
+      "changes": "更新1925至心理健康司現行服務頁；把網路守門人線索留存限縮在網路情境並要求私下提供必要資料；補入2025通報人次及死亡統計，保留國外直接詢問證據的外推限制。",
+      "frequency_assessment": "衛福部委託成果報告第10頁：2025年1至9月通報系統34,612人次，較2024年同期少8%；非不同個案數或意念盛行率。2025死因統計：3,951人死亡，粗率16.9/10萬、年齡標準化率12.9/10萬；不代表直接詢問介入成效或個人風險。",
+      "limits": [
+        "**臺灣頻率背景（救援後閱讀）：**衛福部委託之114年全國自殺防治中心成果報告記載，2025年1至9月全國自殺通報34,612人次，較2024年同期減少8%；這是通報系統的人次，不等於不同個案數、全部未遂事件或自殺意念，也沒有全體暴露者分母，不能推算個人機率或意念盛行率。另依死因統計，2025年全國自殺死亡3,951人，粗死亡率每十萬人口16.9人；年齡標準化死亡率為每十萬人口12.9人，供不同年齡結構比較。這些數字不能當作個人風險或直接詢問的成效。NIMH指出直接問自殺念頭不會因問話而增加念頭，但這是美國研究綜整，不是臺灣對話成功率；本輪未取得臺灣同定義個人介入效果的原始研究。不把「答應不自傷」、暫時平靜或否認念頭當安全保證；重大風險優先轉介與救援。",
+        "衛福部網路守門人頁正文日期為2024-05-21，雖頁面目錄顯示2026-10-22更新，本次僅按可見正文核對；直接詢問「不增加意念」依據為美國NIMH綜整，未取得同定義臺灣介入成效研究。未取得心理、精神醫療、消防或法律專業獨立審閱。"
+      ]
+    },
+    {
+      "id": "TW-01-046",
+      "title": "化糞池、汙水槽與坑井先禁止擅入，有人倒下不可入內救人",
+      "before_sha256": "9e473ba615763fce1e7938f79d00b2dea380da3ac3f745bd10eeb9b3288b213a",
+      "after_sha256": "56b304abac85d56c79f8ac62f52f76185dc4e5822c72b8f36c06a8b27bd64e87",
+      "prior_review_sha256": "9b4c2d8e8ed975f053ba236417807195b7995c4e514891c25f46e84cbabccb72",
+      "source_ids": [
+        "ch01_confined_osha",
+        "ch01_confined_facilities_29"
+      ],
+      "changes": "再次核對局限空間圖表年份與2024數字；將一般住戶行動與雇主對勞工作業的29-1至29-7條義務分開；依2026-06-30修法頁面標明部分條文自2027-01-01生效，退役錯誤指向研磨輪第62條的來源ID。",
+      "frequency_assessment": "職安署官方圖表標示民國100至113年（2011–2024）；2024年局限空間重大職災2件、死亡2人。屬職業重大事故行政統計，沒有勞工進入作業或工時分母，也不含全部非職業事件，不能換算個人發生率或致死率。",
+      "limits": [
+        "開蓋、風扇、一般口罩或聞不到臭味都不是安全證明，不能用憋氣、綁繩或家用氧氣自行試進。**臺灣頻率證據：**職安署目前公開的圖表涵蓋民國100至113年（2011至2024）；113年（2024）局限空間重大職災2件、死亡2人。這是職業災害行政統計，不涵蓋所有民間或非職業事故，沒有進入作業人次分母，不能算致死率或個人發生率；該圖沒有提供114年（2025）或115年（2026）數字。更完整的工作者、雇主及承攬安全流程另見獨立「職業安全與健康」指引。",
+        "AI輔助核對法規及職安署頁面，未取得職安、消防或法律專業獨立審閱；本文不構成工程現場風險評估、進入許可、救援訓練或個案法律意見。"
+      ]
+    }
+  ],
+  "unresolved": {
+    "professional_review": "未取得精神醫療、心理、毒物、急診、消防、職安或法律領域獨立專業審閱；AI來源核對與工程驗證不能替代。",
+    "statistics": "CO最新完整年度官方數及多類中毒可比暴露分母尚未取得；自殺通報人次沒有個人風險分母；局限空間圖表不含2025年或非職業事件。",
+    "source_scope": "臺北榮總毒物中心服務資訊與119急救各司其職；網路守門人頁正文日期2024-05-21，頁面索引更新日不代表內文同步修訂。",
+    "publication_readiness": false
+  }
+}
