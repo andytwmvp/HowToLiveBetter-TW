@@ -121,13 +121,15 @@ class Chapter01DrivingChildFallRecheckTests(unittest.TestCase):
         self.assertEqual(after["substantive_rechecks"], before["substantive_rechecks"] + len(IDS))
         self.assertEqual(after["runtime_sources"], before["runtime_sources"] + len(NEW_SOURCE_IDS))
         self.assertEqual(after["source_registry"], before["source_registry"] + len(NEW_SOURCE_IDS))
-        self.assertEqual(after["source_registry"], load("localization/tw-edition/coverage.json")["registry_sources"])
-        self.assertEqual(len(validate_runtime()["sources"]), after["runtime_sources"])
         self.assertFalse(after["publication_ready"])
         self.assertFalse(publication_report()["publication_ready"])
 
         old = json.loads(subprocess.check_output(
             ["git", "show", BASE + ":localization/tw-edition/runtime.json"], cwd=ROOT, text=True))
+        old_coverage = json.loads(subprocess.check_output(
+            ["git", "show", BASE + ":localization/tw-edition/coverage.json"], cwd=ROOT, text=True))
+        self.assertEqual(after["runtime_sources"], len(old["sources"]) + len(NEW_SOURCE_IDS))
+        self.assertEqual(after["source_registry"], old_coverage["registry_sources"] + len(NEW_SOURCE_IDS))
         runtime = validate_runtime()
         current_sources = {source["id"]: source for source in runtime["sources"]}
         for source in old["sources"]:
