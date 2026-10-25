@@ -12,6 +12,17 @@ def check_ch25_browser(page,context,url,review):
         card=page.locator('#'+key);assert card.locator('h3').count()==5
         assert 'TW-ID:' not in card.inner_text() and '## ' not in card.inner_text()
         assert card.locator('a[href^="https://"]').count()>=len(expected[key]['source_ids'])
+    page.locator('#q').fill('已結案')
+    card=page.locator('#TW-25-005');assert card.count()==1
+    assert '登記完成' in card.inner_text() and '不等於給付核准' in card.inner_text()
+    page.locator('#q').fill('1950')
+    card=page.locator('#TW-25-007');assert card.count()==1
+    assert '15日內妥適處理' in card.inner_text() and '不是退款' in card.inner_text()
+    assert '不是提起消費訴訟的強制前置程序' in card.inner_text()
+    page.locator('#q').fill('第56條')
+    card=page.locator('#TW-25-008');assert card.count()==1
+    assert '第42條' in card.inner_text() and '不是投資商品' in card.inner_text()
+    page.locator('#reset').click()
     page.locator('#q').fill('中低收入戶')
     card=page.locator('#TW-25-006');assert card.count()==1
     assert '2026-01-01' in card.inner_text() and '私立' in card.inner_text()
@@ -32,5 +43,7 @@ def check_ch25_browser(page,context,url,review):
     page.goto((ROOT/'dist/HowToLiveBetter-TW.html').as_uri(),wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     assert set(page.locator('[data-id^="TW-25-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
+    for key,phrase in {'TW-25-005':'已結案','TW-25-006':'中低收入戶','TW-25-007':'1950','TW-25-008':'第56條'}.items():
+        card=page.locator('#'+key);assert phrase in card.inner_text()
     assert 'iCloud鑰匙圈' in page.locator('#TW-25-010').inner_text()
-    return ['第25章12條ID、五段標題與可點擊來源一致','指定公立設施減免搜尋、繼承書籤、手機自查及3個月與6個月不同起算、無水平溢出','離線12條與數位帳號限制保留；未以本測試聲稱外站連通或法律核准']
+    return ['第25章12條ID、五段標題與可點擊來源一致；死亡登記結案、消費申訴15日與第42／56條範圍均可搜尋且界線正確','指定公立設施減免搜尋、繼承書籤、手機自查及3個月與6個月不同起算、無水平溢出','離線12條與數位帳號限制保留；四篇再審正文及來源仍與共用資料一致，未以本測試聲稱外站連通或法律核准']
