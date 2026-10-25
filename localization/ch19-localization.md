@@ -6,7 +6,7 @@
 
 完成第19章TW-19-001至008、017、020、022至024共13條。涵蓋加班、特休、試用、資遣、預告、解僱爭議、自願離職文件、合法留證、證明文件、契約認定、競業與服務年限、調職與派遣。另11條職災、保險、稅務及霸凌主題未完成，不把部分章節寫成全部24條定稿。
 
-[正文目錄](../locales/zh-TW/book/ch19/README.md)提供獨立全文；`ch19-reviewed.json`保存本批原始編修內容，sources/ch19.json保存14筆來源登錄，reviews目錄保存13份逐項審閱紀錄。各檔與manifest／runtime的ID、路徑、正文、日期、來源及SHA-256同步。
+[正文目錄](../locales/zh-TW/book/ch19/README.md)提供獨立全文；`ch19-reviewed.json`與`sources/ch19.json`保存2026-10-16原始編修批次快照，不覆寫其後的歷史再審。現行正文及來源審閱以Markdown、manifest、runtime、個別review和回溯登錄為準，並逐項同步ID、路徑、日期、來源與SHA-256；後續來源批次另有獨立登錄檔。
 
 ## 核對方法與來源
 
