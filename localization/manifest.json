@@ -4625,6 +4625,7 @@
       "sources": [
         "jobportal",
         "bli_training_allowance_2026",
+        "bli_training_allowance_repeat_period_2026",
         "bli_employment_insurance_law_current",
         "bli_employment_insurance_history_2026",
         "bli_jobtraining_admin_2024",

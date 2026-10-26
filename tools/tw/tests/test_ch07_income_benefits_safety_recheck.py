@@ -19,6 +19,7 @@ NEW_SOURCE_IDS = {
     "ch07_mohw_aids_guide_2026",
     "ch07_aids_ntpc_recheck_2026",
     "bli_training_allowance_2026",
+    "bli_training_allowance_repeat_period_2026",
     "bli_employment_insurance_law_current",
     "bli_employment_insurance_history_2026",
     "bli_jobtraining_admin_2024",
@@ -125,11 +126,29 @@ class Ch07IncomeBenefitsSafetyRecheckTests(unittest.TestCase):
         self.assertEqual(evidence["counts_before"]["coverage_snapshot_registry_sources"], 820)
         self.assertEqual(evidence["counts_before"]["core_completed"], 278)
         self.assertEqual(evidence["counts_after"]["core_completed"], 278)
+        self.assertEqual(evidence["counts_after"]["runtime_sources"], 753)
+        self.assertEqual(evidence["counts_after"]["source_registry"], 834)
         self.assertEqual(evidence["counts_after"]["runtime_sources"], len(runtime["sources"]))
         self.assertEqual(evidence["counts_after"]["source_registry"], coverage["registry_sources"])
         self.assertEqual(coverage["core_reviewed_entries"], report["publication_completed_entries"])
         self.assertFalse(coverage["publication_ready"])
         self.assertFalse(report["publication_ready"])
+
+    def test_corrected_law_attribution_and_training_period_source(self):
+        runtime = validate_runtime()
+        items = {row["id"]: row for row in runtime["items"]}
+        sources = {row["id"]: row for row in runtime["sources"]}
+        disability = items["TW-07-008"]["body"]
+        training = items["TW-07-013"]["body"]
+        self.assertIn("第5條定義身心障礙者", disability)
+        self.assertIn("第6條規範鑑定受理", disability)
+        self.assertIn("第7條要求地方主管機關", disability)
+        self.assertIn("https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050046", disability)
+        self.assertIn("bli_training_allowance_repeat_period_2026", items["TW-07-013"]["source_ids"])
+        self.assertEqual(sources["bli_training_allowance_repeat_period_2026"]["url"],
+                         "https://www.bli.gov.tw/0015724.html")
+        self.assertIn("同一非自願離職保險事故", sources["bli_training_allowance_repeat_period_2026"]["supports"])
+        self.assertIn("最長6個月", training)
 
 
 if __name__ == "__main__":
