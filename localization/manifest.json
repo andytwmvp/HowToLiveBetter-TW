@@ -604,9 +604,10 @@
       "sources": [
         "ch01_nhi_puncture",
         "ch01_cdc_tetanus_manual",
-        "ch01_cdc_tetanus_counts"
+        "ch01_cdc_tetanus_manual_2026",
+        "ch01_cdc_tetanus_counts_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "被鐵釘、木刺扎到或者傷口沾了泥土，當天去處理，順便問破傷風要不要打",
@@ -980,9 +981,11 @@
         "ch01_crisis_gatekeeper_2026",
         "ch01_crisis_vgh_safety",
         "ch01_mental_support_2026",
-        "ch01_mental_support_fees"
+        "ch01_mental_support_fees",
+        "ch01_crisis_mohw_1925_2026",
+        "ch01_mohw_suicide_stats_114"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "自殺念頭一冒出來先告訴身邊的一個人，把這幾十分鐘交出去",
@@ -1248,10 +1251,10 @@
         "ch01_af_vgh",
         "ch01_af_aspirin_vghtc",
         "ch01_af_ntuh_ecg",
-        "ch01_af_chao_pubmed",
-        "ch01_af_chao_manuscript"
+        "ch01_af_stroke_guideline_2024",
+        "ch01_af_incidence_2021"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "心慌、心跳亂就去做心電圖，查出房顫請醫生評估吃抗凝藥防中風，別拿阿司匹林代替",
@@ -1336,9 +1339,10 @@
       "target_path": "locales/zh-TW/book/ch01/TW-01-048.md",
       "sources": [
         "ch01_food_fda_202408",
-        "ch01_food_fda_home"
+        "ch01_food_fda_home",
+        "ch01_food_tpe_milkrice_2026"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "泡發的木耳、銀耳當頓吃完別過夜，河粉、腸粉這類溼米粉買來當天吃，家裡不自制酵米麵",

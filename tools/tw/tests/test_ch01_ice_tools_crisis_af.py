@@ -23,7 +23,7 @@ class IceToolsCrisisAFTests(unittest.TestCase):
   self.assertIn('不以15公分',b['TW-01-041']);self.assertIn('海外',b['TW-01-041'])
   self.assertIn('鋸齒',b['TW-01-042']);self.assertIn('護罩',b['TW-01-042']);self.assertIn('17例',b['TW-01-042'])
   self.assertIn('不要承諾保密',b['TW-01-043']);self.assertIn('119',b['TW-01-043']);self.assertIn('資料限制',b['TW-01-043'])
-  self.assertIn('1.51',b['TW-01-044']);self.assertIn('2011',b['TW-01-044']);self.assertIn('阿斯匹靈',b['TW-01-044']);self.assertIn('人年',b['TW-01-044'])
+  self.assertIn('32,817',b['TW-01-044']);self.assertIn('169.06',b['TW-01-044']);self.assertIn('112.38',b['TW-01-044']);self.assertIn('2021',b['TW-01-044']);self.assertIn('阿斯匹靈',b['TW-01-044']);self.assertIn('人年',b['TW-01-044'])
   self.assertIn('不等找出物質',b['TW-13-021']);self.assertIn('退燒藥',b['TW-13-022']);self.assertIn('監測人次',b['TW-13-023']);self.assertIn('不採333',b['TW-13-027'])
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts

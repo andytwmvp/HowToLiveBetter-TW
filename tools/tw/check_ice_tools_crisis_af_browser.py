@@ -25,7 +25,7 @@ def check_ice_tools_crisis_af_browser(page, context, url, review):
         button = page.locator('#TW-01-043 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        page.locator('#q').fill('1.51')
+        page.locator('#q').fill('169.06')
         assert page.locator('#TW-01-044').count() == 1
         page.locator('#reset').click()
         page.locator('#q').fill('不等找出物質')
