@@ -116,6 +116,9 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
         for source_id, previous in prior_runtime.items():
             self.assertEqual(self.sources[source_id], previous)
         self.assertTrue(set(prior_registry).issubset(registry_rows))
+        for source_id, previous in prior_registry.items():
+            with self.subTest(prior_registry_source=source_id):
+                self.assertEqual(registry_rows[source_id], previous)
         self.assertTrue((set(prior_runtime) | NEW_SOURCE_IDS).issubset(self.sources))
         for row in retired:
             with self.subTest(retired_source=row['id']):
@@ -187,15 +190,22 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
         source = self.sources[source_id]
         self.assertEqual(source['url'], 'https://job.taiwanjobs.gov.tw/internet/index/index.aspx')
         self.assertIn('工作地點', source['supports'])
+        self.assertIn('工作職稱、工作內容與技能專長', source['supports'])
         self.assertIn(source_id, self.items['TW-23-012']['source_ids'])
-        self.assertIn(source['url'], {check['url'] for check in read('localization/reviews/TW-23-012.json')['source_checks']})
-        self.assertIn(source['url'], {check['url'] for check in self.evidence_items['TW-23-012']['source_checks']})
+        review_checks = {check['url']: check for check in read('localization/reviews/TW-23-012.json')['source_checks']}
+        evidence_checks = {check['url']: check for check in self.evidence_items['TW-23-012']['source_checks']}
+        self.assertIn(source['url'], review_checks)
+        self.assertIn(source['url'], evidence_checks)
+        for check in (review_checks[source['url']], evidence_checks[source['url']]):
+            self.assertIn('關鍵字', check['claim'])
+            self.assertIn('工作職稱、工作內容、技能專長', check['supporting_passage'])
 
     def test_cpa_reform_separates_assistant_eligibility_and_practice_years(self):
         body = self.items['TW-23-021']['body']
         for phrase in ('2026年8月5日', '10學分以上', '高等或普通考試會計、審計人員及格', '高級商業職業學校畢業', '永續資訊簽證工作的助理不受這四款資格限制', '二年以上經驗', '兩項不同規定', '公會', '不包括受委任辦理稅捐查核簽證申報'):
             self.assertIn(phrase, body)
         self.assertIn('登錄後還須加入記帳士公會', body)
+        self.assertIn('全國聯合會擬訂並報主管機關核定', body)
         self.assertIn('考選部當年度考試動態詳頁本次直接讀取逾時', body)
         self.assertIn('未取得獨立法律、會計或考選專業簽證', body)
 
