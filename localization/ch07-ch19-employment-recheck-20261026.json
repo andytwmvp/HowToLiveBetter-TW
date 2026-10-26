@@ -1,0 +1,300 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "0149b4a25d9e2f79e92b8367323a36e1664de39d",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-07-001",
+      "TW-07-002",
+      "TW-07-015",
+      "TW-19-006"
+    ],
+    "risk_order": [
+      "TW-07-015",
+      "TW-07-001",
+      "TW-07-002",
+      "TW-19-006"
+    ],
+    "risk_basis": "依招募詐騙可能造成人身控制或金融犯罪連帶風險、失業給付期限、欠薪即時現金流與權益保存、再到解僱爭議程序排序；不是事件發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 143,
+    "runtime_sources": 715,
+    "source_registry": 796,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 147,
+    "runtime_sources": 723,
+    "source_registry": 804,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "source_id": "ch07_unemployment_stats_2025",
+      "period": "2025",
+      "scope": "勞動部全國月報表7-4",
+      "unit": "受理案件數",
+      "numerator_definition": "失業給付首次認定及再次認定申請受理件數合計",
+      "values": {
+        "total_cases": 447304,
+        "first_recognition_cases": 94892,
+        "repeat_recognition_cases": 352412
+      },
+      "denominator": null,
+      "data_type": "行政受理案件數",
+      "limitations": "非不重複申請人、核准件數或實際給付款；沒有符合資格勞工分母，不能估個人失業機率。",
+      "source_document_edition": "勞動統計月報2026年9月號，PDF更新日期2026-10-22，2026-10-26查閱",
+      "publication_method": "官方月報PDF表7-4，以表格標示為案件數；不是人數或個人發生率",
+      "source": "勞動部：勞動統計月報（2026年9月號），表7-4"
+    },
+    {
+      "source_id": "labor_dispute_stats_2024",
+      "period": "2024（比較列2023）",
+      "scope": "勞動部全國勞資爭議表8-1",
+      "unit": "案件數；另列表列人數",
+      "numerator_definition": "全類勞資爭議行政案件及積欠工資主要爭議分類案件",
+      "values": {
+        "all_disputes_cases_2024": 27419,
+        "listed_persons_2024": 38766,
+        "wage_arrears_cases_2024": 9367,
+        "wage_arrears_cases_2023": 9669
+      },
+      "denominator": null,
+      "data_type": "行政爭議案件數及表列人數",
+      "limitations": "每案僅按一項主要爭議類別；非不重複勞工、全體工人暴露分母、受償數或個人發生率。"
+    },
+    {
+      "source_id": "ch07_cib_fakejob_case_20260907",
+      "period": "偵辦案件期間2025-12-23至2026-08-20；公告2026-09-07",
+      "scope": "跨臺北、新北、桃園、臺南、高雄及屏東的一宗警政偵辦案件",
+      "unit": "單案中被引述求職者人數",
+      "numerator_definition": "警方公告遭假徵才利用為詐欺車手的11名求職者",
+      "values": {
+        "persons_in_case": 11
+      },
+      "denominator": null,
+      "data_type": "單一偵辦案例",
+      "limitations": "不是全國年度案件數、發生率或求職者分母，不估算個人風險。"
+    },
+    {
+      "source_id": "ch07_cib_fakejob_investment_case_20260809",
+      "period": "警方公開案例2026-08-09",
+      "scope": "一名遠端求職者的單一警政案例",
+      "unit": "個案金額",
+      "numerator_definition": "警方公告求職者先領兩個月薪資後遭誘導投資的單案損失",
+      "values": {
+        "loss_ntd": 500000,
+        "salary_months_before_loss": 2
+      },
+      "denominator": null,
+      "data_type": "單一偵辦案例",
+      "limitations": "不是平均損失、典型損害或案件發生率。"
+    }
+  ],
+  "new_source_ids": [
+    "ch07_unemployment_stats_2025",
+    "ch07_jobinsurance_deadlines_2026",
+    "labor_dispute_stats_2024",
+    "mol_mediation_support_20260903",
+    "mol_labor_legal_aid_thresholds_20261002",
+    "ch07_cib_fakejob_patterns_20261022",
+    "ch07_cib_fakejob_case_20260907",
+    "ch07_cib_fakejob_investment_case_20260809"
+  ],
+  "new_sources": [
+    [
+      "ch07_unemployment_stats_2025",
+      "勞動部：勞動統計月報（2026年9月號），表7-4",
+      "https://statdb.mol.gov.tw/html/mon/4.Full-Text%20Download.pdf",
+      "2026年9月號勞動統計月報（2026-10-22更新）表7-4列2025年失業給付受理447,304件，其中首次認定申請94,892件、再次認定申請352,412件。單位為受理案件數，未提供不重複申請人或符合資格勞工分母；不能推算核准、實際給付或個人失業機率。"
+    ],
+    [
+      "ch07_jobinsurance_deadlines_2026",
+      "就業保險法：求職登記起算與請求權期限（第20、24、25條）",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=N0050021",
+      "第20條規定符合資格之失業給付自求職登記第15日起算；第24條請求權自得請領日起2年不行使消滅；第25條另定退保後2年內辦理求職登記及證明文件程序。期限性質與起算點不同。法規最後修正日為2022-01-12。"
+    ],
+    [
+      "labor_dispute_stats_2024",
+      "勞動部：2024年勞資爭議統計，表8-1",
+      "https://statdb.mol.gov.tw/html/nat/113/8.%E8%A1%A88-1.pdf",
+      "表8-1列2024年全國勞資爭議27,419件、表列爭議人數38,766人；積欠工資為主要爭議類別之一，共9,367件，2023年為9,669件。每案按主要爭議分類，沒有全體勞工暴露分母，不等於追回或受償案件。"
+    ],
+    [
+      "mol_mediation_support_20260903",
+      "勞動部：勞資爭議調解、仲裁與訴訟扶助（2026-09-03更新）",
+      "https://www.mol.gov.tw/1607/28162/28296/81778/81802/81951/",
+      "勞動部2026-09-03更新說明勞資任一方可向勞務提供地地方政府申請免費調解；仲裁須雙方同意，仲裁、行政調解與法院程序分開。律師及訴訟扶助依不同方案與資格審查，不是自動核准。"
+    ],
+    [
+      "mol_labor_legal_aid_thresholds_20261002",
+      "勞動部：勞工法律及生活費用扶助資格（2026-10-02更新）",
+      "https://www.mol.gov.tw/1607/28752/28774/28776/28778/30712/",
+      "勞動部2026-10-02更新說明其中一類特定勞動事件訴訟代理扶助，須先經地方調解、進入法院程序，並以月收入總計不超過新臺幣65,000元、扣除自用住宅後資產不超過300萬元等條件審查；必要費用與生活費方案資格不同，不可套用同一門檻。"
+    ],
+    [
+      "ch07_cib_fakejob_patterns_20261022",
+      "刑事警察局：假求職常見手法與求職防詐",
+      "https://www.cib.npa.gov.tw/ch/app/data/view?id=1909&module=wg116&serno=87a85079-c42f-48cb-9506-14e08c912a39",
+      "刑事警察局頁面於2026-10-22更新，列假職缺可能要求帳戶密碼、預付費用、代辦金融服務或限制人身自由等風險，並提醒查證、保護帳戶及求援；屬防詐指引，未提供全國發生率。"
+    ],
+    [
+      "ch07_cib_fakejob_case_20260907",
+      "刑事警察局：假徵才案中11名求職者遭利用為詐欺車手",
+      "https://www.cib.npa.gov.tw/ch/app/news/view?id=1885&module=news&serno=95961c9f-bdcd-40c1-a2d3-fcc75e87b775",
+      "刑事警察局2026-09-07公布一宗偵辦案件，跨臺北、新北、桃園、臺南、高雄及屏東，案情期間為2025-12-23至2026-08-20，11名求職者遭假徵才利用為詐欺車手。這是單一偵辦案例，不是年度案件總數、受害率或個人發生機率。"
+    ],
+    [
+      "ch07_cib_fakejob_investment_case_20260809",
+      "刑事警察局：假遠端工作以真薪資誘導投資",
+      "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=e1176987-bf06-46b1-b333-6bfe1e752fb3",
+      "刑事警察局2026-08-09公布一宗遠端求職個案，求職者先領取兩個月真實薪資，其後遭誘導投資損失新臺幣50萬元並被要求追加款項；警方提供165及110求助分流。此為單一案例，不可推算案件頻率或典型損失。"
+    ]
+  ],
+  "reused_source_ids": [
+    "ch07_jobinsurance",
+    "ch07_laf_cost",
+    "ch07_mediation",
+    "ch07_wagefund",
+    "ch19_labor_events",
+    "ch19_lsa",
+    "employmentact",
+    "jobservice",
+    "laboraid",
+    "labordispute",
+    "unemploypay"
+  ],
+  "retired_source": [
+    {
+      "id": "fraud165",
+      "reason": "2026-10-26直接讀取舊警政頁時回傳502，未能重新核對其現行內容；不以失效／不可讀頁面繼續支撐本篇，改用本次直接核讀的刑事警察局假求職指引及2026年案件說明。舊來源物件保留於runtime及Git歷史。",
+      "prior_source_sha256": "98a75d32784a6d9b302c75609fcb6e97c9cacd9156c62090aefafa57c4b43110",
+      "replacement_ids": [
+        "ch07_cib_fakejob_patterns_20261022",
+        "ch07_cib_fakejob_case_20260907",
+        "ch07_cib_fakejob_investment_case_20260809"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-07-001",
+      "before_sha256": "ab67b97464d92fcbc8c531d24e782a3752972a1df6152f1d5a59b6eb23375902",
+      "after_sha256": "874cfaca632dc0cca59c58e340079e1a30c697032e7826f9cdd9bc6aefa0e6ca",
+      "prior_review_sha256": "35ca2bcc980fda2b5e434db85d981084016ac69b0a7f74bafd1da9551116534d",
+      "source_ids": [
+        "ch07_jobinsurance",
+        "unemploypay",
+        "jobservice",
+        "ch07_jobinsurance_deadlines_2026",
+        "ch07_unemployment_stats_2025"
+      ],
+      "changes": "核對就保法第20、24、25條，明確分開第15日起給付、退保後登記期限及請求權消滅期限；補正符合資格眷屬加給條件。加入勞動部2025年受理案件數及案件單位／分母限制。",
+      "frequency_assessment": "勞動部表7-4為2025年行政受理案件：447,304件，其中首次認定94,892件、再次認定352,412件。表內沒有不重複申請人或符合資格就業人口分母，也不是核准／核付數；不推算個人失業機率。",
+      "limits": [
+        "2025年數據是受理案件數，沒有不重複申請人及符合資格勞工分母，不能估計個人失業機率；失業資格、給付與期限仍須由主管機關依個案確認。AI輔助來源核對，未取得獨立就業保險或法律專業審閱。",
+        "AI輔助來源核對，尚未取得相關領域獨立專業審閱。"
+      ],
+      "review_path": "localization/reviews/TW-07-001.json",
+      "retired_sources": []
+    },
+    {
+      "id": "TW-07-002",
+      "before_sha256": "959b551cf8941b5f83ca7af9431e7f708f4da59bcde951ca72a0116114f6aa6b",
+      "after_sha256": "e5c0673f442fdd07be1b0598c541fd9576a0110bce3c76846ae1bbd840e87153",
+      "prior_review_sha256": "698f3444b68d8052ebc32477b40039fe7172f1722abb09a6c1dfbd1b9f3ce1c0",
+      "source_ids": [
+        "ch07_mediation",
+        "ch07_wagefund",
+        "ch07_laf_cost",
+        "mol_mediation_support_20260903",
+        "labor_dispute_stats_2024"
+      ],
+      "changes": "更新欠薪保存證據、地方調解、仲裁／法院分流及墊償前提；補上2024年勞資爭議與積欠工資主分類案件數，明確排除個人風險與追回率推論。",
+      "frequency_assessment": "勞動部2024年表8-1為全國27,419件爭議、表列38,766人；積欠工資9,367件，2023年9,669件。按每案主要爭議分類，缺全體勞工暴露分母，不能換算個人遇到欠薪或實際追回的機率。",
+      "limits": [
+        "行政爭議案件數不等於不重複勞工、受償數或個人機率；欠薪時效、雇主停業狀況、調解效力及墊償資格須按個案確認。AI輔助來源核對不等於律師或勞動行政專業簽證。",
+        "AI輔助來源核對，尚未取得相關領域獨立專業審閱。"
+      ],
+      "review_path": "localization/reviews/TW-07-002.json",
+      "retired_sources": []
+    },
+    {
+      "id": "TW-07-015",
+      "before_sha256": "7f80c653ad859275079eb0248adcaf49421cc2fb4457ff2fc7c279d1e6862b56",
+      "after_sha256": "3c9d856e9a6421c1fa7ae0e8665e2ab486c4015437d1d74e237119a6e1cda2af",
+      "prior_review_sha256": "6e99a71881d71ee8872814da3cb202319348675ce2c420c80edaac263b3c3e06",
+      "source_ids": [
+        "employmentact",
+        "jobservice",
+        "ch07_cib_fakejob_patterns_20261022",
+        "ch07_cib_fakejob_case_20260907",
+        "ch07_cib_fakejob_investment_case_20260809"
+      ],
+      "changes": "更新就服法僱主與私立仲介規範差異，補入刑事警察局2026年假求職指引及兩宗公開案件；加入停止金流、銀行聯繫、保全證據、165／110分流，區分單一案例與發生率。",
+      "frequency_assessment": "未找到有全國一致假求職詐騙定義及求職者分母的官方統計。刑事警察局2026年公布的11人車手案及50萬元遠端求職投資案均為單一偵辦個案，不是全國年件數或個人發生率。",
+      "limits": [
+        "警方公開案件是個案，未取得具全國一致定義及求職者分母的假求職詐騙率；求助不保證止付、追回損失或免除法律責任。AI輔助來源核對不等於警政、法律或金融專業獨立審閱。",
+        "AI輔助來源核對，尚未取得相關領域獨立專業審閱。"
+      ],
+      "review_path": "localization/reviews/TW-07-015.json",
+      "retired_sources": [
+        {
+          "id": "fraud165",
+          "reason": "2026-10-26直接讀取舊警政頁時回傳502，未能重新核對其現行內容；不以失效／不可讀頁面繼續支撐本篇，改用本次直接核讀的刑事警察局假求職指引及2026年案件說明。舊來源物件保留於runtime及Git歷史。",
+          "prior_source_sha256": "98a75d32784a6d9b302c75609fcb6e97c9cacd9156c62090aefafa57c4b43110",
+          "replacement_ids": [
+            "ch07_cib_fakejob_patterns_20261022",
+            "ch07_cib_fakejob_case_20260907",
+            "ch07_cib_fakejob_investment_case_20260809"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-19-006",
+      "before_sha256": "a9f27686fcca5661d5f59e361725dd8f2faf4637766994e7b976bd0f85e4e0ab",
+      "after_sha256": "bbfba07e2c3e28969b7473b7c399c16f875e1ac1deb689877a0841d46aa1d88d",
+      "prior_review_sha256": "20fa650009d81b1a636b8c79e62a4160abc632f2391e4462f759fa0c59e3f6d1",
+      "source_ids": [
+        "ch19_lsa",
+        "labordispute",
+        "ch19_labor_events",
+        "laboraid",
+        "mol_mediation_support_20260903",
+        "labor_dispute_stats_2024",
+        "mol_labor_legal_aid_thresholds_20261002"
+      ],
+      "changes": "更新地方調解免費入口、仲裁雙方同意及法院暫時處分個別要件；明示第49條準許情形及可能返還工資；核對2026年特定法扶代理方案資力門檻，加入全類爭議統計及限制。",
+      "frequency_assessment": "勞動部2024年勞資爭議總數27,419件涵蓋多種爭議；未單列所有不當解僱，更沒有第49條暫時處分聲請／準許數或勞工暴露分母。案件數不能換算個人機率、準許率或結果保證。",
+      "limits": [
+        "2024統計是全類勞資爭議案件，並非違法解僱或第49條暫時處分件數；沒有勞工暴露分母或準許率。扶助資格及個案權利須由法院、主管機關與法扶依當時資料確認；AI輔助核對不是個案法律意見或律師簽證。",
+        "AI輔助來源核對，尚未取得相關領域獨立專業審閱。"
+      ],
+      "review_path": "localization/reviews/TW-19-006.json",
+      "retired_sources": []
+    }
+  ],
+  "unresolved": [
+    "沒有可用全國分母的失業給付與欠薪事件個人風險估計；保留行政案件數及限制。",
+    "沒有一致事件定義與求職者分母的假求職詐騙發生率；刑事案件僅為案例。",
+    "四篇均為AI輔助來源核對；尚未取得就業保險、勞動行政、法律、警政或金融專業獨立簽核。",
+    "全書未登錄來源ID與待處理引用缺口仍為115個與306處；本批未新增核心，出版狀態仍未就緒。"
+  ]
+}
