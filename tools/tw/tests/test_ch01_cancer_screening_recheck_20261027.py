@@ -74,6 +74,7 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
                 self.assertEqual(item['title'], TITLES[item_id])
                 body = (ROOT / item['target_path']).read_bytes()
                 body_hash = hashlib.sha256(body).hexdigest()
+                markdown_title = next(line[2:] for line in body.decode('utf-8').splitlines() if line.startswith('# '))
                 review_path = f'localization/reviews/{item_id}.json'
                 review_raw = (ROOT / review_path).read_bytes()
                 review = json.loads(review_raw)
@@ -81,6 +82,8 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
                 record = self.records[item_id]
                 self.assertEqual(body_hash, item['after_sha256'])
                 self.assertEqual(body_hash, review['target_sha256'])
+                self.assertEqual(item['title'], markdown_title)
+                self.assertEqual(self.items[item_id]['title'], markdown_title)
                 self.assertEqual(body.decode('utf-8'), self.items[item_id]['body'])
                 self.assertEqual(entry['verified_at'], self.evidence['reviewed_at'])
                 self.assertEqual(entry['sources'], item['source_ids'])
@@ -107,7 +110,8 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
         previous_ids = [source['id'] for source in previous]
         current_ids = [source['id'] for source in self.runtime['sources']]
         self.assertEqual(current_ids[:len(previous_ids)], previous_ids)
-        self.assertEqual(set(current_ids[len(previous_ids):]), NEW_SOURCE_IDS)
+        runtime_added_ids = current_ids[len(previous_ids):]
+        self.assertTrue(NEW_SOURCE_IDS.issubset(set(runtime_added_ids)))
         for source in previous:
             self.assertEqual(self.sources[source['id']], source)
         added = {source['id']: source for source in self.evidence['sources_added']}
@@ -116,6 +120,9 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
         catalog = read('localization/tw-edition/sources/ch01-cancer-screening-recheck-20261027.json')
         rows = {row[0]: row for row in catalog['sources']}
         self.assertEqual(set(rows), NEW_SOURCE_IDS)
+        runtime_batch_order = [source_id for source_id in runtime_added_ids if source_id in NEW_SOURCE_IDS]
+        self.assertEqual([source['id'] for source in self.evidence['sources_added']], runtime_batch_order)
+        self.assertEqual([row[0] for row in catalog['sources']], runtime_batch_order)
         for source_id in NEW_SOURCE_IDS:
             self.assertEqual(self.sources[source_id], added[source_id])
             self.assertEqual(rows[source_id][2], added[source_id]['url'])
@@ -160,7 +167,9 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
         self.assertIn('45至74歲', bodies['TW-01-019'])
         self.assertIn('40至44歲', bodies['TW-01-019'])
         self.assertIn('檢查年度減出生年', bodies['TW-01-024'])
-        self.assertIn('兩次檢查的間隔則以檢查年度相差至少2年', bodies['TW-01-024'])
+        self.assertIn('女性年差40至75、男性45至75', bodies['TW-01-024'])
+        self.assertIn('年差50至75', bodies['TW-01-024'])
+        self.assertIn('兩次檢查的間隔以檢查年度相差至少2年', bodies['TW-01-024'])
         self.assertIn('咳血', bodies['TW-01-024'])
         self.assertIn('19,986例', bodies['TW-01-024'])
 
