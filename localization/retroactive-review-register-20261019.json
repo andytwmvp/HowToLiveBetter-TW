@@ -19409,6 +19409,244 @@
       ],
       "retired_sources": [],
       "review_path": "localization/reviews/TW-01-048.json"
+    },
+    {
+      "id": "TW-23-005",
+      "before_sha256": "409238fbcbb42af20ea0c30a9a4c93f9cd7caaa8461c835ebf641a4305820367",
+      "after_sha256": "80f00f7ed1efe32a895865b70e32c7181ec59a9efb88c499572d57751c46a1ca",
+      "prior_revision": "eda74bc4428cff38e3e41cd1c680dd7bc50792c6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "4a89926aa0838f5cde986ad02bb98e23d01fbb2958cda64d511a1d90f46f628e",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣國中升學、高中職升科技校院、五專或二技；115手冊與116日程並列，年度混用可造成資格或期限誤判。",
+      "frequency_assessment": "錄取依年度、管道、學校、資格和志願而異，無合格申請人與個人條件配對的全國同口徑分母，不估個人錄取率；志願增額不是錄取機率。",
+      "changes": "更新116年度招生入口與志願公告，區分115手冊與116日程；補入僅特殊選才及技優甄審由5增至6志願，依當年簡章核資格、期限及錄取後規則。",
+      "source_ids": [
+        "ch23_admission_116_portal_20261027",
+        "ch23_admission_116_choices_20260803"
+      ],
+      "previous_source_ids": [
+        "ch23_admission"
+      ],
+      "previous_review_claims": [
+        "官方宣導入口確有五專、四技二專及二技等不同進路資料；本批沒有查核全部簡章內文或截止日。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.techadmi.edu.tw/manual.php",
+          "claim": "官方入口列有115學年度多類入學手冊與116學年度四技二專、五專日程海報；未以未讀PDF聲稱已核對116完整資格或日期。",
+          "supporting_passage": "編者摘要（非逐字引文）：入口HTML列出115學年度四技二專、二技、五專手冊，及116學年度四技二專、五專招生日程海報。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取招策會入口HTML項目名稱；未下載閱讀PDF。"
+        },
+        {
+          "url": "https://www.techadmi.edu.tw/bbs-detail.php?gid=480&nid=1860",
+          "claim": "116學年度起四技二專特殊選才與技優甄審志願數由5個增為6個。",
+          "supporting_passage": "編者摘要（非逐字引文）：招策會2026-08-03公告明載兩管道志願數從5增至6，依教育部2026-07-22函。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取官方公告HTML、刊登日期與管道名稱，未擴張至其他招生方式。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_admission",
+          "replacement_ids": [
+            "ch23_admission_116_portal_20261027"
+          ],
+          "reason": "原入口查核時間為2026-10-16；本次重新讀取同一官方入口，建立2026-10-27的現行證據紀錄，以保留原稿和新查核的時間界線。",
+          "prior_source_sha256": "eec5880c2da52ac3f887957db43c54835084fc2639711fef9bf4ace10c36d8f5"
+        }
+      ],
+      "limits": [
+        "未逐份下載閱讀116年度各管道完整簡章；資格、日期、費用與放棄規則須按實際管道查核。志願增額只適用特殊選才和技優甄審。未找到全臺各管道合格申請人與個人條件配對的分母，不估個人錄取率。",
+        "AI輔助招生資料核對，未取得獨立教育專業複核；不是個案錄取資格確認。"
+      ],
+      "review_path": "localization/reviews/TW-23-005.json"
+    },
+    {
+      "id": "TW-23-011",
+      "before_sha256": "c0fdd7ab1f1d505632f3b69beb3cf45c8de3911434984f42a40cc89b4d9ef9cb",
+      "after_sha256": "d5c83c5e91e03a949af6b6e002c7cd7760cc84c79b93b1dc29f53cd0e6e7ec57",
+      "prior_revision": "eda74bc4428cff38e3e41cd1c680dd7bc50792c6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "46cab905cfa73781bdc62a41b5a23700cc68397fc2b784e71a39ab80d9291b6c",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣學生、在職者及職訓學員報考技術士檢定，按職類、級別核對資格並留意三職類2027年才生效的變更。",
+      "frequency_assessment": "三梯次是檢定安排，不是通過率；無考照者、級別、僱主採認與薪資配對的全國同口徑分母，不估個人考取或加薪機率。",
+      "changes": "精確核對技術士辦法第5至9、47、49條，補入三職類2027生效公告、計齡日、年度梯次、不得借證及無薪資因果母數。",
+      "source_ids": [
+        "ch23_certificate",
+        "ch23_certificate_exam_schedule_current",
+        "ch23_skill_cooking_qualification_20260722"
+      ],
+      "previous_source_ids": [
+        "ch23_certificate"
+      ],
+      "previous_review_claims": [
+        "第5至8條規定技術士級別與不同報考途徑，第47條發證；該級別本身不是所有僱主的薪資表。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
+          "claim": "技術士職類分級、丙級／單一級一般報檢條件與計齡日、高級資格及特殊職類差異、合格發證與不得租借。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行辦法第5至9條列分級、資格途徑和主管機關另定資格；第47條規定合格發證，第49條禁止租借。最後修正日2023-11-02。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取法規資料庫第5至9、47、49條及修正日期；不以一般條件涵蓋特殊職類。"
+        },
+        {
+          "url": "https://www.wdasec.gov.tw/News_Content.aspx?n=611E645F4BAB689F&s=DC23306255B80E52&sms=47C68486FEC19CA4",
+          "claim": "技術士技能檢定每年三梯次；職類、級別與時程按年度公告，非每梯次都有全部職類。",
+          "supporting_passage": "編者摘要（非逐字引文）：技能檢定中心FAQ（2026-04-29更新、2026-07-01檢核）依辦法第12條說明全國技術士技能檢定每年三梯次，並於年底前公告下年度梯次、職類級別、報名與測試事項。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀技能檢定中心FAQ全文及更新／檢核日期；依其說明記錄年度三梯次與公告時間，未推定各職類每梯次均開辦。"
+        },
+        {
+          "url": "https://skill.tcte.edu.tw/news_detail.php?no=MTAwNDA5&valid=08c308c36d906fa6acbb11a862ddec93",
+          "claim": "中餐烹調、西餐烹調與食物製備職類另訂報檢資格，自2027-07-01生效。",
+          "supporting_passage": "編者摘要（非逐字引文）：技能檢定中心公告標題及內文載明三職類申請檢定資格自116年7月1日生效，發佈日2026-07-22。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取公告HTML及日期；未閱讀連結頁以外的新資格全文。"
+        }
+      ],
+      "retired_sources": [],
+      "limits": [
+        "三梯次不代表每職類每梯次均開辦。三職類2027-07-01生效公告未列完整細則，本文不轉述未讀規定；個人資格仍以年度簡章為準。",
+        "未找到考照者、證照級別、僱主採認、錄取和薪資配對母數，不估個人考取或加薪機率；未取得獨立法律、職涯或職安專業複核。"
+      ],
+      "review_path": "localization/reviews/TW-23-011.json"
+    },
+    {
+      "id": "TW-23-012",
+      "before_sha256": "cf255ef99667ba6ab5b70d938cfe43a1dc22bb3340679709567189cd9fcf28ff",
+      "after_sha256": "570ac7d24b8b8f07af8266a3c57bdabf1e6b037c7948615cb50e353c2af8c407",
+      "prior_revision": "eda74bc4428cff38e3e41cd1c680dd7bc50792c6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a15cfe0e11d01ce7f445b348b5453abf0b55b8b3dbd61197a23f323324534de6",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣求職、轉職與職訓決策；保留全國工業服務業職缺與全時薪資資料不同的母體、期間和分母。",
+      "frequency_assessment": "勞動部調查估計職缺296,143個、職缺率3.3%、全時平均招募3.1個月；職缺率分母為296,143職缺加8,584,682名員工，不是求職者，不能換算個人錄取率。",
+      "changes": "更新勞動部6月底職缺數的精確表值、員工數、職缺率分母、招募時間、樣本期間與定義；重核薪資調查母體、9,977家事業單位樣本和月年期間差，明示不能推個人錄取率或薪資。",
+      "source_ids": [
+        "ch23_vacancies_11506_recheck_20261027",
+        "ch23_salary_114_recheck_20261027"
+      ],
+      "previous_source_ids": [
+        "ch23_vacancies",
+        "ch23_salary"
+      ],
+      "previous_review_claims": [
+        "官方職位空缺與勞動力短缺定義不同，需併看招募時間及進退出率。",
+        "薪資調查母體為全時受僱者，月薪與年薪的基準年度與薪資定義不同。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.mol.gov.tw/1607/1632/1633/99227/post",
+          "claim": "115-06月底職缺296,143個、受僱員工8,584,682人、職缺率3.3%、全時平均招募3.1個月；4,004家有效樣本、2026-07-01至07-31調查；分母為職缺加受僱員工。",
+          "supporting_passage": "編者摘要（非逐字引文）：公告HTML提要列29.6萬個、3.3%、3.1個月；所連結PDF表1列296,143個職缺、8,584,682名受僱員工，附錄列4,004家有效樣本、調查期間、母體、職缺定義及比率公式。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀勞動部公告HTML及所連結PDF表1、附錄，核對精確值、期間、母體、樣本、職缺定義與分母；不把總體職缺數解讀為個人機率。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/1632/1633/90814/",
+          "claim": "114年職類別薪資調查9,977家有效事業單位樣本、全時受僱母體、2025年7月月薪與2024全年年薪不同口徑。",
+          "supporting_passage": "編者摘要（非逐字引文）：公告定義段說明母體和月／年薪口徑；所連結PDF第1頁列114年8月調查、排除部分工時等對象及9,977家有效樣本。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀勞動部公告HTML定義及所連結PDF第1頁，核對樣本數、母體、期間與薪資定義；沒有引用未核實的個別職類金額。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_vacancies",
+          "replacement_ids": [
+            "ch23_vacancies_11506_recheck_20261027"
+          ],
+          "reason": "舊來源只記錄搜尋索引和概括性解讀，無法支持本次精確職缺數、員工分母與調查母體；改用直接讀取的現行公告及PDF表格。",
+          "prior_source_sha256": "44659e41010c2e6701215e49efcea2c0fd0913c4d42a20d34628956c1bcdf166"
+        },
+        {
+          "id": "ch23_salary",
+          "replacement_ids": [
+            "ch23_salary_114_recheck_20261027"
+          ],
+          "reason": "舊來源未記錄有效樣本數及附件表格查核；改用本次直接查讀的公告定義與PDF樣本／口徑資料。",
+          "prior_source_sha256": "c1008d6e7256d32377c39c31bee40b0f0c8c815aa92f7904648cee4f496f66c9"
+        }
+      ],
+      "limits": [
+        "職缺統計時點2026-06-30，2026-07-01至07-31蒐集，有4,004家有效樣本；母體排除公告所列行業。29.6萬是現有公開招募未補實職缺估計；職缺率分母為職缺加受僱員工，不含求職者；3.1個月是全時職缺平均招募時間。不可推個人錄取率或找工作耗時。",
+        "薪資調查9,977家是事業單位樣本；月薪期間2025年7月、年薪期間2024全年均在職者，排除部分工時和自營者；不是2026年個別職缺待遇。本次未重算附件，未取得獨立統計專業複核。"
+      ],
+      "review_path": "localization/reviews/TW-23-012.json"
+    },
+    {
+      "id": "TW-23-021",
+      "before_sha256": "dfe3559aa9e495704c8edecd768d6e3df70fe6e8e8659cffb693480bea881e86",
+      "after_sha256": "4d969f1ffc16ab30656bc8613d332db91ec1f8cd4e1306a2f10f4054eb5b7d71",
+      "prior_revision": "eda74bc4428cff38e3e41cd1c680dd7bc50792c6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "7796f45882b8cbc97f9a32e6e8bbdaec88145bf711d2be9623d9ad93466bc82f",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣會計相關與跨科系畢業者比較會計師、記帳士和企業帳務；分開考試、證書、助理經驗、登記、公會和業務範圍。",
+      "frequency_assessment": "會計師考試每年一次是法定頻次，不是通過率；無報考、及格、領證、執業登記和薪資配對的全國母數，不估個人通過或報酬機率。",
+      "changes": "核對會計師考試規則、會計師法與記帳士法；納入2026-08-05修法及考試、證書、簽證助理資格、執業年資、登記、公會和業務界線，明確區分第18條助理資格與第12條執業登記年資。",
+      "source_ids": [
+        "ch23_cpaexam",
+        "ch23_bookkeeper",
+        "ch23_cpa_act_20260805",
+        "ch23_cpa_act_amendment_20260805"
+      ],
+      "previous_source_ids": [
+        "ch23_cpaexam",
+        "ch23_bookkeeper"
+      ],
+      "previous_review_claims": [
+        "第4條提供會計師報考學歷及指定修課途徑，不適用中國會計職稱的年資表。",
+        "記帳士的考試、證書、登錄與業務範圍不同，13條對查核簽證申報及訴願等有排除。"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=R0040045",
+          "claim": "會計師考試每年一次；相關科系或其他科系加規定至少七科、20學分與指定科目等報考途徑。",
+          "supporting_passage": "編者摘要（非逐字引文）：規則第2條規定每年一次；第4條載相關科系途徑及其他科系至少七科、總20學分以上且包含指定科目。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取法規資料庫第2、4條及修正日期2019-07-01；不判定個人成績單。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400067",
+          "claim": "會計師考試及格、領證與執業分開；第12條兩年以上簽證助理經驗；現行第18條助理資格、第8條事務所／執業登記／公會及第39條業務範圍。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行法第5、7、8、12、18、39條分列考試及格與領證、執業條件、助理資格和業務範圍；最近修正日2026-08-05。第18條助理資格與第12條領證後執業年資是不同條件。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀法規資料庫第5、7、8、12、18、39條及修正日期；對照第12條執業年資和第18條助理任職資格，不作個案行政認定。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=199186",
+          "claim": "會計師法第18、39、44、54條於2026-08-05修正公布；修正條文依第81條自公布日施行。",
+          "supporting_passage": "編者摘要（非逐字引文）：公告全文列明2026-08-05修正公布第18、39、44、54條及新第18條四類簽證助理資格；現行法第81條規定修正條文自公布日施行。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀修法公告和現行法第81條，逐項核對新第18條助理資格及公布／施行日。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340110",
+          "claim": "記帳士考試及格領證、執業前登錄且登錄後須加入公會；第13條業務界線。",
+          "supporting_passage": "編者摘要（非逐字引文）：記帳士法第2、5、7、13、19條分列考試、證書、執業前登錄、公會加入和受委任業務範圍；法規最近修正日2022-05-04。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀法規資料庫現行全文；未將法定業務範圍擴張為所有公司內部職務。"
+        }
+      ],
+      "retired_sources": [],
+      "limits": [
+        "個人科目採認、國外學歷及成績單須由考選部確認。考選部當年度會計師及記帳士考試詳頁本次讀取逾時，因此本文不稱報名是否開放或列未確認期限。",
+        "未找到個人資格、報考、及格、領證、執業登記和薪資配對母數，不估考取或薪資機率；AI輔助法規核對未取得獨立會計、考選或法律專業複核。"
+      ],
+      "review_path": "localization/reviews/TW-23-021.json"
     }
   ]
 }

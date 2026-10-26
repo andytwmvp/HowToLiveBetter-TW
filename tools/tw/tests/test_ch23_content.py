@@ -57,11 +57,17 @@ class SkillsChapterTests(unittest.TestCase):
             'TW-23-007':{'ch23_returns_wb_wps8402_pdf','ch23_returns_causal_meta_2026','ch23_returns_comment_2026','ch23_returns_tw_schooling_2020'},
             'TW-23-008':{'ch23_certificate_exam_schedule_current','ch23_cpaexam'},
             'TW-23-009':{'ch23_training_q_and_a_115'},
+            'TW-23-005':{'ch23_admission_116_portal_20261027','ch23_admission_116_choices_20260803'},
+            'TW-23-011':{'ch23_certificate_exam_schedule_current','ch23_skill_cooking_qualification_20260722'},
+            'TW-23-012':{'ch23_vacancies_11506_recheck_20261027','ch23_salary_114_recheck_20261027'},
+            'TW-23-021':{'ch23_cpa_act_20260805','ch23_cpa_act_amendment_20260805'},
         }
+        register={r['id']:r for r in read('localization/retroactive-review-register-20261019.json')['substantive_rechecks']}
         for e in batch['entries']:
             self.assertEqual(set(e['source_ids']),set(e['source_claims']))
             review=read(f"localization/reviews/{e['id']}.json")
-            expected_ids=set(e['source_ids'])|supplemental.get(e['id'],set())
+            retired={source['id'] for source in register.get(e['id'],{}).get('retired_sources',[])}
+            expected_ids=(set(e['source_ids'])|supplemental.get(e['id'],set()))-retired
             self.assertEqual({s['url'] for s in review['source_checks']},{runtime[s]['url'] for s in expected_ids})
             self.assertTrue(all(len(s['claim'])>15 and len(s['retrieval_method'])>15 for s in review['source_checks']))
     def test_only_22_new_topics_counted_and_publication_still_incomplete(self):

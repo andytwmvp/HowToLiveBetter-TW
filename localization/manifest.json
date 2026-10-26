@@ -11150,9 +11150,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-005.md",
       "sources": [
-        "https://www.techadmi.edu.tw/manual.php"
+        "https://www.techadmi.edu.tw/manual.php",
+        "https://www.techadmi.edu.tw/bbs-detail.php?gid=480&nid=1860"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "沒考上普高不等於路斷了：中職有貫通招生和單獨考試，事業單位技能崗位招聘還可以降學歷要求",
@@ -11272,9 +11273,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-011.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
+        "https://www.wdasec.gov.tw/News_Content.aspx?n=611E645F4BAB689F&s=DC23306255B80E52&sms=47C68486FEC19CA4",
+        "https://skill.tcte.edu.tw/news_detail.php?no=MTAwNDA5&valid=08c308c36d906fa6acbb11a862ddec93"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "學之前先確認這個技能有沒有等級評價，等級能不能換成錢",
@@ -11291,10 +11294,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-012.md",
       "sources": [
-        "https://www.mol.gov.tw/1607/1632/1633/99227/",
+        "https://www.mol.gov.tw/1607/1632/1633/99227/post",
         "https://www.mol.gov.tw/1607/1632/1633/90814/"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "別把「網上說工資高」當成缺人，去查當地的緊缺職業目錄和補貼目錄",
@@ -11466,9 +11469,11 @@
       "target_path": "locales/zh-TW/book/ch23/TW-23-021.md",
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=R0040045",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340110"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340110",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400067",
+        "https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=199186"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "會計這類初級、中級職稱靠全國統考拿，先對照學歷和工作年限去報名",
