@@ -29,12 +29,17 @@ class ChapterContentTests(unittest.TestCase):
         report=publication_report();self.assertGreaterEqual(report['publication_completed_entries'],len(IDS))
         self.assertFalse(report['publication_ready']);self.assertEqual(report['publication_total_entries'],765)
 
-    def test_all_fourteen_sources_registered(self):
+    def test_historical_sources_and_rechecks_registered(self):
         data=validate_runtime();sources={s['id']:s for s in data['sources']}
         batch=json.loads((ROOT/'localization/tw-edition/ch14-reviewed.json').read_text())
         self.assertEqual(len(batch['sources']),14);self.assertEqual({e['id'] for e in batch['entries']},IDS)
         registry=json.loads((ROOT/'localization/tw-edition/sources/ch14.json').read_text())
-        self.assertEqual({r[0] for r in registry['sources']},{s['id'] for s in batch['sources']})
+        historical_ids={s['id'] for s in batch['sources']}
+        recheck=json.loads((ROOT/'localization/ch14-account-recovery-fraud-recheck-20261026.json').read_text())
+        recheck_ids={s['id'] for s in recheck['sources_added']}
+        registry_ids={r[0] for r in registry['sources']}
+        self.assertTrue(historical_ids.issubset(registry_ids))
+        self.assertEqual(registry_ids,historical_ids|recheck_ids)
         for item in data['items']:
             if item['id'] in IDS:
                 for key in item['source_ids']:self.assertIn(key,sources)
