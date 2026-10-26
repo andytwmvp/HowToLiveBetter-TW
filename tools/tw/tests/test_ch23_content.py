@@ -59,7 +59,7 @@ class SkillsChapterTests(unittest.TestCase):
             'TW-23-009':{'ch23_training_q_and_a_115'},
             'TW-23-005':{'ch23_admission_116_portal_20261027','ch23_admission_116_choices_20260803'},
             'TW-23-011':{'ch23_certificate_exam_schedule_current','ch23_skill_cooking_qualification_20260722'},
-            'TW-23-012':{'ch23_vacancies_11506_recheck_20261027','ch23_salary_114_recheck_20261027'},
+            'TW-23-012':{'ch23_vacancies_11506_recheck_20261027','ch23_salary_114_recheck_20261027','ch23_taiwanjobs_job_search_20261027'},
             'TW-23-021':{'ch23_cpa_act_20260805','ch23_cpa_act_amendment_20260805'},
         }
         register={r['id']:r for r in read('localization/retroactive-review-register-20261019.json')['substantive_rechecks']}

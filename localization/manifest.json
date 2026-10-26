@@ -11275,7 +11275,7 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
         "https://www.wdasec.gov.tw/News_Content.aspx?n=611E645F4BAB689F&s=DC23306255B80E52&sms=47C68486FEC19CA4",
-        "https://skill.tcte.edu.tw/news_detail.php?no=MTAwNDA5&valid=08c308c36d906fa6acbb11a862ddec93"
+        "https://www.wdasec.gov.tw/News_Content.aspx?n=F240F6BB01FE46BA&s=73338FF0B7B02094&sms=DD855C7DF840A224"
       ],
       "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
@@ -11295,7 +11295,8 @@
       "target_path": "locales/zh-TW/book/ch23/TW-23-012.md",
       "sources": [
         "https://www.mol.gov.tw/1607/1632/1633/99227/post",
-        "https://www.mol.gov.tw/1607/1632/1633/90814/"
+        "https://www.mol.gov.tw/1607/1632/1633/90814/",
+        "https://job.taiwanjobs.gov.tw/internet/index/index.aspx"
       ],
       "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",

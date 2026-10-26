@@ -22,6 +22,7 @@ NEW_SOURCE_IDS = {
     'ch23_salary_114_recheck_20261027',
     'ch23_cpa_act_20260805',
     'ch23_cpa_act_amendment_20260805',
+    'ch23_taiwanjobs_job_search_20261027',
 }
 
 
@@ -111,12 +112,31 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
         self.assertEqual(set(evidence_sources), NEW_SOURCE_IDS)
         retired = self.evidence['sources_retired']
         self.assertEqual({row['id'] for row in retired}, {'ch23_admission', 'ch23_vacancies', 'ch23_salary'})
-        self.assertTrue(all(row['preserved_in_runtime'] and row['prior_source_sha256'] for row in retired))
         self.assertTrue(set(prior_runtime).issubset(self.sources))
         for source_id, previous in prior_runtime.items():
             self.assertEqual(self.sources[source_id], previous)
         self.assertTrue(set(prior_registry).issubset(registry_rows))
         self.assertTrue((set(prior_runtime) | NEW_SOURCE_IDS).issubset(self.sources))
+        for row in retired:
+            with self.subTest(retired_source=row['id']):
+                prior_source = prior_runtime[row['id']]
+                digest = hashlib.sha256(json.dumps(prior_source, ensure_ascii=False, sort_keys=True).encode('utf-8')).hexdigest()
+                self.assertTrue(row['preserved_in_runtime'])
+                self.assertEqual(row['prior_source_sha256'], digest)
+                self.assertEqual(self.sources[row['id']], prior_source)
+                replacements = set(row['replacement_ids'])
+                self.assertTrue(replacements)
+                register_record = next(
+                    record for record in self.records.values()
+                    if any(retired_record['id'] == row['id'] for retired_record in record.get('retired_sources', []))
+                )
+                register_retired = next(value for value in register_record['retired_sources'] if value['id'] == row['id'])
+                self.assertEqual(register_retired['prior_source_sha256'], row['prior_source_sha256'])
+                self.assertEqual(register_retired['replacement_ids'], row['replacement_ids'])
+                self.assertEqual(register_retired['reason'], row['reason'])
+                current_item = self.items[register_record['id']]
+                self.assertNotIn(row['id'], current_item['source_ids'])
+                self.assertTrue(replacements.issubset(set(current_item['source_ids'])))
         for source_id, source in evidence_sources.items():
             with self.subTest(source=source_id):
                 self.assertEqual(self.sources[source_id], source)
@@ -141,7 +161,7 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
         duration = stats['recruitment_time_2026q2_full_time']
         self.assertEqual((duration['value'], duration['unit'], duration['sample_size']), (3.1, '月（全時職缺平均）', 4004))
         salary = stats['occupational_salary_survey_2025']
-        self.assertEqual((salary['sample_size'], salary['numerator'], salary['denominator']), (9977, 9977, None))
+        self.assertEqual((salary['sample_size'], salary['numerator'], salary['denominator']), (9977, None, None))
         self.assertEqual(salary['unit'], '家有效事業單位樣本')
         self.assertIn('不是9,977名員工', ' '.join(salary['limitations']))
         body = self.items['TW-23-012']['body']
@@ -153,17 +173,30 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
         for phrase in ('115學年度', '116學年度', '特殊選才', '技優甄審', '由5個調整為6個', '不能推成所有招生管道', '不能給出全臺通用的個人錄取機率'):
             self.assertIn(phrase, admission)
         skills = self.items['TW-23-011']['body']
-        for phrase in ('年滿15歲或國民中學畢業', '2027年7月1日生效', '尚未到生效日', '不能說某級證照必然提高個人薪資'):
+        for phrase in ('年滿15歲或國民中學畢業', '2026年7月14日發布、7月22日更新', '2027年7月1日生效', '尚未到生效日', '不能說某級證照必然提高個人薪資'):
             self.assertIn(phrase, skills)
         notice = next(s for s in self.evidence['sources_added'] if s['id']=='ch23_skill_cooking_qualification_20260722')
+        self.assertEqual(notice['published_at'], '2026-07-14')
         self.assertIn('2027-07-01', notice['supports'])
+        self.assertIn('更新日期2026-07-22', notice['supports'])
+        self.assertEqual(notice['url'], 'https://www.wdasec.gov.tw/News_Content.aspx?n=F240F6BB01FE46BA&s=73338FF0B7B02094&sms=DD855C7DF840A224')
+        self.assertEqual(notice['url'], 'https://www.wdasec.gov.tw/News_Content.aspx?n=F240F6BB01FE46BA&s=73338FF0B7B02094&sms=DD855C7DF840A224')
+
+    def test_taiwanjobs_portal_is_a_traced_official_search_source(self):
+        source_id = 'ch23_taiwanjobs_job_search_20261027'
+        source = self.sources[source_id]
+        self.assertEqual(source['url'], 'https://job.taiwanjobs.gov.tw/internet/index/index.aspx')
+        self.assertIn('工作地點', source['supports'])
+        self.assertIn(source_id, self.items['TW-23-012']['source_ids'])
+        self.assertIn(source['url'], {check['url'] for check in read('localization/reviews/TW-23-012.json')['source_checks']})
+        self.assertIn(source['url'], {check['url'] for check in self.evidence_items['TW-23-012']['source_checks']})
 
     def test_cpa_reform_separates_assistant_eligibility_and_practice_years(self):
         body = self.items['TW-23-021']['body']
-        for phrase in ('2026年8月5日', '10學分以上', '高等或普通考試會計、審計人員及格', '高級商業職業學校畢業', '二年以上經驗', '兩項不同規定', '公會', '不包括受委任辦理稅捐查核簽證申報'):
+        for phrase in ('2026年8月5日', '10學分以上', '高等或普通考試會計、審計人員及格', '高級商業職業學校畢業', '永續資訊簽證工作的助理不受這四款資格限制', '二年以上經驗', '兩項不同規定', '公會', '不包括受委任辦理稅捐查核簽證申報'):
             self.assertIn(phrase, body)
         self.assertIn('登錄後還須加入記帳士公會', body)
-        self.assertIn('考選部考試動態詳頁直接讀取逾時', body)
+        self.assertIn('考選部當年度考試動態詳頁本次直接讀取逾時', body)
         self.assertIn('未取得獨立法律、會計或考選專業簽證', body)
 
 

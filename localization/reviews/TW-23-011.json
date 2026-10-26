@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-011.md",
-  "target_sha256": "d5c83c5e91e03a949af6b6e002c7cd7760cc84c79b93b1dc29f53cd0e6e7ec57",
+  "target_sha256": "c003a65104beac8517be9f8a09c0f1eb57dcf17a5730bb0773210a41956b8e58",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
@@ -22,11 +22,11 @@
       "retrieval_method": "2026-10-27直接閱讀技能檢定中心FAQ全文及更新／檢核日期；依其說明記錄年度三梯次與公告時間，未推定各職類每梯次均開辦。"
     },
     {
-      "url": "https://skill.tcte.edu.tw/news_detail.php?no=MTAwNDA5&valid=08c308c36d906fa6acbb11a862ddec93",
-      "claim": "中餐烹調、西餐烹調與食物製備職類另訂報檢資格，自2027-07-01生效。",
-      "supporting_passage": "編者摘要（非逐字引文）：技能檢定中心公告標題及內文載明三職類申請檢定資格自116年7月1日生效，發佈日2026-07-22。",
+      "url": "https://www.wdasec.gov.tw/News_Content.aspx?n=F240F6BB01FE46BA&s=73338FF0B7B02094&sms=DD855C7DF840A224",
+      "claim": "公告所列三職類另訂報檢資格，自2027-07-01生效；公告發布於2026-07-14，更新於2026-07-22，檢核日期為2026-09-30。",
+      "supporting_passage": "編者摘要（非逐字引文）：官方公告頁顯示發布日期115-07-14、更新日期115-07-22、檢核日期115-09-30；標題載明中餐烹調、西餐烹調及食物製備資格自116-07-01生效。",
       "accessed_at": "2026-10-27",
-      "retrieval_method": "2026-10-27直接讀取公告HTML及日期；未閱讀連結頁以外的新資格全文。"
+      "retrieval_method": "2026-10-27直接讀取勞動力發展署技能檢定中心公告HTML，分別核對發布、更新、檢核與生效日期；未讀連結附件，不轉述新資格細節。"
     }
   ],
   "localization_changes": "核對技術士辦法第5至9、47、49條，精確寫出丙／單一級條件與計齡日、高級及特殊職類差異；補入三職類2027-07-01才生效的資格公告、年度梯次、禁止借證與缺乏證照薪資因果資料。",
