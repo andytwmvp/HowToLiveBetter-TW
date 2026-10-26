@@ -18,7 +18,7 @@ jobs:
   validate:
     if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - name: 初始化暫存位置
         run: echo "TW_REVIEW_DIR=$RUNNER_TEMP/tw-review" >> "$GITHUB_ENV"
@@ -71,11 +71,12 @@ jobs:
           console.log('PASS：README實際渲染出6個徽章圖片。');
           JS
       - name: 安裝瀏覽器檢查工具
+        timeout-minutes: 15
         run: |
           set -euo pipefail
           python3 -m pip install -q 'playwright==1.55.0'
-          python3 -m playwright install --with-deps chromium > "$RUNNER_TEMP/tw-install.log" 2>&1
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk >> "$RUNNER_TEMP/tw-install.log" 2>&1
+          python3 -m playwright install --with-deps chromium 2>&1 | tee "$RUNNER_TEMP/tw-install.log"
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk 2>&1 | tee -a "$RUNNER_TEMP/tw-install.log"
       - name: 桌機、手機、自查與離線互動
         run: |
           set -euo pipefail

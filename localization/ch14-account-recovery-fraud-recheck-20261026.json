@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "batch": "TW-14-004/005/011/012 台灣帳號、信用卡與門號冒用高風險歷史實質再審",
+  "jurisdiction": "TW",
+  "base_main_sha": "899a5daf61da708b74b0223a22b019cae7436f50",
+  "reviewed_at": "2026-10-26",
+  "review_due_at": "2027-01-31",
+  "priority_basis": "本批依帳戶立即接管損失、金融交易止損期限、冒名信用與門號復原可行性排序；不是臺灣事件發生率排名。",
+  "new_core_entries": 0,
+  "items": [
+    {
+      "id": "TW-14-004",
+      "target_path": "locales/zh-TW/book/ch14/TW-14-004.md",
+      "before_sha256": "0b45cc73a219f25bc5d33e7455304b7f2167bd0677f41c38d522c0f2239b4c38",
+      "after_sha256": "bbe89dfc54d86c49f2019cd58ca42482b2d0b4d58f8df1bafde8f906980faed5",
+      "prior_review_sha256": "8370727b050896b2d0b13a22df5107520bb3aec61a8b2c9937bc0530f558cb3d",
+      "review_path": "localization/reviews/TW-14-004.json",
+      "source_ids": [
+        "ch14_apple_lost",
+        "google_android_find_lost_current",
+        "cib_lost_phone_faq_2026",
+        "cib_phone_forwarding_financial_takeover_2026",
+        "ncc_telecom_complaint_process_current",
+        "ncc_tcmc_complaint_portal_current"
+      ],
+      "changes": "把手機遺失／遭竊分流、人身安全、門號與金融止損、iOS及Android遠端功能條件、刑事局單一轉接案及電信申訴期限補入；撤下中華電信單一業者入口和轉載防詐來源，保留舊來源物件及SHA。 補入NCC電信調處受理範圍限制：金額未達2,000元或純定價政策案件不受理。",
+      "frequency_assessment": "沒有臺灣手機遺失、帳戶接管及使用者暴露量配對的全國分母；刑事局2026年一宗案只說明來電轉接、綁卡及遠端社交工程可能造成的損失，不可當作遺失手機後盜刷率。",
+      "retired_source_ids": [
+        "ch14_cht_service",
+        "ch14_fsc_fraud"
+      ]
+    },
+    {
+      "id": "TW-14-005",
+      "target_path": "locales/zh-TW/book/ch14/TW-14-005.md",
+      "before_sha256": "c1f2b1fbba02901d96cd928fc269188273318dc247bccbdde3423e957a3d21a2",
+      "after_sha256": "ad37699f38a9285626938c867f67e4882e9bdc1f78560cad4f044e413a47d3e7",
+      "prior_review_sha256": "e26b0ba1a064fc214993b29e18b812b1436bacdca08f7ace07f61b785f2c2d5d",
+      "review_path": "localization/reviews/TW-14-005.json",
+      "source_ids": [
+        "ch14_financial_law",
+        "foi_bank_dispute_categories_2026_q1",
+        "foi_creditcard_otp_case_2025"
+      ],
+      "changes": "補上可信管道停卡、OTP與通話轉接留證、現行金保法第13條期限及修法生效沿革、評議中心2026Q1分類統計；明示案件比例與單一個案均非個人發生率或退款保證。",
+      "frequency_assessment": "評議中心2026Q1銀行業101/235（42.98%）是銀行業已申請評議案件中的「信用卡消費款爭議」類別比例，母數不是刷卡交易、未授權交易或持卡人；不估個人風險。評議中心OTP案例是單一爭議個案。",
+      "retired_source_ids": [
+        "ch14_fsc_fraud"
+      ]
+    },
+    {
+      "id": "TW-14-011",
+      "target_path": "locales/zh-TW/book/ch14/TW-14-011.md",
+      "before_sha256": "e602f62d7a46950a5f2eb8bb03a4e573ba8b2ab3ee77ea5056f1c0be173a8b60",
+      "after_sha256": "485ce91bca9752cbdc3ee06e16629eb295ce302a8046148d43449a79b935aa41",
+      "prior_review_sha256": "40e8b92ba154a3a5e984c5415037382fc42ba3ec5292543e44bd6db9ae6dab54",
+      "review_path": "localization/reviews/TW-14-011.json",
+      "source_ids": [
+        "jcic_credit_data_correction_current",
+        "jcic_access_fee_faq_current",
+        "jcic_credit_report_fee_schedule_current",
+        "ncc_telecom_complaint_process_current",
+        "ncc_tcmc_complaint_portal_current"
+      ],
+      "changes": "分清電信訂戶資料與聯徵信用報告，依聯徵現行費用頁修正紙本與線上費率及分開計算的年度免費次數；更新特定免收資格、線上年齡／憑證條件、郵局時間及資料更正流程，加入NCC申訴／調處期限。 補入NCC電信調處受理範圍限制：金額未達2,000元或純定價政策案件不受理。",
+      "frequency_assessment": "未找到電信冒辦／冒名信用案件與全部可能遭冒用民眾可配對的臺灣全國分子分母；聯徵報告及業者訂戶資料的涵蓋範圍不同，故不推算個人發生率。",
+      "retired_source_ids": [
+        "ch14_jcic",
+        "ch14_cht_service"
+      ]
+    },
+    {
+      "id": "TW-14-012",
+      "target_path": "locales/zh-TW/book/ch14/TW-14-012.md",
+      "before_sha256": "2a5f7894630189ef2d8e75943ed5d5c3ac8e88c2a14be39271b86b1677d1059d",
+      "after_sha256": "0e5b6f00443020153597dbe07f3194ad712c3b5a6c493372faedad1f189edbd6",
+      "prior_review_sha256": "f6997f99af1077909e37b7af6fc0f131b528f9b60f37fbfa661d04404d9190b0",
+      "review_path": "localization/reviews/TW-14-012.json",
+      "source_ids": [
+        "ch14_google_recovery",
+        "cib_phone_forwarding_financial_takeover_2026",
+        "ncc_telecom_complaint_process_current",
+        "ncc_tcmc_complaint_portal_current"
+      ],
+      "changes": "保留Google 7日規則並限定為Google，補入2026年刑事局轉接詐騙警示與電信申訴期限；移除中華電信單一業者服務作為泛用入口。 補入NCC電信調處受理範圍限制：金額未達2,000元或純定價政策案件不受理。",
+      "frequency_assessment": "未找到可配對換號人口、帳戶復原失敗事件與暴露期間的臺灣全國同口徑資料；Google 7日規則是產品特定流程，不能視為臺灣各服務的發生率或通則。",
+      "retired_source_ids": [
+        "ch14_cht_service"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "source_id": "foi_bank_dispute_categories_2026_q1",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "geography": "臺灣全國金融消費評議中心所列銀行業評議申請案件",
+      "population": "統計表所列銀行業評議申請案件，不含全體信用卡交易資料",
+      "event_definition": "評議案件分類「信用卡消費款爭議」",
+      "numerator": 101,
+      "denominator": 235,
+      "unit": "件；分類占比",
+      "reported_share_percent": 42.98,
+      "method": "行政性評議案件統計，以已受理／申請評議銀行案件分類計數",
+      "limitations": [
+        "235件不是全體刷卡交易或持卡人人數",
+        "101件不等同盜刷、未授權交易、拒賠或實際損失件數",
+        "分類案件非個人層級去重風險；不推算個人發生率",
+        "當季案件量不適合直接跨年度作趨勢比較，需核對統計定義及受理口徑是否一致"
+      ]
+    }
+  ],
+  "official_case_examples": [
+    {
+      "source_id": "cib_phone_forwarding_financial_takeover_2026",
+      "date_published": "2026-05-09",
+      "date_updated": "2026-05-11",
+      "geography": "新北市單一刑事案件（警方公告個案）",
+      "period": "兩日內發生卡片交易及後續股票變現",
+      "observations": {
+        "credit_card_transactions": 19,
+        "credit_card_amount_twd_approx": 2600000,
+        "stock_liquidation_twd_approx": 1050000,
+        "total_loss_twd_approx": 3660000
+      },
+      "definition": "單一警方公告的金融接管詐騙案；不是手機遺失案件母數，也非全國盜刷或來電轉接發生率。",
+      "limitation": "沒有全部手機遺失人數、金融帳戶使用者或案件可配對暴露時間作分母，不能推估個人機率。"
+    },
+    {
+      "source_id": "foi_creditcard_otp_case_2025",
+      "published_at": "2025-03-24",
+      "geography": "評議中心公布之單一信用卡附卡爭議個案",
+      "event_definition": "持卡人輸入卡號及OTP後之網路交易爭議；評議中心同時衡酌持卡人行為及發卡銀行異常交易控管",
+      "limitation": "不是全體交易、拒賠率或一般賠償先例；本次官方HTML重取逾時，僅據官方頁索引摘要核對並揭露限制。"
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "cib_lost_phone_faq_2026",
+      "title": "刑事警察局：手機遺失應如何處置",
+      "url": "https://www.cib.npa.gov.tw/ch/app/faq/view?id=18233&module=faq&serno=5118a6e6-d656-4f01-b407-82a9b130dfca",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "刑事警察局說明單純遺失不是刑案；遺失案件證明及受理紀錄是協助日後查對拾得物的便民措施；確認遭侵占時應提出侵占報案以啟動偵查。",
+      "evidence_type": "臺灣警政機關官方問答"
+    },
+    {
+      "id": "cib_phone_forwarding_financial_takeover_2026",
+      "title": "刑事警察局：來電轉接與金融接管詐騙警示",
+      "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=0d321a53-757f-4cd9-ac54-0d3e1dd55b08",
+      "published_at": "2026-05-09",
+      "accessed_at": "2026-10-26",
+      "supports": "刑事局公告2026-05-09、更新2026-05-11：一宗假檢警社交工程案涉及要求下載不明App、提供金融資料、綁定卡片及設定來電轉接；兩日內19筆信用卡交易約新臺幣260萬元，另股票變現約105萬元、總損失約366萬元。這是單一案件而非手機遺失或全國盜刷發生率。",
+      "evidence_type": "臺灣警政機關官方個案與防詐公告"
+    },
+    {
+      "id": "ncc_telecom_complaint_process_current",
+      "title": "國家通訊傳播委員會：電信消費爭議申訴作業流程",
+      "url": "https://api.ncc.gov.tw/chncc/app/artwebsite?id=450&module=artwebsite&serno=null",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "NCC官方SOP列先向電信業者申訴、電消中心受理後業者於申訴次日起15日回覆；不接受結果或逾期者可在收受結果或期限屆滿日起30日內申請調處；爭議金額未達新臺幣2,000元或純屬費率／定價政策者不受理，並列0800-034-580及tcmc.tw。",
+      "evidence_type": "臺灣主管機關消費爭議程序"
+    },
+    {
+      "id": "foi_bank_dispute_categories_2026_q1",
+      "title": "金融消費評議中心：2026年第1季銀行業評議案件爭議類型統計",
+      "url": "https://www.foi.org.tw/download.ashx?id=5665&lang=1",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "統計期間2026-01-01至2026-03-31，銀行業申請評議案件；信用卡消費款爭議101件／該業別總數235件，占42.98%。分子是評議案件分類，非全體交易、未授權交易或持卡人數；不代表拒賠率或個人發生率。",
+      "evidence_type": "臺灣官方行政案件PDF統計"
+    },
+    {
+      "id": "foi_creditcard_otp_case_2025",
+      "title": "金融消費評議中心：刷卡消費OTP簡訊內容看仔細",
+      "url": "https://www.foi.org.tw/Article.aspx?Arti=10839&ClassId=8029&Lang=1&p=1",
+      "published_at": "2025-03-24",
+      "accessed_at": "2026-10-26",
+      "supports": "評議中心公布單一附卡網路交易爭議：持卡人輸入卡號及OTP，委員會同時衡酌持卡人提供驗證碼與銀行異常交易控管不足後作成個案處理結果；不能當成普遍先例或固定賠償比例。原頁本次重取曾逾時，文字以官方頁面索引摘要核對。",
+      "evidence_type": "臺灣金融消費評議官方案例；HTML重取受限"
+    },
+    {
+      "id": "jcic_access_fee_faq_current",
+      "title": "聯徵中心：信用報告申請方式、資格與處理時間常見問答",
+      "url": "https://www.jcic.org.tw/main_ch/faq.aspx",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "官方常見問答說明個人線上查閱年滿18歲及自然人或金融機構軟體金融憑證條件、郵局申請文件與處理時間，以及書面和線上查詢次數分開計算；各途徑費率以聯徵中心現行申請費用頁為準。",
+      "evidence_type": "臺灣聯徵中心官方服務與收費說明"
+    },
+    {
+      "id": "google_android_find_lost_current",
+      "title": "Google：尋找、鎖定遺失的Android裝置或清除裝置資料",
+      "url": "https://support.google.com/accounts/answer/6160491?hl=zh-Hant",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "Google官方說明Android裝置可遠端尋找、鎖定或清除資料；可用條件包含帳戶、裝置設定、連線及其他服務限制。不是所有手機或所有狀態都保證可定位或立即執行。",
+      "evidence_type": "官方裝置操作文件；繁體中文頁面可能含AI翻譯"
+    },
+    {
+      "id": "jcic_credit_data_correction_current",
+      "title": "聯徵中心：信用資料更正種類及說明",
+      "url": "https://www.jcic.org.tw/main_ch/docDetail.aspx?docid=368&pid=95&uid=527",
+      "published_at": "2025-03-13",
+      "accessed_at": "2026-10-26",
+      "supports": "聯徵中心於2025-03-13更新說明：信用資料有錯誤時，可向原報送金融機構反映，或附證據以書面向聯徵中心提出；中心聯繫報送機構，查明屬實後更正。資料是否可更正依事由與證據處理，不能承諾任意刪除正確資料。",
+      "evidence_type": "臺灣聯徵中心官方資料更正程序"
+    },
+    {
+      "id": "ncc_tcmc_complaint_portal_current",
+      "title": "電信消費爭議處理中心：線上申訴與服務入口",
+      "url": "https://tcmc.tw/",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "官方電信消費爭議處理中心入口提供線上申訴／調處服務並列0800-034-580及服務時間；期限與程序以NCC官方申訴作業流程為準。",
+      "evidence_type": "臺灣電信消費爭議處理中心官方服務入口"
+    },
+    {
+      "id": "jcic_credit_report_fee_schedule_current",
+      "title": "聯徵中心：信用報告申請費用說明",
+      "url": "https://www.jcic.org.tw/main_ch/report_2_3.aspx?uid=1664",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "聯徵中心官方現行費用頁分別列出線上與書面中文個人信用報告每年各自首次免費；線上第2次起每份新臺幣80元，書面第2次起每份新臺幣100元，書面同次同版本加份每份50元；並列符合條件者免收查詢費及證明要求。",
+      "evidence_type": "臺灣聯徵中心官方服務費用說明"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch14_cht_service",
+      "reason": "原文為中華電信單一業者自助服務，不能作為全國跨業者門號查詢或申訴流程；改用NCC通用申訴入口。",
+      "replacement_ids": [
+        "ncc_telecom_complaint_process_current"
+      ],
+      "prior_source_sha256": "290ffab8fc76f67fdbbe834b69d38900c041c2c8db6a21bce9400b1dfd9c1003",
+      "preserved_in_runtime": true
+    },
+    {
+      "id": "ch14_fsc_fraud",
+      "reason": "舊來源是轉載且不能支持本文最新的來電轉接個案；改用刑事警察局直接公告，信用卡OTP個案另用評議中心原始案例。",
+      "replacement_ids": [
+        "cib_phone_forwarding_financial_takeover_2026",
+        "foi_creditcard_otp_case_2025"
+      ],
+      "prior_source_sha256": "3c2b83c12efd3b4491789890e85dc360145c000978786d139df9474d7535de9c",
+      "preserved_in_runtime": true
+    },
+    {
+      "id": "ch14_jcic",
+      "reason": "較舊的會員專區概述頁由聯徵中心目前列明更新日的信用資料更正專頁取代，以直接支持更正程序。",
+      "replacement_ids": [
+        "jcic_credit_data_correction_current"
+      ],
+      "prior_source_sha256": "3cf705f5b24cbe56d4ff953806e0d8d6129fee04e9307686a6f47c433fddd858",
+      "preserved_in_runtime": true
+    }
+  ],
+  "legal_effective_dates": [
+    {
+      "law": "金融消費者保護法",
+      "article_used": "第13條申訴與評議期限",
+      "current_consolidated_text_last_amended": "2023-12-06",
+      "promulgation_date_of_latest_amendment": "2023-12-06",
+      "effective_date_of_latest_amendment": "2024-02-01",
+      "latest_amendment_scope": "第3、11-1、19條，不包括第13條；第13條30／60日文字按現行合併條文核對，不將本次公布日或施行日誤配給第13條。",
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0380226"
+      ]
+    }
+  ],
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "reader_items": 289,
+    "substantive_rechecks": 178,
+    "runtime_sources": 782,
+    "source_registry": 863,
+    "json_files_checked": 468,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "reader_items": 289,
+    "substantive_rechecks": 182,
+    "runtime_sources": 792,
+    "source_registry": 873,
+    "json_files_checked": 469,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "review_limits": [
+    "No matching Taiwan-wide exposure denominator was found for phone loss/account takeover, unauthorized credit-card transactions, identity misuse or account recovery failure after a number change.",
+    "The FOI 101/235 figure is a bank-sector adjudication-case category share, not a transaction or individual incidence rate.",
+    "Two official case examples are individual cases only; no population extrapolation.",
+    "No independent professional review in cybersecurity, banking, telecom, law, or statistics was obtained.",
+    "One FOI case page timed out on direct retrieval; its official indexed summary was used and the retrieval limit is recorded.",
+    "Google Find Hub support content may contain AI translation; verify app labels on the device.",
+    "The TCMC portal is a service entry; deadlines and eligibility are grounded in the NCC procedure page, not inferred from portal UI."
+  ],
+  "publication_ready": false
+}

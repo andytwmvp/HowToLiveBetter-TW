@@ -8453,11 +8453,14 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-004.md",
       "sources": [
-        "https://support.apple.com/zh-tw/101593",
-        "https://www.cht.com.tw/home/consumer/member/mobileservice",
-        "https://eycc.ey.gov.tw/Page/9FAC64F67005E355/d37e1865-9f11-4413-8a0f-3fdddff7473b"
+        "ch14_apple_lost",
+        "google_android_find_lost_current",
+        "cib_lost_phone_faq_2026",
+        "cib_phone_forwarding_financial_takeover_2026",
+        "ncc_telecom_complaint_process_current",
+        "ncc_tcmc_complaint_portal_current"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "手機丟了按這個順序做：掛失 SIM 卡、遠程鎖定、改密碼、報警、凍結銀行卡",
@@ -8474,10 +8477,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-005.md",
       "sources": [
-        "https://eycc.ey.gov.tw/Page/9FAC64F67005E355/d37e1865-9f11-4413-8a0f-3fdddff7473b",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226"
+        "ch14_financial_law",
+        "foi_bank_dispute_categories_2026_q1",
+        "foi_creditcard_otp_case_2025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "卡被盜刷先掛失凍結再報警，然後要求銀行賠：證明「是你自己刷的」是銀行的責任",
@@ -8595,10 +8599,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-011.md",
       "sources": [
-        "https://member.jcic.org.tw/report/home.html?pid=74&uid=79",
-        "https://www.cht.com.tw/home/consumer/member/mobileservice"
+        "jcic_credit_data_correction_current",
+        "jcic_access_fee_faq_current",
+        "jcic_credit_report_fee_schedule_current",
+        "ncc_telecom_complaint_process_current",
+        "ncc_tcmc_complaint_portal_current"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "每年查一次自己名下有幾張電話卡、幾張銀行卡，查出不是自己辦的就去註銷",
@@ -8615,10 +8622,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-012.md",
       "sources": [
-        "https://support.google.com/accounts/answer/183723?hl=zh-Hant",
-        "https://www.cht.com.tw/home/consumer/member/mobileservice"
+        "ch14_google_recovery",
+        "cib_phone_forwarding_financial_takeover_2026",
+        "ncc_telecom_complaint_process_current",
+        "ncc_tcmc_complaint_portal_current"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "換手機號、不用舊號之前，先把銀行、支付和社交賬號改綁到新號上，別讓舊號欠費停機了事",

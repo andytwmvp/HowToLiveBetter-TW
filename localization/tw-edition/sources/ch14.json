@@ -83,6 +83,66 @@
       "Google：設定與變更救援選項",
       "https://support.google.com/accounts/answer/183723?hl=zh-Hant",
       "變更備援資料後7天內仍可能傳碼至先前資訊；移除備援門號不代表其他Google服務不再使用該號碼；組織帳戶需另向管理員確認。"
+    ],
+    [
+      "cib_lost_phone_faq_2026",
+      "刑事警察局：手機遺失應如何處置",
+      "https://www.cib.npa.gov.tw/ch/app/faq/view?id=18233&module=faq&serno=5118a6e6-d656-4f01-b407-82a9b130dfca",
+      "刑事警察局說明單純遺失不是刑案；遺失案件證明及受理紀錄是協助日後查對拾得物的便民措施；確認遭侵占時應提出侵占報案以啟動偵查。"
+    ],
+    [
+      "cib_phone_forwarding_financial_takeover_2026",
+      "刑事警察局：來電轉接與金融接管詐騙警示",
+      "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=0d321a53-757f-4cd9-ac54-0d3e1dd55b08",
+      "刑事局公告2026-05-09、更新2026-05-11：一宗假檢警社交工程案涉及要求下載不明App、提供金融資料、綁定卡片及設定來電轉接；兩日內19筆信用卡交易約新臺幣260萬元，另股票變現約105萬元、總損失約366萬元。這是單一案件而非手機遺失或全國盜刷發生率。"
+    ],
+    [
+      "ncc_telecom_complaint_process_current",
+      "國家通訊傳播委員會：電信消費爭議申訴作業流程",
+      "https://api.ncc.gov.tw/chncc/app/artwebsite?id=450&module=artwebsite&serno=null",
+      "NCC官方SOP列先向電信業者申訴、電消中心受理後業者於申訴次日起15日回覆；不接受結果或逾期者可在收受結果或期限屆滿日起30日內申請調處；爭議金額未達新臺幣2,000元或純屬費率／定價政策者不受理，並列0800-034-580及tcmc.tw。"
+    ],
+    [
+      "foi_bank_dispute_categories_2026_q1",
+      "金融消費評議中心：2026年第1季銀行業評議案件爭議類型統計",
+      "https://www.foi.org.tw/download.ashx?id=5665&lang=1",
+      "統計期間2026-01-01至2026-03-31，銀行業申請評議案件；信用卡消費款爭議101件／該業別總數235件，占42.98%。分子是評議案件分類，非全體交易、未授權交易或持卡人數；不代表拒賠率或個人發生率。"
+    ],
+    [
+      "foi_creditcard_otp_case_2025",
+      "金融消費評議中心：刷卡消費OTP簡訊內容看仔細",
+      "https://www.foi.org.tw/Article.aspx?Arti=10839&ClassId=8029&Lang=1&p=1",
+      "評議中心公布單一附卡網路交易爭議：持卡人輸入卡號及OTP，委員會同時衡酌持卡人提供驗證碼與銀行異常交易控管不足後作成個案處理結果；不能當成普遍先例或固定賠償比例。原頁本次重取曾逾時，文字以官方頁面索引摘要核對。"
+    ],
+    [
+      "jcic_access_fee_faq_current",
+      "聯徵中心：信用報告申請方式、資格與處理時間常見問答",
+      "https://www.jcic.org.tw/main_ch/faq.aspx",
+      "官方常見問答說明個人線上查閱年滿18歲及自然人或金融機構軟體金融憑證條件、郵局申請文件與處理時間，以及書面和線上查詢次數分開計算；各途徑費率以聯徵中心現行申請費用頁為準。"
+    ],
+    [
+      "google_android_find_lost_current",
+      "Google：尋找、鎖定遺失的Android裝置或清除裝置資料",
+      "https://support.google.com/accounts/answer/6160491?hl=zh-Hant",
+      "Google官方說明Android裝置可遠端尋找、鎖定或清除資料；可用條件包含帳戶、裝置設定、連線及其他服務限制。不是所有手機或所有狀態都保證可定位或立即執行。"
+    ],
+    [
+      "jcic_credit_data_correction_current",
+      "聯徵中心：信用資料更正種類及說明",
+      "https://www.jcic.org.tw/main_ch/docDetail.aspx?docid=368&pid=95&uid=527",
+      "聯徵中心於2025-03-13更新說明：信用資料有錯誤時，可向原報送金融機構反映，或附證據以書面向聯徵中心提出；中心聯繫報送機構，查明屬實後更正。資料是否可更正依事由與證據處理，不能承諾任意刪除正確資料。"
+    ],
+    [
+      "ncc_tcmc_complaint_portal_current",
+      "電信消費爭議處理中心：線上申訴與服務入口",
+      "https://tcmc.tw/",
+      "官方電信消費爭議處理中心入口提供線上申訴／調處服務並列0800-034-580及服務時間；期限與程序以NCC官方申訴作業流程為準。"
+    ],
+    [
+      "jcic_credit_report_fee_schedule_current",
+      "聯徵中心：信用報告申請費用說明",
+      "https://www.jcic.org.tw/main_ch/report_2_3.aspx?uid=1664",
+      "聯徵中心官方現行費用頁分別列出線上與書面中文個人信用報告每年各自首次免費；線上第2次起每份新臺幣80元，書面第2次起每份新臺幣100元，書面同次同版本加份每份50元；並列符合條件者免收查詢費及證明要求。"
     ]
   ]
 }
