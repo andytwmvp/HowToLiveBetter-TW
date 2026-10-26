@@ -18519,6 +18519,162 @@
         }
       ],
       "review_path": "localization/reviews/TW-14-012.json"
+    },
+    {
+      "id": "TW-23-001",
+      "before_sha256": "ab736fd1445279ffbfeb79c7963c0983e653fc750323d0f0ad242fe0391fa315",
+      "after_sha256": "0757a93d47b1b3dc66ca55e958606fb79102c6ef1b0b8b3795e60f4de2809b3a",
+      "prior_revision": "9e164aa7840be5e34b63acd41f683467aeee414c",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "fcaa103a4ac97fdd1677a7087848b5f08a01fb6e82d876589188aa516189b30c",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "對應臺灣中學生課後或暑期到餐飲、飲料店、便利商店及活動臨時班工作的實際情境；按年齡、是否國中畢業、實際工作關係、危害內容與夜班分別確認。",
+      "frequency_assessment": "勞動部數字是2025年被風險條件選列的1,852家事業單位中465家違反任一勞動法令，為行政檢查受檢事業違規占比，非機率樣本；公告未分列未滿15歲或童工夜班件數，沒有未成年勞工／工時分母，不能推估個人發生率。",
+      "changes": "依現行勞基法第44至48條逐條核對未滿15歲例外、準用、童工時段與未滿18歲危害工作文件；補入臺灣課後打工場景、勞動部114年目標式勞檢數據及選樣／分母限制。",
+      "source_ids": [
+        "ch23_labor",
+        "ch23_mol_student_inspection_114"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+          "claim": "《勞動基準法》第44至48條分別規定童工定義、未滿15歲受僱原則與例外、準用、未滿18歲危險有害工作及文件、童工工時與夜間限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：第44條界定童工並禁止童工及16至未滿18歲者從事危險或有害工作；第45條載未滿15歲受僱原則與例外及非勞僱有償勞務之準用；第46至48條規定未滿18歲文件、童工工時與夜間工作限制。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取法務部全國法規資料庫現行全文，逐項核對第44至48條；另以沿革頁核對相關修正公布日及第86條施行規定，沒有把全法最新修正日錯配為這些條文的修正日。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/1632/1633/96453/post",
+          "claim": "勞動部2025年工讀生專案檢查的選列方式、受檢事業數、違規事業數及童工違規件數限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：公告列1,852家受檢事業，其中465家有任一勞動法令違規、434家受裁罰；對象按工讀常見業別及風險條件選列，公告提及未滿15歲受僱與童工夜間工作但未分項列數。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀勞動部官方公告及其更新日期，核對受檢期間、母數、分子、受檢選列條件與特定童工違規未分列的限制。"
+        }
+      ],
+      "limits": [
+        "25.11%是風險選列受檢事業單位的行政檢查違規占比，不能外推成臺灣事業違規率、未成年勞工風險或個人發生機率；未成年相關違規未分項列數。\n\n本次AI輔助法規及官方統計核對，未取得獨立勞動、法律或統計專業複核；個別僱傭關係、工作許可與危害判斷仍需主管機關確認。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-23-001.json"
+    },
+    {
+      "id": "TW-23-004",
+      "before_sha256": "6cbb0e238aa03b3eb9d532c4f5e29b4fd7f54bcf322a29c528cf1efcb8166778",
+      "after_sha256": "1a21aa9f67431dc43af5f92bf1c7df43d3fd0284b4e61af7b4eb2cba7ba76494",
+      "prior_revision": "9e164aa7840be5e34b63acd41f683467aeee414c",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "dffe7876e8bd7c69a3f9f26c82e3135ad2b0c1a009c26aeeae1cd2fea2b32122",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "對應臺灣公私立高中職註冊單、免學費自動扣減及雜費、交通、住宿、書籍、設備等仍需逐項籌措的家庭情境。",
+      "frequency_assessment": "免學費是政策資格規則，不是發生率；未找到可以配對全國高中職學生、經濟因素退學／放棄升學與各項助學申請核准結果的同口徑分子分母，不估個人獲助機率。",
+      "changes": "用國教署現行FAQ重新核對2024年2月起免學費政策、國籍和例外、學校自動審定扣減及其他費用；明列未找到可配對退學、放棄升學與助學核准的全國母數。",
+      "source_ids": [
+        "ch23_tuition"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.k12ea.gov.tw/Tw/Unique/FAQDetail?Keywords=&cate1_id=C0C06A62-A856-48BB-A410-9E9C361BE503&filter=C49CFCC1-11D8-49BD-AFB8-95856E82E58D&page=0",
+          "claim": "國教署問答載明2024年2月起具中華民國國籍之公私立高中職學生免學費、重讀與透過私立學校獨立招生者例外、由學校審定並直接於註冊單扣減，雜費等其他費用仍可能須繳。",
+          "supporting_passage": "編者摘要（非逐字引文）：國教署FAQ Q1至Q4列免學費起始學期、適用國籍及公私立高中職、重讀與私立獨立招生例外、免申請由學校審定扣減，以及雜費等費用仍可能應繳。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取國教署官方常見問答HTML之Q1至Q4；頁面未標統一發布日期，因此只記錄其明文生效時間，不虛填公告日。"
+        }
+      ],
+      "limits": [
+        "來源只支持國教署高中職免學費政策與所列例外，不支持大專、進修、其他國籍或個別助學方案的金額及資格；未取得個人繳費單。\n\n本次AI輔助官方資料核對，未取得獨立教育、財務或統計專業複核；學校實際帳單及各方案期限以就讀學校與當期公告為準。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-23-004.json"
+    },
+    {
+      "id": "TW-23-008",
+      "before_sha256": "00ea8a73c7bfe56210f034aad0fee43d8cc7261921701e5d2818aae29800c8d3",
+      "after_sha256": "3b95d43b38048ac074dd0b22edc345f7605f7a7f10dd640bc8fc85049a89679c",
+      "prior_revision": "9e164aa7840be5e34b63acd41f683467aeee414c",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "ae8b98b3b2ad035453d9f2d63aa4299fb2119d0d5e0aa4bb4ea1574b004ab617",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "對應臺灣技術士全國年度考試、會計師等專門職業考試與原廠／民間認證；報考資格及職場採認分開查。",
+      "frequency_assessment": "每年三梯次是檢定安排，不是通過率；未找到可按證照、報考者背景、雇主採認、錄取及薪資結果配對的全國同口徑母數，不推算個人考取、就業或加薪機率。",
+      "changes": "補核技術士分級與報檢門檻、合格發證和禁止租借，加入每年三梯次年度公告來源並將會計師考試另依專門規則；不推算證照對錄取或薪資的個人效果。",
+      "source_ids": [
+        "ch23_certificate",
+        "ch23_certificate_exam_schedule_current",
+        "ch23_cpaexam"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
+          "claim": "技術士技能檢定及發證辦法第5至9條分級與報檢資格、第47條合格發證、第49條不得租借技術士證；不是所有證書均屬同一制度。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行辦法第5至9條列甲、乙、丙及單一級與報檢資格；第47條規定檢定合格者由中央主管機關發技術士證，第49條禁止租借。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀全國法規資料庫現行辦法第5至9、47、49及55條；另讀沿革確認2023-11-02修正公布及第55條發布日施行，未把修正日期當成所有職類之個別報考日期。"
+        },
+        {
+          "url": "https://www.wdasec.gov.tw/News_Content.aspx?n=611E645F4BAB689F&s=DC23306255B80E52&sms=47C68486FEC19CA4",
+          "claim": "全國技術士技能檢定每年分三梯次，次年度職類、級別、報名及測試時間依年度公告。",
+          "supporting_passage": "編者摘要（非逐字引文）：技能檢定中心FAQ載全國檢定每年三梯次，並於年底前公告下年度梯次、職類級別、報名及測試事項。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取技能檢定中心FAQ，核對初次發布日、更新日、檢核日及現行年度公告方法。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=R0040045",
+          "claim": "會計師考試為另有專門考試規則之職業考試，不適用技術士技能檢定的報檢資格條文。",
+          "supporting_passage": "編者摘要（非逐字引文）：會計師考試規則另列報考學歷與指定修課途徑；法規資料庫整編頁列修正日期2019-07-01，本次未另取得修正公告以確認單獨公告日。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取法務部全國法規資料庫會計師考試規則現行全文，確認其為獨立法規且有另列報考資格；未把整編修正日期寫成另行核實的公告日期。"
+        }
+      ],
+      "limits": [
+        "三梯次及職類資訊依年度公告可能改變；技術士規則不代替特定目的事業法規、會計師考試或原廠認證規則。沒有證照與就業／薪資可配對的全國母數，不推算個人報酬。\n\n本次AI輔助法規及官方入口核對，未取得獨立法律、雇主或職涯專業複核；報考資格及執業限制須依個別職類與當年度規則確認。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-23-008.json"
+    },
+    {
+      "id": "TW-23-009",
+      "before_sha256": "edba0e934d4b5dc397052622428184283de4023dcea150f8a60479b7508be3f3",
+      "after_sha256": "2ee8d592bb074a50402f71ac665a95cf047415b36dc0815e348a71fe57c68365",
+      "prior_revision": "9e164aa7840be5e34b63acd41f683467aeee414c",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "5bb9be22f8e2375ef5c36870fcb9ddc1993fc12e7584888510bc7d7168aa1120",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "對應台灣就業通／在職訓練網、在職投保資格、先墊訓練費、額度查詢、缺課及分署核銷審查。",
+      "frequency_assessment": "補助比例、上限與缺課條件是行政方案規則，不是事件發生率；未找到可配對全國合資格者、申請、核准、結訓和後續就業的同口徑分母，不推算個人核准、就業或薪資效果。",
+      "changes": "以現行學員Q&A核對10萬元三年上限與2025-01-01生效日、起算計畫、開訓日資格、付款方式、缺課門檻及四類須送轄區分署認列的排除時數例外；保留約2個月為非保證估計。",
+      "source_ids": [
+        "ch23_training",
+        "ch23_training_q_and_a_115"
+      ],
+      "source_checks": [
+        {
+          "url": "https://course.taiwanjobs.gov.tw/about/recommended",
+          "claim": "職訓整合網現行產投方案列80%或100%、每3年最高10萬元、投保與國籍／居留等資格以開訓日為準、先繳費及結訓後申領；失業者職前訓練另有安排。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方方案頁列補助比例與三年10萬元、年齡與指定投保身分、開訓日查核、線上報名、先繳後於結訓申領，並另列失業者職前訓練。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取職訓整合網官方HTML中產投計畫對象、補助及報名方式，並與學員版問答互核；不以課程入口頁代替個人資格審核。"
+        },
+        {
+          "url": "https://job.taiwanjobs.gov.tw/upload/115/2d14b503-e267-4c3c-942b-a889a84dab2f.pdf",
+          "claim": "學員Q&A列三年上限和跨方案起算、開訓日投保條件、缺課1/5門檻及四類可排除時數例外；例外須提交資料由轄區分署認列，並列付款與約2個月撥款。",
+          "supporting_passage": "編者摘要（非逐字引文）：PDF第3頁問11載缺課超過總訓練時數1/5一般不得申領；第6頁問26列天然災害依法停止上班上課、國防部召集規則下國民應盡義務、符合勞工請假規則第3條且百日內請畢的喪假、公職人員選舉及全國性公民投票日，該等時數可排除並須提交資料由辦訓地轄區分署認列。第3至4頁列三年額度起算、先繳款方式與結訓後約2個月流程。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27從勞發署115年度下半年課程公告開啟並逐頁閱讀學員版PDF，核對封面修正日、第3頁問11、第6頁問26及額度、付款與撥款說明；舊版7萬元附件不作現行金額依據。"
+        }
+      ],
+      "limits": [
+        "個人投保、國籍／居留、剩餘額度、班別名額、結訓與補助仍依開訓日資料及分署審查；四類缺課時數例外須交相關資料由辦訓地轄區分署認列，非自動扣除；約2個月是估計而非保證。\n\n本次AI輔助官方方案與問答核對，未取得獨立勞動、職訓、法律或統計專業複核；不是個案補助核准。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-23-009.json"
     }
   ]
 }

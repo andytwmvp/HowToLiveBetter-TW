@@ -165,8 +165,10 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
         manifest = load(root, "localization/manifest.json")
         entry = next((e for e in manifest["entries"] if e["id"] == key), None)
         urls = {c["url"] for c in current_review["source_checks"]}
+        expected_urls = [sources[source_id]["url"] for source_id in new["source_ids"] if source_id in sources]
+        manifest_refs = entry.get("sources") if entry is not None else None
         if ((entry is None and not key.startswith("TW-NAV-"))
-                or (entry is not None and entry.get("sources") != new["source_ids"])
+                or (entry is not None and manifest_refs not in (new["source_ids"], expected_urls))
                 or any(s not in sources for s in new["source_ids"])
                 or {sources[s]["url"] for s in new["source_ids"]} != urls):
             raise ValueError("再審追加來源未完整登錄或對應審閱：" + key)

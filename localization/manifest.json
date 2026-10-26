@@ -11057,9 +11057,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-001.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+        "https://www.mol.gov.tw/1607/1632/1633/96453/post"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "不滿 16 週歲沒有「去打工」這個選項：招你的單位每月被罰 5000 元，肯招的都是黑工",
@@ -11116,7 +11117,7 @@
       "sources": [
         "https://www.k12ea.gov.tw/Tw/Unique/FAQDetail?Keywords=&cate1_id=C0C06A62-A856-48BB-A410-9E9C361BE503&filter=C49CFCC1-11D8-49BD-AFB8-95856E82E58D&page=0"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "「讀不起」先按政策算一遍：公辦中職學費對農村和困難學生大多已免，助學金 2300 元，助學貸款每年最高 2 萬",
@@ -11190,9 +11191,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-008.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
+        "https://www.wdasec.gov.tw/News_Content.aspx?n=611E645F4BAB689F&s=DC23306255B80E52&sms=47C68486FEC19CA4",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=R0040045"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "花錢考證之前，先查這張證在不在國家職業資格目錄或人社部備案的評價機構名單裡",
@@ -11209,9 +11212,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-009.md",
       "sources": [
-        "https://course.taiwanjobs.gov.tw/about/recommended"
+        "https://course.taiwanjobs.gov.tw/about/recommended",
+        "https://job.taiwanjobs.gov.tw/upload/115/2d14b503-e267-4c3c-942b-a889a84dab2f.pdf"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "培訓優先走政府補貼渠道，別一上來就自費報商業班",
