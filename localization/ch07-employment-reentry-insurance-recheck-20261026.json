@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "batch_date": "2026-10-26",
+  "base_main_sha": "2b0264bb53cf62f9e5c5798ff9c4bdf8bcf4c2c7",
+  "scope": {
+    "type": "historical_substantive_recheck",
+    "new_core_ids": [],
+    "rechecked_ids": [
+      "TW-07-005",
+      "TW-07-012",
+      "TW-07-019",
+      "TW-07-020"
+    ],
+    "priority_order": [
+      "TW-07-005",
+      "TW-07-019",
+      "TW-07-020",
+      "TW-07-012"
+    ],
+    "priority_basis": "依假求職誘導犯罪與財損、復歸生活及法律程序、保險理賠爭議期限、方案資格誤判可能造成的損害嚴重度與可採行動排序；不是發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "shared_runtime_items": 289,
+    "substantive_rechecks": 174,
+    "runtime_sources": 772,
+    "source_registry": 853,
+    "json_files_checked": 466,
+    "unique_drafts": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "shared_runtime_items": 289,
+    "substantive_rechecks": 178,
+    "runtime_sources": 782,
+    "source_registry": 863,
+    "json_files_checked": 468,
+    "unique_drafts": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306
+  },
+  "articles": [
+    {
+      "id": "TW-07-005",
+      "priority": "P1",
+      "before_sha256": "3f5a2fc28b02a15ceed1247cf5134c5aa059ffa835d4ec7f4cbf3a41a5c19a13",
+      "after_sha256": "b060fc673066ccf55a92af4f11ea4024cf697bef0f76a836a8e0a45b29d6539a",
+      "source_ids": [
+        "jobportal",
+        "employmentact",
+        "private_jobseeker_fee_standard",
+        "npa_fakejob_victims_2025_q2",
+        "cib_fakejob_warning_20260718",
+        "ch07_cib_fakejob_case_20260907"
+      ],
+      "retired_source_ids": [
+        "jobservice"
+      ],
+      "changes": "核對公立就服免費原則及私立求職仲介的許可、書面契約、收費項目與實際法定上限；新增2025年第2季警政署假求職被害人統計，標示1,911人／54,996人、3.47%、計數對象及無求職者分母；補入2026年官方假徵才案件與165／110止損指示。；將重複的第13條單條來源ID退役，由已連結的現行法規全文支持並保留舊來源雜湊。",
+      "frequency_assessment": "警政統計只計警方行政系統列報的被害人與分類比例，沒有全部求職者、求職次數或假職缺接觸母數；單一偵辦案件不得外推個人發生率。"
+    },
+    {
+      "id": "TW-07-012",
+      "priority": "P1",
+      "before_sha256": "6a4db5b18caee7ecec4620df3951993830562b453e69d20ca2ebe33a20a22daa",
+      "after_sha256": "2396569738e32ccf385482b6370cbfce7c19a8446adff604888cfe0a8d768a82",
+      "source_ids": [
+        "employmentact",
+        "jobservice",
+        "jobportal",
+        "mol_unemployment_services_2025"
+      ],
+      "retired_source_ids": [],
+      "changes": "依2025-01-20修正之就業服務法第24條及2025-11-13勞動部失業服務入口，補正列舉對象、方案核准與個人給付的差異、官方分流入口及申請前核對項目；明確記錄沒有同口徑全國合格／申請／核准／就業結果分母。",
+      "frequency_assessment": "第24條身分不自動核給補助；截至查閱日未找到同年度、同口徑可配對所有協助對象合格人數、申請／核准人數與就業結果的全國統計。"
+    },
+    {
+      "id": "TW-07-019",
+      "priority": "P1",
+      "before_sha256": "45a6ad5c66377c7d29180f025c9cedc65f16e017e861c58eb2aa1a89f7ce6d1d",
+      "after_sha256": "e807546627f0902ab2df64246cd0f3baa7bd8a1c12e764f04b9d9292143d7cd2",
+      "source_ids": [
+        "employmentact",
+        "mohw_emergency_aid_overview_2026",
+        "aftercare_protection_act",
+        "aftercare_association_home",
+        "consumer_debt_clearance_act"
+      ],
+      "retired_source_ids": [
+        "ch07_reentry",
+        "ch07_reentry_choice",
+        "debtcleanup"
+      ],
+      "changes": "將司法更生保護與消費者債務更生明確分開；依現行更生保護法第2、3、11至13條補正適用對象、自願聲請或同意轉介、地方分會及個案式服務；增加更生保護會官方電話與1957急難轉介，移除未逐條讀取的地方索引頁與舊制度說明引用。",
+      "frequency_assessment": "更生保護服務須符合法定對象並依個案、本人同意、地方資源評估；無全國同口徑資格母數與服務結果，AI核對不等於法律、社工或社福專業意見。"
+    },
+    {
+      "id": "TW-07-020",
+      "priority": "P1",
+      "before_sha256": "dd7529c35a05461d88c1f423948a5227c24000ebeaa67b161b75071d62f9b40c",
+      "after_sha256": "2a904ad9af703f33a98c5a5ae8dad7f8f7174fce4dbec4ee25e333e1ffb74498",
+      "source_ids": [
+        "nhicategories",
+        "catastrophic",
+        "fsc_insurance_act_current",
+        "foi_life_claim_disputes_2025",
+        "fcpa_article13_current",
+        "foi_dispute_process_current"
+      ],
+      "retired_source_ids": [
+        "ch07_insurance"
+      ],
+      "changes": "重核金管會2025-06-18更新後保險法第64、127條；新增2025年度人壽保險理賠爭議分子／分母及限制、現行金保法第13條30日回覆／60日評議期限、書面申請與評議中心免費電話，並與健保職場銜接及重大傷病部分負擔分開。",
+      "frequency_assessment": "金融消費評議中心統計是人壽保險理賠申訴／評議案件而非所有保單理賠或被保險人；案件分類未說明是否去重，不能推作拒賠率或個人機率。"
+    }
+  ],
+  "statistics": [
+    {
+      "source_id": "npa_fakejob_victims_2025_q2",
+      "statistic_type": "警方行政列報被害人數與詐欺被害人構成比",
+      "period": "2025-04-01至2025-06-30（114年第2季）",
+      "geography": "臺灣全國",
+      "population": "警政署統計通報列報之詐欺被害人；納入民眾報案、警察機關自行立案及檢察官交辦案件",
+      "unit": "人；占該季全部詐欺被害人比例",
+      "numerator": 1911,
+      "denominator": 54996,
+      "value": {
+        "fake_job_victims": 1911,
+        "all_fraud_victims": 54996,
+        "share_percent": 3.47
+      },
+      "event_definition": "統計通報表6分類為假求職的詐欺被害人；不是所有求職者受害事件，也不一定代表個人唯一一次事件。",
+      "source_url": "https://www.npa.gov.tw/ch/app/data/doc?module=wg057&detailNo=1417413147584630784&type=s",
+      "accessed_at": "2026-10-26",
+      "method": "警政行政統計通報；官方說明列受理來源並註明2025資料為初步數",
+      "denominator_note": "分母54,996是同季全部詐欺被害人，不是求職者、應徵次數或接觸假職缺人數，不能作個人假求職受害率。",
+      "limitations": [
+        "2025數據為初步數",
+        "警政署註明案件數認定原則自2024年9月改變，不直接與更早年度同季比較",
+        "該類別只有分子與全部詐欺被害人構成比，無求職者暴露分母"
+      ]
+    },
+    {
+      "source_id": "ch07_cib_fakejob_case_20260907",
+      "statistic_type": "單一偵辦案件中受假徵才利用人數",
+      "period": "2025-12-23至2026-08-20（案件期間）",
+      "geography": "臺北、新北、桃園、臺南、高雄及屏東",
+      "population": "刑事警察局在該單一案件中調查的受假徵才利用求職者",
+      "unit": "人（單案列報）",
+      "numerator": 11,
+      "denominator": null,
+      "value": {
+        "job_seekers_used_as_fraud_couriers": 11
+      },
+      "event_definition": "單一詐欺偵辦案中被利用為詐欺車手之求職者數，不是全國年度假求職被害總數。",
+      "source_url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1885&module=news&serno=95961c9f-bdcd-40c1-a2d3-fcc75e87b775",
+      "accessed_at": "2026-10-26",
+      "method": "警政單案公告",
+      "denominator_note": "沒有全部求職者、面試者或接觸招募資訊者的母數；不可換算比率。",
+      "limitations": [
+        "單一偵辦案件，不代表全國年度案件數或發生率",
+        "公告描述的是被利用為車手的人數，不等於全部案件受害人或已定罪人數"
+      ]
+    },
+    {
+      "source_id": "foi_life_claim_disputes_2025",
+      "statistic_type": "評議中心人壽保險理賠爭議案件類型",
+      "period": "2025-01-01至2025-12-31",
+      "geography": "臺灣全國金融消費評議中心受理案件",
+      "population": "人壽保險理賠爭議申訴及評議案件",
+      "unit": "件；占該表案件比例",
+      "numerator": 549,
+      "denominator": 8238,
+      "value": {
+        "preexisting_condition_or_pregnancy_complaints": 298,
+        "preexisting_condition_or_pregnancy_ombudsman_cases": 251,
+        "category_total_cases": 549,
+        "total_complaints": 5269,
+        "total_ombudsman_cases": 2969,
+        "total_cases": 8238,
+        "category_share_percent": 6.66
+      },
+      "event_definition": "類型為投保時已患疾病或在妊娠中；申訴與評議兩種程序案件分開列計，未聲稱按個人去重。",
+      "source_url": "https://www.foi.org.tw/download.ashx?id=5612&lang=1",
+      "accessed_at": "2026-10-26",
+      "method": "金融消費評議中心官方年度統計PDF文字層",
+      "denominator_note": "分母8238為評議中心收到之人壽保險理賠申訴與評議案件總數，非所有保單理賠、被保險人、投保人或拒賠件數。",
+      "limitations": [
+        "行政受理案件分類，不是全市場理賠發生率或拒賠率",
+        "統計表未交代跨程序是否去重，故不轉成不同申訴人的人數",
+        "沒有全體保單及理賠母數，不能估計個人遇到此爭議的機率"
+      ]
+    }
+  ],
+  "new_source_ids": [
+    "aftercare_association_home",
+    "aftercare_protection_act",
+    "cib_fakejob_warning_20260718",
+    "fcpa_article13_current",
+    "foi_dispute_process_current",
+    "foi_life_claim_disputes_2025",
+    "fsc_insurance_act_current",
+    "mol_unemployment_services_2025",
+    "npa_fakejob_victims_2025_q2",
+    "private_jobseeker_fee_standard"
+  ],
+  "new_source_count": 10,
+  "professional_review_pending": true,
+  "publication_ready": false,
+  "limitations": [
+    "TW-07-005假求職官方統計只有被害人數與全部詐欺被害人構成比，無全體求職者分母；單一案件人數不代表全國發生率。",
+    "TW-07-012沒有可配對全部就服法第24條協助對象合格人數及申請、核准、就業結果的同年度全國分母。",
+    "TW-07-019沒有更生保護服務需求／資格人數及服務結果的全國同口徑分母。",
+    "TW-07-020評議統計僅覆蓋評議中心人壽保險理賠申訴與評議案件，不能推作所有保單或投保人的機率。",
+    "AI輔助官方來源核對不等於獨立法律、金融、勞動、社福、警政、保險或統計專業簽證。"
+  ]
+}

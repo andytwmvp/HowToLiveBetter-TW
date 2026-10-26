@@ -4447,11 +4447,14 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-005.md",
       "sources": [
-        "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001"
+        "jobportal",
+        "employmentact",
+        "private_jobseeker_fee_standard",
+        "npa_fakejob_victims_2025_q2",
+        "cib_fakejob_warning_20260718",
+        "ch07_cib_fakejob_case_20260907"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "找活先用免費的公共就業服務和零工市場，不找收費中介",
@@ -4602,11 +4605,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-012.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001",
-        "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx"
+        "employmentact",
+        "jobservice",
+        "jobportal",
+        "mol_unemployment_services_2025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "辦失業登記後爭取就業困難人員認定，拿社保補貼或公益性崗位",
@@ -4758,12 +4762,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-019.md",
       "sources": [
-        "https://www.ulc.moj.gov.tw/10682/1028622/10836/10842/249147/",
-        "https://www.ttc.moj.gov.tw/294601/294650/294653/558080/",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
-        "https://www.judicial.gov.tw/tw/cp-1453-56942-7af0e-1.html"
+        "employmentact",
+        "mohw_emergency_aid_overview_2026",
+        "aftercare_protection_act",
+        "aftercare_association_home",
+        "consumer_debt_clearance_act"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "坐過牢、破過產、上過失信名單，法律上都有重來的路，先把手續走完",
@@ -4780,11 +4785,14 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-020.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390002",
-        "https://www.nhi.gov.tw/ch/cp-1438-8ae58-3255-1.html",
-        "https://www.nhi.gov.tw/ch/cp-5185-17079-2744-1.html"
+        "nhicategories",
+        "catastrophic",
+        "fsc_insurance_act_current",
+        "foi_life_claim_disputes_2025",
+        "fcpa_article13_current",
+        "foi_dispute_process_current"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "大病之前，基本醫保之外配一份一年期醫療險或重疾險，看清「保證續保」四個字",
