@@ -4354,11 +4354,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-001.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
-        "https://www.bli.gov.tw/0005071.html",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001"
+        "ch07_jobinsurance",
+        "unemploypay",
+        "jobservice",
+        "ch07_jobinsurance_deadlines_2026",
+        "ch07_unemployment_stats_2025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "失業了先在線申領失業保險金",
@@ -4375,11 +4377,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-002.md",
       "sources": [
-        "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
-        "https://www.bli.gov.tw/0109116.html",
-        "https://www.laf.org.tw/expense-des"
+        "ch07_mediation",
+        "ch07_wagefund",
+        "ch07_laf_cost",
+        "mol_mediation_support_20260903",
+        "labor_dispute_stats_2024"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "被欠薪先投訴勞動監察，再申請勞動仲裁，兩條路都不收費，多數案子幾個月內有結果",
@@ -4653,11 +4657,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-015.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
-        "https://www.3spc.npa.gov.tw/ch/app/data/view?id=18710&module=govinfo&serno=0305c623-5e65-4512-91cb-c23b660ac4a4",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001"
+        "employmentact",
+        "jobservice",
+        "ch07_cib_fakejob_patterns_20261022",
+        "ch07_cib_fakejob_case_20260907",
+        "ch07_cib_fakejob_investment_case_20260809"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "不交押金、不押證件、不籤「培訓貸」、不進傳銷、不借高利貸",
@@ -9805,12 +9811,15 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-006.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010064",
-        "https://www.mol.gov.tw/1607/28752/28774/28776/28778/30712/"
+        "ch19_lsa",
+        "labordispute",
+        "ch19_labor_events",
+        "laboraid",
+        "mol_mediation_support_20260903",
+        "labor_dispute_stats_2024",
+        "mol_labor_legal_aid_thresholds_20261002"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "公司違法解除的，賠償金是經濟補償標準的二倍",
