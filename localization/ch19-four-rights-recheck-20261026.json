@@ -1,0 +1,186 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "779b870ba8b915fc561fcbb4cd21b207d99999fb",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-19-019",
+      "TW-19-023",
+      "TW-19-008",
+      "TW-19-018"
+    ],
+    "risk_order": [
+      "TW-19-019",
+      "TW-19-023",
+      "TW-19-008",
+      "TW-19-018"
+    ],
+    "risk_basis": "依保障空窗與退休提繳可能直接損害、調職工資與僱傭權益救濟、離職證據及第三人資料風險、年度稅務額度誤用可能造成的損失排序；是損害嚴重度與可採行動的處理優先序，不是事件發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 165,
+    "runtime_sources": 761,
+    "source_registry": 842,
+    "json_files_checked": 462,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 169,
+    "runtime_sources": 763,
+    "source_registry": 844,
+    "json_files_checked": 464,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "frequency_findings": [
+    {
+      "article_id": "TW-19-008",
+      "finding": "未找到全國員工取證／資料外傳事件及受僱者分母；不推個人發生率。"
+    },
+    {
+      "article_id": "TW-19-018",
+      "finding": "個人率不適用；未找到可評估退職所得領取及各所得級距的全國統計與配對母數。"
+    },
+    {
+      "article_id": "TW-19-019",
+      "finding": "未找到轉職、依法應保身分及實際投保空窗的配對資料；不估個人漏保機率。"
+    },
+    {
+      "article_id": "TW-19-023",
+      "finding": "2025全國勞資爭議受理29,714件（單位件、全類別行政調處），無調職專項或調職暴露分母，不推個人風險。"
+    }
+  ],
+  "statistics": [
+    {
+      "source_id": "mol_labor_disputes_table_3_5_2025",
+      "period": "2025-01-01至2025-12-31（民國114年）",
+      "geography": "臺灣全國",
+      "population": "勞工行政主管機關及受委託民間團體協商調處的勞資爭議受理案件",
+      "values": {
+        "all_dispute_cases": 29714,
+        "cases_handled_by_labor_admin_parentheses": 10543
+      },
+      "unit": "件，不是人數、事件全部發生數或個人發生率",
+      "numerator_definition": "統計月報表3-5「爭議受理案件件數」114年／2025年度行；括號內為勞工行政主管機關（構）調處案件。",
+      "denominator": null,
+      "denominator_status": "表內無全體受僱者、全部調職次數或受調動者母數；不能計算調職發生率或個人遭遇機率。",
+      "measurement_type": "行政受理／協商調處案件數；不是抽樣調查、裁判成立數或所有爭議實際發生數。",
+      "source_url": "https://statdb.mol.gov.tw/html/mon/23050.pdf",
+      "accessed_at": "2026-10-26",
+      "limitations": [
+        "表3-5未單列調職爭議類別。",
+        "一件案件不等於一名不同勞工，且行政受理不是違法認定。",
+        "括號值為主管機關處理的子集合，其餘包含委託民間團體協商調處案件。",
+        "無受僱或調職暴露母數，不換算個人風險。"
+      ]
+    }
+  ],
+  "new_source_ids": [
+    "mol_labor_disputes_table_3_5_2025",
+    "nhi_person_enrollment_order_2024"
+  ],
+  "reused_source_ids": [
+    "ch19_lsa",
+    "ch19_labor_events",
+    "ch19_trade_secret",
+    "tax2026",
+    "ch19_pension_continuity",
+    "ch19_labor_insurance",
+    "ch19_employment_coverage",
+    "mol_mediation_support_20260903"
+  ],
+  "retired_sources": [
+    {
+      "article_id": "TW-19-018",
+      "id": "retiretax"
+    },
+    {
+      "article_id": "TW-19-019",
+      "id": "nhiact"
+    },
+    {
+      "article_id": "TW-19-019",
+      "id": "nhiunemployed"
+    },
+    {
+      "article_id": "TW-19-023",
+      "id": "labordispute"
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-19-019",
+      "before_sha256": "922c0535c4af3905398da33d9cb9e2399dbd2c8ecd8822e15b80122978b58cc2",
+      "after_sha256": "cd26d2ef6c4dd9ddad3d50da55bbdcc52ac808817042dbb62cdc999cf4769a36",
+      "prior_review_sha256": "aa81a2507f900e662b51fd3c2fe69450cd1b12f36d3a271382802c26dfd51bd4",
+      "review_path": "localization/reviews/TW-19-019.json",
+      "source_ids": [
+        "ch19_pension_continuity",
+        "ch19_labor_insurance",
+        "ch19_employment_coverage",
+        "nhi_person_enrollment_order_2024"
+      ],
+      "changes": "明列勞保到職日申報及遲報翌日生效的空窗風險，分清勞退從到職日起提繳與七日異動申報期限；以健保署2024更新的投保順位取代舊新聞路徑，補列符合規定的職業工會／農漁會會員身分。",
+      "frequency_assessment": "未找到可配對全國轉職者、依法應投保資格、加退保實際日期及勞退提繳記錄的資料；不以失業率、加保人數或健保欠費件數推算個人轉職漏保率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-023",
+      "before_sha256": "85798660855f97ce83f5d58913f20c3d24e28c1410c7c0c936a0bf6001441768",
+      "after_sha256": "22e9c3ddbc618d6f17377f07cd79275e0198515d67136854b9743a3a9265da9e",
+      "prior_review_sha256": "bc6159b73c08ef85ac15d62a336b7db1fa9e2db23a34c1d265e354d9055e93d8",
+      "review_path": "localization/reviews/TW-19-023.json",
+      "source_ids": [
+        "ch19_lsa",
+        "ch19_labor_events",
+        "mol_mediation_support_20260903",
+        "mol_labor_disputes_table_3_5_2025"
+      ],
+      "changes": "逐項保留調動五原則，補足勞動事件法第50條先提確認調動無效或回復原職之訴、法院判斷及勞工聲請門檻；以正確2025全年統計29,714件作廣義背景並明確限制推論。",
+      "frequency_assessment": "勞動部表3-5列2025年全類別勞資爭議受理29,714件（其中括號10,543為主管機關調處）；該行政案件數不是調職專項，沒有全年調職總數或受調職者分母，不能推算調職發生率或個人機率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-008",
+      "before_sha256": "087a7c03941e79d001f131c3a42f1b5ebc55f615d4ff5cadd52c318e4c2fb954",
+      "after_sha256": "41ad543d8e0855ff36b1909e622a7b247bc43bc65d4128c7912738572018c69e",
+      "prior_review_sha256": "f7fcda18a6ffa37920ddd3e153efadb00703be5f67f7f91e88b998b243284656",
+      "review_path": "localization/reviews/TW-19-008.json",
+      "source_ids": [
+        "ch19_lsa",
+        "ch19_labor_events",
+        "ch19_trade_secret"
+      ],
+      "changes": "補正勞基法第30條出勤紀錄五年保存、分鐘記載及勞工請求本人副本不得拒絕；分清保存自身證據與批次外傳公司／第三人資料，補上找不到全國適用發生率的限制。",
+      "frequency_assessment": "未找到臺灣全國統計能辨識員工離職取證、未授權大量複製或由此產生爭議，且具受僱者或資料匯出暴露分母；不以勞資爭議總量代替個人風險。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-018",
+      "before_sha256": "9c03a2f42c12b83441acfa5b8066438f51d2a69b63c66b92493738a8351ee60e",
+      "after_sha256": "8f9b0e5ca4bcb8d7da829a684d59b07ec27ff6c0e25e712aaff7cd4de5c6a30d",
+      "prior_review_sha256": "3e34b15e33e9faa2eb69b1bfabfc9b92bca0334f6793b538fb929f8dae6c64a7",
+      "review_path": "localization/reviews/TW-19-018.json",
+      "source_ids": [
+        "tax2026"
+      ],
+      "changes": "將退職所得年度算法修正為財政部115年度明列的206,000、414,000與894,000元門檻，標明2026領取年度與2027需重查，移除未能直接讀取的法條來源引用。",
+      "frequency_assessment": "個人發生率不適用於年度退職所得稅額算法；未找到可估計特定受僱／退休群體領取退職所得或落入各級距機率的全國配對統計及分母。",
+      "professional_review_pending": true
+    }
+  ]
+}
