@@ -9734,10 +9734,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-002.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002"
+        "ch19_lsa",
+        "ch19_lsa_rules",
+        "mol_special_leave_2025",
+        "mol_special_leave_wage_2026",
+        "mol_disputes_table_3_14_2024"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "年休假按累計工齡算 5、10、15 天，沒休成的按日工資 300% 折錢",
@@ -9754,13 +9757,17 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-003.md",
       "sources": [
-        "https://www.mol.gov.tw/1607/28162/28296/28340/28342/28356/47085/",
-        "https://www.mol.gov.tw/1607/28162/28166/28180/28182/28188/30519/",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030002",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020"
+        "probation",
+        "wage2026",
+        "ch19_lsa",
+        "ch19_lsa_rules",
+        "pension",
+        "mol_probation_limit_faq_2026",
+        "ey_minimum_wage_2027",
+        "mol_disputes_table_3_14_2024",
+        "mol_minimum_wage_2027_notice"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "試用期有法定上限、工資不得低於 80%，而且只能約定一次",
@@ -9800,10 +9807,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-005.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://www.mol.gov.tw/1607/28162/28296/28340/28342/28348/47070/"
+        "ch19_lsa",
+        "noticepay",
+        "mol_notice_pay_2026",
+        "mol_disputes_table_3_14_2024"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "公司以病後幹不了、不勝任或情況大變為由辭退你，沒提前 30 天通知的，還要多付一個月工資",
@@ -9845,11 +9854,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch19/TW-19-007.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
-        "https://www.mol.gov.tw/1607/28162/28296/28410/28412/"
+        "ch19_lsa",
+        "unemployment",
+        "labordispute",
+        "mol_separation_certificate_2026",
+        "mol_disputes_table_3_14_2024"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md",
       "display_path": "book/19-在職離職和工傷.md",
       "source_title_zh_tw": "不要籤「個人原因主動辭職」，那一簽就沒有 N 了",
