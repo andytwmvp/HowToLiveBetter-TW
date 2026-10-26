@@ -1,0 +1,334 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "d7da29e335ae04ef3c5912b29be5d2ff6b25bad6",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-07-008",
+      "TW-07-013",
+      "TW-07-018",
+      "TW-07-021"
+    ],
+    "risk_order": [
+      "TW-07-021",
+      "TW-07-018",
+      "TW-07-013",
+      "TW-07-008"
+    ],
+    "risk_basis": "依今晚無住處的即時人身安全、離職後健保與保險資格中斷、輔具錯買或補助失格的直接支出、職訓期間收入與給付互斥風險排序；是傷害後果及行動優先順序，不是發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 155,
+    "runtime_sources": 740,
+    "source_registry": 821,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false,
+    "coverage_snapshot_registry_sources": 820
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 159,
+    "runtime_sources": 752,
+    "source_registry": 833,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false,
+    "json_files_checked": 454,
+    "registry_sources": 833
+  },
+  "statistics": [
+    {
+      "source_id": "bli_jobtraining_admin_2024",
+      "period": "民國113年（2024）",
+      "scope": "勞保局就業保險年報表2-19職訓生活津貼初次核付人數",
+      "unit": "人",
+      "numerator_definition": "表列初次核付人數，不等同全部申請件數或所有受訓人口。",
+      "values": {
+        "all_persons": 8334,
+        "male_persons": 3156,
+        "female_persons": 5178
+      },
+      "denominator": {
+        "description": "未提供合格參訓或符合津貼資格者的配對母數。",
+        "validated_matching_denominator": null
+      },
+      "data_type": "行政給付統計年報",
+      "limitations": "無資格分母，不能換算需求率、核准率或個人機率。月報含初次和再次核付且以件計，與年報人數不同。",
+      "source_document_edition": "勞保局113年就業保險統計年報表2-19，2026-10-26查閱。",
+      "publication_method": "直接讀取官方PDF表2-19，核對期間、欄位、數值及單位。"
+    },
+    {
+      "source_id": "bli_jobtraining_monthly_2026",
+      "period": "按月編報；頁面文字未顯示可核對的最近月份",
+      "scope": "就業保險給付月報的職訓生活津貼欄",
+      "unit": "件、新臺幣元",
+      "numerator_definition": "每月核付件數含初次及再次核付；同表另列核付金額。",
+      "values": {},
+      "denominator": {
+        "description": "未提供合格申請或參訓人口分母。",
+        "validated_matching_denominator": null
+      },
+      "data_type": "行政統計月報表",
+      "limitations": "件數不是不重複受益人數，不能推算個人機率或與年報初次核付人數直接比較。",
+      "source_document_edition": "勞保局就業保險月報表頭和註記，2026-10-26查閱。",
+      "publication_method": "直接讀取表頭和註記，不摘錄文字層未能確認的月份或數值。"
+    },
+    {
+      "source_id": "ch07_homeless_admin_2024",
+      "period": "民國113年（2024）",
+      "scope": "衛福部臺灣人權指標資料頁列示之全國遊民指標",
+      "unit": "人；頁面列身心障礙者占比",
+      "numerator_definition": "頁面列遊民2,991人，其中625人為身心障礙者，顯示約21%。",
+      "values": {
+        "listed_homeless_persons": 2991,
+        "listed_persons_with_disability": 625,
+        "displayed_share_pct": 21
+      },
+      "denominator": {
+        "description": "625／2,991為頁面內部身心障礙者占列示人數比例；無居住暴露人口分母及完整盤點方法。",
+        "validated_matching_denominator": null
+      },
+      "data_type": "政府人權指標資料頁列示人數；完整方法未在頁面說明。",
+      "limitations": "不是年度新發生率、全部無固定住所者、個人機率或當晚床位數。",
+      "source_document_edition": "衛福部臺灣人權指標儀表板適足居住權指標24，113年，2026-10-26查閱。",
+      "publication_method": "直接讀取官方頁列示年份與數值，不推算個人風險。"
+    }
+  ],
+  "new_source_ids": [
+    "ch07_disability_law_current_2026",
+    "ch07_disability_law_history_2026",
+    "ch07_mohw_aids_guide_2026",
+    "ch07_aids_ntpc_recheck_2026",
+    "bli_training_allowance_2026",
+    "bli_employment_insurance_law_current",
+    "bli_employment_insurance_history_2026",
+    "bli_jobtraining_admin_2024",
+    "bli_jobtraining_monthly_2026",
+    "nhi_class_priority_2025",
+    "bli_labor_continuation_15y_2025",
+    "bli_labor_continuation_rules"
+  ],
+  "reused_source_ids": [
+    "assault_113_dops",
+    "ch07_homeless_admin_2024",
+    "ch07_nationalpension",
+    "ch07_retirement",
+    "ch07_urgent_household",
+    "ch24_nfa_119_20220705",
+    "jobportal",
+    "socialaid",
+    "supportlines"
+  ],
+  "retired_sources": [
+    {
+      "id": "ch07_disability",
+      "article_id": "TW-07-008",
+      "reason": "改以現行全文和沿革頁核對第71條與施行日。",
+      "prior_source_sha256": "a44e13af5f353606ef986a025b0ca1c615e1f00a4d90c0e0551108294522253e",
+      "replacement_ids": [
+        "ch07_disability_law_current_2026",
+        "ch07_disability_law_history_2026"
+      ]
+    },
+    {
+      "id": "ch07_aids",
+      "article_id": "TW-07-008",
+      "reason": "改用中央現行輔具提醒及新北指定流程頁。",
+      "prior_source_sha256": "c9d6cdf9e1176983e8e69d9825d4b2dc540d5a50c5d0df2bd6ea5818c16c58ac",
+      "replacement_ids": [
+        "ch07_mohw_aids_guide_2026",
+        "ch07_aids_ntpc_recheck_2026"
+      ]
+    },
+    {
+      "id": "training",
+      "article_id": "TW-07-013",
+      "reason": "以勞動部2026-10-02更新說明取代舊版訓練津貼頁。",
+      "prior_source_sha256": "78236b2a77cc505ec65c9712009f65ada4dd3f28365cada704faef0348ef56ef",
+      "replacement_ids": [
+        "bli_training_allowance_2026"
+      ]
+    },
+    {
+      "id": "ch07_jobinsurance",
+      "article_id": "TW-07-013",
+      "reason": "改用就業保險法現行全文及沿革核對給付與日期。",
+      "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748",
+      "replacement_ids": [
+        "bli_employment_insurance_law_current",
+        "bli_employment_insurance_history_2026"
+      ]
+    },
+    {
+      "id": "nhicategories",
+      "article_id": "TW-07-018",
+      "reason": "改用健保署現行投保身分及資格頁重新核對順位。",
+      "prior_source_sha256": "ff4b478ccc49bf18faa54427b835d9da45e7297eb2a180ac85f513b230256867",
+      "replacement_ids": [
+        "nhi_class_priority_2025"
+      ]
+    },
+    {
+      "id": "ch07_jobinsurance",
+      "article_id": "TW-07-018",
+      "reason": "共用現行就業保險法，並補入資遣續保說明及辦法。",
+      "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748",
+      "replacement_ids": [
+        "bli_employment_insurance_law_current",
+        "bli_labor_continuation_15y_2025",
+        "bli_labor_continuation_rules"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-07-008",
+      "before_sha256": "7db761eaa38ccf0f817f43ae14d26071c82e9063eee17d0e29b58f32ef4977a9",
+      "after_sha256": "db60449c0f6794e6e0690b0a4214684905d5ec03c66563931acf7550d84374c4",
+      "prior_review_sha256": "cd1dd0c1f1d8874cf982fdd9421e15e13a570f2e78a7a968ffe5f170b90cced6",
+      "review_path": "localization/reviews/TW-07-008.json",
+      "source_ids": [
+        "supportlines",
+        "ch07_disability_law_current_2026",
+        "ch07_disability_law_history_2026",
+        "ch07_mohw_aids_guide_2026",
+        "ch07_aids_ntpc_recheck_2026"
+      ],
+      "changes": "依身心障礙者權益保障法第5、7、71條分清鑑定、證明、需求評估與補助；記錄設籍限制及沿革日期。將先核定後購買限定於主管機關要求事前核准的品項，補入中央提醒及新北4日／12日（不含補件）的地方流程。",
+      "frequency_assessment": "沒有一致全國申請定義、符合資格者分母與觀察期間可計算個人核准率；不以障礙人口或補助總額推算個人申請機率。",
+      "professional_review_pending": true,
+      "retired_sources": [
+        {
+          "id": "ch07_disability",
+          "reason": "改以現行全文和沿革頁核對第71條與施行日。",
+          "prior_source_sha256": "a44e13af5f353606ef986a025b0ca1c615e1f00a4d90c0e0551108294522253e",
+          "replacement_ids": [
+            "ch07_disability_law_current_2026",
+            "ch07_disability_law_history_2026"
+          ]
+        },
+        {
+          "id": "ch07_aids",
+          "reason": "改用中央現行輔具提醒及新北指定流程頁。",
+          "prior_source_sha256": "c9d6cdf9e1176983e8e69d9825d4b2dc540d5a50c5d0df2bd6ea5818c16c58ac",
+          "replacement_ids": [
+            "ch07_mohw_aids_guide_2026",
+            "ch07_aids_ntpc_recheck_2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-07-013",
+      "before_sha256": "38029325fe5e4f9329b0660828b97d022d8b2a206dcc54d38d54cf9a2075defd",
+      "after_sha256": "a6d39e30078b09718fe837f378f85959f3863ff85a341908927e7a0b8fe68056",
+      "prior_review_sha256": "df051539df157ee83d8413f758c8a5ea9524cb1ff5dda73d8cc7cf101979bf6a",
+      "review_path": "localization/reviews/TW-07-013.json",
+      "source_ids": [
+        "jobportal",
+        "bli_training_allowance_2026",
+        "bli_employment_insurance_law_current",
+        "bli_employment_insurance_history_2026",
+        "bli_jobtraining_admin_2024",
+        "bli_jobtraining_monthly_2026"
+      ],
+      "changes": "補正全日制門檻、公立就服安排、工作收入停發、眷屬加給及健保保費補助；分清職訓津貼和失業給付資格，依第11、16、17、19、28條說明認定與結訓轉介，記錄公告及施行日。新增113年年報人數及月報件數定義與母數限制。",
+      "frequency_assessment": "113年年報列初次核付8,334人，沒有合格參訓或符合資格者分母；月報件數含初次及再次核付。不能換算個人機率或將不同單位直接比較。",
+      "professional_review_pending": true,
+      "retired_sources": [
+        {
+          "id": "training",
+          "reason": "以勞動部2026-10-02更新說明取代舊版訓練津貼頁。",
+          "prior_source_sha256": "78236b2a77cc505ec65c9712009f65ada4dd3f28365cada704faef0348ef56ef",
+          "replacement_ids": [
+            "bli_training_allowance_2026"
+          ]
+        },
+        {
+          "id": "ch07_jobinsurance",
+          "reason": "改用就業保險法現行全文及沿革核對給付與日期。",
+          "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748",
+          "replacement_ids": [
+            "bli_employment_insurance_law_current",
+            "bli_employment_insurance_history_2026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-07-018",
+      "before_sha256": "9c5e67594fa9c6b4178800a2dc30f8777a98b53960bc92968da8dfbc147bae4e",
+      "after_sha256": "d911edf003a0f434e8f32886c9586d14b3f9b3578db074518cea6d3df6e26ba9",
+      "prior_review_sha256": "bd1b043d65e368b2ec9a7ea68a68113e2f44b651babf37f8d08c8c02f9863576",
+      "review_path": "localization/reviews/TW-07-018.json",
+      "source_ids": [
+        "ch07_nationalpension",
+        "ch07_retirement",
+        "bli_employment_insurance_law_current",
+        "nhi_class_priority_2025",
+        "bli_labor_continuation_15y_2025",
+        "bli_labor_continuation_rules"
+      ],
+      "changes": "依健保署現行類別順位補正離職後健保銜接；分開法定眷屬、公所第六類及不得掛名工會。補正被裁減資遣續保事由、15年年資、期限與辦法；核對國保資格，分清就保、勞保、職災保險及勞退專戶。",
+      "frequency_assessment": "未找到以全臺離職者為分母、統一界定中斷並使用相同觀察期的資料；不由補辦或追繳件數推算個人健保中斷機率。",
+      "professional_review_pending": true,
+      "retired_sources": [
+        {
+          "id": "nhicategories",
+          "reason": "改用健保署現行投保身分及資格頁重新核對順位。",
+          "prior_source_sha256": "ff4b478ccc49bf18faa54427b835d9da45e7297eb2a180ac85f513b230256867",
+          "replacement_ids": [
+            "nhi_class_priority_2025"
+          ]
+        },
+        {
+          "id": "ch07_jobinsurance",
+          "reason": "共用現行就業保險法，並補入資遣續保說明及辦法。",
+          "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748",
+          "replacement_ids": [
+            "bli_employment_insurance_law_current",
+            "bli_labor_continuation_15y_2025",
+            "bli_labor_continuation_rules"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-07-021",
+      "before_sha256": "6d129afef870ce5d0571b00a9710c3e18f06ce12590ec5b3f17e8432069b4215",
+      "after_sha256": "04cf295108fa714db73e9c602f0d6c1069852e57962dc082f6a0a7b198ced43d",
+      "prior_review_sha256": "46ac0f09926046f84cd7bb57bec23dcb55ae179d0bf7d915c7bbb10bbc73f6bc",
+      "review_path": "localization/reviews/TW-07-021.json",
+      "source_ids": [
+        "supportlines",
+        "socialaid",
+        "ch07_urgent_household",
+        "assault_113_dops",
+        "ch24_nfa_119_20220705",
+        "ch07_homeless_admin_2024"
+      ],
+      "changes": "分流立即威脅110、緊急救護119、特定保護事件24小時113；一般福利諮詢用1957每日08:00至22:00和所在地社政窗口。補入社會救助法第17、21條及113年官方指標，標示地方量能和統計限制。",
+      "frequency_assessment": "官方指標頁列113年遊民2,991人、身心障礙者625人（約21%）；沒有暴露分母或完整盤點方法，非新發生率、全部無固定住所者、當晚床位或個人機率。",
+      "professional_review_pending": true,
+      "retired_sources": []
+    }
+  ],
+  "unresolved": [
+    "身心障礙輔具、福利資格及時程存在縣市與品項差異；職訓、失業認定和健保補助依個案資格審查。",
+    "職訓年報沒有符合資格母數，月報與年報單位不同，不能直接比較或換算個人機率。",
+    "尚未逐縣市查核夜間收容量能和收案規則；遊民指標未公布完整盤點方法及暴露分母。",
+    "尚無身障社福、輔具、就業服務、勞動法、勞健保、社工警消醫療或統計專家獨立審閱。",
+    "本批未新增核心正文；其餘草稿、未登錄來源ID與舊引用仍待逐條實質核對。"
+  ]
+}
