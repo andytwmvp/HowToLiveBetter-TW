@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "batch": "TW-01-015／032／044／048：第1章安全、心理危機、心血管與食品毒理歷史實質再審",
+  "base_main_sha": "14b71d87acf2acad5fea74c6de500cd5ed042d9b",
+  "reviewed_at": "2026-10-27",
+  "review_due_at": "2026-12-15",
+  "prior_reviews_preserved_by_git_ref": true,
+  "counts_before": {
+    "substantive_rechecks": 194,
+    "runtime_sources": 806,
+    "source_registry": 887,
+    "json_files_checked": 473,
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "substantive_rechecks": 198,
+    "runtime_sources": 812,
+    "source_registry": 893,
+    "json_files_checked": 475,
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "new_core_entries": [],
+  "items": [
+    {
+      "id": "TW-01-015",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-015.md",
+      "title": "鐵釘木刺與泥土汙染傷口：及早處理，讓醫師評估破傷風預防",
+      "prior_body_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:locales/zh-TW/book/ch01/TW-01-015.md",
+      "prior_review_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:localization/reviews/TW-01-015.json",
+      "before_sha256": "6ef224a82669f3374ac0937b21afd1ac000bc5045d448f1c0e56b1d6f92c2294",
+      "after_sha256": "1a93c611e6e282ab9b0aca68aca8ccf644ef255414142983b43e8cb56e0d4229",
+      "prior_review_sha256": "cf197b6b7e4f3566015cf497295ef3a8be9c0e715b2582fee72aefec0810b815",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch01_nhi_puncture",
+        "ch01_cdc_tetanus_manual",
+        "ch01_cdc_tetanus_manual_2026",
+        "ch01_cdc_tetanus_counts_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_nhi_puncture",
+        "ch01_cdc_tetanus_manual",
+        "ch01_cdc_tetanus_counts"
+      ],
+      "previous_review_claims": [
+        "依臺灣實際情境、官方服務與統計口徑獨立改寫；原作固定ID與來源雜湊保全。"
+      ],
+      "taiwan_context": "臺灣居家修繕、工地、園藝、農作及颱風後清理可能造成釘刺和泥土汙染傷口；先處理出血與深部異物，再由醫師依傷口、接種史及現行疫苗供應評估。監測病例少不代表一次傷口的個人風險已知。",
+      "frequency_assessment": "疾管署依發病日統計，2025全年3例、2026年第43週累計4例、最近發病日2026-05-30；是本土加境外移入的監測病例數，沒有全部釘刺／汙染傷口暴露人次分母。2026查詢視窗上限2026-10-31晚於本輪查閱日，不能當成未來資料已觀察。",
+      "changes": "更新疾管署統計頁查閱快照至2026-10-27，記錄2025全年3例、2026第43週累計4例、最近發病日與未來查詢上限；直接讀取2026年4月官方PDF，補明同份手冊的Td停產／Tdap更換與傷口附表舊名詞落差，停止提供可自行套用的傷口決策表。",
+      "source_status": "逐條來源核對方法、擷取範圍與限制見source_checks；未取得專業簽證。",
+      "source_checks": [
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-2784-732cd-2951-1.html",
+          "claim": "穿刺傷外表可能小但傷及深部；汙染、異物殘留或無把握時應就醫。",
+          "supporting_passage": "重新讀取健保署民眾外傷頁，依其穿刺傷和需就醫說明保留深部傷及評估分流。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接開啟健保署中文官方HTML；只摘錄本篇使用的傷口行動建議。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Category/MPage/1pegI_Sg6BvXDSxrEEB7Ag",
+          "claim": "土壤、塵土及糞便汙染傷口可能使破傷風芽孢進入；成人追加疫苗於Td停產後改用Tdap。",
+          "supporting_passage": "疾管署指引頁及現行疫苗資料指出汙染傷口、免疫種類差異與2025年起Td停產改Tdap；傷口預防由醫師評估。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取疾管署官方指引頁及可見更新；不以一般成人追加建議替代個別傷口評估。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Uploads/fb6e1e1e-2ac2-4ee3-a8f8-13836b2fcdf7.pdf",
+          "claim": "2026年4月手冊載Td自2025年起停產、例行每十年改Tdap；同份手冊傷口表仍出現Td及Toxoid名稱。",
+          "supporting_passage": "下載並讀取官方PDF文字；同一手冊疫苗段落與後附傷口表的用語不完全一致，本文不自行把表格轉成讀者決策規則。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "直接下載官方PDF，檢視5頁內容及傷口處置表；不宣稱已取得疾管署對表格不一致的正式釋疑。"
+        },
+        {
+          "url": "https://nidss.cdc.gov.tw/nndss/disease?id=037",
+          "claim": "全國依發病日統計的本土及境外移入病例：2025年3例，2026年第43週累計4例，最近發病日2026-05-30；無傷口暴露分母。",
+          "supporting_passage": "官方HTML摘要顯示年度數及最近發病日期；趨勢視窗涵蓋2025年第1週至2026年第43週，範圍上限2026-10-31晚於查閱日。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接取得官方HTML並讀取年度摘要表及趨勢日期；不把日期上限當作未來觀察，病例數可修訂。"
+        }
+      ],
+      "statistics_assessed": [
+        "tetanus_confirmed_cases_2025_tw",
+        "tetanus_confirmed_cases_2026_through_week43_tw"
+      ],
+      "unresolved": [
+        "無傷口暴露分母；不能估個人傷口感染率。傷口表舊疫苗名稱待疾管署／專家釋疑。"
+      ],
+      "reviewer_limit": "ChatGPT AI輔助來源再核對；醫療／公共衛生專業獨立審閱待完成。",
+      "retired_source_ids": [
+        "ch01_cdc_tetanus_counts"
+      ]
+    },
+    {
+      "id": "TW-01-032",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-032.md",
+      "title": "危機時找可信任的人一起接上協助，預先留下安全與後續就醫安排",
+      "prior_body_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:locales/zh-TW/book/ch01/TW-01-032.md",
+      "prior_review_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:localization/reviews/TW-01-032.json",
+      "before_sha256": "abe701b8b3e1b937c82f7918e1ffaa4053182edc795c36e6451166b1a3d9238c",
+      "after_sha256": "741cd53054add4ed9838bf1ab1cbe79a06592b417499ba4871356078ff94813f",
+      "prior_review_sha256": "5a2ec4ab43c18e0e63a83289b3a863f1bd7682406259f74c62ac428854c5b0f4",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch01_crisis_gatekeeper_2026",
+        "ch01_crisis_vgh_safety",
+        "ch01_mental_support_2026",
+        "ch01_mental_support_fees",
+        "ch01_crisis_mohw_1925_2026",
+        "ch01_mohw_suicide_stats_114"
+      ],
+      "previous_source_ids": [
+        "ch01_crisis_gatekeeper_2026",
+        "ch01_crisis_vgh_safety",
+        "ch01_mental_support_2026",
+        "ch01_mental_support_fees"
+      ],
+      "previous_review_claims": [
+        "依臺灣服務與臨床分流獨立撰寫，不以原作或外國比例推估個人機率。"
+      ],
+      "taiwan_context": "先區分立即生命危險與非急迫心理支持：立即危險119，非立即危機可用1925或醫療／心理服務；家庭成員可能是壓力源，不能把通知家人當唯一方案。2026年青壯方案的名額、身分和年底期限須實際確認。",
+      "frequency_assessment": "衛福部統計處114年死因統計列2025全國自殺死亡3,951人、粗率16.9／10萬人口、WHO 2000年世界標準人口標準化率12.9／10萬人口。死亡登記不是自傷意念盛行率、通報或諮商人次；未找到可直接套用的2026年全國意念調查母數。",
+      "changes": "新增衛福部114年自殺死亡官方PDF數值與統計口徑，與意念、通報及諮商人次分開；增加心理健康司現行1925服務入口，核對15至45歲2026方案資格、3次、預約／費用及12月31日屆期。",
+      "source_status": "逐條來源核對方法、擷取範圍與限制見source_checks；未取得專業簽證。",
+      "source_checks": [
+        {
+          "url": "https://beipu.hcshb.gov.tw/News_Content.aspx?n=363&s=109351&sms=9314",
+          "claim": "守門人以關懷提問、支持陪伴、專業轉介及持續關懷為核心；高危機應求助。",
+          "supporting_passage": "北埔鄉衛生所更新至2026-10-22頁面列一問、二應、三轉介，並指出照護者角色有限，應連結專業資源。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取官方衛生所完整正文；不採作個案診斷或唯一服務入口。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/782",
+          "claim": "高風險親友需陪伴、維持環境安全、藥物管理並持續與醫療團隊聯繫。",
+          "supporting_passage": "臺北榮總護理衛教列陪伴、安全環境、藥物管理與持續追蹤；本篇不引用其可能汙名化的描述或方法細節。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取公立醫院公開衛教；僅採支持與安全部分，非精神科專業審查。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-2704-85046-1.html",
+          "claim": "2026年15至45歲本國籍或持健保卡外籍人士每人3次免費心理諮商，需查合作機構並預約。",
+          "supporting_passage": "衛福部2026-01-08建檔、2026-03-09更新的方案頁列出15至45歲、資格、3次及查名額、預約與身分文件流程。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取衛福部官方HTML；依明示年度限定，不外推至2027方案。"
+        },
+        {
+          "url": "https://www.gov.tw/News_Content_26_826198",
+          "claim": "2026方案期間為2026-01-01至12-31，每人3次個別諮商，掛號等行政費不在補助內。",
+          "supporting_passage": "E政府2026-05-28更新頁列年度期間、個別諮商次數、合作機構預約及費用限制。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取E政府服務整理頁；名額、地方資源與實際自付額仍由機構確認。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-4906-54077-107.html",
+          "claim": "1925安心專線由心理健康司提供24小時免付費心理諮詢；立即生命危險應走119。",
+          "supporting_passage": "心理健康司頁面更新日期2026-10-22，正文列1925及24小時免付費心理諮詢；本篇維持119緊急分流。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取心理健康司官方服務頁，並以本地危機專線查詢工具核對國內服務資訊。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-102761-e04590c0-1e41-4680-856e-bbfa70bab330.html",
+          "claim": "114年（2025）全國自殺死亡3,951人、粗率16.9及標準化率12.9／10萬人口；死亡資料不是意念盛行率。",
+          "supporting_passage": "衛福部統計處2026-09-11製表PDF表列死亡人數、粗死亡率及WHO 2000世界標準人口年齡標準化死亡率。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "直接下載官方PDF並以文字擷取核對原表；死亡登記不代表自傷意念、通報或諮商人次。"
+        }
+      ],
+      "statistics_assessed": [
+        "suicide_death_count_2025_tw",
+        "suicide_crude_death_rate_2025_tw",
+        "suicide_age_standardized_death_rate_2025_tw"
+      ],
+      "unresolved": [
+        "沒有可直接採用的2026全國自傷意念盛行率；2027年心理健康支持方案尚未公告。"
+      ],
+      "reviewer_limit": "ChatGPT AI輔助來源再核對；醫療／公共衛生專業獨立審閱待完成。",
+      "retired_source_ids": []
+    },
+    {
+      "id": "TW-01-044",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-044.md",
+      "title": "疑似心房顫動先確認診斷，抗凝血預防中風須個別評估，勿自行吃阿斯匹靈",
+      "prior_body_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:locales/zh-TW/book/ch01/TW-01-044.md",
+      "prior_review_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:localization/reviews/TW-01-044.json",
+      "before_sha256": "b98b75fb6e270f7fbf776dab85383abb87d852933f3a1b77ed9ba1bb3383d10e",
+      "after_sha256": "1d6c9fa626e8ea933b150cd781c105a6f49cac8466c3cc07e09f1348be36249c",
+      "prior_review_sha256": "99b9cd08fead12d6ab5cc142fa0d951af5e773709940e4a622814f76134ab827",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch01_af_vgh",
+        "ch01_af_aspirin_vghtc",
+        "ch01_af_ntuh_ecg",
+        "ch01_af_stroke_guideline_2024",
+        "ch01_af_incidence_2021"
+      ],
+      "previous_source_ids": [
+        "ch01_af_vgh",
+        "ch01_af_aspirin_vghtc",
+        "ch01_af_ntuh_ecg",
+        "ch01_af_chao_pubmed",
+        "ch01_af_chao_manuscript"
+      ],
+      "previous_review_claims": [
+        "保留原作不以阿斯匹靈代替抗凝血的原則，補台灣診斷與急症分流、個別治療及2011健保原始研究限制；不誤稱原作鼓勵自行服藥。"
+      ],
+      "taiwan_context": "心悸、穿戴裝置通知、心電圖與醫師確診是不同情境；台灣健保資料的新診斷率屬族群人年率，抗凝血需兼顧中風及出血風險，不可將人口率或指南代替個別醫療評估。",
+      "frequency_assessment": "臺灣健保資料回溯研究摘要列2021年32,817例新診斷心房顫動、IR 169.06／10萬人年、2000世界標準人口SIR 112.38／10萬人年。只涵蓋符合研究診斷定義、被健保資料記錄的新診斷；未就醫或未診斷者不在分子，非盛行率或個人心悸機率。",
+      "changes": "以2025年臺灣健保資料發生率研究及2024台灣腦中風學會指引，替換2000至2011舊心房顫動數值；記錄2021病例數、IR、SIR和題名／摘要期間差異，明示全文未取得且不把數值用作個人風險。",
+      "source_status": "逐條來源核對方法、擷取範圍與限制見source_checks；未取得專業簽證。",
+      "source_checks": [
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/432",
+          "claim": "心房顫動可能有心悸、呼吸短促、頭暈等表現，但症狀不能自行確診；依醫療評估治療。",
+          "supporting_passage": "臺北榮總衛教指出心房顫動及症狀，並建議有相關症狀至心臟內科評估。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取公立醫院公開HTML；不把所有患者套用相同藥物或程序。"
+        },
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/1694",
+          "claim": "阿斯匹靈為抗血小板藥；部分心房顫動心因性栓塞需抗凝血藥，勿自行改頻率。",
+          "supporting_passage": "臺中榮總2026-09-11修訂衛教說明依中風病因選擇抗栓治療，抗凝血與抗血小板用途不同。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取公立醫院最新版公開HTML；不採互動測驗中的相對效果數字作個人預測。"
+        },
+        {
+          "url": "https://www.ntuh.gov.tw/telehealth/Fpage.action?fid=1549",
+          "claim": "異常心電圖及心律疑慮應由醫療團隊進一步判讀，不以穿戴裝置單獨確診。",
+          "supporting_passage": "臺大醫院公開心電圖問答介紹心律判讀與進一步檢查原則；本篇只建議醫療評估、未規定每人須做同一檢查。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取臺大醫院公開頁面可見問答；未把心律影像擴大解讀為個人診斷。"
+        },
+        {
+          "url": "https://www.stroke.org.tw/files/guideline/2024_2.V6%281%29-1-65.pdf",
+          "claim": "台灣2024臨床指引要求評估中風風險、可控制因子、AF負荷與出血風險，與病人共同決策。",
+          "supporting_passage": "閱讀指引前言及治療評估／次級預防段落；抗凝血益處與出血風險需依個別臨床條件平衡。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取學會公開65頁PDF相關章節；屬醫療專業指引，不作一般讀者自我開藥表。"
+        },
+        {
+          "url": "https://www.sciencedirect.com/science/article/pii/S1547527125023057",
+          "claim": "臺灣健保資料研究摘要列2021年32,817例新增診斷，IR 169.06及2000年世界人口標準化SIR 112.38／10萬人年。",
+          "supporting_passage": "讀取Heart Rhythm出版者摘要列出的資料來源、診斷編碼方法及2021數值；題名研究期間與摘要提及2000基準年不同，僅採摘要明列數值。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取出版者公開摘要及索引；全文頁存取403，未讀全文、補充表或重算人年分母。"
+        }
+      ],
+      "statistics_assessed": [
+        "af_new_diagnoses_2021_tw",
+        "af_incidence_rate_2021_tw",
+        "af_standardized_incidence_2021_tw"
+      ],
+      "unresolved": [
+        "研究全文、補充表及精確人年分母未取得；題名與摘要列示研究起始年有差異。"
+      ],
+      "reviewer_limit": "ChatGPT AI輔助來源再核對；醫療／公共衛生專業獨立審閱待完成。",
+      "retired_source_ids": [
+        "ch01_af_chao_pubmed",
+        "ch01_af_chao_manuscript"
+      ]
+    },
+    {
+      "id": "TW-01-048",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-048.md",
+      "title": "木耳復水與米麵濕製品要冷藏控時，煮沸不能挽救已形成的邦克列酸",
+      "prior_body_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:locales/zh-TW/book/ch01/TW-01-048.md",
+      "prior_review_git_ref": "14b71d87acf2acad5fea74c6de500cd5ed042d9b:localization/reviews/TW-01-048.json",
+      "before_sha256": "db844882cfd276f8586e0abcb00f44a8ae9d57eb3da31b52c21309ad3ac893ec",
+      "after_sha256": "414d4569b7248414bcba8626b11eafcf9a1241d7f07f963e121f61a99ec44fc3",
+      "prior_review_sha256": "c05beecd5005cc4f785e9134dc19c9e2f5fbb8234fdadcd0bdc3ee5c97704a49",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch01_food_fda_202408",
+        "ch01_food_fda_home",
+        "ch01_food_tpe_milkrice_2026"
+      ],
+      "previous_source_ids": [
+        "ch01_food_fda_202408",
+        "ch01_food_fda_home"
+      ],
+      "previous_review_claims": [
+        "由不過夜口訣改成台灣冷鏈與復水控時、毒素耐熱及求醫；特定抽驗未檢出不外推。"
+      ],
+      "taiwan_context": "臺灣家庭復水木耳、採買河粉／粄條／米苔目與外食米濕製品需注意冷藏和保存；單一城市、通路或月份的抽驗不能代表全國市售食品汙染盛行率，無暴露分母時不推估個人中毒機率。",
+      "frequency_assessment": "未找到可估算臺灣邦克列酸中毒發生率的全國病例總數與食品暴露分母。食藥署2024特定米麵濕製品110件及臺北市2026米濕製品50件均為抽驗且未檢出，不能當全國代表性盛行率、零風險或個人機率。",
+      "changes": "新增臺北市2026年米濕製品50件行政抽驗與市售冷藏保存建議，與食藥署2024年110件抽驗分開；保留無全國發生率與暴露分母限制，不把零檢出外推為零風險。",
+      "source_status": "逐條來源核對方法、擷取範圍與限制見source_checks；未取得專業簽證。",
+      "source_checks": [
+        {
+          "url": "https://www.fda.gov.tw/TC/PublishOtherEpaperContent.aspx?id=1522&r=664640862&tid=4852",
+          "claim": "邦克列酸耐熱、不能靠洗滌或烹煮可靠去除；2024年5月20日啟動的抽驗至8月16日公告110件均未檢出。",
+          "supporting_passage": "食藥署第987期週報載明110件抽驗結果及食品保存風險；抽驗是行政樣本，不是全市場分母。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取食藥署官方週報HTML，並與2024公告日期及件數核對；不外推全國零汙染。"
+        },
+        {
+          "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f638563772690774149&iid=13043&type=3",
+          "claim": "家用指引建議復水使用潔淨水、冷藏並定時換水，料理後儘速食用或降溫冷藏。",
+          "supporting_passage": "食藥署2024-07-12三頁指引列食材處理、復水冷藏、米麵濕製品與保存建議。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取官方PDF三頁；不推導未載明的各種食材統一安全天數。"
+        },
+        {
+          "url": "https://www.fda.gov.tw/TC/csmnewsContent.aspx?id=t634650&mid=267",
+          "claim": "臺北市2026-09-14公告抽驗50件米濕製品，列示邦克列酸等項目均未檢出；市售流通保存提醒儘可能低於7°C。",
+          "supporting_passage": "食藥署轉載臺北市衛生局公告列出抽驗50件及通路，並提醒保存與疑似食用後保留食物、儘速就醫。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取食藥署轉載地方衛生局公告；地區與行政抽樣不代表全臺市場盛行率。"
+        }
+      ],
+      "statistics_assessed": [
+        "bongkrekic_sample_2024_tw",
+        "bongkrekic_sample_2026_taipei"
+      ],
+      "unresolved": [
+        "沒有邦克列酸全國病例及食用暴露母數，不能估發生率或食品汙染盛行率。"
+      ],
+      "reviewer_limit": "ChatGPT AI輔助來源再核對；醫療／公共衛生專業獨立審閱待完成。",
+      "retired_source_ids": []
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch01_cdc_tetanus_manual_2026",
+      "title": "疾管署：破傷風防治工作手冊（115年4月修訂）",
+      "url": "https://www.cdc.gov.tw/Uploads/fb6e1e1e-2ac2-4ee3-a8f8-13836b2fcdf7.pdf",
+      "supports": "2026年4月修訂手冊明載自2025年起Td停產、成人每十年追加改用Tdap；同一手冊附載的傷口處置表仍出現Td與Toxoid等名稱，本文不將其轉成民眾自用決策表。",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "evidence_type": "臺灣官方防疫手冊PDF",
+      "retrieval_method": "直接下載疾管署官方PDF並以文字擷取檢視5頁；核對疫苗變更文字及同份手冊的傷口處置表，不提供民眾自行選擇疫苗或免疫球蛋白的表格。"
+    },
+    {
+      "id": "ch01_cdc_tetanus_counts_20261027",
+      "title": "疾管署：破傷風監測病例統計（2026-10-27查閱）",
+      "url": "https://nidss.cdc.gov.tw/nndss/disease?id=037",
+      "supports": "2026-10-27讀取之全國依發病日、本土及境外移入監測頁列2025年3例、2026年第43週累計4例，最近一例發病日2026-05-30；查詢日期上限2026-10-31晚於查閱日；非傷口感染率，無傷口暴露分母。",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "evidence_type": "臺灣官方法定傳染病監測統計",
+      "retrieval_method": "直接取得疾管署官方HTML，讀取年度摘要表、最近病例日期與趨勢圖日期範圍；不把延伸至2026-10-31的查詢上限視為已觀察資料，也不以週別加總代替年度統計。"
+    },
+    {
+      "id": "ch01_mohw_suicide_stats_114",
+      "title": "衛福部統計處：114年自殺死亡統計（2026-09-11製表）",
+      "url": "https://www.mohw.gov.tw/dl-102761-e04590c0-1e41-4680-856e-bbfa70bab330.html",
+      "supports": "114年（2025）臺灣全國自殺死亡3,951人，粗死亡率16.9／10萬人口，年齡標準化死亡率12.9／10萬人口；標準化使用WHO 2000年世界標準人口。死亡登記不等於自傷意念、通報或諮商人次。",
+      "published_at": "2026-09-11",
+      "accessed_at": "2026-10-27",
+      "evidence_type": "臺灣中央政府死因統計PDF",
+      "retrieval_method": "直接下載衛福部統計處官方PDF，以文字擷取讀取114年表列死亡數、粗率及標準化率；保留標準人口與死亡登記口徑，不重算微資料。"
+    },
+    {
+      "id": "ch01_af_stroke_guideline_2024",
+      "title": "台灣腦中風學會：2024年心房顫動腦中風預防治療指引",
+      "url": "https://www.stroke.org.tw/files/guideline/2024_2.V6%281%29-1-65.pdf",
+      "supports": "2024年台灣指引要求臨床整體評估中風風險、可調整因子、心房顫動負荷、出血風險及病人偏好；抗凝血處方與劑量屬臨床決策，本文不作民眾自行選藥表。",
+      "published_at": "2024-03-01",
+      "accessed_at": "2026-10-27",
+      "evidence_type": "臺灣專業學會臨床指引PDF",
+      "retrieval_method": "直接開啟並閱讀公開65頁指引相關章節及建議；只轉述臨床風險平衡與共同決策原則，不提供個別用藥指示。"
+    },
+    {
+      "id": "ch01_af_incidence_2021",
+      "title": "Lien等：臺灣心房顫動發生率趨勢研究（Heart Rhythm 2025）",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1547527125023057",
+      "supports": "以臺灣健保資料研究新診斷心房顫動；摘要列2021年32,817例、整體IR 169.06／10萬人年及按2000年世界人口標準化SIR 112.38／10萬人年。題名稱2001-2021、摘要方法及結果提到2000，本文只報告摘要明列2021數值。",
+      "published_at": "2025-08-01",
+      "accessed_at": "2026-10-27",
+      "evidence_type": "臺灣健保行政資料原始研究之出版者摘要",
+      "retrieval_method": "讀取Heart Rhythm／ScienceDirect公開摘要與出版者索引所示方法及2021數值；出版社完整文章頁403，未讀全文、補充表或重新計算分母。"
+    },
+    {
+      "id": "ch01_food_tpe_milkrice_2026",
+      "title": "臺北市衛生局：115年度米濕製品抽驗結果",
+      "url": "https://www.fda.gov.tw/TC/csmnewsContent.aspx?id=t634650&mid=267",
+      "supports": "臺北市2026-09-14公告在傳統市場、麵攤、餐飲、百貨及雜貨通路抽驗50件米濕製品，邦克列酸等列示檢驗項目均未檢出；屬臺北市特定行政抽驗，不代表全國或個人發生率。市售流通保存建議儘可能低於7°C。",
+      "published_at": "2026-09-14",
+      "accessed_at": "2026-10-27",
+      "evidence_type": "臺灣地方政府食品抽驗公告（食藥署轉載）",
+      "retrieval_method": "直接讀取食藥署轉載的臺北市政府衛生局公告、抽驗通路、件數與保存提醒；抽樣名冊未作全市場推估，未將零檢出外推為零風險。"
+    }
+  ],
+  "sources_reused": [
+    {
+      "id": "ch01_crisis_mohw_1925_2026",
+      "reason": "直接加入本篇1925服務入口；runtime來源物件及既有來源登錄保留原樣。"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch01_cdc_tetanus_counts",
+      "replacement_ids": [
+        "ch01_cdc_tetanus_counts_20261027"
+      ],
+      "reason": "以本輪2026-10-27直接讀取的疾管署HTML快照取代2026-10-19來源快照；保留舊URL來源物件與歷史證據。",
+      "prior_source_sha256": "eb773714b7826bcbdb956619132a94466dcb125a33cd43b81b18851b7f304fb2",
+      "article_id": "TW-01-015",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_af_chao_pubmed",
+      "replacement_ids": [
+        "ch01_af_incidence_2021"
+      ],
+      "reason": "2017／2018年舊研究與本輪使用的2021年資料研究不同；不再以舊數值描述目前可用的較新發生率證據。",
+      "prior_source_sha256": "59b8b33302bf834c6a661f42780ae3e5692069d2697528c07d43b489a0e17227",
+      "article_id": "TW-01-044",
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_af_chao_manuscript",
+      "replacement_ids": [
+        "ch01_af_incidence_2021"
+      ],
+      "reason": "舊論文方法附件僅支持2000至2011年病例定義；本輪改以新研究摘要和台灣2024臨床指引呈現並保留全文限制。",
+      "prior_source_sha256": "ce72f5bb232e0f0970d182189e8a1e59cb0e399afa567399a44f780256281b58",
+      "article_id": "TW-01-044",
+      "current_source_object_unchanged": true
+    }
+  ],
+  "statistics": [
+    {
+      "id": "tetanus_confirmed_cases_2025_tw",
+      "item_id": "TW-01-015",
+      "source_id": "ch01_cdc_tetanus_counts_20261027",
+      "value": 3,
+      "unit": "確定病例；人",
+      "period": "2025全年",
+      "geography": "臺灣全國，本土及境外移入，依發病日",
+      "population": "法定傳染病監測確定病例",
+      "numerator": 3,
+      "denominator": null,
+      "denominator_description": "無全部釘刺、汙染傷口或其他暴露人次分母；不能計算受傷後感染率。",
+      "event_definition": "疾管署破傷風監測系統依發病日呈現的本土加境外移入病例數。",
+      "data_type": "官方通報監測病例數，不是抽樣調查或個人風險推估",
+      "method": "疾管署傳染病統計查詢系統年度表。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "病例數可修訂。",
+        "不得以病例數推算受傷感染機率。"
+      ]
+    },
+    {
+      "id": "tetanus_confirmed_cases_2026_through_week43_tw",
+      "item_id": "TW-01-015",
+      "source_id": "ch01_cdc_tetanus_counts_20261027",
+      "value": 4,
+      "unit": "年度累計確定病例；人",
+      "period": "2026年截至第43週；頁面日期上限2026-10-31",
+      "geography": "臺灣全國，本土及境外移入，依發病日",
+      "population": "法定傳染病監測確定病例",
+      "numerator": 4,
+      "denominator": null,
+      "denominator_description": "無全部傷口暴露人次分母；頁面日期上限2026-10-31晚於查閱日2026-10-27，不代表未來資料已觀察。",
+      "event_definition": "疾管署監測頁顯示2026年累計病例與最近一例發病日2026-05-30。",
+      "data_type": "官方監測年度累計數",
+      "method": "讀取官方HTML年度摘要與趨勢日期範圍。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "累計數可能修訂。",
+        "沒有全部傷口暴露分母，不能算個人機率。"
+      ]
+    },
+    {
+      "id": "suicide_death_count_2025_tw",
+      "item_id": "TW-01-032",
+      "source_id": "ch01_mohw_suicide_stats_114",
+      "value": 3951,
+      "unit": "登記死亡人數；人",
+      "period": "2025（民國114年）",
+      "geography": "臺灣全國",
+      "population": "全人口自殺死亡登記",
+      "numerator": 3951,
+      "denominator": null,
+      "denominator_description": "此筆為死亡件數；不是自傷意念、企圖或服務使用的分母。",
+      "event_definition": "死因統計登記之蓄意自我傷害（自殺）死亡。",
+      "data_type": "全國死亡登記統計",
+      "method": "衛福部統計處114年死因統計PDF。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不是自殺意念盛行率、通報或心理諮商人次。",
+        "不代表個人危機機率。"
+      ]
+    },
+    {
+      "id": "suicide_crude_death_rate_2025_tw",
+      "item_id": "TW-01-032",
+      "source_id": "ch01_mohw_suicide_stats_114",
+      "value": 16.9,
+      "unit": "每10萬人口粗死亡率",
+      "period": "2025（民國114年）",
+      "geography": "臺灣全國",
+      "population": "全人口",
+      "numerator": 3951,
+      "denominator": null,
+      "denominator_description": "以全國人口為粗率分母；官方表列每10萬人口16.9，報告未在本表直接列出可供本文重算的單一分母值。",
+      "event_definition": "死因統計登記之蓄意自我傷害（自殺）死亡。",
+      "data_type": "官方人口粗死亡率",
+      "method": "官方公布率；本輪不以四捨五入率反推人口數。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "粗死亡率不調整人口年齡結構。",
+        "不是自傷意念盛行率或個人機率。"
+      ]
+    },
+    {
+      "id": "suicide_age_standardized_death_rate_2025_tw",
+      "item_id": "TW-01-032",
+      "source_id": "ch01_mohw_suicide_stats_114",
+      "value": 12.9,
+      "unit": "每10萬人口年齡標準化死亡率",
+      "period": "2025（民國114年）",
+      "geography": "臺灣全國",
+      "population": "全人口；WHO 2000年世界標準人口年齡標準化",
+      "numerator": 3951,
+      "denominator": null,
+      "denominator_description": "以WHO 2000年世界標準人口年齡結構作標準化權重，不能以單一實際人口分母還原。",
+      "event_definition": "死因統計登記之蓄意自我傷害（自殺）死亡。",
+      "data_type": "官方年齡標準化死亡率",
+      "method": "衛福部統計處官方公布率；未重算微資料。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不同人口年齡結構下不可直接視為個人機率。",
+        "不是自傷意念盛行率。"
+      ]
+    },
+    {
+      "id": "af_new_diagnoses_2021_tw",
+      "item_id": "TW-01-044",
+      "source_id": "ch01_af_incidence_2021",
+      "value": 32817,
+      "unit": "符合研究定義的新診斷病例；人",
+      "period": "2021年",
+      "geography": "臺灣全國健保資料",
+      "population": "健保資料中研究定義之心房顫動新增診斷",
+      "numerator": 32817,
+      "denominator": null,
+      "denominator_description": "摘要未列出原始總人年分母；不可由四捨五入發生率倒推。",
+      "event_definition": "以健保資料及ICD-9／ICD-10-CM診斷碼識別的新診斷心房顫動。",
+      "data_type": "回溯性健保行政資料研究病例數",
+      "method": "Heart Rhythm 2025公開摘要；標題期間寫2001–2021，方法及結果另含2000基準年。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "行政診斷不含未就醫或未診斷者。",
+        "摘要資料不足以核對完整病例演算法與人年分母。"
+      ]
+    },
+    {
+      "id": "af_incidence_rate_2021_tw",
+      "item_id": "TW-01-044",
+      "source_id": "ch01_af_incidence_2021",
+      "value": 169.06,
+      "unit": "每10萬人年發生率（IR）",
+      "period": "2021年",
+      "geography": "臺灣全國健保資料",
+      "population": "研究定義之臺灣人口新增診斷",
+      "numerator": 32817,
+      "denominator": null,
+      "denominator_description": "分母為研究計算之人年；摘要未列總人年，故不重算。",
+      "event_definition": "回溯性健保研究中符合ICD-9／ICD-10-CM研究診斷定義的新發心房顫動。",
+      "data_type": "研究估計的年度粗發生率",
+      "method": "2025年Heart Rhythm出版者摘要；數值按每100,000 person-years報告。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不是盛行率、2026即時率或特定心悸者個人風險。",
+        "摘要未提供可檢算之原始人年總分母。"
+      ]
+    },
+    {
+      "id": "af_standardized_incidence_2021_tw",
+      "item_id": "TW-01-044",
+      "source_id": "ch01_af_incidence_2021",
+      "value": 112.38,
+      "unit": "每10萬人年年齡標準化發生率（SIR）",
+      "period": "2021年",
+      "geography": "臺灣全國健保資料",
+      "population": "研究定義之臺灣人口新增診斷，按2000年世界標準人口標準化",
+      "numerator": 32817,
+      "denominator": null,
+      "denominator_description": "以2000年世界標準人口年齡結構標準化；非單一實際人口分母。",
+      "event_definition": "研究定義的新發心房顫動，按年齡標準化。",
+      "data_type": "回溯性研究標準化發生率",
+      "method": "2025年Heart Rhythm出版者摘要報告之SIR。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不等於個人機率或盛行率。",
+        "題名與摘要期間差異、且全文及補充表未取得。"
+      ]
+    },
+    {
+      "id": "bongkrekic_sample_2024_tw",
+      "item_id": "TW-01-048",
+      "source_id": "ch01_food_fda_202408",
+      "value": 0,
+      "unit": "未檢出件數／受檢樣本件數",
+      "period": "2024-05-20啟動至2024-08-16公告",
+      "geography": "臺灣地方政府衛生局行政抽驗；公告未提供機率抽樣框",
+      "population": "粿條、粄條、河粉等米麵濕製品抽驗樣本",
+      "numerator": 0,
+      "denominator": 110,
+      "denominator_description": "特定時期抽驗110件；不是全市場隨機樣本或總販售量。",
+      "event_definition": "食藥署週報記載抽驗米麵濕製品未檢出邦克列酸。",
+      "data_type": "官方行政抽驗件數，不是疾病病例或盛行率調查",
+      "method": "食藥署第987期2024-08-16公告，抽驗自2024-05-20啟動。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "非全國市場代表性樣本，不能推算汙染率。",
+        "零檢出不代表零風險。"
+      ]
+    },
+    {
+      "id": "bongkrekic_sample_2026_taipei",
+      "item_id": "TW-01-048",
+      "source_id": "ch01_food_tpe_milkrice_2026",
+      "value": 0,
+      "unit": "未檢出件數／受檢樣本件數",
+      "period": "2026-09-14公告之115年度抽驗",
+      "geography": "臺北市指定市場、麵攤、餐飲、百貨及雜貨通路",
+      "population": "米粉／米線、河粉、米苔目、粄條及糕粿等50件米濕製品",
+      "numerator": 0,
+      "denominator": 50,
+      "denominator_description": "50件是臺北市特定通路行政抽驗件數，非全國或全市場母數。",
+      "event_definition": "公告所列抽驗項目包含邦克列酸，結果均未檢出。",
+      "data_type": "地方政府行政抽驗結果",
+      "method": "臺北市政府衛生局執行，食藥署轉載公告。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不能外推全國或市場汙染盛行率。",
+        "零檢出不能換算個人中毒機率。"
+      ]
+    }
+  ],
+  "policy_dates": [
+    {
+      "id": "adult_tetanus_booster_Td_to_Tdap",
+      "jurisdiction": "TW",
+      "source_id": "ch01_cdc_tetanus_manual_2026",
+      "published_at": "2026-04",
+      "effective_at": "2025（手冊未載精確起始日）",
+      "status": "疾管署手冊載明Td停產後，成人每十年追加改用Tdap；非個別外傷處置表。"
+    },
+    {
+      "id": "youth_mental_health_support_2026",
+      "jurisdiction": "TW",
+      "source_id": "ch01_mental_support_2026",
+      "published_at": "2026-01-08",
+      "updated_at": "2026-03-09",
+      "effective_at": "2026-01-01",
+      "expires_at": "2026-12-31",
+      "status": "2026年度方案；截至查閱日未確認2027年續辦公告。"
+    }
+  ],
+  "professional_review_pending": [
+    "感染科或急診",
+    "精神醫療及心理",
+    "心臟科／心律、腦中風及臨床藥事",
+    "食品毒理、臨床醫療及公共衛生"
+  ],
+  "publication_ready": false,
+  "unresolved": [
+    "各篇仍待相應獨立專業審閱；AI來源再核對不構成專業簽證。",
+    "心房顫動研究全文未取得，只採出版者摘要所列2021數值。",
+    "邦克列酸全國病例數及食用暴露分母不足，不能估全國發生率。",
+    "破傷風傷口附表與手冊疫苗名詞落差未取得疾管署釋疑。"
+  ]
+}
