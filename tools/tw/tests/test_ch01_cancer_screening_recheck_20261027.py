@@ -127,6 +127,8 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
             self.assertEqual(self.sources[source_id], added[source_id])
             self.assertEqual(rows[source_id][2], added[source_id]['url'])
             self.assertGreater(len(added[source_id]['retrieval_method']), 20)
+        self.assertEqual(self.sources['hpa_ldct_service_20260828']['url'], 'https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4619')
+        self.assertIn('應同意接受衛教戒菸', self.sources['hpa_ldct_service_20260828']['supports'])
 
     def test_frequency_data_keeps_period_population_and_denominator_limits(self):
         stats = {stat['id']: stat for stat in self.evidence['statistics']}
@@ -169,6 +171,7 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
         self.assertIn('檢查年度減出生年', bodies['TW-01-024'])
         self.assertIn('女性年差40至75、男性45至75', bodies['TW-01-024'])
         self.assertIn('年差50至75', bodies['TW-01-024'])
+        self.assertIn('同意接受衛教戒菸', bodies['TW-01-024'])
         self.assertIn('兩次檢查的間隔以檢查年度相差至少2年', bodies['TW-01-024'])
         self.assertIn('咳血', bodies['TW-01-024'])
         self.assertIn('19,986例', bodies['TW-01-024'])
