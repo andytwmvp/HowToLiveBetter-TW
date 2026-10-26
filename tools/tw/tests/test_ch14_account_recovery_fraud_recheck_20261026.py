@@ -127,9 +127,16 @@ class Chapter14AccountRecoveryRecheckTests(unittest.TestCase):
         self.assertEqual(self.evidence['legal_effective_dates'][0]['effective_date_of_latest_amendment'], '2024-02-01')
         self.assertIn('不包括第13條', self.evidence['legal_effective_dates'][0]['latest_amendment_scope'])
 
-        bodies = '\n'.join(self.items[item_id]['body'] for item_id in IDS)
-        for phrase in ('15日內回覆', '30日內', '未達新臺幣2,000元', '0800-034-580', '2026年第1季', '101件', '235件', '年滿18歲', '1至2個工作日', '線上查閱與書面申請每年度', '新臺幣80元', '新臺幣100元', '7天', '165'):
-            self.assertIn(phrase, bodies)
+        expected_by_item = {
+            'TW-14-004': ('15日內回覆', '30日內', '未達新臺幣2,000元', '0800-034-580', '260萬元', '105萬元', '165'),
+            'TW-14-005': ('收受申訴後30日內', '60日內', '2026年第1季', '101件', '235件'),
+            'TW-14-011': ('15日內回覆', '30日內', '未達新臺幣2,000元', '0800-034-580', '年滿18歲', '1至2個工作日', '線上查閱與書面申請每年度', '新臺幣80元', '新臺幣100元'),
+            'TW-14-012': ('15日內回覆', '30日內', '未達新臺幣2,000元', '0800-034-580', '7天'),
+        }
+        for item_id, phrases in expected_by_item.items():
+            with self.subTest(item=item_id):
+                for phrase in phrases:
+                    self.assertIn(phrase, self.items[item_id]['body'])
         self.assertFalse(self.evidence['publication_ready'])
         report = publication_report()
         self.assertFalse(report['publication_ready'])
