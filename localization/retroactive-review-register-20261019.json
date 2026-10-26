@@ -16623,6 +16623,380 @@
         "年報不單列被迫簽署；無該類案件或全體離職者母數。",
         "尚無律師或勞動行政專業獨立審閱。"
       ]
+    },
+    {
+      "id": "TW-07-008",
+      "before_sha256": "7db761eaa38ccf0f817f43ae14d26071c82e9063eee17d0e29b58f32ef4977a9",
+      "after_sha256": "1e7e3d1513af259d90ddd1b8e882c36828761e46508a8a1ffbf056b50f921112",
+      "prior_revision": "d7da29e335ae04ef3c5912b29be5d2ff6b25bad6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "cd1dd0c1f1d8874cf982fdd9421e15e13a570f2e78a7a968ffe5f170b90cced6",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "身心障礙證明、需求評估、地方補助及輔具申請在臺灣是不同程序；購買前須問地方對該品項的評估、核定與請款條件。",
+      "frequency_assessment": "沒有一致全國申請定義、符合資格者分母與觀察期間可計算個人核准率；不以障礙人口或補助總額推算個人申請機率。",
+      "changes": "依身心障礙者權益保障法第5、6、7、71條分清身分定義、鑑定、需求評估、證明及補助；記錄設籍限制及沿革日期。將先核定後購買限定於主管機關要求事前核准的品項，補入中央提醒及新北4日／12日（不含補件）的地方流程。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-6654-77519-1.html",
+          "claim": "核對福利諮詢服務時段與用途，不將其當緊急服務或核定。",
+          "supporting_passage": "編者摘要（非逐字引文）：1957免付費福利諮詢每天08:00至22:00，提供福利資訊及轉介；不是24小時緊急救護、即時床位保證或核定補助窗口。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050046",
+          "claim": "第5條定義身心障礙者及鑑定評估要件，第6條規範鑑定程序，第7條規範需求評估與證明核發；持證、需求及補助分開判斷。",
+          "supporting_passage": "編者摘要（非逐字引文）：第5條定義身心障礙者並列鑑定、評估及證明要件；第6條規定鑑定受理、專業鑑定和報告程序；第7條規定地方主管機關依鑑定報告進行需求評估，符合規定者核發證明並據以提供福利服務；第71條規定依評估結果提供補助，個別資格與程序另依規定。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行全文，逐條核對第5、6、7、71條的規範事項及最近修正日期。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050046",
+          "claim": "核對第71條施行日期及最近修法條次。",
+          "supporting_passage": "編者摘要（非逐字引文）：法規沿革列第71條分階段施行；現行全文最近修正為2025-08-01，該次修正第53條，不是第71條。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫沿革頁，對照公告、修正條文與施行日期。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-190-235-1.html",
+          "claim": "購置前先確認品項是否須評估或核定。",
+          "supporting_passage": "編者摘要（非逐字引文）：衛福部說明輔具補助應先確認申請和核定流程，再依規定購置；個別品項仍須查地方規定。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取衛福部身心障礙服務說明頁，核對評估、核定與購買順序。"
+        },
+        {
+          "url": "https://atrc.aihsin.ntpc.gov.tw/Service/1",
+          "claim": "新北時程只作地方例子，不套用全國。",
+          "supporting_passage": "編者摘要（非逐字引文）：新北流程要求核定後購置；頁面列中心審查最多4日、社會局複審最多12日，均不含補件時間。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取新北市輔具資源中心指定服務頁，核對流程和頁列日數。"
+        }
+      ],
+      "limits": [
+        "持證、需求評估及各項補助核定是不同程序。即使符合身心障礙身分，也不代表所有補助自動核准；失業或有工作也不能單獨決定所有支持資格。業者的口頭保證不是政府核定，勿因折扣先刷卡或簽下不清楚的分期契約。不同縣市的受理機關、服務量能、補助項目及地方規定可能不同。\n\n若照顧或居住安全已出現立即危險，先告知所在地社政窗口；一般福利資訊可撥1957（每日08:00至22:00），但它不是緊急救援、個案核定或即時服務保證專線。",
+        "各地輔具項目、補助額度、費用分擔及時程不同，未逐縣市盤點。",
+        "尚無社工、輔具、醫療或法律專業人員獨立審閱。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch07_disability",
+          "reason": "改以現行全文和沿革頁核對第71條與施行日。",
+          "prior_source_sha256": "a44e13af5f353606ef986a025b0ca1c615e1f00a4d90c0e0551108294522253e",
+          "replacement_ids": [
+            "ch07_disability_law_current_2026",
+            "ch07_disability_law_history_2026"
+          ]
+        },
+        {
+          "id": "ch07_aids",
+          "reason": "改用中央現行輔具提醒及新北指定流程頁。",
+          "prior_source_sha256": "c9d6cdf9e1176983e8e69d9825d4b2dc540d5a50c5d0df2bd6ea5818c16c58ac",
+          "replacement_ids": [
+            "ch07_mohw_aids_guide_2026",
+            "ch07_aids_ntpc_recheck_2026"
+          ]
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-008.json",
+      "source_ids": [
+        "supportlines",
+        "ch07_disability_law_current_2026",
+        "ch07_disability_law_history_2026",
+        "ch07_mohw_aids_guide_2026",
+        "ch07_aids_ntpc_recheck_2026"
+      ],
+      "review_method": "2026-10-26逐項核對臺灣法規現行條文與沿革、主管機關服務入口及行政統計原始頁／表；支持段落為編者摘要而非逐字引文。分開記錄統計年度、範圍、單位、母數與限制；缺乏匹配分母時明示資料不足。",
+      "unresolved_questions": [
+        "各地輔具項目、補助額度、費用分擔及時程不同，未逐縣市盤點。",
+        "尚無社工、輔具、醫療或法律專業人員獨立審閱。"
+      ]
+    },
+    {
+      "id": "TW-07-013",
+      "before_sha256": "38029325fe5e4f9329b0660828b97d022d8b2a206dcc54d38d54cf9a2075defd",
+      "after_sha256": "16c6ce81b777d372ab616dcb7b3c439374d3ec17dccef0cacca78450ea32d3bc",
+      "prior_revision": "d7da29e335ae04ef3c5912b29be5d2ff6b25bad6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "df051539df157ee83d8413f758c8a5ea9524cb1ff5dda73d8cc7cf101979bf6a",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "就保職訓生活津貼須由公立就服機構安排合格全日制課程；學費補助、津貼與失業給付不同，另考慮交通、照顧與家庭健保保費。",
+      "frequency_assessment": "113年年報列初次核付8,334人，沒有合格參訓或符合資格者分母；月報件數含初次及再次核付。不能換算個人機率或將不同單位直接比較。",
+      "changes": "補正全日制門檻、公立就服安排、工作收入停發、眷屬加給及健保保費補助；分清職訓津貼和失業給付資格，依第11、16、17、19、28條說明認定與結訓轉介，記錄公告及施行日。新增勞保局同一非自願離職事故多次訓練津貼期間合併且最長6個月的現行規則，以及113年年報人數與月報件數定義和母數限制。",
+      "source_checks": [
+        {
+          "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
+          "claim": "就業通查課是服務入口，不等於津貼核准。",
+          "supporting_passage": "編者摘要（非逐字引文）：提供職缺、訓練及就服據點查找；0800-777-888客服服務時間為週一至週五08:30至18:30，國定假日除外。入口及服務不保證錄用或補助核准。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/1632/1633/99260/post",
+          "claim": "核對全日制門檻、津貼計算、工作停發和健保補助。",
+          "supporting_passage": "編者摘要（非逐字引文）：2026-10-02說明列公立就服安排、全日制定義、平均投保薪資60%、最長6個月、眷屬加給、健保自付保費補助及受訓工作收入停發。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取勞動部2026-10-02更新之職訓津貼指定說明頁。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0015724.html",
+          "claim": "同一非自願離職保險事故安排一次或多次職業訓練時，津貼期間應合併計算，最長發給6個月。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞保局列明，被保險人因同一非自願離職保險事故，經公立就業服務機構安排參加一次或多次職業訓練，其請領職業訓練生活津貼的期間應合併計算，最長發給6個月。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取勞保局官方指定頁面「給付標準及期限」，核對給付期間段落及事故、訓練安排、合併計算和上限。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+          "claim": "分清失業給付、職訓津貼互斥和結訓轉介。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行法規最近修正日為2022-01-12；第11、16、17、19、28條規範失業給付、給付期間、職訓津貼互斥及結訓轉介。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行全文，核對所引條文和修正日期。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0050021",
+          "claim": "分開法規公布日與實際施行日。",
+          "supporting_passage": "編者摘要（非逐字引文）：沿革列2022-01-12修正第19-2條自2022-01-18施行；第28條前次修正2009-04-22公布、2009-05-01施行。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫沿革頁，分開公布日和施行日。"
+        },
+        {
+          "url": "https://events.bli.gov.tw/report/attachment_file/report/year/113/h20190.pdf",
+          "claim": "113年初次核付人數與母數限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：113年年報表2-19單位為人，職訓生活津貼初次核付8,334人（男性3,156、女性5,178）；沒有合格參訓或符合資格者分母。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取勞保局113年年報PDF表2-19，核對年份、欄名、單位及數值。"
+        },
+        {
+          "url": "https://events.bli.gov.tw/report/reportM.aspx?f=1181905050&m=09710",
+          "claim": "月報核付件數不可和年報人數直接比較。",
+          "supporting_passage": "編者摘要（非逐字引文）：月報以件及新臺幣元列值；職訓津貼月核付件數含初次及再次核付，不等於年報初次核付人數。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取勞保局月報表頭及註記，核對單位與計數範圍，不以件數推估人數。"
+        }
+      ],
+      "limits": [
+        "職業訓練生活津貼不得與失業給付同時領取；受訓期間如另有工作或承攬並取得工作收入，職訓津貼會停止發給，須如實向承辦通報。非全日制或自行報名課程不符合「由公立就服機構安排合格全日制訓練」的生活津貼條件；失業給付資格則依《就業保險法》第11條及失業認定另行審查。先向就服機構說明課程與參訓安排，不要自行假定給付結果或兩種給付可同領。\n\n全日制訓練結束仍未獲推介就業時，訓練單位應轉請公立就業服務機構辦理失業認定；尚未領或尚未領滿失業給付者，可能依程序核發剩餘給付。既有失業給付期間合併計入《就業保險法》第16條的給付期限：一般最長6個月，離職退保時已年滿45歲或領有身心障礙證明者最長9個月。這不是津貼與失業給付自動接續或兩者可同時領，且不得在訓練期滿前先申請後段失業給付。",
+        "津貼資格、出席、所得通報及失業認定由就服機構和勞保局按個案審查。",
+        "年報沒有符合資格者分母；月報與年報單位不同。",
+        "尚無勞動法、就業服務或統計專業人員獨立審閱。"
+      ],
+      "retired_sources": [
+        {
+          "id": "training",
+          "reason": "以勞動部2026-10-02更新說明取代舊版訓練津貼頁。",
+          "prior_source_sha256": "78236b2a77cc505ec65c9712009f65ada4dd3f28365cada704faef0348ef56ef",
+          "replacement_ids": [
+            "bli_training_allowance_2026"
+          ]
+        },
+        {
+          "id": "ch07_jobinsurance",
+          "reason": "改用就業保險法現行全文及沿革核對給付與日期。",
+          "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748",
+          "replacement_ids": [
+            "bli_employment_insurance_law_current",
+            "bli_employment_insurance_history_2026"
+          ]
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-013.json",
+      "source_ids": [
+        "jobportal",
+        "bli_training_allowance_2026",
+        "bli_training_allowance_repeat_period_2026",
+        "bli_employment_insurance_law_current",
+        "bli_employment_insurance_history_2026",
+        "bli_jobtraining_admin_2024",
+        "bli_jobtraining_monthly_2026"
+      ],
+      "review_method": "2026-10-26逐項核對臺灣法規現行條文與沿革、主管機關服務入口及行政統計原始頁／表；支持段落為編者摘要而非逐字引文。分開記錄統計年度、範圍、單位、母數與限制；缺乏匹配分母時明示資料不足。",
+      "unresolved_questions": [
+        "津貼資格、出席、所得通報及失業認定由就服機構和勞保局按個案審查。",
+        "年報沒有符合資格者分母；月報與年報單位不同。",
+        "尚無勞動法、就業服務或統計專業人員獨立審閱。"
+      ]
+    },
+    {
+      "id": "TW-07-018",
+      "before_sha256": "9c5e67594fa9c6b4178800a2dc30f8777a98b53960bc92968da8dfbc147bae4e",
+      "after_sha256": "efebee6f4c803d541fcce116c501151cf0875bda6fe329c1719d41925330e625",
+      "prior_revision": "d7da29e335ae04ef3c5912b29be5d2ff6b25bad6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "bd1b043d65e368b2ec9a7ea68a68113e2f44b651babf37f8d08c8c02f9863576",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "健保依強制投保類別順位；就保、勞保、國保和勞退有不同資格、保費與給付。資遣續保限特定離職事由、年資與期限，國保依條件接續，不是任選。",
+      "frequency_assessment": "未找到以全臺離職者為分母、統一界定中斷並使用相同觀察期的資料；不由補辦或追繳件數推算個人健保中斷機率。",
+      "changes": "依健保署現行類別順位補正離職後健保銜接；分開法定眷屬、公所第六類及不得掛名工會。補正被裁減資遣續保事由、15年年資、期限與辦法；核對國保資格，分清就保、勞保、職災保險及勞退專戶。 本次再核對臺灣勞退用語，明列勞工退休金（勞退）提繳資料，並保留個人專戶非離職後可任意提領生活費的限制。",
+      "source_checks": [
+        {
+          "url": "https://www.bli.gov.tw/0013590.html",
+          "claim": "國保按年齡、戶籍、其他保險及排除條件判斷。",
+          "supporting_passage": "編者摘要（非逐字引文）：原則25歲至未滿65歲、在臺設戶籍且未參加其他法定社會保險者，依國民年金法及已領老年給付等排除條件核定；不是所有離職者均可自由選擇參加。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0012942.htm",
+          "claim": "離職後應保留並查詢勞工退休金（勞退）個人專戶提繳資料；專戶不是可任意提領的失業生活費。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞工退休金新制個人專戶金額屬於勞工，可依法查詢；不是離職即歸零或可隨時提領的帳戶。預估試算不等於實際核發，且與勞保老年給付不同。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+          "claim": "分清失業給付、職訓津貼互斥和結訓轉介。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行法規最近修正日為2022-01-12；第11、16、17、19、28條規範失業給付、給付期間、職訓津貼互斥及結訓轉介。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行全文，核對所引條文和修正日期。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-4532-a6e73-2616-1.html",
+          "claim": "健保離職後按法定身分順位接續，不任選類別。",
+          "supporting_passage": "編者摘要（非逐字引文）：健保署頁面更新日期為2025-11-20，列投保類別與眷屬條件；離職後依實際身分及法定順位接續。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取健保署投保身分與資格頁，核對類別、眷屬和頁面日期。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0005059.htm",
+          "claim": "資遣續保有特定事由、年資和期限。",
+          "supporting_passage": "編者摘要（非逐字引文）：符合被裁減資遣等法定事由、勞保年資合計滿15年且未達老年給付條件者，可依規定在期限內申請續保；不是所有待業者適用。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取勞保局被裁減資遣續保頁，核對適用事由、年資和期限。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0005488.html",
+          "claim": "續保生效日期依專屬辦法辦理。",
+          "supporting_passage": "編者摘要（非逐字引文）：相關辦法規定續保申請、效力起算及保險給付處理；不能把資遣續保擴張為一般離職續保。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "核對勞保局列示續保辦法及申請時點說明；不把未讀附件擴張為個案結論。"
+        }
+      ],
+      "limits": [
+        "健保、就保、勞保、國保及勞退不是同一個帳戶。工會加保須符合實際工作及會員資格；被資遣勞保續保只限法定特定條件；國民年金也不是所有離職者都能自行選擇。收到保費單不代表給付已核准，勞退個人專戶餘額也不是立即失業補助。\n\n遇到雇主漏保、少報薪資或未提繳勞退，保留薪資、出勤、在職及離職資料，向勞保局或地方勞工主管機關詢問。健保身分及欠費問題則由健保署處理，不要用第三方代辦保證「補足年資」。",
+        "保費級距、補助與投保類別隨年度、薪資及法定身分變動，須查個人紀錄。",
+        "沒有一致全國離職人口分母可估個人健保中斷機率。",
+        "尚無勞健保、國保、勞退或法律專業人員獨立審閱。"
+      ],
+      "retired_sources": [
+        {
+          "id": "nhicategories",
+          "reason": "改用健保署現行投保身分及資格頁重新核對順位。",
+          "prior_source_sha256": "ff4b478ccc49bf18faa54427b835d9da45e7297eb2a180ac85f513b230256867",
+          "replacement_ids": [
+            "nhi_class_priority_2025"
+          ]
+        },
+        {
+          "id": "ch07_jobinsurance",
+          "reason": "共用現行就業保險法，並補入資遣續保說明及辦法。",
+          "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748",
+          "replacement_ids": [
+            "bli_employment_insurance_law_current",
+            "bli_labor_continuation_15y_2025",
+            "bli_labor_continuation_rules"
+          ]
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-018.json",
+      "source_ids": [
+        "ch07_nationalpension",
+        "ch07_retirement",
+        "bli_employment_insurance_law_current",
+        "nhi_class_priority_2025",
+        "bli_labor_continuation_15y_2025",
+        "bli_labor_continuation_rules"
+      ],
+      "review_method": "2026-10-26逐項核對臺灣法規現行條文與沿革、主管機關服務入口及行政統計原始頁／表；支持段落為編者摘要而非逐字引文。分開記錄統計年度、範圍、單位、母數與限制；缺乏匹配分母時明示資料不足。",
+      "unresolved_questions": [
+        "保費級距、補助與投保類別隨年度、薪資及法定身分變動，須查個人紀錄。",
+        "沒有一致全國離職人口分母可估個人健保中斷機率。",
+        "尚無勞健保、國保、勞退或法律專業人員獨立審閱。"
+      ]
+    },
+    {
+      "id": "TW-07-021",
+      "before_sha256": "6d129afef870ce5d0571b00a9710c3e18f06ce12590ec5b3f17e8432069b4215",
+      "after_sha256": "04cf295108fa714db73e9c602f0d6c1069852e57962dc082f6a0a7b198ced43d",
+      "prior_revision": "d7da29e335ae04ef3c5912b29be5d2ff6b25bad6",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "46ac0f09926046f84cd7bb57bec23dcb55ae179d0bf7d915c7bbb10bbc73f6bc",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "無安全住處時先判斷暴力、受傷失溫及保護需求；110、119、113、1957用途與時間不同。遊民安置由地方主管機關依規定辦理，床位及資格逐地確認。",
+      "frequency_assessment": "官方指標頁列113年遊民2,991人、身心障礙者625人（約21%）；沒有暴露分母或完整盤點方法，非新發生率、全部無固定住所者、當晚床位或個人機率。",
+      "changes": "分流立即威脅110、緊急救護119、特定保護事件24小時113；一般福利諮詢用1957每日08:00至22:00和所在地社政窗口。補入社會救助法第17、21條及113年官方指標，標示地方量能和統計限制。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-6654-77519-1.html",
+          "claim": "核對福利諮詢服務時段與用途，不將其當緊急服務或核定。",
+          "supporting_passage": "編者摘要（非逐字引文）：1957免付費福利諮詢每天08:00至22:00，提供福利資訊及轉介；不是24小時緊急救護、即時床位保證或核定補助窗口。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078",
+          "claim": "遊民安置依地方規定處理，不保證每晚均有空床。",
+          "supporting_passage": "編者摘要（非逐字引文）：第4至5條低收、中低收須依家庭收入財產及法定人口範圍；第5條之1無工作而有工作能力者原則推計基本工資，公立就服認定失業等情形例外。第17條遊民處理由地方規範；第21條列急難救助事由。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOSAASW/cp-594-5082-103.html",
+          "claim": "急難救助依法定事由和戶籍地窗口申請。",
+          "supporting_passage": "編者摘要（非逐字引文）：社會救助法第21條的急難救助，依死亡重病失業及其他致生活陷困等事由，向戶籍地主管機關／公所詢問申請；與急難紓困方案之居住地受理分開。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已核對主管機關、法規資料庫或服務提供機構的指定HTML正文；查閱日不等於發布或施行日，未讀附件不作細項依據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
+          "claim": "113處理特定保護事件，立即危險先110。",
+          "supporting_passage": "編者摘要（非逐字引文）：113是全年24小時免付費保護諮詢與轉介管道；立即人身安全危險先打110，不是以113代替緊急報警或119救護。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已讀取官方指定頁面；查閱日不等於公告日或施行日。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=12181&code=list&flag=detail&ids=26",
+          "claim": "119提供緊急救護與送醫，不替代安置。",
+          "supporting_passage": "編者摘要（非逐字引文）：消防署說明119為緊急救護專線，急重症受理後派遣救護人員，並依危急情形送往就近適當醫院；不須等一般門診或轉診文件。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "已讀取官方指定頁面；查閱日不等於公告日或施行日。"
+        },
+        {
+          "url": "https://service.mohw.gov.tw/HumanRights/housing_theme1.html",
+          "claim": "官方人數不可推作發生率、總人口或床位數。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方指標資料頁列示民國113年遊民人口2,991人，其中625人為身心障礙者（約21%）；未提供足以估算個人暴露率的居住人口分母，行政人數不是所有無固定住所者總數、新發生人數或當晚床位數。 本摘要限於本篇所述對象、適用條件及查閱日期。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-25直接讀取主管機關指定頁面正文；摘要限於該頁可見資訊，不由入口頁或未讀附件擴張推論。"
+        }
+      ],
+      "limits": [
+        "1957不是24小時服務，113保護專線、110警察與119緊急救護亦不能互相取代。地方收容規則、夜間聯絡方式、床位、費用及資格有差異；本篇未逐縣市查核即時容量。不要在公開社群貼出完整身分證件、銀行資料或即時位置，也不要因急著找床而接受被控制、無償工作或交付帳戶的條件。",
+        "尚未逐縣市查核夜間收容量能、規則、費用、同行及臨時聯絡方式。",
+        "官方遊民資料頁沒有完整盤點方法和居住暴露分母。",
+        "尚無社工、警政、消防、醫療或法律專業人員獨立審閱。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-07-021.json",
+      "source_ids": [
+        "supportlines",
+        "socialaid",
+        "ch07_urgent_household",
+        "assault_113_dops",
+        "ch24_nfa_119_20220705",
+        "ch07_homeless_admin_2024"
+      ],
+      "review_method": "2026-10-26逐項核對臺灣法規現行條文與沿革、主管機關服務入口及行政統計原始頁／表；支持段落為編者摘要而非逐字引文。分開記錄統計年度、範圍、單位、母數與限制；缺乏匹配分母時明示資料不足。",
+      "unresolved_questions": [
+        "尚未逐縣市查核夜間收容量能、規則、費用、同行及臨時聯絡方式。",
+        "官方遊民資料頁沒有完整盤點方法和居住暴露分母。",
+        "尚無社工、警政、消防、醫療或法律專業人員獨立審閱。"
+      ]
     }
   ]
 }

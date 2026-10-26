@@ -46,7 +46,9 @@ class Ch19LeaveProbationNoticeRecheckTests(unittest.TestCase):
         chapter_entries = {f"TW-19-{row[0]:03}": row for row in chapter["entries"]}
 
         self.assertEqual(old_runtime["sources"], [row for row in runtime["sources"] if row["id"] in prior_sources])
-        self.assertEqual(NEW_SOURCE_IDS, set(sources) - set(prior_sources))
+        # Later batches may append sources to the shared runtime. Keep this
+        # historical contract scoped to the IDs introduced by this chapter-19 batch.
+        self.assertTrue(NEW_SOURCE_IDS <= set(sources) - set(prior_sources))
         self.assertEqual(new_source_registry["ey_minimum_wage_2027"][2], sources["ey_minimum_wage_2027"]["url"])
         self.assertIn("2026-10-14", new_source_registry["ey_minimum_wage_2027"][3])
         self.assertNotIn("2026-10-01核定", new_source_registry["ey_minimum_wage_2027"][3])
