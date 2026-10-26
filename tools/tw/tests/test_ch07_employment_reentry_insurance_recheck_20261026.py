@@ -132,7 +132,12 @@ class Ch07EmploymentReentryInsuranceRecheckTests(unittest.TestCase):
         self.assertIn("非所有保單理賠", foi["denominator_note"])
 
         items = {row["id"]: row for row in validate_runtime()["items"]}
+        self.assertIn("549件", items["TW-07-020"]["body"])
+        self.assertIn("8,238件", items["TW-07-020"]["body"])
+        self.assertIn("6.66%", items["TW-07-020"]["body"])
         self.assertIn("1,911名", items["TW-07-005"]["body"])
+        self.assertIn("54,996名", items["TW-07-005"]["body"])
+        self.assertIn("3.47%", items["TW-07-005"]["body"])
         self.assertIn("資料未提供求職者、應徵次數或接觸假職缺人數作分母", items["TW-07-005"]["body"])
         self.assertIn("不得把年度法院收案件數、受保護對象類別或單一分會成果當作個人成功率或再犯機率", items["TW-07-019"]["body"])
         self.assertIn("30日內處理", items["TW-07-020"]["body"])
