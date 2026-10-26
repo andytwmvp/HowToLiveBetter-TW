@@ -1,0 +1,140 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "54b9b8a5dad61fdd5ea32accbeb56b6a885b4454",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-NAV-004",
+      "TW-NAV-005",
+      "TW-NAV-006",
+      "TW-NAV-007",
+      "TW-NAV-008",
+      "TW-NAV-009"
+    ],
+    "risk_order": [
+      "TW-NAV-008",
+      "TW-NAV-009",
+      "TW-NAV-004",
+      "TW-NAV-005",
+      "TW-NAV-006",
+      "TW-NAV-007"
+    ],
+    "risk_basis": "依臺灣癌症登記所列新發個案量與篩檢後續延誤可能造成的傷害排序；全國個案數不代表個人風險。順序是本批核對工作優先度，不是精確發生率或醫療建議排序。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 159,
+    "runtime_sources": 753,
+    "source_registry": 834,
+    "json_files_checked": 454,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 165,
+    "runtime_sources": 761,
+    "source_registry": 842,
+    "json_files_checked": 462,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": {
+    "source": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+    "report": "國民健康署112年癌症登記報告與衛福部官方附表",
+    "published_at": "2025-12-30",
+    "accessed_at": "2026-10-26",
+    "period": "2023年（民國112年）新發侵襲癌登記",
+    "jurisdiction": "臺灣全國",
+    "data_type": "癌症登記行政資料，不是抽樣調查；來源明示發生資料不含原位癌",
+    "standardization": "年齡標準化率以西元2000年世界標準人口計算；率的分母單位為每10萬名相應人口。官方附表未提供可由公開摘要重算的未標準化原始暴露人年分母。",
+    "measures": [
+      {
+        "site": "乳房（女性）",
+        "numerator": 17779,
+        "denominator": "率標準化後每10萬名女性標準人口；癌登摘要未列可重算的個人暴露人年分母",
+        "value": 91.2,
+        "unit": "2023年新發侵襲癌病例數；年齡標準化發生率／10萬女性",
+        "age_median": 57,
+        "event_definition": "癌症登記中的女性乳房侵襲癌新發個案，不含原位癌。",
+        "limitations": [
+          "全體女性率，不是40至74歲族群分層率或個人兩年發生機率。",
+          "不可將年齡標準化率直接換算為個人終生、年度或兩年風險。"
+        ]
+      },
+      {
+        "site": "大腸癌（男女合計）",
+        "numerator": 19074,
+        "denominator": "率標準化後每10萬名人口；癌登摘要未列可重算的個人暴露人年分母",
+        "value": 43.1,
+        "unit": "2023年新發侵襲癌病例數；年齡標準化發生率／10萬人口",
+        "age_median": 67,
+        "event_definition": "癌症登記中的全體大腸癌新發個案，不含原位癌。",
+        "limitations": [
+          "全人口率，不是45至74歲或40至44歲家族史族群的分層發生率。",
+          "癌登資料未提供可套用到本批篩檢資格族群的個人風險分母。"
+        ]
+      },
+      {
+        "site": "子宮頸（女性）",
+        "numerator": 1429,
+        "denominator": "率標準化後每10萬名女性標準人口；癌登摘要未列可重算的個人暴露人年分母",
+        "value": 7.4,
+        "unit": "2023年新發侵襲癌病例數；年齡標準化發生率／10萬女性",
+        "age_median": null,
+        "event_definition": "癌症登記中的女性子宮頸侵襲癌新發個案，不含原位癌。",
+        "limitations": [
+          "全體女性率，不是25至29歲、30歲以上或其他個別年齡層的發生率。",
+          "子宮頸癌發生率不能代替HPV感染盛行率、篩檢陽性率或個人未來風險。"
+        ]
+      }
+    ],
+    "comparability": "此處僅並列同一年度、同一官方報告體系的癌登數字；不跨不同標準人口、癌別定義或統計期間作趨勢比較。不同年齡、家族史、症狀及手術史的個人風險未從全體標準化率推估。"
+  },
+  "policy_dates": [
+    {
+      "source_id": "hpa_preventive_service_rules_20261008",
+      "announcement_date": "2026-10-08",
+      "effective_date": "2027-01-01",
+      "scope": "公告摘要涉及抹片檢體難以判讀之給付，以及HPV無法判讀給付、年齡檢核與子宮全切除給付調整。",
+      "status_at_review": "已公告但尚未生效；公告摘要未含可確認個案資格的完整附表，沒有當作現行資格或現行檢查流程套用。",
+      "follow_up_due": "2026-12-15"
+    }
+  ],
+  "new_source_ids": [
+    "hpa_cancer_screening_policy_2026",
+    "hpa_breast_screening_followup_2026",
+    "hpa_cervical_screening_2026",
+    "hpa_cervical_followup_2026",
+    "hpa_colorectal_screening_2026",
+    "hpa_colorectal_family_2026",
+    "hpa_colorectal_repeat_2026",
+    "hpa_preventive_service_rules_20261008"
+  ],
+  "reused_source_ids": ["ch01_cancer_registry_2023_tables"],
+  "retired_sources": [
+    {
+      "id": "taipei_screening",
+      "usage": "從6則導航條目的現行 source_ids 移除；保留 runtime 原始來源物件、Git歷史及逐條退役SHA。",
+      "reason": "臺北市地方預約頁不足以單獨證明全國中央資格與其他縣市服務安排。"
+    }
+  ],
+  "retrieval_limits": [
+    "國健署多個HTML頁在本次查核環境直接開啟逾時或回傳502；資格、發布日期與摘要依官方搜尋索引顯示的正文交叉核對，來源紀錄明載此限制，沒有宣稱讀過未載入的附件。",
+    "官方癌登PDF表格及搜尋索引可核對個案數、標準化率、標準人口及原位癌排除；本批未重算癌登微資料或年齡別風險。",
+    "2027年預防保健修正附表尚未逐項核讀，故將最新複查日設於2026-12-15，早於施行日。"
+  ],
+  "professional_review": "pending",
+  "publication_ready": false
+}

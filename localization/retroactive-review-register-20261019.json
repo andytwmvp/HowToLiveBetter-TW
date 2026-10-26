@@ -16997,6 +16997,382 @@
         "官方遊民資料頁沒有完整盤點方法和居住暴露分母。",
         "尚無社工、警政、消防、醫療或法律專業人員獨立審閱。"
       ]
+    },
+    {
+      "id": "TW-NAV-004",
+      "before_sha256": "e2123b591a2b2df05d964e8a65f33957b0b7a3822589f80d005b05bf980e21d3",
+      "after_sha256": "a2f91c4736cd4c03162e1b3d5ff34e12e44aa40beef3557a586659c606196550",
+      "prior_revision": "54b9b8a5dad61fdd5ea32accbeb56b6a885b4454",
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "9141f54f3886e2eee617656daed9d21c97ca7c4d7131b119f5c650a91dbfed37",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣女性可依中央40至74歲、每2年一次的公費乳房攝影方案至核可院所；有症狀者直接尋求診斷，不以無症狀篩檢替代。",
+      "frequency_assessment": "2023年全國癌症登記列女性乳癌17,779例；女性年齡標準化發生率91.2／10萬女性，依2000年世界標準人口；不含原位癌。是全體女性年度標準化率，不是40至74歲兩年個人風險，不能直接換算個人機率。",
+      "changes": "重查國健署中央公費資格與地方入口差異，更新臺灣癌登頻率、期間、個案數、標準人口及限制，補正個別行動與症狀／異常分流；臺北市預約平臺退出現行依據但來源物件保留。",
+      "source_checks": [
+        {
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=211",
+          "claim": "核對全國公費方案年齡與篩檢週期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署政策頁列乳房X光攝影40至74歲每2年、25至29歲子宮頸抹片每3年、30歲以上每年補助且建議至少每3年一次、35／45／65歲HPV，以及大腸癌45至74歲與40至44歲家族史每2年。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "官方頁面可檢索文字；web.open回傳502，以官方搜尋索引正文及癌別更新頁交叉核對，未宣稱已讀取未顯示附件。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=614&pid=1124&sid=14961",
+          "claim": "核對乳房攝影時間、核可院所、陰性限制與異常後續。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署資料列乳房攝影約需15分鐘、可查核可機構；篩檢可能偽陰性，正常後新異狀仍須就醫，疑似異常應由專科進一步影像或切片。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方搜尋索引正文，頁面顯示更新2026-03-09；web.open回傳502，未採用索引未呈現的附件細節。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "核對最近公布的全國癌登病例數、率的單位與標準人口。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署癌症登記資料列2023年女性乳癌17,779例、年齡標準化發生率91.2／10萬女性；兩性大腸癌19,074例、43.1／10萬人口；女性子宮頸癌1,429例、7.4／10萬女性。發生率不含原位癌，率以2000年世界標準人口標準化。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接開啟衛福部官方兩頁PDF：核對第1頁表頭、癌登來源及標準化註記；子宮頸女性年齡別圖由同一PDF官方搜尋索引文字核對，未重算資料庫。"
+        }
+      ],
+      "limits": [
+        "此為全體女性年齡標準化發生率，不是40至74歲個人兩年發生機率。乳房攝影可能偽陰性；即使結果正常，之後有新異狀仍應儘速就醫。有症狀或高風險病史者請由醫師評估，不等下次例行篩檢。",
+        "本次為AI輔助官方來源核對，非醫師或公共衛生專業獨立審閱；癌症登記的整體年齡標準化率不能代替個人化風險。"
+      ],
+      "retired_sources": [
+        {
+          "id": "taipei_screening",
+          "reason": "臺北市預約平臺只支援地方預約入口，不能單獨證明全國資格、中央最新方案或地方即時場次；完整保留來源物件，改以國健署全國政策與專題頁支持。",
+          "replacement_ids": [
+            "hpa_cancer_screening_policy_2026",
+            "hpa_breast_screening_followup_2026",
+            "ch01_cancer_registry_2023_tables"
+          ],
+          "prior_source_sha256": "72b0a4af11394ee4bc54a1c7fef5e1ec7373e2a6a3c663358b56f239fdfdefd6"
+        }
+      ]
+    },
+    {
+      "id": "TW-NAV-005",
+      "before_sha256": "db775835d1651f9939306c458f2f3af761bf18e0b16f3431c67f84209992da0c",
+      "after_sha256": "11272df0d28f168e5ec67198af828f8607ca04f48259b05a4618e0153888a93f",
+      "prior_revision": "54b9b8a5dad61fdd5ea32accbeb56b6a885b4454",
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "755967b6457afca08a74adac705d396ea64d25de54d74dac668ee6b3151fc994",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2026-12-15",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣子宮頸抹片公費間隔與國健署一般建議頻率並不完全相同；症狀、過往異常及子宮頸手術史需個別確認。",
+      "frequency_assessment": "2023年全國癌症登記列子宮頸癌1,429例；女性年齡標準化發生率7.4／10萬女性，依2000年世界標準人口；不含原位癌。沒有以本條目特定年齡或HPV檢測陽性作分層的分母，不能推算個人風險或HPV盛行率。",
+      "changes": "重查國健署中央公費資格與地方入口差異，更新臺灣癌登頻率、期間、個案數、標準人口及限制，補正個別行動與症狀／異常分流；臺北市預約平臺退出現行依據但來源物件保留。",
+      "source_checks": [
+        {
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=211",
+          "claim": "核對全國公費方案年齡與篩檢週期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署政策頁列乳房X光攝影40至74歲每2年、25至29歲子宮頸抹片每3年、30歲以上每年補助且建議至少每3年一次、35／45／65歲HPV，以及大腸癌45至74歲與40至44歲家族史每2年。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "官方頁面可檢索文字；web.open回傳502，以官方搜尋索引正文及癌別更新頁交叉核對，未宣稱已讀取未顯示附件。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?id=549&kv=default&lottery=NnNicDZvK2lCZFF6cW5SSXYzY3dsUT09&name=NDMyMjM5SXB5V3lhYlJWdlBUY1hMUT09&nodeid=614&pid=1125",
+          "claim": "核對2026年現行抹片與HPV公費年齡、頻率及一般建議。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署頁列25至29歲每3年一次、30歲以上每年補助一次、建議25歲以上至少每3年一次，並列35、45、65歲HPV檢測。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方搜尋索引正文，頁面顯示更新2026-03-09；web.open回傳502，未讀取HPV處置流程PDF。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4809&pid=17947",
+          "claim": "核對篩檢異常及症狀的就醫分流。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署提醒抹片陽性不等於癌症，應依醫師指示接受進一步檢查和追蹤；即使結果正常，有異狀仍應儘速就醫。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方搜尋索引正文；未使用未檢視的附件或病人個別診斷資料。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "核對最近公布的全國癌登病例數、率的單位與標準人口。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署癌症登記資料列2023年女性乳癌17,779例、年齡標準化發生率91.2／10萬女性；兩性大腸癌19,074例、43.1／10萬人口；女性子宮頸癌1,429例、7.4／10萬女性。發生率不含原位癌，率以2000年世界標準人口標準化。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接開啟衛福部官方兩頁PDF：核對第1頁表頭、癌登來源及標準化註記；子宮頸女性年齡別圖由同一PDF官方搜尋索引文字核對，未重算資料庫。"
+        }
+      ],
+      "limits": [
+        "此為全體女性年齡標準化發生率，不是25至29歲個人發生機率。公費間隔不涵蓋異常報告、症狀或個人手術史的追蹤；有症狀或曾異常請依醫囑，不等下一次補助間隔。",
+        "本次為AI輔助官方來源核對，非醫師或公共衛生專業獨立審閱；癌症登記的整體年齡標準化率不能代替個人化風險。"
+      ],
+      "retired_sources": [
+        {
+          "id": "taipei_screening",
+          "reason": "臺北市預約平臺只支援地方預約入口，不能單獨證明全國資格、中央最新方案或地方即時場次；完整保留來源物件，改以國健署全國政策與專題頁支持。",
+          "replacement_ids": [
+            "hpa_cancer_screening_policy_2026",
+            "hpa_cervical_screening_2026",
+            "hpa_cervical_followup_2026",
+            "ch01_cancer_registry_2023_tables"
+          ],
+          "prior_source_sha256": "72b0a4af11394ee4bc54a1c7fef5e1ec7373e2a6a3c663358b56f239fdfdefd6"
+        }
+      ]
+    },
+    {
+      "id": "TW-NAV-006",
+      "before_sha256": "b3e3762fda950807b3a17c4189af1fb0e5b04a0b626145049e5571ba29a88061",
+      "after_sha256": "efaed5fac3a4dd2f0ba42a76c2aa5b4ff31592d50a34498d8cf34c72281655dc",
+      "prior_revision": "54b9b8a5dad61fdd5ea32accbeb56b6a885b4454",
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "1ac18ec3de35096194eb690f5164b1c7c939d3f896c5792d25365f6b81dee8d6",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2026-12-15",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣子宮頸抹片公費間隔與國健署一般建議頻率並不完全相同；症狀、過往異常及子宮頸手術史需個別確認。",
+      "frequency_assessment": "2023年全國癌症登記列子宮頸癌1,429例；女性年齡標準化發生率7.4／10萬女性，依2000年世界標準人口；不含原位癌。沒有以本條目特定年齡或HPV檢測陽性作分層的分母，不能推算個人風險或HPV盛行率。",
+      "changes": "重查國健署中央公費資格與地方入口差異，更新臺灣癌登頻率、期間、個案數、標準人口及限制，補正個別行動與症狀／異常分流；臺北市預約平臺退出現行依據但來源物件保留。 另清楚區分每年可補助一次與一般建議至少每3年一次，避免把補助次數誤讀為必要檢查頻率。",
+      "source_checks": [
+        {
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=211",
+          "claim": "核對全國公費方案年齡與篩檢週期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署政策頁列乳房X光攝影40至74歲每2年、25至29歲子宮頸抹片每3年、30歲以上每年補助且建議至少每3年一次、35／45／65歲HPV，以及大腸癌45至74歲與40至44歲家族史每2年。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "官方頁面可檢索文字；web.open回傳502，以官方搜尋索引正文及癌別更新頁交叉核對，未宣稱已讀取未顯示附件。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?id=549&kv=default&lottery=NnNicDZvK2lCZFF6cW5SSXYzY3dsUT09&name=NDMyMjM5SXB5V3lhYlJWdlBUY1hMUT09&nodeid=614&pid=1125",
+          "claim": "核對2026年現行抹片與HPV公費年齡、頻率及一般建議。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署頁列25至29歲每3年一次、30歲以上每年補助一次、建議25歲以上至少每3年一次，並列35、45、65歲HPV檢測。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方搜尋索引正文，頁面顯示更新2026-03-09；web.open回傳502，未讀取HPV處置流程PDF。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4809&pid=17947",
+          "claim": "核對篩檢異常及症狀的就醫分流。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署提醒抹片陽性不等於癌症，應依醫師指示接受進一步檢查和追蹤；即使結果正常，有異狀仍應儘速就醫。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方搜尋索引正文；未使用未檢視的附件或病人個別診斷資料。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=838&pid=20378",
+          "claim": "核對已公告但尚未施行的預防保健規範變更與日期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署公告修正預防保健服務注意事項，公告日2026-10-08、生效日2027-01-01；摘要涉及子宮頸抹片難以判讀，以及女性HPV檢測無法判讀給付、年齡檢核和子宮全切除給付，未列新資格細節。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方公告搜尋索引正文，核對公告及生效日期；web.open回傳502，尚未逐項讀取修正附表PDF，因此不轉述未核讀的條件。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "核對最近公布的全國癌登病例數、率的單位與標準人口。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署癌症登記資料列2023年女性乳癌17,779例、年齡標準化發生率91.2／10萬女性；兩性大腸癌19,074例、43.1／10萬人口；女性子宮頸癌1,429例、7.4／10萬女性。發生率不含原位癌，率以2000年世界標準人口標準化。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接開啟衛福部官方兩頁PDF：核對第1頁表頭、癌登來源及標準化註記；子宮頸女性年齡別圖由同一PDF官方搜尋索引文字核對，未重算資料庫。"
+        }
+      ],
+      "limits": [
+        "此為全體女性年齡標準化發生率，不是個人風險。抹片陽性不等於癌症，應依醫師安排確認及追蹤；有症狀或過往異常者不應只依公費週期安排。國健署已公告2027-01-01生效的預防保健規範修正，抹片檢體難以判讀的給付細節須於生效前再核對。",
+        "本次為AI輔助官方來源核對，非醫師或公共衛生專業獨立審閱；癌症登記的整體年齡標準化率不能代替個人化風險。",
+        "國健署2026-10-08公告之規範尚未生效；公告摘要不足以確認新細則，須於2026-12-15前重核附件及院所執行方式，未宣稱已套用。"
+      ],
+      "retired_sources": [
+        {
+          "id": "taipei_screening",
+          "reason": "臺北市預約平臺只支援地方預約入口，不能單獨證明全國資格、中央最新方案或地方即時場次；完整保留來源物件，改以國健署全國政策與專題頁支持。",
+          "replacement_ids": [
+            "hpa_cancer_screening_policy_2026",
+            "hpa_cervical_screening_2026",
+            "hpa_cervical_followup_2026",
+            "hpa_preventive_service_rules_20261008",
+            "ch01_cancer_registry_2023_tables"
+          ],
+          "prior_source_sha256": "72b0a4af11394ee4bc54a1c7fef5e1ec7373e2a6a3c663358b56f239fdfdefd6"
+        }
+      ]
+    },
+    {
+      "id": "TW-NAV-007",
+      "before_sha256": "897bcf13df0900105fac9a1d048de6e5934e109200429b5f1f7b8cb95045d204",
+      "after_sha256": "d8c42c8fc99cac0de7d679d52cbca72b4350d30a1b7161846ff0ff43916c67f6",
+      "prior_revision": "54b9b8a5dad61fdd5ea32accbeb56b6a885b4454",
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "a61d847fb9a9ad892ddd1739111a0da47e0106661f2c0c08dae6e9d35c58d00b",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2026-12-15",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣提供35、45、65歲特定年齡的公費HPV篩檢；HPV檢測、子宮頸抹片、疫苗與陽性後追蹤是不同服務，且2027年有已公告待生效規範。",
+      "frequency_assessment": "2023年全國癌症登記列子宮頸癌1,429例；女性年齡標準化發生率7.4／10萬女性，依2000年世界標準人口；不含原位癌。沒有以本條目特定年齡或HPV檢測陽性作分層的分母，不能推算個人風險或HPV盛行率。",
+      "changes": "重查國健署中央公費資格與地方入口差異，更新臺灣癌登頻率、期間、個案數、標準人口及限制，補正個別行動與症狀／異常分流；臺北市預約平臺退出現行依據但來源物件保留。 記錄2026-10-08公告、2027-01-01施行之未來HPV給付與年齡核對變更；附件未逐表核讀，不將公告摘要推作現行個人資格。",
+      "source_checks": [
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?id=549&kv=default&lottery=NnNicDZvK2lCZFF6cW5SSXYzY3dsUT09&name=NDMyMjM5SXB5V3lhYlJWdlBUY1hMUT09&nodeid=614&pid=1125",
+          "claim": "核對2026年現行抹片與HPV公費年齡、頻率及一般建議。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署頁列25至29歲每3年一次、30歲以上每年補助一次、建議25歲以上至少每3年一次，並列35、45、65歲HPV檢測。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方搜尋索引正文，頁面顯示更新2026-03-09；web.open回傳502，未讀取HPV處置流程PDF。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4809&pid=17947",
+          "claim": "核對篩檢異常及症狀的就醫分流。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署提醒抹片陽性不等於癌症，應依醫師指示接受進一步檢查和追蹤；即使結果正常，有異狀仍應儘速就醫。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方搜尋索引正文；未使用未檢視的附件或病人個別診斷資料。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=838&pid=20378",
+          "claim": "核對已公告但尚未施行的預防保健規範變更與日期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署公告修正預防保健服務注意事項，公告日2026-10-08、生效日2027-01-01；摘要涉及子宮頸抹片難以判讀，以及女性HPV檢測無法判讀給付、年齡檢核和子宮全切除給付，未列新資格細節。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方公告搜尋索引正文，核對公告及生效日期；web.open回傳502，尚未逐項讀取修正附表PDF，因此不轉述未核讀的條件。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "核對最近公布的全國癌登病例數、率的單位與標準人口。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署癌症登記資料列2023年女性乳癌17,779例、年齡標準化發生率91.2／10萬女性；兩性大腸癌19,074例、43.1／10萬人口；女性子宮頸癌1,429例、7.4／10萬女性。發生率不含原位癌，率以2000年世界標準人口標準化。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接開啟衛福部官方兩頁PDF：核對第1頁表頭、癌登來源及標準化註記；子宮頸女性年齡別圖由同一PDF官方搜尋索引文字核對，未重算資料庫。"
+        }
+      ],
+      "limits": [
+        "HPV檢測不同於HPV疫苗；抹片或HPV篩檢異常不等於癌症，須按醫療人員安排後續評估。子宮頸癌發生率不能換算個人HPV感染或篩檢陽性機率。國健署2026-10-08公告之服務規範於2027-01-01生效，涉及HPV無法判讀之給付、年齡檢核及子宮全切除給付；公告摘要沒有列出新資格細節，施行前再核對院所與官方最新說明。",
+        "本次為AI輔助官方來源核對，非醫師或公共衛生專業獨立審閱；癌症登記的整體年齡標準化率不能代替個人化風險。",
+        "國健署2026-10-08公告之規範尚未生效；公告摘要不足以確認新細則，須於2026-12-15前重核附件及院所執行方式，未宣稱已套用。"
+      ],
+      "retired_sources": [
+        {
+          "id": "taipei_screening",
+          "reason": "臺北市預約平臺只支援地方預約入口，不能單獨證明全國資格、中央最新方案或地方即時場次；完整保留來源物件，改以國健署全國政策與專題頁支持。",
+          "replacement_ids": [
+            "hpa_cervical_screening_2026",
+            "hpa_cervical_followup_2026",
+            "hpa_preventive_service_rules_20261008",
+            "ch01_cancer_registry_2023_tables"
+          ],
+          "prior_source_sha256": "72b0a4af11394ee4bc54a1c7fef5e1ec7373e2a6a3c663358b56f239fdfdefd6"
+        }
+      ]
+    },
+    {
+      "id": "TW-NAV-008",
+      "before_sha256": "5fd7a7f5c36fcf0494e862c6339593e31b7e2a860cb686c2bb5f15822fef677f",
+      "after_sha256": "541ca212bfc170832c5fafb1233a522be42919206705bf4b8a85fd1739f0a6a9",
+      "prior_revision": "54b9b8a5dad61fdd5ea32accbeb56b6a885b4454",
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "4ed0d300d12d325e79bcf3ceb37cb19b31bfa540fdf61b0a3bb43f85c9c9e881",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣以健保特約院所領取及送回定量免疫法糞便潛血檢體；FIT陽性需接續大腸鏡，家族史和既往息肉或癌症會改變個別評估。",
+      "frequency_assessment": "2023年全國癌症登記列兩性大腸癌19,074例；年齡標準化發生率43.1／10萬人口，依2000年世界標準人口；不含原位癌。該率不是本條目的40至44歲家族史分層率，也不是45至74歲兩年個人機率，不能直接換算個人風險。",
+      "changes": "重查國健署中央公費資格與地方入口差異，更新臺灣癌登頻率、期間、個案數、標準人口及限制，補正個別行動與症狀／異常分流；臺北市預約平臺退出現行依據但來源物件保留。",
+      "source_checks": [
+        {
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=211",
+          "claim": "核對全國公費方案年齡與篩檢週期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署政策頁列乳房X光攝影40至74歲每2年、25至29歲子宮頸抹片每3年、30歲以上每年補助且建議至少每3年一次、35／45／65歲HPV，以及大腸癌45至74歲與40至44歲家族史每2年。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "官方頁面可檢索文字；web.open回傳502，以官方搜尋索引正文及癌別更新頁交叉核對，未宣稱已讀取未顯示附件。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=190",
+          "claim": "核對最新公費糞便潛血篩檢年齡及週期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署服務表列45至74歲及40至44歲具家族史民眾，每2年一次定量免疫法糞便潛血檢查。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方服務表搜尋索引正文，頁面更新2026-09-09；不把醫療機構申報額當成個人自付額。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19177",
+          "claim": "核對陰性後週期、檢查限制及症狀處理。",
+          "supporting_passage": "編者摘要（非逐字引文）：糞便潛血陰性後仍建議每2年定期篩檢；此檢查不是診斷工具，結果正常但有異狀仍須找專科醫師評估。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方問答搜尋索引正文，頁面發布2025-09-16、更新2026-09-18。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "核對最近公布的全國癌登病例數、率的單位與標準人口。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署癌症登記資料列2023年女性乳癌17,779例、年齡標準化發生率91.2／10萬女性；兩性大腸癌19,074例、43.1／10萬人口；女性子宮頸癌1,429例、7.4／10萬女性。發生率不含原位癌，率以2000年世界標準人口標準化。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接開啟衛福部官方兩頁PDF：核對第1頁表頭、癌登來源及標準化註記；子宮頸女性年齡別圖由同一PDF官方搜尋索引文字核對，未重算資料庫。"
+        }
+      ],
+      "limits": [
+        "統計是全人口年齡標準化發生率，不是45至74歲個人風險。糞便潛血檢查不是診斷工具：陰性仍按2年週期篩檢；陽性應儘速接受大腸鏡確認。有排便習慣改變、出血或其他症狀時，即使最近篩檢陰性也要就醫評估。",
+        "本次為AI輔助官方來源核對，非醫師或公共衛生專業獨立審閱；癌症登記的整體年齡標準化率不能代替個人化風險。"
+      ],
+      "retired_sources": [
+        {
+          "id": "taipei_screening",
+          "reason": "臺北市預約平臺只支援地方預約入口，不能單獨證明全國資格、中央最新方案或地方即時場次；完整保留來源物件，改以國健署全國政策與專題頁支持。",
+          "replacement_ids": [
+            "hpa_cancer_screening_policy_2026",
+            "hpa_colorectal_screening_2026",
+            "hpa_colorectal_repeat_2026",
+            "ch01_cancer_registry_2023_tables"
+          ],
+          "prior_source_sha256": "72b0a4af11394ee4bc54a1c7fef5e1ec7373e2a6a3c663358b56f239fdfdefd6"
+        }
+      ]
+    },
+    {
+      "id": "TW-NAV-009",
+      "before_sha256": "675c99122dd790bc0caaba6c9bcbe07ea4122a52cb975beba9e2aae9fa7cc758",
+      "after_sha256": "e2106b737367c0cd74f0668e3b06ae4a0cd66975f28cdad5964a8a969ab6791b",
+      "prior_revision": "54b9b8a5dad61fdd5ea32accbeb56b6a885b4454",
+      "prior_review_kind": "runtime_item",
+      "prior_review_sha256": "f9c72147a6044ffa89e862b1c7cb0d94d6a03fc163b6c054d03b49d6db9eab1c",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣以健保特約院所領取及送回定量免疫法糞便潛血檢體；FIT陽性需接續大腸鏡，家族史和既往息肉或癌症會改變個別評估。",
+      "frequency_assessment": "2023年全國癌症登記列兩性大腸癌19,074例；年齡標準化發生率43.1／10萬人口，依2000年世界標準人口；不含原位癌。該率不是本條目的40至44歲家族史分層率，也不是45至74歲兩年個人機率，不能直接換算個人風險。",
+      "changes": "重查國健署中央公費資格與地方入口差異，更新臺灣癌登頻率、期間、個案數、標準人口及限制，補正個別行動與症狀／異常分流；臺北市預約平臺退出現行依據但來源物件保留。 補明40至44歲家族史關係人範圍，並提醒高風險者先由醫師評估全大腸鏡。",
+      "source_checks": [
+        {
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=211",
+          "claim": "核對全國公費方案年齡與篩檢週期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署政策頁列乳房X光攝影40至74歲每2年、25至29歲子宮頸抹片每3年、30歲以上每年補助且建議至少每3年一次、35／45／65歲HPV，以及大腸癌45至74歲與40至44歲家族史每2年。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "官方頁面可檢索文字；web.open回傳502，以官方搜尋索引正文及癌別更新頁交叉核對，未宣稱已讀取未顯示附件。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=190",
+          "claim": "核對最新公費糞便潛血篩檢年齡及週期。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署服務表列45至74歲及40至44歲具家族史民眾，每2年一次定量免疫法糞便潛血檢查。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方服務表搜尋索引正文，頁面更新2026-09-09；不把醫療機構申報額當成個人自付額。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5053&pid=20022&sid=20027",
+          "claim": "核對一等親範圍與既往息肉／癌症高風險分流。",
+          "supporting_passage": "編者摘要（非逐字引文）：40至44歲家族史包括父母、兄弟姊妹或子女曾診斷大腸癌；本人或家族有息肉症或大腸癌病史者，國健署建議優先接受全大腸鏡評估。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方問答搜尋索引正文及2026-04-22日期；未讀取未列於頁面正文的附件。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19177",
+          "claim": "核對陰性後週期、檢查限制及症狀處理。",
+          "supporting_passage": "編者摘要（非逐字引文）：糞便潛血陰性後仍建議每2年定期篩檢；此檢查不是診斷工具，結果正常但有異狀仍須找專科醫師評估。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "國健署官方問答搜尋索引正文，頁面發布2025-09-16、更新2026-09-18。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "核對最近公布的全國癌登病例數、率的單位與標準人口。",
+          "supporting_passage": "編者摘要（非逐字引文）：國健署癌症登記資料列2023年女性乳癌17,779例、年齡標準化發生率91.2／10萬女性；兩性大腸癌19,074例、43.1／10萬人口；女性子宮頸癌1,429例、7.4／10萬女性。發生率不含原位癌，率以2000年世界標準人口標準化。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接開啟衛福部官方兩頁PDF：核對第1頁表頭、癌登來源及標準化註記；子宮頸女性年齡別圖由同一PDF官方搜尋索引文字核對，未重算資料庫。"
+        }
+      ],
+      "limits": [
+        "全體發生率不是40至44歲且有家族史者的個人機率。本人或家族有大腸癌或息肉病史時，國健署建議優先由醫師評估全大腸鏡；公費糞便檢查資格不是完整的高風險追蹤計畫。即使篩檢陰性，有症狀仍須就醫。",
+        "本次為AI輔助官方來源核對，非醫師或公共衛生專業獨立審閱；癌症登記的整體年齡標準化率不能代替個人化風險。"
+      ],
+      "retired_sources": [
+        {
+          "id": "taipei_screening",
+          "reason": "臺北市預約平臺只支援地方預約入口，不能單獨證明全國資格、中央最新方案或地方即時場次；完整保留來源物件，改以國健署全國政策與專題頁支持。",
+          "replacement_ids": [
+            "hpa_cancer_screening_policy_2026",
+            "hpa_colorectal_screening_2026",
+            "hpa_colorectal_family_2026",
+            "hpa_colorectal_repeat_2026",
+            "ch01_cancer_registry_2023_tables"
+          ],
+          "prior_source_sha256": "72b0a4af11394ee4bc54a1c7fef5e1ec7373e2a6a3c663358b56f239fdfdefd6"
+        }
+      ]
     }
   ]
 }
