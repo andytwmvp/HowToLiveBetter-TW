@@ -1,0 +1,244 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "a090c0121f35dfde3b097666cb1b6c292dbe494a",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-07-003",
+      "TW-07-007",
+      "TW-19-001",
+      "TW-19-004"
+    ],
+    "risk_order": [
+      "TW-07-007",
+      "TW-07-003",
+      "TW-19-001",
+      "TW-19-004"
+    ],
+    "risk_basis": "依社會救助資格與年度門檻對脆弱家庭的直接影響、法院期限及法扶服務分流、加班工資與證據保存、資遣終止資格及金額排序；是錯誤後果與可採取行動的優先順序，不是發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 147,
+    "runtime_sources": 723,
+    "source_registry": 804,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 151,
+    "runtime_sources": 732,
+    "source_registry": 813,
+    "json_files_checked": 450,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "source_id": "mohw_low_income_2026q2_stats",
+      "period": "2026年第2季季末",
+      "scope": "衛福部全國低收入戶行政統計；另列同表全國戶數與人口總計",
+      "unit": "戶、人",
+      "numerator_definition": "期末經行政認定的低收入戶戶數及人數",
+      "values": {
+        "low_income_households": 142278,
+        "low_income_persons": 252349,
+        "same_row_all_households": 9810510,
+        "same_row_all_persons": 23346741,
+        "official_reported_household_share_pct": 1.4382995396931977,
+        "official_reported_person_share_pct": 1.0844127225429134,
+        "direct_ratio_from_same_row_households_pct": 1.450260995605733,
+        "direct_ratio_from_same_row_persons_pct": 1.0808746282832367
+      },
+      "denominator": {
+        "validated_matching_denominator": null,
+        "table_adjacent_totals_households": 9810510,
+        "table_adjacent_totals_persons": 23346741,
+        "reason": "同列官方比率與同列總量直接相除不一致，原始表未清楚說明母數口徑；正文不採比率。"
+      },
+      "data_type": "行政認定季末存量；比例為同表計算",
+      "limitations": "低收入戶統計表所列官方比率為1.4382995%戶、1.0844127%人；同列總戶數9,810,510、人口23,346,741直接計算則為1.4502610%及1.0808746%，不一致且原表未說明母數差異。正文只列戶數、人數；屬行政認定季末存量，不是新申請、核准率或個人機率。",
+      "source_document_edition": "衛福部低收入戶戶數及人口統計表，2026工作表；2026-08-31更新，2026-10-26查閱",
+      "publication_method": "由衛福部官方統計頁下載原始XLSX，核對2026工作表第2季季末總計列、欄名及比率欄；重算同列總量比例發現不一致，故正文不引用比例並明列口徑未解。"
+    },
+    {
+      "source_id": "mohw_middlelow_2026q2_stats",
+      "period": "2026年第2季季末",
+      "scope": "衛福部全國中低收入戶行政統計",
+      "unit": "戶、人",
+      "numerator_definition": "期末經行政認定的中低收入戶戶數及人數",
+      "values": {
+        "middle_low_income_households": 91067,
+        "middle_low_income_persons": 228217
+      },
+      "denominator": null,
+      "data_type": "行政認定季末存量",
+      "limitations": "無配對的同表全國戶數及人口分母；不代表新申請、核准率、貧窮發生率或個人申請機率。",
+      "source_document_edition": "衛福部中低收入戶戶數及人口統計表，2026工作表；2026-08-31更新，2026-10-26查閱",
+      "publication_method": "由衛福部官方統計頁下載原始XLSX，核對2026工作表第2季季末列。"
+    },
+    {
+      "source_id": "mol_overtime_survey_2025",
+      "period": "2024-06至2025-05",
+      "scope": "臺灣投保勞保、就保及災保的本國籍受僱者；有效樣本4,029",
+      "unit": "抽樣調查比例、加班者月均小時",
+      "numerator_definition": "自陳有加班、加班者自陳每次加班均取得加班費／補休",
+      "values": {
+        "reported_any_overtime_pct": 36.3,
+        "average_overtime_hours_per_month_among_overtime_reporters": 16.2,
+        "always_compensated_overtime_reporters_pct": 88.1,
+        "valid_samples": 4029
+      },
+      "denominator": {
+        "published_valid_sample": 4029,
+        "weighted_numerators": null,
+        "confidence_interval": null
+      },
+      "data_type": "主管機關抽樣調查摘要",
+      "limitations": "未公布原始加權分子、標準誤或信賴區間；未每次自陳補償不是經認定違法，不能外推為個人機率或全體勞工違法率。",
+      "source_document_edition": "勞動部2025年勞工生活及就業狀況調查發布頁，2026-01-23更新，2026-10-26查閱",
+      "publication_method": "直接核對調查頁樣本、對象、期間與公開摘要；不自行重建未公布分子。"
+    },
+    {
+      "source_id": "mol_disputes_yearbook_2024",
+      "period": "2024",
+      "scope": "勞動部全國勞資爭議統計年報表3-14",
+      "unit": "爭議類別表列涉及人數",
+      "numerator_definition": "延長工時工資及資遣費爭議之行政統計表列涉及人數",
+      "values": {
+        "overtime_pay_dispute_persons_involved": 2139,
+        "severance_pay_dispute_persons_involved": 9223
+      },
+      "denominator": null,
+      "data_type": "行政爭議統計報告",
+      "limitations": "沒有全體勞工、加班時數、離職者或終止原因分母；表列涉及人數不等於案件件數、違法認定、受償率或不重複個人發生率。",
+      "source_document_edition": "勞動部113年勞資爭議統計年報（2024年度），表3-14，2026-10-26查閱",
+      "publication_method": "直接讀取勞動部統計年報PDF表3-14，核對單位為爭議類別之涉及人數。"
+    }
+  ],
+  "new_source_ids": [
+    "laf_application_2026",
+    "laf_phone_advice_2026",
+    "laf_inperson_advice_2026",
+    "mohw_2026_social_assistance_limits",
+    "mohw_low_income_2026q2_stats",
+    "mohw_middlelow_2026q2_stats",
+    "mol_overtime_survey_2025",
+    "mol_disputes_yearbook_2024",
+    "laf_means_test_2026"
+  ],
+  "reused_source_ids": [
+    "ch07_income_imputation",
+    "ch07_laf_cost",
+    "ch07_urgent_household",
+    "ch19_lsa",
+    "ch19_lsa_rules",
+    "laborcalc",
+    "labordispute",
+    "lafphone",
+    "pension",
+    "socialaid"
+  ],
+  "retired_sources": [
+    {
+      "id": "laf",
+      "article_id": "TW-07-003",
+      "reason": "改用法扶現行service-app頁核對分會申請入口，保留舊runtime source object及來源SHA。",
+      "prior_source_sha256": "6c923f0d2ef3c283e6b66443d580d9c7d7174adb33f951cf9aba6efecc0fe55a",
+      "replacement_ids": [
+        "laf_application_2026"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-07-003",
+      "before_sha256": "294da07d3772799335af4274bd435996362ea88ceb7085ae26bfd4d99cf03ec4",
+      "after_sha256": "70d0a76f187114d023fc384abefd313f2dd0a878a5a9956b62d4090844711060",
+      "prior_review_sha256": "44e8fbe20b725f9e5081a8749ffcd6d9a82c76b7e12ecfa6f04da157c03591d8",
+      "review_path": "localization/reviews/TW-07-003.json",
+      "source_ids": [
+        "lafphone",
+        "ch07_laf_cost",
+        "laf_application_2026",
+        "laf_phone_advice_2026",
+        "laf_inperson_advice_2026",
+        "laf_means_test_2026"
+      ],
+      "changes": "更新法扶電話分流、申請預約、免資力面談諮詢、20分鐘限制及2026資力標準；明確指出預約不延長法院期限，並記錄缺乏全國需求人口分母。 另依2026-10-26即時核對法扶電話頁，補明轉2後語音再分流、補班週六服務與年度臨時停辦公告。",
+      "frequency_assessment": "無可信全國法律需求／合格需求人口與實際扶助分母可算服務覆蓋或個人資格機率；本篇明示資料不足，不推估個人機率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-07-007",
+      "before_sha256": "020fcc9c8e38fafb795c7b24dff71076d84472724cfaebcb3ec9ff9d4c356a5f",
+      "after_sha256": "c264425cbb67b7823cbf44c7b48b15dbadd75cdf596484bf63875c00c3a98c10",
+      "prior_review_sha256": "ed91bf7d60c18ffe77a9f2f51b602d4e10094396d519376c16e520b6f1cad733",
+      "review_path": "localization/reviews/TW-07-007.json",
+      "source_ids": [
+        "socialaid",
+        "ch07_income_imputation",
+        "ch07_urgent_household",
+        "mohw_2026_social_assistance_limits",
+        "mohw_low_income_2026q2_stats",
+        "mohw_middlelow_2026q2_stats"
+      ],
+      "changes": "補正社會救助法實際居住與前一年在國內超過183日條件、2026縣市年度門檻及三項失業推計例外；加入2026Q2全國低收與中低收行政認定存量，列低收同表人口／戶數分母及所有非發生率限制。 檢出衛福部低收入戶原始表的官方比率與同列總戶數／人口直接計算不一致，正文撤除無法解釋的比率，只保留行政認定戶數、人數及分母口徑限制。另依2026-10-26即時查核，將衛福部資格頁更新日期由舊紀錄校正為2026-10-22並同步正文及來源中繼資料。",
+      "frequency_assessment": "2026Q2季末低收入戶142,278戶／252,349人，中低收入戶91,067戶／228,217人。低收入戶表另列總戶數9,810,510、人口23,346,741及比率1.4383%／1.0844%，但這兩個表列比率與總量直接相除結果不一致，且未清楚交代母數；本篇不引用比率，僅列季末行政認定存量，不推估申請率、核准率或個人機率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-001",
+      "before_sha256": "a0903265db69f0652a65c1739c11d38ccb6e01b66f5f2ee7258b8bb054c6cd2e",
+      "after_sha256": "5ae09ac2348592525aed5114e16ea923e8df3a5a5ae108188be9299fe7f1df56",
+      "prior_review_sha256": "0b23cc3cca961cb98f5ffb44415e84786e225a2d0342a5dd2074468704815087",
+      "review_path": "localization/reviews/TW-19-001.json",
+      "source_ids": [
+        "ch19_lsa",
+        "laborcalc",
+        "labordispute",
+        "mol_overtime_survey_2025",
+        "mol_disputes_yearbook_2024"
+      ],
+      "changes": "增加2025勞工調查樣本框、有效樣本、參照期與三項加班調查結果，另列2024延長工時工資爭議涉及人數；區分抽樣自陳、行政案件與違法認定，補保存紀錄、工時上限與補休條件。 明列每日12小時上限、一般每月46小時及程序核准後54／138小時界線。",
+      "frequency_assessment": "勞動部調查期間2024-06至2025-05，有加班36.3%、加班者月均16.2小時、其中88.1%自陳每次加班均取得加班費或補休；樣本4,029但無公開原始加權分子及信賴區間。2024延長工時工資爭議涉及2,139人，無全體受僱者／工時分母；不推估個人違法風險。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-004",
+      "before_sha256": "6455e139461610d099b71c2957e57379773276f7801dca0e971c5e0a8c673d2c",
+      "after_sha256": "1112008e362f540b245c54c9d5d4d4ed36ca900f06b4a434ab8e7629b2beb4fe",
+      "prior_review_sha256": "af190719efbde845966b53d99a44b5cbd947fbce4da4518c7cddeff8d8e39f3f",
+      "review_path": "localization/reviews/TW-19-004.json",
+      "source_ids": [
+        "pension",
+        "ch19_lsa",
+        "ch19_lsa_rules",
+        "labordispute",
+        "mol_disputes_yearbook_2024"
+      ],
+      "changes": "依勞退條例及勞基法分清新舊制、平均工資、終止事由、期限及例外，加入2024資遣費爭議涉及人數並說明沒有離職人口分母；補文件整理、免費調解及拒簽不實自願離職提醒。",
+      "frequency_assessment": "2024資遣費爭議涉及9,223人；統計未配對所有離職者、終止原因或新舊制年資母數，不能估違法率、請領率或個人機率。",
+      "professional_review_pending": true
+    }
+  ],
+  "unresolved": [
+    "尚未取得法律扶助、社會工作／社福行政、勞動法及統計領域獨立專家審閱；AI來源核對不等於專業簽證。",
+    "法扶服務名額、年度資格及個案法律期限須按申請時與法院文件確認。",
+    "中低收入戶原始統計缺少可配對的全國戶數／人口分母。",
+    "加班調查沒有公開原始加權分子和信賴區間；爭議年報沒有全體工人、工時或離職者分母。",
+    "沒有新增核心條目；全書其餘內容和未核稿仍待持續再審。"
+  ]
+}
