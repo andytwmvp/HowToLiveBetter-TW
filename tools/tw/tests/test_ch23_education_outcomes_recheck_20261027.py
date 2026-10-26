@@ -105,8 +105,11 @@ class Ch23EducationOutcomesRecheckTests(unittest.TestCase):
         self.assertTrue(set(prior_runtime).issubset(self.sources))
         for source_id, previous in prior_runtime.items():
             self.assertEqual(self.sources[source_id], previous)
-        self.assertEqual(set(registry_rows), set(prior_registry) | NEW_SOURCE_IDS)
-        self.assertEqual(set(self.sources), set(prior_runtime) | NEW_SOURCE_IDS)
+        # Later additive re-review batches may append sources after this batch.
+        # Keep this historical contract focused on its own additions and on
+        # preserving the prior snapshot, without freezing future progress.
+        self.assertTrue(set(prior_registry).issubset(registry_rows))
+        self.assertTrue((set(prior_runtime) | NEW_SOURCE_IDS).issubset(self.sources))
         for source_id, source in evidence_sources.items():
             self.assertEqual(self.sources[source_id], source)
             self.assertEqual(registry_rows[source_id][2], source['url'])
