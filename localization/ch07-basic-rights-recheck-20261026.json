@@ -1,0 +1,299 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "25f163aeb6214a31fcf91deea8c0faaf9d1ae384",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-07-011",
+      "TW-07-016",
+      "TW-07-017",
+      "TW-07-022",
+      "TW-07-023"
+    ],
+    "risk_order": [
+      "TW-07-017",
+      "TW-07-022",
+      "TW-07-023",
+      "TW-07-016",
+      "TW-07-011"
+    ],
+    "risk_basis": "依當日食宿與必要醫療缺口、欠薪及勞動權益損害、債務程序和法院期限、年度租補申請窗口、身分證冒用止損的損害嚴重度與可行動性排序；這是編輯處理優先序，不是事件發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 169,
+    "runtime_sources": 763,
+    "source_registry": 844,
+    "json_files_checked": 464,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 174,
+    "runtime_sources": 772,
+    "source_registry": 853,
+    "json_files_checked": 466,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "frequency_findings": [
+    {
+      "article_id": "TW-07-017",
+      "finding": "未找到可直接核對且具全國急難求助家庭數與符合需求家戶母數的現行資料。衛福部114年度6,099戶數字只在搜尋摘要出現，原檔回傳404，未作正文統計。"
+    },
+    {
+      "article_id": "TW-07-022",
+      "finding": "勞動部2024年全國行政表列總爭議27,419件、38,766人；主要類別積欠工資為9,669件。分類按每案主要類別，沒有全部勞工、欠薪暴露或不同受影響者母數，不推算個人欠薪機率。"
+    },
+    {
+      "article_id": "TW-07-023",
+      "finding": "司法院114年度司法業務年報列2025年地方法院消債事件新收45,720件，較2024年增14%；是法院程序案件量，無去重債務人或全體負債者母數。年報同段列示部分程序數合計29,049件，與總數差16,671件，來源未說明差額構成，故正文只引用總數。"
+    },
+    {
+      "article_id": "TW-07-016",
+      "finding": "國土署截至2026-05-31公布申請逾100萬戶、核定逾85.4萬戶，單位為方案行政戶數；沒有符合資格租屋家戶母數，不能代表居住不穩定盛行率或個人核准機率。"
+    },
+    {
+      "article_id": "TW-07-011",
+      "finding": "未找到可配對當代身分證遺失者、遭冒用者及受影響者的全國事件數與暴露母數；歷年掛失件數不是冒用件數，也不代表個人機率。"
+    }
+  ],
+  "statistics": [
+    {
+      "source_id": "nlma_rent_app_stats_2026",
+      "period": "截至2026-05-31（115年度中央擴大租金補貼）",
+      "geography": "臺灣全國",
+      "population": "國土署中央租金補貼專案申請及核定戶",
+      "values": {
+        "applications_households_lower_bound": 1000000,
+        "approved_households_lower_bound": 854000
+      },
+      "unit": "戶；官方表述為申請戶數逾100萬、核定補助逾85.4萬戶",
+      "numerator_definition": "公告所述截至2026年5月底115年度計畫申請戶數及核定補助戶數下界。",
+      "denominator": null,
+      "denominator_status": "未列全體租屋戶或符合資格且有需要的家戶母數，不計算申請率、核准率或居住不穩定盛行率。",
+      "measurement_type": "方案行政申請／核定戶數，不是住宅不穩定事件數或個人發生率。",
+      "source_url": "https://www.nlma.gov.tw/ch/titlelist/news/17480",
+      "accessed_at": "2026-10-26",
+      "limitations": [
+        "申請戶與核定戶為行政方案統計單位；公告未提供全體符合資格租屋家戶分母。",
+        "不把兩個下界相除推算個人核准機率。"
+      ]
+    },
+    {
+      "source_id": "labor_dispute_stats_2024",
+      "period": "2024-01-01至2024-12-31（民國113年）",
+      "geography": "臺灣全國",
+      "population": "勞動部年報所列全國勞資爭議行政案件及主要爭議類別",
+      "values": {
+        "all_dispute_cases": 27419,
+        "all_dispute_people_reported": 38766,
+        "labor_authority_mediation_cases": 9685,
+        "labor_authority_mediation_people": 17825,
+        "wage_arrears_main_category_cases": 9669,
+        "wage_arrears_main_category_cases_2023": 9367
+      },
+      "unit": "案件數為件；爭議人數為人；不可互換或將案件視作不同個人。",
+      "numerator_definition": "表8-1總爭議案件／表列人數與主管機關調處子集合；圖8-1僅列主要9類，每案只依主要爭議類別統計。原始PDF圖表確認2024紅色積欠工資柱為9,669，2023藍色柱為9,367。",
+      "denominator": null,
+      "denominator_status": "無全體受僱者、應付工資、欠薪暴露期間或特定不同勞工數分母，不能計算個人被欠薪機率。",
+      "measurement_type": "主管機關行政爭議案件與人數統計；不是全部欠薪事件、違法認定、追回款項或抽樣盛行率。",
+      "source_url": "https://statdb.mol.gov.tw/html/nat/113/8.%E8%A1%A88-1.pdf",
+      "accessed_at": "2026-10-26",
+      "source_sha256": "eeeedc2da64c8c0b91caf6929f5d57ea34c38650c08839581860e7f3736b3a6c",
+      "limitations": [
+        "9,669是2024主要爭議類別案件數，不是欠薪勞工人數。",
+        "圖表只列前9類，每案僅按主要類別計一次。",
+        "總爭議案件與表列人數不是欠薪專項分母。"
+      ]
+    },
+    {
+      "source_id": "judicial_consumer_debt_stats_2025",
+      "period": "2025-01-01至2025-12-31（民國114年度）",
+      "geography": "臺灣全國地方法院",
+      "population": "司法院司法業務年報所列消費者債務清理程序新收案件",
+      "values": {
+        "new_consumer_debt_cases": 45720,
+        "change_from_2024_percent": 14.0
+      },
+      "unit": "件；行政法院案件數，不是不同債務人人數。",
+      "numerator_definition": "司法院114年度司法業務年報第6頁「消債事件」明列新收45,720件、較113年增14.0%。同段列示的五項細項合計29,049件，與總數差16,671件；年報未在該段說明差額構成，故只使用明列總數。",
+      "denominator": null,
+      "denominator_status": "未提供跨程序去重債務人數、全體負債自然人或符合條例消費者分母，不計算個人發生率或成功率。",
+      "measurement_type": "司法行政案件新收件數，跨前置協商認可、更生／清算聲請及執行等程序；不是民間調查或個人風險率。",
+      "source_url": "https://www.judicial.gov.tw/tw/dl-257142-71a8a7604b9b40c684a5e19ebdfec0b2.html",
+      "accessed_at": "2026-10-26",
+      "source_sha256": "16b8861fc6f40ac32010366ed4317514a98395d6fa6c26b454188445c6a95e3b",
+      "limitations": [
+        "官方年報只在該段列出部分細項，所列金額與總數不勾稽，未推測差額來源。",
+        "案件數不等於不同個人；無債務人母數。",
+        "不以年度增幅推算個人陷入債務困難機率。"
+      ]
+    }
+  ],
+  "source_access_notes": [
+    {
+      "url": "https://www.mohw.gov.tw/dl-99620-968c6579-ad99-4a4e-8d93-9e33f4f3f5ae.html",
+      "result": "直接下載回傳404；搜尋索引雖出現114年度6,099戶，但未讀到原檔，未引用數字。"
+    },
+    {
+      "url": "https://www.judicial.gov.tw/tw/cp-1453-56942-7af0e-1.html",
+      "result": "官方制度說明頁本次瀏覽器直讀逾時；本文具體程序改按可直讀的全國法規資料庫現行條文核對。"
+    },
+    {
+      "url": "https://www.judicial.gov.tw/tw/dl-257142-71a8a7604b9b40c684a5e19ebdfec0b2.html",
+      "result": "瀏覽器頁面逾時；以官方PDF下載後pdftotext核對頁6，並記錄PDF SHA-256。"
+    }
+  ],
+  "new_source_ids": [
+    "ris_lost_id_faq_2026",
+    "ris_id_replacement_fee",
+    "nlma_rent_2026_notice",
+    "nlma_rent_2027_notice",
+    "nlma_rent_app_stats_2026",
+    "mohw_emergency_aid_overview_2026",
+    "mol_contract_relation_2026",
+    "consumer_debt_clearance_act",
+    "judicial_consumer_debt_stats_2025"
+  ],
+  "reused_source_ids": [
+    "ch07_contract",
+    "ch07_laf_cost",
+    "ch07_mediation",
+    "idreplace",
+    "labor_dispute_stats_2024",
+    "laf",
+    "socialaid"
+  ],
+  "retired_sources": [
+    {
+      "article_id": "TW-07-011",
+      "id": "idloss"
+    },
+    {
+      "article_id": "TW-07-011",
+      "id": "ch07_idfee"
+    },
+    {
+      "article_id": "TW-07-016",
+      "id": "rent2026"
+    },
+    {
+      "article_id": "TW-07-016",
+      "id": "rentbuilding"
+    },
+    {
+      "article_id": "TW-07-016",
+      "id": "supportlines"
+    },
+    {
+      "article_id": "TW-07-017",
+      "id": "supportlines"
+    },
+    {
+      "article_id": "TW-07-017",
+      "id": "urgentresidence"
+    },
+    {
+      "article_id": "TW-07-023",
+      "id": "debtcleanup"
+    },
+    {
+      "article_id": "TW-07-023",
+      "id": "ch07_debtlaw"
+    }
+  ],
+  "articles": [
+    {
+      "id": "TW-07-011",
+      "before_sha256": "a5bd667456a985cba1390cec7009f8a969b744bc932a7f5a3fe42c599bbb0222",
+      "after_sha256": "cc33fb5a955fba5ba50a9f114b636876d842e9bd3cdd0030f8098dac23b3c9de",
+      "prior_review_sha256": "f0a28eb768deb571df12190aec796a613facc366a321a602f868cf95ab091cd5",
+      "review_path": "localization/reviews/TW-07-011.json",
+      "source_ids": [
+        "idreplace",
+        "ris_lost_id_faq_2026",
+        "ris_id_replacement_fee"
+      ],
+      "changes": "將原先一般化掛失與補領步驟改為戶政司明列的四種通道，補正舊證是在新證補發後才失效、補領適用年齡與全國受理戶所；以中央戶政司補領費取代地方頁面，並明列銀行卡與門號須另行止損。",
+      "frequency_assessment": "未找到可配對當代身分證遺失者、遭冒用者及受影響者的全國事件數與暴露母數；歷年掛失件數不是冒用件數，也不代表個人機率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-07-016",
+      "before_sha256": "d92cbb2de1dca2b12df7c227b0540a4812d69d525c433c9f093a165574ff6b4b",
+      "after_sha256": "df70b38809b6e56b3c830762631024023305c1c0b264819f0dfeecda008cd608",
+      "prior_review_sha256": "b4e7fd4f06bf74fc8459590aa7e7711bf4bad971e45d0f7fed3cd7303afb55a1",
+      "review_path": "localization/reviews/TW-07-016.json",
+      "source_ids": [
+        "nlma_rent_2026_notice",
+        "nlma_rent_2027_notice",
+        "nlma_rent_app_stats_2026",
+        "mohw_emergency_aid_overview_2026"
+      ],
+      "changes": "補入2026-12-31 17:00截止時間及2027-01-01 09:00至12-31 17:00公告期，區分公告日與受理日；將房屋要件、所得門檻、舊戶帶入及新租約期限改按國土署第一手年度公告，並以主管機關申請與核定戶數提供有限行政規模背景。",
+      "frequency_assessment": "國土署截至2026-05-31公布申請逾100萬戶、核定逾85.4萬戶，單位為方案行政戶數；沒有符合資格租屋家戶母數，不能代表居住不穩定盛行率或個人核准機率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-07-017",
+      "before_sha256": "8433281fc19c2991085c69c70c577dac66ed8b35177c17249563dad282d181b2",
+      "after_sha256": "072c950d2230ce990a71db022d9363b6787863bdf00ad3d9c489cdfed955f390",
+      "prior_review_sha256": "81e1612006001458d1abb3008b02964e8e5952ab02da7d1bd57ad127ddd499d6",
+      "review_path": "localization/reviews/TW-07-017.json",
+      "source_ids": [
+        "socialaid",
+        "mohw_emergency_aid_overview_2026"
+      ],
+      "changes": "將舊稿籠統的生活節流建議改為先處理當日食宿與必要醫療，再列公所、地方社福中心與1957實際分流；補入急難紓困需訪視、給付1至3萬元須符合認定，以及1957每天08:00至22:00的時段限制。",
+      "frequency_assessment": "未找到可直接核對且具全國急難求助家庭數與符合需求家戶母數的現行資料。衛福部114年度6,099戶數字只在搜尋摘要出現，原檔回傳404，未作正文統計。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-07-022",
+      "before_sha256": "a8527b8845b92d0d84a3892379caffdc744c2ec1d235dea97bca25a4c696aa1f",
+      "after_sha256": "a02f080adbf05fdeeacece77a2e6ac7a3e05ec64fa3b620a8910210bf7206062",
+      "prior_review_sha256": "41fe15ed23c492158a68a0e187ae78716e32c8816fb16b54f29f69be215e45fb",
+      "review_path": "localization/reviews/TW-07-022.json",
+      "source_ids": [
+        "ch07_contract",
+        "ch07_mediation",
+        "laf",
+        "mol_contract_relation_2026",
+        "labor_dispute_stats_2024"
+      ],
+      "changes": "補正承攬或自營名稱不單獨決定勞動關係，新增2026-09-03更新的工作所在地協處指引與免費調解路徑；逐圖確認勞動部2024年積欠工資數為9,669件，避免把2023年藍色柱9,367件誤作2024年。",
+      "frequency_assessment": "勞動部2024年全國行政表列總爭議27,419件、38,766人；主要類別積欠工資為9,669件。分類按每案主要類別，沒有全部勞工、欠薪暴露或不同受影響者母數，不推算個人欠薪機率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-07-023",
+      "before_sha256": "9957e5a4dd10ca491aa7b2e31fa3ba8f649e3798595b7ca40a4d7899cf5f6fbf",
+      "after_sha256": "459bfb35efc78a4dcb0fccf56c56a8997e938e82957ebbe09306bdc4c3d4f59f",
+      "prior_review_sha256": "b377baa7dd6aa31233d2d5a98b2098d1600fcc8e8262352a027bec14a0527f94",
+      "review_path": "localization/reviews/TW-07-023.json",
+      "source_ids": [
+        "ch07_laf_cost",
+        "consumer_debt_clearance_act",
+        "judicial_consumer_debt_stats_2025"
+      ],
+      "changes": "替換原作中國網貸、信用修復及破產說法；依現行條文補正消費者適用範圍、金融機構債務才須依法前置協商或調解、1,000元聲請費、法院可另命預納、僅清算且經裁定才可暫免及調解失敗後20日內續聲請的規則。加入司法院2025年總新收45,720件但不拆解未能與總額勾稽的所列子類。",
+      "frequency_assessment": "司法院114年度司法業務年報列2025年地方法院消債事件新收45,720件，較2024年增14%；是法院程序案件量，無去重債務人或全體負債者母數。年報同段列示部分程序數合計29,049件，與總數差16,671件，來源未說明差額構成，故正文只引用總數。",
+      "professional_review_pending": true
+    }
+  ],
+  "professional_review_pending": true,
+  "publication_ready": false
+}

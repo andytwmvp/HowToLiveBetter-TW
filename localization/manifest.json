@@ -4581,11 +4581,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-011.md",
       "sources": [
-        "https://www.gov.tw/News_Content_26_608877",
-        "https://www.ris.gov.tw/documents/html/2/3/5/388.html",
-        "https://www.civil.taichung.gov.tw/21804/21813/21950/22013/92738"
+        "idreplace",
+        "ris_lost_id_faq_2026",
+        "ris_id_replacement_fee"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "身份證丟了立刻補辦，急用先領臨時身份證",
@@ -4692,11 +4692,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-016.md",
       "sources": [
-        "https://www.gov.tw/News_Content_37_561179",
-        "https://house.nfu.edu.tw/announce/4831",
-        "https://www.mohw.gov.tw/cp-6654-77519-1.html"
+        "nlma_rent_2026_notice",
+        "nlma_rent_2027_notice",
+        "nlma_rent_app_stats_2026",
+        "mohw_emergency_aid_overview_2026"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "住房困難先排公租房",
@@ -4713,11 +4714,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-017.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078",
-        "https://www.mohw.gov.tw/cp-6654-77519-1.html",
-        "https://www.mohw.gov.tw/dl-86267-27a4eeb1-89b9-4dca-9908-20df855a2d29.html"
+        "socialaid",
+        "mohw_emergency_aid_overview_2026"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "把住和吃壓到最低：合租月租代替日租，自炊和助餐食堂代替外賣",
@@ -4825,11 +4825,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-022.md",
       "sources": [
-        "https://www.mol.gov.tw/1607/1632/1640/12431/",
-        "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
-        "https://www.laf.org.tw/service-flow1"
+        "ch07_contract",
+        "ch07_mediation",
+        "laf",
+        "mol_contract_relation_2026",
+        "labor_dispute_stats_2024"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "被欠了工錢，先分清僱你的是誰：沒執照的作坊和包工頭照樣找勞動監察，給家庭或個人幹私活才去法院",
@@ -4846,11 +4848,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch07/TW-07-023.md",
       "sources": [
-        "https://www.judicial.gov.tw/tw/cp-1453-56942-7af0e-1.html",
-        "https://legal.judicial.gov.tw/FLAW/dat02.aspx?lsid=FL043662",
-        "https://www.laf.org.tw/expense-des"
+        "ch07_laf_cost",
+        "consumer_debt_clearance_act",
+        "judicial_consumer_debt_stats_2025"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-26",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "信用卡、網貸已經還不上，自己打銀行或平臺客服申請個性化分期或延期，別借新還舊，也別付錢找「停息掛賬」「徵信修復」「反催收」中介",
