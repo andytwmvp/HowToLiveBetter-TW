@@ -17913,6 +17913,319 @@
         }
       ],
       "review_path": "localization/reviews/TW-07-023.json"
+    },
+    {
+      "id": "TW-07-005",
+      "before_sha256": "3f5a2fc28b02a15ceed1247cf5134c5aa059ffa835d4ec7f4cbf3a41a5c19a13",
+      "after_sha256": "b060fc673066ccf55a92af4f11ea4024cf697bef0f76a836a8e0a45b29d6539a",
+      "prior_revision": "2b0264bb53cf62f9e5c5798ff9c4bdf8bcf4c2c7",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a71e880f8f09c86f9dbc5eaa4de55add7c97c524f100eaefd7215948f2ff9fdb",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "核對公立就服免費原則及私立求職仲介的許可、書面契約、收費項目與實際法定上限；新增2025年第2季警政署假求職被害人統計，標示1,911人／54,996人、3.47%、計數對象及無求職者分母；補入2026年官方假徵才案件與165／110止損指示。；將重複的第13條單條來源ID退役，由已連結的現行法規全文支持並保留舊來源雜湊。",
+      "frequency_assessment": "警政統計只計警方行政系統列報的被害人與分類比例，沒有全部求職者、求職次數或假職缺接觸母數；單一偵辦案件不得外推個人發生率。",
+      "changes": "核對公立就服免費原則及私立求職仲介的許可、書面契約、收費項目與實際法定上限；新增2025年第2季警政署假求職被害人統計，標示1,911人／54,996人、3.47%、計數對象及無求職者分母；補入2026年官方假徵才案件與165／110止損指示。；將重複的第13條單條來源ID退役，由已連結的現行法規全文支持並保留舊來源雜湊。",
+      "source_ids": [
+        "jobportal",
+        "employmentact",
+        "private_jobseeker_fee_standard",
+        "npa_fakejob_victims_2025_q2",
+        "cib_fakejob_warning_20260718",
+        "ch07_cib_fakejob_case_20260907"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
+          "claim": "台灣就業通官方求職、訓練與公立就服據點入口。",
+          "supporting_passage": "編者摘要（非逐字引文）：台灣就業通提供職缺、訓練及公立就業服務據點查找；正式資訊可供求職者進一步核對，不保證錄用或工作條件。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取台灣就業通官方入口HTML；不把職缺刊登視為僱主或勞動條件保證。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+          "claim": "就業服務法現行第5、13、24及34至40條適用求職者保護、公立就業服務免費原則、民間仲介許可及禁止收取保證金／超標費用。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行法規資料庫顯示就業服務法修正日期為2025-01-20；第5條規範雇主招募與求職資料保護，第13條明定公立就業服務以免費為原則及向雇主收取必要招考費用的例外，第24條列特定就業協助對象，第34條以下規範民間就業服務許可，第40條禁止扣留求職財物、保證金及超標收費。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取法務部全國法規資料庫現行全文和勞動部現行法令頁；修正日不冒充個別條文施行日。"
+        },
+        {
+          "url": "https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=4&id=FL028066",
+          "claim": "營利仲介向本國求職者收取登記費與介紹費合計上限為第一個月薪資5%，諮詢與職業心理測驗另有單項金額上限。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部收費標準第4條明列營利就業服務機構受本國求職人委任時，登記費與介紹費合計不逾第一個月薪資5%、就業諮詢每小時不逾新臺幣1,000元、職業心理測驗每項不逾新臺幣700元；屬法定上限，不代表普遍實際費用。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "讀取勞動部法令查詢系統第4條頁面文字，並核對該法規修正日2017-04-06及資料截止日2026-05-31。"
+        },
+        {
+          "url": "https://www.npa.gov.tw/ch/app/data/doc?module=wg057&detailNo=1417413147584630784&type=s",
+          "claim": "警政署2025年第2季統計假求職類被害人1,911人、占該季全部詐欺被害人54,996人的3.47%。",
+          "supporting_passage": "編者摘要（非逐字引文）：警政署2025-09-17發布之第114年第38週統計通報，表6列2025年第2季假求職被害人1,911人；表列占該季總被害人54,996人的3.47%。被害人資料包含民眾報案、警方自行立案及檢察官交辦，114年數據為初步數；未提供求職者或應徵接觸的分母。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接閱讀警政署官方PDF文字層及表6、統計說明，核對發布日、統計期、分子、分母、分類與計數來源；不換算求職者發生率。"
+        },
+        {
+          "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=4d38316e-d938-444f-949a-134d9938dbff",
+          "claim": "刑事警察局提醒假求職轉售商品可能先以小額佣金取信，再要求匯款，並提供165及110查證管道。",
+          "supporting_passage": "編者摘要（非逐字引文）：刑事警察局2026-07-18發布、2026-07-20更新假求職防詐公告，說明社群假求職、轉售商品及先付進貨款手法；提醒不得交金融卡及密碼，有疑慮可撥165，或有緊急狀況撥110。該文是預警案例，不是全國發生率統計。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取刑事警察局官方HTML公告，核對更新日期、假求職手法及警政求助入口；不把案例當作盛行率。"
+        },
+        {
+          "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1885&module=news&serno=95961c9f-bdcd-40c1-a2d3-fcc75e87b775",
+          "claim": "刑事警察局一宗跨六縣市偵辦案件中，11名求職者被假徵才利用為詐欺車手。",
+          "supporting_passage": "編者摘要（非逐字引文）：刑事警察局公布單一偵辦案件，案情期間為2025-12-23至2026-08-20，跨臺北、新北、桃園、臺南、高雄及屏東，警方稱有11名求職者被假徵才利用為詐欺車手；沒有全體求職者或招募暴露分母，本文僅作警示案例。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取刑事警察局官方HTML破案新聞，核對案件期間、行政區域及11名求職者；明確限制為單案。"
+        }
+      ],
+      "limits": [
+        "警政統計只計警方行政系統列報的被害人與分類比例，沒有全部求職者、求職次數或假職缺接觸母數；單一偵辦案件不得外推個人發生率。",
+        "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
+        "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
+      ],
+      "retired_sources": [
+        {
+          "id": "jobservice",
+          "reason": "第13條全文已由同篇現行《就業服務法》全文來源支持；移除重複單條來源ID與未另行連結的重複引用，保留原來源物件及歷史雜湊。",
+          "replacement_ids": [
+            "employmentact"
+          ],
+          "prior_source_sha256": "74bc4ad9f432103666f008a07aa758daee1c26e39ccaae607de10391ad13e8f2"
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-005.json"
+    },
+    {
+      "id": "TW-07-012",
+      "before_sha256": "6a4db5b18caee7ecec4620df3951993830562b453e69d20ca2ebe33a20a22daa",
+      "after_sha256": "2396569738e32ccf385482b6370cbfce7c19a8446adff604888cfe0a8d768a82",
+      "prior_revision": "2b0264bb53cf62f9e5c5798ff9c4bdf8bcf4c2c7",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "56ba2d00b156217331fa6725536f2b89aa576577893891ff51ecfdaa9f3a491f",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "依2025-01-20修正之就業服務法第24條及2025-11-13勞動部失業服務入口，補正列舉對象、方案核准與個人給付的差異、官方分流入口及申請前核對項目；明確記錄沒有同口徑全國合格／申請／核准／就業結果分母。",
+      "frequency_assessment": "第24條身分不自動核給補助；截至查閱日未找到同年度、同口徑可配對所有協助對象合格人數、申請／核准人數與就業結果的全國統計。",
+      "changes": "依2025-01-20修正之就業服務法第24條及2025-11-13勞動部失業服務入口，補正列舉對象、方案核准與個人給付的差異、官方分流入口及申請前核對項目；明確記錄沒有同口徑全國合格／申請／核准／就業結果分母。",
+      "source_ids": [
+        "employmentact",
+        "jobservice",
+        "jobportal",
+        "mol_unemployment_services_2025"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+          "claim": "就業服務法第24條列特定協助對象及依方案提供就業措施，不是列名即取得固定補助。",
+          "supporting_passage": "編者摘要（非逐字引文）：法務部現行法規資料庫顯示就業服務法修正日為2025-01-20；第24條列獨力負擔家計者、中高齡者、身心障礙者、原住民族、低收或中低收入有工作能力者、長期失業者、二度就業婦女、家暴被害人、更生受保護人等，並授權依方案規劃協助或津貼。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取法務部全國法規資料庫現行第24條及勞動部法令頁；不將法條列名推作個案給付核准。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001",
+          "claim": "公立就業服務免費原則，求職者通常不需支付公立媒合服務費。",
+          "supporting_passage": "編者摘要（非逐字引文）：公立就業服務機構辦理就業服務以免費為原則；法條明列雇主委託招考的必要費用得向雇主收取，不是求職者補助或保證金規定。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "讀取法務部全國法規資料庫第13條現行條文，並對照勞動部現行法頁。"
+        },
+        {
+          "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
+          "claim": "台灣就業通提供職缺、訓練與公立服務據點等官方入口。",
+          "supporting_passage": "編者摘要（非逐字引文）：台灣就業通可供查找職缺、職訓與公立就服據點；求職者可先向官方就服員核對特定方案及當期受理條件。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取台灣就業通官方入口HTML；未把平台服務理解為給付核准。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/28690/82583/",
+          "claim": "勞動部失業服務頁面將求職補助、就業服務、職訓及創業資源按不同對象分類。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部頁面更新日期為2025-11-13，分列一般民眾、中高齡、高齡、二度就業婦女、身心障礙、青年及其他就服法第24條對象的補助、找工作、訓練和創業入口；各入口仍連到不同計畫及資格，不代表同一組給付。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取勞動部官方「我失業了該怎麼辦？」HTML頁面，核對更新日與分類入口；未推定連結附件或地方方案相同。"
+        }
+      ],
+      "limits": [
+        "第24條身分不自動核給補助；截至查閱日未找到同年度、同口徑可配對所有協助對象合格人數、申請／核准人數與就業結果的全國統計。",
+        "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
+        "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-07-012.json"
+    },
+    {
+      "id": "TW-07-019",
+      "before_sha256": "45a6ad5c66377c7d29180f025c9cedc65f16e017e861c58eb2aa1a89f7ce6d1d",
+      "after_sha256": "e807546627f0902ab2df64246cd0f3baa7bd8a1c12e764f04b9d9292143d7cd2",
+      "prior_revision": "2b0264bb53cf62f9e5c5798ff9c4bdf8bcf4c2c7",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "fcb9c6ade07125a72fb9da74930da858fb904f4950336a8ccd9b2ddc3dfa6f96",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "將司法更生保護與消費者債務更生明確分開；依現行更生保護法第2、3、11至13條補正適用對象、自願聲請或同意轉介、地方分會及個案式服務；增加更生保護會官方電話與1957急難轉介，移除未逐條讀取的地方索引頁與舊制度說明引用。",
+      "frequency_assessment": "更生保護服務須符合法定對象並依個案、本人同意、地方資源評估；無全國同口徑資格母數與服務結果，AI核對不等於法律、社工或社福專業意見。",
+      "changes": "將司法更生保護與消費者債務更生明確分開；依現行更生保護法第2、3、11至13條補正適用對象、自願聲請或同意轉介、地方分會及個案式服務；增加更生保護會官方電話與1957急難轉介，移除未逐條讀取的地方索引頁與舊制度說明引用。",
+      "source_ids": [
+        "employmentact",
+        "mohw_emergency_aid_overview_2026",
+        "aftercare_protection_act",
+        "aftercare_association_home",
+        "consumer_debt_clearance_act"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
+          "claim": "就業服務法第24條列更生受保護人為積極就業協助對象，具體方案需另核資格。",
+          "supporting_passage": "編者摘要（非逐字引文）：就業服務法第24條列更生受保護人等特定協助對象，授權採就業促進方案；法條身分本身不表示所有求職津貼或僱用補助都已核准。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取法務部全國法規資料庫與勞動部現行條文。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-88-226-1.html",
+          "claim": "衛福部急難救助資訊列示1957福利諮詢每日08:00至22:00及服務分流，並非保證即時安置或核給。",
+          "supporting_passage": "編者摘要（非逐字引文）：衛福部頁面更新至2026-07-14，說明急難救助及1957每天08:00至22:00的福利諮詢與轉介；實際社福資格、訪視和給付仍由主管機關按個案審查，電話轉介不等於即時核准或安置。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取衛福部急難救助HTML正文，核對更新日、1957服務時間及諮詢／轉介範圍。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050001",
+          "claim": "更生保護法第2、3及11至13條列法定受保護對象、申請地點、同意轉介與個案保護方式。",
+          "supporting_passage": "編者摘要（非逐字引文）：全國法規資料庫現行更生保護法頁面列末次修正日2010-05-26；第2條列十類得予保護者，第3條可向住所、居所或所在地更生保護會／分會聲請，機關轉介須本人同意；第11至13條列依情況採就業就學、訓練、暫時協助等方式並由會或分會決定。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取法務部全國法規資料庫完整現行條文，核對條次與頁面修正日；修正日期不冒稱所有服務條款另有施行日。"
+        },
+        {
+          "url": "https://www.after-care.org.tw/",
+          "claim": "臺灣更生保護會官方入口列出總會、分會服務及免付費專線0800-7885-95。",
+          "supporting_passage": "編者摘要（非逐字引文）：臺灣更生保護會官方首頁列出各分會服務入口及免付費專線0800-7885-95；本文只指向官方目錄供讀者查所在地服務，不沿用未核對的個別分會地址、開放時段或給付額。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "官方首頁直接擷取未回傳正文，依同一官方網站搜尋索引可讀摘要核對免付費電話與分會導覽；未列個別分會資料或服務時間。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010042",
+          "claim": "消費者債務清理條例與更生保護法是不同法律程序；金融機構債務另有前置程序。",
+          "supporting_passage": "編者摘要（非逐字引文）：法務部全國法規資料庫現行消債條例全文頁面末次修正日期為2021-06-16；第2、3條界定消費者及不能清償／有不能清償之虞，第151條規定金融機構債務之協商或調解前置程序；修正日不等於各條個別施行日。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取法務部全國法規資料庫現行消債條例全文並核對第2、3及151條；不據此個別判斷債務資格。"
+        }
+      ],
+      "limits": [
+        "更生保護服務須符合法定對象並依個案、本人同意、地方資源評估；無全國同口徑資格母數與服務結果，AI核對不等於法律、社工或社福專業意見。",
+        "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
+        "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch07_reentry",
+          "reason": "原來源只取得地方地檢署搜尋索引，改用法務部現行更生保護法全文及服務提供者入口，逐條核對資格與申請。",
+          "replacement_ids": [
+            "aftercare_protection_act",
+            "aftercare_association_home"
+          ],
+          "prior_source_sha256": "34bad678bf65fc2542ef1a761576bfb81e52a490fc90d5b3e07e25f04e174ef8"
+        },
+        {
+          "id": "ch07_reentry_choice",
+          "reason": "原地方服務頁僅搜尋索引可讀，改用現行中央法規全文與更生保護會官方總入口，避免跨區服務條件被誤當統一規則。",
+          "replacement_ids": [
+            "aftercare_protection_act",
+            "aftercare_association_home"
+          ],
+          "prior_source_sha256": "90196b3898b31a4ea1180acfcf60cc92aee18ead658b40c01ae20af3b6b90499"
+        },
+        {
+          "id": "debtcleanup",
+          "reason": "原司法院制度導覽改以消費者債務清理條例現行全文支持法定資格及金融機構債務前置程序。",
+          "replacement_ids": [
+            "consumer_debt_clearance_act"
+          ],
+          "prior_source_sha256": "4abc3047ba180d7c9cd308c88ed72a0f6d4286e7e44966f26c55b67e2328580c"
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-019.json"
+    },
+    {
+      "id": "TW-07-020",
+      "before_sha256": "dd7529c35a05461d88c1f423948a5227c24000ebeaa67b161b75071d62f9b40c",
+      "after_sha256": "2a904ad9af703f33a98c5a5ae8dad7f8f7174fce4dbec4ee25e333e1ffb74498",
+      "prior_revision": "2b0264bb53cf62f9e5c5798ff9c4bdf8bcf4c2c7",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "0f8c80583a153ba766a591bcb3de07199816b98c7979a16275d1521e9768f693",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "重核金管會2025-06-18更新後保險法第64、127條；新增2025年度人壽保險理賠爭議分子／分母及限制、現行金保法第13條30日回覆／60日評議期限、書面申請與評議中心免費電話，並與健保職場銜接及重大傷病部分負擔分開。",
+      "frequency_assessment": "金融消費評議中心統計是人壽保險理賠申訴／評議案件而非所有保單理賠或被保險人；案件分類未說明是否去重，不能推作拒賠率或個人機率。",
+      "changes": "重核金管會2025-06-18更新後保險法第64、127條；新增2025年度人壽保險理賠爭議分子／分母及限制、現行金保法第13條30日回覆／60日評議期限、書面申請與評議中心免費電話，並與健保職場銜接及重大傷病部分負擔分開。",
+      "source_ids": [
+        "nhicategories",
+        "catastrophic",
+        "fsc_insurance_act_current",
+        "foi_life_claim_disputes_2025",
+        "fcpa_article13_current",
+        "foi_dispute_process_current"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-1438-8ae58-3255-1.html",
+          "claim": "健保署說明離職或變更工作後依投保身分銜接全民健保，與商業保單不同。",
+          "supporting_passage": "編者摘要（非逐字引文）：健保署轉換職場頁面說明健保為強制保險並依投保身分類別銜接；職業工會、眷屬、公所等資格需按現況確認，商業醫療險不替代全民健保投保義務。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接閱讀健保署官方HTML頁面及頁面更新資訊；內容以投保順位與銜接說明為限。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-5185-17079-2744-1.html",
+          "claim": "健保重大傷病核准後免部分負擔有指定適用範圍，不代表商業保單理賠。",
+          "supporting_passage": "編者摘要（非逐字引文）：健保署說明重大傷病證明在符合範圍的相關疾病就醫可免部分負擔；其他疾病、病房差額及非健保自費項目不能據此推定一律免付，更不能替代商業保單條款。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取健保署重大傷病官方說明頁，採其部分負擔範圍而不推定商業契約給付。"
+        },
+        {
+          "url": "https://law.fsc.gov.tw/LawContent.aspx?id=FL006746",
+          "claim": "保險法第64條告知與解除規則、第127條已在疾病／妊娠責任需分條適用；法規頁顯示末次修正2025-06-18。",
+          "supporting_passage": "編者摘要（非逐字引文）：金融監督管理委員會法規頁顯示保險法修正日期2025-06-18；第64條規範書面詢問據實說明及解除契約權條件／期間，第127條另規範契約訂立時已在疾病或妊娠之給付責任，不能推導「兩年後一律理賠」。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取金管會主管法規系統現行保險法HTML及第64、127條；分開記錄末次修正日，不將其直接當成各條施行日期。"
+        },
+        {
+          "url": "https://www.foi.org.tw/download.ashx?id=5612&lang=1",
+          "claim": "2025年人壽保險理賠爭議表中投保時已患疾病／妊娠類有549件，占該表8,238件的6.66%。",
+          "supporting_passage": "編者摘要（非逐字引文）：金融消費評議中心統計區間2025-01-01至2025-12-31、人壽保險公司理賠；既往疾病／妊娠類申訴298件、評議251件、合計549件，總表申訴5,269件、評議2,969件、合計8,238件。是評議中心案件表分類比例，不是所有理賠申請、保單人數或拒賠率；表未說明是否按個人去重。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "下載並直接閱讀金融消費評議中心官方統計PDF文字層，核對統計區間、業別、申訴／評議分子、合計分母及分類比例。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
+          "claim": "金融消費者保護法第13條要求先向業者申訴、業者30日內回覆；收到不滿意結果或30日期限屆滿後60日內申請評議。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行金融消費者保護法第13條明定先向金融服務業申訴，業者於收受後30日內妥適處理及回覆；不接受回覆者或逾期未處理者，得自收到回覆或期限屆滿日起60日內向爭議處理機構申請評議。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取法務部全國法規資料庫現行金融消費者保護法第13條，並與評議中心期限FAQ交叉核對。"
+        },
+        {
+          "url": "https://www.foi.org.tw/Article.aspx?Arti=1622&Lang=1&p=3",
+          "claim": "金融消費評議中心說明申訴須先向業者提出、評議採書面資料，並提供0800-789-885諮詢專線。",
+          "supporting_passage": "編者摘要（非逐字引文）：評議中心受理及程序FAQ要求先向金融服務業提出申訴，並確認收到不滿意回覆可立即起算60日、不需等滿30日；評議申請應以書面附上申訴與證明資料，頁面列免費專線0800-789-885。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取評議中心FAQ指定問答並與現行金保法第13條交叉核對；頁面更新日期較早，現行期限以法條為準。"
+        }
+      ],
+      "limits": [
+        "金融消費評議中心統計是人壽保險理賠申訴／評議案件而非所有保單理賠或被保險人；案件分類未說明是否去重，不能推作拒賠率或個人機率。",
+        "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
+        "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch07_insurance",
+          "reason": "以金融監督管理委員會主管法規系統目前可直接讀取之保險法現行全文取代舊法規入口，以核對2025-06-18更新後第64及127條。",
+          "replacement_ids": [
+            "fsc_insurance_act_current"
+          ],
+          "prior_source_sha256": "894f313845a3deb5530316f3a7f618d0007be3fb219c077aae135fc00cd6c284"
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-020.json"
     }
   ]
 }
