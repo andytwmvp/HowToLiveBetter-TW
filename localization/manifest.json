@@ -645,9 +645,11 @@
       "sources": [
         "ch01_cancer_expansion_2025",
         "ch01_cancer_registry_2023_tables",
-        "ch01_taipei_breast_followup"
+        "ch01_taipei_breast_followup",
+        "hpa_breast_screening_service_20260911",
+        "hpa_cancer_registry_latest_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "女性 40 歲起做乳腺癌篩查，每兩年一次鉬靶",
@@ -667,9 +669,12 @@
         "ch01_cancer_expansion_2025",
         "ch01_cancer_registry_2023_tables",
         "ch01_tanzi_screening_202610",
-        "ch01_wanfang_hpv_interpretation"
+        "ch01_wanfang_hpv_interpretation",
+        "hpa_cervical_screening_2026",
+        "hpa_cancer_registry_latest_20261027",
+        "hpa_preventive_service_rules_20261008"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "30 歲以上女性做宮頸癌篩查，優先 HPV 檢測",
@@ -689,9 +694,11 @@
         "ch01_cancer_expansion_2025",
         "ch01_cancer_registry_2023_tables",
         "ch01_mohw_fit_process",
-        "ch01_vghks_fit_positive"
+        "ch01_vghks_fit_positive",
+        "hpa_colorectal_screening_2026",
+        "hpa_cancer_registry_latest_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "45 到 50 歲起做結直腸癌篩查，做查大便隱血的糞便免疫化學檢測或者腸鏡",
@@ -796,9 +803,12 @@
       "sources": [
         "ch01_ldct_202601",
         "ch01_ldct_quit_2025",
-        "ch01_ldct_tph_risks"
+        "ch01_ldct_tph_risks",
+        "hpa_ldct_service_20260828",
+        "hpa_cancer_registry_latest_20261027",
+        "ch01_cancer_registry_2023_lung"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "重度吸菸者每年做一次低劑量胸部 CT",
