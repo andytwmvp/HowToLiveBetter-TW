@@ -128,8 +128,10 @@ class Ch07IncomeBenefitsSafetyRecheckTests(unittest.TestCase):
         self.assertEqual(evidence["counts_after"]["core_completed"], 278)
         self.assertEqual(evidence["counts_after"]["runtime_sources"], 753)
         self.assertEqual(evidence["counts_after"]["source_registry"], 834)
-        self.assertEqual(evidence["counts_after"]["runtime_sources"], len(runtime["sources"]))
-        self.assertEqual(evidence["counts_after"]["source_registry"], coverage["registry_sources"])
+        # This evidence is a historical batch snapshot; later batches may append sources.
+        self.assertGreaterEqual(len(runtime["sources"]), evidence["counts_after"]["runtime_sources"])
+        self.assertGreaterEqual(coverage["registry_sources"], evidence["counts_after"]["source_registry"])
+        self.assertGreaterEqual(coverage["registry_sources"], len(runtime["sources"]))
         self.assertEqual(coverage["core_reviewed_entries"], report["publication_completed_entries"])
         self.assertFalse(coverage["publication_ready"])
         self.assertFalse(report["publication_ready"])
