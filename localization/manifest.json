@@ -11316,9 +11316,10 @@
       "target_path": "locales/zh-TW/book/ch23/TW-23-013.md",
       "sources": [
         "https://course.taiwanjobs.gov.tw/about/recommended",
+        "https://thmr.wda.gov.tw/News_Content.aspx?n=1A79903405D714E4&s=6B8BBC06EF5448C2&sms=6789F97D2E2677C3",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "同樣的錢和時間，優先選能直接上崗的短週期項目",
@@ -11452,7 +11453,7 @@
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030024",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "評職稱先弄清自己在哪個系列、哪一級，再按單位性質找申報渠道",
@@ -11491,9 +11492,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-022.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030010"
+        "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL008615",
+        "https://edu.law.moe.gov.tw/LawContent.aspx?id=GL001280"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "別找中介代評、別買論文代寫、別在材料上造假：查實就撤銷職稱，記誠信檔案 3 年",
@@ -11512,7 +11514,7 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "拿到職稱不等於漲工資：先問清單位是按崗位比例評聘，還是評了不一定聘",
