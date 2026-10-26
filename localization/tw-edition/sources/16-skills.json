@@ -149,6 +149,48 @@
       "台灣就業通：產投方案常見問答（學員版；2025年12月5日修正）",
       "https://job.taiwanjobs.gov.tw/upload/115/2d14b503-e267-4c3c-942b-a889a84dab2f.pdf",
       "學員版問答說明補助80%或符合方案資格者100%、每3年最高新臺幣10萬元（自2025-01-01起適用）、三年期間起算及重算、開訓日資格、一般缺課超過總訓練時數1/5不符申領及四類可排除缺席時數（須附資料交辦訓地轄區分署認列）、不同子計畫先繳費方式及結訓後約2個月撥款流程。PDF封面標示2025-12-05修正，並由2026-07-03發布之115年度下半年課程公告提供。"
+    ],
+    [
+      "ch23_taiwan_elder_mortality_2011",
+      "林正祥、鄭維芬（2011）：臺灣老人教育程度差異與死亡風險",
+      "https://toaj.stpi.niar.org.tw/index/journal/volume/article/4b1141f99035f52901903f87f6ab0558",
+      "臺灣老人保健與生活問題調查五波、4,049個案、1989至2003年；不同中介因素控制下估計不同；排除事故死亡，不是目前全國發生率。"
+    ],
+    [
+      "ch23_mol_initial_salary_114",
+      "勞動部（2026）：114年初任人員薪資統計結果",
+      "https://www.mol.gov.tw/1607/1632/1633/90149/",
+      "114年約13.8萬名依畢業生與退休金／公教保險行政資料編算的全時初任受僱者；平均月薪3.9萬元、中位數3.6萬元、大學3.6萬元、研究所5.3萬元；17.2%以當年最低工資28,590元起薪。描述統計不是教育因果效果。"
+    ],
+    [
+      "ch23_returns_wb_wps8402_pdf",
+      "Psacharopoulos與Patrinos（2018）：Returns to Investment in Education（WPS8402 PDF）",
+      "https://documents1.worldbank.org/curated/en/442521523465644318/pdf/WPS8402.pdf",
+      "世界銀行工作論文回顧139國、1,120筆估計；其中1950至2014年705筆Mincer估計的額外一年教育私人報酬為8.8%。Mincer與完整折現法尺度不同；論文明示國別研究不可替代。"
+    ],
+    [
+      "ch23_returns_causal_meta_2026",
+      "Clark與Nielsen（2026）：The Returns to Education: A Meta-Study",
+      "https://onlinelibrary.wiley.com/doi/10.1111/kykl.70041",
+      "聚焦義務教育年限改革因果薪資估計：53篇論文、46項改革中的79個獨立估計；未加權8.2%、隨機效果6.0%、固定效果6.2%；作者偏誤修正解讀0%至3%。"
+    ],
+    [
+      "ch23_returns_comment_2026",
+      "Crawfurd（2026）：The Returns to Education: A Comment",
+      "https://onlinelibrary.wiley.com/doi/10.1111/kykl.70081",
+      "對Clark與Nielsen（2026）資料使用其他標準出版偏誤修正，摘要報告每增一年教育薪資效果約5%至6%，反駁其近零結論。這是另一方法分析，非個人課程報酬。"
+    ],
+    [
+      "ch23_returns_tw_schooling_2020",
+      "Zhang（2020）：臺灣義務教育改革與教育報酬迴歸不連續研究（作者公開稿）",
+      "https://ztempest0218.github.io/papers/001-schooling-return.pdf",
+      "使用1995至2015年臺灣人力運用調查；1968年義務教育改革及1955年出生界線建立模糊迴歸不連續設計，作者報告受改革影響者每增加一年教育約5.6%薪資效果。全體有效薪資樣本601,689人，不是局部估計分母。"
+    ],
+    [
+      "ch23_moi_education_2025_pdf",
+      "內政部統計處（2026-04-04）：114年底人口教育程度統計通報（原始PDF）",
+      "https://ws.moi.gov.tw/Download.ashx?icon=.pdf&n=MTE15bm056ysMTTpgLHlhafmlL%2FntbHoqIjpgJrloLFf5pWZ6IKy56iL5bqmLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAwL3JlbGZpbGUvMC8yMzE5My9jZTFmZDcyYS1kYTU1LTRmZTYtYmU5MC1kYjI4OWMyYTU0MTQucGRm",
+      "114年底15歲以上戶籍人口約20,617,000人，其中大專以上約10,602,000人、占51.4%；官方通報25至34歲占比81.9%，年齡表列25至29歲與30至34歲各81.9%（表列四捨五入），但未列各組人數及分母；刊載人口總數以千人為單位。"
     ]
   ]
 }

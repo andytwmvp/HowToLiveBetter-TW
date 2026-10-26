@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "batch": "TW-23-002 / 003 / 006 / 007 historical substantive re-review",
+  "base_main_sha": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536",
+  "reviewed_at": "2026-10-27",
+  "review_due_at": "2027-01-31",
+  "prior_reviews_preserved_by_git_ref": true,
+  "counts_before": {
+    "substantive_rechecks": 186,
+    "runtime_sources": 795,
+    "source_registry": 876,
+    "json_files_checked": 470,
+    "core_completed": 278,
+    "core_total": 765,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "substantive_rechecks": 190,
+    "runtime_sources": 802,
+    "source_registry": 883,
+    "json_files_checked": 471,
+    "core_completed": 278,
+    "core_total": 765,
+    "publication_ready": false
+  },
+  "new_core_entries": [],
+  "items": [
+    {
+      "id": "TW-23-002",
+      "chapter": 23,
+      "target_path": "locales/zh-TW/book/ch23/TW-23-002.md",
+      "title": "教育與健康有關聯；群體風險不是個人延壽保證",
+      "prior_body_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:locales/zh-TW/book/ch23/TW-23-002.md",
+      "prior_review_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:localization/reviews/TW-23-002.json",
+      "before_sha256": "434c03aeb45193182ae98368e19cc81ee19f1555da50dbf4c888d631def0065c",
+      "after_sha256": "2ccafef6b259a0e2a49b1d4de7b709ebe9b50a3941202c21e86bbedeff133422",
+      "prior_review_sha256": "c9acd61df7005d8e3b5c96ac5b161773740746f6ca80d5fc5649beb829269a36",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch23_mortality",
+        "ch23_taiwan_elder_mortality_2011"
+      ],
+      "previous_source_ids": [
+        "ch23_mortality"
+      ],
+      "previous_review_claims": [
+        "研究摘要的603項研究、59國與每年教育約1.9%較低死亡風險，須限於人群關聯並揭露研究差異。"
+      ],
+      "taiwan_context": "臺灣讀者常以教育決策、健康老化或長壽說法解讀跨國研究；正文區分全死因相對風險與臺灣特定老人世代模型，避免用教育選擇取代就醫及健康照護。",
+      "frequency_assessment": "可用證據不是臺灣個人發生率：全球統合分析的分母單位為10,355筆研究觀察值（603項研究、59國），不是人口數；臺灣研究樣本為4,049名老人個案、1989至2003年五波調查，未以公開摘要提供可換算的全國教育分層死亡發生率。未找到可比較的近期全臺教育分層全死因風險分母，因此不推估。",
+      "changes": "補入全球統合分析的觀察值單位、相對風險、不確定區間、年齡差異與異質性；新增臺灣1989至2003年老人研究及中介因素調整後不顯著結果，刪除將群體估計當個人延壽保證的讀法。補明研究關聯不證明個人因果效果。",
+      "source_status": "逐項核對來源；全文／附件限制見審閱紀錄與limits。",
+      "unresolved": [
+        "臺灣研究全文與補充模型資料未納入本次核對；無可比較的近期臺灣全人口教育分層死亡發生率。"
+      ],
+      "statistics_assessed": [
+        "education_mortality_global_meta",
+        "education_mortality_taiwan_elder_cohort"
+      ],
+      "reviewer_limit": "AI輔助來源核對，不是獨立醫療、公共衛生、人口統計、勞動、教育經濟或統計專業簽證。"
+    },
+    {
+      "id": "TW-23-003",
+      "chapter": 23,
+      "target_path": "locales/zh-TW/book/ch23/TW-23-003.md",
+      "title": "判斷學歷普及程度，先對齊臺灣年齡、學位與統計母體",
+      "prior_body_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:locales/zh-TW/book/ch23/TW-23-003.md",
+      "prior_review_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:localization/reviews/TW-23-003.json",
+      "before_sha256": "9d906a4ee83351a383fcd2f495c43059f519a033b931e9a0940b395df4e2f5fa",
+      "after_sha256": "6d9e7826111fbde9936a7a5fd19c08fc1f1e8a7290bc24bca24ea16a1c0ddb76",
+      "prior_review_sha256": "770b6c07eefcd37b19d4917edad47d18b75c278d0f65bd50b1f3aa8e71a7d8b5",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch23_education",
+        "ch23_moi_education_2025_pdf"
+      ],
+      "previous_source_ids": [
+        "ch23_education"
+      ],
+      "previous_review_claims": [
+        "2025年底15歲以上戶籍人口大專以上51.4%，25至34歲81.9%，兩者母體及大專定義必須保留。"
+      ],
+      "taiwan_context": "以內政部戶籍人口年度通報呈現臺灣整體與25至34歲教育程度；分開年齡、學位定義與母體，未將人口占比外推到職缺或錄取。",
+      "frequency_assessment": "這是教育程度普及度而非風險事件頻率：2025年底15歲以上戶籍人口約20,617,000人中，大專以上約10,602,000人（51.4%；通報以千人為單位刊載）；官方PDF年齡表列25至29歲與30至34歲各81.9%，但未列分組分子與分母。",
+      "changes": "以2025年底內政部戶籍人口明確分子／分母更新大專以上占比，區分25至34歲分母未公布、專科以上定義與就業統計，補上依職務和法定資格自行核對步驟。另核對內政部官方原始PDF第1頁及第4頁年齡表，明列分齡表只提供比例而無分組人數分母。明示總數以千人刊載、換算人數為約數。",
+      "source_status": "逐項核對官方HTML與原始PDF第1頁及第4頁；分齡表沒有分組人數與分母。",
+      "unresolved": [
+        "25至34歲分組的分子、分母未於官方通報正文刊出；未重算附件。"
+      ],
+      "statistics_assessed": [
+        "registered_population_education_2025",
+        "registered_population_education_age_25_34_2025"
+      ],
+      "reviewer_limit": "AI輔助來源核對，不是獨立醫療、公共衛生、人口統計、勞動、教育經濟或統計專業簽證。"
+    },
+    {
+      "id": "TW-23-006",
+      "chapter": 23,
+      "target_path": "locales/zh-TW/book/ch23/TW-23-006.md",
+      "title": "比較升學與工作，用同一時間範圍計算額外成本及收入差",
+      "prior_body_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:locales/zh-TW/book/ch23/TW-23-006.md",
+      "prior_review_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:localization/reviews/TW-23-006.json",
+      "before_sha256": "7ba8df5673e6d9ff61834931b93598887de596447bc463f704d83d0df34e379b",
+      "after_sha256": "4221dfce0dd3256ffd569d0ce8c7e91461275cbe77269187ab279ef6c5faa779",
+      "prior_review_sha256": "e947acd122ca98deab2a042907f18863fb2f30fd65e950c4e7ec3529c192b2d4",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch23_salary",
+        "ch23_mol_initial_salary_114"
+      ],
+      "previous_source_ids": [
+        "ch23_salary"
+      ],
+      "previous_review_claims": [
+        "114年職類別薪資調查的月薪、年薪基準年度及全時受僱母體不同，不能當作新進者的個人薪資。"
+      ],
+      "taiwan_context": "以臺灣勞動部初任人員行政統計與職類別薪資調查處理畢業進入職場、升學期間少領收入及工時差異；兩份統計分別保留母體和基準年度。",
+      "frequency_assessment": "這是行政資料描述統計，不是個人升學成功率或薪資因果機率：114年初任全時受僱人員約13.8萬人；17.2%以當年最低工資起薪。職類調查的9,977家是有效事業單位樣本，不是全體個人受僱者樣本。",
+      "changes": "加入勞動部114年初任全時受僱薪資行政統計與114年職類調查，逐一標明母體、年度、薪資口徑及中位數估算方式；改以同期間、同職務情境比較升學成本。",
+      "source_status": "逐項核對來源；全文／附件限制見審閱紀錄與limits。",
+      "unresolved": [
+        "未重算勞動部統計附件原始個體資料；平均薪資差不能識別個人教育因果回報。"
+      ],
+      "statistics_assessed": [
+        "initial_full_time_employee_salary_2025",
+        "occupational_salary_survey_sample_2025"
+      ],
+      "reviewer_limit": "AI輔助來源核對，不是獨立醫療、公共衛生、人口統計、勞動、教育經濟或統計專業簽證。"
+    },
+    {
+      "id": "TW-23-007",
+      "chapter": 23,
+      "target_path": "locales/zh-TW/book/ch23/TW-23-007.md",
+      "title": "教育報酬研究有爭議，不能當課程保證年利率",
+      "prior_body_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:locales/zh-TW/book/ch23/TW-23-007.md",
+      "prior_review_git_ref": "0d0c4304fe6730c2e0e14834618c2bdb6e43f536:localization/reviews/TW-23-007.json",
+      "before_sha256": "1513e9b2a21a38ea2c437b419c61087e2dc3e5ba1b0756d82ecdb0f384c578da",
+      "after_sha256": "b4acf48aa0e6cef461f21a5bf7560ad62e449c3ff912b566f7a64a7061866060",
+      "prior_review_sha256": "0b56756459813f230e05cb36ed649e112e8d3f189107f9845ada87993c4b4fb9",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch23_returns",
+        "ch23_returns_wb_wps8402_pdf",
+        "ch23_returns_causal_meta_2026",
+        "ch23_returns_comment_2026",
+        "ch23_returns_tw_schooling_2020"
+      ],
+      "previous_source_ids": [
+        "ch23_returns"
+      ],
+      "previous_review_claims": [
+        "2018年跨國歷史教育報酬綜整的約9%平均估計，只作研究背景，不支持臺灣個人或短期課程保證報酬。"
+      ],
+      "taiwan_context": "教育報酬為跨國方法研究及臺灣1968年義務教育改革準實驗，正文提醒現代升學、學科、職訓與短期課程不是研究中的同一介入。",
+      "frequency_assessment": "數值是研究估計分佈，不是事件發生頻率：世界銀行整理1,120筆估計、其中705筆Mincer估計；2026統合分析79筆估計來自53篇論文及46項改革；臺灣5.6%是特定出生界線附近的局部效果，不是601,689人中的個人機率。",
+      "changes": "從世界銀行原始PDF核對705筆Mincer估計8.8%，新增2026年兩種出版偏誤分析與其分歧、臺灣1968年義務教育改革5.6%局部估計及出生界線限制；明確禁止將研究數字當課程年利率。",
+      "source_status": "逐項核對來源；全文／附件限制見審閱紀錄與limits。",
+      "unresolved": [
+        "Crawfurd評論全文未取得；兩篇2026方法分析對偏誤修正結論相左；臺灣研究使用作者稿。"
+      ],
+      "statistics_assessed": [
+        "worldbank_mincer_returns_1950_2014",
+        "causal_schooling_returns_2026_meta",
+        "causal_schooling_returns_2026_comment",
+        "schooling_returns_taiwan_1968_reform"
+      ],
+      "reviewer_limit": "AI輔助來源核對，不是獨立醫療、公共衛生、人口統計、勞動、教育經濟或統計專業簽證。"
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch23_mol_initial_salary_114",
+      "title": "勞動部（2026）：114年初任人員薪資統計結果",
+      "url": "https://www.mol.gov.tw/1607/1632/1633/90149/",
+      "published_at": "2026-04-24",
+      "supports": "114年約13.8萬名依畢業生與退休金／公教保險行政資料編算的全時初任受僱者；平均月薪3.9萬元、中位數3.6萬元、大學3.6萬元、研究所5.3萬元；17.2%以當年最低工資28,590元起薪。描述統計不是教育因果效果。",
+      "evidence_type": "臺灣政府行政資料統計",
+      "retrieval_method": "2026-10-27讀取勞動部官方HTML摘要、母體定義、薪資結果與註解；未宣稱重新計算附件。",
+      "accessed_at": "2026-10-27",
+      "scope_note": "僅支持上述主張及其明確研究母體、期間與方法；不推論個人結果。"
+    },
+    {
+      "id": "ch23_returns_causal_meta_2026",
+      "title": "Clark與Nielsen（2026）：The Returns to Education: A Meta-Study",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/kykl.70041",
+      "published_at": "2026-02-06",
+      "supports": "聚焦義務教育年限改革因果薪資估計：53篇論文、46項改革中的79個獨立估計；未加權8.2%、隨機效果6.0%、固定效果6.2%；作者偏誤修正解讀0%至3%。",
+      "evidence_type": "同儕審查研究統合／方法研究",
+      "retrieval_method": "2026-10-27閱讀Wiley出版社開放全文HTML摘要、方法、樣本和估計；未重新編碼附錄資料。",
+      "accessed_at": "2026-10-27",
+      "scope_note": "僅支持上述主張及其明確研究母體、期間與方法；不推論個人結果。"
+    },
+    {
+      "id": "ch23_returns_comment_2026",
+      "title": "Crawfurd（2026）：The Returns to Education: A Comment",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/kykl.70081",
+      "published_at": "2026-08-16",
+      "supports": "對Clark與Nielsen（2026）資料使用其他標準出版偏誤修正，摘要報告每增一年教育薪資效果約5%至6%，反駁其近零結論。這是另一方法分析，非個人課程報酬。",
+      "evidence_type": "同儕審查研究評論（摘要）",
+      "retrieval_method": "2026-10-27閱讀Wiley出版社文章HTML摘要與出版資料；未取得需另行分享的全文。",
+      "accessed_at": "2026-10-27",
+      "scope_note": "僅支持上述主張及其明確研究母體、期間與方法；不推論個人結果。"
+    },
+    {
+      "id": "ch23_returns_tw_schooling_2020",
+      "title": "Zhang（2020）：臺灣義務教育改革與教育報酬迴歸不連續研究（作者公開稿）",
+      "url": "https://ztempest0218.github.io/papers/001-schooling-return.pdf",
+      "published_at": null,
+      "supports": "使用1995至2015年臺灣人力運用調查；1968年義務教育改革及1955年出生界線建立模糊迴歸不連續設計，作者報告受改革影響者每增加一年教育約5.6%薪資效果。全體有效薪資樣本601,689人，不是局部估計分母。",
+      "evidence_type": "臺灣原始準實驗研究（作者公開稿；正式刊載Applied Economics Letters）",
+      "retrieval_method": "2026-10-27閱讀研究者公開PDF的摘要、識別策略、樣本與結果；DOI 10.1080/13504851.2019.1638493核對刊載資訊。PDF為2019年作者稿。",
+      "accessed_at": "2026-10-27",
+      "scope_note": "僅支持上述主張及其明確研究母體、期間與方法；不推論個人結果。"
+    },
+    {
+      "id": "ch23_returns_wb_wps8402_pdf",
+      "title": "Psacharopoulos與Patrinos（2018）：Returns to Investment in Education（WPS8402 PDF）",
+      "url": "https://documents1.worldbank.org/curated/en/442521523465644318/pdf/WPS8402.pdf",
+      "published_at": "2018-04-11",
+      "supports": "世界銀行工作論文回顧139國、1,120筆估計；其中1950至2014年705筆Mincer估計的額外一年教育私人報酬為8.8%。Mincer與完整折現法尺度不同；論文明示國別研究不可替代。",
+      "evidence_type": "研究綜整／世界銀行政策研究工作論文",
+      "retrieval_method": "2026-10-27直接閱讀世界銀行原始PDF摘要、方法、估計與限制；未重新計算線上附錄資料。",
+      "accessed_at": "2026-10-27",
+      "scope_note": "僅支持上述主張及其明確研究母體、期間與方法；不推論個人結果。"
+    },
+    {
+      "id": "ch23_taiwan_elder_mortality_2011",
+      "title": "林正祥、鄭維芬（2011）：臺灣老人教育程度差異與死亡風險",
+      "url": "https://toaj.stpi.niar.org.tw/index/journal/volume/article/4b1141f99035f52901903f87f6ab0558",
+      "published_at": null,
+      "supports": "臺灣老人保健與生活問題調查五波、4,049個案、1989至2003年；不同中介因素控制下估計不同；排除事故死亡，不是目前全國發生率。",
+      "evidence_type": "臺灣原始研究（期刊摘要）",
+      "retrieval_method": "2026-10-27直接讀取期刊平台HTML中英文摘要；未取得可讀PDF全文或補充資料。",
+      "accessed_at": "2026-10-27",
+      "scope_note": "僅支持上述主張及其明確研究母體、期間與方法；不推論個人結果。"
+    },
+    {
+      "id": "ch23_moi_education_2025_pdf",
+      "title": "內政部統計處（2026-04-04）：114年底人口教育程度統計通報（原始PDF）",
+      "url": "https://ws.moi.gov.tw/Download.ashx?icon=.pdf&n=MTE15bm056ysMTTpgLHlhafmlL%2FntbHoqIjpgJrloLFf5pWZ6IKy56iL5bqmLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAwL3JlbGZpbGUvMC8yMzE5My9jZTFmZDcyYS1kYTU1LTRmZTYtYmU5MC1kYjI4OWMyYTU0MTQucGRm",
+      "published_at": "2026-04-04",
+      "supports": "114年底15歲以上戶籍人口約20,617,000人，其中大專以上約10,602,000人、占51.4%；官方通報25至34歲占比81.9%，年齡表列25至29歲與30至34歲各81.9%（表列四捨五入），但未列各組人數及分母；刊載人口總數以千人為單位。",
+      "evidence_type": "臺灣政府行政統計原始PDF",
+      "retrieval_method": "2026-10-27直接閱讀內政部官方六頁統計通報PDF第1頁總覽及第4頁全體年齡別教育程度表；年齡表列比率，未列年齡組人數或分母。",
+      "accessed_at": "2026-10-27",
+      "scope_note": "僅支持通報列載的2025年底戶籍人口數與教育程度比例；總數以千人表值換算為約數，年齡分組只列比例，不推算分組人數、求職結果或個人機會。"
+    }
+  ],
+  "sources_retired": [],
+  "statistics": [
+    {
+      "id": "education_mortality_global_meta",
+      "source_id": "ch23_mortality",
+      "value": 1.9,
+      "unit": "每增加一年教育，成人全死因死亡相對風險平均低百分比",
+      "period": "研究搜尋至2023-05-31；論文2024年刊出",
+      "scope": "70個研究地點、59國；成人全死因死亡研究統合分析",
+      "population": "603項研究；最終合併資料10,355筆觀察值（不是參與者數）",
+      "numerator": null,
+      "denominator": null,
+      "observations": 10355,
+      "studies": 603,
+      "locations": 70,
+      "countries": 59,
+      "uncertainty_interval_95": [
+        1.8,
+        2.0
+      ],
+      "method": "全球系統性回顧與統合分析；相對風險模型估計",
+      "accessed_at": "2026-10-27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38278172/",
+      "limitations": "10,355筆觀察值，不是樣本參與者人數；相對風險差不是絕對百分點或臺灣發生率。研究異質性與出版偏誤已報告，不能推成個人因果。"
+    },
+    {
+      "id": "education_mortality_taiwan_elder_cohort",
+      "source_id": "ch23_taiwan_elder_mortality_2011",
+      "value": 13.7,
+      "adjusted_estimate": 6.1,
+      "unit": "每增加一年教育，特定老年樣本死亡風險估計下降百分比",
+      "period": "1989至2003年五波調查；論文2011年",
+      "scope": "臺灣老人保健與生活問題調查；排除事故死亡",
+      "population": "4,049名調查個案；非全國近期死亡率樣本",
+      "sample_size": 4049,
+      "numerator": null,
+      "denominator": null,
+      "method": "脆弱Cox比例風險模型；納入健康狀況、健康行為、社會參與後教育估計不顯著",
+      "accessed_at": "2026-10-27",
+      "url": "https://toaj.stpi.niar.org.tw/index/journal/volume/article/4b1141f99035f52901903f87f6ab0558",
+      "limitations": "摘要未提供可換算全國發生率的分子分母；13.7%與6.1%是不同模型估計，控制中介因素後6.1%不顯著，不能當個人發生機率。"
+    },
+    {
+      "id": "registered_population_education_2025",
+      "source_id": "ch23_moi_education_2025_pdf",
+      "value": 51.4,
+      "unit": "大專以上占比（百分比）",
+      "period": "2025年底；2026-04-04發布",
+      "scope": "臺灣15歲以上戶籍人口",
+      "population": "內政部戶籍人口教育程度行政統計；大專以上含專科、大學、研究所",
+      "numerator": 10602000,
+      "denominator": 20617000,
+      "method": "戶籍人口與教育程度行政統計；比率依通報四捨五入",
+      "accessed_at": "2026-10-27",
+      "url": "https://ws.moi.gov.tw/Download.ashx?icon=.pdf&n=MTE15bm056ysMTTpgLHlhafmlL%2FntbHoqIjpgJrloLFf5pWZ6IKy56iL5bqmLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAwL3JlbGZpbGUvMC8yMzE5My9jZTFmZDcyYS1kYTU1LTRmZTYtYmU5MC1kYjI4OWMyYTU0MTQucGRm",
+      "limitations": "不是當年畢業率、居住人口學歷抽樣、就業或錄取率。 人數由通報以千人為單位之刊載值換算，為約數，不是精確到單人的未四捨五入戶籍計數。",
+      "approximate_values": true,
+      "rounding_unit_people": 1000
+    },
+    {
+      "id": "registered_population_education_age_25_34_2025",
+      "source_id": "ch23_moi_education_2025_pdf",
+      "value": 81.9,
+      "unit": "大專以上占比（百分比）",
+      "period": "2025年底；2026-04-04發布",
+      "scope": "臺灣25至34歲戶籍人口",
+      "population": "內政部通報分齡教育程度行政統計",
+      "numerator": null,
+      "denominator": null,
+      "method": "官方通報正文列比例；未刊出分齡人數與分母",
+      "accessed_at": "2026-10-27",
+      "url": "https://ws.moi.gov.tw/Download.ashx?icon=.pdf&n=MTE15bm056ysMTTpgLHlhafmlL%2FntbHoqIjpgJrloLFf5pWZ6IKy56iL5bqmLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvNDAwL3JlbGZpbGUvMC8yMzE5My9jZTFmZDcyYS1kYTU1LTRmZTYtYmU5MC1kYjI4OWMyYTU0MTQucGRm",
+      "limitations": "官方報告未刊出此年齡組人數與分母；不自行反推，不能與15歲以上比率作個人競爭力推論。 分齡比率按通報列值四捨五入。",
+      "percentage_rounded": true
+    },
+    {
+      "id": "initial_full_time_employee_salary_2025",
+      "source_id": "ch23_mol_initial_salary_114",
+      "population_count": 138000,
+      "period": "民國114年（2025年）；2026-04-24更新",
+      "scope": "依畢業生、勞退月提繳工資及公教保險等資料編算之全時初任受僱者",
+      "population": "高中職以上畢業後初入職場的行政資料定義初任人員",
+      "mean_monthly_twd": 39000,
+      "median_monthly_twd": 36000,
+      "bachelor_mean_monthly_twd": 36000,
+      "graduate_mean_monthly_twd": 53000,
+      "minimum_wage_start_share_pct": 17.2,
+      "minimum_wage_twd": 28590,
+      "numerator": null,
+      "denominator": null,
+      "method": "行政資料連結編算；薪資中位數以薪資級距中點估算",
+      "accessed_at": "2026-10-27",
+      "url": "https://www.mol.gov.tw/1607/1632/1633/90149/",
+      "limitations": "描述統計，不是教育造成的薪資因果效果；薪資中位數依級距中點估算；教育、產業、職務、性別及雇主組成不同，不代表個人薪資。",
+      "population_count_approximate": true
+    },
+    {
+      "id": "occupational_salary_survey_sample_2025",
+      "source_id": "ch23_salary",
+      "sample_size": 9977,
+      "unit": "有效事業單位樣本家數",
+      "period": "114年調查；月薪為2025年7月、年薪為2024年",
+      "scope": "臺灣工業及服務業事業單位之全時受僱人員職類別薪資調查",
+      "population": "調查單位回收樣本9,977家；非個人受僱者樣本數",
+      "numerator": null,
+      "denominator": null,
+      "method": "按年事業單位調查；排除雇主、自營作業者、無酬家屬工作者及部分工時受僱者",
+      "accessed_at": "2026-10-27",
+      "url": "https://www.mol.gov.tw/1607/1632/1633/90814/",
+      "limitations": "9,977是事業單位有效樣本，不是勞工個人樣本或全國個人薪資發生機率。"
+    },
+    {
+      "id": "worldbank_mincer_returns_1950_2014",
+      "source_id": "ch23_returns_wb_wps8402_pdf",
+      "value": 8.8,
+      "unit": "額外一年教育的平均私人薪資報酬（百分比）",
+      "period": "估計資料1950至2014年；政策工作論文2018年",
+      "scope": "139國、1,120筆教育報酬估計總彙整；Mincer子集705筆",
+      "population": "跨國研究估計值，不是個人資料母數",
+      "estimates_total": 1120,
+      "countries": 139,
+      "estimates_mincer": 705,
+      "numerator": null,
+      "denominator": null,
+      "method": "Mincer收入函數文獻綜整；與完整折現法估計尺度不同",
+      "accessed_at": "2026-10-27",
+      "url": "https://documents1.worldbank.org/curated/en/442521523465644318/pdf/WPS8402.pdf",
+      "limitations": "跨國歷史估計，不能替代臺灣當期國別研究，亦不能視為個人課程投資年利率。"
+    },
+    {
+      "id": "causal_schooling_returns_2026_meta",
+      "source_id": "ch23_returns_causal_meta_2026",
+      "papers": 53,
+      "estimates": 79,
+      "reforms": 46,
+      "unweighted_mean": 8.2,
+      "random_effects_weighted": 6.0,
+      "fixed_effects_weighted": 6.2,
+      "author_publication_bias_adjusted_range_pct": [
+        0,
+        3
+      ],
+      "unit": "受義務教育年限改革影響每多一年教育的薪資估計百分比",
+      "period": "2026年研究；大多數改革為1945至2000年",
+      "scope": "準實驗研究統合分析；樣本偏西方國家，非西方14篇包含臺灣研究",
+      "population": "53篇論文、46項改革中的79個獨立估計",
+      "numerator": null,
+      "denominator": null,
+      "method": "義務教育年限自然實驗的因果薪資估計統合；作者提出出版偏誤修正",
+      "accessed_at": "2026-10-27",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/kykl.70041",
+      "limitations": "估計方法與偏誤修正會改變結果；不同研究情境和改革樣本非一般教育課程效果。0%至3%為作者修正解讀，不是共識。"
+    },
+    {
+      "id": "causal_schooling_returns_2026_comment",
+      "source_id": "ch23_returns_comment_2026",
+      "estimated_range": "5%–6%",
+      "period": "2026-08-16首次刊出",
+      "scope": "對Clark與Nielsen同一資料集再作出版偏誤修正的評論",
+      "population": "再分析既有研究估計值；不是新增個人樣本",
+      "numerator": null,
+      "denominator": null,
+      "method": "另一篇同行評審評論摘要報告標準出版偏誤修正結果",
+      "accessed_at": "2026-10-27",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/kykl.70081",
+      "limitations": "與原統合研究修正結果相左；本次取得可見摘要，未取得可分享全文，不能說爭議已解決。"
+    },
+    {
+      "id": "schooling_returns_taiwan_1968_reform",
+      "source_id": "ch23_returns_tw_schooling_2020",
+      "estimate": 5.6,
+      "unit": "受改革影響者每增加一年教育的局部薪資效果百分比",
+      "period": "使用1995至2015年資料；2020年正式刊載（作者稿2019年）",
+      "scope": "臺灣1968年義務教育年限延長；1955年出生界線附近",
+      "population": "人力運用調查全體可用薪資樣本601,689人；非局部估計分母",
+      "sample_size": 601689,
+      "numerator": null,
+      "denominator": null,
+      "method": "模糊迴歸不連續設計；用出生界線識別受改革影響的教育年數",
+      "accessed_at": "2026-10-27",
+      "url": "https://ztempest0218.github.io/papers/001-schooling-return.pdf",
+      "limitations": "1955年出生界線及歷史改革局部估計，非全樣本平均；不代表2026年所有升學、科系或短期課程。"
+    }
+  ],
+  "research_scope": "四篇正文均為歷史條目實質再審，不新增核心條目；區分行政統計、研究估計、觀察值與個人發生率。",
+  "publication_ready": false,
+  "publication_limit": "核心新增數不變；AI輔助來源核對不構成獨立醫療、人口統計、勞動、教育經濟或統計專業簽證。"
+}

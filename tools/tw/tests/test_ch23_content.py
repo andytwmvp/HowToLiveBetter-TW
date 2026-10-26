@@ -49,8 +49,12 @@ class SkillsChapterTests(unittest.TestCase):
             self.assertEqual(runtime[s['id']],s);self.assertEqual(registry[s['id']][2],s['url'])
             self.assertGreater(len(s['retrieval_method']),15)
         supplemental={
+            'TW-23-002':{'ch23_taiwan_elder_mortality_2011'},
+            'TW-23-003':{'ch23_moi_education_2025_pdf'},
             'TW-23-001':{'ch23_mol_student_inspection_114'},
             'TW-23-004':set(),
+            'TW-23-006':{'ch23_mol_initial_salary_114'},
+            'TW-23-007':{'ch23_returns_wb_wps8402_pdf','ch23_returns_causal_meta_2026','ch23_returns_comment_2026','ch23_returns_tw_schooling_2020'},
             'TW-23-008':{'ch23_certificate_exam_schedule_current','ch23_cpaexam'},
             'TW-23-009':{'ch23_training_q_and_a_115'},
         }
