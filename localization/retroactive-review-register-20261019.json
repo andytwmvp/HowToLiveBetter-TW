@@ -17576,6 +17576,343 @@
           "prior_source_sha256": "766628dfa8399577386e03208f49123c7d77ba00905c8edac28b7eab484fbfeb"
         }
       ]
+    },
+    {
+      "id": "TW-07-011",
+      "before_sha256": "a5bd667456a985cba1390cec7009f8a969b744bc932a7f5a3fe42c599bbb0222",
+      "after_sha256": "cc33fb5a955fba5ba50a9f114b636876d842e9bd3cdd0030f8098dac23b3c9de",
+      "prior_revision": "25f163aeb6214a31fcf91deea8c0faaf9d1ae384",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "f0a28eb768deb571df12190aec796a613facc366a321a602f868cf95ab091cd5",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "依臺灣戶政司現行四種掛失方式、1996非上班時間管道、24小時線上申請、舊證失效時點、全國戶所補領與新臺幣200元規費，另分開處理銀行卡及電信門號。",
+      "frequency_assessment": "未找到可配對當代身分證遺失者、遭冒用者及受影響者的全國事件數與暴露母數；歷年掛失件數不是冒用件數，也不代表個人機率。",
+      "changes": "將原先一般化掛失與補領步驟改為戶政司明列的四種通道，補正舊證是在新證補發後才失效、補領適用年齡與全國受理戶所；以中央戶政司補領費取代地方頁面，並明列銀行卡與門號須另行止損。",
+      "source_ids": [
+        "idreplace",
+        "ris_lost_id_faq_2026",
+        "ris_id_replacement_fee"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.ris.gov.tw/documents/html/2/3/5/388.html",
+          "claim": "年滿14歲者原則須本人補領，並依戶政司規格準備照片及身分資料。",
+          "supporting_passage": "編者摘要（非逐字引文）：戶政司申辦須知列年滿14歲本人親辦，得以戶口名簿或有照片身分證明及最近2年照片辦理；初補領可向全國任一戶政事務所申請。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取內政部戶政司初補換申辦須知HTML正文，核對申請人、文件與全國受理地點。"
+        },
+        {
+          "url": "https://www.ris.gov.tw/documents/html/8/7/1/158_Q012.html",
+          "claim": "遺失身分證可使用戶政司掛失管道，且舊證並非掛失後立即失效。",
+          "supporting_passage": "編者摘要（非逐字引文）：戶政司列出戶所臨櫃或電話、1996、自然人憑證線上及免自然人憑證線上四種方式；掛失紀錄可供查證，遺失舊證到新證補發後才失效。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取戶政司FAQ正文，逐項核對掛失方式、線上服務時段與舊證效力。"
+        },
+        {
+          "url": "https://www.ris.gov.tw/documents/html/2/3/5/388.html",
+          "claim": "一般國民身分證補領規費為新臺幣200元。",
+          "supporting_passage": "編者摘要（非逐字引文）：戶政司現行規費段落分別列初領50元、換領50元及補領每張200元；本文只引用補領費。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取戶政司申辦須知規費段落；不把初領或換領費用混入補領費。"
+        }
+      ],
+      "limits": [
+        "未找到當代身分證遺失後冒用事件與遺失者母數的全國配對統計，故不估計個人風險；行政掛失件數不等於冒用案件。",
+        "戶政司申辦須知提供一般程序；未成年人、身分查證疑義及特殊減免由受理戶政事務所依個案確認。",
+        "AI輔助來源核對不等於法律專業簽證；銀行、電信或冒名爭議須分別向服務提供者及警政確認。"
+      ],
+      "retired_sources": [
+        {
+          "id": "idloss",
+          "reason": "改以戶政司第一手FAQ取代跨機關入口摘要，因官方FAQ直接列出24小時線上掛失、1996及舊證效力。",
+          "replacement_ids": [
+            "ris_lost_id_faq_2026"
+          ],
+          "prior_source_sha256": "7e33c281e62f65c44a7a60a4c6fd1cc4f9db1a98eb6e993a0928757f46b1db8e"
+        },
+        {
+          "id": "ch07_idfee",
+          "reason": "改用戶政司全國申辦須知的補領規費，避免以單一縣市頁面支撐全國一般費率。",
+          "replacement_ids": [
+            "ris_id_replacement_fee"
+          ],
+          "prior_source_sha256": "5aa8677ccd8c3f8b934980db5fe1fd4c9fbfc5b2ae5cbe4007eb68b1fecda535"
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-011.json"
+    },
+    {
+      "id": "TW-07-016",
+      "before_sha256": "d92cbb2de1dca2b12df7c227b0540a4812d69d525c433c9f093a165574ff6b4b",
+      "after_sha256": "df70b38809b6e56b3c830762631024023305c1c0b264819f0dfeecda008cd608",
+      "prior_revision": "25f163aeb6214a31fcf91deea8c0faaf9d1ae384",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "b4e7fd4f06bf74fc8459590aa7e7711bf4bad971e45d0f7fed3cd7303afb55a1",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "分列115年度（2026）與116年度（2027）中央租補受理日期、住宅登記及用途條件、當年度家戶資格、地方政府審查與舊戶帶入規則；即時無住處改由所在地社政分流。",
+      "frequency_assessment": "國土署截至2026-05-31公布申請逾100萬戶、核定逾85.4萬戶，單位為方案行政戶數；沒有符合資格租屋家戶母數，不能代表居住不穩定盛行率或個人核准機率。",
+      "changes": "補入2026-12-31 17:00截止時間及2027-01-01 09:00至12-31 17:00公告期，區分公告日與受理日；將房屋要件、所得門檻、舊戶帶入及新租約期限改按國土署第一手年度公告，並以主管機關申請與核定戶數提供有限行政規模背景。",
+      "source_ids": [
+        "nlma_rent_2026_notice",
+        "nlma_rent_2027_notice",
+        "nlma_rent_app_stats_2026",
+        "mohw_emergency_aid_overview_2026"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.nlma.gov.tw/ch/legislation/law%26regunu/7243",
+          "claim": "115年度（2026）中央租補受理至2026年12月31日17:00，並有年度住宅條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：國土署114年9月16日公告115年度受理自2026年1月1日09:00至12月31日17:00；公告含住宅登記、用途及同址舊戶有限過渡規則。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取國土署115年度公告正文，核對公告日、申請期間、住宅條件與過渡條款。"
+        },
+        {
+          "url": "https://www.nlma.gov.tw/ch/legislation/law%26regunu/7312",
+          "claim": "116年度（2027）公告日、申請時段、所得門檻及舊戶續辦均按該年度公告。",
+          "supporting_passage": "編者摘要（非逐字引文）：國土署115年10月13日公告116年度計畫，受理自2027年1月1日09:00至12月31日17:00；公告列一般所得3倍、新婚或育有未成年子女家庭3.5倍、住宅條件與舊戶檢附新租約規則。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取國土署116年度公告正文，另讀行政院公報確認115年10月13日公告日；不混同公告與受理日期。"
+        },
+        {
+          "url": "https://www.nlma.gov.tw/ch/titlelist/news/17480",
+          "claim": "2026年租補申請與核定戶數只能描述方案行政量，沒有資格家戶分母。",
+          "supporting_passage": "編者摘要（非逐字引文）：國土署公布截至2026年5月底申請戶數超過100萬、核定補助超過85.4萬戶；頁面未提供全體符合資格租屋戶分母或去重個人發生率。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取國土署統計說明正文，保留其統計截止日與「戶數」單位，不計算核准率。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-88-226-1.html",
+          "claim": "急難紓困須由地方訪視評估，合格者金額與1957服務時間有明確限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：衛福部頁面更新於2026年7月14日；主要生計責任者遭逢失業、重傷病等使家庭陷困者可通報訪視，符合規定者得核發1萬至3萬元；1957每日08:00至22:00提供福利諮詢。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取衛福部更新頁面正文，核對方案對象、訪視程序、給付範圍與1957時段。"
+        }
+      ],
+      "limits": [
+        "租補年度門檻及住宅要件可能變動；本文分列2026與2027公告，不能跨年度套用，個案由承租住宅所在地縣市審查。",
+        "2026年5月申請與核定戶數沒有全體合資格租屋家戶分母，不計算個人核准率或居住不穩定盛行率。",
+        "地方社宅、包租代管、緊急安置與物資供給各有條件及量能；AI來源核對不等於住宅或社福專業審查。"
+      ],
+      "retired_sources": [
+        {
+          "id": "rent2026",
+          "reason": "以國土署年度公告取代入口網站摘要，直接核對公告日、受理時段與住宅條件。",
+          "replacement_ids": [
+            "nlma_rent_2026_notice"
+          ],
+          "prior_source_sha256": "2a623769e1ba3fd547a4aebb12a96e2f22608d5d96ff227c008bafc70ec0b4a9"
+        },
+        {
+          "id": "rentbuilding",
+          "reason": "移除國立大學轉載中央函文，改依國土署116年度第一手公告核對新年度住宅與舊戶規則。",
+          "replacement_ids": [
+            "nlma_rent_2027_notice"
+          ],
+          "prior_source_sha256": "ce9d721443bc7d61036c9f9c81ef9778aaf0a0dba4b34ec25c5479f1567eb882"
+        },
+        {
+          "id": "supportlines",
+          "reason": "以2026年更新的衛福部急難救助綜覽取代舊1957專頁，該頁同時列福利轉介及服務時段。",
+          "replacement_ids": [
+            "mohw_emergency_aid_overview_2026"
+          ],
+          "prior_source_sha256": "d94596430429ad0ff445448e8584dcae94c152f9a7b15e0037f5a144e4db5703"
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-016.json"
+    },
+    {
+      "id": "TW-07-017",
+      "before_sha256": "8433281fc19c2991085c69c70c577dac66ed8b35177c17249563dad282d181b2",
+      "after_sha256": "072c950d2230ce990a71db022d9363b6787863bdf00ad3d9c489cdfed955f390",
+      "prior_revision": "25f163aeb6214a31fcf91deea8c0faaf9d1ae384",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "81e1612006001458d1abb3008b02964e8e5952ab02da7d1bd57ad127ddd499d6",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "按臺灣社會救助法、中央急難紓困、地方急難救助、社福中心、公所及1957服務時段處理食宿、必要醫療與收入中斷；救助金須經訪視與核定。",
+      "frequency_assessment": "未找到可直接核對且具全國急難求助家庭數與符合需求家戶母數的現行資料。衛福部114年度6,099戶數字只在搜尋摘要出現，原檔回傳404，未作正文統計。",
+      "changes": "將舊稿籠統的生活節流建議改為先處理當日食宿與必要醫療，再列公所、地方社福中心與1957實際分流；補入急難紓困需訪視、給付1至3萬元須符合認定，以及1957每天08:00至22:00的時段限制。",
+      "source_ids": [
+        "socialaid",
+        "mohw_emergency_aid_overview_2026"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078",
+          "claim": "社會救助法把急難事由及地方主管機關審查列為申請依據，非記帳表自行判定資格。",
+          "supporting_passage": "編者摘要（非逐字引文）：全國法規資料庫現行頁面列低收及中低收家庭人口與財產審查，並列戶內死亡、重病、主要生計者失業或福利未核准期間生活陷困等急難事由，由地方主管機關依規定受理評估。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取全國法規資料庫社會救助法現行條文，核對修正日期與第4、5、17、21條。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-88-226-1.html",
+          "claim": "急難紓困須由地方訪視評估，合格者金額與1957服務時間有明確限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：衛福部頁面更新於2026年7月14日；主要生計責任者遭逢失業、重傷病等使家庭陷困者可通報訪視，符合規定者得核發1萬至3萬元；1957每日08:00至22:00提供福利諮詢。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取衛福部更新頁面正文，核對方案對象、訪視程序、給付範圍與1957時段。"
+        }
+      ],
+      "limits": [
+        "本次未取得可核實的全國求助家庭數及合資格家戶母數；衛福部114年度報告直連回傳404，未使用搜尋摘要中的6,099戶數字。",
+        "急難紓困金額須訪視與地方核定，地方物資、臨時安置及急難救助服務量能不同，不保證即時給付或固定供應。",
+        "AI來源核對不等於社福、醫療或法律專業審查；急迫人身危險與急症須另用相應緊急服務。"
+      ],
+      "retired_sources": [
+        {
+          "id": "supportlines",
+          "reason": "以2026年更新的衛福部急難救助綜覽取代較窄的1957舊專頁，並直接核對每日服務時段。",
+          "replacement_ids": [
+            "mohw_emergency_aid_overview_2026"
+          ],
+          "prior_source_sha256": "d94596430429ad0ff445448e8584dcae94c152f9a7b15e0037f5a144e4db5703"
+        },
+        {
+          "id": "urgentresidence",
+          "reason": "舊方案PDF直連本次無法重取；改用衛福部現行急難救助綜覽支持本文範圍，未聲稱核對未取得的個案認定附表。",
+          "replacement_ids": [
+            "mohw_emergency_aid_overview_2026"
+          ],
+          "prior_source_sha256": "9c5778c3fe700ca287cd7ea060bc0bcc9f297be253113360fe0c03bf7eba2d21"
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-017.json"
+    },
+    {
+      "id": "TW-07-022",
+      "before_sha256": "a8527b8845b92d0d84a3892379caffdc744c2ec1d235dea97bca25a4c696aa1f",
+      "after_sha256": "a02f080adbf05fdeeacece77a2e6ac7a3e05ec64fa3b620a8910210bf7206062",
+      "prior_revision": "25f163aeb6214a31fcf91deea8c0faaf9d1ae384",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "41fe15ed23c492158a68a0e187ae78716e32c8816fb16b54f29f69be215e45fb",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "依臺灣勞動部從屬性判斷、工作所在地主管機關協處及勞務提供地免費勞資調解，並處理平台、派遣、工頭與多層包商下的相對人辨識。",
+      "frequency_assessment": "勞動部2024年全國行政表列總爭議27,419件、38,766人；主要類別積欠工資為9,669件。分類按每案主要類別，沒有全部勞工、欠薪暴露或不同受影響者母數，不推算個人欠薪機率。",
+      "changes": "補正承攬或自營名稱不單獨決定勞動關係，新增2026-09-03更新的工作所在地協處指引與免費調解路徑；逐圖確認勞動部2024年積欠工資數為9,669件，避免把2023年藍色柱9,367件誤作2024年。",
+      "source_ids": [
+        "ch07_contract",
+        "ch07_mediation",
+        "laf",
+        "mol_contract_relation_2026",
+        "labor_dispute_stats_2024"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.mol.gov.tw/1607/1632/1640/12431/",
+          "claim": "勞動關係依人格、經濟與組織從屬性整體判斷，契約標題不是唯一依據。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部指導原則按人格、經濟及組織從屬性列示多項判斷因素；部會說明指示，承攬等書面名稱不當然免除可能的雇主責任。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取勞動部勞動契約認定指導原則說明正文，核對三類從屬性及非單一因素判斷。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
+          "claim": "勞資爭議調解由勞務提供地地方政府受理，勞動部說明該調解免費。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部調解說明列地方政府受理及第三方協助，並明示此為免費的訴訟外紛爭處理途徑；調解成立的契約效力與訴訟分流處理。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取勞動部勞資爭議調解頁面，核對地點、程序性質、費用及成立效力。"
+        },
+        {
+          "url": "https://www.laf.org.tw/service-flow1",
+          "claim": "法律扶助基金會可提供預約審查及法律協助，但預約不等於扶助核准。",
+          "supporting_passage": "編者摘要（非逐字引文）：法律扶助基金會說明可依流程預約並準備身分、資力及案件資料，到會後另行審查；實際是否扶助與範圍以審查結果為準。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取法律扶助基金會預約準備頁面，核對預約、文件準備與另行審查流程。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/28690/2282/2326/2288/82217/",
+          "claim": "雙方對勞動契約認定有爭議時，可檢具契約資料向工作所在地主管機關請求協處。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部頁面標示2026年9月3日更新，說明仍有關係認定爭議者可檢具契約等相關資料，至工作所在地勞工行政主管機關請求協處。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取勞動部更新頁面正文，核對更新日、適用窗口及所需資料範圍。"
+        },
+        {
+          "url": "https://statdb.mol.gov.tw/html/nat/113/8.%E8%A1%A88-1.pdf",
+          "claim": "2024年全國勞資爭議表列27,419件；積欠工資主要類別為9,669件，但無勞工暴露分母。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部表8-1列2024年總爭議27,419件、表列爭議人數38,766人及主管機關調處9,685件、17,825人；圖8-1的2024紅色長條列積欠工資9,669件，每案按主要類別統計。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26下載勞動部官方PDF，以文字抽取並逐圖核對2024紅色柱標；不將2023藍色柱9,367件誤記為2024。"
+        }
+      ],
+      "limits": [
+        "勞動部2024年積欠工資9,669件是行政主要爭議類別，沒有全體勞工或欠薪暴露分母，不是違法認定或個人發生率。",
+        "契約關係、真正雇主、請求種類及時效依個案事實判斷；行政協處或調解不等同法院判決，也不保證全額取回款項。",
+        "只保存依法可取得的自身工作證據，不大量匯出同事、客戶個資或公司機密；AI來源核對不等於勞動法律或統計專業簽核。"
+      ],
+      "retired_sources": [],
+      "review_path": "localization/reviews/TW-07-022.json"
+    },
+    {
+      "id": "TW-07-023",
+      "before_sha256": "9957e5a4dd10ca491aa7b2e31fa3ba8f649e3798595b7ca40a4d7899cf5f6fbf",
+      "after_sha256": "459bfb35efc78a4dcb0fccf56c56a8997e938e82957ebbe09306bdc4c3d4f59f",
+      "prior_revision": "25f163aeb6214a31fcf91deea8c0faaf9d1ae384",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "b377baa7dd6aa31233d2d5a98b2098d1600fcc8e8262352a027bec14a0527f94",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "依臺灣消費者債務清理條例現行第2、3、6、7、151及153-1條，區分適用資格、金融機構債務前置協商／調解、法院聲請費與無資力暫免條件。",
+      "frequency_assessment": "司法院114年度司法業務年報列2025年地方法院消債事件新收45,720件，較2024年增14%；是法院程序案件量，無去重債務人或全體負債者母數。年報同段列示部分程序數合計29,049件，與總數差16,671件，來源未說明差額構成，故正文只引用總數。",
+      "changes": "替換原作中國網貸、信用修復及破產說法；依現行條文補正消費者適用範圍、金融機構債務才須依法前置協商或調解、1,000元聲請費、法院可另命預納、僅清算且經裁定才可暫免及調解失敗後20日內續聲請的規則。加入司法院2025年總新收45,720件但不拆解未能與總額勾稽的所列子類。",
+      "source_ids": [
+        "ch07_laf_cost",
+        "consumer_debt_clearance_act",
+        "judicial_consumer_debt_stats_2025"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.laf.org.tw/expense-des",
+          "claim": "法扶諮詢與申請過程不收費，但核准後可能有分擔金、代墊及訴訟相關費用。",
+          "supporting_passage": "編者摘要（非逐字引文）：法律扶助基金會頁面標示2024年5月28日更新；法律諮詢及申請律師過程不收費，通過扶助後則依全部或部分扶助與審查結果，可能涉及分擔金、訴訟及必要費用。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取法律扶助基金會費用說明頁，核對更新日、免費範圍及核准後可能費用。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010042",
+          "claim": "消債條例限定消費者範圍，並明定金融機構債務前置程序、聲請費及法院審查。",
+          "supporting_passage": "編者摘要（非逐字引文）：全國法規資料庫顯示條例最後修正2021年6月16日；現行第2、3條界定消費者及不能清償情形，第6、7條規定1,000元聲請費與清算無資力暫免條件，第151條規定金融機構債務的前置協商或調解，第153-1條規定調解費與20日內續行聲請。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接讀取全國法規資料庫現行全文及修正日期；此修正日期不等同每一條個別施行日期。"
+        },
+        {
+          "url": "https://www.judicial.gov.tw/tw/dl-257142-71a8a7604b9b40c684a5e19ebdfec0b2.html",
+          "claim": "2025年地方法院消債事件新收45,720件，屬案件量而非不同債務人或發生率。",
+          "supporting_passage": "編者摘要（非逐字引文）：司法院114年度司法業務年報PDF第6頁明列地方法院消債事件新收45,720件、較113年增加14%；該段另列的部分程序件數合計不等於總數，本文只用總件數並保留細項未完整核對限制。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26下載司法院官方PDF，以pdftotext核對頁面原文；瀏覽器讀取超時，並以PDF檔SHA-256保全查閱對象。"
+        }
+      ],
+      "limits": [
+        "司法院2025年45,720件是跨程序的法院新收案件數，沒有去重個人及全體負債者分母；年報列舉子類合計與總數不符，正文只引用總數。",
+        "法律資料庫顯示條例最後修正日為2021-06-16；本文按2026-10-26讀取的現行全文摘要，未將修正日冒充所有條文個別施行日。",
+        "聲請資格、費用暫免、強制執行效果及個人債務方案應由法院或合格法律專業人員依完整資料確認；AI來源核對不是法律意見。"
+      ],
+      "retired_sources": [
+        {
+          "id": "debtcleanup",
+          "reason": "司法院制度說明頁本次讀取逾時，改以可直接核對的全國法規資料庫現行條文支持具體程序。",
+          "replacement_ids": [
+            "consumer_debt_clearance_act"
+          ],
+          "prior_source_sha256": "4abc3047ba180d7c9cd308c88ed72a0f6d4286e7e44966f26c55b67e2328580c"
+        },
+        {
+          "id": "ch07_debtlaw",
+          "reason": "以法務部全國法規資料庫完整現行條文取代司法法學資料入口，直接核對費用、資格與前置程序。",
+          "replacement_ids": [
+            "consumer_debt_clearance_act"
+          ],
+          "prior_source_sha256": "946649a5209dbe139378d295f143c893fc883ddff36d5c02fa5dabd8ee14ce3f"
+        }
+      ],
+      "review_path": "localization/reviews/TW-07-023.json"
     }
   ]
 }

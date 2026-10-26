@@ -37,7 +37,8 @@ class Ch19FourRightsRecheckTests(unittest.TestCase):
             old_runtime["sources"],
             [row for row in runtime["sources"] if row["id"] in old_sources],
         )
-        self.assertEqual(NEW_SOURCE_IDS, set(sources) - set(old_sources))
+        # Keep this historical batch's sources present while allowing later batches to append theirs.
+        self.assertTrue(NEW_SOURCE_IDS.issubset(set(sources) - set(old_sources)))
 
         source_file = read(
             "localization/tw-edition/sources/ch19-four-rights-recheck-20261026.json"
@@ -52,7 +53,7 @@ class Ch19FourRightsRecheckTests(unittest.TestCase):
         old_manifest_rows = {row["id"]: row for row in old_manifest["entries"]}
         register = read("localization/retroactive-review-register-20261019.json")
         rechecks = {row["id"]: row for row in register["substantive_rechecks"]}
-        self.assertEqual(len(register["substantive_rechecks"]), 169)
+        self.assertTrue(set(IDS).issubset(rechecks))
 
         for item_id in IDS:
             with self.subTest(item_id=item_id):
