@@ -6919,6 +6919,93 @@
       "evidence_type": "政府給付業務說明",
       "retrieval_method": "直接讀取勞保局指定頁面「給付標準及期限」，核對同一非自願離職保險事故、一次或多次訓練、津貼期間合併及最長6個月。",
       "scope_note": "僅支持此給付期間上限及合併規則；個案資格與實際核付仍由勞保局審核。"
+    },
+    {
+      "id": "hpa_cancer_screening_policy_2026",
+      "title": "國民健康署：癌症篩檢服務政策與資格",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=211",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "中央公費方案：乳房攝影40至74歲每2年；子宮頸抹片25至29歲每3年、30歲以上每年補助且建議至少每3年一次，35、45、65歲HPV檢測；大腸癌45至74歲及40至44歲具家族史者每2年一次。",
+      "retrieval_method": "2026-10-26由國健署官方頁面搜尋索引讀取現行資格表，並以各癌別更新頁交叉核對；官方頁面直接開啟回傳502，未把首頁連結當作各地方即時場次保證。",
+      "evidence_type": "臺灣中央政府現行服務資格頁"
+    },
+    {
+      "id": "hpa_breast_screening_followup_2026",
+      "title": "國民健康署：乳癌篩檢方法與異常後續評估",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=614&pid=1124&sid=14961",
+      "published_at": null,
+      "last_updated_at": "2026-03-09",
+      "accessed_at": "2026-10-26",
+      "supports": "乳房X光攝影及國健署核可院所資訊；篩檢可能有偽陰性，正常後出現新異狀仍需儘速就醫，異常結果依醫師安排進一步影像或切片確認。",
+      "retrieval_method": "2026-10-26讀取國健署官方頁面搜尋索引所顯示的正文與更新日；web.open直接取得頁面失敗，未引用未讀附件。",
+      "evidence_type": "臺灣中央政府醫療服務與追蹤指引"
+    },
+    {
+      "id": "hpa_cervical_screening_2026",
+      "title": "國民健康署：子宮頸抹片與HPV公費篩檢",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?id=549&kv=default&lottery=NnNicDZvK2lCZFF6cW5SSXYzY3dsUT09&name=NDMyMjM5SXB5V3lhYlJWdlBUY1hMUT09&nodeid=614&pid=1125",
+      "published_at": null,
+      "last_updated_at": "2026-03-09",
+      "accessed_at": "2026-10-26",
+      "supports": "現行方案自2025年起提供25至29歲女性每3年一次、30歲以上每年一次公費子宮頸抹片，並在35、45、65歲提供當年度一次HPV檢測；國健署建議25歲以上至少每3年接受一次抹片。",
+      "retrieval_method": "2026-10-26讀取國健署官方頁面搜尋索引的政策正文及更新日，並和公費服務表交叉核對；未讀取HPV後續處置PDF附件。",
+      "evidence_type": "臺灣中央政府現行醫療服務與預防指引"
+    },
+    {
+      "id": "hpa_cervical_followup_2026",
+      "title": "國民健康署：子宮頸篩檢陽性與症狀後續處理",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4809&pid=17947",
+      "published_at": null,
+      "accessed_at": "2026-10-26",
+      "supports": "抹片陽性不等於癌症；依醫師指示接受進一步檢查與回診追蹤，篩檢正常但出現異狀仍應儘速就醫。",
+      "retrieval_method": "2026-10-26讀取國健署官方頁面搜尋索引所呈現的正文摘要；未使用搜尋結果中的國外疫苗效果或未查證個人預後數據。",
+      "evidence_type": "臺灣中央政府醫療服務追蹤指引"
+    },
+    {
+      "id": "hpa_colorectal_screening_2026",
+      "title": "國民健康署：定量免疫法糞便潛血篩檢資格",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=190",
+      "published_at": null,
+      "last_updated_at": "2026-09-09",
+      "accessed_at": "2026-10-26",
+      "supports": "45至74歲及40至44歲具家族史民眾每2年一次定量免疫法糞便潛血檢查；以國健署現行公費篩檢服務表為資格來源。",
+      "retrieval_method": "2026-10-26讀取國健署官方服務表搜尋索引；索引顯示更新日期2026-09-09，未把醫療機構每案核付額當作民眾自付費用。",
+      "evidence_type": "臺灣中央政府現行服務資格表"
+    },
+    {
+      "id": "hpa_colorectal_family_2026",
+      "title": "國民健康署：大腸癌篩檢與家族史",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5053&pid=20022&sid=20027",
+      "published_at": "2026-04-22",
+      "last_updated_at": "2026-04-22",
+      "accessed_at": "2026-10-26",
+      "supports": "40至44歲家族史範圍為父母、兄弟姊妹或子女曾經診斷大腸癌；本人或家族有息肉症或大腸癌病史時，國健署建議優先接受全大腸鏡評估。",
+      "retrieval_method": "2026-10-26讀取國健署官方問答頁搜尋索引全文摘要及發布、更新日期；未讀取索引未呈現的附件。",
+      "evidence_type": "臺灣中央政府篩檢資格及高風險轉介資訊"
+    },
+    {
+      "id": "hpa_colorectal_repeat_2026",
+      "title": "國民健康署：糞便潛血陰性後仍需定期篩檢",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19177",
+      "published_at": "2025-09-16",
+      "last_updated_at": "2026-09-18",
+      "accessed_at": "2026-10-26",
+      "supports": "陰性後仍應每2年定期篩檢；糞便潛血並非診斷工具，結果正常但有異狀時仍應找專科醫師評估；現行補助年齡為45至74歲及40至44歲具家族史。",
+      "retrieval_method": "2026-10-26讀取國健署官方問答頁搜尋索引的正文與更新日期；僅採明示之篩檢間隔、適用對象及症狀限制。",
+      "evidence_type": "臺灣中央政府篩檢追蹤指引"
+    },
+    {
+      "id": "hpa_preventive_service_rules_20261008",
+      "title": "國民健康署：預防保健服務規範修正公告",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=838&pid=20378",
+      "published_at": "2026-10-08",
+      "effective_at": "2027-01-01",
+      "last_updated_at": "2026-10-08",
+      "accessed_at": "2026-10-26",
+      "supports": "2026-10-08公告修正預防保健服務注意事項，2027-01-01生效；公告摘要提及子宮頸抹片難以判讀給付，以及女性HPV檢測無法判讀給付、年齡檢核與子宮全切除給付調整。摘要未提供新個案資格細節，不據此擴寫個人資格。",
+      "retrieval_method": "2026-10-26讀取國健署官方公告搜尋索引正文、發布日、生效日及修正摘要；官方頁面直接開啟回傳502，且尚未逐項讀取附表PDF。",
+      "evidence_type": "臺灣中央政府已公告、尚未生效之行政服務規範"
     }
   ],
   "items": [
@@ -6975,14 +7062,16 @@
     {
       "id": "TW-NAV-004",
       "title": "乳癌篩檢：40至74歲女性",
-      "body": "40至74歲女性，每2年補助1次乳房X光攝影檢查，可向篩檢院所確認資格與安排。",
-      "limits": "有症狀或高風險狀況時應由醫師評估，不等到下一次例行篩檢；超出公費年齡不等於不需就醫。",
+      "body": "40至74歲女性每2年可使用一次公費乳房X光攝影，檢查約15分鐘；預約前確認上次檢查日期並選擇國健署核可院所。臺灣2023年癌症登記列女性乳癌新發17,779例，年齡標準化發生率91.2／10萬女性。",
+      "limits": "此為全體女性年齡標準化發生率，不是40至74歲個人兩年發生機率。乳房攝影可能偽陰性；即使結果正常，之後有新異狀仍應儘速就醫。有症狀或高風險病史者請由醫師評估，不等下次例行篩檢。",
       "source_ids": [
-        "taipei_screening"
+        "hpa_cancer_screening_policy_2026",
+        "hpa_breast_screening_followup_2026",
+        "ch01_cancer_registry_2023_tables"
       ],
       "review_status": "source_checked",
-      "reviewed_at": "2026-10-15",
-      "review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
       "eligibility": {
         "sex": "f",
         "min_age": 40,
@@ -6993,14 +7082,17 @@
     {
       "id": "TW-NAV-005",
       "title": "子宮頸抹片：25至29歲女性",
-      "body": "25至29歲女性，每3年補助1次子宮頸抹片檢查。",
-      "limits": "公費資格與個別檢查需要不同；相關病史、器官狀況與檢查時機請與醫療人員討論。",
+      "body": "25至29歲女性每3年可使用一次公費子宮頸抹片；預約前確認最近一次檢查日期，並向健保特約院所或所在地衛生局、衛生所查詢服務。臺灣2023年癌症登記列子宮頸癌新發1,429例，女性年齡標準化發生率7.4／10萬女性。",
+      "limits": "此為全體女性年齡標準化發生率，不是25至29歲個人發生機率。公費間隔不涵蓋異常報告、症狀或個人手術史的追蹤；有症狀或曾異常請依醫囑，不等下一次補助間隔。",
       "source_ids": [
-        "taipei_screening"
+        "hpa_cancer_screening_policy_2026",
+        "hpa_cervical_screening_2026",
+        "hpa_cervical_followup_2026",
+        "ch01_cancer_registry_2023_tables"
       ],
       "review_status": "source_checked",
-      "reviewed_at": "2026-10-15",
-      "review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2026-12-15",
       "eligibility": {
         "sex": "f",
         "min_age": 25,
@@ -7011,14 +7103,18 @@
     {
       "id": "TW-NAV-006",
       "title": "子宮頸抹片：30歲以上女性",
-      "body": "30歲以上女性，每年補助1次子宮頸抹片檢查。",
-      "limits": "這是公費補助間隔，不是所有人的個別醫療指示；症狀或異常追蹤應依醫囑處理。",
+      "body": "30歲以上女性公費每年可補助一次子宮頸抹片；但國健署建議25歲以上女性至少每3年接受一次，年度補助頻率不等於每年都需要檢查。臺灣2023年癌症登記列子宮頸癌新發1,429例，女性年齡標準化發生率7.4／10萬女性。",
+      "limits": "此為全體女性年齡標準化發生率，不是個人風險。抹片陽性不等於癌症，應依醫師安排確認及追蹤；有症狀或過往異常者不應只依公費週期安排。國健署已公告2027-01-01生效的預防保健規範修正，抹片檢體難以判讀的給付細節須於生效前再核對。",
       "source_ids": [
-        "taipei_screening"
+        "hpa_cancer_screening_policy_2026",
+        "hpa_cervical_screening_2026",
+        "hpa_cervical_followup_2026",
+        "hpa_preventive_service_rules_20261008",
+        "ch01_cancer_registry_2023_tables"
       ],
       "review_status": "source_checked",
-      "reviewed_at": "2026-10-15",
-      "review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2026-12-15",
       "eligibility": {
         "sex": "f",
         "min_age": 30
@@ -7028,14 +7124,17 @@
     {
       "id": "TW-NAV-007",
       "title": "HPV檢測：35、45及65歲女性",
-      "body": "35歲、45歲及65歲女性，在該年齡各補助1次人類乳突病毒檢測。",
-      "limits": "HPV檢測與疫苗接種不同，也不等於省略醫療人員建議的子宮頸抹片或後續追蹤。",
+      "body": "35、45、65歲女性，在就醫年度減出生年度等於目標年齡時，各可使用一次公費人類乳突病毒（HPV）檢測；實際資格與結果追蹤向篩檢院所確認。臺灣2023年子宮頸癌新發1,429例，女性年齡標準化發生率7.4／10萬女性；這不是HPV感染盛行率。",
+      "limits": "HPV檢測不同於HPV疫苗；抹片或HPV篩檢異常不等於癌症，須按醫療人員安排後續評估。子宮頸癌發生率不能換算個人HPV感染或篩檢陽性機率。國健署2026-10-08公告之服務規範於2027-01-01生效，涉及HPV無法判讀之給付、年齡檢核及子宮全切除給付；公告摘要沒有列出新資格細節，施行前再核對院所與官方最新說明。",
       "source_ids": [
-        "taipei_screening"
+        "hpa_cervical_screening_2026",
+        "hpa_cervical_followup_2026",
+        "hpa_preventive_service_rules_20261008",
+        "ch01_cancer_registry_2023_tables"
       ],
       "review_status": "source_checked",
-      "reviewed_at": "2026-10-15",
-      "review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2026-12-15",
       "eligibility": {
         "sex": "f",
         "ages": [
@@ -7049,14 +7148,17 @@
     {
       "id": "TW-NAV-008",
       "title": "大腸癌篩檢：45至74歲民眾",
-      "body": "45至74歲民眾，每2年補助1次糞便潛血檢查。",
-      "limits": "本頁不以大腸鏡取代公費糞便潛血檢查條件；檢查異常或已有症狀應由院所安排評估。",
+      "body": "45至74歲民眾每2年可使用一次公費定量免疫法糞便潛血檢查；向健保特約院所領取採便管並依說明送回。臺灣2023年癌症登記列大腸癌新發19,074例，兩性年齡標準化發生率43.1／10萬人口。",
+      "limits": "統計是全人口年齡標準化發生率，不是45至74歲個人風險。糞便潛血檢查不是診斷工具：陰性仍按2年週期篩檢；陽性應儘速接受大腸鏡確認。有排便習慣改變、出血或其他症狀時，即使最近篩檢陰性也要就醫評估。",
       "source_ids": [
-        "taipei_screening"
+        "hpa_cancer_screening_policy_2026",
+        "hpa_colorectal_screening_2026",
+        "hpa_colorectal_repeat_2026",
+        "ch01_cancer_registry_2023_tables"
       ],
       "review_status": "source_checked",
-      "reviewed_at": "2026-10-15",
-      "review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
       "eligibility": {
         "min_age": 45,
         "max_age": 74
@@ -7066,14 +7168,18 @@
     {
       "id": "TW-NAV-009",
       "title": "大腸癌篩檢：40至44歲且有家族史",
-      "body": "40至44歲，且父母、兄弟姊妹或子女曾患有大腸癌者，每2年補助1次糞便潛血檢查。",
-      "limits": "須同時符合年齡及家族史條件，由院所核對；沒有填寫資料時，本頁只顯示資格說明，不判定是否符合。",
+      "body": "40至44歲且父母、兄弟姊妹或子女曾確診大腸癌者，每2年可使用一次公費定量免疫法糞便潛血檢查；向健保特約院所確認資格。臺灣2023年兩性大腸癌新發19,074例，年齡標準化發生率43.1／10萬人口；資料未提供40至44歲家族史族群的發生率。",
+      "limits": "全體發生率不是40至44歲且有家族史者的個人機率。本人或家族有大腸癌或息肉病史時，國健署建議優先由醫師評估全大腸鏡；公費糞便檢查資格不是完整的高風險追蹤計畫。即使篩檢陰性，有症狀仍須就醫。",
       "source_ids": [
-        "taipei_screening"
+        "hpa_cancer_screening_policy_2026",
+        "hpa_colorectal_screening_2026",
+        "hpa_colorectal_family_2026",
+        "hpa_colorectal_repeat_2026",
+        "ch01_cancer_registry_2023_tables"
       ],
       "review_status": "source_checked",
-      "reviewed_at": "2026-10-15",
-      "review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
       "eligibility": {
         "min_age": 40,
         "max_age": 44,
