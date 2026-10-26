@@ -17373,6 +17373,209 @@
           "prior_source_sha256": "72b0a4af11394ee4bc54a1c7fef5e1ec7373e2a6a3c663358b56f239fdfdefd6"
         }
       ]
+    },
+    {
+      "id": "TW-19-019",
+      "before_sha256": "922c0535c4af3905398da33d9cb9e2399dbd2c8ecd8822e15b80122978b58cc2",
+      "after_sha256": "cd26d2ef6c4dd9ddad3d50da55bbdcc52ac808817042dbb62cdc999cf4769a36",
+      "prior_revision": "779b870ba8b915fc561fcbb4cd21b207d99999fb",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "aa81a2507f900e662b51fd3c2fe69450cd1b12f36d3a271382802c26dfd51bd4",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣受僱者跨公司時要分開核對勞保、就保、健保及勞退；勞保到職日申報、勞退自到職日起提繳但異動七日內通知，健保按受僱、符合規定的職業工會／農漁會會員、合法眷屬與戶籍地公所等順位銜接。",
+      "frequency_assessment": "未找到可配對全國轉職者、依法應投保資格、加退保實際日期及勞退提繳記錄的資料；不以失業率、加保人數或健保欠費件數推算個人轉職漏保率。",
+      "changes": "明列勞保到職日申報及遲報翌日生效的空窗風險，分清勞退從到職日起提繳與七日異動申報期限；以健保署2024更新的投保順位取代舊新聞路徑，補列符合規定的職業工會／農漁會會員身分。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
+          "claim": "勞退個人專戶、到離職提繳起訖及七日內辦理異動通知是三件不同規則。",
+          "supporting_passage": "編者摘要（非逐字引文）：雇主按月提繳到勞工個人專戶；提繳自到職日起至離職當日止，雇主於相關異動日起七日內通知勞保局，且前後實際提繳年資可以依法合併。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行勞工退休金條例第6、16、18及24條，核對個人專戶、起訖日期、申報期限與年資合併規則。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
+          "claim": "勞保適用勞工的加退保申報日影響效力起訖，重新加保後原有年資依法併計。",
+          "supporting_passage": "編者摘要（非逐字引文）：符合勞保條例第6條的勞工由投保單位辦理；到職當日申報時自該日生效，遲於到職日申報者原則上自通知翌日起算，退保後再次參保的保險年資依法併計。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫勞工保險條例第6、11及12條，並交叉核對勞保局現行條文頁及2026-01-21修正日期。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+          "claim": "就業保險投保資格與失業給付條件不能等同勞保年資或勞退提繳。",
+          "supporting_passage": "編者摘要（非逐字引文）：就業保險另列受僱者身分與排除條件，失業給付尚須非自願離職、一定保險年資、工作能力及求職登記等要件，與勞退專戶不是同一項給付。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行就業保險法第5、6及11條，核對投保對象、效力及失業給付門檻。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-7244-12ae4-2618-1.html",
+          "claim": "轉換工作時健保依投保順位銜接，待業者應核對職業工會／農漁會會員、眷屬及戶籍地公所等適用身分。",
+          "supporting_passage": "編者摘要（非逐字引文）：健保署頁面2024年1月更新，列出受僱工作單位、具符合規定的職業工會／農會／漁會會員資格者、可依法依附的配偶或直系血親，以及上述身分均不適用時由戶籍地公所等順位；轉換工作期間須維持適法投保。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取健保署「人員投保申辦」現行服務頁，核對頁面更新日期、職業工會／農漁會會員條件與各身分投保先後，不採用舊新聞頁的過時申辦路徑。"
+        }
+      ],
+      "limits": [
+        "僅涵蓋本文列明的一般受僱情況；國籍、年齡、雇主類型、工作型態與投保例外可能改變適用規則，應向勞保局／健保署核對個人紀錄。",
+        "AI輔助官方來源再核對，未經勞動、保險或社會保險專業人士獨立審閱；不構成個案法律或投保核定。"
+      ],
+      "retired_sources": [
+        {
+          "id": "nhiact",
+          "reason": "本次全國法規資料庫全民健康保險法頁直接讀取逾時；改由健保署現行投保申辦頁支持本文實際投保順位，不在此篇引用未能本次直接重核的法條頁，原來源物件保留。",
+          "replacement_ids": [
+            "nhi_person_enrollment_order_2024"
+          ],
+          "prior_source_sha256": "0f7a1f5dfa1f75b08dae0b022f7033a2ddbd1812f9f978ed2b5d45fc3371e6c2"
+        },
+        {
+          "id": "nhiunemployed",
+          "reason": "舊健保署轉職新聞頁最後更新於2023-11-29，且含舊App操作路徑；改引健保署2024-01-19更新的人員投保順位服務頁，保留舊來源物件但不再作本篇現行程序依據。",
+          "replacement_ids": [
+            "nhi_person_enrollment_order_2024"
+          ],
+          "prior_source_sha256": "6ca7cbe0f454abce7db4e6cf2f9b3720f38b03c27ec7e58ff4aa37228eae48e4"
+        }
+      ]
+    },
+    {
+      "id": "TW-19-023",
+      "before_sha256": "85798660855f97ce83f5d58913f20c3d24e28c1410c7c0c936a0bf6001441768",
+      "after_sha256": "22e9c3ddbc618d6f17377f07cd79275e0198515d67136854b9743a3a9265da9e",
+      "prior_revision": "779b870ba8b915fc561fcbb4cd21b207d99999fb",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "bc6159b73c08ef85ac15d62a336b7db1fa9e2db23a34c1d265e354d9055e93d8",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣調職爭議依法逐項檢視契約與勞基法五原則；勞工可向勞務提供地地方政府申請免費調解，法院暫時處分須先提相關訴訟並符合勞動事件法第50條條件。",
+      "frequency_assessment": "勞動部表3-5列2025年全類別勞資爭議受理29,714件（其中括號10,543為主管機關調處）；該行政案件數不是調職專項，沒有全年調職總數或受調職者分母，不能推算調職發生率或個人機率。",
+      "changes": "逐項保留調動五原則，補足勞動事件法第50條先提確認調動無效或回復原職之訴、法院判斷及勞工聲請門檻；以正確2025全年統計29,714件作廣義背景並明確限制推論。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+          "claim": "勞基法第10條之1要求調職逐項檢視五項原則與契約限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：調動須以企業經營必要且無不當目的為前提，不得使工資等條件不利變更，須能勝任，地點過遠提供必要協助，並考量勞工及家庭生活利益。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行勞動基準法第10條之1，逐款核對調動限制與五項原則。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010064",
+          "claim": "勞動事件法第50條的暫時處分須先提訴、符合法定條件並經勞工聲請。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞工提起確認調動無效或回復原職之訴後，若法院認為調動可能違法且原工作繼續僱用並非顯有重大困難，法院可依勞工聲請裁定暫時工作安排。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行勞動事件法第50條，核對訴訟種類、違法疑義、繼續僱用門檻與聲請要件。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/28162/28296/81778/81802/81951/",
+          "claim": "勞資爭議一方可向勞務提供地地方政府申請免費調解，仲裁須雙方同意。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部於2026年9月3日更新的服務說明指出，勞工或雇主任一方可向勞務提供地地方政府申請免費調解；仲裁須雙方當事人同意，與訴訟程序分開。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取勞動部2026-09-03更新的調解、仲裁與訴訟扶助頁，核對受理地點、費用及合意仲裁條件。"
+        },
+        {
+          "url": "https://statdb.mol.gov.tw/html/mon/23050.pdf",
+          "claim": "勞動部2025年全年勞資爭議受理案件總數與表格件數口徑。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方月報表3-5以件為單位，114年（2025年）全年列29,714件，其中括號10,543件為主管機關調處；全表亦包括委託民間團體協商調處案件，並未按調職原因列示。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接開啟勞動部官方PDF並讀取表3-5與表尾註記，再以官方全文下載結果交叉對照114年／2025年年度列及括號欄位涵義；不以2026年月累計欄位替代年度值。"
+        }
+      ],
+      "limits": [
+        "調職效力、原勞動條件與暫時處分門檻須按契約及個案證據由法院判斷；本文不保證調解或聲請結果。",
+        "AI輔助官方來源與行政統計核對，未經勞動法律或勞資調解專業人士獨立審閱；不構成個案法律意見。"
+      ],
+      "retired_sources": [
+        {
+          "id": "labordispute",
+          "reason": "舊勞動部調解頁不是本次可直接核對的現行流程頁；改用勞動部2026-09-03更新的調解／仲裁／訴訟扶助說明，並將具體統計另列為原始表3-5來源。",
+          "replacement_ids": [
+            "mol_mediation_support_20260903"
+          ],
+          "prior_source_sha256": "ae2d5e8c3ddda59491dd99b285cd8d44fd4798053ed849d063d0896d0d6deedd"
+        }
+      ]
+    },
+    {
+      "id": "TW-19-008",
+      "before_sha256": "087a7c03941e79d001f131c3a42f1b5ebc55f615d4ff5cadd52c318e4c2fb954",
+      "after_sha256": "41ad543d8e0855ff36b1909e622a7b247bc43bc65d4128c7912738572018c69e",
+      "prior_revision": "779b870ba8b915fc561fcbb4cd21b207d99999fb",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "f7fcda18a6ffa37920ddd3e153efadb00703be5f67f7f91e88b998b243284656",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣職場離職取證以本人薪資、出勤、排班及往來資料為主；勞基法要求雇主保留五年、逐日記至分鐘，勞工得請求本人紀錄副本；公司共享雲端、客戶資料與同事個資不是本人證據的概括授權。",
+      "frequency_assessment": "未找到臺灣全國統計能辨識員工離職取證、未授權大量複製或由此產生爭議，且具受僱者或資料匯出暴露分母；不以勞資爭議總量代替個人風險。",
+      "changes": "補正勞基法第30條出勤紀錄五年保存、分鐘記載及勞工請求本人副本不得拒絕；分清保存自身證據與批次外傳公司／第三人資料，補上找不到全國適用發生率的限制。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+          "claim": "勞基法第30條規定出勤紀錄保存年限、記載精度與本人請求副本的處理。",
+          "supporting_passage": "編者摘要（非逐字引文）：法規要求雇主保存出勤紀錄五年並逐日記載到分鐘；勞工提出自己的出勤紀錄副本或影本請求時，雇主不得拒絕。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行勞動基準法第30條；核對頁面修正日期與雇主保存、記錄及提供本人副本的條文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0010064",
+          "claim": "勞動事件的出勤紀錄可以作為證據，但法律保留提出反證的空間。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動事件法的出勤紀錄規則設有法律推定，雇主或勞工仍可依其他資料提出反證；不等同每個打卡分鐘必然被認定為工作時間。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行勞動事件法第38條及證據規定，核對推定與反證的適用範圍。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080028",
+          "claim": "營業秘密須符合秘密性、經濟價值與合理保密措施要件。",
+          "supporting_passage": "編者摘要（非逐字引文）：營業秘密法第2條列出非一般涉及該類資訊者所知、因秘密性具有實際或潛在經濟價值，以及所有人採取合理保密措施等要件。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "直接讀取全國法規資料庫現行營業秘密法第2條及侵害責任條文，核對構成要件與責任範圍。"
+        }
+      ],
+      "limits": [
+        "僅概述本文列明的勞基法出勤紀錄與營業秘密要件；個資、契約、保密義務及證據能力仍須依個案確認。",
+        "AI輔助官方來源核對，未經勞動法、個資或證據專業人士獨立審閱；不構成個案法律意見。"
+      ],
+      "retired_sources": []
+    },
+    {
+      "id": "TW-19-018",
+      "before_sha256": "9c03a2f42c12b83441acfa5b8066438f51d2a69b63c66b92493738a8351ee60e",
+      "after_sha256": "8f9b0e5ca4bcb8d7da829a684d59b07ec27ff6c0e25e712aaff7cd4de5c6a30d",
+      "prior_revision": "779b870ba8b915fc561fcbb4cd21b207d99999fb",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "3e34b15e33e9faa2eb69b1bfabfc9b92bca0334f6793b538fb929f8dae6c64a7",
+      "reviewed_at": "2026-10-26",
+      "review_due_at": "2026-12-15",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣退職所得採領取年度的財政部額度，115年度為206,000／414,000元乘服務年資及分期894,000元減除；2027年領取需重新確認116年度公告。",
+      "frequency_assessment": "個人發生率不適用於年度退職所得稅額算法；未找到可估計特定受僱／退休群體領取退職所得或落入各級距機率的全國配對統計及分母。",
+      "changes": "將退職所得年度算法修正為財政部115年度明列的206,000、414,000與894,000元門檻，標明2026領取年度與2027需重查，移除未能直接讀取的法條來源引用。",
+      "source_checks": [
+        {
+          "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/taxation-scope/which-income/O9EmLJZ",
+          "claim": "115年度退職所得依一次領取年資門檻、分期減除額及兼領比例計算。",
+          "supporting_passage": "編者摘要（非逐字引文）：財政部頁面於2026年4月10日更新，分別列明113至114年與115年領取額度；115年一次領取採206,000元及414,000元乘服務年資分段，分期領取減除894,000元，兼領按比例分配。",
+          "accessed_at": "2026-10-26",
+          "retrieval_method": "2026-10-26直接開啟財政部稅務入口網退職所得問答，核對頁面更新日、113至114年與115年區分、分段額度及所得稅法條號。"
+        }
+      ],
+      "limits": [
+        "本文限於財政部115年度退職所得計算；給付性質、退職服務年資、自提已課稅部分及其他所得須依個案向國稅局確認。",
+        "所得稅法官方頁本次直接讀取逾時；本次以財政部年度官方說明核對115年度門檻，未取得稅務專業獨立簽核；116年度額度尚待再查。"
+      ],
+      "retired_sources": [
+        {
+          "id": "retiretax",
+          "reason": "本次法務部所得稅法全文頁直接讀取逾時；本文僅陳述可由財政部115年度官方退職所得說明直接支持的年度算法，故暫退出未能本次直接重核的法條連結，原來源物件保留。",
+          "replacement_ids": [
+            "tax2026"
+          ],
+          "prior_source_sha256": "766628dfa8399577386e03208f49123c7d77ba00905c8edac28b7eab484fbfeb"
+        }
+      ]
     }
   ]
 }
