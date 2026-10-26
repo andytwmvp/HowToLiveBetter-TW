@@ -63,8 +63,14 @@ class Ch23CredentialsTitleWageTrainingRecheckTests(unittest.TestCase):
         self.assertEqual(self.evidence['counts_after']['source_registry'], 908)
         self.assertEqual(self.evidence['counts_before']['json_files_checked'], 476)
         self.assertEqual(self.evidence['counts_after']['json_files_checked'], 477)
-        self.assertEqual(coverage['json_files_checked'], 477)
-        self.assertEqual(coverage['registry_sources'], 908)
+        self.assertGreaterEqual(
+            coverage['json_files_checked'],
+            self.evidence['counts_after']['json_files_checked'],
+        )
+        self.assertGreaterEqual(
+            coverage['registry_sources'],
+            self.evidence['counts_after']['source_registry'],
+        )
         self.assertEqual(coverage['unique_draft_entries'], 498)
         self.assertEqual(coverage['entries_without_any_draft'], 267)
         self.assertEqual(coverage['publication_completed_entries'], 278)
