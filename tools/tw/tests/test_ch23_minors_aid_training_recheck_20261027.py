@@ -47,7 +47,9 @@ class Ch23MinorsAidTrainingRecheckTests(unittest.TestCase):
         self.assertEqual(self.evidence['counts_after']['runtime_sources'], self.evidence['counts_before']['runtime_sources'] + 3)
         self.assertEqual(self.evidence['counts_after']['source_registry'], self.evidence['counts_before']['source_registry'] + 3)
         self.assertEqual(self.evidence['counts_after']['json_files_checked'], self.evidence['counts_before']['json_files_checked'] + 1)
-        self.assertEqual(len(self.records), self.evidence['counts_after']['substantive_rechecks'])
+        # Later batches append to the shared register. This older batch is still
+        # present; its historical count belongs to its own evidence snapshot.
+        self.assertTrue(ITEM_IDS.issubset(self.records))
         self.assertFalse(self.evidence['publication_ready'])
         self.assertFalse(read('localization/tw-edition/coverage.json')['publication_ready'])
         self.assertEqual(self.evidence['counts_after']['core_completed'], self.evidence['counts_before']['core_completed'])
@@ -100,12 +102,15 @@ class Ch23MinorsAidTrainingRecheckTests(unittest.TestCase):
         self.assertEqual(set(prior_runtime).issubset(self.sources), True)
         for source_id, previous in prior_runtime.items():
             self.assertEqual(self.sources[source_id], previous)
-        self.assertEqual(set(registry_rows), set(prior_registry) | NEW_SOURCE_IDS)
-        self.assertEqual(set(self.sources), set(prior_runtime) | NEW_SOURCE_IDS)
+        self.assertTrue(set(prior_registry).issubset(registry_rows))
+        self.assertTrue(set(prior_runtime).issubset(self.sources))
         for source_id, source in evidence_sources.items():
             self.assertEqual(self.sources[source_id], source)
             self.assertEqual(registry_rows[source_id][2], source['url'])
             self.assertGreater(len(source['retrieval_method']), 20)
+        # Later batches can add more records, but this batch's sources remain
+        # immutable in the shared runtime and catalog.
+        self.assertTrue(NEW_SOURCE_IDS.issubset(set(self.sources) - set(prior_runtime)))
 
     def test_labor_inspection_statistic_keeps_denominator_and_selection_limits(self):
         statistic = self.evidence['statistics'][0]
