@@ -1,0 +1,193 @@
+{
+  "batch_date": "2026-10-26",
+  "repository": "andytwmvp/HowToLiveBetter-TW",
+  "base_main_sha": "e0d5245f98bca06be161f7bbbdd888eac7770b70",
+  "scope": {
+    "new_core_ids": [],
+    "substantive_recheck_ids": [
+      "TW-19-007",
+      "TW-19-003",
+      "TW-19-005",
+      "TW-19-002"
+    ],
+    "risk_order": [
+      "TW-19-007",
+      "TW-19-003",
+      "TW-19-005",
+      "TW-19-002"
+    ],
+    "risk_basis": "依離職事由錯置可能影響失業給付與法定期限、試用期錯誤可能導致過早放棄工資／終止權、預告日數與工資計算、年度特休日數及未休工資排序；此為錯誤損害與可行處置的優先級，不是發生率排名。"
+  },
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 151,
+    "runtime_sources": 732,
+    "source_registry": 813,
+    "json_files_checked": 450,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 155,
+    "runtime_sources": 740,
+    "source_registry": 821,
+    "json_files_checked": 452,
+    "unique_draft_topics": 498,
+    "topics_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "source_id": "mol_disputes_table_3_14_2024",
+      "period": "2024",
+      "scope": "臺灣全國勞資爭議行政受理統計；勞動部統計年報表3-14",
+      "unit": "表列涉及對象；勞工人數與工會對象分列",
+      "numerator_definition": "表3-14按主要爭議類別列出行政受理之涉及對象；休假爭議為所有休假類別，契約爭議按契約性質及恢復僱傭關係分項。",
+      "values": {
+        "leave_dispute_table_total": 338,
+        "leave_dispute_workers": 336,
+        "leave_dispute_worker_organizations": 2,
+        "contract_dispute_workers": 2145,
+        "contract_nature_dispute_workers": 553,
+        "reinstatement_dispute_workers": 1592
+      },
+      "denominator": {
+        "validated_matching_denominator": null,
+        "reason": "年報未提供全體適用勞工、特休使用者、試用期受僱者、需法定預告的終止者或全部離職者等相配母數。"
+      },
+      "data_type": "勞動部年度行政受理統計，不是抽樣調查、法院判決或違法認定",
+      "limitations": "表列涉及對象不能換算案件率或個人風險；休假類別涵蓋各種假別，338總數含336名勞工及2個工會；契約爭議是廣義分類，未單列被要求簽自願離職；無合適母數，不推估發生率。",
+      "source_document_edition": "勞動部勞資爭議統計年報113年（2024年度）表3-14；2026-10-26查閱",
+      "publication_method": "直接開啟勞動部官方Table 3-14 PDF及文字層，核對年度、表列單位、主要爭議類別、休假總數與身分分欄、契約爭議及兩個子類別；未將廣義案件數套用為個人發生率。"
+    }
+  ],
+  "frequency_findings": [
+    {
+      "article_id": "TW-19-002",
+      "finding": "休假爭議表列336名勞工及2個工會；不是特休專項，無全體勞工／特休使用者分母，不能推個人率。"
+    },
+    {
+      "article_id": "TW-19-003",
+      "finding": "沒有找到具全國代表性、明確定義試用期安排或試用終止並有配對受僱者分母的統計；不以整體離職／契約爭議數替代。"
+    },
+    {
+      "article_id": "TW-19-005",
+      "finding": "沒有找到全國單列預告不足／預告工資欠付的統計及應預告終止勞工分母；不以一般工資爭議數替代。"
+    },
+    {
+      "article_id": "TW-19-007",
+      "finding": "契約爭議2,145名勞工是行政統計廣義分類，年報不單列被迫簽自願離職且無全體離職分母；不推個人率。"
+    }
+  ],
+  "new_source_ids": [
+    "mol_special_leave_2025",
+    "mol_special_leave_wage_2026",
+    "mol_probation_limit_faq_2026",
+    "ey_minimum_wage_2027",
+    "mol_notice_pay_2026",
+    "mol_separation_certificate_2026",
+    "mol_disputes_table_3_14_2024",
+    "mol_minimum_wage_2027_notice"
+  ],
+  "reused_source_ids": [
+    "ch19_lsa",
+    "ch19_lsa_rules",
+    "probation",
+    "wage2026",
+    "pension",
+    "noticepay",
+    "unemployment",
+    "labordispute"
+  ],
+  "retired_sources": [],
+  "articles": [
+    {
+      "id": "TW-19-007",
+      "before_sha256": "f1bbcbfb8ec3f8010425fdd6778b8b568bf28252981443865c007324e353ce6a",
+      "after_sha256": "cbd313a5f5f979cf2da9ec99e2272efc51abc537527122a7f22cda02700de547",
+      "prior_review_sha256": "3f487d1aaa39a4d5590707146ec58b877d4202ce622ca12116c0a08f9679bacb",
+      "review_path": "localization/reviews/TW-19-007.json",
+      "source_ids": [
+        "ch19_lsa",
+        "unemployment",
+        "labordispute",
+        "mol_separation_certificate_2026",
+        "mol_disputes_table_3_14_2024"
+      ],
+      "changes": "重新核對勞基法第14條、就保法第11、23及25條，以及勞動部2026-04-29離職證明說明。補充爭議期間向公立就服機構申請、一般資格仍須符合、地方發證條件與最終不符時15日返還；加入2024年廣義契約爭議統計但明確限制其不能代表被迫簽署率。",
+      "frequency_assessment": "勞動部2024年統計年報表3-14列契約爭議涉及2,145名勞工，分為契約性質553人及恢復僱傭關係1,592人；不單列遭要求簽自願離職。缺少全部離職者或相關雇主接觸分母，不能推算個人發生率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-003",
+      "before_sha256": "c7022d4d6b1fc29ba2c7f582ca435aaa12e00c74f9ee577126f9f4671feb5ff1",
+      "after_sha256": "6971daa483eea40705c9d2a724bc3fa8760c18bf36454d4738d0b8f203641ec7",
+      "prior_review_sha256": "70f04d79110a35fce3f25eaf8b12251afde960917d8ca5e0e7e5f86941482600",
+      "review_path": "localization/reviews/TW-19-003.json",
+      "source_ids": [
+        "probation",
+        "wage2026",
+        "ch19_lsa",
+        "ch19_lsa_rules",
+        "pension",
+        "mol_probation_limit_faq_2026",
+        "ey_minimum_wage_2027",
+        "mol_disputes_table_3_14_2024",
+        "mol_minimum_wage_2027_notice"
+      ],
+      "changes": "重新核對勞動部2025試用保障頁、2026-09-03試用期問答、勞基法與勞退規則。更正「下一年度如有公告」過時句，加入行政院2026-10-14重要政策頁確認已核定、勞動部2026-10-21頁列2027-01-01生效的月薪30,900元／時薪205元，同時保留2026現行標準及生效日區分；明列缺乏全國試用期母數。 補充未滿3個月法定預告日數與合法終止事由的區分。",
+      "frequency_assessment": "本次查核未找到可代表全臺、明確定義試用期聘僱或未通過解僱、並有相配受僱者分母的官方統計。勞資爭議年報的類別也不單列試用期；不以整體離職或爭議數替代。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-005",
+      "before_sha256": "7187366d0288fdb13e7791f17d24cbcb41f093694e9059032dc3c80f40cb51bd",
+      "after_sha256": "30998da561f5382bb74c963e7d193edf3e1c42d639c87158ea37894a4e8abe22",
+      "prior_review_sha256": "7ef2c3727dcce08399ac5966086489e4afa7ee0f6d14382e66e066586686405c",
+      "review_path": "localization/reviews/TW-19-005.json",
+      "source_ids": [
+        "ch19_lsa",
+        "noticepay",
+        "mol_notice_pay_2026",
+        "mol_disputes_table_3_14_2024"
+      ],
+      "changes": "重核勞基法第16及18條，更新至勞動部2026-09-03預告工資問答，保留通知次日按曆日起算及依最後應提供勞務日計算；加入不足日數與金額資料留存、謀職假和專項統計缺口。",
+      "frequency_assessment": "本次查核未找到全國單列預告不足日數或預告工資欠付，且有應預告勞工分母的統計。2024勞資爭議年報依主要類別編列，未提供該主題的暴露母數；不把廣義工資爭議換算成預告工資發生率。",
+      "professional_review_pending": true
+    },
+    {
+      "id": "TW-19-002",
+      "before_sha256": "f82ab6b09307677082fa850fb60dcd3e540bdc5813c93bcdad507b18222ad256",
+      "after_sha256": "12bbd0ef89d7b22720bdea665e8fcbef3f50abde10a15c6b6288353af3de0ba4",
+      "prior_review_sha256": "d1534903435d7939fcf9d73c8bee8f48f24c2ecc0d6ddd8e7e0a12eacaa77706",
+      "review_path": "localization/reviews/TW-19-002.json",
+      "source_ids": [
+        "ch19_lsa",
+        "ch19_lsa_rules",
+        "mol_special_leave_2025",
+        "mol_special_leave_wage_2026",
+        "mol_disputes_table_3_14_2024"
+      ],
+      "changes": "重新逐條核對勞基法第38條、施行細則第24及24-1條與勞動部現行頁面；補充部分工時的適用提醒、排定／遞延條件、2026年現行未休工資算法，並以2024年行政統計交代休假爭議的實際分類、涉及對象與母數限制。",
+      "frequency_assessment": "勞動部2024年統計年報表3-14「休假爭議」列338個涉及對象，其中336名勞工及2個工會。它涵蓋各種休假而非特休專項；沒有適用勞工或特休排定的配對分母，不能推算個人發生率。",
+      "professional_review_pending": true
+    }
+  ],
+  "unresolved": [
+    "尚未取得勞動法、勞動行政及統計領域的獨立專家審閱；AI來源核對不等於專業簽證。",
+    "試用期、預告不足及被迫簽自願離職缺少具適當全國母數的專項統計，不能估算個人發生率。",
+    "休假爭議分類涵蓋特休以外假別，且表列338對象包括2個工會。",
+    "失業給付、勞基法第14條終止及特休計算均須依實際身分、終止事實、工時與文件判斷。",
+    "本批沒有新增核心正文；全書其他章節與未核對稿仍待持續實質再審。"
+  ]
+}
