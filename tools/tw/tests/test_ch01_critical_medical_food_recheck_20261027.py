@@ -70,9 +70,11 @@ class Ch01CriticalMedicalFoodRecheckTests(unittest.TestCase):
         self.assertEqual((after['unresolved_source_ids'], after['unresolved_reference_occurrences']), (115, 306))
         self.assertEqual(len(self.coverage['unresolved_source_ids']), 115)
         self.assertEqual(self.coverage['unresolved_reference_occurrences'], 306)
-        self.assertEqual(len(self.runtime['sources']), after['runtime_sources'])
-        self.assertEqual(self.coverage['registry_sources'], after['source_registry'])
-        self.assertEqual(self.coverage['json_files_checked'], after['json_files_checked'])
+        # This test certifies the historical batch snapshot. Later batches may
+        # append sources and JSON files without changing that snapshot.
+        self.assertGreaterEqual(len(self.runtime['sources']), after['runtime_sources'])
+        self.assertGreaterEqual(self.coverage['registry_sources'], after['source_registry'])
+        self.assertGreaterEqual(self.coverage['json_files_checked'], after['json_files_checked'])
         self.assertFalse(self.evidence['publication_ready'])
         self.assertFalse(self.coverage['publication_ready'])
 
@@ -134,7 +136,7 @@ class Ch01CriticalMedicalFoodRecheckTests(unittest.TestCase):
         added = {source['id']: source for source in self.evidence['sources_added']}
         self.assertEqual(set(added), NEW_SOURCE_IDS)
         actual_added = set(runtime_ids) - set(previous_ids)
-        self.assertEqual(actual_added, NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS.issubset(actual_added))
         catalog_path = 'localization/tw-edition/sources/ch01-critical-medical-food-recheck-20261027.json'
         catalog = read(catalog_path)
         rows = {row[0]: row for row in catalog['sources']}
