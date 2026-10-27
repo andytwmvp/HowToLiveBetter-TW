@@ -75,6 +75,7 @@ class PropertyRightsRecheckTests(unittest.TestCase):
         package = self.items["TW-15-004"]["body"]
         self.assertIn("屋主書面同意", package)
         self.assertIn("三十日內", package)
+        self.assertIn("知悉終止租賃契約之次日起五日內", package)
         self.assertIn("營業保證金也不是無上限保險", package)
         self.assertIn("租客／契約分母", package)
 
