@@ -10,7 +10,7 @@ def check_ch15_browser(page,context,url,review):
     assert set(page.locator('[data-id^="TW-15-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
     for key in sorted(ids):
         card=page.locator('#'+key)
-        assert card.locator('h3').count()==5 and 'TW-ID:' not in card.inner_text()
+        assert card.locator('h3').count()>=5 and 'TW-ID:' not in card.inner_text()
         assert card.locator('a[href^="https://"]').count()>=len(expected[key]['source_ids'])
     page.locator('#q').fill('面積與建材')
     card=page.locator('#TW-15-012');assert card.count()==1

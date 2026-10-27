@@ -22573,6 +22573,327 @@
         "independent_of_frequency": true,
         "legal_status": "權利義務、合法性、行政抽查和發生頻率分開記錄；草案不當成現行法。"
       }
+    },
+    {
+      "id": "TW-15-006",
+      "before_sha256": "6233e8e5e5041e3604264db3ef45ad67fe58064be4f92a632d4127d3c52fe1a4",
+      "after_sha256": "553466e00730c5fcb266aaddf4a170213a68ebf2d181127a1d5bd3501622ce65",
+      "prior_revision": "f85c55717d5505505d8698ce0239dfc6d2defcd5",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "484151f2051918afed363b7415bbcc68466aa6fe6f57071465e2f43b09b49f5f",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣公寓、套房、透天厝租賃、中古屋交易、代理簽約及抵押後出租情境。",
+      "frequency_assessment": "截至2026-10-28未找到全國一致事件定義及租約／住宅交易分母，不以整體詐騙數推估假房東、無權代理或謄本爭議個人風險。",
+      "changes": "以臺灣地號、建號、最新謄本、資料分級、簽約／收款授權、代理範圍和抵押時序重核。基隆市地政事務所舊來源頁面擷取不完整，從現行引用退役，改以直接核對的全國土地登記規則支持；原來源物件及雜湊保留。",
+      "source_ids": [
+        "tenancyact",
+        "ch15_mortgagelease",
+        "ch15_land_registration_rules_20261028"
+      ],
+      "source_status": "現行正文來源逐筆核對；舊引用退役附理由和原始雜湊，歷史來源物件保留。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+          "claim": "租賃住宅出租、包租、代管與轉租的法定授權規則。",
+          "supporting_passage": "編者摘要（非逐字引文）：第3、5、7至12、16、19及28至29條區分代管與包租、二個月押金上限、修繕催告、書面轉租同意及終止返還；住宅租賃視為消費關係，租賃調處與業者登記另有規範。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001",
+          "claim": "民法第866條的抵押權設定後租賃及抵押權實行效果。",
+          "supporting_passage": "編者摘要（非逐字引文）：民法第866條規範抵押後租賃及影響抵押權實行時的法院處置；這與預告登記保全請求是不同問題。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060003",
+          "claim": "謄本類別、個資遮蔽與預告登記身分核驗依土地登記規則第24條之1、第137條。",
+          "supporting_passage": "編者摘要（非逐字引文）：土地登記規則第24條之1區分第一、二、三類資料，第二類任何人可申請但隱匿部分資料，第三類限權利人及依法可申請者；第137條定預告登記文件及身分核驗。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接查閱現行條文及第24條之1、第137條單條頁；未推定個案資料或例外資格。"
+        }
+      ],
+      "statistics_assessed": [],
+      "unresolved": [
+        "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+        "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
+      ],
+      "review_path": "localization/reviews/TW-15-006.json",
+      "limits": [
+        "未找到全國一致事件定義及租約／交易分母，可估算住宅租售中假房東、未授權代理或權利資料錯誤的個人發生率；謄本亦不顯示全部屋況、使用及未登記事實。",
+        "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+        "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch15_records",
+          "reason": "舊地方來源頁擷取不完整；改以直接查核的全國土地登記規則支持，歷史來源物件仍保留。",
+          "prior_source_sha256": "3024e4b814a83cd60f3b4870fac0c964f26087b5591a965f9237db70cd1aad30",
+          "replacement_ids": [
+            "ch15_land_registration_rules_20261028"
+          ]
+        }
+      ],
+      "previous_source_ids": [
+        "ch15_records",
+        "tenancyact",
+        "ch15_mortgagelease"
+      ],
+      "previous_review_claims": [
+        "官方可確認的謄本分級資訊顯示第二類資料會隱匿部分姓名與識別資訊，不能當完整身分核驗。",
+        "出租及轉租需有權利與授權依據，業者角色亦須確認。",
+        "抵押後租賃可能影響執行，應查清權利時序而非僅看有無抵押。"
+      ],
+      "reviewer_limit": "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+      "taiwan_context_assessment": {
+        "fit": "臺灣公寓、套房、透天厝租賃、中古屋交易、代理簽約及抵押後出租情境。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律效力、合法性、情境代表性、頻率、傷害嚴重度與行動分開評估；無資料不推估，專業限制明示。"
+      }
+    },
+    {
+      "id": "TW-15-011",
+      "before_sha256": "eb951e19e92952501df790aef6ac92d1b2d7ed7db7d4fea2b5eedc025012d4c5",
+      "after_sha256": "18ca221d443ee1b8933580eee23272d2d409e21e042ec21e2f9f84b326bf9771",
+      "prior_revision": "f85c55717d5505505d8698ce0239dfc6d2defcd5",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "66045795ad84faf80ad57193e7faf5cf107995d6f7a03caf43670f1beefde851",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣預售屋建商洽辦貸款、中古屋買方自行洽貸、斡旋金／定金文件及授信條件變更情境。",
+      "frequency_assessment": "截至2026-10-28未找到連結貸款不足原因、交易類型、退款結果與申貸／成交分母的全國資料；不以交易量或申訴量推估個人機率。",
+      "changes": "區分預售賣方洽辦貸款、中古屋自行貸款和民法定金；修正30%分母、7年與30日適用範圍；不可歸責雙方時差額超過預定貸款額30%才有契約解除權，原承諾條件文件不足可參照賣方洽定銀行核定條件，賣方不得以買方違約沒收已繳價款；30%內賣方不能分期須另協議，雙方可合意解除。",
+      "source_ids": [
+        "ch15_offer",
+        "ch15_deposit",
+        "presalestandard",
+        "ch15_presale_current_requirements_20261028",
+        "ch15_miaoli_presale_shortfall_20241112"
+      ],
+      "source_status": "現行正文來源逐筆核對；舊引用退役附理由和原始雜湊，歷史來源物件保留。",
+      "source_checks": [
+        {
+          "url": "https://www.klcg.gov.tw/tw/klland/2308-111026.html",
+          "claim": "斡旋／要約文件、付款及融資條件須書面核對。",
+          "supporting_passage": "編者摘要（非逐字引文）：業者應說明要約書及須付斡旋金的方式、房屋資訊與報酬；融資、付款、遺留物及瑕疵條件應寫入文件，交易雙方得協議辦理登記的地政士。本批不把網站案例視為所有要約生效時點的唯一判斷。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=249&pcode=B0000001",
+          "claim": "民法第249條依履約及可歸責原因分流定金效果。",
+          "supporting_passage": "編者摘要（非逐字引文）：民法第249條依履約、付定金方可歸責、受定金方可歸責或雙方均不可歸責，分別規範抵充／返還、不返還、加倍返還或返還。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/DFB720D019CCCB0A/7beaa539-d140-4e03-97c3-020b68a9692c",
+          "claim": "行政院預售屋契約頁面所列最近修正公告日及施行日。",
+          "supporting_passage": "編者摘要（非逐字引文）：行政院契約頁面所列最近一次修正為2023年6月19日公告、2023年7月1日生效；2026年履約擔保修正草案不視為已生效。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀行政院契約目錄及公告沿革，確認該頁所列最近公告和施行日期；不將草案當成現行規範。"
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "claim": "預售屋現行契約第18點雙方均不可歸責、賣方可歸責及買方可歸責時的貸款差額處理。",
+          "supporting_passage": "編者摘要（非逐字引文）：第18點（二）限賣方洽辦的貸款不足；雙方均不可歸責時以預定貸款額為30%分母，超過30%可依原承諾利率分期且年限不得少於7年，買賣雙方得選分期或解除；可歸責賣方時依原承諾年限與條件分期，不能補足時買方有權解除；可歸責買方時，接獲通知後應於至少30日內一次給付差額，或經賣方同意分期。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        },
+        {
+          "url": "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=802870&sms=9462",
+          "claim": "內政部函釋示例、貸款差額30%門檻、期限文件替代、解除權與已繳價款處理。",
+          "supporting_passage": "編者摘要（非逐字引文）：苗栗縣政府援引內政部函，指出政府調整授信條件可作不可歸責雙方例子，爭議由法院依個案認定；原承諾條件欠缺相關文件時可參照賣方洽定銀行核定利率及年期；差額超過預定貸款額30%時才有契約解除權，賣方不得以買方違約沒收已繳價款；低於門檻而賣方無法分期時可協議或合意解除。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀苗栗縣政府公告正文第237至248行，核對上版日、函釋例子、30%分母、原始條件文件不足的替代方式、解除權及已繳價款處理；不取代個案法院認定。"
+        }
+      ],
+      "statistics_assessed": [],
+      "unresolved": [
+        "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+        "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
+      ],
+      "review_path": "localization/reviews/TW-15-011.json",
+      "limits": [
+        "預售契約第18點30%、不得少於7年及買方可歸責時至少30日補款，只適用指定賣方洽辦貸款契約；原承諾條件無相關文件時另有參照賣方洽定銀行核定利率及年期的方式。未找到貸款不足原因、交易／申貸母數及退款結果相連的全國統計。",
+        "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+        "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
+      ],
+      "retired_sources": [],
+      "previous_source_ids": [
+        "ch15_offer",
+        "ch15_deposit",
+        "presalestandard"
+      ],
+      "previous_review_claims": [
+        "要約書、斡旋文件與附加條件應於簽交前確認，不把業務說可退當成確定權利。",
+        "民法第249條定金效果依可歸責與當事人另約分流，不是一律沒收或一律雙倍。",
+        "第18點區分賣方洽定貸款不足的歸責及30%分母；雙方均不可歸責且差額超過30%時，另列不少於7年的分期及買賣雙方得選擇分期或解除的方式，不是所有核貸不足一概可取消。"
+      ],
+      "reviewer_limit": "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+      "taiwan_context_assessment": {
+        "fit": "臺灣預售屋建商洽辦貸款、中古屋買方自行洽貸、斡旋金／定金文件及授信條件變更情境。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律效力、合法性、情境代表性、頻率、傷害嚴重度與行動分開評估；無資料不推估，專業限制明示。"
+      }
+    },
+    {
+      "id": "TW-15-013",
+      "before_sha256": "9885f36d87407929fdb8ac698736b7a9b6cd50e54024f6b29a6420ae2945c4d5",
+      "after_sha256": "a6d30a4bfc42a987eed62f346fcc68db062f3d40e9ddf9015503febe9434b06b",
+      "prior_revision": "f85c55717d5505505d8698ce0239dfc6d2defcd5",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "c0baf81dc54a2ed09387ce2e41dbf17084710a0a954d0dd72e00642ca92f09d6",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣預售建案從施工、使用執照、移轉文件到通知交屋的多階段契約流程。",
+      "frequency_assessment": "2026年地方選案50案中9案條款部分不符、750項次13項不符（官方列1.7%）；2025年9至12月另為72案混合抽樣。均為契約檢查、不是實際延期率；無全國延期母數。",
+      "changes": "區分開工、使用執照、四個月備妥移轉文件和六個月通知交屋；補記2026抽查的分子分母與混合抽樣限制；2025年條款樣態另列，不混為趨勢或個人機率。",
+      "source_ids": [
+        "presalestandard",
+        "ch15_presalechecks",
+        "ch15_presale_audit_20260923"
+      ],
+      "source_status": "現行正文來源逐筆核對；舊引用退役附理由和原始雜湊，歷史來源物件保留。",
+      "source_checks": [
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "claim": "預售屋現行契約特定期限、貸款差額及違約責任。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行契約第12點開工與使用執照、第14點四個月備妥文件申辦移轉、第15點六個月通知交屋、第18點賣方洽辦貸款差額分流。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a9868fff-73ce-4b32-b979-ecdc1fbdefcf",
+          "claim": "114年第2次官方查核所揭露的對保／撥款排除交屋期限條款樣態。",
+          "supporting_passage": "編者摘要（非逐字引文）：2025-09至12月共查核72案；公告揭露部分契約把賣方辦理對保或貸款撥付排除於使用執照後六個月通知交屋期間。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        },
+        {
+          "url": "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/235e42d0-6ffc-4df2-bba3-751a5f0c0af5",
+          "claim": "2026年3至5月69案混合抽查及地方選案13/750項次結果。",
+          "supporting_passage": "編者摘要（非逐字引文）：2026-03至05月查核69案；地方選案50案中9案有部分條款不符，每案15項共750項次中13項不符，官方列1.7%；混合選樣不是全市場隨機樣本。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀官方原始條文、公告或契約PDF的相關部分；只支持列明主張，不外推個案或全市場風險。"
+        }
+      ],
+      "statistics_assessed": [
+        "tw_2026_presale_selected_contract_audit",
+        "tw_2025_q4_presale_contract_audit"
+      ],
+      "unresolved": [
+        "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+        "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。",
+        "無全國實際延期率及建案母數；不同年度抽查不可合併推趨勢。"
+      ],
+      "review_path": "localization/reviews/TW-15-013.json",
+      "limits": [
+        "2026年契約抽查是混合選樣的非隨機行政查核；13/750是地方選案組契約檢核項次，不是工程延誤、全部建案或個人機率；未找到全國實際逾期及總建案分母。",
+        "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+        "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
+      ],
+      "retired_sources": [],
+      "previous_source_ids": [
+        "presalestandard",
+        "ch15_presalechecks"
+      ],
+      "previous_review_claims": [
+        "第12、14、15點分開開工、使用執照、備件申辦與通知交屋，遲延利息以已繳房地價款計。",
+        "2026年查核指出銀行作業、交屋前修繕與費用起算常見違規，不能以自訂排除條款任意免責。"
+      ],
+      "reviewer_limit": "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
+      "taiwan_context_assessment": {
+        "fit": "臺灣預售建案從施工、使用執照、移轉文件到通知交屋的多階段契約流程。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律效力、合法性、情境代表性、頻率、傷害嚴重度與行動分開評估；無資料不推估，專業限制明示。"
+      }
+    },
+    {
+      "id": "TW-15-014",
+      "before_sha256": "c6b02bd8a5ef0521dcb2e11c089d05dc4c8e9331d567f87d5ae5e543fff61b28",
+      "after_sha256": "53b7d06735ce1fecdba6cfdf687b4e71ae2e588eada565a51dd0c4482bf1873f",
+      "prior_revision": "f85c55717d5505505d8698ce0239dfc6d2defcd5",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a37c3af8f946ad7703e02e71a4dea21693fc03bfb16bcf9a58368fe77df443c9",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "已簽不動產交易但尚未完成移轉時，由標的所在地地政事務所確認預告登記可用請求及文件。",
+      "frequency_assessment": "截至2026-10-28未找到全國預告登記、妨礙保全處分或受損事件與交易分母；不以一般買賣、詐騙或法拍數推估個人風險。",
+      "changes": "依臺灣土地法第79條之1及土地登記規則第137條重核請求權、名義人同意、身分核驗與執行例外；民法第866條作為既存抵押後租賃的獨立問題來源，不把預告登記稱為所有權。",
+      "source_ids": [
+        "landpre",
+        "ch15_mortgagelease",
+        "ch15_land_registration_rules_20261028"
+      ],
+      "source_status": "現行正文來源逐筆核對；舊引用退役附理由和原始雜湊，歷史來源物件保留。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=79-1",
+          "claim": "土地法第79條之1的保全請求、登記名義人同意及強制執行例外。",
+          "supporting_passage": "編者摘要（非逐字引文）：土地法第79條之1列舉可保全請求，須附名義人同意；妨礙請求的處分於法定範圍無效，但不排除徵收、法院判決或強制執行。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接查閱法務部全國法規資料庫現行單條；資料庫整編截止日2026-10-16；不從條文推定個案登記、抵押順位或法拍結果。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001",
+          "claim": "民法第866條下既存抵押及後設租賃須另行核對。",
+          "supporting_passage": "編者摘要（非逐字引文）：民法第866條處理抵押權設定後租賃及可能影響抵押權實行的法院處置；這與預告登記是不同法律問題。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接查閱法務部全國法規資料庫現行單條；資料庫整編截止日2026-10-16；不從條文推定個案登記、抵押順位或法拍結果。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060003",
+          "claim": "土地登記規則第137條預告登記文件與身分核驗程序。",
+          "supporting_passage": "編者摘要（非逐字引文）：土地登記規則第137條規範申請文件、名義人同意與身分核驗；法定例外依條文辦理。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接查閱法務部全國法規資料庫現行單條；資料庫整編截止日2026-10-16；不從條文推定個案登記、抵押順位或法拍結果。"
+        }
+      ],
+      "statistics_assessed": [],
+      "unresolved": [
+        "未取得獨立法律、地政或金融專業審閱；不構成個案法律意見、可登記性確認或法院結果保證。",
+        "法定權利、合法性、頻率、傷害嚴重度與可行行動分開評估；沒有母數時不推算個人機率。"
+      ],
+      "review_path": "localization/reviews/TW-15-014.json",
+      "limits": [
+        "預告登記對因徵收、法院判決或強制執行所為的新登記沒有排除效力，不能保證房子不被查封、拍賣或受到優先權影響。也沒有原作中國一律90日後失效的通用規則可以直接套用。租賃、原有抵押與其他權利的順位及影響須另查；用借名、持分或不明使用權代替真正買賣者，不能靠預告登記解決全部法律問題。",
+        "未取得獨立法律、地政或金融專業審閱；不構成個案法律意見、可登記性確認或法院結果保證。",
+        "法定權利、合法性、頻率、傷害嚴重度與可行行動分開評估；沒有母數時不推算個人機率。"
+      ],
+      "retired_sources": [],
+      "previous_source_ids": [
+        "landpre",
+        "ch15_mortgagelease"
+      ],
+      "previous_review_claims": [
+        "第79條之1規範可保全的請求、名義人同意及效力，並排除以此對抗徵收、判決或強制執行新登記的主張。",
+        "原有抵押與後設使用關係的處理另有法律規則，不能以交易保全名稱推定全部權利無風險。"
+      ],
+      "reviewer_limit": "未取得獨立法律、地政或金融專業審閱；不構成個案法律意見、可登記性確認或法院結果保證。",
+      "taiwan_context_assessment": {
+        "fit": "已簽不動產交易但尚未完成移轉時，由標的所在地地政事務所確認預告登記可用請求及文件。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律效力、合法性、情境代表性、頻率、傷害嚴重度與行動分開評估；無資料不推估，專業限制明示。"
+      }
     }
   ]
 }

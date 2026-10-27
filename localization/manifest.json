@@ -8786,11 +8786,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch15/TW-15-006.md",
       "sources": [
-        "https://www.kl-land.klcg.gov.tw/tw/land/3960-259514.html",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001"
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060003"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "租房簽約前核對產權證和抵押情況，所有款項走轉賬並備註用途",
@@ -8898,9 +8898,11 @@
       "sources": [
         "https://www.klcg.gov.tw/tw/klland/2308-111026.html",
         "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=249&pcode=B0000001",
-        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C"
+        "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+        "https://www.ey.gov.tw/Page/DFB720D019CCCB0A/7beaa539-d140-4e03-97c3-020b68a9692c",
+        "https://www.miaoli.gov.tw/News_Content2.aspx?n=285&s=802870&sms=9462"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "買新房交了認購定金或者首付，沒簽成正式合同、貸款批不下來（比如簽約後政策收緊、銀行停貸）又怪不到你的，要求開發商退錢",
@@ -8938,9 +8940,10 @@
       "target_path": "locales/zh-TW/book/ch15/TW-15-013.md",
       "sources": [
         "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
-        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a9868fff-73ce-4b32-b979-ecdc1fbdefcf"
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a9868fff-73ce-4b32-b979-ecdc1fbdefcf",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/235e42d0-6ffc-4df2-bba3-751a5f0c0af5"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "買新房遇上開發商逾期交房、逾期辦證，先發書面催告留證據，再按合同要違約金",
@@ -8958,9 +8961,10 @@
       "target_path": "locales/zh-TW/book/ch15/TW-15-014.md",
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=79-1",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001"
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060003"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "買房簽約前查清有沒有查封和抵押，簽約後去不動產登記機構辦預告登記",
