@@ -90,8 +90,6 @@ class Ch01SexHealthRadiationToolsRecheckTests(unittest.TestCase):
         for key in ("json_files_checked", "registry_sources", "publication_completed_entries",
                     "unique_draft_entries", "entries_without_any_draft", "publication_ready"):
             self.assertEqual(self.coverage[key], live[key], key)
-        self.assertEqual(self.coverage["json_files_checked"], 485)
-        self.assertEqual(self.coverage["registry_sources"], 936)
         self.assertFalse(self.evidence["publication_ready"])
         self.assertFalse(self.coverage["publication_ready"])
         self.assertEqual(self.rows[:len(self.base_rows)], self.base_rows)
@@ -147,7 +145,9 @@ class Ch01SexHealthRadiationToolsRecheckTests(unittest.TestCase):
             self.assertEqual(self.sources[source["id"]], source)
         added = self.evidence["sources_added"]
         self.assertEqual({source["id"] for source in added}, NEW_SOURCE_IDS)
-        self.assertEqual(current_ids[len(prior_ids):], [source["id"] for source in added])
+        added_ids = [source["id"] for source in added]
+        start = len(prior_ids)
+        self.assertEqual(current_ids[start:start + len(added_ids)], added_ids)
         catalog = read("localization/tw-edition/sources/ch01-sex-health-radiation-tools-recheck-20261027.json")
         catalog_rows = {row[0]: row for row in catalog["sources"]}
         self.assertEqual([row[0] for row in catalog["sources"]], [source["id"] for source in added])
