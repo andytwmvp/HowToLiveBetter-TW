@@ -1,0 +1,504 @@
+{
+  "batch_id": "ch15-housing-safety-recheck-20261028",
+  "as_of": "2026-10-28",
+  "starting_main_sha": "4a0b870745383cf381f63bb291fcfad6180181f9",
+  "jurisdiction": "TW",
+  "language": "zh-TW",
+  "scope": "第15章租屋押金、房東換鎖／停水電、出租及收款授權、防詐、隔間住宅用途與火場逃生的歷史實質再審；無新增核心條目。",
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-15-001",
+    "TW-15-002",
+    "TW-15-003",
+    "TW-15-008"
+  ],
+  "risk_order": [
+    "TW-15-002",
+    "TW-15-003",
+    "TW-15-008",
+    "TW-15-001"
+  ],
+  "risk_order_note": "依失去居所與證據時效、金流詐騙止損、火災可能致命性、押金與消費爭議的損害嚴重度編排；不是發生率排名。",
+  "counts_before": {
+    "core_reviewed": 278,
+    "runtime_items": 289,
+    "runtime_sources": 871,
+    "registry_sources": 952,
+    "substantive_rechecks": 227,
+    "coverage_json_files": 487
+  },
+  "source_ids_added": [
+    "ch15_tainan_rent_disputes_2025",
+    "ch15_laf_rental_legal_aid_202601",
+    "ch15_moi_rental_draft_status_20260722",
+    "ch15_cib_fake_landlord_keys_20260906",
+    "ch15_moi_rental_service_licensing_20260814",
+    "ch15_moi_rental_service_directory_20261028",
+    "ch15_nfa_residential_fire_stats_2021_2025",
+    "ch15_nfa_fire_escape_guidance_20260103"
+  ],
+  "sources_added": 8,
+  "statistics": {
+    "TW-15-001": [
+      {
+        "name": "臺南市租屋消費爭議分類",
+        "period": "2025年度",
+        "value": {
+          "押金返還或抵充": 39,
+          "水電瓦斯及管理費": 20,
+          "限制申請租金補貼": 19
+        },
+        "unit": "受理消費爭議案件",
+        "geographic_scope": "臺南市",
+        "population": "臺南市政府公布之租屋消費爭議案件類型",
+        "numerator_definition": "市府公告列示的各類案件件數；公告未交代跨類別重複計算或處理狀態",
+        "denominator": null,
+        "denominator_definition": "沒有全國租賃契約、租屋戶、租屋者或暴露時間母數",
+        "data_type": "地方政府行政受理案件分類",
+        "limitations": [
+          "不能外推全臺發生情形",
+          "案件數不等於個人發生機率",
+          "受理案件未必經裁決認定違法",
+          "不同年度及城市需先核對定義與收案範圍"
+        ]
+      }
+    ],
+    "TW-15-002": [
+      {
+        "name": "換鎖／停水電迫遷之臺灣全國可比頻率",
+        "period": "截至2026-10-28查核",
+        "value": null,
+        "unit": null,
+        "geographic_scope": "臺灣全國",
+        "population": "住宅租賃承租人或租賃案件",
+        "numerator_definition": "尚未找到相同事件定義的全國行政統計",
+        "denominator": null,
+        "denominator_definition": "尚未找到租屋戶、租賃案件或暴露時間分母",
+        "data_type": "資料缺口紀錄，不是零件數",
+        "limitations": [
+          "不可把未找到資料解讀成事件未發生",
+          "不以新聞個案換算個人風險"
+        ]
+      }
+    ],
+    "TW-15-003": [
+      {
+        "name": "刑事警察局公布之假房東寄鑰匙案例",
+        "period": "2026-09-06公告單一個案",
+        "value": {
+          "reported_cases_in_article": 1,
+          "reported_loss_NTD": 55000
+        },
+        "unit": "公布個案及新臺幣損失額",
+        "geographic_scope": "臺灣北部個案（依警政公告描述）",
+        "population": "該警政公告所述單一受害者",
+        "numerator_definition": "單一公告個案及其報告損失",
+        "denominator": null,
+        "denominator_definition": "無租屋廣告、租屋者、詐騙暴露或租約分母",
+        "data_type": "警政機關公開個案，不是統計調查",
+        "limitations": [
+          "不可推估臺灣租屋詐騙發生率",
+          "案件通報及揭露不代表全部事件",
+          "金額是單一個案損失，不是典型損失或平均值"
+        ]
+      }
+    ],
+    "TW-15-008": [
+      {
+        "name": "建築物火災住宅類型統計",
+        "period": "2021–2025年",
+        "value": {
+          "all_building_fire_incidents": 25895,
+          "independent_residential_incidents": 9573,
+          "collective_residential_incidents": 8948,
+          "combined_residential_incidents": 18521,
+          "combined_share_percent_rounded": 71.5
+        },
+        "unit": "建築物火災行政事件件數；占總建築物火災事件比例",
+        "geographic_scope": "臺灣全國",
+        "population": "消防署建築物火災案件分類",
+        "numerator_definition": "獨立住宅與集合住宅兩類合計18,521件；18,521 ÷ 25,895 × 100，四捨五入至小數一位",
+        "denominator": 25895,
+        "denominator_definition": "消防署同期間統計中的全部建築物火災事件；不是建築物數、住宅戶、租屋戶或人口",
+        "data_type": "行政通報／統計事件件數；官方資料頁直接存取失敗，依官方索引摘要核對",
+        "limitations": [
+          "官方頁面更新日為2026-02-06；本輪直接頁面回傳403",
+          "未取得租賃、分隔套房、受影響住戶或暴露時間分母",
+          "71.5%只描述建築物火災件數類別構成，不能解讀為住戶或租屋者發生機率",
+          "不能據此推論隔間房相對危險或所有分租均違法"
+        ]
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "TW-15-001",
+      "title": "租屋先留屋況與收款證明，押金不能當成房東任意沒收的費用",
+      "before_sha256": "cc77c5831a91922658050ea1738895bbae21e31f5a0aea100339a380453d030e",
+      "after_sha256": "e443a30160e132356e3949e6b0232baffe779be39d6c4e3bb0a662c052bc269d",
+      "source_ids": [
+        "rentalstandard",
+        "tenancyact",
+        "ch15_tainan_rent_disputes_2025"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.ey.gov.tw/File/43BC094940995CFC?A=C",
+          "claim": "定型化契約押金上限、住宅返還及押金合法扣抵後返還餘額的規則。",
+          "supporting_passage": "編者摘要（非逐字引文）：已核對行政院現行住宅租賃定型化契約相關點次：押金上限為二個月租金，租賃關係終止並返還住宅後，按契約約定債務結算，剩餘押金返還；不支持任意沒收。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28讀取行政院住宅租賃定型化契約PDF並核對相關點次；使用本次可讀文字與官方修正說明，不用未閱讀附件推定細節。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+          "claim": "住宅租賃條例第7條的押金上限與租賃結束後結算返還規則。",
+          "supporting_passage": "編者摘要（非逐字引文）：法務部現行條例第7條規定押金不得超過二個月租金，租賃關係消滅且返還住宅後，出租人以押金抵充租賃所生債務並返還餘額。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接核對法務部全國法規資料庫現行住宅租賃條例條文與沿革；草案另以內政部公告標示為未生效。"
+        },
+        {
+          "url": "https://www.tainan.gov.tw/News_Content.aspx?n=13371&s=8802352",
+          "claim": "臺南市2025年租屋消費爭議的案件分類數與統計範圍。",
+          "supporting_passage": "編者摘要（非逐字引文）：市府公布押金返還或抵充39案、水電瓦斯及管理費20案、限制租金補貼19案；是臺南受理案件數，沒有全國租屋戶或契約分母。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "直接讀取臺南市政府2026-03-13官方消費爭議公告；只描述該市案件，不視為全國趨勢或個人風險率。"
+        }
+      ],
+      "taiwan_context_assessment": {
+        "fit": "臺灣情境與中央／地方制度、實際服務入口及民眾可執行措施重新核對；頻率資料不超出原始範圍。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律權利義務與事件頻率分開記錄；草案不當成現行法。"
+      },
+      "frequency_assessment": "有臺南市政府發布的2025年地方消費爭議分類數：押金返還／抵充39案、水電瓦斯／管理費20案、限制申請租補19案。範圍是單一城市受理案件數，無全國租賃契約、租戶或申訴人分母；沒有個人風險率，也不證明案件違法。",
+      "statistics": [
+        {
+          "name": "臺南市租屋消費爭議分類",
+          "period": "2025年度",
+          "value": {
+            "押金返還或抵充": 39,
+            "水電瓦斯及管理費": 20,
+            "限制申請租金補貼": 19
+          },
+          "unit": "受理消費爭議案件",
+          "geographic_scope": "臺南市",
+          "population": "臺南市政府公布之租屋消費爭議案件類型",
+          "numerator_definition": "市府公告列示的各類案件件數；公告未交代跨類別重複計算或處理狀態",
+          "denominator": null,
+          "denominator_definition": "沒有全國租賃契約、租屋戶、租屋者或暴露時間母數",
+          "data_type": "地方政府行政受理案件分類",
+          "limitations": [
+            "不能外推全臺發生情形",
+            "案件數不等於個人發生機率",
+            "受理案件未必經裁決認定違法",
+            "不同年度及城市需先核對定義與收案範圍"
+          ]
+        }
+      ],
+      "unresolved": [
+        "臺南消費爭議是地方受理件數，不含全國租屋契約或承租人分母，也不表示各案已判定違法；沒有由此估個人發生率。未取得臺灣租屋押金爭議的全國暴露分母；本篇不是個案法律意見，須保留契約、付款及點交證據。",
+        "所有統計、行政案件或單一案例均按資料原始範圍與事件定義呈現；未有適當暴露分母時不推算個人發生率。",
+        "未取得獨立法律、消費、租屋服務、建築消防或統計專業者審閱；本批AI來源核對不構成個案法律意見、建物安全鑑定或消防專業簽證。",
+        "法規適用須核對締約時點、現行條文及個案事實；地方服務資格、電話和查詢入口可能更新，使用前由官方窗口確認。"
+      ]
+    },
+    {
+      "id": "TW-15-002",
+      "title": "房東換鎖或停水電逼搬時先保全安全與證據，不用對抗代替法律程序",
+      "before_sha256": "827fb12b819d9dff460117f9c933560fed1a8ce027faedbfa8a0916f937758c7",
+      "after_sha256": "a54429ee67d7693d995ffae136df7a2277a5d8b65a9e201889b29569c9e22db9",
+      "source_ids": [
+        "tenancyact",
+        "rentalstandard",
+        "criminal",
+        "ch15_laf_rental_legal_aid_202601",
+        "ch15_moi_rental_draft_status_20260722"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+          "claim": "住宅租賃條例的出租人終止事由、承租人終止權及租賃調處制度。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行條例第10、11、16條區分出租人與承租人的終止事由、通知及地方租賃爭議調處；條文不授予出租人不經法定程序私力清退權。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接核對法務部全國法規資料庫現行住宅租賃條例條文與沿革；草案另以內政部公告標示為未生效。"
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/43BC094940995CFC?A=C",
+          "claim": "承租人與出租人終止通知、契約點交及返還程序應按現行住宅租賃定型化契約與法律辦理。",
+          "supporting_passage": "編者摘要（非逐字引文）：已核對住宅租賃契約終止及返還文字；公證逕受強制執行仍須依法由法院執行機關辦理，不是私人進屋或斷水電授權。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28讀取行政院住宅租賃定型化契約PDF並核對相關點次；使用本次可讀文字與官方修正說明，不用未閱讀附件推定細節。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0000001",
+          "claim": "保留強制、恐嚇與侵入住宅罪構成要件須依具體事實判斷，不把換鎖個案一概定罪。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方法規資料庫索引列有刑法第304至306條相關罪名；本次直接法條頁讀取逾時，因此只保留不同條文須依具體構成要件與證據判斷的限制，不推定每次換鎖均成立犯罪。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28法務部全國法規資料庫刑法指定條文直接頁面讀取逾時；僅確認官方索引與先前正式審閱紀錄，不就個案作刑事定性。"
+        },
+        {
+          "url": "https://www.laf.org.tw/service-project-detail/22",
+          "claim": "住宅租賃電話諮詢入口、服務時段及內政部專案律師扶助的申請文件與審查門檻。",
+          "supporting_passage": "編者摘要（非逐字引文）：申請內政部專案律師扶助須提出由內政部國土管理署或地方政府於二年內核發的租金補貼核定函影本，始受理開案；未取得仍可依一般法扶標準或其他政府委託專案標準申請審查。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接讀取法律扶助基金會專案頁；官方顯示發佈日2024-08-01、更新日2026-01-02，核對電話、服務時段、諮詢與律師代理資格的區別；個案適格仍由法扶審查。"
+        },
+        {
+          "url": "https://www.moi.gov.tw/News_Content.aspx?n=2&s=339757",
+          "claim": "住宅租賃條例修正草案截至公告日仍在審查，未當成現行法。",
+          "supporting_passage": "編者摘要（非逐字引文）：內政部2026-07-22公告稱租賃條例修正草案已送行政院審查；此程序狀態不代表草案已經立法或生效。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "直接讀取內政部公告，並與法務部現行法規資料庫2023-02-08修正沿革交叉核對；分開草案與已施行條文。"
+        }
+      ],
+      "taiwan_context_assessment": {
+        "fit": "臺灣情境與中央／地方制度、實際服務入口及民眾可執行措施重新核對；頻率資料不超出原始範圍。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律權利義務與事件頻率分開記錄；草案不當成現行法。"
+      },
+      "frequency_assessment": "沒有找到以一致事件定義統計全臺租屋換鎖、停水電迫遷案件，且提供租屋戶或租賃案件暴露分母的官方資料；標示資料不足，不以警政零星案件、新聞或外國統計推估個人機率。",
+      "statistics": [
+        {
+          "name": "換鎖／停水電迫遷之臺灣全國可比頻率",
+          "period": "截至2026-10-28查核",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "臺灣全國",
+          "population": "住宅租賃承租人或租賃案件",
+          "numerator_definition": "尚未找到相同事件定義的全國行政統計",
+          "denominator": null,
+          "denominator_definition": "尚未找到租屋戶、租賃案件或暴露時間分母",
+          "data_type": "資料缺口紀錄，不是零件數",
+          "limitations": [
+            "不可把未找到資料解讀成事件未發生",
+            "不以新聞個案換算個人風險"
+          ]
+        }
+      ],
+      "unresolved": [
+        "未取得以一致事件定義統計全臺換鎖、停水電迫遷且附租屋戶分母的資料，不估個人機率。刑事法條是否適用須由檢警、檢察官或法院按具體事證判斷；法扶代理資格須申請審查，本篇不是個案法律意見。",
+        "所有統計、行政案件或單一案例均按資料原始範圍與事件定義呈現；未有適當暴露分母時不推算個人發生率。",
+        "未取得獨立法律、消費、租屋服務、建築消防或統計專業者審閱；本批AI來源核對不構成個案法律意見、建物安全鑑定或消防專業簽證。",
+        "法規適用須核對締約時點、現行條文及個案事實；地方服務資格、電話和查詢入口可能更新，使用前由官方窗口確認。"
+      ]
+    },
+    {
+      "id": "TW-15-003",
+      "title": "付租金前查收款授權，仲介、代管與包租的角色不能混用",
+      "before_sha256": "d8a859b857aaf0349cfce26868cc822536ba17e08a5ea42defd61b3ed3132daa",
+      "after_sha256": "d7a06f64344e8f975e12762ffd31b83323971daf3f28c38ba9689b2d9076ee2c",
+      "source_ids": [
+        "tenancyact",
+        "rentalstandard",
+        "ch15_cib_fake_landlord_keys_20260906",
+        "ch15_moi_rental_service_licensing_20260814",
+        "ch15_moi_rental_service_directory_20261028"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+          "claim": "條例第3、19、28、29條區分媒合、代管與包租；第19條明列服務業許可、保證金、管理人員、公會及登記要求，仍須個別核對實際收款授權。",
+          "supporting_passage": "編者摘要（非逐字引文）：第3條定義媒合、代管與包租；第19條要求地方許可、公司登記、營業保證金、租賃住宅管理人員、所在地同業公會及領得登記證始得營業；第28、29條另規範代管與包租契約。這些條文不表示第三方一律不得代收，收款權限仍須依個別授權確認。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接核對法務部全國法規資料庫現行《租賃住宅市場發展及管理條例》第3、19、28、29條全文及沿革；第19條明定許可、保證金、管理人員、公會與登記要求。"
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/43BC094940995CFC?A=C",
+          "claim": "出租、媒合及代管的契約資訊與租賃標的應書面確認。",
+          "supporting_passage": "編者摘要（非逐字引文）：住宅租賃定型化契約要求載明出租人、租賃標的、租金押金及重要資訊；契約不能替代出租權或第三人收款授權查證。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28讀取行政院住宅租賃定型化契約PDF並核對相關點次；使用本次可讀文字與官方修正說明，不用未閱讀附件推定細節。"
+        },
+        {
+          "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=49cbf0a6-1d97-40f0-8fc7-21c4f35936fa",
+          "claim": "假房東寄鑰匙、假物流驗證及損失55,000元只作防詐手法個案示例，不代表發生頻率。",
+          "supporting_passage": "編者摘要（非逐字引文）：刑事警察局於2026-09-06公布一宗寄鑰匙後誘導受害者操作假物流驗證的案件，損失新臺幣55,000元；該公告是單一案例而非全年租屋詐騙數。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "直接讀取刑事警察局2026-09-06官方反詐公告；保留單案限制，未拿該金額或案例換算租客風險。"
+        },
+        {
+          "url": "https://www.moi.gov.tw/News_Content.aspx?n=2&s=340311",
+          "claim": "租賃住宅服務業的地方許可、公司登記、營業保證金、管理人員、所在地同業公會及領證營業規則。",
+          "supporting_passage": "編者摘要（非逐字引文）：《租賃住宅市場發展及管理條例》第19條規定地方許可、完成公司登記，之後繳存營業保證金、置管理人員、加入所在地同業公會並領得登記證始得營業。內政部公告說明業者資格要求；這不能代替核對個別收款授權。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接讀取內政部租賃住宅服務業管理公告，並核對法務部全國法規資料庫《租賃住宅市場發展及管理條例》第19條：許可、公司登記、營業保證金、管理人員、加入所在地同業公會與領得登記證等要求；不把登記狀態當成特定收款授權或履約保證。"
+        },
+        {
+          "url": "https://resim.moi.gov.tw/Home/RentIndex",
+          "claim": "內政部官方租賃住宅服務業查詢入口，不據未載入頁面斷言個別業者目前登記狀態。",
+          "supporting_passage": "編者摘要（非逐字引文）：該連結為內政部不動產服務業資訊系統的租賃住宅服務業查詢入口；本次無法載入結果頁，未核實個別業者，也不把查詢結果等同收款授權。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "核對內政部公告所連結之官方查詢入口；本次瀏覽器未能渲染查詢資料，因此只記錄入口用途，不宣稱已查核業者。"
+        }
+      ],
+      "taiwan_context_assessment": {
+        "fit": "臺灣情境與中央／地方制度、實際服務入口及民眾可執行措施重新核對；頻率資料不超出原始範圍。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律權利義務與事件頻率分開記錄；草案不當成現行法。"
+      },
+      "frequency_assessment": "有刑事警察局2026年9月公布的一宗假房東寄鑰匙案例，受害人損失新臺幣55,000元。這是一個已報告個案而非案件總數、租戶分母或租屋詐騙發生率；只能支持辨識手法與立即止損。",
+      "statistics": [
+        {
+          "name": "刑事警察局公布之假房東寄鑰匙案例",
+          "period": "2026-09-06公告單一個案",
+          "value": {
+            "reported_cases_in_article": 1,
+            "reported_loss_NTD": 55000
+          },
+          "unit": "公布個案及新臺幣損失額",
+          "geographic_scope": "臺灣北部個案（依警政公告描述）",
+          "population": "該警政公告所述單一受害者",
+          "numerator_definition": "單一公告個案及其報告損失",
+          "denominator": null,
+          "denominator_definition": "無租屋廣告、租屋者、詐騙暴露或租約分母",
+          "data_type": "警政機關公開個案，不是統計調查",
+          "limitations": [
+            "不可推估臺灣租屋詐騙發生率",
+            "案件通報及揭露不代表全部事件",
+            "金額是單一個案損失，不是典型損失或平均值"
+          ]
+        }
+      ],
+      "unresolved": [
+        "單一假房東個案說明手法與止損，不代表租屋詐騙件數或個人發生率。官方查詢系統本次未能載入結果，未驗證個別業者狀態；登記不等於收款授權或履約保證，本篇不是個案法律或金融意見。",
+        "所有統計、行政案件或單一案例均按資料原始範圍與事件定義呈現；未有適當暴露分母時不推算個人發生率。",
+        "未取得獨立法律、消費、租屋服務、建築消防或統計專業者審閱；本批AI來源核對不構成個案法律意見、建物安全鑑定或消防專業簽證。",
+        "法規適用須核對締約時點、現行條文及個案事實；地方服務資格、電話和查詢入口可能更新，使用前由官方窗口確認。"
+      ]
+    },
+    {
+      "id": "TW-15-008",
+      "title": "低價隔間套房先看合法用途與逃生，不把有門牌或能申請補貼當成安全證明",
+      "before_sha256": "d6d1853554297ccc9f31a702e4d2a6d93111afd2b2e43576c7af9e50d9c3ea3c",
+      "after_sha256": "a2f3fccdbad9e2ee24139cb9bc822afe18de4180b401be14c98baf73516f90b0",
+      "source_ids": [
+        "rentalstandard",
+        "tenancyact",
+        "condominium",
+        "ch15_nfa_residential_fire_stats_2021_2025",
+        "ch15_nfa_fire_escape_guidance_20260103"
+      ],
+      "source_checks": [
+        {
+          "url": "https://www.ey.gov.tw/File/43BC094940995CFC?A=C",
+          "claim": "住宅租賃契約的現況確認及設備資訊需與建物實況核對。",
+          "supporting_passage": "編者摘要（非逐字引文）：已核對住宅租賃契約現況確認與設備欄位，作為看屋、留存屋況及向主管機關詢問的起點，不等同建築或消防安全鑑定。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28讀取行政院住宅租賃定型化契約PDF並核對相關點次；使用本次可讀文字與官方修正說明，不用未閱讀附件推定細節。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
+          "claim": "住宅租賃條例的修繕及安全義務範圍，與建物用途判斷的界線。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行條例第8、9條等規範修繕及承租人對危及安全健康情形的終止權；此法規查核不取代建築物用途、隔間或消防設備的現場鑑定。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接核對法務部全國法規資料庫現行住宅租賃條例條文與沿革；草案另以內政部公告標示為未生效。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070118",
+          "claim": "公寓大廈共用走廊、樓梯及避難通道的用途與住戶使用限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：公寓大廈管理條例第7條將走廊、樓梯等共用部分列為不得約定專用的範圍，第15條要求按核准用途及規約使用；是否違規及具體建築避難條件仍由主管機關查核。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接核對法務部全國法規資料庫公寓大廈管理條例第7、15條及沿革；不宣稱已完成建築物現勘。"
+        },
+        {
+          "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+          "claim": "2021–2025年建築物火災統計中獨立住宅及集合住宅的事件數及其分母限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方索引顯示五年建築物火災25,895件、獨立住宅9,573件、集合住宅8,948件；住宅兩類合計約71.5%。沒有租賃、隔間房或住戶暴露分母，不能推算租客個人風險。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "官方統計頁直接回傳403；查閱消防署頁面更新資訊及官方索引摘要，未讀取或引用未能取得的附件；將數字限定為行政建築火災件數並記錄擷取限制。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20255&code=list&flag=detail&ids=1468",
+          "claim": "住宅火場按可否安全撤離分流；濃煙阻斷時不穿越煙層，改至相對安全位置通報119。",
+          "supporting_passage": "編者摘要（非逐字引文）：消防署2026-01-03指引建議可安全撤離時往下、往外，濃煙阻斷時不要硬闖，前往適當相對安全處關門並撥119提供位置，避免搭電梯或躲入浴室。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "直接讀取消防署2026-01-03官方火場應變指引；本篇保留路線辨識條件及依現場消防指示，不承諾單一方法適用所有建築。"
+        }
+      ],
+      "taiwan_context_assessment": {
+        "fit": "臺灣情境與中央／地方制度、實際服務入口及民眾可執行措施重新核對；頻率資料不超出原始範圍。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "法律權利義務與事件頻率分開記錄；草案不當成現行法。"
+      },
+      "frequency_assessment": "消防署官方索引摘要列2021至2025建築物火災25,895件，獨立住宅9,573件、集合住宅8,948件，後兩者合計18,521件／約71.5%。母數是建築物火災行政事件，不是住宅戶、租屋戶、隔間房、住戶人數或暴露時間；未能估計租客或分隔套房個人火災率。",
+      "statistics": [
+        {
+          "name": "建築物火災住宅類型統計",
+          "period": "2021–2025年",
+          "value": {
+            "all_building_fire_incidents": 25895,
+            "independent_residential_incidents": 9573,
+            "collective_residential_incidents": 8948,
+            "combined_residential_incidents": 18521,
+            "combined_share_percent_rounded": 71.5
+          },
+          "unit": "建築物火災行政事件件數；占總建築物火災事件比例",
+          "geographic_scope": "臺灣全國",
+          "population": "消防署建築物火災案件分類",
+          "numerator_definition": "獨立住宅與集合住宅兩類合計18,521件；18,521 ÷ 25,895 × 100，四捨五入至小數一位",
+          "denominator": 25895,
+          "denominator_definition": "消防署同期間統計中的全部建築物火災事件；不是建築物數、住宅戶、租屋戶或人口",
+          "data_type": "行政通報／統計事件件數；官方資料頁直接存取失敗，依官方索引摘要核對",
+          "limitations": [
+            "官方頁面更新日為2026-02-06；本輪直接頁面回傳403",
+            "未取得租賃、分隔套房、受影響住戶或暴露時間分母",
+            "71.5%只描述建築物火災件數類別構成，不能解讀為住戶或租屋者發生機率",
+            "不能據此推論隔間房相對危險或所有分租均違法"
+          ]
+        }
+      ],
+      "unresolved": [
+        "消防署統計為2021–2025年建築物火災行政事件數，沒有租屋、分隔套房、住戶或暴露時間分母；官方統計頁本次回傳403，數字僅依官方索引摘要呈現。未取得消防、建築專業者獨立現勘或審閱；依現場建築、煙流及消防人員指示處置。",
+        "所有統計、行政案件或單一案例均按資料原始範圍與事件定義呈現；未有適當暴露分母時不推算個人發生率。",
+        "未取得獨立法律、消費、租屋服務、建築消防或統計專業者審閱；本批AI來源核對不構成個案法律意見、建物安全鑑定或消防專業簽證。",
+        "法規適用須核對締約時點、現行條文及個案事實；地方服務資格、電話和查詢入口可能更新，使用前由官方窗口確認。"
+      ]
+    }
+  ],
+  "law_and_policy_dates": [
+    {
+      "name": "《租賃住宅市場發展及管理條例》現行法規資料庫沿革",
+      "announced_or_amended_at": "2023-02-08",
+      "effective_at": null,
+      "status_as_of": "2026-10-28",
+      "note": "官方沿革所列最近修正日；未宣稱所有條文均於同日施行。"
+    },
+    {
+      "name": "內政部住宅租賃條例修正草案審查進度",
+      "announced_or_amended_at": "2026-07-22",
+      "effective_at": null,
+      "status_as_of": "2026-10-28",
+      "note": "公告草案已送行政院審查，尚未完成立法或施行，不作為現行法律依據。"
+    },
+    {
+      "name": "住宅租賃定型化契約2025修正",
+      "announced_or_amended_at": "2025-04-18",
+      "effective_at": "2025-04-18",
+      "status_as_of": "2026-10-28",
+      "note": "本批引用現行契約相關條款；2024電費規定依自身生效日期另行辨識。"
+    }
+  ],
+  "retrieval_limitations": [
+    "消防署2021–2025建築火災統計頁本輪直接開啟回傳403；只據官方索引摘要記錄表列數字，未讀未取得附件。",
+    "內政部租賃住宅服務業查詢頁本次未能渲染；只記錄官方入口，不宣稱查核任何業者。",
+    "刑法第304至306條官方資料庫直接頁面讀取逾時；保留個案構成要件限制，不據此將換鎖或停水電一概判為犯罪。",
+    "未找到全國換鎖／停水電迫遷或租屋詐騙與租屋暴露分母；未自行推估個人風險。"
+  ],
+  "professional_review": "pending",
+  "professional_review_limit": "未取得獨立法律、消費、租屋服務、建築消防或統計專業者審閱；本批AI來源核對不構成個案法律意見、建物安全鑑定或消防專業簽證。",
+  "publication_ready": false,
+  "next_review_due_at": "2027-01-31",
+  "counts_after": {
+    "core_reviewed": 278,
+    "runtime_items": 289,
+    "runtime_sources": 879,
+    "registry_sources": 960,
+    "substantive_rechecks": 231,
+    "coverage_json_files": 489,
+    "draft_entries_without_verified_review": 220,
+    "publication_ready": false
+  }
+}
