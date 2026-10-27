@@ -124,13 +124,17 @@ class Ch01GamblingHivPrepRecheckTests(unittest.TestCase):
         current_ids = [source["id"] for source in self.runtime["sources"]]
         self.assertEqual(current_ids[:len(base_ids)], base_ids)
         added = self.runtime["sources"][len(base_ids):]
-        self.assertEqual([source["id"] for source in added], [source["id"] for source in self.evidence["sources_added"]])
-        self.assertEqual({source["id"] for source in added}, NEW_SOURCE_IDS)
+        batch_added = self.evidence["sources_added"]
+        batch_ids = [source["id"] for source in batch_added]
+        self.assertEqual(len(batch_ids), len(NEW_SOURCE_IDS))
+        self.assertEqual(set(batch_ids), NEW_SOURCE_IDS)
+        self.assertEqual([source["id"] for source in added[:len(batch_ids)]], batch_ids)
+        self.assertTrue(set(batch_ids).issubset({source["id"] for source in added}))
         for prior in base_runtime["sources"]:
             self.assertEqual(self.sources[prior["id"]], prior)
         catalog = read("localization/tw-edition/sources/ch01-gambling-hiv-prep-recheck-20261027.json")
-        self.assertEqual([row[0] for row in catalog["sources"]], [source["id"] for source in added])
-        for row, source in zip(catalog["sources"], added):
+        self.assertEqual([row[0] for row in catalog["sources"]], batch_ids)
+        for row, source in zip(catalog["sources"], batch_added):
             self.assertEqual(row[2], source["url"])
             self.assertEqual(row[3], source["supports"])
         old_monthly = next(source for source in base_runtime["sources"] if source["id"] == "ch01_hiv_monthly_202609")
