@@ -126,10 +126,15 @@ class PropertyRightsRecheckTests(unittest.TestCase):
         self.assertEqual(self.batch["counts_after"]["substantive_rechecks"],
                          self.batch["counts_before"]["substantive_rechecks"] + len(IDS))
         audit = audit_drafts()
-        self.assertEqual(audit["json_files_checked"],
-                         self.batch["counts_after"]["coverage_json_files"])
-        self.assertEqual(audit["registry_sources"],
-                         self.batch["counts_after"]["registry_sources"])
+        coverage = read("localization/tw-edition/coverage.json")
+        # This is a historical batch snapshot; later batches may add evidence
+        # JSON and source-catalog rows. The live coverage must match its own audit.
+        self.assertGreaterEqual(audit["json_files_checked"],
+                                self.batch["counts_after"]["coverage_json_files"])
+        self.assertGreaterEqual(audit["registry_sources"],
+                                self.batch["counts_after"]["registry_sources"])
+        self.assertEqual(coverage["json_files_checked"], audit["json_files_checked"])
+        self.assertEqual(coverage["registry_sources"], audit["registry_sources"])
         self.assertEqual(audit["unresolved_reference_occurrences"], 306)
         self.assertEqual(len(audit["unresolved_source_ids"]), 115)
         self.assertFalse(self.batch["publication_ready"])

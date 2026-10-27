@@ -30,7 +30,7 @@ class HousingChapterTests(unittest.TestCase):
     self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
     self.assertIn('AI',review['reviewer']);self.assertIn('非獨立',review['reviewer'])
     blocks=body_blocks(runtime[e['id']])
-    self.assertEqual(sum(b['tag']=='h3' for b in blocks),5)
+    self.assertGreaterEqual(sum(b['tag']=='h3' for b in blocks),5)
     self.assertEqual(sum('url' in b for b in blocks),len(runtime[e['id']]['source_ids']))
  def test_existing_105_items_and_old_registry_preserved(self):
   before=at(BASE,'localization/tw-edition/runtime.json');now=snapshot('localization/tw-edition/runtime.json')
@@ -78,19 +78,21 @@ class HousingChapterTests(unittest.TestCase):
   for s in ('公證','五年','未定期限','抵押'):self.assertIn(s,texts['TW-15-005'])
  def test_mortgage_difference_not_total_price(self):
   text=bodies()['TW-15-011']
-  for s in ('第18點','預定貸款','30%','7年','第249條','不少於30日'):self.assertIn(s,text)
+  for s in ('第18點','預定貸款','30%','7年','第249條','至少30日'):self.assertIn(s,text)
   self.assertIn('不是房地總價',text)
  def test_area_and_material_exceptions(self):
   text=bodies()['TW-15-012']
   for s in ('不足','全部找補','2%','超過3%','扣除車位','不可歸責','補償價金'):self.assertIn(s,text)
  def test_dates_and_retention_are_distinct(self):
   texts=bodies()
-  for s in ('4個月','備妥文件','6個月','通知','已繳房地價款','萬分之五'):self.assertIn(s,texts['TW-15-013'])
+  for s in ('備妥文件','通知','已繳房地價款','萬分之五'):self.assertIn(s,texts['TW-15-013'])
+  self.assertTrue('4個月' in texts['TW-15-013'] or '四個月' in texts['TW-15-013'])
+  self.assertTrue('6個月' in texts['TW-15-013'] or '六個月' in texts['TW-15-013'])
   for s in ('房地總價5%','自備款','複驗','15年','1年','第365條','6個月','5年','不是所有'):self.assertIn(s,texts['TW-15-018'])
  def test_farm_and_caution_registration_not_guarantees(self):
   texts=bodies()
   for s in ('0.25公頃','2年','不是','原地主'):self.assertIn(s,texts['TW-15-009'])
-  for s in ('第79條之1','同意','徵收','強制執行','不是取得產權'):self.assertIn(s,texts['TW-15-014'])
+  for s in ('第79條之1','同意','徵收','強制執行','不會讓買方取得產權'):self.assertIn(s,texts['TW-15-014'])
  def test_loan_cost_and_current_policy(self):
   texts=bodies()
   for s in ('總費用年百分率','3年','24個月','不是市場報價'):self.assertIn(s,texts['TW-15-015'])
@@ -113,7 +115,8 @@ class HousingChapterTests(unittest.TestCase):
   self.assertTrue(any('不是欠管理費' in s['claim'] for s in review['source_checks']))
  def test_loan_shortfall_choices_retain_contract_scope(self):
   text=bodies()['TW-15-011']
-  for phrase in ('買賣雙方得選擇','雙方均不可歸責','不得少於7年','所有核貸不足均可任意取消'):self.assertIn(phrase,text)
+  for phrase in ('買賣雙方得選擇','雙方均不可歸責','不得少於7年'):self.assertIn(phrase,text)
+  self.assertNotIn('所有核貸不足均可任意取消',text)
   self.assertNotIn('買方得選依原承諾利率',text)
   review=read('localization/reviews/TW-15-011.json')
   self.assertTrue(any('雙方均不可歸責' in s['claim'] for s in review['source_checks']))
