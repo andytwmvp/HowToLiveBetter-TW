@@ -1,0 +1,695 @@
+{
+  "schema_version": 1,
+  "batch": "第1章血尿急症、HP篩檢、C肝與胃鏡決策四篇高風險歷史實質再審",
+  "base_main_sha": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae",
+  "reviewed_at": "2026-10-27",
+  "review_due_at": "2027-01-31",
+  "priority_basis": "依可能立即出血阻塞與感染惡化先核TW-01-027；再核公費HP資格與胃癌風險背景TW-01-023、HCV篩檢／RNA／治療鏈TW-01-045，最後核胃鏡適應情境與程序風險TW-01-047。此為可能損害與可行動性排序，不是個人發生率排名。",
+  "prior_reviews_preserved_by_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae",
+  "counts_before": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 210,
+    "runtime_sources": 831,
+    "source_registry": 912,
+    "json_files_checked": 479,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 214,
+    "runtime_sources": 836,
+    "source_registry": 917,
+    "json_files_checked": 481,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "new_core_entries": [],
+  "items": [
+    {
+      "id": "TW-01-027",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-027.md",
+      "title": "肉眼血尿即使不痛或暫時消失也要就醫，尿不出或大量血塊須緊急處理",
+      "prior_body_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:locales/zh-TW/book/ch01/TW-01-027.md",
+      "prior_review_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:localization/reviews/TW-01-027.json",
+      "before_sha256": "b64fee9d099053b460b5a1826399a242aa0c24683b80861e73652eaad5d1e1ce",
+      "after_sha256": "3a0476290b1342873bd38c6dc39b84b8395bb56aba58e2e84ec16f662b8be7ea",
+      "prior_review_sha256": "ef59ca886eb67689d485d5af99b80ebdabc1af268a8aee3f5e919a545da6b363",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_hematuria_tph2026",
+        "ch01_hematuria_tsgh_20261023"
+      ],
+      "previous_source_ids": [
+        "ch01_hematuria_tph2026",
+        "ch01_hematuria_ntuh",
+        "ch01_uti_vgh2026"
+      ],
+      "previous_review_claims": [
+        "2026-07-02醫師說明無痛血尿應盡快檢查；血塊堵塞與尿不出來的個案緊急處理，案例非全國盛行率或人人癌症機率。",
+        "無痛性血尿仍是泌尿系統警訊，盡早泌尿科；感染、結石及腫瘤等須檢查，不能靠症狀確診。",
+        "血尿、發燒、腰痛等需進一步診治，症狀不一定是感染；飲水受限依醫師指示，不自行用抗生素。"
+      ],
+      "taiwan_context": "臺灣民眾常在家中、通勤前或基層門診發現尿色改變；須在泌尿科門診與急診間依發燒、腰痛、尿滯留、血塊及循環狀態分流，危急時119而非自行騎車。",
+      "frequency_assessment": "未找到帶有全國事件數與人口／就醫分母的肉眼血尿發生率。臺北醫院單一延誤病例只能支持警訊，不能推估全國發生頻率或個人癌症機率；依急診警訊先處理再記錄資料限制。",
+      "changes": "增列高燒、畏寒、劇烈腰痛、嘔吐、尿滯留／血塊阻塞、頭暈虛弱及血壓不穩的急診紅旗，危急情況119且不自行騎車；採用最新可讀的三總血尿專頁，移除不夠切題或本輪無法讀取的舊引用，明列無全國頻率分母。",
+      "source_status": "AI直接核對臺灣中央／地方官方頁面、國健署正式轉載問答PDF、健保署現行給付附件及癌登表格；歷史鏡像及不切題／無法讀取來源已退出本文現行引用並保留來源物件。",
+      "source_checks": [
+        {
+          "url": "https://www.tph.mohw.gov.tw/?aid=504&iid=339&page_name=detail",
+          "claim": "臺北醫院2026-07-02個案顯示無痛且反覆血尿可能延誤泌尿道腫瘤評估；案例只說明就醫警訊，沒有全國分母。",
+          "supporting_passage": "編者摘要：醫院報導一名50多歲男性因無痛血尿延誤數月，後有尿滯留與大量血塊而緊急就醫；此為院內個案，不是全國發生率。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27以HTTPS直接取得並閱讀衛福部臺北醫院官方新聞稿，核對張貼日期及案例；不將病例數作個人癌症機率。"
+        },
+        {
+          "url": "https://wwwv.tsgh.ndmutsgh.edu.tw/unit/10027/13816",
+          "claim": "三軍總醫院列肉眼無痛／反覆血尿應儘早泌尿科；高燒、畏寒、劇烈腰痛、嘔吐、尿滯留／血塊阻塞、頭暈虛弱或血壓不穩立即急診；抗凝血者不可自行停藥。",
+          "supporting_passage": "編者摘要：頁面「哪些情況需要儘快就醫」段列急症警訊及泌尿科評估；用藥段明示血尿不應只歸因於抗凝血藥。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀三軍總醫院泌尿外科完整衛教頁及其2026-10-23更新時間；不使用網站瀏覽量推算盛行率。"
+        }
+      ],
+      "statistics_assessed": [],
+      "unresolved": [
+        "未找到可用的全國肉眼血尿發生率或人口分母；院內個案不能代表全國。",
+        "未取得泌尿科、腎臟科或急診專家獨立審閱。"
+      ],
+      "reviewer_limit": "AI來源核對不等於泌尿科、腎臟科或急診專業分流簽證；沒有全國肉眼血尿分母，不能推算個人病因風險。",
+      "retired_sources": [
+        {
+          "id": "ch01_hematuria_ntuh",
+          "replacement_ids": [
+            "ch01_hematuria_tsgh_20261023"
+          ],
+          "reason": "舊臺大頁面為2021年下泌尿道症狀通用衛教，未能支撐本輪新增的完整血尿急診警訊；以2026年更新的三軍總醫院血尿專頁替代，原來源物件與雜湊保留。",
+          "prior_source_sha256": "8c655583e5ec8e1915d3ddef7589eb2d09b6238ee0830b8bbef551d5e9814c92",
+          "preserved_in_runtime": true
+        },
+        {
+          "id": "ch01_uti_vgh2026",
+          "replacement_ids": [
+            "ch01_hematuria_tsgh_20261023"
+          ],
+          "reason": "本輪直接重取臺北榮總連結回傳HTTP 403，無法重核其目前內容；不再作現行引文，改用可直接讀取且較切題的三軍總醫院2026血尿衛教，保留舊來源物件與雜湊。",
+          "prior_source_sha256": "d9320d9bcdaf7aee61ce990bcbec3716936efd1d68cbece3e090160f12f56ad0",
+          "preserved_in_runtime": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-023",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-023.md",
+      "title": "幽門螺旋桿菌陽性回診完整除菌並確認療效，公費篩檢不是自行買抗生素",
+      "prior_body_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:locales/zh-TW/book/ch01/TW-01-023.md",
+      "prior_review_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:localization/reviews/TW-01-023.json",
+      "before_sha256": "2782290661ca35578f57d3e7cac4325142fb141ff84659ec4a5813a373d31218",
+      "after_sha256": "c7b8c2978c1b3ad06f43f41b1c2cf8aac3fd644d77b1efd4fa62c77b85a4ad04",
+      "prior_review_sha256": "72dfcb845fc236276abeae5804a32c27519d02c0b19f21536a08e6540c06479c",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_hp_program_2026",
+        "ch01_hp_taipei_eligibility",
+        "ch01_hp_ntuh_202508",
+        "ch01_hp_ntuh_202605",
+        "ch01_hp_klchb_20261006",
+        "ch01_stomach_cancer_registry_2023"
+      ],
+      "previous_source_ids": [
+        "ch01_hp_program_2026",
+        "ch01_hp_taipei_eligibility",
+        "ch01_hp_ntuh_202508",
+        "ch01_hp_ntuh_202605"
+      ],
+      "previous_review_claims": [
+        "2026-01-01起45至74歲終身一次糞便抗原篩檢，陽性帶報告回診除菌／進一步檢查；450元是院所補助，不是民眾領款。30%盛行率缺原始期間母數，本篇不當2026發生率。",
+        "45至74歲且未參與113、114年糞便抗原試辦計畫，終身一次，帶健保卡至特約院所。",
+        "完整療程、治療前告知所有藥物及保健品、交互作用；服藥結束4週後回診確認除菌，不抄處方。",
+        "依處方完整治療，一般療程10至14天；明顯不適回診，結束後呼氣或糞便抗原確認療效，失敗再評估。"
+      ],
+      "taiwan_context": "臺灣45至74歲公費以糞便抗原為主，部分縣市曾辦不同試辦項目；使用健保卡和院所資格查詢，陽性回診後依本地抗藥性、共病和藥物交互作用處理。",
+      "frequency_assessment": "MOHW公告所述HP盛行率約30%，但未提供原調查期、樣本、分子、分母或加權，不能當2026全國精確盛行率。2023全國癌登列胃癌4,518例及年齡標準化率9.8/10萬；排除GIST為3,551例及7.6/10萬，不含原位癌、2000世界標準人口。這是全人口癌症登記，不是感染者個人罹癌率或篩檢受益率。",
+      "changes": "新增按縣市公告說明舊試辦參與可能影響資格，由院所查核資格；補2023胃癌癌登病例數／標準化率及GIST口徑，保留HP 30%缺原始母數限制；複核院所補助、治療日數及療程後4週複驗。",
+      "source_status": "AI直接核對臺灣中央／地方官方頁面、國健署正式轉載問答PDF、健保署現行給付附件及癌登表格；歷史鏡像及不切題／無法讀取來源已退出本文現行引用並保留來源物件。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-7395-85266-1.html",
+          "claim": "衛福部公告：自2026-01-01起45至74歲民眾終身一次公費糞便抗原檢測；陽性須攜報告回診；450元為院所補助；公告提及20歲以上成人感染盛行率約30%但未提供原調查母數。",
+          "supporting_passage": "編者摘要：政策年齡、檢測方法、陽性後續及補助對象均依公告；公告的30%未附原調查年份、樣本、分子或分母，不作2026全國精確盛行率。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀衛福部／國健署官方新聞稿正文及建檔日期；僅採政策和其明載但不完整的統計界線。"
+        },
+        {
+          "url": "https://health.gov.taipei/cp.aspx?n=A006B1E45D7C538B&s=15E2B510BCB6A9E8",
+          "claim": "臺北市公告45至74歲終身一次，未曾參與國健署113、114年糞便抗原試辦；攜健保卡到特約院所。",
+          "supporting_passage": "編者摘要：官方頁面列45至74歲、終身一次及未參與113／114糞便抗原試辦，並提示攜帶健保卡；頁面更新2025-10-30、檢視2026-08-17。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀臺北市衛生局官方頁面之資格及注意事項，核對頁面更新／檢視日期；不把地方公告單獨視為全國資格系統。"
+        },
+        {
+          "url": "https://www.klchb.klcg.gov.tw/tw/klchbklal/1683-312893.html",
+          "claim": "基隆市地方公告45至74歲終身一次，另列原住民地區碳13尿素吹氣及113、114年糞便抗原試辦既往參與者排除。",
+          "supporting_passage": "編者摘要：基隆市公告明列兩類舊試辦及年齡、終身一次；此為地方範例，不能代表其他縣市公告及院所查核流程。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀基隆市政府公告正文和日期欄；保留公告所示發布與頁尾更新日期差異，不推斷政策全國生效日。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "2023年全國胃癌新發4,518例、年齡標準化率9.8/10萬；排除GIST為3,551例、7.6/10萬；登記不含原位癌，採2000年世界標準人口。",
+          "supporting_passage": "編者摘要：衛福部官方PDF第1頁胃癌列為4,518（3,551）例及標準化發生率9.8（7.6）/10萬；註腳說明不含原位癌、採2000年世界標準人口且GIST成因不同。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接開啟並核讀衛福部官方癌登PDF第1頁表格與註腳；未重算原始微資料或用標準化率估算個人風險。"
+        },
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/202508/project_3.html",
+          "claim": "臺大醫院藥師建議除菌療程後至少4週再依醫囑確認，並避免治療前未揭露藥物交互作用。",
+          "supporting_passage": "編者摘要：療程結束4週後可回診做呼氣檢測確認；應提供處方藥、非處方藥與保健品資訊。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接取得並閱讀臺大醫院藥劑部2025-08衛教頁正文；只使用檢查時間與用藥告知段落，不將文章當個人用藥處方。"
+        },
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/202605/health_4.html",
+          "claim": "臺大醫院2026年用藥問答列出常見10至14天治療方案，強調完整服藥、依抗藥性與交互作用個別選擇，嚴重不適立即處理。",
+          "supporting_passage": "編者摘要：文章列非鉍劑四合一與三合一一般14天、鉍劑四合一10至14天；療法由醫師依抗藥性、治療史及共病決定。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接取得並閱讀臺大醫院藥劑部2026-05 Q&A正文；不複製任何抗生素劑量或自行用藥表。"
+        }
+      ],
+      "statistics_assessed": [
+        "hpylori_reported_prevalence_2026_mohw",
+        "gastric_cancer_cases_2023_taiwan",
+        "gastric_cancer_asr_2023_taiwan",
+        "gastric_cancer_cases_2023_excluding_gist_taiwan",
+        "gastric_cancer_asr_2023_excluding_gist_taiwan"
+      ],
+      "unresolved": [
+        "官方公告所述30%HP盛行率沒有原始調查年期、樣本、分子、分母及加權資訊。",
+        "癌登統計不含原位癌，年齡標準化率不能換成感染者個人罹癌率；未取得幽門桿菌陽性與後續癌症配對資料。",
+        "未取得胃腸科、藥師及公共衛生專家獨立審閱。"
+      ],
+      "reviewer_limit": "AI直接核對官方來源及公開表格，不是胃腸科、藥師或公共衛生專業簽證；HP盛行率原調查母數未取得，個別資格以院所查核結果為準。",
+      "retired_sources": []
+    },
+    {
+      "id": "TW-01-045",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-045.md",
+      "title": "C肝抗體陽性接續RNA確認，完成口服治療與追蹤，不把一次篩檢當終身免疫",
+      "prior_body_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:locales/zh-TW/book/ch01/TW-01-045.md",
+      "prior_review_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:localization/reviews/TW-01-045.json",
+      "before_sha256": "780f1186eb811738f37eedf4ea9b29665e1308b24cb746c585cf0746d4b904f3",
+      "after_sha256": "3c5b8991f2e018b8026fdc6cf9534b1eda92ec9a030896f42b22ca5fc08d050b",
+      "prior_review_sha256": "832606f94e30eb91e1ed895d129af92a154b068f9d0659980a53f06c33d88c3f",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_hcv_taipei",
+        "ch01_hcv_cdc_basics",
+        "ch01_hcv_mohw_202610",
+        "ch01_hcv_hpa_qa6_ntpc_202602",
+        "ch01_hcv_nhi_daa_coverage_20251201"
+      ],
+      "previous_source_ids": [
+        "ch01_hcv_hpa_qa6",
+        "ch01_hcv_taipei",
+        "ch01_hcv_ntuh_diagnosis",
+        "ch01_hcv_ntuh_svr",
+        "ch01_hcv_cdc_basics",
+        "ch01_hcv_mohw_202610"
+      ],
+      "previous_review_claims": [
+        "1986年含以前出生至79歲、原住民2026年回歸40至79歲終身一次；抗體陽性可依院所流程接續RNA。",
+        "檢查項目補助與掛號費分開，可單獨篩檢，不需因肝炎抽血空腹，院所核對既往紀錄。",
+        "抗體與HCV RNA判斷不同；醫師評估肝功能、纖維化及用藥。",
+        "完成療程後12週檢測不到病毒量作治癒判斷；需完成追蹤。",
+        "多數口服療程8至12週，治癒後仍可再感染；沒有C肝疫苗。",
+        "截至2025年12月B、C肝篩檢逾786萬人；DAA已納健保，2019起不限纖維化程度。"
+      ],
+      "taiwan_context": "臺灣成人預防保健由特約院所查核終身一次資格，抗體陽性可接健保RNA及DAA照護；出生年、原住民身分、既往篩檢、院所流程和現行給付需分開確認。",
+      "frequency_assessment": "衛福部2026-10公告稱截至2025-12逾786萬人接受B、C肝篩檢，分母與HCV感染事件數均未提供；這是合併篩檢服務量，不是HCV發生率或盛行率。本文不推估個人感染機率。",
+      "changes": "以地方政府正式轉載的國健署第6版FAQ替換公會鏡像，更新出生年／原住民資格與RNA可由院所直接銜接的實際流程；加入健保署2025-12現行DAA給付與療程後第12週追蹤，保留無個人發生率及政策日期來源差異限制。",
+      "source_status": "AI直接核對臺灣中央／地方官方頁面、國健署正式轉載問答PDF、健保署現行給付附件及癌登表格；歷史鏡像及不切題／無法讀取來源已退出本文現行引用並保留來源物件。",
+      "source_checks": [
+        {
+          "url": "https://www.health.ntpc.gov.tw/article/%E6%96%B0%E5%8C%97%E8%A1%9B%E5%81%A5%E5%AD%97%E7%AC%AC1150245034%E8%99%9F%E5%87%BD%E9%99%84%E4%BB%B6%EF%BC%8C%E6%9B%B4%E6%96%B0%E3%80%8C%E6%93%B4%E5%A4%A7%E6%88%90%E4%BA%BA%E9%A0%90%E9%98%B2%E4%BF%9D%E5%81%A5%E6%9C%8D%E5%8B%99_B%E3%80%81C_%E5%9E%8B%E8%82%9D%E7%82%8E%E7%AF%A9%E6%AA%A2%E5%95%8F%E7%AD%94%E9%9B%86%EF%BC%88%E7%AC%AC_6_%E7%89%88%EF%BC%89%E3%80%8D",
+          "claim": "國健署第6版（2026/02）列一般民眾民國75年含以前出生至79歲及原住民40至79歲終身一次；抗體陽性時院所可直接安排HCV RNA並依健保申報，無須民眾另回診。",
+          "supporting_passage": "編者摘要：問答集第1頁資格為民國75年（含）以前出生至79歲、原住民115年起40至79歲；第2頁說明抗體陽性可由院所逕行RNA檢測及健保申報。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀新北市衛生局官方轉載頁與附件PDF首頁、資格及HCV RNA段落；PDF自標修訂2026/02，未把「可以執行」寫成每家院所自動完成。"
+        },
+        {
+          "url": "https://health.gov.taipei/cp.aspx?n=DEF47383FCC783F2&s=3AC4ACF21B5C9080",
+          "claim": "臺北市衛生局說明成人B、C肝篩檢補助項目與掛號費分開、抽血不需空腹，可單獨進行並查核既往服務。",
+          "supporting_passage": "編者摘要：FAQ列45至79歲／出生年資格、掛號費自付、無需空腹及健康存摺／院所資格查詢；頁面政策起日亦列114-08-01。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀臺北市衛生局完整FAQ，核對資格、費用、空腹與既往篩檢查詢；不把單一地方客服資訊當全國統計。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/lp-2519-1.html?pi=1&ps=20",
+          "claim": "健保署專區列2025-12-01更新給付規定及計畫；附件依病毒與治療史有不同療程，並要求療程結束第12週病毒檢驗追蹤。",
+          "supporting_passage": "編者摘要：專區標示給付規定與執行計畫114-12-01更新；現行附件列不同病毒／既往治療條件與8、12、16及較長療程，並需登錄結束後第12週結果。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀健保署專區及連結的最新給付規定、執行計畫PDF；僅陳述療程存在個別差異，不自行判定給付資格。"
+        },
+        {
+          "url": "https://mohw.gov.tw/cp-16-88169-1.html",
+          "claim": "截至2025-12逾786萬人接受B、C肝篩檢；MOHW同頁說明DAA納健保及2019年起不限肝纖維化程度。",
+          "supporting_passage": "編者摘要：衛福部2026-10-09公告列累計B、C肝篩檢服務逾786萬人，並說明DAA給付政策；此服務數不是C肝病例數、發生率或盛行率。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接以HTTPS閱讀衛福部官方2026-10-09公告；辨識此數為B、C合併篩檢服務量，公告未提供可供個人風險估算的資格人口分母。"
+        },
+        {
+          "url": "https://www.cdc.gov/hepatitis-c/about/index.html",
+          "claim": "CDC醫學背景頁說多數口服療程8至12週、治癒後仍可能再感染且目前無C肝疫苗；美國篩檢政策不套用臺灣。",
+          "supporting_passage": "編者摘要：CDC頁面列8–12週常見治療、可再次感染及無疫苗資訊；只採一般醫療背景，不採美國資格、病例或政策。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀美國CDC現行Hepatitis C Basics頁面；只引用臨床常識，明示不作臺灣制度來源。"
+        }
+      ],
+      "statistics_assessed": [
+        "hcv_bc_cumulative_screening_service_users_2025_12"
+      ],
+      "unresolved": [
+        "衛福部篩檢服務量未列合資格人口分母，不得推算個人感染率。",
+        "2026-02第6版FAQ及臺北市頁列114-08-01擴大日期，另有國健署宣導頁曾列114-07-01；本篇不寫政策起日，個人資格按現行院所查核結果確認。",
+        "未取得肝膽、感染或公共衛生專家獨立審閱。"
+      ],
+      "reviewer_limit": "AI官方來源核對不等於肝膽、感染、藥學或公共衛生專業簽證；政策起日宣導頁有差異，本文不以單一日期判定資格。",
+      "retired_sources": [
+        {
+          "id": "ch01_hcv_hpa_qa6",
+          "replacement_ids": [
+            "ch01_hcv_hpa_qa6_ntpc_202602"
+          ],
+          "reason": "原引用為醫師公會網站的國健署問答集副本；改用新北市衛生局正式轉載的國健署第6版頁面與PDF，來源層級及檢查路徑更可追溯，舊物件保留。",
+          "prior_source_sha256": "b4196c7d170d12644ea0f044d2145a882d0633ca6b0d4a87ef3be84f3b149d21",
+          "preserved_in_runtime": true
+        },
+        {
+          "id": "ch01_hcv_ntuh_diagnosis",
+          "replacement_ids": [
+            "ch01_hcv_hpa_qa6_ntpc_202602"
+          ],
+          "reason": "2018年醫院衛教含過時流行病學與舊治療背景；本輪RNA診斷銜接改以2026年國健署第6版問答支持，舊物件保留但不再作現行來源。",
+          "prior_source_sha256": "758384a41f67bd3e3c2db0016a066d83b7660f4e063ba987334ceb8eb7c2e00d",
+          "preserved_in_runtime": true
+        },
+        {
+          "id": "ch01_hcv_ntuh_svr",
+          "replacement_ids": [
+            "ch01_hcv_nhi_daa_coverage_20251201"
+          ],
+          "reason": "2018年地方院區報導含舊治療率及地方樣本；第12週追蹤改依健保署2025-12現行執行計畫，舊物件保留。",
+          "prior_source_sha256": "9183a6a1fb8098a1b8e326ba3e79719051b50b4109f6b927c08a0eab2c0e5744",
+          "preserved_in_runtime": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-047",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-047.md",
+      "title": "胃鏡依症狀、家族史與胃黏膜風險評估，HP公費檢測不是人人胃鏡普篩",
+      "prior_body_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:locales/zh-TW/book/ch01/TW-01-047.md",
+      "prior_review_git_ref": "9d34ccae0ad8c478b9ea2d514ade441c2d33ceae:localization/reviews/TW-01-047.json",
+      "before_sha256": "c9cce286ae31543c6314cd19d72a34a6ff416c6dd5d290727d3f89e1e3bda273",
+      "after_sha256": "bc66eeeb5de9a157ab38ca79dfabd41f06cf0733a6feb2bdf5922d9a06062020",
+      "prior_review_sha256": "64f45fe0df49cc7e6f9cb6cf227d6ed16800df6ad86c2489cd78685530726271",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_gastric_mohw",
+        "ch01_gastric_hp2026",
+        "ch01_gastric_ntuh_endo",
+        "ch01_gastric_ntuh_sedation",
+        "ch01_gastric_ntuh_consent",
+        "ch01_stomach_cancer_registry_2023",
+        "ch01_hp_taipei_eligibility",
+        "ch01_hp_klchb_20261006"
+      ],
+      "previous_source_ids": [
+        "ch01_gastric_mohw",
+        "ch01_gastric_hp2026",
+        "ch01_gastric_ntuh_endo",
+        "ch01_gastric_ntuh_sedation",
+        "ch01_gastric_ntuh_consent"
+      ],
+      "previous_review_claims": [
+        "上消化道症狀、家族史等高風險者由醫師評估胃鏡，非侵入HP篩檢與胃鏡不同。",
+        "2026-01-01起45至74歲終生一次公費HP糞便抗原，陽性回診除菌或進一步評估，不等於胃鏡公費普篩。",
+        "胃鏡可造成咽喉不適，切片後若出血加劇、腹痛或黑便需就醫。",
+        "鎮靜須麻醉評估，確認用藥與禁食、安排陪同，當天不開車、不操作機械。",
+        "上消化道內視鏡可能出血、穿孔及呼吸相關併發症，切片治療與個別風險需說明。"
+      ],
+      "taiwan_context": "臺灣目前中央公費胃部方案是45至74歲終身一次HP糞便抗原檢測，胃鏡仍按症狀、家族史和病史由醫療團隊評估；鎮靜後交通、健保與自費項目依院所核實。",
+      "frequency_assessment": "採用2023全國胃癌癌登新發4,518例、年齡標準化9.8/10萬；不含原位癌、以2000世界標準人口標準化，含GIST。排除GIST為3,551例、7.6/10萬。此全人口統計不能套用到症狀者、HP陽性者或固定胃鏡間隔，沒有個人篩檢淨效益分母。",
+      "changes": "更新公費HP糞便抗原資格及地方舊試辦查核步驟；新增2023年胃癌癌登病例、年齡標準化率與GIST排除值，清楚區分全人口統計和個人風險／胃鏡效益，保留鎮靜、交通與程序風險。",
+      "source_status": "AI直接核對臺灣中央／地方官方頁面、國健署正式轉載問答PDF、健保署現行給付附件及癌登表格；歷史鏡像及不切題／無法讀取來源已退出本文現行引用並保留來源物件。",
+      "source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "2023年全國胃癌新發4,518例、年齡標準化率9.8/10萬；排除GIST為3,551例、7.6/10萬；登記不含原位癌，採2000年世界標準人口。",
+          "supporting_passage": "編者摘要：衛福部官方PDF第1頁胃癌列為4,518（3,551）例及標準化發生率9.8（7.6）/10萬；註腳說明不含原位癌、採2000年世界標準人口且GIST成因不同。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接開啟並核讀衛福部官方癌登PDF第1頁表格與註腳；未重算原始微資料或用標準化率估算個人風險。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-16-80244-1.html",
+          "claim": "國健署說有上消化道症狀或胃癌高風險族群須由醫師評估侵入性胃鏡；非侵入HP檢測與胃鏡不同。",
+          "supporting_passage": "編者摘要：衛福部2024-10-15公告列症狀及一等親、年齡／地區風險評估與侵入式胃鏡區別；其中歷史數據不作2026個人機率。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀衛福部官方HTML正文，確認其公告日期及胃鏡臨床評估段落；不採頁面未附原始母數的舊歸因比例作個人風險。"
+        },
+        {
+          "url": "https://mohw.gov.tw/cp-16-85392-1.html",
+          "claim": "自2026-01-01起45至74歲終身一次公費HP糞便抗原檢測，陽性應攜報告回診；不是胃鏡公費普篩。",
+          "supporting_passage": "編者摘要：衛福部2026-02-16公告列政策日期、對象、檢測方式及陽性回診安排；未將檢測補助誤寫成胃鏡、鎮靜或切片費用。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀衛福部官方公告第2至3段及更新日期，對照其2026年公費篩檢說明。"
+        },
+        {
+          "url": "https://health.gov.taipei/cp.aspx?n=A006B1E45D7C538B&s=15E2B510BCB6A9E8",
+          "claim": "臺北市公告45至74歲終身一次，未曾參與國健署113、114年糞便抗原試辦；攜健保卡到特約院所。",
+          "supporting_passage": "編者摘要：官方頁面列45至74歲、終身一次及未參與113／114糞便抗原試辦，並提示攜帶健保卡；頁面更新2025-10-30、檢視2026-08-17。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀臺北市衛生局官方頁面之資格及注意事項，核對頁面更新／檢視日期；不把地方公告單獨視為全國資格系統。"
+        },
+        {
+          "url": "https://www.klchb.klcg.gov.tw/tw/klchbklal/1683-312893.html",
+          "claim": "基隆市地方公告45至74歲終身一次，另列原住民地區碳13尿素吹氣及113、114年糞便抗原試辦既往參與者排除。",
+          "supporting_passage": "編者摘要：基隆市公告明列兩類舊試辦及年齡、終身一次；此為地方範例，不能代表其他縣市公告及院所查核流程。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀基隆市政府公告正文和日期欄；保留公告所示發布與頁尾更新日期差異，不推斷政策全國生效日。"
+        },
+        {
+          "url": "https://www.ntuh.gov.tw/DIDT/Fpage.action?fid=6631&muid=6138",
+          "claim": "臺大醫院說明胃鏡可能造成喉嚨噁心或異物感，切片後出血增加、腹痛加劇、黑便或發燒須就醫。",
+          "supporting_passage": "編者摘要：臺大醫院內視鏡FAQ列胃鏡喉部不適與切片後警訊。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀臺大醫院官方檢查前常見問題HTML，不把大腸鏡清腸準備套用到胃鏡。"
+        },
+        {
+          "url": "https://www.ntuh.gov.tw/Ane/Fpage.action?fid=9499&muid=",
+          "claim": "臺大醫院麻醉衛教要求鎮靜檢查前評估用藥及禁食、安排陪同，檢查當日不開車或操作機械。",
+          "supporting_passage": "編者摘要：臺大醫院麻醉衛教列鎮靜前評估、返家陪同與當日交通／機械限制。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接閱讀臺大醫院麻醉科官方資訊；不把固定禁食小時或恢復時間套用到所有病人。"
+        },
+        {
+          "url": "https://www.ntuh.gov.tw/OPD/checkDoc/inst126.pdf",
+          "claim": "臺大醫院內視鏡同意書列出胃鏡可能出血、穿孔及呼吸相關併發症，需說明個別風險。",
+          "supporting_passage": "編者摘要：官方上、下消化道內視鏡說明暨同意書列胃鏡／切片的出血、穿孔及鎮靜呼吸風險。（非逐字引文）",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取臺大醫院官方PDF前兩頁之胃鏡同意內容；不採舊小樣本百分比推定所有病人風險。"
+        }
+      ],
+      "statistics_assessed": [
+        "gastric_cancer_cases_2023_taiwan",
+        "gastric_cancer_asr_2023_taiwan",
+        "gastric_cancer_cases_2023_excluding_gist_taiwan",
+        "gastric_cancer_asr_2023_excluding_gist_taiwan",
+        "hpylori_reported_prevalence_2026_mohw"
+      ],
+      "unresolved": [
+        "癌登摘要表提供全人口病例與標準化率，沒有症狀／HP分層的個人風險或胃鏡淨效益分母。",
+        "胃鏡自費與鎮靜風險需依院所和個人共病確認。",
+        "未取得胃腸科、麻醉或公共衛生專家獨立審閱。"
+      ],
+      "reviewer_limit": "AI來源核對不等於胃腸科、麻醉或公共衛生專家審閱；癌登原始微資料未重算，個人檢查淨效益仍需臨床判斷。",
+      "retired_sources": []
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch01_hp_klchb_20261006",
+      "title": "基隆市衛生局：2026年胃幽門螺旋桿菌公費篩檢資格",
+      "url": "https://www.klchb.klcg.gov.tw/tw/klchbklal/1683-312893.html",
+      "published_at": "2026-10-06",
+      "accessed_at": "2026-10-27",
+      "supports": "基隆市公告45至74歲民眾終身一次；列出曾參與原住民地區碳13尿素吹氣或113、114年糞便抗原試辦者不符當地公告資格。此為地方公告，不可推廣成全國系統的所有資格規則。",
+      "retrieval_method": "2026-10-27直接讀取基隆市政府衛生所／衛生局完整公告正文，核對篩檢年齡、終身一次及兩類既往試辦排除；頁面列公告日期2026-10-06，頁尾另標更新日期2026-09-15，未推定全國資格。",
+      "evidence_type": "臺灣地方衛生機關官方公告"
+    },
+    {
+      "id": "ch01_stomach_cancer_registry_2023",
+      "title": "衛福部／國健署：2023年癌症登記胃癌個案與標準化發生率",
+      "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+      "published_at": "2025-12-30",
+      "accessed_at": "2026-10-27",
+      "supports": "2023年胃癌新發4,518例、年齡標準化發生率每10萬人9.8；排除成因不同的GIST為3,551例及每10萬人7.6。癌症登記不含原位癌，標準化採2000年世界標準人口；不代表幽門螺旋桿菌感染率或個人風險。",
+      "retrieval_method": "2026-10-27直接開啟衛福部官方PDF並逐表核讀第1頁胃癌列、註腳及標準化方法；未重算原始癌登微資料。",
+      "evidence_type": "臺灣政府原始癌症登記統計"
+    },
+    {
+      "id": "ch01_hematuria_tsgh_20261023",
+      "title": "三軍總醫院泌尿外科：血尿與急症就醫警訊",
+      "url": "https://wwwv.tsgh.ndmutsgh.edu.tw/unit/10027/13816",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "頁面標示2026-10-23更新；說明無痛、反覆或有血塊的肉眼血尿應儘早評估；高燒、畏寒、劇烈腰痛、嘔吐、排尿困難／尿不出、血塊阻塞、頭暈虛弱或血壓不穩須立即就醫／急診；抗凝血藥使用者不可自行停藥。",
+      "retrieval_method": "2026-10-27直接閱讀三軍總醫院泌尿外科完整官方衛教頁，核對急症症狀、病因範圍、抗凝血用藥及頁面更新時間；未將醫院瀏覽量當疾病發生率。",
+      "evidence_type": "公立醫院官方衛教"
+    },
+    {
+      "id": "ch01_hcv_hpa_qa6_ntpc_202602",
+      "title": "新北市衛生局轉知：國健署B、C肝篩檢問答集第6版（2026年2月）",
+      "url": "https://www.health.ntpc.gov.tw/article/%E6%96%B0%E5%8C%97%E8%A1%9B%E5%81%A5%E5%AD%97%E7%AC%AC1150245034%E8%99%9F%E5%87%BD%E9%99%84%E4%BB%B6%EF%BC%8C%E6%9B%B4%E6%96%B0%E3%80%8C%E6%93%B4%E5%A4%A7%E6%88%90%E4%BA%BA%E9%A0%90%E9%98%B2%E4%BF%9D%E5%81%A5%E6%9C%8D%E5%8B%99_B%E3%80%81C_%E5%9E%8B%E8%82%9D%E7%82%8E%E7%AF%A9%E6%AA%A2%E5%95%8F%E7%AD%94%E9%9B%86%EF%BC%88%E7%AC%AC_6_%E7%89%88%EF%BC%89%E3%80%8D",
+      "published_at": null,
+      "publication_month": "2026-02",
+      "accessed_at": "2026-10-27",
+      "supports": "新北市衛生局官方頁面轉載國健署問答集第6版PDF（修訂日期2026/02）：一般民眾民國75年含以前出生至79歲、原住民2026年起40至79歲終身一次；院所查詢資格；C肝抗體陽性時院所可直接執行HCV RNA並依健保申報，服務對象無須另回診。",
+      "retrieval_method": "2026-10-27直接閱讀新北市衛生局公告正文並開啟其國健署問答集第6版官方轉載PDF，核對PDF首頁修訂日期、資格頁及HCV RNA申報說明頁；未將院所可執行誤寫為每家自動完成。",
+      "evidence_type": "中央政策問答集之地方政府正式轉載"
+    },
+    {
+      "id": "ch01_hcv_nhi_daa_coverage_20251201",
+      "title": "健保署：C型肝炎全口服新藥給付規定與執行計畫（114年12月1日更新）",
+      "url": "https://www.nhi.gov.tw/ch/lp-2519-1.html?pi=1&ps=20",
+      "published_at": "2025-12-01",
+      "accessed_at": "2026-10-27",
+      "supports": "健保署專區列示2025-12-01更新的DAA給付規定與執行計畫；附件依病人病毒、基因型及治療史列不同條件與8、12、16及個別較長療程，並要求療程結束第12週病毒量追蹤。個案給付仍由醫師依現行規則核定。",
+      "retrieval_method": "2026-10-27直接閱讀健保署C肝專區及其2025-12-01更新的給付規定、執行計畫PDF，核對療程依條件不同及療程結束第12週追蹤；未判定任何個案的健保資格或處方。",
+      "evidence_type": "臺灣健保署現行給付規定及執行計畫"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch01_hematuria_ntuh",
+      "replacement_ids": [
+        "ch01_hematuria_tsgh_20261023"
+      ],
+      "reason": "舊臺大頁面為2021年下泌尿道症狀通用衛教，未能支撐本輪新增的完整血尿急診警訊；以2026年更新的三軍總醫院血尿專頁替代，原來源物件與雜湊保留。",
+      "prior_source_sha256": "8c655583e5ec8e1915d3ddef7589eb2d09b6238ee0830b8bbef551d5e9814c92",
+      "preserved_in_runtime": true
+    },
+    {
+      "id": "ch01_uti_vgh2026",
+      "replacement_ids": [
+        "ch01_hematuria_tsgh_20261023"
+      ],
+      "reason": "本輪直接重取臺北榮總連結回傳HTTP 403，無法重核其目前內容；不再作現行引文，改用可直接讀取且較切題的三軍總醫院2026血尿衛教，保留舊來源物件與雜湊。",
+      "prior_source_sha256": "d9320d9bcdaf7aee61ce990bcbec3716936efd1d68cbece3e090160f12f56ad0",
+      "preserved_in_runtime": true
+    },
+    {
+      "id": "ch01_hcv_hpa_qa6",
+      "replacement_ids": [
+        "ch01_hcv_hpa_qa6_ntpc_202602"
+      ],
+      "reason": "原引用為醫師公會網站的國健署問答集副本；改用新北市衛生局正式轉載的國健署第6版頁面與PDF，來源層級及檢查路徑更可追溯，舊物件保留。",
+      "prior_source_sha256": "b4196c7d170d12644ea0f044d2145a882d0633ca6b0d4a87ef3be84f3b149d21",
+      "preserved_in_runtime": true
+    },
+    {
+      "id": "ch01_hcv_ntuh_diagnosis",
+      "replacement_ids": [
+        "ch01_hcv_hpa_qa6_ntpc_202602"
+      ],
+      "reason": "2018年醫院衛教含過時流行病學與舊治療背景；本輪RNA診斷銜接改以2026年國健署第6版問答支持，舊物件保留但不再作現行來源。",
+      "prior_source_sha256": "758384a41f67bd3e3c2db0016a066d83b7660f4e063ba987334ceb8eb7c2e00d",
+      "preserved_in_runtime": true
+    },
+    {
+      "id": "ch01_hcv_ntuh_svr",
+      "replacement_ids": [
+        "ch01_hcv_nhi_daa_coverage_20251201"
+      ],
+      "reason": "2018年地方院區報導含舊治療率及地方樣本；第12週追蹤改依健保署2025-12現行執行計畫，舊物件保留。",
+      "prior_source_sha256": "9183a6a1fb8098a1b8e326ba3e79719051b50b4109f6b927c08a0eab2c0e5744",
+      "preserved_in_runtime": true
+    }
+  ],
+  "statistics": [
+    {
+      "id": "hpylori_reported_prevalence_2026_mohw",
+      "source_id": "ch01_hp_program_2026",
+      "value": 30,
+      "unit": "%（官方新聞稿轉述的盛行率）",
+      "period": "衛福部2026-01-27公告；原始研究期未載",
+      "geography": "公告稱我國；縣市與抽樣範圍未載",
+      "population": "20歲以上成人（公告概述；樣本框未載）",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "未提供陽性數、檢驗人數、抽樣框或權重。",
+      "event_definition": "公告所述胃幽門螺旋桿菌感染盛行率；測量期間及判定定義未附。",
+      "data_type": "官方新聞稿概述，無法重建原始統計",
+      "method": "僅記錄MOHW 2026-01-27公告文字；不推估、不外插至2026個人風險。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不能稱為2026年精確全國盛行率或年度新感染率。",
+        "原始年份、樣本、分子、分母與加權未公布，不可跨來源比較或估算個人感染機率。"
+      ]
+    },
+    {
+      "id": "gastric_cancer_cases_2023_taiwan",
+      "source_id": "ch01_stomach_cancer_registry_2023",
+      "value": 4518,
+      "unit": "新發癌登個案（例）",
+      "period": "2023（民國112年）",
+      "geography": "臺灣全國",
+      "population": "2023年全人口癌症登記之胃癌新發病例；包含GIST，不含原位癌",
+      "numerator": 4518,
+      "denominator": null,
+      "denominator_description": "個案數；摘要表未提供此筆計數的個人暴露分母。",
+      "event_definition": "癌症登記的新發胃癌個案；不含原位癌，含GIST。",
+      "data_type": "全國行政癌症登記個案數",
+      "method": "衛福部官方2023癌症登記摘要表第1頁；未重算原始微資料。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "病例數是年度新發登記數，不是個人機率、HP陽性者發病數或胃鏡篩檢效果。",
+        "癌症登記不含原位癌。"
+      ]
+    },
+    {
+      "id": "gastric_cancer_asr_2023_taiwan",
+      "source_id": "ch01_stomach_cancer_registry_2023",
+      "value": 9.8,
+      "unit": "每10萬人口年齡標準化發生率",
+      "period": "2023（民國112年）",
+      "geography": "臺灣全國",
+      "population": "2023年胃癌新發登記；全人口年齡標準化",
+      "numerator": 4518,
+      "denominator": null,
+      "denominator_description": "摘要表未提供分層原始分母；採2000年世界標準人口年齡標準化，不是以病例數直接除以100,000。",
+      "event_definition": "新發胃癌登記之年齡標準化發生率，不含原位癌、含GIST。",
+      "data_type": "官方癌症登記年齡標準化發生率",
+      "method": "使用2000年世界標準人口標準化；引用官方彙整值，未重新計算。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不可解讀為任何特定年齡、HP感染狀態或有症狀者的個人風險。",
+        "癌症登記不含原位癌；率值為年齡標準化，不是粗發生率。"
+      ]
+    },
+    {
+      "id": "gastric_cancer_cases_2023_excluding_gist_taiwan",
+      "source_id": "ch01_stomach_cancer_registry_2023",
+      "value": 3551,
+      "unit": "新發癌登個案（例），排除GIST",
+      "period": "2023（民國112年）",
+      "geography": "臺灣全國",
+      "population": "2023年胃癌新發登記，不含GIST與原位癌",
+      "numerator": 3551,
+      "denominator": null,
+      "denominator_description": "個案數；摘要表未提供此筆計數的個人暴露分母。",
+      "event_definition": "胃癌新發登記個案中排除胃腸道基質細胞瘤（GIST）；不含原位癌。",
+      "data_type": "全國行政癌症登記個案數",
+      "method": "衛福部官方2023癌症登記摘要表第1頁括號值；未重算原始微資料。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "病例數不是HP陽性者新發癌數或個人罹癌機率。",
+        "排除GIST是因其成因不同；癌症登記不含原位癌。"
+      ]
+    },
+    {
+      "id": "gastric_cancer_asr_2023_excluding_gist_taiwan",
+      "source_id": "ch01_stomach_cancer_registry_2023",
+      "value": 7.6,
+      "unit": "每10萬人口年齡標準化發生率，排除GIST",
+      "period": "2023（民國112年）",
+      "geography": "臺灣全國",
+      "population": "2023年胃癌新發登記，排除GIST後年齡標準化",
+      "numerator": 3551,
+      "denominator": null,
+      "denominator_description": "摘要表未提供分層原始分母；以2000年世界標準人口年齡標準化，不是粗比率。",
+      "event_definition": "排除GIST及原位癌的胃癌新發登記年齡標準化發生率。",
+      "data_type": "官方癌症登記年齡標準化發生率",
+      "method": "官方摘要表引用值，採2000年世界標準人口；未重新計算。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不能套用為HP感染者、特定年齡或有症狀者的個人風險。",
+        "排除GIST因成因不同；登記不含原位癌。"
+      ]
+    },
+    {
+      "id": "hcv_bc_cumulative_screening_service_users_2025_12",
+      "source_id": "ch01_hcv_mohw_202610",
+      "value": 7860000,
+      "reported_value": ">7,860,000",
+      "unit": "人，B、C型肝炎合併篩檢服務量（公告稱逾）",
+      "period": "截至2025-12累計",
+      "geography": "臺灣全國方案公告",
+      "population": "接受成人預防保健B、C肝篩檢之累計服務對象；公告未提供去重及合資格人口分母細節",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "衛福部公告未附合資格人口、篩檢陰性／陽性分子或HCV感染母數。",
+      "event_definition": "累計接受B、C肝篩檢服務人數，不是HCV新感染事件或病例數。",
+      "data_type": "政府方案累計服務量",
+      "method": "依衛福部2026-10-09公告截至2025-12的原文概述，不自行推估。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "B、C肝合併服務量不等於C肝感染人數、發生率或盛行率。",
+        "沒有合資格人口分母，不能估個人感染機率或篩檢覆蓋率。"
+      ]
+    }
+  ],
+  "policy_dates": [
+    {
+      "id": "hpylori_national_screening_program",
+      "published_at": "2026-01-27",
+      "effective_at": "2026-01-01",
+      "status": "衛福部公告現行45至74歲公費糞便抗原檢測；本次核對2026年5月公告之表單更新未改變本文年齡和檢測方法。"
+    },
+    {
+      "id": "adult_hcv_screening_expansion",
+      "published_at": "2026-02",
+      "effective_at": "2025-08-01（第6版FAQ及臺北市頁；另一國健署宣導頁曾列2025-07-01）",
+      "status": "官方宣導頁起日互有一月差異；本文只載現行資格，並要求院所查核資格，不用單一頁面日期判定資格。"
+    }
+  ],
+  "professional_review_pending": [
+    "TW-01-027：泌尿科、腎臟科或急診專業獨立審閱未取得。",
+    "TW-01-023：胃腸科、藥師及公共衛生專業獨立審閱未取得。",
+    "TW-01-045：肝膽、感染及公共衛生專業獨立審閱未取得。",
+    "TW-01-047：胃腸科、麻醉及公共衛生專業獨立審閱未取得。"
+  ],
+  "publication_ready": false,
+  "unresolved": [
+    "臺灣全國肉眼血尿發生率和人口分母未找到；醫院個案不是個人機率。",
+    "官方HP 30%盛行率缺原始調查期、樣本、分子、分母與加權；胃癌癌登不能換算HP感染者個人風險或篩檢效益。",
+    "官方C肝篩檢政策起日宣導頁有114-07-01與114-08-01差異；本文不以該日期判定資格，院所查現行系統。",
+    "衛福部逾786萬為B、C肝累計篩檢服務量而非HCV病例；公告無合資格人口分母。",
+    "癌症登記摘要表未提供症狀或HP分層的胃鏡個人淨效益；本批AI官方來源核對不等於臨床專家審閱或出版核准。"
+  ]
+}
