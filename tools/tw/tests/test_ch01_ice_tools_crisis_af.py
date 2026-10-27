@@ -8,11 +8,12 @@ from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_his
 BASE='69da58f9df6e4f5046d71b9c7b9112efe7bc9f62'
 NEW={f'TW-01-{n:03}' for n in range(41,45)}
 RECHECK={f'TW-13-{n:03}' for n in (21,22,23,27)}
+CURRENT_RECHECK={'TW-01-035','TW-01-039','TW-01-040','TW-01-041'}
 def read(p):return json.loads((ROOT/p).read_text())
 class IceToolsCrisisAFTests(unittest.TestCase):
  def test_formal_sources_hash_and_rendering(self):
   rt=validate_runtime();ii={x['id']:x for x in rt['items']};ss={s['id']:s for s in rt['sources']};mm={e['id']:e for e in read('localization/manifest.json')['entries']}
-  for key in NEW|RECHECK:
+  for key in NEW|RECHECK|CURRENT_RECHECK:
    with self.subTest(key=key):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
@@ -20,7 +21,7 @@ class IceToolsCrisisAFTests(unittest.TestCase):
     self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
  def test_emergency_actions_and_denominator_boundaries(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
-  self.assertIn('不以15公分',b['TW-01-041']);self.assertIn('海外',b['TW-01-041'])
+  self.assertIn('高山天候快速變化',b['TW-01-041']);self.assertIn('事故案件502件、事故人數695人',b['TW-01-041']);self.assertIn('不能換算單次行程風險',b['TW-01-041']);self.assertNotIn('不以15公分',b['TW-01-041']);self.assertNotIn('海外冰湖',b['TW-01-041']);self.assertNotIn('較常需要面對',b['TW-01-041'])
   self.assertIn('配件額定轉速不得低於工具最高轉速',b['TW-01-042']);self.assertIn('護罩',b['TW-01-042']);self.assertIn('切割黏結式砂輪時使用切割護罩',b['TW-01-042']);self.assertNotIn('鋸齒片一律禁止',b['TW-01-042']);self.assertIn('17例人造石矽肺症',b['TW-01-042'])
   self.assertIn('不要承諾保密',b['TW-01-043']);self.assertIn('119',b['TW-01-043']);self.assertIn('資料限制',b['TW-01-043'])
   self.assertIn('32,817',b['TW-01-044']);self.assertIn('169.06',b['TW-01-044']);self.assertIn('112.38',b['TW-01-044']);self.assertIn('2021',b['TW-01-044']);self.assertIn('阿斯匹靈',b['TW-01-044']);self.assertIn('人年',b['TW-01-044'])
@@ -40,7 +41,24 @@ class IceToolsCrisisAFTests(unittest.TestCase):
   for row in old['items']:assert_preserved_or_rechecked(self,row,ii[row['id']])
   for row in old['sources']:self.assertEqual(row,ss[row['id']])
   rr={r['id']:r for r in read('localization/retroactive-review-register-20261019.json')['substantive_rechecks']}
-  for key in RECHECK:
+  for key in RECHECK|CURRENT_RECHECK:
    self.assertEqual(rr[key]['status'],'ai_source_rechecked_professional_pending');validate_recheck_history(ROOT,rr[key],ii[key])
   self.assertFalse(publication_report()['publication_ready'])
+ def test_local_scenario_fit_and_frequency_evidence(self):
+  batch=read('localization/ch01-organ-bone-mountain-safety-recheck-20261027.json')
+  items={x['id']:x for x in batch['items']}
+  organ=items['TW-01-035']
+  self.assertEqual(organ['taiwan_context_assessment']['decision'],'retain_taiwan_prohibited_trade_with_local_action')
+  self.assertEqual(organ['taiwan_context_assessment']['legal_status'],'臺灣法律禁止器官買賣及違法仲介；合法捐贈須依核定醫院程序辦理')
+  self.assertTrue(organ['taiwan_context_assessment']['independent_of_frequency'])
+  self.assertIn('不能只用高低頻率描述',Path(ROOT/'localization/TAIWAN_REUSE_POLICY.md').read_text())
+  self.assertEqual(items['TW-01-039']['taiwan_context_assessment']['decision'],'taiwan_specific_content')
+  self.assertEqual(items['TW-01-040']['taiwan_context_assessment']['decision'],'taiwan_specific_content')
+  self.assertEqual(items['TW-01-041']['taiwan_context_assessment']['decision'],'replace_low_relevance_scenario_with_local_analogue')
+  stats={x['id']:x for x in batch['statistics']}
+  mountain=stats['tw_mountain_rescue_admin_counts_2025']
+  self.assertEqual(mountain['value'],{'incident_cases':502,'incident_people':695})
+  self.assertEqual(mountain['period'],'2025年（民國114年）');self.assertIsNone(mountain['denominator'])
+  self.assertIn('不得換算成個人或單次行程機率',items['TW-01-041']['frequency_assessment'])
+  self.assertNotIn('野外薄冰厚度',validate_runtime()['items'][next(i for i,x in enumerate(validate_runtime()['items']) if x['id']=='TW-01-041')]['body'])
 if __name__=='__main__':unittest.main()

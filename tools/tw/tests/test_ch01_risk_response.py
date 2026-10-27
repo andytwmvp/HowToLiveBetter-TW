@@ -22,7 +22,7 @@ class RiskResponseTests(unittest.TestCase):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('先撥119',b['TW-01-033']);self.assertIn('不催吐',b['TW-01-033']);self.assertIn('不能保證',b['TW-01-033'])
   self.assertLess(b['TW-01-034'].index('119'),b['TW-01-034'].index('136'));self.assertIn('不是墜落者致死率',b['TW-01-034'])
-  self.assertIn('無償',b['TW-01-035']);self.assertIn('2015-07-03',b['TW-01-035']);self.assertIn('2023-01-01',b['TW-01-035']);self.assertNotIn('86%',b['TW-01-035'])
+  self.assertIn('無償',b['TW-01-035']);self.assertIn('2015年7月1日',b['TW-01-035']);self.assertIn('2023年1月1日',b['TW-01-035']);self.assertNotIn('2015-07-03',b['TW-01-035']);self.assertNotIn('86%',b['TW-01-035'])
   self.assertIn('不觸碰',b['TW-01-036']);self.assertIn('0800-088-928',b['TW-01-036']);self.assertIn('不能保證安全',b['TW-01-036'])
   for key in RECHECK:self.assertIn('頻率',b[key])
   self.assertIn('分母',b['TW-13-008']);self.assertIn('90%',b['TW-13-009']);self.assertIn('無法估算',b['TW-13-010']);self.assertIn('不自行扳腳尖',b['TW-13-011'])

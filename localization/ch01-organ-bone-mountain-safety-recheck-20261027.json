@@ -1,0 +1,1053 @@
+{
+  "schema_version": 1,
+  "batch": "TW-01-035／039／040／041：器官捐贈、骨鬆檢查與治療、臺灣高山安全歷史實質再審",
+  "base_main_sha": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e",
+  "reviewed_at": "2026-10-27",
+  "review_due_at": "2027-01-31",
+  "priority_basis": "先處理本輪P0：器官捐贈法規、骨鬆篩檢與治療；並依使用者要求，把臺灣代表性低的野外薄冰情境改為更貼近臺灣高山天候、失溫與搜救的指引。風險排序依傷害嚴重度、讀者可採行措施及制度／來源更新，不代表事件機率排序。",
+  "prior_reviews_preserved_by_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e",
+  "counts_before": {
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 223,
+    "runtime_sources": 855,
+    "source_registry": 936,
+    "json_files_checked": 485,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false,
+    "core_verified_entries": 278,
+    "publication_completed_entries": 274
+  },
+  "counts_after": {
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "substantive_rechecks": 227,
+    "runtime_sources": 871,
+    "source_registry": 952,
+    "json_files_checked": 487,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false,
+    "core_verified_entries": 278,
+    "publication_completed_entries": 278
+  },
+  "new_core_entries": [],
+  "items": [
+    {
+      "id": "TW-01-035",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-035.md",
+      "title": "器官不可買賣；活體腎臟捐贈須自由決定並經核定醫院評估",
+      "prior_body_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:locales/zh-TW/book/ch01/TW-01-035.md",
+      "prior_review_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:localization/reviews/TW-01-035.json",
+      "before_sha256": "c8157edfd50190bed8f5fd788727256024b8526b6626cda8b10e64778a7c690a",
+      "after_sha256": "ffd170c088e4f058e3ddeb8e9484a5d5df91bb16bece7d8c16ed7fb344cfe076",
+      "prior_review_sha256": "11282790591f3311374f5f531943f51820efed81f0eebad67e95bb37ddca4df6",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_organ_law_tw_20261027",
+        "ch01_organ_law_history_20261027",
+        "ch01_mohw_transplant_hospitals_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_organ_law_tw",
+        "ch01_organ_law_history",
+        "ch01_law_effective_day",
+        "ch01_kidney_donor_consent"
+      ],
+      "previous_review_claims": [
+        "第8、9、10條：自由意願、醫學心理社會與倫理評估、核定院所及健康追蹤；第12及16條規定無償和違法交易責任；第25區分施行時點。",
+        "2015-07-01修正公布含第9、12、16條；2021-01-20修正公布第8及25條並自2023-01-01施行，不把整部法律都說成2021新制。",
+        "第13條自公布或發布日施行者起算第三日生效，第14條特定施行日依該日；配合器官條例25條，2015-07-01公布相關修正於2015-07-03生效。",
+        "2024-02-15版本第1頁：自由意願、重大手術之出血感染等風險，可拒絕非必要捐贈，恢復及工作安排需評估；文獻比例未採作台灣個人風險。"
+      ],
+      "taiwan_context": "臺灣法律禁止器官買賣及違法仲介，合法捐贈須依核定醫院及法定評估流程辦理；這項法律定位與事件發生頻率分開判斷，不把境外非法交易研究套成臺灣盛行率。",
+      "taiwan_context_assessment": {
+        "fit": "臺灣法律禁止器官買賣及違法仲介，合法器官捐贈須經核定醫院及法定評估程序。法律定位、發生頻率、傷害程度與求助行動分開審查；頻率資料不足不會將違法行為改列為一般罕見情境。",
+        "decision": "retain_taiwan_prohibited_trade_with_local_action",
+        "legal_status": "臺灣法律禁止器官買賣及違法仲介；合法捐贈須依核定醫院程序辦理",
+        "independent_of_frequency": true
+      },
+      "frequency_assessment": "頻率資料與法律定位分開：本輪未找到具一致案件定義及接觸或暴露分母的臺灣全國非法器官交易／仲介邀約統計；不能算一般人發生機率。合法篩選活體捐贈者不能代替非法交易者母群；資料缺口不改變器官買賣及違法仲介受臺灣法律禁止／處罰的界線。",
+      "changes": "將活體腎臟捐贈年齡、資格、親等、無償、仲介刑責和網路訊息行政罰按現行第8、12、16、18條精確表述；更正2015年7月1日修正同日施行與2021年修正2023年1月1日施行的區別，加入衛福部核定醫院入口與臺灣頻率資料缺口。",
+      "source_status": "本輪逐項讀取記錄中的臺灣官方頁面／PDF並保留抽樣分母、規則更新與專業審閱限制。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020024",
+          "claim": "現行器官移植條例第8至10、12、16、18、25條界定活體捐贈條件、醫療說明、核定醫院、無償、交易刑責、媒體訊息及施行日期。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：現行器官移植條例第8至10、12、16、18、25條界定活體捐贈條件、醫療說明、核定醫院、無償、交易刑責、媒體訊息及施行日期。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取全國法規資料庫現行第8至10、12、16、18、25條；僅做條文摘要，不提供個案法律判斷。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0020024",
+          "claim": "2015-07-01修正公布與2021-01-20修正公布的條文範圍；2021年修正部分自2023-01-01施行，2015年修正依當時公布日施行規定於同日生效。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2015-07-01修正公布與2021-01-20修正公布的條文範圍；2021年修正部分自2023-01-01施行，2015年修正依當時公布日施行規定於同日生效。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取全國法規資料庫沿革與現行第25條；分開記錄公布日、修正範圍及特別施行日。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/fp-88-221-1.html",
+          "claim": "衛福部核定之移植醫院及移植項目查詢入口，頁面更新時間2026-07-14。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：衛福部核定之移植醫院及移植項目查詢入口，頁面更新時間2026-07-14。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取衛福部官方頁面與更新日；頁面提供核定醫院與移植項目查詢，不保證即時服務量能。"
+        }
+      ],
+      "statistics_assessed": [
+        "tw_illicit_organ_trade_frequency_not_estimable"
+      ],
+      "unresolved": [
+        "臺灣全國非法器官交易／仲介邀約頻率與暴露分母未找到。",
+        "移植醫學、社工及法律專業對本篇獨立審閱未取得。"
+      ],
+      "reviewer_limit": "未取得移植醫學、社工及法律專業者對本篇的獨立審閱；AI來源核對不構成個案醫療或法律意見。",
+      "retired_sources": [
+        {
+          "id": "ch01_organ_law_tw",
+          "replacement_ids": [
+            "ch01_organ_law_tw_20261027",
+            "ch01_organ_law_history_20261027",
+            "ch01_mohw_transplant_hospitals_20261027"
+          ],
+          "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+          "prior_source_sha256": "2d1e259788031ff1ba20732cabd9750ed7cc18e07c57a8538e5516f21ebf4fee",
+          "article_id": "TW-01-035",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_organ_law_history",
+          "replacement_ids": [
+            "ch01_organ_law_tw_20261027",
+            "ch01_organ_law_history_20261027",
+            "ch01_mohw_transplant_hospitals_20261027"
+          ],
+          "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+          "prior_source_sha256": "fce95ddcda767c326dadffaa6be85a7dd407668ccb65d42a628cf19233ef50a4",
+          "article_id": "TW-01-035",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_law_effective_day",
+          "replacement_ids": [
+            "ch01_organ_law_tw_20261027",
+            "ch01_organ_law_history_20261027",
+            "ch01_mohw_transplant_hospitals_20261027"
+          ],
+          "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+          "prior_source_sha256": "e0d303d7f252fbb62e99ed54be22b07d5cc3edf0b13c5d1329b789155e28855f",
+          "article_id": "TW-01-035",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_kidney_donor_consent",
+          "replacement_ids": [
+            "ch01_organ_law_tw_20261027",
+            "ch01_organ_law_history_20261027",
+            "ch01_mohw_transplant_hospitals_20261027"
+          ],
+          "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+          "prior_source_sha256": "510a7d2ee1ff6b75bb3bd0096835dd8816ba9e2c4450e2af347545466fe911e1",
+          "article_id": "TW-01-035",
+          "current_source_object_unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-039",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-039.md",
+      "title": "依臺灣骨鬆共識評估DXA，檢查建議與健保給付分開確認",
+      "prior_body_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:locales/zh-TW/book/ch01/TW-01-039.md",
+      "prior_review_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:localization/reviews/TW-01-039.json",
+      "before_sha256": "e058fa43c733d1eb2464fc06b7315ca06c74994f62edd4f02159748b84459ddb",
+      "after_sha256": "eb0a90429afc0332579f2a095066a85882e80a727da6cc8284097054558f5479",
+      "prior_review_sha256": "64ac5431adc9410eda9608f621b19d5fa7a74495e7a874937cf879705ce5c6f9",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_hpa_survey_20261027",
+        "ch01_bone_nhi_dxa_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_bone_ntuh_202609",
+        "ch01_bone_ntuh_referral",
+        "ch01_bone_hpa_survey"
+      ],
+      "previous_review_claims": [
+        "65歲以上女性、70歲以上男性及有危險因子者評估DXA；飲食、平衡肌力、居家防跌與門診分流。",
+        "風險評估與給付規範不同；特定骨鬆藥停藥需銜接，牙科手術需跨科評估，不能自行用藥假期。",
+        "2017至2020年國民營養調查65歲以上至少一處骨鬆14.1%，女17.4%、男10.4%；是盛行比例而非年度骨折發生率。"
+      ],
+      "taiwan_context": "內容以臺灣常見就醫入口、臺灣成人骨鬆共識、健保DXA給付及65歲以上抽樣調查為依據；臨床建議和健保給付條件分開描述。",
+      "taiwan_context_assessment": {
+        "fit": "以臺灣成人骨鬆共識、國健署調查與健保DXA規則為正文依據；海外篩檢門檻不代替臺灣指引。",
+        "decision": "taiwan_specific_content"
+      },
+      "frequency_assessment": "官方摘要提供2017至2020年65歲以上至少一處骨密度達骨鬆標準的盛行比例14.1%（女性17.4%、男性10.4%）；不是年度骨折率或個人風險。原始樣本量、權重與測量部位細節未取得。",
+      "changes": "用2025臺灣成人共識修正男女65歲以上風險評估背景；更新健保署2026-10-18的DXA適用類別、間隔及終生次數，明確區分建議檢查、盛行比例及個人發生率，標示調查原始分母資料限制。",
+      "source_status": "本輪逐項讀取記錄中的臺灣官方頁面／PDF並保留抽樣分母、規則更新與專業審閱限制。",
+      "source_checks": [
+        {
+          "url": "https://edu.pch.org.tw/share/pdfDownload?key=177630674930875&mediaId=22728",
+          "claim": "2025臺灣共識第15頁的骨鬆篩檢風險因子及65歲以上男女評估流程；第36至38頁用藥與療法銜接原則。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2025臺灣共識第15頁的骨鬆篩檢風險因子及65歲以上男女評估流程；第36至38頁用藥與療法銜接原則。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取76頁PDF第15及36至38頁；未將共識內容當作本篇獨立專業簽證。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-5270-70579-1.html",
+          "claim": "2017-2020國民營養調查65歲以上至少一處骨質測量達骨鬆標準14.1%，女性17.4%、男性10.4%；不提供原始樣本細節。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2017-2020國民營養調查65歲以上至少一處骨質測量達骨鬆標準14.1%，女性17.4%、男性10.4%；不提供原始樣本細節。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取衛福部官方摘要；原始調查報告本輪未取得，因此保留分母、權重與量測細節缺口。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-20659-1211d-3255-1.html",
+          "claim": "2026-10-18健保署列DXA特定給付對象、至少2年檢查間隔及終生最多3次。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2026-10-18健保署列DXA特定給付對象、至少2年檢查間隔及終生最多3次。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取健保署2026-10-18新聞稿檢查對象及次數段落；個案給付資格仍以就醫時現行規定為準。"
+        }
+      ],
+      "statistics_assessed": [
+        "tw_osteoporosis_prevalence_65plus_2017_2020"
+      ],
+      "unresolved": [
+        "國健署官方摘要未列原始樣本數、權重及測量部位細節；原始調查報告本輪未取得。",
+        "骨科／骨鬆臨床專業對本篇獨立審閱未取得。"
+      ],
+      "reviewer_limit": "2025共識本身由多個臺灣醫學團體參與編修，但未取得獨立臨床專業者對本篇的獨立審閱。",
+      "retired_sources": [
+        {
+          "id": "ch01_bone_ntuh_202609",
+          "replacement_ids": [
+            "ch01_bone_tos_consensus_2025_20261027",
+            "ch01_bone_hpa_survey_20261027",
+            "ch01_bone_nhi_dxa_20261027"
+          ],
+          "reason": "本輪以2025臺灣成人共識、現行國健署官方調查摘要及健保署2026-10公告重核篩檢與給付；舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "ec9be65d05426d58512ad4fa83d03120976901cfc7aee28266ee027a971196c0",
+          "article_id": "TW-01-039",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_bone_ntuh_referral",
+          "replacement_ids": [
+            "ch01_bone_tos_consensus_2025_20261027",
+            "ch01_bone_hpa_survey_20261027",
+            "ch01_bone_nhi_dxa_20261027"
+          ],
+          "reason": "本輪以2025臺灣成人共識、現行國健署官方調查摘要及健保署2026-10公告重核篩檢與給付；舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "8d275ae1969b803ff1196862585a2814dcde892a735d8d04dcfc5c56bdef11db",
+          "article_id": "TW-01-039",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_bone_hpa_survey",
+          "replacement_ids": [
+            "ch01_bone_tos_consensus_2025_20261027",
+            "ch01_bone_hpa_survey_20261027",
+            "ch01_bone_nhi_dxa_20261027"
+          ],
+          "reason": "本輪以2025臺灣成人共識、現行國健署官方調查摘要及健保署2026-10公告重核篩檢與給付；舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "822ebd96bba35ca5b3444b5369ec8ce00249f89c285858de960080539c34c1fe",
+          "article_id": "TW-01-039",
+          "current_source_object_unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-040",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-040.md",
+      "title": "骨鬆或低創傷骨折後由醫師評估藥物，補鈣不能取代處方",
+      "prior_body_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:locales/zh-TW/book/ch01/TW-01-040.md",
+      "prior_review_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:localization/reviews/TW-01-040.json",
+      "before_sha256": "aa13072bfc0b870434776e289d3e62a88e48f9cc9bbc1719738239d8770deccf",
+      "after_sha256": "0ae1f99bc7cbcc18acb24276a42d9298131dc1524a34c726130621a4a656c592",
+      "prior_review_sha256": "2948d451c5e45b4934d4998184d1b9bae33e75802d0877db5c223ac34cb01fcf",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_nhi_refracture_release_20261027",
+        "ch01_bone_nhi_latest_rules_20261027",
+        "ch01_bone_nhi_anti_notice_20261027",
+        "ch01_bone_nhi_anti_attachment_20261027",
+        "ch01_bone_nhi_romo_notice_20261027",
+        "ch01_bone_nhi_romo_attachment_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_bone_ntuh_202609",
+        "ch01_bone_ntuh_referral",
+        "ch01_bone_nhi_202607",
+        "ch01_bone_nhi_20260801"
+      ],
+      "previous_review_claims": [
+        "65歲以上女性、70歲以上男性及有危險因子者評估DXA；飲食、平衡肌力、居家防跌與門診分流。",
+        "風險評估與給付規範不同；特定骨鬆藥停藥需銜接，牙科手術需跨科評估，不能自行用藥假期。",
+        "2026-07-15公告健保審字第1150055156號修訂5.6.1，附件明定2026-08-01生效。",
+        "2026-08-01生效之修訂後欄：給付依DXA、骨折、高風險及藥品條件判定，非凡骨鬆即可領所有藥。"
+      ],
+      "taiwan_context": "臺灣患者可從健保骨鬆門診、骨科、家醫或骨折聯合照護取得處置；健保藥物條件依藥品、DXA、骨折史與個別病況而異，不能把補鈣當處方替代。",
+      "taiwan_context_assessment": {
+        "fit": "以臺灣骨折照護、2026年健保藥品給付與本地共識描述治療決策；不把外國藥價或適用資格套入。",
+        "decision": "taiwan_specific_content"
+      },
+      "frequency_assessment": "健保署2026-10-18宣導轉述再次骨折率50%，但來源段落未交代研究期間、母群、事件定義與分母；標記為不可個人化的二手統計，未用作個人預測。臺灣個別藥物不良反應率本輪未取得合適分母。",
+      "changes": "依2025臺灣共識補足風險導向治療及停止後銜接提醒；更新健保署2026-10-22版本並核對5.6.1、5.6.3於2026-08-01生效的附件；將再次骨折50%說法標為無分母的官方二手摘要，避免當個人風險。",
+      "source_status": "本輪逐項讀取記錄中的臺灣官方頁面／PDF並保留抽樣分母、規則更新與專業審閱限制。",
+      "source_checks": [
+        {
+          "url": "https://edu.pch.org.tw/share/pdfDownload?key=177630674930875&mediaId=22728",
+          "claim": "2025臺灣共識第15頁的骨鬆篩檢風險因子及65歲以上男女評估流程；第36至38頁用藥與療法銜接原則。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2025臺灣共識第15頁的骨鬆篩檢風險因子及65歲以上男女評估流程；第36至38頁用藥與療法銜接原則。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取76頁PDF第15及36至38頁；未將共識內容當作本篇獨立專業簽證。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-20659-1211d-3255-1.html",
+          "claim": "健保署轉述學會再次骨折率可達50%，未提供期間、病例定義或分母，不能推算個人風險。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：健保署轉述學會再次骨折率可達50%，未提供期間、病例定義或分母，不能推算個人風險。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取健保署2026-10-18新聞稿；未追得原始研究及分母，故不把50%轉為個人機率。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-13108-67ddf-2508-1.html",
+          "claim": "健保署最新版藥品給付規定總表更新日期為2026-10-22，供識別現行規則版本。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：健保署最新版藥品給付規定總表更新日期為2026-10-22，供識別現行規則版本。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取官方索引頁及附件更新日；以此確定查閱版本日期，詳細5.6條款另讀專項修訂附件。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-20268-ebde6-3258-1.html",
+          "claim": "2026-07-15健保署公告修訂5.6.1抗骨質再吸收劑給付規定。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2026-07-15健保署公告修訂5.6.1抗骨質再吸收劑給付規定。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取公告主旨、文號、日期和附件連結；不混淆公告日與生效日。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/dl-100477-6c03207371494c4ab4e1dfe13ed38265-1.pdf",
+          "claim": "5.6.1附件列明自2026-08-01生效及依藥品、DXA、骨折與病歷條件給付。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：5.6.1附件列明自2026-08-01生效及依藥品、DXA、骨折與病歷條件給付。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取PDF兩頁修訂後欄與施行日；下載顯示標題與PDF內容不一致，依PDF實際條文判讀。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-20270-cdbd9-3258-1.html",
+          "claim": "2026-07-15健保署公告修訂romosozumab（5.6.3）給付規定。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2026-07-15健保署公告修訂romosozumab（5.6.3）給付規定。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取公告主旨、文號、日期及附件連結；不混淆公告日與生效日。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/dl-100507-4c553f9b0bcb41a585eeed4fec06b534-1.pdf",
+          "claim": "5.6.3附件列明自2026-08-01生效，限停經後女性並須符合特定DXA、骨折與治療條件。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：5.6.3附件列明自2026-08-01生效，限停經後女性並須符合特定DXA、骨折與治療條件。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取PDF修訂後條文及生效日；下載標題與PDF內容不一致，依PDF實際條文判讀。"
+        }
+      ],
+      "statistics_assessed": [
+        "tw_refracture_rate_underdescribed_nhi_release_2026"
+      ],
+      "unresolved": [
+        "健保署宣導所引再次骨折50%未附研究期間、病例定義與分母；本篇不作個人風險。",
+        "骨科／骨鬆、藥師及牙科專業對本篇獨立審閱未取得。"
+      ],
+      "reviewer_limit": "未取得骨科／骨鬆、藥師及牙科專業者對本篇的獨立審閱；健保條件仍應以就醫時官方現行版本為準。",
+      "retired_sources": [
+        {
+          "id": "ch01_bone_ntuh_202609",
+          "replacement_ids": [
+            "ch01_bone_tos_consensus_2025_20261027",
+            "ch01_bone_nhi_refracture_release_20261027",
+            "ch01_bone_nhi_latest_rules_20261027",
+            "ch01_bone_nhi_anti_notice_20261027",
+            "ch01_bone_nhi_anti_attachment_20261027",
+            "ch01_bone_nhi_romo_notice_20261027",
+            "ch01_bone_nhi_romo_attachment_20261027"
+          ],
+          "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "ec9be65d05426d58512ad4fa83d03120976901cfc7aee28266ee027a971196c0",
+          "article_id": "TW-01-040",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_bone_ntuh_referral",
+          "replacement_ids": [
+            "ch01_bone_tos_consensus_2025_20261027",
+            "ch01_bone_nhi_refracture_release_20261027",
+            "ch01_bone_nhi_latest_rules_20261027",
+            "ch01_bone_nhi_anti_notice_20261027",
+            "ch01_bone_nhi_anti_attachment_20261027",
+            "ch01_bone_nhi_romo_notice_20261027",
+            "ch01_bone_nhi_romo_attachment_20261027"
+          ],
+          "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "8d275ae1969b803ff1196862585a2814dcde892a735d8d04dcfc5c56bdef11db",
+          "article_id": "TW-01-040",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_bone_nhi_202607",
+          "replacement_ids": [
+            "ch01_bone_tos_consensus_2025_20261027",
+            "ch01_bone_nhi_refracture_release_20261027",
+            "ch01_bone_nhi_latest_rules_20261027",
+            "ch01_bone_nhi_anti_notice_20261027",
+            "ch01_bone_nhi_anti_attachment_20261027",
+            "ch01_bone_nhi_romo_notice_20261027",
+            "ch01_bone_nhi_romo_attachment_20261027"
+          ],
+          "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "d3e7ebe6766e39c104bd7d227036efa64c68ba59282dda6d2dc3610dc143dc78",
+          "article_id": "TW-01-040",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_bone_nhi_20260801",
+          "replacement_ids": [
+            "ch01_bone_tos_consensus_2025_20261027",
+            "ch01_bone_nhi_refracture_release_20261027",
+            "ch01_bone_nhi_latest_rules_20261027",
+            "ch01_bone_nhi_anti_notice_20261027",
+            "ch01_bone_nhi_anti_attachment_20261027",
+            "ch01_bone_nhi_romo_notice_20261027",
+            "ch01_bone_nhi_romo_attachment_20261027"
+          ],
+          "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "1baecea35e6ba11b18802ee70c0521675c8fa170f09dd69709179572fb741059",
+          "article_id": "TW-01-040",
+          "current_source_object_unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-041",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-041.md",
+      "title": "臺灣高山天候驟變或隊友失聯時，先保暖定位並及早求援",
+      "prior_body_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:locales/zh-TW/book/ch01/TW-01-041.md",
+      "prior_review_git_ref": "aebcc50e73df8bef92bfb8f884dde9e94b4e972e:localization/reviews/TW-01-041.json",
+      "before_sha256": "b99262cb87d1695fd8c6b772412f24d045662f5538912a876f55bc57c1bc0614",
+      "after_sha256": "c95e055b1b6289ccbbe6da92e14b62e1da6f9ffa75263f67d839f3e5b6b27d09",
+      "prior_review_sha256": "ac1eace907b90a6dc505be884cbaa41c8f1d5fa3b597cc42a38164836fc3e449",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_mountain_taiwan_nps_guide_20261027",
+        "ch01_mountain_spnp_autumn_20261027",
+        "ch01_mountain_nfa_rescue_20261027",
+        "ch01_mountain_nfa_stats_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_ice_spnp_115",
+        "ch01_ice_ontario"
+      ],
+      "previous_review_claims": [
+        "115年雪季期間為2026年1月1日至3月31日，雪地行程要求裝備與領隊能力查核。",
+        "冰況受水流、積雪及天候影響；應查當地管理與冰況，不把單一厚度當通行保證。"
+      ],
+      "taiwan_context": "臺灣登山行程可能遇天候急變、低溫強風、降雨濃霧、高山症、結冰步道、迷途與隊友失聯。將不具代表性的國外冰湖厚度指引改成國家公園公告、撤退、定位與119／112求援。",
+      "taiwan_context_assessment": {
+        "fit": "移除對一般臺灣讀者代表性低的海外野外薄冰厚度／冰湖遊憩情境，改為臺灣高山天候、失溫、迷途、撤退及搜救；仍說明雪季結冰只適用具相應訓練的路線。",
+        "decision": "replace_low_relevance_scenario_with_local_analogue"
+      },
+      "frequency_assessment": "消防署2025年統計列山域事故案件502件、事故人數695人，屬行政案件數與涉事故人數。新聞稿未提供登山人次、獨立登山者或暴露時間分母，亦未列完整事故納入定義；不得換算成個人或單次行程機率，也不能推估冰面事故率。",
+      "changes": "依使用者指示將臺灣一般讀者代表性低的野外薄冰厚度／海外冰湖活動改為本地高山天候驟變、低溫失溫、迷途定位、撤退及119／112求援；加入消防署2025年502件、695人的行政統計並說明事件定義及登山暴露分母不足，避免把案件數當個人風險。",
+      "source_status": "本輪逐項讀取記錄中的臺灣官方頁面／PDF並保留抽樣分母、規則更新與專業審閱限制。",
+      "source_checks": [
+        {
+          "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18663.html",
+          "claim": "臺灣冬季高山步道可能積雪結冰；須依路線與園區規定具備相應經驗、訓練與裝備。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：臺灣冬季高山步道可能積雪結冰；須依路線與園區規定具備相應經驗、訓練與裝備。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取國家公園署主題網冬季登山指引；只採用一般高山安全原則，不把單一園區規定套用全臺。"
+        },
+        {
+          "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3856",
+          "claim": "2026秋季雪霸公告要求查看最新天氣及園區公告，天候轉差停止前進或撤退，注意低溫及失溫警訊。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：2026秋季雪霸公告要求查看最新天氣及園區公告，天候轉差停止前進或撤退，注意低溫及失溫警訊。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取雪霸國家公園2026年秋季安全公告；要求出發前查當日公告，不把當季文章當預報。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?act=article&article_id=8991&code=print&ids=597",
+          "claim": "山域事故撥119或112並提供座標，迷途時避免盲目亂闖。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：山域事故撥119或112並提供座標，迷途時避免盲目亂闖。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取消防署山域事故求援頁；不替代119／112接線及現場搜救指示。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/pro/index.php?article_id=21278&code=list&flag=detail&ids=1470",
+          "claim": "消防署2025年統計列山域事故案件502件、事故人數695人；不具登山暴露分母，不能換算個人風險。",
+          "supporting_passage": "直接閱讀可見段落後的獨立語意摘要，非逐字引文：消防署2025年統計列山域事故案件502件、事故人數695人；不具登山暴露分母，不能換算個人風險。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取消防署2025年山域事故統計清單及分析頁，並核對2026-05-28官方新聞稿列出的502件與695人；完整事件收錄定義與登山暴露分母未取得，不推算個人率。"
+        }
+      ],
+      "statistics_assessed": [
+        "tw_mountain_rescue_admin_counts_2025",
+        "tw_mountain_personal_incident_rate_not_estimable"
+      ],
+      "unresolved": [
+        "消防署新聞稿未列2025年山域事故的完整納入／去重定義，也無登山人次、獨立登山者或暴露時間分母；不能估個人或單次行程發生率。",
+        "未找到同定義的臺灣冰面事故率；不以山域案件數代替。",
+        "山域搜救、急診／高山醫學及戶外安全專業對本篇獨立審閱未取得。"
+      ],
+      "reviewer_limit": "未取得山域搜救、急診／高山醫學及戶外安全專業者對本篇的獨立審閱；本指引不取代現場搜救及醫療處置。",
+      "retired_sources": [
+        {
+          "id": "ch01_ice_spnp_115",
+          "replacement_ids": [
+            "ch01_mountain_taiwan_nps_guide_20261027",
+            "ch01_mountain_spnp_autumn_20261027",
+            "ch01_mountain_nfa_rescue_20261027",
+            "ch01_mountain_nfa_stats_20261027"
+          ],
+          "reason": "臺灣一般讀者較需要本地高山步道、天候及搜救資訊；以國家公園與消防署指引取代外國薄冰厚度及冰湖遊憩來源，舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "8c2ae5424593eaa9057b4999f03f2c59f5542cb4ef0bffefd4ef278c5fde092c",
+          "article_id": "TW-01-041",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_ice_ontario",
+          "replacement_ids": [
+            "ch01_mountain_taiwan_nps_guide_20261027",
+            "ch01_mountain_spnp_autumn_20261027",
+            "ch01_mountain_nfa_rescue_20261027",
+            "ch01_mountain_nfa_stats_20261027"
+          ],
+          "reason": "臺灣一般讀者較需要本地高山步道、天候及搜救資訊；以國家公園與消防署指引取代外國薄冰厚度及冰湖遊憩來源，舊來源物件保留供歷史追溯。",
+          "prior_source_sha256": "374d7295c9692627b18b21e6baf1c9656d30ceecb4d5ca789893310aeecdd769",
+          "article_id": "TW-01-041",
+          "current_source_object_unchanged": true
+        }
+      ]
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch01_organ_law_tw_20261027",
+      "title": "全國法規資料庫：人體器官移植條例（2026-10-27核對）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020024",
+      "published_at": "2021-01-20",
+      "accessed_at": "2026-10-27",
+      "supports": "第8條活體捐贈年齡、自由同意、最近親屬證明、心理社會醫學評估、倫理審查及親屬關係；第9、10、12、16、18、25條說明義務、核定醫院、無償、刑責、媒體訊息及施行日期。",
+      "retrieval_method": "2026-10-27以網頁直接讀取現行第8至10、12、16、18、25條；法規資料庫標示整編資料截止日2026-10-16。",
+      "evidence_type": "臺灣中央政府現行法規"
+    },
+    {
+      "id": "ch01_organ_law_history_20261027",
+      "title": "全國法規資料庫：人體器官移植條例沿革（2026-10-27核對）",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0020024",
+      "published_at": "2021-01-20",
+      "accessed_at": "2026-10-27",
+      "supports": "沿革列2015-07-01修正公布第6、8、9至10-1、12、14、16至18-1條，以及2021-01-20修正公布第8、25條並自2023-01-01施行；配合第25條公布日施行規定判讀2015年修正日期。",
+      "retrieval_method": "2026-10-27直接讀取全國法規資料庫沿革及現行第25條；沒有把沿革最近修正日誤當每一條文生效日。",
+      "evidence_type": "臺灣中央政府法規沿革"
+    },
+    {
+      "id": "ch01_mohw_transplant_hospitals_20261027",
+      "title": "衛福部：核定移植醫院與移植項目查詢入口",
+      "url": "https://www.mohw.gov.tw/fp-88-221-1.html",
+      "published_at": "2026-07-14",
+      "accessed_at": "2026-10-27",
+      "supports": "衛福部頁面提供核定移植醫院、移植項目及器官捐贈移植服務查詢入口；頁面更新時間2026-07-14。",
+      "retrieval_method": "2026-10-27直接讀取衛福部官方頁面及更新日期；僅作服務導航，不視為醫院即時床位或個案醫療資格保證。",
+      "evidence_type": "臺灣中央政府服務入口"
+    },
+    {
+      "id": "ch01_bone_tos_consensus_2025_20261027",
+      "title": "2025臺灣成人骨質疏鬆症防治共識及指引",
+      "url": "https://edu.pch.org.tw/share/pdfDownload?key=177630674930875&mediaId=22728",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "第15頁建議評估臨床風險因子，女性及男性65歲以上依臺灣分別流程評估；第36至38頁說明風險導向治療、部分療法停止後骨量流失與接續治療。",
+      "retrieval_method": "2026-10-27讀取76頁PDF第15及36至38頁；只引用本篇對應段落，不把共識文件視為本篇獨立專家審閱。",
+      "evidence_type": "臺灣多學會臨床共識PDF"
+    },
+    {
+      "id": "ch01_bone_hpa_survey_20261027",
+      "title": "衛福部／國健署：2017至2020年骨鬆調查摘要",
+      "url": "https://www.mohw.gov.tw/cp-5270-70579-1.html",
+      "published_at": "2022-07-18",
+      "accessed_at": "2026-10-27",
+      "supports": "官方摘要報告65歲以上受調查民眾至少一處骨密度測量達骨鬆標準比例14.1%，女性17.4%、男性10.4%；此為盛行比例。",
+      "retrieval_method": "2026-10-27直接讀取衛福部轉載的國健署調查摘要；原始調查報告本輪未取得，故樣本數、權重及測量部位細節不確認、不反推病例數。",
+      "evidence_type": "臺灣中央政府調查摘要"
+    },
+    {
+      "id": "ch01_bone_nhi_dxa_20261027",
+      "title": "健保署：骨質密度檢查（DXA）給付說明",
+      "url": "https://www.nhi.gov.tw/ch/cp-20659-1211d-3255-1.html",
+      "published_at": "2026-10-18",
+      "accessed_at": "2026-10-27",
+      "supports": "2026-10-18公告列50歲以上、停經後女性、非創傷性骨折、內分泌失調及特定乳癌／攝護腺癌治療等DXA給付對象，檢查間隔至少2年、終生最多3次；個案仍須核對規定。",
+      "retrieval_method": "2026-10-27直接讀取健保署2026-10-18新聞稿相關段落；不把行政摘要寫成每人自動符合給付。",
+      "evidence_type": "臺灣中央政府健保政策公告"
+    },
+    {
+      "id": "ch01_bone_nhi_refracture_release_20261027",
+      "title": "健保署：骨鬆宣導新聞稿中的再次骨折率說法",
+      "url": "https://www.nhi.gov.tw/ch/cp-20659-1211d-3255-1.html",
+      "published_at": "2026-10-18",
+      "accessed_at": "2026-10-27",
+      "supports": "健保署新聞稿轉述學會稱再次骨折率可達50%，但該段未交代研究期間、研究對象、病例定義及分母；本篇僅記錄該說法及其不可換算個人風險的限制。",
+      "retrieval_method": "2026-10-27直接讀取健保署新聞稿；沒有追查到該段對應的原始研究，未將50%當作患者個人預測。",
+      "evidence_type": "臺灣中央政府二手統計宣導"
+    },
+    {
+      "id": "ch01_bone_nhi_latest_rules_20261027",
+      "title": "健保署：最新版藥品給付規定（更新至2026-10-22）",
+      "url": "https://www.nhi.gov.tw/ch/cp-13108-67ddf-2508-1.html",
+      "published_at": "2026-10-22",
+      "accessed_at": "2026-10-27",
+      "supports": "官方頁面列最新版藥品給付規定總表更新日期為2026-10-22；作為現行規則版本索引，骨鬆特定條件另核對5.6.1及5.6.3個別公告附件。",
+      "retrieval_method": "2026-10-27讀取健保署官方頁面及附件清單；以頁面更新日識別版本，不聲稱本輪逐字審閱428頁全文。",
+      "evidence_type": "臺灣中央政府健保給付規則索引"
+    },
+    {
+      "id": "ch01_bone_nhi_anti_notice_20261027",
+      "title": "健保署：5.6.1抗骨質再吸收劑給付修訂公告",
+      "url": "https://www.nhi.gov.tw/ch/cp-20268-ebde6-3258-1.html",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-10-27",
+      "supports": "健保署2026-07-15公告修訂5.6.1抗骨質再吸收劑給付規定；公告本身連結修訂對照表。",
+      "retrieval_method": "2026-10-27直接讀取健保署公告主旨、文號、發文日期及附件連結；不把公告日混同附件施行日。",
+      "evidence_type": "臺灣中央政府健保法規公告"
+    },
+    {
+      "id": "ch01_bone_nhi_anti_attachment_20261027",
+      "title": "健保署：5.6.1抗骨質再吸收劑修訂對照附件",
+      "url": "https://www.nhi.gov.tw/ch/dl-100477-6c03207371494c4ab4e1dfe13ed38265-1.pdf",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-10-27",
+      "supports": "附件明列5.6.1修訂內容自2026-08-01生效，並列特定藥品、骨折、DXA及高風險條件；不是所有骨鬆患者均符合。",
+      "retrieval_method": "2026-10-27讀取兩頁PDF修訂後條文及標示生效日；PDF下載顯示標題文字與內容不一致，以實際頁面條文為準。",
+      "evidence_type": "臺灣中央政府健保法規修訂附件"
+    },
+    {
+      "id": "ch01_bone_nhi_romo_notice_20261027",
+      "title": "健保署：romosozumab給付修訂公告",
+      "url": "https://www.nhi.gov.tw/ch/cp-20270-cdbd9-3258-1.html",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-10-27",
+      "supports": "健保署2026-07-15公告修訂5.6.3含romosozumab成分藥品給付規定，並提供修訂對照附件。",
+      "retrieval_method": "2026-10-27直接讀取健保署公告主旨、文號、發文日期及附件連結；區分公告與生效日期。",
+      "evidence_type": "臺灣中央政府健保法規公告"
+    },
+    {
+      "id": "ch01_bone_nhi_romo_attachment_20261027",
+      "title": "健保署：romosozumab修訂對照附件",
+      "url": "https://www.nhi.gov.tw/ch/dl-100507-4c553f9b0bcb41a585eeed4fec06b534-1.pdf",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-10-27",
+      "supports": "附件明列5.6.3自2026-08-01生效，限停經後骨質疏鬆婦女並有指定DXA、骨折及既往治療條件；不等於所有骨鬆或所有高風險者均符合。",
+      "retrieval_method": "2026-10-27讀取PDF修訂後條文；檔案下載標題與PDF內文不一致，以實際PDF條文為準。",
+      "evidence_type": "臺灣中央政府健保法規修訂附件"
+    },
+    {
+      "id": "ch01_mountain_taiwan_nps_guide_20261027",
+      "title": "臺灣國家公園主題網：冬季登山安全攻略",
+      "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18663.html",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "官方冬季登山指引指出高山步道可有積雪與結冰，應有雪地經驗或訓練，熟悉裝備並確認園區規定；裝備不熟不能視為充分安全條件。",
+      "retrieval_method": "2026-10-27讀取國家公園署主題網官方冬季登山頁面及雪季風險段落；未將單一園區管理條件套用至全臺所有路線。",
+      "evidence_type": "臺灣國家公園署登山安全指引"
+    },
+    {
+      "id": "ch01_mountain_spnp_autumn_20261027",
+      "title": "雪霸國家公園：2026年秋季登山安全提醒",
+      "url": "https://www.spnp.gov.tw/ch/specialreport/latest-news/3856",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "官方提醒出發前查中央氣象署與園區最新公告，天候變差應停止前進或撤退，並注意低溫、濕衣、強風及持續發抖、動作變慢、反應異常等警訊。",
+      "retrieval_method": "2026-10-27直接讀取雪霸國家公園官方頁面；此為當季提醒，文中要求讀者出發前重新查公告而非沿用該頁作為即時預報。",
+      "evidence_type": "臺灣國家公園管理處當季公告"
+    },
+    {
+      "id": "ch01_mountain_nfa_rescue_20261027",
+      "title": "消防署：登山防溺及山域事故求援",
+      "url": "https://www.nfa.gov.tw/cht/index.php?act=article&article_id=8991&code=print&ids=597",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "消防署山域事故指引提供迷途通報與座標、事故時撥119或112求援及避免盲目亂闖等處置方向。",
+      "retrieval_method": "2026-10-27直接讀取消防署官方登山防溺與山域事故頁面；只摘要其一般求援流程，不替代現場搜救人員指示。",
+      "evidence_type": "臺灣中央政府山域救援指引"
+    },
+    {
+      "id": "ch01_mountain_nfa_stats_20261027",
+      "title": "消防署：2025年山域事故案件分析",
+      "url": "https://www.nfa.gov.tw/pro/index.php?article_id=21278&code=list&flag=detail&ids=1470",
+      "published_at": "2026-05-28",
+      "accessed_at": "2026-10-27",
+      "supports": "消防署2025年山域事故行政統計列事故案件502件、事故人數695人；未提供登山人次、獨立登山者或暴露時間分母，不能推作個人發生率。",
+      "retrieval_method": "2026-10-27直接讀取消防署2026-05-28新聞稿；明載2015至2025年間案件變化及2025事故人數。未取得統計附件中完整分類定義及登山暴露分母，故按行政案件數呈現、不計算個人風險。",
+      "evidence_type": "臺灣中央政府山域事故行政統計"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch01_organ_law_tw",
+      "replacement_ids": [
+        "ch01_organ_law_tw_20261027",
+        "ch01_organ_law_history_20261027",
+        "ch01_mohw_transplant_hospitals_20261027"
+      ],
+      "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+      "prior_source_sha256": "2d1e259788031ff1ba20732cabd9750ed7cc18e07c57a8538e5516f21ebf4fee",
+      "article_ids": [
+        "TW-01-035"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_organ_law_history",
+      "replacement_ids": [
+        "ch01_organ_law_tw_20261027",
+        "ch01_organ_law_history_20261027",
+        "ch01_mohw_transplant_hospitals_20261027"
+      ],
+      "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+      "prior_source_sha256": "fce95ddcda767c326dadffaa6be85a7dd407668ccb65d42a628cf19233ef50a4",
+      "article_ids": [
+        "TW-01-035"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_law_effective_day",
+      "replacement_ids": [
+        "ch01_organ_law_tw_20261027",
+        "ch01_organ_law_history_20261027",
+        "ch01_mohw_transplant_hospitals_20261027"
+      ],
+      "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+      "prior_source_sha256": "e0d303d7f252fbb62e99ed54be22b07d5cc3edf0b13c5d1329b789155e28855f",
+      "article_ids": [
+        "TW-01-035"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_kidney_donor_consent",
+      "replacement_ids": [
+        "ch01_organ_law_tw_20261027",
+        "ch01_organ_law_history_20261027",
+        "ch01_mohw_transplant_hospitals_20261027"
+      ],
+      "reason": "本輪重新核對全國法規資料庫現行條文與沿革並增加衛福部核定移植醫院入口；舊來源物件及其前次引用維持不變。",
+      "prior_source_sha256": "510a7d2ee1ff6b75bb3bd0096835dd8816ba9e2c4450e2af347545466fe911e1",
+      "article_ids": [
+        "TW-01-035"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bone_ntuh_202609",
+      "replacement_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_hpa_survey_20261027",
+        "ch01_bone_nhi_dxa_20261027"
+      ],
+      "reason": "本輪以2025臺灣成人共識、現行國健署官方調查摘要及健保署2026-10公告重核篩檢與給付；舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "ec9be65d05426d58512ad4fa83d03120976901cfc7aee28266ee027a971196c0",
+      "article_ids": [
+        "TW-01-039"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bone_ntuh_referral",
+      "replacement_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_hpa_survey_20261027",
+        "ch01_bone_nhi_dxa_20261027"
+      ],
+      "reason": "本輪以2025臺灣成人共識、現行國健署官方調查摘要及健保署2026-10公告重核篩檢與給付；舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "8d275ae1969b803ff1196862585a2814dcde892a735d8d04dcfc5c56bdef11db",
+      "article_ids": [
+        "TW-01-039"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bone_hpa_survey",
+      "replacement_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_hpa_survey_20261027",
+        "ch01_bone_nhi_dxa_20261027"
+      ],
+      "reason": "本輪以2025臺灣成人共識、現行國健署官方調查摘要及健保署2026-10公告重核篩檢與給付；舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "822ebd96bba35ca5b3444b5369ec8ce00249f89c285858de960080539c34c1fe",
+      "article_ids": [
+        "TW-01-039"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bone_ntuh_202609",
+      "replacement_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_nhi_refracture_release_20261027",
+        "ch01_bone_nhi_latest_rules_20261027",
+        "ch01_bone_nhi_anti_notice_20261027",
+        "ch01_bone_nhi_anti_attachment_20261027",
+        "ch01_bone_nhi_romo_notice_20261027",
+        "ch01_bone_nhi_romo_attachment_20261027"
+      ],
+      "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "ec9be65d05426d58512ad4fa83d03120976901cfc7aee28266ee027a971196c0",
+      "article_ids": [
+        "TW-01-040"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bone_ntuh_referral",
+      "replacement_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_nhi_refracture_release_20261027",
+        "ch01_bone_nhi_latest_rules_20261027",
+        "ch01_bone_nhi_anti_notice_20261027",
+        "ch01_bone_nhi_anti_attachment_20261027",
+        "ch01_bone_nhi_romo_notice_20261027",
+        "ch01_bone_nhi_romo_attachment_20261027"
+      ],
+      "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "8d275ae1969b803ff1196862585a2814dcde892a735d8d04dcfc5c56bdef11db",
+      "article_ids": [
+        "TW-01-040"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bone_nhi_202607",
+      "replacement_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_nhi_refracture_release_20261027",
+        "ch01_bone_nhi_latest_rules_20261027",
+        "ch01_bone_nhi_anti_notice_20261027",
+        "ch01_bone_nhi_anti_attachment_20261027",
+        "ch01_bone_nhi_romo_notice_20261027",
+        "ch01_bone_nhi_romo_attachment_20261027"
+      ],
+      "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "d3e7ebe6766e39c104bd7d227036efa64c68ba59282dda6d2dc3610dc143dc78",
+      "article_ids": [
+        "TW-01-040"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_bone_nhi_20260801",
+      "replacement_ids": [
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_nhi_refracture_release_20261027",
+        "ch01_bone_nhi_latest_rules_20261027",
+        "ch01_bone_nhi_anti_notice_20261027",
+        "ch01_bone_nhi_anti_attachment_20261027",
+        "ch01_bone_nhi_romo_notice_20261027",
+        "ch01_bone_nhi_romo_attachment_20261027"
+      ],
+      "reason": "本輪以2025臺灣成人共識、健保署2026-10-22給付版本及5.6.1／5.6.3施行附件重核；舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "1baecea35e6ba11b18802ee70c0521675c8fa170f09dd69709179572fb741059",
+      "article_ids": [
+        "TW-01-040"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_ice_spnp_115",
+      "replacement_ids": [
+        "ch01_mountain_taiwan_nps_guide_20261027",
+        "ch01_mountain_spnp_autumn_20261027",
+        "ch01_mountain_nfa_rescue_20261027",
+        "ch01_mountain_nfa_stats_20261027"
+      ],
+      "reason": "臺灣一般讀者較需要本地高山步道、天候及搜救資訊；以國家公園與消防署指引取代外國薄冰厚度及冰湖遊憩來源，舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "8c2ae5424593eaa9057b4999f03f2c59f5542cb4ef0bffefd4ef278c5fde092c",
+      "article_ids": [
+        "TW-01-041"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_ice_ontario",
+      "replacement_ids": [
+        "ch01_mountain_taiwan_nps_guide_20261027",
+        "ch01_mountain_spnp_autumn_20261027",
+        "ch01_mountain_nfa_rescue_20261027",
+        "ch01_mountain_nfa_stats_20261027"
+      ],
+      "reason": "臺灣一般讀者較需要本地高山步道、天候及搜救資訊；以國家公園與消防署指引取代外國薄冰厚度及冰湖遊憩來源，舊來源物件保留供歷史追溯。",
+      "prior_source_sha256": "374d7295c9692627b18b21e6baf1c9656d30ceecb4d5ca789893310aeecdd769",
+      "article_ids": [
+        "TW-01-041"
+      ],
+      "current_source_object_unchanged": true
+    }
+  ],
+  "statistics": [
+    {
+      "id": "tw_osteoporosis_prevalence_65plus_2017_2020",
+      "source_id": "ch01_bone_hpa_survey_20261027",
+      "value": 14.1,
+      "subgroup_values": {
+        "女性": 17.4,
+        "男性": 10.4
+      },
+      "unit": "百分比；65歲以上受調查民眾至少一處骨質測量達骨鬆標準",
+      "period": "2017-2020",
+      "geography": "臺灣全國調查摘要",
+      "population": "65歲以上國民營養健康狀況變遷調查參與者",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "官方摘要未提供本輪可核對的分子、樣本數、權重或測量部位細節；不推算人數。",
+      "event_definition": "至少一處骨密度測量達骨質疏鬆標準；為盛行測量，不是新發骨折。",
+      "data_type": "抽樣調查盛行比例的官方摘要",
+      "method": "原樣引用衛福部／國健署官方摘要值，未重算、未推算個案數。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "非年度骨折發生率、全體成人盛行率或個人骨折機率。",
+        "原始調查與樣本權重細節未取得；不與不同年齡、部位或期間直接比較。"
+      ]
+    },
+    {
+      "id": "tw_refracture_rate_underdescribed_nhi_release_2026",
+      "source_id": "ch01_bone_nhi_refracture_release_20261027",
+      "value": 50,
+      "unit": "健保署新聞稿轉述學會的再次骨折率說法（百分比）",
+      "period": null,
+      "geography": "臺灣宣導資料引用的學會說法；來源研究範圍未明",
+      "population": "新聞稿未在該段提供母群及骨折患者分層",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "未提供研究期間、樣本、分子、分母或納入條件。",
+      "event_definition": "新聞稿使用再次骨折率一詞，該段未定義事件時間窗與病例條件。",
+      "data_type": "官方新聞稿轉述的二手統計主張",
+      "method": "記錄新聞稿原稱百分比，不追補或自行推估原始分母；不作患者預測。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不能直接解讀為每位臺灣患者的再骨折機率。",
+        "缺原始研究方法、研究期間、病例分層與分母，故正文只揭露而不作行動機率。"
+      ]
+    },
+    {
+      "id": "tw_mountain_rescue_admin_counts_2025",
+      "source_id": "ch01_mountain_nfa_stats_20261027",
+      "value": {
+        "incident_cases": 502,
+        "incident_people": 695
+      },
+      "unit": "件（事故案件）；人（事故人數）",
+      "period": "2025年（民國114年）",
+      "geography": "臺灣全國消防署山域事故行政統計",
+      "population": "消防署新聞稿所報山域事故案件及事故人數；不是登山者全體或登山行程樣本",
+      "numerator": {
+        "incident_cases": 502,
+        "incident_people": 695
+      },
+      "denominator": null,
+      "denominator_description": "未提供登山人次、獨立登山者人數或總暴露時間；新聞稿未列完整事故納入與去重方式。",
+      "event_definition": "官方資料稱山域事故案件與事故人數；本輪未取得可核對的完整操作性定義，不進一步推定每件等於單一事故或每人只計一次。",
+      "data_type": "消防署行政統計／救援案件數與人數",
+      "method": "逐項核對消防署2026-05-28新聞稿所報2025件數及人數；不以兩項總數相除、不計算率、不反推全體登山者風險。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不是個人發生率、盛行率、死亡率或單次登山機率。",
+        "沒有暴露分母及完整事故定義，不與其他年份做風險趨勢比較。",
+        "不能由山域事故總量推估野外薄冰或冰湖事故。"
+      ]
+    },
+    {
+      "id": "tw_mountain_personal_incident_rate_not_estimable",
+      "source_id": "ch01_mountain_nfa_stats_20261027",
+      "value": null,
+      "unit": "未估算臺灣山域個人或單次登山發生率",
+      "period": "截至2026-10-27檢索現況",
+      "geography": "臺灣全國",
+      "population": "一般登山者",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "消防署公開新聞稿提供山域行政事故件數和事故人數，沒有登山人次、獨立登山者或暴露時間分母，也沒有完整事件定義。",
+      "event_definition": "無法由現有行政救援總數定義每次登山或每位登山者之新發事故。",
+      "data_type": "無適當個人風險統計；行政案件數只作情境背景",
+      "method": "不從案件數、涉事故人數或救援率自行推算個人機率；不以國外冰湖事故數代替臺灣山域風險。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "需要具一致事故定義且有登山暴露母數的資料才能估計。",
+        "一般山域救援資料不能推作冰面事故頻率。"
+      ]
+    }
+  ],
+  "policy_dates": [
+    {
+      "id": "organ_transplant_amendment_2015",
+      "published_at": "2015-07-01",
+      "effective_at": "2015-07-01",
+      "status": "2015修正公布第6、8、9至10-1、12、14、16至18-1條；依當時第25條公布日施行規定判讀同日生效。"
+    },
+    {
+      "id": "organ_transplant_amendment_2021",
+      "published_at": "2021-01-20",
+      "effective_at": "2023-01-01",
+      "status": "2021修正公布第8、25條；第25條明定相關修正自2023-01-01施行。"
+    },
+    {
+      "id": "nhi_anti_resorptive_5_6_1",
+      "published_at": "2026-07-15",
+      "effective_at": "2026-08-01",
+      "status": "健保署公告修訂5.6.1；以附件標示日期為施行日。"
+    },
+    {
+      "id": "nhi_romosozumab_5_6_3",
+      "published_at": "2026-07-15",
+      "effective_at": "2026-08-01",
+      "status": "健保署公告修訂5.6.3；以附件標示日期為施行日。"
+    },
+    {
+      "id": "nhi_latest_drug_rules",
+      "published_at": "2026-10-22",
+      "effective_at": "2026-10-22版本更新日",
+      "status": "健保署頁面列最新版藥品給付規定更新日期；就醫時仍應查最新版本。"
+    }
+  ],
+  "professional_review_pending": [
+    "TW-01-035：未取得移植醫學、社工及法律專業者對本篇的獨立審閱；AI來源核對不構成個案醫療或法律意見。",
+    "TW-01-039：2025共識本身由多個臺灣醫學團體參與編修，但未取得獨立臨床專業者對本篇的獨立審閱。",
+    "TW-01-040：未取得骨科／骨鬆、藥師及牙科專業者對本篇的獨立審閱；健保條件仍應以就醫時官方現行版本為準。",
+    "TW-01-041：未取得山域搜救、急診／高山醫學及戶外安全專業者對本篇的獨立審閱；本指引不取代現場搜救及醫療處置。"
+  ],
+  "publication_ready": false,
+  "unresolved": [
+    "臺灣全國非法器官交易／仲介邀約頻率與暴露分母未找到。",
+    "移植醫學、社工及法律專業對本篇獨立審閱未取得。",
+    "國健署官方摘要未列原始樣本數、權重及測量部位細節；原始調查報告本輪未取得。",
+    "骨科／骨鬆臨床專業對本篇獨立審閱未取得。",
+    "健保署宣導所引再次骨折50%未附研究期間、病例定義與分母；本篇不作個人風險。",
+    "骨科／骨鬆、藥師及牙科專業對本篇獨立審閱未取得。",
+    "消防署新聞稿未列2025年山域事故的完整納入／去重定義，也無登山人次、獨立登山者或暴露時間分母；不能估個人或單次行程發生率。",
+    "未找到同定義的臺灣冰面事故率；不以山域案件數代替。",
+    "山域搜救、急診／高山醫學及戶外安全專業對本篇獨立審閱未取得。"
+  ]
+}

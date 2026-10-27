@@ -1059,12 +1059,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-035.md",
       "sources": [
-        "ch01_organ_law_tw",
-        "ch01_organ_law_history",
-        "ch01_law_effective_day",
-        "ch01_kidney_donor_consent"
+        "ch01_organ_law_tw_20261027",
+        "ch01_organ_law_history_20261027",
+        "ch01_mohw_transplant_hospitals_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "別拿「少一個腎沒什麼」換錢：剩下那個要替兩個幹活，賣過腎的人事後 86% 說身體變差",
@@ -1150,11 +1149,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-039.md",
       "sources": [
-        "ch01_bone_ntuh_202609",
-        "ch01_bone_ntuh_referral",
-        "ch01_bone_hpa_survey"
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_hpa_survey_20261027",
+        "ch01_bone_nhi_dxa_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "65 歲以上的女性去做一次雙能 X 線骨密度檢查，絕經後有骨質疏鬆危險因素的不用等到 65 歲",
@@ -1171,12 +1170,15 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-040.md",
       "sources": [
-        "ch01_bone_ntuh_202609",
-        "ch01_bone_ntuh_referral",
-        "ch01_bone_nhi_202607",
-        "ch01_bone_nhi_20260801"
+        "ch01_bone_tos_consensus_2025_20261027",
+        "ch01_bone_nhi_refracture_release_20261027",
+        "ch01_bone_nhi_latest_rules_20261027",
+        "ch01_bone_nhi_anti_notice_20261027",
+        "ch01_bone_nhi_anti_attachment_20261027",
+        "ch01_bone_nhi_romo_notice_20261027",
+        "ch01_bone_nhi_romo_attachment_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "查出骨質疏鬆，或者輕輕一摔就骨折過，就請醫生開抗骨質疏鬆藥並堅持用，別拿補鈣代替",
@@ -1193,10 +1195,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-041.md",
       "sources": [
-        "ch01_ice_spnp_115",
-        "ch01_ice_ontario"
+        "ch01_mountain_taiwan_nps_guide_20261027",
+        "ch01_mountain_spnp_autumn_20261027",
+        "ch01_mountain_nfa_rescue_20261027",
+        "ch01_mountain_nfa_stats_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "上野外冰面前先打孔量厚度，不到 15 釐米別上，河上的冰和冰釣洞邊別去",
