@@ -1,0 +1,1210 @@
+{
+  "schema_version": 1,
+  "batch": "TW-01-021／028／029／036／042：帶狀皰疹、勃起功能、放射異常物及砂輪機歷史實質再審",
+  "base_main_sha": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae",
+  "reviewed_at": "2026-10-27",
+  "review_due_at": "2027-01-31",
+  "priority_basis": "第1章醫療、急症及作業安全內容依可能傷害嚴重度、臺灣處置、統計時效及現有證據缺口排序；本批為五項既有歷史正文實質再審，不新增核心。",
+  "prior_reviews_preserved_by_git_ref": true,
+  "counts_before": {
+    "substantive_rechecks": 218,
+    "runtime_sources": 839,
+    "source_registry": 920,
+    "json_files_checked": 483,
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "substantive_rechecks": 223,
+    "runtime_sources": 855,
+    "source_registry": 936,
+    "json_files_checked": 485,
+    "core_completed": 278,
+    "core_total": 765,
+    "shared_reader_items": 289,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306,
+    "publication_ready": false
+  },
+  "new_core_entries": [],
+  "items": [
+    {
+      "id": "TW-01-021",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-021.md",
+      "title": "帶狀皰疹疫苗先確認年齡、免疫狀況及兩劑安排，不用疫苗處理急性皮蛇",
+      "prior_body_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:locales/zh-TW/book/ch01/TW-01-021.md",
+      "prior_review_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:localization/reviews/TW-01-021.json",
+      "before_sha256": "3b6e54fe4a6034bd83c759b4452655783ec67f1aba3d1201b30cf397ef46164a",
+      "after_sha256": "0dbc59ee937ebdde931c902b9df0d697d6ae5179cb32f6df6fdee8f09cd4a2bc",
+      "prior_review_sha256": "a17b1f9b01cb38d1cbb0db38d15773f902a6ca6efda50bd0335405c4d75605c3",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_zoster_cdc_20261027",
+        "ch01_zoster_adult_schedule_20261027",
+        "ch01_zoster_vghtpe_20261027",
+        "ch01_zoster_claims_2011_2020"
+      ],
+      "previous_source_ids": [
+        "ch01_zoster_cdc",
+        "ch01_zoster_vghtpe",
+        "ch01_zoster_claims_2017"
+      ],
+      "previous_review_claims": [
+        "50歲以上或18歲以上免疫功能低下者自費評估非活性重組疫苗，兩劑間隔2至6個月；嚴重過敏、急性中重症及懷孕注意事項。",
+        "及早就醫、避免弄破水泡及自行塗成藥，50歲以上及免疫低下者評估疫苗；疫苗不是急性發病治療。",
+        "2017年健保申報帶狀皰疹就醫約24.4萬人，67%為50歲以上；是舊就醫人數，不採其藥價與給付作2026規定。"
+      ],
+      "taiwan_context": "臺灣健保申報可支援全國成人年發生率估計，但人口老化、就醫診斷及抗病毒給付改變會影響申報捕捉；實際自費接種、地方補助及院所供應需按所在地確認。",
+      "frequency_assessment": "全國健保世代研究報告每1,000人年率及成人分齡率，人年為分母；精確分子與總人年未見於可取得摘要，不反推。2018年底給付擴大可能影響病例捕捉；資料截至2020年，不是個人終生風險或疫苗效果。",
+      "changes": "以臺灣2011至2020健保世代人年率取代2017就醫人數，記錄標準化／分齡口徑、病例定義、給付變更對申報捕捉的可能影響及研究讀取限制；更新疫苗政策來源時效。",
+      "source_status": "本輪逐條讀取來源可見範圍並記錄擷取限制；正文與審閱來源均更新，舊來源物件保持未變並記錄退役原因。",
+      "source_checks": [
+        {
+          "url": "https://www.cdc.gov.tw/Category/Page/WzNj0ONng_AdPtlJc4XDhA",
+          "claim": "50歲以上或18歲以上免疫功能低下者經醫師評估自費接種非活性重組疫苗，兩劑間隔2至6個月；嚴重過敏、急性中重症及懷孕注意事項。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：50歲以上或18歲以上免疫功能低下者經醫師評估自費接種非活性重組疫苗，兩劑間隔2至6個月；嚴重過敏、急性中重症及懷孕注意事項。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取疾管署官方HTML正文第60至88行；記錄頁面最後更新日，不推定全國公費、當前存貨或通用價格。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Category/Page/MoZgDU5xEilvKbL54nUTEg",
+          "claim": "疾管署成人接種時程頁列成人時程PDF名稱及最後更新日2026-03-31；附件內容本輪未能讀取，不引用附件規定。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：疾管署成人接種時程頁列成人時程PDF名稱及最後更新日2026-03-31；附件內容本輪未能讀取，不引用附件規定。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取疾管署官方HTML第64至80、133至141行；曾嘗試開啟PDF但回傳HTML驗證頁，未宣稱核對附件內文。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/576",
+          "claim": "及早就醫、避免弄破水泡及自行塗成藥；疫苗兩劑間隔2至6個月。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：及早就醫、避免弄破水泡及自行塗成藥；疫苗兩劑間隔2至6個月。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取官方HTML第49至95行及印列日期；未將護理衛教當個人診療或政策公告。"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12604628/",
+          "claim": "全國成人健保申報世代報告年齡標準化及分齡人年率與病例定義；未取得精確病例數和總人年，不反推。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：全國成人健保申報世代報告年齡標準化及分齡人年率與病例定義；未取得精確病例數和總人年，不反推。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取PMC可見搜尋索引全文摘要、方法及結果；PMC直接開啟回傳驗證頁，未取得補充表或微資料。只用可見率值與人年分母，不反推病例數或精確人年。"
+        }
+      ],
+      "statistics_assessed": [
+        "taiwan_hz_age_standardized_rate_2011",
+        "taiwan_hz_age_standardized_rate_2020",
+        "taiwan_hz_crude_rate_age18_49_2020",
+        "taiwan_hz_crude_rate_age50plus_2020"
+      ],
+      "unresolved": [
+        "PMC全文直接開啟遭驗證限制，未取得補充表、病例數或精確人年。",
+        "疾管署成人時程附件本輪無法讀取；未據此更新政策。",
+        "感染科、疫苗及公共衛生專業獨立審閱未取得。"
+      ],
+      "reviewer_limit": "尚未取得感染科、疫苗及公共衛生專業獨立審閱；健保研究補充表及原始微資料本輪未取得。",
+      "retired_sources": [
+        {
+          "id": "ch01_zoster_cdc",
+          "replacement_ids": [
+            "ch01_zoster_cdc_20261027",
+            "ch01_zoster_adult_schedule_20261027",
+            "ch01_zoster_vghtpe_20261027",
+            "ch01_zoster_claims_2011_2020"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "ee89f4bb502e3921428c53d5a6b42eeec55144bea379cdde074f50c7ef9b8c5f",
+          "article_id": "TW-01-021",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_zoster_vghtpe",
+          "replacement_ids": [
+            "ch01_zoster_cdc_20261027",
+            "ch01_zoster_adult_schedule_20261027",
+            "ch01_zoster_vghtpe_20261027",
+            "ch01_zoster_claims_2011_2020"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "cce6c5b02a88b7df1d13a6d4c0445b8af61a0bb34751fc94b064552bf2206dfa",
+          "article_id": "TW-01-021",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_zoster_claims_2017",
+          "replacement_ids": [
+            "ch01_zoster_cdc_20261027",
+            "ch01_zoster_adult_schedule_20261027",
+            "ch01_zoster_vghtpe_20261027",
+            "ch01_zoster_claims_2011_2020"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "f5e06323a8b5d59c7ecb2256105bfcce90efba7e0e7379007d4aaf654b28e93b",
+          "article_id": "TW-01-021",
+          "current_source_object_unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-028",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-028.md",
+      "title": "勃起功能困擾先作整體健康與用藥評估，不自行買藥或認定已有心臟病",
+      "prior_body_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:locales/zh-TW/book/ch01/TW-01-028.md",
+      "prior_review_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:localization/reviews/TW-01-028.json",
+      "before_sha256": "49691a84716eeba569015114ed70a577b5aad2b77070ce798ddbe4aee4ec79e2",
+      "after_sha256": "3976003395d1823b15f74154aa1ae2bd82db7d129ecad48bc5d64fea31d1a89b",
+      "prior_review_sha256": "527728f8741403237e97bdbf8a62f7ebeaad23e9d4a70d5fb0b228980f05bf43",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_ed_ntuh_20261027",
+        "ch01_ed_fda_20261027",
+        "ch01_ed_survey_2010"
+      ],
+      "previous_source_ids": [
+        "ch01_ed_ntuh202610",
+        "ch01_ed_fda2026"
+      ],
+      "previous_review_claims": [
+        "勃起功能障礙可有血管、神經、荷爾蒙、心理或藥物多重原因；評估血糖血脂與心血管，非人人已有冠心病；硝酸鹽藥不可併用PDE5藥。",
+        "2026-02-27第1067期：處方評估，PDE5與硝酸鹽不可併用；勃起超過4小時、胸痛、視聽異常等立即就醫，不能加倍自行購藥。"
+      ],
+      "taiwan_context": "臺灣男性健康照護需兼顧泌尿、家醫、心血管與代謝評估；歷史電話問卷不可代替目前診斷，也不能把冠心病患者比例反向解讀為個人風險。",
+      "frequency_assessment": "2010年電話調查提供受訪者盛行率，不是年發生率；樣本n=1,060，但陽性數、田野期、回覆率及40歲以上子群分母未列。臺大2026文章比例未附可核對該段母數，不推作個人心血管機率。",
+      "changes": "新增2010臺灣調查樣本及歷史盛行率，標示摘要缺欄位；排除未附母數比例的個人風險推論，強化PDE5與硝酸鹽禁忌和急症求援。",
+      "source_status": "本輪逐條讀取來源可見範圍並記錄擷取限制；正文與審閱來源均更新，舊來源物件保持未變並記錄退役原因。",
+      "source_checks": [
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/202610/project_2.html",
+          "claim": "勃起障礙可能多因素造成，醫療評估可檢查代謝風險；衛教所引關聯比例無該段可核對樣本分母，不作個人風險。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：勃起障礙可能多因素造成，醫療評估可檢查代謝風險；衛教所引關聯比例無該段可核對樣本分母，不作個人風險。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27以HTTPS直接取得官方HTML（HTTP 200）並讀全文；排除未附抽樣分母比例作個人機率。"
+        },
+        {
+          "url": "https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1608&r=631958882&tid=5542",
+          "claim": "PDE5藥不得與硝酸鹽併用；特殊近期心血管事件或嚴重疾病須醫療評估；勃起逾4小時、胸痛及視聽異常立即就醫。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：PDE5藥不得與硝酸鹽併用；特殊近期心血管事件或嚴重疾病須醫療評估；勃起逾4小時、胸痛及視聽異常立即就醫。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取食藥署官方HTML第154至161行；摘錄禁忌及急症警訊，不作個人用藥指示。"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20456624/",
+          "claim": "電話調查1,060名30歲以上男性，IIEF-5定義盛行率27%、40歲以上29%；摘要缺調查期、回覆率及分層分母。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：電話調查1,060名30歲以上男性，IIEF-5定義盛行率27%、40歲以上29%；摘要缺調查期、回覆率及分層分母。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27讀取PubMed可見研究摘要及方法；直接開啟頁遭驗證限制，未取得全文或調查期與原始分子。"
+        }
+      ],
+      "statistics_assessed": [
+        "taiwan_ed_survey_prevalence_all_2010",
+        "taiwan_ed_survey_prevalence_age40plus_2010"
+      ],
+      "unresolved": [
+        "PubMed全文頁遭驗證限制；調查期、回覆率與分層母數未取得。",
+        "臺大2026文章引述比例無該段可核對分母，不用於個人風險。",
+        "泌尿科、心臟科及藥師獨立審閱未取得。"
+      ],
+      "reviewer_limit": "尚未取得泌尿科、心臟科及藥師獨立專業審閱；2010電話調查全文及抽樣細節未取得。",
+      "retired_sources": [
+        {
+          "id": "ch01_ed_ntuh202610",
+          "replacement_ids": [
+            "ch01_ed_ntuh_20261027",
+            "ch01_ed_fda_20261027",
+            "ch01_ed_survey_2010"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "0f1cbeeec7ba21cd251324edbc5a0554203ef0b606dc7a75989b562c44010191",
+          "article_id": "TW-01-028",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_ed_fda2026",
+          "replacement_ids": [
+            "ch01_ed_ntuh_20261027",
+            "ch01_ed_fda_20261027",
+            "ch01_ed_survey_2010"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "1c136e1d8f505f21d379d1a4801094ef093a947ba24da50e7b4e6a47bc56a998",
+          "article_id": "TW-01-028",
+          "current_source_object_unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-029",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-029.md",
+      "title": "改善生活型態與三高管理支持性功能健康，持續困擾仍要就醫",
+      "prior_body_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:locales/zh-TW/book/ch01/TW-01-029.md",
+      "prior_review_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:localization/reviews/TW-01-029.json",
+      "before_sha256": "5f38eff8800c29e1cd6ce11feaccd3388c667971638ea8f6dd1aca7e31c1ac1f",
+      "after_sha256": "287838f11cd152cc0b2523e8957f0fdd737cfdcd1f0821f42f61cc6158306ef2",
+      "prior_review_sha256": "c9903c2458466a41cc996693a1850ca4cddfe8e693bf229a177dfb12fe612eab",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_ed_lifestyle_ntuh_20261027",
+        "ch01_ed_ntuh_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_ed_lifestyle_ntuh",
+        "ch01_ed_ntuh202610"
+      ],
+      "previous_review_claims": [
+        "戒菸、體重及三高控制、規律運動與伴侶支持可作性功能照護一環；不保證改善。2015比例缺原始樣本期間母數，不作2026盛行率，舊藥物劑量及硝酸鹽間隔不作自行用藥表。",
+        "勃起功能障礙可有血管、神經、荷爾蒙、心理或藥物多重原因；評估血糖血脂與心血管，非人人已有冠心病；硝酸鹽藥不可併用PDE5藥。"
+      ],
+      "taiwan_context": "以臺灣家庭日常飲食、步行及既有家醫／泌尿門診作可行起點；生活型態管理支持整體健康但不能取代診斷、處方追蹤或保證性功能改善。",
+      "frequency_assessment": "2015年舊衛教盛行率沒有樣本、期間或量表，不能作現況；未找到臺灣全國生活介入改善機率，不自行推估。",
+      "changes": "移除無抽樣方法的2015盛行率外推；明示臺灣生活介入改善率資料不足，不提供無依據效果或舊藥物指示。",
+      "source_status": "本輪逐條讀取來源可見範圍並記錄擷取限制；正文與審閱來源均更新，舊來源物件保持未變並記錄退役原因。",
+      "source_checks": [
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/201511/project_3.html",
+          "claim": "舊衛教討論吸菸、體重、慢性病、心理及藥物因素；不以未交代樣本比例及舊藥物規則作現行決策。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：舊衛教討論吸菸、體重、慢性病、心理及藥物因素；不以未交代樣本比例及舊藥物規則作現行決策。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27以HTTPS直接取得官方HTML（HTTP 200）並讀全文；只保留整體生活管理方向，不使用舊比例、劑量或交互作用時間。"
+        },
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/202610/project_2.html",
+          "claim": "勃起障礙可能多因素造成，醫療評估可檢查代謝風險；衛教所引關聯比例無該段可核對樣本分母，不作個人風險。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：勃起障礙可能多因素造成，醫療評估可檢查代謝風險；衛教所引關聯比例無該段可核對樣本分母，不作個人風險。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27以HTTPS直接取得官方HTML（HTTP 200）並讀全文；排除未附抽樣分母比例作個人機率。"
+        }
+      ],
+      "statistics_assessed": [],
+      "unresolved": [
+        "未找到臺灣全國性生活型態介入改善率，未估個人效果。",
+        "泌尿科、心臟科、心理及藥師獨立審閱未取得。"
+      ],
+      "reviewer_limit": "尚未取得泌尿科、心臟科、心理及藥師獨立專業審閱；未取得生活型態介入對臺灣族群的全國改善率。",
+      "retired_sources": [
+        {
+          "id": "ch01_ed_lifestyle_ntuh",
+          "replacement_ids": [
+            "ch01_ed_lifestyle_ntuh_20261027",
+            "ch01_ed_ntuh_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "1197a8cb35c377b4122656c9ebb65276b8602e1b548e1d312467b60a0afe9285",
+          "article_id": "TW-01-029",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_ed_ntuh202610",
+          "replacement_ids": [
+            "ch01_ed_lifestyle_ntuh_20261027",
+            "ch01_ed_ntuh_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "0f1cbeeec7ba21cd251324edbc5a0554203ef0b606dc7a75989b562c44010191",
+          "article_id": "TW-01-029",
+          "current_source_object_unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-036",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-036.md",
+      "title": "疑似失控放射源不觸碰、不拆解，離開並通報核安會",
+      "prior_body_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:locales/zh-TW/book/ch01/TW-01-036.md",
+      "prior_review_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:localization/reviews/TW-01-036.json",
+      "before_sha256": "d75455275b1749b5945e3328ac6891da5018de715c39a913ac0d5feb1c7f2350",
+      "after_sha256": "42d9b254194fac12291ec9b7e1a3e328d34c80fa3138c503212ef095b22b8f40",
+      "prior_review_sha256": "67d87f02c6a7f3542e6d5e86bb75d080e363f5749f6a90ed4237b972ee2aac13",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_nusc_reporting_20261027",
+        "ch01_nusc_scrap_guide_20261027",
+        "ch01_nusc_steel_anomaly_2023",
+        "ch01_nusc_firstline_faq_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_nusc_reporting",
+        "ch01_nusc_scrap_guide",
+        "ch01_iaea_uncontrolled_source",
+        "ch01_nusc_scrap_effective"
+      ],
+      "previous_review_claims": [
+        "監管中心全天24小時受理核安輻安疑慮與事件，通報專線0800-088-928。",
+        "2023-12-13修正，鋼鐵及準用之回收業隔離管制、通報及專業協助；不得任意退運或轉給其他業者。",
+        "疑似失控放射源或設備不觸碰、離開周邊並避免他人接近、增加距離並通知主管機關；標誌可能很小或看不見。",
+        "核輻字第11200186972號令修正鋼鐵業者輻射異常物通報處理導則，2023-12-13公布並自即日生效。"
+      ],
+      "taiwan_context": "臺灣民眾可直接通報核安會24小時專線，疑似物件不帶往警局、醫院或其他回收點；鋼鐵及資源回收業者另依專業導則及地方應變體系處理。",
+      "frequency_assessment": "2023年鋼鐵及回收業者通報38件、調查38件、4件含人工核種；是特定產業通報案件，沒有民眾暴露人數分母，不是一般人曝露率或個人機率。",
+      "changes": "新增臺灣業者2023年38起通報、其中4起人工核種的限定背景；以當前核安會FAQ支持一般民眾求援，分清產業處理和民眾通報。",
+      "source_status": "本輪逐條讀取來源可見範圍並記錄擷取限制；正文與審閱來源均更新，舊來源物件保持未變並記錄退役原因。",
+      "source_checks": [
+        {
+          "url": "https://www.nusc.gov.tw/%E4%BF%9D%E5%AE%89%E6%87%89%E8%AE%8A/%E6%A0%B8%E5%AE%89%E7%9B%A3%E7%AE%A1%E5%85%A8%E5%B9%B4%E7%84%A1%E4%BC%91--5484_5489_5501.html",
+          "claim": "核安會監管中心24小時運作，民眾核安或輻安疑慮可撥0800-088-928。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：核安會監管中心24小時運作，民眾核安或輻安疑慮可撥0800-088-928。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取核安會官方HTML第45至83行，確認24小時服務及通報專線。"
+        },
+        {
+          "url": "https://erss.nusc.gov.tw/law/LawContent.aspx?id=GL000036",
+          "claim": "2023-12-13修正之鋼鐵業者導則及資源回收業準用程序；不把業者劑量門檻或期限套作民眾規則。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：2023-12-13修正之鋼鐵業者導則及資源回收業準用程序；不把業者劑量門檻或期限套作民眾規則。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取核安會法規系統HTML第65至114行及頁尾更新日期，區分業者程序和民眾求援。"
+        },
+        {
+          "url": "https://www.nusc.gov.tw/share/file/law/q1tbjePHecte34T1etGc0A__.pdf?v=2024040856",
+          "claim": "2023年截至12月15日鋼鐵及回收業者通報與調查38起，其中4起含人工核種；不是民眾曝露率或個人機率。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：2023年截至12月15日鋼鐵及回收業者通報與調查38起，其中4起含人工核種；不是民眾曝露率或個人機率。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "直接下載核安會官方PDF並抽取檢視調查結果段落與表格；只記產業通報及訪查件數，不轉作一般民眾遭遇風險。"
+        },
+        {
+          "url": "https://www.nusc.gov.tw/%E7%B7%8A%E6%80%A5%E6%87%89%E8%AE%8A/%E6%B0%91%E7%9C%BE%E9%98%B2%E7%81%BD%E8%B3%87%E8%A8%8A/%E8%BC%BB%E7%81%BD%E7%9F%A5%E8%AD%98%E7%B0%A1%E4%BB%8B/%E6%88%91%E8%A9%B2%E6%80%8E%E9%BA%BC%E5%81%9A/%E8%BC%BB%E5%B0%84%E7%81%BD%E5%AE%B3%E7%AC%AC%E4%B8%80%E7%B7%9A%E6%87%89%E8%AE%8A%E4%BA%BA%E5%93%A1%E5%B0%88%E5%8D%80/%E7%AC%AC%E4%B8%80%E7%B7%9A%E8%BC%BB%E5%B0%84%E7%81%BD%E5%AE%B3%E6%87%89%E8%AE%8A%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94%E9%9B%86/4%E3%80%81%E8%BC%BB%E5%B0%84%E7%81%BD%E5%AE%B3%E6%95%B4%E5%82%99%E9%A1%9E--5_5438_5439_41_4428_4763_4767.html",
+          "claim": "FAQ列24小時專線、距離原則及地方應變人員管制現場；專業程序不轉為民眾自行測量指示。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：FAQ列24小時專線、距離原則及地方應變人員管制現場；專業程序不轉為民眾自行測量指示。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取核安會FAQ第68至99行，確認專線、應變原則與頁面更新日。"
+        }
+      ],
+      "statistics_assessed": [
+        "taiwan_steel_recycle_reports_2023",
+        "taiwan_steel_recycle_artificial_nuclide_2023"
+      ],
+      "unresolved": [
+        "產業通報件數無一般民眾暴露分母；不提供固定距離或民眾自行測量法。",
+        "輻防、消防、急診及法規專業獨立審閱未取得。"
+      ],
+      "reviewer_limit": "尚未取得輻射防護、消防、急診及法規專業獨立審閱；業者通報件數無一般民眾暴露分母。",
+      "retired_sources": [
+        {
+          "id": "ch01_nusc_reporting",
+          "replacement_ids": [
+            "ch01_nusc_reporting_20261027",
+            "ch01_nusc_scrap_guide_20261027",
+            "ch01_nusc_steel_anomaly_2023",
+            "ch01_nusc_firstline_faq_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "426e8891d32a6615693f687c404d4b20831bf11f78117e14a72b38b5bb30a312",
+          "article_id": "TW-01-036",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_nusc_scrap_guide",
+          "replacement_ids": [
+            "ch01_nusc_reporting_20261027",
+            "ch01_nusc_scrap_guide_20261027",
+            "ch01_nusc_steel_anomaly_2023",
+            "ch01_nusc_firstline_faq_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "999ebd49fee66aaad08c16db5ff7f8a77a197446b8db16e82559673f8a9a4cb5",
+          "article_id": "TW-01-036",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_iaea_uncontrolled_source",
+          "replacement_ids": [
+            "ch01_nusc_reporting_20261027",
+            "ch01_nusc_scrap_guide_20261027",
+            "ch01_nusc_steel_anomaly_2023",
+            "ch01_nusc_firstline_faq_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "f3365a15ed0f6906d8ba8d55e73e3e2203339fc38b79c3f00c44cd2f7af2a557",
+          "article_id": "TW-01-036",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_nusc_scrap_effective",
+          "replacement_ids": [
+            "ch01_nusc_reporting_20261027",
+            "ch01_nusc_scrap_guide_20261027",
+            "ch01_nusc_steel_anomaly_2023",
+            "ch01_nusc_firstline_faq_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "e53c9b88b047dab4ca37a11b3134f18722e8076c909c5b236165e52ba207acda",
+          "article_id": "TW-01-036",
+          "current_source_object_unchanged": true
+        }
+      ]
+    },
+    {
+      "id": "TW-01-042",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-042.md",
+      "title": "手持砂輪機依機型核對配件、護罩與粉塵控制，未受訓先停工",
+      "prior_body_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:locales/zh-TW/book/ch01/TW-01-042.md",
+      "prior_review_git_ref": "0ff546d81a1d3d42ec87ba4cd852761dc2e545ae:localization/reviews/TW-01-042.json",
+      "before_sha256": "8f23e6fb70a1f3609edde6f6c29de1ada90ba592fa09f001425884ca7d8df58b",
+      "after_sha256": "2d1f471224dfdbef59ba9a6fb4ee4b3b2cd4116e146c694097bba27a62873d8c",
+      "prior_review_sha256": "c73c3b8a37d8f2bccaab9437dba62a9d93ba0d7016edb2c18c87a249e5634056",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-27",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch01_grinder_bosch_manual_20261027",
+        "ch01_grinder_facilities_20261027",
+        "ch01_grinder_law_history_20261027",
+        "ch01_grinder_silica_mol_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_grinder_bosch_manual",
+        "ch01_grinder_facilities",
+        "ch01_grinder_law_history",
+        "ch01_grinder_silica_mol"
+      ],
+      "previous_review_claims": [
+        "配件速度與尺寸須匹配、適當護罩及輔助手柄、避免反彈；禁止鋸齒或鏈鋸式配件，切割片不可側磨。",
+        "雇主須防止研磨輪超過最高使用周速度，非側用輪不得側用，並依規定試轉、檢查及使用護罩。",
+        "2026年6月30日修訂指定7月1日施行，另列條文2027年1月1日施行；第62條並非本次新增。",
+        "2021至2024年職病通報17例人造石矽肺；切磨粉塵須工程控制及健康管理，不是只戴口罩。"
+      ],
+      "taiwan_context": "臺灣公寓修繕、鐵工和承攬裝修都可能使用手持砂輪機；家庭修繕依機型手冊並設定停工界線，職場作業由雇主履行研磨輪與粉塵危害控制義務。",
+      "frequency_assessment": "2021至2024年17例人造石矽肺為特定產業職業病通報，無暴露人口母數；不是砂輪機事故件數或使用者發生率。未找到可比全國砂輪機事故風險率。",
+      "changes": "移除手冊未支持的鏈鋸／鋸齒片絕對禁令並改題；補上手冊機型範圍、配件轉速／尺寸、護罩、石材集塵、雇主第62條、分段施行日期及矽肺口徑。",
+      "source_status": "本輪逐條讀取來源可見範圍並記錄擷取限制；正文與審閱來源均更新，舊來源物件保持未變並記錄退役原因。",
+      "source_checks": [
+        {
+          "url": "https://www.bosch-professional.com/binary/manualsmedia/o484989v21_160992AA7J_202410.pdf",
+          "claim": "該型號手冊要求配件尺寸、安裝及轉速相符，按作業使用護罩和輔助手柄，石材切割須集塵；不支持全機型鏈鋸／鋸齒片絕對禁令。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：該型號手冊要求配件尺寸、安裝及轉速相符，按作業使用護罩和輔助手柄，石材切割須集塵；不支持全機型鏈鋸／鋸齒片絕對禁令。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取官方PDF第21至27頁繁體中文段落並檢視機型範圍；不將型號手冊泛化。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060009",
+          "claim": "現行第62條的研磨輪速度、側磨、試轉及換輪檢查均為雇主職場安全義務。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：現行第62條的研磨輪速度、側磨、試轉及換輪檢查均為雇主職場安全義務。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27以HTTPS直接取得現行條文並讀取第62條，明確限定雇主職場義務，不延伸到家庭修繕。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060009",
+          "claim": "2026-06-30修正指定條文分2026-07-01和2027-01-01施行；第62條不在修正清單。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：2026-06-30修正指定條文分2026-07-01和2027-01-01施行；第62條不在修正清單。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接取得並讀取法規資料庫沿革全文，核對修正清單、分段日期及資料整編截止日。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/1632/1640/79520/post",
+          "claim": "勞動部記錄2021至2024年17例人造石矽肺職業病通報；未提供暴露人口分母，不能換算砂輪機使用者風險。",
+          "supporting_passage": "來源實讀或可見原始摘要後的獨立語意摘要，非逐字引文：勞動部記錄2021至2024年17例人造石矽肺職業病通報；未提供暴露人口分母，不能換算砂輪機使用者風險。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接讀取勞動部官方HTML第48至52行；限制17例為特定產業職業病通報，不推作砂輪機或一般民眾風險。"
+        }
+      ],
+      "statistics_assessed": [
+        "taiwan_engineered_stone_silicosis_2021_2024"
+      ],
+      "unresolved": [
+        "Bosch手冊限列兩款機型；沒有全國砂輪機事故母數。",
+        "職安、職業醫學、急救及法律專業獨立審閱未取得。"
+      ],
+      "reviewer_limit": "尚未取得職安、職業醫學、急救及法律專業獨立審閱；沒有可比全國手持砂輪機事故暴露分母。",
+      "retired_sources": [
+        {
+          "id": "ch01_grinder_bosch_manual",
+          "replacement_ids": [
+            "ch01_grinder_bosch_manual_20261027",
+            "ch01_grinder_facilities_20261027",
+            "ch01_grinder_law_history_20261027",
+            "ch01_grinder_silica_mol_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "d77a77d1b0c0bea0be786439219834a6452c839f3c702b44dcac691a873a8551",
+          "article_id": "TW-01-042",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_grinder_facilities",
+          "replacement_ids": [
+            "ch01_grinder_bosch_manual_20261027",
+            "ch01_grinder_facilities_20261027",
+            "ch01_grinder_law_history_20261027",
+            "ch01_grinder_silica_mol_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "01032b718e7cbd62495b5d9691ff8e05f6f3cb28ff5ae0f5ef8c7c3ef7495481",
+          "article_id": "TW-01-042",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_grinder_law_history",
+          "replacement_ids": [
+            "ch01_grinder_bosch_manual_20261027",
+            "ch01_grinder_facilities_20261027",
+            "ch01_grinder_law_history_20261027",
+            "ch01_grinder_silica_mol_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "d273a38f36fb76a287a3072f5f24c16b3948c0b6d5f6493b98b9763e9c6864db",
+          "article_id": "TW-01-042",
+          "current_source_object_unchanged": true
+        },
+        {
+          "id": "ch01_grinder_silica_mol",
+          "replacement_ids": [
+            "ch01_grinder_bosch_manual_20261027",
+            "ch01_grinder_facilities_20261027",
+            "ch01_grinder_law_history_20261027",
+            "ch01_grinder_silica_mol_20261027"
+          ],
+          "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+          "prior_source_sha256": "aa07e41707ddaa241f1591b98217bd3732ed9e6655029ee0cfa02234be574c16",
+          "article_id": "TW-01-042",
+          "current_source_object_unchanged": true
+        }
+      ]
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch01_zoster_cdc_20261027",
+      "title": "疾管署：帶狀皰疹疫苗自費接種建議",
+      "url": "https://www.cdc.gov.tw/Category/Page/WzNj0ONng_AdPtlJc4XDhA",
+      "published_at": "2023-06-14",
+      "accessed_at": "2026-10-27",
+      "supports": "50歲以上成人及18歲以上免疫不全或免疫功能低下者經醫師評估自費接種非活性重組疫苗，兩劑間隔2至6個月；列嚴重過敏、急性中重症及懷孕注意事項。頁面更新2023-06-14。",
+      "retrieval_method": "2026-10-27直接讀取疾管署官方HTML正文第60至88行；記錄頁面最後更新日，不推定全國公費、當前存貨或通用價格。",
+      "evidence_type": "臺灣中央政府官方疫苗資訊HTML"
+    },
+    {
+      "id": "ch01_zoster_adult_schedule_20261027",
+      "title": "疾管署：成人預防接種建議時程表",
+      "url": "https://www.cdc.gov.tw/Category/Page/MoZgDU5xEilvKbL54nUTEg",
+      "published_at": "2026-03-31",
+      "accessed_at": "2026-10-27",
+      "supports": "成人接種時程頁列有帶狀皰疹疫苗並指向1150929 PDF；頁面最後更新2026-03-31。本輪連結PDF無法讀取，不以未讀取附件更新政策。",
+      "retrieval_method": "2026-10-27直接讀取疾管署官方HTML第64至80、133至141行；曾嘗試開啟PDF但回傳HTML驗證頁，未宣稱核對附件內文。",
+      "evidence_type": "臺灣中央政府官方疫苗時程索引HTML"
+    },
+    {
+      "id": "ch01_zoster_vghtpe_20261027",
+      "title": "臺北榮總：帶狀皰疹照護",
+      "url": "https://ihealth.vghtpe.gov.tw/media/576",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "及早就醫、避免弄破水泡及自行塗成藥；50歲以上及免疫低下者評估疫苗，重組疫苗兩劑間隔2至6個月；頁面印列2026-10-27。",
+      "retrieval_method": "2026-10-27直接讀取官方HTML第49至95行及印列日期；未將護理衛教當個人診療或政策公告。",
+      "evidence_type": "臺灣公立醫學中心官方健康教育HTML"
+    },
+    {
+      "id": "ch01_zoster_claims_2011_2020",
+      "title": "臺灣成人帶狀皰疹健保世代研究（2011–2020）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12604628/",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "全國健保申報成人世代：一般成人年齡標準化率2011年7.15、2020年7.82／1,000人年；2020年18至49歲5.92、50歲以上14.00／1,000人年。病例定義為住院或門診至少一次主診斷；研究指出給付擴大可能改變病例捕捉。無疫苗史，非疫苗效果研究。",
+      "retrieval_method": "2026-10-27讀取PMC可見搜尋索引全文摘要、方法及結果；PMC直接開啟回傳驗證頁，未取得補充表或微資料。只用可見率值與人年分母，不反推病例數或精確人年。",
+      "evidence_type": "臺灣全國健保申報回溯世代原始研究"
+    },
+    {
+      "id": "ch01_ed_ntuh_20261027",
+      "title": "臺大醫院：勃起功能障礙與健康評估（2026年10月）",
+      "url": "https://epaper.ntuh.gov.tw/health/202610/project_2.html",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "勃起功能障礙可能涉及血管、神經、荷爾蒙、心理及藥物因素；評估可包括病史、IIEF-5、血糖、血脂及睪固酮；PDE5藥與硝酸鹽不可併用。文中未附個人風險可用的特定比例分母。",
+      "retrieval_method": "2026-10-27以HTTPS直接取得官方HTML（HTTP 200）並讀全文；排除未附抽樣分母比例作個人機率。",
+      "evidence_type": "臺灣醫學中心泌尿科醫師官方健康教育HTML"
+    },
+    {
+      "id": "ch01_ed_fda_20261027",
+      "title": "食藥署：性功能藥品禁忌及副作用（第1067期）",
+      "url": "https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1608&r=631958882&tid=5542",
+      "published_at": "2026-02-27",
+      "accessed_at": "2026-10-27",
+      "supports": "食藥署指出PDE5抑制劑不可與硝酸鹽類併用；近期心肌梗塞／中風或嚴重心血管疾病、重度肝腎功能不良者應避免或由醫師審慎評估；勃起逾4小時、視聽異常、胸痛或嚴重低血壓需立即就醫。",
+      "retrieval_method": "2026-10-27直接讀取食藥署官方HTML第154至161行；摘錄禁忌及急症警訊，不作個人用藥指示。",
+      "evidence_type": "臺灣中央政府藥品安全官方HTML"
+    },
+    {
+      "id": "ch01_ed_survey_2010",
+      "title": "臺灣男性勃起功能調查（2010）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20456624/",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "PubMed摘要記載代表性電話樣本1,060名30歲以上男性，以IIEF-5評估，全體受訪者盛行率27%、40歲以上子群29%。摘要未列實際訪查期間、回覆率、陽性人數及子群母數；僅作歷史盛行率。",
+      "retrieval_method": "2026-10-27讀取PubMed可見研究摘要及方法；直接開啟頁遭驗證限制，未取得全文或調查期與原始分子。",
+      "evidence_type": "臺灣男性電話調查原始研究之PubMed摘要"
+    },
+    {
+      "id": "ch01_ed_lifestyle_ntuh_20261027",
+      "title": "臺大醫院：男性性功能障礙與生活及用藥因素（2015年11月）",
+      "url": "https://epaper.ntuh.gov.tw/health/201511/project_3.html",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "舊衛教討論心理、血管、神經、慢性病、吸菸、體重及藥物等可能因素；未附原始調查母數，且部分藥品劑量和交互作用時距已非當前民眾自用規則。",
+      "retrieval_method": "2026-10-27以HTTPS直接取得官方HTML（HTTP 200）並讀全文；只保留整體生活管理方向，不使用舊比例、劑量或交互作用時間。",
+      "evidence_type": "臺灣醫學中心藥師官方健康教育HTML"
+    },
+    {
+      "id": "ch01_nusc_reporting_20261027",
+      "title": "核安會：核安監管全年無休與24小時通報",
+      "url": "https://www.nusc.gov.tw/%E4%BF%9D%E5%AE%89%E6%87%89%E8%AE%8A/%E6%A0%B8%E5%AE%89%E7%9B%A3%E7%AE%A1%E5%85%A8%E5%B9%B4%E7%84%A1%E4%BC%91--5484_5489_5501.html",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "核安會監管中心每日24小時全年無休；民眾核安或輻安疑慮可撥0800-088-928。",
+      "retrieval_method": "2026-10-27直接讀取核安會官方HTML第45至83行，確認24小時服務及通報專線。",
+      "evidence_type": "臺灣中央主管機關官方應變資訊HTML"
+    },
+    {
+      "id": "ch01_nusc_scrap_guide_20261027",
+      "title": "核安會：鋼鐵業者輻射異常物通報處理導則現行頁",
+      "url": "https://erss.nusc.gov.tw/law/LawContent.aspx?id=GL000036",
+      "published_at": "2023-12-13",
+      "accessed_at": "2026-10-27",
+      "supports": "2023-12-13修正發布的鋼鐵業者導則，資源回收業準用；規定隔離、圍籬、通報、專業協助及不宜由無專業人員搜尋處理。劑量門檻和時限不套作民眾標準。現行頁系統更新日2026-10-15。",
+      "retrieval_method": "2026-10-27直接讀取核安會法規系統HTML第65至114行及頁尾更新日期，區分業者程序和民眾求援。",
+      "evidence_type": "臺灣中央主管機關業者作業導則HTML"
+    },
+    {
+      "id": "ch01_nusc_steel_anomaly_2023",
+      "title": "核安會委託研究：111至112年度鋼鐵輻射異常物調查",
+      "url": "https://www.nusc.gov.tw/share/file/law/q1tbjePHecte34T1etGc0A__.pdf?v=2024040856",
+      "published_at": "2024-04-08",
+      "accessed_at": "2026-10-27",
+      "supports": "2023年截至12月15日鋼鐵及回收業者共通報38起並訪查38起，其中4起含Co-60或Cs-137人工核種，其餘為天然輻射異常物；沒有一般民眾暴露人數分母。",
+      "retrieval_method": "直接下載核安會官方PDF並抽取檢視調查結果段落與表格；只記產業通報及訪查件數，不轉作一般民眾遭遇風險。",
+      "evidence_type": "臺灣中央主管機關委託研究官方PDF"
+    },
+    {
+      "id": "ch01_nusc_firstline_faq_20261027",
+      "title": "核安會：輻射災害整備常見問答",
+      "url": "https://www.nusc.gov.tw/%E7%B7%8A%E6%80%A5%E6%87%89%E8%AE%8A/%E6%B0%91%E7%9C%BE%E9%98%B2%E7%81%BD%E8%B3%87%E8%A8%8A/%E8%BC%BB%E7%81%BD%E7%9F%A5%E8%AD%98%E7%B0%A1%E4%BB%8B/%E6%88%91%E8%A9%B2%E6%80%8E%E9%BA%BC%E5%81%9A/%E8%BC%BB%E5%B0%84%E7%81%BD%E5%AE%B3%E7%AC%AC%E4%B8%80%E7%B7%9A%E6%87%89%E8%AE%8A%E4%BA%BA%E5%93%A1%E5%B0%88%E5%8D%80/%E7%AC%AC%E4%B8%80%E7%B7%9A%E8%BC%BB%E5%B0%84%E7%81%BD%E5%AE%B3%E6%87%89%E8%AE%8A%E5%B8%B8%E8%A6%8B%E5%95%8F%E7%AD%94%E9%9B%86/4%E3%80%81%E8%BC%BB%E5%B0%84%E7%81%BD%E5%AE%B3%E6%95%B4%E5%82%99%E9%A1%9E--5_5438_5439_41_4428_4763_4767.html",
+      "published_at": "2024-05-22",
+      "accessed_at": "2026-10-27",
+      "supports": "核安會FAQ列24小時通報電話、時間／距離／屏蔽原則及地方政府應變人員管制現場；專業偵測分區與量測程序不改寫成民眾自行操作。",
+      "retrieval_method": "2026-10-27直接讀取核安會FAQ第68至99行，確認專線、應變原則與頁面更新日。",
+      "evidence_type": "臺灣中央主管機關官方輻射災害FAQ HTML"
+    },
+    {
+      "id": "ch01_grinder_bosch_manual_20261027",
+      "title": "Bosch：GWS 18-125 L／18-150 L操作說明",
+      "url": "https://www.bosch-professional.com/binary/manualsmedia/o484989v21_160992AA7J_202410.pdf",
+      "published_at": "2024-10-09",
+      "accessed_at": "2026-10-27",
+      "supports": "2024-10-09版手冊僅適用列出的兩款機型；配件孔徑與尺寸、安裝及轉速須相符，不用轉接環；按作業使用護罩與輔助手柄，石材切割須集塵。全文搜尋未找到鏈鋸或鋸齒片絕對禁令。",
+      "retrieval_method": "2026-10-27直接讀取官方PDF第21至27頁繁體中文段落並檢視機型範圍；不將型號手冊泛化。",
+      "evidence_type": "製造商官方機型操作手冊PDF"
+    },
+    {
+      "id": "ch01_grinder_facilities_20261027",
+      "title": "全國法規資料庫：職業安全衛生設施規則第62條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060009",
+      "published_at": null,
+      "accessed_at": "2026-10-27",
+      "supports": "現行第62條要求雇主使用速率試驗合格且標示最高周速度的研磨輪，不得超速；非側用輪不得側用；每日作業前試轉至少1分鐘，換輪檢查裂痕並於護罩下試轉至少3分鐘。",
+      "retrieval_method": "2026-10-27以HTTPS直接取得現行條文並讀取第62條，明確限定雇主職場義務，不延伸到家庭修繕。",
+      "evidence_type": "臺灣中央政府現行法規官方HTML"
+    },
+    {
+      "id": "ch01_grinder_law_history_20261027",
+      "title": "全國法規資料庫：職安設施規則沿革",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060009",
+      "published_at": "2026-06-30",
+      "accessed_at": "2026-10-27",
+      "supports": "2026-06-30修正：第21-3、57、116、185-1至185-4條自2027-01-01施行，其餘指定條文自2026-07-01施行；第62條不在該次修正清單。資料整編截止2026-10-16。",
+      "retrieval_method": "2026-10-27直接取得並讀取法規資料庫沿革全文，核對修正清單、分段日期及資料整編截止日。",
+      "evidence_type": "臺灣中央政府法規沿革官方HTML"
+    },
+    {
+      "id": "ch01_grinder_silica_mol_20261027",
+      "title": "勞動部：人造石產業矽肺防治",
+      "url": "https://www.mol.gov.tw/1607/1632/1640/79520/post",
+      "published_at": "2025-03-14",
+      "accessed_at": "2026-10-27",
+      "supports": "人造石製造、切割、拋光及研磨可能產生結晶型二氧化矽粉塵；2021至2024年共通報17例人造石矽肺症職業病例。沒有完整暴露人口分母，不是砂輪機事故或所有使用者發生率。",
+      "retrieval_method": "2026-10-27直接讀取勞動部官方HTML第48至52行；限制17例為特定產業職業病通報，不推作砂輪機或一般民眾風險。",
+      "evidence_type": "臺灣中央主管機關職業衛生官方HTML"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch01_zoster_cdc",
+      "replacement_ids": [
+        "ch01_zoster_cdc_20261027",
+        "ch01_zoster_adult_schedule_20261027",
+        "ch01_zoster_vghtpe_20261027",
+        "ch01_zoster_claims_2011_2020"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "ee89f4bb502e3921428c53d5a6b42eeec55144bea379cdde074f50c7ef9b8c5f",
+      "article_ids": [
+        "TW-01-021"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_zoster_vghtpe",
+      "replacement_ids": [
+        "ch01_zoster_cdc_20261027",
+        "ch01_zoster_adult_schedule_20261027",
+        "ch01_zoster_vghtpe_20261027",
+        "ch01_zoster_claims_2011_2020"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "cce6c5b02a88b7df1d13a6d4c0445b8af61a0bb34751fc94b064552bf2206dfa",
+      "article_ids": [
+        "TW-01-021"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_zoster_claims_2017",
+      "replacement_ids": [
+        "ch01_zoster_cdc_20261027",
+        "ch01_zoster_adult_schedule_20261027",
+        "ch01_zoster_vghtpe_20261027",
+        "ch01_zoster_claims_2011_2020"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "f5e06323a8b5d59c7ecb2256105bfcce90efba7e0e7379007d4aaf654b28e93b",
+      "article_ids": [
+        "TW-01-021"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_ed_ntuh202610",
+      "replacement_ids": [
+        "ch01_ed_ntuh_20261027",
+        "ch01_ed_fda_20261027",
+        "ch01_ed_survey_2010",
+        "ch01_ed_lifestyle_ntuh_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "0f1cbeeec7ba21cd251324edbc5a0554203ef0b606dc7a75989b562c44010191",
+      "article_ids": [
+        "TW-01-028",
+        "TW-01-029"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_ed_fda2026",
+      "replacement_ids": [
+        "ch01_ed_ntuh_20261027",
+        "ch01_ed_fda_20261027",
+        "ch01_ed_survey_2010"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "1c136e1d8f505f21d379d1a4801094ef093a947ba24da50e7b4e6a47bc56a998",
+      "article_ids": [
+        "TW-01-028"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_ed_lifestyle_ntuh",
+      "replacement_ids": [
+        "ch01_ed_lifestyle_ntuh_20261027",
+        "ch01_ed_ntuh_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "1197a8cb35c377b4122656c9ebb65276b8602e1b548e1d312467b60a0afe9285",
+      "article_ids": [
+        "TW-01-029"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_nusc_reporting",
+      "replacement_ids": [
+        "ch01_nusc_reporting_20261027",
+        "ch01_nusc_scrap_guide_20261027",
+        "ch01_nusc_steel_anomaly_2023",
+        "ch01_nusc_firstline_faq_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "426e8891d32a6615693f687c404d4b20831bf11f78117e14a72b38b5bb30a312",
+      "article_ids": [
+        "TW-01-036"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_nusc_scrap_guide",
+      "replacement_ids": [
+        "ch01_nusc_reporting_20261027",
+        "ch01_nusc_scrap_guide_20261027",
+        "ch01_nusc_steel_anomaly_2023",
+        "ch01_nusc_firstline_faq_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "999ebd49fee66aaad08c16db5ff7f8a77a197446b8db16e82559673f8a9a4cb5",
+      "article_ids": [
+        "TW-01-036"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_iaea_uncontrolled_source",
+      "replacement_ids": [
+        "ch01_nusc_reporting_20261027",
+        "ch01_nusc_scrap_guide_20261027",
+        "ch01_nusc_steel_anomaly_2023",
+        "ch01_nusc_firstline_faq_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "f3365a15ed0f6906d8ba8d55e73e3e2203339fc38b79c3f00c44cd2f7af2a557",
+      "article_ids": [
+        "TW-01-036"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_nusc_scrap_effective",
+      "replacement_ids": [
+        "ch01_nusc_reporting_20261027",
+        "ch01_nusc_scrap_guide_20261027",
+        "ch01_nusc_steel_anomaly_2023",
+        "ch01_nusc_firstline_faq_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "e53c9b88b047dab4ca37a11b3134f18722e8076c909c5b236165e52ba207acda",
+      "article_ids": [
+        "TW-01-036"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_grinder_bosch_manual",
+      "replacement_ids": [
+        "ch01_grinder_bosch_manual_20261027",
+        "ch01_grinder_facilities_20261027",
+        "ch01_grinder_law_history_20261027",
+        "ch01_grinder_silica_mol_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "d77a77d1b0c0bea0be786439219834a6452c839f3c702b44dcac691a873a8551",
+      "article_ids": [
+        "TW-01-042"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_grinder_facilities",
+      "replacement_ids": [
+        "ch01_grinder_bosch_manual_20261027",
+        "ch01_grinder_facilities_20261027",
+        "ch01_grinder_law_history_20261027",
+        "ch01_grinder_silica_mol_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "01032b718e7cbd62495b5d9691ff8e05f6f3cb28ff5ae0f5ef8c7c3ef7495481",
+      "article_ids": [
+        "TW-01-042"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_grinder_law_history",
+      "replacement_ids": [
+        "ch01_grinder_bosch_manual_20261027",
+        "ch01_grinder_facilities_20261027",
+        "ch01_grinder_law_history_20261027",
+        "ch01_grinder_silica_mol_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "d273a38f36fb76a287a3072f5f24c16b3948c0b6d5f6493b98b9763e9c6864db",
+      "article_ids": [
+        "TW-01-042"
+      ],
+      "current_source_object_unchanged": true
+    },
+    {
+      "id": "ch01_grinder_silica_mol",
+      "replacement_ids": [
+        "ch01_grinder_bosch_manual_20261027",
+        "ch01_grinder_facilities_20261027",
+        "ch01_grinder_law_history_20261027",
+        "ch01_grinder_silica_mol_20261027"
+      ],
+      "reason": "2026-10-27本輪以重新讀取的臺灣官方來源或原始研究取代舊文章引用；舊來源物件與雜湊保留於runtime及Git歷史。",
+      "prior_source_sha256": "aa07e41707ddaa241f1591b98217bd3732ed9e6655029ee0cfa02234be574c16",
+      "article_ids": [
+        "TW-01-042"
+      ],
+      "current_source_object_unchanged": true
+    }
+  ],
+  "statistics": [
+    {
+      "id": "taiwan_hz_age_standardized_rate_2011",
+      "item_id": "TW-01-021",
+      "source_id": "ch01_zoster_claims_2011_2020",
+      "value": 7.15,
+      "unit": "每1,000人年",
+      "period": "2011年",
+      "geography": "臺灣全國",
+      "population": "18歲以上一般成人健保申報世代",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "各年研究納入一般成人總人年；精確分母未見可讀摘要。",
+      "event_definition": "住院或門診至少一次帶狀皰疹主診斷，排除前一年已有診斷。",
+      "data_type": "健保行政申報回溯世代率",
+      "method": "全國健保申報成人世代，按年度人年計算並依研究方法標準化。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "健保申報病例不含未就醫者。",
+        "原始病例數及精確總人年未在可讀摘要提供，未自行反推。",
+        "可能受診斷認知及2018年底給付擴大影響；無疫苗史，不可視為疫苗效果。"
+      ]
+    },
+    {
+      "id": "taiwan_hz_age_standardized_rate_2020",
+      "item_id": "TW-01-021",
+      "source_id": "ch01_zoster_claims_2011_2020",
+      "value": 7.82,
+      "unit": "每1,000人年",
+      "period": "2020年",
+      "geography": "臺灣全國",
+      "population": "18歲以上一般成人健保申報世代",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "各年研究納入一般成人總人年；精確分母未見可讀摘要。",
+      "event_definition": "住院或門診至少一次帶狀皰疹主診斷，排除前一年已有診斷。",
+      "data_type": "健保行政申報回溯世代率",
+      "method": "全國健保申報成人世代，按年度人年計算並依研究方法標準化。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "健保申報病例不含未就醫者。",
+        "原始病例數及精確總人年未在可讀摘要提供，未自行反推。",
+        "可能受診斷認知及2018年底給付擴大影響；無疫苗史，不可視為疫苗效果。"
+      ]
+    },
+    {
+      "id": "taiwan_hz_crude_rate_age18_49_2020",
+      "item_id": "TW-01-021",
+      "source_id": "ch01_zoster_claims_2011_2020",
+      "value": 5.92,
+      "unit": "每1,000人年；未標準化",
+      "period": "2020年",
+      "geography": "臺灣全國",
+      "population": "18至49歲一般成人健保申報世代",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "該年齡層總人年；精確分母未見可讀摘要。",
+      "event_definition": "住院或門診至少一次帶狀皰疹主診斷，排除前一年已有診斷。",
+      "data_type": "健保行政申報分齡年發生率",
+      "method": "研究報告18至49及50歲以上成人的未標準化人年率。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "非個人終生風險。",
+        "未取得精確分子和人年。",
+        "申報及診斷捕捉可能隨政策與就醫行為改變。"
+      ]
+    },
+    {
+      "id": "taiwan_hz_crude_rate_age50plus_2020",
+      "item_id": "TW-01-021",
+      "source_id": "ch01_zoster_claims_2011_2020",
+      "value": 14.0,
+      "unit": "每1,000人年；未標準化",
+      "period": "2020年",
+      "geography": "臺灣全國",
+      "population": "50歲以上一般成人健保申報世代",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "該年齡層總人年；精確分母未見可讀摘要。",
+      "event_definition": "住院或門診至少一次帶狀皰疹主診斷，排除前一年已有診斷。",
+      "data_type": "健保行政申報分齡年發生率",
+      "method": "研究報告18至49及50歲以上成人的未標準化人年率。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "非個人終生風險。",
+        "未取得精確分子和人年。",
+        "申報及診斷捕捉可能隨政策與就醫行為改變。"
+      ]
+    },
+    {
+      "id": "taiwan_ed_survey_prevalence_all_2010",
+      "item_id": "TW-01-028",
+      "source_id": "ch01_ed_survey_2010",
+      "value": 27,
+      "unit": "%盛行率（IIEF-5）",
+      "period": "2010年發表；調查執行期未列於摘要",
+      "geography": "臺灣",
+      "population": "30歲以上男性電話調查受訪者",
+      "numerator": null,
+      "denominator": 1060,
+      "denominator_description": "樣本1,060人；摘要未列陽性人數及回覆率。",
+      "event_definition": "以IIEF-5界定之調查盛行率。",
+      "data_type": "單次代表性電話調查受訪者盛行率",
+      "method": "研究摘要稱代表性樣本，電話訪問1,060名30歲以上男性。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "非2026年現況或年發生率。",
+        "調查期、回覆率、陽性分子未列。",
+        "不能代表個人心血管風險。"
+      ]
+    },
+    {
+      "id": "taiwan_ed_survey_prevalence_age40plus_2010",
+      "item_id": "TW-01-028",
+      "source_id": "ch01_ed_survey_2010",
+      "value": 29,
+      "unit": "%盛行率（IIEF-5）",
+      "period": "2010年發表；調查執行期未列於摘要",
+      "geography": "臺灣",
+      "population": "40歲以上男性調查子群",
+      "numerator": null,
+      "denominator": null,
+      "denominator_description": "摘要未列該子群樣本數、陽性人數或回覆率，不推算。",
+      "event_definition": "以IIEF-5界定之調查盛行率。",
+      "data_type": "單次電話調查子群盛行率",
+      "method": "摘要列40歲以上子群29%，但未提供分層母數。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "非2026年現況或個人風險。",
+        "缺該子群分母、調查期及回覆率。"
+      ]
+    },
+    {
+      "id": "taiwan_steel_recycle_reports_2023",
+      "item_id": "TW-01-036",
+      "source_id": "ch01_nusc_steel_anomaly_2023",
+      "value": 38,
+      "unit": "起通報案件",
+      "period": "2023-01-01至2023-12-15",
+      "geography": "臺灣鋼鐵及資源回收業者",
+      "population": "業者通報的輻射異常物案件",
+      "numerator": 38,
+      "denominator": null,
+      "denominator_description": "產業行政通報件數，沒有全產業物料、作業批次或一般民眾暴露人口分母。",
+      "event_definition": "業者通報鋼鐵輻射異常物並安排訪查的案件。",
+      "data_type": "委託研究記錄的業者通報案件數",
+      "method": "研究報告記錄38件通報並安排38件訪查，非抽樣或個人曝露監測。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不代表民眾遭遇率、曝露率或個人機率。",
+        "僅涵蓋報告期間及產業通報。"
+      ]
+    },
+    {
+      "id": "taiwan_steel_recycle_artificial_nuclide_2023",
+      "item_id": "TW-01-036",
+      "source_id": "ch01_nusc_steel_anomaly_2023",
+      "value": 4,
+      "unit": "起含人工核種通報案件",
+      "period": "2023年截至12月15日訪查案件",
+      "geography": "臺灣鋼鐵及資源回收業者",
+      "population": "38起產業通報及訪查案件",
+      "numerator": 4,
+      "denominator": 38,
+      "denominator_description": "38件業者通報案件，不是民眾曝露人口分母。",
+      "event_definition": "訪查確認含Co-60或Cs-137人工核種的異常物案件。",
+      "data_type": "通報案件調查分類",
+      "method": "委託研究逐案記錄核種分類；無一般民眾抽樣或曝露測量。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "4/38僅描述業者通報件分類，不是人口比例或曝露機率。",
+        "天然核種案件不等於有害個人曝露。"
+      ]
+    },
+    {
+      "id": "taiwan_engineered_stone_silicosis_2021_2024",
+      "item_id": "TW-01-042",
+      "source_id": "ch01_grinder_silica_mol_20261027",
+      "value": 17,
+      "unit": "例職業病通報病例",
+      "period": "2021至2024年",
+      "geography": "臺灣人造石產業",
+      "population": "通報的人造石矽肺職業病例",
+      "numerator": 17,
+      "denominator": null,
+      "denominator_description": "公告未列完整暴露勞工人數或人時分母。",
+      "event_definition": "職業病通報資料中與人造石產業相關的矽肺症病例。",
+      "data_type": "特定產業職業病行政通報病例數",
+      "method": "勞動部引用職災預防及重建中心對通報資料的統計分析。",
+      "source_accessed_at": "2026-10-27",
+      "limitations": [
+        "不是砂輪機事故或所有矽肺病例發生率。",
+        "缺暴露人口分母，不能計算率或個人風險。"
+      ]
+    }
+  ],
+  "policy_dates": [
+    {
+      "id": "tw_zoster_selfpay_guidance",
+      "jurisdiction": "TW",
+      "source_id": "ch01_zoster_cdc_20261027",
+      "published_at": "2023-06-14",
+      "effective_at": null,
+      "status": "疾管署仍刊登50歲以上及18歲以上免疫低下者經醫師評估自費建議；供應與補助按院所及所在地確認。"
+    },
+    {
+      "id": "tw_zoster_adult_schedule_index",
+      "jurisdiction": "TW",
+      "source_id": "ch01_zoster_adult_schedule_20261027",
+      "published_at": "2026-03-31",
+      "effective_at": null,
+      "status": "成人時程索引列PDF檔名；PDF本輪無法讀取，不據其未讀內容宣稱接種規則。"
+    },
+    {
+      "id": "tw_pde5_safety_notice",
+      "jurisdiction": "TW",
+      "source_id": "ch01_ed_fda_20261027",
+      "published_at": "2026-02-27",
+      "effective_at": null,
+      "status": "食藥署藥品安全衛教，不是法規修正或個人處方。"
+    },
+    {
+      "id": "tw_nusc_steel_radiation_guide",
+      "jurisdiction": "TW",
+      "source_id": "ch01_nusc_scrap_guide_20261027",
+      "published_at": "2023-12-13",
+      "effective_at": "2023-12-13",
+      "status": "業者導則修正發布並自同日生效；資源回收業準用，非民眾處置規程；現行頁系統更新2026-10-15。"
+    },
+    {
+      "id": "tw_osh_facilities_rule_62",
+      "jurisdiction": "TW",
+      "source_id": "ch01_grinder_facilities_20261027",
+      "published_at": null,
+      "effective_at": "現行第62條；法規資料庫整編至2026-10-16",
+      "status": "雇主職場作業義務。2026-06-30修正指定條文分於2026-07-01和2027-01-01施行，第62條不在修正清單。"
+    }
+  ],
+  "professional_review_pending": [
+    "TW-01-021：尚未取得感染科、疫苗及公共衛生專業獨立審閱；健保研究補充表及原始微資料本輪未取得。",
+    "TW-01-028：尚未取得泌尿科、心臟科及藥師獨立專業審閱；2010電話調查全文及抽樣細節未取得。",
+    "TW-01-029：尚未取得泌尿科、心臟科、心理及藥師獨立專業審閱；未取得生活型態介入對臺灣族群的全國改善率。",
+    "TW-01-036：尚未取得輻射防護、消防、急診及法規專業獨立審閱；業者通報件數無一般民眾暴露分母。",
+    "TW-01-042：尚未取得職安、職業醫學、急救及法律專業獨立審閱；沒有可比全國手持砂輪機事故暴露分母。"
+  ],
+  "publication_ready": false,
+  "unresolved": [
+    "帶狀皰疹研究PMC直接開啟遭驗證限制；可見摘要、方法及結果已核對，未取得補充表或精確病例數／人年。",
+    "臺灣2010勃起功能調查僅取得PubMed摘要，實際調查期間、回覆率及分層母數未確認。",
+    "疾管署成人接種時程頁最後更新2026-03-31，但連結附件本輪讀取失敗；不據未讀內容宣稱規則。",
+    "全國法規資料庫內容整編截止2026-10-16，查閱日2026-10-27；未覆蓋整編截止日後的法規變動。",
+    "砂輪機製造商手冊僅適用Bosch兩款機型，不代替其他機型說明或現場風險評估。"
+  ]
+}

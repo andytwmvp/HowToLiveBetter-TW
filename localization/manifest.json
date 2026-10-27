@@ -743,11 +743,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-021.md",
       "sources": [
-        "ch01_zoster_cdc",
-        "ch01_zoster_vghtpe",
-        "ch01_zoster_claims_2017"
+        "ch01_zoster_cdc_20261027",
+        "ch01_zoster_adult_schedule_20261027",
+        "ch01_zoster_vghtpe_20261027",
+        "ch01_zoster_claims_2011_2020"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "50 歲以後打帶狀皰疹疫苗",
@@ -900,10 +901,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-028.md",
       "sources": [
-        "ch01_ed_ntuh202610",
-        "ch01_ed_fda2026"
+        "ch01_ed_ntuh_20261027",
+        "ch01_ed_fda_20261027",
+        "ch01_ed_survey_2010"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "勃起功能出了問題，先去查心血管，別當成單純的「那方面的事」",
@@ -920,10 +922,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-029.md",
       "sources": [
-        "ch01_ed_lifestyle_ntuh",
-        "ch01_ed_ntuh202610"
+        "ch01_ed_lifestyle_ntuh_20261027",
+        "ch01_ed_ntuh_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "減重、戒菸、把血壓血糖控住，勃起功能能跟著好轉",
@@ -1079,12 +1081,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-036.md",
       "sources": [
-        "ch01_nusc_reporting",
-        "ch01_nusc_scrap_guide",
-        "ch01_iaea_uncontrolled_source",
-        "ch01_nusc_scrap_effective"
+        "ch01_nusc_reporting_20261027",
+        "ch01_nusc_scrap_guide_20261027",
+        "ch01_nusc_steel_anomaly_2023",
+        "ch01_nusc_firstline_faq_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "不撿、不拆、不賣來路不明的金屬件，帶三葉草警示標誌的離遠點",
@@ -1211,12 +1213,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch01/TW-01-042.md",
       "sources": [
-        "ch01_grinder_bosch_manual",
-        "ch01_grinder_facilities",
-        "ch01_grinder_law_history",
-        "ch01_grinder_silica_mol"
+        "ch01_grinder_bosch_manual_20261027",
+        "ch01_grinder_facilities_20261027",
+        "ch01_grinder_law_history_20261027",
+        "ch01_grinder_silica_mol_20261027"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-27",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "裝好護罩、戴上護目鏡加面屏再用角磨機，雙手握穩，別裝木工鋸片切木頭",

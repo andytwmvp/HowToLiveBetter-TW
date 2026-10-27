@@ -23,7 +23,7 @@ class CrisisSymptomsTests(unittest.TestCase):
   c=b['TW-01-025'];self.assertLess(c.index('先撥119'),c.index('3,951'));self.assertIn('1925',c);self.assertIn('不是自行停處方藥',c);self.assertNotIn('oai_link_source',c)
   self.assertIn('每半年',b['TW-01-026']);self.assertIn('濃煙',b['TW-01-026']);self.assertIn('沒有家戶',b['TW-01-026'])
   self.assertIn('沒有疼痛',b['TW-01-027']);self.assertIn('先急診',b['TW-01-027']);self.assertIn('不等於',b['TW-01-027'])
-  self.assertIn('不可與PDE5抑制劑併用',b['TW-01-028']);self.assertIn('4小時',b['TW-01-028']);self.assertIn('倒過來',b['TW-01-028'])
+  self.assertIn('不可與PDE5抑制劑併用',b['TW-01-028']);self.assertIn('4小時',b['TW-01-028']);self.assertIn('告知救護人員最近使用的藥名與時間',b['TW-01-028']);self.assertIn('不能證明已有冠心病',b['TW-01-028'])
   self.assertIn('不能解讀為超時',b['TW-13-003']);self.assertIn('母數',b['TW-13-007']);self.assertIn('暫時沒有症狀',b['TW-13-020']);self.assertIn('無家戶分母',b['TW-13-024'])
  def test_all_prior_content_and_actual_review_history(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();ii={x['id']:x for x in rt['items']};ss={s['id']:s for s in rt['sources']}
