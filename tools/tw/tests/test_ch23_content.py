@@ -66,8 +66,12 @@ class SkillsChapterTests(unittest.TestCase):
         for e in batch['entries']:
             self.assertEqual(set(e['source_ids']),set(e['source_claims']))
             review=read(f"localization/reviews/{e['id']}.json")
-            retired={source['id'] for source in register.get(e['id'],{}).get('retired_sources',[])}
-            expected_ids=(set(e['source_ids'])|supplemental.get(e['id'],set()))-retired
+            recheck=register.get(e['id'])
+            if recheck:
+                expected_ids=set(recheck['source_ids'])
+            else:
+                retired={source['id'] for source in register.get(e['id'],{}).get('retired_sources',[])}
+                expected_ids=(set(e['source_ids'])|supplemental.get(e['id'],set()))-retired
             self.assertEqual({s['url'] for s in review['source_checks']},{runtime[s]['url'] for s in expected_ids})
             self.assertTrue(all(len(s['claim'])>15 and len(s['retrieval_method'])>15 for s in review['source_checks']))
     def test_only_22_new_topics_counted_and_publication_still_incomplete(self):

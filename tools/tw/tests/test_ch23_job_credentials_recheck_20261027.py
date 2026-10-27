@@ -56,8 +56,9 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
         self.assertEqual(self.evidence['counts_after']['runtime_sources'], self.evidence['counts_before']['runtime_sources'] + len(NEW_SOURCE_IDS))
         self.assertEqual(self.evidence['counts_after']['source_registry'], self.evidence['counts_before']['source_registry'] + len(NEW_SOURCE_IDS))
         self.assertEqual(self.evidence['counts_after']['json_files_checked'], self.evidence['counts_before']['json_files_checked'] + 1)
-        self.assertEqual(coverage['json_files_checked'], self.evidence['counts_after']['json_files_checked'])
-        self.assertEqual(coverage['registry_sources'], self.evidence['counts_after']['source_registry'])
+        # This evidence is an immutable snapshot; later batches can add files and sources.
+        self.assertGreaterEqual(coverage['json_files_checked'], self.evidence['counts_after']['json_files_checked'])
+        self.assertGreaterEqual(coverage['registry_sources'], self.evidence['counts_after']['source_registry'])
         self.assertEqual(coverage['unique_draft_entries'], 498)
         self.assertEqual(self.evidence['counts_after']['core_completed'], self.evidence['counts_before']['core_completed'])
         self.assertEqual(coverage['publication_completed_entries'], 278)
