@@ -21,7 +21,7 @@ class HivPreventionTests(unittest.TestCase):
  def test_urgent_care_window_and_statistical_limits(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('不保證',b['TW-01-029']);self.assertIn('不自行停藥',b['TW-01-029'])
-  self.assertIn('72小時',b['TW-01-030']);self.assertIn('28天',b['TW-01-030']);self.assertIn('679',b['TW-01-030']);self.assertIn('不是感染發生率',b['TW-01-030'])
+  self.assertIn('72小時',b['TW-01-030']);self.assertIn('28天',b['TW-01-030']);self.assertIn('837例',b['TW-01-030']);self.assertIn('2025全年1,027例',b['TW-01-030']);self.assertIn('不是感染發生率',b['TW-01-030'])
   self.assertLess(b['TW-01-031'].index('72小時'),b['TW-01-031'].index('3至12週'));self.assertIn('確認檢驗',b['TW-01-031']);self.assertIn('3至6個月',b['TW-01-031'])
   self.assertIn('不是等待',b['TW-01-032']);self.assertIn('119',b['TW-01-032']);self.assertIn('1925',b['TW-01-032']);self.assertNotIn('oai_link_source',b['TW-01-032'])
   for key in RECHECK:self.assertIn('頻率',b[key])
