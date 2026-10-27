@@ -40,7 +40,7 @@ class PreventionBatchTests(unittest.TestCase):
         self.assertIn('非高危險群尚無須全面追加',items['TW-01-014'])
         self.assertIn('2026年當年累計4例',items['TW-01-015'])
         self.assertIn('不是全臺釘刺傷人數',items['TW-01-015'])
-        self.assertIn('2026年應核對當學年度通知',items['TW-01-016'])
+        self.assertIn('目前依學校通知核對本人名冊、接種日及補接種期限',items['TW-01-016'])
         for key in ('TW-13-001','TW-13-026','TW-13-043','TW-13-044'):
             self.assertIn('臺灣事件頻率再審',items[key])
             self.assertIn('不等於醫師或急救教官專業簽證',items[key])

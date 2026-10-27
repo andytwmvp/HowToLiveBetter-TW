@@ -32,8 +32,10 @@ class ScreeningInfluenzaTests(unittest.TestCase):
         self.assertIn('19,074',b['TW-01-019']);self.assertIn('間歇',b['TW-01-019'])
         for n in (17,18,19):
             self.assertIn('2000',b[f'TW-01-{n:03}']);self.assertIn('不含原位癌',b[f'TW-01-{n:03}'])
-        self.assertIn('11月2日才開放',b['TW-01-020']);self.assertIn('非每例都確診流感',b['TW-01-020'])
-        self.assertIn('不以334除以1,673',b['TW-01-020'])
+        self.assertIn('11月2日才開放',b['TW-01-020']);self.assertIn('也不代表確診流感',b['TW-01-020'])
+        self.assertIn('123,820人次',b['TW-01-020'])
+        self.assertIn('307例流感併發重症及42例死亡',b['TW-01-020'])
+        self.assertIn('不以42除以307',b['TW-01-020'])
         self.assertEqual(next(x for x in validate_runtime()['items'] if x['id']=='TW-01-020')['review_due_at'],'2026-11-02')
 
     def test_all_prior_items_and_sources_unchanged(self):
