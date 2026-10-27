@@ -95,7 +95,12 @@ class HousingSafetyRecheckTests(unittest.TestCase):
                          self.batch["counts_before"]["registry_sources"] + len(NEW_SOURCE_IDS))
         self.assertEqual(self.batch["counts_after"]["substantive_rechecks"],
                          self.batch["counts_before"]["substantive_rechecks"] + len(IDS))
-        self.assertEqual(audit_drafts()["json_files_checked"], self.batch["counts_after"]["coverage_json_files"])
+        live_audit = audit_drafts()
+        coverage = read("localization/tw-edition/coverage.json")
+        self.assertGreaterEqual(live_audit["json_files_checked"],
+                                self.batch["counts_after"]["coverage_json_files"])
+        self.assertEqual(coverage["json_files_checked"], live_audit["json_files_checked"])
+        self.assertEqual(coverage["registry_sources"], live_audit["registry_sources"])
         self.assertFalse(publication_report()["publication_ready"])
 
     def test_law_status_is_separate_from_frequency(self):

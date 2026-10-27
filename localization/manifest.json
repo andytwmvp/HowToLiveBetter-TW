@@ -8743,9 +8743,11 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
         "https://www.ey.gov.tw/File/43BC094940995CFC?A=C",
-        "https://law.fsc.gov.tw/LawContent.aspx?id=FE054525&media=print"
+        "https://law.fsc.gov.tw/LawContent.aspx?id=FE054525&media=print",
+        "https://resim.moi.gov.tw/Home/RentIndex",
+        "https://www.laf.org.tw/service-project-detail/22"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "租長租公寓先查它的資金監管賬戶，別圖便宜一次性付一年",
@@ -8764,9 +8766,10 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=425",
         "https://www.ey.gov.tw/File/43BC094940995CFC?A=C",
-        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001"
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=866&pcode=B0000001",
+        "https://www.laf.org.tw/service-project-detail/22"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "房子租期內被賣掉，租約繼續有效，不用搬",
@@ -8849,9 +8852,11 @@
       "target_path": "locales/zh-TW/book/ch15/TW-15-009.md",
       "sources": [
         "https://www.nps.gov.tw/ch/titlelist/reginquiry/2760",
-        "https://www.kl-land.klcg.gov.tw/tw/land/3960-259514.html"
+        "https://www.kl-land.klcg.gov.tw/tw/land/3960-259514.html",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0110013",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0020001"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "城鎮戶口想搬去鄉下住，只租農房，別買宅基地和宅基地上的房子",
@@ -8869,10 +8874,12 @@
       "target_path": "locales/zh-TW/book/ch15/TW-15-010.md",
       "sources": [
         "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
-        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/a9868fff-73ce-4b32-b979-ecdc1fbdefcf",
-        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/487a6113-c94c-4d85-a927-3fa724dd9357"
+        "https://www.ey.gov.tw/Page/DFB720D019CCCB0A/7beaa539-d140-4e03-97c3-020b68a9692c",
+        "https://cpc.ey.gov.tw/Page/6C059838CA9744A8/235e42d0-6ffc-4df2-bba3-751a5f0c0af5",
+        "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/aa50b3f7-018c-4925-9e23-78b9c70e041c",
+        "https://appeal.cpc.ey.gov.tw/WWW/Default.aspx"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "買期房時先看預售許可證，定金、首付和貸款只打進合同寫明的預售資金監管賬戶",
