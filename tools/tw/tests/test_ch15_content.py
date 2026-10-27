@@ -45,6 +45,9 @@ class HousingChapterTests(unittest.TestCase):
    if a['id'] not in IDS:self.assertEqual(a,b)
  def test_sources_and_retrieval_scope(self):
   batch=read('localization/ch15-batch.json');all_sources={s['id']:s for s in validate_runtime()['sources']}
+  current_items={row['id']:row for row in validate_runtime()['items']}
+  register=read('localization/retroactive-review-register-20261019.json')
+  records={row['id']:row for row in register['substantive_rechecks']}
   new=read('localization/tw-edition/sources/19-housing.json')['sources']
   self.assertEqual(len(batch['sources']),22);self.assertEqual(len(new),14)
   for s in batch['sources']:
@@ -52,10 +55,15 @@ class HousingChapterTests(unittest.TestCase):
    self.assertGreater(len(s['retrieval_method']),20)
   for e in batch['entries']:
    self.assertEqual(set(e['source_ids']),set(e['source_claims']))
-   checks=read(f"localization/reviews/{e['id']}.json")['source_checks']
-   # The first integration batch is a historical snapshot. Later substantive
-   # rechecks may append sources without rewriting that immutable batch record.
-   self.assertTrue({all_sources[k]['url'] for k in e['source_ids']}.issubset({c['url'] for c in checks}))
+   review=read(f"localization/reviews/{e['id']}.json");checks=review['source_checks']
+   current_ids=set(current_items[e['id']]['source_ids'])
+   retired_ids={row['id'] for row in records.get(e['id'],{}).get('retired_sources',[])}
+   historical_ids=set(e['source_ids'])
+   # Old source objects stay registered, while citations no longer supporting
+   # the current article must have an explicit replacement and retirement record.
+   self.assertTrue(historical_ids.issubset(current_ids|retired_ids))
+   self.assertTrue(retired_ids.issubset(historical_ids))
+   self.assertEqual({all_sources[k]['url'] for k in current_ids},{c['url'] for c in checks})
    self.assertTrue(all('非逐字引文' in c['supporting_passage'] for c in checks))
  def test_counts_without_duplicate_draft_progress(self):
   data=audit_drafts()
