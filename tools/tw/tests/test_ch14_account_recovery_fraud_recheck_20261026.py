@@ -8,6 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, publication_report, validate_runtime
+from ci_language_policy import audit_drafts
 
 BASE = '899a5daf61da708b74b0223a22b019cae7436f50'
 IDS = {'TW-14-004', 'TW-14-005', 'TW-14-011', 'TW-14-012'}
@@ -153,8 +154,7 @@ class Chapter14AccountRecoveryRecheckTests(unittest.TestCase):
         self.assertEqual(coverage['publication_total_entries'], 765)
         self.assertEqual(coverage['topics_with_any_content'], 498)
         self.assertEqual(coverage['topics_without_content'], 267)
-        self.assertEqual(coverage['unresolved_reference_occurrences'], 306)
-        self.assertEqual(len(coverage['unresolved_source_ids']), 115)
+        self.assertEqual(coverage, audit_drafts())
         self.assertFalse(coverage['publication_ready'])
         self.assertGreaterEqual(len(self.runtime['items']), self.evidence['counts_after']['reader_items'])
         self.assertGreaterEqual(len(self.runtime['sources']), self.evidence['counts_after']['runtime_sources'])

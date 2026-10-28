@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "scope": "草稿結構盤點，不代表內容查核完成",
-  "json_files_checked": 495,
+  "json_files_checked": 498,
   "original_entries": 765,
   "structured_draft_chapters": 14,
   "structured_draft_entries": 373,
   "legacy_markdown_draft_entries": 278,
   "unique_draft_entries": 498,
   "entries_without_any_draft": 267,
-  "registry_sources": 977,
+  "registry_sources": 983,
   "unresolved_source_ids": {
     "adultcheck": 5,
     "afib": 1,
@@ -35,7 +35,7 @@
     "diabetes": 3,
     "disasterkit": 1,
     "drinkingwater": 1,
-    "drowning": 2,
+    "drowning": 1,
     "dysmenorrhea": 1,
     "emsact": 4,
     "energylabel": 1,
@@ -84,7 +84,6 @@
     "nationalpension": 1,
     "nhimedical": 8,
     "nistauth": 1,
-    "npssafety": 1,
     "nutrition": 15,
     "oralcare": 1,
     "oshconfined": 1,
@@ -126,7 +125,7 @@
     "whosalt": 1,
     "zoster": 1
   },
-  "unresolved_reference_occurrences": 306,
+  "unresolved_reference_occurrences": 304,
   "chapters": [
     {
       "chapter": 1,

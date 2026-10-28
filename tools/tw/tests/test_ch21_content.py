@@ -47,7 +47,7 @@ class TravelChapterTests(unittest.TestCase):
    self.assertIn('HTML',s['retrieval_method']);self.assertEqual(s['accessed_at'],'2026-10-17')
   for e in batch['entries']:
    self.assertEqual(set(e['source_ids']),set(e['source_claims']))
-   checks=read(f"localization/reviews/{e['id']}.json")['source_checks']
+   checks=at(INTEGRATED,f"localization/reviews/{e['id']}.json")['source_checks']
    self.assertEqual({c['url'] for c in checks},{runtime[s]['url'] for s in e['source_ids']})
    self.assertTrue(all('非逐字引文' in c['supporting_passage'] for c in checks))
  def test_new_topics_not_counted_as_navigation(self):
@@ -80,7 +80,7 @@ class TravelChapterTests(unittest.TestCase):
   for value in ('非觀光','許可','註冊','退款','不實'):self.assertIn(value,t)
   t=bodies()['TW-21-010']
   for value in ('B類','不是必備','不能','空白','冒用'):self.assertIn(value,t)
-  self.assertIn('不把所有海外合法職缺都判為犯罪',bodies()['TW-21-005'])
+  self.assertIn('不要因此把所有海外工作、特定地區或特定族群一概當成犯罪',bodies()['TW-21-005'])
  def test_contacts_and_medicine_scopes(self):
   t=bodies()['TW-21-011']
   for value in ('可信任','不必一定是家人','不是','24或48','最後位置'):self.assertIn(value,t)
@@ -88,7 +88,7 @@ class TravelChapterTests(unittest.TestCase):
   for value in ('至少14日前','三個月','兩週','轉機','禁止','不自行停藥'):self.assertIn(value,t)
  def test_quarantine_not_blanket_original_list(self):
   t=bodies()['TW-21-013']
-  for value in ('新鮮果實','土壤','非疫區','申報','不會把禁止輸入物變成合法','未取得舊版參考表PDF','免稅不是免檢疫'):self.assertIn(value,t)
+  for value in ('新鮮果實','土壤','非疫區','申報','不會把禁止輸入物變成合法','不將中國對所有奶酪與蛋製品的舊名單原封套用','免稅不是免檢疫'):self.assertIn(value,t)
   self.assertNotIn('乳製品一律禁止',t)
  def test_browser_hook_and_no_one_shot_writers(self):
   t=(ROOT/'tools/tw/assets_and_browser.py').read_text()

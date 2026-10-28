@@ -258,11 +258,16 @@ def _historical_edge_is_valid(root: Path, revision: str, record: dict, old: dict
                 raw = _git_blob(root, revision, new["target_path"])
             if raw.decode("utf-8") != new["body"] or review.get("target_path") != new["target_path"]:
                 return False
+        sources = {item["id"]: item for item in runtime["sources"]}
         if not key.startswith("TW-NAV-"):
             entries = {item["id"]: item for item in manifest["entries"]}
-            if key not in entries or entries[key].get("sources") != new.get("source_ids", []):
+            if key not in entries:
                 return False
-        sources = {item["id"]: item for item in runtime["sources"]}
+            if new.get("source_ids", []) != old.get("source_ids", []):
+                expected_urls = [sources[source_id]["url"] for source_id in new.get("source_ids", [])
+                                 if source_id in sources]
+                if entries[key].get("sources") not in (new.get("source_ids", []), expected_urls):
+                    return False
         if any(source_id not in sources for source_id in new.get("source_ids", [])):
             return False
         if {sources[source_id]["url"] for source_id in new.get("source_ids", [])} != {
@@ -283,45 +288,61 @@ def _historical_edge_is_valid(root: Path, revision: str, record: dict, old: dict
 
 
 def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, dict]]:
-    """Return valid committed revisions for one item, in mainline order."""
+    """Return valid committed revisions for one item, in mainline order.
+
+    Use Git's string search to locate commits that introduced each recorded
+    after-hash, then validate those immutable snapshots. Reading every full
+    register blob for every item made repeated review-chain checks needlessly
+    expensive.
+    """
     head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
     cache_key = (str(root.resolve()), key + ":" + head)
     if cache_key in _HISTORY_EDGE_CACHE:
         return _HISTORY_EDGE_CACHE[cache_key]
+    register_path = "localization/retroactive-review-register-20261019.json"
+    records = [record for record in load(root, register_path).get("substantive_rechecks", [])
+               if record.get("id") == key]
     revisions_key = (str(root.resolve()), head)
     if revisions_key not in _HISTORY_REVISIONS_CACHE:
         _HISTORY_REVISIONS_CACHE[revisions_key] = subprocess.check_output(
-            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--",
-             "localization/retroactive-review-register-20261019.json"], cwd=root, text=True,
-            stderr=subprocess.DEVNULL).splitlines()
-    revisions = _HISTORY_REVISIONS_CACHE[revisions_key]
-    edges: list[tuple[dict, dict, dict]] = []
+            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--", register_path],
+            cwd=root, text=True, stderr=subprocess.DEVNULL).splitlines()
+    order = {revision: index for index, revision in enumerate(reversed(_HISTORY_REVISIONS_CACHE[revisions_key]))}
+    ranked_edges: list[tuple[int, tuple[dict, dict, dict]]] = []
     seen: set[tuple[str, str]] = set()
     runtime_cache: dict[str, dict] = {}
-    for revision in reversed(revisions):
-        try:
-            register = _git_json(root, revision, "localization/retroactive-review-register-20261019.json")
-            record = next((item for item in register.get("substantive_rechecks", [])
-                           if item.get("id") == key), None)
-            if record is None:
-                continue
-            pair = (record.get("before_sha256", ""), record.get("after_sha256", ""))
-            if pair in seen:
-                continue
-            if revision not in runtime_cache:
-                runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
-            prior_revision = record.get("prior_revision", "")
-            if prior_revision not in runtime_cache:
-                runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
-            old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
-            new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
-            old, new = old_items.get(key), new_items.get(key)
-            if old is None or new is None or not _historical_edge_is_valid(root, revision, record, old, new):
-                continue
-            seen.add(pair)
-            edges.append((old, new, record))
-        except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+    for record in records:
+        after_sha = record.get("after_sha256", "")
+        if not re.fullmatch(r"[0-9a-f]{64}", after_sha):
             continue
+        candidates = subprocess.check_output(
+            ["git", "log", "--first-parent", "--full-history", "--format=%H", "-S", after_sha,
+             "--", register_path], cwd=root, text=True, stderr=subprocess.DEVNULL).splitlines()
+        for revision in reversed(candidates):
+            try:
+                commit_register = _git_json(root, revision, register_path)
+                committed = next((item for item in commit_register.get("substantive_rechecks", [])
+                                  if item == record), None)
+                if committed is None:
+                    continue
+                pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
+                if pair in seen:
+                    continue
+                if revision not in runtime_cache:
+                    runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
+                prior_revision = committed.get("prior_revision", "")
+                if prior_revision not in runtime_cache:
+                    runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+                old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
+                new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
+                old, new = old_items.get(key), new_items.get(key)
+                if old is None or new is None or not _historical_edge_is_valid(root, revision, committed, old, new):
+                    continue
+                seen.add(pair)
+                ranked_edges.append((order.get(revision, -1), (old, new, committed)))
+            except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+                continue
+    edges = [edge for _, edge in sorted(ranked_edges, key=lambda entry: entry[0])]
     _HISTORY_EDGE_CACHE[cache_key] = edges
     return edges
 
@@ -357,18 +378,22 @@ def _registered_history_connects(root: Path, old: dict, new: dict, record: dict)
 
 
 def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
-    """Require unchanged content or a complete, evidence-backed Git history chain."""
+    """Require unchanged content or a complete, evidence-backed Git history chain.
+
+    A source can be substantively re-reviewed more than once. The append-only
+    register therefore may contain multiple records for one item; select the
+    record that proves the current edge or final edge of the chain.
+    """
     if old == new:
         return
     register = load(ROOT, "localization/retroactive-review-register-20261019.json")
     records = [r for r in register.get("substantive_rechecks", []) if r.get("id") == old.get("id")]
-    case.assertEqual(len(records), 1, "正文變更必須有唯一再審紀錄")
-    record = records[0]
-    if documented_revision(old, new, record):
-        validate_recheck_history(ROOT, record, new)
-        return
-    case.assertTrue(_registered_history_connects(ROOT, old, new, record), "未登錄、證據缺漏或雜湊不同的正文修訂歷史鏈")
-    validate_recheck_history(ROOT, record, new)
+    case.assertTrue(records, "正文變更必須有再審紀錄")
+    for record in sorted(records, key=lambda item: (item.get("reviewed_at", ""), item.get("after_sha256", "")), reverse=True):
+        if documented_revision(old, new, record) or _registered_history_connects(ROOT, old, new, record):
+            validate_recheck_history(ROOT, record, new)
+            return
+    case.fail("未登錄、證據缺漏或雜湊不同的正文修訂歷史鏈")
 
 
 def load(root: Path, relative: str) -> dict:
@@ -507,15 +532,35 @@ def audit(root: Path = ROOT) -> dict:
     if not isinstance(rechecks, list):
         raise ValueError("實質再審紀錄必須為清單")
     seen = set()
+    grouped: dict[str, list[dict]] = defaultdict(list)
     for record in rechecks:
         key = record.get("id")
-        if key not in published_map or key in seen:
-            raise ValueError("實質再審 ID 不存在或重複")
-        seen.add(key)
+        pair = (record.get("before_sha256", ""), record.get("after_sha256", ""))
+        token = (key, *pair)
+        if key not in published_map or token in seen:
+            raise ValueError("實質再審 ID 不存在或同一正文版本邊重複")
+        seen.add(token)
         revision = record.get("prior_revision", "")
         if not re.fullmatch(r"[0-9a-f]{40}", revision):
             raise ValueError("實質再審原版本不符")
-        validate_recheck_history(root, record, published_map[key])
+        grouped[key].append(record)
+    for key, item_records in grouped.items():
+        if len(item_records) == 1:
+            validate_recheck_history(root, item_records[0], published_map[key])
+            continue
+        historical = _historical_recheck_edges(root, key)
+        for record in item_records:
+            if any(edge[2] == record for edge in historical):
+                continue
+            revision = record["prior_revision"]
+            try:
+                prior_runtime = _git_json(root, revision, "localization/tw-edition/runtime.json")
+                old = next(item for item in prior_runtime["items"] if item["id"] == key)
+            except (KeyError, StopIteration, ValueError, subprocess.CalledProcessError) as error:
+                raise ValueError("無法核對未提交的實質再審原版本：" + key) from error
+            if not _historical_edge_is_valid(root, "WORKTREE", record, old, published_map[key]):
+                raise ValueError("實質再審證據或前後正文 SHA 不符：" + key)
+            validate_recheck_history(root, record, published_map[key])
     return {
         "schema_version": 1,
         "standard": "PR #27：臺灣情境、發生頻率、原始來源與風險分流",

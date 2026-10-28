@@ -31,15 +31,21 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         runtime = validate_runtime()
         items = {item['id']: item for item in runtime['items']}
         sources = {source['id']: source for source in runtime['sources']}
-        rows = {row['id']: row for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']}
+        rows = load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
         manifest = {row['id']: row for row in load('localization/manifest.json')['entries']}
         for key in IDS:
             item = items[key]
             review = load(f'localization/reviews/{key}.json')
-            validate_recheck_history(ROOT, rows[key], item)
+            body_sha = hashlib.sha256(item['body'].encode()).hexdigest()
+            current_records = [
+                row for row in rows
+                if row['id'] == key and row.get('after_sha256') == body_sha
+            ]
+            self.assertEqual(len(current_records), 1, key)
+            validate_recheck_history(ROOT, current_records[0], item)
             self.assertEqual((ROOT / item['target_path']).read_text(encoding='utf-8'), item['body'])
             self.assertEqual(review['target_sha256'], hashlib.sha256(item['body'].encode()).hexdigest())
-            self.assertEqual(review['source_checks'], rows[key]['source_checks'])
+            self.assertEqual(review['source_checks'], current_records[0]['source_checks'])
             for check in review['source_checks']:
                 self.assertGreaterEqual(len(check['supporting_passage']), 50)
                 self.assertNotEqual(check['supporting_passage'], check['claim'])
@@ -75,8 +81,11 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(altered['body'].encode()).hexdigest(),
                          hashlib.sha256(current['body'].encode()).hexdigest())
         self.assertNotEqual(altered, current)
-        record = next(row for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
-                      if row['id'] == 'TW-24-001')
+        current_sha = hashlib.sha256(current['body'].encode()).hexdigest()
+        record = next(
+            row for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
+            if row['id'] == 'TW-24-001' and row.get('after_sha256') == current_sha
+        )
         self.assertFalse(_registered_history_connects(ROOT, altered, current, record))
 
     def test_taiwan_will_law_announcement_effective_date_and_transition(self):

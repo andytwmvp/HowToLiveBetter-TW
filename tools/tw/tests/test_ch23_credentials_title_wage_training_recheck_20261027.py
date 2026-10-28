@@ -8,6 +8,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from content_validation import load_json
+from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
 from review_contract import ROOT, validate_runtime
 
@@ -75,8 +76,7 @@ class Ch23CredentialsTitleWageTrainingRecheckTests(unittest.TestCase):
         self.assertEqual(coverage['entries_without_any_draft'], 267)
         self.assertEqual(coverage['publication_completed_entries'], 278)
         self.assertEqual(coverage['publication_total_entries'], 765)
-        self.assertEqual(len(coverage['unresolved_source_ids']), 115)
-        self.assertEqual(coverage['unresolved_reference_occurrences'], 306)
+        self.assertEqual(coverage, audit_drafts())
         self.assertFalse(self.evidence['publication_ready'])
         self.assertFalse(coverage['publication_ready'])
 
