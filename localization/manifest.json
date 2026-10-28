@@ -293,9 +293,10 @@
       "sources": [
         "ch01_motc_belt_rule",
         "ch01_motc_unbelted_highway_2025",
-        "ch01_tpe_traffic_faq_202609"
+        "ch01_tpe_traffic_faq_202609",
+        "ch01_road_traffic_act31_current"
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "系安全帶，前排後排都系",
@@ -313,13 +314,13 @@
       "target_path": "locales/zh-TW/book/ch01/TW-01-002.md",
       "sources": [
         "ch01_moj_micro_helmet",
-        "ch01_motc_moto_rider_deaths_2026july",
         "ch01_moj_motorcycle_helmet_art88",
         "ch01_bsmi_helmet_retest_report_202607",
         "ch01_bsmi_helmet_materials_202607",
-        "head_2026_vghtc"
+        "head_2026_vghtc",
+        "ch01_motc_moto_rider_deaths_2026aug"
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "騎摩托車、電動自行車戴頭盔並扣好",
@@ -340,9 +341,13 @@
         "ch01_nfa_smoke_alarm",
         "ch01_nfa_co_detector_3714",
         "ch01_wda_co_first_aid_2026",
-        "ch01_vghtpe_inhalation_firstaid"
+        "ch01_vghtpe_inhalation_firstaid",
+        "ch01_fire_services_act_current",
+        "ch01_nfa_fire_amendment_effective_202506",
+        "ch01_residential_alarm_installation_rule_current",
+        "ch01_nfa_home_fire_escape_202601"
       ],
-      "verified_at": "2026-10-25",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "裝煙霧報警器；冬天在室內燒煤、用燃氣取暖的再裝一氧化碳報警器",
@@ -364,9 +369,11 @@
         "ch01_wda_co_first_aid_2026",
         "ch01_vghtpe_inhalation_firstaid",
         "ch01_moea_gas_emergency_2025",
-        "ch01_ftc_gas_check_2023"
+        "ch01_ftc_gas_check_2023",
+        "ch01_gasheater_installer_rule_current",
+        "ch01_fair_trade_act25_current"
       ],
-      "verified_at": "2026-10-25",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "燃氣軟管和灶具到期就換，不自己改管道，燃氣公司上門推銷可以直接拒絕",

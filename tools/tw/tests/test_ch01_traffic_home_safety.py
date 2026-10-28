@@ -25,7 +25,7 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
  def test_taiwan_frequency_and_risk_gates(self):
   b={x["id"]:x["body"] for x in validate_runtime()["items"]}
   self.assertIn("19件",b["TW-01-001"]);self.assertIn("21人死亡",b["TW-01-001"]);self.assertNotIn("2,858人",b["TW-01-001"])
-  self.assertIn("932人",b["TW-01-002"]);self.assertIn("初估",b["TW-01-002"]);self.assertIn("材料",b["TW-01-002"]);self.assertNotIn("衝擊吸收不符",b["TW-01-002"])
+  self.assertIn("1,055人",b["TW-01-002"]);self.assertNotIn("932人",b["TW-01-002"]);self.assertNotIn("初估",b["TW-01-002"]);self.assertIn("材料",b["TW-01-002"]);self.assertNotIn("衝擊吸收不符",b["TW-01-002"])
   self.assertIn("3,171次",b["TW-01-003"]);self.assertIn("不是全臺房屋戶數",b["TW-01-003"])
   self.assertIn("24件",b["TW-01-004"]);self.assertIn("22件",b["TW-01-004"]);self.assertNotIn("118件",b["TW-01-004"]);self.assertIn("沒有燃氣熱水器使用戶數",b["TW-01-004"])
   for key in IDS:

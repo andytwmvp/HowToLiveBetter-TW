@@ -10,8 +10,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import validate_recheck_history
 from review_contract import ROOT, publication_report, validate_entry, validate_runtime
 
-BASE = "66b24c548bb3b3731579bd2421e37124d437d303"
+BASE = "37756e57425903c75dfa54dd24ee201bf613b6c5"
+PREVIOUS_BATCH_BASE = "66b24c548bb3b3731579bd2421e37124d437d303"
 IDS = ("TW-01-003", "TW-01-004", "TW-01-006", "TW-01-012")
+CURRENT_RECHECK_IDS = {"TW-01-003", "TW-01-004"}
 NEW_SOURCE_IDS = {
     "ch01_nfa_co_detector_3714", "ch01_wda_co_first_aid_2026",
     "ch01_vghtpe_inhalation_firstaid", "ch01_nfa_co_2024",
@@ -45,10 +47,12 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
                 self.assertEqual(entry["sources"], item["source_ids"])
                 self.assertEqual(raw.decode("utf-8"), item["body"])
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review["target_sha256"])
-                self.assertEqual(review["reviewed_at"], "2026-10-25")
+                expected_date = "2026-10-28" if key in CURRENT_RECHECK_IDS else "2026-10-25"
+                expected_revision = BASE if key in CURRENT_RECHECK_IDS else PREVIOUS_BATCH_BASE
+                self.assertEqual(review["reviewed_at"], expected_date)
                 self.assertEqual(review["review_due_at"], "2027-01-31")
                 self.assertEqual(row["status"], "ai_source_rechecked_professional_pending")
-                self.assertEqual(row["prior_revision"], BASE)
+                self.assertEqual(row["prior_revision"], expected_revision)
                 self.assertEqual(row["source_ids"], item["source_ids"])
                 self.assertEqual(row["source_checks"], review["source_checks"])
                 self.assertEqual({check["url"] for check in review["source_checks"]},
@@ -89,24 +93,30 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
         sources = {source["id"]: source for source in runtime["sources"]}
         self.assertTrue(NEW_SOURCE_IDS.issubset(sources))
         register = load("localization/retroactive-review-register-20261019.json")
-        rows = {row["id"]: row for row in register["substantive_rechecks"]}
-        self.assertEqual(len(rows["TW-01-004"]["retired_sources"]), 2)
-        self.assertEqual(len(rows["TW-01-012"]["retired_sources"]), 1)
+        all_rows = register["substantive_rechecks"]
+        rows = {row["id"]: row for row in all_rows}
+        previous_batch_rows = {
+            key: next(row for row in all_rows
+                      if row["id"] == key and row["prior_revision"] == PREVIOUS_BATCH_BASE)
+            for key in IDS
+        }
+        self.assertEqual(len(previous_batch_rows["TW-01-004"]["retired_sources"]), 2)
+        self.assertEqual(len(previous_batch_rows["TW-01-012"]["retired_sources"]), 1)
         previous = json.loads(subprocess.check_output(
-            ["git", "show", BASE + ":localization/tw-edition/runtime.json"], cwd=ROOT, text=True))
+            ["git", "show", PREVIOUS_BATCH_BASE + ":localization/tw-edition/runtime.json"], cwd=ROOT, text=True))
         previous_sources = {source["id"]: source for source in previous["sources"]}
         self.assertGreaterEqual(len(runtime["sources"]),
                                 len(previous_sources) + len(NEW_SOURCE_IDS))
         for source_id, old_source in previous_sources.items():
             self.assertEqual(sources[source_id], old_source)
         for key in ("TW-01-004", "TW-01-012"):
-            for retired in rows[key]["retired_sources"]:
+            for retired in previous_batch_rows[key]["retired_sources"]:
                 old_source = previous_sources[retired["id"]]
                 digest = hashlib.sha256(json.dumps(old_source, ensure_ascii=False,
                                                    sort_keys=True).encode("utf-8")).hexdigest()
                 self.assertEqual(retired["prior_source_sha256"], digest)
         evidence = load("localization/ch01-p0-fire-co-evehicle-drowning-recheck-20261025.json")
-        self.assertEqual(evidence["base_main_sha"], BASE)
+        self.assertEqual(evidence["base_main_sha"], PREVIOUS_BATCH_BASE)
         self.assertEqual(evidence["new_core_ids"], [])
         self.assertEqual(evidence["counts_before"]["core_reviewed_entries"], 278)
         self.assertEqual(evidence["counts_after"]["core_reviewed_entries"], 278)
