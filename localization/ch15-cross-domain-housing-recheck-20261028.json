@@ -1,0 +1,291 @@
+{
+  "batch_date": "2026-10-28",
+  "base_main_sha": "94f860d0ea977227c4d0a0c1445c20324a376673",
+  "scope": {
+    "core_ids": [],
+    "historical_ids": [
+      "TW-15-007",
+      "TW-15-012",
+      "TW-15-015",
+      "TW-15-017"
+    ],
+    "priority_order": [
+      "TW-15-007",
+      "TW-15-012",
+      "TW-15-015",
+      "TW-15-017"
+    ],
+    "new_core_ids": [],
+    "review_type": "臺灣成屋交易、預售契約、房貸轉貸及公寓大廈管理費的跨領域歷史實質再審"
+  },
+  "publication_ready": false,
+  "professional_review_pending": true,
+  "sources_added": [
+    {
+      "id": "ch15_moi_broker_fee_faq_20261028",
+      "title": "內政部：不動產仲介報酬總額及事前揭露規定",
+      "url": "https://www.moi.gov.tw/News_toggle3.aspx?PageSize=30&n=174&page=7&sms=9015",
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "supports": "買賣仲介向一方或雙方收取的報酬總額不得超過實際成交價金6%；6%是最高上限，不是固定分配比例，收費標準及買賣雙方比例應事先記載。",
+      "retrieval_method": "2026-10-28直接閱讀內政部地政司官方FAQ第191題；只支持報酬上限與事前揭露，不推定個別議價價格。",
+      "evidence_type": "臺灣中央政府官方行政說明"
+    },
+    {
+      "id": "ch15_yilan_resale_transaction_safety_20261028",
+      "title": "宜蘭縣政府地政處：購買不動產注意小細節交易更安全",
+      "url": "https://land.e-land.gov.tw/News_Content.aspx?n=18681&s=355479",
+      "published_at": "2018-09-05",
+      "accessed_at": "2026-10-28",
+      "supports": "買賣前核對賣方身分與代理權、簽約日最新謄本、原抵押權清理方式；過戶後及付尾款前再查謄本確認原權利塗銷且無不明新設定。",
+      "retrieval_method": "2026-10-28直接閱讀宜蘭縣政府地政處官方交易安全頁全文；將其作為操作提醒，不外推為全臺唯一程序。",
+      "evidence_type": "臺灣地方政府地政行政說明"
+    },
+    {
+      "id": "ch15_completed_home_contract_qa_20261028",
+      "title": "彰化縣政府：成屋買賣定型化契約問答",
+      "url": "https://economic.chcg.gov.tw/getFile.aspx?did=21408&file=2&file_id=267340&type=2",
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "supports": "官方問答說明成屋標準買賣契約未納入履約保證機制；成屋買賣雙方另行約定的價金保管或擔保，須依具體契約確認範圍與撥付條件。",
+      "retrieval_method": "2026-10-28直接閱讀彰化縣政府官方PDF問答第6題及第7題；只用來區分成屋標準契約與預售契約，不把問答推廣成所有契約的個案結論。",
+      "evidence_type": "臺灣地方政府官方契約說明"
+    },
+    {
+      "id": "ch15_moi_contract_index_20261028",
+      "title": "內政部不動產資訊平台：現行定型化契約及契約書範本清單",
+      "url": "https://pip.moi.gov.tw/Publicize/Info/G1020",
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "supports": "查閱日平台列示預售屋買賣定型化契約2023-06-19公告、2023-07-01生效；住宅租賃應記載事項於2025-04-18修正，住宅租賃契約書範本為2024-07-08版；實際適用仍依簽約日和公告版本核對。",
+      "retrieval_method": "2026-10-28直接查看內政部不動產資訊平台契約版本目錄並核對公告、生效日期；平台個別下載頁讀取受限，日期依官方目錄搜尋索引交叉確認。",
+      "evidence_type": "臺灣中央政府現行契約版本目錄"
+    },
+    {
+      "id": "ch15_fsc_mortgage_cost_guide_20210924",
+      "title": "金管會：金融商品及消費者權益相關法律知識訊息（銀行篇）",
+      "url": "https://www.fsc.gov.tw/uploaddowndoc?file=publicizeinfo%2F202109241416010.pdf&filedisplay=%E9%8A%80%E8%A1%8C%E7%AF%87.pdf&flag=doc",
+      "published_at": "2021-09-24",
+      "accessed_at": "2026-10-28",
+      "supports": "總費用年百分率不等於貸款利率；金管會消費者指引列舉逾期違約金、代書費、保險費等不在總費用年百分率涵蓋範圍，並提醒詢問納入項目。",
+      "retrieval_method": "2026-10-28直接閱讀金管會官方PDF相關頁面；僅引用APR概念與費用範圍，不採用歷史試算金額或利率作現行報價。",
+      "evidence_type": "臺灣中央政府金融消費者教育資料"
+    },
+    {
+      "id": "ch15_rental_contract_template_20240708",
+      "title": "內政部：住宅租賃契約書範本（企業或個人出租通用，2024-07-08）",
+      "url": "https://pip.moi.gov.tw/Upload/File/Contract/33-%28113-07-08%29%E4%BD%8F%E5%AE%85%E7%A7%9F%E8%B3%83%E5%A5%91%E7%B4%84%E6%9B%B8%E7%AF%84%E6%9C%AC%28%E4%BC%81%E6%A5%AD%E6%88%96%E5%80%8B%E4%BA%BA%E5%87%BA%E7%A7%9F%E9%80%9A%E7%94%A8%29.pdf",
+      "published_at": "2024-07-08",
+      "accessed_at": "2026-10-28",
+      "supports": "契約範本提供欄位記載管理費、停車位管理費及積欠金額；出租人、承租人應在實際租約確認費用負擔和繳付方式，範本欄位不是個案租約。",
+      "retrieval_method": "2026-10-28直接閱讀內政部官方PDF範本第5條相關欄位，並與內政部契約版本目錄核對範本日期；不將範本當成每份租約的已簽條款。",
+      "evidence_type": "臺灣中央政府住宅租賃契約範本"
+    },
+    {
+      "id": "ch15_ntpc_condo_disputes_2023",
+      "title": "新北市政府工務局：112年公寓大廈爭議事件調處案件分析",
+      "url": "https://www.publicwork.ntpc.gov.tw/uploaddowndoc?dis=publicworkan&file=publicworkan%2F202606151121200.pdf&filedisplay=19.%28%E5%B0%88%E9%A1%8C%E5%88%86%E6%9E%90112%E5%B9%B411%E6%9C%88%29112%E5%B9%B4%E6%96%B0%E5%8C%97%E5%B8%82%E5%85%AC%E5%AF%93%E5%A4%A7%E5%BB%88%E7%88%AD%E8%AD%B0%E4%BA%8B%E4%BB%B6%E8%AA%BF%E8%99%95%E6%A1%88%E4%BB%B6%E5%88%86%E6%9E%90.pdf&flag=doc",
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "supports": "新北市調處委員會自2012-01-01至2023-08-31累計315件公寓大廈爭議調處，其中管理費類17件；此為一縣市行政受理案件的類型分佈，並非社區、住戶或欠費者發生率。",
+      "retrieval_method": "2026-10-28直接閱讀新北市政府工務局8頁統計PDF前言及類型統計圖表；核對統計期間與分子分母，不外推全國或個人機率。",
+      "evidence_type": "臺灣地方政府行政調處統計"
+    },
+    {
+      "id": "ch15_ntpc_condo_mediation_20261028",
+      "title": "新北市政府工務局：公寓大廈爭議調處申請資訊",
+      "url": "https://www.publicwork.ntpc.gov.tw/home.jsp?id=76978e4447f68f46",
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "supports": "新北市政府工務局公告公寓大廈爭議調處申請書及相關地方政府服務資訊；僅供新北市居民使用，其他縣市應查所在地主管機關。",
+      "retrieval_method": "2026-10-28查閱新北市政府工務局公寓大廈管理科官方服務頁搜尋索引；此為新北市入口，不外推其他縣市。",
+      "evidence_type": "臺灣地方政府申辦服務入口"
+    },
+    {
+      "id": "ch15_moi_completed_contract_20260401",
+      "title": "內政部：成屋買賣新制與建物現況揭露（2026-04-01生效）",
+      "url": "https://www.moi.gov.tw/News_Content.aspx?Create=1&n=2&s=337606&sms=9009",
+      "supports": "內政部2025-12-19公告修正成屋買賣定型化契約附件一，2026-04-01生效；新版建物現況確認書增加太陽光電、硬固混凝土氯離子檢測及社區加壓受水設備管理責任等揭露。",
+      "published_at": "2026-04-01",
+      "accessed_at": "2026-10-28",
+      "retrieval_method": "2026-10-28直接閱讀內政部2026-04-01公告及其連結文件，另核對公告日2025-12-19與施行日2026-04-01；只支持成屋契約揭露版本，不推論新增履約保證。",
+      "evidence_type": "臺灣中央政府現行成屋交易契約公告"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch15_brokerfees",
+      "reason": "以內政部地政司現行官方FAQ直接支持全國費率上限與事前揭露；保留舊基隆來源物件及SHA。",
+      "prior_source_sha256": "0f8bdc6ed73c9dbd18ca4d31842cbe130b914a1c220e0996271d622505dfe0dd",
+      "replacement_ids": [
+        "ch15_moi_broker_fee_faq_20261028"
+      ]
+    },
+    {
+      "id": "ch15_offer",
+      "reason": "舊基隆市出價斡旋頁不再支持本版中古屋履保與付款核對主張；改用宜蘭地政處直接列明謄本、抵押清理及尾款前核對的官方流程，歷史來源物件及SHA保留。",
+      "prior_source_sha256": "ccca858de63d40d8503513b27e279bd794132e943a628ca5371bfa3aeaaa313c",
+      "replacement_ids": [
+        "ch15_yilan_resale_transaction_safety_20261028"
+      ]
+    },
+    {
+      "id": "ch15_presalechecks",
+      "reason": "2025年契約抽查已由本文直接核讀的2026年最新查核取代；舊來源物件及SHA保留，不能跨年合併作趨勢。",
+      "prior_source_sha256": "7d3ed6a43dc4e171ef364d6e345a73f481529b59c4199612f786a837ba952cb0",
+      "replacement_ids": [
+        "ch15_presale_audit_20260923"
+      ]
+    }
+  ],
+  "statistics": {
+    "TW-15-007": [
+      {
+        "name": "中古屋價金保管與失效損害的全國配對資料缺口",
+        "period": "截至2026-10-28",
+        "value": null,
+        "unit": null,
+        "geographic_scope": "臺灣全國",
+        "population": "中古屋交易、價金保管使用及交易款項損失案件",
+        "numerator_definition": "未找到可連結保管方式、完成／中止交易及因保管失效造成損失的全國案件數",
+        "denominator": null,
+        "denominator_definition": "沒有相配的全國中古屋交易量或使用價金保管交易量母數",
+        "data_type": "資料不足，不代表零事件或履約保證必然可用",
+        "source_ids": [
+          "ch15_yilan_resale_transaction_safety_20261028",
+          "ch15_completed_home_contract_qa_20261028",
+          "presalestandard",
+          "ch15_moi_completed_contract_20260401"
+        ],
+        "accessed_at": "2026-10-28",
+        "limitations": [
+          "不以詐騙通報、整體買賣量或地方交易提醒推算個人風險",
+          "成屋與預售屋擔保制度不同"
+        ]
+      }
+    ],
+    "TW-15-012": [
+      {
+        "name": "115年度預售契約地方選案組條款查核",
+        "period": "2026-03至2026-05",
+        "value": {
+          "all_groups_projects": 69,
+          "national_ranked_projects": 10,
+          "national_ranked_noncompliant_projects": 0,
+          "local_selected_projects": 50,
+          "local_noncompliant_projects": 9,
+          "local_checked_items": 750,
+          "local_noncompliant_items": 13,
+          "local_official_percentage_rounded": 1.7,
+          "repeat_violation_projects": 9,
+          "repeat_violation_noncompliant_projects": 2,
+          "repeat_violation_checked_items": 135,
+          "repeat_violation_noncompliant_items": 3
+        },
+        "unit": "建案數及契約條款檢核項次",
+        "geographic_scope": "混合全國銷售排行、地方選案與既往違規業者抽查",
+        "population": "行政院消保處選取的預售建案契約，不是所有建案或所有購屋人",
+        "numerator_definition": "地方選案50案中9案有部分條款不符；750個檢核項次中13項不符",
+        "denominator": 750,
+        "denominator_definition": "地方選案50案、每案檢查15項所形成的契約條款檢核項次，不是房屋或事件分母",
+        "data_type": "混合選樣、非隨機官方行政契約查核",
+        "source_ids": [
+          "ch15_presale_audit_20260923"
+        ],
+        "published_at": "2026-09-23",
+        "accessed_at": "2026-10-28",
+        "limitations": [
+          "官方列1.7%為四捨五入值，13/750約為1.733%",
+          "不代表面積短少、建材替換或實際瑕疵率",
+          "9/50只代表地方選案組，不能外推全市場或個人風險",
+          "未找到可比對全國實際面積或建材瑕疵件數與建案分母"
+        ]
+      }
+    ],
+    "TW-15-015": [
+      {
+        "name": "房貸轉貸申請、核准及個人總成本的全國配對資料缺口",
+        "period": "截至2026-10-28",
+        "value": null,
+        "unit": null,
+        "geographic_scope": "臺灣全國",
+        "population": "既有房貸戶、轉貸申請者及核貸結果",
+        "numerator_definition": "未找到可連結轉貸申請、核貸／拒貸、實際費用及後續節息結果的全國數據",
+        "denominator": null,
+        "denominator_definition": "沒有全臺存量房貸戶或符合轉貸條件者的相配母數",
+        "data_type": "資料不足，不代表零轉貸或零成本",
+        "source_ids": [
+          "ch15_mortgagecontract",
+          "creditcost",
+          "ch15_fsc_mortgage_cost_guide_20210924"
+        ],
+        "accessed_at": "2026-10-28",
+        "limitations": [
+          "不以政策利率、廣告利率或單一銀行方案推算個人省息",
+          "不估轉貸成功率或平均節省額"
+        ]
+      }
+    ],
+    "TW-15-017": [
+      {
+        "name": "新北市公寓大廈調處案件中的管理費爭議",
+        "period": "2012-01-01至2023-08-31",
+        "value": {
+          "all_dispute_mediation_cases": 315,
+          "management_fee_cases": 17,
+          "share_percent_rounded": 5.4
+        },
+        "unit": "新北市政府公寓大廈爭議調處案件",
+        "geographic_scope": "新北市政府調處委員會",
+        "population": "該委員會累計受理的各類公寓大廈爭議調處案件",
+        "numerator_definition": "其中爭議分類為管理費的案件17件",
+        "denominator": 315,
+        "denominator_definition": "該委員會自成立起至2023-08-31累計受理的全部公寓大廈爭議調處案件",
+        "data_type": "地方行政調處案件數及類型分佈，非抽樣調查或違法判決",
+        "source_ids": [
+          "ch15_ntpc_condo_disputes_2023"
+        ],
+        "published_at": null,
+        "accessed_at": "2026-10-28",
+        "limitations": [
+          "5.4%為17/315的案件組成比，不是住戶、社區或欠費戶發生率",
+          "僅新北市行政調處案件，不代表全國",
+          "未提供社區、住戶或欠費暴露母數，不能估個人機率"
+        ]
+      }
+    ]
+  },
+  "cross_domain_standard": "適用情境、法律狀態、統計頻率、傷害嚴重度與可採行動各自評估；不得以低頻、資料缺漏或單一個案取代法律判斷。清單為開放範圍，依每個主題實際需要選擇臺灣制度及替代情境。",
+  "counts_before": {
+    "core_reviewed": 278,
+    "core_total": 765,
+    "runtime_items": 289,
+    "runtime_sources": 887,
+    "registry_sources": 968,
+    "substantive_rechecks": 239,
+    "coverage_json_files": 493,
+    "unique_draft_entries": 498,
+    "entries_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306
+  },
+  "counts_after": {
+    "core_reviewed": 278,
+    "core_total": 765,
+    "runtime_items": 289,
+    "runtime_sources": 896,
+    "registry_sources": 977,
+    "substantive_rechecks": 243,
+    "coverage_json_files": 495,
+    "unique_draft_entries": 498,
+    "entries_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306
+  },
+  "body_sha256_after": {
+    "TW-15-007": "5db162e9b5fec8dbdc7283383dedc3eb4df151dd470ee56bc37391b672425914",
+    "TW-15-012": "4d1fc0ec77a1526a6511b5b725288beb05f26f0c252aa57e932735802bedf801",
+    "TW-15-015": "3684ee76d680346b332f1d10f70642dba9f6b61ebcbe881fc95be61e49710921",
+    "TW-15-017": "ba809f0d7e5f0b0e843f98b5610299a6d57e66668804a1c77b305e776c59c6a1"
+  }
+}
