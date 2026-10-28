@@ -1,14 +1,16 @@
-# 臺灣生活決策Skill
+# 臺灣生活決策 Skill
 
-本Skill僅使用本fork的臺灣已核對導航資料，不抓取上游原文，也不以草稿補出確定建議。安全與取材規則見 [SKILL.md](SKILL.md)。
+這個 Skill 會依據專案中已完成臺灣來源核對的內容，協助整理生活問題的下一步、適用條件、主要風險與資料來源。緊急情況先說明安全處置與求援方式；資料不足時會直接指出缺漏，不以原作或未審閱草稿補出結論。
 
-在專案根目錄執行：
+正式閱讀資料以 [runtime.json](../../localization/tw-edition/runtime.json) 為準。各章臺灣版內容可從[章節目錄](../../locales/zh-TW/README.md)閱讀；用途、限制與查核規則詳見 [SKILL.md](SKILL.md)。
 
-```sh
+## 在專案資料夾執行
+
+~~~sh
 python3 tools/tw/edition.py --list
 python3 tools/tw/edition.py --id TW-14-003
-```
+~~~
 
-目前有第14章12條與第19章24條正文，加9則急救與篩檢補充導航，共45項，不是全書765條臺灣定稿。缺少主題時須明確說明未核對，再另行研究官方來源。每次使用檢查資料版本、適用限制與複查日期。
+命令會列出目前可讀取的臺灣版條目，或顯示指定條目的正文與來源。執行時請一併查看適用條件、來源日期及限制。
 
-[臺灣版閱讀說明](../../locales/zh-TW/README.md) · [來源與授權](../../ATTRIBUTION.md)
+[臺灣版閱讀說明](../../locales/zh-TW/README.md) · [原作署名與授權](../../ATTRIBUTION.md)

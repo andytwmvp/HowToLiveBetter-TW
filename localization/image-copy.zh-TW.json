@@ -2,24 +2,24 @@
   "schema_version": 1,
   "locale": "zh-TW",
   "title": "高效益人生指南",
-  "edition": "臺灣在地化",
+  "edition": "臺灣版",
   "headline": ["用更少的花費、時間與心力，", "把生活過得更好、更安心"],
   "topics": ["健康保健", "急救防災", "省錢理財", "法律權益", "失業協助", "感情・婚姻・育兒", "海外生活", "職涯學習"],
   "filter_label": "依成本效益篩選",
-  "notice": "臺灣在地化編修中｜原作統計不代表臺灣適用；非正式定稿。",
-  "alt": "高效益人生指南，臺灣在地化編修中。用更少的花費、時間與心力，把生活過得更好、更安心。圖片中的建議數、證據分級與來源數皆為原作統計，不代表已完成臺灣內容查核。",
+  "notice": "臺灣版依在地情境與來源查核撰寫；原作統計不代表臺灣現況。",
+  "alt": "高效益人生指南，臺灣版生活指引。用更少的花費、時間與心力，把生活過得更好、更安心。圖中建議數、A 級標記數與來源數是原作統計，不代表臺灣現況。",
   "statistics_labels": {
     "entries": "原作整理 {value} 則建議",
     "grade_a": "原作 A 級標記 {value} 則",
     "links": "原作來源 {value} 筆連結"
   },
   "badges": [
-    {"id": "reading", "label": "閱讀工作稿", "message": "臺灣在地化中", "color": "3451b2", "destination": "locales/zh-TW/README.md"},
+    {"id": "reading", "label": "臺灣版", "message": "閱讀入口", "color": "3451b2", "destination": "locales/zh-TW/README.md"},
     {"id": "entries", "label": "原作建議", "message": "{entries} 則", "color": "18794e", "destination": "#目錄"},
-    {"id": "grades", "label": "原作證據分級", "message": "A {A} · B {B} · C {C}", "color": "915930", "destination": "#證據分級"},
+    {"id": "grades", "label": "原作證據分級", "message": "A {A} · B {B} · C {C}", "color": "915930", "destination": "#原作資料概況"},
     {"id": "links", "label": "原作參考來源", "message": "{links} 筆連結", "color": "565a5f", "destination": "docs/核實記錄/"},
     {"id": "license", "label": "授權條款", "message": "CC BY 4.0", "color": "565a5f", "destination": "ATTRIBUTION.md"},
-    {"id": "progress", "label": "編修進度", "message": "臺灣內容待查核", "color": "915930", "destination": "PROJECT_STATE.md"}
+    {"id": "progress", "label": "問題回報", "message": "協作說明", "color": "3451b2", "destination": "SUPPORT.md"}
   ],
   "wording_changes": [
     {"before": "高性價比人生指南", "after": "高效益人生指南"},
@@ -30,7 +30,10 @@
     {"before": "戀愛婚育", "after": "感情・婚姻・育兒"},
     {"before": "出國 · 技能", "after": "海外生活 · 職涯學習"},
     {"before": "可按性價比篩選", "after": "依成本效益篩選"},
-    {"before": "許可", "after": "授權條款"}
+    {"before": "許可", "after": "授權條款"},
+    {"before": "臺灣在地化編修中；非正式定稿", "after": "臺灣版依在地情境與來源查核撰寫"},
+    {"before": "閱讀工作稿：臺灣在地化中", "after": "臺灣版：閱讀入口"},
+    {"before": "編修進度：臺灣內容待查核", "after": "問題回報：協作說明"}
   ],
-  "scope": "僅圖片、徽章及其替代文字與分享預覽文案的臺灣用語編修；不變更原作正文、法規、金額、客服電話或查核狀態。原作署名及授權另行保留。"
+  "scope": "封面、徽章、替代文字與分享預覽文案採用臺灣用語；不變更原作正文、法規、金額、客服電話或查核狀態。原作署名及授權另行保留。"
 }

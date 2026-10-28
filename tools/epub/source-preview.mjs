@@ -6,51 +6,47 @@ import { resolve, dirname, posix } from 'node:path';
 import { zip } from '../lib/zip.mjs';
 import { Marked, Tokenizer } from 'marked';
 import { splitLongItems } from '../lib/split-items.mjs';
-import { ROOT, REPO, SITE, TITLE, read, readBook, gitCommit, buildStamp, stripBackLink } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, TITLE, read, readBook, stripBackLink } from '../lib/book.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter-source-preview.epub');
 const BUILD_GUIDE = `${REPO}/blob/main/REPOSITORY_GUIDE.md#exports`;
 const BOOK_ID = 'urn:uuid:cee8db2b-5e19-59ea-ad9f-b3f59b53f469';
 const NOW = new Date();
-const COMMIT = gitCommit();
 
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const plain = html => html.replace(/<[^>]+>/g, '');
 
 // ---------- 從 README 取內容與文件清單 ----------
 const book = readBook();
-const { description, frontMd, bookFiles, docFiles } = book;
+const { bookFiles, docFiles } = book;
+const sourceDescription = '原作繁體來源預覽，保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從本專案閱讀入口閱讀。';
 const contentsMd = book.contentsMd.replace(/^## 目錄/, '# 各節簡介');
 
 // ---------- 頁面清單 ----------
 // 每頁：xhtml 文件名、來源 md 的倉庫路徑（用來解析相對連結）、md 正文
 const pages = [
-  { file: 'front.xhtml', src: 'README.md', title: '前言', md: `# ${TITLE}\n\n${description}\n\n${frontMd}` },
+  { file: 'front.xhtml', src: 'README.md', title: '前言', md: `# ${TITLE}\n\n${sourceDescription}` },
   { file: 'contents.xhtml', src: 'README.md', title: '各節簡介', md: contentsMd },
   ...bookFiles.map((src, i) => ({ file: `ch${String(i + 1).padStart(2, '0')}.xhtml`, src, md: splitLongItems(stripBackLink(read(src))) })),
   ...docFiles.map((src, i) => ({ file: `doc${i + 1}.xhtml`, src, md: splitLongItems(stripBackLink(read(src))) })),
-  { file: 'about.xhtml', src: 'README.md', title: '版本說明', md: aboutMd() },
+  { file: 'about.xhtml', src: 'README.md', title: '來源預覽說明', md: aboutMd() },
 ];
 const pageByPath = new Map(pages.map(p => [p.src, p.file]));
 pageByPath.set('README.md', 'front.xhtml');
 
 function aboutMd() {
-  const commitLine = COMMIT ? `- 對應提交：[${COMMIT.slice(0, 7)}](${REPO}/commit/${COMMIT})` : '';
-  return `# 版本說明
+  return `# 原作來源預覽說明
 
-這是明確指定的原作繁體來源工程預覽，不是臺灣定稿，也不會自動發布。手上這份的版本：
+這份 EPUB 保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從[專案閱讀入口](${SITE})閱讀。
 
-- 生成時間：${buildStamp()}（臺北時間）
-${commitLine}
-- 本 repo 本地建置說明（不是正式下載）：${BUILD_GUIDE}
-- 原作來源閱讀方式（自行在本機開啟 source.html）：${SITE}#source-preview
-- 本 repo、編修紀錄與回報方式：${REPO}
+- 專案閱讀與建置說明：${BUILD_GUIDE}
+- 原作來源閱讀方式：${SITE}#source-preview
 
-正文裡指向倉庫內其他文件的連結已改成書內跳轉；指向核實記錄、許可證這類沒收進書的文件的連結改成了 GitHub 網址。
+正文中指向其他章節的連結已改為書內跳轉；來源紀錄與授權檔等未收錄在書中的文件則連回專案儲存庫。
 
 原作、授權與修改說明：${REPO}/blob/main/ATTRIBUTION.md
 
-正文以 CC BY 4.0 發佈（https://creativecommons.org/licenses/by/4.0/）。可以轉載、改編、商用，要寫明出處「高性價比人生指南」並附倉庫鏈接，改過內容的要註明改過。`;
+正文依 CC BY 4.0 授權（https://creativecommons.org/licenses/by/4.0/）。轉載或改編時，請標明「高性價比人生指南」及原始作品連結，並說明修改情形。`;
 }
 
 // ---------- Markdown → XHTML ----------
@@ -171,11 +167,11 @@ const opf = `<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" xml:lang="zh-TW">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
 <dc:identifier id="pub-id">${BOOK_ID}</dc:identifier>
-<dc:title>${TITLE}（本repo原作繁體來源預覽）</dc:title>
+<dc:title>${TITLE}（原作繁體來源預覽）</dc:title>
 <dc:language>zh-TW</dc:language>
 <dc:creator>eternity4719</dc:creator>
-<dc:contributor>andytwmvp/HowToLiveBetter-TW（繁體來源預覽編修）</dc:contributor>
-<dc:description>${esc(description)}</dc:description>
+<dc:contributor>andytwmvp/HowToLiveBetter-TW（繁體來源預覽）</dc:contributor>
+<dc:description>${esc(sourceDescription)}</dc:description>
 <dc:source>${REPO}</dc:source>
 <dc:rights>CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）</dc:rights>
 <dc:date>${NOW.toISOString().slice(0, 10)}</dc:date>
