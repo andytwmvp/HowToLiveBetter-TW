@@ -180,11 +180,26 @@ class CrossBorderRecheckTests(unittest.TestCase):
         live = audit_drafts()
         after = self.batch["counts_after"]
         self.assertEqual(coverage, live)
-        self.assertEqual(coverage["core_reviewed_entries"], after["core_reviewed"])
-        self.assertEqual(coverage["registry_sources"], after["registry_sources"])
-        self.assertEqual(len(self.runtime["items"]), after["runtime_items"])
-        self.assertEqual(len(self.runtime["sources"]), after["runtime_sources"])
-        self.assertEqual(len(self.register["substantive_rechecks"]), after["substantive_rechecks"])
+        # counts_after is an immutable snapshot from the 2026-10-28 batch.
+        # Later batches can add reviewed items, sources, drafts, and rechecks;
+        # unresolved work can only stay level or shrink. Do not freeze main's
+        # future progress to this batch's historical values.
+        self.assertGreaterEqual(coverage["core_reviewed_entries"], after["core_reviewed"])
+        self.assertEqual(coverage["original_entries"], after["core_total"])
+        self.assertGreaterEqual(coverage["registry_sources"], after["registry_sources"])
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(
+            len(self.register["substantive_rechecks"]), after["substantive_rechecks"]
+        )
+        self.assertGreaterEqual(coverage["json_files_checked"], after["coverage_json_files"])
+        self.assertGreaterEqual(coverage["unique_draft_entries"], after["unique_draft_entries"])
+        self.assertLessEqual(coverage["entries_without_any_draft"], after["entries_without_draft"])
+        self.assertLessEqual(len(coverage["unresolved_source_ids"]), after["unresolved_source_ids"])
+        self.assertLessEqual(
+            coverage["unresolved_reference_occurrences"],
+            after["unresolved_reference_occurrences"],
+        )
         self.assertFalse(self.batch["publication_ready"])
         self.assertFalse(publication_report()["publication_ready"])
 
