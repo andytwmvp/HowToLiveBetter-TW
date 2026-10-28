@@ -93,6 +93,12 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
         body = {key: self.items[key]["body"] for key in IDS}
         self.assertIn("3,000至6,000元", body["TW-01-001"])
         self.assertIn("1,500至3,000元", body["TW-01-001"])
+        self.assertIn(
+            "一般道路汽車駕駛人、前座或小型車後座乘客未依規定繫安全帶，處駕駛人新臺幣1,500元",
+            body["TW-01-001"],
+        )
+        self.assertIn("同一營業車告知例外也適用", body["TW-01-001"])
+        self.assertNotIn("乘客可處新臺幣1,500元", body["TW-01-001"])
         self.assertIn("1,055人", body["TW-01-002"])
         self.assertNotIn("932人", body["TW-01-002"])
         self.assertIn("機車騎士", body["TW-01-002"])
