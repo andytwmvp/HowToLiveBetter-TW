@@ -8556,10 +8556,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-007.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021"
+        "ch14_pdpa_current_20261028",
+        "ch14_pdpc_amendment_faq_20251226"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "別為了用 App 點「全部同意」：不是必需的信息，你不同意也不能拒絕給你服務",
@@ -8576,10 +8576,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-008.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021"
+        "ch14_pdpa_current_20261028",
+        "ch14_pdpc_amendment_faq_20251226"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "你有權查看、複製、更正和刪除自己的個人信息，被拒絕可以起訴",
@@ -8596,10 +8596,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-009.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021"
+        "ch14_pdpa_current_20261028",
+        "ch14_pdpc_amendment_faq_20251226"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "刷臉不是必須答應的：有別的辦法就不能只讓你刷臉，你不同意得給你其他方式",
@@ -8616,10 +8616,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch14/TW-14-010.md",
       "sources": [
-        "https://www.sme.gov.tw/article-tw-2391-11626",
-        "https://pages.nist.gov/800-63-4/sp800-63b.html"
+        "ch14_ai_basic_law_20260114",
+        "ch14_moda_ai_risk_framework_20260707",
+        "ch14_acs_agent_safety_20260325",
+        "ch14_acs_agent_incident_20260813"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-28",
       "upstream_path_uri": "book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md",
       "display_path": "book/14-賬號與信息安全.md",
       "source_title_zh_tw": "別把代碼、密鑰和隱私資料交給來路不明的「AI 中轉站」，讓 AI 自動執行命令時尤其如此",

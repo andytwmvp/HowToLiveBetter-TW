@@ -24442,6 +24442,592 @@
         "罰則依現行法律條文與車種條件列示；未取得交通事故鑑定、法律或救護專業獨立審閱。"
       ],
       "review_method": "2026-10-28逐篇重讀臺灣正文及所列官方法規、統計、消防／醫療／交通來源；分別核對本地情境、法律義務與違法條件、資料期間與事件定義、分子分母、緊急行動順序及來源時效。AI輔助來源再核對，不等於獨立法律、消防、醫療、交通、燃氣或統計專業審閱。"
+    },
+    {
+      "id": "TW-14-007",
+      "before_sha256": "aa9e9f78d7106f9e1d794f38938fcb97176d3b8f48584ab5923ac9142d9727df",
+      "after_sha256": "7b528be241c6962032c9d663b829d21fe45d50c7843474ecdbf9c3ab2caa9fa0",
+      "prior_revision": "93966ca110b119220f3d5093c74f9f3f967b37f9",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "7eae387011ebd87ccfbb99bf3069bd35fb7076285a7c560e83175a849202c751",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣居民於交通、外送、購物、通訊及政府服務App可能遇到相機、定位、照片或聯絡人權限要求；裝置權限控制與個資蒐集利用法律依據必須分開判讀。",
+      "frequency_assessment": "本次未找到非必要權限要求／拒絕服務事件與全體App使用者或使用次數配對的全國資料，不估個人發生率。",
+      "changes": "明確區分作業系統存取提示與個資告知／法律依據，更新個資法第5、8、19、20條，核對2025修法未生效狀態；加入保留告知版本、詢問目的及拒絕後影響的步驟。",
+      "source_ids": [
+        "ch14_pdpa_current_20261028",
+        "ch14_pdpc_amendment_faq_20251226"
+      ],
+      "source_status": "逐筆核對臺灣官方第一手來源；舊引用逐項記錄退役理由及原始SHA，全域歷史物件保留。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+          "claim": "App權限與個資法告知及處理依據不同；必要性、告知與非公務機關蒐集處理利用依據須依現行第5、8、19、20條分別檢查。",
+          "supporting_passage": "編者摘要（非逐字引文）：全國法規資料庫頁首標示2025-11-11修正及部分規定未生效；現行法第5、8、19、20條分別規範必要範圍、告知、非公務機關蒐集或處理的法定依據，以及目的外利用限制。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        },
+        {
+          "url": "https://ws.pdpc.gov.tw/FS01/FilePath/3/relfile/30/1072/a842b3f2-3399-4742-96ae-3f6648bd071a.pdf",
+          "claim": "2025-11-11修正條文的指定施行日期及施行前適用法規狀態。",
+          "supporting_passage": "編者摘要（非逐字引文）：籌備處問答第2題說明，2025-11-11公布之修法待指定施行日期前，仍依現行有效個資法規定辦理。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "App權限要求與拒絕服務的臺灣事件頻率缺口",
+          "period": "截至2026-10-28",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "臺灣全國",
+          "population": "使用App時遭遇非必要權限要求、因拒絕而被拒絕服務的居民與使用事件",
+          "numerator_definition": "本次未找到可按同一事件定義識別非必要權限要求／拒絕服務的全國事件數",
+          "denominator": null,
+          "denominator_definition": "未找到可配對的全體App使用者、使用次數或權限提示次數母數",
+          "data_type": "資料不足，不代表零事件；法規條文不計個人暴露率",
+          "source_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ],
+          "accessed_at": "2026-10-28",
+          "search_scope": "查核個資主管機關公開資訊與政府資料開放檢索，未找到同時具事件定義和App使用暴露分母的全國統計。；另查閱數發部2026-05-27針對4款特定App的15項檢測，僅列為案例，無全體使用者分母。",
+          "limitations": [
+            "不把陳情、通報或單一平台資料當成全體App使用者的風險",
+            "不以沒有統計推斷沒有風險或違法行為"
+          ],
+          "search_queries": [
+            {
+              "query": "App 權限 個資 事件 統計 拒絕 權限 臺灣",
+              "searched_domains": [
+                "moda.gov.tw",
+                "ncc.gov.tw",
+                "data.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "找到數發部對特定App的資安檢測案例；無全臺全部App及拒絕權限後遭拒絕服務的暴露母數。"
+            }
+          ],
+          "screened_sources": [
+            {
+              "title": "數發部公布高德地圖等4款中製App資安檢測結果",
+              "url": "https://web.moda.gov.tw/ACS/press/news/press/19790",
+              "published_at": "2026-05-27",
+              "accessed_at": "2026-10-28",
+              "retrieval_method": "直接閱讀數發部資通安全署官方新聞稿，核對受測App數與檢測項目。",
+              "reported_scope": "4款特定App、15項檢測項目；官方指出部分受測App有與核心功能無關的敏感權限及資料傳輸風險。",
+              "scope_limit": "這是特定App的風險檢測案例，非隨機抽樣，也未統計臺灣所有App使用者、權限提示次數或拒絕後服務遭拒事件；不能當作普遍率或個人發生率。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "本條為一般App權限與個資告知的自我檢查步驟，不是個案法律判斷；裝置權限、個資法告知及蒐集處理的法律依據須分開確認。",
+        "未取得臺灣非必要App權限要求及拒絕服務事件的可比全國分子與暴露母數，不估個人發生率；服務功能可能因拒絕權限受限。",
+        "法規頁截至2026-10-28仍標示部分修正條文尚未生效；不得把新法尚未生效的主管機關或監理規定當成現行權責。",
+        "未取得獨立法律或隱私專業審閱；AI輔助來源再核對不構成法律意見。"
+      ],
+      "review_path": "localization/reviews/TW-14-007.json",
+      "limits": [
+        "本條為一般App權限與個資告知的自我檢查步驟，不是個案法律判斷；裝置權限、個資法告知及蒐集處理的法律依據須分開確認。",
+        "未取得臺灣非必要App權限要求及拒絕服務事件的可比全國分子與暴露母數，不估個人發生率；服務功能可能因拒絕權限受限。",
+        "法規頁截至2026-10-28仍標示部分修正條文尚未生效；不得把新法尚未生效的主管機關或監理規定當成現行權責。",
+        "未取得獨立法律或隱私專業審閱；AI輔助來源再核對不構成法律意見。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch14_pdpa",
+          "reason": "新增2026-10-28逐條查閱的現行法規快照，直接標示最新修法及未生效條文，並加入主管機關修法問答確認施行前現行法；舊來源物件保留以維持既有歷史可追溯性。",
+          "prior_source_sha256": "25bbe83d7eee7253d7600ac8d94e3c1e0f804d24b12d336b66d6cbb225031670",
+          "replacement_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ]
+        },
+        {
+          "id": "ch14_pdpa_effective",
+          "reason": "新增現行法頁與主管機關FAQ支撐該條具體主張及最新施行界線；舊版比對連結不再是本條唯一的現行法依據，保留其全域來源物件及SHA。",
+          "prior_source_sha256": "72e3a3d2c5c121d522e010fae72a90b5719188c433734f6e391a3346fd7d9537",
+          "replacement_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ]
+        }
+      ],
+      "previous_source_ids": [
+        "ch14_pdpa",
+        "ch14_pdpa_effective"
+      ],
+      "previous_review_claims": [
+        "App權限按用途開啟，個資蒐集另看臺灣法律依據：查閱時頁首明示部分條文未生效。第2、3、5、8、10、11、13、14、19、20條用於本章；不將新主管機關與尚未施行條文當成現行通則。",
+        "App權限按用途開啟，個資蒐集另看臺灣法律依據：本章援用的既有條文經新舊頁比對：必要範圍、告知、資料權利及例外、準駁期限、必要成本費用、非公務機關蒐集與利用要件。未生效的第1-1條等不援為現行義務。"
+      ],
+      "reviewer_limit": "未取得獨立法律或隱私專業審閱；AI輔助來源再核對不構成法律意見。",
+      "taiwan_context_assessment": {
+        "fit": "臺灣居民於交通、外送、購物、通訊及政府服務App可能遇到相機、定位、照片或聯絡人權限要求；裝置權限控制與個資蒐集利用法律依據必須分開判讀。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "本條不是宣布App權限要求一律違法；是否有法律依據、告知及必要性須按目的與服務類型判斷。"
+      }
+    },
+    {
+      "id": "TW-14-008",
+      "before_sha256": "29a7b1c7f6f71278e106cc75a3835cdbbbf3d6a7dc3844a5c56446200ce1a1c3",
+      "after_sha256": "d9b490be7e272f170bd56f5f7cacf7ca17a199df633dad08c779402547f42a50",
+      "prior_revision": "93966ca110b119220f3d5093c74f9f3f967b37f9",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "43045fb659ec83c4193544054387f58c951971bd6b3e593d6a16d8f57124502d",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "個人可對臺灣公私機關或平台提出個資查詢、閱覽、複製、更正、停止或刪除請求；資料保留義務、主管機關依產業分工，且業者有正式核身及受理管道。",
+      "frequency_assessment": "未找到請求種類、請求處理結果、逾期件數與全部請求母數配對的全國統計；不估個人遭拒率或完成率。",
+      "changes": "逐條核對第3、10、11、13、14條及請求決定時限、延長書面通知、複製成本；將申訴路徑改為按資料持有者及產業查詢現行主管機關，避免套用未生效新制。",
+      "source_ids": [
+        "ch14_pdpa_current_20261028",
+        "ch14_pdpc_amendment_faq_20251226"
+      ],
+      "source_status": "逐筆核對臺灣官方第一手來源；舊引用逐項記錄退役理由及原始SHA，全域歷史物件保留。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+          "claim": "個資法第3、10、11、13、14條的權利種類、例外、請求決定期限及必要成本。",
+          "supporting_passage": "編者摘要（非逐字引文）：第13條分別規定第10條請求15日內決定是否同意、必要時最多延長15日，以及第11條請求30日內核准或拒絕、必要時最多延長30日並書面通知原因；第14條限查詢、閱覽及複製本得酌收必要成本。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        },
+        {
+          "url": "https://ws.pdpc.gov.tw/FS01/FilePath/3/relfile/30/1072/a842b3f2-3399-4742-96ae-3f6648bd071a.pdf",
+          "claim": "2025-11-11新監理架構尚待施行時的現行個資法適用與分工界線。",
+          "supporting_passage": "編者摘要（非逐字引文）：籌備處問答第1、2題說明新機關及修法施行安排尚有法定程序，施行日前仍依現行有效法及目前監理分工辦理。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "個資權利請求結果與總請求數的全國配對資料缺口",
+          "period": "截至2026-10-28",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "臺灣全國",
+          "population": "依個資法提出閱覽、更正、停止處理或刪除請求之當事人",
+          "numerator_definition": "未找到可按請求種類統計遭拒、逾期或未完成的全國同口徑件數",
+          "denominator": null,
+          "denominator_definition": "未找到同期間全部各類請求數和處理時間分母；機關／產業分散紀錄不能直接相加",
+          "data_type": "資料不足，不代表零爭議或業者必然違法",
+          "source_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ],
+          "accessed_at": "2026-10-28",
+          "search_scope": "查核主管機關公開FAQ、現行個資法及統計檢索，未找到可配對遭拒／逾期件數與請求總量的全國資料。；政府資料開放平臺FAQ只說明自身受理方式，沒有件數、結果或時間統計。",
+          "limitations": [
+            "不以單一機關或產業申訴數推算全臺民眾成功率",
+            "法定請求決定期限不能換算成實際刪除完成率"
+          ],
+          "search_queries": [
+            {
+              "query": "個資權利 請求件數 閱覽 更正 刪除 統計",
+              "searched_domains": [
+                "pdpc.gov.tw",
+                "moj.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "查核個資主管機關及法務部公開法規／FAQ；未找到可將請求結果與全體請求量配對的全國統計。"
+            },
+            {
+              "query": "個資查詢 閱覽 更正 停止處理 刪除 申請件數 開放資料",
+              "searched_domains": [
+                "data.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "政府資料開放平臺FAQ說明其自身個資權利受理方式，沒有揭露請求件數、結果或處理時間。"
+            }
+          ],
+          "screened_sources": [
+            {
+              "title": "政府資料開放平臺個人資料調整或刪除FAQ",
+              "url": "https://data.gov.tw/faqs/93189",
+              "accessed_at": "2026-10-28",
+              "retrieval_method": "直接閱讀政府資料開放平臺官方FAQ。",
+              "reported_scope": "說明該平臺個資當事人可行使的權利及聯絡方式。",
+              "scope_limit": "該頁沒有請求件數、準駁／逾期結果或處理時間資料，且只說明單一平臺管道，不能推作全國受理量或成功率。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "第13條是是否同意請求的決定期限，非保證資料於相同期限內全部實際刪除；第10條和第11條請求適用不同期限與法定例外。",
+        "第14條必要成本限於查詢、閱覽或製給複製本；申請人身分核對、資料保存義務及申訴管轄依個案和現行規範確認。",
+        "未取得個資權利請求件數、遭拒或逾期件數及同口徑總請求母數配對的全國統計，不估個人遭拒或未刪除機率。",
+        "未取得獨立法律或個資監理專業審閱；AI輔助來源再核對不構成個案法律意見。"
+      ],
+      "review_path": "localization/reviews/TW-14-008.json",
+      "limits": [
+        "第13條是是否同意請求的決定期限，非保證資料於相同期限內全部實際刪除；第10條和第11條請求適用不同期限與法定例外。",
+        "第14條必要成本限於查詢、閱覽或製給複製本；申請人身分核對、資料保存義務及申訴管轄依個案和現行規範確認。",
+        "未取得個資權利請求件數、遭拒或逾期件數及同口徑總請求母數配對的全國統計，不估個人遭拒或未刪除機率。",
+        "未取得獨立法律或個資監理專業審閱；AI輔助來源再核對不構成個案法律意見。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch14_pdpa",
+          "reason": "新增2026-10-28逐條查閱的現行法規快照，直接標示最新修法及未生效條文，並加入主管機關修法問答確認施行前現行法；舊來源物件保留以維持既有歷史可追溯性。",
+          "prior_source_sha256": "25bbe83d7eee7253d7600ac8d94e3c1e0f804d24b12d336b66d6cbb225031670",
+          "replacement_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ]
+        },
+        {
+          "id": "ch14_pdpa_effective",
+          "reason": "新增現行法頁與主管機關FAQ支撐該條具體主張及最新施行界線；舊版比對連結不再是本條唯一的現行法依據，保留其全域來源物件及SHA。",
+          "prior_source_sha256": "72e3a3d2c5c121d522e010fae72a90b5719188c433734f6e391a3346fd7d9537",
+          "replacement_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ]
+        }
+      ],
+      "previous_source_ids": [
+        "ch14_pdpa",
+        "ch14_pdpa_effective"
+      ],
+      "previous_review_claims": [
+        "申請閱覽、更正或刪除個資，寫清楚範圍與臺灣法定例外：查閱時頁首明示部分條文未生效。第2、3、5、8、10、11、13、14、19、20條用於本章；不將新主管機關與尚未施行條文當成現行通則。",
+        "申請閱覽、更正或刪除個資，寫清楚範圍與臺灣法定例外：本章援用的既有條文經新舊頁比對：必要範圍、告知、資料權利及例外、準駁期限、必要成本費用、非公務機關蒐集與利用要件。未生效的第1-1條等不援為現行義務。"
+      ],
+      "reviewer_limit": "未取得獨立法律或個資監理專業審閱；AI輔助來源再核對不構成個案法律意見。",
+      "taiwan_context_assessment": {
+        "fit": "個人可對臺灣公私機關或平台提出個資查詢、閱覽、複製、更正、停止或刪除請求；資料保留義務、主管機關依產業分工，且業者有正式核身及受理管道。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "權利依第3條行使，但第10、11條存在例外；第13條時限是是否同意請求的決定期限，非實際刪除完成期限。個資法新修正截至查閱日仍有部分未生效。"
+      }
+    },
+    {
+      "id": "TW-14-009",
+      "before_sha256": "97bab2da4d1ffa717d52d101c51b4af5be8329ae38a178e31881ecb3df5ab5a0",
+      "after_sha256": "62a601f69947f7fa3dd6f32715603f813c33a1975d5be9f854fbc2edc642750f",
+      "prior_revision": "93966ca110b119220f3d5093c74f9f3f967b37f9",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "bc6ba701c45f0d55c400091b91e6e2066302082457eb4a1288579a7c050f9141",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣居民可能在公寓門禁、職場簽到、健身房、活動入場、校園、公務或App服務遇到臉部辨識；本機解鎖和把資料交給業者是不同資料流向。",
+      "frequency_assessment": "未找到全國公私部門臉部辨識使用事件與實際暴露人次／次數配對的統計，不把設備數或單場案例當作個人機率。",
+      "changes": "加入臺灣住居、職場、消費和校園情境；區分手機本機辨識和業者端處理；明示替代方法只是詢問建議，核對特種個資法定範圍及新法生效界線。",
+      "source_ids": [
+        "ch14_pdpa_current_20261028",
+        "ch14_pdpc_amendment_faq_20251226"
+      ],
+      "source_status": "逐筆核對臺灣官方第一手來源；舊引用逐項記錄退役理由及原始SHA，全域歷史物件保留。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+          "claim": "可識別臉部特徵可能為第2條個人資料；第5、8、19、20條之必要性、告知與法律依據，以及第6條列舉資料範圍。",
+          "supporting_passage": "編者摘要（非逐字引文）：第2條個人資料含自然人特徵及得以直接或間接方式識別之資料；第6條條文明列病歷、醫療、基因、性生活、健康檢查及犯罪前科。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        },
+        {
+          "url": "https://ws.pdpc.gov.tw/FS01/FilePath/3/relfile/30/1072/a842b3f2-3399-4742-96ae-3f6648bd071a.pdf",
+          "claim": "個資法修正的生效界線；不把尚未生效新制當成所有場域共通義務。",
+          "supporting_passage": "編者摘要（非逐字引文）：籌備處問答說明個資法新監理制度於新法施行前仍按現行有效法處理。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "各場域臉部辨識使用與居民實際暴露率資料缺口",
+          "period": "截至2026-10-28",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "臺灣全國",
+          "population": "接觸公寓門禁、職場、健身房、活動、校園、公務或App臉部辨識的居民",
+          "numerator_definition": "未找到按場域、蒐集者及目的可比較的臉部辨識使用／被要求使用事件總數",
+          "denominator": null,
+          "denominator_definition": "未找到同口徑被辨識人數、使用次數或暴露期間母數",
+          "data_type": "資料不足，不代表零使用；政策案例及設備數不是人口暴露率",
+          "source_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ],
+          "accessed_at": "2026-10-28",
+          "search_scope": "檢索個資法、官方資料／立法研究資訊及政府資料開放平臺資料集177794「行動自然人憑證使用概況表_使用人次」。2026-10-28直接讀取其詮釋資料API及內政部CSV，resourceField與CSV表頭均為序號、年度、使用人次、統計日期、提供機關；沒有驗證方式欄位。平台2026-06-30說明頁指出服務可採指紋或臉部辨識，但沒有模式分項使用量；該特定服務人次不涵蓋其他公私部門與場域，也不是居民去重人數，因此不作全臺臉部辨識事件率或個人機率估計。；另找到水利署2023年單一機關人臉打卡案例，因年代、場域及推算分母限制，不外推目前全臺。",
+          "limitations": [
+            "不將某一縣市、機關或單場活動外推全國",
+            "法律是否許可與實際使用頻率分開判斷"
+          ],
+          "screened_sources": [
+            {
+              "dataset_url": "https://data.gov.tw/dataset/177794",
+              "metadata_api_url": "https://data.gov.tw/api/v2/rest/dataset/177794",
+              "csv_resource_url": "https://opdadm.moi.gov.tw/api/v1/no-auth/resource/api/dataset/C2E5AD78-BF72-47A8-80C8-48A75B014E8E/resource/A509E6DE-691B-480E-A466-BE7FE8B7632B/download",
+              "title": "行動自然人憑證使用概況表_使用人次",
+              "accessed_at": "2026-10-28",
+              "retrieval_status": "2026-10-28直接讀取政府資料開放平臺詮釋資料API與連結CSV，兩者HTTP 200；resourceField與CSV表頭核對成功。",
+              "retrieval_method": "以Python urllib讀取JSON詮釋資料API，取得resourceField及resourceDownloadUrl；再直接讀取該內政部CSV並核對表頭。",
+              "data_fields": [
+                "序號",
+                "年度",
+                "使用人次",
+                "統計日期",
+                "提供機關"
+              ],
+              "csv_header": [
+                "序號",
+                "年度",
+                "使用人次",
+                "統計日期",
+                "提供機關"
+              ],
+              "data_rows_at_access": 4,
+              "official_context_url": "https://data.gov.tw/news/32629",
+              "official_context_published_at": "2026-06-30",
+              "official_context": "政府資料開放平臺說明頁列出該服務使用人次資料集，並稱行動自然人憑證可透過指紋或臉部辨識驗證。",
+              "exclusion_reason": "API欄位與CSV只有年度使用人次，沒有驗證方式欄位，無法把總人次拆成臉部與指紋辨識。此數據只涵蓋行動自然人憑證服務，不代表公寓門禁、職場、健身房、活動、校園等全臺跨場域暴露，也不是去重的居民人數；不作全臺臉部辨識事件率或個人機率估算。"
+            },
+            {
+              "title": "水利署人臉影像辨識系統整合應用資訊室",
+              "url": "https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30173&s=8631&sms=9942",
+              "published_at": "2023-09-29",
+              "accessed_at": "2026-10-28",
+              "retrieval_method": "直接閱讀經濟部水利署官方電子報，核對頁面日期、實際使用場域與該機關自行估算的出勤次數分母。",
+              "reported_scope": "水利署單一機關、臺北／臺中／新店／中興辦公場域的歷史員工人臉出退勤案例；文中報告2023年2月至7月人臉打卡次數，並以416名員工及估算出勤次數比較。",
+              "scope_limit": "僅一個機關的2023年歷史案例，母數部分由機關按每月工作日及預估出勤率推算；不是目前使用情形、全臺人口暴露率或跨場域同口徑資料，因此不納入全國發生率。"
+            }
+          ],
+          "search_queries": [
+            {
+              "query": "台灣 臉部辨識 使用人次 統計",
+              "searched_domains": [
+                "data.gov.tw",
+                "gov.tw",
+                "moda.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "找到行動自然人憑證特定服務的人次資料及水利署單一機關歷史案例；兩者均不足以作全國跨場域臉部辨識率。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "臉部影像或模板是否屬個資須看能否直接或間接識別自然人；不因是生物特徵就一律屬個資法第6條列舉資料。",
+        "臺灣未找到各場域臉部辨識暴露人數、次數及用途配對的全國統計，不推估民眾被要求刷臉的個人機率。",
+        "替代方式是詢問及風險管理建議，不宣稱所有雇主、社區、金融或服務提供者一律負有提供替代方式的法定義務。",
+        "未取得獨立法律、隱私或生物辨識技術專業審閱；AI輔助來源再核對不構成法律意見。"
+      ],
+      "review_path": "localization/reviews/TW-14-009.json",
+      "limits": [
+        "臉部影像或模板是否屬個資須看能否直接或間接識別自然人；不因是生物特徵就一律屬個資法第6條列舉資料。",
+        "臺灣未找到各場域臉部辨識暴露人數、次數及用途配對的全國統計，不推估民眾被要求刷臉的個人機率。",
+        "替代方式是詢問及風險管理建議，不宣稱所有雇主、社區、金融或服務提供者一律負有提供替代方式的法定義務。",
+        "未取得獨立法律、隱私或生物辨識技術專業審閱；AI輔助來源再核對不構成法律意見。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch14_pdpa",
+          "reason": "新增2026-10-28逐條查閱的現行法規快照，直接標示最新修法及未生效條文，並加入主管機關修法問答確認施行前現行法；舊來源物件保留以維持既有歷史可追溯性。",
+          "prior_source_sha256": "25bbe83d7eee7253d7600ac8d94e3c1e0f804d24b12d336b66d6cbb225031670",
+          "replacement_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ]
+        },
+        {
+          "id": "ch14_pdpa_effective",
+          "reason": "新增現行法頁與主管機關FAQ支撐該條具體主張及最新施行界線；舊版比對連結不再是本條唯一的現行法依據，保留其全域來源物件及SHA。",
+          "prior_source_sha256": "72e3a3d2c5c121d522e010fae72a90b5719188c433734f6e391a3346fd7d9537",
+          "replacement_ids": [
+            "ch14_pdpa_current_20261028",
+            "ch14_pdpc_amendment_faq_20251226"
+          ]
+        }
+      ],
+      "previous_source_ids": [
+        "ch14_pdpa",
+        "ch14_pdpa_effective"
+      ],
+      "previous_review_claims": [
+        "被要求臉部辨識時，先查用途、保存方式與替代方案：查閱時頁首明示部分條文未生效。第2、3、5、8、10、11、13、14、19、20條用於本章；不將新主管機關與尚未施行條文當成現行通則。",
+        "被要求臉部辨識時，先查用途、保存方式與替代方案：本章援用的既有條文經新舊頁比對：必要範圍、告知、資料權利及例外、準駁期限、必要成本費用、非公務機關蒐集與利用要件。未生效的第1-1條等不援為現行義務。"
+      ],
+      "reviewer_limit": "未取得獨立法律、隱私或生物辨識技術專業審閱；AI輔助來源再核對不構成法律意見。",
+      "taiwan_context_assessment": {
+        "fit": "臺灣居民可能在公寓門禁、職場簽到、健身房、活動入場、校園、公務或App服務遇到臉部辨識；本機解鎖和把資料交給業者是不同資料流向。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "個資法第2條下可識別臉部資料可能是個資；第6條列舉的特種資料不含一般臉部特徵。沒有所有場域通用的全面禁止或替代方式義務，須按具體法律及關係確認。"
+      }
+    },
+    {
+      "id": "TW-14-010",
+      "before_sha256": "5d111ec2574a995f070a2d3d833b111c2d06bc3cf4cb712ae8e04af85e6d2b34",
+      "after_sha256": "108efb1e89078df2c4857999105fd5241d00a48285d20896832da180b0873d61",
+      "prior_revision": "93966ca110b119220f3d5093c74f9f3f967b37f9",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "4f579318cd55348982883977ae374b5e2f58fb1e374f1eecca1cc381dfa2b5a1",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣使用者可將雲端文件、政府／醫療服務、工作信箱或金流帳戶交給聊天AI或可呼叫工具的代理；後者能讀檔、瀏覽、發信、刪除或付款，權限與可能損害高於一般問答。",
+      "frequency_assessment": "數發部於2026-08公開一波政府機關遭境外攻擊且有AI代理輔助的事件，這不是一般民眾受害數；未找到民眾使用暴露人數／時數配對的全國越權、外洩或財損率。",
+      "changes": "以2026年有效AI基本法、MODA框架B6與資安署代理風險提醒改寫；明確分開聊天AI及可操作外部工具的代理，加入隔離測試、最小限權、短效憑證、先唯讀與高風險操作人工確認。",
+      "source_ids": [
+        "ch14_ai_basic_law_20260114",
+        "ch14_moda_ai_risk_framework_20260707",
+        "ch14_acs_agent_safety_20260325",
+        "ch14_acs_agent_incident_20260813"
+      ],
+      "source_status": "逐筆核對臺灣官方第一手來源；舊引用逐項記錄退役理由及原始SHA，全域歷史物件保留。",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093",
+          "claim": "人工智慧基本法公布日及施行日、第16條風險規範和第19條政府AI使用風險評估義務。",
+          "supporting_passage": "編者摘要（非逐字引文）：全國法規資料庫列公布日期2026-01-14；第16條要求數發部推動風險分類框架並協助目的事業主管機關訂定風險規範，第19條明文主詞為政府，第20條規定自公布日施行。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        },
+        {
+          "url": "https://www-api.moda.gov.tw/File/Get/moda/zh-tw/UieEfux5Yv0iJuR",
+          "claim": "人工智慧風險框架v1.0之規範主體與社會大眾參考定位，以及B6代理越權和多代理連鎖風險。",
+          "supporting_passage": "編者摘要（非逐字引文）：v1.0執行摘要稱目的事業主管機關為規範主體，並供產業界及社會大眾參考；B6說代理可自行規劃、呼叫外部工具並偏離原指令或取得授權外權限，多代理可連鎖反應。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        },
+        {
+          "url": "https://moda.gov.tw/ACS/press/news/press/19294",
+          "claim": "資安署對AI代理工具提出隔離環境、最小化帳號權限、時效授權與高風險操作人工審核建議。",
+          "supporting_passage": "編者摘要（非逐字引文）：資安署公告列舉外部網頁中的惡意指令及第三方技能等風險，並建議隔離環境、外部帳號權限最小化、有時效的授權憑證和高風險操作人工審核。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        },
+        {
+          "url": "https://moda.gov.tw/ACS/press/news/press/20394",
+          "claim": "資安署公開描述一波境外攻擊政府機關事件中使用AI Agent輔助；該事件不代表一般民眾發生率。",
+          "supporting_passage": "編者摘要（非逐字引文）：資安署公告記錄2026年7月發現的政府機關異常攻擊，調查說明事件具境外來源特徵並結合OpenClaw等AI Agent輔助；公告沒有一般民眾使用暴露分母。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的臺灣中央主管機關或全國法規資料庫原始頁面／PDF，逐項核對公告日期、生效狀態、條次或資安措施；不以搜尋摘要替代正文。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "政府機關AI代理輔助攻擊的單一公開事件（非一般民眾發生率）",
+          "period": "2026-07發現；2026-08-13公布",
+          "value": {
+            "officially_described_attack_waves": 1
+          },
+          "unit": "官方新聞稿描述的攻擊波次",
+          "geographic_scope": "臺灣政府機關資安事件",
+          "population": "一波境外來源攻擊政府機關的官方事件描述",
+          "numerator_definition": "資安署2026-08-13說明的一波政府機關攻擊事件結合OpenClaw等AI Agent輔助",
+          "denominator": null,
+          "denominator_definition": "無可配對的臺灣一般民眾AI代理使用人數、使用時數或個人受害案件母數",
+          "data_type": "單一官方事件說明，非一般民眾案件統計、使用率、攻擊成功率或個人風險",
+          "source_ids": [
+            "ch14_acs_agent_incident_20260813"
+          ],
+          "published_at": "2026-08-13",
+          "accessed_at": "2026-10-28",
+          "search_scope": "查核數發部資安署官方事件公告、AI代理風險框架與資安提醒；未找到民眾AI代理使用暴露與越權／外洩損害配對的全國統計。；2026年7月月報列145件各類通報（含62件演練），提及AI Agent政府網站攻擊但未分列AI Agent件數，且可能與8月公告為同波事件。",
+          "limitations": [
+            "不能把一波政府機關攻擊推估成民眾遭害率",
+            "通報資安事件總數涵蓋其他類型及演練，不能冒充AI代理事件頻率",
+            "無暴露分母時不自行推估個人機率"
+          ],
+          "search_queries": [
+            {
+              "query": "AI Agent 攻擊 事件 使用者 數量 統計 台灣",
+              "searched_domains": [
+                "moda.gov.tw",
+                "data.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "找到政府機關AI Agent資安事件公告及月報，但事件通報總數包含其他類型與演練，未分列AI Agent使用事件數或民眾暴露母數。"
+            }
+          ],
+          "screened_sources": [
+            {
+              "title": "資通安全網路月報（115年7月）",
+              "url": "https://moda.gov.tw/ACS/press/report/20430",
+              "period": "2026-07",
+              "accessed_at": "2026-10-28",
+              "retrieval_method": "直接閱讀數發部資通安全署官方月報，區分月報所有資安事件通報與其中AI Agent攻擊敘述。",
+              "all_incidents_including_exercises": 145,
+              "exercises": 62,
+              "ai_agent_specific_case_count": null,
+              "scope_limit": "145件為所有類型資安通報且包含62件攻防演練；報告提及OpenClaw、Hermes Agent等AI Agent遭用於攻擊政府網站，但未列AI Agent事件數、一般民眾使用數或受害者母數，不能換算個人風險。與2026-08-13公告描述的7月攻擊可能重疊，不另計新攻擊波次。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "官方AI代理資安提醒主要以OpenClaw為例；其攻擊模式、功能和建議不可未經查核推廣到所有產品。",
+        "2026-08臺灣政府機關攻擊事件是單一公開描述，沒有一般民眾AI代理使用暴露人數／時數分母，不估個人受害率。",
+        "《人工智慧基本法》及2026風險框架不構成一般私人使用者一律禁止AI或使用某項設定的通則；特定產業法律、契約和組織政策仍可能適用。",
+        "未取得獨立法律、資安或AI系統安全專業審閱；AI輔助來源再核對不構成安全認證。"
+      ],
+      "review_path": "localization/reviews/TW-14-010.json",
+      "limits": [
+        "官方AI代理資安提醒主要以OpenClaw為例；其攻擊模式、功能和建議不可未經查核推廣到所有產品。",
+        "2026-08臺灣政府機關攻擊事件是單一公開描述，沒有一般民眾AI代理使用暴露人數／時數分母，不估個人受害率。",
+        "《人工智慧基本法》及2026風險框架不構成一般私人使用者一律禁止AI或使用某項設定的通則；特定產業法律、契約和組織政策仍可能適用。",
+        "未取得獨立法律、資安或AI系統安全專業審閱；AI輔助來源再核對不構成安全認證。"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch14_ai_guideline",
+          "reason": "原來源為2023年行政院及所屬機關指引，適用主體與時間範圍較窄，不能支持現行AI代理風險及法律效力；新法、風險框架及資安署公告更直接。保留全域來源物件與歷史SHA。",
+          "prior_source_sha256": "597b792182c9f88a1430fd408fbfd3f220304975dcee0c4903f41c89efe95d25",
+          "replacement_ids": [
+            "ch14_ai_basic_law_20260114",
+            "ch14_moda_ai_risk_framework_20260707",
+            "ch14_acs_agent_safety_20260325",
+            "ch14_acs_agent_incident_20260813"
+          ]
+        },
+        {
+          "id": "ch14_nist",
+          "reason": "NIST驗證標準不支持AI代理的外部工具授權、越權或臺灣AI法規主張；保留於其他帳號安全條目及全域來源目錄，不再由本條引用。",
+          "prior_source_sha256": "6c7fd289cb6826069f48c717eeb5711cfe086fabf543b641e6647e2b5899da21",
+          "replacement_ids": [
+            "ch14_ai_basic_law_20260114",
+            "ch14_moda_ai_risk_framework_20260707",
+            "ch14_acs_agent_safety_20260325",
+            "ch14_acs_agent_incident_20260813"
+          ]
+        }
+      ],
+      "previous_source_ids": [
+        "ch14_ai_guideline",
+        "ch14_nist"
+      ],
+      "previous_review_claims": [
+        "使用AI服務或代理工具前，先限制資料與可執行權限：轉載2023-10-03函頒的行政院及所屬機關指引：機密與個人資料輸入限制、產出需人員判斷與機關內控；不能說成所有私人使用者一律適用的禁止法。",
+        "使用AI服務或代理工具前，先限制資料與可執行權限：第3.1.1、3.2.5與第8節：WebAuthn/FIDO2的網域綁定提供抗釣魚能力；OTP非抗釣魚；鼓勵不同服務使用獨立密碼及密碼管理器。這是美國技術指引，不是臺灣法律。"
+      ],
+      "reviewer_limit": "未取得獨立法律、資安或AI系統安全專業審閱；AI輔助來源再核對不構成安全認證。",
+      "taiwan_context_assessment": {
+        "fit": "臺灣使用者可將雲端文件、政府／醫療服務、工作信箱或金流帳戶交給聊天AI或可呼叫工具的代理；後者能讀檔、瀏覽、發信、刪除或付款，權限與可能損害高於一般問答。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "《人工智慧基本法》2026-01-14公布即施行。第16條建立主管機關風險規範框架，第19條要求政府使用AI評估風險與內控；框架和公部門規定不等於私人使用者一律禁用，其他法律仍按情況適用。"
+      }
     }
   ]
 }
