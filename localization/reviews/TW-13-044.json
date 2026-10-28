@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-044.md",
-  "target_sha256": "37b6afc48c5369f515348ea6748323e350a14d4b16dfa5a736a69c4e75e1f21e",
+  "target_sha256": "0ae354a13b7531d43e2781bf06d72553babbbd96d9806fd9f0296828967ca605",
   "source_checks": [
     {
       "url": "https://ihealth.vghtc.gov.tw/media/518",
@@ -29,5 +29,13 @@
     "不冒充醫師、救護教官或主管機關正式簽證，不保證個案療效或費用。",
     "沒有相同母群與結局定義的臺灣嬰兒院外心跳停止資料，不拿成人存活率或嬰兒猝死率替代。",
     "本次為AI輔助來源再核對，急救專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "37b6afc48c5369f515348ea6748323e350a14d4b16dfa5a736a69c4e75e1f21e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "37b6afc48c5369f515348ea6748323e350a14d4b16dfa5a736a69c4e75e1f21e",
+    "after_sha256": "0ae354a13b7531d43e2781bf06d72553babbbd96d9806fd9f0296828967ca605",
+    "before_reader_sha256": "20ca30cc0ccb03bfa93f0c8d013bc708f1b077408b9421c6ce4ab2027b70c140",
+    "after_reader_sha256": "67d9b88b22db37e4144da3013b0961b5c70562934cd4ce25f93d41a8fe6c4538"
+  }
 }

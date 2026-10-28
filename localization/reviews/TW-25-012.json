@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-012.md",
-  "target_sha256": "72bb3e02d56bb41e2d24bbff8f051b37b5fbee53c5829f9c012ee44e023923c7",
+  "target_sha256": "2f662017d6e591a2cdce7088336068e2146ec15bae23b1c09ecbf453a93405a6",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=73&pcode=D0060001",
@@ -69,5 +69,13 @@
   "limits": [
     "別漏掉死亡年度綜合所得稅。除法定免申報外，亡者有配偶時由配偶合併申報；符合受扶養規定者亦依財政部說明辦理。沒有配偶或不符合受扶養規定時，遺囑執行人、繼承人或遺產管理人原則須自死亡日起3個月內申報；特殊情形須在期限屆滿前申請核准展延，且最遲不得超過遺產稅申報期限。這不是遺產稅6個月，也不是拋棄繼承的知悉起算3個月。跨境、特殊遺產管理或爭議案件，實際末日與申請資格向機關確認；保留每一項收件及完成證明。",
     "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "72bb3e02d56bb41e2d24bbff8f051b37b5fbee53c5829f9c012ee44e023923c7",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "72bb3e02d56bb41e2d24bbff8f051b37b5fbee53c5829f9c012ee44e023923c7",
+    "after_sha256": "2f662017d6e591a2cdce7088336068e2146ec15bae23b1c09ecbf453a93405a6",
+    "before_reader_sha256": "a99e2493639db3be41d9ec79cace006a571488e823d6966702bcf96e995672d1",
+    "after_reader_sha256": "d3c278480d9b0a2fa0e9dcdf616bf39f9b74f234cb01d08e7d38eede2350aeab"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-021.md",
-  "target_sha256": "9e86ccc363079fe2570a265b7cbc5cf51b4d05f52a77f142de4b1edb77288a5c",
+  "target_sha256": "c8a7509297498fc3a3b15f17f82fdbf02484346792a4d82a0d97311b7bcd2a7c",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=R0040045",
@@ -42,5 +42,13 @@
   "limits": [
     "個人科目採認、國外學歷及成績單須由考選部確認。考選部當年度會計師及記帳士考試詳頁本次讀取逾時，因此本文不稱報名是否開放或列未確認期限。",
     "未找到個人資格、報考、及格、領證、執業登記和薪資配對母數，不估考取或薪資機率；AI輔助法規核對未取得獨立會計、考選或法律專業複核。"
-  ]
+  ],
+  "source_reviewed_sha256": "9e86ccc363079fe2570a265b7cbc5cf51b4d05f52a77f142de4b1edb77288a5c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "9e86ccc363079fe2570a265b7cbc5cf51b4d05f52a77f142de4b1edb77288a5c",
+    "after_sha256": "c8a7509297498fc3a3b15f17f82fdbf02484346792a4d82a0d97311b7bcd2a7c",
+    "before_reader_sha256": "f5056004094911163d8622c89c6135bcc69b8fb4c980e7c8336e22ef59e1d8a3",
+    "after_reader_sha256": "f0f1c0e4907ddc781c83f2e4a914a938c24f06791c294d32da951c97f4d2b810"
+  }
 }

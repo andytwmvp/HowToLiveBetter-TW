@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-003.md",
-  "target_sha256": "6971daa483eea40705c9d2a724bc3fa8760c18bf36454d4738d0b8f203641ec7",
+  "target_sha256": "355a54e231bd8d7a9068613f0ed96e5bd02be9f0b514cbea617688633ffa4830",
   "source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/28162/28296/28340/28342/28356/47085/",
@@ -80,5 +80,13 @@
     "2027最低工資已核定但須到2027-01-01才生效；試用期頻率缺少全國母數。",
     "尚無獨立勞動法或勞動行政專業審閱。"
   ],
-  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。"
+  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。",
+  "source_reviewed_sha256": "6971daa483eea40705c9d2a724bc3fa8760c18bf36454d4738d0b8f203641ec7",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "6971daa483eea40705c9d2a724bc3fa8760c18bf36454d4738d0b8f203641ec7",
+    "after_sha256": "355a54e231bd8d7a9068613f0ed96e5bd02be9f0b514cbea617688633ffa4830",
+    "before_reader_sha256": "5c85388b152e8985a4d0e3597672d99d1e2ec0c295cdeeb033191076f2add16c",
+    "after_reader_sha256": "4000bdda1b1db7056f888935287ee528feeff5b7b836eccb76b99690477843c3"
+  }
 }

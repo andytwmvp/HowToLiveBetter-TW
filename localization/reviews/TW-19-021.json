@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-021.md",
-  "target_sha256": "fc74472931a78982269008c237507bf6470d5beda0530450c2928fc0b27f1e2d",
+  "target_sha256": "098e62e76e05e9b10f35d08383e74af5451a3d874de2b173dd8a1fb2b7f1c8d6",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050001",
@@ -79,5 +79,13 @@
     "勞保局一般保險薪資調整表不能往前追溯；勞退經查證後可溯及法定日期更正，程序不可混用，也不保證損失自動補足。",
     "無同口徑全國低報案件與受僱者／薪資申報暴露分母；不以投訴數推個人遭遇機率。",
     "未取得律師或勞動保險專業獨立簽證；未登入使用者帳戶或核對特定雇主個案。"
-  ]
+  ],
+  "source_reviewed_sha256": "fc74472931a78982269008c237507bf6470d5beda0530450c2928fc0b27f1e2d",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "fc74472931a78982269008c237507bf6470d5beda0530450c2928fc0b27f1e2d",
+    "after_sha256": "098e62e76e05e9b10f35d08383e74af5451a3d874de2b173dd8a1fb2b7f1c8d6",
+    "before_reader_sha256": "16a6bc1f34c67ff3e199164a532813aeb876fac2a188b28d160761d777812823",
+    "after_reader_sha256": "688aa106d821f6068091bf57b1ffc50ba2a296985e0e0e5e11bc60feffb02974"
+  }
 }

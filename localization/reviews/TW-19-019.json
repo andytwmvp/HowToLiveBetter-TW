@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-019.md",
-  "target_sha256": "cd26d2ef6c4dd9ddad3d50da55bbdcc52ac808817042dbb62cdc999cf4769a36",
+  "target_sha256": "8fec3c8713951bf03fd603804b6c2d7779987fb98bf9c50aa0a2483a8d873d66",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
@@ -42,5 +42,13 @@
   ],
   "localization_changes": "明列勞保到職日申報及遲報翌日生效的空窗風險，分清勞退從到職日起提繳與七日異動申報期限；以健保署2024更新的投保順位取代舊新聞路徑，補列符合規定的職業工會／農漁會會員身分。",
   "legal_scope": "核對勞工保險條例第6、11、12條、勞工退休金條例第6、16、18、24條、就業保險法第5、6、11條，以及健保署投保順位說明；不同勞工身分另有例外。",
-  "review_method": "逐一讀取法務部法規資料庫、勞保局條例頁與健保署目前服務頁，將保險生效、個人專戶提繳、申報期限及投保順位分別核對。"
+  "review_method": "逐一讀取法務部法規資料庫、勞保局條例頁與健保署目前服務頁，將保險生效、個人專戶提繳、申報期限及投保順位分別核對。",
+  "source_reviewed_sha256": "cd26d2ef6c4dd9ddad3d50da55bbdcc52ac808817042dbb62cdc999cf4769a36",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "cd26d2ef6c4dd9ddad3d50da55bbdcc52ac808817042dbb62cdc999cf4769a36",
+    "after_sha256": "8fec3c8713951bf03fd603804b6c2d7779987fb98bf9c50aa0a2483a8d873d66",
+    "before_reader_sha256": "d3e6ec084c0e672a1e8202e700d46dc2cccf5efe3816151ca19e94df1e06a592",
+    "after_reader_sha256": "2bd6b1fa2834eed353bad1fea3cc5d468234d96b79ad52af111c4b32104e81f3"
+  }
 }

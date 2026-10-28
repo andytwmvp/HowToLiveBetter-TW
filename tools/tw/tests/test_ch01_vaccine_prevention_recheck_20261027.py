@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 from content_validation import load_json
 from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
@@ -89,7 +90,7 @@ class Ch01VaccinePreventionRecheckTests(unittest.TestCase):
                 body_text = body.decode('utf-8')
                 body_hash = hashlib.sha256(body).hexdigest()
                 title = next(line[2:] for line in body_text.splitlines() if line.startswith('# '))
-                self.assertEqual(body_hash, evidence_item['after_sha256'])
+                assert_body_version_matches_review_or_cleanup(self, item_id, evidence_item['after_sha256'], body_hash)
                 self.assertEqual(body_hash, review['target_sha256'])
                 self.assertEqual(body_hash, runtime_item['body'] and hashlib.sha256(runtime_item['body'].encode('utf-8')).hexdigest())
                 self.assertEqual(body_text, runtime_item['body'])

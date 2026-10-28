@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-003.md",
-  "target_sha256": "6d9e7826111fbde9936a7a5fd19c08fc1f1e8a7290bc24bca24ea16a1c0ddb76",
+  "target_sha256": "dc3bd3fa9e5e04c7e58fcc4d20af4e71982c9605b4cfeb0ac46071880f284556",
   "source_checks": [
     {
       "url": "https://www.moi.gov.tw/News_Content.aspx?n=9&s=337608",
@@ -27,5 +27,13 @@
   "review_method": "AI輔助逐項閱讀當次可取得的官方HTML、官方原始PDF或期刊／出版社摘要；逐筆記錄統計單位、母體、期間、分子分母、事件定義、來源與方法限制。機器結構檢查不作實質審閱證據；未取得全文或附件者明列於限制。",
   "limits": [
     "15歲以上戶籍人口的分母可由通報正文核對；25至34歲只有比例，官方報告未刊出此年齡組人數與分母，不能反推。戶籍人口教育統計不是就業或個人競爭力指標。本次AI輔助核對，未重算未開啟的附件，無獨立人口統計專業複核。"
-  ]
+  ],
+  "source_reviewed_sha256": "6d9e7826111fbde9936a7a5fd19c08fc1f1e8a7290bc24bca24ea16a1c0ddb76",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "6d9e7826111fbde9936a7a5fd19c08fc1f1e8a7290bc24bca24ea16a1c0ddb76",
+    "after_sha256": "dc3bd3fa9e5e04c7e58fcc4d20af4e71982c9605b4cfeb0ac46071880f284556",
+    "before_reader_sha256": "dc9ec1ed833d34beb9d5d0241fc4b1bf608f7f62b708dd28269086aac043b2e6",
+    "after_reader_sha256": "70c73b23db4de09d9ba85cd491ba8906c6bb924e85535dcd8fb62094d997369c"
+  }
 }

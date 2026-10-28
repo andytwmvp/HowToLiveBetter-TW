@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-027.md",
-  "target_sha256": "c8e44e5aee90aea35f3770396b11fe6770d5cf057deb186bdd19a182cd928449",
+  "target_sha256": "d53f5a37af0b588525d6373de3270205bd922998ff26ba1ef60c9bd7d728d6b7",
   "source_checks": [
     {
       "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18576.html",
@@ -34,5 +34,13 @@
   "limits": [
     "不採333固定存活時數作可等待三小時或其他時間的保證。國家公園來源中的一般生存口訣不能推算個別失溫時限，降雨、風與濕衣會改變風險；保持安全、保溫、及早求援優先，危險位置仍須移往鄰近可確認安全處。455件是2020山域救援全部案件，不是迷途件數或2026個人遇險率；1416面是林保署截至2026年2月標示量，非逐點測試訊號或事故母數。資料集頁所列111年CSV及較新年度消防分析本輪未取回，不能假稱已更新到2025完整統計。112仍需可用網路與相容裝置，完全無訊號不保證接通。",
     "獨立醫療、心理、職安、消防及法律專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "c8e44e5aee90aea35f3770396b11fe6770d5cf057deb186bdd19a182cd928449",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c8e44e5aee90aea35f3770396b11fe6770d5cf057deb186bdd19a182cd928449",
+    "after_sha256": "d53f5a37af0b588525d6373de3270205bd922998ff26ba1ef60c9bd7d728d6b7",
+    "before_reader_sha256": "b3b58e49eda0b2bcd378addc0f7ac1afac039ae39e6bf0052cab66fa3f4fb661",
+    "after_reader_sha256": "1f693cb37d16d08155449b88004df5b84c2ac45e1fa95f66845035951387632f"
+  }
 }

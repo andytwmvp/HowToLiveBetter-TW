@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch21/TW-21-008.md",
-  "target_sha256": "6a25c5ce17bcd6281f131dba346db68af5a6fc64d9aa7e00b45fae8858b7103d",
+  "target_sha256": "474bed014ba62bcb0d6735e95fa174e1fed89235d3f12b408f364131d09ca559",
   "source_checks": [
     {
       "url": "https://168.motc.gov.tw/theme/news/post/2302241437190",
@@ -30,5 +30,13 @@
     "動植物檢疫參考表PDF連結未成功取得，本次只依官方HTML正文提供類別及申報流程，不以未讀附表判定特定奶蛋食品或沿用原作的中國禁止名單。",
     "來源支持與每條主張均為編者摘要，非逐字引文；費用表、備援清單與行程檢核屬編修建議，不宣稱由研究證實固定效益。",
     "本章13個主題在基線尚無臺灣稿。本批新增實質正文與審閱整合，不改寫既有123項閱讀資料、舊草稿、圖片、原作、授權或來源物件。"
-  ]
+  ],
+  "source_reviewed_sha256": "6a25c5ce17bcd6281f131dba346db68af5a6fc64d9aa7e00b45fae8858b7103d",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "6a25c5ce17bcd6281f131dba346db68af5a6fc64d9aa7e00b45fae8858b7103d",
+    "after_sha256": "474bed014ba62bcb0d6735e95fa174e1fed89235d3f12b408f364131d09ca559",
+    "before_reader_sha256": "b24605ae536a641cd937ef8db765c4276a06e399b8c7a926f62d06c5ef799d84",
+    "after_reader_sha256": "bda7e579b015c2ef3397a4b6882e52c3e739dba6240d139cdcc7bccad09221e4"
+  }
 }

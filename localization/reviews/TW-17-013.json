@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-013.md",
-  "target_sha256": "1b5ad917ae8b94e28703dca59d0508d64d0ec3993d4f5c44ec28663a4562ea83",
+  "target_sha256": "027fe17583227889c3af60e03766d3219c3fd20031e63f539ab38aadb4da0d5a",
   "source_checks": [
     {
       "url": "https://1966.gov.tw/LTC/cp-6456-69825-207.html",
@@ -56,5 +56,13 @@
     "短期譫妄和慢性認知退化的緊急性不同，不以「年紀到了」忽視突然症狀。陪診要盡量保護長輩意思與隱私；不要因一次測驗結果就自行凍結銀行帳戶、取消法定能力或調整所有藥物。",
     "短期譫妄和慢性認知退化的緊急性不同，不以「年紀到了」忽視突然症狀。陪診要盡量保護長輩意思與隱私；不要因一次測驗結果就自行凍結銀行帳戶、取消法定能力或調整所有藥物。\n\n英國NHS只支持突然混亂須立即評估的臨床原則，不把其電話或服務制度套到臺灣；臺灣緊急救護為119，1966與共照中心不取代急救。長照資格與費用須個別核定，本輪未逐院實測名單、掛號及等待時間。",
     "來源讀取有範圍限制，原始試驗、全部法規公報與個案專業判斷尚待；非獨立醫療、護理、藥事或法律簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "1b5ad917ae8b94e28703dca59d0508d64d0ec3993d4f5c44ec28663a4562ea83",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1b5ad917ae8b94e28703dca59d0508d64d0ec3993d4f5c44ec28663a4562ea83",
+    "after_sha256": "027fe17583227889c3af60e03766d3219c3fd20031e63f539ab38aadb4da0d5a",
+    "before_reader_sha256": "39b52a695823462e859eae6f2ec3825f5e5089fed9b961f38db92b195830bfa9",
+    "after_reader_sha256": "e48903e5426ce0b0af0767432ae54d957e61686744773496c4a9dca43f8c9d14"
+  }
 }

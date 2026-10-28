@@ -122,7 +122,7 @@ def check():
     if problems: raise RuntimeError('仍有簡體字或待校閱用字：'+', '.join(problems)
                                     + '；差異：' + '; '.join(details))
     md = base.read('README.md'); badges = text.BADGE.findall(md)
-    if len(badges)!=6 or '%29%5D%28' in md: raise ValueError('Markdown徽章數量或語法錯誤')
+    if len(badges)!=3 or '%29%5D%28' in md: raise ValueError('Markdown徽章數量或語法錯誤')
     for label,url,dest in badges:
         if re.search(r'[\[\]()]',unquote(url)): raise ValueError('徽章網址混入Markdown語法')
         if canonical(base.cc().convert(label))!=canonical(label): raise ValueError('徽章含待轉文字')
@@ -130,7 +130,7 @@ def check():
     validate_runtime(base.ROOT)
     from link_policy import audit as check_repo_links
     check_repo_links(base.ROOT)
-    print(f'PASS：{len(text.targets())}份文案、6個圖片徽章及臺灣導航資料。')
+    print(f'PASS：{len(text.targets())}份文案、3個圖片徽章及臺灣導航資料。')
 
 if __name__ == '__main__':
     parser=argparse.ArgumentParser(description=__doc__)

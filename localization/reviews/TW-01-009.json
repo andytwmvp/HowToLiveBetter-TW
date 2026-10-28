@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-009.md",
-  "target_sha256": "c6335990847b15aad5591f3179eeca0ec189daa37345d16e1061135fd202e61b",
+  "target_sha256": "38d0ae127271e449f1fdb72083f89c96df5689ea37d2fa3a59ab1066d8187520",
   "source_checks": [
     {
       "url": "https://168.motc.gov.tw/Dui",
@@ -33,5 +33,13 @@
   "review_method": "逐項核對交通部行政數據期間、事故與死者分子、來源新聞稿的比例口徑、道路暴露分母與現行道交條例第31-1條；AI輔助，非交通安全或醫療專業簽證。",
   "limits": [
     "酒駕143名30日死亡、8751名受傷及取締／移送數不能當作疲勞、手機分心事件或個人事故率。；國道A1 27件死亡事故、30名死者、14名分心歸因死者沒有車流、里程或旅次暴露分母；新聞稿約五成比例口徑不清，未採用。；駕駛是否適任及事故處理需依個案與派遣指示；AI來源核對不等同交通或醫療專業判斷。"
-  ]
+  ],
+  "source_reviewed_sha256": "c6335990847b15aad5591f3179eeca0ec189daa37345d16e1061135fd202e61b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c6335990847b15aad5591f3179eeca0ec189daa37345d16e1061135fd202e61b",
+    "after_sha256": "38d0ae127271e449f1fdb72083f89c96df5689ea37d2fa3a59ab1066d8187520",
+    "before_reader_sha256": "a6bf3bc65bf0dbe83e9297963e188b5b6057d8b4bde6be5f52148263a2fc55cb",
+    "after_reader_sha256": "a531f5865287bf19e7451247fb5d757a65fb9c7f980ca491f64e787c8de03bea"
+  }
 }

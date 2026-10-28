@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-002.md",
-  "target_sha256": "a54429ee67d7693d995ffae136df7a2277a5d8b65a9e201889b29569c9e22db9",
+  "target_sha256": "16105a1b5fefded66b846f8e984c3c991293d2bfdd83d5089ed85cfacbc119c2",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
@@ -50,5 +50,13 @@
     "所有統計、行政案件或單一案例均按資料原始範圍與事件定義呈現；未有適當暴露分母時不推算個人發生率。",
     "未取得獨立法律、消費、租屋服務、建築消防或統計專業者審閱；本批AI來源核對不構成個案法律意見、建物安全鑑定或消防專業簽證。",
     "法規適用須核對締約時點、現行條文及個案事實；地方服務資格、電話和查詢入口可能更新，使用前由官方窗口確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "a54429ee67d7693d995ffae136df7a2277a5d8b65a9e201889b29569c9e22db9",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a54429ee67d7693d995ffae136df7a2277a5d8b65a9e201889b29569c9e22db9",
+    "after_sha256": "16105a1b5fefded66b846f8e984c3c991293d2bfdd83d5089ed85cfacbc119c2",
+    "before_reader_sha256": "2c6dce1b4bab34ea5e8fcef0d0873bf852f149672888ec6b82c84c25e3ee7b47",
+    "after_reader_sha256": "9f4d2d578db2fcda5fdf5b28942a47422a7bf7914ffd3e386e3b56f0b29cf0c6"
+  }
 }

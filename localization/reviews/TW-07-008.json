@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-008.md",
-  "target_sha256": "1e7e3d1513af259d90ddd1b8e882c36828761e46508a8a1ffbf056b50f921112",
+  "target_sha256": "f5a20aba3d14d1a06b9e7cb9b0fe92dce89ba3886691d4e4ce2801b0a69aca02",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-6654-77519-1.html",
@@ -49,5 +49,13 @@
     "持證、需求評估及各項補助核定是不同程序。即使符合身心障礙身分，也不代表所有補助自動核准；失業或有工作也不能單獨決定所有支持資格。業者的口頭保證不是政府核定，勿因折扣先刷卡或簽下不清楚的分期契約。不同縣市的受理機關、服務量能、補助項目及地方規定可能不同。\n\n若照顧或居住安全已出現立即危險，先告知所在地社政窗口；一般福利資訊可撥1957（每日08:00至22:00），但它不是緊急救援、個案核定或即時服務保證專線。",
     "各地輔具項目、補助額度、費用分擔及時程不同，未逐縣市盤點。",
     "尚無社工、輔具、醫療或法律專業人員獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "1e7e3d1513af259d90ddd1b8e882c36828761e46508a8a1ffbf056b50f921112",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1e7e3d1513af259d90ddd1b8e882c36828761e46508a8a1ffbf056b50f921112",
+    "after_sha256": "f5a20aba3d14d1a06b9e7cb9b0fe92dce89ba3886691d4e4ce2801b0a69aca02",
+    "before_reader_sha256": "9a9dc0b339905d8dcc97265dfd45e16fbc06b0ac9d3d482c996776a43706f460",
+    "after_reader_sha256": "6c041b70aaf604068f2285f5c3f5796b63ea619e071bb12b6942617c076f45b9"
+  }
 }

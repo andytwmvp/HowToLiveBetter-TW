@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-008.md",
-  "target_sha256": "41ad543d8e0855ff36b1909e622a7b247bc43bc65d4128c7912738572018c69e",
+  "target_sha256": "5b76297c83d9f5e20de09a841eacd39abc1fcc8aa597a5803bd27bf9f08848bd",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -35,5 +35,13 @@
   ],
   "localization_changes": "補正勞基法第30條出勤紀錄五年保存、分鐘記載及勞工請求本人副本不得拒絕；分清保存自身證據與批次外傳公司／第三人資料，補上找不到全國適用發生率的限制。",
   "legal_scope": "僅核對勞動基準法第23、30條、勞動事件法出勤紀錄規則及營業秘密法第2條等本文列明主張；不判斷個案證據能力、個資或契約責任。",
-  "review_method": "逐一讀取現行法規條文，將法定出勤紀錄權利與非必要的公司資料外傳分開；支持段落均為編者摘要，非逐字引文。"
+  "review_method": "逐一讀取現行法規條文，將法定出勤紀錄權利與非必要的公司資料外傳分開；支持段落均為編者摘要，非逐字引文。",
+  "source_reviewed_sha256": "41ad543d8e0855ff36b1909e622a7b247bc43bc65d4128c7912738572018c69e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "41ad543d8e0855ff36b1909e622a7b247bc43bc65d4128c7912738572018c69e",
+    "after_sha256": "5b76297c83d9f5e20de09a841eacd39abc1fcc8aa597a5803bd27bf9f08848bd",
+    "before_reader_sha256": "5b626f9cac313896f48045905011749f5b91c0bb14c66d941112edbe21496703",
+    "after_reader_sha256": "94cb3550f6670967ea1fe819fb753c8b02a3adfedbc73d49f18927c76fcdc52e"
+  }
 }

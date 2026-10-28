@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-023.md",
-  "target_sha256": "459bfb35efc78a4dcb0fccf56c56a8997e938e82957ebbe09306bdc4c3d4f59f",
+  "target_sha256": "e820078cdd8e89c757a828d5d6f4c2f0ef92368e158b87191bec51c2a37d4987",
   "source_checks": [
     {
       "url": "https://www.laf.org.tw/expense-des",
@@ -35,5 +35,13 @@
     "司法院2025年45,720件是跨程序的法院新收案件數，沒有去重個人及全體負債者分母；年報列舉子類合計與總數不符，正文只引用總數。",
     "法律資料庫顯示條例最後修正日為2021-06-16；本文按2026-10-26讀取的現行全文摘要，未將修正日冒充所有條文個別施行日。",
     "聲請資格、費用暫免、強制執行效果及個人債務方案應由法院或合格法律專業人員依完整資料確認；AI來源核對不是法律意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "459bfb35efc78a4dcb0fccf56c56a8997e938e82957ebbe09306bdc4c3d4f59f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "459bfb35efc78a4dcb0fccf56c56a8997e938e82957ebbe09306bdc4c3d4f59f",
+    "after_sha256": "e820078cdd8e89c757a828d5d6f4c2f0ef92368e158b87191bec51c2a37d4987",
+    "before_reader_sha256": "f13ecf7e123ecd7c57cedcd78005b68ce3f4590b91268fd4f6ec0069264e20ce",
+    "after_reader_sha256": "241dcf0d912bba0cb7ca642f8ad7f3f6eaccad38e58c38736b5c5720e9bbd435"
+  }
 }

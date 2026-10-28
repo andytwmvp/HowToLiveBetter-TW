@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-003.md",
-  "target_sha256": "a8436f18771255217c2862592f81a64018c50ef9ba3f9b01bf2f110111e3a54c",
+  "target_sha256": "8c2d4015912de6da255d601ced7ca074060bb9ed94caa8bee2a7c71458281a17",
   "source_checks": [
     {
       "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
@@ -76,5 +76,13 @@
   "limits": [
     "2025建築物火災數為分類行政事件次數，沒有住宅戶數或建物年分母，不能推算住戶發生率或住警器效益。住警器及一氧化碳偵測器用途不同；法定義務須按場所類別和管理權人判斷。",
     "AI輔助核對官方消防法規及指引，未取得消防設備師／士、建築消防或個案專業簽證；緊急狀況先撤離並撥119。"
-  ]
+  ],
+  "source_reviewed_sha256": "a8436f18771255217c2862592f81a64018c50ef9ba3f9b01bf2f110111e3a54c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a8436f18771255217c2862592f81a64018c50ef9ba3f9b01bf2f110111e3a54c",
+    "after_sha256": "8c2d4015912de6da255d601ced7ca074060bb9ed94caa8bee2a7c71458281a17",
+    "before_reader_sha256": "de5a983b1292569a36db59645757518052e7c3f0967933ce56ccf7700c55a66e",
+    "after_reader_sha256": "208d6e2d05d9707f5543a4fbdc9f4a23e0f99e33f2850fb7b3fc78c418304f8e"
+  }
 }

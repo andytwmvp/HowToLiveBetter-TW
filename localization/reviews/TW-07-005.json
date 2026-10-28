@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-005.md",
-  "target_sha256": "b060fc673066ccf55a92af4f11ea4024cf697bef0f76a836a8e0a45b29d6539a",
+  "target_sha256": "491b10a00acf2ccc82e5cdcdd5aefa4519a2787b4ebbd30af1138f39dab7d6d3",
   "source_checks": [
     {
       "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
@@ -56,5 +56,13 @@
     "警政統計只計警方行政系統列報的被害人與分類比例，沒有全部求職者、求職次數或假職缺接觸母數；單一偵辦案件不得外推個人發生率。",
     "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
     "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "b060fc673066ccf55a92af4f11ea4024cf697bef0f76a836a8e0a45b29d6539a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "b060fc673066ccf55a92af4f11ea4024cf697bef0f76a836a8e0a45b29d6539a",
+    "after_sha256": "491b10a00acf2ccc82e5cdcdd5aefa4519a2787b4ebbd30af1138f39dab7d6d3",
+    "before_reader_sha256": "281564bfb86e4df9138d5644395ad7a2feca82da793691147633d7d9a27d73bb",
+    "after_reader_sha256": "455aec801789fecf80761816d51dec31c681285494c7c1ce49137e1fd5de38b6"
+  }
 }

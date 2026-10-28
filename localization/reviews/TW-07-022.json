@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-022.md",
-  "target_sha256": "a02f080adbf05fdeeacece77a2e6ac7a3e05ec64fa3b620a8910210bf7206062",
+  "target_sha256": "83d48d689db582820af2ce056cf886fe652ea8ed0c9e35cbc1033ff914c618bf",
   "source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/1632/1640/12431/",
@@ -49,5 +49,13 @@
     "勞動部2024年積欠工資9,669件是行政主要爭議類別，沒有全體勞工或欠薪暴露分母，不是違法認定或個人發生率。",
     "契約關係、真正雇主、請求種類及時效依個案事實判斷；行政協處或調解不等同法院判決，也不保證全額取回款項。",
     "只保存依法可取得的自身工作證據，不大量匯出同事、客戶個資或公司機密；AI來源核對不等於勞動法律或統計專業簽核。"
-  ]
+  ],
+  "source_reviewed_sha256": "a02f080adbf05fdeeacece77a2e6ac7a3e05ec64fa3b620a8910210bf7206062",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a02f080adbf05fdeeacece77a2e6ac7a3e05ec64fa3b620a8910210bf7206062",
+    "after_sha256": "83d48d689db582820af2ce056cf886fe652ea8ed0c9e35cbc1033ff914c618bf",
+    "before_reader_sha256": "c52a3440772628653adb470f6fc6cef78da47ace49a9e7da32991fc3dd267ae9",
+    "after_reader_sha256": "36bf35b3ef66142f052798b96503a6efdea24c985ca964092668493427e099c9"
+  }
 }

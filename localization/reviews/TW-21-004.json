@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch21/TW-21-004.md",
-  "target_sha256": "42d83f3a48d52423342aad3e22d240b67eec3778fb390593e746a078f140a266",
+  "target_sha256": "60ec1a5ef5c01b2ef26b4006925e02e6b0136fe8f43d9910deb208a279a49078",
   "source_checks": [
     {
       "url": "https://wwwnc.cdc.gov/travel/page/insurance",
@@ -37,5 +37,13 @@
     "動植物檢疫參考表PDF連結未成功取得，本次只依官方HTML正文提供類別及申報流程，不以未讀附表判定特定奶蛋食品或沿用原作的中國禁止名單。",
     "來源支持與每條主張均為編者摘要，非逐字引文；費用表、備援清單與行程檢核屬編修建議，不宣稱由研究證實固定效益。",
     "本章13個主題在基線尚無臺灣稿。本批新增實質正文與審閱整合，不改寫既有123項閱讀資料、舊草稿、圖片、原作、授權或來源物件。"
-  ]
+  ],
+  "source_reviewed_sha256": "42d83f3a48d52423342aad3e22d240b67eec3778fb390593e746a078f140a266",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "42d83f3a48d52423342aad3e22d240b67eec3778fb390593e746a078f140a266",
+    "after_sha256": "60ec1a5ef5c01b2ef26b4006925e02e6b0136fe8f43d9910deb208a279a49078",
+    "before_reader_sha256": "3214624bd6101007a931a81695e6ef16d6b5a3c3018d38e505c15d19c0722765",
+    "after_reader_sha256": "b6141b4f1e8c89c968a4da747ea5738975d8136a340848d3bf45bc24c570f847"
+  }
 }

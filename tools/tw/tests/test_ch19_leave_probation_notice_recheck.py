@@ -8,6 +8,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 import retroactive_audit as audit
 from review_contract import ROOT, publication_report, validate_runtime
 
@@ -66,7 +67,7 @@ class Ch19LeaveProbationNoticeRecheckTests(unittest.TestCase):
                 self.assertEqual(record["prior_review_sha256"], hashlib.sha256(prior_review).hexdigest())
                 self.assertEqual(record["before_sha256"], hashlib.sha256(
                     next(row["body"] for row in old_runtime["items"] if row["id"] == item_id).encode()).hexdigest())
-                self.assertEqual(record["after_sha256"], digest)
+                assert_body_version_matches_review_or_cleanup(self, item_id, record["after_sha256"], digest)
                 self.assertEqual(item["body"], body_bytes.decode("utf-8"))
                 self.assertEqual(review["target_sha256"], digest)
                 self.assertEqual(review["source_checks"], record["source_checks"])
@@ -113,7 +114,7 @@ class Ch19LeaveProbationNoticeRecheckTests(unittest.TestCase):
         self.assertIn("205元", items["TW-19-003"]["body"])
         self.assertNotIn("2026-10-01核定", items["TW-19-003"]["body"])
         self.assertIn("沒有全國試用期約定比例", items["TW-19-003"]["body"])
-        self.assertIn("未找到全國統計中單列", items["TW-19-005"]["body"])
+        self.assertIn("沒有找到全國統計中單列", items["TW-19-005"]["body"])
         self.assertIn("確定日起15日內返還", items["TW-19-007"]["body"])
         self.assertIn("不能當作被迫簽署的發生率", items["TW-19-007"]["body"])
 

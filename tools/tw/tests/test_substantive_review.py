@@ -66,7 +66,7 @@ class SubstantiveReviewTests(unittest.TestCase):
                 self.assertFalse(audit.documented_revision(old, dict(new, source_ids=ids), record))
 
     def test_appended_source_must_exist_and_match_manifest_and_review(self):
-        record = next(r for r in audit.load(audit.ROOT, 'localization/retroactive-review-register-20261019.json')['substantive_rechecks'] if r['id'] == 'TW-13-014')
+        record = next(r for r in audit.load(audit.ROOT, 'localization/retroactive-review-register-20261019.json')['substantive_rechecks'] if r['id'] == 'TW-23-010')
         item = next(i for i in audit.load(audit.ROOT, 'localization/tw-edition/runtime.json')['items'] if i['id'] == record['id'])
         original = audit.load
         for target in ('registry', 'manifest', 'review'):

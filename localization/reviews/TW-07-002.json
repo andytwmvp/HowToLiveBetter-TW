@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-002.md",
-  "target_sha256": "e5c0673f442fdd07be1b0598c541fd9576a0110bce3c76846ae1bbd840e87153",
+  "target_sha256": "646b4090ccc15b4c3fd3d17074a01116111b9e84a84e0e83a9a672a2e852110a",
   "source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/28162/28296/28410/28412/",
@@ -48,5 +48,13 @@
   "limits": [
     "行政爭議案件數不等於不重複勞工、受償數或個人機率；欠薪時效、雇主停業狀況、調解效力及墊償資格須按個案確認。AI輔助來源核對不等於律師或勞動行政專業簽證。",
     "未取得勞動、法律、警政或金融領域獨立專家審閱；本紀錄不構成個案法律意見、行政認定或求償保證。"
-  ]
+  ],
+  "source_reviewed_sha256": "e5c0673f442fdd07be1b0598c541fd9576a0110bce3c76846ae1bbd840e87153",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e5c0673f442fdd07be1b0598c541fd9576a0110bce3c76846ae1bbd840e87153",
+    "after_sha256": "646b4090ccc15b4c3fd3d17074a01116111b9e84a84e0e83a9a672a2e852110a",
+    "before_reader_sha256": "53280ba09543b17a48557ef5137754d003ebf000f5f3c872a92deab4a845029d",
+    "after_reader_sha256": "a497e80c52a024620e45d4db6641bc5fc3b0039993ed1ec386d29a826af9c040"
+  }
 }

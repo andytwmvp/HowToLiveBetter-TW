@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-007.md",
-  "target_sha256": "bf9fcd5f87e71a9154b0693e8958e8e05165f6dee730910249d35f663996cbe7",
+  "target_sha256": "bec12c4817c275ac02487e19df6a6151bd71cba5a6d55c589ce750cc7867dc44",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20223",
@@ -48,5 +48,13 @@
   "limits": [
     "2019至2023年調查摘要未提供樣本數、加權細節、信賴區間或個體資料；18歲以上28.9%與30至39歲9.7%是不同年齡分母，不是年發生率。722是量測紀錄方法，不是自行診斷、調藥或急症分流規則。未取得心臟科、高血壓或公共衛生專家獨立審閱。",
     "國健署心腦血管急症頁搜尋索引可讀到警訊及119內容，但直接開頁本次回傳502；中風症狀及119另由直接讀取的衛福部官方頁交叉核對。未取得心臟科或腦中風專業獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "bf9fcd5f87e71a9154b0693e8958e8e05165f6dee730910249d35f663996cbe7",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "bf9fcd5f87e71a9154b0693e8958e8e05165f6dee730910249d35f663996cbe7",
+    "after_sha256": "bec12c4817c275ac02487e19df6a6151bd71cba5a6d55c589ce750cc7867dc44",
+    "before_reader_sha256": "9396752b942ae0fbb833096e6d289d9cec5c372981e166843baf5f086f3c87b3",
+    "after_reader_sha256": "dbeefe3ab252213acdf0cc9dae40f8aa866119cb781524854eb20fabf437460f"
+  }
 }

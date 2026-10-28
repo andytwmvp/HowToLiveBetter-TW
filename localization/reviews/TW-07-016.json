@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-016.md",
-  "target_sha256": "df70b38809b6e56b3c830762631024023305c1c0b264819f0dfeecda008cd608",
+  "target_sha256": "27d0094bab26f04bc5d0dc917df9202177d56248461070a6061d367ff6e88cff",
   "source_checks": [
     {
       "url": "https://www.nlma.gov.tw/ch/legislation/law%26regunu/7243",
@@ -42,5 +42,13 @@
     "租補年度門檻及住宅要件可能變動；本文分列2026與2027公告，不能跨年度套用，個案由承租住宅所在地縣市審查。",
     "2026年5月申請與核定戶數沒有全體合資格租屋家戶分母，不計算個人核准率或居住不穩定盛行率。",
     "地方社宅、包租代管、緊急安置與物資供給各有條件及量能；AI來源核對不等於住宅或社福專業審查。"
-  ]
+  ],
+  "source_reviewed_sha256": "df70b38809b6e56b3c830762631024023305c1c0b264819f0dfeecda008cd608",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "df70b38809b6e56b3c830762631024023305c1c0b264819f0dfeecda008cd608",
+    "after_sha256": "27d0094bab26f04bc5d0dc917df9202177d56248461070a6061d367ff6e88cff",
+    "before_reader_sha256": "692b0a879e571defe76da04fb11903740008c9b092a36d4c4fc5fa75e8c1ffbd",
+    "after_reader_sha256": "7a6a6d7acb205dabd02e8cb5018a1a226ee3b8287c2a8e41e6d38ce6c21db65d"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-006.md",
-  "target_sha256": "4221dfce0dd3256ffd569d0ce8c7e91461275cbe77269187ab279ef6c5faa779",
+  "target_sha256": "f524886c35d6a0ae30565d148af12a7080a497486c9a2419a948c691644268a7",
   "source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/1632/1633/90814/",
@@ -27,5 +27,13 @@
   "review_method": "AI輔助逐項閱讀當次可取得的官方HTML、原始PDF或期刊／出版社摘要；逐筆記錄統計單位、母體、期間、分子分母、事件定義、來源與方法限制。機器結構檢查不作實質審閱證據；未取得全文或附件者明列於限制。",
   "limits": [
     "初任薪資是依行政資料編算的全時初任受僱者描述統計，不是教育造成的薪資因果效果；薪資中位數依級距中點估算，且不代表每位畢業生。職類調查涵蓋不同母體及期間。本次AI輔助核對未重算附件原始資料，無獨立勞動或統計專業複核。"
-  ]
+  ],
+  "source_reviewed_sha256": "4221dfce0dd3256ffd569d0ce8c7e91461275cbe77269187ab279ef6c5faa779",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "4221dfce0dd3256ffd569d0ce8c7e91461275cbe77269187ab279ef6c5faa779",
+    "after_sha256": "f524886c35d6a0ae30565d148af12a7080a497486c9a2419a948c691644268a7",
+    "before_reader_sha256": "fc97e4fdd36ddcffb29aa0b7680406d1ec6bcf417f32c3c9c2da2891d0f895cc",
+    "after_reader_sha256": "c2c2dc9f3512f91a034c347a073f0f1e32501329775d226667dd93c0b9cadd75"
+  }
 }

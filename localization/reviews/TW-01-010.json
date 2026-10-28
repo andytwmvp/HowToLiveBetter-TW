@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-010.md",
-  "target_sha256": "2f2643eb5968e7d3a8164625cd2f673e3389c7022b32ea7c6c406a7d4f5349a3",
+  "target_sha256": "5e26c8230ee6babe731fac4e140bcb458142f78c296d362bc2bc300d87506dc2",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040038",
@@ -40,5 +40,13 @@
   "review_method": "逐項核對全國法規現行全文、行政院公報發布／施行日期、車種定義、兒童年齡與重量條件及計程車例外；沒有以一般道路死亡總數代替幼童座椅風險。",
   "limits": [
     "沒有幼童乘車旅次、正確座椅使用率及事故結果配對母數，不能估算幼童個人風險或座椅效果百分比。；計程車屬營業小客車時適用不同條文；叫車平台媒合車種須逐車確認，法規例外不是安全建議。；產品適配、安裝品質及事故後是否更換依產品說明、車輛手冊及專業建議處理；未取得兒童乘車安全專家簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "2f2643eb5968e7d3a8164625cd2f673e3389c7022b32ea7c6c406a7d4f5349a3",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2f2643eb5968e7d3a8164625cd2f673e3389c7022b32ea7c6c406a7d4f5349a3",
+    "after_sha256": "5e26c8230ee6babe731fac4e140bcb458142f78c296d362bc2bc300d87506dc2",
+    "before_reader_sha256": "9c424fbe4035adbaa85684e1fc346919617671b43cd17a757daae7456a13c23b",
+    "after_reader_sha256": "0fd8cb2a63f203d7d6fa8b708298cf6d89898125413c4c7317424f8b243c516f"
+  }
 }

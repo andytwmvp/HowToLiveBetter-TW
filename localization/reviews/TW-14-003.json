@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-003.md",
-  "target_sha256": "a62739f607650ce4507fc13de31d9be82741905903cc072b754b1f0360be74fc",
+  "target_sha256": "b7e77c92efaec05469d6cda94fe26008d19b02e5833e556dd6de0af5a3ff0a96",
   "source_checks": [
     {
       "url": "https://support.apple.com/zh-tw/118228",
@@ -36,5 +36,13 @@
     "SIM PIN只保護支援此功能的SIM卡或eSIM於特定裝置情況；不阻止業者補換卡申請，也不能取代螢幕鎖、業者核驗或帳號復原。PUK不可猜。",
     "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
   ],
-  "review_method": "逐一開啟並核對臺灣主管機關、官方服務文件及NIST現行技術標準；區分制度／宣導適用主體、台灣服務情境、事件件數、事件定義及暴露分母；資料不足時不推估。AI輔助查核不是獨立專業審閱。"
+  "review_method": "逐一開啟並核對臺灣主管機關、官方服務文件及NIST現行技術標準；區分制度／宣導適用主體、台灣服務情境、事件件數、事件定義及暴露分母；資料不足時不推估。AI輔助查核不是獨立專業審閱。",
+  "source_reviewed_sha256": "a62739f607650ce4507fc13de31d9be82741905903cc072b754b1f0360be74fc",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a62739f607650ce4507fc13de31d9be82741905903cc072b754b1f0360be74fc",
+    "after_sha256": "b7e77c92efaec05469d6cda94fe26008d19b02e5833e556dd6de0af5a3ff0a96",
+    "before_reader_sha256": "595db35e069915d339d7e3ac9b176fa0daad15a7804be6af66cb8facf840b116",
+    "after_reader_sha256": "1abb01cbbc104564652ea9f884cee6ad4cef9d42e76addde2748c71a81d89ebe"
+  }
 }

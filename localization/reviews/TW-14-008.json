@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-008.md",
-  "target_sha256": "d9b490be7e272f170bd56f5f7cacf7ca17a199df633dad08c779402547f42a50",
+  "target_sha256": "53dfb02cb33514f1d783ab6f89f884f95231a6464cbe694af7cf210528e06a34",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
@@ -31,5 +31,13 @@
     "未取得個資權利請求件數、遭拒或逾期件數及同口徑總請求母數配對的全國統計，不估個人遭拒或未刪除機率。",
     "未取得獨立法律或個資監理專業審閱；AI輔助來源再核對不構成個案法律意見。"
   ],
-  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。"
+  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。",
+  "source_reviewed_sha256": "d9b490be7e272f170bd56f5f7cacf7ca17a199df633dad08c779402547f42a50",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d9b490be7e272f170bd56f5f7cacf7ca17a199df633dad08c779402547f42a50",
+    "after_sha256": "53dfb02cb33514f1d783ab6f89f884f95231a6464cbe694af7cf210528e06a34",
+    "before_reader_sha256": "a10e4bdda8d6abafc53b8106bae1d88e7ec419745451b2050a1a2b2f5e79efb6",
+    "after_reader_sha256": "e9033deb85153885062ac8f3aee682ffb1d3cde26562db035f4dece91d4c7f5a"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-001.md",
-  "target_sha256": "0757a93d47b1b3dc66ca55e958606fb79102c6ef1b0b8b3795e60f4de2809b3a",
+  "target_sha256": "6200e9f75db838d10d611ff570a97c0cd9cb58a3007defc46fdf6f0274f77903",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -27,5 +27,13 @@
   "review_method": "逐項讀取臺灣中央主管機關現行法規、法規沿革、官方統計公告、官方FAQ及官方參訓問答PDF，將正文各主張對照到來源段落或頁次；統計另記錄期間、母數、分子、事件定義、資料型態與選樣限制。沒有可信的臺灣配對母數時明示資料不足，不自行推估。AI輔助核對不等於獨立專家或個案簽核。",
   "limits": [
     "25.11%是風險選列受檢事業單位的行政檢查違規占比，不能外推成臺灣事業違規率、未成年勞工風險或個人發生機率；未成年相關違規未分項列數。\n\n本次AI輔助法規及官方統計核對，未取得獨立勞動、法律或統計專業複核；個別僱傭關係、工作許可與危害判斷仍需主管機關確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "0757a93d47b1b3dc66ca55e958606fb79102c6ef1b0b8b3795e60f4de2809b3a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0757a93d47b1b3dc66ca55e958606fb79102c6ef1b0b8b3795e60f4de2809b3a",
+    "after_sha256": "6200e9f75db838d10d611ff570a97c0cd9cb58a3007defc46fdf6f0274f77903",
+    "before_reader_sha256": "b66f950cfc3a53d5d7ac66c2d3842bfcd03e4794fd88620fcda70d17b395eaea",
+    "after_reader_sha256": "e872b75e8b36e80275c1d85b4a7cdca322e70b75e9c0232f79fdfc1193fefd70"
+  }
 }

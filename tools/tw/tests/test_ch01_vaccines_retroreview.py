@@ -20,7 +20,7 @@ class VaccinesRetroreviewTests(unittest.TestCase):
     self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
  def test_2026_policy_and_denominators(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
-  self.assertIn('2至6個月',b['TW-01-021']);self.assertIn('2011至2020年',b['TW-01-021']);self.assertIn('每千人年7.15例',b['TW-01-021']);self.assertIn('每千人年7.82例',b['TW-01-021']);self.assertIn('不將舊申報率當2026即時風險',b['TW-01-021'])
+  self.assertIn('2至6個月',b['TW-01-021']);self.assertIn('2011至2020年',b['TW-01-021']);self.assertIn('每千人年7.15例',b['TW-01-021']);self.assertIn('每千人年7.82例',b['TW-01-021']);self.assertIn('舊申報率不能當作2026年即時風險',b['TW-01-021'])
   self.assertIn('PCV21',b['TW-01-022']);self.assertIn('8週例外不適用僅打PPV23',b['TW-01-022']);self.assertIn('Q10',b['TW-01-022']);self.assertIn('不是所有肺炎',b['TW-01-022'])
   self.assertIn('終身一次',b['TW-01-023']);self.assertIn('民眾可領450元',b['TW-01-023']);self.assertIn('缺',b['TW-01-023']);self.assertIn('4週',b['TW-01-023'])
   self.assertIn('每2年一次',b['TW-01-024']);self.assertIn('戒菸未達15年',b['TW-01-024']);self.assertIn('不是每個結節都需開刀',b['TW-01-024'])

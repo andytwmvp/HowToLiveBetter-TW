@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-001.md",
-  "target_sha256": "5ae09ac2348592525aed5114e16ea923e8df3a5a5ae108188be9299fe7f1df56",
+  "target_sha256": "f3bd23965736fcf58974240f18d43764c98e48093620c466ac506d8ca1bcb888",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -49,5 +49,13 @@
     "4,029份調查有效樣本的公開摘要未提供原始加權分子、抽樣誤差／信賴區間；樣本框不代表所有在臺勞動者或非本國籍受僱者。",
     "2024年2,139名涉及人數是勞資爭議行政統計，無全體受僱者、工時或加班暴露分母；調查中未每次取得補償不等於已證實違法。",
     "工作者身分、工資項目、班別、變形工時及第84條之1適用需按個案文件核對；尚無獨立勞動法或統計專業審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "5ae09ac2348592525aed5114e16ea923e8df3a5a5ae108188be9299fe7f1df56",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "5ae09ac2348592525aed5114e16ea923e8df3a5a5ae108188be9299fe7f1df56",
+    "after_sha256": "f3bd23965736fcf58974240f18d43764c98e48093620c466ac506d8ca1bcb888",
+    "before_reader_sha256": "25b7339efea41d11749aac62f962d0068d172b11a995dec138d75bb054cd564e",
+    "after_reader_sha256": "9070f03a5e124abfb7359c2a4b93c27ce918a6707aa35b04514c74780f834302"
+  }
 }

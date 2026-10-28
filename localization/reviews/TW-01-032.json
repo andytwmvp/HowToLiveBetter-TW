@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2026-12-15",
   "target_path": "locales/zh-TW/book/ch01/TW-01-032.md",
-  "target_sha256": "741cd53054add4ed9838bf1ab1cbe79a06592b417499ba4871356078ff94813f",
+  "target_sha256": "f78a68b431a8df2981eaf9a50b4dd01678764a0d09d28cfca721b46f4d4a6f23",
   "source_checks": [
     {
       "url": "https://beipu.hcshb.gov.tw/News_Content.aspx?n=363&s=109351&sms=9314",
@@ -57,5 +57,13 @@
     "精神醫療及心理專業尚未獨立審閱；2026心理健康支持方案尚未宣布2027年是否延續，需於到期前複查。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "a6a00778124c7ce9e700c6642eefb3a06d417638ba234202d27f3caeff8720eb"
+  "upstream_text_sha256": "a6a00778124c7ce9e700c6642eefb3a06d417638ba234202d27f3caeff8720eb",
+  "source_reviewed_sha256": "741cd53054add4ed9838bf1ab1cbe79a06592b417499ba4871356078ff94813f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "741cd53054add4ed9838bf1ab1cbe79a06592b417499ba4871356078ff94813f",
+    "after_sha256": "f78a68b431a8df2981eaf9a50b4dd01678764a0d09d28cfca721b46f4d4a6f23",
+    "before_reader_sha256": "3e4299151839b79cc6cd508c298d3bdda0677f17acc16f356fddf2e544d47b40",
+    "after_reader_sha256": "df1f8d0c4a7a331dbb73bdf06c087faa9c19be1b8495c049638775675c1fc3c3"
+  }
 }

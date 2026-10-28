@@ -109,6 +109,7 @@ class RuntimeTests(unittest.TestCase):
             edition.build_html(root/'tw.html',data)
             html=(root/'tw.html').read_text();self.assertNotIn('window.__CORPUS__=',html)
             self.assertIn('window.__TW_RUNTIME__=',html)
+            self.assertIn('內容最後確認日期',html);self.assertIn('建議再次確認日期',html)
             edition.build_epub(root/'tw.epub',data)
             with zipfile.ZipFile(root/'tw.epub') as z:
                 self.assertEqual(z.namelist()[0],'mimetype');self.assertEqual(z.getinfo('mimetype').compress_type,zipfile.ZIP_STORED)
@@ -116,6 +117,8 @@ class RuntimeTests(unittest.TestCase):
                     if p.endswith(('.xml','.xhtml','.opf')):ET.fromstring(z.read(p))
                 tree=ET.fromstring(z.read('OEBPS/content.xhtml'))
                 self.assertEqual({e.attrib['id'] for e in tree.findall('.//{http://www.w3.org/1999/xhtml}section')},ids)
+                epub_text=z.read('OEBPS/content.xhtml').decode()
+                self.assertIn('內容最後確認日期',epub_text);self.assertIn('建議再次確認日期',epub_text)
             edition.build_anki(root/'tw.apkg',data)
             with zipfile.ZipFile(root/'tw.apkg') as z:(root/'deck.sqlite').write_bytes(z.read('collection.anki2'))
             with closing(sqlite3.connect(root/'deck.sqlite')) as db:
@@ -124,5 +127,6 @@ class RuntimeTests(unittest.TestCase):
                 self.assertEqual({r[1] for r in rows},ids)
                 self.assertTrue(all(r[0] == 'hltb-tw-' + r[1] for r in rows))
                 self.assertTrue(all('https://' in r[2] for r in rows))
+                self.assertTrue(all('內容最後確認日期' in r[2] and '建議再次確認日期' in r[2] for r in rows))
 
 if __name__=='__main__':unittest.main()

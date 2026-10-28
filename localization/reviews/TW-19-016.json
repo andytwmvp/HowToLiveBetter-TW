@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-016.md",
-  "target_sha256": "51cc0e1fded60a73f080b717752eab4aa346cf81ddba546bb24ead269387961f",
+  "target_sha256": "9fab62595558ce53c2037ee2667f8a4daac60ef263d4d43d720b6781a82f78e3",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
@@ -97,5 +97,13 @@
   "review_method": "直接閱讀可取得的官方現行法規、主管機關統計／服務公告及本篇對應條文，記錄資料定義、期間、範圍和未取得的分母；AI來源核對不等於專業審查。",
   "limits": [
     "AI輔助法規及服務入口再核對，未取得獨立勞動法、心理或人資調查專業簽證；霸凌成立、最高負責人身分、期限及保護措施均須依完整事證由雇主或主管機關調查判斷，本文不是法律或臨床意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "51cc0e1fded60a73f080b717752eab4aa346cf81ddba546bb24ead269387961f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "51cc0e1fded60a73f080b717752eab4aa346cf81ddba546bb24ead269387961f",
+    "after_sha256": "9fab62595558ce53c2037ee2667f8a4daac60ef263d4d43d720b6781a82f78e3",
+    "before_reader_sha256": "9f1314174cb1ebe9c89861a5e3afa9903303d2cf0fe649a9d4382daf71c6f724",
+    "after_reader_sha256": "7bc7899a1d89f5c2e77007df523d15e784af00a4f5cb09008c86c662807514f9"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-011.md",
-  "target_sha256": "f8d86d6597ccb4ed5b5b5f7400ec8a1c954647e0d564dd30f3e213105bb3beb0",
+  "target_sha256": "c45f7c48e16ffef60a41ab6817a2f8adc89a5990bd369d9a9b65fe2a9a23a8d5",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050008",
@@ -55,5 +55,13 @@
   "review_method": "直接閱讀可取得的官方現行法規、主管機關統計／服務公告及本篇對應條文，記錄資料定義、期間、範圍和未取得的分母；AI來源核對不等於專業審查。",
   "limits": [
     "AI輔助來源再核對，未取得獨立勞動法或保險專業簽證；上下班路線、給付資格、平均薪資、僱主補償及時效須按事故日期、證據和個案核定，本文不保證職災認定或給付。"
-  ]
+  ],
+  "source_reviewed_sha256": "f8d86d6597ccb4ed5b5b5f7400ec8a1c954647e0d564dd30f3e213105bb3beb0",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "f8d86d6597ccb4ed5b5b5f7400ec8a1c954647e0d564dd30f3e213105bb3beb0",
+    "after_sha256": "c45f7c48e16ffef60a41ab6817a2f8adc89a5990bd369d9a9b65fe2a9a23a8d5",
+    "before_reader_sha256": "86cf247286619bfbee02891f4a4f79578e0d28cd20662d3ccdcca38d76f94160",
+    "after_reader_sha256": "12b4883161b6a3d11d53fa885e4becfe6cfc16cf4e4e30630e83b84e94c3d92d"
+  }
 }

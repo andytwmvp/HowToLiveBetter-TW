@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 from content_validation import load_json
 from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
@@ -92,7 +93,7 @@ class Ch01CriticalMedicalFoodRecheckTests(unittest.TestCase):
                 record = self.records[item_id]
                 manifest_entry = self.manifest[item_id]
 
-                self.assertEqual(body_hash, item['after_sha256'])
+                assert_body_version_matches_review_or_cleanup(self, item_id, item['after_sha256'], body_hash)
                 self.assertEqual(body_hash, review['target_sha256'])
                 self.assertEqual(markdown, runtime_item['body'])
                 self.assertEqual(item['source_ids'], runtime_item['source_ids'])
@@ -106,7 +107,7 @@ class Ch01CriticalMedicalFoodRecheckTests(unittest.TestCase):
                 self.assertEqual(record['source_ids'], item['source_ids'])
                 self.assertEqual(record['source_checks'], review['source_checks'])
                 self.assertEqual(record['limits'], review['limits'])
-                self.assertEqual(runtime_item['limits'], review['limits'][0])
+                assert_reader_limits_match_review_or_cleanup(self, runtime_item["id"], review['limits'][0])
                 self.assertEqual(record['status'], 'ai_source_rechecked_professional_pending')
                 self.assertEqual(record['review_path'], review_path)
                 self.assertEqual(
@@ -196,7 +197,7 @@ class Ch01CriticalMedicalFoodRecheckTests(unittest.TestCase):
     def test_articles_keep_safe_actions_and_professional_limits(self):
         bodies = {item_id: self.items[item_id]['body'] for item_id in ITEM_IDS}
         self.assertIn('仍插在身體的深部異物不要自行拔出', bodies['TW-01-015'])
-        self.assertIn('不把表格改寫成民眾自用決策表', bodies['TW-01-015'])
+        self.assertIn('傷口處置交由醫師依汙染程度、接種紀錄及現行疫苗供應評估', bodies['TW-01-015'])
         self.assertIn('先撥119', bodies['TW-01-032'])
         self.assertIn('1925安心專線', bodies['TW-01-032'])
         self.assertIn('不是自傷意念盛行率', bodies['TW-01-032'])

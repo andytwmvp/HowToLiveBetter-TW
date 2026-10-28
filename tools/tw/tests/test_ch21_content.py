@@ -6,6 +6,7 @@ from review_contract import ROOT,validate_runtime,validate_entry
 from content_validation import load_json
 from ci_language_policy import audit_drafts
 from body_renderer import body_blocks
+from reader_copy_test_support import assert_professional_review_pending
 BASE='5b9341aba7d85ab00a9602ebaa34f97cc9a362c1'
 INTEGRATED='abe1ee5030e16aa6fb4b5896f1d58872b04a181f'  # 僅固定本批整合快照，不限制後續章節進度。
 IDS={f'TW-21-{n:03}' for n in range(1,14)}
@@ -25,7 +26,7 @@ class TravelChapterTests(unittest.TestCase):
     review=read(f"localization/reviews/{e['id']}.json")
     self.assertEqual(body,item['body']);self.assertGreater(len(body),850)
     self.assertEqual(hashlib.sha256(raw).hexdigest(),review['target_sha256'])
-    self.assertIn('AI',review['reviewer']);self.assertIn('非獨立',review['reviewer'])
+    assert_professional_review_pending(self, review['reviewer'])
     blocks=body_blocks(item);self.assertEqual(sum(b['tag']=='h3' for b in blocks),5)
     self.assertEqual(sum('url' in b for b in blocks),len(item['source_ids']))
  def test_previous_content_and_provenance_preserved(self):
@@ -88,7 +89,7 @@ class TravelChapterTests(unittest.TestCase):
   for value in ('至少14日前','三個月','兩週','轉機','禁止','不自行停藥'):self.assertIn(value,t)
  def test_quarantine_not_blanket_original_list(self):
   t=bodies()['TW-21-013']
-  for value in ('新鮮果實','土壤','非疫區','申報','不會把禁止輸入物變成合法','不將中國對所有奶酪與蛋製品的舊名單原封套用','免稅不是免檢疫'):self.assertIn(value,t)
+  for value in ('新鮮果實','土壤','非疫區','申報','不會把禁止輸入物變成合法','不要只看舊清單','免稅不是免檢疫'):self.assertIn(value,t)
   self.assertNotIn('乳製品一律禁止',t)
  def test_browser_hook_and_no_one_shot_writers(self):
   t=(ROOT/'tools/tw/assets_and_browser.py').read_text()

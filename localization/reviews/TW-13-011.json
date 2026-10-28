@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-011.md",
-  "target_sha256": "d803b2d7678141cfdded16b5043ee699ffd7c1ed66a185f7ace50bf4fc2489fb",
+  "target_sha256": "17851f0d8c02f6a51259dc2f682896df8f10b4bfdc2d21ad89563dcd163fa022",
   "source_checks": [
     {
       "url": "https://ihealth.vghtpe.gov.tw/media/1151",
@@ -29,5 +29,13 @@
     "診療、藥物、影像、實際費用及健保資格由主管醫療人員依個案判定，緊急求救優先119。",
     "頻率限制：臺北醫院所述80%位置分佈及病例增加趨勢沒有可用台灣全國樣本期間與分母；不是單腿腫痛者罹DVT機率，也不能由所有血栓死亡估肺栓塞發生率。",
     "AI輔助來源實質再核對，獨立專業審閱待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "d803b2d7678141cfdded16b5043ee699ffd7c1ed66a185f7ace50bf4fc2489fb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d803b2d7678141cfdded16b5043ee699ffd7c1ed66a185f7ace50bf4fc2489fb",
+    "after_sha256": "17851f0d8c02f6a51259dc2f682896df8f10b4bfdc2d21ad89563dcd163fa022",
+    "before_reader_sha256": "b4b2c37b820e1bed5e8b052628e476425a795ceeac64417f83477004cf61cebb",
+    "after_reader_sha256": "790b2e7abc2f1a2c7cab9e85a7c5f6e6440bdf123bec263b3e20d8661c720a82"
+  }
 }

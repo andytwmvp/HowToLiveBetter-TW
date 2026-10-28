@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-014.md",
-  "target_sha256": "c80d5caa3589cbbf2c6f97e5026bf050ec33d0d4b85b1379909de3a445705fcb",
+  "target_sha256": "ea196063d61485e9bb6b57c1aa3a9fe05ee7f0b54020bc754eb4a76bfd1753a0",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=43&pcode=N0050031",
@@ -64,5 +64,13 @@
     "失能診斷、醫療機構資格、給付標準、投保薪資與年資由醫療機構及勞保局依個案審查；身障證明與災保失能給付不得互換。",
     "勞保局失能FAQ最後更新2022-03-29；本輪以2026-10-25現行災保法核對核心要件和比例，其他表件異動於申請日再查。",
     "無合適臺灣個人暴露分母可推算永久失能機率；本輪AI核對不是醫療或法律專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "c80d5caa3589cbbf2c6f97e5026bf050ec33d0d4b85b1379909de3a445705fcb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c80d5caa3589cbbf2c6f97e5026bf050ec33d0d4b85b1379909de3a445705fcb",
+    "after_sha256": "ea196063d61485e9bb6b57c1aa3a9fe05ee7f0b54020bc754eb4a76bfd1753a0",
+    "before_reader_sha256": "a29be139157a2dc8fa9e8da6d605806011723084f21533e924d8b27fcada00fe",
+    "after_reader_sha256": "74d2be08155db6e11823412e75bd191236626a742f7be9353e9658a082c5ced1"
+  }
 }

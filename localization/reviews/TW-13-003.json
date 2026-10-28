@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-003.md",
-  "target_sha256": "1e8920c5ca1bda1efaa035b752bd28ad7dd28a603c8a5cd588d2d9788a8fb855",
+  "target_sha256": "6b916c85fc21418ad9c618d10be941c942676152001c532c414145ba0a4423fa",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=631&pid=15126&sid=1185",
@@ -36,5 +36,13 @@
     "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。",
     "原衛福部2018頁引用2017死亡數與類型占比，不能當2026全國中風發生率；本次未取得同定義新發病例及曝險母數，亦不把全部腦血管死亡當新發中風。",
     "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "1e8920c5ca1bda1efaa035b752bd28ad7dd28a603c8a5cd588d2d9788a8fb855",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1e8920c5ca1bda1efaa035b752bd28ad7dd28a603c8a5cd588d2d9788a8fb855",
+    "after_sha256": "6b916c85fc21418ad9c618d10be941c942676152001c532c414145ba0a4423fa",
+    "before_reader_sha256": "6ddb5e69768af2637907092a75fa3939477b9a224c5f1b4587f9b90eaf422d00",
+    "after_reader_sha256": "489063c5af499534a1f4054763308d9ade22ac24e887841e6de7c17a719ac58c"
+  }
 }

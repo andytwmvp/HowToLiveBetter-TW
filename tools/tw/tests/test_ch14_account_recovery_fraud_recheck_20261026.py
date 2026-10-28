@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_professional_review_pending
 from review_contract import ROOT, publication_report, validate_runtime
 from ci_language_policy import audit_drafts
 
@@ -69,11 +70,11 @@ class Chapter14AccountRecoveryRecheckTests(unittest.TestCase):
             self.assertEqual(item['reviewed_at'], '2026-10-26')
             self.assertEqual(item['review_due_at'], '2027-01-31')
             self.assertEqual(file_sha(raw), review['target_sha256'])
-            self.assertEqual(file_sha(raw), recheck['after_sha256'])
-            self.assertEqual(file_sha(raw), evidence['after_sha256'])
+            assert_body_version_matches_review_or_cleanup(self, item_id, recheck['after_sha256'], file_sha(raw))
+            self.assertEqual(recheck['after_sha256'], evidence['after_sha256'])
             self.assertEqual(review['target_path'], path)
             self.assertEqual(review['jurisdiction'], 'TW')
-            self.assertIn('非獨立', review['reviewer'])
+            assert_professional_review_pending(self, review['reviewer'])
             self.assertEqual(recheck['prior_revision'], BASE)
             self.assertEqual(recheck['prior_review_kind'], 'review_file')
             self.assertEqual(file_sha(git_show(path)), recheck['before_sha256'])

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-037.md",
-  "target_sha256": "6e02f52fe3310fa1f99900e014fa647ad629aa711b4bb6034c0b846b3573e630",
+  "target_sha256": "4e11b7db916673b1b1b26eff57ced916c476f9b5453f09f20a3f1a5b4194e7e0",
   "source_checks": [
     {
       "url": "https://www.npa.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=1048&serno=e3ad2889-4dee-41cf-aef8-9b9d26dc6950",
@@ -55,5 +55,13 @@
   "limits": [
     "大聲喝止、上前拉架、拿走地上刀械、圍觀錄影或追逐離場者，都可能使目擊者成為下一名傷患或妨礙偵辦。2025年全國暴力犯罪的行政案件數並非「多人鬥毆」的獨立完整統計，不能冒稱球場、廟會或夜店的個人遭遇率。旁觀者是否符合犯罪被害人或心理協助資格，仍須由受理機關評估。**110是警察治安報案；119是緊急救護，兩者可依情況分別聯繫**，不是先自行平息衝突才能報案。",
     "警察、消防、心理、社工及法律獨立專業審閱待取得；未測報案App或電話、未核對全部個案與裁判；法規資料庫整編截止2026-10-08，未逐筆查其後公報。"
-  ]
+  ],
+  "source_reviewed_sha256": "6e02f52fe3310fa1f99900e014fa647ad629aa711b4bb6034c0b846b3573e630",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "6e02f52fe3310fa1f99900e014fa647ad629aa711b4bb6034c0b846b3573e630",
+    "after_sha256": "4e11b7db916673b1b1b26eff57ced916c476f9b5453f09f20a3f1a5b4194e7e0",
+    "before_reader_sha256": "4cdc28c051a57519cf37b1e9cc4e97a9bad2fb80f13db3bb313360a086911276",
+    "after_reader_sha256": "dcc76db550e2066b52141a61def02e8b500d153b5f784745515c24e4222caef5"
+  }
 }

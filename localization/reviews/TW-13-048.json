@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-048.md",
-  "target_sha256": "c3f02bd508a08d0b6909a12accacfc42c368ed2def3dd1634570d6132db2f1b1",
+  "target_sha256": "0c9e3d46ed864bce5d24bcd65ac549cad2210bae5a253b877a326ea624f63eaa",
   "source_checks": [
     {
       "url": "https://ihealth.vghtpe.gov.tw/media/622",
@@ -41,5 +41,13 @@
   "limits": [
     "乳牙不可植回來自IADT專業指引，不是台灣法律規定；臺北榮總亦提醒乳牙與恆牙胚密切相鄰，乳牙受外傷仍須就醫。不能確定乳恆牙、牙齒只是折斷或被撞入牙槽、嚴重顎顏面外傷或意識不清時，不要自行放回。**不可手抓牙根、刷洗牙根、久泡清水或讓幼兒把牙齒含嘴裡**。救命與119優先於保存牙齒，診斷及再植需專業人員判斷。",
     "醫療、感染科、牙醫、救護、野生動物與動保獨立專業審閱待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "c3f02bd508a08d0b6909a12accacfc42c368ed2def3dd1634570d6132db2f1b1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c3f02bd508a08d0b6909a12accacfc42c368ed2def3dd1634570d6132db2f1b1",
+    "after_sha256": "0c9e3d46ed864bce5d24bcd65ac549cad2210bae5a253b877a326ea624f63eaa",
+    "before_reader_sha256": "3871c8b88de8e75bc89eab395140c1f899e4a4803c9737f7379114b1a0a0a201",
+    "after_reader_sha256": "937c1ca2c3a450f422f37b62f57d9758ea2ecd8bae4e520c08d62bcc26bc9717"
+  }
 }

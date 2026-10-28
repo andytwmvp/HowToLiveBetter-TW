@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-004.md",
-  "target_sha256": "d23e541664a29a4761984e6efd50e4340294d81c31028b86429c2ecdef673168",
+  "target_sha256": "4cf9b280b2ba3680f3a78677b9ccd01b526ab22406fb655ca6b6570ac41f954e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=218&pcode=C0010001",
@@ -48,5 +48,13 @@
   "limits": [
     "家屬提出意見、依法受通知可在場，不等於可用私下同意書取代或否決檢察官依法採取的必要處分；也不是每件相驗都一定解剖。不沿用原作48小時、冷凍後7日的統一時限，亦不宣稱逾時或不同意就自動承擔全部責任。急救需要優先於本段留證安排。",
     "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "d23e541664a29a4761984e6efd50e4340294d81c31028b86429c2ecdef673168",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d23e541664a29a4761984e6efd50e4340294d81c31028b86429c2ecdef673168",
+    "after_sha256": "4cf9b280b2ba3680f3a78677b9ccd01b526ab22406fb655ca6b6570ac41f954e",
+    "before_reader_sha256": "9c04dfa1943516695589de5bbd412689ede1f8b66497ba6acc5b6b28e1b02a47",
+    "after_reader_sha256": "bbd0b9bbc5c6b465ae9caebf988d95585fd0020be4750cf4e96e53acbeb713ae"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-028.md",
-  "target_sha256": "3976003395d1823b15f74154aa1ae2bd82db7d129ecad48bc5d64fea31d1a89b",
+  "target_sha256": "0c46add77950175c2ed7b97ed5fdaa0c9263ddbea65c63ca3d46c3e402a237c1",
   "source_checks": [
     {
       "url": "https://epaper.ntuh.gov.tw/health/202610/project_2.html",
@@ -36,5 +36,13 @@
     "尚未取得泌尿科、心臟科及藥師獨立專業審閱；2010電話調查全文及抽樣細節未取得。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "d3449a4c41172a545fd6ecbdb922aec60b6a3ba4745e192d9aa483d931fdeb69"
+  "upstream_text_sha256": "d3449a4c41172a545fd6ecbdb922aec60b6a3ba4745e192d9aa483d931fdeb69",
+  "source_reviewed_sha256": "3976003395d1823b15f74154aa1ae2bd82db7d129ecad48bc5d64fea31d1a89b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "3976003395d1823b15f74154aa1ae2bd82db7d129ecad48bc5d64fea31d1a89b",
+    "after_sha256": "0c46add77950175c2ed7b97ed5fdaa0c9263ddbea65c63ca3d46c3e402a237c1",
+    "before_reader_sha256": "40765154849db7a86d878a397fbfbe5e214a97144daf57449dd901935ea3289c",
+    "after_reader_sha256": "086e48f37bdc16aeb51f567dded7079642b0b5d26d2935bc2a44d3903c0ae961"
+  }
 }

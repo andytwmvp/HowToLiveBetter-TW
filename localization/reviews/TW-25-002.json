@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-002.md",
-  "target_sha256": "a89c23c4446db5d47e4a8549256d3baecce1d3d02904495b2afd126f03c7f01e",
+  "target_sha256": "d49564ce8b4cfd67c78ea7527f1d5cf76c710dd4bccbaa789c45d5d5c20b4546",
   "source_checks": [
     {
       "url": "https://www.ris.gov.tw/documents/html/2/3/1/386.html",
@@ -27,5 +27,13 @@
   "limits": [
     "死亡登記30日期限依戶政司須知自死亡事件發生或死亡事實確定後起算；死亡宣告、境外文件或個案文件爭議應先向戶政事務所確認。",
     "AI輔助來源核對，未取得獨立法律、醫療、稅務或殯葬專業簽證；本輪未逐一核對銀行、保險及其他民營機構的文件要求。"
-  ]
+  ],
+  "source_reviewed_sha256": "a89c23c4446db5d47e4a8549256d3baecce1d3d02904495b2afd126f03c7f01e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a89c23c4446db5d47e4a8549256d3baecce1d3d02904495b2afd126f03c7f01e",
+    "after_sha256": "d49564ce8b4cfd67c78ea7527f1d5cf76c710dd4bccbaa789c45d5d5c20b4546",
+    "before_reader_sha256": "58e31b5f284f142a905ab6ee6ea89be7b10e8c57736c6b6a75552eebe49808fb",
+    "after_reader_sha256": "7d952ee113331bc9e014dcaf1c8fb12d5a435c91e8f3dd032d4272482fb6091b"
+  }
 }

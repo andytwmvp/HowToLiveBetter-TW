@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-004.md",
-  "target_sha256": "6021a96342bcfac8f8ea57c05c011cc1ea7244d4de1e53eb4b860d32530d52b3",
+  "target_sha256": "18ca73a4a39a12548fa86f955321fd253182c2ee0a1804e1c709ead6309c7b8c",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-6654-77519-1.html",
@@ -50,5 +50,13 @@
     "各縣市安置規範、夜間值班及機構容量不同；本次未逐縣市查核床位、費用或當晚接案狀態。",
     "AI輔助核對政府頁面及法規，未取得社工、醫療、消防或法律專業獨立簽證。",
     "1957每天08:00至22:00服務，不是24小時救護或床位預約專線。各縣市及接待機構的夜間聯絡方式、資格與容量不同，非緊急情況要先向所在地政府確認；立即人身危險或急病分別使用110或119。家庭暴力等保護個案應依113及地方保護服務分流，不一概視為遊民安置。"
-  ]
+  ],
+  "source_reviewed_sha256": "6021a96342bcfac8f8ea57c05c011cc1ea7244d4de1e53eb4b860d32530d52b3",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "6021a96342bcfac8f8ea57c05c011cc1ea7244d4de1e53eb4b860d32530d52b3",
+    "after_sha256": "18ca73a4a39a12548fa86f955321fd253182c2ee0a1804e1c709ead6309c7b8c",
+    "before_reader_sha256": "6ad158642e9b6a8d08d57fa5648e952429686eadcaed287096402ca051fc7426",
+    "after_reader_sha256": "c9fc255b69971182e50bcb1863d49b281267973cf15c9bc7dfe3057f7c803fda"
+  }
 }

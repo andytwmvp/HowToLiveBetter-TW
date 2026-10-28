@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-009.md",
-  "target_sha256": "cde9f4257ea73707593c216a0c6d406efed3e2cdc4787dcac6a972487b0662c7",
+  "target_sha256": "b4571fcca1a5013cd2cc019867477f99de81e59fac81db881cd5b315448b4092",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
@@ -48,5 +48,13 @@
   "review_method": "直接閱讀可取得的官方現行法規、主管機關統計／服務公告及本篇對應條文，記錄資料定義、期間、範圍和未取得的分母；AI來源核對不等於專業審查。",
   "limits": [
     "AI輔助來源再核對，未取得獨立職業醫學或法規專業簽證；健康檢查義務依工作危害、身分及條文施行日判斷，院所名單與預約狀況仍應即時確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "cde9f4257ea73707593c216a0c6d406efed3e2cdc4787dcac6a972487b0662c7",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "cde9f4257ea73707593c216a0c6d406efed3e2cdc4787dcac6a972487b0662c7",
+    "after_sha256": "b4571fcca1a5013cd2cc019867477f99de81e59fac81db881cd5b315448b4092",
+    "before_reader_sha256": "ca195b92bc759399f9d9a1d76709009a3d1a69cf82b50210451880a6b85fc7ea",
+    "after_reader_sha256": "d3fcc81804bf2d83d96b467f6220d184f312abd61434562532401ec59ed4ee4d"
+  }
 }

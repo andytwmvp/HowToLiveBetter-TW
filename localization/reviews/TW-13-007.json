@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-007.md",
-  "target_sha256": "a8a85cb4edc31490ef2b96d5d2d02c624a19b36d7779fc80c6649282927333e2",
+  "target_sha256": "35a97534d4a909602e0450c3f671cc2d9de1ddade51882684b18856528ba2ae1",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-2625-19381-1.html",
@@ -36,5 +36,13 @@
     "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。",
     "2016衛福部引用2014心臟病死亡數不等於急性心肌梗塞；2026新竹臺大不到20%救護車就醫概述缺研究年份及母數，不作全國率或個人存活率。",
     "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "a8a85cb4edc31490ef2b96d5d2d02c624a19b36d7779fc80c6649282927333e2",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a8a85cb4edc31490ef2b96d5d2d02c624a19b36d7779fc80c6649282927333e2",
+    "after_sha256": "35a97534d4a909602e0450c3f671cc2d9de1ddade51882684b18856528ba2ae1",
+    "before_reader_sha256": "d1dc84a9d862c5166e5c7640309fff3a67008c3e1e09a11150a74ecd6f220a50",
+    "after_reader_sha256": "b078255a003c1923b80049038e84d41a0b6764844617c3c2bef148bb27129d41"
+  }
 }

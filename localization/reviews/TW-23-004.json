@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-004.md",
-  "target_sha256": "1a21aa9f67431dc43af5f92bf1c7df43d3fd0284b4e61af7b4eb2cba7ba76494",
+  "target_sha256": "e916cd8218636ada12e8290bfcea4df84282588398d061fbe77ec5d75cf3af2b",
   "source_checks": [
     {
       "url": "https://www.k12ea.gov.tw/Tw/Unique/FAQDetail?Keywords=&cate1_id=C0C06A62-A856-48BB-A410-9E9C361BE503&filter=C49CFCC1-11D8-49BD-AFB8-95856E82E58D&page=0",
@@ -20,5 +20,13 @@
   "review_method": "逐項讀取臺灣中央主管機關現行法規、法規沿革、官方統計公告、官方FAQ及官方參訓問答PDF，將正文各主張對照到來源段落或頁次；統計另記錄期間、母數、分子、事件定義、資料型態與選樣限制。沒有可信的臺灣配對母數時明示資料不足，不自行推估。AI輔助核對不等於獨立專家或個案簽核。",
   "limits": [
     "來源只支持國教署高中職免學費政策與所列例外，不支持大專、進修、其他國籍或個別助學方案的金額及資格；未取得個人繳費單。\n\n本次AI輔助官方資料核對，未取得獨立教育、財務或統計專業複核；學校實際帳單及各方案期限以就讀學校與當期公告為準。"
-  ]
+  ],
+  "source_reviewed_sha256": "1a21aa9f67431dc43af5f92bf1c7df43d3fd0284b4e61af7b4eb2cba7ba76494",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1a21aa9f67431dc43af5f92bf1c7df43d3fd0284b4e61af7b4eb2cba7ba76494",
+    "after_sha256": "e916cd8218636ada12e8290bfcea4df84282588398d061fbe77ec5d75cf3af2b",
+    "before_reader_sha256": "e35d7592f78ef7a0d4d0ec95e983977d5cee47947874577950bf2add563ad532",
+    "after_reader_sha256": "3b4fdb596bc7daef76a51e5b55dbb1d2f63bd957a51205c73c6278110df7026e"
+  }
 }

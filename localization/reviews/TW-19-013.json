@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-013.md",
-  "target_sha256": "0fdbe5007395f4863522d1eedb706b57cdca3ac47e6f8dca54516508fe122ef0",
+  "target_sha256": "95267948cf875365898ff776d6daf485f7b3580c45ea9874e43b2e9f97ca4a9e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
@@ -43,5 +43,13 @@
     "是否屬災保法第6條強制納保、到職效力例外、事故職業關聯及給付金額，仍由勞保局依個案資料認定；薪資資料不足可能使核付級距低於實際所得。",
     "未申報期間級距上限依事故當時公告；正文不推定具體金額。2022-05-01以前事故及不屬強制納保者須另查過渡或補助規則。",
     "AI逐項核對官方來源，未取得勞動保險專業或律師獨立簽證；官方未提供全國個人漏報率分母或個案處理天數。"
-  ]
+  ],
+  "source_reviewed_sha256": "0fdbe5007395f4863522d1eedb706b57cdca3ac47e6f8dca54516508fe122ef0",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0fdbe5007395f4863522d1eedb706b57cdca3ac47e6f8dca54516508fe122ef0",
+    "after_sha256": "95267948cf875365898ff776d6daf485f7b3580c45ea9874e43b2e9f97ca4a9e",
+    "before_reader_sha256": "775fa713212dd89019ccfc2918208387929abe3094a343b0f788ad82913267a2",
+    "after_reader_sha256": "0f54ec47703fd28eaa0eee6c6c994e09708756a41c046772a61d7d49bf1d5e8e"
+  }
 }

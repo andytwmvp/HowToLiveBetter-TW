@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-003.md",
-  "target_sha256": "26294122b1b4ced49200d803956b3fe1d8b33f2f66804cf8799160162ce9d272",
+  "target_sha256": "9b642065a84befa159037413361938798921358ae309970fcabc20d1733da7a5",
   "source_checks": [
     {
       "url": "https://www.gov.tw/News_Content_26_402190",
@@ -34,5 +34,13 @@
   "limits": [
     "地方殯葬設施申請、許可及收費依縣市與服務型態不同；本輪未實地查核特定業者、設施、個別報價或全國殯葬資訊入口網的每筆資料。",
     "司法相驗、感染管制、跨境運送與特殊情形須依承辦機關指示；本輪為AI輔助法源核對，未取得律師或殯葬專業獨立簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "26294122b1b4ced49200d803956b3fe1d8b33f2f66804cf8799160162ce9d272",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "26294122b1b4ced49200d803956b3fe1d8b33f2f66804cf8799160162ce9d272",
+    "after_sha256": "9b642065a84befa159037413361938798921358ae309970fcabc20d1733da7a5",
+    "before_reader_sha256": "f417d1a3deb18802bb3ab5a5543ab1b6eafc818715e3e2148566d820dcbc8fe8",
+    "after_reader_sha256": "7be804f0277c2a1131b6b7c3154005cd72b3197cfeb85e3554763ac0cf31031c"
+  }
 }

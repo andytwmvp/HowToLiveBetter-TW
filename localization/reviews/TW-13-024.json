@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-024.md",
-  "target_sha256": "56ff1437c2501918e7c13a1ce6690615ce92f70e22bee378859f0e9d20962446",
+  "target_sha256": "247d67f11f8b3cae333c8d982e3a2280b7d289eeca992a59c934c556d4182ce9",
   "source_checks": [
     {
       "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20255&code=list&flag=detail&ids=1468",
@@ -43,5 +43,13 @@
     "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
     "2025全國建築物火災4514次，獨立住宅1688、集合住宅1483，行政事件次數無家戶分母；不能算個人穿煙存活率或裝備效益。",
     "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "56ff1437c2501918e7c13a1ce6690615ce92f70e22bee378859f0e9d20962446",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "56ff1437c2501918e7c13a1ce6690615ce92f70e22bee378859f0e9d20962446",
+    "after_sha256": "247d67f11f8b3cae333c8d982e3a2280b7d289eeca992a59c934c556d4182ce9",
+    "before_reader_sha256": "7b13914ab04db493bb9211c881c61c15027e287ebb0ed6d25c575be8dff6e76b",
+    "after_reader_sha256": "71b42c59f3ac2c2ad2bf5e76c729966fc4c6e8d41b22f057061f64c531d0fb47"
+  }
 }

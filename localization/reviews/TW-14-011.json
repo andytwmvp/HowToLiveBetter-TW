@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-011.md",
-  "target_sha256": "485ce91bca9752cbdc3ee06e16629eb295ce302a8046148d43449a79b935aa41",
+  "target_sha256": "1be78ad72db987301fa28d88c017b58d1d2a96b78937f636bceb0bf9214487b3",
   "source_checks": [
     {
       "url": "https://www.jcic.org.tw/main_ch/docDetail.aspx?docid=368&pid=95&uid=527",
@@ -49,5 +49,13 @@
   "limits": [
     "聯徵只涵蓋依法蒐集且在揭露期間內的金融信用資料，不是電信門號或全部資產總表。未找到可配對冒辦案件與身分資料暴露人口的全國分母，不推估個人風險。費用、申請資格和表單依申請時官方說明確認；資料更正須依事由和證據審查。",
     "本次為AI輔助官方來源再核對，尚未取得獨立資安、金融、電信、法律或統計專業審閱；不可視為專業簽證或個案意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "485ce91bca9752cbdc3ee06e16629eb295ce302a8046148d43449a79b935aa41",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "485ce91bca9752cbdc3ee06e16629eb295ce302a8046148d43449a79b935aa41",
+    "after_sha256": "1be78ad72db987301fa28d88c017b58d1d2a96b78937f636bceb0bf9214487b3",
+    "before_reader_sha256": "17b068f128dcabaea5b34d86fcb64aa061a44a2b8aec80df4125ea103ae3d723",
+    "after_reader_sha256": "0d4cecaa5806c84bd7fb61b6d616be71e00546b4f4e5e730daf7d2b2c8f3801f"
+  }
 }

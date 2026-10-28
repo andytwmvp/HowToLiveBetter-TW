@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-004.md",
-  "target_sha256": "bbe89dfc54d86c49f2019cd58ca42482b2d0b4d58f8df1bafde8f906980faed5",
+  "target_sha256": "ca942f7367774c8b258cc0f2e8907bb6b40cbfe53dc77998f196f6c172365480",
   "source_checks": [
     {
       "url": "https://support.apple.com/zh-tw/101593",
@@ -56,5 +56,13 @@
   "limits": [
     "目前沒有可將臺灣手機遺失人數、帳戶遭接管損失與全部手機使用者暴露量配對的全國分母；刑事局單一案件只作手法示例，不推估個人機率。遠端清除可能不可逆，SIM/eSIM停用、原廠鎖定及金融機構止付各自獨立，費用與時間依業者、設備和帳戶狀況而異。",
     "本次為AI輔助官方來源再核對，尚未取得獨立資安、金融、電信、法律或統計專業審閱；不可視為專業簽證或個案意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "bbe89dfc54d86c49f2019cd58ca42482b2d0b4d58f8df1bafde8f906980faed5",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "bbe89dfc54d86c49f2019cd58ca42482b2d0b4d58f8df1bafde8f906980faed5",
+    "after_sha256": "ca942f7367774c8b258cc0f2e8907bb6b40cbfe53dc77998f196f6c172365480",
+    "before_reader_sha256": "05fb233efeb1e45587c30a5bc9b038db611bd73405b08886ce3eb16ae1845583",
+    "after_reader_sha256": "8b617b2970d4d750d79f2e0049f399e68f6613a3a945e2a80667dd5bcdc6833b"
+  }
 }

@@ -1,4 +1,4 @@
-// 原作統計只同步 README、source.html 與原作統計封面；不是臺灣完成數。
+// 原作統計只同步原作來源閱讀器，不放在臺灣版 README。
 // --check 唯讀；--no-screenshot 同步文字但不重新產生圖片。
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdtempSync, rmSync, statSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
@@ -44,19 +44,9 @@ const short=100-ORDER.reduce((s,k)=>s+pct[k],0);
 for(const k of [...ORDER].sort((a,b)=>rem[b]-rem[a]).slice(0,Math.max(short,0)))pct[k]++;
 console.log(`原作${entries}條／${sections}章；A ${grade.A}、B ${grade.B}、C ${grade.C}；爭議${dispute}、待核${todo}、來源連結${links}`);
 const EDITS=[
-  ['README.md','首屏條目數',/(\d+) 條建議/g,`${entries} 條建議`],
-  ['README.md','條目徽章',/%E5%8E%9F%E4%BD%9C%E5%BB%BA%E8%AD%B0-(\d+)%20%E5%89%87/g,`%E5%8E%9F%E4%BD%9C%E5%BB%BA%E8%AD%B0-${entries}%20%E5%89%87`],
-  ['README.md','證據分級徽章',/A%20(\d+)%20%C2%B7%20B%20\d+%20%C2%B7%20C%20\d+/g,`A%20${grade.A}%20%C2%B7%20B%20${grade.B}%20%C2%B7%20C%20${grade.C}`],
-  ['README.md','文獻連結徽章',/-(\d+)%20%E7%AD%86%E9%80%A3%E7%B5%90/g,`-${links}%20%E7%AD%86%E9%80%A3%E7%B5%90`],
-  ['README.md','證據分級段',/全書 (\d+) 條中 A 級 \d+ 條、B 級 \d+ 條、C 級 \d+ 條，另有 \d+ 條標註了爭議、\d+ 處/g,`全書 ${entries} 條中 A 級 ${grade.A} 條、B 級 ${grade.B} 條、C 級 ${grade.C} 條，另有 ${dispute} 條標註了爭議、${todo} 處`],
-  ['README.md','成本效益分類段',/原作將 (\d+) 條建議按成本與效益分成三類：最高效益 \d+ 條（\d+%）、高效益 \d+ 條（\d+%）、一般 \d+ 條（\d+%）/g,`原作將 ${entries} 條建議按成本與效益分成三類：最高效益 ${ratio['極高']} 條（${pct['極高']}%）、高效益 ${ratio['高']} 條（${pct['高']}%）、一般 ${ratio['一般']} 條（${pct['一般']}%）`],
-  ['README.md','正文文件數',/正文依章分成 (\d+) 個檔案/g,`正文依章分成 ${sections} 個檔案`],
   ['source.html','來源描述',/(\d+) 條建議/g,`${entries} 條建議`],
   ['source.html','頁頭條目數',/原作 (\d+) 章、(\d+) 條建議/g,`原作 ${sections} 章、${entries} 條建議`],
   ['source.html','頁腳文件數',/資料夾下的 (\d+) 個檔案/g,`資料夾下的 ${sections} 個檔案`],
-  ['tools/og.html','og 條目數',/<b data-stat="entries">(\d+)<\/b>/g,`<b data-stat="entries">${entries}</b>`],
-  ['tools/og.html','og A 級數',/<b data-stat="grade-a">(\d+)<\/b>/g,`<b data-stat="grade-a">${grade.A}</b>`],
-  ['tools/og.html','og 連結數',/<b data-stat="links">(\d+)<\/b>/g,`<b data-stat="links">${links}</b>`],
 ];
 const texts=new Map(),stale=[];
 for(const [file,label,pattern,repl] of EDITS){
@@ -66,7 +56,7 @@ for(const [file,label,pattern,repl] of EDITS){
   if(updated!==text)stale.push(`${file} ${label}`);
 }
 if(CHECK){
-  if(!stale.length&&!badWho.length){console.log('PASS：原作統計一致；不是臺灣完成數。');process.exit(0);}
+  if(!stale.length&&!badWho.length){console.log('PASS：原作來源閱讀器統計一致。');process.exit(0);}
   console.error('統計過時或標籤錯誤：'+stale.join('、'));process.exit(1);
 }
 for(const [file,text] of texts)if(text!==read(file))writeFileSync(join(ROOT,file),text);

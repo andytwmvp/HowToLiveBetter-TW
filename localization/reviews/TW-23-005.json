@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-005.md",
-  "target_sha256": "80f00f7ed1efe32a895865b70e32c7181ec59a9efb88c499572d57751c46a1ca",
+  "target_sha256": "463048b72cde7f4bb6415299dd1faf2c5759054308ff2d9b0f2beac74dc4b7ec",
   "source_checks": [
     {
       "url": "https://www.techadmi.edu.tw/manual.php",
@@ -28,5 +28,13 @@
   "limits": [
     "未逐份下載閱讀116年度各管道完整簡章；資格、日期、費用與放棄規則須按實際管道查核。志願增額只適用特殊選才和技優甄審。未找到全臺各管道合格申請人與個人條件配對的分母，不估個人錄取率。",
     "AI輔助招生資料核對，未取得獨立教育專業複核；不是個案錄取資格確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "80f00f7ed1efe32a895865b70e32c7181ec59a9efb88c499572d57751c46a1ca",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "80f00f7ed1efe32a895865b70e32c7181ec59a9efb88c499572d57751c46a1ca",
+    "after_sha256": "463048b72cde7f4bb6415299dd1faf2c5759054308ff2d9b0f2beac74dc4b7ec",
+    "before_reader_sha256": "b9c1c0e1e7d8e6f0fd4659a22bff61f06e0092389775d03329129fe5342fc62a",
+    "after_reader_sha256": "6938115a260cf94bf906c3e5ae76d655bdd2c33beaa54c5bb2540422b11c93b6"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-003.md",
-  "target_sha256": "70d0a76f187114d023fc384abefd313f2dd0a878a5a9956b62d4090844711060",
+  "target_sha256": "20edb6e9305a1f7a3913de65bfdce5c144d4a6afd6ed20ff26e7a4cd152ab76a",
   "source_checks": [
     {
       "url": "https://www.laf.org.tw/service-app",
@@ -66,5 +66,13 @@
         "laf_application_2026"
       ]
     }
-  ]
+  ],
+  "source_reviewed_sha256": "70d0a76f187114d023fc384abefd313f2dd0a878a5a9956b62d4090844711060",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "70d0a76f187114d023fc384abefd313f2dd0a878a5a9956b62d4090844711060",
+    "after_sha256": "20edb6e9305a1f7a3913de65bfdce5c144d4a6afd6ed20ff26e7a4cd152ab76a",
+    "before_reader_sha256": "21664cb19a939cea739ebc23c1c7bb8dfa0f9b6b2de7b06d43c46437a4ee3046",
+    "after_reader_sha256": "2d849686b4cea378020e7f4115b4c73f1bfdb453df496633b1cb0c579e9f89d6"
+  }
 }

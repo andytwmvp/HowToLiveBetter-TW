@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch21/TW-21-012.md",
-  "target_sha256": "c2fa16f4d360e49d05d670302005fbc3f222e38306a9934106e36ff1714300e4",
+  "target_sha256": "31d2f8c50e62b84ebd0fa9e1e0d4cc9a4980119f37020465930e3d97d8522990",
   "source_checks": [
     {
       "url": "https://www.ncd.mhlw.go.jp/en/application2.html",
@@ -41,5 +41,13 @@
     "食藥署第一至三級管制藥品聲明程序限因病隨身攜帶我國管制藥品者；海外就醫返臺規則亦有特定用途、醫師證明與六個月上限。其他藥、郵寄、代攜及目的地規範須個別核對。",
     "日本與新加坡僅為核實的目的地例子，藥品許可依成分、劑型、數量、航線及入境點變動；未列內容不是準許清單。",
     "尚未取得藥事、醫療、海關或法律專業獨立審閱；不要因本指南停藥或自行改變劑量。"
-  ]
+  ],
+  "source_reviewed_sha256": "c2fa16f4d360e49d05d670302005fbc3f222e38306a9934106e36ff1714300e4",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c2fa16f4d360e49d05d670302005fbc3f222e38306a9934106e36ff1714300e4",
+    "after_sha256": "31d2f8c50e62b84ebd0fa9e1e0d4cc9a4980119f37020465930e3d97d8522990",
+    "before_reader_sha256": "d3f22b3f881ec4b5b61afe6f195916aec87c358d928a5ad80c0a4bc8583862fd",
+    "after_reader_sha256": "16086c6e8afc71578a4eab3ec72bb80b6ed196285406571e917ca6b333621ef5"
+  }
 }

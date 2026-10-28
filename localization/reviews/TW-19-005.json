@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-005.md",
-  "target_sha256": "30998da561f5382bb74c963e7d193edf3e1c42d639c87158ea37894a4e8abe22",
+  "target_sha256": "1c2f5bd431169d1604bea09297bd370c577eeac184d142decd59c7b050230edc",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -45,5 +45,13 @@
     "尚無預告不足或預告工資欠付的全國專項數據及應預告者分母。",
     "尚無獨立勞動法或薪資計算專業審閱。"
   ],
-  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。"
+  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。",
+  "source_reviewed_sha256": "30998da561f5382bb74c963e7d193edf3e1c42d639c87158ea37894a4e8abe22",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "30998da561f5382bb74c963e7d193edf3e1c42d639c87158ea37894a4e8abe22",
+    "after_sha256": "1c2f5bd431169d1604bea09297bd370c577eeac184d142decd59c7b050230edc",
+    "before_reader_sha256": "1476dbb1358b5f02999c2745e9704b0ae1b425131ac47aede4ab007f1949a91b",
+    "after_reader_sha256": "9071864f1f3b16dbda1597aa4144aaa9dd5485502839c6b3f7fba487fe152329"
+  }
 }

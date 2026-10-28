@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-020.md",
-  "target_sha256": "44bea64bd04d7433a9266cf68a016eff7c3c592d9622f6f772bb387b87caf4e6",
+  "target_sha256": "12d855add15d170404db6555783708e8ab80beb251faebe00807f31083642f63",
   "source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/28162/28296/28340/28342/28344/",
@@ -43,5 +43,13 @@
     "勞動關係、勞基法適用及工資／加班請求由主管機關或法院按全部證據認定；單一特徵與勞動部檢核表不能代替個案裁判。",
     "工時、投保、平台條款及是否屬真正自營可能隨工作型態、地方執行與契約而異；未取得律師專業獨立簽證。",
     "沒有適合的臺灣個人暴露分母量化錯誤分類機率，不以申訴量估算。"
-  ]
+  ],
+  "source_reviewed_sha256": "44bea64bd04d7433a9266cf68a016eff7c3c592d9622f6f772bb387b87caf4e6",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "44bea64bd04d7433a9266cf68a016eff7c3c592d9622f6f772bb387b87caf4e6",
+    "after_sha256": "12d855add15d170404db6555783708e8ab80beb251faebe00807f31083642f63",
+    "before_reader_sha256": "ddf8172366367e4242b7eefe97e29c1c0cbdc216e800b37d83b3af64e3f2ba00",
+    "after_reader_sha256": "3e521c725d5827497ca4a261c7fc969286cdb2de552a2167ea8cee940f52e3e8"
+  }
 }

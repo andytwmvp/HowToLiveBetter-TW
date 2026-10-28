@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-012.md",
-  "target_sha256": "2396569738e32ccf385482b6370cbfce7c19a8446adff604888cfe0a8d768a82",
+  "target_sha256": "b15017b9637ab9d0c66ff10649418f9277b1a1d86193bf44119de8d0e02fc21e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
@@ -42,5 +42,13 @@
     "第24條身分不自動核給補助；截至查閱日未找到同年度、同口徑可配對所有協助對象合格人數、申請／核准人數與就業結果的全國統計。",
     "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
     "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "2396569738e32ccf385482b6370cbfce7c19a8446adff604888cfe0a8d768a82",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2396569738e32ccf385482b6370cbfce7c19a8446adff604888cfe0a8d768a82",
+    "after_sha256": "b15017b9637ab9d0c66ff10649418f9277b1a1d86193bf44119de8d0e02fc21e",
+    "before_reader_sha256": "3912fbe80c707f0d53ff169e802192ac55deaf99182298a73899c15af7a381ff",
+    "after_reader_sha256": "a5881de90312ee9741d9f49d9defb036797fe35fb982581878943262fe165297"
+  }
 }

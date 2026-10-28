@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-010.md",
-  "target_sha256": "9b4dc8faa54e716ae9de627071c4485efb84f4178d18889773485d3d0dc52cb4",
+  "target_sha256": "fdb33f1f3fceebd7bac900025c5bceaa8faafb7e8a65a74cc9c8e4704b1cbb04",
   "source_checks": [
     {
       "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
@@ -51,5 +51,13 @@
     "法規權利、行政抽查、服務入口及編者風險管理建議分開。草案不作現行法；申請資格、契約效力及法院執行結果依簽約／土地取得時點、完整文件和個案事實確認。",
     "全書核心數與未完成來源不因本批實質再審而增加或減少；本批不代表全書已達正式出版或專業簽證門檻。",
     "13/750為地方選案的契約檢核項次；不能換算成全部預售案、購屋者、損失或個人機率。"
-  ]
+  ],
+  "source_reviewed_sha256": "9b4dc8faa54e716ae9de627071c4485efb84f4178d18889773485d3d0dc52cb4",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "9b4dc8faa54e716ae9de627071c4485efb84f4178d18889773485d3d0dc52cb4",
+    "after_sha256": "fdb33f1f3fceebd7bac900025c5bceaa8faafb7e8a65a74cc9c8e4704b1cbb04",
+    "before_reader_sha256": "4a666f200c5ba189d81828271e2e19e64de34339ff4b5d68111fc3c1c3735182",
+    "after_reader_sha256": "fac3fa0cdcdd3e292964f246ccbd4fc3e694788c588bdb32bd8f4336b335d9fa"
+  }
 }

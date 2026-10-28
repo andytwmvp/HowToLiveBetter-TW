@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-001.md",
-  "target_sha256": "a003a1c7f00cd9cf9a56190a005f2d112b62a0ba75a4cfac6106ab4af3f2b3eb",
+  "target_sha256": "9e8634af0cec836f1ff8872686961454208deb95c08b9d24eefe1743ee39fb2a",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4992&pid=19278",
@@ -35,5 +35,13 @@
     "「每一種慢性病藥都要吃一輩子」也不正確，部分用藥可因病程、懷孕、肝腎功能與副作用調整；是否停藥須醫師規劃。發生呼吸困難、意識障礙或疑似嚴重過敏，優先119，不用等下次慢箋回診。",
     "本篇適用平時長期治療的持續與溝通，不是嚴重副作用時仍須繼續服藥的命令；不能提供所有藥共用的補服、停藥或減量公式。原國健署血壓頁本輪TLS／web未成功，不冒稱重新讀取全文，新增處置由已讀食藥署與公立醫院警訊交叉核對。",
     "原始研究及個案醫療、藥事、法律與核付判斷仍待獨立專業審查。"
-  ]
+  ],
+  "source_reviewed_sha256": "a003a1c7f00cd9cf9a56190a005f2d112b62a0ba75a4cfac6106ab4af3f2b3eb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a003a1c7f00cd9cf9a56190a005f2d112b62a0ba75a4cfac6106ab4af3f2b3eb",
+    "after_sha256": "9e8634af0cec836f1ff8872686961454208deb95c08b9d24eefe1743ee39fb2a",
+    "before_reader_sha256": "b7430eb24f13b537a1dda9dd37ebefb0e47966502436181b014883f9bd8b1a16",
+    "after_reader_sha256": "4ee74806a48cc30ae75792644d59fc32f4bc2a10aee847aadf8254a10cefc6ae"
+  }
 }

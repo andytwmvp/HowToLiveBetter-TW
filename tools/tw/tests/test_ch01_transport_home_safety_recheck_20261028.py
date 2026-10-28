@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 from ci_language_policy import audit_drafts
 from review_contract import ROOT, validate_runtime
 
@@ -76,7 +77,7 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
                 self.assertEqual(record["status"], "ai_source_rechecked_professional_pending")
                 self.assertEqual(record["reviewed_at"], "2026-10-28")
                 self.assertEqual(record["review_due_at"], "2027-01-31")
-                self.assertEqual(record["after_sha256"], digest)
+                assert_body_version_matches_review_or_cleanup(self, key, record["after_sha256"], digest)
                 self.assertEqual(review["target_sha256"], digest)
                 self.assertEqual(raw.decode("utf-8"), item["body"])
                 self.assertEqual(entry["sources"], item["source_ids"])
@@ -108,7 +109,7 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
         self.assertIn("不要搭電梯", body["TW-01-003"])
         self.assertIn("不能僅因某人是房東或租客，就一概判定由誰負責", body["TW-01-003"])
         self.assertIn("22件事故", body["TW-01-004"])
-        self.assertIn("沒有燃氣熱水器使用戶數", body["TW-01-004"])
+        self.assertIn("沒有使用燃氣熱水器的家戶數", body["TW-01-004"])
         self.assertIn("技術士證", body["TW-01-004"])
         self.assertIn("不能因此把所有到府檢查都稱為詐騙", body["TW-01-004"])
         self.assertFalse(self.batch["publication_ready"])

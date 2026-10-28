@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch26/TW-26-002.md",
-  "target_sha256": "a1753bb6071584087a3de566750f522fdd6864add0c8de815da29ab12acf103a",
+  "target_sha256": "7676ca32ac7ac51b2b7cd6db1d6dd341164abd368ccd90444f521fee19c616d5",
   "source_checks": [
     {
       "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/network-transaction-taxtation-area/seller/notice",
@@ -35,5 +35,13 @@
     "個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。",
     "第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。",
     "2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強製法規。"
-  ]
+  ],
+  "source_reviewed_sha256": "a1753bb6071584087a3de566750f522fdd6864add0c8de815da29ab12acf103a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a1753bb6071584087a3de566750f522fdd6864add0c8de815da29ab12acf103a",
+    "after_sha256": "7676ca32ac7ac51b2b7cd6db1d6dd341164abd368ccd90444f521fee19c616d5",
+    "before_reader_sha256": "d48c0ca43c0d51fbb75bc0e83b051ac1343c1fb841dd3c873c7ad7902e47180e",
+    "after_reader_sha256": "26ffb10012e01c2290376cf073bb460962a843e571113fe8eaf02bf2bd2a0934"
+  }
 }

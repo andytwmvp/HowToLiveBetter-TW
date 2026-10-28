@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-035.md",
-  "target_sha256": "b6d2ba15e0db8221691b8336810f4bcfe6e71b82e57d730b1660e9f582e004ae",
+  "target_sha256": "650d01ef7e1ed3231fd2a34bae5a585d2cce6f6ab6e983d7aa08e69248425fe6",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020024",
@@ -42,5 +42,13 @@
     "decision": "state_taiwan_prohibition_separately_from_frequency_and_preserve_legal_donation_path",
     "independent_of_frequency": true,
     "legal_status": "第12條要求移植器官提供與取得無償；違反規定的仲介、提供或取得依第16條可能負刑事責任，媒體傳播交易或仲介訊息另依第18條處理。"
+  },
+  "source_reviewed_sha256": "b6d2ba15e0db8221691b8336810f4bcfe6e71b82e57d730b1660e9f582e004ae",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "b6d2ba15e0db8221691b8336810f4bcfe6e71b82e57d730b1660e9f582e004ae",
+    "after_sha256": "650d01ef7e1ed3231fd2a34bae5a585d2cce6f6ab6e983d7aa08e69248425fe6",
+    "before_reader_sha256": "7a7eca569a64cf06d5d7df3caedfc2ae08e48664a9ff310a61b664127db8031d",
+    "after_reader_sha256": "40e1fa32786895b9cb9f28025dcffca0fe2d634409576ffbe4ce82afb1a4afdb"
   }
 }

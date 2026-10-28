@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-046.md",
-  "target_sha256": "56b304abac85d56c79f8ac62f52f76185dc4e5822c72b8f36c06a8b27bd64e87",
+  "target_sha256": "9c452017a3101c4f2c71e1bb04a20fb869097ec6b2f186214a49871214b3708a",
   "source_checks": [
     {
       "url": "https://www.osha.gov.tw/48110/48207/48299/48301/50484/?cprint=pt",
@@ -29,5 +29,13 @@
     "AI輔助核對法規及職安署頁面，未取得職安、消防或法律專業獨立審閱；本文不構成工程現場風險評估、進入許可、救援訓練或個案法律意見。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "a71e6625028d3aeb27b4ebdcd32f280505b2dbfbfa66138aa651e018be1bc053"
+  "upstream_text_sha256": "a71e6625028d3aeb27b4ebdcd32f280505b2dbfbfa66138aa651e018be1bc053",
+  "source_reviewed_sha256": "56b304abac85d56c79f8ac62f52f76185dc4e5822c72b8f36c06a8b27bd64e87",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "56b304abac85d56c79f8ac62f52f76185dc4e5822c72b8f36c06a8b27bd64e87",
+    "after_sha256": "9c452017a3101c4f2c71e1bb04a20fb869097ec6b2f186214a49871214b3708a",
+    "before_reader_sha256": "972f20897b23dcd2949bdbb4824041eeaffc1d62e698a839b3285c99464ae9a6",
+    "after_reader_sha256": "99aa47c2fffecf1647001dfac523dccad376af4b2bfb72dd376fcfdddfb5d9dd"
+  }
 }

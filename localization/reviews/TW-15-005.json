@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-005.md",
-  "target_sha256": "4f233d68f02da0b7e714660943ae20ff7e6e6656cc6cb4147eebc5292c121250",
+  "target_sha256": "76344f9251ccfff3e527825258a4434ece0b74735bbe54df582826549335a28e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=B0000001&flno=425",
@@ -43,5 +43,13 @@
     "未取得獨立法律、地政、農業、建築、租賃服務、消費或金融專業者審閱；本批AI輔助來源核對不構成個案法律意見、地號建築核定、業者信用保證、消費爭議裁決或貸款承諾。",
     "法規權利、行政抽查、服務入口及編者風險管理建議分開。草案不作現行法；申請資格、契約效力及法院執行結果依簽約／土地取得時點、完整文件和個案事實確認。",
     "全書核心數與未完成來源不因本批實質再審而增加或減少；本批不代表全書已達正式出版或專業簽證門檻。"
-  ]
+  ],
+  "source_reviewed_sha256": "4f233d68f02da0b7e714660943ae20ff7e6e6656cc6cb4147eebc5292c121250",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "4f233d68f02da0b7e714660943ae20ff7e6e6656cc6cb4147eebc5292c121250",
+    "after_sha256": "76344f9251ccfff3e527825258a4434ece0b74735bbe54df582826549335a28e",
+    "before_reader_sha256": "b04d04f06eb5db0dfc59208d64d5da74b0b3946750b0739aff070daf1be8dd71",
+    "after_reader_sha256": "8e43c21368e82f772d9cc39ba532690ab35ac7c13a2d9852fb4785a5b2ff3313"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-012.md",
-  "target_sha256": "b61d2247b66bc9397d4a3dbeb039fde750c5d3382d18e76562c68b5c1b718261",
+  "target_sha256": "5543c06b957fef4211850855bf9ad77ffb721d53df700dd9ce31ad1984d77b9e",
   "source_checks": [
     {
       "url": "https://goldcopd.org/2026-gold-report-and-pocket-guide/",
@@ -56,5 +56,13 @@
     "呼吸急遽惡化、嘴唇發紫、胸痛、意識不清或難以說完整句子應立即119。長期氧氣治療有特定評估標準，不能自購設備或任意調整流量；吸入型類固醇及其他升階治療也須考量肺炎風險、血液檢測與共病。",
     "呼吸急遽惡化、嘴唇發紫、胸痛、意識不清或難以說完整句子應立即119。長期氧氣治療有特定評估標準，不能自購設備或任意調整流量；吸入型類固醇及其他升階治療也須考量肺炎風險、血液檢測與共病。\n\n本篇不能代開藥、設定共用血氧目標、氧氣流量或停藥門檻；不同吸入器須按實際說明與專業示範。國際GOLD全文本輪未重取成功，保留原查閱紀錄並以臺灣公立醫院與國健署指定段落交叉核對，不宣稱2026指引全文重審。",
     "來源讀取有範圍限制，原始試驗、全部法規公報與個案專業判斷尚待；非獨立醫療、護理、藥事或法律簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "b61d2247b66bc9397d4a3dbeb039fde750c5d3382d18e76562c68b5c1b718261",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "b61d2247b66bc9397d4a3dbeb039fde750c5d3382d18e76562c68b5c1b718261",
+    "after_sha256": "5543c06b957fef4211850855bf9ad77ffb721d53df700dd9ce31ad1984d77b9e",
+    "before_reader_sha256": "042fd8d477f2b0b72ad1ba4785055b9c710b72cf5335a04e759661fc5fa9e947",
+    "after_reader_sha256": "b3ef9a215fa8df301ba3d5a1867d35383696f2f21e022d5175f5a2ee6fec7f80"
+  }
 }

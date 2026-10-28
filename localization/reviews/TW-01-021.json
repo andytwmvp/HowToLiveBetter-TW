@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-021.md",
-  "target_sha256": "0dbc59ee937ebdde931c902b9df0d697d6ae5179cb32f6df6fdee8f09cd4a2bc",
+  "target_sha256": "6eb987a227ec6e468451fa639ffad0f2faaa1e87483af786f2754a00f2910cbb",
   "source_checks": [
     {
       "url": "https://www.cdc.gov.tw/Category/Page/WzNj0ONng_AdPtlJc4XDhA",
@@ -43,5 +43,13 @@
     "尚未取得感染科、疫苗及公共衛生專業獨立審閱；健保研究補充表及原始微資料本輪未取得。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "bf413fa730a6f5a693bedf1c6a3fe4dff9e40ec7023ee23ba3afba46b5933f49"
+  "upstream_text_sha256": "bf413fa730a6f5a693bedf1c6a3fe4dff9e40ec7023ee23ba3afba46b5933f49",
+  "source_reviewed_sha256": "0dbc59ee937ebdde931c902b9df0d697d6ae5179cb32f6df6fdee8f09cd4a2bc",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0dbc59ee937ebdde931c902b9df0d697d6ae5179cb32f6df6fdee8f09cd4a2bc",
+    "after_sha256": "6eb987a227ec6e468451fa639ffad0f2faaa1e87483af786f2754a00f2910cbb",
+    "before_reader_sha256": "dde6af4ad5a4f60b6894ab30708cffcaf31c4354a72414bd4906f190ba46b90b",
+    "after_reader_sha256": "a132c9d3e4ffc38f28383df43b6e081fe4e2963151fb40ed67c80491cfee9be9"
+  }
 }

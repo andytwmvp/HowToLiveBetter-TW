@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "batch": "TW-07-014、TW-23-010、TW-23-024、TW-23-025 台灣求職與職涯統計歷史實質再審",
+  "base_main_sha": "1011138aaf550b9376f3cb11ec2c3fc657daf850",
+  "reviewed_at": "2026-10-29",
+  "review_due_at": "2027-01-31",
+  "priority_basis": "依生計急迫性、學位投入成本、研究生心理健康風險及工作任務變化的可行動性排序；不是個人事件機率排名。",
+  "prior_reviews_preserved_by_git_ref": true,
+  "counts_before": {
+    "substantive_rechecks": 264,
+    "runtime_items": 289,
+    "runtime_sources": 921,
+    "source_registry": 1002,
+    "json_files_checked": 504,
+    "core_completed": 278,
+    "core_total": 765,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "substantive_rechecks": 268,
+    "runtime_items": 289,
+    "runtime_sources": 932,
+    "source_registry": 1013,
+    "json_files_checked": 506,
+    "core_completed": 278,
+    "core_total": 765,
+    "publication_ready": false
+  },
+  "new_core_entries": [],
+  "items": [
+    {
+      "id": "TW-07-014",
+      "before_sha256": "136513fbbdb8e5dbc62f43bbb4b3bab6afd4f96db837760e506e482e681b2306",
+      "after_sha256": "3b6bd16690862ea9fb86e6dfed85f51ed821eddeb263d9c7c1bc44fe131505e1",
+      "prior_revision": "1011138aaf550b9376f3cb11ec2c3fc657daf850",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "cc306cffeb1eabe8d4e7dffdea686987d48e3a2ac36297ac7f5245c8f13a1017",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣求職者可能同時面對機車或大眾運輸通勤、輪班、家庭照顧、短期收入需求與失業給付資格問題；可使用台灣就業通公立就業服務，不需先購買求職保證。",
+      "frequency_assessment": "可用台灣官方資料描述失業者的調查週數，但沒有同口徑的求職者個人投遞量、錄取率或完成求職時間全國分母；不估個人錄取機率。",
+      "legal_status_assessment": "《就業服務法》第13條及《就業保險法》現行頁面於2026-10-29查閱；本文只說明一般求職服務與依法審核，不判定個人失業給付資格。",
+      "changes": "重寫求職步驟與統計說明，加入公立就業服務登記、免費推介及專線，將年度平均失業人口與平均失業週數的定義說清楚；把官方來源由舊入口改為本次逐一閱讀的現行頁面與統計原始文件。 另將薪資與求職用語改為臺灣慣用說法；統計、來源主張與適用限制不變。",
+      "source_status": "本輪所列現行來源均已直接讀取；新增具日期來源ID並保留舊來源物件及SHA。",
+      "source_ids": [
+        "ch07_taiwanjobs_20261029",
+        "ch07_employment_service_law_20261029",
+        "ch07_employment_insurance_law_20261029",
+        "ch07_public_employment_service_20261029",
+        "ch07_unemployment_duration_114",
+        "ch07_unemployment_week_definition_20261029"
+      ],
+      "previous_source_ids": [
+        "jobportal",
+        "jobservice",
+        "ch07_jobinsurance"
+      ],
+      "retired_sources": [
+        {
+          "id": "jobportal",
+          "replacement_ids": [
+            "ch07_taiwanjobs_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "213e3cc6a8bffacfa8911e5dad99e0460133df1784535b50dc48afa9d4246cd2"
+        },
+        {
+          "id": "jobservice",
+          "replacement_ids": [
+            "ch07_employment_service_law_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "74bc4ad9f432103666f008a07aa758daee1c26e39ccaae607de10391ad13e8f2"
+        },
+        {
+          "id": "ch07_jobinsurance",
+          "replacement_ids": [
+            "ch07_employment_insurance_law_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748"
+        }
+      ],
+      "previous_review_claims": [
+        "官方提供查職缺、服務據點及訓練資訊，可用於求職紀錄及回饋安排。",
+        "公立就業服務以免費為原則，求職者無須先付私人內推保證費。",
+        "失業給付另有求職意願、推介與收入通報要求，表格不取代法定認定。"
+      ],
+      "review_path": "localization/reviews/TW-07-014.json",
+      "source_checks": [
+        {
+          "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
+          "claim": "台灣就業通可查詢職缺、訓練課程及就業服務資訊。",
+          "supporting_passage": "編者摘要（非逐字引文）：台灣就業通官方首頁設有「找工作」和「找課程」入口，並提供職缺及課程查詢功能；入口資訊不保證個別錄取結果。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀台灣就業通官方首頁，核對找工作與找課程入口；只支持入口及查詢功能，不推定課程補助或求職結果。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001",
+          "claim": "公立就業服務機構辦理就業服務以免費為原則。",
+          "supporting_passage": "編者摘要（非逐字引文）：就業服務法第13條規定公立就業服務機構辦理就業服務以免費為原則；僱主委託招考人才所需費用得向僱主收取。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀全國法規資料庫第13條現行條文，只支持公立就業服務收費原則，不延伸為所有私人就業服務一律免費。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+          "claim": "失業給付資格及申請依就業保險法和承辦機關規定辦理。",
+          "supporting_passage": "編者摘要（非逐字引文）：就業保險法規定失業給付的請領條件與求職登記程序；實際申請依承辦機關查核資料和個案情況認定。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀全國法規資料庫就業保險法現行條文，限於本文所述「依規定審核」的一般說明；未把求職表格當成法定資格認定。"
+        },
+        {
+          "url": "https://job.taiwanjobs.gov.tw/Internet/special2/newlife/docDetail.aspx?docid=19387&uk=492",
+          "claim": "公立就業服務機構可辦理求職登記、免費推介就業，並提供0800-777-888諮詢電話。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方頁面說明可透過各地公立就業服務機構辦理求職登記並免費協助推介就業，頁面列出免付費諮詢專線0800-777-888。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀台灣就業通公立就業服務機構說明頁，核對免費求職登記、就業推介及免付費諮詢電話；未推定服務時段。"
+        },
+        {
+          "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11516/236078/f194afc4-ad75-46bf-aa65-02239bdfdf8d.pdf",
+          "claim": "114年全年平均失業人口估計402,767人，平均失業週數19.87週。",
+          "supporting_passage": "編者摘要（非逐字引文）：人力資源調查表65以人數為單位列出114年全年平均失業人口402,767人，並列平均失業週數19.87週；這是調查估計值，不是個人求職結果。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接查閱行政院主計總處114年人力資源調查表65 PDF及勞動統計名詞；保留年度、表別、單位、失業者定義及週數起訖，不把平均值換算成個人求職機率。"
+        },
+        {
+          "url": "https://statdb.mol.gov.tw/html/com/st0103.html",
+          "claim": "失業週數是從開始找工作到調查資料標準週最後一天的累積週數。",
+          "supporting_passage": "編者摘要（非逐字引文）：勞動部統計名詞將失業週數界定為失業者自開始尋找工作起，至資料標準週最後一日止的尋職總週數。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀勞動部勞動統計名詞指定條目「失業週數」；不將該統計期間解讀為已完成的求職到錄取期間。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch07_unemployment_duration_114"
+      ],
+      "limits": [
+        "失業人口與平均失業週數是官方調查估計，不是全年獨立求職人次或個人找到工作的機率；公立就業服務、失業給付與職訓補助資格仍由承辦機關依個案確認。",
+        "本次為AI輔助公開來源逐項核對，未取得獨立就業服務或勞動法專業審閱；不是個人錄取、失業給付或職訓補助資格認定。"
+      ],
+      "reviewer_limit": "本次為AI輔助公開來源逐項核對，未取得獨立就業服務或勞動法專業審閱；不是個人錄取、失業給付或職訓補助資格認定。"
+    },
+    {
+      "id": "TW-23-010",
+      "before_sha256": "234e60b1710c08e7d0413df830e462c5053cabc99fe9ba0c97968bd088594283",
+      "after_sha256": "c4be84692e330dadd5d1b306ac7c4b5fe4659c10e7df10188623a37c32f69428",
+      "prior_revision": "1011138aaf550b9376f3cb11ec2c3fc657daf850",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "bace8c653d42dd69402f7a4792475e3d9c6b3331a80333ce9fd7d664d91c9f8c",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣工作者在不同產業的工作任務、人機分工、職場資料規範和轉職訓練機會各異；全球職業模型不能直接當成台灣各職類的裁員風險。",
+      "frequency_assessment": "沒有找到可直接套用至台灣個別職類的全國生成式AI職務暴露統計。ILO的24%及3.3%是全球模型估計，不是台灣事件發生率、裁員件數或個人失業率。",
+      "legal_status_assessment": "本文討論工作任務，不作法律資格判定；職業訓練課程及補助依台灣就業通各計畫當期資格和承辦公告。",
+      "changes": "以工作任務和人機分工取代永久安全職業推論；重新讀取ILO完整工作論文，明確標示全球估計並說明沒有可套用台灣各職類的全國估計，新增台灣官方職訓課程入口。 另將薪資與求職用語改為臺灣慣用說法；統計、來源主張與適用限制不變。",
+      "source_status": "本輪所列現行來源均已直接讀取；新增具日期來源ID並保留舊來源物件及SHA。",
+      "source_ids": [
+        "ch23_ilo_genai_exposure_wp140_20261029",
+        "ch23_training_courses_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_ai"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_ai",
+          "replacement_ids": [
+            "ch23_ilo_genai_exposure_wp140_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "10d929af5190f07942c2021cddea41f2b3b2bb267805498491749cfd238efab7"
+        }
+      ],
+      "previous_review_claims": [
+        "ILO2025指標衡量生成式AI的任務暴露與轉型可能性，不能轉譯成職業消失或個人失業機率。"
+      ],
+      "review_path": "localization/reviews/TW-23-010.json",
+      "source_checks": [
+        {
+          "url": "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
+          "claim": "ILO 2025年全球估計約24%工作者所在職業有某種GenAI暴露，3.3%全球就業在最高暴露級距；這不是台灣裁員率或個人失業機率。",
+          "supporting_passage": "編者摘要（非逐字引文）：ILO Working Paper 140指出全球約四分之一工作者所在職業有某種GenAI暴露，3.3%全球就業落在最高暴露級距；論文並說明這是暴露估計而非實際就業影響。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀ILO Working Paper 140完整PDF，核對摘要、全球估計與方法段落；未將全球職業模型外推成台灣職類比例。"
+        },
+        {
+          "url": "https://course.taiwanjobs.gov.tw/",
+          "claim": "職業訓練整合網可依地點、職類和課程資訊查找訓練；各項補助資格依計畫公告。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方課程查詢介面列出開課日期、上課地點、通俗職類、訓練單位及課程關鍵字欄位；網站另列訓練計畫入口。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀勞動力發展署職業訓練整合網的課程查詢介面與計畫入口；只核對搜尋欄位及資訊入口，不推定個人補助資格。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_ilo_genai_exposure_wp140_20261029"
+      ],
+      "limits": [
+        "ILO數字是全球工作任務暴露估計，不能當成台灣裁員率、職缺消失數或個人失業機率；目前沒有能直接套用到台灣個別職類的全國估計。",
+        "本次為AI輔助閱讀ILO工作論文及官方課程頁，未取得獨立職涯、勞動市場或教育專業審閱；全球研究不能代替台灣職類分析。"
+      ],
+      "reviewer_limit": "本次為AI輔助閱讀ILO工作論文及官方課程頁，未取得獨立職涯、勞動市場或教育專業審閱；全球研究不能代替台灣職類分析。"
+    },
+    {
+      "id": "TW-23-024",
+      "before_sha256": "a32ef3c8e38316d0b5cd3e5a3c6909be0de5a8a305cc605a03af401843caf4dc",
+      "after_sha256": "c04292b669251ecf95ee0363bc64041d21bd9314bcdabcd11111ad440dc621f3",
+      "prior_revision": "1011138aaf550b9376f3cb11ec2c3fc657daf850",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "22e8dc0e31e9a0fdaec3fd2fd9c68fbd823e04dfc665f16ee114e098e63a1c8e",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣研究所的學位、論文替代類科、修業條件及招生方式依《學位授予法》和各校簡章而定；本地薪資資料可供分組比較，但不能當成個人讀碩士的因果投資報酬。",
+      "frequency_assessment": "勞動部有以行政資料連結的近五屆畢業生群體平均，但沒有控制學門、職類、經驗及就業選擇後的個人「讀碩士因果收益」分母；不將平均差額視為回報率。",
+      "legal_status_assessment": "《學位授予法》第3、7條於2026-10-29讀取現行條文；不採尚未施行的第4條及第5條第1項修正。各校學位、修業、招生及補助條件另依當年度簡章確認。",
+      "changes": "依現行《學位授予法》重寫碩士學位條件，改採勞動部近五屆畢業生報告表5的全時工作者勞退提繳平均，清楚交代樣本數、資料時間與不能推論個人起薪或因果報酬。",
+      "source_status": "本輪所列現行來源均已直接讀取；新增具日期來源ID並保留舊來源物件及SHA。",
+      "source_ids": [
+        "ch23_degree_law_20261029",
+        "ch23_graduate_outcomes_109_113_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_degree",
+        "ch23_salary"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_degree",
+          "replacement_ids": [
+            "ch23_degree_law_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "782960b1d5b8466243538690aaba25e82316f1930ffded4fb2973fcd5e7a84f4"
+        },
+        {
+          "id": "ch23_salary",
+          "replacement_ids": [
+            "ch23_graduate_outcomes_109_113_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "c1008d6e7256d32377c39c31bee40b0f0c8c815aa92f7904648cee4f496f66c9"
+        }
+      ],
+      "previous_review_claims": [
+        "第3及7條規範正式學位與碩士取得條件，部分替代論文方式有條件；等待施行條文須分開。",
+        "職類薪資統計並非個人畢業起薪，資料年度與全時受僱母體必須保留。"
+      ],
+      "review_path": "localization/reviews/TW-23-024.json",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030010",
+          "claim": "《學位授予法》第3、7、9條規範學位類別、碩士修業及博士候選人和學位考試條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行法第3條列出四級學位；第7條規定碩士修業、學分、畢業條件及學位考試，第9條規定博士候選人資格考核、論文與學位考試。特定類科得依規定以作品或報告代替論文。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀全國法規資料庫現行條文第3、7、9條及生效狀態註記；本次未引用待施行的第4條及第5條第1項。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/media/c1rbs3kt/%E8%BF%915%E5%B9%B4%E5%A4%A7%E5%B0%88%E7%95%A2%E6%A5%AD%E7%94%9F%E5%B0%B1%E6%A5%AD%E7%8B%80%E6%B3%81%E5%8F%8A%E8%96%AA%E8%B3%87%E8%A1%8C%E6%83%85-%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+          "claim": "勞動部近五屆畢業生報告表5列出全時工作且有勞退提繳紀錄者的樣本數和平均月提繳工資。",
+          "supporting_passage": "編者摘要（非逐字引文）：報告表5資料時間為114年7月底；近五年碩士畢業生15.8萬人、學士50.7萬人，平均月提繳工資分別為6.62萬元和4.16萬元；全體樣本69.6萬人。這不是起薪或學位因果效果。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀勞動部統計分析報告PDF表5與說明；核對資料時間（114年7月底）、畢業年度、全時工作及勞退提繳母體、樣本數與月提繳工資單位。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_graduate_outcomes_109_113_20261029"
+      ],
+      "limits": [
+        "薪資資料只涵蓋近五年畢業生中有勞退提繳紀錄的全時工作者群體平均，不代表畢業起薪、學位因果報酬或個人可回收成本；學校、課程、補助資格與費用須個別確認。",
+        "本次為AI輔助核對現行法條與勞動部統計表，未取得獨立教育、勞動市場或法律專業審閱；不是個人升學投資或入學資格意見。"
+      ],
+      "reviewer_limit": "本次為AI輔助核對現行法條與勞動部統計表，未取得獨立教育、勞動市場或法律專業審閱；不是個人升學投資或入學資格意見。"
+    },
+    {
+      "id": "TW-23-025",
+      "before_sha256": "293909bd6f565d9242f797b490277a819bdd0827fd82b6f96ca43a12be2c44da",
+      "after_sha256": "aadc7aaab4c011da7f99489b7545efcfc03b1741a0b40709cad4ceb1c4664544",
+      "prior_revision": "1011138aaf550b9376f3cb11ec2c3fc657daf850",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "2467d08809c77d254d556a052220f181341677f85231b252a75c9647378b6112",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣博士班的學位規範由《學位授予法》及學校制度決定，學生可用校內諮商、研究生申訴及醫療資源；外國樣本的症狀統合值不代表台灣博士生。",
+      "frequency_assessment": "統合分析報告量表症狀比例，但研究間異質性極高且沒有台灣全國代表性分母；不能據此推估台灣博士生盛行率或個人發生機率。",
+      "legal_status_assessment": "《學位授予法》第3、9條於2026-10-29讀取現行條文；各校招生、修業、資格考核與論文替代規定仍須看當年度簡章及校規。研究不提供診斷或個人醫療判斷。",
+      "changes": "以現行台灣學位規範及校內支持資源重寫博士申請評估，將博士生憂鬱與焦慮統合估計的研究數、母數、信賴區間與異質性列明，區分症狀篩檢和臨床診斷。",
+      "source_status": "本輪所列現行來源均已直接讀取；新增具日期來源ID並保留舊來源物件及SHA。",
+      "source_ids": [
+        "ch23_degree_law_20261029",
+        "ch23_phd_mental_health_meta_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_degree",
+        "ch23_phdhealth"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_degree",
+          "replacement_ids": [
+            "ch23_degree_law_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "782960b1d5b8466243538690aaba25e82316f1930ffded4fb2973fcd5e7a84f4"
+        },
+        {
+          "id": "ch23_phdhealth",
+          "replacement_ids": [
+            "ch23_phd_mental_health_meta_20261029"
+          ],
+          "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+          "prior_source_sha256": "f3784c9910b3d11a14994bd17994694df421b93a1aa51c3d69c6fe6a1495fc6f"
+        }
+      ],
+      "previous_review_claims": [
+        "第9條規範博士修業、資格考核及學位考試，不只依年數授予。",
+        "系統性回顧有高度異質性，症狀篩檢與臨床診斷不同，不支持臺灣個人因果預測。"
+      ],
+      "review_path": "localization/reviews/TW-23-025.json",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030010",
+          "claim": "《學位授予法》第3、7、9條規範學位類別、碩士修業及博士候選人和學位考試條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行法第3條列出四級學位；第7條規定碩士修業、學分、畢業條件及學位考試，第9條規定博士候選人資格考核、論文與學位考試。特定類科得依規定以作品或報告代替論文。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀全國法規資料庫現行條文第3、7、9條及生效狀態註記；本次未引用待施行的第4條及第5條第1項。"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8277873/",
+          "claim": "博士生心理健康統合分析中的憂鬱及焦慮症狀估計存在極高異質性，且是篩檢結果不是診斷。",
+          "supporting_passage": "編者摘要（非逐字引文）：全文摘要列出憂鬱16項研究23,469名博士生，合併比例24%、I²=98.75%；焦慮9項研究15,626人，合併比例17%、I²=98.05%。作者使用經驗證的篩檢工具並指出研究方法及樣本差異。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接閱讀PubMed Central全文，核對摘要、研究數、樣本數、信賴區間、I²、篩檢工具和研究限制；不將臨床顯著症狀比例寫成診斷率。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_phd_mental_health_meta_20261029"
+      ],
+      "limits": [
+        "統合分析衡量研究中量表篩檢出的臨床顯著症狀，研究間差異極高，樣本不能代表台灣博士生，也不是診斷或個人風險預測；學校支持資源和個人醫療需求須依實際情況確認。",
+        "本次為AI輔助核對法條與系統性回顧全文，未取得獨立精神醫療、教育或法律專業審閱；不是心理診斷或個人升學適合度判定。"
+      ],
+      "reviewer_limit": "本次為AI輔助核對法條與系統性回顧全文，未取得獨立精神醫療、教育或法律專業審閱；不是心理診斷或個人升學適合度判定。"
+    }
+  ],
+  "statistics": [
+    {
+      "item_id": "TW-07-014",
+      "source_id": "ch07_unemployment_duration_114",
+      "value": "全年平均失業人口402,767人；平均失業週數19.87週",
+      "period": "114年（2025年）全年調查估計",
+      "geographic_scope": "台灣全國",
+      "population": "人力資源調查在資料標準週符合失業者定義者；失業週數為此群體開始尋職至標準週最後一日的累積週數",
+      "numerator_denominator_or_event_definition": "人數為全年平均失業人口估計，不是全年去重後失業者總數；平均週數以調查週失業者的尋職累積週數估計。此計數／平均數沒有個人風險分母。",
+      "measurement_type": "官方抽樣調查估計；不是行政案件數或個人錄取率",
+      "accessed_at": "2026-10-29",
+      "source_url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11516/236078/f194afc4-ad75-46bf-aa65-02239bdfdf8d.pdf",
+      "limitations": "不可換算為個人找工作至錄取時間、個人發生率或投履歷成功率。失業週數採調查週截點，仍處於尋職期間者也在統計對象內。"
+    },
+    {
+      "item_id": "TW-23-010",
+      "source_id": "ch23_ilo_genai_exposure_wp140_20261029",
+      "value": "約24%全球工作者所在職業有某種生成式AI暴露；3.3%全球就業在最高暴露級距",
+      "period": "ILO 2025年全球模型估計",
+      "geographic_scope": "全球；不含可直接套用於台灣個別職類的估計",
+      "population": "ILO採全球就業分佈加權的職業暴露模型；任務資料、專家調查及模型推估用於建立分級",
+      "numerator_denominator_or_event_definition": "暴露估計為各職業就業份額加權後的全球就業占比；不是實際裁員事件分子或台灣勞工個人分母。最高暴露級距占全球就業3.3%。",
+      "measurement_type": "職務任務暴露的全球模型估計；不是事件發生率、通報數、失業率或因果估計",
+      "accessed_at": "2026-10-29",
+      "source_url": "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
+      "limitations": "不得外推為台灣職類裁員率、職缺消失數或個人失業機率。論文提到全職務任務的全球模型，並以工作任務可能轉變為主要預期影響。"
+    },
+    {
+      "item_id": "TW-23-024",
+      "source_id": "ch23_graduate_outcomes_109_113_20261029",
+      "value": "碩士平均月勞退提繳工資6.62萬元（15.8萬人）；學士4.16萬元（50.7萬人）",
+      "period": "109至113年畢業生；資料時間為114年7月底",
+      "geographic_scope": "台灣全國行政資料連結報告",
+      "population": "近五屆大專畢業生中有勞退提繳紀錄的全時工作者；整體69.6萬人",
+      "numerator_denominator_or_event_definition": "表5按教育程度分組，碩士15.8萬人、學士50.7萬人；數值為各組平均月提繳工資，非中位數、入職起薪或學位造成的薪資差。",
+      "measurement_type": "行政資料連結的分組描述統計；不是抽樣調查發生率或個人投資報酬估計",
+      "accessed_at": "2026-10-29",
+      "source_url": "https://www.mol.gov.tw/media/c1rbs3kt/%E8%BF%915%E5%B9%B4%E5%A4%A7%E5%B0%88%E7%95%A2%E6%A5%AD%E7%94%9F%E5%B0%B1%E6%A5%AD%E7%8B%80%E6%B3%81%E5%8F%8A%E8%96%AA%E8%B3%87%E8%A1%8C%E6%83%85-%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+      "limitations": "僅納入全時工作且具勞退提繳紀錄者；各教育程度的學門、畢業年數、職類、工作經驗和就業選擇不同。未控制這些因素，不可將組間差額歸因於碩士學位。"
+    },
+    {
+      "item_id": "TW-23-025",
+      "source_id": "ch23_phd_mental_health_meta_20261029",
+      "value": "憂鬱症狀24%（95% CI 18%至31%，I²=98.75%）；焦慮症狀17%（95% CI 12%至23%，I²=98.05%）",
+      "period": "納入文獻搜尋截至2019-11-05；研究發表2021年",
+      "geographic_scope": "跨國研究樣本，以美國研究居多；非台灣全國樣本",
+      "population": "憂鬱：16項研究、23,469名博士生；焦慮：9項研究、15,626名博士生",
+      "numerator_denominator_or_event_definition": "統合各研究以經驗證篩檢工具判定的臨床顯著症狀比例；不是經醫師診斷病例數。憂鬱與焦慮分別使用研究層級母數合併估計。",
+      "measurement_type": "系統性回顧與隨機效應統合分析的症狀比例估計；不是台灣盛行率、疾病發生率或自殺率",
+      "accessed_at": "2026-10-29",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8277873/",
+      "limitations": "高度研究間異質性，研究期間、量表及招募方式不同；I²接近99%。症狀篩檢不等同診斷，不能預測個人或代表台灣博士生。"
+    }
+  ],
+  "sources_added": [
+    {
+      "id": "ch07_taiwanjobs_20261029",
+      "title": "台灣就業通：職缺與訓練課程查詢",
+      "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
+      "published_at": null,
+      "supports": "官方入口提供職缺查詢、找課程及就業服務相關資訊；入口的職缺和課程查找功能不能保證錄取或補助核准。",
+      "evidence_type": "台灣政府就業服務入口",
+      "retrieval_method": "2026-10-29直接閱讀台灣就業通官方首頁，核對找工作與找課程入口；只支持入口及查詢功能，不推定課程補助或求職結果。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "支持台灣就業通的職缺與訓練課程入口，不代表個人符合課程補助或求職方案資格。"
+    },
+    {
+      "id": "ch07_employment_service_law_20261029",
+      "title": "就業服務法第13條：公立就業服務機構的收費原則",
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001",
+      "published_at": null,
+      "supports": "第13條規定公立就業服務機構辦理就業服務以免費為原則；僱主委託招考人才所需費用，得向僱主收取。",
+      "evidence_type": "台灣現行法規",
+      "retrieval_method": "2026-10-29直接閱讀全國法規資料庫第13條現行條文，只支持公立就業服務收費原則，不延伸為所有私人就業服務一律免費。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "僅支持公立就業服務機構的法定收費原則，私人服務收費及個案契約仍須另核對。"
+    },
+    {
+      "id": "ch07_employment_insurance_law_20261029",
+      "title": "就業保險法：失業給付與求職登記",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+      "published_at": null,
+      "supports": "失業給付的資格、求職登記、給付及相關義務依就業保險法與主管機關個案審核；求職紀錄須如實填報。",
+      "evidence_type": "台灣現行法規",
+      "retrieval_method": "2026-10-29直接閱讀全國法規資料庫就業保險法現行條文，限於本文所述「依規定審核」的一般說明；未把求職表格當成法定資格認定。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "本文未提供個案給付金額或資格判定；實際資格及申請程序依承辦機關認定。"
+    },
+    {
+      "id": "ch07_public_employment_service_20261029",
+      "title": "台灣就業通：公立就業服務機構求職登記與免費推介",
+      "url": "https://job.taiwanjobs.gov.tw/Internet/special2/newlife/docDetail.aspx?docid=19387&uk=492",
+      "published_at": null,
+      "supports": "各地公立就業服務機構可辦理求職登記、免費協助推介就業；台灣就業通頁面列有免付費諮詢電話0800-777-888。",
+      "evidence_type": "台灣政府就業服務說明",
+      "retrieval_method": "2026-10-29直接閱讀台灣就業通公立就業服務機構說明頁，核對免費求職登記、就業推介及免付費諮詢電話；未推定服務時段。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "服務內容以頁面所列為準；電話服務時段、個別職訓或津貼條件須向承辦單位確認。"
+    },
+    {
+      "id": "ch07_unemployment_duration_114",
+      "title": "行政院主計總處：114年人力資源調查統計表65",
+      "url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11516/236078/f194afc4-ad75-46bf-aa65-02239bdfdf8d.pdf",
+      "published_at": null,
+      "supports": "114年（2025）人力資源調查表65估計全年平均失業人口402,767人，平均失業週數19.87週；統計對象為調查週符合失業者定義的人口，週數是開始尋職至資料標準週末日的累積期間。",
+      "evidence_type": "台灣官方抽樣調查統計",
+      "retrieval_method": "2026-10-29直接查閱行政院主計總處114年人力資源調查表65 PDF及勞動統計名詞；保留年度、表別、單位、失業者定義及週數起訖，不把平均值換算成個人求職機率。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "全年平均人數與調查週平均失業週數不是全年獨立失業者總數或完整尋職至到職時間；缺少個人層級暴露分母，不估個人發生率。"
+    },
+    {
+      "id": "ch07_unemployment_week_definition_20261029",
+      "title": "勞動部：失業週數統計名詞定義",
+      "url": "https://statdb.mol.gov.tw/html/com/st0103.html",
+      "published_at": null,
+      "supports": "勞動部將失業週數定義為失業者從開始找工作起，到資料標準週最後一日止的尋職總週數。",
+      "evidence_type": "台灣官方統計名詞定義",
+      "retrieval_method": "2026-10-29直接閱讀勞動部勞動統計名詞指定條目「失業週數」；不將該統計期間解讀為已完成的求職到錄取期間。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "只支持統計名詞的期間定義，不提供個人求職時間預測。"
+    },
+    {
+      "id": "ch23_ilo_genai_exposure_wp140_20261029",
+      "title": "ILO Working Paper 140（2025）：生成式AI與工作全球職業暴露指標",
+      "url": "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
+      "published_at": "2025-05-20",
+      "supports": "ILO全球模型估計約24%工作者所在職業有某種生成式AI暴露，3.3%全球就業落在最高暴露級距；量度為職務任務暴露，不是實際裁員或失業結果，也不是台灣職類估計。",
+      "evidence_type": "國際組織原始工作論文與全球模型估計",
+      "retrieval_method": "2026-10-29直接閱讀ILO Working Paper 140完整PDF，核對摘要、全球估計與方法段落；未將全球職業模型外推成台灣職類比例。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "估計範圍為全球職業與就業分佈；24%及3.3%不是台灣統計、裁員率或個人失業機率。"
+    },
+    {
+      "id": "ch23_training_courses_20261029",
+      "title": "勞動力發展署：台灣就業通職業訓練整合網",
+      "url": "https://course.taiwanjobs.gov.tw/",
+      "published_at": null,
+      "supports": "官方整合網提供課程查詢，可依開課時間、地點、通俗職類、訓練單位及課程名稱查找；網站另列各項訓練計畫，個別補助仍須符合該計畫條件。",
+      "evidence_type": "台灣政府職業訓練服務入口",
+      "retrieval_method": "2026-10-29直接閱讀勞動力發展署職業訓練整合網的課程查詢介面與計畫入口；只核對搜尋欄位及資訊入口，不推定個人補助資格。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "課程開放、名額、費用及補助資格會依計畫與梯次變動，應以當期公告及承辦單位確認。"
+    },
+    {
+      "id": "ch23_degree_law_20261029",
+      "title": "學位授予法：碩士與博士學位要件（現行條文）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030010",
+      "published_at": null,
+      "supports": "現行第3、7、9條說明學位授予層級、碩士修業及學位考試條件、博士候選人資格考核及博士學位考試；符合特定類科條件者得依規定以作品或報告代替論文。",
+      "evidence_type": "台灣現行法規",
+      "retrieval_method": "2026-10-29直接閱讀全國法規資料庫現行條文第3、7、9條及生效狀態註記；本次未引用待施行的第4條及第5條第1項。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "招生、修業、論文替代、學位考試及畢業條件仍須核對學校當年度簡章與校規；法條不代表個別入學或畢業保證。"
+    },
+    {
+      "id": "ch23_graduate_outcomes_109_113_20261029",
+      "title": "勞動部：近5年大專畢業生就業狀況及薪資行情統計分析報告",
+      "url": "https://www.mol.gov.tw/media/c1rbs3kt/%E8%BF%915%E5%B9%B4%E5%A4%A7%E5%B0%88%E7%95%A2%E6%A5%AD%E7%94%9F%E5%B0%B1%E6%A5%AD%E7%8B%80%E6%B3%81%E5%8F%8A%E8%96%AA%E8%B3%87%E8%A1%8C%E6%83%85-%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
+      "published_at": null,
+      "supports": "表5以109至113年畢業生資料，列有勞退提繳紀錄的全時工作者共69.6萬人；碩士15.8萬人平均月提繳工資6.62萬元，學士50.7萬人平均4.16萬元。資料為群體平均，不是剛畢業起薪或學位因果報酬。",
+      "evidence_type": "台灣政府行政資料連結統計報告",
+      "retrieval_method": "2026-10-29直接閱讀勞動部統計分析報告PDF表5與說明；核對資料時間（114年7月底）、畢業年度、全時工作及勞退提繳母體、樣本數與月提繳工資單位。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "未納入無勞退提繳紀錄者、非全時工作者及未進入勞退資料母體者；教育程度組成與職類不同，不能據此推定讀碩士的因果薪資回報。"
+    },
+    {
+      "id": "ch23_phd_mental_health_meta_20261029",
+      "title": "Satinsky等人（2021）：博士生憂鬱與焦慮症狀系統性回顧及統合分析",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8277873/",
+      "published_at": "2021-07-13",
+      "supports": "憂鬱症狀統合16項研究、23,469名博士生，估計24%（95% CI 18%至31%，I²=98.75%）；焦慮症狀統合9項研究、15,626名博士生，估計17%（95% CI 12%至23%，I²=98.05%）。研究採經驗證的症狀篩檢工具，非臨床診斷；不能代表台灣博士生全國盛行率。",
+      "evidence_type": "同儕審查研究：系統性回顧與統合分析",
+      "retrieval_method": "2026-10-29直接閱讀PubMed Central全文，核對摘要、研究數、樣本數、信賴區間、I²、篩檢工具和研究限制；不將臨床顯著症狀比例寫成診斷率。",
+      "accessed_at": "2026-10-29",
+      "scope_note": "研究間異質性極高、樣本與研究地區不等於台灣全國博士生；數據是研究族群症狀篩檢合併估計，不是個人預測。"
+    }
+  ],
+  "sources_retired": [
+    {
+      "item_id": "TW-07-014",
+      "id": "jobportal",
+      "replacement_ids": [
+        "ch07_taiwanjobs_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "213e3cc6a8bffacfa8911e5dad99e0460133df1784535b50dc48afa9d4246cd2"
+    },
+    {
+      "item_id": "TW-07-014",
+      "id": "jobservice",
+      "replacement_ids": [
+        "ch07_employment_service_law_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "74bc4ad9f432103666f008a07aa758daee1c26e39ccaae607de10391ad13e8f2"
+    },
+    {
+      "item_id": "TW-07-014",
+      "id": "ch07_jobinsurance",
+      "replacement_ids": [
+        "ch07_employment_insurance_law_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "cee85cd3b9c5eb5622e979f953ecd70261f7c6d24127a782936d0c7650caa748"
+    },
+    {
+      "item_id": "TW-23-010",
+      "id": "ch23_ai",
+      "replacement_ids": [
+        "ch23_ilo_genai_exposure_wp140_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "10d929af5190f07942c2021cddea41f2b3b2bb267805498491749cfd238efab7"
+    },
+    {
+      "item_id": "TW-23-024",
+      "id": "ch23_degree",
+      "replacement_ids": [
+        "ch23_degree_law_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "782960b1d5b8466243538690aaba25e82316f1930ffded4fb2973fcd5e7a84f4"
+    },
+    {
+      "item_id": "TW-23-024",
+      "id": "ch23_salary",
+      "replacement_ids": [
+        "ch23_graduate_outcomes_109_113_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "c1008d6e7256d32377c39c31bee40b0f0c8c815aa92f7904648cee4f496f66c9"
+    },
+    {
+      "item_id": "TW-23-025",
+      "id": "ch23_degree",
+      "replacement_ids": [
+        "ch23_degree_law_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "782960b1d5b8466243538690aaba25e82316f1930ffded4fb2973fcd5e7a84f4"
+    },
+    {
+      "item_id": "TW-23-025",
+      "id": "ch23_phdhealth",
+      "replacement_ids": [
+        "ch23_phd_mental_health_meta_20261029"
+      ],
+      "reason": "本條本輪改以2026-10-29逐項讀取並記錄的來源版本支持現行主張；舊來源物件保留於runtime和Git歷史，不覆寫其他條目的舊查核紀錄。",
+      "prior_source_sha256": "f3784c9910b3d11a14994bd17994694df421b93a1aa51c3d69c6fe6a1495fc6f"
+    }
+  ],
+  "publication_ready": false,
+  "global_limits": [
+    "本批完成AI輔助來源查核，不代表取得獨立專業審閱。",
+    "全球生成式AI模型及跨國博士生心理健康統合值不代表台灣全國發生率。",
+    "行政薪資資料只能描述有勞退提繳紀錄之全時工作者群體，不構成個人學位投資報酬。",
+    "法規、補助及學校招生條件會更新；辦理個案前仍須向主管機關、學校或專業人員確認。"
+  ]
+}

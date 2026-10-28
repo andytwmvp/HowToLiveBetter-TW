@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-002.md",
-  "target_sha256": "d78f8ae9dfba7628bd89a113fa6aa038482a4da94cde996337b8e399ebde3f48",
+  "target_sha256": "330ca047ccb2eba79e93e85063de796d48d4b54d4eaadb64eaf70140ed8c8862",
   "source_checks": [
     {
       "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
@@ -43,5 +43,13 @@
     "帳號清單只記用途與復原路徑，不記明文密碼、完整復原碼或私鑰；NIST是外國技術標準，非臺灣法律，服務端規則亦各有不同。",
     "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
   ],
-  "review_method": "逐一開啟並核對臺灣主管機關、官方服務文件及NIST現行技術標準；區分制度／宣導適用主體、台灣服務情境、事件件數、事件定義及暴露分母；資料不足時不推估。AI輔助查核不是獨立專業審閱。"
+  "review_method": "逐一開啟並核對臺灣主管機關、官方服務文件及NIST現行技術標準；區分制度／宣導適用主體、台灣服務情境、事件件數、事件定義及暴露分母；資料不足時不推估。AI輔助查核不是獨立專業審閱。",
+  "source_reviewed_sha256": "d78f8ae9dfba7628bd89a113fa6aa038482a4da94cde996337b8e399ebde3f48",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d78f8ae9dfba7628bd89a113fa6aa038482a4da94cde996337b8e399ebde3f48",
+    "after_sha256": "330ca047ccb2eba79e93e85063de796d48d4b54d4eaadb64eaf70140ed8c8862",
+    "before_reader_sha256": "44102a1a2f8e38fa5813a3341b233e953482378c03ba5052791731f5d18f5386",
+    "after_reader_sha256": "aac86fd0635bf7722664018b3ad73bac7306222ef4493cdc75e33c5802aedf9d"
+  }
 }

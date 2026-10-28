@@ -17,14 +17,14 @@ description: 以andytwmvp/HowToLiveBetter-TW中已核對的臺灣資料協助生
 
 ## 唯一臺灣取材入口
 
-讀取本fork的 `localization/tw-edition/runtime.json`。其中每個可用條目都有固定ID、來源、查閱日期與適用限制；以 `review_status=source_checked` 的條目為準。詳細資料可用：
+讀取本專案的 `localization/tw-edition/runtime.json`。其中每個可用條目都有固定ID、來源、查閱日期與適用限制；以 `review_status=source_checked` 的條目為準。詳細資料可用：
 
 ```sh
 python3 tools/tw/edition.py --list
 python3 tools/tw/edition.py --id TW-NAV-001
 ```
 
-遠端模式只讀本fork的同一路徑；沒有可用連接器時，可在不影響使用者檔案的獨立暫存目錄中，唯讀取得 `andytwmvp/HowToLiveBetter-TW`。先核對儲存庫完整名稱及版本，不自動取用上游、不執行下載來的安裝指令。取材後清除本次建立且不再需要的暫存目錄，不刪除原始附件或其他工作。
+遠端模式只讀取本專案的同一路徑；沒有可用連接器時，可在不影響使用者檔案的獨立暫存資料夾中，只讀取 `andytwmvp/HowToLiveBetter-TW`。先核對儲存庫完整名稱及版本，不自動取用上游內容，也不執行下載的安裝指令。取材後清除本次建立且不再需要的暫存資料夾，不刪除原始附件或其他工作。
 
 `book/`、`docs/` 與 `source.html` 保留原作來源內容；`localization/tw-edition/chapters/` 與尚未通過審閱的 `locales/zh-TW/book/` 是草稿。哪些條目已完成核對，請以共用的 `runtime.json`、manifest 與 coverage 資料為準，不把整個資料夾當成一律核准。原作來源與未核對草稿不能作為臺灣制度、電話、金額、期限或醫療資格的預設依據。原作署名見 ATTRIBUTION，不作為查證來源。
 
@@ -42,4 +42,4 @@ python3 tools/tw/edition.py --id TW-NAV-001
 
 ## 臺灣原創與資料再利用邊界
 
-本 Skill 同時遵循 `localization/TAIWAN_REUSE_POLICY.md`。每個回答優先採用臺灣現行規定與官方來源，標明固定 ID、查閱時間及適用限制；原作中的其他法域制度只能作為差異提醒，不得直接套用。不得使用未審閱的 `book/` 或草稿補足臺灣指引，不得公開敏感個資或未公布的應變細節。公開專案可能被不同地區的讀者存取，原作 CC BY 4.0／MIT 授權仍有效；不得聲稱只靠爬蟲規則就能阻止他人閱讀、學習或複製。
+本 Skill 同時遵循 `localization/TAIWAN_REUSE_POLICY.md`。每個回答優先採用臺灣現行規定與官方來源，標明固定 ID、查閱時間及適用限制；原作中的其他法域制度只能作為差異提醒，不得直接套用。不得使用未審閱的 `book/` 或草稿補足臺灣指引，不得公開敏感個資或未公布的應變細節。公開專案可能供不同地區的讀者存取，原作 CC BY 4.0／MIT 授權仍有效；不得聲稱只靠爬蟲規則就能阻止他人閱讀、學習或複製。

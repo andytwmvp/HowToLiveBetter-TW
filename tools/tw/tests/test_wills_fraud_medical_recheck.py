@@ -14,6 +14,7 @@ from retroactive_audit import (
     assert_preserved_or_rechecked,
     documented_revision,
     validate_recheck_history,
+    validate_reader_copy_cleanup_history,
 )
 
 BASE = 'c5e5608bc3cd47da9693878b7e69684393f22312'
@@ -39,10 +40,16 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
             body_sha = hashlib.sha256(item['body'].encode()).hexdigest()
             current_records = [
                 row for row in rows
-                if row['id'] == key and row.get('after_sha256') == body_sha
+                if row['id'] == key and row.get('reviewed_at') == '2026-10-25'
             ]
             self.assertEqual(len(current_records), 1, key)
-            validate_recheck_history(ROOT, current_records[0], item)
+            cleanup = next((row for row in load('localization/retroactive-review-register-20261019.json')['reader_copy_cleanups']
+                            if row['id'] == key and row.get('after_sha256') == body_sha), None)
+            if cleanup:
+                previous = validate_reader_copy_cleanup_history(ROOT, cleanup, item)
+                self.assertEqual(hashlib.sha256(previous['body'].encode()).hexdigest(), current_records[0]['after_sha256'])
+            else:
+                self.assertEqual(body_sha, current_records[0]['after_sha256'])
             self.assertEqual((ROOT / item['target_path']).read_text(encoding='utf-8'), item['body'])
             self.assertEqual(review['target_sha256'], hashlib.sha256(item['body'].encode()).hexdigest())
             self.assertEqual(review['source_checks'], current_records[0]['source_checks'])
@@ -75,7 +82,7 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         assert_preserved_or_rechecked(self, prior, current)
 
     def test_history_chain_rejects_same_body_with_unrecorded_metadata(self):
-        current = next(item for item in validate_runtime()['items'] if item['id'] == 'TW-24-001')
+        current = next(item for item in validate_runtime()['items'] if item['id'] == 'TW-07-014')
         altered = copy.deepcopy(current)
         altered['title'] += ' 未登錄的標題異動'
         self.assertEqual(hashlib.sha256(altered['body'].encode()).hexdigest(),
@@ -84,7 +91,7 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         current_sha = hashlib.sha256(current['body'].encode()).hexdigest()
         record = next(
             row for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
-            if row['id'] == 'TW-24-001' and row.get('after_sha256') == current_sha
+            if row['id'] == 'TW-07-014' and row.get('after_sha256') == current_sha
         )
         self.assertFalse(_registered_history_connects(ROOT, altered, current, record))
 
@@ -141,7 +148,7 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         self.assertIn('若民眾不同意', body)
         self.assertIn('不保證有個人醫師24小時接聽', body)
         self.assertIn('查詢名單不保證當下仍收案、可掛號或符合本人資格', body)
-        self.assertIn('沒有在本輪核實到2026年全國同口徑參與人數', body)
+        self.assertIn('目前沒有2026年全國同口徑的參與人數與需整合照護總數', body)
 
     def test_professional_review_remains_pending(self):
         batch = load(BATCH)

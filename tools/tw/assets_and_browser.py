@@ -98,7 +98,7 @@ def run(render: bool,browser_test: bool) -> None:
                 for(const b of r.getClientRects())if(b.left< -1||b.right>1201||b.top< -1||b.bottom>631)out.push(n.textContent.trim());
               }return out;
             }''');assert not overflow,overflow
-            boxes=[page.locator(s).bounding_box() for s in ('h1','.in p','.chips','.tw-note')];assert all(boxes)
+            boxes=[page.locator(s).bounding_box() for s in ('h1','.in p','.chips')];assert all(boxes)
             for a,b in zip(boxes,boxes[1:]):assert a['y']+a['height']<=b['y']+1,'封面內容重疊'
             page.screenshot(path=str(ROOT/'og.png'),animations='disabled');page.screenshot(path=str(review/'og-zh-TW.png'),animations='disabled')
             result['checks'].append('封面1200×630已由模板重新產生，文字未超出或重疊；需同步重製紀錄。')
@@ -180,11 +180,13 @@ def run(render: bool,browser_test: bool) -> None:
             page.locator('.chips[data-dim="grade"] button[data-v="A"]').click();page.wait_for_function("Number(document.getElementById('cnt').textContent)===495")
             page.locator('#reset').click();page.locator('#theme').click()
             page.screenshot(path=str(review/'desktop-dark-zh-TW.png'),animations='disabled')
-            doc=page.locator('.doc-links a[href*="/blob/main/docs/"]').first;assert doc.count()==1
+            assert page.locator('.doc-links a[href*="/blob/main/docs/"]').count()==0
+            assert '不代表臺灣現行生活建議' in page.locator('.doc-links').inner_text()
+            doc=page.locator('.card a[href*="/blob/main/docs/"]').first;assert doc.count()==1
             doc.click();page.locator('#doc-mask').wait_for(state='visible')
             page.wait_for_function("document.getElementById('dm-doc').textContent.trim().length>100")
             assert '404' not in page.locator('#dm-doc').inner_text()[:100];page.locator('#dm-x').click()
-            result['checks'].append('原作桌機來源稿：765條／34章、搜尋、分級、重設、深色模式及長文彈窗。')
+            result['checks'].append('原作桌機來源稿：765條／34章、搜尋、分級、重設、深色模式、原作延伸閱讀彈窗及臺灣版閱讀分流。')
             page.set_viewport_size({'width':390,'height':844});page.goto(url+'source.html',wait_until='domcontentloaded')
             page.wait_for_function("document.querySelectorAll('.card').length === 765",timeout=120000)
             page.locator('#menu').click();assert 'open' in (page.locator('#sidebar').get_attribute('class') or '')
@@ -192,7 +194,8 @@ def run(render: bool,browser_test: bool) -> None:
             page.goto(url+'selfcheck.html',wait_until='domcontentloaded');page.wait_for_selector('.q')
             assert page.locator('html').get_attribute('lang')=='zh-TW';page.locator('.seg button.yes').first.click()
             assert page.locator('.seg button.yes').first.get_attribute('aria-pressed')=='true'
-            page.set_viewport_size({'width':1440,'height':1000});page.goto((ROOT/'dist/tw-source-preview.html').as_uri(),wait_until='domcontentloaded')
+            source_preview=Path(os.environ.get('TW_SOURCE_PREVIEW',ROOT/'dist/tw-source-preview.html'))
+            page.set_viewport_size({'width':1440,'height':1000});page.goto(source_preview.as_uri(),wait_until='domcontentloaded')
             page.wait_for_function("document.querySelectorAll('.card').length === 765",timeout=120000)
             result['checks'].append('明確指定的離線來源預覽：765條完整內嵌。')
         context.close();browser.close()

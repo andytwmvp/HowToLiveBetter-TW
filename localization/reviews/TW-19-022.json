@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-022.md",
-  "target_sha256": "542901064a7db87c2c889bb5422409bd0de5a400f4c63bc12ec9da5d1afeb1ae",
+  "target_sha256": "021c93848de1c0140c1a0f527238c4bc77bf80c29e4db69715aaa70a3f9ea737",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -43,5 +43,13 @@
     "服務年限、違約責任與競業禁止效力須按雇主支出、職務、秘密接觸、書面約定、補償及終止原因逐案判斷；本輪未審查個別契約。",
     "50%是每月補償的法定最低金額；仍須兼顧維持生活、受限損失相當及離職後支付等條件，不是條款有效的充分條件，也不代表一般離職違約金一律有效或無效。",
     "未取得律師或勞動主管機關針對個案的獨立法律審閱，且沒有可估算個人遭遇率的同口徑分母。"
-  ]
+  ],
+  "source_reviewed_sha256": "542901064a7db87c2c889bb5422409bd0de5a400f4c63bc12ec9da5d1afeb1ae",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "542901064a7db87c2c889bb5422409bd0de5a400f4c63bc12ec9da5d1afeb1ae",
+    "after_sha256": "021c93848de1c0140c1a0f527238c4bc77bf80c29e4db69715aaa70a3f9ea737",
+    "before_reader_sha256": "b46c39db4d0d7cb013bd3a7b741f95be2a575882879a9ab7323faa852976e703",
+    "after_reader_sha256": "6a16b7b570da8df74ebfaf9266783f334222497da0c4d66a14f800c5e1649557"
+  }
 }

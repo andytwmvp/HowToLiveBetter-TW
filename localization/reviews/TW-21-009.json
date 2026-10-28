@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch21/TW-21-009.md",
-  "target_sha256": "71f8f04c71a5e66ebbc5117dc85bd493be24407e9bb63cc3da4ce9d60cff231a",
+  "target_sha256": "1f1f71935004aa1b558b2f9faf00e9272bfc32b946ee1769d7534e8d8e24521c",
   "source_checks": [
     {
       "url": "https://www.immigration.gov.tw/5385/7229/7238/413754/cp_news",
@@ -30,5 +30,13 @@
     "動植物檢疫參考表PDF連結未成功取得，本次只依官方HTML正文提供類別及申報流程，不以未讀附表判定特定奶蛋食品或沿用原作的中國禁止名單。",
     "來源支持與每條主張均為編者摘要，非逐字引文；費用表、備援清單與行程檢核屬編修建議，不宣稱由研究證實固定效益。",
     "本章13個主題在基線尚無臺灣稿。本批新增實質正文與審閱整合，不改寫既有123項閱讀資料、舊草稿、圖片、原作、授權或來源物件。"
-  ]
+  ],
+  "source_reviewed_sha256": "71f8f04c71a5e66ebbc5117dc85bd493be24407e9bb63cc3da4ce9d60cff231a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "71f8f04c71a5e66ebbc5117dc85bd493be24407e9bb63cc3da4ce9d60cff231a",
+    "after_sha256": "1f1f71935004aa1b558b2f9faf00e9272bfc32b946ee1769d7534e8d8e24521c",
+    "before_reader_sha256": "374c1fea05e761b1308480b8146d9ea02cf7eb4f9a047a9e1213de8ae1b8e75d",
+    "after_reader_sha256": "9e5b6dc91e088d14091b7c62b4c2b64ac88bec7ca436205d68cc90e28bae6f72"
+  }
 }

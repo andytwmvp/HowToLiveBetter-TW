@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-007.md",
-  "target_sha256": "c264425cbb67b7823cbf44c7b48b15dbadd75cdf596484bf63875c00c3a98c10",
+  "target_sha256": "6791f6369bb92fa8083e73b3e8f712600b258d3d526ad06ab6ace6c3a72fdeb9",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078",
@@ -56,5 +56,13 @@
     "2026Q2低收及中低收資料為全國季末行政認定存量，不是申請事件、核准率、貧窮發生率或個人成功機率；中低收表未提供可與同表總人口配對的分母。",
     "低收表同表總戶數與人口可描述認定存量占同表人口／戶數比例，仍非個人申請或新發生風險；2026門檻不得套用至2027。",
     "各縣市家庭人口、財產、居住例外與個案認定仍須由地方政府核定；未取得獨立社福、社工或法律專業審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "c264425cbb67b7823cbf44c7b48b15dbadd75cdf596484bf63875c00c3a98c10",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c264425cbb67b7823cbf44c7b48b15dbadd75cdf596484bf63875c00c3a98c10",
+    "after_sha256": "6791f6369bb92fa8083e73b3e8f712600b258d3d526ad06ab6ace6c3a72fdeb9",
+    "before_reader_sha256": "68aa60c48f6121dc313264ef4a80d887e5dfd5d37836e0253cf8d1eba846e9e3",
+    "after_reader_sha256": "b7cdc2a7ec54e71c3bb701ccd03a030d4f0cd93eeb2b4b60ddd96df50d68f493"
+  }
 }

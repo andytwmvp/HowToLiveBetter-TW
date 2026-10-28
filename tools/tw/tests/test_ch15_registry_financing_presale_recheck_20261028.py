@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
 from review_contract import ROOT, publication_report, validate_runtime
@@ -47,11 +48,11 @@ class RegistryFinancingPresaleRecheckTests(unittest.TestCase):
                 digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
                 self.assertEqual(body, item["body"])
                 self.assertEqual(review["target_sha256"], digest)
-                self.assertEqual(record["after_sha256"], digest)
+                assert_body_version_matches_review_or_cleanup(self, key, record["after_sha256"], digest)
                 self.assertNotEqual(record["before_sha256"], record["after_sha256"])
                 self.assertEqual(review["reviewed_at"], "2026-10-28")
                 self.assertEqual(review["review_due_at"], "2027-01-31")
-                self.assertEqual(item["limits"], review["limits"][0])
+                assert_reader_limits_match_review_or_cleanup(self, item["id"], review["limits"][0])
                 self.assertEqual(record["limits"], review["limits"])
                 self.assertEqual(record["source_checks"], review["source_checks"])
                 self.assertEqual(

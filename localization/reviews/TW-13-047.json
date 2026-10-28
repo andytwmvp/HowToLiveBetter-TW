@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-047.md",
-  "target_sha256": "6fc088f29cae7991a80513e6eb0b4050698b023d037bdbca82cd1c5be57f9b33",
+  "target_sha256": "37b55ad622e03e5a5c68dba0933ec9a1323d001253ef980aa18869f814a57cea",
   "source_checks": [
     {
       "url": "https://ihealth.vghtpe.gov.tw/media/479",
@@ -34,5 +34,13 @@
   "limits": [
     "不可以將斷指放入冰塊堆、直接浸泡冰水、酒精或消毒藥劑，亦不能冷凍或用止血帶綁已離體組織。未完全斷離不能自行割斷，不能硬拉復位。醫院文章的接合時間並非超過後就放棄就醫的界線；患者持續失血和意識、呼吸危險永遠優先於斷指保存。\n\n台灣事件頻率資料不足：本輪榮總與勞動部是保存衛教，未提供全國同定義斷指／斷肢事故與作業暴露分母；不能用全部職災死亡或單院接合成功率推估。勞動部原頁2024-04-27發布、2026-10-03更新，只讀中文HTML，未宣稱各語圖片已查核或取得再利用授權；本文獨立撰寫不複製圖。",
     "醫療、防疫、救護、法律及社工獨立專業審閱尚待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "6fc088f29cae7991a80513e6eb0b4050698b023d037bdbca82cd1c5be57f9b33",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "6fc088f29cae7991a80513e6eb0b4050698b023d037bdbca82cd1c5be57f9b33",
+    "after_sha256": "37b55ad622e03e5a5c68dba0933ec9a1323d001253ef980aa18869f814a57cea",
+    "before_reader_sha256": "e27433d30b2a36f0b9dbd72cf7f57413f7d8aa9c3d2e0daa75473fd01384b686",
+    "after_reader_sha256": "6a7552811e580ca3a643fc2503be4d1215be318126a8264adfdf36f9eda31807"
+  }
 }

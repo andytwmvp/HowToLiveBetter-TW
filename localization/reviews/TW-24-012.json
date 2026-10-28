@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-21",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-012.md",
-  "target_sha256": "5ca0208e71247988a22dd88c0f7661af682ecea4f6f3798ec620f13576545345",
+  "target_sha256": "0c687b53b7acf704429788afaecbd4adf6e1e0ba6bde5c9c01d768d985dc771a",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
@@ -38,5 +38,13 @@
     "未取得同定義全臺過失、核准、植牙失敗或錯收發生率；行政件數與國際結果不能當臺灣個人機率。",
     "法規庫整編截止2026-10-08，之後公報與全部地方規定未全核；未實際申請、就醫、調解、調閱個資或核付。",
     "ch24_materials實際URL主文不支持原植牙特材主張，已從本篇退役；原來源物件不改寫、非新增失效網址。"
-  ]
+  ],
+  "source_reviewed_sha256": "5ca0208e71247988a22dd88c0f7661af682ecea4f6f3798ec620f13576545345",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "5ca0208e71247988a22dd88c0f7661af682ecea4f6f3798ec620f13576545345",
+    "after_sha256": "0c687b53b7acf704429788afaecbd4adf6e1e0ba6bde5c9c01d768d985dc771a",
+    "before_reader_sha256": "7ae6b19d14df3aca3242f049f3fc0b5fb577627ea33afa63e47df89fd6195ce0",
+    "after_reader_sha256": "e6a89db779f26c2f09b992b147cbcce037b61b0513c6fd2fada9bad1688aa650"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-007.md",
-  "target_sha256": "7ab30ebc18040092b64b42127d426fc0d7f60d23b9a1e55ebf3153b55f140085",
+  "target_sha256": "c196f11716fcd01f69277199d14d582444dbbd8ddf1ef5ded5419a5f97a49be7",
   "source_checks": [
     {
       "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S261/163919/12-Retinopathy-Neuropathy-and-Foot-Care-Standards",
@@ -35,5 +35,13 @@
     "「所有糖尿病每年只查一次眼底」不對：有病變或懷孕時可能需更密集追蹤；長期檢查正常者也可能由醫師調整到1至2年。突發視力明顯變差、足部新傷口合併感染、發黑或循環不足需迅速就醫。",
     "國際ADA2026本輪出版商403，PMC檢索可讀指定眼底／足部建議，直接開啟遇驗證頁，未取得全文及底層試驗；初診、年度與高風險時點須依個案核對，不把國外建議當臺灣免費給付。臺中榮總2026衛教只採文字原則，不轉載其AI圖片或把參考書目當本輪已讀。",
     "原始研究及個案醫療、藥事、法律與核付判斷仍待獨立專業審查。"
-  ]
+  ],
+  "source_reviewed_sha256": "7ab30ebc18040092b64b42127d426fc0d7f60d23b9a1e55ebf3153b55f140085",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "7ab30ebc18040092b64b42127d426fc0d7f60d23b9a1e55ebf3153b55f140085",
+    "after_sha256": "c196f11716fcd01f69277199d14d582444dbbd8ddf1ef5ded5419a5f97a49be7",
+    "before_reader_sha256": "74b4606da13509fc2cc606face8a31826bf87de31a1262329a95fac73d2fec0e",
+    "after_reader_sha256": "245dac5fab2802cefe43f5324d91ec7d7f812b83a89cefb5454ac8fd58561a4a"
+  }
 }

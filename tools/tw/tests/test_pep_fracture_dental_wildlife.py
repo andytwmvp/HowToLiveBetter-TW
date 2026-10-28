@@ -9,7 +9,7 @@ from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
-from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history, documented_revision
+from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history, documented_revision, validate_reader_copy_cleanup_history
 from body_renderer import body_blocks
 
 BASE = '8c9685deee6efa0936178695582d4c908c1c5599'
@@ -82,13 +82,15 @@ class PepFractureDentalWildlifeTests(unittest.TestCase):
         old = next(i for i in old_rt['items'] if i['id']==current['id'])
         rows = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())
         record = next(r for r in rows['substantive_rechecks'] if r['id']==current['id'])
+        cleanup = next(r for r in rows['reader_copy_cleanups'] if r['id']==current['id'] and r['after_sha256']==hashlib.sha256(current['body'].encode()).hexdigest())
+        reviewed = validate_reader_copy_cleanup_history(ROOT, cleanup, current)
         self.assertEqual([r['id'] for r in record['retired_sources']], ['dental_iadt_2024'])
-        self.assertTrue(documented_revision(old, current, record))
+        self.assertTrue(documented_revision(old, reviewed, record))
         validate_recheck_history(ROOT, record, current)
         for field, value in [('reason',''),('prior_source_sha256',None),('replacement_ids',[]),('replacement_ids',['unknown']),('id','other')]:
             bad = copy.deepcopy(record)
             bad['retired_sources'][0][field] = value
-            self.assertFalse(documented_revision(old,current,bad),field)
+            self.assertFalse(documented_revision(old,reviewed,bad),field)
         bad = copy.deepcopy(record)
         bad['prior_revision'] = BASE
         bad['retired_sources'][0]['prior_source_sha256'] = '0'*64
@@ -96,7 +98,7 @@ class PepFractureDentalWildlifeTests(unittest.TestCase):
             validate_recheck_history(ROOT,bad,current)
         bad = copy.deepcopy(record)
         del bad['retired_sources']
-        self.assertFalse(documented_revision(old,current,bad))
+        self.assertFalse(documented_revision(old,reviewed,bad))
         original_load = retroactive_audit.load
         def altered_load(root, relative):
             data = original_load(root,relative)

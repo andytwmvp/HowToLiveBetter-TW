@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-045.md",
-  "target_sha256": "3c5b8991f2e018b8026fdc6cf9534b1eda92ec9a030896f42b22ca5fc08d050b",
+  "target_sha256": "0aea9d13c370d63bdd8a0b382956721011caf48d4bb8cd345af85ea9694d15af",
   "source_checks": [
     {
       "url": "https://www.health.ntpc.gov.tw/article/%E6%96%B0%E5%8C%97%E8%A1%9B%E5%81%A5%E5%AD%97%E7%AC%AC1150245034%E8%99%9F%E5%87%BD%E9%99%84%E4%BB%B6%EF%BC%8C%E6%9B%B4%E6%96%B0%E3%80%8C%E6%93%B4%E5%A4%A7%E6%88%90%E4%BA%BA%E9%A0%90%E9%98%B2%E4%BF%9D%E5%81%A5%E6%9C%8D%E5%8B%99_B%E3%80%81C_%E5%9E%8B%E8%82%9D%E7%82%8E%E7%AF%A9%E6%AA%A2%E5%95%8F%E7%AD%94%E9%9B%86%EF%BC%88%E7%AC%AC_6_%E7%89%88%EF%BC%89%E3%80%8D",
@@ -57,5 +57,13 @@
     "ch01_hcv_mohw_202610",
     "ch01_hcv_hpa_qa6_ntpc_202602",
     "ch01_hcv_nhi_daa_coverage_20251201"
-  ]
+  ],
+  "source_reviewed_sha256": "3c5b8991f2e018b8026fdc6cf9534b1eda92ec9a030896f42b22ca5fc08d050b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "3c5b8991f2e018b8026fdc6cf9534b1eda92ec9a030896f42b22ca5fc08d050b",
+    "after_sha256": "0aea9d13c370d63bdd8a0b382956721011caf48d4bb8cd345af85ea9694d15af",
+    "before_reader_sha256": "64c6bd964f6453f2c25da078b60a9d029550ab977a416c0fe2ac59cd9f3e164e",
+    "after_reader_sha256": "15236976bf12606686dad1ee9d5e5a90e4280aeb3d4d277abebcf8ed423203be"
+  }
 }

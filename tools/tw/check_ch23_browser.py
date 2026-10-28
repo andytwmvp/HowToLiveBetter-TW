@@ -36,5 +36,5 @@ def check_ch23_browser(page,context,url,review):
     page.goto((ROOT/'dist/HowToLiveBetter-TW.html').as_uri(),wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     assert set(page.locator('[data-id^="TW-23-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
-    assert '第5條第1項' in page.locator('#TW-23-024').inner_text()
+    assert '第7條' in page.locator('#TW-23-024').inner_text()
     return ['第23章25條ID、五段標題、來源連結與人口數據一致','職訓書籤、成本搜尋、交錯練習限制、手機自查按鈕與無水平溢出','離線25條及學位待施行界線保留；未在本測試對外查詢來源網頁']

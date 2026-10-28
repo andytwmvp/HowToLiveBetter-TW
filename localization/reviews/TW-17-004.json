@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-004.md",
-  "target_sha256": "31dcca8bcaa82ba8233eafdd5320f939b139126cef38ec276ccf45eba506e7bb",
+  "target_sha256": "1d7e22611428dd206ad514577ea8d39e59b3791fd8b066f4ef8a3a4fb9e48c09",
   "source_checks": [
     {
       "url": "https://165.npa.gov.tw/",
@@ -50,5 +50,13 @@
     "2026年9月10,775件為全國電信網路詐騙行政受理件數，39.3億餘元為公告總財損，不是獨立被害人數、件均損失或個人受騙率。",
     "原引用110網址因UUID錯誤而回傳錯誤訊息頁；本次改用警政署正確110頁。舊來源物件仍保存在runtime供歷史追蹤，不再由本文引用。",
     "未辦理銀行止付、報案或司法追償；來源核對不構成警政、銀行或法律專業意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "31dcca8bcaa82ba8233eafdd5320f939b139126cef38ec276ccf45eba506e7bb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "31dcca8bcaa82ba8233eafdd5320f939b139126cef38ec276ccf45eba506e7bb",
+    "after_sha256": "1d7e22611428dd206ad514577ea8d39e59b3791fd8b066f4ef8a3a4fb9e48c09",
+    "before_reader_sha256": "681a5083b46b43a3e3b264fcf84ef5c9c9b89af07216d602b65e8f9cd9d8690e",
+    "after_reader_sha256": "31b658bcbe584e3f6d23f3bd12c8415de3835796b942142f5f696f2831ee6e3a"
+  }
 }

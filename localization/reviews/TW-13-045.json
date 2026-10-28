@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-045.md",
-  "target_sha256": "fd3267225e9b0cf0380f1199dd7c16c3d078005ea17f92f4363b50ed4c28fa3d",
+  "target_sha256": "3964172b4f8fd0fd38aa4118397b7b40b20549a62f3df467bb9f6fdb9c382099",
   "source_checks": [
     {
       "url": "https://www.wanfang.gov.tw/news/post/a194185837d8ed3",
@@ -41,5 +41,13 @@
   "limits": [
     "鈕扣電池、強力磁鐵與一般單枚硬幣並不相同，電池可能造成腐蝕性灼傷，兩顆以上磁鐵或磁鐵合併金屬物可能互相吸引造成穿孔。不要等孩子哭痛、發燒或排便才確認，也不要以在家喝水、吃蜂蜜、吞飯、催吐、瀉藥或伸手挖取代替緊急評估。是否可經內視鏡取出、需要哪些影像或後續觀察，須由兒科急診依物品、位置、時間與病況判斷，不一定每例都要手術。\n\n頻率限制：台灣醫院案例與玩具衛教沒有提供全國鈕扣電池／磁鐵吞食同定義分子及兒童暴露母數，不把所有異物或單院病例當發生率。海外指引是一般減傷原則，非台灣臨床成效或個案處方，獨立兒科毒物專業審查待取得。",
     "獨立醫療、職安、消防及法律專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "fd3267225e9b0cf0380f1199dd7c16c3d078005ea17f92f4363b50ed4c28fa3d",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "fd3267225e9b0cf0380f1199dd7c16c3d078005ea17f92f4363b50ed4c28fa3d",
+    "after_sha256": "3964172b4f8fd0fd38aa4118397b7b40b20549a62f3df467bb9f6fdb9c382099",
+    "before_reader_sha256": "8ab46a132b1013120e73a5bf9339f403881d11dc3998e3302e2140ffb77aa094",
+    "after_reader_sha256": "06b4c346fe6befdbfba70a53a9a63a578459c78240ef79f3c7bd1711d39e488b"
+  }
 }

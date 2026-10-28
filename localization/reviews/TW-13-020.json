@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-020.md",
-  "target_sha256": "399042245365b21c67f091a4f7680f8b01b514a17fc05d4edc867c4e1634fe63",
+  "target_sha256": "87f5249114c1557f57144b1313829f6070f787d4b9a47b7c69f7984f6ce7ae75",
   "source_checks": [
     {
       "url": "https://www.pcc-vghtpe.tw/active-detail1260.htm",
@@ -29,5 +29,13 @@
     "急救與疫苗資格由119派遣、主管機關與醫師依實際情境及最新制度判斷。",
     "健保署頁稱超過一半中毒在6歲以下，未附年份、範圍與資料母數，不能當臺灣現行全國占比或發生率；諮詢中心來電亦非全國事件分母。",
     "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "399042245365b21c67f091a4f7680f8b01b514a17fc05d4edc867c4e1634fe63",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "399042245365b21c67f091a4f7680f8b01b514a17fc05d4edc867c4e1634fe63",
+    "after_sha256": "87f5249114c1557f57144b1313829f6070f787d4b9a47b7c69f7984f6ce7ae75",
+    "before_reader_sha256": "7aaa9cec2d8f0c5a21ef27fa656d3184619579cdc727989ddab4b5163d3dd399",
+    "after_reader_sha256": "fe27fca30308b9b002ea4fc5d90706371bbadf2fd074fd8e06cf85813f580e7d"
+  }
 }

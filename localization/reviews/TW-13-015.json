@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-015.md",
-  "target_sha256": "c0c09f47c907af72c41a7bbe425aa39a1545ccb7f2f39e676a8d86ac90e6b566",
+  "target_sha256": "778c9dbd951c6a13b47f9d3ee458b6e1c838d95120bda3981c29db919995d432",
   "source_checks": [
     {
       "url": "https://www.hch.gov.tw/?aid=503&iid=490&page_name=detail&pid=0",
@@ -29,5 +29,13 @@
     "非個案醫療建議；不得以網站文字取代醫師與119派遣指示，費用及預後不可保證。",
     "新竹臺大是一名兒童案例，臺大2%至10%為全球食物過敏概述，皆非臺灣嚴重全身過敏發生率；未取得可比全國母數。",
     "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "c0c09f47c907af72c41a7bbe425aa39a1545ccb7f2f39e676a8d86ac90e6b566",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c0c09f47c907af72c41a7bbe425aa39a1545ccb7f2f39e676a8d86ac90e6b566",
+    "after_sha256": "778c9dbd951c6a13b47f9d3ee458b6e1c838d95120bda3981c29db919995d432",
+    "before_reader_sha256": "e4e13d7122b2ea79326917692786936d4996175e0ea57631eaef96191d2a08de",
+    "after_reader_sha256": "1fdecb7a2789bab8f4a71fcfd4a42a94d48020721f261ed893be5c471dc08697"
+  }
 }

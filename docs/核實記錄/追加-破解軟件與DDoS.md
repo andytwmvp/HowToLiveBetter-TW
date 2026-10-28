@@ -1,5 +1,3 @@
-> **繁體字形轉換稿，非台灣制度定稿。** 本頁保留原作的論述、數字與來源；中國大陸法規、補助、客服電話及醫療制度尚未完成台灣查核，不可直接當作台灣現行依據。來源引文亦經字形轉換，精確原文請查固定版本與所附來源。
-
 # 追加：第 11 節第 20 條（破解補丁、註冊機）、第 21 條（DDoS），以及節首導覽
 
 核實日期：2026-10-14。工具：Git Bash curl 直取（spp.gov.cn、npc.gov.cn、ga.sz.gov.cn、jtgl.beijing.gov.cn、ncac.gov.cn、jsfy.gov.cn、sdcourt.gov.cn 均可直連），python 去標籤後 grep 原文。WebSearch 用了 3 次，只用來定位頁面 URL，條目裡的數字全部按下面的官方原文核對。

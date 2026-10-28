@@ -46,12 +46,11 @@ class Metadata(HTMLParser):
 
 def check():
     spec=load_spec();counts=statistics();template=read('tools/og.html')
-    for value in [spec['title'],spec['edition'],*spec['headline'],*spec['topics'],spec['filter_label'],spec['notice']]:
+    for value in [spec['title'],*spec['headline'],*spec['topics']]:
         if html.escape(value) not in template: raise RuntimeError('模板文案未同步：'+value)
     for token in ('性價比','長壽防病','法律紅線','失業兜底','戀愛婚育','換回壽命'):
         if token in template: raise RuntimeError('舊圖片用語殘留：'+token)
-    for key,value in {'entries':counts['entries'],'grade-a':counts['A'],'links':counts['links']}.items():
-        if f'<b data-stat="{key}">{value}</b>' not in template: raise RuntimeError('封面統計過時：'+key)
+    if any(token in template for token in ('data-stat=', '原作統計不代表臺灣現況')): raise RuntimeError('封面不應呈現原作數字或維護狀態說明')
     md=read('README.md')
     for line in badge_lines(spec,counts):
         if line not in md: raise RuntimeError('徽章文案或來源範圍不同步')
@@ -73,7 +72,7 @@ def check():
     if report['image_sha256']!=digest(raw) or report['template_sha256']!=digest(template.encode()): raise RuntimeError('模板與實際圖片版本對不上')
     if report['spec_sha256']!=digest((ROOT/SPEC).read_bytes()): raise RuntimeError('圖片規格變更後尚未重新產圖')
     subprocess.run(['node','tools/sync-stats.mjs','--check'],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
-    print('PASS：臺灣圖片文案、六個徽章、實際替代文字值、PNG／模板／規格雜湊、原作統計及授權一致。')
+    print('PASS：臺灣圖片文案、三個徽章、實際替代文字值、PNG／模板／規格雜湊、原作統計及授權一致。')
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true');args=parser.parse_args()

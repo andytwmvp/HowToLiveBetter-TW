@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-042.md",
-  "target_sha256": "2d1f471224dfdbef59ba9a6fb4ee4b3b2cd4116e146c694097bba27a62873d8c",
+  "target_sha256": "6ae9c80916aea0f2c2707d8dc8a2c10740154c2f37922e45f065023d0e6caaf3",
   "source_checks": [
     {
       "url": "https://www.bosch-professional.com/binary/manualsmedia/o484989v21_160992AA7J_202410.pdf",
@@ -43,5 +43,13 @@
     "尚未取得職安、職業醫學、急救及法律專業獨立審閱；沒有可比全國手持砂輪機事故暴露分母。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "21bb1ce7dfb0f31f6298535a70b506f67ae516220d8bc19c24b0b5287650e649"
+  "upstream_text_sha256": "21bb1ce7dfb0f31f6298535a70b506f67ae516220d8bc19c24b0b5287650e649",
+  "source_reviewed_sha256": "2d1f471224dfdbef59ba9a6fb4ee4b3b2cd4116e146c694097bba27a62873d8c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2d1f471224dfdbef59ba9a6fb4ee4b3b2cd4116e146c694097bba27a62873d8c",
+    "after_sha256": "6ae9c80916aea0f2c2707d8dc8a2c10740154c2f37922e45f065023d0e6caaf3",
+    "before_reader_sha256": "d606f817b61ced5fb0dd825373e25db6963cd86d9ffaa135a4000d083b31f8a5",
+    "after_reader_sha256": "95692d9b3044bf414c7e9f1e7e6255815f3f01176edf01e1fc2a2aba31087cef"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-009.md",
-  "target_sha256": "d4724667ca1d78a64cb52107eec32e3be35699bde0affba5e160f8fa1a5ce3b7",
+  "target_sha256": "98e9d3fca2974ae8ad589ba131eb046cb193cabc801613c0e2fe4da37d777fcb",
   "source_checks": [
     {
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/",
@@ -43,5 +43,13 @@
     "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。",
     "AI輔助來源實質核對，不是心臟科、腎臟科、泌尿科、風濕科或藥師專業簽證；個案治療與檢驗/檢測給付尚待實際團隊判定。",
     "未取得者不冒稱全文、未以自發通報/特定樣本/海外指引數字推臺灣個人風險；未實際諮詢、申請、測量或核定產品安全。"
-  ]
+  ],
+  "source_reviewed_sha256": "d4724667ca1d78a64cb52107eec32e3be35699bde0affba5e160f8fa1a5ce3b7",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d4724667ca1d78a64cb52107eec32e3be35699bde0affba5e160f8fa1a5ce3b7",
+    "after_sha256": "98e9d3fca2974ae8ad589ba131eb046cb193cabc801613c0e2fe4da37d777fcb",
+    "before_reader_sha256": "f8e789e7ee63d2dd4fa5985976252264d9df2c347999e665e61d4dbc2f08ef8a",
+    "after_reader_sha256": "f050ca3290ab6b720b889e297063b9552c171cf91c8e32d6cb342164f2a16f49"
+  }
 }

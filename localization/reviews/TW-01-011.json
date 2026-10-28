@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-011.md",
-  "target_sha256": "2fbc7e405122659db190334dee21fc54a4aca2013ab1e410c52214fc9dbaff37",
+  "target_sha256": "5537eac81556572c4a470881bcdf170f53cd204cbcca1f00ec2da65b8fbf10b9",
   "source_checks": [
     {
       "url": "https://www.nlma.gov.tw/ch/legislation/law%26regusw/1424",
@@ -33,5 +33,13 @@
   "review_method": "直接核對國土署指引全文、基隆市兒童衛教及政府傷患處理指引；另檢視舊臺北頁發稿日期及其已不同的尺寸，社家署附件未實讀並記為待辦。",
   "limits": [
     "本次未能讀取社家署114年兒少事故傷害死因附件；不據未核讀檔案提供數值，也未驗證窗戶／陽台全國發生率或暴露分母。；公寓大廈設置原則有其適用法源與窗型，不能推成所有房屋、既有建築均須同一尺寸或同一施工方式。；防墜設施必須兼顧逃生與消防救援；未取得建築、消防、兒科或急救專業獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "2fbc7e405122659db190334dee21fc54a4aca2013ab1e410c52214fc9dbaff37",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2fbc7e405122659db190334dee21fc54a4aca2013ab1e410c52214fc9dbaff37",
+    "after_sha256": "5537eac81556572c4a470881bcdf170f53cd204cbcca1f00ec2da65b8fbf10b9",
+    "before_reader_sha256": "0285ad1f1d597e880b1b6d7e00276e3ceec6f5c842cccb89fde01d483d0b6f62",
+    "after_reader_sha256": "b1ab793dfa447d61c9494b6c465e2dfcd2e2e552fc39dfc341acb579afe3113c"
+  }
 }

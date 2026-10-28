@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-015.md",
-  "target_sha256": "072f7ac7b83c3b9e923dc630a4d9922ddcecc4f6a8acfe6631ab36ed159d062b",
+  "target_sha256": "304236fefbacbe6390ec9122c15552dccc974be476aefb9e53f324da01289ab8",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050031",
@@ -65,5 +65,13 @@
     "第90條差額公式只在職災致死亡或失能、雇主依法投保繳費且保險人核定事故時適用；其他情形不得直接套用。",
     "109及58是重大職災死亡行政統計，無工作者或工時分母，不是全部職業死亡、致死率或個人機率；調查通報數可能修正。",
     "AI核對未取得律師、勞動保險或殯葬專業獨立簽證；官方未承諾個案審理天數。"
-  ]
+  ],
+  "source_reviewed_sha256": "072f7ac7b83c3b9e923dc630a4d9922ddcecc4f6a8acfe6631ab36ed159d062b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "072f7ac7b83c3b9e923dc630a4d9922ddcecc4f6a8acfe6631ab36ed159d062b",
+    "after_sha256": "304236fefbacbe6390ec9122c15552dccc974be476aefb9e53f324da01289ab8",
+    "before_reader_sha256": "deb825537329134bde5f903f49201747fb2575e49a92c329a7e9553ac7878fee",
+    "after_reader_sha256": "b6587a8457d7459d74751eda8e903708754ab9df0ef55c5c81f6407fb9cbd7e3"
+  }
 }

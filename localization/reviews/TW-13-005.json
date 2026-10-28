@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-005.md",
-  "target_sha256": "5ca84d54efaed7abd2959e74cbf7bac011a016fd337a7b7f3495d7bb946f5a3f",
+  "target_sha256": "52b2c5bffc17f04d98a87a318eda3d91409513738f340170ea8d10dd011a2e67",
   "source_checks": [
     {
       "url": "https://lowvision.tpech.gov.tw/w/LowVision/knowledge_21040915144089462",
@@ -36,5 +36,13 @@
     "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
     "頻率限制：聯醫騎士黑矇案例不是全國發生率，未有同方法臺灣母體分母，不能由該例推論每位患者都有頸動脈狹窄或一定中風。",
     "AI輔助來源再核對，專業再審待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "5ca84d54efaed7abd2959e74cbf7bac011a016fd337a7b7f3495d7bb946f5a3f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "5ca84d54efaed7abd2959e74cbf7bac011a016fd337a7b7f3495d7bb946f5a3f",
+    "after_sha256": "52b2c5bffc17f04d98a87a318eda3d91409513738f340170ea8d10dd011a2e67",
+    "before_reader_sha256": "93d23a7721d973d9f3e51c39f2968bd8723f5595965bcdae73bfe76db505fff1",
+    "after_reader_sha256": "a84ce254e529e058753a687e26ed58bd4927ec6818b9bc272602b15b15d21343"
+  }
 }

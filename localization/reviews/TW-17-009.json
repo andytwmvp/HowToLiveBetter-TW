@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-009.md",
-  "target_sha256": "8698df243307c6263834781519458a0ef3d2046606d1b7cd76ea8ef100b5c7cb",
+  "target_sha256": "64204c5ffd7ab54b6cb4fc211abc1c8d8fa072a65b3af644c389024ecdb563a3",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-7375-9bd76-2530-1.html",
@@ -36,5 +36,13 @@
     "與公部門、金融及醫療機構實際辦理時須再確認最新資格、費用及地方法規；不因取得工程CI綠燈就視為專業簽證。",
     "AI輔助來源實質再核對，非醫療、復健、營養或法律專業簽證；仍待相應專業審查。",
     "未取得全文或附件的來源逐項記明，不以存活估計、行政件數或海外相對效果換算臺灣個人機率；費用與資格須個案核定。"
-  ]
+  ],
+  "source_reviewed_sha256": "8698df243307c6263834781519458a0ef3d2046606d1b7cd76ea8ef100b5c7cb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "8698df243307c6263834781519458a0ef3d2046606d1b7cd76ea8ef100b5c7cb",
+    "after_sha256": "64204c5ffd7ab54b6cb4fc211abc1c8d8fa072a65b3af644c389024ecdb563a3",
+    "before_reader_sha256": "8f28b469a6d62f41a44a2764d926777bf1c00de521a43f68977ab56233b8d719",
+    "after_reader_sha256": "bcbd750bdde99272728707a3ec53cd9554997187114fc9ff980543fb81087ce0"
+  }
 }

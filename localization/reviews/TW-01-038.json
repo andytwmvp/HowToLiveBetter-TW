@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-038.md",
-  "target_sha256": "a680b9c5c75f4f9b1287c3ecc57c3a98dc0bf239f2eafea05bae45f9ebfafa2b",
+  "target_sha256": "4238b7b002cedd38a0082be361aa6796abd8dae7980198cc66c6bca65f2fd03a",
   "source_checks": [
     {
       "url": "https://www.cdc.gov.tw/Category/MPage/tXBKgpeVZ9l9929TEdZGJw",
@@ -77,5 +77,13 @@
     "hiv_pep_cdc_2026",
     "ch01_prep_selfpay_20261008",
     "ch01_hiv_nidss_20261027"
-  ]
+  ],
+  "source_reviewed_sha256": "a680b9c5c75f4f9b1287c3ecc57c3a98dc0bf239f2eafea05bae45f9ebfafa2b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a680b9c5c75f4f9b1287c3ecc57c3a98dc0bf239f2eafea05bae45f9ebfafa2b",
+    "after_sha256": "4238b7b002cedd38a0082be361aa6796abd8dae7980198cc66c6bca65f2fd03a",
+    "before_reader_sha256": "6bb496badeab550e26b16d5bac219fa3209c4ee3016d8cb913b58a39f7d077da",
+    "after_reader_sha256": "e641ad6463f87350fb3c6f8ae2b94782cff0af21c9510926d5b87369160eb983"
+  }
 }

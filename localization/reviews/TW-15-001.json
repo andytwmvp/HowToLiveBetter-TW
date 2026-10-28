@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-001.md",
-  "target_sha256": "e443a30160e132356e3949e6b0232baffe779be39d6c4e3bb0a662c052bc269d",
+  "target_sha256": "bef1519b99c4cfcd9f56819c988e4f2d27b71978a556dcd37f9fa28e16e785cc",
   "source_checks": [
     {
       "url": "https://www.ey.gov.tw/File/43BC094940995CFC?A=C",
@@ -36,5 +36,13 @@
     "所有統計、行政案件或單一案例均按資料原始範圍與事件定義呈現；未有適當暴露分母時不推算個人發生率。",
     "未取得獨立法律、消費、租屋服務、建築消防或統計專業者審閱；本批AI來源核對不構成個案法律意見、建物安全鑑定或消防專業簽證。",
     "法規適用須核對締約時點、現行條文及個案事實；地方服務資格、電話和查詢入口可能更新，使用前由官方窗口確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "e443a30160e132356e3949e6b0232baffe779be39d6c4e3bb0a662c052bc269d",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e443a30160e132356e3949e6b0232baffe779be39d6c4e3bb0a662c052bc269d",
+    "after_sha256": "bef1519b99c4cfcd9f56819c988e4f2d27b71978a556dcd37f9fa28e16e785cc",
+    "before_reader_sha256": "9ef2f27ea21686edac6422909f2c34bc0517f6ff3e266ed32292805504b1424d",
+    "after_reader_sha256": "cb3a3f7e69e87995c34772057af7f24bf51eaf171a4f73fce1db81c7fcdd079e"
+  }
 }

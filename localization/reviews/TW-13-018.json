@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-018.md",
-  "target_sha256": "af27be3019ebfd4ba778d86ae8a132ba7033a7e1c93e3c351671827c1f3acf18",
+  "target_sha256": "744b97e02c2a2ecbee92d6bf2870c2ba30ef7610c5623b6feac1eb2fa5214f6d",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-2783-1eb08-2951-1.html",
@@ -34,5 +34,13 @@
   "limits": [
     "健保署居家急救文字雖提及乾木棒，但並不代表所有木棒具足夠絕緣能力，尤其**高壓、電弧、未知電壓、潮濕現場不可套用**。不潑水、不打腳底、不捏人中、不用人身直接拖離帶電設備；復原清醒但有心臟或呼吸症狀仍要就醫。電氣設備檢修及斷電須由有資格者依安全規範處理。 頻率限制：台電停電事故件數或全體職災死亡，不是居民觸電、電燒傷或某電壓致死率；本次未取得全國同定義觸電事件及曝險分母，保留資料不足。 **掉落或外露電線由台電1911派員處理；有人受傷先119，安全隔離前不接觸傷者或設備。**木棍、橡皮手套及「110伏特可觀察」的舊概述不能作一般民眾的安全測試；不自行判電壓或用沒外傷保證無深部傷害。警戒位置也不能讓自己進入帶電區。",
     "獨立急救、醫療及相關專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "af27be3019ebfd4ba778d86ae8a132ba7033a7e1c93e3c351671827c1f3acf18",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "af27be3019ebfd4ba778d86ae8a132ba7033a7e1c93e3c351671827c1f3acf18",
+    "after_sha256": "744b97e02c2a2ecbee92d6bf2870c2ba30ef7610c5623b6feac1eb2fa5214f6d",
+    "before_reader_sha256": "c9bfffbb5234cc4d86e6309f63105a7ef4fe833e4aab4c394689443610a4c4a2",
+    "after_reader_sha256": "f0ee15832c9abf7be4089b819110dd114544d2fbbc09bbdfb672b266828dac82"
+  }
 }

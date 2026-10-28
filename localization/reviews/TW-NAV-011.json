@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/guides/職業安全與健康.md",
-  "target_sha256": "ffe41ccf590ce410e154c3837ff3991a95484c04b4057a14d53b9f00f540b3f8",
+  "target_sha256": "b4257122ce500ff7a7c9a0865edf194216f9eaefbb6133f0eeedeae896ddb4f1",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
@@ -62,5 +62,13 @@
   "limits": [
     "本文是可執行的獨立職安入門指引，不代替現場風險評估、合格操作訓練、職業醫學或法律意見，也不是職安制度、各行業證照與健康管理的完整百科。各作業須查主管機關及適用子法；醫療、輻射、礦業、水域等特殊作業另有規範，不把通用清單當許可。\n\n時效：職安法2025-12-19修正公布，行政院2026-06-09令定2026-07-01施行；本篇依已施行內容。設施規則2026-06-30修訂主要自7月1日施行，21-3、57、116、185-1至185-4等指定條文為2027-01-01，不能混成全部已施行。熱危害公告只讀可見原文，附件全文未作本輪專業審查；沒有為每個情境估個人發生率或保證防護零風險。",
     "AI來源實質核對不是心理、精神醫療、職醫、勞檢、救護或法律專業簽證；未實際撥打專線、報案或施作現場評估；不能保證通話、治療或救援結果。"
-  ]
+  ],
+  "source_reviewed_sha256": "ffe41ccf590ce410e154c3837ff3991a95484c04b4057a14d53b9f00f540b3f8",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "ffe41ccf590ce410e154c3837ff3991a95484c04b4057a14d53b9f00f540b3f8",
+    "after_sha256": "b4257122ce500ff7a7c9a0865edf194216f9eaefbb6133f0eeedeae896ddb4f1",
+    "before_reader_sha256": "ea12ed46e48988d7c2cd6d53d93fcf6ef2ce5d148e2da480159cc81a86e3b83a",
+    "after_reader_sha256": "d8995d4d6d72f38cbcddb882417adea3dff95308470b58f15c0c42ab0bad6a23"
+  }
 }

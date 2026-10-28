@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-013.md",
-  "target_sha256": "36dc2301356b826ab23298577556e2492b607119e2bccc8af00e5987e4180529",
+  "target_sha256": "d9eafd5f059975c7941023fae9171e81f04a349ac70dc58bfdffc3f247a9d2a3",
   "source_checks": [
     {
       "url": "https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t601790",
@@ -42,5 +42,13 @@
     "不同藥品、治療窗與劑型不能機械替代；供貨公告會變動。出現嚴重副作用或急性惡化須立即就醫，網購處方藥可能涉及偽劣及療效風險。",
     "不可因仿單或平台列有替代，就自行拆緩釋錠、換成不同劑型、借親友處方藥或網購藥。第26條替代規範與第22條慢箋用量分開；2024-06-20修正發布的第22條於2024-08-01施行，不是2026新替代制度。原健保處方頁本輪只見入口，改以實讀法規支持具體條件。",
     "原始研究及個案醫療、藥事、法律與核付判斷仍待獨立專業審查。"
-  ]
+  ],
+  "source_reviewed_sha256": "36dc2301356b826ab23298577556e2492b607119e2bccc8af00e5987e4180529",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "36dc2301356b826ab23298577556e2492b607119e2bccc8af00e5987e4180529",
+    "after_sha256": "d9eafd5f059975c7941023fae9171e81f04a349ac70dc58bfdffc3f247a9d2a3",
+    "before_reader_sha256": "bc1ae816d815b41a49d3f6c3eb3958367c9c048fe2545c13e1d213beeff7e7c9",
+    "after_reader_sha256": "7ac61e0548c01508989de201504189c3374cda5fc7a4ca4e637135689201b799"
+  }
 }

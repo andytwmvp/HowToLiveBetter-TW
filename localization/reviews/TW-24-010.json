@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-21",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-010.md",
-  "target_sha256": "9ce19e202f32f434d60b54f276c4af89e4e3bef95fadb61822e4d5fc25d24e8e",
+  "target_sha256": "811c178c5ad870dd8a7fb8277f24c22112502f306da2d2744503bc9939496992",
   "source_checks": [
     {
       "url": "https://www.gov.tw/News_Content_26_677435",
@@ -51,5 +51,13 @@
     "AI輔助逐條實讀來源，非醫師、牙醫、社工或律師專業簽證；個案資格、療程、期限與核付待專業確認。",
     "未取得同定義全臺過失、核准、植牙失敗或錯收發生率；行政件數與國際結果不能當臺灣個人機率。",
     "法規庫整編截止2026-10-08，之後公報與全部地方規定未全核；未實際申請、就醫、調解、調閱個資或核付。"
-  ]
+  ],
+  "source_reviewed_sha256": "9ce19e202f32f434d60b54f276c4af89e4e3bef95fadb61822e4d5fc25d24e8e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "9ce19e202f32f434d60b54f276c4af89e4e3bef95fadb61822e4d5fc25d24e8e",
+    "after_sha256": "811c178c5ad870dd8a7fb8277f24c22112502f306da2d2744503bc9939496992",
+    "before_reader_sha256": "166d298dfedc10296c21d19f0cf2f74dbac491a7dd79f06c40e48c6fc3c3e16c",
+    "after_reader_sha256": "2825f1791f8088f4148ec166edbff70f111f4dc4a9f012aa0370679536f91e5a"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-022.md",
-  "target_sha256": "0f03df8f8619252dfb23fc328c04efb448b6261f6204585aff05e30af3301f27",
+  "target_sha256": "928d1f3347b7db8e8932991f8a4d6ea626aef149fed57477bab5fa06dd243ede",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10751&sid=18379",
@@ -48,5 +48,13 @@
   "limits": [
     "退燒藥不能取代熱中暑降溫，不用酒精擦拭，也不讓患者獨自回去工作。台灣官方資料集為部分醫院監測人次，涵蓋熱中暑、熱衰竭等多類診斷，不能當全部重症病例或全人口發生率；本輪只讀資料說明與截至1151011標籤，CSV未取回，未報總量。兩個原國健署頁本輪取回失敗保留前審閱日期，另用可讀臺大及NIOSH段落支持，不採舊衛教停止流汗作必要條件。",
     "獨立醫療、心理、職安、消防及法律專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "0f03df8f8619252dfb23fc328c04efb448b6261f6204585aff05e30af3301f27",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0f03df8f8619252dfb23fc328c04efb448b6261f6204585aff05e30af3301f27",
+    "after_sha256": "928d1f3347b7db8e8932991f8a4d6ea626aef149fed57477bab5fa06dd243ede",
+    "before_reader_sha256": "a53e6046fd5b75d222267a0f7a4e3acedc601988a24b0a4b51eec883d911aa09",
+    "after_reader_sha256": "329ee2dac010660e726efa6d4db501a104accc2ba19143ac33b2fa3fc9e6e40e"
+  }
 }

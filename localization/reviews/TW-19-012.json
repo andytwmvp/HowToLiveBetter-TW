@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-012.md",
-  "target_sha256": "dc7f6da5462d15f3b992fee386d352654f03c5d8543f61e0f1bb13921532bf8b",
+  "target_sha256": "2a097316397a69f1d6936f883af9ae7ac4f6b34be4be6b6e70158e22f5c28d9d",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
@@ -34,5 +34,13 @@
   "review_method": "直接閱讀可取得的官方現行法規、主管機關統計／服務公告及本篇對應條文，記錄資料定義、期間、範圍和未取得的分母；AI來源核對不等於專業審查。",
   "limits": [
     "AI輔助來源再核對，未取得獨立心臟科、神經科、職業醫學或法律專業簽證；急症先依119及醫療人員處置，工作相關因果及給付須由醫師與主管機關按個案證據判斷。"
-  ]
+  ],
+  "source_reviewed_sha256": "dc7f6da5462d15f3b992fee386d352654f03c5d8543f61e0f1bb13921532bf8b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "dc7f6da5462d15f3b992fee386d352654f03c5d8543f61e0f1bb13921532bf8b",
+    "after_sha256": "2a097316397a69f1d6936f883af9ae7ac4f6b34be4be6b6e70158e22f5c28d9d",
+    "before_reader_sha256": "b97d7ec153d6d392279ab5796c79cced72659d6a65ac4708018376a41b242ae3",
+    "after_reader_sha256": "325781300bc78e5563791f514556591d92b38a9bb75a10f17eec01365878e94f"
+  }
 }

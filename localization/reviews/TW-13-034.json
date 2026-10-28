@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-034.md",
-  "target_sha256": "44d31a4f709c089e0b53e804f23dcd7ae80f73ccf102c2d3cf8ec2de0e5a9363",
+  "target_sha256": "c60427291889320d8ed63064531068dac7457b7a39658e5078b5793071785793",
   "source_checks": [
     {
       "url": "https://www.cdc.gov.tw/En/Category/ListContent/kpBYBdd1WKIy8ATJWSWKww?uaid=kEDGe_ZPotUYmqikBePlHQ",
@@ -41,5 +41,13 @@
   "limits": [
     "**不要塗油、凡士林、酒精或精油逼蟲退出，也不能點火、壓爆或用指甲挖出**。蜱蟲與傳播恙蟲病的恙蟎不相同，兩類疾病不能混算；4至10月是活動較明顯的季節，並非其餘月份絕無風險。SFTS、萊姆病等疾病是否存在感染風險由醫師評估，不能因網路照片自行確診。2026年單次報告新增1例沒有蜱叮咬總人次的母數，**不能推估每個人的感染機率**。\n\n本輪重讀台灣疾管署疾病介紹與Q&A正文，並以美國CDC一般移除原則交叉核對；未移植美國蜱種分佈、萊姆病預防用藥或叮咬時數門檻。主要活動季節與單次新增1例公告都不能當全國叮咬發生率；國外或跨地區致死率概述也不作台灣個人風險。",
     "醫療、防疫、救護、法律及社工獨立專業審閱尚待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "44d31a4f709c089e0b53e804f23dcd7ae80f73ccf102c2d3cf8ec2de0e5a9363",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "44d31a4f709c089e0b53e804f23dcd7ae80f73ccf102c2d3cf8ec2de0e5a9363",
+    "after_sha256": "c60427291889320d8ed63064531068dac7457b7a39658e5078b5793071785793",
+    "before_reader_sha256": "2077b946d444857a2d46b2a5d863ae7afc1e6dc000e7778f69eb8897bfb206e1",
+    "after_reader_sha256": "c0c898b92fd4b3e456ec6354c33074440c0f300b1deaa02a647101e5f7324d96"
+  }
 }

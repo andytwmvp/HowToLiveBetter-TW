@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-16",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-017.md",
-  "target_sha256": "e55c3c6358295711e6f6bedfb452d8bcba6640da40b2cfcea2f2f96020cf4831",
+  "target_sha256": "f72421cde606f4fc1f6ac6f988578e1bc6ea65e512016afe017a2de5d454f946",
   "source_checks": [
     {
       "url": "https://pubmed.ncbi.nlm.nih.gov/31556629/",
@@ -17,5 +17,13 @@
   ],
   "localization_changes": "加入材料反例與基礎能力條件，區分交錯、區塊及分心多工。",
   "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
+  "source_reviewed_sha256": "e55c3c6358295711e6f6bedfb452d8bcba6640da40b2cfcea2f2f96020cf4831",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e55c3c6358295711e6f6bedfb452d8bcba6640da40b2cfcea2f2f96020cf4831",
+    "after_sha256": "f72421cde606f4fc1f6ac6f988578e1bc6ea65e512016afe017a2de5d454f946",
+    "before_reader_sha256": "0eb15ebb5c9ebb8b48f89de1015c0011b5520ad7daf3c3da2480e6a047b55226",
+    "after_reader_sha256": "2b5baca8c7d85d5c3997715e3b699f6ece0ed96d9a6b9eaff10a14e3f11254fd"
+  }
 }

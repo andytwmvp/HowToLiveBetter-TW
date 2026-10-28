@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-046.md",
-  "target_sha256": "35178cbfc7c1aac8f2bd0f92925104c3a1b1a38f9dc3e0f1286ac0dcb8ec53fb",
+  "target_sha256": "0cc8296e73307aa83b72c057eaa7cc59f57cfeaf4ee6c3d6a4dc2482691d4106",
   "source_checks": [
     {
       "url": "https://dpt.cch.org.tw/layout/layout_3/qa.aspx?ID=7327&p=4",
@@ -34,5 +34,13 @@
   "limits": [
     "酒味不能用來排除腦中風、頭傷、低血糖或其他藥物中毒，務必由醫護鑑別。**側臥不取代CPR**：若無正常呼吸或只有不正常喘息，必須依119指示急救。皮膚冰冷、反覆嘔吐等要警覺惡化；不能放人『睡過去』。臺灣急救電話為119而非原作120。現有兩份臺灣醫院公開衛教並沒有全國急性酒精中毒的發生率母數，不能據此創造固定年發生數。\n\n本輪重讀彰基HTML與松德介紹頁，後者酒精中毒PDF僅見入口，未冒稱讀全文。美國NIAAA只採持續吸收與危急原則，不移植美國杯數、族群風險或發生率；台灣急性中毒分母仍不足。",
     "獨立醫療、職安、消防及法律專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "35178cbfc7c1aac8f2bd0f92925104c3a1b1a38f9dc3e0f1286ac0dcb8ec53fb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "35178cbfc7c1aac8f2bd0f92925104c3a1b1a38f9dc3e0f1286ac0dcb8ec53fb",
+    "after_sha256": "0cc8296e73307aa83b72c057eaa7cc59f57cfeaf4ee6c3d6a4dc2482691d4106",
+    "before_reader_sha256": "728767e35cc2fba7fa6f6c3ab42e0f09874c99ff6b80ac4e97d39eebfd8715a7",
+    "after_reader_sha256": "e1217ebcf541486add286d87fb7e6142f1ff1e233e9224e60470ebb5229d69c0"
+  }
 }

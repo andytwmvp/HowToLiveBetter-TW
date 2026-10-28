@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2026-11-02",
   "target_path": "locales/zh-TW/book/ch01/TW-01-020.md",
-  "target_sha256": "94a31a7dbce083747600975e286940aeab95f22be824fe647dbae0b9cc6618b2",
+  "target_sha256": "319af5861fd33592d6810d929b2bc7812617ba7279c6daa312424d2e13eb9c77",
   "source_checks": [
     {
       "url": "https://mohw.gov.tw/cp-16-88084-1.html",
@@ -44,5 +44,13 @@
     "AI輔助官方資料核對，未取得感染科、家醫或疫苗專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "76a29021aabfe7e55879a7fd503df57c0495940e17a2bd3b23f2c758638ddc8f"
+  "upstream_text_sha256": "76a29021aabfe7e55879a7fd503df57c0495940e17a2bd3b23f2c758638ddc8f",
+  "source_reviewed_sha256": "94a31a7dbce083747600975e286940aeab95f22be824fe647dbae0b9cc6618b2",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "94a31a7dbce083747600975e286940aeab95f22be824fe647dbae0b9cc6618b2",
+    "after_sha256": "319af5861fd33592d6810d929b2bc7812617ba7279c6daa312424d2e13eb9c77",
+    "before_reader_sha256": "dbb99a4739e0f9475e7a970876315b7a24487f75b7ade4a1b80a5165db0e5c60",
+    "after_reader_sha256": "01b1aa95dc3124964cace8bc3258373057879645e84274e65fc94ee0eace13aa"
+  }
 }

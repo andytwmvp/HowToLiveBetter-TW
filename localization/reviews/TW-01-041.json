@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-041.md",
-  "target_sha256": "c95e055b1b6289ccbbe6da92e14b62e1da6f9ffa75263f67d839f3e5b6b27d09",
+  "target_sha256": "80aa9c881c7c05d1e7eeb358ce5dba2e4abee00f7d634edcc0c98b508dd4ab2d",
   "source_checks": [
     {
       "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/topic/18663.html",
@@ -43,5 +43,13 @@
     "未取得山域搜救、急診／高山醫學及戶外安全專業者對本篇的獨立審閱；本指引不取代現場搜救及醫療處置。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "992bad24c60b44660ac3d00c11a8f56f9ae737f34592e1c4a96007ca262383d3"
+  "upstream_text_sha256": "992bad24c60b44660ac3d00c11a8f56f9ae737f34592e1c4a96007ca262383d3",
+  "source_reviewed_sha256": "c95e055b1b6289ccbbe6da92e14b62e1da6f9ffa75263f67d839f3e5b6b27d09",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c95e055b1b6289ccbbe6da92e14b62e1da6f9ffa75263f67d839f3e5b6b27d09",
+    "after_sha256": "80aa9c881c7c05d1e7eeb358ce5dba2e4abee00f7d634edcc0c98b508dd4ab2d",
+    "before_reader_sha256": "e922af2caa9606d32939d0cc85280025350a7c1e3d5a6bbcd279cf6fd997f119",
+    "after_reader_sha256": "841e5668a87d80f8343fdcf0285843e08ff8895137921d3d46cf7d24b14ca448"
+  }
 }

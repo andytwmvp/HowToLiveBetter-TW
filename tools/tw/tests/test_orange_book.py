@@ -34,7 +34,7 @@ class OrangeBookTests(unittest.TestCase):
   self.assertEqual(coverage['publication_completed_entries'],report['publication_completed_entries'])
  def test_official_attribution_without_pdf_or_image_republication(self):
   text=(ROOT/PATH).read_text()
-  self.assertIn('不複製原書PDF',text)
+  self.assertIn('原書不受本專案 CC BY 4.0 授權涵蓋',text)
   self.assertIn('七天',text);self.assertIn('三公升',text)
   self.assertIn('一至三天',text);self.assertIn('不能當成',text)
   self.assertIn('心理',text);self.assertIn('查證',text)

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-010.md",
-  "target_sha256": "b71f1776e9911a32ef9c979568f4db65f214f3acadb6d8c81e1ff18b1b60b981",
+  "target_sha256": "1d21fe70af5bad0ccdbf0b3d37d807a9e4d11d39e55a4af1f0ca10840d13ad0b",
   "source_checks": [
     {
       "url": "https://support.apple.com/zh-tw/102631",
@@ -41,5 +41,13 @@
   "limits": [
     "Apple程序依所在地、帳號狀態及支援頁更新；本篇不外推至其他服務。資料可能含第三人隱私、契約或財產權，未判斷任何個案存取權。",
     "截至查閱日，法規資料庫將個資法2025年部分修正標示為尚未生效且施行日未定；AI輔助來源核對不等於律師或資安專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "b71f1776e9911a32ef9c979568f4db65f214f3acadb6d8c81e1ff18b1b60b981",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "b71f1776e9911a32ef9c979568f4db65f214f3acadb6d8c81e1ff18b1b60b981",
+    "after_sha256": "1d21fe70af5bad0ccdbf0b3d37d807a9e4d11d39e55a4af1f0ca10840d13ad0b",
+    "before_reader_sha256": "5cd2fbdaed9904a6d4bfd5adbd411a8e9c181b20a639cf93a7f8e365e9d4e917",
+    "after_reader_sha256": "b25952c86f5c663f7fe188316dc48ec9f4878ae8bd7f781480183467fafbd549"
+  }
 }

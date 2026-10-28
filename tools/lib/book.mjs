@@ -1,5 +1,4 @@
-// README 的結構解析和文件清單：EPUB（tools/epub）和 PDF（tools/pdf）兩套構建共用。
-// 只認 README 裡的結構，不維護文件名單——新增一節或一篇長文，兩套構建都自動跟上。
+// 原作預覽匯出共用的章節清單與連結設定；臺灣版匯出只讀共用 runtime。
 import { readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,6 +12,7 @@ export const SITE = GUIDE;
 // 封面與電子書共用本地文案規格，不再以舊書名綁定 README 的解析。
 const imageCopy = JSON.parse(readFileSync(resolve(ROOT, 'localization/image-copy.zh-TW.json'), 'utf8'));
 export const TITLE = imageCopy.title;
+export const SOURCE_TITLE = 'HowToLiveBetter｜原作繁體中文對照預覽';
 export const SOURCE_GUIDE = `${GUIDE}#source-preview`;
 
 // 一律按 LF 交給各套構建：Windows 上 core.autocrlf=true 檢出的是 CRLF，離線版腳本
@@ -39,26 +39,33 @@ export function stripBackLink(md) {
   return md.replace(/^\[← 回總目錄\]\([^)]*\)\s*\n/, '');
 }
 
-// README 裡從某個標題到下一個標題之間的一段
+// 原作預覽只依 manifest 的來源章節清單建目錄；讀者入口 README 不承載原作書籍結構。
 export function readBook() {
   const readme = read('README.md');
-  const lines = readme.split('\n');
-  const between = (from, to) => {
-    const a = lines.findIndex(l => l.startsWith(from));
-    const b = lines.findIndex((l, i) => i > a && l.startsWith(to));
-    if (a < 0 || b < 0) throw new Error(`README 裡找不到 ${from} 到 ${to} 這一段`);
-    return lines.slice(a, b).join('\n');
-  };
-  const descriptionHeading = lines.find(l => l === `# ${TITLE}` || l.startsWith(`# ${TITLE}｜`) || l === '# 高性價比人生指南');
-  if (!descriptionHeading) throw new Error('README 找不到對應圖片文案規格的書名標題');
-  const description = between(descriptionHeading, '[![')
-    .split('\n').slice(1).map(l => l.replace(/<[^>]+>/g, '').trim()).filter(Boolean).join('');
-  const frontMd = between('## 臺灣版怎麼讀', '## 目錄');
-  const contentsMd = between('## 目錄', '## 正文')
-    .split('\n\n').filter(p => !p.includes('index.html')).join('\n\n');
-  const bookFiles = unique([...contentsMd.matchAll(/\]\((book\/[^)#]+\.md)\)/g)].map(m => m[1]));
-  const docFiles = unique([...readme.matchAll(/\]\((docs\/[^)#/]+\.md)\)/g)].map(m => m[1]));
-  if (bookFiles.length === 0) throw new Error('README 目錄裡沒找到 book/ 文件');
+  const sourceManifest = JSON.parse(read('localization/manifest.json'));
+  const chapters = [...sourceManifest.chapters].sort((a, b) => a.chapter - b.chapter);
+  const bookFiles = unique(chapters.map(chapter => chapter.display_path));
+  if (bookFiles.length !== chapters.length || bookFiles.length === 0) {
+    throw new Error('來源 manifest 的章節清單缺少檔案路徑或有重複項');
+  }
+  const contentsMd = [
+    '## 目錄',
+    '',
+    `本目錄列出原作章節，方便查找、比對原文。要看臺灣版，請參考[閱讀說明](${GUIDE}#reading)。`,
+    '',
+    '| 章節 | 原作章名 | 來源檔 |',
+    '| --- | --- | --- |',
+    ...chapters.map(chapter => `| ${chapter.chapter} | ${chapter.source_title_zh_tw} | [原作第${chapter.chapter}章](${chapter.display_path}) |`),
+  ].join('\n');
+  const description = '原作的繁體中文對照預覽，保留原作內容與用語，方便查找、比對來源。';
+  const frontMd = `## 原作來源說明\n\n${description}\n\n要閱讀臺灣版，請參考[閱讀說明](${GUIDE}#reading)。`;
+  // 原作章節連結的長文仍可在來源預覽查閱；內部核對紀錄不列為閱讀附錄。
+  const docFiles = unique(bookFiles.flatMap(path => {
+    const chapter = read(path);
+    return [...chapter.matchAll(/\]\((?:\.\.\/)?(docs\/[^)#\s]+\.md)\)/g)]
+      .map(match => match[1])
+      .filter(doc => !doc.includes('/核實記錄/') && !doc.includes('來源核實'));
+  }));
   return { readme, description, frontMd, contentsMd, bookFiles, docFiles };
 }
 

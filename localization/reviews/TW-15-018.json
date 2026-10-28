@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-018.md",
-  "target_sha256": "46fb7aa7e5aeaaa7924e4013995c469923c561d1ddbe727ac276fe710fbff406",
+  "target_sha256": "89826ad4a960e50a09ae823a4303e621bc2526f6a9d2fad79dad8cb6d0faf112",
   "source_checks": [
     {
       "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
@@ -53,5 +53,13 @@
     "青安3.0採行政院2026-07-16的HTML政策說明；未以未讀附件推定各區房價上限或所有舊貸轉案細節。實際利率、資格及成數須由銀行核定。",
     "本章18個主題原本已有結構化草稿，完成整合不重複增加主題覆蓋。沿用既有8個來源ID的網址但不覆寫舊登錄內容；14個新來源ID不代表其他章節引用的主張全部完成審閱。",
     "未改動既有105項閱讀內容及其來源、原作正文、圖片或兩份授權，不發布完整電子書或部署網站。"
-  ]
+  ],
+  "source_reviewed_sha256": "46fb7aa7e5aeaaa7924e4013995c469923c561d1ddbe727ac276fe710fbff406",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "46fb7aa7e5aeaaa7924e4013995c469923c561d1ddbe727ac276fe710fbff406",
+    "after_sha256": "89826ad4a960e50a09ae823a4303e621bc2526f6a9d2fad79dad8cb6d0faf112",
+    "before_reader_sha256": "92cf4f3f4610859962de4b98cbbe8eb7597513297d87b34e0286739052947e2f",
+    "after_reader_sha256": "fac61711303925da4b93bfdb4bd76fbe35fe5f4b4ae6e5549c1432431d3eaabb"
+  }
 }

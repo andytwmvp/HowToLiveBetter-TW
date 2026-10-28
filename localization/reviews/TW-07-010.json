@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-010.md",
-  "target_sha256": "1085b88154dcb64746c91455d6770ad56718a7392d080d355936ecbd3d07acfd",
+  "target_sha256": "5b873937c24e4869ee5411fba7af136f31e10604291c2eb1cf0da6bc1371a0a4",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078",
@@ -37,5 +37,13 @@
     "未取得臺灣醫療財務困難的可比較全國分母或專業研究，故不提供個人風險率。",
     "AI輔助核對政府頁面與法規，非獨立醫療、健保、保險或法律專業簽證。",
     "重大傷病免部分負擔的範圍須看核准證明、有效期間及醫師判定，並非所有就醫都適用；商業保險仍按保單條款審核，和健保資格不同。院內社工協助也不保證每筆費用都有補助。留存診斷、費用明細、收據與申請紀錄；不確定的費用或治療選項請直接向醫療團隊與健保窗口確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "1085b88154dcb64746c91455d6770ad56718a7392d080d355936ecbd3d07acfd",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1085b88154dcb64746c91455d6770ad56718a7392d080d355936ecbd3d07acfd",
+    "after_sha256": "5b873937c24e4869ee5411fba7af136f31e10604291c2eb1cf0da6bc1371a0a4",
+    "before_reader_sha256": "0529480f4db5019bb2cfb783e192a3405ee171227b286c1cfae53dd4bd038cd0",
+    "after_reader_sha256": "42ff6329a5909a072e3d5e81ed6dc1a547b973aa0ecc6a28656b54499f864d22"
+  }
 }

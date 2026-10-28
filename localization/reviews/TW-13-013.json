@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-013.md",
-  "target_sha256": "018ff405a6bc6ae4409007723b040735006dc17a2b7f9a400b9802835b258873",
+  "target_sha256": "f5ab2e7ae625ece4eba4c6ab528c9a17e273f0e55585ac619a676a6afdccd36a",
   "source_checks": [
     {
       "url": "https://www.cdc.gov.tw/Category/QAPage/3xoWx2U2FGpCjF752cmKGA",
@@ -62,5 +62,13 @@
   "limits": [
     "如果大量出血、臉部或手部深層受傷、麻木或呼吸異常，立即急診或撥119。不要追逐或自己捕捉疑似染病動物；動物留置十日觀察不表示傷者可在家等十日而延後就醫。家犬貓與野生動物暴露風險不能混為一談，境外咬傷也不能套用臺灣犬貓監測資料。原作『貓狗破皮一律打疫苗』不適用臺灣。\n\n台灣事件頻率：本輪讀取並目視防檢署2026年9月監測PDF第1、2、5頁指定內容，**2026年1至9月動物狂犬病抗原監測合計1,146件、陽性41件**，當年陽性為39件鼬獾、2件白鼻心；合計送驗類別含犬、貓、蝙蝠、食肉目與其他野生動物及邊境／其他動物，不是人類感染或全體動物隨機調查。2026-02-10新聞所載2023年至2026年1月2,597件、137件陽性只保留作不同期間摘要，不相加或跨口徑比較；兩者都不能當成人被咬後的感染機率。本輪未驗證整份PDF各歷年地域圖或個案微資料。",
     "醫療、防疫、救護、法律及社工獨立專業審閱尚待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "018ff405a6bc6ae4409007723b040735006dc17a2b7f9a400b9802835b258873",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "018ff405a6bc6ae4409007723b040735006dc17a2b7f9a400b9802835b258873",
+    "after_sha256": "f5ab2e7ae625ece4eba4c6ab528c9a17e273f0e55585ac619a676a6afdccd36a",
+    "before_reader_sha256": "6cef4d79c85d37e6f66ac8838f49c1a5a1a1fb092440c6dd612922631b22eb09",
+    "after_reader_sha256": "f41162ad080e4b61a703c341f12be0761d54f280b7197bed2e14def43ae13237"
+  }
 }

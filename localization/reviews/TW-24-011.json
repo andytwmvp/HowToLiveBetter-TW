@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-011.md",
-  "target_sha256": "4ea669e706438c12da8b98693ec6c0522aba22c5fb80193121470882ffb6381c",
+  "target_sha256": "dd0a6bb869d494755e41b27b569afb7aab0ea0ebaab61d412955871546ebd24d",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
@@ -27,5 +27,13 @@
   "limits": [
     "本輪未取得醫療餽贈／索取財物的全國個人暴露分母，不估算發生率；各院所的倫理、政風及員工規則不同，不把一般感謝行為概括定罪。",
     "公務員廉政倫理規範依任用、俸給、職務關係及例外條件適用；個案責任須由院方、政風、主管機關或法律專業人士審查。尚待醫療法制、院所政風與醫療倫理專業審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "4ea669e706438c12da8b98693ec6c0522aba22c5fb80193121470882ffb6381c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "4ea669e706438c12da8b98693ec6c0522aba22c5fb80193121470882ffb6381c",
+    "after_sha256": "dd0a6bb869d494755e41b27b569afb7aab0ea0ebaab61d412955871546ebd24d",
+    "before_reader_sha256": "b6a9216ec866ce5b8c7f1947c171f18f7b11a95ee6e6f8b5fb5062010bf92d85",
+    "after_reader_sha256": "e059821b95d42e7d9ce3407f93069230ac11b058a1e40b596a1ab749fef5f320"
+  }
 }

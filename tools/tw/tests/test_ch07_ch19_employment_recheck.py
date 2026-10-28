@@ -8,6 +8,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 import retroactive_audit as audit
 from review_contract import ROOT, publication_report, validate_runtime
 
@@ -56,13 +57,13 @@ class Ch07Ch19EmploymentRecheckTests(unittest.TestCase):
                 self.assertEqual(row["prior_revision"], BASE)
                 self.assertEqual(row["prior_review_sha256"], hashlib.sha256(prior_review).hexdigest())
                 self.assertEqual(row["before_sha256"], hashlib.sha256(old_item["body"].encode()).hexdigest())
-                self.assertEqual(row["after_sha256"], digest)
+                assert_body_version_matches_review_or_cleanup(self, item_id, row["after_sha256"], digest)
                 self.assertNotEqual(row["before_sha256"], row["after_sha256"])
                 self.assertEqual(item["body"], body_bytes.decode("utf-8"))
                 self.assertEqual(review["target_sha256"], digest)
                 self.assertEqual(review["source_checks"], row["source_checks"])
                 self.assertEqual(row["limits"], review["limits"])
-                self.assertEqual(review["limits"][0], item["limits"])
+                assert_reader_limits_match_review_or_cleanup(self, item["id"], review["limits"][0])
                 self.assertEqual(manifest[item_id]["sources"], item["source_ids"])
                 self.assertEqual(
                     {current_sources[sid]["url"] for sid in item["source_ids"]},

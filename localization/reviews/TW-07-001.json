@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-001.md",
-  "target_sha256": "874cfaca632dc0cca59c58e340079e1a30c697032e7826f9cdd9bc6aefa0e6ca",
+  "target_sha256": "f17fcfa5722e873304dbeb7d70123b6a031d8477b64ca78260902bca1a19972e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
@@ -48,5 +48,13 @@
   "limits": [
     "2025年數據是受理案件數，沒有不重複申請人及符合資格勞工分母，不能估計個人失業機率；失業資格、給付與期限仍須由主管機關依個案確認。AI輔助來源核對，未取得獨立就業保險或法律專業審閱。",
     "未取得勞動、法律、警政或金融領域獨立專家審閱；本紀錄不構成個案法律意見、行政認定或求償保證。"
-  ]
+  ],
+  "source_reviewed_sha256": "874cfaca632dc0cca59c58e340079e1a30c697032e7826f9cdd9bc6aefa0e6ca",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "874cfaca632dc0cca59c58e340079e1a30c697032e7826f9cdd9bc6aefa0e6ca",
+    "after_sha256": "f17fcfa5722e873304dbeb7d70123b6a031d8477b64ca78260902bca1a19972e",
+    "before_reader_sha256": "e7f553e4ada38c0ea8efccba8d6c8d3c2e5135bf81fda851aa5939c260365c57",
+    "after_reader_sha256": "18febe63ad3856bd79f5fe2e0eef20ccc7e1fd3e8f7019e2093f157efc7114ea"
+  }
 }

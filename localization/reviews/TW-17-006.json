@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-21",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-006.md",
-  "target_sha256": "c68f646c1b5a8de70bd9957845cb428fd4892b327248d772b32b327bc19b26c1",
+  "target_sha256": "557ce06e4b6e15b8bf4a67b9405ec6b0b4cf726b8941cedfe0ad6b4a9841eff3",
   "source_checks": [
     {
       "url": "https://law.banking.gov.tw/Chi/FLAW/PrintFLAWDOC03.aspx?cnt=2&datatype=etype&eadmin=1&edate=20171031&recordNo=1&sdate=20171001",
@@ -58,5 +58,13 @@
     "AI逐條官方來源核對，非律師、公證人、醫師、社工或金融專業簽證；個案意思能力、契約、代理權及申請仍待確認。",
     "法規庫整編截止2026-10-08，其後全部公報與地方規定未全核，未逐條追溯民法本批首次施行日期。",
     "未實際申請、公證、交易、調閱個資、核貸或代辦退款；工程通過不保證財產、居住與個案權益結果。"
-  ]
+  ],
+  "source_reviewed_sha256": "c68f646c1b5a8de70bd9957845cb428fd4892b327248d772b32b327bc19b26c1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c68f646c1b5a8de70bd9957845cb428fd4892b327248d772b32b327bc19b26c1",
+    "after_sha256": "557ce06e4b6e15b8bf4a67b9405ec6b0b4cf726b8941cedfe0ad6b4a9841eff3",
+    "before_reader_sha256": "5fd668e3fb829e178ac0fbb1e7a232d28999cd30f6684ae3895b7124afbc69f1",
+    "after_reader_sha256": "684fbb893e638179215e94537c6fa870fefc36ca01c6e205c7f8e69734b9dc37"
+  }
 }

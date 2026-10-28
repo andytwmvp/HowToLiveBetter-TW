@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-009.md",
-  "target_sha256": "dee8aab56328073b784049ede2feebfd9890ce2ae6a588fe603e81c2ea00996c",
+  "target_sha256": "53eb6c80703facbf305618507bcce7262130b35db139a4e4d51cf181902668fe",
   "source_checks": [
     {
       "url": "https://www.nps.gov.tw/ch/titlelist/reginquiry/2760",
@@ -43,5 +43,13 @@
     "未取得獨立法律、地政、農業、建築、租賃服務、消費或金融專業者審閱；本批AI輔助來源核對不構成個案法律意見、地號建築核定、業者信用保證、消費爭議裁決或貸款承諾。",
     "法規權利、行政抽查、服務入口及編者風險管理建議分開。草案不作現行法；申請資格、契約效力及法院執行結果依簽約／土地取得時點、完整文件和個案事實確認。",
     "全書核心數與未完成來源不因本批實質再審而增加或減少；本批不代表全書已達正式出版或專業簽證門檻。"
-  ]
+  ],
+  "source_reviewed_sha256": "dee8aab56328073b784049ede2feebfd9890ce2ae6a588fe603e81c2ea00996c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "dee8aab56328073b784049ede2feebfd9890ce2ae6a588fe603e81c2ea00996c",
+    "after_sha256": "53eb6c80703facbf305618507bcce7262130b35db139a4e4d51cf181902668fe",
+    "before_reader_sha256": "4293bc9101c4c921fc54af2e167c8adcc0d2a9e39d32c8864c598ccbf4d9b7c2",
+    "after_reader_sha256": "3753d12c66b34ca88d4d11372f08879fde0ef27e7d0d690e9c4c8e2a332d6fe0"
+  }
 }

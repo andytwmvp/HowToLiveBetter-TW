@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-004.md",
-  "target_sha256": "2ee1260c876af6f5a9fc51c7025a12ccad6e5cc53928423ededc5cb0c54158bb",
+  "target_sha256": "4e5d9086346ea1feb53f025add47a75c493f1ecf51a6037bf49bdfb65291d734",
   "source_checks": [
     {
       "url": "https://www.nfa.gov.tw/cht/index.php?article_id=17797&code=list&flag=detail&ids=1468",
@@ -69,5 +69,13 @@
   "limits": [
     "2024及2025一氧化碳事故及傷亡數無燃氣設備戶數或家庭暴露分母；事故件數、死亡與送醫人數不是同一量，不能換算個人發生率或致死率。2025數字是基隆市消防局轉引消防署，正文已揭露。",
     "安裝維修法律資格與公平會具體假安檢個案已核對；未取得消防、燃氣承裝或公平交易法律專業獨立簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "2ee1260c876af6f5a9fc51c7025a12ccad6e5cc53928423ededc5cb0c54158bb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2ee1260c876af6f5a9fc51c7025a12ccad6e5cc53928423ededc5cb0c54158bb",
+    "after_sha256": "4e5d9086346ea1feb53f025add47a75c493f1ecf51a6037bf49bdfb65291d734",
+    "before_reader_sha256": "c5b4bf181dff06119ad1417860244a740e11d2b90a6168836da1774bfd594336",
+    "after_reader_sha256": "65b0089c936205b7b502112f8dc8f5c6964b919b0692b4215cebd32850ea213f"
+  }
 }

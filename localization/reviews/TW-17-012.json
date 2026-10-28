@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-012.md",
-  "target_sha256": "73fad114a684b845bd948c605d193c83f98a5596093711a49fe3c3be3539ab2b",
+  "target_sha256": "146854183c0c499f73805504de5b657b642b9df6d5bdbd76d5239e8e2e05429f",
   "source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/28690/2282/2284/2320/7366/",
@@ -58,5 +58,13 @@
     "僱主不得因依法請家庭照顧假而視為缺勤影響全勤獎金或考績；但法令所定請假天數不表示必然有帶薪長照假。公務人員或有團體協約者可能另有規定，不能把私部門勞工的時數套用所有職種。",
     "AI輔助來源實質再核對，非醫療、復健、營養或法律專業簽證；仍待相應專業審查。",
     "未取得全文或附件的來源逐項記明，不以存活估計、行政件數或海外相對效果換算臺灣個人機率；費用與資格須個案核定。"
-  ]
+  ],
+  "source_reviewed_sha256": "73fad114a684b845bd948c605d193c83f98a5596093711a49fe3c3be3539ab2b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "73fad114a684b845bd948c605d193c83f98a5596093711a49fe3c3be3539ab2b",
+    "after_sha256": "146854183c0c499f73805504de5b657b642b9df6d5bdbd76d5239e8e2e05429f",
+    "before_reader_sha256": "18b67c4c8a7b2baeb675d9513d8fd87b3d1ef6e1d64e598076b8df02e1597edf",
+    "after_reader_sha256": "ea4c1d1232f7976e791a5840df9427024de53c3cb8166fef2657e19f7f0eba8e"
+  }
 }

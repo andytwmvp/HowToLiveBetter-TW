@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-001.md",
-  "target_sha256": "64d0037759d2b9c441f9ce23b2d258066b7239d1f15a0de76379332875a6198a",
+  "target_sha256": "b6828a5872686d33fa0749dad5e1aff591a75b8392ba2c813cffcf12907ad231",
   "source_checks": [
     {
       "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
@@ -48,5 +48,13 @@
   "limits": [
     "需要救援或避開立即危險時以安全為先。其餘情形在警方、醫療人員確認前，不任意搬動、清洗或丟棄現場物品，也不讓陌生業者先把人帶走。獨居、在家或高齡本身，不等於已判定自然死亡或犯罪；境外死亡與傳染病事件另有程序。",
     "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "64d0037759d2b9c441f9ce23b2d258066b7239d1f15a0de76379332875a6198a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "64d0037759d2b9c441f9ce23b2d258066b7239d1f15a0de76379332875a6198a",
+    "after_sha256": "b6828a5872686d33fa0749dad5e1aff591a75b8392ba2c813cffcf12907ad231",
+    "before_reader_sha256": "2c908361f914b4aaed3658099abb10dd425ce3a0a5b7ac2e0fcba17f4e97838c",
+    "after_reader_sha256": "0d06bbab3f16adddfc0aae1b4169b4341bcbea0bcd3deb0a664aa9fff28807db"
+  }
 }

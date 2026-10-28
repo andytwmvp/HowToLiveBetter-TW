@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-007.md",
-  "target_sha256": "5db162e9b5fec8dbdc7283383dedc3eb4df151dd470ee56bc37391b672425914",
+  "target_sha256": "d5536135293cb7e037c5f4f7e511c585d2ca356b812ed5cc21dbcaaf0f339dd2",
   "source_checks": [
     {
       "url": "https://law.fsc.gov.tw/LawContent.aspx?id=GL001398&media=print",
@@ -57,5 +57,13 @@
     "未取得獨立法律、地政、建築、金融或消費專業審閱；本文不構成個案法律意見、產權鑑定、貸款承諾或求償保證。",
     "法律適用、契約保障範圍、事件頻率、可能損害與可採行動分開判讀；沒有頻率資料不代表事件不存在。",
     "2026-04-01生效的成屋契約附件修正增加建物現況揭露，並未因此新增成屋履約保證；預售屋五種擔保機制各有不同條件與責任範圍，須看簽約文件。"
-  ]
+  ],
+  "source_reviewed_sha256": "5db162e9b5fec8dbdc7283383dedc3eb4df151dd470ee56bc37391b672425914",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "5db162e9b5fec8dbdc7283383dedc3eb4df151dd470ee56bc37391b672425914",
+    "after_sha256": "d5536135293cb7e037c5f4f7e511c585d2ca356b812ed5cc21dbcaaf0f339dd2",
+    "before_reader_sha256": "820511c523890d6debcdefae91d25a3787e99c1430494ee1c7db1290f8e05b14",
+    "after_reader_sha256": "bc3a324f401cbb1b376f8742c069f4ec4ca2dc2f930166e4a5ce8979bb9fee28"
+  }
 }

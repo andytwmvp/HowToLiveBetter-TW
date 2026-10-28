@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-16",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-019.md",
-  "target_sha256": "7c74eb18850670177160c502054c80edb6338e9e6ba612524b4ed65771e28b9c",
+  "target_sha256": "d76feadfff03a7e51c5ea66d6ee780b9b94ad208b2589720d62703e5c845ca94",
   "source_checks": [
     {
       "url": "https://pubmed.ncbi.nlm.nih.gov/29733621/",
@@ -17,5 +17,13 @@
   ],
   "localization_changes": "將原題背誦改成用途與情境驗收，加入研究調節因素和安全授權界線。",
   "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
+  "source_reviewed_sha256": "7c74eb18850670177160c502054c80edb6338e9e6ba612524b4ed65771e28b9c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "7c74eb18850670177160c502054c80edb6338e9e6ba612524b4ed65771e28b9c",
+    "after_sha256": "d76feadfff03a7e51c5ea66d6ee780b9b94ad208b2589720d62703e5c845ca94",
+    "before_reader_sha256": "ee7804f9bf4f1effc108dc1bbe9816a4a519c1046beee0fa31ea1708f2adbc2f",
+    "after_reader_sha256": "c13afde56c783a7b959e732e0c03f5d66fe692a2ac71d0c497e7aae38d9ece4b"
+  }
 }

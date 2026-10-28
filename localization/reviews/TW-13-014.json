@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-014.md",
-  "target_sha256": "f60beb66b93e5a74658f604e7a4349a8c25bab15f6b1987270d8c3623a0b5dea",
+  "target_sha256": "ba9ebf409be951579cda4dc27ffb22c42b5a2e46fd3268609f5fe78c22fd5410",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-7172-84404-1.html",
@@ -37,5 +37,13 @@
     "兩份國健署公告是預防與處置宣導，未提供定義一致全國燒燙傷發生率；不以兒童單案或全體火災數推估。",
     "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。",
     "官方泡水時長15／30分鐘不同，不累加固定等待；失溫與緊急送醫優先。"
-  ]
+  ],
+  "source_reviewed_sha256": "f60beb66b93e5a74658f604e7a4349a8c25bab15f6b1987270d8c3623a0b5dea",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "f60beb66b93e5a74658f604e7a4349a8c25bab15f6b1987270d8c3623a0b5dea",
+    "after_sha256": "ba9ebf409be951579cda4dc27ffb22c42b5a2e46fd3268609f5fe78c22fd5410",
+    "before_reader_sha256": "996c5c39f747a062346fd3c163916344ca381ee5f75287a0c8ff65cb32ae43eb",
+    "after_reader_sha256": "3158c8dc717fd35d016807751c9ba3395bfe0011e90a7398bf304269439071ea"
+  }
 }

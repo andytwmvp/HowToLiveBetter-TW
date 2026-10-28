@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2026-12-15",
   "target_path": "locales/zh-TW/book/ch01/TW-01-018.md",
-  "target_sha256": "f2b4931f2008d6f53289a6c04b328ea4a0d36adb79441b08d8cdc6246d8a72b5",
+  "target_sha256": "b9945fa4e906f61187ba197e66210d3423ba65231f9867bcd79b47dce34917c3",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-2704-80948-1.html",
@@ -64,5 +64,13 @@
     "2027-01-01生效規範的官方公告摘要未給個案資格細節，附件PDF本輪未逐項讀取；2026資格不套用未生效內容，安排2027篩檢者須向院所核對。國健署頁面直接重取回傳502，未取得婦產科或公衛專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "9d73071ccb397fcc26017c86235071d93a937be5a75b6827e565b56a9998d95c"
+  "upstream_text_sha256": "9d73071ccb397fcc26017c86235071d93a937be5a75b6827e565b56a9998d95c",
+  "source_reviewed_sha256": "f2b4931f2008d6f53289a6c04b328ea4a0d36adb79441b08d8cdc6246d8a72b5",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "f2b4931f2008d6f53289a6c04b328ea4a0d36adb79441b08d8cdc6246d8a72b5",
+    "after_sha256": "b9945fa4e906f61187ba197e66210d3423ba65231f9867bcd79b47dce34917c3",
+    "before_reader_sha256": "5ab3dacc26c11f9ebdb04abb5a2581ea6f996cdcbbb1db83bfd1674365d20caf",
+    "after_reader_sha256": "0066e02f815630f7dac7e6cddba9fad4dfd8d5759ddfc77327f19f8cfbfbc2e4"
+  }
 }

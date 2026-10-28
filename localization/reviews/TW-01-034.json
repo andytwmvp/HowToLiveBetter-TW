@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-034.md",
-  "target_sha256": "2e1a05b4ed415d60a4f9e1f04e471a955e40085331ea3ecb712a5ba83d8073c0",
+  "target_sha256": "35f2c9ec449d484ec314ab7dd35fc3c79ca39ead10e5e0529c929d138d6ff950",
   "source_checks": [
     {
       "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=BF739CEA16BBDEA6&sms=87415A8B9CE81B16",
@@ -48,5 +48,13 @@
   "limits": [
     "職安署重大職災死亡統計是勞檢接報後現場調查案件，少數待判定案件未列且沒有工作者或工時分母；2025全年分類為墜落、滾落，2026上半年為墜落，不能直接比較或推估所有工作及非工作墜落風險。",
     "急救、創傷醫療與職業安全僅做官方來源AI輔助核對，未取得醫療或職安專業獨立審閱；本文不代替119派遣、個案診療或現場職安評估。"
-  ]
+  ],
+  "source_reviewed_sha256": "2e1a05b4ed415d60a4f9e1f04e471a955e40085331ea3ecb712a5ba83d8073c0",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2e1a05b4ed415d60a4f9e1f04e471a955e40085331ea3ecb712a5ba83d8073c0",
+    "after_sha256": "35f2c9ec449d484ec314ab7dd35fc3c79ca39ead10e5e0529c929d138d6ff950",
+    "before_reader_sha256": "e8dfafcb10874e4e6d4967a68277ed71b761db22796f2851cf21ad39fe302109",
+    "after_reader_sha256": "d80bae1842e99922584b6ad86fa73c93c8efd157a77ae234019d53c867b8662b"
+  }
 }

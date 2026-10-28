@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-007.md",
-  "target_sha256": "7b528be241c6962032c9d663b829d21fe45d50c7843474ecdbf9c3ab2caa9fa0",
+  "target_sha256": "268a47eaa7786559b6f904cb63027186ff569029e2cab578cbb502abb2585236",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
@@ -31,5 +31,13 @@
     "法規頁截至2026-10-28仍標示部分修正條文尚未生效；不得把新法尚未生效的主管機關或監理規定當成現行權責。",
     "未取得獨立法律或隱私專業審閱；AI輔助來源再核對不構成法律意見。"
   ],
-  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。"
+  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。",
+  "source_reviewed_sha256": "7b528be241c6962032c9d663b829d21fe45d50c7843474ecdbf9c3ab2caa9fa0",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "7b528be241c6962032c9d663b829d21fe45d50c7843474ecdbf9c3ab2caa9fa0",
+    "after_sha256": "268a47eaa7786559b6f904cb63027186ff569029e2cab578cbb502abb2585236",
+    "before_reader_sha256": "930bc7a88f627d23c9ba3a4ab702739a72552c0ed1457c13e63c837e8d243435",
+    "after_reader_sha256": "5e5ad1a8c4eeb558ac0a45a2cd63709e04f985198ea02baa479c7b64685e0d30"
+  }
 }

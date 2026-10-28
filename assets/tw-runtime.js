@@ -172,8 +172,8 @@
         article.append(part);
       }
       article.append(node('p', e.limits));
-      const stale = today > e.review_due_at;
-      article.append(node('p', `${e.id}｜來源核對：${e.reviewed_at}｜下次檢查：${e.review_due_at}${stale ? '｜資料已到複查日期，請向官方確認現況' : ''}`, 'meta'));
+      const due = today >= e.review_due_at;
+      article.append(node('p', `內容最後確認日期：${e.reviewed_at}；建議再次確認日期：${e.review_due_at}${due ? '。已到再次確認日期，採取行動前請向主管機關或服務單位確認最新資訊。' : '。'}`, 'meta'));
       const refs = node('p', '依據：');
       for (const id of e.source_ids) {
         const s = catalog.sources.find(x => x.id === id); const a = node('a', s.title);
@@ -194,13 +194,16 @@
       }
       container.append(article);
     }
-    byId('status').textContent = `顯示 ${rows.length}／${catalog.items.length} 項已核對內容。未填的條件不作資格判定；這不是全書完成數。`;
-    if (!rows.length) container.append(node('p', '沒有符合目前篩選的已核對項目；不會改以原作或未審閱草稿填補。'));
+    byId('status').textContent = `找到 ${rows.length} 篇符合條件的文章。未填的條件不代表符合個人資格。`;
+    if (!rows.length) container.append(node('p', '目前沒有符合條件的文章；可能是搜尋字詞不合，也可能尚無該主題的臺灣指引。請調整搜尋或從章節目錄瀏覽。'));
   }
   function showFailure(error) {
     catalog = null; answers.clear();
     byId('cards').replaceChildren();
-    byId('status').textContent = `臺灣資料未通過檢查：${error.message}。不會使用未查核來源稿替代。`;
+    console.error('臺灣版文章載入失敗', error);
+    byId('status').textContent = error.message.includes('複查日期早於查核日或已逾期')
+      ? '閱讀資料已到再次確認日期，目前無法顯示；請向主管機關或服務單位確認最新資訊。'
+      : '文章目前無法載入，請稍後再試。';
     byId('status').className = 'error';
     window.TWRuntime.failed = true; window.TWRuntime.ready = false;
   }

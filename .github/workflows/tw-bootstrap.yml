@@ -67,8 +67,8 @@ jobs:
           import {marked} from './tools/epub/node_modules/marked/lib/marked.esm.js';
           const html=marked.parse(readFileSync('README.md','utf8'));
           const images=[...html.matchAll(/<img[^>]+src="(https:\/\/img\.shields\.io\/badge\/[^"]+)"/g)];
-          if(images.length!==6)throw Error('README實際Markdown渲染的徽章不是6個');
-          console.log('PASS：README實際渲染出6個徽章圖片。');
+          if(images.length!==3)throw Error(`README實際Markdown渲染的徽章數量不符: ${images.length}`);
+          console.log('PASS：README實際Markdown渲染出3個導覽、授權與問題回報徽章。');
           JS
       - name: 安裝瀏覽器檢查工具
         timeout-minutes: 15

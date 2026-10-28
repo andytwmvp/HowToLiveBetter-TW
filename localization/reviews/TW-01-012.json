@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-012.md",
-  "target_sha256": "227036fa00f5d3791e9fc871ca335f2fa3cb477635efdc6ee4b4d22f41820dcf",
+  "target_sha256": "50be81f948b917c8b328749a930871b85939c152ceec6e7f2b4d3effc198d955",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19221",
@@ -50,5 +50,13 @@
     "HPA原宣導頁本輪直接開啟逾時；年齡別死亡數由衛福部統計處原始114年表22試算表重新核對，表格仍可能隨統計修訂。",
     "CPR／AED應依119派遣指示與受訓程度執行；本輪AI輔助來源核對不等於急救、兒科或水域救援專業獨立簽證。",
     "衛福部表22的2023至2025年1至5歲死亡數不是所有溺水事件或戲水者發生率，沒有暴露分母；不應用年度小數字評估個人風險或防溺措施效果。"
-  ]
+  ],
+  "source_reviewed_sha256": "227036fa00f5d3791e9fc871ca335f2fa3cb477635efdc6ee4b4d22f41820dcf",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "227036fa00f5d3791e9fc871ca335f2fa3cb477635efdc6ee4b4d22f41820dcf",
+    "after_sha256": "50be81f948b917c8b328749a930871b85939c152ceec6e7f2b4d3effc198d955",
+    "before_reader_sha256": "c0ac16f2399ecb318aa53728055298b0bb098afc6ad6aa0e7bc79f71cefc2286",
+    "after_reader_sha256": "8a58f5c871b1dcbfa83cfdd38471f9b671eb064ea3df3eb5e01ca7098b262614"
+  }
 }

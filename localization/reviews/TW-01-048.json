@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-048.md",
-  "target_sha256": "414d4569b7248414bcba8626b11eafcf9a1241d7f07f963e121f61a99ec44fc3",
+  "target_sha256": "410c9dc6881aa579743bf4385e46f4b74ca96cd4ff71d6a44e7372a544fb4073",
   "source_checks": [
     {
       "url": "https://www.fda.gov.tw/TC/PublishOtherEpaperContent.aspx?id=1522&r=664640862&tid=4852",
@@ -36,5 +36,13 @@
     "未找到可估全國發生率的食物暴露分母；食品毒理、臨床醫療或公共衛生專業尚未獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "b0221d0920e275e849ec008a120c031c50299a161552f18d3122d3bc0947e56b"
+  "upstream_text_sha256": "b0221d0920e275e849ec008a120c031c50299a161552f18d3122d3bc0947e56b",
+  "source_reviewed_sha256": "414d4569b7248414bcba8626b11eafcf9a1241d7f07f963e121f61a99ec44fc3",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "414d4569b7248414bcba8626b11eafcf9a1241d7f07f963e121f61a99ec44fc3",
+    "after_sha256": "410c9dc6881aa579743bf4385e46f4b74ca96cd4ff71d6a44e7372a544fb4073",
+    "before_reader_sha256": "1ebb1ec514ad87bdcdce9b71179a92337f8cbf76e25ab90d6ff9cc89f2dfa1ba",
+    "after_reader_sha256": "9af0fcddaf4557f526e1ec4bf4356f846f61d883fd6235fc4c7d2982f0a50f43"
+  }
 }

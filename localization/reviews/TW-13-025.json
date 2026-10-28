@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-025.md",
-  "target_sha256": "8de50afb2b0fe6e4224b8c7cc595f98cff4dc590ba34838cb4ae56dbc320448f",
+  "target_sha256": "b90e5ec06c2ee4199bc712061f66c3eee2be60847d678e71cb3f334bb5e57074",
   "source_checks": [
     {
       "url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b0f39b7019b118405f00bd5",
@@ -43,5 +43,13 @@
     "救援須以現場119派遣與專業醫療指示為準，費用由實際醫療服務及健保條件決定。",
     "2025消防救溺1056人，溪河415、海邊228；行政救援範圍含自傷及其他類，不代表純戲水意外或全國人口個人風險。",
     "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "8de50afb2b0fe6e4224b8c7cc595f98cff4dc590ba34838cb4ae56dbc320448f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "8de50afb2b0fe6e4224b8c7cc595f98cff4dc590ba34838cb4ae56dbc320448f",
+    "after_sha256": "b90e5ec06c2ee4199bc712061f66c3eee2be60847d678e71cb3f334bb5e57074",
+    "before_reader_sha256": "94fd938bc7a270c7d563eb2ae1389889cd55905384a090486caac4abc9e81ca1",
+    "after_reader_sha256": "08faa6bf5e559fdbf940c4c0a19d92085cc038ecfcb21f444f40f0569c12a15b"
+  }
 }

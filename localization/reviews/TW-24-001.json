@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-001.md",
-  "target_sha256": "e9213804535bce5bd3ec6adb199e151cef1b6c7c792d57fcc6f4bb1427d1eaaa",
+  "target_sha256": "4a9ba0554130658db814b6f71ba5bbd19e946749bb3713f85b9029117403a99f",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
@@ -50,5 +50,13 @@
     "未取得同口徑全國急症發生或延誤轉診個人暴露分母，不推估個人機率；嚴重後果可能重大，急救行動優先。",
     "健保表只列西醫門診基本部分負擔；掛號、藥品、檢查、自費與交通另計，個別適用情形以健保署與院所為準。",
     "未實際辦理急救、醫療分流或轉診；本輪AI來源再核對不等於醫師、急診、救護或健保專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "e9213804535bce5bd3ec6adb199e151cef1b6c7c792d57fcc6f4bb1427d1eaaa",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e9213804535bce5bd3ec6adb199e151cef1b6c7c792d57fcc6f4bb1427d1eaaa",
+    "after_sha256": "4a9ba0554130658db814b6f71ba5bbd19e946749bb3713f85b9029117403a99f",
+    "before_reader_sha256": "20cb33775de30492187361ca35ff0539c12f0e726b9fa9263142a942e10ec962",
+    "after_reader_sha256": "9dafe9334c730f3706483d107ac6848adfdac7865ae360dd2606f3dcc94b7dba"
+  }
 }

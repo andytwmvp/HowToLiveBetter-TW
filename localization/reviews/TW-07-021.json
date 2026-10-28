@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-021.md",
-  "target_sha256": "04cf295108fa714db73e9c602f0d6c1069852e57962dc082f6a0a7b198ced43d",
+  "target_sha256": "a6b23c46cb4f82120e255a90742b5dd7081129566cfc91eaa5335b5534063e3f",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-6654-77519-1.html",
@@ -57,5 +57,13 @@
     "尚未逐縣市查核夜間收容量能、規則、費用、同行及臨時聯絡方式。",
     "官方遊民資料頁沒有完整盤點方法和居住暴露分母。",
     "尚無社工、警政、消防、醫療或法律專業人員獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "04cf295108fa714db73e9c602f0d6c1069852e57962dc082f6a0a7b198ced43d",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "04cf295108fa714db73e9c602f0d6c1069852e57962dc082f6a0a7b198ced43d",
+    "after_sha256": "a6b23c46cb4f82120e255a90742b5dd7081129566cfc91eaa5335b5534063e3f",
+    "before_reader_sha256": "868bd014498425178f49bddbf557869b47cb802475378bbe70fd9b48cc699e94",
+    "after_reader_sha256": "ac3eb3fcc1913717c6fa743c48b121e59eb45f246db6a0f31e5cd73c9032a32b"
+  }
 }

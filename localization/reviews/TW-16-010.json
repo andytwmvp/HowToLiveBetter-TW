@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-010.md",
-  "target_sha256": "b6e16df3a0202cfa8e3013a072e2bae19f496b5e5661892c1705b469bb553079",
+  "target_sha256": "1e4fdd8cc1c8ea127c2887c0330853a13116e98c32574e46fd1bda143cc26adb",
   "source_checks": [
     {
       "url": "https://www.cdc.gov/arthritis/gout/",
@@ -50,5 +50,13 @@
     "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。",
     "AI輔助來源實質再核對，非醫療、復健、營養或法律專業簽證；仍待相應專業審查。",
     "未取得全文或附件的來源逐項記明，不以存活估計、行政件數或海外相對效果換算臺灣個人機率；費用與資格須個案核定。"
-  ]
+  ],
+  "source_reviewed_sha256": "b6e16df3a0202cfa8e3013a072e2bae19f496b5e5661892c1705b469bb553079",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "b6e16df3a0202cfa8e3013a072e2bae19f496b5e5661892c1705b469bb553079",
+    "after_sha256": "1e4fdd8cc1c8ea127c2887c0330853a13116e98c32574e46fd1bda143cc26adb",
+    "before_reader_sha256": "93070ac4908f82109a3562ab4749550fa22876d37763aed30d606a68503c9e57",
+    "after_reader_sha256": "b3f445f929ca71f838a4ce5e8b5e146a81898cf6e21e323c303ed75682e83a9e"
+  }
 }

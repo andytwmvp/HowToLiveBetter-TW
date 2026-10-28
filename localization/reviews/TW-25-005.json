@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-005.md",
-  "target_sha256": "0d15bfc04c7e7904e29c8023cb5177244855f1f5609cbb361da512cfeb8c50f2",
+  "target_sha256": "1fce1a339d8bbf3e1585cb453d870e854f69e8cc26ab8c221877bda4d953732e",
   "source_checks": [
     {
       "url": "https://www.ris.gov.tw/documents/html/2/3/1/386.html",
@@ -28,5 +28,13 @@
     "線上申辦資格、系統狀態與跨機關通報依戶政司查閱當日說明；本輪未代辦個案，未逐一核對地方戶所補件要求或境外文件個案。",
     "戶政登記完成不證明健保退保、保單清查、勞保家屬死亡給付或遺產程序已完成；各權責機關另作處理。",
     "AI輔助行政來源核對，未取得戶政／法律專業獨立簽證；30日為登記期限而非其他司法、稅務或給付期限。"
-  ]
+  ],
+  "source_reviewed_sha256": "0d15bfc04c7e7904e29c8023cb5177244855f1f5609cbb361da512cfeb8c50f2",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0d15bfc04c7e7904e29c8023cb5177244855f1f5609cbb361da512cfeb8c50f2",
+    "after_sha256": "1fce1a339d8bbf3e1585cb453d870e854f69e8cc26ab8c221877bda4d953732e",
+    "before_reader_sha256": "149f1062b8445bd3eb6a055ded4526e011c380fb8e40b1110f7cb6c05bb5e4b1",
+    "after_reader_sha256": "68ab77cd46f8a9453f00fad562d29526a70e7cf2443f6a3415f3a1aba0410111"
+  }
 }

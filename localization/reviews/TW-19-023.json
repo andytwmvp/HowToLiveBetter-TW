@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-023.md",
-  "target_sha256": "22e9c3ddbc618d6f17377f07cd79275e0198515d67136854b9743a3a9265da9e",
+  "target_sha256": "999322b4850428fdb5cdb8e6274e9b6beb84abb7237a66e8dace84dcbc9c6157",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -42,5 +42,13 @@
   ],
   "localization_changes": "逐項保留調動五原則，補足勞動事件法第50條先提確認調動無效或回復原職之訴、法院判斷及勞工聲請門檻；以正確2025全年統計29,714件作廣義背景並明確限制推論。",
   "legal_scope": "核對勞動基準法第10條之1、勞動事件法第50條、勞動部調解說明與統計月報表3-5；調職是否合法、暫時處分及調解結果依契約和個案證據判斷。",
-  "review_method": "直接讀取兩部現行法規、勞動部2026-09-03服務頁與表3-5 PDF；以原表年度標籤、括號註釋及表格單位核對統計範圍，不將廣義案件數換算個人率。"
+  "review_method": "直接讀取兩部現行法規、勞動部2026-09-03服務頁與表3-5 PDF；以原表年度標籤、括號註釋及表格單位核對統計範圍，不將廣義案件數換算個人率。",
+  "source_reviewed_sha256": "22e9c3ddbc618d6f17377f07cd79275e0198515d67136854b9743a3a9265da9e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "22e9c3ddbc618d6f17377f07cd79275e0198515d67136854b9743a3a9265da9e",
+    "after_sha256": "999322b4850428fdb5cdb8e6274e9b6beb84abb7237a66e8dace84dcbc9c6157",
+    "before_reader_sha256": "8bd07b55fac44368c5ade85f1d2dbb73ad30cb8a4d9f943138ab39d80514309a",
+    "after_reader_sha256": "7ce9884c5306886a352f9da33d5c07cb76b1bd297400f1713d047918508cecd9"
+  }
 }
