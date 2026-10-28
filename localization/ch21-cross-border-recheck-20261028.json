@@ -1,0 +1,298 @@
+{
+  "batch_date": "2026-10-28",
+  "base_main_sha": "3f2636d3a01ef38a3764323f3f1ba7666de92801",
+  "scope": {
+    "core_ids": [],
+    "historical_ids": [
+      "TW-01-035",
+      "TW-21-005",
+      "TW-21-006",
+      "TW-21-012",
+      "TW-21-013"
+    ],
+    "priority_order": [
+      "TW-01-035",
+      "TW-21-005",
+      "TW-21-012",
+      "TW-21-013",
+      "TW-21-006"
+    ],
+    "new_core_ids": [],
+    "review_type": "跨領域高風險歷史實質再審：臺灣器官交易法定禁止、海外求職與人口販運、現鈔通關、管制藥品及動植物檢疫；另同步臺灣山域求援草稿"
+  },
+  "publication_ready": false,
+  "professional_review_pending": true,
+  "sources_added": [
+    {
+      "id": "ch21_mofa_overseas_job_20261028",
+      "title": "外交部：海外工作防詐脫困小叮嚀",
+      "url": "https://www.mofa.gov.tw/cp.aspx?n=4229",
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "supports": "出國前備妥簽證、登錄旅外聯絡資訊及記下急難專線；抵達後持續聯繫親友並自行妥善保管護照、簽證及手機；受困時通知親友並向外交部或駐外館處求助。",
+      "retrieval_method": "2026-10-28直接閱讀外交部「海外工作防詐脫困小叮嚀」HTML正文；只引用護照保管、行程聯繫及求助分流，不將未讀取的下載圖片或連結當正文證據。",
+      "evidence_type": "臺灣中央政府海外求職及領務安全指引"
+    },
+    {
+      "id": "ch21_nia_trafficking_report_2025",
+      "title": "移民署：我國2025年防制人口販運成效報告",
+      "url": "https://www.immigration.gov.tw/media/121687/%E6%88%91%E5%9C%8B2025%E5%B9%B4%E5%BA%A6%E9%98%B2%E5%88%B6%E4%BA%BA%E5%8F%A3%E8%B2%A9%E9%81%8B%E6%88%90%E6%95%88%E5%A0%B1%E5%91%8A-%E4%B8%AD%E6%96%87%E7%89%88.pdf",
+      "published_at": "2026-09-21",
+      "accessed_at": "2026-10-28",
+      "supports": "報告記錄2025年有337名返國國人接收移民署國境事務大隊發放的入境關懷通知；措施涵蓋海外人口販運、其他被害及被迫從事犯罪等情境。另記載主管機關於2025年12月宣導避免輕信赴境外從事高薪工作的不明廣告。337是行政通知人數，不等於確認人口販運案件數，且沒有旅客或求職者暴露母數。",
+      "retrieval_method": "2026-10-28直接閱讀移民署年度報告PDF第27至28頁（頁碼標示26至27）及官方報告索引頁；核對報告年度、通知對象和措施範圍，不將通報人數換算成個人風險。",
+      "evidence_type": "臺灣中央政府年度行政報告"
+    },
+    {
+      "id": "ch21_boca_emergency_center_20260707",
+      "title": "領務局：外交部緊急聯絡中心",
+      "url": "https://www.boca.gov.tw/cp-53-378-353fb-1.html",
+      "published_at": "2021-03-17",
+      "accessed_at": "2026-10-28",
+      "supports": "頁面2026-07-07更新：中心全年無休、24小時輪值；國內0800-085-095免付費、海外+886-800-085-095須自付國際電話費；800-0885-0885只適用公告的22個國家或地區，使用國內手機門號須另付國際漫遊費。緊急專線限海外急難。",
+      "retrieval_method": "2026-10-28直接閱讀領務局官方HTML正文及更新日期，逐項核對國內／海外電話費用與全球免付費專線的適用範圍。",
+      "evidence_type": "臺灣中央政府旅外緊急服務入口"
+    },
+    {
+      "id": "ch21_tfda_controlled_meds_20260520",
+      "title": "食藥署：病人隨身攜帶第一至三級管制藥品出入境聲明書說明",
+      "url": "https://www.fda.gov.tw/tc/siteContent.aspx?sid=196",
+      "published_at": "2023-09-21",
+      "accessed_at": "2026-10-28",
+      "supports": "食藥署頁面維護於2026-05-20：病人因治療本人疾病，隨身攜帶我國第一至三級管制藥品出入境，可附聲明書、載明病名／治療經過／用藥理由的醫師診斷證明、護照影本及藥品資料報請備查；此程序免繳費，收件辦理約7個工作天；出入境仍建議攜帶處方或診斷證明及藥袋。",
+      "retrieval_method": "2026-10-28直接閱讀食藥署官方HTML正文第141至159行所對應段落，核對適用藥品級別、文件、費用與辦理時間；不把臺灣備查視為其他國家許可。",
+      "evidence_type": "臺灣中央政府管制藥品申辦規定"
+    },
+    {
+      "id": "ch21_tfda_foreign_meds_20251215",
+      "title": "食藥署：旅客攜帶管制藥品出入境注意事項",
+      "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=118&id=31314",
+      "published_at": "2025-12-15",
+      "accessed_at": "2026-10-28",
+      "supports": "食藥署2025-12-15公告提醒依各國管制規定辦理；國外就醫攜帶管制藥品返臺須供本人特定疾病治療，攜帶醫療機構處方或證明，數量不超過醫師處方／證明且最多六個月用量。",
+      "retrieval_method": "2026-10-28直接閱讀食藥署官方中文頁面及英文對照正文；引用海外就醫返臺條件，不外推為一般國外購藥的完整進口規則。",
+      "evidence_type": "臺灣中央政府旅客藥品通關說明"
+    },
+    {
+      "id": "ch01_organ_law_tw_20261028",
+      "title": "全國法規資料庫：人體器官移植條例（2026-10-28核對）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020024",
+      "published_at": "2021-01-20",
+      "accessed_at": "2026-10-28",
+      "supports": "第12條要求移植器官的提供與取得無償；第16條規定違反第12條而仲介、提供或取得者的刑責，第18條另處理媒體傳播器官買賣或仲介訊息的行政罰。法律禁止不以案件發生頻率或統計是否完整為條件。",
+      "retrieval_method": "2026-10-28直接閱讀全國法規資料庫現行條文第12、16、18條；另核對第8至10條及第25條以區分合法活體捐贈程序、醫院核定和施行日期。只作法條摘要，不提供個案法律判斷。",
+      "evidence_type": "臺灣中央政府現行法規"
+    }
+  ],
+  "sources_retired": [
+    {
+      "item_id": "TW-21-005",
+      "id": "ch21_scams",
+      "reason": "原外交部海外求職詐騙新聞頁本輪無法重新讀取；現以可直接讀取的外交部海外工作指引和移民署2025年度報告支持現行主張。保留舊來源物件及SHA供歷史追溯。",
+      "prior_source_sha256": "c2362939feb0fadf0664c845355cf580db6acff337b9e9d5c35e9916d116407f",
+      "replacement_ids": [
+        "ch21_mofa_overseas_job_20261028",
+        "ch21_nia_trafficking_report_2025"
+      ]
+    },
+    {
+      "item_id": "TW-01-035",
+      "id": "ch01_organ_law_tw_20261027",
+      "reason": "2026-10-28重新直接閱讀現行條文並補充第12、16、18條的法律狀態後，以本次核對來源取代前次帶日期來源；舊來源物件及SHA保留於runtime與Git歷史。",
+      "prior_source_sha256": "997127a161ecf01ad0dc97dea9d923578268cefaf8ab812af816681af76f3e93",
+      "replacement_ids": [
+        "ch01_organ_law_tw_20261028"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "id": "TW-21-005",
+      "name": "返國國人入境關懷通知人數",
+      "period": "2025年",
+      "value": {
+        "returnees_issued_entry_care_notices": 337
+      },
+      "unit": "國人（行政通知對象）",
+      "geographic_scope": "返國入境臺灣之國人",
+      "population": "移民署國境事務大隊於2025年發給入境關懷通知的返國國人",
+      "numerator_definition": "收到移民署入境關懷通知的返國國人337人；通知適用於海外人口販運或其他被害及被迫從事犯罪等情境，非確認案件數。",
+      "denominator": null,
+      "denominator_definition": "報告未提供海外求職者、旅客、特定目的地或有風險暴露人口的相配分母。",
+      "data_type": "政府行政服務／通知人數，非抽樣調查、人口販運確認案件數、發生率或個人機率",
+      "source_ids": [
+        "ch21_nia_trafficking_report_2025"
+      ],
+      "published_at": "2026-09-21",
+      "accessed_at": "2026-10-28",
+      "limitations": [
+        "包含的被害或被迫犯罪情境不只求職詐騙或已確認人口販運。",
+        "沒有旅客或求職者暴露母數，不能估個人發生機率。",
+        "行政通知人數不等於不重複確認案件數或人口販運盛行率。"
+      ]
+    },
+    {
+      "id": "TW-21-006",
+      "name": "旅客現金攜帶超額違規之個人發生率資料缺口",
+      "period": "截至2026-10-28",
+      "value": null,
+      "unit": null,
+      "geographic_scope": "臺灣全國",
+      "population": "臺灣入出境旅客及可能超額攜帶各類洗錢防制物品者",
+      "numerator_definition": "本輪未找到能與全國旅客暴露母數配對的現金超額申報、違規或查獲分子。",
+      "denominator": null,
+      "denominator_definition": "未找到同期間可配對的旅客攜帶現金調查或暴露人次母數。",
+      "data_type": "資料不足；申報金額是法定門檻，不是個人發生率",
+      "source_ids": [
+        "ch21_cash"
+      ],
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "limitations": [
+        "不能以門檻、海關查獲數或申報件數推算每位旅客違規機率。",
+        "外幣、新臺幣、人民幣及其他貴重物品規則不同。"
+      ]
+    },
+    {
+      "id": "TW-21-012",
+      "name": "臺灣旅客受管制藥品攜帶違規之個人發生率資料缺口",
+      "period": "截至2026-10-28",
+      "value": null,
+      "unit": null,
+      "geographic_scope": "臺灣旅客出入境及目的地法域",
+      "population": "攜帶處方藥、管制藥或其他藥品出入境之臺灣旅客",
+      "numerator_definition": "本輪未找到藥品成分與各法域法律分類一致，並可配對旅客暴露母數的違規或查獲分子。",
+      "denominator": null,
+      "denominator_definition": "沒有可配對的旅客攜藥暴露人次、分法域及分成分母數。",
+      "data_type": "資料不足；藥品申報及許可門檻為規則，不是個人發生率",
+      "source_ids": [
+        "ch21_tfda_controlled_meds_20260520",
+        "ch21_tfda_foreign_meds_20251215",
+        "ch21_japan_meds",
+        "ch21_singapore_meds"
+      ],
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "limitations": [
+        "藥品品牌名稱不能替代成分、含量、劑型與管制級別核對。",
+        "不同目的地、轉機地、入境方式和時點的法律不同。",
+        "不以未查獲或沒有統計推論攜藥行為合法或安全。"
+      ]
+    },
+    {
+      "id": "TW-21-013",
+      "name": "旅客動植物檢疫違規之個人發生率資料缺口",
+      "period": "截至2026-10-28",
+      "value": null,
+      "unit": null,
+      "geographic_scope": "臺灣全國入境旅客",
+      "population": "攜帶需申報或檢疫動植物及其產品之返臺旅客",
+      "numerator_definition": "本輪未找到與旅客暴露母數配對、且按物品種類與來源地區分的違規旅客或不合格物品數。",
+      "denominator": null,
+      "denominator_definition": "沒有同期間旅客攜帶受檢疫品項的全國暴露人次母數。",
+      "data_type": "資料不足；檢疫條件不等於發生率或個人疾病風險",
+      "source_ids": [
+        "ch21_quarantine",
+        "ch21_animals",
+        "ch21_plants"
+      ],
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "limitations": [
+        "不同品項、加工方式、產地和疫區分類不能合併成單一比例。",
+        "查獲數若無旅客暴露母數不能推算個人違規機率。",
+        "疫情通報不是旅客違規數或傳入機率。"
+      ]
+    },
+    {
+      "id": "TW-01-035",
+      "name": "臺灣非法器官交易及民眾接觸仲介之個人發生率資料缺口",
+      "period": "截至2026-10-28",
+      "value": null,
+      "unit": null,
+      "geographic_scope": "臺灣全國",
+      "population": "臺灣居民及可能接觸器官仲介邀約者",
+      "numerator_definition": "本輪未找到具一致定義的全國非法器官交易或民眾接觸仲介統計。",
+      "denominator": null,
+      "denominator_definition": "沒有可配對的居民、捐贈評估對象或仲介接觸暴露母數。",
+      "data_type": "資料不足；不推估個人機率，且不影響法定無償要求及違法刑責",
+      "source_ids": [
+        "ch01_organ_law_tw_20261028"
+      ],
+      "published_at": null,
+      "accessed_at": "2026-10-28",
+      "limitations": [
+        "案件數或媒體案例缺少暴露母數，不能推估個人發生率。",
+        "法律禁止與刑責是法規狀態，不隨發生率資料多寡改變。",
+        "合法捐贈研究不能代表非法交易者的健康結果。"
+      ]
+    }
+  ],
+  "cross_domain_standard": "跨領域審查不限於冰面等低代表性情境，也包含法律禁止、許可限制、在臺制度不適用、低頻高傷害及資料不足等情形。法律狀態、臺灣情境適配、頻率、傷害嚴重度與可採行動分開判斷；器官交易等法定禁止事項不因低頻或缺乏統計而弱化，清單例示不封閉。",
+  "counts_before": {
+    "core_reviewed": 278,
+    "core_total": 765,
+    "runtime_items": 289,
+    "runtime_sources": 896,
+    "registry_sources": 977,
+    "substantive_rechecks": 243,
+    "coverage_json_files": 495,
+    "unique_draft_entries": 498,
+    "entries_without_draft": 267,
+    "unresolved_source_ids": 115,
+    "unresolved_reference_occurrences": 306
+  },
+  "counts_after": {
+    "core_reviewed": 278,
+    "core_total": 765,
+    "runtime_items": 289,
+    "runtime_sources": 902,
+    "registry_sources": 983,
+    "substantive_rechecks": 252,
+    "coverage_json_files": 498,
+    "unique_draft_entries": 498,
+    "entries_without_draft": 267,
+    "unresolved_source_ids": 114,
+    "unresolved_reference_occurrences": 304
+  },
+  "body_sha256_before": {
+    "TW-21-005": "7b363394cefee2e2341781c7d3064f530903f8e1bbdfe84822ba11f32f02d450",
+    "TW-21-006": "9b1ffc30fa625a2200fefae48c18c10a764d2e7754d85e45cf332efb4f8ace8c",
+    "TW-21-012": "e879fcc8d2114e59a7251d917d23d243ad81bf930f5897ad7ef7e293e035c883",
+    "TW-21-013": "b28cc42ed8acea8dd1e3f19eb694a6db0e3e03af6aa1ad3ae25c329122e2e098",
+    "TW-01-035": "ffd170c088e4f058e3ddeb8e9484a5d5df91bb16bece7d8c16ed7fb344cfe076"
+  },
+  "body_sha256_after": {
+    "TW-21-005": "4b8c5f38920582ba01db1529d822d6de6cdb24cb06b9205f43bc3ca1385b89bd",
+    "TW-21-006": "c76a405e1b11a8e62b882de47f4dbc968dc26a2f349d4583e2512110c9b10d1f",
+    "TW-21-012": "c2fa16f4d360e49d05d670302005fbc3f222e38306a9934106e36ff1714300e4",
+    "TW-21-013": "644db03a185ecf1f101581b87d482b2393160568300fa2163c9529c06d63344e",
+    "TW-01-035": "b6d2ba15e0db8221691b8336810f4bcfe6e71b82e57d730b1660e9f582e004ae"
+  },
+  "historical_chain_repairs": [
+    {
+      "id": "TW-16-006",
+      "restored_reviewed_at": "2026-10-24",
+      "source_revision": "68742d9226d6f750175936d4c2040a4cc4570ec2",
+      "restoration": "從該主線提交逐字還原原有回溯紀錄；其after_sha256逐筆銜接2026-10-25紀錄的before_sha256。未改動該條正文、來源或審閱內容。"
+    },
+    {
+      "id": "TW-17-002",
+      "restored_reviewed_at": "2026-10-24",
+      "source_revision": "68742d9226d6f750175936d4c2040a4cc4570ec2",
+      "restoration": "從該主線提交逐字還原原有回溯紀錄；其after_sha256逐筆銜接2026-10-25紀錄的before_sha256。未改動該條正文、來源或審閱內容。"
+    },
+    {
+      "id": "TW-17-004",
+      "restored_reviewed_at": "2026-10-24",
+      "source_revision": "68742d9226d6f750175936d4c2040a4cc4570ec2",
+      "restoration": "從該主線提交逐字還原原有回溯紀錄；其after_sha256逐筆銜接2026-10-25紀錄的before_sha256。未改動該條正文、來源或審閱內容。"
+    },
+    {
+      "id": "TW-24-001",
+      "restored_reviewed_at": "2026-10-24",
+      "source_revision": "68742d9226d6f750175936d4c2040a4cc4570ec2",
+      "restoration": "從該主線提交逐字還原原有回溯紀錄；其after_sha256逐筆銜接2026-10-25紀錄的before_sha256。未改動該條正文、來源或審閱內容。"
+    }
+  ]
+}

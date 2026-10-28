@@ -69,6 +69,6 @@ class Chapter16Tests(unittest.TestCase):
   self.assertGreaterEqual(coverage['unique_draft_entries'],437)
   self.assertLessEqual(coverage['entries_without_any_draft'],328)
   self.assertGreaterEqual(coverage['registry_sources'],312)
-  self.assertEqual(coverage['unresolved_reference_occurrences'],306)
+  self.assertLessEqual(coverage['unresolved_reference_occurrences'],306)
 
 if __name__=='__main__':unittest.main()

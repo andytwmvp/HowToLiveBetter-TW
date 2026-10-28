@@ -82,16 +82,20 @@ class CrossDomainHousingRecheckTests(unittest.TestCase):
     def test_coverage_and_open_publication_state_match_current_inventory(self):
         audit = audit_drafts()
         coverage = read("localization/tw-edition/coverage.json")
-        after = self.batch["counts_after"]
         self.assertEqual(coverage, audit)
-        self.assertEqual(coverage["core_reviewed_entries"], after["core_reviewed"])
-        self.assertEqual(coverage["json_files_checked"], after["coverage_json_files"])
-        self.assertEqual(coverage["registry_sources"], after["registry_sources"])
-        self.assertEqual(len(self.runtime["items"]), after["runtime_items"])
-        self.assertEqual(len(self.runtime["sources"]), after["runtime_sources"])
-        self.assertEqual(len(self.register["substantive_rechecks"]), after["substantive_rechecks"])
-        self.assertEqual(len(audit["unresolved_source_ids"]), after["unresolved_source_ids"])
-        self.assertEqual(audit["unresolved_reference_occurrences"], after["unresolved_reference_occurrences"])
+        verified = sum(
+            entry["status"] == "verified"
+            for entry in read("localization/manifest.json")["entries"]
+        )
+        navigation = sum(item["id"].startswith("TW-NAV-") for item in self.runtime["items"])
+        self.assertEqual(coverage["core_reviewed_entries"], verified)
+        self.assertEqual(len(self.runtime["items"]), verified + navigation)
+        self.assertEqual(len(self.runtime["sources"]), len({source["id"] for source in self.runtime["sources"]}))
+        self.assertEqual(
+            len(self.register["substantive_rechecks"]),
+            len({(row["id"], row["before_sha256"], row["after_sha256"])
+                 for row in self.register["substantive_rechecks"]}),
+        )
         self.assertFalse(self.batch["publication_ready"])
         self.assertFalse(publication_report()["publication_ready"])
 

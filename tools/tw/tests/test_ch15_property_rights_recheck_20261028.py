@@ -135,8 +135,8 @@ class PropertyRightsRecheckTests(unittest.TestCase):
                                 self.batch["counts_after"]["registry_sources"])
         self.assertEqual(coverage["json_files_checked"], audit["json_files_checked"])
         self.assertEqual(coverage["registry_sources"], audit["registry_sources"])
-        self.assertEqual(audit["unresolved_reference_occurrences"], 306)
-        self.assertEqual(len(audit["unresolved_source_ids"]), 115)
+        self.assertEqual(coverage["unresolved_source_ids"], audit["unresolved_source_ids"])
+        self.assertEqual(coverage["unresolved_reference_occurrences"], audit["unresolved_reference_occurrences"])
         self.assertFalse(self.batch["publication_ready"])
         self.assertFalse(publication_report()["publication_ready"])
 

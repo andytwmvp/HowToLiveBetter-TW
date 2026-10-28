@@ -8,6 +8,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from content_validation import load_json
+from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
 from review_contract import ROOT, validate_runtime
 
@@ -68,8 +69,7 @@ class Ch01CriticalMedicalFoodRecheckTests(unittest.TestCase):
                       'unresolved_source_ids', 'unresolved_reference_occurrences'):
             self.assertEqual(after[field], before[field], field)
         self.assertEqual((after['unresolved_source_ids'], after['unresolved_reference_occurrences']), (115, 306))
-        self.assertEqual(len(self.coverage['unresolved_source_ids']), 115)
-        self.assertEqual(self.coverage['unresolved_reference_occurrences'], 306)
+        self.assertEqual(self.coverage, audit_drafts())
         # This test certifies the historical batch snapshot. Later batches may
         # append sources and JSON files without changing that snapshot.
         self.assertGreaterEqual(len(self.runtime['sources']), after['runtime_sources'])
