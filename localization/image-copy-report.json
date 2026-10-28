@@ -1,11 +1,11 @@
 {
   "base_commit": "510111a8bd1003fff5e9adef8b95f6ffc489afba",
-  "scope": "圖片文案臺灣在地化；非正文制度查核",
+  "scope": "封面圖片與閱讀徽章文案採臺灣用語；非正文制度查核",
   "image": "og.png",
-  "image_sha256": "db57013fbb000b939448c8d6177dfade840144169598213e532fd449eaafe468",
+  "image_sha256": "353ad0bb433b2a0157154efa962b31804dffe96175b29d94b40c8288869ca825",
   "template": "tools/og.html",
-  "template_sha256": "303814c2872ede062a5cb9fcb0868dc178eb7b01526314a6d4112b5a4cd87196",
-  "spec_sha256": "a554b7f33fc9415f73205a40ce73174c8e1aef8532e5baad9565e7f4cff2e3f5",
+  "template_sha256": "84063f6890c2862691a8284571c163ccb47b598dd47b70fd3cb0883e8511b1bd",
+  "spec_sha256": "4cefdacfa229d04259a62a65f955b62198898662f5f50511a266ebd4e4138a35",
   "dimensions": [
     1200,
     630
@@ -20,6 +20,7 @@
   },
   "taiwan_verified_entries_changed": false,
   "render_checks": [
-    "og.png 已由繁體模板重製；1200×630；文字無超出畫布或區塊重疊"
+    "og.png 已由繁體模板重新產生；1200×630；文字未超出畫布或與其他區塊重疊。",
+    "README 六個動態徽章與臺灣版入口、協作說明一致。"
   ]
 }

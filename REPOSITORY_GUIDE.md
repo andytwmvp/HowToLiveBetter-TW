@@ -1,74 +1,56 @@
-> **2026-10-20五篇安全再審：** 動物暴露、蜱蟲、野外飲水、性侵後照護及斷肢已逐主張再核對；累計41篇AI來源實質再審，專業審閱仍待取得。[本批證據](localization/bites-ticks-water-assault-amputation-20261020.json)。
-
-> **2026-10-20安全再審：** 地震、雷擊、高山症與穿刺異物已逐主張再核對；累計36篇AI來源實質再審，專業審閱仍待取得。[本批證據](localization/disaster-altitude-trauma-20261020.json)。
-
-# 臺灣 repo 閱讀、建置與連結入口
+# 臺灣版閱讀與建置說明
 
 <a id="reading"></a>
-## 閱讀
+## 閱讀臺灣版
 
-目前以本 repo 檔案為準，沒有啟用 GitHub Pages，也沒有正式 Release。GitHub 點開 `.html` 會看到原始碼，不是已部署的閱讀網站；不要用原作者網站或猜測的 Pages 網址替代。
+臺灣版網站、自我檢視與離線閱讀檔共用同一套完成來源核對的內容。尚無臺灣版指引的主題會直接顯示說明，不會改用原作內容或未核對的資料。
 
-```sh
+將專案下載到本機後，在專案資料夾執行：
+
+~~~sh
 git clone https://github.com/andytwmvp/HowToLiveBetter-TW.git
 cd HowToLiveBetter-TW
 python3 -m http.server 8000 --bind 127.0.0.1
-```
+~~~
 
-在瀏覽器開啟 `http://127.0.0.1:8000/` 閱讀臺灣導航，`http://127.0.0.1:8000/selfcheck.html` 使用自查。完成後按 Ctrl+C 停止伺服器。預設資料只讀 [runtime.json](localization/tw-edition/runtime.json)。截至 2026-10-19，已完成臺灣核心278／765條與11則補充指引與導航，共289項；未來增修請以 [coverage.json](localization/tw-edition/coverage.json) 和 runtime 實際數字為準，不依歷史文字凍結完成數。原作繁體來源稿與未審閱草稿不能充當臺灣現行制度建議。
+在瀏覽器開啟 http://127.0.0.1:8000/ 閱讀臺灣版導航，或開啟 http://127.0.0.1:8000/selfcheck.html 使用自我檢視。結束後回到命令列按 Ctrl+C 停止。
 
-[第14章12條正文](locales/zh-TW/book/ch14/README.md) · [第15章18條正文](locales/zh-TW/book/ch15/README.md) · [第19章24條正文](locales/zh-TW/book/ch19/README.md) · [第21章13條正文](locales/zh-TW/book/ch21/README.md) · [第23章25條正文](locales/zh-TW/book/ch23/README.md) · [第25章12條正文](locales/zh-TW/book/ch25/README.md) · [第26章13條正文](locales/zh-TW/book/ch26/README.md) · [第7章23條正文](locales/zh-TW/book/ch07/README.md)。這是AI輔助來源核對與編修，不是獨立法律或資安專業簽證。
+GitHub 上直接點選 HTML 檔只會看到原始碼。各章入口請見[臺灣版閱讀說明](locales/zh-TW/README.md)。
 
 <a id="exports"></a>
-## 本地匯出
+## 建立離線閱讀檔
 
-在儲存庫根目錄使用 Python 3 與 Node.js 22 執行：
+在專案資料夾使用 Python 3 與 Node.js 22 執行：
 
-```sh
+~~~sh
 node tools/offline/build.mjs
 node tools/epub/build.mjs
 node tools/anki/build.mjs
-```
+~~~
 
-輸出分別是 `dist/HowToLiveBetter-TW.html`、`dist/HowToLiveBetter-TW.epub`、`dist/HowToLiveBetter-TW.apkg`，僅收錄目前已核對的導航。沒有公開下載資產時，連結導向這份建置說明，不建立不存在的固定 Release 下載網址。
-
-HTML 可離線使用；EPUB 與 Anki 的工程驗證不等於所有閱讀器或用戶端匯入驗收。正式臺灣全書 PDF 尚未完成，不能把原作 PDF 改名後當成臺灣版。
+檔案會輸出到 dist 資料夾，分別是 HTML、EPUB 與 Anki 套件；內容與臺灣版閱讀器相同，可供離線閱讀。HTML 可直接開啟，EPUB 可用電子書閱讀器開啟，Anki 套件則依 Anki App 的匯入步驟加入牌組。
 
 <a id="source-preview"></a>
-## 原作繁體來源預覽
+## 原作來源預覽
 
-完整34章、765條原作繁體稿保存在 [book/](book/) 與 [docs/](docs/)。在本機開啟 `http://127.0.0.1:8000/source.html` 才是含原作搜尋與分級的來源閱讀器；不是臺灣制度建議。
+這裡提供原作來源預覽，方便查找與比對原文。臺灣版生活指引請從[章節目錄](locales/zh-TW/README.md)閱讀。
 
-原作工程預覽需要明確指定，不能和臺灣導航產物混用：
+在本機開啟 http://127.0.0.1:8000/source.html，可使用原作來源閱讀器。建立原作來源預覽時，請明確指定 --source-preview：
 
-```sh
+~~~sh
 npm ci --prefix tools/epub
 node tools/offline/build.mjs --source-preview dist/HowToLiveBetter-source-preview.html
 node tools/epub/build.mjs --source-preview dist/HowToLiveBetter-source-preview.epub
 node tools/anki/build.mjs --source-preview dist/HowToLiveBetter-source-preview.apkg
-```
+~~~
 
-本fork來源Anki及EPUB現在使用獨立識別碼。第一次匯入此版Anki可能新增獨立來源牌組，不會自動遷移、合併或刪除既有原作／舊版預覽的學習紀錄。請先備份，再確認匯入選項；這不是所有版本皆相容的保證。[匯出識別、測試與限制](localization/export-integrity.md)記錄完整處理方式。
+來源版 Anki 和 EPUB 使用獨立識別碼。第一次匯入時，會新增另一組來源資料；舊有學習紀錄不會自動搬移或合併。匯入前請先備份並確認畫面上的選項；不同版本的相容狀況可能不同。詳細說明見[匯出識別與完整性說明](localization/export-integrity.md)。
 
-原作 PDF 工具是 `tools/pdf/build.mjs`，另需該工具記載的 Pandoc 與 Typst 依賴；它仍是原作來源預覽，不是臺灣全書。手動原作工作流程也不發布 Release 或部署網站。
+原作 PDF 建置工具需要 Pandoc 與 Typst，詳見工具目錄中的說明；產出的 PDF 是原作來源預覽。臺灣版內容請從[章節目錄](locales/zh-TW/README.md)閱讀。
 
 <a id="contributing"></a>
-## 回報、取材與署名
+## 回報問題與授權
 
-[臺灣原創、出處及再利用政策](localization/TAIWAN_REUSE_POLICY.md)、[問題回報](SUPPORT.md)、[Skill 共用規則](skills/life-decision-guide/SKILL.md)、[協作規則](AGENTS.md)、[原作署名與授權](ATTRIBUTION.md)與[連結處理紀錄](localization/link-audit.md)都在本 repo。資料未核對時不回退到上游，原作歷史引文亦不任意改成另一個 repo 的 issue。
+若發現內容、連結或無障礙閱讀問題，請依[問題回報方式](SUPPORT.md)提供可公開分享的資訊。不要在公開討論中貼上病歷、帳號密碼、驗證碼、憑證或其他個人資料。
 
-本次不部署網站、不發布電子書；不再需要的 `dist/`、`/mnt/data` 與 `/tmp` 測試中間檔須清除，保留使用者原始附件。字型、依賴安裝目錄及私人資料不提交。
-
-## 公開資料與爬蟲限制
-
-本 fork 是公開 GitHub 儲存庫，跨地區讀取及依法複製的權利不能只靠 `robots.txt` 停止。詳細授權、臺灣獨立寫作、追溯和未公開資料保護見 [再利用政策](localization/TAIWAN_REUSE_POLICY.md)。目前沒有部署 Pages，來源檔案中的爬蟲要求不代表已經對任何地區、公司或模型提供存取控制，也不會妨礙既有合法離線匯出。
-
-獨立工作安全閱讀：[職業安全與健康](locales/zh-TW/guides/職業安全與健康.md)（TW-NAV-011），與個別機械、局限空間及急救條目分開，仍共用正式runtime。
-
-2026-10-20接續：[PEP、骨折、牙齒與遇獸四篇實質再審](localization/pep-fracture-dental-wildlife-20261020.json)，累計45筆AI來源再核對且專業待審；核心278／765不變，612來源登錄。
-
-2026-10-20接續：[威脅、鬥毆與施救權益三篇實質再審](localization/conflict-rescue-rights-20261020.json)；第13章48篇均有AI來源再核對紀錄且專業待審，核心278／765不變，619來源登錄。
-
-2026-10-20三則P0安全導航再核對：[中風、心臟急症與家庭防災](localization/safety-navigation-20261020.json)。核心278／765不變，來源622；51筆AI來源再核對仍專業待審。
-
-2026-10-20心理與職安高風險導航再審：[急迫危險、支持與權益分流](localization/mental-occupational-20261020.json)。核心278／765不變，來源624；53筆AI來源再核對仍專業待審。
+原作署名、授權與修改說明見 [ATTRIBUTION.md](ATTRIBUTION.md)；臺灣版內容的來源和再利用方式見[臺灣內容治理政策](localization/TAIWAN_REUSE_POLICY.md)。如需編修內容，請先閱讀 [AGENTS.md](AGENTS.md) 的協作與查核規範。

@@ -16,7 +16,7 @@ import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
 import { zip } from '../lib/zip.mjs';
-import { ROOT, REPO, SITE, TITLE, read, readBook, COST_W, ratioOf, gitCommit, buildStamp } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, TITLE, read, readBook, COST_W, ratioOf } from '../lib/book.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter-source-preview.apkg');
 const NOW = new Date();
@@ -105,11 +105,11 @@ a { color: #3451b2; }
 .nightMode a, .night_mode a { color: #a8b1ff; }
 .nightMode .sec, .nightMode .hint, .nightMode .label { color: #98989f; }`;
 
-const QFMT = `<div class="hint">原作繁體來源預覽；非臺灣制度定稿。</div>
+const QFMT = `<div class="hint">原作來源預覽｜臺灣版生活指引請看本專案閱讀入口。</div>
 <div class="sec">{{節}}</div>
 <div class="q">{{標題}}</div>
 <div class="hint">想一想：為什麼值得做，要花多少代價？</div>`;
-const AFMT = `<div class="hint">原作繁體來源預覽；非臺灣制度定稿。</div>
+const AFMT = `<div class="hint">原作來源預覽｜臺灣版生活指引請看本專案閱讀入口。</div>
 <div class="sec">{{節}}</div>
 <div class="q">{{標題}}</div>
 <hr id="answer">
@@ -129,10 +129,8 @@ const deck = (id, name, desc = '') => ({
   id, name, desc, mod: NOW_S, usn: -1, dyn: 0, conf: 1, collapsed: false, browserCollapsed: false,
   newToday: [0, 0], revToday: [0, 0], lrnToday: [0, 0], timeToday: [0, 0], extendNew: 0, extendRev: 0,
 });
-const commit = gitCommit();
-const rootDesc = `《${TITLE}》原作繁體來源預覽（非臺灣制度定稿），全書條目，一條一張卡，按節分子牌組。生成於 ${buildStamp()}（臺北時間）`
-  + `${commit ? `，正文提交 ${commit.slice(0, 7)}` : ''}。正文會繼續更新，閱讀方式見 <a href="${SITE}#source-preview">本 repo 來源預覽說明</a>；`
-  + '本fork來源卡採獨立識別碼；第一次匯入新版不自動遷移舊版或原作的學習紀錄。請先備份，再依Anki匯入選項處理。';
+const rootDesc = `《${TITLE}》原作繁體來源預覽，保留原作內容與用語，供查找及比對來源。臺灣版生活指引請從 <a href="${SITE}">本專案閱讀入口</a>閱讀。`
+  + '本牌組使用獨立識別碼；匯入前請先備份，舊版或原作牌組的學習紀錄不會自動搬移。';
 const decks = {
   1: deck(1, 'Default'),
   [ROOT_DECK_ID]: deck(ROOT_DECK_ID, `${TITLE}｜原作繁體來源預覽`, rootDesc),

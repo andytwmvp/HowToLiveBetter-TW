@@ -82,10 +82,9 @@ jobs:
           curl -fsSL -o epubcheck.zip https://github.com/w3c/epubcheck/releases/download/v5.4.0/epubcheck-5.4.0.zip
           unzip -q epubcheck.zip
           java -jar epubcheck-5.4.0/epubcheck.jar dist/HowToLiveBetter.epub
-      - name: 標示非台灣正式版
+      - name: 說明原作來源預覽
         run: |
-          printf '%s\n' '此產物使用未完成台灣在地化的原文 book/，僅供工程驗證，不是台灣正式版，也不代表法規、醫療或金融內容已查核。' > dist/READ-BEFORE-USE.txt
-          echo '只產生原文工程預覽；未建立 PR、未推送、未部署、未發布 Release。' >> "$GITHUB_STEP_SUMMARY"
+          printf '%s\n' '這些檔案是原作繁體來源預覽，保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從專案閱讀入口閱讀。' > dist/READ-BEFORE-USE.txt
       - uses: actions/upload-artifact@v4
         with:
           name: SOURCE-ONLY-NOT-TAIWAN-EDITION

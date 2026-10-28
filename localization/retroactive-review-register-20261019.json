@@ -25028,6 +25028,592 @@
         "independent_of_frequency": true,
         "legal_status": "《人工智慧基本法》2026-01-14公布即施行。第16條建立主管機關風險規範框架，第19條要求政府使用AI評估風險與內控；框架和公部門規定不等於私人使用者一律禁用，其他法律仍按情況適用。"
       }
+    },
+    {
+      "id": "TW-14-001",
+      "before_sha256": "71f2cb3bb68bc6c90775d50c3263d9424a3d0409c794a164859b11d83d1417fd",
+      "after_sha256": "cdb7a14e1b303e2e36ae26e3c202097c8959c63aa4fee2a3b04087d25490d73b",
+      "prior_revision": "2b79c8cf4248c18b8a20c33c7f2eb83ef79276a8",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "ae2e1ed706c828474ac0aa2d0ba34b6167e9d9a56dc859536d0ced7b45622115",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣個人常用的主要信箱、網路銀行、購物會員、LINE及社群帳號可能因釣魚連結遭接管；刑事局公布的LINE投票／按讚釣魚案例是與本地服務相符的實際情境。",
+      "frequency_assessment": "刑事警察局公布LINE盜（冒）用案件2025全年4,033件、2026年1至7月138件；僅是單一平台行政案件件數，未提供活躍帳號或使用者分母，且未說明獨立帳號去重。未找到台灣一般帳號接管與登入暴露配對的全國資料，不估個人機率。",
+      "legal_status_assessment": "本文是帳號安全建議，不宣稱所有台灣居民依法必須採用特定驗證器；NIST為美國技術標準，資安署新聞稿為一般宣導，工作或受管制服務另依其適用規範及組織政策。",
+      "changes": "更新NIST現行SP 800-63B-4及資安署2026民眾宣導；加入LINE投票釣魚與刑事局行政案件數，說清LINE案件數沒有帳號／使用者分母；補入機關網站重設流程繞過MFA的限定案例，並新增登入及復原安全步驟。",
+      "source_ids": [
+        "ch14_nist",
+        "ch14_google_auth",
+        "ch14_nist_20261028",
+        "ch14_acs_account_security_20260112",
+        "ch14_cib_line_hijack_20260803",
+        "ch14_acs_reset_report_202607"
+      ],
+      "source_status": "逐筆核對每個現行來源及支持段落；舊來源ID與SHA保留，新增來源均另行登錄。",
+      "source_checks": [
+        {
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "claim": "WebAuthn/FIDO2透過驗證者網域名稱綁定提供抗釣魚；密碼、OTP與帶外驗證本身不具抗釣魚特性。",
+          "supporting_passage": "編者摘要（非逐字引文）：SP 800-63B-4第3.2.5節以WebAuthn verifier name binding為抗釣魚範例；第3.1.1、3.1.3、3.1.4及3.1.5節明示密碼、帶外驗證及OTP非抗釣魚。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://safety.google/intl/zh-TW_ALL/safety/authentication/",
+          "claim": "Google說明密碼金鑰符合FIDO/W3C標準、帳戶救援、兩步驟驗證及密碼管理工具；廠商說明不代表所有平台相同。",
+          "supporting_passage": "編者摘要（非逐字引文）：頁面列密碼金鑰、帳戶救援、兩步驟驗證和密碼管理工具；其密碼金鑰產品說明強調網域釣魚防護。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "claim": "NIST SP 800-63B-4目前版本的WebAuthn網域綁定及密碼／OTP抗釣魚界線。",
+          "supporting_passage": "編者摘要（非逐字引文）：2025-08-26頁面更新後的SP 800-63B-4第3.2.5節以WebAuthn驗證者名稱綁定為例，第3.1.1、3.1.3、3.1.4及3.1.5節稱密碼、帶外驗證及OTP不具抗釣魚能力。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://web.moda.gov.tw/ACS/press/news/press/18660",
+          "claim": "資安署2026-01-12建議民眾重要服務啟用兩步驟驗證、檢視登入活動，並列出信箱、網路銀行及社群等重要帳號。",
+          "supporting_passage": "編者摘要（非逐字引文）：新聞稿第102至107行列資安署三項帳密防護建議：不要跨平台共用、重要服務啟用兩步驟驗證、檢視登入活動；列舉網路銀行、Google、LINE與社群。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=60c2b431-063b-427a-a609-95ad6b806748",
+          "claim": "刑事局公布LINE釣魚盜用帳號案件及不輸入／不交付認證碼、登入異常處理建議；統計只屬LINE服務且沒有使用者分母。",
+          "supporting_passage": "編者摘要（非逐字引文）：2026-08-03公告記載2025全年4,033件、2026年1至7月138件；第150至154行描述投票／按讚仿冒頁面取得帳密與認證碼、LINE復原做法及不提供認證碼提醒。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://moda.gov.tw/ACS/press/report/20430",
+          "claim": "資安署2026年7月月報記錄機關網站密碼重設／OTP缺陷可繞過雙重驗證，並建議密碼重設後終止既有工作階段；不是一般民眾事件率。",
+          "supporting_passage": "編者摘要（非逐字引文）：月報第163至178行記載機關網站重設流程缺失及終止既有工作階段、使重設憑證失效的系統方建議。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        }
+      ],
+      "statistics_ids": [
+        "刑事警察局LINE盜（冒）用帳號案件數"
+      ],
+      "statistics_assessed": [
+        {
+          "name": "刑事警察局LINE盜（冒）用帳號案件數",
+          "period": "2025-01-01至2025-12-31；2026-01-01至2026-07-31（分期間呈現）",
+          "value": {
+            "2025_full_year_LINE_cases": 4033,
+            "2026_january_to_july_LINE_cases": 138
+          },
+          "unit": "刑事警察局公告之LINE盜（冒）用案件數（件）",
+          "geographic_scope": "臺灣全國",
+          "population": "刑事警察局公告之全國LINE盜（冒）用帳號案件；公告未提供相對應LINE用戶、活躍帳號或登入暴露母數",
+          "numerator_definition": "刑事警察局公告的全國盜（冒）用LINE帳號案件件數；2025年4,033件，2026年1至7月138件。",
+          "denominator": null,
+          "denominator_definition": "無LINE活躍帳號、使用者、登入次數或相關暴露母數；案件是否按獨立帳號去重未明，不得換算個人風險。",
+          "data_type": "單一服務的官方行政案件件數，不是抽樣發生率、個人風險或所有網路帳號受害件數。",
+          "source_ids": [
+            "ch14_cib_line_hijack_20260803"
+          ],
+          "accessed_at": "2026-10-28",
+          "search_scope": "找到刑事局公布的LINE盜（冒）用案件數及資安署機關網站驗證實作案例；未找到全體個人服務的接管案件與使用者／登入暴露母數。",
+          "limitations": [
+            "LINE只代表單一服務，不能推廣至電子郵件、金融、購物或所有社群帳號。",
+            "刑事局公告未交代是否為不同帳號去重，也沒有使用者或登入暴露母數。",
+            "月報中的機關網站安全缺失或政府聯防情資不等於一般居民的受害件數。",
+            "不自行推算台灣個人帳號受害率。"
+          ],
+          "search_queries": [
+            {
+              "query": "台灣 LINE 帳號盜用 件數 活躍帳號 分母 刑事警察局 2025 2026",
+              "searched_domains": [
+                "moda.gov.tw",
+                "npa.gov.tw",
+                "cib.npa.gov.tw",
+                "ncc.gov.tw",
+                "data.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "找到刑事局公布的LINE盜（冒）用案件數及資安署機關網站驗證實作案例；未找到全體個人服務的接管案件與使用者／登入暴露母數。"
+            }
+          ],
+          "screened_sources": [
+            {
+              "title": "刑事警察局：LINE盜用釣魚及官方帳號處理方式（2026-08-03）",
+              "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=60c2b431-063b-427a-a609-95ad6b806748",
+              "published_at": "2026-08-03",
+              "accessed_at": "2026-10-28",
+              "retrieval_method": "直接閱讀刑事警察局公告全文，逐行核對兩段期間案件數、釣魚情境、帳號事件定義限制與官方LINE復原建議。",
+              "reported_scope": "刑事警察局稱全國盜（冒）用LINE帳號案件：2025全年4,033件；2026年1至7月138件。公告另報告官方月均約數，但本批不把不同期間月均差異當成原因或個人風險。",
+              "value": {
+                "2025_full_year_cases": 4033,
+                "2026_january_to_july_cases": 138
+              },
+              "unit": "刑事局公告案件件數；只限LINE服務",
+              "scope_limit": "公告未提供LINE活躍帳號／使用者／登入暴露母數，亦未說明個案或不同帳號的去重規則；案件數不是個人發生率，也不是全體網路帳號事件數。"
+            },
+            {
+              "title": "資安署：資通安全網路月報（115年7月）",
+              "url": "https://moda.gov.tw/ACS/press/report/20430",
+              "published_at": "2026-08-17",
+              "updated_at": "2026-10-13",
+              "accessed_at": "2026-10-28",
+              "retrieval_method": "直接閱讀資安署官方2026年7月月報帳號安全事件和通報趨勢段落。",
+              "reported_scope": "包含機關網站的密碼重設／一次性密碼實作缺失、帳號接管案例及政府機關資安聯防情資；不是一般民眾帳號事件統計。",
+              "excluded_general_population_rate": true,
+              "scope_limit": "網站管理機關事件、政府資安聯防情資與通報案件不是一般居民帳號遭盜件數；不提供社會大眾活躍帳號或登入暴露分母。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "刑事警察局公布LINE盜（冒）用案件2025全年4,033件、2026年1至7月138件；僅是單一平台行政案件件數，未提供活躍帳號或使用者分母，且未說明獨立帳號去重。未找到台灣一般帳號接管與登入暴露配對的全國資料，不估個人機率。",
+        "本文是帳號安全建議，不宣稱所有台灣居民依法必須採用特定驗證器；NIST為美國技術標準，資安署新聞稿為一般宣導，工作或受管制服務另依其適用規範及組織政策。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "review_path": "localization/reviews/TW-14-001.json",
+      "limits": [
+        "多因素驗證仍受帳號復原設計、服務端實作、裝置及社交工程影響；釣魚時自行交付認證碼可能繞過部分保護。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "previous_source_ids": [
+        "ch14_nist",
+        "ch14_google_auth"
+      ],
+      "retired_sources": [],
+      "previous_review_claims": [
+        "信箱與重要帳號啟用多因素驗證，優先考慮抗釣魚方式：第3.1.1、3.2.5與第8節：WebAuthn/FIDO2的網域綁定提供抗釣魚能力；OTP非抗釣魚；鼓勵不同服務使用獨立密碼及密碼管理器。這是美國技術指引，不是臺灣法律。",
+        "信箱與重要帳號啟用多因素驗證，優先考慮抗釣魚方式：說明密碼金鑰的FIDO/W3C公開金鑰機制、裝置解鎖與同步，以及不重複密碼、密碼管理器的用途。產品說明不代表全體平臺同樣支援。"
+      ],
+      "reviewer_limit": "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。",
+      "taiwan_context_assessment": {
+        "fit": "台灣個人常用的主要信箱、網路銀行、購物會員、LINE及社群帳號可能因釣魚連結遭接管；刑事局公布的LINE投票／按讚釣魚案例是與本地服務相符的實際情境。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "本文是帳號安全建議，不宣稱所有台灣居民依法必須採用特定驗證器；NIST為美國技術標準，資安署新聞稿為一般宣導，工作或受管制服務另依其適用規範及組織政策。"
+      }
+    },
+    {
+      "id": "TW-14-002",
+      "before_sha256": "9f3c7d2fe973b2ec4a6eda7a932396950d945994c58af010ce9ff1cb5861dfcf",
+      "after_sha256": "d78f8ae9dfba7628bd89a113fa6aa038482a4da94cde996337b8e399ebde3f48",
+      "prior_revision": "2b79c8cf4248c18b8a20c33c7f2eb83ef79276a8",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "fb7355e04c73d9ec64e7a42984027466da817e7a67b94869ebf7e2ba4b731d7c",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣居民常在信箱、金融、電商、LINE及社群間切換；應先守住主要信箱並使用各服務均可接受的獨立密碼，不套用未經查核的海外網站規則。",
+      "frequency_assessment": "未找到台灣重複使用密碼造成帳號接管的全國事件數與受影響帳號／登入暴露母數；LINE盜用統計包含釣魚情境，不能當作重複密碼事件統計。",
+      "legal_status_assessment": "本文是一般密碼管理建議，不把資安署宣導或NIST服務提供者技術標準稱為所有私人網站及居民的法定密碼格式要求。",
+      "changes": "以資安署2026民眾宣導和NIST SP 800-63B-4對照密碼建議，明確區分宣導對象與服務提供者標準；保留每站獨立長密碼、密碼管理器、已洩漏才更換及復原步驟，將重複密碼受害率標為無可比全國分子／分母。",
+      "source_ids": [
+        "ch14_nist",
+        "ch14_google_auth",
+        "ch14_nist_20261028",
+        "ch14_acs_account_security_20260112"
+      ],
+      "source_status": "逐筆核對每個現行來源及支持段落；舊來源ID與SHA保留，新增來源均另行登錄。",
+      "source_checks": [
+        {
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "claim": "不同服務使用獨立密碼、允許密碼管理器；對服務提供者不應設混合字元規則或無故要求週期更換。",
+          "supporting_passage": "編者摘要（非逐字引文）：SP 800-63B-4第3.1.1節要求允許密碼管理器與自動填入；不得施加字元混合組成規則或週期更換，有已洩漏證據時則要求更換。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://safety.google/intl/zh-TW_ALL/safety/authentication/",
+          "claim": "Google安全中心建議不同網站使用不同密碼，並說明密碼管理工具產生、儲存與管理密碼及密碼金鑰。",
+          "supporting_passage": "編者摘要（非逐字引文）：頁面第128至138行說明密碼管理工具建議、儲存及自動填入，並可查看是否重複使用或外洩。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "claim": "NIST現行SP 800-63B-4對服務提供者的密碼管理器、組成規則與密碼更換規範。",
+          "supporting_passage": "編者摘要（非逐字引文）：第3.1.1節要求允許密碼管理器及自動填入，不得要求不同字元類型混用或週期更換；有憑證遭洩漏證據時須強制更換。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://web.moda.gov.tw/ACS/press/news/press/18660",
+          "claim": "資安署2026-01-12一般民眾宣導建議勿跨服務重複使用密碼、密碼至少15字元混合字元或採用密碼管理工具。",
+          "supporting_passage": "編者摘要（非逐字引文）：新聞稿第100至107行提醒不要在社群、電子郵件、網路銀行重複使用密碼；列出至少15字元混合字元或以密碼管理工具生成管理的宣導建議。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        }
+      ],
+      "statistics_ids": [
+        "密碼重複使用造成的台灣個人帳號接管頻率"
+      ],
+      "statistics_assessed": [
+        {
+          "name": "密碼重複使用造成的台灣個人帳號接管頻率",
+          "period": "截至2026-10-28；若列事件數則逐期間分開",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "臺灣全國",
+          "population": "在台灣使用重複密碼、並因此遭帳號接管的居民及帳號登入事件",
+          "numerator_definition": "未找到能按重複密碼原因識別的全國帳號接管件數或調查估值。",
+          "denominator": null,
+          "denominator_definition": "未找到可配對的帳號數、活躍使用者、登入次數、名下門號或相關暴露母數；不得換算個人機率。",
+          "data_type": "資料不足；官方資安宣導不是事件統計，LINE帳號釣魚案件不是重複密碼案件數。",
+          "source_ids": [
+            "ch14_nist_20261028",
+            "ch14_acs_account_security_20260112"
+          ],
+          "accessed_at": "2026-10-28",
+          "search_scope": "找到資安署密碼宣導與NIST技術標準，並搜尋刑事局社群帳號事件；未找到以密碼重複使用為事件定義且具使用者分母的台灣統計。",
+          "limitations": [
+            "未取得重複密碼與台灣帳號接管事件配對的行政或抽樣資料。",
+            "LINE盜用案件包含釣魚交付憑證，無法歸因為密碼重用。",
+            "不把海外技術標準或廠商調查換算為台灣盛行率或財損機率。"
+          ],
+          "search_queries": [
+            {
+              "query": "site:npa.gov.tw OR site:cib.npa.gov.tw 台灣 密碼重複使用 帳號接管 統計 件數",
+              "searched_domains": [
+                "moda.gov.tw",
+                "npa.gov.tw",
+                "cib.npa.gov.tw",
+                "ncc.gov.tw",
+                "data.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "找到資安署密碼宣導與NIST技術標準，並搜尋刑事局社群帳號事件；未找到以密碼重複使用為事件定義且具使用者分母的台灣統計。"
+            }
+          ],
+          "screened_sources": [
+            {
+              "title": "資安署：強化帳密安全，落實三大防護原則",
+              "url": "https://web.moda.gov.tw/ACS/press/news/press/18660",
+              "published_at": "2026-01-12",
+              "accessed_at": "2026-10-28",
+              "reported_scope": "資安宣導建議勿跨服務共用密碼；無使用者抽樣或事件數。",
+              "scope_limit": "一般預防宣導不是密碼重複使用盛行率、帳號外洩件數或個人風險。"
+            },
+            {
+              "title": "刑事警察局：LINE盜用釣魚及官方帳號處理方式（2026-08-03）",
+              "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=60c2b431-063b-427a-a609-95ad6b806748",
+              "published_at": "2026-08-03",
+              "accessed_at": "2026-10-28",
+              "reported_scope": "LINE釣魚接管的特定平台案件數。",
+              "scope_limit": "公告描述的主要機制為仿冒頁面騙取帳號、密碼及認證碼，未分出重複密碼造成的案件，亦無使用者分母。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "未找到台灣重複使用密碼造成帳號接管的全國事件數與受影響帳號／登入暴露母數；LINE盜用統計包含釣魚情境，不能當作重複密碼事件統計。",
+        "本文是一般密碼管理建議，不把資安署宣導或NIST服務提供者技術標準稱為所有私人網站及居民的法定密碼格式要求。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "review_path": "localization/reviews/TW-14-002.json",
+      "limits": [
+        "帳號清單只記用途與復原路徑，不記明文密碼、完整復原碼或私鑰；NIST是外國技術標準，非臺灣法律，服務端規則亦各有不同。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "previous_source_ids": [
+        "ch14_nist",
+        "ch14_google_auth"
+      ],
+      "retired_sources": [],
+      "previous_review_claims": [
+        "主要信箱使用獨立密碼，建立可復原的密碼管理方式：第3.1.1、3.2.5與第8節：WebAuthn/FIDO2的網域綁定提供抗釣魚能力；OTP非抗釣魚；鼓勵不同服務使用獨立密碼及密碼管理器。這是美國技術指引，不是臺灣法律。",
+        "主要信箱使用獨立密碼，建立可復原的密碼管理方式：說明密碼金鑰的FIDO/W3C公開金鑰機制、裝置解鎖與同步，以及不重複密碼、密碼管理器的用途。產品說明不代表全體平臺同樣支援。"
+      ],
+      "reviewer_limit": "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。",
+      "taiwan_context_assessment": {
+        "fit": "台灣居民常在信箱、金融、電商、LINE及社群間切換；應先守住主要信箱並使用各服務均可接受的獨立密碼，不套用未經查核的海外網站規則。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "本文是一般密碼管理建議，不把資安署宣導或NIST服務提供者技術標準稱為所有私人網站及居民的法定密碼格式要求。"
+      }
+    },
+    {
+      "id": "TW-14-003",
+      "before_sha256": "29b4ee4b469931415786e4fa22906ef39a481156d755e4c939ea77a149dba318",
+      "after_sha256": "a62739f607650ce4507fc13de31d9be82741905903cc072b754b1f0360be74fc",
+      "prior_revision": "2b79c8cf4248c18b8a20c33c7f2eb83ef79276a8",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "1e15927112f3ec3ff44c923e0eccc4359c5cc52988b8993423efd8e9b7435d5c",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣用戶使用實體SIM卡或eSIM及三大電信業者服務；裝置端SIM PIN、手機螢幕鎖、電信帳號及業者核准補換卡是不同安全控制。",
+      "frequency_assessment": "未找到台灣未授權補換SIM事件數與名下門號、補換卡申請或用戶暴露母數；通傳會指引是業者管理措施，不是發生率。",
+      "legal_status_assessment": "通傳會2025-09-26修正指引向電信事業規範補換卡KYC風險管理；它不是要求消費者啟用SIM PIN的法定義務，也不保證每件申請無冒名風險。",
+      "changes": "重核Apple SIM PIN／PUK操作及中華電信自助入口，加入通傳會2025-09-26補換SIM卡KYC指引；分清裝置端SIM PIN和電信業者補換卡流程，補上官方管道查證與未授權異動處理，未把指引誤寫成消費者法定義務。",
+      "source_ids": [
+        "ch14_apple_sim",
+        "ch14_cht_service",
+        "ch14_ncc_sim_replacement_20250926"
+      ],
+      "source_status": "逐筆核對每個現行來源及支持段落；舊來源ID與SHA保留，新增來源均另行登錄。",
+      "source_checks": [
+        {
+          "url": "https://support.apple.com/zh-tw/118228",
+          "claim": "Apple說明SIM PIN可鎖定支援的SIM/eSIM；未知預設碼或PUK不可猜，應聯絡業者。",
+          "supporting_passage": "編者摘要（非逐字引文）：Apple台灣支援第30至62行說明重新啟動或取出卡片後的鎖定、猜錯可能永久鎖卡、從未設定時向業者取得預設碼，以及聯絡業者取得PUK。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://www.cht.com.tw/home/consumer/member/mobileservice",
+          "claim": "中華電信行動自助服務包含PUK解鎖入口；僅支援中華電信客戶，非跨業者查詢。",
+          "supporting_passage": "編者摘要（非逐字引文）：中華電信網路門市自助服務頁列有解鎖及PUK等行動服務入口；依帳戶登入及本公司客戶服務操作。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://www.ncc.gov.tw/chinese/files/25092/566_51775_250926_2.pdf",
+          "claim": "通傳會2025-09-26修正指引要求業者受理更換或補發SIM卡時詢問原因、目的和證明資料，得依KYC審核結果酌予核准。",
+          "supporting_passage": "編者摘要（非逐字引文）：通傳會正式指引第柒點第二款規定，申請更換或補發SIM卡時，電信事業應請用戶說明原因和目的、提供證明資料，並得依KYC審核結果予以酌核；文件標示114.9.26版。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28透過通傳會公告所附114.9.26版正式指引PDF全文核對第柒點第二款（第8頁）；文章來源欄保留通傳會原始PDF網址。"
+        }
+      ],
+      "statistics_ids": [
+        "台灣未授權SIM卡／eSIM補發或更換事件頻率"
+      ],
+      "statistics_assessed": [
+        {
+          "name": "台灣未授權SIM卡／eSIM補發或更換事件頻率",
+          "period": "截至2026-10-28；若列事件數則逐期間分開",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "臺灣全國",
+          "population": "台灣電信門號用戶及SIM卡補換申請",
+          "numerator_definition": "未找到全國未經本人授權的SIM卡／eSIM補發或更換事件數，也未找到相同口徑的補換申請總數。",
+          "denominator": null,
+          "denominator_definition": "未找到可配對的帳號數、活躍使用者、登入次數、名下門號或相關暴露母數；不得換算個人機率。",
+          "data_type": "資料不足；通傳會指引提供業者風險管理要求，並非違法補換卡事件統計。",
+          "source_ids": [
+            "ch14_ncc_sim_replacement_20250926"
+          ],
+          "accessed_at": "2026-10-28",
+          "search_scope": "查核通傳會補換SIM防詐風險指引、公告及政府開放資料；找到預防流程，未找到未授權補換事件數或補換申請母數。",
+          "limitations": [
+            "業者風險管理指引不能當作事件發生率。",
+            "未找到全國事件分子及門號／申請母數，不估個人風險。",
+            "無資料不代表沒有事件。"
+          ],
+          "search_queries": [
+            {
+              "query": "台灣 未授權 SIM 卡 補發 更換 案件統計 分母 NCC",
+              "searched_domains": [
+                "moda.gov.tw",
+                "npa.gov.tw",
+                "cib.npa.gov.tw",
+                "ncc.gov.tw",
+                "data.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "查核通傳會補換SIM防詐風險指引、公告及政府開放資料；找到預防流程，未找到未授權補換事件數或補換申請母數。"
+            }
+          ],
+          "screened_sources": [
+            {
+              "title": "通傳會：電信事業提供電信服務風險管理機制指引（2025-09-26修正）",
+              "url": "https://www.ncc.gov.tw/chinese/files/25092/566_51775_250926_2.pdf",
+              "published_at": "2025-09-26",
+              "accessed_at": "2026-10-28",
+              "reported_scope": "業者受理補換SIM時詢問原因、目的及證明資料，並依KYC審核。",
+              "scope_limit": "指引未提供未授權補換事件數、全體補換件數或門號用戶暴露分母。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "未找到台灣未授權補換SIM事件數與名下門號、補換卡申請或用戶暴露母數；通傳會指引是業者管理措施，不是發生率。",
+        "通傳會2025-09-26修正指引向電信事業規範補換卡KYC風險管理；它不是要求消費者啟用SIM PIN的法定義務，也不保證每件申請無冒名風險。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "review_path": "localization/reviews/TW-14-003.json",
+      "limits": [
+        "SIM PIN只保護支援此功能的SIM卡或eSIM於特定裝置情況；不阻止業者補換卡申請，也不能取代螢幕鎖、業者核驗或帳號復原。PUK不可猜。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "previous_source_ids": [
+        "ch14_apple_sim",
+        "ch14_cht_service"
+      ],
+      "retired_sources": [],
+      "previous_review_claims": [
+        "螢幕鎖定與SIM PIN分開設定，不猜預設碼或PUK：開啟SIM PIN後須依電信業者提供的資料設定；不知道預設碼時不可猜測，鎖住後向業者取得PUK及解鎖協助。",
+        "螢幕鎖定與SIM PIN分開設定，不猜預設碼或PUK：提供本公司用戶的資費、帳單、通話明細與SIM卡PUK解鎖等正式入口；不是跨電信或跨銀行名下帳戶總查詢。"
+      ],
+      "reviewer_limit": "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。",
+      "taiwan_context_assessment": {
+        "fit": "台灣用戶使用實體SIM卡或eSIM及三大電信業者服務；裝置端SIM PIN、手機螢幕鎖、電信帳號及業者核准補換卡是不同安全控制。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "通傳會2025-09-26修正指引向電信事業規範補換卡KYC風險管理；它不是要求消費者啟用SIM PIN的法定義務，也不保證每件申請無冒名風險。"
+      }
+    },
+    {
+      "id": "TW-14-006",
+      "before_sha256": "c78d1308f87665a99ac7df46d3562e0efaa23088ecc1eb1d8226e0c238a3c9f4",
+      "after_sha256": "2a9d082dc54a788a2e000c8dc4043c5e23a7655da28d09592d8f360d343a6fac",
+      "prior_revision": "2b79c8cf4248c18b8a20c33c7f2eb83ef79276a8",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "5938b26afed80cf5bb3ffa04f79423ff5c9d55bcdb179fbabf66bbf2f16a4ce3",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2027-01-15",
+      "reviewed_at": "2026-10-28",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣居民可能在手機換機、遺失、共用／交還工作裝置或LINE被釣魚接管時，需要處理登入工作階段、第三方權限及帳號復原。",
+      "frequency_assessment": "刑事警察局公布LINE盜（冒）用案件數，但其母數僅限特定平台且無使用者分母；未找到所有個人帳號的工作階段、第三方授權遭不當使用事件與帳號使用暴露配對的全國資料。",
+      "legal_status_assessment": "本文為一般帳號安全操作；LINE、Apple及Google操作文件僅適用各自服務，不是所有平台通用法定流程。工作帳號另遵從雇主及服務適用規範。",
+      "changes": "更新Apple、Google及刑事局LINE官方操作內容，新增LINE釣魚案件數及帳號仍可登入／已登出的處理；依資安署2026年7月月報區分密碼重設與既有工作階段撤銷，明確保留第三方資料副本限制。",
+      "source_ids": [
+        "ch14_apple_devices",
+        "ch14_apple_lost",
+        "ch14_google_connections",
+        "ch14_cib_line_hijack_20260803",
+        "ch14_acs_reset_report_202607"
+      ],
+      "source_status": "逐筆核對每個現行來源及支持段落；舊來源ID與SHA保留，新增來源均另行登錄。",
+      "source_checks": [
+        {
+          "url": "https://support.apple.com/zh-tw/102649",
+          "claim": "Apple帳號裝置列表可查看裝置並移除不再使用或不認得的裝置；已移除裝置無法再存取相關服務。",
+          "supporting_passage": "編者摘要（非逐字引文）：Apple台灣支援第28至62行列出可查看的裝置、作用及從帳號移除步驟。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://support.apple.com/zh-tw/101593",
+          "claim": "遺失Apple裝置應使用尋找／遺失模式處理，並防範索取裝置密碼或驗證碼的社交工程。",
+          "supporting_passage": "編者摘要（非逐字引文）：Apple台灣支援第28至58行說明使用尋找及遺失模式，並提醒勿交出裝置密碼、驗證碼或帳號資訊。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://support.google.com/accounts/answer/3466521?hl=zh-Hant",
+          "claim": "Google說明可查看及移除第三方資料存取權；撤權後第三方不能再存取，但已取得資料可能須另行要求刪除。",
+          "supporting_passage": "編者摘要（非逐字引文）：Google官方說明第31至72行列出第三方資料權限、移除存取權及另行要求刪除已取得資料的界線。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=60c2b431-063b-427a-a609-95ad6b806748",
+          "claim": "刑事局對LINE帳號仍可登入、已遭登出及復原資料變更提供服務特定步驟，不能推廣成其他App通用流程。",
+          "supporting_passage": "編者摘要（非逐字引文）：2026-08-03公告第152至154行列LINE仍能登入時改密碼、關閉其他裝置登入並登出陌生裝置；遭登出時依官方復原，綁定資料變更時使用客服表單。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        },
+        {
+          "url": "https://moda.gov.tw/ACS/press/report/20430",
+          "claim": "資安署月報指出密碼重設後系統應使重設憑證失效並終止既有工作階段，並非所有服務的使用者介面都相同。",
+          "supporting_passage": "編者摘要（非逐字引文）：2026年7月資安月報第172至178行明列密碼重設後使重設憑證失效、終止既有工作階段並通知帳號持有人。",
+          "accessed_at": "2026-10-28",
+          "retrieval_method": "2026-10-28直接閱讀連結的官方網頁、法規、指引或PDF，核對文件日期、適用對象和支持本條的具體段落；不以搜尋摘要、制度文件或單一案例推估一般民眾發生率。"
+        }
+      ],
+      "statistics_ids": [
+        "台灣個人帳號登入工作階段或第三方授權遭未授權存取之全國頻率"
+      ],
+      "statistics_assessed": [
+        {
+          "name": "台灣個人帳號登入工作階段或第三方授權遭未授權存取之全國頻率",
+          "period": "截至2026-10-28；本次未找到可配對的全國事件數與使用暴露母數",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "臺灣全國資料查找範圍；未找到此事件類型的全國統計",
+          "population": "臺灣個人信箱、LINE、Apple／Google及其他服務帳號的登入工作階段與第三方授權使用者；目前沒有共通暴露母數",
+          "numerator_definition": "未找到全國個人帳號工作階段或第三方授權遭未授權存取的彙總事件數；刑事局LINE盜（冒）用案件沒有按工作階段或第三方授權分類，故不列入此指標的事件分子。",
+          "denominator": null,
+          "denominator_definition": "沒有所有服務的活躍使用者、登入工作階段或第三方授權數作為對應暴露母數；不估個人受害率。",
+          "data_type": "資料不足；現有LINE行政案件及政府機關網站實作案例屬不同事件定義與對象，不能換算成個人工作階段或第三方授權遭不當使用的發生率。",
+          "source_ids": [],
+          "accessed_at": "2026-10-28",
+          "search_scope": "查核刑事局LINE帳號盜用公告、資安署政府網站驗證事件及政府開放資料；未找到涵蓋所有個人服務且按工作階段／第三方授權分類的事件統計或母數。",
+          "limitations": [
+            "LINE案件只代表LINE帳號盜（冒）用，公告未分解攻擊是否涉及既有登入工作階段或第三方授權。",
+            "政府網站密碼重設事件對象是機關系統，不是一般居民帳號事件。",
+            "各服務工作階段及第三方授權記錄分散，沒有可相加的全國共同母數。",
+            "不估個人受害率、工作階段遭接管率或第三方資料外流機率。"
+          ],
+          "search_queries": [
+            {
+              "query": "台灣 個人帳號 不明裝置 第三方授權 撤銷 事件統計",
+              "searched_domains": [
+                "moda.gov.tw",
+                "npa.gov.tw",
+                "cib.npa.gov.tw",
+                "ncc.gov.tw",
+                "data.gov.tw"
+              ],
+              "searched_at": "2026-10-28",
+              "result_scope": "找到LINE盜用案件與機關網站驗證實作事件；未找到所有個人服務工作階段／第三方授權事件的全國分子及暴露母數。"
+            }
+          ],
+          "screened_sources": [
+            {
+              "title": "刑事警察局：LINE盜用釣魚及官方帳號處理方式（2026-08-03）",
+              "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=60c2b431-063b-427a-a609-95ad6b806748",
+              "published_at": "2026-08-03",
+              "accessed_at": "2026-10-28",
+              "reported_scope": "全國LINE盜（冒）用帳號行政案件：2025全年4,033件、2026年1至7月138件；未按登入工作階段或第三方授權分類。",
+              "value": {
+                "2025_full_year_cases": 4033,
+                "2026_january_to_july_cases": 138
+              },
+              "unit": "僅限LINE案件件數，不是工作階段或第三方授權事件頻率",
+              "scope_limit": "無LINE使用者、活躍帳號或登入暴露母數，亦未交代是否按不同帳號去重；不納入本項工作階段／第三方授權事件的分子。"
+            },
+            {
+              "title": "資安署：資通安全網路月報（115年7月）",
+              "url": "https://moda.gov.tw/ACS/press/report/20430",
+              "published_at": "2026-08-17",
+              "updated_at": "2026-10-13",
+              "accessed_at": "2026-10-28",
+              "reported_scope": "機關網站密碼重設及一次性密碼實作缺失案例；對象為政府機關系統，不是一般居民個人帳號統計。",
+              "excluded_general_population_rate": true,
+              "scope_limit": "不提供一般居民帳號事件數或個人服務工作階段／第三方授權的使用暴露母數。"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "刑事警察局公布LINE盜（冒）用案件數，但其母數僅限特定平台且無使用者分母；未找到所有個人帳號的工作階段、第三方授權遭不當使用事件與帳號使用暴露配對的全國資料。",
+        "本文為一般帳號安全操作；LINE、Apple及Google操作文件僅適用各自服務，不是所有平台通用法定流程。工作帳號另遵從雇主及服務適用規範。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "review_path": "localization/reviews/TW-14-006.json",
+      "limits": [
+        "撤銷授權不代表刪除第三方已取得資料；清理可能中斷工作或同步。平台登出、復原流程及介面可能改版。",
+        "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
+      ],
+      "previous_source_ids": [
+        "ch14_apple_devices",
+        "ch14_apple_lost",
+        "ch14_google_connections"
+      ],
+      "retired_sources": [],
+      "previous_review_claims": [
+        "清理登入裝置與第三方授權，要分清登出、撤銷與刪除資料：帳號設定可查看裝置資訊並移除不再使用或無法辨識的裝置；遺失裝置另須依尋找流程處理，不應把解除啟用鎖定當成例行登出。",
+        "清理登入裝置與第三方授權，要分清登出、撤銷與刪除資料：可標示遺失、停用電信服務及回報警方；遠端清除須審慎，不可從尋找移除而解除啟用鎖定；未預先啟用尋找或裝置離線時有功能限制。",
+        "清理登入裝置與第三方授權，要分清登出、撤銷與刪除資料：授權可允許第三方複製、修改或刪除資料；撤銷存取後第三方不能再存取，但已取得資料可能須另請對方刪除。"
+      ],
+      "reviewer_limit": "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。",
+      "taiwan_context_assessment": {
+        "fit": "台灣居民可能在手機換機、遺失、共用／交還工作裝置或LINE被釣魚接管時，需要處理登入工作階段、第三方權限及帳號復原。",
+        "decision": "taiwan_specific_content",
+        "independent_of_frequency": true,
+        "legal_status": "本文為一般帳號安全操作；LINE、Apple及Google操作文件僅適用各自服務，不是所有平台通用法定流程。工作帳號另遵從雇主及服務適用規範。"
+      }
     }
   ]
 }

@@ -7,7 +7,7 @@ import { execSync } from 'node:child_process';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const REPO = 'https://github.com/andytwmvp/HowToLiveBetter-TW';
-// 尚未部署網站；匯出文件只指向可存取的 repo 使用說明。
+// 目前以專案說明頁作為閱讀入口；匯出檔不預設一個未確認的網站網址。
 export const GUIDE = `${REPO}/blob/main/REPOSITORY_GUIDE.md`;
 export const SITE = GUIDE;
 // 封面與電子書共用本地文案規格，不再以舊書名綁定 README 的解析。
@@ -53,7 +53,7 @@ export function readBook() {
   if (!descriptionHeading) throw new Error('README 找不到對應圖片文案規格的書名標題');
   const description = between(descriptionHeading, '[![')
     .split('\n').slice(1).map(l => l.replace(/<[^>]+>/g, '').trim()).filter(Boolean).join('');
-  const frontMd = between('## 這本書想回答的問題', '## 目錄');
+  const frontMd = between('## 臺灣版怎麼讀', '## 目錄');
   const contentsMd = between('## 目錄', '## 正文')
     .split('\n\n').filter(p => !p.includes('index.html')).join('\n\n');
   const bookFiles = unique([...contentsMd.matchAll(/\]\((book\/[^)#]+\.md)\)/g)].map(m => m[1]));

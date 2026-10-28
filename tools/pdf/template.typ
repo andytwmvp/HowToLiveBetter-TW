@@ -56,9 +56,9 @@ $--
   #block(width: 80%)[#text(11.5pt, fill: luma(60))[$subtitle$]]
   #v(2cm)
   #text(10pt, fill: luma(90))[
-    生成於 $builddate$（北京時間）　·　正文提交 $commit$ \
-    正文每天都在改，以線上版為準：$site$ \
-    線上檢索、EPUB 與本 PDF 的最新版都在 $repo$
+    原作繁體來源預覽，保留原作內容與用語，方便查找及比對來源。 \
+    臺灣版生活指引請至：$site$ \
+    專案與原作授權說明：$repo$
   ]
 ]
 

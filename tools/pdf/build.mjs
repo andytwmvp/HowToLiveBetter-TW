@@ -6,17 +6,15 @@
 import { writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { resolve, dirname, posix, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { ROOT, REPO, SITE, TITLE, read, readBook, gitCommit, buildStamp, stripBackLink } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, TITLE, read, readBook, stripBackLink } from '../lib/book.mjs';
 import { splitLongItems } from '../lib/split-items.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.pdf');
 const WORK = resolve(ROOT, 'dist/pdf-build.md');
 const PANDOC = process.env.PANDOC ?? 'pandoc';
 const TYPST = process.env.TYPST ?? 'typst';
-const STAMP = buildStamp();          // 「（臺北時間）」寫在模板和版本說明裡，傳給 pandoc 的值保持純 ASCII
-const COMMIT = gitCommit();
-
-const { description, frontMd, contentsMd, bookFiles, docFiles } = readBook();
+const { contentsMd, bookFiles, docFiles } = readBook();
+const sourceDescription = '原作繁體來源預覽，保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從本專案閱讀入口閱讀。';
 
 // ---------- 頁（每頁一個一級標題，一級標題在 typst 裡另起一頁） ----------
 const anchorOf = new Map();
@@ -24,27 +22,25 @@ bookFiles.forEach(f => anchorOf.set(f, 'sec-' + (basename(f).match(/^\d+/)?.[0] 
 docFiles.forEach((f, i) => anchorOf.set(f, `doc-${i + 1}`));
 
 const pages = [
-  { src: 'README.md', md: `# 前言\n\n${description}\n\n${frontMd}`, anchor: 'front' },
+  { src: 'README.md', md: `# 前言\n\n${sourceDescription}`, anchor: 'front' },
   { src: 'README.md', md: contentsMd.replace(/^## 目錄/, '# 各節簡介'), anchor: 'contents' },
   ...[...bookFiles, ...docFiles].map(src => ({ src, md: splitLongItems(stripBackLink(read(src))), anchor: anchorOf.get(src) })),
   { src: 'README.md', md: aboutMd(), anchor: 'about' },
 ];
 
 function aboutMd() {
-  const commitLine = COMMIT ? `- 對應提交：${COMMIT.slice(0, 7)}\n` : '';
-  return `# 版本說明
+  return `# 原作來源預覽說明
 
-這份 PDF 是原作繁體來源工程預覽，不是臺灣定稿，也不會自動發布。手上這份的版本：
+這份 PDF 保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從[專案閱讀入口](${SITE})閱讀。
 
-- 生成時間：${STAMP}（臺北時間）
-${commitLine}- 本 repo、建置與回報方式：${REPO}
-- 原作來源閱讀與本地開啟方式：${SITE}#source-preview
+- 專案閱讀與建置說明：${REPO}/blob/main/REPOSITORY_GUIDE.md#reading
+- 原作來源閱讀方式：${SITE}#source-preview
 
-正文裡指向書內其他節的連結已改成書內跳轉；指向核實記錄、許可證這類沒排進書的文件的連結改成了 GitHub 網址。
+正文中指向其他章節的連結已改為書內跳轉；來源紀錄與授權檔等未收錄在書中的文件則連回專案儲存庫。
 
 原作、授權與修改說明：${REPO}/blob/main/ATTRIBUTION.md
 
-正文以 CC BY 4.0 發佈（https://creativecommons.org/licenses/by/4.0/）。可以轉載、改編、商用，要寫明出處「高性價比人生指南」並附倉庫鏈接，改過內容的要註明改過。`;
+正文依 CC BY 4.0 授權（https://creativecommons.org/licenses/by/4.0/）。轉載或改編時，請標明「高性價比人生指南」及原始作品連結，並說明修改情形。`;
 }
 
 // ---------- 連結：書內的改成錨點，書外的改成絕對網址 ----------
@@ -87,8 +83,7 @@ const typFile = resolve(ROOT, 'dist/pdf-build.typ');
 run(PANDOC, [
   '--from=gfm+attributes', '--to=typst', '--wrap=none',
   `--template=${resolve(ROOT, 'tools/pdf/template.typ')}`,
-  '-V', `booktitle=${TITLE}`, '-V', `subtitle=${description}`,
-  '-V', `builddate=${STAMP}`, '-V', `commit=${COMMIT.slice(0, 7) || '未知'}`,
+  '-V', `booktitle=${TITLE}`, '-V', `subtitle=${sourceDescription}`,
   '-V', `site=${SITE}`, '-V', `repo=${REPO}`,
   '-o', typFile, WORK,
 ]);

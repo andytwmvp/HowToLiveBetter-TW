@@ -53,16 +53,21 @@ class ExportIdentityTests(unittest.TestCase):
         self.assertNotIn('1759900000001',first[2])
         self.assertNotIn('1759900000100',first[3])
 
-    def test_source_anki_displays_scope_and_timezone(self):
+    def test_source_anki_displays_scope_and_import_guidance(self):
         _,_,models,decks=self.deck('first.apkg')
         for model in models.values():
             for template in model['tmpls']:
                 for key in ('qfmt','afmt'):
-                    self.assertIn('非臺灣制度定稿',template[key])
+                    self.assertIn('原作來源預覽',template[key])
+                    self.assertIn('臺灣版生活指引',template[key])
         root=decks['1792060000100']
         self.assertIn('原作繁體來源預覽',root['name'])
-        self.assertIn('臺北時間',root['desc']);self.assertNotIn('北京時間',root['desc'])
-        self.assertIn('不自動遷移',root['desc'])
+        self.assertIn('本專案閱讀入口',root['desc'])
+        self.assertIn('獨立識別碼',root['desc'])
+        self.assertIn('匯入前請先備份',root['desc'])
+        self.assertIn('不會自動搬移',root['desc'])
+        self.assertNotIn('生成於',root['desc'])
+        self.assertNotIn('正文提交',root['desc'])
 
     def test_source_epub_identity_is_stable_and_separate(self):
         first=self.epub_metadata('first.epub');second=self.epub_metadata('second.epub');nav=self.epub_metadata('nav.epub')
