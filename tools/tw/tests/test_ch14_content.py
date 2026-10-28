@@ -81,8 +81,11 @@ class ChapterContentTests(unittest.TestCase):
         items={e['id']:e for e in validate_runtime()['items']}
         self.assertIn('不試猜',items['TW-14-003']['body']);self.assertNotIn('1234',items['TW-14-003']['body'])
         self.assertIn('30',items['TW-14-005']['body']);self.assertIn('60',items['TW-14-005']['body'])
-        self.assertIn('尚未',items['TW-14-007']['body']);self.assertIn('未生效',items['TW-14-008']['body'])
-        self.assertIn('特定公部門適用範圍',items['TW-14-010']['body'])
+        self.assertIn('尚未生效',items['TW-14-007']['body']);self.assertIn('未生效',items['TW-14-008']['body'])
+        self.assertIn('2026-01-14',items['TW-14-010']['body'])
+        self.assertIn('第19條規範政府使用',items['TW-14-010']['body'])
+        self.assertIn('不等於私人使用者一律被禁止',items['TW-14-010']['body'])
+        self.assertIn('B6',items['TW-14-010']['body'])
         self.assertIn('7天',items['TW-14-012']['body'])
 
 if __name__=='__main__':unittest.main()
