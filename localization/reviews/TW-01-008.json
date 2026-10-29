@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-008.md",
-  "target_sha256": "f01052014ad946bcbd740ec76bcd25b09a038139a4e2ec121b76e84ad0b9c99c",
+  "target_sha256": "2817d4e0c8189ef71b54736df0a528f51f1d676d3b3f71632db5c0da7e892199",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20171",
@@ -48,5 +48,13 @@
   "limits": [
     "2019至2023年30至39歲高血糖2.5%公開摘要未附可重算樣本與信賴區間；2025年30.8%為約35.5萬服務使用者中至少一項三高異常，其中血糖異常約4.7%；截至2026年5月逾47.5萬人為首次服務累積統計，約3成有一項異常、19.3%符合代謝症候群。上述均非全體人口盛行率或糖尿病確診率，亦不可由約數反推精確個案。公費資格不取代臨床評估；未取得內分泌、家醫或公共衛生專家獨立審閱。",
     "國健署成人預防保健兩則來源本次以官方索引摘錄核對，直接頁面回傳Internal Error；未取得國民營養調查微資料、行政統計分項表或信賴區間。臺北榮總護理衛教支持急症症狀及立即就醫，不取代醫師診斷或個別處置。"
-  ]
+  ],
+  "source_reviewed_sha256": "f01052014ad946bcbd740ec76bcd25b09a038139a4e2ec121b76e84ad0b9c99c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "f01052014ad946bcbd740ec76bcd25b09a038139a4e2ec121b76e84ad0b9c99c",
+    "after_sha256": "2817d4e0c8189ef71b54736df0a528f51f1d676d3b3f71632db5c0da7e892199",
+    "before_reader_sha256": "7e368d20e5f29f60f841f6ef197a2c4012d6efdb40666759a8300d63f7d13751",
+    "after_reader_sha256": "d9b72e5b7a7a1202dc64be6d3871a077d8f9ed4f467ff14a7a66936524a58b68"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-009.md",
-  "target_sha256": "546342912a9ae69b5e454b9c2de0607e00579a24f3368ce48beb69686eea8be6",
+  "target_sha256": "e236af389b72c7799f7011f792ee7f88e29b1fa5c2a9737cab55586c67747944",
   "source_checks": [
     {
       "url": "https://www.bli.gov.tw/0017483.html",
@@ -76,5 +76,13 @@
   "limits": [
     "給付資格、起算點及跨制度併領依亡者投保史、申請人身分與個案文件認定；本輪未執行個案試算、代辦或主管機關核定，逾期案件應即向勞保局等主管機關確認。",
     "AI輔助官方來源核對，未取得獨立律師、社會保險、勞動或稅務專業簽證；無適合的同口徑個人暴露分母，未推算給付請領機率。"
-  ]
+  ],
+  "source_reviewed_sha256": "546342912a9ae69b5e454b9c2de0607e00579a24f3368ce48beb69686eea8be6",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "546342912a9ae69b5e454b9c2de0607e00579a24f3368ce48beb69686eea8be6",
+    "after_sha256": "e236af389b72c7799f7011f792ee7f88e29b1fa5c2a9737cab55586c67747944",
+    "before_reader_sha256": "4bd9936529e115cba0685c19dfcc80bab65a3d9b7391827d83478895530c0020",
+    "after_reader_sha256": "bea6989fe6dedb5926846c79cb74b0886dcf81f73ed04b29829a3de0b4416efb"
+  }
 }

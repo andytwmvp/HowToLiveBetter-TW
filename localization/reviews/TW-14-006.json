@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-006.md",
-  "target_sha256": "2a9d082dc54a788a2e000c8dc4043c5e23a7655da28d09592d8f360d343a6fac",
+  "target_sha256": "922cf28293e662d4d3ebeac51e1dbda113d3549903d9c60ab1025aa30a565381",
   "source_checks": [
     {
       "url": "https://support.apple.com/zh-tw/102649",
@@ -50,5 +50,13 @@
     "撤銷授權不代表刪除第三方已取得資料；清理可能中斷工作或同步。平台登出、復原流程及介面可能改版。",
     "未取得相關資安、通訊或法律專業獨立審閱；本次為AI輔助逐項來源再核對，不構成安全認證或法律意見。"
   ],
-  "review_method": "逐一開啟並核對臺灣主管機關、官方服務文件及NIST現行技術標準；區分制度／宣導適用主體、台灣服務情境、事件件數、事件定義及暴露分母；資料不足時不推估。AI輔助查核不是獨立專業審閱。"
+  "review_method": "逐一開啟並核對臺灣主管機關、官方服務文件及NIST現行技術標準；區分制度／宣導適用主體、台灣服務情境、事件件數、事件定義及暴露分母；資料不足時不推估。AI輔助查核不是獨立專業審閱。",
+  "source_reviewed_sha256": "2a9d082dc54a788a2e000c8dc4043c5e23a7655da28d09592d8f360d343a6fac",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2a9d082dc54a788a2e000c8dc4043c5e23a7655da28d09592d8f360d343a6fac",
+    "after_sha256": "922cf28293e662d4d3ebeac51e1dbda113d3549903d9c60ab1025aa30a565381",
+    "before_reader_sha256": "1f4ceef043adb5a4f342fb0308b83c21498866d7b932f1a2fe3559a161882b1d",
+    "after_reader_sha256": "5a08687ce4a18c2925f7d249cd0bcfca5622431ea9aff5bd8466deb667fa94cc"
+  }
 }

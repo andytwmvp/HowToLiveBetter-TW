@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-004.md",
-  "target_sha256": "2830622062d80c0307bd952683df8de46a59dd14351b0ac2beae0619d8d1e9fa",
+  "target_sha256": "0aa0a1dcca88c85f41ad580fa75fd233792858eac56ce76fcf7869e3c5f73e46",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-5163-9803c-2737-1.html",
@@ -55,5 +55,13 @@
   "limits": [
     "一般特約門診流程不能代替投保狀態、境外就醫、居家照護、專案給付、住院或事前審查的個別核定；未取得跨縣市延誤或額外支出的個人分母。",
     "健保署部分負擔頁最後更新2025-04-22，未在本文固定列出金額；費用表、院所掛號費及地方公告可能調整，實際支出須向院所確認。醫療法資料庫最後修正日2026-09-23。"
-  ]
+  ],
+  "source_reviewed_sha256": "2830622062d80c0307bd952683df8de46a59dd14351b0ac2beae0619d8d1e9fa",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2830622062d80c0307bd952683df8de46a59dd14351b0ac2beae0619d8d1e9fa",
+    "after_sha256": "0aa0a1dcca88c85f41ad580fa75fd233792858eac56ce76fcf7869e3c5f73e46",
+    "before_reader_sha256": "d5fc9b6b448926e497b4ea5a7cd4161a2d6809668f141c98a1c02d8ad8f3a19b",
+    "after_reader_sha256": "4317615f82de2bea178210045c40f3a08c143036e2fed620935273ac03f9f8ae"
+  }
 }

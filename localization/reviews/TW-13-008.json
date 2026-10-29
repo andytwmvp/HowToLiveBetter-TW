@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-008.md",
-  "target_sha256": "075ea55ae2545ce276bdd1ed98305032cad75dc314ba7f9eb04527a5056d0fe1",
+  "target_sha256": "a4dd20ef3771cbf9b3df26fc04b14407c354827e5beca272eb7833a83309554f",
   "source_checks": [
     {
       "url": "https://www.hch.gov.tw/?aid=626&iid=48&page_name=detail&pid=5",
@@ -29,5 +29,13 @@
     "個案病情、費用與結果不作保證，也不冒充醫師、急救教官、消防或其他正式專業簽證。",
     "頻率限制：新竹臺大2021衛教所稱每年1至2例為單院以心肌梗塞表現之個案，無全國胸痛患者分母，不是台灣主動脈剝離發生率；年齡及性別概述不能排除年輕人或女性急症。",
     "AI輔助來源實質再核對，獨立專業審閱待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "075ea55ae2545ce276bdd1ed98305032cad75dc314ba7f9eb04527a5056d0fe1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "075ea55ae2545ce276bdd1ed98305032cad75dc314ba7f9eb04527a5056d0fe1",
+    "after_sha256": "a4dd20ef3771cbf9b3df26fc04b14407c354827e5beca272eb7833a83309554f",
+    "before_reader_sha256": "f22b7b17c2d168fd2b6658386e82057e6df1339130435dca01b9a58a03cb3815",
+    "after_reader_sha256": "555bd015a5f77f6fad511a97cefedc2275fc7dc62884ab53c88590ec352aef3d"
+  }
 }

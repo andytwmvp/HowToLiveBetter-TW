@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-020.md",
-  "target_sha256": "2a904ad9af703f33a98c5a5ae8dad7f8f7174fce4dbec4ee25e333e1ffb74498",
+  "target_sha256": "c2efc47a3123c5e6e905f6c023e3f96fed578206f693cf9f6f9f77087411f236",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-1438-8ae58-3255-1.html",
@@ -56,5 +56,13 @@
     "金融消費評議中心統計是人壽保險理賠申訴／評議案件而非所有保單理賠或被保險人；案件分類未說明是否去重，不能推作拒賠率或個人機率。",
     "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
     "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "2a904ad9af703f33a98c5a5ae8dad7f8f7174fce4dbec4ee25e333e1ffb74498",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2a904ad9af703f33a98c5a5ae8dad7f8f7174fce4dbec4ee25e333e1ffb74498",
+    "after_sha256": "c2efc47a3123c5e6e905f6c023e3f96fed578206f693cf9f6f9f77087411f236",
+    "before_reader_sha256": "12bf2af15a5d8f1892d4728347d393ce8615c3eee3c0417629483bbde6bcd1ea",
+    "after_reader_sha256": "9b86c2b9cb946ba22e85fd49abe2a872a1d0010efa7705d3753c6a4c232161a3"
+  }
 }

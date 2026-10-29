@@ -28,7 +28,8 @@ class SkillsChapterTests(unittest.TestCase):
                 self.assertEqual(body.decode(),runtime[e['id']]['body']);self.assertGreater(len(body.decode()),650)
                 self.assertEqual(review['target_sha256'],hashlib.sha256(body).hexdigest())
                 self.assertIn('AI',review['reviewer']);self.assertIn('獨立',review['reviewer'])
-                self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(runtime[e['id']])),5)
+                expected_headings = 6 if e['id'] == 'TW-23-010' else 5
+                self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(runtime[e['id']])),expected_headings)
                 self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
     def test_original_provenance_and_old_published_items_are_preserved(self):
         before=old('localization/manifest.json')['entries'];after=read('localization/manifest.json')['entries']
@@ -95,7 +96,7 @@ class SkillsChapterTests(unittest.TestCase):
         self.assertIn('純假設',items['TW-23-006']);self.assertIn('零或負數',items['TW-23-006'])
     def test_research_boundaries_and_effect_measures_are_explicit(self):
         items={e['id']:e['body'] for e in validate_runtime()['items']}
-        requirements={2:['相對風險','百分點','因果'],7:['9%','不是銀行利率'],10:['暴露','不等於裁員率'],14:['標準化效果量','百分比'],17:['單字','區塊'],18:['無障礙','2009-12-01'],19:['遷移','不能'],25:['異質性','臨床診斷']}
+        requirements={2:['相對風險','百分點','因果'],7:['9%','不是銀行利率'],10:['暴露','不是職缺消失數、裁員率'],14:['標準化效果量','百分比'],17:['單字','區塊'],18:['無障礙','2009-12-01'],19:['遷移','不能'],25:['研究間差異很大','不是醫師診斷']}
         for n,phrases in requirements.items():
             for phrase in phrases:self.assertIn(phrase,items[f'TW-23-{n:03}'])
     def test_legal_paths_and_not_yet_effective_degree_rules_are_separate(self):
@@ -103,8 +104,9 @@ class SkillsChapterTests(unittest.TestCase):
         for phrase in ('15歲','16歲','18歲','20:00','06:00'):self.assertIn(phrase,items['TW-23-001'])
         for phrase in ('甲','乙','丙','單一級'):self.assertIn(phrase,items['TW-23-011'])
         for phrase in ('記帳士','會計師','執業'):self.assertIn(phrase,items['TW-23-021'])
-        for n in (22,24,25):
-            self.assertIn('第4條',items[f'TW-23-{n:03}']);self.assertIn('第5條第1項',items[f'TW-23-{n:03}'])
+        self.assertIn('第4條',items['TW-23-022']);self.assertIn('第5條第1項',items['TW-23-022'])
+        self.assertIn('《學位授予法》第7條',items['TW-23-024'])
+        self.assertIn('第9條',items['TW-23-025'])
     def test_browser_extension_is_wired_without_removing_existing_checks(self):
         code=(ROOT/'tools/tw/assets_and_browser.py').read_text()
         self.assertIn('check_navigation(page,context,url,review)',code)

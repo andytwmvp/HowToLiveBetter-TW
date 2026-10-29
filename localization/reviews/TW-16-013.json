@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-013.md",
-  "target_sha256": "bbdbe861471051a527cf07a756635a51d17fdbff813112c6d09a1facaeedbffc",
+  "target_sha256": "c93e4bf51202631b7a40a70c6b752a45ef8a21734334febfeede6992bfe7684d",
   "source_checks": [
     {
       "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management",
@@ -42,5 +42,13 @@
     "感染、運動、發燒及短期血糖異常可能影響UACR；需依專業指示重複驗證，腎病通常要求持續性證據，不能看一次升高就確診。慢性腎病用藥劑量、含鉀藥物及顯影劑安排都須醫師核對；出現無尿或急性不適立刻就醫。",
     "KDIGO官方基層重點頁支持ACR與GFR及慢性判定；本輪未重讀完整2024指引，2027用藥更新尚屬公開草案，不據以自行換藥。原ADA出版頁受限，保留前次查閱與本輪指定檢索段落範圍，不宣稱全文重審；臺灣檢驗給付仍看個案及院所規範。",
     "原始研究及個案醫療、藥事、法律與核付判斷仍待獨立專業審查。"
-  ]
+  ],
+  "source_reviewed_sha256": "bbdbe861471051a527cf07a756635a51d17fdbff813112c6d09a1facaeedbffc",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "bbdbe861471051a527cf07a756635a51d17fdbff813112c6d09a1facaeedbffc",
+    "after_sha256": "c93e4bf51202631b7a40a70c6b752a45ef8a21734334febfeede6992bfe7684d",
+    "before_reader_sha256": "fda77f051af8af794c3c872a3b122a00295b54cefaa8c8bbd1ae332e842898ad",
+    "after_reader_sha256": "4253dc89ac4d860e1f6d1ec9388edf33d735a8fa67df749f43640d9cb9a024bb"
+  }
 }

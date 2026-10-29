@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-011.md",
-  "target_sha256": "cc33fb5a955fba5ba50a9f114b636876d842e9bd3cdd0030f8098dac23b3c9de",
+  "target_sha256": "c53d8a4da1bf292165acdc9bcb452b75e1a41ccb48091a9b01c7cf16e6f67f6a",
   "source_checks": [
     {
       "url": "https://www.ris.gov.tw/documents/html/2/3/5/388.html",
@@ -35,5 +35,13 @@
     "未找到當代身分證遺失後冒用事件與遺失者母數的全國配對統計，故不估計個人風險；行政掛失件數不等於冒用案件。",
     "戶政司申辦須知提供一般程序；未成年人、身分查證疑義及特殊減免由受理戶政事務所依個案確認。",
     "AI輔助來源核對不等於法律專業簽證；銀行、電信或冒名爭議須分別向服務提供者及警政確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "cc33fb5a955fba5ba50a9f114b636876d842e9bd3cdd0030f8098dac23b3c9de",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "cc33fb5a955fba5ba50a9f114b636876d842e9bd3cdd0030f8098dac23b3c9de",
+    "after_sha256": "c53d8a4da1bf292165acdc9bcb452b75e1a41ccb48091a9b01c7cf16e6f67f6a",
+    "before_reader_sha256": "bf81e37542e9dc46764f2cafeb0cbe69bd5d20a8769878726a248684865bd032",
+    "after_reader_sha256": "2da217dcdaab25d34a9443e5d15ca0f91189414eb9702d6e240b3784d8535c4a"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2026-12-15",
   "target_path": "locales/zh-TW/book/ch01/TW-01-024.md",
-  "target_sha256": "8dde9f45914bb657126753d6ddd224767b848de2b597ff461cdad89becaf21b9",
+  "target_sha256": "43167d2577fdf8f4668dc7dbba55d7758af32a61ed76eb561806af3ecff3c4f9",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-7395-85289-1.html",
@@ -57,5 +57,13 @@
     "LDCT詳頁本輪依國健署官方搜尋結果核對年齡、戒菸衛教同意、間隔及排除資訊，直接開啟逾時；未取得胸腔、放射或公衛專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "253edbbe5dc68a28f58a3c3a55fc21a1f26371fef2acc9fe2b80dd962417c121"
+  "upstream_text_sha256": "253edbbe5dc68a28f58a3c3a55fc21a1f26371fef2acc9fe2b80dd962417c121",
+  "source_reviewed_sha256": "8dde9f45914bb657126753d6ddd224767b848de2b597ff461cdad89becaf21b9",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "8dde9f45914bb657126753d6ddd224767b848de2b597ff461cdad89becaf21b9",
+    "after_sha256": "43167d2577fdf8f4668dc7dbba55d7758af32a61ed76eb561806af3ecff3c4f9",
+    "before_reader_sha256": "6da71a9a46827ea498668b7db4d37e77a0167b64cfa2531db5ab985884b1a573",
+    "after_reader_sha256": "b18ddebb24537a7e3f3308982fa60de4f2d2e322e6e4642ad5f0bcef4624b2c2"
+  }
 }

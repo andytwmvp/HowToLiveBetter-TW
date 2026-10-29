@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-013.md",
-  "target_sha256": "a6d30a4bfc42a987eed62f346fcc68db062f3d40e9ddf9015503febe9434b06b",
+  "target_sha256": "05ef699a6ac3ca62c2c850b8c18763bfe012c97e1234aaf9e56dce788bea4ff1",
   "source_checks": [
     {
       "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
@@ -35,5 +35,13 @@
     "2026年契約抽查是混合選樣的非隨機行政查核；13/750是地方選案組契約檢核項次，不是工程延誤、全部建案或個人機率；未找到全國實際逾期及總建案分母。",
     "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
     "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
-  ]
+  ],
+  "source_reviewed_sha256": "a6d30a4bfc42a987eed62f346fcc68db062f3d40e9ddf9015503febe9434b06b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a6d30a4bfc42a987eed62f346fcc68db062f3d40e9ddf9015503febe9434b06b",
+    "after_sha256": "05ef699a6ac3ca62c2c850b8c18763bfe012c97e1234aaf9e56dce788bea4ff1",
+    "before_reader_sha256": "80523e1f7af831dbc7ee8b5f743bc533aa18a9e83137a39ca8e89518b548ca94",
+    "after_reader_sha256": "49e77384bc15a31d882d527e6dd04fe42dfeb6d345fe73a050f129c10a21ee9a"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-033.md",
-  "target_sha256": "aa103c75710ab01c2f3161ec7ce843959c103cfcb4ae02197acbc1132d8c62e9",
+  "target_sha256": "2684c90ae16d423ebefcf448fc1b03a5ae6f56bdd9dae2814a775710c2941154",
   "source_checks": [
     {
       "url": "https://ihealth.vghtpe.gov.tw/media/704",
@@ -64,5 +64,13 @@
     "毒物中心與消防來源不能替代119、急診診療或現場測量；未取得毒物、急診、消防、職安或法律專業獨立審閱，無法確認個案預後、現場可進入性或2025完整全年統計。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "8e50b396bc7cafb7e8e4ad382fa3b5643d915cbb8a21633f5d3101f6741647dc"
+  "upstream_text_sha256": "8e50b396bc7cafb7e8e4ad382fa3b5643d915cbb8a21633f5d3101f6741647dc",
+  "source_reviewed_sha256": "aa103c75710ab01c2f3161ec7ce843959c103cfcb4ae02197acbc1132d8c62e9",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "aa103c75710ab01c2f3161ec7ce843959c103cfcb4ae02197acbc1132d8c62e9",
+    "after_sha256": "2684c90ae16d423ebefcf448fc1b03a5ae6f56bdd9dae2814a775710c2941154",
+    "before_reader_sha256": "256c1e7f5da5755a4bb786abf4f5bc44f627754dbec0c176decd2608e1573119",
+    "after_reader_sha256": "2d14630808d6682f33e98c9653673822c836f2fd73faf037f8b84b8a0648dac7"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-036.md",
-  "target_sha256": "42d9b254194fac12291ec9b7e1a3e328d34c80fa3138c503212ef095b22b8f40",
+  "target_sha256": "b06f388075e02ffce876d8f3b2ceb28331c9666ca7330ca547240c5961966b4e",
   "source_checks": [
     {
       "url": "https://www.nusc.gov.tw/%E4%BF%9D%E5%AE%89%E6%87%89%E8%AE%8A/%E6%A0%B8%E5%AE%89%E7%9B%A3%E7%AE%A1%E5%85%A8%E5%B9%B4%E7%84%A1%E4%BC%91--5484_5489_5501.html",
@@ -43,5 +43,13 @@
     "尚未取得輻射防護、消防、急診及法規專業獨立審閱；業者通報件數無一般民眾暴露分母。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "be965b045d6b49878c7ecbfa3877ec784f3a070ca1656c75289db2cdb447dab6"
+  "upstream_text_sha256": "be965b045d6b49878c7ecbfa3877ec784f3a070ca1656c75289db2cdb447dab6",
+  "source_reviewed_sha256": "42d9b254194fac12291ec9b7e1a3e328d34c80fa3138c503212ef095b22b8f40",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "42d9b254194fac12291ec9b7e1a3e328d34c80fa3138c503212ef095b22b8f40",
+    "after_sha256": "b06f388075e02ffce876d8f3b2ceb28331c9666ca7330ca547240c5961966b4e",
+    "before_reader_sha256": "da7a2bfe19504ef70f39b03ec11542ecd8c03cab1799f9c0297f41450de8a056",
+    "after_reader_sha256": "61992c20406c39213687978e99f44b4a61cf1615b28e809924c2cc66a166b4d7"
+  }
 }

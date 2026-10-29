@@ -41,7 +41,13 @@ class PreventionBatchTests(unittest.TestCase):
         self.assertIn('2026年當年累計4例',items['TW-01-015'])
         self.assertIn('不是全臺釘刺傷人數',items['TW-01-015'])
         self.assertIn('目前依學校通知核對本人名冊、接種日及補接種期限',items['TW-01-016'])
-        for key in ('TW-13-001','TW-13-026','TW-13-043','TW-13-044'):
-            self.assertIn('臺灣事件頻率再審',items[key])
-            self.assertIn('不等於醫師或急救教官專業簽證',items[key])
+        frequency_limits={
+            'TW-13-001':'目前缺少定義一致、同時記錄成人院外心跳停止事件及結果並附暴露分母的全國資料',
+            'TW-13-026':'臺灣目前沒有全國一致的哽塞事件數及用餐、吞嚥障礙族群母數',
+            'TW-13-043':'目前沒有全國未滿一歲嬰兒哽塞事件數及暴露分母',
+            'TW-13-044':'目前沒有與嬰兒相同母群及結果定義的全國院外心跳停止資料',
+        }
+        for key,limit in frequency_limits.items():
+            self.assertIn(limit,items[key])
+            self.assertIn('依119',items[key])
 if __name__=='__main__':unittest.main()

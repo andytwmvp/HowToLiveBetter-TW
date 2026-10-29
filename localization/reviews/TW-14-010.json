@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-010.md",
-  "target_sha256": "108efb1e89078df2c4857999105fd5241d00a48285d20896832da180b0873d61",
+  "target_sha256": "5544ef59c4c5076c3d18e865e6ae7ed86e01e0937c72fc61d30ccbbbd93cd833",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093",
@@ -45,5 +45,13 @@
     "《人工智慧基本法》及2026風險框架不構成一般私人使用者一律禁止AI或使用某項設定的通則；特定產業法律、契約和組織政策仍可能適用。",
     "未取得獨立法律、資安或AI系統安全專業審閱；AI輔助來源再核對不構成安全認證。"
   ],
-  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。"
+  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。",
+  "source_reviewed_sha256": "108efb1e89078df2c4857999105fd5241d00a48285d20896832da180b0873d61",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "108efb1e89078df2c4857999105fd5241d00a48285d20896832da180b0873d61",
+    "after_sha256": "5544ef59c4c5076c3d18e865e6ae7ed86e01e0937c72fc61d30ccbbbd93cd833",
+    "before_reader_sha256": "60af3c386d6858ffbeef4b8401f5f0ce0839298329554fbe010091b11b1fed91",
+    "after_reader_sha256": "cb643d6a267ca42c2a0b9f432292685fdcb8fb2c9fdf27654916ccf97016dfb7"
+  }
 }

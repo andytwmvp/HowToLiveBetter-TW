@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch21/TW-21-013.md",
-  "target_sha256": "644db03a185ecf1f101581b87d482b2393160568300fa2163c9529c06d63344e",
+  "target_sha256": "6a2f558bc0ffae08ffd37109563d74982bffe171d454784b41b2b7113554c6fd",
   "source_checks": [
     {
       "url": "https://www.aphia.gov.tw/ws.php?id=10719",
@@ -34,5 +34,13 @@
     "防檢署旅客HTML說明提供禁止類別與條件式輸入概述，不是每一食品或混合配料的即時核准清單；本輪沒有取得／核讀舊版參考表PDF，故不判定特定乳品、蛋品或加工食品可否入境。",
     "未找到可配對的全國旅客暴露人次、申報量與違規物品分子，不能估算個人違規或疫病傳入機率；法定檢疫義務依物品和來源條件適用，不因低頻或缺統計而省略。",
     "疫區和商品規定可能快速更新；AI來源核對不等於動植物檢疫、植物病理、獸醫或法律專業審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "644db03a185ecf1f101581b87d482b2393160568300fa2163c9529c06d63344e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "644db03a185ecf1f101581b87d482b2393160568300fa2163c9529c06d63344e",
+    "after_sha256": "6a2f558bc0ffae08ffd37109563d74982bffe171d454784b41b2b7113554c6fd",
+    "before_reader_sha256": "56248d89da3d99428409ae844ac516e8996c50a844ec5a114ae4c3544ca3962f",
+    "after_reader_sha256": "b0daa9051edd335028096b8ab39e6283d3e31972bedc30378cfab386bebb43d3"
+  }
 }

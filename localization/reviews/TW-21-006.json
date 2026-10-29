@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch21/TW-21-006.md",
-  "target_sha256": "c76a405e1b11a8e62b882de47f4dbc968dc26a2f349d4583e2512110c9b10d1f",
+  "target_sha256": "0804ec77d47efe959046a6083ee2cb04e851b8606a87dc8f40dfd7584022c0be",
   "source_checks": [
     {
       "url": "https://eysc.ey.gov.tw/Page/46CA47D31F822AE0/6a3ae8c8-65fb-4e31-8f88-74e1f119d037",
@@ -20,5 +20,13 @@
     "現金申報與攜帶限額是不同制度，並按貨幣、物品及入出境方向區分。現有公開資料未找到可配對的全國旅客暴露人次及違規分子，不能由查獲數或規定門檻推算個人超額攜帶機率。",
     "目的地、過境地、銀行與金融卡規則可能不同且會變動；本條不構成海關、銀行、法律或財務專業審閱。",
     "金、證券、寶石及白金等另有門檻，不能只用現鈔規則判斷。"
-  ]
+  ],
+  "source_reviewed_sha256": "c76a405e1b11a8e62b882de47f4dbc968dc26a2f349d4583e2512110c9b10d1f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c76a405e1b11a8e62b882de47f4dbc968dc26a2f349d4583e2512110c9b10d1f",
+    "after_sha256": "0804ec77d47efe959046a6083ee2cb04e851b8606a87dc8f40dfd7584022c0be",
+    "before_reader_sha256": "fecd0ebfdf40f9a0102ecc73979c6442ad69dedda751e93a206f9a84ed5ee105",
+    "after_reader_sha256": "2fc8a95ce50abdedcfccd8718e5a5e113fcd28a8693cf31b2d5cf9575ec2d7df"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-026.md",
-  "target_sha256": "33512bda59568bda3a4263b67b3c09eca9d80463a8d34aefb5d035989f1209c9",
+  "target_sha256": "8e028eb5010504c3c08941bc12877eb4678d9506458184ab02142f323cdb65b4",
   "source_checks": [
     {
       "url": "https://119.hccg.gov.tw/chhcfd/app/data/view?id=36&module=disasterKnowledge&serno=32552b2a-d77d-4b65-8a76-beb991607b69",
@@ -30,5 +30,13 @@
     "取得衛教非全國監測；沒有哽塞與用餐／吞嚥障礙族群母數，不能估全國發生率。",
     "本次為AI輔助來源再核對，急救專業審閱仍待取得。",
     "新竹市消防局原來源本次403，連結仍待重取；本次實質修訂依臺北榮總第三節，不以失敗頁作為新增證據。"
-  ]
+  ],
+  "source_reviewed_sha256": "33512bda59568bda3a4263b67b3c09eca9d80463a8d34aefb5d035989f1209c9",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "33512bda59568bda3a4263b67b3c09eca9d80463a8d34aefb5d035989f1209c9",
+    "after_sha256": "8e028eb5010504c3c08941bc12877eb4678d9506458184ab02142f323cdb65b4",
+    "before_reader_sha256": "a8d1d46fcba774987b596ebe4c0a337423e3e7ce38bcace7fea4a730bdd962f2",
+    "after_reader_sha256": "2dfca99c896907d44b2eadef1374082b73a6170982496c191a0d88ac72e73592"
+  }
 }

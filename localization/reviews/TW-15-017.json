@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-017.md",
-  "target_sha256": "ba809f0d7e5f0b0e843f98b5610299a6d57e66668804a1c77b305e776c59c6a1",
+  "target_sha256": "a195159aaf383fe0496d92502bfe5dd05b3a5738cc52e69bae0cbe682174f83b",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070118",
@@ -56,5 +56,13 @@
     "新北市17/315是2012-01-01至2023-08-31單一縣市公寓大廈調處案件類型分佈，不是全國事件率、社區或住戶風險，也不能換算個人機率。",
     "管理費義務與催繳結果依實際身分、費用性質、租約、規約和法院程序判斷；門禁或水電個案不能只憑單一描述判定必然合法或違法。",
     "未取得獨立法律、住宅管理或統計專業審閱；地方調處不保證和解、裁處或法院結果。"
-  ]
+  ],
+  "source_reviewed_sha256": "ba809f0d7e5f0b0e843f98b5610299a6d57e66668804a1c77b305e776c59c6a1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "ba809f0d7e5f0b0e843f98b5610299a6d57e66668804a1c77b305e776c59c6a1",
+    "after_sha256": "a195159aaf383fe0496d92502bfe5dd05b3a5738cc52e69bae0cbe682174f83b",
+    "before_reader_sha256": "fa74fe853876831581b92f4e0270a18ae564c9123fd49d89a67930881e6f2655",
+    "after_reader_sha256": "87fc95d32a26834520ac2f1513a962df5fa3a944d16a0d97f7e4b118fb65bfb1"
+  }
 }

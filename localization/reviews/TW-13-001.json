@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-001.md",
-  "target_sha256": "fd1ddff7d78d82539a771eceb1a14d99f3e73aea90d0289e6bb8e11c45c388b1",
+  "target_sha256": "160c6f899a2b2cc2ca1e7a3fa664a03835b6de19b20b6eae1b7fa20ae012b4ce",
   "source_checks": [
     {
       "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
@@ -29,5 +29,13 @@
     "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。",
     "缺全國同一定義成人院外心跳停止暴露及結局資料，本次不估個人風險或CPR成功率。",
     "本次為AI輔助來源再核對，急救專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "fd1ddff7d78d82539a771eceb1a14d99f3e73aea90d0289e6bb8e11c45c388b1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "fd1ddff7d78d82539a771eceb1a14d99f3e73aea90d0289e6bb8e11c45c388b1",
+    "after_sha256": "160c6f899a2b2cc2ca1e7a3fa664a03835b6de19b20b6eae1b7fa20ae012b4ce",
+    "before_reader_sha256": "02b8f552d47050f98c443752a1b633f8e6b44bcae1612dca9b739c57020e3dbb",
+    "after_reader_sha256": "c86e1555da46c2c5ee25f2b52e17f233099b87087d6d604d46cb7807217d307f"
+  }
 }

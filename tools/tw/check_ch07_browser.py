@@ -1,4 +1,5 @@
 """第7章瀏覽器驗收：資料顯示及來源一致性，不代替補助核定或外站申辦。"""
+from body_renderer import body_blocks
 from review_contract import ROOT,validate_runtime
 
 def check_ch07_browser(page,context,url,review):
@@ -9,7 +10,9 @@ def check_ch07_browser(page,context,url,review):
  assert set(page.locator('[data-id^="TW-07-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
  for key in sorted(ids):
   card=page.locator('#'+key)
-  assert card.locator('h3').count()==5 and 'TW-ID:' not in card.inner_text()
+  expected_headings=sum(block['tag']=='h3' for block in body_blocks(expected[key]))
+  assert card.locator('h3').count()==expected_headings and 'TW-ID:' not in card.inner_text()
+  assert '內容最後確認日期：' in card.inner_text() and '建議再次確認日期：' in card.inner_text()
   assert card.locator('a[href^="https://"]').count()>=len(expected[key]['source_ids'])
  page.locator('#q').fill('急難紓困')
  card=page.locator('#TW-07-006');assert card.count()==1

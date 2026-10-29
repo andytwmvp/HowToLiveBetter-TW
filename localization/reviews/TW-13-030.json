@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-030.md",
-  "target_sha256": "005faff80eebc65da89534c908b9f86112caa117de4f9dab9723459d6e2829b1",
+  "target_sha256": "a8ac5afaf8d53e6564fd972d1dfd0da22020723a1b51684dda83d0725fe7de2d",
   "source_checks": [
     {
       "url": "https://scweb.cwa.gov.tw/zh-tw/page/intro/11",
@@ -48,5 +48,13 @@
   "limits": [
     "趴下、掩護、穩住是一般情境優先原則，不是建物結構鑑定，也不能保證嚴重受損建築仍安全。若遇火災、瓦斯洩漏或海嘯威脅，須依現場及權責機關指示處理；停搖後當心餘震，切勿貿然回到已受損建築。戶外、山區、行車及行動不便者的避難方式因情境不同，需要另行判斷。\n\n台灣事件頻率：氣象署說明監測設備與涵蓋範圍會改變可偵測件數；概括年均數沒有交代完整平均期間，不當成2026年固定次數。地震事件數不是個人受傷機率，也不能據此判斷某屋齡建物會否倒塌；本輪未讀年次圖表或逐屋結構資料。",
     "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "005faff80eebc65da89534c908b9f86112caa117de4f9dab9723459d6e2829b1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "005faff80eebc65da89534c908b9f86112caa117de4f9dab9723459d6e2829b1",
+    "after_sha256": "a8ac5afaf8d53e6564fd972d1dfd0da22020723a1b51684dda83d0725fe7de2d",
+    "before_reader_sha256": "9c33dff0210a7bbc6f4a12e504d08751af2be2a7c1ccefb3010acc0a77406453",
+    "after_reader_sha256": "ca8a295eecc3ad453d688e00e7bd0e7b4ebccb61547aa04d1d90b367bf209363"
+  }
 }

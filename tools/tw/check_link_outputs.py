@@ -4,13 +4,16 @@ from review_contract import validate_runtime
 from contextlib import closing
 from html import unescape
 import json
+import os
 import sqlite3
 import tempfile
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
 from urllib.parse import urlsplit
+
 from link_policy import ROOT,CONFIG,read,HtmlLinks,own_target,upstream_kind
+EXPORT_ROOT = Path(os.environ.get('TW_EXPORT_DIR', ROOT / 'dist'))
 
 def check_references(text,label,policy):
     parser=HtmlLinks();parser.feed(text);count=0
@@ -27,12 +30,12 @@ def main():
     policy=json.loads(read(CONFIG));counts={}
     runtime_ids={e['id'] for e in validate_runtime()['items']}
     for name in ('tw-source-preview.html','HowToLiveBetter-TW.html'):
-        path=ROOT/'dist'/name
+        path=EXPORT_ROOT/name
         if not path.is_file():raise ValueError('尚未生成：'+name)
         counts[name]=check_references(path.read_text(),name,policy)
     for name,expected in [('HowToLiveBetter-source-preview.epub',None),('HowToLiveBetter-TW.epub',len(runtime_ids))]:
         count=0;sections=0;section_ids=[]
-        with zipfile.ZipFile(ROOT/'dist'/name) as z:
+        with zipfile.ZipFile(EXPORT_ROOT/name) as z:
             for path in z.namelist():
                 if path.endswith(('.xml','.opf','.xhtml')):
                     tree=ET.fromstring(z.read(path))
@@ -45,7 +48,7 @@ def main():
     for name,expected in [('HowToLiveBetter-source-preview.apkg',765),('HowToLiveBetter-TW.apkg',len(runtime_ids))]:
         with tempfile.TemporaryDirectory(prefix='htlb-link-output-') as temp:
             database=Path(temp)/'collection.anki2'
-            with zipfile.ZipFile(ROOT/'dist'/name) as z:database.write_bytes(z.read('collection.anki2'))
+            with zipfile.ZipFile(EXPORT_ROOT/name) as z:database.write_bytes(z.read('collection.anki2'))
             with closing(sqlite3.connect(database)) as db:
                 if db.execute('PRAGMA integrity_check').fetchone()[0]!='ok':raise ValueError('Anki資料庫不完整')
                 rows=db.execute('SELECT flds FROM notes').fetchall()

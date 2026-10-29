@@ -1,4 +1,4 @@
-// 把 README + book/*.md + docs/*.md 打成一本 EPUB 3。
+// 依 manifest 的原作章節清單建立 EPUB 3 來源預覽。
 // 用法：node tools/epub/build.mjs --source-preview [輸出路徑]；此模組只建立原作繁體來源預覽。
 // 只依賴 marked；zip 用 tools/lib/zip.mjs 自己打（EPUB 要求 mimetype 第一個且不壓縮，通用 zip 庫不一定保證）。
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -6,7 +6,7 @@ import { resolve, dirname, posix } from 'node:path';
 import { zip } from '../lib/zip.mjs';
 import { Marked, Tokenizer } from 'marked';
 import { splitLongItems } from '../lib/split-items.mjs';
-import { ROOT, REPO, SITE, TITLE, read, readBook, stripBackLink } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, SOURCE_TITLE, read, readBook, stripBackLink } from '../lib/book.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter-source-preview.epub');
 const BUILD_GUIDE = `${REPO}/blob/main/REPOSITORY_GUIDE.md#exports`;
@@ -19,13 +19,13 @@ const plain = html => html.replace(/<[^>]+>/g, '');
 // ---------- 從 README 取內容與文件清單 ----------
 const book = readBook();
 const { bookFiles, docFiles } = book;
-const sourceDescription = '原作繁體來源預覽，保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從本專案閱讀入口閱讀。';
+const sourceDescription = '原作的繁體中文對照預覽，保留原作內容與用語，方便查找、比對來源。';
 const contentsMd = book.contentsMd.replace(/^## 目錄/, '# 各節簡介');
 
 // ---------- 頁面清單 ----------
 // 每頁：xhtml 文件名、來源 md 的倉庫路徑（用來解析相對連結）、md 正文
 const pages = [
-  { file: 'front.xhtml', src: 'README.md', title: '前言', md: `# ${TITLE}\n\n${sourceDescription}` },
+  { file: 'front.xhtml', src: 'README.md', title: '前言', md: `# ${SOURCE_TITLE}\n\n${sourceDescription}` },
   { file: 'contents.xhtml', src: 'README.md', title: '各節簡介', md: contentsMd },
   ...bookFiles.map((src, i) => ({ file: `ch${String(i + 1).padStart(2, '0')}.xhtml`, src, md: splitLongItems(stripBackLink(read(src))) })),
   ...docFiles.map((src, i) => ({ file: `doc${i + 1}.xhtml`, src, md: splitLongItems(stripBackLink(read(src))) })),
@@ -35,12 +35,12 @@ const pageByPath = new Map(pages.map(p => [p.src, p.file]));
 pageByPath.set('README.md', 'front.xhtml');
 
 function aboutMd() {
-  return `# 原作來源預覽說明
+  return `# 原作內容對照說明
 
-這份 EPUB 保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從[專案閱讀入口](${SITE})閱讀。
+這本 EPUB 保留原作內容與用語，方便查找、比對來源；內容不代表臺灣現行制度或生活建議。要閱讀臺灣版，請參考[閱讀說明](${SITE}#reading)。
 
-- 專案閱讀與建置說明：${BUILD_GUIDE}
-- 原作來源閱讀方式：${SITE}#source-preview
+- [閱讀與離線檔製作說明](${BUILD_GUIDE})
+- [原作內容對照方式](${SITE}#source-preview)
 
 正文中指向其他章節的連結已改為書內跳轉；來源紀錄與授權檔等未收錄在書中的文件則連回專案儲存庫。
 
@@ -152,7 +152,7 @@ const ncx = `<?xml version="1.0" encoding="UTF-8"?>
 <meta name="dtb:totalPageCount" content="0"/>
 <meta name="dtb:maxPageNumber" content="0"/>
 </head>
-<docTitle><text>${TITLE}</text></docTitle>
+<docTitle><text>${SOURCE_TITLE}</text></docTitle>
 <navMap>
 ${navItems.map(navPoint).join('\n')}
 </navMap>
@@ -160,14 +160,14 @@ ${navItems.map(navPoint).join('\n')}
 `;
 
 // ---------- 封面、OPF、容器 ----------
-const coverXhtml = wrap(TITLE, `<div class="cover"><img src="cover.png" alt="${esc(TITLE)}"/></div>\n`);
+const coverXhtml = wrap(SOURCE_TITLE, `<div class="cover"><img src="cover.png" alt="${esc(SOURCE_TITLE)}"/></div>\n`);
 const modified = NOW.toISOString().replace(/\.\d{3}Z$/, 'Z');
 const manifestPages = pages.map(p => `<item id="${p.file.replace('.xhtml', '')}" href="${p.file}" media-type="application/xhtml+xml"/>`);
 const opf = `<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" xml:lang="zh-TW">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
 <dc:identifier id="pub-id">${BOOK_ID}</dc:identifier>
-<dc:title>${TITLE}（原作繁體來源預覽）</dc:title>
+<dc:title>${SOURCE_TITLE}</dc:title>
 <dc:language>zh-TW</dc:language>
 <dc:creator>eternity4719</dc:creator>
 <dc:contributor>andytwmvp/HowToLiveBetter-TW（繁體來源預覽）</dc:contributor>

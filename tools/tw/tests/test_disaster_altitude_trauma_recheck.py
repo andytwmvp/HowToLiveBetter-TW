@@ -22,7 +22,7 @@ class DisasterAltitudeTraumaTests(unittest.TestCase):
             self.assertIn(text, b['TW-13-032'])
         for text in ('1066', '2007年4月至2008年3月', '871', '就醫者', '氧氣罐', '血氧'):
             self.assertIn(text, b['TW-13-033'])
-        for text in ('四肢', '持續加壓', '胸腹', '不為沖洗', '同定義'):
+        for text in ('四肢', '持續加壓', '胸腹', '不為沖洗', '不要旋轉、推入或拔出異物'):
             self.assertIn(text, b['TW-13-040'])
 
     def test_recheck_history_and_body_source_contracts(self):

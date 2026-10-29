@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-012.md",
-  "target_sha256": "2f2e9bdf05212a4e760df87d5dd60ed46051ebe46bb651fa54e10e7ecbe3bc8c",
+  "target_sha256": "7d8decfc65dd66f6e0d21291b12a134063f6f44c0ae1e29eef86a4d64bfde8fb",
   "source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/1632/1633/99227/post",
@@ -35,5 +35,13 @@
   "limits": [
     "職缺統計時點2026-06-30，2026-07-01至07-31蒐集，有4,004家有效樣本；母體排除公告所列行業。29.6萬是現有公開招募未補實職缺估計；職缺率分母為職缺加受僱員工，不含求職者；3.1個月是全時職缺平均招募時間。不可推個人錄取率或找工作耗時。",
     "薪資調查9,977家是事業單位樣本；月薪期間2025年7月、年薪期間2024全年均在職者，排除部分工時和自營者；不是2026年個別職缺待遇。本次未重算附件，未取得獨立統計專業複核。"
-  ]
+  ],
+  "source_reviewed_sha256": "2f2e9bdf05212a4e760df87d5dd60ed46051ebe46bb651fa54e10e7ecbe3bc8c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2f2e9bdf05212a4e760df87d5dd60ed46051ebe46bb651fa54e10e7ecbe3bc8c",
+    "after_sha256": "7d8decfc65dd66f6e0d21291b12a134063f6f44c0ae1e29eef86a4d64bfde8fb",
+    "before_reader_sha256": "11fd0e59ef3827f8e89cd6815a0e1cb19af95b4bbb00f2aa2660b7ed0d34b7f9",
+    "after_reader_sha256": "7159f6f40795cc3189c2336fbc832ad4acadf491b046721354b6a0e08d655be0"
+  }
 }

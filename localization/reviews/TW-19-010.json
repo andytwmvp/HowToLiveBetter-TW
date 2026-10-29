@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-010.md",
-  "target_sha256": "04bb1b6c6f166b2b9fda8ecfbee2b66dc7ff95081e960c676de35696317d13e1",
+  "target_sha256": "e81e1c53871053cf45d6e504cf506d85c15c69a7a0d2cbc805ce90ec38394770",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
@@ -62,5 +62,13 @@
   "review_method": "直接閱讀可取得的官方現行法規、主管機關統計／服務公告及本篇對應條文，記錄資料定義、期間、範圍和未取得的分母；AI來源核對不等於專業審查。",
   "limits": [
     "AI輔助來源再核對，未取得職業安全衛生專業人員或勞動檢查員對個案現場的簽證；本文不能替代危害評估、作業許可、設備維修、化學品處置或救援訓練。重大職災通報死亡統計沒有個人暴露分母，不能作個人事故率。"
-  ]
+  ],
+  "source_reviewed_sha256": "04bb1b6c6f166b2b9fda8ecfbee2b66dc7ff95081e960c676de35696317d13e1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "04bb1b6c6f166b2b9fda8ecfbee2b66dc7ff95081e960c676de35696317d13e1",
+    "after_sha256": "e81e1c53871053cf45d6e504cf506d85c15c69a7a0d2cbc805ce90ec38394770",
+    "before_reader_sha256": "f5173bd1a070a62bd477d67b8bec149a2cf47caa50f7af69c007fd81641f98dc",
+    "after_reader_sha256": "ef9f1837bfe5048a53cac1d6e4828c6ebcc7dac7aafc905765a09c5fab8ac77f"
+  }
 }

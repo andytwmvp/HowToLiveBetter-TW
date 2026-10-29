@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-011.md",
-  "target_sha256": "35789bd0a3b02b8fca8129dd6bc9f5c67e96a5d00fc7dac97183a94f58317b6a",
+  "target_sha256": "7648ec7a0a330dedef50db3a598def0672fbd6db9f9f4d6068408d0a896b13f8",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=1148&pcode=B0000001",
@@ -62,5 +62,13 @@
   "limits": [
     "拋棄是同時放棄繼承財產及債務關係，不是只拒絕負債。私下聲明、家族群組留言或分配協議不能取代法院聲明。第1163條對重大隱匿、清冊重大虛偽或意圖詐害債權人處分遺產，另有失去限定責任利益的規定；第1162條之2對違反清償規則亦可能產生超過遺產範圍的責任。不要把所有遺產支付一概稱為違法，也不要假設怎麼支付都安全。",
     "本輪為AI輔助來源核對，未取得律師、醫師、法醫、稅務或殯葬專業獨立簽證；資格、事實認定與個案期限仍須主管機關或專業人員依文件確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "35789bd0a3b02b8fca8129dd6bc9f5c67e96a5d00fc7dac97183a94f58317b6a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "35789bd0a3b02b8fca8129dd6bc9f5c67e96a5d00fc7dac97183a94f58317b6a",
+    "after_sha256": "7648ec7a0a330dedef50db3a598def0672fbd6db9f9f4d6068408d0a896b13f8",
+    "before_reader_sha256": "949304ab323fd5265e1db230a97859f7924e48eccf5861be3a0b4215889cb0be",
+    "after_reader_sha256": "87134d8e883ed5caf509d3c4ce5158348e4a77d8cc002e244dc07a47449f843f"
+  }
 }

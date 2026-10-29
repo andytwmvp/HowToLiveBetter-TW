@@ -2,6 +2,7 @@
 import hashlib, json, subprocess, unittest, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_entry, validate_runtime, publication_report
 from body_renderer import body_blocks
@@ -27,7 +28,7 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
   self.assertIn("19件",b["TW-01-001"]);self.assertIn("21人死亡",b["TW-01-001"]);self.assertNotIn("2,858人",b["TW-01-001"])
   self.assertIn("1,055人",b["TW-01-002"]);self.assertNotIn("932人",b["TW-01-002"]);self.assertNotIn("初估",b["TW-01-002"]);self.assertIn("材料",b["TW-01-002"]);self.assertNotIn("衝擊吸收不符",b["TW-01-002"])
   self.assertIn("3,171次",b["TW-01-003"]);self.assertIn("不是全臺房屋戶數",b["TW-01-003"])
-  self.assertIn("24件",b["TW-01-004"]);self.assertIn("22件",b["TW-01-004"]);self.assertNotIn("118件",b["TW-01-004"]);self.assertIn("沒有燃氣熱水器使用戶數",b["TW-01-004"])
+  self.assertIn("24件",b["TW-01-004"]);self.assertIn("22件",b["TW-01-004"]);self.assertNotIn("118件",b["TW-01-004"]);self.assertIn("沒有使用燃氣熱水器的家戶數",b["TW-01-004"])
   for key in IDS:
    self.assertIn("119",b[key]);self.assertTrue("頻率" in b[key] or "分母" in b[key])
    self.assertNotIn("撥120",b[key]);self.assertNotIn("打120",b[key])
@@ -45,7 +46,7 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
     self.assertEqual(raw.decode("utf-8"),items[key]["body"])
     self.assertEqual(set(entries[key]["sources"]),set(items[key]["source_ids"]))
     self.assertEqual({x["url"] for x in review["source_checks"]},{sources[s]["url"] for s in items[key]["source_ids"]})
-    self.assertEqual(rows[key]["after_sha256"],review["target_sha256"])
+    assert_body_version_matches_review_or_cleanup(self, key, rows[key]["after_sha256"], hashlib.sha256(raw).hexdigest())
   b={x["id"]:x["body"] for x in rt["items"]}
   self.assertIn("25,895次",b["TW-01-026"]);self.assertIn("71.5%",b["TW-01-026"]);self.assertIn("每三年",b["TW-01-026"])
   self.assertIn("墜落、滾落136人",b["TW-01-034"]);self.assertIn("墜落49人",b["TW-01-034"]);self.assertIn("TW-19-010.md",b["TW-01-034"])

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-029.md",
-  "target_sha256": "287838f11cd152cc0b2523e8957f0fdd737cfdcd1f0821f42f61cc6158306ef2",
+  "target_sha256": "c34890b40d1dd9208ef0d3db9bc187016e54789bb37b1eb524fd02018315b21b",
   "source_checks": [
     {
       "url": "https://epaper.ntuh.gov.tw/health/201511/project_3.html",
@@ -29,5 +29,13 @@
     "尚未取得泌尿科、心臟科、心理及藥師獨立專業審閱；未取得生活型態介入對臺灣族群的全國改善率。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "5f02d005996de5a5bfda9ec010defbb41e3b21ddec0c1c7a96d428a817c3e928"
+  "upstream_text_sha256": "5f02d005996de5a5bfda9ec010defbb41e3b21ddec0c1c7a96d428a817c3e928",
+  "source_reviewed_sha256": "287838f11cd152cc0b2523e8957f0fdd737cfdcd1f0821f42f61cc6158306ef2",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "287838f11cd152cc0b2523e8957f0fdd737cfdcd1f0821f42f61cc6158306ef2",
+    "after_sha256": "c34890b40d1dd9208ef0d3db9bc187016e54789bb37b1eb524fd02018315b21b",
+    "before_reader_sha256": "7164cb57b4a94b0ec990e880f3e30f392063be3586eaae3a0b480641686b50c2",
+    "after_reader_sha256": "12e999be42dc29fdfbc3a3c27bef7807dc36cb30fc955105f02209a9f1935fab"
+  }
 }

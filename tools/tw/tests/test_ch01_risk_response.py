@@ -35,7 +35,7 @@ class RiskResponseTests(unittest.TestCase):
   self.assertEqual(counts['runtime_after'],counts['runtime_before']+len(batch['new_core_ids']))
   self.assertGreaterEqual(len(rt['items']),counts['runtime_after'])
   core=sum(not x['id'].startswith('TW-NAV-') for x in rt['items'])
-  self.assertEqual(counts['core_after'],counts['core_before']+len(batch['new_core_ids']));self.assertGreaterEqual(core,counts['core_after']);self.assertIn(str(core)+'條',rt['scope']);self.assertIn(str(len(rt['items']))+'項',rt['scope'])
+  self.assertEqual(counts['core_after'],counts['core_before']+len(batch['new_core_ids']));self.assertGreaterEqual(core,counts['core_after']);self.assertIn('臺灣生活情境',rt['scope']);self.assertNotRegex(rt['scope'],r'\d+\s*(?:條|項)')
  def test_all_prior_content_and_actual_review_history(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();ii={x['id']:x for x in rt['items']};ss={s['id']:s for s in rt['sources']}
   for row in old['items']:assert_preserved_or_rechecked(self,row,ii[row['id']])

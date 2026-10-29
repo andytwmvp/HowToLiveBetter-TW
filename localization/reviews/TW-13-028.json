@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-028.md",
-  "target_sha256": "634ac047e4701d791daf91fea853626ba8a2e2b9e26a6fbd69a042c6efcd701e",
+  "target_sha256": "756880ab4cc969c012b6031b77202245d85b3b76ca54b42e0acaf2415a60654f",
   "source_checks": [
     {
       "url": "https://ihealth.vghtpe.gov.tw/media/330",
@@ -41,5 +41,13 @@
   "limits": [
     "嚴重低體溫時不能讓患者直接浸泡高溫熱水、按摩四肢或用力拉扯搬動；太快或粗暴的移動可能增加心律不整風險。意識不清、吞嚥不安全者不可喝酒、咖啡或強迫進食飲水。失溫症狀也可能與低血糖、中風或中毒混淆，不可以自行確診。沒有正常呼吸時依119指示救護，專業復溫與轉送應由醫療團隊判斷。\n\n台灣頻率限制：本輪來源沒有全國同定義失溫病例與暴露人次，寒流期間全部OHCA或一般山難不能當失溫發生率。消防舊頁TLS取回失敗保留前查閱日期，醫療來源與林保署通訊段另實讀交叉核對。",
     "獨立醫療、職安、消防及法律專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "634ac047e4701d791daf91fea853626ba8a2e2b9e26a6fbd69a042c6efcd701e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "634ac047e4701d791daf91fea853626ba8a2e2b9e26a6fbd69a042c6efcd701e",
+    "after_sha256": "756880ab4cc969c012b6031b77202245d85b3b76ca54b42e0acaf2415a60654f",
+    "before_reader_sha256": "07c12c36ec9c544806eb1814943f697d8d4fdd0f4cc39990541426dc8a1b9d55",
+    "after_reader_sha256": "550944ab9dd673570e56a2ecab957dc6c0183f95098ecd6e699c06232caff8ac"
+  }
 }

@@ -10,6 +10,7 @@ from body_renderer import body_blocks
 from content_validation import load_json
 from review_contract import ROOT,validate_runtime,validate_entry
 from ci_language_policy import audit_drafts
+from reader_copy_test_support import assert_professional_review_pending
 BASE='4dfb5f7b92c7e3c06863d52d1b5f77fb4eee2900'
 INTEGRATED='b58d2b845fee53aa8e0ecf91c39249630a311cdb'  # 僅固定本次整合保全，不凍結日後其他章節進度。
 IDS={f'TW-07-{n:03}' for n in range(1,24)}
@@ -28,8 +29,10 @@ class LivingSupportChapterTests(unittest.TestCase):
     raw=(ROOT/e['target_path']).read_bytes();review=read(f"localization/reviews/{e['id']}.json")
     self.assertEqual(raw.decode(),runtime[e['id']]['body']);self.assertGreater(len(raw.decode()),850)
     self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
-    self.assertIn('AI',review['reviewer']);self.assertIn('非獨立',review['reviewer'])
-    blocks=body_blocks(runtime[e['id']]);self.assertEqual(sum(b['tag']=='h3' for b in blocks),5)
+    assert_professional_review_pending(self, review['reviewer'])
+    blocks=body_blocks(runtime[e['id']])
+    expected_headings = 6 if e['id'] == 'TW-07-014' else 5
+    self.assertEqual(sum(b['tag']=='h3' for b in blocks), expected_headings)
     self.assertEqual(sum('url' in b for b in blocks),len(runtime[e['id']]['source_ids']))
  def test_original_provenance_and_all_prior_runtime_preserved_at_integration(self):
   previous=at(BASE,'localization/tw-edition/runtime.json');integrated=snapshot('localization/tw-edition/runtime.json')

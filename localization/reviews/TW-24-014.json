@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-014.md",
-  "target_sha256": "1a63db07d99ecda794d8243de7620f3ea3972d31d165a06b3fa6cdecefcc7c36",
+  "target_sha256": "daa1ed1769a0db386014dd8d59255a414a465b1759603ace34f9c537143313d6",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html",
@@ -36,5 +36,13 @@
     "研究、醫療與保險個案依主治醫師、健保署或地方主管機關當期規則核定；2026年後新規需重新確認。",
     "獨立醫師、藥師、肝臟專科、法律與照護專業審查尚待；AI來源核對不是臨床、核付、院所核准或契約個案判定。",
     "法規整編截止2026-10-08，未逐筆核之後公報、全部當期支付附件及各院所/機構個案；未做實際申請、諮詢或即時庫存查詢。"
-  ]
+  ],
+  "source_reviewed_sha256": "1a63db07d99ecda794d8243de7620f3ea3972d31d165a06b3fa6cdecefcc7c36",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1a63db07d99ecda794d8243de7620f3ea3972d31d165a06b3fa6cdecefcc7c36",
+    "after_sha256": "daa1ed1769a0db386014dd8d59255a414a465b1759603ace34f9c537143313d6",
+    "before_reader_sha256": "5ffbc9b294aaa62cfb9f226ff055958ea1e1cd740ab1f34daaaf3d67ceef4d0f",
+    "after_reader_sha256": "9213cc5b181514591f103c11e3be04c6f2b6a1ad9f85ca66912a5d7cd7de86c6"
+  }
 }

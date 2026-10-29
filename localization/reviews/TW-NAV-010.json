@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/guides/全民安全與防災準備.md",
-  "target_sha256": "66c3053f46ab914d1ad0c4e1a8b95a59d940f588b89fa53326b5e9e5909ae8ae",
+  "target_sha256": "19456dae2de6bd3d105bcb591a4c4fd2924b2d14b2cb87c6b2311613da85bc90",
   "source_checks": [
     {
       "url": "https://prepare.mnd.gov.tw/",
@@ -76,5 +76,13 @@
   "limits": [
     "本指南為獨立AI輔助改寫及導航，非國防部授權重製、緊急救護保證或全書完成證明；手冊原始版權仍屬出版機關。",
     "AI來源核對非醫療、救護、災防、法律或著作權專業簽證；未實測報案、真實避難、App、設施當下開放；不保證治療或救援結果。"
-  ]
+  ],
+  "source_reviewed_sha256": "66c3053f46ab914d1ad0c4e1a8b95a59d940f588b89fa53326b5e9e5909ae8ae",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "66c3053f46ab914d1ad0c4e1a8b95a59d940f588b89fa53326b5e9e5909ae8ae",
+    "after_sha256": "19456dae2de6bd3d105bcb591a4c4fd2924b2d14b2cb87c6b2311613da85bc90",
+    "before_reader_sha256": "e4b77f408f25c50f65f1c1dc1575b9db06dd913a652be732d3309ce3cfa54d3c",
+    "after_reader_sha256": "f4b2bc226c978eb7855a419c361e8aa478a8466729ee6d0380cde8e96f09cc95"
+  }
 }

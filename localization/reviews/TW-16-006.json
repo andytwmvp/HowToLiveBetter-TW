@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-006.md",
-  "target_sha256": "5cc84feeca7f926ffed4f346bf4df202813c7f125615751a07a09cabe017504b",
+  "target_sha256": "d119ca96a48cdc4b721ad36da33e386c7894ebe2e9dd75385d8f601175801da5",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-19992-048aa-3258-1.html",
@@ -50,5 +50,13 @@
     "不適用疾病盛行率：本輪未核實同口徑參與者、收案數及照護需求母數，不能推估個人需要或效益。",
     "115年度公告新增的計畫支付是院所支付，不等於給民眾的現金補助或每次就醫免費；慢箋仍由醫師按病況評估。",
     "未實際辦理健保收案或診療；AI來源核對不等於健保署個案核定或醫療專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "5cc84feeca7f926ffed4f346bf4df202813c7f125615751a07a09cabe017504b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "5cc84feeca7f926ffed4f346bf4df202813c7f125615751a07a09cabe017504b",
+    "after_sha256": "d119ca96a48cdc4b721ad36da33e386c7894ebe2e9dd75385d8f601175801da5",
+    "before_reader_sha256": "cacb16a1539d1d95999415174012dbec39cb4ad9344301a09807f9a21c75dd12",
+    "after_reader_sha256": "c3fd17d7a03aa0af2652a04249821d01be1cafc0f296dd3a5fbc3ef7d03245eb"
+  }
 }

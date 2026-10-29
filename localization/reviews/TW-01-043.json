@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-043.md",
-  "target_sha256": "ac5f888db2ca905e8d46693ea57124911b20b00004c467e6b7055e4512a923dc",
+  "target_sha256": "1e7d2ca0e0140e367a29427783aef855df2c428881ac2c6edb7067fa01445237",
   "source_checks": [
     {
       "url": "https://www.mlshb.gov.tw/nc/article?id=bb1fc655-fe83-4c9e-a908-37080a98692f",
@@ -50,5 +50,13 @@
     "衛福部網路守門人頁正文日期為2024-05-21，雖頁面目錄顯示2026-10-22更新，本次僅按可見正文核對；直接詢問「不增加意念」依據為美國NIMH綜整，未取得同定義臺灣介入成效研究。未取得心理、精神醫療、消防或法律專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "e984699c74df0948fa2e469fa1fb48e40f2a8b77da0d4224bcdf790f2bf24915"
+  "upstream_text_sha256": "e984699c74df0948fa2e469fa1fb48e40f2a8b77da0d4224bcdf790f2bf24915",
+  "source_reviewed_sha256": "ac5f888db2ca905e8d46693ea57124911b20b00004c467e6b7055e4512a923dc",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "ac5f888db2ca905e8d46693ea57124911b20b00004c467e6b7055e4512a923dc",
+    "after_sha256": "1e7d2ca0e0140e367a29427783aef855df2c428881ac2c6edb7067fa01445237",
+    "before_reader_sha256": "80e0eca0bdad75f03483b832bfe79c391d8255f43a9b52b2fddb3225ee53c031",
+    "after_reader_sha256": "c5931d565e1c2918fc9dfc022ff0abf51e32f0b9abcd232fccce0b6ba9093dbb"
+  }
 }

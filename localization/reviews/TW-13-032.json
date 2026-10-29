@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-032.md",
-  "target_sha256": "feed0e37c0ed976a8bb8127eb5a4feb1baa8ad02d82bb0b3e873890a7af886ec",
+  "target_sha256": "32e5e237db7138593484ced9056e3939fa3a512af21ad60ad57611cfce0cecf4",
   "source_checks": [
     {
       "url": "https://fsm.119.gov.taipei/w/fsm119/OtherDisasters_21103020191025470",
@@ -41,5 +41,13 @@
   "limits": [
     "不要以「沒有下雨就不會雷擊」、「附近最高是避雷針就能待在戶外」、「一棵大樹可以擋雷」作保證。雨傘、相機腳架或自行車等不應在開闊地繼續使用，但並非只要移除金屬就安全；**離開雷雨暴露環境才是核心**。臺灣地形、季節和活動類型各異，不能由一般午後雷陣雨資訊推算每人雷擊機率。\n\n本輪重讀國家公園2025舊頁，其山洞、乾睡墊及「閃電停止後」說法未直接採為安全保證；以NWS的可靠封閉掩蔽與最後雷聲或閃電交叉核對。這些來源不是台灣雷擊病例監測，仍無可用的全國同定義傷亡與活動人次分母。",
     "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "feed0e37c0ed976a8bb8127eb5a4feb1baa8ad02d82bb0b3e873890a7af886ec",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "feed0e37c0ed976a8bb8127eb5a4feb1baa8ad02d82bb0b3e873890a7af886ec",
+    "after_sha256": "32e5e237db7138593484ced9056e3939fa3a512af21ad60ad57611cfce0cecf4",
+    "before_reader_sha256": "01c49050f1442b91ec8d515a4e873ff10873fc593aaeb8f0d17317572533fa8c",
+    "after_reader_sha256": "cdda63f5c8abbcc6f8a1a68f9eff29617da46db40537643df1ed4229c2fdfb1e"
+  }
 }

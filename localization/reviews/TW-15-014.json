@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-014.md",
-  "target_sha256": "53b7d06735ce1fecdba6cfdf687b4e71ae2e588eada565a51dd0c4482bf1873f",
+  "target_sha256": "d86e7ccbaf20ce454a5e2a79e16dc34afbeb0e27f9ce248cf258070e9bb5d177",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0060001&flno=79-1",
@@ -35,5 +35,13 @@
     "預告登記對因徵收、法院判決或強制執行所為的新登記沒有排除效力，不能保證房子不被查封、拍賣或受到優先權影響。也沒有原作中國一律90日後失效的通用規則可以直接套用。租賃、原有抵押與其他權利的順位及影響須另查；用借名、持分或不明使用權代替真正買賣者，不能靠預告登記解決全部法律問題。",
     "未取得獨立法律、地政或金融專業審閱；不構成個案法律意見、可登記性確認或法院結果保證。",
     "法定權利、合法性、頻率、傷害嚴重度與可行行動分開評估；沒有母數時不推算個人機率。"
-  ]
+  ],
+  "source_reviewed_sha256": "53b7d06735ce1fecdba6cfdf687b4e71ae2e588eada565a51dd0c4482bf1873f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "53b7d06735ce1fecdba6cfdf687b4e71ae2e588eada565a51dd0c4482bf1873f",
+    "after_sha256": "d86e7ccbaf20ce454a5e2a79e16dc34afbeb0e27f9ce248cf258070e9bb5d177",
+    "before_reader_sha256": "7da111abba1c1492a4e828c4ed055126ec51a5a7e29e15f7a818ddaddce913ab",
+    "after_reader_sha256": "0f5aca3a0fccb0e1aeb9959eae05deb7c187b842a7aabd7523326981881b5843"
+  }
 }

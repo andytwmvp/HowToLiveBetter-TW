@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-17",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch26/TW-26-008.md",
-  "target_sha256": "9a3949ad35bed7c669ea76d07b0ede759d798ecf5d43e170fe8eda6654cf7420",
+  "target_sha256": "532836ed60cb55c4571cb6bb4d46a81a646af65b2e153faa29d6bdc9f2cac86e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001",
@@ -35,5 +35,13 @@
     "個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。",
     "第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。",
     "2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強製法規。"
-  ]
+  ],
+  "source_reviewed_sha256": "9a3949ad35bed7c669ea76d07b0ede759d798ecf5d43e170fe8eda6654cf7420",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "9a3949ad35bed7c669ea76d07b0ede759d798ecf5d43e170fe8eda6654cf7420",
+    "after_sha256": "532836ed60cb55c4571cb6bb4d46a81a646af65b2e153faa29d6bdc9f2cac86e",
+    "before_reader_sha256": "3223087a26c249ac420484652d73ab6e4dce308b84f9df23a26feb4cb719dae3",
+    "after_reader_sha256": "2a1f523c387a588961b54938db393032a284a77b645bc0d0feca8e7c63e76114"
+  }
 }

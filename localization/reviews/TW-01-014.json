@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-014.md",
-  "target_sha256": "cb98abdb0e70f7121721a9ad205503aafe8e38774b7acad3cb6249257bc2a793",
+  "target_sha256": "e5355e9e72c3923547042da2b1eedd7f59a467e0d010a975014e0225b9a01893",
   "source_checks": [
     {
       "url": "https://www.cdc.gov.tw/Category/Page/_c-wFWniWQTe9yoxeBXs_g",
@@ -37,5 +37,13 @@
     "AI輔助官方資料核對，尚未取得肝膽、感染或公共衛生專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "49fe6e0da5a73a46cdd7477d3309e42a666e171792d1bb13354cb286c714003f"
+  "upstream_text_sha256": "49fe6e0da5a73a46cdd7477d3309e42a666e171792d1bb13354cb286c714003f",
+  "source_reviewed_sha256": "cb98abdb0e70f7121721a9ad205503aafe8e38774b7acad3cb6249257bc2a793",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "cb98abdb0e70f7121721a9ad205503aafe8e38774b7acad3cb6249257bc2a793",
+    "after_sha256": "e5355e9e72c3923547042da2b1eedd7f59a467e0d010a975014e0225b9a01893",
+    "before_reader_sha256": "2b2f498f44a82d6557806e2807449fbe020e2a8adae4782e2f00b12346d12d54",
+    "after_reader_sha256": "96a726bee72c32e4e2addaabec9c217064a59767081f79568d4d0f2d03ef0980"
+  }
 }

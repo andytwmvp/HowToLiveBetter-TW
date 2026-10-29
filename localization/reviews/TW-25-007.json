@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-007.md",
-  "target_sha256": "4a145228ce25288443ff54de0d074d482da61a2d3f99d516cac3a2ec086ff2b4",
+  "target_sha256": "151ce2e6dce7688d6f69aa8af1b32c629b616a9968fbe87bf4a827e264173f26",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
@@ -35,5 +35,13 @@
     "消保法第43條的15日是業者妥適處理申訴之義務，不是退款期限、爭議勝負或賠償保證；本輪未審閱任何個別契約、收據或地方消保案件。",
     "行政院消保會頁說明1950於上班時間且不含午休；實際服務可用性、個別地方受理方式及線上系統狀態應以送件當時資訊為準。",
     "AI輔助法規及行政流程核對，未取得律師或消保專業獨立簽證；本輪未判定個案請求權及期間。"
-  ]
+  ],
+  "source_reviewed_sha256": "4a145228ce25288443ff54de0d074d482da61a2d3f99d516cac3a2ec086ff2b4",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "4a145228ce25288443ff54de0d074d482da61a2d3f99d516cac3a2ec086ff2b4",
+    "after_sha256": "151ce2e6dce7688d6f69aa8af1b32c629b616a9968fbe87bf4a827e264173f26",
+    "before_reader_sha256": "d178df60995411c8fc51e34034a8a160a4c45269639a86f1ebca0cb8da2c6e84",
+    "after_reader_sha256": "6d5cb652cc634db74648d999b1b20d39f7f9c55f91d8a7062716eb55125268b7"
+  }
 }

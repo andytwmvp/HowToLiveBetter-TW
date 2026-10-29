@@ -10,6 +10,7 @@ from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from ci_language_policy import audit_drafts
+from reader_copy_test_support import assert_professional_review_pending
 BASE='c2472e69a50b9585b1a9e58576b0654fa238e3e2'
 NEW_IDS={f'TW-19-{n:03}' for n in (9,10,11,12,13,14,15,16,18,19,21)}
 ALL_IDS={f'TW-19-{n:03}' for n in range(1,25)}
@@ -38,7 +39,7 @@ class Chapter19CompletionTests(unittest.TestCase):
                 self.assertEqual(set(item['source_claims']),set(item['source_ids']))
                 self.assertGreater(len(entry['body']),650)
                 self.assertEqual(hashlib.sha256(entry['body'].encode()).hexdigest(),review['target_sha256'])
-                self.assertIn('AI',review['reviewer']);self.assertIn('非獨立',review['reviewer'])
+                assert_professional_review_pending(self, review['reviewer'])
                 self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
                 self.assertEqual(len([b for b in body_blocks(entry) if b['tag']=='h3']),5)
 

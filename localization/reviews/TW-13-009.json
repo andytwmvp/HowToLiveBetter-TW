@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-009.md",
-  "target_sha256": "49131df09fbd7bcdcf2e9865104d4192ea7de1925a2eca21cecacab6788d4db1",
+  "target_sha256": "1966abe516202175a11d0caceb78a9474786cb8cc9ac24b262981a766ddaf518",
   "source_checks": [
     {
       "url": "https://www.ntuh.gov.tw/RMC/Fpage.action?fid=8028&muid=",
@@ -22,5 +22,13 @@
     "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
     "頻率限制：臺大2024演講概述90%與10%未列抽樣母數及期間，且談全部頭痛，不能拿來計算雷擊性頭痛者出血機率或當作不就醫理由。",
     "AI輔助來源實質再核對，獨立專業審閱待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "49131df09fbd7bcdcf2e9865104d4192ea7de1925a2eca21cecacab6788d4db1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "49131df09fbd7bcdcf2e9865104d4192ea7de1925a2eca21cecacab6788d4db1",
+    "after_sha256": "1966abe516202175a11d0caceb78a9474786cb8cc9ac24b262981a766ddaf518",
+    "before_reader_sha256": "fe2263ae01845ae6c2fd6b12aab384ae95d4a5b1e43f80bf091416ffbc9f9720",
+    "after_reader_sha256": "193e31f96d1bc4c904ed831e73f4dd60e4d08afa630418bed5dddcdda60a7a41"
+  }
 }

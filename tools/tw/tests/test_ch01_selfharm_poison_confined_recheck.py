@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 import retroactive_audit as audit
 from review_contract import ROOT, publication_report, validate_runtime
 
@@ -55,7 +56,7 @@ class Ch01SelfharmPoisonConfinedRecheckTests(unittest.TestCase):
                 self.assertEqual(row["prior_revision"], BASE)
                 self.assertEqual(row["prior_review_sha256"], hashlib.sha256(old_review).hexdigest())
                 self.assertEqual(row["before_sha256"], hashlib.sha256(old_item["body"].encode()).hexdigest())
-                self.assertEqual(row["after_sha256"], digest)
+                assert_body_version_matches_review_or_cleanup(self, item_id, row["after_sha256"], digest)
                 self.assertNotEqual(row["before_sha256"], row["after_sha256"])
                 self.assertEqual(item["body"], markdown.decode("utf-8"))
                 self.assertEqual(review["target_sha256"], digest)
@@ -93,7 +94,7 @@ class Ch01SelfharmPoisonConfinedRecheckTests(unittest.TestCase):
         self.assertIn("2024年全國燃氣熱水器相關一氧化碳中毒事故24件", poison)
         self.assertIn("2025年截至3月16日14件", poison)
         self.assertIn("不代表2025全年", poison)
-        self.assertIn("沒有燃氣設備使用戶數或暴露人次分母", poison)
+        self.assertIn("沒有使用燃氣設備的家戶數或暴露人次分母", poison)
 
         gatekeeper = items["TW-01-043"]["body"]
         self.assertIn("網路貼文", gatekeeper)

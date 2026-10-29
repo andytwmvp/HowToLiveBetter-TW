@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-005.md",
-  "target_sha256": "ad37699f38a9285626938c867f67e4882e9bdc1f78560cad4f044e413a47d3e7",
+  "target_sha256": "c3f7255a6ed1fe2f75d1b9c06f2e6bb2bda1c3c6c8600508175ca8f52e3f7c76",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
@@ -35,5 +35,13 @@
   "limits": [
     "評議中心分類是銀行業已申請評議案件內比例，不是全體刷卡交易或未授權交易發生率；沒有臺灣同口徑交易／持卡人分母，不推估個人機率。本文不判定個別契約責任、銀行過失或退款結果；30／60日期限按法定起算點及個案適用資格確認。",
     "本次為AI輔助官方來源再核對，尚未取得獨立資安、金融、電信、法律或統計專業審閱；不可視為專業簽證或個案意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "ad37699f38a9285626938c867f67e4882e9bdc1f78560cad4f044e413a47d3e7",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "ad37699f38a9285626938c867f67e4882e9bdc1f78560cad4f044e413a47d3e7",
+    "after_sha256": "c3f7255a6ed1fe2f75d1b9c06f2e6bb2bda1c3c6c8600508175ca8f52e3f7c76",
+    "before_reader_sha256": "7bd4fa1469fda1d6cf1d6a1fa12e5fa4700291fe84c470330a1e94700cb209fd",
+    "after_reader_sha256": "2cec2b49b1589e03e187b6b75a83e4a0f9f591fe8f1b497fdc68485e165705a3"
+  }
 }

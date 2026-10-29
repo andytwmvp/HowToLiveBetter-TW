@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 from content_validation import load_json
 from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
@@ -93,7 +94,7 @@ class Ch23CredentialsTitleWageTrainingRecheckTests(unittest.TestCase):
                 record = self.records[item_id]
                 manifest_item = self.manifest[item_id]
                 markdown_title = body_bytes.decode('utf-8').splitlines()[0].removeprefix('# ')
-                self.assertEqual(body_sha, item_evidence['after_sha256'])
+                assert_body_version_matches_review_or_cleanup(self, item_id, item_evidence['after_sha256'], body_sha)
                 self.assertEqual(body_sha, review['target_sha256'])
                 self.assertEqual(body_bytes.decode('utf-8'), self.items[item_id]['body'])
                 self.assertEqual(markdown_title, self.items[item_id]['title'])
@@ -113,7 +114,7 @@ class Ch23CredentialsTitleWageTrainingRecheckTests(unittest.TestCase):
                 self.assertEqual(review['reviewed_at'], self.evidence['reviewed_at'])
                 self.assertEqual(review['review_due_at'], self.evidence['review_due_at'])
                 self.assertEqual(record['limits'], review['limits'])
-                self.assertEqual(self.items[item_id]['limits'], review['limits'][0])
+                assert_reader_limits_match_review_or_cleanup(self, item_id, review['limits'][0])
                 self.assertEqual(review['source_checks'], item_evidence['source_checks'])
                 validate_recheck_history(ROOT, record, self.items[item_id])
 

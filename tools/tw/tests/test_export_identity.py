@@ -11,7 +11,7 @@ from xml.etree import ElementTree as ET
 from zipfile import ZipFile
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_runtime
-from edition import build_anki,build_epub
+from edition import build_anki,build_epub,freshness_copy
 
 class ExportIdentityTests(unittest.TestCase):
     @classmethod
@@ -43,6 +43,17 @@ class ExportIdentityTests(unittest.TestCase):
             ncx=z.read('OEBPS/toc.ncx').decode() if 'OEBPS/toc.ncx' in z.namelist() else ''
         return uid,title,ncx
 
+    def test_freshness_copy_keeps_a_future_due_date_reminder_in_static_exports(self):
+        entry={'reviewed_at':'2026-10-27','review_due_at':'2026-10-29'}
+        before=freshness_copy(entry,'2026-10-28')
+        due=freshness_copy(entry,'2026-10-29')
+        self.assertIn('內容最後確認日期：2026-10-27',before)
+        self.assertIn('建議再次確認日期：2026-10-29',before)
+        self.assertIn('到建議再次確認日期後',before)
+        self.assertNotIn('已到再次確認日期',before)
+        self.assertIn('已到再次確認日期',due)
+        self.assertIn('向主管機關或服務單位確認最新資訊',due)
+
     def test_source_anki_namespace_and_repeatability(self):
         first=self.deck('first.apkg');second=self.deck('second.apkg');nav=self.deck('nav.apkg')
         self.assertEqual(len(first[0]),765)
@@ -58,11 +69,12 @@ class ExportIdentityTests(unittest.TestCase):
         for model in models.values():
             for template in model['tmpls']:
                 for key in ('qfmt','afmt'):
-                    self.assertIn('原作來源預覽',template[key])
-                    self.assertIn('臺灣版生活指引',template[key])
+                    self.assertIn('原作內容對照卡',template[key])
+                    self.assertIn('閱讀說明',template[key])
         root=decks['1792060000100']
-        self.assertIn('原作繁體來源預覽',root['name'])
-        self.assertIn('本專案閱讀入口',root['desc'])
+        self.assertIn('原作繁體中文對照預覽',root['name'])
+        self.assertIn('不代表臺灣現行制度或生活建議',root['desc'])
+        self.assertIn('閱讀說明',root['desc'])
         self.assertIn('獨立識別碼',root['desc'])
         self.assertIn('匯入前請先備份',root['desc'])
         self.assertIn('不會自動搬移',root['desc'])
@@ -75,6 +87,6 @@ class ExportIdentityTests(unittest.TestCase):
         self.assertEqual(first[0],'urn:uuid:cee8db2b-5e19-59ea-ad9f-b3f59b53f469')
         self.assertNotEqual(first[0],nav[0])
         self.assertNotEqual(first[0],'urn:uuid:5c0c1c0e-6a5c-4d2b-9b1e-7d1f0a4e8c31')
-        self.assertIn('原作繁體來源預覽',first[1]);self.assertIn(first[0],first[2])
+        self.assertIn('原作繁體中文對照預覽',first[1]);self.assertIn(first[0],first[2])
 
 if __name__=='__main__':unittest.main()

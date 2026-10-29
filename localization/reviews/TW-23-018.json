@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-16",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-018.md",
-  "target_sha256": "da7e1da21e75af0309294289ad9357b35dc9ee9c29a2f04ffe522cda7e0977bb",
+  "target_sha256": "4b2e16f687cbf89905c45aca338c6dcfab457faedc589e6f4395a915b2604ee9",
   "source_checks": [
     {
       "url": "https://journals.sagepub.com/doi/10.1111/j.1539-6053.2009.01038.x",
@@ -17,5 +17,13 @@
   ],
   "localization_changes": "保留風格配對證據限制，明確排除將它誤用為拒絕無障礙或個別支持。",
   "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
+  "source_reviewed_sha256": "da7e1da21e75af0309294289ad9357b35dc9ee9c29a2f04ffe522cda7e0977bb",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "da7e1da21e75af0309294289ad9357b35dc9ee9c29a2f04ffe522cda7e0977bb",
+    "after_sha256": "4b2e16f687cbf89905c45aca338c6dcfab457faedc589e6f4395a915b2604ee9",
+    "before_reader_sha256": "7d7ebdaa040e8c327c80490747edde89fb8b38455ad52153241911e6219cc6c1",
+    "after_reader_sha256": "063c63576d3c40cb86410ea90ad1d717b07030430fdae05da93a484f664f066c"
+  }
 }

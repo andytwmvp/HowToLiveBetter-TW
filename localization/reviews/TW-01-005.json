@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-005.md",
-  "target_sha256": "0e99fc38562964d6b0023663cee51c59e5036b4846d6d26fbc4776ecb99e5fe3",
+  "target_sha256": "58ac43fd09e07c22cc463df3a49be2a6dbb521b3797cb613eafa43901aeacd57",
   "source_checks": [
     {
       "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=t623202",
@@ -40,5 +40,13 @@
   "review_method": "逐項核對食藥署野菇送驗公告、高雄市衛生局單一事件及臺北榮總毒藥物防治中心民眾版處置／服務頁；區分送驗案例、事件人數、急救分流及諮詢資格。",
   "limits": [
     "食藥署「近年4例」未提供明確期間、全部事件數或採食暴露分母；高雄一家3人為單次疑似通報，不能合併成全國率。毒物諮詢不取代昏迷、抽搐、窒息或呼吸異常時立即119。未取得毒物學、急診或公共衛生專家獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "0e99fc38562964d6b0023663cee51c59e5036b4846d6d26fbc4776ecb99e5fe3",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0e99fc38562964d6b0023663cee51c59e5036b4846d6d26fbc4776ecb99e5fe3",
+    "after_sha256": "58ac43fd09e07c22cc463df3a49be2a6dbb521b3797cb613eafa43901aeacd57",
+    "before_reader_sha256": "e00fe7e31a2df4b27af0bc2cd603494adfe16136be910a205bc4915570224af9",
+    "after_reader_sha256": "3ec384dac4c8287d5a12bb3e73e5996a367d9a265353203420b7385279f8bcba"
+  }
 }

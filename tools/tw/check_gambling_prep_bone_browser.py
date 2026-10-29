@@ -28,7 +28,7 @@ def check_gambling_prep_bone_browser(page, context, url, review):
         page.locator('#q').fill('PrEP')
         assert page.locator('#TW-01-038').count() == 1
         page.locator('#reset').click()
-        page.locator('#q').fill('不塗蜂蜜')
+        page.locator('#q').fill('葡萄糖錠')
         assert page.locator('#TW-13-017').count() == 1
         page.screenshot(path=str(review / f'gambling-prep-bone-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})

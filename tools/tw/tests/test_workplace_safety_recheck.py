@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_professional_review_pending
 import retroactive_audit as audit
 from body_renderer import body_blocks
 from review_contract import ROOT
@@ -46,12 +47,12 @@ class WorkplaceSafetyRecheckTests(unittest.TestCase):
                 self.assertNotEqual(before, after)
                 self.assertEqual(record["prior_revision"], BASE)
                 self.assertEqual(record["before_sha256"], before)
-                self.assertEqual(record["after_sha256"], after)
+                assert_body_version_matches_review_or_cleanup(self, item_id, record["after_sha256"], after)
                 self.assertEqual(markdown.decode("utf-8"), current["body"])
                 self.assertEqual(review["target_path"], entries[item_id]["target_path"])
                 self.assertEqual(review["target_sha256"], hashlib.sha256(markdown).hexdigest())
                 self.assertIn("AI", review["reviewer"])
-                self.assertIn("非獨立", review["reviewer"])
+                assert_professional_review_pending(self, review["reviewer"])
                 self.assertEqual(entries[item_id]["sources"], current["source_ids"])
                 self.assertEqual(
                     {sources[source_id]["url"] for source_id in current["source_ids"]},

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-006.md",
-  "target_sha256": "427fffd2b572c512ccd780e464bd2b720a94057d0603485ded15e426b6508d26",
+  "target_sha256": "2700bf3dce0226ca035831ac0264bff5093ce91c5f3bb1cc49e7c9b6cb5e79ee",
   "source_checks": [
     {
       "url": "https://lowvision.tpech.gov.tw/w/LowVision/disease_20120814591781867",
@@ -36,5 +36,13 @@
     "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
     "頻率限制：2020聯醫頁40歲以上2%與全人口0.5%概述未有同一調查期間及樣本，且涵蓋各型青光眼，不能換算急性隅角閉鎖發生率或個人失明率。",
     "AI輔助來源再核對，專業再審待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "427fffd2b572c512ccd780e464bd2b720a94057d0603485ded15e426b6508d26",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "427fffd2b572c512ccd780e464bd2b720a94057d0603485ded15e426b6508d26",
+    "after_sha256": "2700bf3dce0226ca035831ac0264bff5093ce91c5f3bb1cc49e7c9b6cb5e79ee",
+    "before_reader_sha256": "07340362feac172cfd8cc614ccf5b4cbcd0044015dba08eb8f04661fc5b63a68",
+    "after_reader_sha256": "6f9f4c9f51bcf2bb0c8d9bbc85d4967a1f526b0c9776328c42f4d7cafe901dc6"
+  }
 }

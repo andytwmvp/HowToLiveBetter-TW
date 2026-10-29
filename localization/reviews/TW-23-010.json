@@ -1,21 +1,32 @@
 {
   "id": "TW-23-010",
-  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；未取得獨立專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-16",
-  "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-010.md",
-  "target_sha256": "234e60b1710c08e7d0413df830e462c5053cabc99fe9ba0c97968bd088594283",
+  "reviewed_at": "2026-10-29",
+  "review_due_at": "2027-01-31",
+  "target_sha256": "c4be84692e330dadd5d1b306ac7c4b5fe4659c10e7df10188623a37c32f69428",
   "source_checks": [
     {
-      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
-      "claim": "ILO2025指標衡量生成式AI的任務暴露與轉型可能性，不能轉譯成職業消失或個人失業機率。",
-      "supporting_passage": "編者摘要（非逐字引文）：ILO2025指標衡量生成式AI的任務暴露與轉型可能性，不能轉譯成職業消失或個人失業機率。",
-      "accessed_at": "2026-10-16",
-      "retrieval_method": "以ILO原始工作論文頁的搜尋索引完整摘要核對方法與主要限制；直接頁面未成功載入，未檢視互動圖表或完整PDF。"
+      "url": "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
+      "claim": "ILO 2025年全球估計約24%工作者所在職業有某種GenAI暴露，3.3%全球就業在最高暴露級距；這不是台灣裁員率或個人失業機率。",
+      "supporting_passage": "編者摘要（非逐字引文）：ILO Working Paper 140指出全球約四分之一工作者所在職業有某種GenAI暴露，3.3%全球就業落在最高暴露級距；論文並說明這是暴露估計而非實際就業影響。",
+      "accessed_at": "2026-10-29",
+      "retrieval_method": "2026-10-29直接閱讀ILO Working Paper 140完整PDF，核對摘要、全球估計與方法段落；未將全球職業模型外推成台灣職類比例。"
+    },
+    {
+      "url": "https://course.taiwanjobs.gov.tw/",
+      "claim": "職業訓練整合網可依地點、職類和課程資訊查找訓練；各項補助資格依計畫公告。",
+      "supporting_passage": "編者摘要（非逐字引文）：官方課程查詢介面列出開課日期、上課地點、通俗職類、訓練單位及課程關鍵字欄位；網站另列訓練計畫入口。",
+      "accessed_at": "2026-10-29",
+      "retrieval_method": "2026-10-29直接閱讀勞動力發展署職業訓練整合網的課程查詢介面與計畫入口；只核對搜尋欄位及資訊入口，不推定個人補助資格。"
     }
   ],
-  "localization_changes": "刪除永久安全職業推論，以任務暴露、人機分工及可驗收練習取代。",
-  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+  "localization_changes": "以工作任務和人機分工取代永久安全職業推論；重新讀取ILO完整工作論文，明確標示全球估計並說明沒有可套用台灣各職類的全國估計，新增台灣官方職訓課程入口。",
+  "legal_scope": "本文討論工作任務，不作法律資格判定；職業訓練課程及補助依台灣就業通各計畫當期資格和承辦公告。",
+  "review_method": "逐筆直接閱讀連結的主管機關法規、官方統計表或研究全文，記錄原始網址、查閱日期、支持內容及適用範圍；研究估計保留研究母數、單位與限制，不外推成個人風險或因果報酬。",
+  "limits": [
+    "ILO數字是全球工作任務暴露估計，不能當成台灣裁員率、職缺消失數或個人失業機率；目前沒有能直接套用到台灣個別職類的全國估計。",
+    "本次為AI輔助閱讀ILO工作論文及官方課程頁，未取得獨立職涯、勞動市場或教育專業審閱；全球研究不能代替台灣職類分析。"
+  ]
 }

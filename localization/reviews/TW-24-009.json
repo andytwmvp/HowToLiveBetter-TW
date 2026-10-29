@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-21",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-009.md",
-  "target_sha256": "dfa87d2ba7617e864ecbc93eb296f137a7ce89ca871aa46049f0e5dbaa02aab5",
+  "target_sha256": "97d40a1f14255ead72397067e499bdbd0504f650f5e998bb2a409a377ab97982",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-13698-9d097-2957-1.html",
@@ -58,5 +58,13 @@
     "AI輔助逐條官方來源實質核對，非醫師、社工、勞保／健保審查機關或律師專業簽證；個案仍待專業與主管機關判定。",
     "本輪未取得全臺同定義延誤、爭議、資料缺漏或申請核准機率；行政件數不能代替個人發生率。",
     "法規整編截止2026-10-08，之後公報與地方細則未逐一全核；沒有實際救治、調閱病歷、申請或核付。"
-  ]
+  ],
+  "source_reviewed_sha256": "dfa87d2ba7617e864ecbc93eb296f137a7ce89ca871aa46049f0e5dbaa02aab5",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "dfa87d2ba7617e864ecbc93eb296f137a7ce89ca871aa46049f0e5dbaa02aab5",
+    "after_sha256": "97d40a1f14255ead72397067e499bdbd0504f650f5e998bb2a409a377ab97982",
+    "before_reader_sha256": "5dfe5989e58845504dc7280af6139adee1fc9802e58eb5100b8fe929bebaa362",
+    "after_reader_sha256": "238fa42b7f0ea2c731c32f63f546f8e208c3c8708a404b246934ee761b4862b8"
+  }
 }

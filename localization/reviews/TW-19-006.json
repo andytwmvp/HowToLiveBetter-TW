@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-006.md",
-  "target_sha256": "bbfba07e2c3e28969b7473b7c399c16f875e1ac1deb689877a0841d46aa1d88d",
+  "target_sha256": "182c573a5acf8ac881e26b87bb48b6bb503e913d7528553c88b1c9e3d1152840",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -63,5 +63,13 @@
   "limits": [
     "2024統計是全類勞資爭議案件，並非違法解僱或第49條暫時處分件數；沒有勞工暴露分母或準許率。扶助資格及個案權利須由法院、主管機關與法扶依當時資料確認；AI輔助核對不是個案法律意見或律師簽證。",
     "未取得勞動、法律、警政或金融領域獨立專家審閱；本紀錄不構成個案法律意見、行政認定或求償保證。"
-  ]
+  ],
+  "source_reviewed_sha256": "bbfba07e2c3e28969b7473b7c399c16f875e1ac1deb689877a0841d46aa1d88d",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "bbfba07e2c3e28969b7473b7c399c16f875e1ac1deb689877a0841d46aa1d88d",
+    "after_sha256": "182c573a5acf8ac881e26b87bb48b6bb503e913d7528553c88b1c9e3d1152840",
+    "before_reader_sha256": "846c4e0b1bfa311cbebbe76c40dd6f7f2e941e752263ae4908bc93400aff1078",
+    "after_reader_sha256": "fa15d040b01ff6c5eaa2b7250986e742b21c237007803ed26f8f29c27d53e3a0"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-004.md",
-  "target_sha256": "3df20ca978c776526ca57217730b0a851418895e893ad5f54598944a6cb1ee61",
+  "target_sha256": "44b469065c099898a4bc52178076099604d222ab2ec2aa1509783d119282d635",
   "source_checks": [
     {
       "url": "https://sdm.tpech.gov.tw/xmdoc/cont?sid=0I348761069595303797&xsmsid=0I334591562045174688",
@@ -36,5 +36,13 @@
     "不作個案診斷；任何緊急狀況先求助119，費用、療效及預後不保證。",
     "頻率限制：兩個症狀衛教沒有可用全國後循環中風病例與眩暈就診分母，不能用所有腦血管疾病死亡數當眩暈者中風機率。",
     "AI輔助來源再核對，專業再審待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "3df20ca978c776526ca57217730b0a851418895e893ad5f54598944a6cb1ee61",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "3df20ca978c776526ca57217730b0a851418895e893ad5f54598944a6cb1ee61",
+    "after_sha256": "44b469065c099898a4bc52178076099604d222ab2ec2aa1509783d119282d635",
+    "before_reader_sha256": "adea3051e6651ab0956d051102609292a288fe02948826e479a774ab3d0c853a",
+    "after_reader_sha256": "1b5e7a7334613da7b0248c8fc39ee89702e5c9f6c712d501b7b11874190f53c0"
+  }
 }

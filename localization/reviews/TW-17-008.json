@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-008.md",
-  "target_sha256": "39692a1b2879ae00249f0425d1a9b777f5ea564c26e92f1e57c470ff18b8a2f3",
+  "target_sha256": "3f2d36be9549b580122488bb9bd090524ab3457e4613cf9cc5142efa8b75f3c6",
   "source_checks": [
     {
       "url": "https://www.hch.gov.tw/?aid=626&iid=798&page_name=detail&pid=95",
@@ -35,5 +35,13 @@
     "紅腫不能退、傷口變深、異味、發燒或疼痛加劇時應就醫；勿自行按摩已受損的紅斑或把破皮當普通乾燥。對脊椎不穩、呼吸器、骨折等個案，翻身方式須由醫療團隊安排；氣墊床不等於不用翻身。",
     "紅腫不能退、傷口變深、異味、發燒或疼痛加劇時應就醫；勿自行按摩已受損的紅斑或把破皮當普通乾燥。對脊椎不穩、呼吸器、骨折等個案，翻身方式須由醫療團隊安排；氣墊床不等於不用翻身。\n\n減壓床墊、坐墊或敷料均不能取代翻身、皮膚檢查與個別傷口治療。專業分期、清創、抗生素與營養處方不在家屬自行操作範圍；本篇不是傷造口護理、復健或營養師專業驗收。",
     "來源讀取有範圍限制，原始試驗、全部法規公報與個案專業判斷尚待；非獨立醫療、護理、藥事或法律簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "39692a1b2879ae00249f0425d1a9b777f5ea564c26e92f1e57c470ff18b8a2f3",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "39692a1b2879ae00249f0425d1a9b777f5ea564c26e92f1e57c470ff18b8a2f3",
+    "after_sha256": "3f2d36be9549b580122488bb9bd090524ab3457e4613cf9cc5142efa8b75f3c6",
+    "before_reader_sha256": "b8654b1fdccbe2266af0ea631eb3dbec6efc37464fbd000bc905b4b061877989",
+    "after_reader_sha256": "e47b2459ccf110c3de698e738828af9ca8ff897ecb61fbf5c2934ebca75334b9"
+  }
 }

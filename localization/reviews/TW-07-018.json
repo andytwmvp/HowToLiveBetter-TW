@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-018.md",
-  "target_sha256": "efebee6f4c803d541fcce116c501151cf0875bda6fe329c1719d41925330e625",
+  "target_sha256": "9f46dd0ca5a2ba849afe6d1c46affd43b29700672af4dc457975abc07f82f03d",
   "source_checks": [
     {
       "url": "https://www.bli.gov.tw/0013590.html",
@@ -57,5 +57,13 @@
     "保費級距、補助與投保類別隨年度、薪資及法定身分變動，須查個人紀錄。",
     "沒有一致全國離職人口分母可估個人健保中斷機率。",
     "尚無勞健保、國保、勞退或法律專業人員獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "efebee6f4c803d541fcce116c501151cf0875bda6fe329c1719d41925330e625",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "efebee6f4c803d541fcce116c501151cf0875bda6fe329c1719d41925330e625",
+    "after_sha256": "9f46dd0ca5a2ba849afe6d1c46affd43b29700672af4dc457975abc07f82f03d",
+    "before_reader_sha256": "a348f63107857a47fe851478292ae2aec29044d903efceae776f6120055b2b89",
+    "after_reader_sha256": "ee1ad4ff6f177f8691538bd7e8aefb3276b5f36b02410fc549ed332bf0801693"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2026-12-15",
   "target_path": "locales/zh-TW/book/ch01/TW-01-017.md",
-  "target_sha256": "bff5dd40c1489562ab5d4cf80b192572a0dc8a9ea7515c7b01a13895e4649f8a",
+  "target_sha256": "8719797312c4d151c2b48d70b225c55321eb430fe78c61da5cdddcb837b2c26b",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-2704-80948-1.html",
@@ -50,5 +50,13 @@
     "乳房X光攝影服務頁本輪直接重取回傳502，資格以官方搜尋索引可見文字和先前直接查核的政策來源交叉核對；未取得乳房專科、放射及公衛專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "86e08f02cb622f1b160eb1df8af55024f3d17f29d6c4a17e08b894e967548b07"
+  "upstream_text_sha256": "86e08f02cb622f1b160eb1df8af55024f3d17f29d6c4a17e08b894e967548b07",
+  "source_reviewed_sha256": "bff5dd40c1489562ab5d4cf80b192572a0dc8a9ea7515c7b01a13895e4649f8a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "bff5dd40c1489562ab5d4cf80b192572a0dc8a9ea7515c7b01a13895e4649f8a",
+    "after_sha256": "8719797312c4d151c2b48d70b225c55321eb430fe78c61da5cdddcb837b2c26b",
+    "before_reader_sha256": "84ee09e98738f18f206e9df9a884c3bebc2c8bb7a90884ee70e34c5ee940ac47",
+    "after_reader_sha256": "d733cfc1610e820504de46ac8365418acf81ee075a7ef9d26d7ddf373c047fe1"
+  }
 }

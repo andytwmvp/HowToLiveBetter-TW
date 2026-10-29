@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-010.md",
-  "target_sha256": "1ddad277fbe68b5a272c00dce99d46d95f8b262bb27f2c0101a1b35a424e46f2",
+  "target_sha256": "1058c37e4739ac0898614da27ef8c37e612fbd7506870147b7d62cde217ec382",
   "source_checks": [
     {
       "url": "https://ihealth.vghtc.gov.tw/media/340",
@@ -29,5 +29,13 @@
     "診療、藥物、影像、實際費用及健保資格由主管醫療人員依個案判定，緊急求救優先119。",
     "頻率限制：兩篇頭部外傷照護無可用台灣撞頭長者全體分母及同期間延遲出血病例數，無法估算個人幾週後血腫機率，不能將急診返家衛教當全國發生率。",
     "AI輔助來源實質再核對，獨立專業審閱待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "1ddad277fbe68b5a272c00dce99d46d95f8b262bb27f2c0101a1b35a424e46f2",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1ddad277fbe68b5a272c00dce99d46d95f8b262bb27f2c0101a1b35a424e46f2",
+    "after_sha256": "1058c37e4739ac0898614da27ef8c37e612fbd7506870147b7d62cde217ec382",
+    "before_reader_sha256": "803a8324226c36e98874e4da05e755ef0b96e84baee279a8b0c3b9332e8847de",
+    "after_reader_sha256": "c233e0b4ab6009c53e7afaf805302c7a4737be21622c23d4e8057b7e90c0db1e"
+  }
 }

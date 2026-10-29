@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-002.md",
-  "target_sha256": "3145e08a435f08f9f46f6d594641eddb640b27beda03e19b78792d7e5c9d875b",
+  "target_sha256": "70614fa82038a6ee9cb45ab8afbd7a8d3dc34701df10438a6dbcac3966288fe7",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=3&pcode=L0060009",
@@ -41,5 +41,13 @@
   "limits": [
     "未取得跨縣市就醫延誤、慢箋中斷或重複檢查之全國同口徑個人暴露分母，不估算個人發生機率；特殊照護、專案與個別給付仍須由健保署及醫療團隊確認。",
     "《全民健康保險醫療辦法》法規全文頁僅顯示整體最後修正日2024-06-20，未分別標註第3、15條施行日；本輪另據官方修正沿革、施行條文與中央法規標準法第13條、釋字第161號確認該版本自2018-04-29生效。本文不是獨立醫師、藥師或健保專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "3145e08a435f08f9f46f6d594641eddb640b27beda03e19b78792d7e5c9d875b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "3145e08a435f08f9f46f6d594641eddb640b27beda03e19b78792d7e5c9d875b",
+    "after_sha256": "70614fa82038a6ee9cb45ab8afbd7a8d3dc34701df10438a6dbcac3966288fe7",
+    "before_reader_sha256": "44b92ead534eeea55785d9a1bbc8f753571363f677db37e10064e9d164200e7f",
+    "after_reader_sha256": "067bfb8a68ec8aacfdcee5ce7548fb979062b13d65ff46e45ce2016f52eefef8"
+  }
 }

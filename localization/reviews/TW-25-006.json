@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-006.md",
-  "target_sha256": "d67095014ea09f7dfac2a95a8c3e05990956f270f05dd12301091c7ad96789c8",
+  "target_sha256": "4c1ee2a7474e1dca79bbfd83df5fa20b376315292ed97feb5924531120a9f082",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
@@ -28,5 +28,13 @@
     "第21條之1要求各直轄市、縣市政府列冊身分，指定公立設施使用及相關使用管理費；本輪未檢查每一地方政府的櫃位免費標準、申請表或個別費率。",
     "交通、私人禮儀、商品與其他治喪支出是否有地方扶助須個別詢問；不保證未列冊者或私立設施可減免。",
     "AI輔助官方法規來源核對，未取得社工、殯葬或法律專業獨立簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "d67095014ea09f7dfac2a95a8c3e05990956f270f05dd12301091c7ad96789c8",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d67095014ea09f7dfac2a95a8c3e05990956f270f05dd12301091c7ad96789c8",
+    "after_sha256": "4c1ee2a7474e1dca79bbfd83df5fa20b376315292ed97feb5924531120a9f082",
+    "before_reader_sha256": "6d5e4983b9fa405ed74a9510312de0c670d84968cf0ae352c7764f42f70c9249",
+    "after_reader_sha256": "96c0b67233fb01b3e8f1c67ff16546745b6d8f1e939c1034b77bbcaf69043f8b"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-21",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-005.md",
-  "target_sha256": "59dc5835b03e9235fe463161c3c2a42f520279fd7942f90d22318761f897f5bc",
+  "target_sha256": "2ba071249ca16c4b437d952691e27d70709a5b3952de02e6e5f46c2cbff4bd96",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/CLU/cp-6620-75709-1.html",
@@ -66,5 +66,13 @@
     "AI逐條官方來源核對，非律師、公證人、醫師、社工或金融專業簽證；個案意思能力、契約、代理權及申請仍待確認。",
     "法規庫整編截止2026-10-08，其後全部公報與地方規定未全核，未逐條追溯民法本批首次施行日期。",
     "未實際申請、公證、交易、調閱個資、核貸或代辦退款；工程通過不保證財產、居住與個案權益結果。"
-  ]
+  ],
+  "source_reviewed_sha256": "59dc5835b03e9235fe463161c3c2a42f520279fd7942f90d22318761f897f5bc",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "59dc5835b03e9235fe463161c3c2a42f520279fd7942f90d22318761f897f5bc",
+    "after_sha256": "2ba071249ca16c4b437d952691e27d70709a5b3952de02e6e5f46c2cbff4bd96",
+    "before_reader_sha256": "80f98ddcf60cf61f26f22beaf237b25e382fddd2a0a0862b51ca6c5a49d8af7e",
+    "after_reader_sha256": "ae9a03bc2175a7d88a494e7ed8c53af8ca270aa3bb25c6c345a6d25cedccdd13"
+  }
 }

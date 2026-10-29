@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-007.md",
-  "target_sha256": "296eb912d2252f08365879cc30020bca8207b222958e253deec810063e09a689",
+  "target_sha256": "f5ca0f6fc20ad2df65cf5a2036675679a95427e500a607450f4d35d2b46da50c",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-16-20446-1.html",
@@ -35,5 +35,13 @@
     "若有嚴重胸痛、突然單側無力、嚴重呼吸困難或失去意識，請求急救，不因目前檢傷或網路資訊降低警覺。對分級存疑可請現場人員再評估。",
     "若有嚴重胸痛、突然單側無力、嚴重呼吸困難或失去意識，請求急救，不因目前檢傷或網路資訊降低警覺。對分級存疑可請現場人員再評估。\n\n網路候診數、分級目標分鐘與當下量能均不是保證看診時間，也不是可以放心等待的安全期限；不要為提高分級誇大症狀。醫院即時資訊只作溝通參考，不能取代現場專業判斷。",
     "來源讀取有範圍限制，原始試驗、全部法規公報與個案專業判斷尚待；非獨立醫療、護理、藥事或法律簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "296eb912d2252f08365879cc30020bca8207b222958e253deec810063e09a689",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "296eb912d2252f08365879cc30020bca8207b222958e253deec810063e09a689",
+    "after_sha256": "f5ca0f6fc20ad2df65cf5a2036675679a95427e500a607450f4d35d2b46da50c",
+    "before_reader_sha256": "d7fae8954785b07530d2c4273822509495b97b0270a857c601a3f4d14e2d983b",
+    "after_reader_sha256": "a72de68e4203664c2df8bb0cf88ac86eb3a373b292531294194db01794b73192"
+  }
 }

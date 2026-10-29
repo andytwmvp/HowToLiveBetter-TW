@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 from ci_language_policy import audit_drafts
 from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history
 from review_contract import ROOT, publication_report, validate_runtime
@@ -53,7 +54,7 @@ class CrossBorderRecheckTests(unittest.TestCase):
                 digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
                 self.assertEqual(body, item["body"])
                 self.assertEqual(review["target_sha256"], digest)
-                self.assertEqual(record["after_sha256"], digest)
+                assert_body_version_matches_review_or_cleanup(self, key, record["after_sha256"], digest)
                 self.assertNotEqual(record["before_sha256"], record["after_sha256"])
                 self.assertEqual(review["reviewed_at"], "2026-10-28")
                 self.assertEqual(review["review_due_at"], "2027-01-31")
@@ -157,7 +158,7 @@ class CrossBorderRecheckTests(unittest.TestCase):
         quarantine = self.items["TW-21-013"]["body"]
         for phrase in ("新鮮果實", "附土", "來源地", "不合格可能存關退運或銷毀", "免稅不是免檢疫"):
             self.assertIn(phrase, quarantine)
-        self.assertIn("未找到可配對的全國旅客暴露人次與違規分子", quarantine)
+        self.assertIn("目前沒有找到可配對的全國旅客暴露人次與違規分子", quarantine)
         self.assertNotIn("乳製品一律禁止", quarantine)
         self.assertNotIn("所有熟食一律禁止", quarantine)
 

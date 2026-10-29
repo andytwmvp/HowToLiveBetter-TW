@@ -24,7 +24,13 @@ class HivPreventionTests(unittest.TestCase):
   self.assertIn('72小時',b['TW-01-030']);self.assertIn('28天',b['TW-01-030']);self.assertIn('837例',b['TW-01-030']);self.assertIn('2025全年1,027例',b['TW-01-030']);self.assertIn('不是感染發生率',b['TW-01-030'])
   self.assertLess(b['TW-01-031'].index('72小時'),b['TW-01-031'].index('3至12週'));self.assertIn('確認檢驗',b['TW-01-031']);self.assertIn('3至6個月',b['TW-01-031'])
   self.assertIn('不是等待',b['TW-01-032']);self.assertIn('119',b['TW-01-032']);self.assertIn('1925',b['TW-01-032']);self.assertNotIn('oai_link_source',b['TW-01-032'])
-  for key in RECHECK:self.assertIn('頻率',b[key])
+  frequency_limits={
+   'TW-13-002':'原始調查未列母數，不能據此估算個人風險',
+   'TW-13-004':'不能用所有腦血管疾病死亡數當眩暈者中風機率',
+   'TW-13-005':'案例不是全國發生率',
+   'TW-13-006':'不能換算急性隅角閉鎖發生率',
+  }
+  for key in RECHECK:self.assertIn(frequency_limits[key],b[key])
   self.assertIn('不以年輕',b['TW-13-004']);self.assertIn('不是全國發生率',b['TW-13-005']);self.assertIn('不能換算',b['TW-13-006'])
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
@@ -35,7 +41,7 @@ class HivPreventionTests(unittest.TestCase):
   self.assertEqual(counts['runtime_after'],counts['runtime_before']+len(batch['new_core_ids']))
   self.assertGreaterEqual(len(rt['items']),counts['runtime_after'])
   core=sum(not x['id'].startswith('TW-NAV-') for x in rt['items'])
-  self.assertEqual(counts['core_after'],counts['core_before']+len(batch['new_core_ids']));self.assertGreaterEqual(core,counts['core_after']);self.assertIn(str(core)+'條',rt['scope']);self.assertIn(str(len(rt['items']))+'項',rt['scope'])
+  self.assertEqual(counts['core_after'],counts['core_before']+len(batch['new_core_ids']));self.assertGreaterEqual(core,counts['core_after']);self.assertIn('臺灣生活情境',rt['scope']);self.assertNotRegex(rt['scope'],r'\d+\s*(?:條|項)')
  def test_all_prior_content_and_actual_review_history(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();ii={x['id']:x for x in rt['items']};ss={s['id']:s for s in rt['sources']}
   for row in old['items']:assert_preserved_or_rechecked(self,row,ii[row['id']])

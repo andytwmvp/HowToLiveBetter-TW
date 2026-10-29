@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 from ci_language_policy import audit_drafts
 from content_validation import load_json
 from retroactive_audit import validate_recheck_history
@@ -89,7 +90,7 @@ class Ch01GamblingHivPrepRecheckTests(unittest.TestCase):
                 entry = self.manifest[item_id]
                 item = self.items[item_id]
                 record = records[item_id]
-                self.assertEqual(body_hash, ev["after_sha256"])
+                assert_body_version_matches_review_or_cleanup(self, item_id, ev["after_sha256"], body_hash)
                 self.assertEqual(body_hash, review["target_sha256"])
                 self.assertEqual(body.decode("utf-8"), item["body"])
                 self.assertEqual(entry["sources"], ev["source_ids"])
@@ -103,7 +104,9 @@ class Ch01GamblingHivPrepRecheckTests(unittest.TestCase):
                 self.assertEqual(record["status"], "ai_source_rechecked_professional_pending")
                 self.assertEqual(record["prior_revision"], BASE)
                 self.assertEqual(record["before_sha256"], ev["before_sha256"])
-                self.assertEqual(record["after_sha256"], body_hash)
+                # Later reader-copy cleanup has its own hash edge; the substantive
+                # recheck's after hash must remain the original reviewed revision.
+                self.assertEqual(record["after_sha256"], ev["after_sha256"])
                 self.assertEqual(record["prior_review_sha256"], ev["prior_review_sha256"])
                 self.assertEqual(record["source_ids"], ev["source_ids"])
                 self.assertEqual(record["source_checks"], review["source_checks"])
@@ -168,7 +171,7 @@ class Ch01GamblingHivPrepRecheckTests(unittest.TestCase):
         self.assertIn("當次（3日內）", bodies["TW-01-031"])
         self.assertIn("只補助該次就醫", bodies["TW-01-031"])
         self.assertIn("不能取代119、急診或賭博成癮治療", bodies["TW-01-037"])
-        self.assertIn("未找到具全國代表性", bodies["TW-01-037"])
+        self.assertIn("目前沒有具全國代表性", bodies["TW-01-037"])
         self.assertIn("412-8518轉2", bodies["TW-01-037"])
         self.assertIn("自費院所名冊2026-10-08", bodies["TW-01-038"])
         self.assertIn("35歲（含）以下", bodies["TW-01-038"])

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-013.md",
-  "target_sha256": "e618bf9044833b16cd979bd0197c21aa6b11a06e8d685f12c81499b08da437ee",
+  "target_sha256": "6c8b8361c1a4faeae0d558e9332d4aeecb1dfe6c962c7f64d0fa765c8d254e9d",
   "source_checks": [
     {
       "url": "https://course.taiwanjobs.gov.tw/about/recommended",
@@ -35,5 +35,13 @@
   "review_method": "2026-10-27由AI逐項直接閱讀臺灣主管機關現行法規、行政裁罰基準及職訓方案／FAQ，核對條號、適用對象、公布／修正／施行日期、資格條件、費用與程序；未以來源存在或關鍵字掃描取代實質主張核查。統計部分搜尋未找到可支援個人機率的適當配對母數，故明示資料不足。",
   "limits": [
     "AI輔助官方方案與法規核對，未取得獨立職訓、勞動或教育專業複核；補助資格、個人餘額與班別條款需向承辦單位確認，不能據此保證就業或薪資。"
-  ]
+  ],
+  "source_reviewed_sha256": "e618bf9044833b16cd979bd0197c21aa6b11a06e8d685f12c81499b08da437ee",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e618bf9044833b16cd979bd0197c21aa6b11a06e8d685f12c81499b08da437ee",
+    "after_sha256": "6c8b8361c1a4faeae0d558e9332d4aeecb1dfe6c962c7f64d0fa765c8d254e9d",
+    "before_reader_sha256": "0087aaf2ab26d9c5a4c7d403166a0c4d4cbb67d0447326b2abd5851ee7b5d0ad",
+    "after_reader_sha256": "e404e035ec0195adf7c1b8749584939d567608dfa1c3a6f773059f76e146eb12"
+  }
 }

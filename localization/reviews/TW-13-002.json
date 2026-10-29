@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-002.md",
-  "target_sha256": "d7f1c40dc6f8bc91ced850ca98f4aef8936409ded551d5201f63210fc000ba30",
+  "target_sha256": "a4b7b65c6f1b61894c8b4003fe21123ef3a0abf5cfe85d66fb872f2417bb27fb",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-2704-73952-1.html",
@@ -36,5 +36,13 @@
     "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
     "頻率限制：原2023官方新聞引2017調查長者曾跌倒比例，及2021跌倒死亡數，並非2026跌倒後骨折或頭部出血機率，未取得本次原始調查母數，不套成現行個人風險。",
     "AI輔助來源再核對，專業再審待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "d7f1c40dc6f8bc91ced850ca98f4aef8936409ded551d5201f63210fc000ba30",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d7f1c40dc6f8bc91ced850ca98f4aef8936409ded551d5201f63210fc000ba30",
+    "after_sha256": "a4b7b65c6f1b61894c8b4003fe21123ef3a0abf5cfe85d66fb872f2417bb27fb",
+    "before_reader_sha256": "082939ab383d5980f76addafc97322f1bbf7fd8037aa9659ef23e997a867ab8d",
+    "after_reader_sha256": "beb3cfd1bf90927b4d53d77c9e18637545112a8945642f6cb63fc02bcfc50b2c"
+  }
 }

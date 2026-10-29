@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-015.md",
-  "target_sha256": "1a93c611e6e282ab9b0aca68aca8ccf644ef255414142983b43e8cb56e0d4229",
+  "target_sha256": "fa58139abf932ab59db71f70ddd42e42be960f892999cbaaea6be6d6f06187ea",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-2784-732cd-2951-1.html",
@@ -43,5 +43,13 @@
     "感染科或急診醫療專業尚未獨立審閱；疾管署手冊同時包含疫苗供應變更及沿用舊名詞的傷口表，本文不提供個案接種建議。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "8b3d5f9526596ddd519b4b9725d7af62d0c70647fe93993a622cfc01b7b5475b"
+  "upstream_text_sha256": "8b3d5f9526596ddd519b4b9725d7af62d0c70647fe93993a622cfc01b7b5475b",
+  "source_reviewed_sha256": "1a93c611e6e282ab9b0aca68aca8ccf644ef255414142983b43e8cb56e0d4229",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1a93c611e6e282ab9b0aca68aca8ccf644ef255414142983b43e8cb56e0d4229",
+    "after_sha256": "fa58139abf932ab59db71f70ddd42e42be960f892999cbaaea6be6d6f06187ea",
+    "before_reader_sha256": "0e04cb9a00a8560ab45f70bcfd2d4d105d585488574c344c79ec831d3dfa80c1",
+    "after_reader_sha256": "72fa6f401f49829df43c95508f2c024586ac8a4493c59e9dd6af89a60e1dfa63"
+  }
 }

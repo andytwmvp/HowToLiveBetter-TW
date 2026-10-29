@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-040.md",
-  "target_sha256": "d667fb25d81480236d75efa581923ef0d0ebe2ba6849fdf6a965c2ebc84ecc70",
+  "target_sha256": "72801cd4ac6137be5ca24a71beff0993742b76ed8f42b7b5a3e774c367ee3b24",
   "source_checks": [
     {
       "url": "https://119.tainan.gov.tw/News_Content.aspx?n=25539&s=8545256",
@@ -34,5 +34,13 @@
   "limits": [
     "穿刺異物和一般淺表割傷不同，不應直接用力壓住仍插在身體的刀柄或玻璃，也不該以止血帶繞頸、胸或腹部。眼球穿刺、重物壓傷或電鋸受傷需另依專門急救規範；不要誤把大出血教學的直接壓迫用到嵌入異物本體。即使暫時沒流血，仍需依專業救護決定送醫方式。\n\n台灣事件頻率資料不足：消防及全民安全指引提供處置原則，沒有全國同定義嵌入異物病例與暴露分母；不以全部外傷、所有職災或單一新聞病例推算個人率。本輪只讀國防部HTML指定傷患段落，未複製小橘書PDF、圖表或影片。",
     "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "d667fb25d81480236d75efa581923ef0d0ebe2ba6849fdf6a965c2ebc84ecc70",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "d667fb25d81480236d75efa581923ef0d0ebe2ba6849fdf6a965c2ebc84ecc70",
+    "after_sha256": "72801cd4ac6137be5ca24a71beff0993742b76ed8f42b7b5a3e774c367ee3b24",
+    "before_reader_sha256": "a5cb860c1bb25e6fe591a32e9fe757da0cc2bd1bb6557892806fcc651d816d18",
+    "after_reader_sha256": "825f93dbeb34f42ac3e16c2781bdb808f409cd8780039f9597d37182246f921c"
+  }
 }

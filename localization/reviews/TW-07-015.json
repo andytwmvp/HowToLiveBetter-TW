@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-015.md",
-  "target_sha256": "3c9d856e9a6421c1fa7ae0e8665e2ab486c4015437d1d74e237119a6e1cda2af",
+  "target_sha256": "80725778644286db4e556fbb16204ec3de01bd6885dd28bfd1a008115d973b4d",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
@@ -60,5 +60,13 @@
         "ch07_cib_fakejob_investment_case_20260809"
       ]
     }
-  ]
+  ],
+  "source_reviewed_sha256": "3c9d856e9a6421c1fa7ae0e8665e2ab486c4015437d1d74e237119a6e1cda2af",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "3c9d856e9a6421c1fa7ae0e8665e2ab486c4015437d1d74e237119a6e1cda2af",
+    "after_sha256": "80725778644286db4e556fbb16204ec3de01bd6885dd28bfd1a008115d973b4d",
+    "before_reader_sha256": "698b6d5aa3195c61c2e743ce1b00e8df49c208ca807ecfd8c53c52375b106d2a",
+    "after_reader_sha256": "0d5017935d5c5da6879b657e6d027b2e06e364be4a79a34939e7f7d399590391"
+  }
 }

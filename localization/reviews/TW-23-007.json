@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-007.md",
-  "target_sha256": "b4acf48aa0e6cef461f21a5bf7560ad62e449c3ff912b566f7a64a7061866060",
+  "target_sha256": "97d10dc4720c7d70de577f403dcaed2c4400feaa313c9e9bbb3fa0bde2d99cb2",
   "source_checks": [
     {
       "url": "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/442521523465644318",
@@ -48,5 +48,13 @@
   "review_method": "AI輔助逐項閱讀當次可取得的官方HTML、原始PDF或期刊／出版社摘要；逐筆記錄統計單位、母體、期間、分子分母、事件定義、來源與方法限制。機器結構檢查不作實質審閱證據；未取得全文或附件者明列於限制。",
   "limits": [
     "研究估計對象、年代與識別方法不同；全球Mincer平均、義務教育改革準實驗、偏誤修正評論及臺灣1968年改革不能相互替代。臺灣估計依1955年出生界線及局部改革樣本，不代表2026年所有升學、科系或短期課程。本次AI輔助核對，不等於獨立教育經濟或統計專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "b4acf48aa0e6cef461f21a5bf7560ad62e449c3ff912b566f7a64a7061866060",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "b4acf48aa0e6cef461f21a5bf7560ad62e449c3ff912b566f7a64a7061866060",
+    "after_sha256": "97d10dc4720c7d70de577f403dcaed2c4400feaa313c9e9bbb3fa0bde2d99cb2",
+    "before_reader_sha256": "5f2e80c23e0371950aa7acaed9a54ee55eb947e7d7d1ca60574ae2a6a6d94b47",
+    "after_reader_sha256": "ec4be32d02f0ea82408ddd74e57964905619a40b4416566adbfa743eb2edb1e6"
+  }
 }

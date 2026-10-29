@@ -42,7 +42,7 @@ def check_ch19_employment_rights_browser(page, context, url, review):
         )
         for key, phrase in searches:
             page.locator('#q').fill(phrase)
-            page.wait_for_function("document.getElementById('status').textContent.startsWith('顯示 1／')")
+            page.wait_for_function("document.getElementById('status').textContent.startsWith('找到 1 篇')")
             article = page.locator('#'+key)
             assert article.count() == 1 and article.is_visible(), (key, phrase)
             article.evaluate('(element)=>element.scrollIntoView({block:"start"})')

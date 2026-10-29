@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-017.md",
-  "target_sha256": "072c950d2230ce990a71db022d9363b6787863bdf00ad3d9c489cdfed955f390",
+  "target_sha256": "f6e1f75f7a256f11a6bd4934cbd43e3190a438930dae54f1480f6134ac8fd990",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078",
@@ -28,5 +28,13 @@
     "本次未取得可核實的全國求助家庭數及合資格家戶母數；衛福部114年度報告直連回傳404，未使用搜尋摘要中的6,099戶數字。",
     "急難紓困金額須訪視與地方核定，地方物資、臨時安置及急難救助服務量能不同，不保證即時給付或固定供應。",
     "AI來源核對不等於社福、醫療或法律專業審查；急迫人身危險與急症須另用相應緊急服務。"
-  ]
+  ],
+  "source_reviewed_sha256": "072c950d2230ce990a71db022d9363b6787863bdf00ad3d9c489cdfed955f390",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "072c950d2230ce990a71db022d9363b6787863bdf00ad3d9c489cdfed955f390",
+    "after_sha256": "f6e1f75f7a256f11a6bd4934cbd43e3190a438930dae54f1480f6134ac8fd990",
+    "before_reader_sha256": "a002e5dae8e0b45ab1145a12954f60fa2d7fd47038405bc7ac2200d544426d45",
+    "after_reader_sha256": "6429d3c70c8f936b711b45a5541c8c0a7baf024d60b02d618d2274fb82e3f7fb"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-025.md",
-  "target_sha256": "dbcff70932577104d2c4498692d33cf3ee98bacea1722f899686483bb1f09976",
+  "target_sha256": "aa4c50f7ef8b31e094d59a37067e44ee5c15f43fbf331f982c01318eaf23141f",
   "source_checks": [
     {
       "url": "https://beipu.hcshb.gov.tw/News_Content.aspx?n=363&s=109351&sms=9314",
@@ -50,5 +50,13 @@
     "AI輔助核對官方與公立醫院公開來源，未取得精神醫療、心理、急救或危機介入專業獨立審閱；本文不是個案診療、危機評估或安全保證。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "c350f43684141e88b5887c61a2af23ef9706a9269477cfb51dc4566785c26b66"
+  "upstream_text_sha256": "c350f43684141e88b5887c61a2af23ef9706a9269477cfb51dc4566785c26b66",
+  "source_reviewed_sha256": "dbcff70932577104d2c4498692d33cf3ee98bacea1722f899686483bb1f09976",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "dbcff70932577104d2c4498692d33cf3ee98bacea1722f899686483bb1f09976",
+    "after_sha256": "aa4c50f7ef8b31e094d59a37067e44ee5c15f43fbf331f982c01318eaf23141f",
+    "before_reader_sha256": "20b4afd1c48ace3b38869361d48ee1f8923885849f9d8b9ea7d0c330d9dc95f3",
+    "after_reader_sha256": "a8bee1664139cab45c55ea0af7ae850485a333ac49058a76bb574bfd2aac2cbe"
+  }
 }

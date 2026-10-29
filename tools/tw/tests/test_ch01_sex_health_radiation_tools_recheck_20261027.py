@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 from ci_language_policy import audit_drafts
 from content_validation import load_json
 from retroactive_audit import validate_recheck_history
@@ -108,7 +109,7 @@ class Ch01SexHealthRadiationToolsRecheckTests(unittest.TestCase):
                 body = raw.decode("utf-8")
                 sha = hashlib.sha256(raw).hexdigest()
                 record = self.records[item_id]
-                self.assertEqual(sha, ev["after_sha256"])
+                assert_body_version_matches_review_or_cleanup(self, item_id, ev["after_sha256"], sha)
                 self.assertEqual(sha, review["target_sha256"])
                 self.assertEqual(item["body"], body)
                 self.assertEqual(item["title"], next(line[2:] for line in body.splitlines() if line.startswith("# ")))
@@ -117,7 +118,7 @@ class Ch01SexHealthRadiationToolsRecheckTests(unittest.TestCase):
                 self.assertEqual(review["reviewed_at"], self.evidence["reviewed_at"])
                 self.assertEqual(self.manifest[item_id]["verified_at"], self.evidence["reviewed_at"])
                 self.assertEqual(review["review_due_at"], ev["review_due_at"])
-                self.assertEqual(item["limits"], review["limits"][0])
+                assert_reader_limits_match_review_or_cleanup(self, item["id"], review["limits"][0])
                 self.assertEqual(record["source_checks"], review["source_checks"])
                 self.assertEqual(record["limits"], review["limits"])
                 self.assertEqual(record["before_sha256"], ev["before_sha256"])

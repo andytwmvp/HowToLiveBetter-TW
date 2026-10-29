@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch21/TW-21-005.md",
-  "target_sha256": "4b8c5f38920582ba01db1529d822d6de6cdb24cb06b9205f43bc3ca1385b89bd",
+  "target_sha256": "9e64e59665487943a41f041c322f12c551952ea407c1ea458a882c603f62b470",
   "source_checks": [
     {
       "url": "https://www.boca.gov.tw/cp-85-244-cdfdb-1.html",
@@ -41,5 +41,13 @@
     "2025年337名返國國人入境關懷通知是行政通知人數，涵蓋不同被害或被迫犯罪情境；不是確認人口販運或海外求職詐騙案件數，也沒有海外求職者或旅客暴露分母，不能換算個人機率。目的地簽證、勞動權益和刑責依當地法令及個案事實；外交部與館處不能保證固定救援時程。",
     "本條是一般風險辨識與官方聯絡入口，不構成個別移民、勞動、法律、保險或領務意見；未取得獨立相關專業審閱。",
     "若立即危險，先求助所在地緊急服務；外交部海外付費專線及全球免付費專線的適用範圍、電話費和漫遊費依官方頁確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "4b8c5f38920582ba01db1529d822d6de6cdb24cb06b9205f43bc3ca1385b89bd",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "4b8c5f38920582ba01db1529d822d6de6cdb24cb06b9205f43bc3ca1385b89bd",
+    "after_sha256": "9e64e59665487943a41f041c322f12c551952ea407c1ea458a882c603f62b470",
+    "before_reader_sha256": "d450d4f57930fb466f1100a2e6fc19f1506a27b047d0f6d517319e0292effad5",
+    "after_reader_sha256": "d8d594eb59c8fdd6a1957a3d808e7f96297fbd0cd2843c7ea04b20d101530823"
+  }
 }

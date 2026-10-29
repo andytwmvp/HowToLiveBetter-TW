@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-013.md",
-  "target_sha256": "16c6ce81b777d372ab616dcb7b3c439374d3ec17dccef0cacca78450ea32d3bc",
+  "target_sha256": "b8b972349bd2f0ca55948599e33abdd6f3cac5e0dc2830282a4bf8973e676a59",
   "source_checks": [
     {
       "url": "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
@@ -64,5 +64,13 @@
     "津貼資格、出席、所得通報及失業認定由就服機構和勞保局按個案審查。",
     "年報沒有符合資格者分母；月報與年報單位不同。",
     "尚無勞動法、就業服務或統計專業人員獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "16c6ce81b777d372ab616dcb7b3c439374d3ec17dccef0cacca78450ea32d3bc",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "16c6ce81b777d372ab616dcb7b3c439374d3ec17dccef0cacca78450ea32d3bc",
+    "after_sha256": "b8b972349bd2f0ca55948599e33abdd6f3cac5e0dc2830282a4bf8973e676a59",
+    "before_reader_sha256": "19c59d9ac841424e67ab1f1163fc03deab94fbbcb0881da0019ad7678cfb73d1",
+    "after_reader_sha256": "c4eaa9e820af3fb5ceee23302ca2c5317737131833a3b9546728f623963eeb2e"
+  }
 }

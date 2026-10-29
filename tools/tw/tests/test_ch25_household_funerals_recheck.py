@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup
 import retroactive_audit as audit
 from review_contract import ROOT
 
@@ -46,7 +47,7 @@ class Chapter25HouseholdFuneralsRecheckTests(unittest.TestCase):
                 self.assertEqual(record["prior_review_sha256"], hashlib.sha256(review_bytes).hexdigest())
                 self.assertEqual(record["before_sha256"], hashlib.sha256(old["body"].encode("utf-8")).hexdigest())
                 self.assertNotEqual(record["before_sha256"], body_sha)
-                self.assertEqual(record["after_sha256"], body_sha)
+                assert_body_version_matches_review_or_cleanup(self, item_id, record["after_sha256"], body_sha)
                 self.assertEqual(current["body"], markdown.decode("utf-8"))
                 self.assertEqual(review["target_sha256"], hashlib.sha256(markdown).hexdigest())
                 self.assertEqual(manifest[item_id]["sources"], current["source_ids"])

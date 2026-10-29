@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2026-12-15",
   "target_path": "locales/zh-TW/book/ch01/TW-01-019.md",
-  "target_sha256": "1c180b9e0ddb8606d78f312f4342a1aa5228f3b6ac4fdc016c6b5e839b0d895f",
+  "target_sha256": "fd7a936edfbd6d04d58dd421d3ed96ce22728997207a3b2550bd505299423f11",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-2704-80948-1.html",
@@ -57,5 +57,13 @@
     "國健署更新的服務表本輪以官方搜尋索引可見內容核對，直接開啟回傳502；仍待腸胃專科與公衛專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "db819b95f584337057c6f22cd5ec4691e522e8332f619f57da8f91619912db21"
+  "upstream_text_sha256": "db819b95f584337057c6f22cd5ec4691e522e8332f619f57da8f91619912db21",
+  "source_reviewed_sha256": "1c180b9e0ddb8606d78f312f4342a1aa5228f3b6ac4fdc016c6b5e839b0d895f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1c180b9e0ddb8606d78f312f4342a1aa5228f3b6ac4fdc016c6b5e839b0d895f",
+    "after_sha256": "fd7a936edfbd6d04d58dd421d3ed96ce22728997207a3b2550bd505299423f11",
+    "before_reader_sha256": "5c151f0ea600de5faaa534824988abfb8e63451a392402bd879d33ce8733962a",
+    "after_reader_sha256": "56bfabc37616ef7cbd8c2136add70274f705a02a86977cf76e602c6f378d6d52"
+  }
 }

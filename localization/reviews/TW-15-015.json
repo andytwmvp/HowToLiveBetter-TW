@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-015.md",
-  "target_sha256": "3684ee76d680346b332f1d10f70642dba9f6b61ebcbe881fc95be61e49710921",
+  "target_sha256": "90c880999c93f6130bdf92b02c2689f81097621d7c46086df554b63e54fd9ec7",
   "source_checks": [
     {
       "url": "https://law.fsc.gov.tw/LawContent.aspx?id=GL001398&media=print",
@@ -35,5 +35,13 @@
     "未找到可配對全國轉貸申請、核貸與貸款戶母數的統計，不估成功率、可省金額或個人節省期間；APR不涵蓋所有支出且不是未來利率保證。",
     "限制清償三年上限只依金管會個人購屋貸款定型化契約條文描述；其他房貸、融資或商業產品須看各自契約與適用規定。",
     "未取得獨立法律、金融或財務專業審閱；本文不構成個人借貸建議、銀行授信條件或節省承諾。"
-  ]
+  ],
+  "source_reviewed_sha256": "3684ee76d680346b332f1d10f70642dba9f6b61ebcbe881fc95be61e49710921",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "3684ee76d680346b332f1d10f70642dba9f6b61ebcbe881fc95be61e49710921",
+    "after_sha256": "90c880999c93f6130bdf92b02c2689f81097621d7c46086df554b63e54fd9ec7",
+    "before_reader_sha256": "d30c2bfdd95d3ef0d2ed838b650d9032121dd7b1c3e2fa91eac188aaedb57305",
+    "after_reader_sha256": "0197bd68787eb4c69fc01481b68fa23eb05968c1ae41e70f7ae26490bb88e81e"
+  }
 }

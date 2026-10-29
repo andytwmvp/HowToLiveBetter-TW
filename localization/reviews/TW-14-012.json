@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-012.md",
-  "target_sha256": "0e5b6f00443020153597dbe07f3194ad712c3b5a6c493372faedad1f189edbd6",
+  "target_sha256": "ffcbcbffefd6f6b3331d9adc94ca917fd03139398efeb1aad971933cb95892f6",
   "source_checks": [
     {
       "url": "https://support.google.com/accounts/answer/183723?hl=zh-Hant",
@@ -42,5 +42,13 @@
   "limits": [
     "Google的7日規則只適用其帳戶；未找到可配對臺灣換號人數與帳戶復原失敗數的全國分母，不推估個人機率。各銀行、平台和電信業者的更改、驗證、費用與等待程序不同，不保證統一完成時間。",
     "本次為AI輔助官方來源再核對，尚未取得獨立資安、金融、電信、法律或統計專業審閱；不可視為專業簽證或個案意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "0e5b6f00443020153597dbe07f3194ad712c3b5a6c493372faedad1f189edbd6",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0e5b6f00443020153597dbe07f3194ad712c3b5a6c493372faedad1f189edbd6",
+    "after_sha256": "ffcbcbffefd6f6b3331d9adc94ca917fd03139398efeb1aad971933cb95892f6",
+    "before_reader_sha256": "a37eb302d686a8c705ba999b9a8833f0a69fdec361922d3e7282e8214abfbed8",
+    "after_reader_sha256": "5d3f2f36bc4042182be1405e2ee53baad5f5b6b17aee923b438f98117f47c817"
+  }
 }

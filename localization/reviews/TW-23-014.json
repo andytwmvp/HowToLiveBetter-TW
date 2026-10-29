@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-16",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-014.md",
-  "target_sha256": "36c41fac63cc570f64af37322dc47e388e9353c35ac12bddbb4c6bde0f54d3fd",
+  "target_sha256": "dc21732abd2f4bdc57a631e3690ca1a7f31cece733e9e8e68e93a2a8bbb7218e",
   "source_checks": [
     {
       "url": "https://pubmed.ncbi.nlm.nih.gov/33683913/",
@@ -17,5 +17,13 @@
   ],
   "localization_changes": "保留提取練習，加入先理解、正確回饋、標準化效果量與摘要取材限制。",
   "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
+  "source_reviewed_sha256": "36c41fac63cc570f64af37322dc47e388e9353c35ac12bddbb4c6bde0f54d3fd",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "36c41fac63cc570f64af37322dc47e388e9353c35ac12bddbb4c6bde0f54d3fd",
+    "after_sha256": "dc21732abd2f4bdc57a631e3690ca1a7f31cece733e9e8e68e93a2a8bbb7218e",
+    "before_reader_sha256": "cefc0f09cda05ea286ee52f40b28ed94261243166107e61c5a655ebc3102fd78",
+    "after_reader_sha256": "72881a0da6048b4d2b2b2f0a8058f5058a3dbe3265911aafaec85ed9deea6d2c"
+  }
 }

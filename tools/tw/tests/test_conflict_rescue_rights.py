@@ -16,7 +16,7 @@ IDS = {f'TW-13-{n:03}' for n in (36, 37, 39)}
 class ConflictRescueRightsTests(unittest.TestCase):
     def test_actionable_safety_boundaries(self):
         b = {i['id']: i['body'] for i in validate_runtime()['items']}
-        for text in ('七類', '2024年9月', '不採', '無聲', '不尾隨'):
+        for text in ('七類', '2024年9月', '不要為了財物突然追趕', '無聲', '不要尾隨'):
             self.assertIn(text, b['TW-13-036'])
         for text in ('第24條', '2023-07-01', '七類', '不要為蒐證', '心理'):
             self.assertIn(text, b['TW-13-037'])

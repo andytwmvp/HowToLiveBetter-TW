@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-026.md",
-  "target_sha256": "2bdf1e2b50400f82fec17251e4675870b9f00a7a01f59e1423116249ea1900a8",
+  "target_sha256": "6c5cb8c25ea067a8228ce6a61e3ee43b2db2b554e2f6df708e9f0411529d7374",
   "source_checks": [
     {
       "url": "https://eoc.gov.taipei/News/Detail/624?MenuId=51",
@@ -48,5 +48,13 @@
   "limits": [
     "2021至2025年建築物火災件數與住宅類別占比沒有家戶、居住人口或住宅暴露分母，不能換算每戶起火機率。乾粉滅火器三年性能檢查說明不得推成所有家戶、場所與器材型式都相同；臺北市消防指引屬地方宣導。",
     "未取得消防專業獨立審閱；本文不是消防安全檢查、滅火器認證或現場風險評估。"
-  ]
+  ],
+  "source_reviewed_sha256": "2bdf1e2b50400f82fec17251e4675870b9f00a7a01f59e1423116249ea1900a8",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2bdf1e2b50400f82fec17251e4675870b9f00a7a01f59e1423116249ea1900a8",
+    "after_sha256": "6c5cb8c25ea067a8228ce6a61e3ee43b2db2b554e2f6df708e9f0411529d7374",
+    "before_reader_sha256": "0a775eaecbf5701ec40585b8627d26e1f1301294ca30b3b86bc053ad46d5ab27",
+    "after_reader_sha256": "c91764b7c18a7c8d9fcd81a6f922e44d40f0241fced514b5275cd87ca456fc5a"
+  }
 }

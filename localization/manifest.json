@@ -4691,9 +4691,12 @@
       "sources": [
         "https://www.taiwanjobs.gov.tw/Internet/Index/index.aspx",
         "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=N0090001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0050021",
+        "https://job.taiwanjobs.gov.tw/Internet/special2/newlife/docDetail.aspx?docid=19387&uk=492",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11516/236078/f194afc4-ad75-46bf-aa65-02239bdfdf8d.pdf",
+        "https://statdb.mol.gov.tw/html/com/st0103.html"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/07-沒錢的時候怎麼活.md",
       "source_title_zh_tw": "求職別只投簡歷，用系統方法：學技巧、定目標、找人幫",
@@ -11320,9 +11323,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-010.md",
       "sources": [
-        "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+        "https://www.ilo.org/sites/default/files/2025-05/WP140_web.pdf",
+        "https://course.taiwanjobs.gov.tw/"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "挑技能時優先看「要不要動手、要不要現場判斷」，這類最難被自動化頂掉",
@@ -11598,9 +11602,9 @@
       "target_path": "locales/zh-TW/book/ch23/TW-23-024.md",
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030010",
-        "https://www.mol.gov.tw/1607/1632/1633/90814/"
+        "https://www.mol.gov.tw/media/c1rbs3kt/%E8%BF%915%E5%B9%B4%E5%A4%A7%E5%B0%88%E7%95%A2%E6%A5%AD%E7%94%9F%E5%B0%B1%E6%A5%AD%E7%8B%80%E6%B3%81%E5%8F%8A%E8%96%AA%E8%B3%87%E8%A1%8C%E6%83%85-%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A.pdf?mediaDL=true"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "本科畢業要不要接著讀碩士：先算學費和少掙的兩三年工資，再看自己讀的專業多掙不多掙；已經上班的可以讀非全日制，證書和全日制效力相同",
@@ -11618,9 +11622,9 @@
       "target_path": "locales/zh-TW/book/ch23/TW-23-025.md",
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030010",
-        "https://www.nature.com/articles/s41598-021-93687-7"
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8277873/"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "碩士畢業要不要接著讀博士：目標崗位明確要博士才讀，讀之前把心理負擔也算進去",

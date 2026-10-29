@@ -16,7 +16,7 @@ import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
 import { zip } from '../lib/zip.mjs';
-import { ROOT, REPO, SITE, TITLE, read, readBook, COST_W, ratioOf } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, SOURCE_TITLE, read, readBook, COST_W, ratioOf } from '../lib/book.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter-source-preview.apkg');
 const NOW = new Date();
@@ -59,7 +59,7 @@ const sections = bookFiles.map(f => ({ ...parseSection(read(f)), file: f }));
 const esc = s => String(s ?? '').replace(/\*\*/g, '').replace(/\\([*_])/g, '$1')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const pad = n => String(n).padStart(2, '0');
-const deckName = s => `${TITLE}｜原作繁體來源預覽::${pad(s.sec)} ${s.name}`;
+const deckName = s => `${SOURCE_TITLE}::${pad(s.sec)} ${s.name}`;
 
 const FIELDS = ['節', '標題', '說人話', '成本', '要點', '連結'];
 const notes = [];
@@ -105,11 +105,11 @@ a { color: #3451b2; }
 .nightMode a, .night_mode a { color: #a8b1ff; }
 .nightMode .sec, .nightMode .hint, .nightMode .label { color: #98989f; }`;
 
-const QFMT = `<div class="hint">原作來源預覽｜臺灣版生活指引請看本專案閱讀入口。</div>
+const QFMT = `<div class="hint">原作內容對照卡｜臺灣版閱讀方式請參考專案的「閱讀說明」。</div>
 <div class="sec">{{節}}</div>
 <div class="q">{{標題}}</div>
 <div class="hint">想一想：為什麼值得做，要花多少代價？</div>`;
-const AFMT = `<div class="hint">原作來源預覽｜臺灣版生活指引請看本專案閱讀入口。</div>
+const AFMT = `<div class="hint">原作內容對照卡｜臺灣版閱讀方式請參考專案的「閱讀說明」。</div>
 <div class="sec">{{節}}</div>
 <div class="q">{{標題}}</div>
 <hr id="answer">
@@ -119,7 +119,7 @@ const AFMT = `<div class="hint">原作來源預覽｜臺灣版生活指引請看
 <div class="link">{{連結}}</div>`;
 
 const model = {
-  id: MODEL_ID, name: `${TITLE}（本repo原作來源卡）`, type: 0, mod: NOW_S, usn: -1, sortf: 1, did: ROOT_DECK_ID,
+  id: MODEL_ID, name: `${SOURCE_TITLE}｜來源卡`, type: 0, mod: NOW_S, usn: -1, sortf: 1, did: ROOT_DECK_ID,
   tmpls: [{ name: '問答', ord: 0, qfmt: QFMT, afmt: AFMT, did: null, bqfmt: '', bafmt: '' }],
   flds: FIELDS.map((name, ord) => ({ name, ord, sticky: false, rtl: false, font: 'Arial', size: 20, media: [] })),
   css: CSS, latexPre: '', latexPost: '', latexsvg: false, req: [[0, 'any', [1]]], tags: [], vers: [],
@@ -129,11 +129,11 @@ const deck = (id, name, desc = '') => ({
   id, name, desc, mod: NOW_S, usn: -1, dyn: 0, conf: 1, collapsed: false, browserCollapsed: false,
   newToday: [0, 0], revToday: [0, 0], lrnToday: [0, 0], timeToday: [0, 0], extendNew: 0, extendRev: 0,
 });
-const rootDesc = `《${TITLE}》原作繁體來源預覽，保留原作內容與用語，供查找及比對來源。臺灣版生活指引請從 <a href="${SITE}">本專案閱讀入口</a>閱讀。`
+const rootDesc = `這套牌組保留原作繁體內容與原作用語，方便查找、比對來源；內容不代表臺灣現行制度或生活建議。要閱讀臺灣版，請看<a href="${SITE}#reading">閱讀說明</a>。`
   + '本牌組使用獨立識別碼；匯入前請先備份，舊版或原作牌組的學習紀錄不會自動搬移。';
 const decks = {
   1: deck(1, 'Default'),
-  [ROOT_DECK_ID]: deck(ROOT_DECK_ID, `${TITLE}｜原作繁體來源預覽`, rootDesc),
+  [ROOT_DECK_ID]: deck(ROOT_DECK_ID, SOURCE_TITLE, rootDesc),
   ...Object.fromEntries(sections.map(s => [deckId(s.sec), deck(deckId(s.sec), deckName(s))])),
 };
 

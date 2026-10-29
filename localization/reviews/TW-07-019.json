@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-019.md",
-  "target_sha256": "e807546627f0902ab2df64246cd0f3baa7bd8a1c12e764f04b9d9292143d7cd2",
+  "target_sha256": "2b679e16a44b79d5f359c6b898b6b653453b048abf44667829ad17d606996994",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090001",
@@ -49,5 +49,13 @@
     "更生保護服務須符合法定對象並依個案、本人同意、地方資源評估；無全國同口徑資格母數與服務結果，AI核對不等於法律、社工或社福專業意見。",
     "法律與方案資格、年度規定、服務量及各地窗口可能變動；申請、官方資訊入口或電話諮詢不等於補助、服務、保險理賠或個案法律結果已獲核准。",
     "本次僅為AI輔助官方來源核對；尚未取得相應領域獨立專家審閱，不能視為法律、勞動、社福、保險、金融消費、警政、醫療或統計專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "e807546627f0902ab2df64246cd0f3baa7bd8a1c12e764f04b9d9292143d7cd2",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e807546627f0902ab2df64246cd0f3baa7bd8a1c12e764f04b9d9292143d7cd2",
+    "after_sha256": "2b679e16a44b79d5f359c6b898b6b653453b048abf44667829ad17d606996994",
+    "before_reader_sha256": "fec0320af8a56ec901ca14d4ea5dd4a6d9932e7e1fd0830ea50b41a25fa71716",
+    "after_reader_sha256": "2dc280dc18528daa287184d0205e1248dd197fc40aa9eee931a8cc997905cf34"
+  }
 }

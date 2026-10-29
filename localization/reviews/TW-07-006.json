@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-006.md",
-  "target_sha256": "4d917ba5bd815f322b384fc91ee21da0656e34518d9b3c7c1e510282934986d2",
+  "target_sha256": "9c93817c9f84c351384bf510c3a6344b59ab7cf021203ebdef86998ca9fa0c88",
   "source_checks": [
     {
       "url": "https://dep.mohw.gov.tw/DOSAASW/cp-594-5082-103.html",
@@ -44,5 +44,13 @@
     "每年約6,000人或家庭是方案預期效益，不是實際行政統計或急難風險分母。",
     "AI輔助核對官方方案，非獨立社福、法律或財務專業簽證。",
     "依方案，公所受理後應於24小時內安排實地訪視；符合規定且經確認急迫者可先領5,000元，餘額的24小時時限則從核定機關當日核定後起算。這些程序不是提交申請後保證隔天入帳，也不代表所有個案都符合先發條件。戶籍地急難救助、居住地急難紓困及地方加碼方案的資格與作業不同；未核定款項不能當成確定收入。若仍無食宿，立即向承辦補充急迫變化，並留存受理紀錄及補件通知。"
-  ]
+  ],
+  "source_reviewed_sha256": "4d917ba5bd815f322b384fc91ee21da0656e34518d9b3c7c1e510282934986d2",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "4d917ba5bd815f322b384fc91ee21da0656e34518d9b3c7c1e510282934986d2",
+    "after_sha256": "9c93817c9f84c351384bf510c3a6344b59ab7cf021203ebdef86998ca9fa0c88",
+    "before_reader_sha256": "43ae62e86932950d42b41919f235d3b6b862ac69928ef85833d5f21ede66f859",
+    "after_reader_sha256": "5cc4f0a615e822e579aad56858e66b57abede5398c59f00f23b52109c43bd7b7"
+  }
 }

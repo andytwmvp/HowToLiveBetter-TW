@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-039.md",
-  "target_sha256": "0691a551a20386f49c2fca4d92ade94d74c750ac16fa6d2c7fd012158708d393",
+  "target_sha256": "7a3109da3df65e93c62130bdad72016cc3889eac2749a46d7592b6542159fd5e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020045",
@@ -90,5 +90,13 @@
   "limits": [
     "緊急醫療救護法第14條之2保障的是為免除他人生命急迫危險而施予急救等法定情況，並非做任何救援動作一概免刑事或民事責任；民法第150條亦有限度與責任要件。犯罪被害保護服務、補償金、職災保險及商業保險各有不同資格，不能說救人受傷必定由加害人、健保或國家全額負擔。臺灣沒有一套所有一般民眾通用的「見義勇為申報確認後必然領錢」程序。金錢或法律程序不優先於現場緊急求救。",
     "警察、消防、心理、社工及法律獨立專業審閱待取得；未測報案App或電話、未核對全部個案與裁判；法規資料庫整編截止2026-10-08，未逐筆查其後公報。"
-  ]
+  ],
+  "source_reviewed_sha256": "0691a551a20386f49c2fca4d92ade94d74c750ac16fa6d2c7fd012158708d393",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0691a551a20386f49c2fca4d92ade94d74c750ac16fa6d2c7fd012158708d393",
+    "after_sha256": "7a3109da3df65e93c62130bdad72016cc3889eac2749a46d7592b6542159fd5e",
+    "before_reader_sha256": "2c9dae5340c3aa431281719e24a26009ed905d19de767136539194dc54d158fd",
+    "after_reader_sha256": "60b787d4b3d2593923e5e109c0a278bbc20506eb8baca9cbf59f15ab9b501871"
+  }
 }

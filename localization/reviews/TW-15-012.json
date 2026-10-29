@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-012.md",
-  "target_sha256": "4d1fc0ec77a1526a6511b5b725288beb05f26f0c252aa57e932735802bedf801",
+  "target_sha256": "abe1ff4d46c35a163c01fa90f85cea528a1f361f358ec1275f9e09884c2552c5",
   "source_checks": [
     {
       "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
@@ -35,5 +35,13 @@
     "2026年查核為混合選樣的契約行政抽查；13/750是地方選案契約條款檢核項次比例，不是實際面積誤差、建材替換、全市場建案違約率或個人機率。未找到可比對全國實體瑕疵事件與建案母數。",
     "面積計算、解約權及替代材料條件以簽約時適用版本和個案契約為準；官方目錄顯示日期不取代正式公告或契約文件。",
     "未取得獨立法律、地政、建築或消費專業審閱；AI輔助來源核對不等於個案測量、解除權或求償結果保證。"
-  ]
+  ],
+  "source_reviewed_sha256": "4d1fc0ec77a1526a6511b5b725288beb05f26f0c252aa57e932735802bedf801",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "4d1fc0ec77a1526a6511b5b725288beb05f26f0c252aa57e932735802bedf801",
+    "after_sha256": "abe1ff4d46c35a163c01fa90f85cea528a1f361f358ec1275f9e09884c2552c5",
+    "before_reader_sha256": "3fe1017c34df1b901d4f502353bfac29eaab314cc05ad498a7dbe279f6e78374",
+    "after_reader_sha256": "ad145d61193bbd1db4cd198391b2254f2da690e4376b84ae6e94286e5f8e2d69"
+  }
 }

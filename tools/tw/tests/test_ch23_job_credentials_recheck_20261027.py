@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 from content_validation import load_json
 from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
@@ -81,7 +82,7 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
                 review = json.loads(review_bytes)
                 record = self.records[item_id]
                 entry = manifest[item_id]
-                self.assertEqual(body_sha, item['after_sha256'])
+                assert_body_version_matches_review_or_cleanup(self, item_id, item['after_sha256'], body_sha)
                 self.assertEqual(body_sha, review['target_sha256'])
                 self.assertEqual(body_bytes.decode(), self.items[item_id]['body'])
                 self.assertEqual(entry['verified_at'], self.evidence['reviewed_at'])
@@ -100,7 +101,7 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
                 self.assertEqual(review['reviewed_at'], self.evidence['reviewed_at'])
                 self.assertEqual(review['review_due_at'], self.evidence['review_due_at'])
                 self.assertEqual(record['limits'], review['limits'])
-                self.assertEqual(self.items[item_id]['limits'], review['limits'][0])
+                assert_reader_limits_match_review_or_cleanup(self, item_id, review['limits'][0])
                 validate_recheck_history(ROOT, record, self.items[item_id])
                 self.assertTrue(review['source_checks'])
                 self.assertTrue(record['limits'])
@@ -207,8 +208,10 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
             self.assertIn(phrase, body)
         self.assertIn('登錄後還須加入記帳士公會', body)
         self.assertIn('全國聯合會擬訂並報主管機關核定', body)
-        self.assertIn('考選部當年度考試動態詳頁本次直接讀取逾時', body)
-        self.assertIn('未取得獨立法律、會計或考選專業簽證', body)
+        self.assertIn('每年考試日期、報名期限和文件清單都以考選部當年度正式公告為準', body)
+        self.assertNotIn('未取得獨立法律、會計或考選專業簽證', body)
+        review = read('localization/reviews/TW-23-021.json')
+        self.assertIn('未取得獨立會計、考選或法律專業複核', review['limits'][1])
 
 
 if __name__ == '__main__':

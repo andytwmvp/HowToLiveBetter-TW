@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-024.md",
-  "target_sha256": "f7aaf138c4a6290f4587c10271152d1e5f3e363857ece72468872c940425977a",
+  "target_sha256": "d55ae1fea018694ed143ddf761ce6e9eaac54c1eaa730421948fa11f2cb244bc",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -36,5 +36,13 @@
     "派遣與承攬須按實際契約、招募、指揮及組織從屬性判斷；第17-1條僅適用特定違法行為且已受領勞務的情境。",
     "要派單位欠薪責任須先有派遣單位遭主管機關處罰或依第27條限期給付後仍未付；職災補償與損害賠償依第63-1條及事故證據分別認定。",
     "本輪為AI逐項核對，未取得律師、勞動行政或職業安全專業獨立簽證；未找到合適臺灣派遣勞工／工時風險分母。"
-  ]
+  ],
+  "source_reviewed_sha256": "f7aaf138c4a6290f4587c10271152d1e5f3e363857ece72468872c940425977a",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "f7aaf138c4a6290f4587c10271152d1e5f3e363857ece72468872c940425977a",
+    "after_sha256": "d55ae1fea018694ed143ddf761ce6e9eaac54c1eaa730421948fa11f2cb244bc",
+    "before_reader_sha256": "54714f6b2696c13b18a90697b8565a8b3d5f2e9d5b41ce35d71d56126afc3566",
+    "after_reader_sha256": "8ed84957ded5e2c751f1dae584466ee7244a707267ff76da4cf54452499edb80"
+  }
 }

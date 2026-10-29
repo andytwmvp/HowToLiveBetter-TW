@@ -65,10 +65,10 @@ def check() -> None:
         before = git('show', f'{UPSTREAM}:{old}').decode()
         after = read(new)
         assert Counter(URL.findall(before)) == Counter(URL.findall(after)), f'來源網址有變：{new}'
-        assert re.findall(r'\d+(?:\.\d+)?', before) == re.findall(r'\d+(?:\.\d+)?', after.replace(NOTICE, '')), f'數字有變：{new}'
+        assert re.findall(r'\d+(?:\.\d+)?', before) == re.findall(r'\d+(?:\.\d+)?', after), f'數字有變：{new}'
         a = len(re.findall(r'^###\s+\d+\.', after, re.M)); count += a
         assert a == chapter['entry_count'], new
-        assert NOTICE.strip() in after, new
+        assert NOTICE.strip() not in after, f'不應在原作來源副本中保留編輯提醒：{new}'
     assert count == 765
     for e in manifest['entries']:
         o = by_id[e['id']]

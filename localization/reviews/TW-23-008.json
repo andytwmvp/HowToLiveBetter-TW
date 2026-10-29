@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-008.md",
-  "target_sha256": "3b95d43b38048ac074dd0b22edc345f7605f7a7f10dd640bc8fc85049a89679c",
+  "target_sha256": "ff4dd9c7824401bd2060ad1911874ded4a06a2537cf4f88aa2074f4920ef2acc",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
@@ -34,5 +34,13 @@
   "review_method": "逐項讀取臺灣中央主管機關現行法規、法規沿革、官方統計公告、官方FAQ及官方參訓問答PDF，將正文各主張對照到來源段落或頁次；統計另記錄期間、母數、分子、事件定義、資料型態與選樣限制。沒有可信的臺灣配對母數時明示資料不足，不自行推估。AI輔助核對不等於獨立專家或個案簽核。",
   "limits": [
     "三梯次及職類資訊依年度公告可能改變；技術士規則不代替特定目的事業法規、會計師考試或原廠認證規則。沒有證照與就業／薪資可配對的全國母數，不推算個人報酬。\n\n本次AI輔助法規及官方入口核對，未取得獨立法律、雇主或職涯專業複核；報考資格及執業限制須依個別職類與當年度規則確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "3b95d43b38048ac074dd0b22edc345f7605f7a7f10dd640bc8fc85049a89679c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "3b95d43b38048ac074dd0b22edc345f7605f7a7f10dd640bc8fc85049a89679c",
+    "after_sha256": "ff4dd9c7824401bd2060ad1911874ded4a06a2537cf4f88aa2074f4920ef2acc",
+    "before_reader_sha256": "b9730f5bd7ad55f09091ac8366fd4a071cdccb7ba1bf2b53cf3da06c418987c8",
+    "after_reader_sha256": "c7f902d1703870347f244385a98634a649494f21e62d9ff3dd0d6d1b0cad4b68"
+  }
 }

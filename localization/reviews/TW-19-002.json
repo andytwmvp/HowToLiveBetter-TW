@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-002.md",
-  "target_sha256": "12bbd0ef89d7b22720bdea665e8fcbef3f50abde10a15c6b6288353af3de0ba4",
+  "target_sha256": "74f70249ebaa5e5bcb048d43ceb63f6503794c9c9db0cb8be17cf48f319ee8d3",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -52,5 +52,13 @@
     "2024休假爭議含各類休假及工會對象，不是特休專項、違法認定或個人發生率。",
     "尚無獨立勞動法或勞動行政專業審閱。"
   ],
-  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。"
+  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。",
+  "source_reviewed_sha256": "12bbd0ef89d7b22720bdea665e8fcbef3f50abde10a15c6b6288353af3de0ba4",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "12bbd0ef89d7b22720bdea665e8fcbef3f50abde10a15c6b6288353af3de0ba4",
+    "after_sha256": "74f70249ebaa5e5bcb048d43ceb63f6503794c9c9db0cb8be17cf48f319ee8d3",
+    "before_reader_sha256": "282dae9973fc39ea4e774eb8359f87096279f45604fdc064519f27bee258e02f",
+    "after_reader_sha256": "930e5b32be92a2d680e7f8acee60e380ffb5ee7a7296328745048936ce69edac"
+  }
 }

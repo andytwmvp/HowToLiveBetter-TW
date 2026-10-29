@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-21",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-015.md",
-  "target_sha256": "7e2c01d4d9a71f2d5fdf272c44542308018391924ab91f6843dfb5599e7abdc9",
+  "target_sha256": "79fcabfaae928c8ad5ac52ebbaf8b639bb6d64aa3d71bde710324461275eb33e",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
@@ -58,5 +58,13 @@
     "AI輔助逐條官方來源實質核對，非醫師、社工、勞保／健保審查機關或律師專業簽證；個案仍待專業與主管機關判定。",
     "本輪未取得全臺同定義延誤、爭議、資料缺漏或申請核准機率；行政件數不能代替個人發生率。",
     "法規整編截止2026-10-08，之後公報與地方細則未逐一全核；沒有實際救治、調閱病歷、申請或核付。"
-  ]
+  ],
+  "source_reviewed_sha256": "7e2c01d4d9a71f2d5fdf272c44542308018391924ab91f6843dfb5599e7abdc9",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "7e2c01d4d9a71f2d5fdf272c44542308018391924ab91f6843dfb5599e7abdc9",
+    "after_sha256": "79fcabfaae928c8ad5ac52ebbaf8b639bb6d64aa3d71bde710324461275eb33e",
+    "before_reader_sha256": "deceaec6dbf9fe4f1d971e6dac3d7cfa6d37ff8e332153678fa073bd5119a360",
+    "after_reader_sha256": "bb8107e36131f144ed6bdcf0a7201b6cc9ae85f8b50e32cd02e6c88eb85abbae"
+  }
 }

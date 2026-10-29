@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-006.md",
-  "target_sha256": "553466e00730c5fcb266aaddf4a170213a68ebf2d181127a1d5bd3501622ce65",
+  "target_sha256": "4e134039275d917d310f10a22bfdfa8959575ab0f025250a0d965fbd93a45dd4",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
@@ -35,5 +35,13 @@
     "未找到全國一致事件定義及租約／交易分母，可估算住宅租售中假房東、未授權代理或權利資料錯誤的個人發生率；謄本亦不顯示全部屋況、使用及未登記事實。",
     "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
     "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
-  ]
+  ],
+  "source_reviewed_sha256": "553466e00730c5fcb266aaddf4a170213a68ebf2d181127a1d5bd3501622ce65",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "553466e00730c5fcb266aaddf4a170213a68ebf2d181127a1d5bd3501622ce65",
+    "after_sha256": "4e134039275d917d310f10a22bfdfa8959575ab0f025250a0d965fbd93a45dd4",
+    "before_reader_sha256": "ea2bb4da44c2df7142e1dde79ba965374effa12b672e6fda964c65e17b6a695e",
+    "after_reader_sha256": "159858700e1a4bfc844b1048319c41d9b80620f06b18af2ba04e11930065825f"
+  }
 }

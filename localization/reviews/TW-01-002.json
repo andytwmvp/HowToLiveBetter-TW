@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-002.md",
-  "target_sha256": "c4a3c75ad4d124464d827a94d091d27036c242aaa1d010d09e38c1b20c2d1b4e",
+  "target_sha256": "46b6d0f69d0dd5364638c4bbe1b986d0cda3fcae3bcd92b4de89d2e3a0c2f9ea",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=K0040013",
@@ -55,5 +55,13 @@
   "limits": [
     "2026年1至8月機車騎士30日死亡1,055人是官方儀表板最新可見數，無騎乘暴露或安全帽使用分母；不能當作未戴安全帽死亡數或個人風險。標檢局10頂通路樣品不是機率抽樣。",
     "法規資料庫顯示道路交通安全規則全文最後修正日2026-06-26；未據此聲稱第88條或第115-7條在該日個別修正。未取得創傷醫療、商品檢測或監理專業獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "c4a3c75ad4d124464d827a94d091d27036c242aaa1d010d09e38c1b20c2d1b4e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c4a3c75ad4d124464d827a94d091d27036c242aaa1d010d09e38c1b20c2d1b4e",
+    "after_sha256": "46b6d0f69d0dd5364638c4bbe1b986d0cda3fcae3bcd92b4de89d2e3a0c2f9ea",
+    "before_reader_sha256": "eb90e899d7e2e57ffbe289e149e8fd932169976c8624fe330ddc971888ca222c",
+    "after_reader_sha256": "a6e878bba0c1084060252a08c7f22454759be0ec98fac4c6386276932f18e8bb"
+  }
 }

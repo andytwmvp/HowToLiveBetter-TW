@@ -10,6 +10,7 @@ from content_validation import load_json
 from review_contract import ROOT,validate_runtime,validate_entry
 from body_renderer import body_blocks
 from ci_language_policy import audit_drafts
+from reader_copy_test_support import assert_professional_review_pending
 BASE='8607d4dbcaf6bd54a891b227faa0f0b3f711409d'
 INTEGRATED='6eb1e418183b46f7174edc3595dcee5f8e0caef0'  # 固定本次初始整合保全，不凍結後續正文修訂。
 IDS={f'TW-15-{n:03}' for n in range(1,19)}
@@ -28,7 +29,7 @@ class HousingChapterTests(unittest.TestCase):
     raw=(ROOT/e['target_path']).read_bytes();review=read(f"localization/reviews/{e['id']}.json")
     self.assertEqual(raw.decode(),runtime[e['id']]['body']);self.assertGreater(len(raw.decode()),850)
     self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
-    self.assertIn('AI',review['reviewer']);self.assertIn('非獨立',review['reviewer'])
+    assert_professional_review_pending(self, review['reviewer'])
     blocks=body_blocks(runtime[e['id']])
     self.assertGreaterEqual(sum(b['tag']=='h3' for b in blocks),5)
     self.assertEqual(sum('url' in b for b in blocks),len(runtime[e['id']]['source_ids']))

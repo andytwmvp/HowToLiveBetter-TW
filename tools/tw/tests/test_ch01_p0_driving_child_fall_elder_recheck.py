@@ -104,11 +104,11 @@ class Chapter01DrivingChildFallRecheckTests(unittest.TestCase):
             self.assertLess(items[key].index("## 適用情境"), items[key].index(markers[key]))
         self.assertIn("沒有車流量、行駛里程或旅次暴露分母", items["TW-01-009"])
         self.assertIn("約占整體事故五成", items["TW-01-009"])
-        self.assertIn("口徑不清，本文不採用該比例", items["TW-01-009"])
-        self.assertIn("兒童乘車旅次", items["TW-01-010"])
+        self.assertIn("未提供可換算個人酒駕機率的道路暴露分母", items["TW-01-009"])
+        self.assertIn("乘車旅次、正確使用情形與事故結果配對資料", items["TW-01-010"])
         self.assertNotIn("2,858", items["TW-01-010"])
-        self.assertIn("附件未能直接取得並逐項核讀", items["TW-01-011"])
-        self.assertIn("不再以2016年多種事故傷害死亡合計239人代表窗墜發生率", items["TW-01-011"])
+        self.assertIn("不可把不同事故類型的死亡合計當成窗戶或陽台墜落發生率", items["TW-01-011"])
+        self.assertNotIn("239人", items["TW-01-011"])
         self.assertIn("不是跌倒後的致死率", items["TW-01-013"])
 
     def test_counts_and_publication_state_are_dynamic(self):

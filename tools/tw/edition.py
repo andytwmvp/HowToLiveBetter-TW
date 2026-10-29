@@ -12,6 +12,7 @@ import tempfile
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from review_contract import ROOT, validate_runtime, publication_report
 from content_validation import validate_runtime_data
 
@@ -41,19 +42,31 @@ def refs(entry: dict, data: dict) -> list[dict]:
     return [mapping[key] for key in entry['source_ids']]
 
 
+def freshness_copy(entry: dict, today: str | None = None) -> str:
+    """Return reader-facing confirmation dates and a current-date reminder."""
+    if today is None:
+        today = datetime.now(ZoneInfo('Asia/Taipei')).date().isoformat()
+    copy = f"內容最後確認日期：{entry['reviewed_at']}；建議再次確認日期：{entry['review_due_at']}。"
+    if today >= entry['review_due_at']:
+        copy += '已到再次確認日期，採取行動前請向主管機關或服務單位確認最新資訊。'
+    else:
+        copy += '到建議再次確認日期後，採取行動前請向主管機關或服務單位確認最新資訊。'
+    return copy
+
+
 def build_epub(output: Path, data: dict) -> None:
     validate_runtime_data(data)
     esc = html.escape
     parts = [f'<h1>{esc(data["title"])}</h1><p>{esc(data["scope"])}</p>']
     for e in data['items']:
         links = '；'.join(f'<a href="{esc(s["url"],quote=True)}">{esc(s["title"])}</a>' for s in refs(e,data))
-        parts.append(f'<section id="{e["id"]}"><h2>{esc(e["title"])}</h2>{body_html(e)}<p>{esc(e["limits"])}</p><p>來源核對：{e["reviewed_at"]}；複查日期：{e["review_due_at"]}</p><p>{links}</p></section>')
-    parts.append('<p>非官方改編。原作為eternity4719與貢獻者的HowToLiveBetter；本導航由臺灣分支編修，依CC BY 4.0分享，不表示原作者背書。</p><p><a href="https://github.com/andytwmvp/HowToLiveBetter-TW/blob/main/ATTRIBUTION.md">原作、授權與修改說明</a></p>')
+        parts.append(f'<section id="{e["id"]}"><h2>{esc(e["title"])}</h2>{body_html(e)}<p>{esc(e["limits"])}</p><p class="meta">{esc(freshness_copy(e))}</p><p>{links}</p></section>')
+    parts.append('<p>本指南改寫自《HowToLiveBetter》，原作者為 eternity4719 與貢獻者，依 CC BY 4.0 授權分享。原作署名與修改說明見 <a href="https://github.com/andytwmvp/HowToLiveBetter-TW/blob/main/ATTRIBUTION.md">原作署名與授權</a>；原作者不代表本臺灣版背書。</p>')
     document = '<?xml version="1.0" encoding="utf-8"?><html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW" xml:lang="zh-TW"><head><title>'+esc(data['title'])+'</title><meta charset="utf-8"/></head><body>'+''.join(parts)+'</body></html>'
     nav = '<?xml version="1.0" encoding="utf-8"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-TW"><head><title>目錄</title></head><body><nav epub:type="toc" id="toc"><h1>目錄</h1><ol>'+''.join(f'<li><a href="content.xhtml#{e["id"]}">{esc(e["title"])}</a></li>' for e in data['items'])+'</ol></nav></body></html>'
     uid = 'urn:sha256:' + hashlib.sha256(data_json(data).encode()).hexdigest()
     modified = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
-    opf = f'''<?xml version="1.0" encoding="utf-8"?><package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:identifier id="uid">{uid}</dc:identifier><dc:title>{esc(data['title'])}（非全書定稿）</dc:title><dc:language>zh-TW</dc:language><dc:description>{esc(data['scope'])}</dc:description><dc:rights>CC BY 4.0；非官方臺灣改編</dc:rights><meta property="dcterms:modified">{modified}</meta></metadata><manifest><item id="content" href="content.xhtml" media-type="application/xhtml+xml"/><item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/></manifest><spine><itemref idref="content"/></spine></package>'''
+    opf = f'''<?xml version="1.0" encoding="utf-8"?><package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:identifier id="uid">{uid}</dc:identifier><dc:title>{esc(data['title'])}</dc:title><dc:language>zh-TW</dc:language><dc:description>{esc(data['scope'])}</dc:description><dc:rights>CC BY 4.0；臺灣版改寫，原作署名與修改說明見 ATTRIBUTION.md</dc:rights><meta property="dcterms:modified">{modified}</meta></metadata><manifest><item id="content" href="content.xhtml" media-type="application/xhtml+xml"/><item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/></manifest><spine><itemref idref="content"/></spine></package>'''
     container = '<?xml version="1.0"?><container xmlns="urn:oasis:names:tc:opendocument:xmlns:container" version="1.0"><rootfiles><rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/></rootfiles></container>'
     output.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as z:
@@ -74,7 +87,7 @@ CREATE INDEX ix_notes_usn on notes (usn); CREATE INDEX ix_cards_usn on cards (us
 def build_anki(output: Path, data: dict) -> None:
     validate_runtime_data(data)
     now = int(datetime.now(timezone.utc).timestamp()); mid, did = 1792000000001,1792000000100
-    model = {'id':mid,'name':'臺灣安全導航（來源核對卡）','type':0,'mod':now,'usn':-1,'sortf':0,'did':did,'tmpls':[{'name':'導航','ord':0,'qfmt':'{{題目}}','afmt':'{{FrontSide}}<hr id="answer">{{內容}}<br>{{來源}}','did':None,'bqfmt':'','bafmt':''}],'flds':[{'name':name,'ord':i,'sticky':False,'rtl':False,'font':'Arial','size':20,'media':[]} for i,name in enumerate(['題目','內容','來源'])],'css':'.card{font-family:system-ui,sans-serif;font-size:18px;line-height:1.8;text-align:left}','latexPre':'','latexPost':'','latexsvg':False,'req':[[0,'any',[0]]],'tags':[],'vers':[]}
+    model = {'id':mid,'name':'臺灣生活指南（生活資訊卡）','type':0,'mod':now,'usn':-1,'sortf':0,'did':did,'tmpls':[{'name':'生活資訊','ord':0,'qfmt':'{{題目}}','afmt':'{{FrontSide}}<hr id="answer">{{內容}}<br>{{來源}}','did':None,'bqfmt':'','bafmt':''}],'flds':[{'name':name,'ord':i,'sticky':False,'rtl':False,'font':'Arial','size':20,'media':[]} for i,name in enumerate(['題目','內容','來源'])],'css':'.card{font-family:system-ui,sans-serif;font-size:18px;line-height:1.8;text-align:left}','latexPre':'','latexPost':'','latexsvg':False,'req':[[0,'any',[0]]],'tags':[],'vers':[]}
     def deck(key, name):
         return {'id':key,'name':name,'desc':data['scope'],'mod':now,'usn':-1,'dyn':0,'conf':1,'collapsed':False,'browserCollapsed':False,'newToday':[0,0],'revToday':[0,0],'lrnToday':[0,0],'timeToday':[0,0],'extendNew':0,'extendRev':0}
     dconf = {1:{'id':1,'name':'Default','mod':0,'usn':0,'maxTaken':60,'autoplay':True,'timer':0,'replayq':True,'dyn':False,'new':{'delays':[1,10],'ints':[1,4,7],'initialFactor':2500,'order':1,'perDay':20,'bury':True,'separate':True},'rev':{'perDay':200,'ease4':1.3,'fuzz':.05,'ivlFct':1,'maxIvl':36500,'minSpace':1,'bury':True},'lapse':{'delays':[10],'mult':0,'minInt':1,'leechFails':8,'leechAction':0}}}
@@ -87,11 +100,11 @@ def build_anki(output: Path, data: dict) -> None:
             for order,e in enumerate(data['items']):
                 identity = int.from_bytes(hashlib.sha256(e['id'].encode()).digest()[:6],'big')
                 nid = 1792100000000 + identity
-                body = body_html(e)+'<br>'+html.escape(e['limits'])+f'<br>來源核對：{e["reviewed_at"]}；複查日期：{e["review_due_at"]}'
+                body = body_html(e)+'<br>'+html.escape(e['limits'])+'<br><small>'+html.escape(freshness_copy(e))+'</small>'
                 links = '<br>'.join(f'<a href="{html.escape(s["url"],quote=True)}">{html.escape(s["title"])}</a>' for s in refs(e,data))
                 flds = '\x1f'.join([html.escape(e['title']),body,links])
                 checksum = int(hashlib.sha1(e['title'].encode()).hexdigest()[:8],16)
-                db.execute('INSERT INTO notes VALUES (?,?,?,?,?,?,?,?,?,0,?)',(nid,'hltb-tw-'+e['id'],mid,now,-1,' 臺灣 來源已核對 非全書定稿 ',flds,e['title'],checksum,e['id']))
+                db.execute('INSERT INTO notes VALUES (?,?,?,?,?,?,?,?,?,0,?)',(nid,'hltb-tw-'+e['id'],mid,now,-1,' 臺灣 生活指引 ',flds,e['title'],checksum,e['id']))
                 db.execute('INSERT INTO cards VALUES (?,?,?,0,?,-1,0,0,?,0,0,0,0,0,0,0,0,?)',(nid+1,nid,did,now,order,''))
             if db.execute('PRAGMA integrity_check').fetchone()[0]!='ok': raise RuntimeError('Anki資料庫完整性失敗')
         output.parent.mkdir(parents=True,exist_ok=True)

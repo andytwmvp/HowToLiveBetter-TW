@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-013.md",
-  "target_sha256": "2ec0a9f27758dd30fff715a4347b6fc68fe37c8b82ec2b23490df2c303855823",
+  "target_sha256": "7fa25985a348b8a0861e76c91a981d3b3d5bdd1c033b1f76e13c7606e6146ba9",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-7181-81561-1.html",
@@ -42,5 +42,13 @@
     "2021調查原始樣本數、加權細節與信賴區間未取得；比例不是個人年度發生率。；2023年65歲以上跌倒死亡率每十萬同齡人口26.4人，不是跌倒者致死率；不同年份和分母不得相除。；運動處方、跌倒後處置及居家工程須依個案由醫療、復健或工程專業評估；未取得專業獨立簽證。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "a585eb2f3d7d4d2e419588bc44318e88edb51ab15623637b2a8d2faf081aae59"
+  "upstream_text_sha256": "a585eb2f3d7d4d2e419588bc44318e88edb51ab15623637b2a8d2faf081aae59",
+  "source_reviewed_sha256": "2ec0a9f27758dd30fff715a4347b6fc68fe37c8b82ec2b23490df2c303855823",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2ec0a9f27758dd30fff715a4347b6fc68fe37c8b82ec2b23490df2c303855823",
+    "after_sha256": "7fa25985a348b8a0861e76c91a981d3b3d5bdd1c033b1f76e13c7606e6146ba9",
+    "before_reader_sha256": "bbaa5cfe80fb8686ffce7a54aaf5e285d88d5253f59893b4dab07588d0c883fb",
+    "after_reader_sha256": "3d556900d622ee226f8d1afc744b75f853c06350b931bcf5ef9862a1dde04269"
+  }
 }

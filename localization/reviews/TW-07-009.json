@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-009.md",
-  "target_sha256": "2ffa15840e4f8ca4e6222c1232e6cb1cee7e36eb31bff4ad6556cf45f1bfcb8b",
+  "target_sha256": "f0db5ef3f1e4d9bcc320a04c2b794d4b24588f866507e651517c6467b44ccbf6",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-1438-8ae58-3255-1.html",
@@ -50,5 +50,13 @@
     "本次未找到可計算待業者個人中斷投保率的全國同口徑分母；未使用追繳或補辦件數推算機率。",
     "AI輔助核對健保署頁面，非獨立健保、保險或法律專業簽證；本輪未代替個案投保資格查核。",
     "健保署說明，發現投保中斷時，就醫可能須先自墊醫療費用，補辦投保後再依程序申請退費；中斷期間保費也可能追繳，金額依實際身分與期間計算。投保、欠費、分期與就醫退費是不同程序；完成分期不等於加保完成。勞保、就保或國民年金通知不代表健保已接續。遇到急病先就醫，保留收據並請院方或健保署協助查明，不自行延誤必要治療。"
-  ]
+  ],
+  "source_reviewed_sha256": "2ffa15840e4f8ca4e6222c1232e6cb1cee7e36eb31bff4ad6556cf45f1bfcb8b",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2ffa15840e4f8ca4e6222c1232e6cb1cee7e36eb31bff4ad6556cf45f1bfcb8b",
+    "after_sha256": "f0db5ef3f1e4d9bcc320a04c2b794d4b24588f866507e651517c6467b44ccbf6",
+    "before_reader_sha256": "f7b6895e14c667f31273448a39da9c3468c010b614166040bebbf04fe624b887",
+    "after_reader_sha256": "75c42641584d5d049ee7865b48eac8f97474f611d712b05e6d3ea1ef1b58faba"
+  }
 }

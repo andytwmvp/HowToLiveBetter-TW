@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-011.md",
-  "target_sha256": "c003a65104beac8517be9f8a09c0f1eb57dcf17a5730bb0773210a41956b8e58",
+  "target_sha256": "7fa1e08f282263d93863478fe5c8e6bd8b85144657902f97bb12961afe087a33",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080004",
@@ -35,5 +35,13 @@
   "limits": [
     "三梯次不代表每職類每梯次均開辦。三職類2027-07-01生效公告未列完整細則，本文不轉述未讀規定；個人資格仍以年度簡章為準。",
     "未找到考照者、證照級別、僱主採認、錄取和薪資配對母數，不估個人考取或加薪機率；未取得獨立法律、職涯或職安專業複核。"
-  ]
+  ],
+  "source_reviewed_sha256": "c003a65104beac8517be9f8a09c0f1eb57dcf17a5730bb0773210a41956b8e58",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "c003a65104beac8517be9f8a09c0f1eb57dcf17a5730bb0773210a41956b8e58",
+    "after_sha256": "7fa1e08f282263d93863478fe5c8e6bd8b85144657902f97bb12961afe087a33",
+    "before_reader_sha256": "2cd0ad43c542b02aa933492caeecfec6442dc15aad91dc662528cab7cf5f118b",
+    "after_reader_sha256": "f3bf96a510287aef79e1bf25a7957c4052f5063c19a8286dd29e1ed155c1c1b1"
+  }
 }

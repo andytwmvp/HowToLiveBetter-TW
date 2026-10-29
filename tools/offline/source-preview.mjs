@@ -1,13 +1,10 @@
 // 明確指定的原作來源預覽，不作為臺灣版預設內容。
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import { ROOT, REPO, SITE, read } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, read, readBook } from '../lib/book.mjs';
 const OUT=resolve(ROOT,process.argv[2] ?? 'dist/HowToLiveBetter-source-preview.html');
-const readme=read('README.md');
-const files=[...new Set([...readme.matchAll(/\]\((book\/[^)]+\.md)\)/g)].map(m=>m[1]))].sort();
-const docs=[...new Set([...readme.matchAll(/\]\((docs\/[^)#/]+\.md)\)/g)].map(m=>m[1]))].sort();
-if(!files.length)throw Error('README沒有原作來源目錄');
-const corpus={readme,parts:Object.fromEntries(files.map(f=>[f,read(f)])),docs:Object.fromEntries(docs.map(f=>[f,read(f)]))};
+const {bookFiles:files,docFiles:docs}=readBook();
+const corpus={chapters:files,parts:Object.fromEntries(files.map(f=>[f,read(f)])),docs:Object.fromEntries(docs.map(f=>[f,read(f)]))};
 const corpusJson=JSON.stringify(corpus).replace(/<\/script/gi,'<\\/script');
 let html=read('source.html');
 if(/googletagmanager|google-analytics/.test(html))throw Error('來源預覽不得包含追蹤碼');
@@ -15,8 +12,8 @@ const must=(needle)=>{if(!html.includes(needle))throw Error('source.html缺少�
 for(const needle of ['href="README.md"','href="book/"','href="selfcheck.html"'])must(needle);
 html=html.replaceAll('href="README.md"',`href="${REPO}/blob/main/README.md"`).replaceAll('href="selfcheck.html"',`href="${SITE}#reading"`).replaceAll('href="book/"',`href="${REPO}/tree/main/book"`).replaceAll('href="SUPPORT.md"',`href="${REPO}/blob/main/SUPPORT.md"`).replaceAll('href="ATTRIBUTION.md"',`href="${REPO}/blob/main/ATTRIBUTION.md"`).replaceAll('<a class="title" href="./"',`<a class="title" href="${SITE}"`);
 const foot='<div class="foot">';must(foot);
-html=html.replace(foot,`${foot}原作繁體來源預覽，保留原作內容與用語，方便查找及比對來源；臺灣版生活指引請至<a href="${SITE}">本專案閱讀入口</a>。<br>`);
+html=html.replace(foot,`${foot}這裡是原作的繁體中文對照預覽，保留原作內容與用語，方便查找、比對來源；要閱讀臺灣版，請看<a href="${SITE}#reading">閱讀說明</a>。<br>`);
 const mainScript='\n<script>\n/* ---------- 調試面板';must(mainScript);
 html=html.replace(mainScript,`\n<script>window.__CORPUS__=${corpusJson}</script>${mainScript}`);
 mkdirSync(dirname(OUT),{recursive:true});writeFileSync(OUT,html);
-console.log(`PASS：原作預覽${files.length}章、${docs.length}篇長文；${OUT}`);
+console.log(`PASS：原作來源預覽${files.length}章、${docs.length}篇原作延伸閱讀；${OUT}`);

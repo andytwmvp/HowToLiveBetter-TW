@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-004.md",
-  "target_sha256": "1112008e362f540b245c54c9d5d4d4ed36ca900f06b4a434ab8e7629b2beb4fe",
+  "target_sha256": "4ad1c07b28939a41393e80d766957f935b0c14cdc6d019e4ccd6487cf3c0fd64",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020",
@@ -49,5 +49,13 @@
     "2024年9,223名涉及人數是資遣費行政爭議統計，無全體離職者、新舊制年資或終止原因分母；不得當成違法率、請領率或個人機率。",
     "資遣資格、平均工資、新舊制年資及30日給付起算須由實際聘僱／薪資文件認定；本文公式示例不替代個案計算。",
     "尚無獨立勞動法、勞動行政或薪資計算專業審閱；本文不構成個案法律意見。"
-  ]
+  ],
+  "source_reviewed_sha256": "1112008e362f540b245c54c9d5d4d4ed36ca900f06b4a434ab8e7629b2beb4fe",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "1112008e362f540b245c54c9d5d4d4ed36ca900f06b4a434ab8e7629b2beb4fe",
+    "after_sha256": "4ad1c07b28939a41393e80d766957f935b0c14cdc6d019e4ccd6487cf3c0fd64",
+    "before_reader_sha256": "f380f2aab79f35bf8c83c20bbc4ff44796fbaafd161bb04a35c49fbd28e1e93d",
+    "after_reader_sha256": "ab23529ce1e821a12902871a506be6421fb8340eb1df44512532216202121fd1"
+  }
 }

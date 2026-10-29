@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-047.md",
-  "target_sha256": "bc66eeeb5de9a157ab38ca79dfabd41f06cf0733a6feb2bdf5922d9a06062020",
+  "target_sha256": "81f364658c6e7b14724266d5361a6f262c955532292cd8bcda70b3d9b2d2cf15",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
@@ -81,5 +81,13 @@
     "ch01_stomach_cancer_registry_2023",
     "ch01_hp_taipei_eligibility",
     "ch01_hp_klchb_20261006"
-  ]
+  ],
+  "source_reviewed_sha256": "bc66eeeb5de9a157ab38ca79dfabd41f06cf0733a6feb2bdf5922d9a06062020",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "bc66eeeb5de9a157ab38ca79dfabd41f06cf0733a6feb2bdf5922d9a06062020",
+    "after_sha256": "81f364658c6e7b14724266d5361a6f262c955532292cd8bcda70b3d9b2d2cf15",
+    "before_reader_sha256": "39bcbe23f0f51f0132b561d7fda3d8dc4bcbb491574337047c682e5f2937cf76",
+    "after_reader_sha256": "5fc178502d99a6a29d37d8bf05341db08d387607ebfe44accfa8f7d87007acb1"
+  }
 }

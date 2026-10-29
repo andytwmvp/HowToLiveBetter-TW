@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-02-17",
   "target_path": "locales/zh-TW/book/ch17/TW-17-002.md",
-  "target_sha256": "ee288c4e3bccaacb5f1eb6a648e2fcefe3d789b0437949d96b00e7bc8a03e9f5",
+  "target_sha256": "23b2530b2ddbc52f76e6981920a4056defe1b140d0d00f9bc3a4fc48630733d6",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
@@ -50,5 +50,13 @@
     "事件頻率不適用：未取得有有效立遺囑人分母的全臺遺囑瑕疵／訴訟發生率，法院案件量不能當個人爭議機率。",
     "本輪可核對政府法規資料庫版本標示為2026-08-17；施行前法規、後續公告及個案適用仍應在辦理前再確認。",
     "未實際辦理公證、支付詐騙款、受理報案、健保收案或門診轉診；工程測試不代表法律、警政、醫療或健保專業簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "ee288c4e3bccaacb5f1eb6a648e2fcefe3d789b0437949d96b00e7bc8a03e9f5",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "ee288c4e3bccaacb5f1eb6a648e2fcefe3d789b0437949d96b00e7bc8a03e9f5",
+    "after_sha256": "23b2530b2ddbc52f76e6981920a4056defe1b140d0d00f9bc3a4fc48630733d6",
+    "before_reader_sha256": "68a1a08fb28d5a6016d1e9818b06b51ca5b467aad3d8c522d12c1ad03df34255",
+    "after_reader_sha256": "b237e0f1b612ec683291b9edfd39ca7314d12fdc6ae1ead6fcdfd4ba0776b241"
+  }
 }

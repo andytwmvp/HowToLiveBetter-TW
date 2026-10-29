@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-010.md",
-  "target_sha256": "a246f67c76132a850e785257dea71c26596370d04f46dcfbb072e8ce497486c8",
+  "target_sha256": "88a2a23f66533857d55df8415bafd0156ff67af36534e8960f571e3371e369c2",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=M0060027",
@@ -55,5 +55,13 @@
   "limits": [
     "2021年調查公開摘要未列樣本數、分子或信賴區間；2025死亡統計涵蓋全齡，臺北市102／41為截至2023-07-31行政查獲與衝突件數，無犬隻外出分母；同稿單一骨折案例只示例可能後果，均不能換算遛狗者或長者的個人發生率。",
     "未取得遛狗期間長者跌倒的全國暴露分母；中央動保法、地方公園規則及個人健康條件需分別確認。尚待醫療、動物行為及地方法規專業審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "a246f67c76132a850e785257dea71c26596370d04f46dcfbb072e8ce497486c8",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a246f67c76132a850e785257dea71c26596370d04f46dcfbb072e8ce497486c8",
+    "after_sha256": "88a2a23f66533857d55df8415bafd0156ff67af36534e8960f571e3371e369c2",
+    "before_reader_sha256": "2e53a206a3d742e887cf1c0277efa5de16f53212ac40c9fabaed69061a80391e",
+    "after_reader_sha256": "b08e696b0b4c13db9d8bdc25340128e9812a07bade023b47f66016df0906870c"
+  }
 }

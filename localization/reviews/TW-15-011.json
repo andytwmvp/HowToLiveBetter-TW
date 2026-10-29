@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-011.md",
-  "target_sha256": "18ca221d443ee1b8933580eee23272d2d409e21e042ec21e2f9f84b326bf9771",
+  "target_sha256": "c468436e52cc30264485f22f3620b984d7b139522b854ceaec5c1d27c2a7b177",
   "source_checks": [
     {
       "url": "https://www.klcg.gov.tw/tw/klland/2308-111026.html",
@@ -49,5 +49,13 @@
     "預售契約第18點30%、不得少於7年及買方可歸責時至少30日補款，只適用指定賣方洽辦貸款契約；原承諾條件無相關文件時另有參照賣方洽定銀行核定利率及年期的方式。未找到貸款不足原因、交易／申貸母數及退款結果相連的全國統計。",
     "未取得獨立法律、地政、建築、消費或金融專業審閱；AI輔助核對不構成個案法律意見、產權鑑定、貸款承諾或法院結果保證。",
     "法律權利、合法性、頻率、傷害嚴重度與可行行動分開評估；無適用統計即標示資料缺口。"
-  ]
+  ],
+  "source_reviewed_sha256": "18ca221d443ee1b8933580eee23272d2d409e21e042ec21e2f9f84b326bf9771",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "18ca221d443ee1b8933580eee23272d2d409e21e042ec21e2f9f84b326bf9771",
+    "after_sha256": "c468436e52cc30264485f22f3620b984d7b139522b854ceaec5c1d27c2a7b177",
+    "before_reader_sha256": "b87ac370da8f66758bd8a88499d18f9083d6e15822a327dce24756ddee6fd575",
+    "after_reader_sha256": "d790be8cb7afb3ee5de915d726a406a1d88beab5c70be2a1558050871c673d3e"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-017.md",
-  "target_sha256": "719a0d028b1320a84bb6d5fe74284e7b6d69112609d7a05a442b6f89dd615047",
+  "target_sha256": "896fdefb3fe6327a49aa39b91b4f3eb00f6b84da84d1d0399b0cec4dc82ca531",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -50,5 +50,13 @@
     "服務證明的法定內容、拒發罰則與勞動部五年請求解釋分別依現行法規及主管機關說明；請求權起算與個案事實仍由主管機關或法院判斷。",
     "失業給付須同時符合就業保險身分、非自願離職、投保年資、工作能力與求職等條件；文件補正及受理日依公立就業服務機構通知認定。",
     "離職原因爭議及返還可能影響個案權益，宜保留通知、投保、薪資、申請與送達資料；本輪未取得律師或就業服務專業獨立簽證。"
-  ]
+  ],
+  "source_reviewed_sha256": "719a0d028b1320a84bb6d5fe74284e7b6d69112609d7a05a442b6f89dd615047",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "719a0d028b1320a84bb6d5fe74284e7b6d69112609d7a05a442b6f89dd615047",
+    "after_sha256": "896fdefb3fe6327a49aa39b91b4f3eb00f6b84da84d1d0399b0cec4dc82ca531",
+    "before_reader_sha256": "8c8305698f75e005ce19855cc975da3311dc4aa5750b550e8eb14e902182c571",
+    "after_reader_sha256": "8d1cc834fdb0d1f826650359f397d9c3373ac5961c990602cee2ce4d065242ff"
+  }
 }

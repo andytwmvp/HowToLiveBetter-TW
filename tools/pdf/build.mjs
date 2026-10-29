@@ -1,4 +1,4 @@
-// 把 README + book/*.md + docs/*.md 排成一本 PDF：pandoc 把 Markdown 轉成 typst，typst 排版。
+// 依 manifest 的原作章節清單建立來源預覽 PDF：pandoc 把 Markdown 轉成 typst，typst 排版。
 // 用法：node tools/pdf/build.mjs [輸出路徑]   預設輸出 dist/HowToLiveBetter.pdf
 // 需要 pandoc（≥3.1，要有 typst 輸出）和 typst（≥0.13）在 PATH 上，或用環境變量 PANDOC、TYPST 指路徑。
 // 版面在 tools/pdf/template.typ 裡；正文一個字都不改，只做三件事：
@@ -6,7 +6,7 @@
 import { writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { resolve, dirname, posix, basename } from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { ROOT, REPO, SITE, TITLE, read, readBook, stripBackLink } from '../lib/book.mjs';
+import { ROOT, REPO, SITE, SOURCE_TITLE, read, readBook, stripBackLink } from '../lib/book.mjs';
 import { splitLongItems } from '../lib/split-items.mjs';
 
 const OUT = resolve(ROOT, process.argv[2] ?? 'dist/HowToLiveBetter.pdf');
@@ -14,7 +14,7 @@ const WORK = resolve(ROOT, 'dist/pdf-build.md');
 const PANDOC = process.env.PANDOC ?? 'pandoc';
 const TYPST = process.env.TYPST ?? 'typst';
 const { contentsMd, bookFiles, docFiles } = readBook();
-const sourceDescription = '原作繁體來源預覽，保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從本專案閱讀入口閱讀。';
+const sourceDescription = '原作的繁體中文對照預覽，保留原作內容與用語，方便查找、比對來源。';
 
 // ---------- 頁（每頁一個一級標題，一級標題在 typst 裡另起一頁） ----------
 const anchorOf = new Map();
@@ -29,12 +29,12 @@ const pages = [
 ];
 
 function aboutMd() {
-  return `# 原作來源預覽說明
+  return `# 原作內容對照說明
 
-這份 PDF 保留原作內容與用語，方便查找及比對來源。臺灣版生活指引請從[專案閱讀入口](${SITE})閱讀。
+這份 PDF 保留原作內容與用語，方便查找、比對來源；內容不代表臺灣現行制度或生活建議。要閱讀臺灣版，請參考[閱讀說明](${SITE}#reading)。
 
-- 專案閱讀與建置說明：${REPO}/blob/main/REPOSITORY_GUIDE.md#reading
-- 原作來源閱讀方式：${SITE}#source-preview
+- [閱讀與離線檔製作說明](${REPO}/blob/main/REPOSITORY_GUIDE.md#reading)
+- [原作內容對照方式](${SITE}#source-preview)
 
 正文中指向其他章節的連結已改為書內跳轉；來源紀錄與授權檔等未收錄在書中的文件則連回專案儲存庫。
 
@@ -83,7 +83,7 @@ const typFile = resolve(ROOT, 'dist/pdf-build.typ');
 run(PANDOC, [
   '--from=gfm+attributes', '--to=typst', '--wrap=none',
   `--template=${resolve(ROOT, 'tools/pdf/template.typ')}`,
-  '-V', `booktitle=${TITLE}`, '-V', `subtitle=${sourceDescription}`,
+  '-V', `booktitle=${SOURCE_TITLE}`, '-V', `subtitle=${sourceDescription}`,
   '-V', `site=${SITE}`, '-V', `repo=${REPO}`,
   '-o', typFile, WORK,
 ]);

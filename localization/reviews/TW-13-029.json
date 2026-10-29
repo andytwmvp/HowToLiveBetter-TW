@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-029.md",
-  "target_sha256": "0704617d27d119242c73559863d5013bbf7c688df545d4fd36d038df5c818ee7",
+  "target_sha256": "cf36bfe4e7c0086ecb2c7e31fd323b05a537cdf2915ddbff51687febe1b5b843",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-16-83220-1.html",
@@ -27,5 +27,13 @@
   "limits": [
     "五不包括不割開傷口、不用嘴吸蛇毒、不冰敷、不飲酒或刺激性飲料、不拖延治療。也**不應自行用止血帶緊緊綁死**或用電擊、偏方處理；官方宣導的傷口上緣包紮應依傷勢及119醫護判斷，不等於切斷血液循環。不要冒險單獨開車自行下山，不能保證每種蛇咬傷都會有明顯毒牙痕或症狀。\n\n統計限制：979為歷史年平均用藥人數，完整暴露母數與原始疫情報導本輪未取得，不算全台蛇咬發生率、每人機率或2026年量；公告0.18%未在本輪核對分子及適當分母，不採作個人存活保證。",
     "獨立醫療、職安、消防及法律專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "0704617d27d119242c73559863d5013bbf7c688df545d4fd36d038df5c818ee7",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0704617d27d119242c73559863d5013bbf7c688df545d4fd36d038df5c818ee7",
+    "after_sha256": "cf36bfe4e7c0086ecb2c7e31fd323b05a537cdf2915ddbff51687febe1b5b843",
+    "before_reader_sha256": "0bef738e88b116b786019e48179ccf18888601dfa71b857136d978adbb6e1a96",
+    "after_reader_sha256": "af963f39cb8ea80cd1b726da4fe4f6a87b20c26f50a042466c868670f13ae0b6"
+  }
 }

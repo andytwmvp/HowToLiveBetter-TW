@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-007.md",
-  "target_sha256": "61a67500dc589ea2e1906b578ca9daf4f31909c28d9266304940826da1294bb4",
+  "target_sha256": "d15cfe9c84fc975b9a5e0f860a0b315167e5cf86961515558cc199e4fcfb0562",
   "source_checks": [
     {
       "url": "https://1966.gov.tw/LTC/cp-6533-70777-207.html",
@@ -35,5 +35,13 @@
     "臺灣不是中國由醫保部門統一核銷「依職工或居民身分固定比例」的長期護理保險制度，也不是所有失能者都可直接領現金。使用外籍家庭看護者仍可能有符合條件的長照服務，但給付組合另有規則；不可照原作套6個月等待期及大陸電話。",
     "2025-12-31核定長照3.0、2026起實施，年齡擴大與PAC收案自2026-01-01起；不是所有剛出院者都自動符合PAC資格。聘外籍看護仍可評估，但部分照顧服務組合及額度另有限制，不能推論全部居家照顧都可重複補助；核定計畫全文、支付附件及地方個案未逐項重審。",
     "原始研究及個案醫療、藥事、法律與核付判斷仍待獨立專業審查。"
-  ]
+  ],
+  "source_reviewed_sha256": "61a67500dc589ea2e1906b578ca9daf4f31909c28d9266304940826da1294bb4",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "61a67500dc589ea2e1906b578ca9daf4f31909c28d9266304940826da1294bb4",
+    "after_sha256": "d15cfe9c84fc975b9a5e0f860a0b315167e5cf86961515558cc199e4fcfb0562",
+    "before_reader_sha256": "bb37ad667d7afd1298cae4941bfcff7f33114da7059eee24ffd1272a8b484df8",
+    "after_reader_sha256": "d297886500f5b23780a843d43a3333c369e25aa8439a2e2b4dff4a0231ce233a"
+  }
 }

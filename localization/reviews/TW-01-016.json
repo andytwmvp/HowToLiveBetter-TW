@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-016.md",
-  "target_sha256": "9ea13f7074a73414be72caa8995a3d103f7560b04a83556cad0863d4880a658c",
+  "target_sha256": "1f62c8e5a5502224a78cb9a6bc47f3348019fa7e7eee00ece9d9961c30fd8c99",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-16-83470-1.html",
@@ -58,5 +58,13 @@
     "AI輔助官方與地方公開資料核對，未取得感染科、疫苗、婦產科或公共衛生專業獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "54ca67015b95823051c2532632ef7c71fbffc6d6f6fce3d6312d24bf6e5dfec1"
+  "upstream_text_sha256": "54ca67015b95823051c2532632ef7c71fbffc6d6f6fce3d6312d24bf6e5dfec1",
+  "source_reviewed_sha256": "9ea13f7074a73414be72caa8995a3d103f7560b04a83556cad0863d4880a658c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "9ea13f7074a73414be72caa8995a3d103f7560b04a83556cad0863d4880a658c",
+    "after_sha256": "1f62c8e5a5502224a78cb9a6bc47f3348019fa7e7eee00ece9d9961c30fd8c99",
+    "before_reader_sha256": "ed04498330524751d4c205795f1bf95011aa68e5b3b4abcddff785fb69d825fa",
+    "after_reader_sha256": "6aa59ac4a0df615f3fc3bf57a34c01096ecf0eb86823bab8c709e31514f76c9a"
+  }
 }

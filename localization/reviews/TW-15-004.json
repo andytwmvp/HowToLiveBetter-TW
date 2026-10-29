@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch15/TW-15-004.md",
-  "target_sha256": "cc0901d2497c971470abcfbc31e029885b9f11a45299019979132f845ecd622f",
+  "target_sha256": "2b4c2d6492492c413b4433b948d0758906124a31f402d6034999e038987f3906",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060125",
@@ -51,5 +51,13 @@
     "法規權利、行政抽查、服務入口及編者風險管理建議分開。草案不作現行法；申請資格、契約效力及法院執行結果依簽約／土地取得時點、完整文件和個案事實確認。",
     "全書核心數與未完成來源不因本批實質再審而增加或減少；本批不代表全書已達正式出版或專業簽證門檻。",
     "內政部租賃住宅服務業查詢頁本次直接載入逾時；正文僅保留查詢入口，業者現行狀態需向所在地主管機關確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "cc0901d2497c971470abcfbc31e029885b9f11a45299019979132f845ecd622f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "cc0901d2497c971470abcfbc31e029885b9f11a45299019979132f845ecd622f",
+    "after_sha256": "2b4c2d6492492c413b4433b948d0758906124a31f402d6034999e038987f3906",
+    "before_reader_sha256": "c223ab53b00afa054b1a81250ea5f1dce9786a30e52fcfa4ecdf8ce1798e6484",
+    "after_reader_sha256": "df4026de64b5b0b5d7eca3a0fbabfef706773bde0061a3f791fc0e7ca0fcd909"
+  }
 }

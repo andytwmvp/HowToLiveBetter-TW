@@ -1,16 +1,16 @@
 {
   "base_commit": "510111a8bd1003fff5e9adef8b95f6ffc489afba",
-  "scope": "封面圖片與閱讀徽章文案採臺灣用語；非正文制度查核",
+  "scope": "封面圖片和閱讀入口採臺灣常用詞句；不取代正文的來源與制度核對。",
   "image": "og.png",
-  "image_sha256": "353ad0bb433b2a0157154efa962b31804dffe96175b29d94b40c8288869ca825",
+  "image_sha256": "e1b5c02c3b19ee94d4717ad1ec6d41b45c1ce0f7aa8c5a6cf39a009876eb45ed",
   "template": "tools/og.html",
-  "template_sha256": "84063f6890c2862691a8284571c163ccb47b598dd47b70fd3cb0883e8511b1bd",
-  "spec_sha256": "4cefdacfa229d04259a62a65f955b62198898662f5f50511a266ebd4e4138a35",
+  "template_sha256": "0346e59c91fe0f89d66233868da4c391d0a1dc500e8acaac5db13b50d3064872",
+  "spec_sha256": "b6580ad09a7615d19eb2f51f21a63d5e745517b1b3ce8564aa6b1418ea73d1e1",
   "dimensions": [
     1200,
     630
   ],
-  "dynamic_badges": 6,
+  "dynamic_badges": 3,
   "source_statistics": {
     "entries": 765,
     "A": 495,
@@ -20,7 +20,7 @@
   },
   "taiwan_verified_entries_changed": false,
   "render_checks": [
-    "og.png 已由繁體模板重新產生；1200×630；文字未超出畫布或與其他區塊重疊。",
-    "README 六個動態徽章與臺灣版入口、協作說明一致。"
+    "封面已由臺灣文案模板重製，尺寸1200×630；已確認文字完整、沒有超出畫面或互相重疊。",
+    "README 三個徽章及封面替代文字與文案規格一致。"
   ]
 }

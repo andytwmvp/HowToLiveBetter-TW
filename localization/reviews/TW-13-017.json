@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-017.md",
-  "target_sha256": "9de9a79d0c989643ee64da752ce1570f5f260520db36c588968268e8bb98bf19",
+  "target_sha256": "077275e91c8d72355ebfe2763e065ea91a33337dacfdd2ddbfc13169ae4145a8",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=14279",
@@ -34,5 +34,13 @@
   "limits": [
     "15公克醣類與15分鐘複測屬於**清醒且能安全吞嚥**的一般處理方式，不適合昏迷者。不能把所有口齒不清都當低血糖而拖延腦中風的119救治；吃代糖也無法立即升血糖，高油脂甜點升糖較慢。特定降血糖藥物可能影響不同糖類吸收，應依既有醫囑選擇；症狀遲遲未改善或持續意識異常即使測量值回升仍應就醫。 頻率限制：糖尿病人數、單院衛教瀏覽量或國外胰島素族群比例，都不是台灣全體低血糖事件發生率。本次未取得定義一致、按用藥與年齡分層的全國事件率與觀察人時，不估個人機率。 **無法吞嚥或意識不清者不塗蜂蜜、糖漿或凝膠於嘴內，也不以手按摩口腔。**榮總1083雖在不強灌食後另列塗抹做法，本篇不採；以ADA清醒且可安全吞嚥才口服的分流交叉核對。立即119，不為找血糖機或等15分鐘延誤；兒童補糖量依原照護團隊計畫，不能將成人15公克一律套用。",
     "獨立急救、醫療及相關專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "9de9a79d0c989643ee64da752ce1570f5f260520db36c588968268e8bb98bf19",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "9de9a79d0c989643ee64da752ce1570f5f260520db36c588968268e8bb98bf19",
+    "after_sha256": "077275e91c8d72355ebfe2763e065ea91a33337dacfdd2ddbfc13169ae4145a8",
+    "before_reader_sha256": "67d8b1fa9faf410dbe10e0e0f0d4a10c4f171bec0aadbacc1531747d8117d706",
+    "after_reader_sha256": "02218aaf2455cd56a7cc13110ece02f64c3d77fadc878640f098c7e3ade54995"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-041.md",
-  "target_sha256": "44f1e894fc05b43859124d4555cf7bbe2843c2a2b280a74e362e440306792e63",
+  "target_sha256": "b552a0ef5aeec282f3bf10444bb87c28bda3ca666d599782a445184725cb0a21",
   "source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-2758-39bb9-2951-1.html",
@@ -34,5 +34,13 @@
   "limits": [
     "部分專業救護教材提到必要時由受訓人員評估牽引復位，那不是一般民眾可以自行拉直患肢的建議。也不把「冰敷20分鐘」視為所有骨折的必然固定流程；強力冰敷可能造成皮膚受傷。若有骨盆、脊椎傷勢疑慮，避免自行搬運，除非現場立即有火勢等危及生命的情況。開放性骨折、末端麻木或血循不良更需及時專業評估。\n\n台灣頻率證據限制：本輪未取得可比較的2026全台各型骨折事件數與同定義暴露分母，不能把長者跌倒死亡、髖部骨折或單院病人當所有疑似骨折發生率。國健署相關跌倒頁TLS驗證失敗，未讀原始死因表不採其數字。健保署原頁本輪直接403、web僅擷取導覽，保留舊查閱紀錄，現行處置另以國防部HTML及AHA／紅十字會2024第9.7節交叉核對；後者多為專家共識，不冒充台灣試驗或保證固定效果。",
     "醫療、感染科、牙醫、救護、野生動物與動保獨立專業審閱待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "44f1e894fc05b43859124d4555cf7bbe2843c2a2b280a74e362e440306792e63",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "44f1e894fc05b43859124d4555cf7bbe2843c2a2b280a74e362e440306792e63",
+    "after_sha256": "b552a0ef5aeec282f3bf10444bb87c28bda3ca666d599782a445184725cb0a21",
+    "before_reader_sha256": "24c16d0dcf60e284be18bde33c59b9a971fbc72d51e3e578b1560381c1bcd0af",
+    "after_reader_sha256": "147ce8983028166a043bffdf0a637ae20da88f8dad2e7b64b02a0f77a75e7e38"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2026-12-15",
   "target_path": "locales/zh-TW/book/ch19/TW-19-018.md",
-  "target_sha256": "8f9b0e5ca4bcb8d7da829a684d59b07ec27ff6c0e25e712aaff7cd4de5c6a30d",
+  "target_sha256": "0520e64b7b836bebc78c4a8b1ffd63e5c4940c6fbf8126885656e0df191696ef",
   "source_checks": [
     {
       "url": "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/individual-income-tax/taxation-scope/which-income/O9EmLJZ",
@@ -21,5 +21,13 @@
   ],
   "localization_changes": "將退職所得年度算法修正為財政部115年度明列的206,000、414,000與894,000元門檻，標明2026領取年度與2027需重查，移除未能直接讀取的法條來源引用。",
   "legal_scope": "僅核對財政部115年度退職所得計算說明與本文算例；給付分類、實際年資、自提已課稅金額和綜合所得稅仍由主管機關按個案認定。",
-  "review_method": "直接開啟財政部年度說明並重算三年、一次給付100萬元的所得額；所得稅法資料庫頁面本次逾時，未把未讀法條當成已直接核對。"
+  "review_method": "直接開啟財政部年度說明並重算三年、一次給付100萬元的所得額；所得稅法資料庫頁面本次逾時，未把未讀法條當成已直接核對。",
+  "source_reviewed_sha256": "8f9b0e5ca4bcb8d7da829a684d59b07ec27ff6c0e25e712aaff7cd4de5c6a30d",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "8f9b0e5ca4bcb8d7da829a684d59b07ec27ff6c0e25e712aaff7cd4de5c6a30d",
+    "after_sha256": "0520e64b7b836bebc78c4a8b1ffd63e5c4940c6fbf8126885656e0df191696ef",
+    "before_reader_sha256": "f86c52474e526cb2f1757bec210506ed761582764a832446015fb819bf91eba6",
+    "after_reader_sha256": "13e6ea2cd138a400f6c200cf3054d8136a5290d5fccce7489a7c4c2b77724109"
+  }
 }

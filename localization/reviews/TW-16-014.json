@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-014.md",
-  "target_sha256": "639daeaf545a8cf6ba01a5bd419b308e4b02402f5806bfa17bdc6f149bfc960c",
+  "target_sha256": "db34d05279929539fb7095978a04ac3763acd729b8d275c0271b470ff94da162",
   "source_checks": [
     {
       "url": "https://pubmed.ncbi.nlm.nih.gov/40450658/",
@@ -36,5 +36,13 @@
     "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。",
     "AI輔助來源實質再核對，非醫療、復健、營養或法律專業簽證；仍待相應專業審查。",
     "未取得全文或附件的來源逐項記明，不以存活估計、行政件數或海外相對效果換算臺灣個人機率；費用與資格須個案核定。"
-  ]
+  ],
+  "source_reviewed_sha256": "639daeaf545a8cf6ba01a5bd419b308e4b02402f5806bfa17bdc6f149bfc960c",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "639daeaf545a8cf6ba01a5bd419b308e4b02402f5806bfa17bdc6f149bfc960c",
+    "after_sha256": "db34d05279929539fb7095978a04ac3763acd729b8d275c0271b470ff94da162",
+    "before_reader_sha256": "133f7acb382a438200306748b85de79560f2f3645e004dab938e2efdb209248d",
+    "after_reader_sha256": "d0dcfada9f45a171304b2b9b7512320ce263c96360b48bc424e91681b557263d"
+  }
 }

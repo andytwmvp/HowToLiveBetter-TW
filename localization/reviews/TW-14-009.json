@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch14/TW-14-009.md",
-  "target_sha256": "62a601f69947f7fa3dd6f32715603f813c33a1975d5be9f854fbc2edc642750f",
+  "target_sha256": "d18d242c80eb2a580b6b540800a2c696fb999a32bf80f32f6820b2a873a9f2e9",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
@@ -31,5 +31,13 @@
     "替代方式是詢問及風險管理建議，不宣稱所有雇主、社區、金融或服務提供者一律負有提供替代方式的法定義務。",
     "未取得獨立法律、隱私或生物辨識技術專業審閱；AI輔助來源再核對不構成法律意見。"
   ],
-  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。"
+  "review_method": "逐一開啟臺灣官方法規、主管機關PDF／公告並核對支撐段落、公布日期、生效狀態和適用主體；分開記錄法律狀態、臺灣情境、統計分子分母、嚴重度及行動；無可比資料時不推估；不是自動掃描或專業簽證。",
+  "source_reviewed_sha256": "62a601f69947f7fa3dd6f32715603f813c33a1975d5be9f854fbc2edc642750f",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "62a601f69947f7fa3dd6f32715603f813c33a1975d5be9f854fbc2edc642750f",
+    "after_sha256": "d18d242c80eb2a580b6b540800a2c696fb999a32bf80f32f6820b2a873a9f2e9",
+    "before_reader_sha256": "5f876ba8134a03f55a26dc9a9a315923e42be0850ec43dc540f82fe912bdbb39",
+    "after_reader_sha256": "75a0dd8a58ee83b8e9f6e94e812dd4490dbf48e62871bbd932acb8b8164ba18d"
+  }
 }

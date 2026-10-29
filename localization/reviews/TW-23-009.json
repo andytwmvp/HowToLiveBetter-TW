@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-009.md",
-  "target_sha256": "2ee8d592bb074a50402f71ac665a95cf047415b36dc0815e348a71fe57c68365",
+  "target_sha256": "26d5f3693e5e95bc06326020d8864e29e9772a215488ec12f344fb85c8e7c043",
   "source_checks": [
     {
       "url": "https://course.taiwanjobs.gov.tw/about/recommended",
@@ -27,5 +27,13 @@
   "review_method": "逐項讀取臺灣中央主管機關現行法規、法規沿革、官方統計公告、官方FAQ及官方參訓問答PDF，將正文各主張對照到來源段落或頁次；統計另記錄期間、母數、分子、事件定義、資料型態與選樣限制。沒有可信的臺灣配對母數時明示資料不足，不自行推估。AI輔助核對不等於獨立專家或個案簽核。",
   "limits": [
     "個人投保、國籍／居留、剩餘額度、班別名額、結訓與補助仍依開訓日資料及分署審查；四類缺課時數例外須交相關資料由辦訓地轄區分署認列，非自動扣除；約2個月是估計而非保證。\n\n本次AI輔助官方方案與問答核對，未取得獨立勞動、職訓、法律或統計專業複核；不是個案補助核准。"
-  ]
+  ],
+  "source_reviewed_sha256": "2ee8d592bb074a50402f71ac665a95cf047415b36dc0815e348a71fe57c68365",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "2ee8d592bb074a50402f71ac665a95cf047415b36dc0815e348a71fe57c68365",
+    "after_sha256": "26d5f3693e5e95bc06326020d8864e29e9772a215488ec12f344fb85c8e7c043",
+    "before_reader_sha256": "dd575629960f0f702c4c68fb78b6e46a299ee8cf4355201e8ab7d28749374bce",
+    "after_reader_sha256": "71b5fcfef52ec3c30c6a356074d94060d59d0127da9ecb69728f565ccd0f5290"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-023.md",
-  "target_sha256": "393e3283dbb6c36621702adf8a2f15646f5c984ce81c9679452da7a4f6a8370e",
+  "target_sha256": "9749f944a9388a36056187da2037d40e71174d7daeaa2169ad31c76614a0236c",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10751&sid=18379",
@@ -48,5 +48,13 @@
   "limits": [
     "心腎疾病、限水限鹽及特殊用藥者按個別醫囑；不要猛灌、用酒精或高糖飲料替代安全飲水。頻率限制：官方熱傷害資料是部分醫院監測人次，不是唯一病人、全部熱衰竭個案或全國發生率；2026-10-14更新頁列截至1151011，本輪未讀CSV，不把資源日期當總病例。原國健署頁取回失敗，保留前次查閱日，以衛福部可讀原公告鏡像及NIOSH交叉支持。",
     "獨立醫療、心理、職安、消防及法律專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "393e3283dbb6c36621702adf8a2f15646f5c984ce81c9679452da7a4f6a8370e",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "393e3283dbb6c36621702adf8a2f15646f5c984ce81c9679452da7a4f6a8370e",
+    "after_sha256": "9749f944a9388a36056187da2037d40e71174d7daeaa2169ad31c76614a0236c",
+    "before_reader_sha256": "245efc0e89d70bccde82b4d958e6941ac3e12efb3e6e39c856ceb51e02024b42",
+    "after_reader_sha256": "c8f1b4083126a03d31435d863801b13e0b97b45357ef28e558f67bbddea7ebe7"
+  }
 }

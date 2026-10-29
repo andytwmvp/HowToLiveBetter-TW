@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch19/TW-19-007.md",
-  "target_sha256": "cbd313a5f5f979cf2da9ec99e2272efc51abc537527122a7f22cda02700de547",
+  "target_sha256": "74ec2162c58569eeefd3ef07329af190aa66a22ab54954fd97a124a85ba32ce5",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
@@ -52,5 +52,13 @@
     "2024契約爭議不包括可識別的被迫簽署母群，不能當作個人風險率。",
     "尚無獨立律師、勞動行政或就業保險專業審閱。"
   ],
-  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。"
+  "review_method": "2026-10-26逐條開啟臺灣官方法規／主管機關頁面及勞動部原始統計表；比對正文中每項期限、金額、資格、計算方法與入口。統計明列年份、全國範圍、單位、類別與缺少的適當分母；不把行政爭議涉及人數當成違法判決或個人發生率。僅完成AI輔助來源核對，沒有獨立律師、勞動行政或統計專業簽核。",
+  "source_reviewed_sha256": "cbd313a5f5f979cf2da9ec99e2272efc51abc537527122a7f22cda02700de547",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "cbd313a5f5f979cf2da9ec99e2272efc51abc537527122a7f22cda02700de547",
+    "after_sha256": "74ec2162c58569eeefd3ef07329af190aa66a22ab54954fd97a124a85ba32ce5",
+    "before_reader_sha256": "91349e71bef366a8eabf7741f3ebf845984fd6bd1b36dbd4fcbd2c3c7654c78f",
+    "after_reader_sha256": "7663b230d7a3a9c535e9efd6c03c527e8b80a6e33ce74c7be11418e9ee3cf687"
+  }
 }

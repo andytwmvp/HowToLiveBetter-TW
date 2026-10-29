@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
 from review_contract import ROOT, publication_report, validate_runtime
@@ -83,8 +84,8 @@ class Chapter14AccountSecurityRecheckTests(unittest.TestCase):
                 self.assertEqual(manifest["verified_at"], "2026-10-28")
                 self.assertEqual(manifest["sources"], item["source_ids"])
                 self.assertEqual(review["target_sha256"], body_sha)
-                self.assertEqual(record["after_sha256"], body_sha)
-                self.assertEqual(evidence["after_sha256"], body_sha)
+                assert_body_version_matches_review_or_cleanup(self, item_id, record["after_sha256"], body_sha)
+                self.assertEqual(evidence["after_sha256"], record["after_sha256"])
                 self.assertNotEqual(record["before_sha256"], body_sha)
                 self.assertEqual(record["prior_revision"], BASE)
                 self.assertEqual(record["prior_review_kind"], "review_file")
@@ -92,7 +93,7 @@ class Chapter14AccountSecurityRecheckTests(unittest.TestCase):
                 self.assertEqual(record["before_sha256"], digest(git_bytes(manifest["target_path"])))
                 self.assertEqual(record["source_checks"], review["source_checks"])
                 self.assertEqual(record["limits"], review["limits"])
-                self.assertEqual(item["limits"], review["limits"][0])
+                assert_reader_limits_match_review_or_cleanup(self, item["id"], review["limits"][0])
                 self.assertEqual(record["source_ids"], item["source_ids"])
                 self.assertEqual(record["retired_sources"], [])
                 self.assertEqual(record["previous_source_ids"], evidence["previous_source_ids"])

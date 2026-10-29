@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-038.md",
-  "target_sha256": "e3686876cc32a9f5124a959686d99e8b73d12d063ef41393708429ec91129846",
+  "target_sha256": "814b7508cfe3b0064b4593eb5fd69d69e4db94a2a63526c30b913a9bddffd263",
   "source_checks": [
     {
       "url": "https://www.cdc.gov.tw/Category/MPage/uo89XT3izngK6IY0wv8BNg",
@@ -62,5 +62,13 @@
   "limits": [
     "72小時是疾管署建議啟動PEP的關鍵時間窗，**不是72小時後就不必就醫，更不是拿到藥後可跳過追蹤**。切勿以對方外表、身分、病史猜測感染狀態；共用杯筷、一般社交接觸與具風險的血液／體液暴露不可混為一談。PEP與暴露前PrEP不同，不能互相替代。由醫師整合暴露情境與檢驗安排處置；不是要求等全部結果才開始。反覆暴露或已在用PrEP，立即告知漏藥與最後服藥時間，仍需本次評估，不自行停藥或拼湊療程。\n\n舊FAQ含2019年的約3萬元、0.3%／0.09%及2021年的延長時間說法，不能作2026台灣人人適用的價格、個人感染率或可等7天的依據。2025附件其他段落的自行停止PEP改PrEP與排毒概述不採用；只採具體療程與追蹤段並由醫師接手。",
     "醫療、感染科、牙醫、救護、野生動物與動保獨立專業審閱待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "e3686876cc32a9f5124a959686d99e8b73d12d063ef41393708429ec91129846",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e3686876cc32a9f5124a959686d99e8b73d12d063ef41393708429ec91129846",
+    "after_sha256": "814b7508cfe3b0064b4593eb5fd69d69e4db94a2a63526c30b913a9bddffd263",
+    "before_reader_sha256": "0ac875a7de7cf99312aeca4a7ee36b7c65a392d1f7158bcd2ff079b9131061de",
+    "after_reader_sha256": "5c92180577e88a8f4e6323f60703e0de7b8a1ad9278bfbdb46deba03f9be97f5"
+  }
 }

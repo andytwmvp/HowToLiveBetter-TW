@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-16",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-015.md",
-  "target_sha256": "e05b1973b33a7ee9ce45ee74dd68fb45a1b75f32da5045197a74f22bb7275494",
+  "target_sha256": "50ad57cb46fb3e6d96f0edf2d762c3c2513c0afaf1bec7a2c2551fedd5463795",
   "source_checks": [
     {
       "url": "https://digitalcommons.usf.edu/psy_facpub/1771/",
@@ -17,5 +17,13 @@
   ],
   "localization_changes": "保留分散練習，將固定排程改成可調整的編者範例並揭露記憶任務外推限制。",
   "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。"
+  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
+  "source_reviewed_sha256": "e05b1973b33a7ee9ce45ee74dd68fb45a1b75f32da5045197a74f22bb7275494",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e05b1973b33a7ee9ce45ee74dd68fb45a1b75f32da5045197a74f22bb7275494",
+    "after_sha256": "50ad57cb46fb3e6d96f0edf2d762c3c2513c0afaf1bec7a2c2551fedd5463795",
+    "before_reader_sha256": "56598339e52ce0fd667f14451217eb456cbca6e9aec8087b72c3bd662dc60dd3",
+    "after_reader_sha256": "06ac264f56fdd37a71ca747ffd6417e6fdb88d5b2615711c58c5023ae183bc57"
+  }
 }

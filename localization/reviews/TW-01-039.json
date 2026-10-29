@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-27",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-039.md",
-  "target_sha256": "eb0a90429afc0332579f2a095066a85882e80a727da6cc8284097054558f5479",
+  "target_sha256": "8ff02643ff8ebccf4088188f4fb280ed7af1cf6fa13f0f304d8c161717f1bba2",
   "source_checks": [
     {
       "url": "https://edu.pch.org.tw/share/pdfDownload?key=177630674930875&mediaId=22728",
@@ -36,5 +36,13 @@
     "2025共識本身由多個臺灣醫學團體參與編修，但未取得獨立臨床專業者對本篇的獨立審閱。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
-  "upstream_text_sha256": "fc6aa0b6c95ee2d7b362aa71768998f577ac8f22459e0c26ea6710f3aa5ae54e"
+  "upstream_text_sha256": "fc6aa0b6c95ee2d7b362aa71768998f577ac8f22459e0c26ea6710f3aa5ae54e",
+  "source_reviewed_sha256": "eb0a90429afc0332579f2a095066a85882e80a727da6cc8284097054558f5479",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "eb0a90429afc0332579f2a095066a85882e80a727da6cc8284097054558f5479",
+    "after_sha256": "8ff02643ff8ebccf4088188f4fb280ed7af1cf6fa13f0f304d8c161717f1bba2",
+    "before_reader_sha256": "d2743949a7eecfd6f928e698f370c986a44710601b2ae8af4dfcac0da508d1bc",
+    "after_reader_sha256": "0438c263af26d23e7390ab06c33cb9228e9c123a4cbb04caf399013b06f93c3a"
+  }
 }

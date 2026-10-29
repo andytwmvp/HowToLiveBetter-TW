@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch25/TW-25-008.md",
-  "target_sha256": "0d668943179f2f6796a49316db858c7fc272811af337c582e4c267464bccbf26",
+  "target_sha256": "0c30696f3b27a4fa77248074e7d6bc845c431e5385a6512a4d20413e55eb66c3",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020040",
@@ -29,5 +29,13 @@
     "內政部全國殯葬資訊入口網在本次直接開啟時逾時；只確認內政部公告所述查詢用途，未實際查驗該站任何業者記錄。一般禮儀服務業許可應向所在地縣市主管機關核對。",
     "內政部2024年公告舉例塔位投資及代售詐騙，但無個人暴露分母；不把該公告描述作全國個人風險率。",
     "AI輔助法律及來源核對，未取得律師、殯葬專業或警方針對個案的獨立確認。"
-  ]
+  ],
+  "source_reviewed_sha256": "0d668943179f2f6796a49316db858c7fc272811af337c582e4c267464bccbf26",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "0d668943179f2f6796a49316db858c7fc272811af337c582e4c267464bccbf26",
+    "after_sha256": "0c30696f3b27a4fa77248074e7d6bc845c431e5385a6512a4d20413e55eb66c3",
+    "before_reader_sha256": "5ff7900b6fb9afe38081f20507f7b1ae149c124c304aec53a878fe26b606f70d",
+    "after_reader_sha256": "3f1bc358d6d257a589711cab1f4a5555ecf2e2c16e1bae37df3da9e02a818194"
+  }
 }

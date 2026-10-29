@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-006.md",
-  "target_sha256": "fbd2a7a1a5ed858e8abde950477204a636b325960ac2e07f811b9e06365e59c3",
+  "target_sha256": "259ce1dc85ccafa5fe63a1529ccab6bae40a4150fee65c812574b989e48b8850",
   "source_checks": [
     {
       "url": "https://www.fire.ntpc.gov.tw/PageDoc/Detail?fid=108&id=4712",
@@ -36,5 +36,13 @@
     "消防署「充電有人在場、充滿拔電」的明確建議針對微型電動二輪車案例；電動機車及電動輔助自行車應依原廠規格與合法設施規範處理。",
     "本輪未取得消防、電池工程或流行病學專業獨立簽證；異常冒煙、起火時先撤離並撥119，不自行搬動電池。",
     "新北71/242是2021至2025二輪車火災中的電動車種占比；臺北49件為不同期間與分類；兩者均無車輛或使用時間分母，不能換算起火率。"
-  ]
+  ],
+  "source_reviewed_sha256": "fbd2a7a1a5ed858e8abde950477204a636b325960ac2e07f811b9e06365e59c3",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "fbd2a7a1a5ed858e8abde950477204a636b325960ac2e07f811b9e06365e59c3",
+    "after_sha256": "259ce1dc85ccafa5fe63a1529ccab6bae40a4150fee65c812574b989e48b8850",
+    "before_reader_sha256": "07b929fa7f1d223262755536ded21373898a02753c9494a202c3aa203e0d735b",
+    "after_reader_sha256": "de899687d7eb464c30cb6c0b92991f83fdfdbd8c43f35c0e71281cdad47b24bd"
+  }
 }

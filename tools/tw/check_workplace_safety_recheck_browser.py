@@ -44,7 +44,7 @@ def check_workplace_safety_recheck_browser(page, context, url, review):
             page.locator('#q').fill(phrase)
             article = page.locator('#'+key)
             assert article.count() == 1, (key, phrase)
-            page.wait_for_function("document.getElementById('status').textContent.startsWith('顯示 1／')")
+            page.wait_for_function("document.getElementById('status').textContent.startsWith('找到 1 篇')")
             assert article.is_visible(), (key, phrase)
             for other in sorted(ids - {key}):
                 assert not page.locator('#'+other).is_visible(), (key, phrase, other)

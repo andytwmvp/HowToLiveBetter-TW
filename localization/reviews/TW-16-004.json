@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-004.md",
-  "target_sha256": "a4fe2b1f92954bdbbdce1070a319d4bedac4c235b843d2e0d787a2beff678cbc",
+  "target_sha256": "5f1f109cae883c20b003f3cb8dda907f59ae9d0d6d6e4f5fb9c0b49520730774",
   "source_checks": [
     {
       "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=19717",
@@ -36,5 +36,13 @@
     "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。",
     "AI輔助來源實質核對，不是心臟科、腎臟科、泌尿科、風濕科或藥師專業簽證；個案治療與檢驗/檢測給付尚待實際團隊判定。",
     "未取得者不冒稱全文、未以自發通報/特定樣本/海外指引數字推臺灣個人風險；未實際諮詢、申請、測量或核定產品安全。"
-  ]
+  ],
+  "source_reviewed_sha256": "a4fe2b1f92954bdbbdce1070a319d4bedac4c235b843d2e0d787a2beff678cbc",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "a4fe2b1f92954bdbbdce1070a319d4bedac4c235b843d2e0d787a2beff678cbc",
+    "after_sha256": "5f1f109cae883c20b003f3cb8dda907f59ae9d0d6d6e4f5fb9c0b49520730774",
+    "before_reader_sha256": "f2e63148ff38a1b6e3e6537a72b2d985828037da6fd27f88cacfeb7e8f272fa6",
+    "after_reader_sha256": "0bb3a9c3cad32e4a512ef7fd261d2d3881e588f6850ccaefeeda03a7189e9ef7"
+  }
 }

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-25",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-003.md",
-  "target_sha256": "e80d343a777a5c96379627602d967191f687837abb195d04d7d09ea1e43733d1",
+  "target_sha256": "ba23898ea7bbfef144c31e264c46dd315a8e2143ef964ac97ee3a62dbc8f59d5",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
@@ -62,5 +62,13 @@
   "limits": [
     "無全國同口徑號販／醫療預約詐騙受害者或接觸分母；醫療法第61條僅按其條文範圍說明，不據此判定每個第三方代掛服務是否合法。",
     "警政署165 FAQ頁標示更新日2022-11-01，本輪只使用諮詢、檢舉及網路報案入口，不引用可能變動的電話費率。醫療法資料庫最後修正日2026-09-23；個案仍由院所、主管機關或法律專業人士判斷。"
-  ]
+  ],
+  "source_reviewed_sha256": "e80d343a777a5c96379627602d967191f687837abb195d04d7d09ea1e43733d1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "e80d343a777a5c96379627602d967191f687837abb195d04d7d09ea1e43733d1",
+    "after_sha256": "ba23898ea7bbfef144c31e264c46dd315a8e2143ef964ac97ee3a62dbc8f59d5",
+    "before_reader_sha256": "f5d27741e8be386252d2322147d7e5a9a8fb6adee35288b505b8e0d6ce96b3af",
+    "after_reader_sha256": "b17eea7fee94b6931c52548f1ea3f80f267fe0f6b468a79a6dbb16b74789b3c8"
+  }
 }

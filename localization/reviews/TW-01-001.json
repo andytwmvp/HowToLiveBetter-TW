@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-28",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch01/TW-01-001.md",
-  "target_sha256": "8bdd05658f380ff95e5b63a2c64db471ff2dcf02b936c534899e1306272595ec",
+  "target_sha256": "9b6d15ba0c2d81a8b220d5b8f26638e881ca76e9b9ad5647e54729573a34e1aa",
   "source_checks": [
     {
       "url": "https://motclaw.motc.gov.tw/webMotcLaw2018/Law/ArticleContent?LawID=E0099005&akeyword1=7&stype=2&type=1",
@@ -41,5 +41,13 @@
   "limits": [
     "2025年國道未繫安全帶死亡事故19件、21人死亡，沒有乘車旅次或繫帶暴露分母；交通部所列3.6倍未提供可重算分子與分母，本篇不換算個人機率。",
     "罰則依現行法律條文與車種條件列示；未取得交通事故鑑定、法律或救護專業獨立審閱。"
-  ]
+  ],
+  "source_reviewed_sha256": "8bdd05658f380ff95e5b63a2c64db471ff2dcf02b936c534899e1306272595ec",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "8bdd05658f380ff95e5b63a2c64db471ff2dcf02b936c534899e1306272595ec",
+    "after_sha256": "9b6d15ba0c2d81a8b220d5b8f26638e881ca76e9b9ad5647e54729573a34e1aa",
+    "before_reader_sha256": "deefacaedca1c39fe0c128830d4e6d1cca77f8df159a887a1158b3bf632c2794",
+    "after_reader_sha256": "4863f901fcd93ada3f71b27a3d5da3c02b87bba3023c09bff831269dab4d0ce7"
+  }
 }

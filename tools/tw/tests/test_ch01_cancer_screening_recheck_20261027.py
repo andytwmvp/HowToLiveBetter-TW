@@ -7,6 +7,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_reader_limits_match_review_or_cleanup
 from content_validation import load_json
 from retroactive_audit import validate_recheck_history
 from review_contract import ROOT, validate_runtime
@@ -80,7 +81,7 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
                 review = json.loads(review_raw)
                 entry = self.manifest[item_id]
                 record = self.records[item_id]
-                self.assertEqual(body_hash, item['after_sha256'])
+                assert_body_version_matches_review_or_cleanup(self, item_id, item['after_sha256'], body_hash)
                 self.assertEqual(body_hash, review['target_sha256'])
                 self.assertEqual(item['title'], markdown_title)
                 self.assertEqual(self.items[item_id]['title'], markdown_title)
@@ -102,7 +103,7 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(old_review).hexdigest(), item['prior_review_sha256'])
                 self.assertEqual(record['source_checks'], review['source_checks'])
                 self.assertEqual(record['limits'], review['limits'])
-                self.assertEqual(self.items[item_id]['limits'], review['limits'][0])
+                assert_reader_limits_match_review_or_cleanup(self, item_id, review['limits'][0])
                 validate_recheck_history(ROOT, record, self.items[item_id])
 
     def test_new_sources_are_additive_and_prior_records_keep_order(self):
@@ -163,7 +164,7 @@ class Ch01CancerScreeningRecheckTests(unittest.TestCase):
     def test_article_changes_state_current_taiwan_screening_rules(self):
         bodies = {key: self.items[key]['body'] for key in ITEM_IDS}
         self.assertIn('40至74歲女性每2年一次', bodies['TW-01-017'])
-        self.assertIn('仍列112年（2023）為最新已公布資料', bodies['TW-01-017'])
+        self.assertIn('2023年登記有公布落差', bodies['TW-01-017'])
         self.assertIn('2027-01-01生效', bodies['TW-01-018'])
         self.assertIn('2026年仍依現行', bodies['TW-01-018'])
         self.assertIn('45至74歲', bodies['TW-01-019'])

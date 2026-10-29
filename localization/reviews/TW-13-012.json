@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-19",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-012.md",
-  "target_sha256": "aad805f91eacd196fe87a871ae5efee8d8f6b07b1035bb910c23accb488e86cf",
+  "target_sha256": "f70793bc0801b85be9b61f249e8ad0d2d8ca18c1100b3689862fae133f87c4a0",
   "source_checks": [
     {
       "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
@@ -29,5 +29,13 @@
     "非個案專業醫療建議；緊急時依119派遣及救護人員指引。",
     "查核來源未附全國外傷大量出血定義、事件人數與曝險母數；不以全體車禍死亡數推算失血風險，資料不足但致命性仍優先急救。",
     "本次為AI輔助來源實質再核對，急救、燒傷或醫療專業審閱仍待取得。"
-  ]
+  ],
+  "source_reviewed_sha256": "aad805f91eacd196fe87a871ae5efee8d8f6b07b1035bb910c23accb488e86cf",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "aad805f91eacd196fe87a871ae5efee8d8f6b07b1035bb910c23accb488e86cf",
+    "after_sha256": "f70793bc0801b85be9b61f249e8ad0d2d8ca18c1100b3689862fae133f87c4a0",
+    "before_reader_sha256": "e08cbc4a553e5ccd6ea17a7a0d475b591d048024ff26ac35da519b80c1461820",
+    "after_reader_sha256": "0559f469fec8044fd652444bc14cc6cf7072c9204cacee5432a380f3e2359b98"
+  }
 }
