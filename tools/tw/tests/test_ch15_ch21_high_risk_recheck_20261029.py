@@ -129,12 +129,27 @@ class HighRiskRecheckTests(unittest.TestCase):
 
     def test_reader_documents_and_taiwan_routing_survive_runtime_normalization(self):
         documents = {row["path"]: row for row in self.batch["reader_documents"]}
+        cleanups = {
+            row["path"]: row
+            for row in read("localization/reader-language-cleanup-20261029.json")["reader_documents"]
+        }
         self.assertEqual(set(documents), {"README.md", "REPOSITORY_GUIDE.md", "locales/zh-TW/README.md"})
+        self.assertEqual(set(cleanups), set(documents))
+        cleanup_record = read("localization/reader-language-cleanup-20261029.json")
+        self.assertEqual(cleanup_record["prior_revision"], "454c0b6a193b2503749a5f579c882311631edc41")
         for path, evidence in documents.items():
             prior = subprocess.check_output(["git", "show", f"{BASE}:{path}"], cwd=ROOT)
+            cleanup_prior = subprocess.check_output(
+                ["git", "show", f"{cleanup_record['prior_revision']}:{path}"], cwd=ROOT
+            )
             current = (ROOT / path).read_bytes()
             self.assertEqual(hashlib.sha256(prior).hexdigest(), evidence["before_sha256"])
-            self.assertEqual(hashlib.sha256(current).hexdigest(), evidence["after_sha256"])
+            cleanup = cleanups[path]
+            self.assertRegex(cleanup["before_sha256"], r"^[0-9a-f]{64}$")
+            self.assertRegex(cleanup["after_sha256"], r"^[0-9a-f]{64}$")
+            self.assertEqual(hashlib.sha256(cleanup_prior).hexdigest(), cleanup["before_sha256"])
+            self.assertEqual(evidence["after_sha256"], cleanup["before_sha256"])
+            self.assertEqual(hashlib.sha256(current).hexdigest(), cleanup["after_sha256"])
 
         item = self.items["TW-21-011"]
         normalized, _ = normalize_reader_item(item)

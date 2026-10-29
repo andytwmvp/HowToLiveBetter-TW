@@ -3,6 +3,7 @@ import hashlib
 from functools import lru_cache
 
 from content_validation import load_json
+import retroactive_audit as audit
 from retroactive_audit import ROOT, normalize_reader_item, validate_reader_copy_cleanup_history
 
 
@@ -56,12 +57,20 @@ def assert_body_version_matches_review_or_cleanup(
     testcase.assertEqual(actual_sha256, observed_sha256, f"{item_id} runtime body hash")
     if actual_sha256 == substantive_sha256:
         return
-    prior_body = _validated_cleanup_prior(item_id, actual_sha256)
-    prior_sha256 = hashlib.sha256(prior_body.encode("utf-8")).hexdigest()
+    rows = [
+        row for row in _current_reader_state()[1]
+        if row.get("id") == item_id and row.get("after_sha256") == actual_sha256
+    ]
+    if len(rows) != 1:
+        raise AssertionError(f"{item_id} 的讀者正文整理版本不唯一")
+    reviewed = audit._pre_cleanup_reviewed_item(
+        ROOT, item, rows[0], target_sha256=substantive_sha256
+    )
+    prior_sha256 = hashlib.sha256(reviewed["body"].encode("utf-8")).hexdigest()
     testcase.assertEqual(
         prior_sha256,
         substantive_sha256,
-        f"{item_id} copy cleanup must preserve the substantively reviewed body",
+        f"{item_id} copy cleanup chain must reach the substantively reviewed body",
     )
 
 

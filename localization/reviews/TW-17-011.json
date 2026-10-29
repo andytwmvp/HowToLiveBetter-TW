@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch17/TW-17-011.md",
-  "target_sha256": "fbd3e4a7da448a99fce5f5cea07d2069dcf5ecc29a6917e74e859962a0e9cb61",
+  "target_sha256": "cd5373d50c40eabd7435baec437c6423f81f6cf762d3cc8ff02c809ee6d2124f",
   "source_checks": [
     {
       "url": "https://1966.gov.tw/LTC/cp-6440-78036-207.html",
@@ -51,12 +51,12 @@
     "獨立醫師、藥師、肝臟專科、法律與照護專業審查尚待；AI來源核對不是臨床、核付、院所核准或契約個案判定。",
     "法規整編截止2026-10-08，未逐筆核之後公報、全部當期支付附件及各院所/機構個案；未做實際申請、諮詢或即時庫存查詢。"
   ],
-  "source_reviewed_sha256": "563b20f0943c1894c64a0c4c75c56fe698fa8aa4e3aeb3b5ddafb34c6cc28cf6",
+  "source_reviewed_sha256": "fbd3e4a7da448a99fce5f5cea07d2069dcf5ecc29a6917e74e859962a0e9cb61",
   "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "563b20f0943c1894c64a0c4c75c56fe698fa8aa4e3aeb3b5ddafb34c6cc28cf6",
-    "after_sha256": "fbd3e4a7da448a99fce5f5cea07d2069dcf5ecc29a6917e74e859962a0e9cb61",
-    "before_reader_sha256": "afd1140a3231d556953b978e36a3781af1362f02192e5c9c389faa06f01ac9c0",
-    "after_reader_sha256": "c9feac3acba79d04561f9ab454ee16f2a55cab65ad35e320a72376ad9650163c"
+    "transform": "reader_copy_cleanup_v3",
+    "before_sha256": "fbd3e4a7da448a99fce5f5cea07d2069dcf5ecc29a6917e74e859962a0e9cb61",
+    "after_sha256": "cd5373d50c40eabd7435baec437c6423f81f6cf762d3cc8ff02c809ee6d2124f",
+    "before_reader_sha256": "c9feac3acba79d04561f9ab454ee16f2a55cab65ad35e320a72376ad9650163c",
+    "after_reader_sha256": "0fa2c2f8cb4f933c8a061f3d551a853deb50e69472960d1e9b296c080f9b4db5"
   }
 }

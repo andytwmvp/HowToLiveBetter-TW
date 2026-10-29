@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "prior_revision": "454c0b6a193b2503749a5f579c882311631edc41",
+  "reader_documents": [
+    {
+      "path": "README.md",
+      "before_sha256": "d44528142af4eb11a097fcbb6fdc0d98e25958d97fbcb193b2f198e7a5ae3391",
+      "after_sha256": "ba79e247e052e3db5bd42367dc6342a23503f550e4fcda724fa8b3d9a3093d55",
+      "change": "以台灣慣用說法整理閱讀入口與使用說明。"
+    },
+    {
+      "path": "REPOSITORY_GUIDE.md",
+      "before_sha256": "ffe957e925516df414541b7c452f5c43dc1a206ce3b43081f46eae9fa2e6c346",
+      "after_sha256": "4efc4f765e6a9d2bd23b6bd772387c62144bb038fc0302dacb77c03d257bd0f2",
+      "change": "以台灣慣用說法整理閱讀入口與使用說明。"
+    },
+    {
+      "path": "locales/zh-TW/README.md",
+      "before_sha256": "7e24ebaa332a442287ebf59cb20357040f88cced79bee350cee9be2b58efe494",
+      "after_sha256": "81696af4f47f96dfbf06cbc4549b2de50aa4cd1d80f4e43992ed06933b2aa7d2",
+      "change": "以台灣慣用說法整理閱讀入口與使用說明。"
+    }
+  ]
+}

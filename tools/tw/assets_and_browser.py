@@ -181,7 +181,9 @@ def run(render: bool,browser_test: bool) -> None:
             page.locator('#reset').click();page.locator('#theme').click()
             page.screenshot(path=str(review/'desktop-dark-zh-TW.png'),animations='disabled')
             assert page.locator('.doc-links a[href*="/blob/main/docs/"]').count()==0
-            assert '不代表臺灣現行生活建議' in page.locator('.doc-links').inner_text()
+            assert '要找台灣生活中的實際做法' in page.locator('.doc-links').inner_text()
+            assert page.locator('#q').get_attribute('placeholder') == '搜尋原作內容'
+            assert '搜索條目' not in page.content()
             doc=page.locator('.card a[href*="/blob/main/docs/"]').first;assert doc.count()==1
             doc.click();page.locator('#doc-mask').wait_for(state='visible')
             page.wait_for_function("document.getElementById('dm-doc').textContent.trim().length>100")

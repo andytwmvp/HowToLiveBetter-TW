@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-042.md",
-  "target_sha256": "9038a04fac7903d85758f3cca844f9cfc3c00a15598b0e370d8e58654f37a53e",
+  "target_sha256": "e8163e4098f855b8157b845baf1af8d96536a7671230701733d519f794c5c224",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-88-234-1.html",
@@ -84,12 +84,12 @@
     "原作把「72小時內去醫院」寫成單一通則，容易令人誤會逾時便失去醫療與求助權利。臺灣113是社福保護窗口，110是立即危險報警，119是緊急救護；角色不同。洗澡、換衣、酒醉、無外傷、伴侶關係或沒有立即報案，都不應作為拒絕求助的理由。避免在公開社群揭露當事人身分、住址及病歷，應透過正式管道保存與轉交資料。\n\n本輪統計圖只有醫療服務人數，未交代跨院重複服務、涵蓋完整率或未就醫者，不能據此計算報案率、採證成功率或推論性侵害發生下降。各地補助依第28條由地方規範，沒有一律全免保證。責任院所只核對PDF第1、2頁及指定註記，未逐院確認即時值班或讀完全部名單；兩條求助管道與病歷、證物應透過正式機制處理。",
     "醫療、防疫、救護、法律及社工獨立專業審閱尚待取得。"
   ],
-  "source_reviewed_sha256": "160427558f9c664b67b7827cd9c9c7c8d403e326cf0a13bde11b31bf725e491d",
+  "source_reviewed_sha256": "9038a04fac7903d85758f3cca844f9cfc3c00a15598b0e370d8e58654f37a53e",
   "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "160427558f9c664b67b7827cd9c9c7c8d403e326cf0a13bde11b31bf725e491d",
-    "after_sha256": "9038a04fac7903d85758f3cca844f9cfc3c00a15598b0e370d8e58654f37a53e",
-    "before_reader_sha256": "7d83a1d4bfc6cbb855efdbd740fa7e23cf1a077eac26e8b96d57c83325a3e766",
-    "after_reader_sha256": "89f3a29cef02e5ca3181a0400eb21eaf9a96afd2b93811d1ce5e829ac139fae2"
+    "transform": "reader_copy_cleanup_v3",
+    "before_sha256": "9038a04fac7903d85758f3cca844f9cfc3c00a15598b0e370d8e58654f37a53e",
+    "after_sha256": "e8163e4098f855b8157b845baf1af8d96536a7671230701733d519f794c5c224",
+    "before_reader_sha256": "89f3a29cef02e5ca3181a0400eb21eaf9a96afd2b93811d1ce5e829ac139fae2",
+    "after_reader_sha256": "1dbc52a6e7930c2078cfb03385111a5835272c90445ff6bbfb17fa93f5b866cd"
   }
 }

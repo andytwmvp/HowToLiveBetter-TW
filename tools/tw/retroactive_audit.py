@@ -333,6 +333,14 @@ READER_COPY_REPLACEMENTS = {
     "學位授予法待施行的第4條及第5條第1項不在本批引用範圍；完成博士不保證教職、終身職或高薪。":
         "《學位授予法》第4條及第5條第1項部分修正尚未施行，申請學位時應查現行規定；完成博士也不保證取得教職、終身職或高薪。",
 }
+READER_COPY_V3_REPLACEMENTS = {
+    "逐來源實讀範圍、受限舊來源日期及前後SHA見審閱與回溯紀錄。": "",
+    "醫預法2022-06-22公布，依2023-12-12行政院令於2024-01-01施行；本篇核對現行法與醫事司服務主文，不把公告日當生效日。法律過渡案件":
+        "醫預法2022-06-22公布，依2023-12-12行政院令於2024-01-01施行。法律過渡案件",
+    "將當天打一針改為外傷急迫性與接種史分流。疾管署資料未提供完整傷口決策附件的新版日期或逐項修訂說明，不自行推定。": "",
+    "本篇尚未經醫療、社工、法律及急救專業人員獨立審閱；若要處理個人醫療或保護需求，請向醫療團隊、社工或所在地主管機關確認。":
+        "若要處理個人醫療或保護需求，請向醫療團隊、社工或所在地主管機關確認。",
+}
 HIGH_RISK = {1, 13}
 ELEVATED_RISK = {7, 16, 17, 19, 23, 24, 25}
 READER_TITLE_REPLACEMENTS = {
@@ -705,7 +713,7 @@ READER_COPY_POST_REPLACEMENTS = {
 }
 
 
-def normalize_reader_copy(body: str) -> tuple[str, list[str]]:
+def normalize_reader_copy(body: str, *, include_v3: bool = False) -> tuple[str, list[str]]:
     """Remove review-workflow prose, retain reader-relevant limits, and rename headings.
 
     Source-linked reference paragraphs are left intact. Removed clauses remain in
@@ -725,6 +733,9 @@ def normalize_reader_copy(body: str) -> tuple[str, list[str]]:
     )
     for original, replacement in READER_COPY_REPLACEMENTS.items():
         body = body.replace(original, replacement)
+    if include_v3:
+        for original, replacement in READER_COPY_V3_REPLACEMENTS.items():
+            body = body.replace(original, replacement)
     for original, replacement in READER_COPY_POST_REPLACEMENTS.items():
         body = body.replace(original, replacement)
     body = re.sub(r"截至查閱日[：，,]?\s*", "", body)
@@ -796,6 +807,9 @@ def normalize_reader_copy(body: str) -> tuple[str, list[str]]:
     # exact reader-facing repairs once more to the retained clauses.
     for original, replacement in READER_COPY_REPLACEMENTS.items():
         cleaned = cleaned.replace(original, replacement)
+    if include_v3:
+        for original, replacement in READER_COPY_V3_REPLACEMENTS.items():
+            cleaned = cleaned.replace(original, replacement)
     if had_final_newline and cleaned:
         cleaned += "\n"
     return cleaned, removed
@@ -840,6 +854,27 @@ def normalize_reader_item(item: dict) -> tuple[dict, list[str]]:
     return cleaned, removed
 
 
+def normalize_reader_item_v3(item: dict) -> tuple[dict, list[str]]:
+    """Apply the v2 reader-copy rules plus new editorial cleanup rules."""
+    if not isinstance(item, dict):
+        raise TypeError("讀者條目必須是物件")
+    cleaned, removed = normalize_reader_item(item)
+    for field in ("title", "body", "limits", "question"):
+        value = cleaned.get(field)
+        if not isinstance(value, str):
+            continue
+        for _ in range(8):
+            previous = value
+            value, field_removed = normalize_reader_copy(value, include_v3=True)
+            removed.extend(f"{field}: {entry}" for entry in field_removed)
+            if value == previous:
+                break
+        else:
+            raise ValueError("讀者文字整理在八次內未收斂：" + str(item.get("id")))
+        cleaned[field] = value
+    return cleaned, removed
+
+
 def _reader_fields_sha256(item: dict) -> str:
     fields = {key: item.get(key) for key in ("title", "body", "limits", "question") if key in item}
     payload = json.dumps(fields, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
@@ -847,13 +882,14 @@ def _reader_fields_sha256(item: dict) -> str:
 
 
 def make_reader_copy_cleanup_record(
-    old: dict, new: dict, prior_revision: str, prior_review_sha256: str | None = None
+    old: dict, new: dict, prior_revision: str, prior_review_sha256: str | None = None,
+    transform: str = "reader_copy_cleanup_v2",
 ) -> dict:
     """Build an append-only history edge for reader-visible copy normalization."""
     return {
         "id": old["id"],
         "prior_revision": prior_revision,
-        "transform": "reader_copy_cleanup_v2",
+        "transform": transform,
         "before_sha256": hashlib.sha256(old["body"].encode("utf-8")).hexdigest(),
         "after_sha256": hashlib.sha256(new["body"].encode("utf-8")).hexdigest(),
         "before_reader_sha256": _reader_fields_sha256(old),
@@ -895,9 +931,10 @@ def documented_reader_cleanup(old: dict, new: dict, record: dict) -> bool:
 def documented_reader_item_cleanup(old: dict, new: dict, record: dict) -> bool:
     if (not isinstance(old, dict) or not isinstance(new, dict) or not isinstance(record, dict)
             or old.get("id") != new.get("id") or record.get("id") != old.get("id")
-            or record.get("transform") != "reader_copy_cleanup_v2"):
+            or record.get("transform") not in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}):
         return False
-    normalized, _removed = normalize_reader_item(old)
+    normalize = normalize_reader_item_v3 if record["transform"] == "reader_copy_cleanup_v3" else normalize_reader_item
+    normalized, _removed = normalize(old)
     return (
         normalized == new
         and record.get("before_sha256") == hashlib.sha256(old.get("body", "").encode("utf-8")).hexdigest()
@@ -928,7 +965,7 @@ def validate_reader_copy_cleanup_history(root: Path, record: dict, new: dict) ->
     key = new.get("id")
     revision = record.get("prior_revision", "")
     if (not re.fullmatch(r"[0-9a-f]{40}", revision)
-            or record.get("transform") not in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2"}
+            or record.get("transform") not in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}
             or record.get("id") != key):
         raise ValueError("讀者正文整理紀錄的版本或轉換種類不符：" + str(key))
     transform = record["transform"]
@@ -961,7 +998,7 @@ def validate_reader_copy_cleanup_history(root: Path, record: dict, new: dict) ->
         "before_sha256": before,
         "after_sha256": after,
     }
-    if transform == "reader_copy_cleanup_v2":
+    if transform in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
         expected_review["reader_copy_cleanup"].update({
             "before_reader_sha256": record.get("before_reader_sha256"),
             "after_reader_sha256": record.get("after_reader_sha256"),
@@ -977,6 +1014,31 @@ def validate_reader_copy_cleanup_history(root: Path, record: dict, new: dict) ->
         if raw.decode("utf-8") != new["body"]:
             raise ValueError("整理後Markdown與runtime不同步：" + str(key))
     return previous
+
+
+def _pre_cleanup_reviewed_item(
+    root: Path, item: dict, cleanup: dict, target_sha256: str | None = None
+) -> dict:
+    """Follow committed reader-copy cleanups back to the substantive review text."""
+    current = validate_reader_copy_cleanup_history(root, cleanup, item)
+    if target_sha256 and hashlib.sha256(current.get("body", "").encode("utf-8")).hexdigest() == target_sha256:
+        return current
+    edges = _historical_reader_copy_edges(root, item["id"])
+    seen = set()
+    while True:
+        digest = hashlib.sha256(current.get("body", "").encode("utf-8")).hexdigest()
+        if target_sha256 and digest == target_sha256:
+            return current
+        if digest in seen:
+            raise ValueError("讀者正文整理歷史形成循環：" + item["id"])
+        seen.add(digest)
+        matches = [old for old, new, _record in edges
+                   if hashlib.sha256(new.get("body", "").encode("utf-8")).hexdigest() == digest]
+        if not matches:
+            return current
+        if len(matches) != 1:
+            raise ValueError("讀者正文整理歷史有多個前版：" + item["id"])
+        current = matches[0]
 
 
 def documented_revision(old: dict, new: dict, record: dict) -> bool:
@@ -1098,7 +1160,9 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
         raise ValueError("再審原始審閱 SHA 不符：" + key)
     digest = hashlib.sha256(new.get("body", "").encode("utf-8")).hexdigest()
     cleanup = _reader_copy_cleanup_for(root, key, digest)
-    reviewed_new = validate_reader_copy_cleanup_history(root, cleanup, new) if cleanup else new
+    reviewed_new = _pre_cleanup_reviewed_item(
+        root, new, cleanup, record.get("after_sha256")
+    ) if cleanup else new
     if not documented_revision(old, reviewed_new, record):
         raise ValueError("實質再審證據或前後正文 SHA 不符：" + key)
     if record.get("retired_sources"):
@@ -1308,7 +1372,7 @@ def _historical_reader_copy_edge_is_valid(
     if record.get("transform") == "reader_copy_cleanup_v1":
         if not documented_reader_cleanup(old, new, record):
             return False
-    elif record.get("transform") == "reader_copy_cleanup_v2":
+    elif record.get("transform") in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
         if not documented_reader_item_cleanup(old, new, record):
             return False
     else:
@@ -1343,7 +1407,7 @@ def _historical_reader_copy_edge_is_valid(
             "before_sha256": before_sha,
             "after_sha256": after_sha,
         }
-        if record["transform"] == "reader_copy_cleanup_v2":
+        if record["transform"] in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
             expected_review["reader_copy_cleanup"].update({
                 "before_reader_sha256": record.get("before_reader_sha256"),
                 "after_reader_sha256": record.get("after_reader_sha256"),
@@ -1420,7 +1484,7 @@ def _historical_reader_copy_edges(root: Path, key: str) -> list[tuple[dict, dict
 
 
 def _documented_history_edge(old: dict, new: dict, record: dict) -> bool:
-    if record.get("transform") in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2"}:
+    if record.get("transform") in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
         return (documented_reader_cleanup(old, new, record)
                 if record.get("transform") == "reader_copy_cleanup_v1"
                 else documented_reader_item_cleanup(old, new, record))
@@ -1673,7 +1737,7 @@ def audit(root: Path = ROOT) -> dict:
         seen_cleanups.add(token)
         current_digest = hashlib.sha256(item.get("body", "").encode("utf-8")).hexdigest()
         current_reader_digest = _reader_fields_sha256(item)
-        active_digest = (record.get("after_reader_sha256") if record.get("transform") == "reader_copy_cleanup_v2"
+        active_digest = (record.get("after_reader_sha256") if record.get("transform") in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}
                          else record.get("after_sha256"))
         if current_reader_digest == active_digest or current_digest == active_digest:
             validate_reader_copy_cleanup_history(root, record, item)
