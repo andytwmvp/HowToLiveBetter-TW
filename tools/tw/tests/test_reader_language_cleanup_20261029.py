@@ -2,13 +2,17 @@
 import hashlib
 import json
 from pathlib import Path
-import re
+import sqlite3
 import sys
+import subprocess
+import tempfile
 import unittest
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
 from retroactive_audit import validate_reader_copy_cleanup_history, validate_recheck_history
+from edition import build_anki, build_epub, refs as export_refs
 
 
 class ReaderLanguageCleanupTests(unittest.TestCase):
@@ -65,6 +69,90 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
         self.assertIn('目前顯示 <b id="cnt">–</b> 則，共 <span id="tot">–</span> 則', text)
         self.assertIn("本指南依臺灣生活情境整理", json.loads(
             self.read("localization/tw-edition/runtime.json"))["scope"])
+
+    def test_visible_source_title_uses_reader_copy_and_keeps_source_history(self):
+        base = "b747f1529e607d2970f1593be464b9f5e88203dc"
+        runtime = json.loads(self.read("localization/tw-edition/runtime.json"))
+        cleanup = json.loads(self.read("localization/reader-language-cleanup-20261029.json"))
+        batches = [row for row in cleanup["source_annotation_batches"]
+                   if row.get("reviewed_at") == "2026-10-30"]
+        self.assertEqual(len(batches), 1)
+        batch = batches[0]
+        self.assertEqual(batch["base_main_sha"], base)
+        self.assertEqual(batch["source_count"], len(batch["sources"]))
+        self.assertEqual(runtime["updated_at"], "2026-10-30")
+
+        before_runtime = json.loads(subprocess.check_output(
+            ["git", "show", f"{base}:localization/tw-edition/runtime.json"],
+            cwd=ROOT, text=True,
+        ))
+        before_sources = {row["id"]: row for row in before_runtime["sources"]}
+        current_sources = {row["id"]: row for row in runtime["sources"]}
+
+        def digest(value):
+            canonical = json.dumps(
+                value, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+            ).encode("utf-8")
+            return hashlib.sha256(canonical).hexdigest()
+
+        self.assertEqual(batch["source_count"], 1)
+        self.assertEqual(len(batch["sources"]), 1)
+        self.assertEqual(set(runtime["reader_source_titles"]), {"criminal"})
+        self.assertEqual(before_runtime["sources"], runtime["sources"])
+        for row in batch["sources"]:
+            source_id = row["id"]
+            with self.subTest(source_id=source_id):
+                previous = before_sources[source_id]
+                current = current_sources[source_id]
+                self.assertEqual(previous["title"], row["title_before"])
+                self.assertEqual(current, previous)
+                self.assertEqual(digest(current), row["source_object_sha256"])
+                self.assertEqual(runtime["reader_source_titles"][source_id], row["title_after"])
+                self.assertEqual(
+                    digest({"id": source_id, "title": row["title_before"]}),
+                    row["reader_title_before_sha256"],
+                )
+                self.assertEqual(
+                    digest({"id": source_id, "title": runtime["reader_source_titles"][source_id]}),
+                    row["reader_title_after_sha256"],
+                )
+                self.assertNotIn("本批", runtime["reader_source_titles"][source_id])
+                self.assertNotIn("核對", runtime["reader_source_titles"][source_id])
+                catalog = ROOT / row["historical_catalog_path"]
+                self.assertEqual(
+                    hashlib.sha256(catalog.read_bytes()).hexdigest(),
+                    row["historical_catalog_sha256"],
+                )
+
+        interface = self.read("assets/tw-runtime.js")
+        self.assertIn("來源可佐證內容", interface)
+        self.assertNotIn("來源支持範圍", interface)
+        self.assertIn("catalog.reader_source_titles?.[id] ?? s.title", interface)
+
+        reader_item = next(item for item in runtime["items"]
+                           if "criminal" in item["source_ids"])
+        exported_source = next(source for source in export_refs(reader_item, runtime)
+                               if source["id"] == "criminal")
+        self.assertEqual(exported_source["title"], runtime["reader_source_titles"]["criminal"])
+        self.assertEqual(current_sources["criminal"]["title"], row["title_before"])
+
+        with tempfile.TemporaryDirectory(prefix="htlb-reader-title-") as folder:
+            epub_path = Path(folder) / "reader.epub"
+            build_epub(epub_path, runtime)
+            with zipfile.ZipFile(epub_path) as archive:
+                epub_content = archive.read("OEBPS/content.xhtml").decode("utf-8")
+            self.assertIn(row["title_after"], epub_content)
+            self.assertNotIn(row["title_before"], epub_content)
+
+            anki_path = Path(folder) / "reader.apkg"
+            build_anki(anki_path, runtime)
+            database_path = Path(folder) / "collection.anki2"
+            with zipfile.ZipFile(anki_path) as archive:
+                database_path.write_bytes(archive.read("collection.anki2"))
+            with sqlite3.connect(database_path) as database:
+                fields = [field for (field,) in database.execute("SELECT flds FROM notes")]
+            self.assertTrue(any(row["title_after"] in field for field in fields))
+            self.assertFalse(any(row["title_before"] in field for field in fields))
 
 
 if __name__ == "__main__":

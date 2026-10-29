@@ -39,7 +39,14 @@ def build_html(output: Path, data: dict) -> None:
 
 def refs(entry: dict, data: dict) -> list[dict]:
     mapping = {s['id']: s for s in data['sources']}
-    return [mapping[key] for key in entry['source_ids']]
+    reader_titles = data.get('reader_source_titles', {})
+    result = []
+    for key in entry['source_ids']:
+        source = mapping[key]
+        if key in reader_titles:
+            source = {**source, 'title': reader_titles[key]}
+        result.append(source)
+    return result
 
 
 def freshness_copy(entry: dict, today: str | None = None) -> str:

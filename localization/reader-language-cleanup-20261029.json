@@ -20,5 +20,26 @@
       "after_sha256": "81696af4f47f96dfbf06cbc4549b2de50aa4cd1d80f4e43992ed06933b2aa7d2",
       "change": "以台灣慣用說法整理閱讀入口與使用說明。"
     }
+  ],
+  "source_annotation_batches": [
+    {
+      "base_main_sha": "b747f1529e607d2970f1593be464b9f5e88203dc",
+      "reviewed_at": "2026-10-30",
+      "purpose": "移除讀者來源連結標題中的批次編修用語，顯示實際法律主題；歷史來源物件與來源登錄保持不變。",
+      "source_count": 1,
+      "sources": [
+        {
+          "id": "criminal",
+          "title_before": "中華民國刑法：本批核對第304至306條",
+          "title_after": "中華民國刑法：強制、恐嚇危害安全與無故侵入住宅",
+          "source_object_sha256": "c52610dfdd436743d9a4cfde491f4a70530c48f6461af83d40b746f9fabc287b",
+          "reader_title_before_sha256": "f7a538c8c4e4a509d09a5c3c915081221e24acdc863a0b8bfe0d062c2faa4890",
+          "reader_title_after_sha256": "f76122c4999e910d6904c52b74f0f744a728597c12ce087e5bb8a68f9a71f454",
+          "historical_catalog_path": "localization/tw-edition/sources/19-housing.json",
+          "historical_catalog_sha256": "3cb4533877409d5f18a0fb84b28adf47d73ea4bb262ccc5b52317b884d8080bc",
+          "change": "來源連結標題改為刑法第304至306條涉及的強制、恐嚇危害安全與無故侵入住宅主題。"
+        }
+      ]
+    }
   ]
 }

@@ -61,7 +61,7 @@
     for (const s of array(data.sources, '來源')) {
       obj(s, '來源'); text(s.id, '來源ID');
       if (!/^[a-z][a-z0-9_]*$/.test(s.id) || sources.has(s.id)) fail('來源ID格式錯誤或重複');
-      text(s.title, '來源標題'); text(s.supports, '來源支持範圍'); text(s.url, '來源網址');
+      text(s.title, '來源標題'); text(s.supports, '來源可佐證內容'); text(s.url, '來源網址');
       if (!s.url.startsWith('https://') || /[\s\\\x00-\x1f\x7f]/.test(s.url) || /%(?![a-fA-F0-9]{2})/.test(s.url)) fail('來源網址格式錯誤');
       // 先檢查原始authority，避免URL解析器自動修補缺少主機的字串。
       const authority = s.url.slice(8).split(/[/?#]/, 1)[0];
@@ -71,6 +71,11 @@
       checked(s.accessed_at, '來源查閱');
       if (s.accessed_at > data.updated_at || (s.published_at !== null && s.published_at !== undefined && iso(s.published_at, '來源發布') > s.accessed_at)) fail('來源日期順序錯誤');
       sources.set(s.id, s);
+    }
+    const readerSourceTitles = obj(data.reader_source_titles || {}, '讀者來源標題');
+    for (const [id, title] of Object.entries(readerSourceTitles)) {
+      if (!sources.has(id)) fail('讀者來源標題引用未登錄的來源ID');
+      text(title, '讀者來源標題');
     }
     const ids = new Set();
     for (const e of array(data.items, '閱讀條目')) {
@@ -176,7 +181,9 @@
       article.append(node('p', `內容最後確認日期：${e.reviewed_at}；建議再次確認日期：${e.review_due_at}${due ? '。已到再次確認日期，採取行動前請向主管機關或服務單位確認最新資訊。' : '。'}`, 'meta'));
       const refs = node('p', '依據：');
       for (const id of e.source_ids) {
-        const s = catalog.sources.find(x => x.id === id); const a = node('a', s.title);
+        const s = catalog.sources.find(x => x.id === id);
+        const title = catalog.reader_source_titles?.[id] ?? s.title;
+        const a = node('a', title);
         a.href = s.url; a.rel = 'noopener noreferrer'; refs.append(a, document.createTextNode(' '));
       }
       article.append(refs);
