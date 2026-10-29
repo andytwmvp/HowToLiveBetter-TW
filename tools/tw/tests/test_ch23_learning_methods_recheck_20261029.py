@@ -90,7 +90,9 @@ class Ch23LearningMethodsRecheckTests(unittest.TestCase):
         self.assertEqual(after["json_files_checked"], before["json_files_checked"] + 2)
         self.assertEqual(after["core_completed"], before["core_completed"])
         self.assertEqual(after["core_total"], before["core_total"])
-        self.assertEqual(len(self.rows), len(self.base_register["substantive_rechecks"]) + len(ITEM_IDS))
+        # Later batches append to the live register; this historical batch must
+        # remain verifiable without requiring the register to stop at its old size.
+        self.assertGreaterEqual(len(self.rows), after["substantive_rechecks"])
         self.assertEqual(self.rows[:len(self.base_register["substantive_rechecks"])],
                          self.base_register["substantive_rechecks"])
         for item_id in ITEM_IDS:
@@ -188,23 +190,32 @@ class Ch23LearningMethodsRecheckTests(unittest.TestCase):
 
     def test_reader_facing_copy_uses_taiwan_wording_and_matches_article_titles(self):
         documents = {row["path"]: row for row in self.evidence["reader_documents"]}
+        current_documents = {
+            row["path"]: row
+            for row in read("localization/ch15-ch21-high-risk-recheck-20261029.json")["reader_documents"]
+        }
         self.assertEqual(set(documents), READER_DOCUMENTS)
         for path, row in documents.items():
             with self.subTest(path=path):
                 prior = subprocess.check_output(["git", "show", f"{BASE}:{path}"], cwd=ROOT)
                 current = (ROOT / path).read_bytes()
                 self.assertEqual(hashlib.sha256(prior).hexdigest(), row["before_sha256"])
-                self.assertEqual(hashlib.sha256(current).hexdigest(), row["after_sha256"])
+                self.assertRegex(row["after_sha256"], r"^[0-9a-f]{64}$")
+                current_sha256 = hashlib.sha256(current).hexdigest()
+                if path in current_documents:
+                    self.assertEqual(current_sha256, current_documents[path]["after_sha256"])
+                else:
+                    self.assertEqual(current_sha256, row["after_sha256"])
 
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         guide = (ROOT / "REPOSITORY_GUIDE.md").read_text(encoding="utf-8")
-        self.assertIn("若仍找不到，表示目前沒有該主題的臺灣版指引", readme)
-        self.assertIn("在 GitHub 上直接開啟 HTML 檔，只會看到程式碼", readme)
-        self.assertIn("在終端機執行以下指令，下載專案並進入專案資料夾", guide)
+        self.assertIn("若仍找不到，表示目前沒有該主題的台灣版文章", readme)
+        self.assertIn("在 GitHub 上直接開啟 HTML 檔會看到程式碼", readme)
+        self.assertIn("開啟終端機，下載專案並切換到資料夾", guide)
         self.assertIn("py -3 -m http.server 8000 --bind 127.0.0.1", guide)
         self.assertIn("python3 -m http.server 8000 --bind 127.0.0.1", guide)
         self.assertIn("按 Ctrl+C 停止伺服器", guide)
-        self.assertIn("離線閱讀檔", guide)
+        self.assertIn("離線檔", guide)
 
         reader_paths = {
             ROOT / "README.md",

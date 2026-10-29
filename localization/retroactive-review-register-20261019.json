@@ -26321,6 +26321,577 @@
         "本次為AI輔助逐項來源核對，未取得獨立教育、技職訓練或職業安全專業審閱。"
       ],
       "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育、技職訓練或職業安全專業審閱。"
+    },
+    {
+      "id": "TW-21-003",
+      "before_sha256": "8dd03e75f45b361eb3d7d08078318b82770e171f46d247b06d2d7fa7baf4942d",
+      "after_sha256": "2e9f76e56b8adbdbb5122c5bc944efa88c3c8123b0317de8f39777cd77073b77",
+      "prior_revision": "2090d5865c46c037afb82d09bbd9acfd09529725",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "328f1a90d452ee5a4a5b0c56a3117452dc58cadce0d8c779914f067f1c8c2932",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "旅外急難依台灣外交部規定、當地法律及身分分流。適用對象是持中華民國護照且在台灣設籍的國民；赴陸港澳另有主管機關與登錄管道。危急時先聯絡所在地緊急服務，再找我國館處。",
+      "frequency_assessment": "外交部2025年海外急難救助7,374件、9,336人次是行政服務量；沒有旅客或旅次分母，不能估個人遭遇率。",
+      "legal_status_assessment": "外交部急難救助實施要點限定適用身分，並規定急返國借款條件；當地刑事程序及入境決定由當地主管機關處理，館處不取代律師或法院。",
+      "changes": "補足外交部急難救助適用身分、赴陸港澳分流、急返國借款資格、額度與還款期限；加入2025年7,374件、9,336人次及缺少旅客暴露分母的限制，並說明境外專線費用與適用地區。",
+      "source_status": "本輪現行引用於2026-10-29依記載方法逐筆讀取；未以未讀附件、無法讀取頁或首頁內容替代具體主張。",
+      "source_ids": [
+        "ch21_assistance",
+        "ch21_boca_emergency_scope_20261029",
+        "ch21_boca_emergency_contact_20261029",
+        "ch21_mofa_overseas_emergency_20261029"
+      ],
+      "previous_source_ids": [
+        "ch21_assistance",
+        "ch21_limits"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch21_limits",
+          "replacement_ids": [
+            "ch21_boca_emergency_scope_20261029",
+            "ch21_mofa_overseas_emergency_20261029"
+          ],
+          "reason": "以現行外交部急難救助實施要點及相關正式規定取代舊FAQ作為本篇資格、借款條件的依據。",
+          "prior_source_sha256": "6f652b54d4d34cf2e949bba57e6edae52d2cc9140adaa778a5c5abcb734677b1"
+        }
+      ],
+      "previous_review_claims": [
+        "舊稿已說明館處不能改變外國司法結果，也提及急返國借款例外；未列出適用身分、借款金額與還款期限，亦未交代官方統計單位和旅客分母。"
+      ],
+      "review_path": "localization/reviews/TW-21-003.json",
+      "source_checks": [
+        {
+          "url": "https://www.boca.gov.tw/cp-85-244-cdfdb-1.html",
+          "claim": "駐外館處可提供的領務協助類型，以及當地法律與隱私的限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：駐外館處可提供的領務協助類型，以及當地法律與隱私的限制。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://www.boca.gov.tw/cp-214-400-56237-1.html",
+          "claim": "第2點定義適用身分為持中華民國護照且在臺灣地區設有戶籍者，赴中國大陸、香港、澳門者不適用；第3點列急難範圍；第9點規定符合急返國條件時得代購最經濟機票，基本生活借款原則不逾美金800元並於立約次日起60天內償還，專案核准可提高。",
+          "supporting_passage": "編者摘要（非逐字引文）：第2點定義適用身分為持中華民國護照且在臺灣地區設有戶籍者，赴中國大陸、香港、澳門者不適用；第3點列急難範圍；第9點規定符合急返國條件時得代購最經濟機票，基本生活借款原則不逾美金800元並於立約次日起60天內償還，專案核准可提高。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取現行實施要點第2、3、7至12點，核對適用身分、服務與借款條件。"
+        },
+        {
+          "url": "https://www.boca.gov.tw/cp-87-2121-7a5da-1.html",
+          "claim": "國內專線0800-085-095；海外撥+886-800-085-095須自付國際電話費；全球免付費專線800-0885-0885僅適用公告的22個國家或地區，漫遊門號可能另計費。",
+          "supporting_passage": "編者摘要（非逐字引文）：國內專線0800-085-095；海外撥+886-800-085-095須自付國際電話費；全球免付費專線800-0885-0885僅適用公告的22個國家或地區，漫遊門號可能另計費。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取領務局急難專線頁及適用地區資訊，核對境外撥號與費用。"
+        },
+        {
+          "url": "https://www.boca.gov.tw/fp-133-8230-23370-1.html",
+          "claim": "2025年駐外館處處理旅外國人急難救助9,336人次、共7,374件；未提供旅客或行程暴露分母，不可換算個人機率。",
+          "supporting_passage": "編者摘要（非逐字引文）：2025年駐外館處處理旅外國人急難救助9,336人次、共7,374件；未提供旅客或行程暴露分母，不可換算個人機率。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取領務局114年領事業務統計表HTML，分開核對7,374件與9,336人次。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "外交部旅外急難救助行政服務量",
+          "period": "2025年（民國114年）",
+          "value": {
+            "events": 7374,
+            "service_person_times": 9336
+          },
+          "unit": "事件件數及服務人次",
+          "geographic_scope": "外交部駐外館處處理之旅外國人急難救助",
+          "population": "2025年駐外館處處理並列入年度領事業務統計的旅外急難服務",
+          "numerator_definition": "官方列7,374件急難救助事件、9,336人次服務；件數與人次不是同一單位。",
+          "denominator": null,
+          "denominator_definition": "未提供同期間全體出國人次、旅客人數或個人暴露分母。",
+          "data_type": "政府行政服務件數與人次，不是抽樣調查、旅客個人發生率或風險機率",
+          "source_ids": [
+            "ch21_mofa_overseas_emergency_20261029"
+          ],
+          "published_at": "2026-07-01",
+          "accessed_at": "2026-10-29",
+          "limitations": [
+            "行政處理量受服務使用、分類及登錄口徑影響。",
+            "沒有旅客出國暴露分母，不能估算個人機率。",
+            "件數不等於人次，也不代表每人只發生一次。"
+          ]
+        }
+      ],
+      "limits": [
+        "急難救助要點只適用特定身分；當地程序與館處協助各有範圍。2025年件數與人次沒有旅客暴露分母，不能換算個人機率；借款需個案審查並依約償還。",
+        "本次為AI輔助逐項來源核對，未取得獨立領務或法律專業審閱；不代替個案判斷。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立領務或法律專業審閱；不代替個案判斷。",
+      "taiwan_context_assessment": {
+        "context": "旅外急難依台灣外交部規定、當地法律及身分分流。適用對象是持中華民國護照且在台灣設籍的國民；赴陸港澳另有主管機關與登錄管道。危急時先聯絡所在地緊急服務，再找我國館處。",
+        "frequency": "外交部2025年海外急難救助7,374件、9,336人次是行政服務量；沒有旅客或旅次分母，不能估個人遭遇率。",
+        "legal_status": "外交部急難救助實施要點限定適用身分，並規定急返國借款條件；當地刑事程序及入境決定由當地主管機關處理，館處不取代律師或法院。",
+        "independent_of_frequency": true
+      },
+      "unresolved": [
+        "未取得獨立相關專業審閱；法規、給付、境外求助與個案權利仍應由主管機關或專業人員確認。"
+      ]
+    },
+    {
+      "id": "TW-21-004",
+      "before_sha256": "60ec1a5ef5c01b2ef26b4006925e02e6b0136fe8f43d9910deb208a279a49078",
+      "after_sha256": "828b8054f53aedca6377b0480d443c8fff2ef360028827b8c1f3f888d51f79d5",
+      "prior_revision": "2090d5865c46c037afb82d09bbd9acfd09529725",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "48ce7d2ce931a0ad26505555f217f36c238306e15ffe9e9c86d3bc0e121c39a4",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2026-12-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣健保保險對象在境外因不可預期緊急傷病或緊急分娩，符合條件可申請自墊核退；申請走健保署分區業務組，額度按季公告。商業旅平險與醫療後送依台灣保單契約確認。",
+      "frequency_assessment": "未找到可與台灣旅客出境旅次配對的境外急難醫療全國事件率資料；核退申請及金額上限不能代替發生率。",
+      "legal_status_assessment": "健保署現行頁面限定保險對象、不可預期緊急傷病或緊急分娩、6個月期限及核退審查；每季上限會更新。",
+      "changes": "以健保署現行申請頁及2026年第4季上限更新來源；補上期限起算、申請文件、受理單位、實際額度與境外醫療發生率資料缺口。CDC僅作通用保障分類，不代表台灣法規或個別保單。",
+      "source_status": "本輪現行引用於2026-10-29依記載方法逐筆讀取；未以未讀附件、無法讀取頁或首頁內容替代具體主張。",
+      "source_ids": [
+        "ch21_insurance",
+        "ch21_nhi_claim_process_20261029",
+        "ch21_nhi_caps_20261029"
+      ],
+      "previous_source_ids": [
+        "ch21_insurance",
+        "ch21_nhi",
+        "ch21_limits"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch21_nhi",
+          "replacement_ids": [
+            "ch21_nhi_claim_process_20261029",
+            "ch21_nhi_caps_20261029"
+          ],
+          "reason": "改用2026-10-29重新讀取的健保署申請說明及當季上限表。",
+          "prior_source_sha256": "de3a9adc3ff2474bdc23a309a6d4e94e2a77bb2510c4d5d43306bbbfc8d68a8c"
+        },
+        {
+          "id": "ch21_limits",
+          "replacement_ids": [
+            "ch21_nhi_claim_process_20261029",
+            "ch21_nhi_caps_20261029"
+          ],
+          "reason": "舊財務協助FAQ與境外醫療核退無直接關聯，改以健保署申請規定及當季上限表作為本篇直接來源。",
+          "prior_source_sha256": "6f652b54d4d34cf2e949bba57e6edae52d2cc9140adaa778a5c5abcb734677b1"
+        }
+      ],
+      "previous_review_claims": [
+        "舊稿已指出健保境外核退有6個月期限和季上限，但未列當期核退數額、申請文件及台灣旅客境外急難醫療事件率資料缺口。"
+      ],
+      "review_path": "localization/reviews/TW-21-004.json",
+      "source_checks": [
+        {
+          "url": "https://wwwnc.cdc.gov/travel/page/insurance",
+          "claim": "旅行取消、旅遊醫療及醫療後送保障類型不同，須依契約分別核對；不據此判讀台灣保單。",
+          "supporting_passage": "編者摘要（非逐字引文）：旅行取消、旅遊醫療及醫療後送保障類型不同，須依契約分別核對；不據此判讀台灣保單。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-5938-d33aa-2740-1.html",
+          "claim": "保險對象因境外不可預期緊急傷病或緊急分娩就醫，須於門急診治療當日或出院日起6個月內申請；需收據、費用明細、診斷書等文件，核退按國內給付規定並受每季上限限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：保險對象因境外不可預期緊急傷病或緊急分娩就醫，須於門急診治療當日或出院日起6個月內申請；需收據、費用明細、診斷書等文件，核退按國內給付規定並受每季上限限制。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取健保署境外核退申請頁，核對條件、期限、文件與受理單位。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-5183-4df08-2740-1.html",
+          "claim": "2026-10-01至12-31境外自墊醫療費核退上限：門診每次新臺幣1,191元、急診每次4,024元、住院每日7,217元；健保署按季公告。",
+          "supporting_passage": "編者摘要（非逐字引文）：2026-10-01至12-31境外自墊醫療費核退上限：門診每次新臺幣1,191元、急診每次4,024元、住院每日7,217元；健保署按季公告。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取健保署2026年季度上限表，核對115年10至12月欄位及單位。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "台灣旅客境外急難醫療事件率資料缺口",
+          "period": "截至2026-10-29",
+          "value": null,
+          "unit": null,
+          "geographic_scope": "台灣健保保險對象於境外就醫",
+          "population": "台灣旅客或健保保險對象境外旅次中發生不可預期急病或緊急分娩者",
+          "numerator_definition": "未找到可同時辨識境外急難醫療事件定義與旅客旅次的全國事件分子。",
+          "denominator": null,
+          "denominator_definition": "未找到同期間同定義的旅客出境人次或境外醫療暴露分母。",
+          "data_type": "資料不足；核退金額上限及申請件數不是發生率或個人風險",
+          "source_ids": [
+            "ch21_nhi_claim_process_20261029"
+          ],
+          "published_at": null,
+          "accessed_at": "2026-10-29",
+          "limitations": [
+            "健保核退統計不能代表全部境外急難事件。",
+            "核退金額是給付規則，不是事件發生頻率。",
+            "不以國外資料或未找到的案件數自行推估台灣旅客機率。"
+          ]
+        }
+      ],
+      "limits": [
+        "健保核退限於符合資格的不可預期緊急傷病或緊急分娩；期限、文件及每季上限依健保署公告，不能當成海外醫療費全額保障。未找到可配對旅客暴露分母的台灣境外醫療發生率。",
+        "本次為AI輔助逐項來源核對，未取得獨立醫療、保險或健保專業審閱；不代替個案核退或承保判斷。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立醫療、保險或健保專業審閱；不代替個案核退或承保判斷。",
+      "taiwan_context_assessment": {
+        "context": "台灣健保保險對象在境外因不可預期緊急傷病或緊急分娩，符合條件可申請自墊核退；申請走健保署分區業務組，額度按季公告。商業旅平險與醫療後送依台灣保單契約確認。",
+        "frequency": "未找到可與台灣旅客出境旅次配對的境外急難醫療全國事件率資料；核退申請及金額上限不能代替發生率。",
+        "legal_status": "健保署現行頁面限定保險對象、不可預期緊急傷病或緊急分娩、6個月期限及核退審查；每季上限會更新。",
+        "independent_of_frequency": true
+      },
+      "unresolved": [
+        "未取得獨立相關專業審閱；法規、給付、境外求助與個案權利仍應由主管機關或專業人員確認。"
+      ]
+    },
+    {
+      "id": "TW-21-011",
+      "before_sha256": "0067154e94a3cf3ed77b7322bebab860ce149d519e2b272b57223065db13c8ba",
+      "after_sha256": "6d3c3ff4e281a3ca5d023e4640fb563df199eb6063da7e22e264692a04a076a3",
+      "prior_revision": "2090d5865c46c037afb82d09bbd9acfd09529725",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "7ae3ea266d158f4bdc63717df91614da45a09618cf9070e374535a487a3f8dc3",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "出國登錄、赴陸港澳登錄及駐外急難服務依台灣主管機關分工；旅客用可信任親友、行程備份、當地警方和駐外館處處理失聯，不預設家人定位或公開貼文。",
+      "frequency_assessment": "官方2025年統計表「尋人」分類列240，但沒有旅客暴露分母，也未說明計數是案件、人數或服務人次；不據此推估個人機率。",
+      "legal_status_assessment": "失聯受理與調查依所在地法令及具體線索辦理；外交部登錄用途是必要聯繫，不是定位服務。",
+      "changes": "補足出國登錄與赴陸港澳分流、個資用途、當地警方及駐外館處求助方式；加入外交部2025年「尋人」欄表列240與計數口徑、旅客暴露分母限制。",
+      "source_status": "本輪現行引用於2026-10-29依記載方法逐筆讀取；未以未讀附件、無法讀取頁或首頁內容替代具體主張。",
+      "source_ids": [
+        "ch21_registration",
+        "ch21_assistance",
+        "ch21_boca_emergency_contact_20261029",
+        "ch21_mofa_emergency_stats_20261029"
+      ],
+      "previous_source_ids": [
+        "ch21_registration",
+        "ch21_assistance",
+        "ch21_scams"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch21_scams",
+          "replacement_ids": [
+            "ch21_mofa_emergency_stats_20261029"
+          ],
+          "reason": "海外求職防詐來源不支持旅外失聯流程；統計主張改由外交部「尋人」行政分類資料直接支持。",
+          "prior_source_sha256": "c2362939feb0fadf0664c845355cf580db6acff337b9e9d5c35e9916d116407f"
+        }
+      ],
+      "previous_review_claims": [
+        "舊稿未說明外交部「尋人」分類的計數口徑及旅客暴露分母，也需要補充登錄的個資用途和當地警方、駐外館處的求助方式。"
+      ],
+      "review_path": "localization/reviews/TW-21-011.json",
+      "source_checks": [
+        {
+          "url": "https://www.boca.gov.tw/sp-abre-main-1.html",
+          "claim": "外交部出國登錄的聯絡用途、赴陸港澳主管機關差異與個資說明。",
+          "supporting_passage": "編者摘要（非逐字引文）：外交部出國登錄的聯絡用途、赴陸港澳主管機關差異與個資說明。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://www.boca.gov.tw/cp-85-244-cdfdb-1.html",
+          "claim": "駐外館處可提供的領務協助類型，以及當地法律與隱私的限制。",
+          "supporting_passage": "編者摘要（非逐字引文）：駐外館處可提供的領務協助類型，以及當地法律與隱私的限制。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://www.boca.gov.tw/cp-87-2121-7a5da-1.html",
+          "claim": "國內專線0800-085-095；海外撥+886-800-085-095須自付國際電話費；全球免付費專線800-0885-0885僅適用公告的22個國家或地區，漫遊門號可能另計費。",
+          "supporting_passage": "編者摘要（非逐字引文）：國內專線0800-085-095；海外撥+886-800-085-095須自付國際電話費；全球免付費專線800-0885-0885僅適用公告的22個國家或地區，漫遊門號可能另計費。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取領務局急難專線頁及適用地區資訊，核對境外撥號與費用。"
+        },
+        {
+          "url": "https://www.boca.gov.tw/fp-133-2171-2fffa-1.html",
+          "claim": "2025年資料在E12「尋人」欄表列240；表格未提供旅客暴露分母，亦未說明該欄計數是否為不重複個案、人數或服務人次。",
+          "supporting_passage": "編者摘要（非逐字引文）：2025年資料在E12「尋人」欄表列240；表格未提供旅客暴露分母，亦未說明該欄計數是否為不重複個案、人數或服務人次。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29由領務局2026-10-08統計頁下載ODS並讀取114年E12「尋人」年度欄；表列240且口徑未說明。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "外交部旅外急難統計表「尋人」分類",
+          "period": "2025年（民國114年）",
+          "value": {
+            "listed_count": 240
+          },
+          "unit": "官方分類欄位表列計數；未說明是否為不重複個案、人數或服務人次",
+          "geographic_scope": "領務局彙整之旅外急難救助事件",
+          "population": "2025年旅外急難救助統計表列入E12「尋人」分類的行政資料",
+          "numerator_definition": "官方ODS年度資料在E12「尋人」欄表列240；資料表未說明每筆是否等於一人或一案。",
+          "denominator": null,
+          "denominator_definition": "未提供出國旅客、境外旅次、親友聯繫失敗或尋人案件暴露母數。",
+          "data_type": "行政分類表列計數，單位口徑未明；不是失蹤者人數、發生率或個人機率",
+          "source_ids": [
+            "ch21_mofa_emergency_stats_20261029"
+          ],
+          "published_at": "2026-10-08",
+          "accessed_at": "2026-10-29",
+          "limitations": [
+            "不能將表列240解讀為240名失蹤者或互不重複案件。",
+            "沒有旅客暴露分母，不能換算個人失聯機率。",
+            "行政分類和通報方式可能影響統計。"
+          ]
+        }
+      ],
+      "limits": [
+        "不同國家的報案程序及館處協助範圍不同；2025年「尋人」欄表列數的個案與人數口徑未明，也沒有旅客暴露分母，不能解讀成失蹤者人數或個人機率。",
+        "本次為AI輔助逐項來源核對，未取得獨立領務、警政或隱私法律專業審閱。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立領務、警政或隱私法律專業審閱。",
+      "taiwan_context_assessment": {
+        "context": "出國登錄、赴陸港澳登錄及駐外急難服務依台灣主管機關分工；旅客用可信任親友、行程備份、當地警方和駐外館處處理失聯，不預設家人定位或公開貼文。",
+        "frequency": "官方2025年統計表「尋人」分類列240，但沒有旅客暴露分母，也未說明計數是案件、人數或服務人次；不據此推估個人機率。",
+        "legal_status": "失聯受理與調查依所在地法令及具體線索辦理；外交部登錄用途是必要聯繫，不是定位服務。",
+        "independent_of_frequency": true
+      },
+      "unresolved": [
+        "未取得獨立相關專業審閱；法規、給付、境外求助與個案權利仍應由主管機關或專業人員確認。"
+      ]
+    },
+    {
+      "id": "TW-15-018",
+      "before_sha256": "89826ad4a960e50a09ae823a4303e621bc2526f6a9d2fad79dad8cb6d0faf112",
+      "after_sha256": "7031f62fea4e8a8961b03ef3eb6d1554698995246cfd3d52f006c2095b1d1dda",
+      "prior_revision": "2090d5865c46c037afb82d09bbd9acfd09529725",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "3a2ca2a1a2b9fbb4ee7fa4c040e013b34e395d3350e6b44cd0eae83208259632",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "預售屋交屋及定型化契約以台灣現行公告為準；中古屋、預售屋與一般買賣的保固和瑕疵權利不可互套。民法規定與抽查結果分開說明。",
+      "frequency_assessment": "2026年行政抽查為混合選樣；地方選案、過往違規業者及銷售排行樣本分開保留，不外推市場比例。",
+      "legal_status_assessment": "民法第354、356、357、365條分別涉及瑕疵擔保、檢查通知、故意未告知例外及解除／減價權期間；定型化契約依公告適用日期，本文不判斷個案責任。",
+      "changes": "更新行政院現行契約版本，直接核對契約PDF並加入2026年69案混合選樣查核分母；補民法第357條並分開說明第354、356、365條，明確區分抽查比例與個人風險。",
+      "source_status": "本輪現行引用於2026-10-29依記載方法逐筆讀取；未以未讀附件、無法讀取頁或首頁內容替代具體主張。",
+      "source_ids": [
+        "ch15_defects",
+        "ch15_defectnotice",
+        "ch15_defectperiod",
+        "ch15_presale_standard_status_20261029",
+        "ch15_presale_standard_pdf_20261029",
+        "ch15_presale_audit_115_20261029",
+        "ch15_civil357_20261029"
+      ],
+      "previous_source_ids": [
+        "presalestandard",
+        "ch15_presalechecks",
+        "ch15_defects",
+        "ch15_defectnotice",
+        "ch15_defectperiod"
+      ],
+      "retired_sources": [
+        {
+          "id": "presalestandard",
+          "replacement_ids": [
+            "ch15_presale_standard_status_20261029",
+            "ch15_presale_standard_pdf_20261029"
+          ],
+          "reason": "改用現行公告彙整頁及契約PDF。",
+          "prior_source_sha256": "edb6382a55124058e26550891d1a1baf5a4bee6ca6d0cccd8a43cb841a906323"
+        },
+        {
+          "id": "ch15_presalechecks",
+          "replacement_ids": [
+            "ch15_presale_audit_115_20261029"
+          ],
+          "reason": "改用2026年最新年度抽查作為頻率證據。",
+          "prior_source_sha256": "7d3ed6a43dc4e171ef364d6e345a73f481529b59c4199612f786a837ba952cb0"
+        }
+      ],
+      "previous_review_claims": [
+        "舊稿已區分5%保留款、結構與設備保固及民法第365條期間；未引用第357條，並未記錄最新行政抽查的選樣分母。"
+      ],
+      "review_path": "localization/reviews/TW-15-018.json",
+      "source_checks": [
+        {
+          "url": "https://www.ey.gov.tw/Page/DFB720D019CCCB0A/7beaa539-d140-4e03-97c3-020b68a9692c",
+          "claim": "現行彙整頁顯示最近修正公告日2023-06-19，2023-07-01施行；依交易時間確認適用版本。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行彙整頁顯示最近修正公告日2023-06-19，2023-07-01施行；依交易時間確認適用版本。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://www.ey.gov.tw/File/17FD66C7511F7121?A=C",
+          "claim": "第13點規定驗收瑕疵應記載並限期修繕，買方得以自備款保留房地總價5%作交屋保留款，複驗合格後支付；第17點規定結構部分15年、固定建材及設備1年保固範圍與起算條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：第13點規定驗收瑕疵應記載並限期修繕，買方得以自備款保留房地總價5%作交屋保留款，複驗合格後支付；第17點規定結構部分15年、固定建材及設備1年保固範圍與起算條件。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取現行定型化契約PDF第13、17點，核對保留款、複驗與保固。"
+        },
+        {
+          "url": "https://www.ey.gov.tw/Page/F7408A6FCA4B0A8A/b33a579c-c999-4426-bd87-826e6188f32d",
+          "claim": "2026年3至5月查核69案，含銷售排行前十、地方選案50案及過去違規業者9案。地方選案50案中9案部分條款不符；750個檢核項次中13項不符（1.7%）。過往違規組9案中2案有不符，135項中3項不符（2.2%）；銷售排行前十均符合。屬非隨機行政抽查。",
+          "supporting_passage": "編者摘要（非逐字引文）：2026年3至5月查核69案，含銷售排行前十、地方選案50案及過去違規業者9案。地方選案50案中9案部分條款不符；750個檢核項次中13項不符（1.7%）。過往違規組9案中2案有不符，135項中3項不符（2.2%）；銷售排行前十均符合。屬非隨機行政抽查。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取消保處115年度查核說明，逐組核對選樣、建案、檢核項次及比率；未將非隨機樣本外推。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=354&pcode=B0000001",
+          "claim": "民法第354條買賣物瑕疵擔保一般規定。",
+          "supporting_passage": "編者摘要（非逐字引文）：民法第354條買賣物瑕疵擔保一般規定。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=356&pcode=B0000001",
+          "claim": "民法第356條通常檢查與發現瑕疵後通知義務。",
+          "supporting_passage": "編者摘要（非逐字引文）：民法第356條通常檢查與發現瑕疵後通知義務。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=357&pcode=B0000001",
+          "claim": "第357條規定出賣人故意不告知瑕疵時，第356條檢查及通知規定不適用；第365條另明文處理解除或減價權利的6個月期間例外。",
+          "supporting_passage": "編者摘要（非逐字引文）：第357條規定出賣人故意不告知瑕疵時，第356條檢查及通知規定不適用；第365條另明文處理解除或減價權利的6個月期間例外。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=365&pcode=B0000001",
+          "claim": "民法第365條解除、減價權利期間及故意不告知時的六個月例外。",
+          "supporting_passage": "編者摘要（非逐字引文）：民法第365條解除、減價權利期間及故意不告知時的六個月例外。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取官方頁面、現行條文或附件，核對本篇所述主張；編者摘要非逐字引文。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "115年度地方選案預售屋契約不符比例",
+          "period": "2026年3月至5月",
+          "value": {
+            "projects_with_some_noncompliance": 9,
+            "checked_projects": 50,
+            "sample_fraction": 0.18
+          },
+          "unit": "建案",
+          "geographic_scope": "消保處115年度預售屋契約地方選案",
+          "population": "依地方政府選出的50個預售屋建案，不是隨機全國建案",
+          "numerator_definition": "50個地方選案中9案有部分契約條款不符。",
+          "denominator": 50,
+          "denominator_definition": "50個地方選案；未代表全台預售屋總案數。",
+          "data_type": "混合抽樣設計中的地方行政選案，不是全市場隨機調查",
+          "source_ids": [
+            "ch15_presale_audit_115_20261029"
+          ],
+          "published_at": "2026-09-23",
+          "accessed_at": "2026-10-29",
+          "limitations": [
+            "地方選案不是隨機全市場樣本。",
+            "條款不符不等於已交屋房屋的瑕疵率。",
+            "18%只描述這50案，不能當全台比例或個人機率。"
+          ]
+        },
+        {
+          "name": "地方選案契約檢核項次不符數",
+          "period": "2026年3月至5月",
+          "value": {
+            "noncompliant_items": 13,
+            "checked_items": 750,
+            "official_fraction": 0.017
+          },
+          "unit": "契約檢核項次",
+          "geographic_scope": "消保處115年度預售屋契約地方選案",
+          "population": "50個地方選案共750個契約檢核項次",
+          "numerator_definition": "官方列750個項次中13項不符，比率1.7%。",
+          "denominator": 750,
+          "denominator_definition": "地方選案的契約檢核項次，不是建案、買方或住宅戶數。",
+          "data_type": "行政契約條款抽查",
+          "source_ids": [
+            "ch15_presale_audit_115_20261029"
+          ],
+          "published_at": "2026-09-23",
+          "accessed_at": "2026-10-29",
+          "limitations": [
+            "條款項次不是案件數，也不是屋況瑕疵率。",
+            "選案方式不具全市場代表性。",
+            "官方比率不外推個人風險。"
+          ]
+        },
+        {
+          "name": "過往違規業者加強查核",
+          "period": "2026年3月至5月",
+          "value": {
+            "projects_with_some_noncompliance": 2,
+            "checked_projects": 9,
+            "items_noncompliant": 3,
+            "items_checked": 135,
+            "official_item_fraction": 0.022
+          },
+          "unit": "建案及契約檢核項次",
+          "geographic_scope": "消保處過往違規業者加強查核組",
+          "population": "9個過往違規業者建案及135個檢核項次",
+          "numerator_definition": "9案中2案有條款不符；135個項次中3項不符，官方列2.2%。",
+          "denominator": 9,
+          "denominator_definition": "建案層級分母9；條款層級另為135，兩個比例分開讀。",
+          "data_type": "對過往違規業者的定向加強抽查",
+          "source_ids": [
+            "ch15_presale_audit_115_20261029"
+          ],
+          "published_at": "2026-09-23",
+          "accessed_at": "2026-10-29",
+          "limitations": [
+            "定向樣本不能與其他組合併估全市場比例。",
+            "建案不符與條款不符是不同單位。",
+            "2.2%是條款檢核比率，不是買方個人機率。"
+          ]
+        },
+        {
+          "name": "銷售排行前十名契約查核",
+          "period": "2026年3月至5月",
+          "value": {
+            "projects_compliant": 10,
+            "projects_checked": 10,
+            "checked_items": 150,
+            "noncompliant_items": 0
+          },
+          "unit": "建案及契約檢核項次",
+          "geographic_scope": "消保處115年度銷售排行前十名選案",
+          "population": "銷售排行前十名10案及150個契約檢核項次",
+          "numerator_definition": "10案均符合，150個契約檢核項次未列不符。",
+          "denominator": 10,
+          "denominator_definition": "建案分母10；檢核項次分母另為150。",
+          "data_type": "依銷售排行選取的行政抽查",
+          "source_ids": [
+            "ch15_presale_audit_115_20261029"
+          ],
+          "published_at": "2026-09-23",
+          "accessed_at": "2026-10-29",
+          "limitations": [
+            "銷售排行樣本不是隨機市場樣本。",
+            "10案符合不代表其他建案或年度都符合。",
+            "條款查核不代表施工品質或實際屋況。"
+          ]
+        }
+      ],
+      "limits": [
+        "預售屋契約抽查是非隨機選樣，不能當全台違規比例或住宅瑕疵率；5%保留款、15年與1年保固及民法期間適用條件不同，個案需按交易日期和證據確認。",
+        "本次為AI輔助逐項來源核對，未取得獨立法律、消保、建築或地政專業審閱；不判斷個案責任與求償結果。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立法律、消保、建築或地政專業審閱；不判斷個案責任與求償結果。",
+      "taiwan_context_assessment": {
+        "context": "預售屋交屋及定型化契約以台灣現行公告為準；中古屋、預售屋與一般買賣的保固和瑕疵權利不可互套。民法規定與抽查結果分開說明。",
+        "frequency": "2026年行政抽查為混合選樣；地方選案、過往違規業者及銷售排行樣本分開保留，不外推市場比例。",
+        "legal_status": "民法第354、356、357、365條分別涉及瑕疵擔保、檢查通知、故意未告知例外及解除／減價權期間；定型化契約依公告適用日期，本文不判斷個案責任。",
+        "independent_of_frequency": true
+      },
+      "unresolved": [
+        "未取得獨立相關專業審閱；法規、給付、境外求助與個案權利仍應由主管機關或專業人員確認。"
+      ]
     }
   ],
   "reader_copy_cleanups": [
