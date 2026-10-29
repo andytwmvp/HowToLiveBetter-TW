@@ -104,6 +104,16 @@ def run(render: bool,browser_test: bool) -> None:
             result['checks'].append('封面1200×630已由模板重新產生，文字未超出或重疊；需同步重製紀錄。')
         audit_assets(rendered=render)
         if browser_test:
+            runtime=json.loads(read('localization/tw-edition/runtime.json'))
+            item=next(row for row in runtime['items'] if 'criminal' in row['source_ids'])
+            title=runtime['reader_source_titles']['criminal']
+            for path in ('index.html','dist/HowToLiveBetter-TW.html'):
+                page.goto(url+path,wait_until='domcontentloaded')
+                page.wait_for_function('window.TWRuntime?.ready === true',timeout=30000)
+                card=page.locator(f'[data-id="{item["id"]}"]')
+                assert card.locator('a').filter(has_text=title).count()==1,'臺灣閱讀頁未顯示讀者用來源標題：'+path
+                assert card.locator('a').filter(has_text='本批核對').count()==0,'臺灣閱讀頁仍顯示內部批次文字：'+path
+            result['checks'].append('網站與離線HTML以讀者用標題顯示刑法來源連結。')
             from check_navigation import check_navigation
             result['checks'].extend(check_navigation(page,context,url,review))
             from check_prevention_rechecks_browser import check_prevention_rechecks_browser
