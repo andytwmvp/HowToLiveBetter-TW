@@ -30,7 +30,7 @@ def check_ch23_browser(page,context,url,review):
     card=page.locator('#TW-23-017');assert card.count()==1
     card.locator('.seg button.yes').click()
     assert card.locator('.seg button.yes').get_attribute('aria-pressed')=='true'
-    assert '單字' in card.inner_text() and '區塊' in card.inner_text()
+    assert '單字' in card.inner_text() and '分開練習' in card.inner_text()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth+1')
     card.scroll_into_view_if_needed();page.screenshot(path=str(review/'chapter23-interleave-mobile.png'),animations='disabled')
     page.goto((ROOT/'dist/HowToLiveBetter-TW.html').as_uri(),wait_until='domcontentloaded')

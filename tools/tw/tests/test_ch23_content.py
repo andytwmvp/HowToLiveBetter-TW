@@ -96,7 +96,7 @@ class SkillsChapterTests(unittest.TestCase):
         self.assertIn('純假設',items['TW-23-006']);self.assertIn('零或負數',items['TW-23-006'])
     def test_research_boundaries_and_effect_measures_are_explicit(self):
         items={e['id']:e['body'] for e in validate_runtime()['items']}
-        requirements={2:['相對風險','百分點','因果'],7:['9%','不是銀行利率'],10:['暴露','不是職缺消失數、裁員率'],14:['標準化效果量','百分比'],17:['單字','區塊'],18:['無障礙','2009-12-01'],19:['遷移','不能'],25:['研究間差異很大','不是醫師診斷']}
+        requirements={2:['相對風險','百分點','因果'],7:['9%','不是銀行利率'],10:['暴露','不是職缺消失數、裁員率'],14:['標準化效果量','不是分數增加 49.9%'],17:['單字','分開練習'],18:['無障礙','2009-12-01'],19:['遷移','不能'],25:['研究間差異很大','不是醫師診斷']}
         for n,phrases in requirements.items():
             for phrase in phrases:self.assertIn(phrase,items[f'TW-23-{n:03}'])
     def test_legal_paths_and_not_yet_effective_degree_rules_are_separate(self):

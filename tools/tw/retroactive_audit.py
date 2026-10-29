@@ -1144,6 +1144,7 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
 
 
 _HISTORY_EDGE_CACHE: dict[tuple[str, str], list[tuple[dict, dict, dict]]] = {}
+_HISTORY_COPY_EDGE_CACHE: dict[tuple[str, str], list[tuple[dict, dict, dict]]] = {}
 _GIT_OBJECT_CACHE: dict[tuple[str, str, str], bytes] = {}
 _GIT_JSON_CACHE: dict[tuple[str, str, str], dict] = {}
 _HISTORY_REVISIONS_CACHE: dict[tuple[str, str], list[str]] = {}
@@ -1300,6 +1301,132 @@ def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, di
     return edges
 
 
+def _historical_reader_copy_edge_is_valid(
+    root: Path, revision: str, record: dict, old: dict, new: dict
+) -> bool:
+    """Validate an immutable copy-edit snapshot and its paired review metadata."""
+    if record.get("transform") == "reader_copy_cleanup_v1":
+        if not documented_reader_cleanup(old, new, record):
+            return False
+    elif record.get("transform") == "reader_copy_cleanup_v2":
+        if not documented_reader_item_cleanup(old, new, record):
+            return False
+    else:
+        return False
+    try:
+        key = record["id"]
+        prior_revision = record["prior_revision"]
+        review_path = f"localization/reviews/{key}.json"
+        previous_review_raw = _git_blob(root, prior_revision, review_path)
+        previous_review = json.loads(previous_review_raw)
+        previous_runtime = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+        previous_item = next(item for item in previous_runtime["items"] if item["id"] == key)
+        if previous_item != old:
+            return False
+        before_sha = hashlib.sha256(old["body"].encode("utf-8")).hexdigest()
+        after_sha = hashlib.sha256(new["body"].encode("utf-8")).hexdigest()
+        previous_markdown = (_git_blob(root, prior_revision, old["target_path"])
+                             if old.get("target_path") else None)
+        if (previous_markdown is not None and previous_markdown.decode("utf-8") != old["body"]):
+            return False
+        if (hashlib.sha256(previous_review_raw).hexdigest() != record.get("prior_review_sha256")
+                or previous_review.get("target_path") != old.get("target_path")
+                or previous_review.get("target_sha256") != before_sha):
+            return False
+
+        review = _git_json(root, revision, review_path)
+        expected_review = dict(previous_review)
+        expected_review["target_sha256"] = after_sha
+        expected_review["source_reviewed_sha256"] = before_sha
+        expected_review["reader_copy_cleanup"] = {
+            "transform": record["transform"],
+            "before_sha256": before_sha,
+            "after_sha256": after_sha,
+        }
+        if record["transform"] == "reader_copy_cleanup_v2":
+            expected_review["reader_copy_cleanup"].update({
+                "before_reader_sha256": record.get("before_reader_sha256"),
+                "after_reader_sha256": record.get("after_reader_sha256"),
+            })
+        if review != expected_review:
+            return False
+        runtime = _git_json(root, revision, "localization/tw-edition/runtime.json")
+        runtime_items = {item["id"]: item for item in runtime["items"]}
+        if runtime_items.get(key) != new:
+            return False
+        if new.get("target_path"):
+            markdown = _git_blob(root, revision, new["target_path"])
+            if markdown.decode("utf-8") != new["body"]:
+                return False
+        return True
+    except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError, UnicodeDecodeError):
+        return False
+
+
+def _historical_reader_copy_edges(root: Path, key: str) -> list[tuple[dict, dict, dict]]:
+    """Return committed reader-copy edges so older snapshots can reach a later re-review."""
+    head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+    cache_key = (str(root.resolve()), key + ":" + head)
+    if cache_key in _HISTORY_COPY_EDGE_CACHE:
+        return _HISTORY_COPY_EDGE_CACHE[cache_key]
+    register_path = "localization/retroactive-review-register-20261019.json"
+    records = [record for record in reader_copy_cleanup_rows(root) if record.get("id") == key]
+    revisions_key = (str(root.resolve()), head)
+    if revisions_key not in _HISTORY_REVISIONS_CACHE:
+        _HISTORY_REVISIONS_CACHE[revisions_key] = subprocess.check_output(
+            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--", register_path],
+            cwd=root, text=True, stderr=subprocess.DEVNULL,
+        ).splitlines()
+    order = {revision: index for index, revision in enumerate(reversed(_HISTORY_REVISIONS_CACHE[revisions_key]))}
+    ranked_edges: list[tuple[int, tuple[dict, dict, dict]]] = []
+    seen: set[tuple[str, str]] = set()
+    runtime_cache: dict[str, dict] = {}
+    for record in records:
+        after_sha = record.get("after_sha256", "")
+        if not re.fullmatch(r"[0-9a-f]{64}", after_sha):
+            continue
+        candidates = subprocess.check_output(
+            ["git", "log", "--first-parent", "--full-history", "--format=%H", "-S", after_sha,
+             "--", register_path], cwd=root, text=True, stderr=subprocess.DEVNULL,
+        ).splitlines()
+        for revision in reversed(candidates):
+            try:
+                commit_register = _git_json(root, revision, register_path)
+                committed = next((item for item in commit_register.get("reader_copy_cleanups", [])
+                                  if item == record), None)
+                if committed is None:
+                    continue
+                pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
+                if pair in seen:
+                    continue
+                if revision not in runtime_cache:
+                    runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
+                prior_revision = committed.get("prior_revision", "")
+                if prior_revision not in runtime_cache:
+                    runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+                old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
+                new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
+                old, new = old_items.get(key), new_items.get(key)
+                if (old is None or new is None
+                        or not _historical_reader_copy_edge_is_valid(root, revision, committed, old, new)):
+                    continue
+                seen.add(pair)
+                ranked_edges.append((order.get(revision, -1), (old, new, committed)))
+            except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+                continue
+    edges = [edge for _, edge in sorted(ranked_edges, key=lambda entry: entry[0])]
+    _HISTORY_COPY_EDGE_CACHE[cache_key] = edges
+    return edges
+
+
+def _documented_history_edge(old: dict, new: dict, record: dict) -> bool:
+    if record.get("transform") in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2"}:
+        return (documented_reader_cleanup(old, new, record)
+                if record.get("transform") == "reader_copy_cleanup_v1"
+                else documented_reader_item_cleanup(old, new, record))
+    return documented_revision(old, new, record)
+
+
 def _registered_history_connects(root: Path, old: dict, new: dict, record: dict) -> bool:
     """Allow older regression fixtures to traverse reviewed versions archived in Git."""
     key = old.get("id")
@@ -1314,20 +1441,32 @@ def _registered_history_connects(root: Path, old: dict, new: dict, record: dict)
     if (_historical_edge_is_valid(root, "WORKTREE", record, latest_old, new)
             and not any(edge[0] == latest_old and edge[1] == new and edge[2] == record for edge in edges)):
         edges.append(current_edge)
-    current = old
-    seen_states = {hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()}
-    while current != new:
-        candidates = [edge for edge in edges if edge[0] == current]
-        next_edge = next((edge for edge in candidates
-                          if documented_revision(current, edge[1], edge[2])), None)
-        if next_edge is None:
-            return False
-        current = next_edge[1]
-        current_state = hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
-        if current_state in seen_states:
-            return False
-        seen_states.add(current_state)
-    return True
+
+    def connects(chain_edges: list[tuple[dict, dict, dict]]) -> bool:
+        current = old
+        seen_states = {
+            hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+        }
+        while current != new:
+            candidates = [edge for edge in chain_edges if edge[0] == current]
+            next_edge = next((edge for edge in candidates
+                              if _documented_history_edge(current, edge[1], edge[2])), None)
+            if next_edge is None:
+                return False
+            current = next_edge[1]
+            current_state = hashlib.sha256(
+                json.dumps(current, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+            if current_state in seen_states:
+                return False
+            seen_states.add(current_state)
+        return True
+
+    if connects(edges):
+        return True
+    # Most historical snapshots connect through substantive review edges alone.
+    # Load the more expensive reader-copy snapshots only for chains that need them.
+    copy_edges = _historical_reader_copy_edges(root, key)
+    return connects(copy_edges + edges)
 
 
 def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:

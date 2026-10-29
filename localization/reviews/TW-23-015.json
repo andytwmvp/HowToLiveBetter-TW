@@ -1,29 +1,32 @@
 {
   "id": "TW-23-015",
-  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；未取得獨立教育、特殊教育或職業訓練專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-16",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-10-29",
+  "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-015.md",
-  "target_sha256": "50ad57cb46fb3e6d96f0edf2d762c3c2513c0afaf1bec7a2c2551fedd5463795",
+  "target_sha256": "2fb8d85b131041b8141ecb8818f4ff89133f1f9bddd5ccef989c2255d1958acd",
   "source_checks": [
     {
       "url": "https://digitalcommons.usf.edu/psy_facpub/1771/",
-      "claim": "分散練習的317項實驗綜整顯示練習間距與保留間隔共同影響記憶，不支持單一固定日程適用所有情境。",
-      "supporting_passage": "編者摘要（非逐字引文）：分散練習的317項實驗綜整顯示練習間距與保留間隔共同影響記憶，不支持單一固定日程適用所有情境。",
-      "accessed_at": "2026-10-16",
-      "retrieval_method": "已取得作者所屬大學典藏的文獻摘要及書目，出版月份為2006-05；未取得出版社全文，published_at不虛填精確日。"
+      "claim": "184篇文章、317項實驗及839次評量的口語回憶研究顯示，練習間距與保留間隔共同影響回憶。",
+      "supporting_passage": "編者摘要（非逐字引文）：典藏摘要指出最佳練習間距會隨保留時間改變；研究任務為口語回憶。",
+      "accessed_at": "2026-10-29",
+      "retrieval_method": "2026-10-29直接讀取南佛羅里達大學作者典藏頁摘要與書目，核對研究及評量數和主要結論；未取得出版社全文，出版月份不補成虛構日期。"
     }
   ],
-  "localization_changes": "保留分散練習，將固定排程改成可調整的編者範例並揭露記憶任務外推限制。",
-  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
-  "source_reviewed_sha256": "e05b1973b33a7ee9ce45ee74dd68fb45a1b75f32da5045197a74f22bb7275494",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "e05b1973b33a7ee9ce45ee74dd68fb45a1b75f32da5045197a74f22bb7275494",
-    "after_sha256": "50ad57cb46fb3e6d96f0edf2d762c3c2513c0afaf1bec7a2c2551fedd5463795",
-    "before_reader_sha256": "56598339e52ce0fd667f14451217eb456cbca6e9aec8087b72c3bd662dc60dd3",
-    "after_reader_sha256": "06ac264f56fdd37a71ca747ffd6417e6fdb88d5b2615711c58c5023ae183bc57"
-  }
+  "localization_changes": "補明184篇文章、317項實驗、839次評量及口語回憶任務範圍；刪除暗示可套用所有職能的說法；將抽象的保留目標改成讀者能理解的記憶期限與練習結果。",
+  "legal_scope": "本篇不主張法律資格或政府給付，沒有適用的法定固定複習日程。",
+  "review_method": "按source_checks逐一核對可見的PubMed、作者典藏、出版頁或教育部現行法規；每筆標明未讀全文或適用範圍。研究效果量不當成臺灣事件發生率或個人保證；法規只限列明學制，技能檢定頁只作當年度查詢入口。",
+  "source_reviewed_sha256": "2fb8d85b131041b8141ecb8818f4ff89133f1f9bddd5ccef989c2255d1958acd",
+  "limits": [
+    "研究主要納入口語回憶任務，不能替所有年齡、科目或職能訂出固定複習間隔。",
+    "本次為AI輔助逐項來源核對，未取得獨立教育或職能訓練專業審閱。"
+  ],
+  "frequency_assessment": "學習方法不是自然事件，發生率不適用。引用研究是口語回憶任務，未提供臺灣各年齡、學科或職能的全國成效分母，不能由839次評量推算個人效果。",
+  "statistics_assessed": [
+    "ch23_spacing_recheck_20261029"
+  ],
+  "taiwan_context": "安排分散練習時可配合臺灣常見的學校課表、輪班和家庭照顧時間，以紙本月曆或手機行事曆記錄；不需要購買特定平台。",
+  "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育或職能訓練專業審閱。"
 }

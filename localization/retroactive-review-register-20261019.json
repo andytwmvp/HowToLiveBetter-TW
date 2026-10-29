@@ -25938,6 +25938,389 @@
         "本次為AI輔助核對法條與系統性回顧全文，未取得獨立精神醫療、教育或法律專業審閱；不是心理診斷或個人升學適合度判定。"
       ],
       "reviewer_limit": "本次為AI輔助核對法條與系統性回顧全文，未取得獨立精神醫療、教育或法律專業審閱；不是心理診斷或個人升學適合度判定。"
+    },
+    {
+      "id": "TW-23-014",
+      "before_sha256": "dc21732abd2f4bdc57a631e3690ca1a7f31cece733e9e8e68e93a2a8bbb7218e",
+      "after_sha256": "fe1eb65d9411a7580b7919c1ad753c0d64dab7346a499db4b29f71790997d3ad",
+      "prior_revision": "80b1df944cf6807d91bbf32a0c45a56d149c2136",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a378e26f3182477c8399ea1bb3927f2f6b4461d9978266d8dca4de20f6ec423d",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣學生準備校內考試、證照或職場技能時，可用低壓自我測驗加正確回饋；國小、國中另有現行多元評量規定，不能外推至其他學制。",
+      "frequency_assessment": "學習方法不是自然事件，發生率不適用。未找到可代表臺灣各學制和科目的自我測驗使用率或個人效果分母；222項研究與48,478名學生是研究樣本，不是臺灣全國統計或個人機率。",
+      "legal_status_assessment": "引用《國民小學及國民中學學生學習評量辦法》第4、5條。法規現行頁面最近修正日期為2024-04-24，本次查閱現行條文；適用範圍只限國民小學及國民中學，不判定個別校內評量是否合法。",
+      "changes": "更新統合分析的樣本、g值與效果量限制；加入臺灣國民中小學多元評量規定及適用範圍；將閉卷提取、即時核對等術語改成較自然的臺灣讀者用語。",
+      "source_status": "本輪現行來源均於2026-10-29按記載方法讀取；未以未讀附件或首頁替代具體主張。",
+      "source_ids": [
+        "ch23_retrieval_recheck_20261029",
+        "ch23_moe_assessment_recheck_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_retrieval"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_retrieval",
+          "replacement_ids": [
+            "ch23_retrieval_recheck_20261029",
+            "ch23_moe_assessment_recheck_20261029"
+          ],
+          "reason": "本篇本輪改以2026-10-29實際讀取並記錄方法的來源版本支持更新主張；舊來源物件保留在runtime及Git歷史，不覆寫其他條目的歷史查核。",
+          "prior_source_sha256": "334e5b540226a5ef6fe8613d664c745521cdfe4f836485f0d7a97fbe469e4a6e"
+        }
+      ],
+      "previous_review_claims": [
+        "222項研究、48,478位學生的課堂測驗綜整支持平均學習效益，並受回饋與材料等條件調節。"
+      ],
+      "review_path": "localization/reviews/TW-23-014.json",
+      "source_checks": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33683913/",
+          "claim": "222項獨立課堂研究、48,478名學生的測驗統合分析平均g=0.499；效果受回饋、格式及教材等因素調節。",
+          "supporting_passage": "編者摘要（非逐字引文）：研究報告中等平均標準化效果，並列出回饋、題型、教材、次數及時點等調節因素。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取PubMed摘要與書目資料，核對研究數、學生數、標準化效果量和調節因素；未宣稱已讀期刊全文或補充材料。"
+        },
+        {
+          "url": "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL008949&media=print",
+          "claim": "國民小學及國民中學評量須兼顧平時與定期並採適當多元方式；相關規定不適用其他學制。",
+          "supporting_passage": "編者摘要（非逐字引文）：第4、5條規定紙筆使用頻率最小化及按目標採紙筆、實作、檔案等方式。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取教育部主管法規系統現行全文，核對最近修正日113-04-24及第4、5條；引用範圍限國民中小學學生學習評量。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_retrieval_recheck_20261029"
+      ],
+      "limits": [
+        "研究平均標準化效果不是分數百分比或個人預測；不保證臺灣考試或個人學習成果。",
+        "本次為AI輔助逐項來源核對，未取得獨立教育專業審閱；國小國中法規說明不取代校方對個別評量的正式答覆。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育專業審閱；國小國中法規說明不取代校方對個別評量的正式答覆。"
+    },
+    {
+      "id": "TW-23-015",
+      "before_sha256": "50ad57cb46fb3e6d96f0edf2d762c3c2513c0afaf1bec7a2c2551fedd5463795",
+      "after_sha256": "2fb8d85b131041b8141ecb8818f4ff89133f1f9bddd5ccef989c2255d1958acd",
+      "prior_revision": "80b1df944cf6807d91bbf32a0c45a56d149c2136",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "b64ebc4a0110f1a4a718c0e6fef799bd3c91d24b67edc4c914581c0dbe77c53f",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "安排分散練習時可配合臺灣常見的學校課表、輪班和家庭照顧時間，以紙本月曆或手機行事曆記錄；不需要購買特定平台。",
+      "frequency_assessment": "學習方法不是自然事件，發生率不適用。引用研究是口語回憶任務，未提供臺灣各年齡、學科或職能的全國成效分母，不能由839次評量推算個人效果。",
+      "legal_status_assessment": "本篇不主張法律資格或政府給付，沒有適用的法定固定複習日程。",
+      "changes": "補明184篇文章、317項實驗、839次評量及口語回憶任務範圍；刪除暗示可套用所有職能的說法；將抽象的保留目標改成讀者能理解的記憶期限與練習結果。",
+      "source_status": "本輪現行來源均於2026-10-29按記載方法讀取；未以未讀附件或首頁替代具體主張。",
+      "source_ids": [
+        "ch23_spacing_recheck_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_spacing"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_spacing",
+          "replacement_ids": [
+            "ch23_spacing_recheck_20261029"
+          ],
+          "reason": "本篇本輪改以2026-10-29實際讀取並記錄方法的來源版本支持更新主張；舊來源物件保留在runtime及Git歷史，不覆寫其他條目的歷史查核。",
+          "prior_source_sha256": "ecd99190be573b51a272dce63487a5d4d9ec883b9ba2f223daa30d02f8517fe2"
+        }
+      ],
+      "previous_review_claims": [
+        "分散練習的317項實驗綜整顯示練習間隔和保留間隔共同影響回憶，不支持人人適用的固定排程。"
+      ],
+      "review_path": "localization/reviews/TW-23-015.json",
+      "source_checks": [
+        {
+          "url": "https://digitalcommons.usf.edu/psy_facpub/1771/",
+          "claim": "184篇文章、317項實驗及839次評量的口語回憶研究顯示，練習間距與保留間隔共同影響回憶。",
+          "supporting_passage": "編者摘要（非逐字引文）：典藏摘要指出最佳練習間距會隨保留時間改變；研究任務為口語回憶。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取南佛羅里達大學作者典藏頁摘要與書目，核對研究及評量數和主要結論；未取得出版社全文，出版月份不補成虛構日期。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_spacing_recheck_20261029"
+      ],
+      "limits": [
+        "研究主要納入口語回憶任務，不能替所有年齡、科目或職能訂出固定複習間隔。",
+        "本次為AI輔助逐項來源核對，未取得獨立教育或職能訓練專業審閱。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育或職能訓練專業審閱。"
+    },
+    {
+      "id": "TW-23-016",
+      "before_sha256": "a742cfa95b54e70964f0ece8a09396448b3fc5ed158d403fac2500efe30cb6df",
+      "after_sha256": "04e412e3426984d6f21c1febb2d8e10b34b421df390923be952c89d516f96776",
+      "prior_revision": "80b1df944cf6807d91bbf32a0c45a56d149c2136",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "f792745dc9aa4da7a8fe647705be9cc621632e3ed4f09c30ab65fb5c25933695",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "學校報告、證照準備和工作筆記都可用畫線或摘要整理材料，再用作答、說明或實際操作確認是否能提取與應用；安全程序需保留原文和例外。",
+      "frequency_assessment": "學習技巧不是自然事件，發生率不適用。研究回顧比較技巧的證據通用性，沒有提供臺灣各行業筆記方式使用率或個人效果分母，不據此估算。",
+      "legal_status_assessment": "本篇不主張法律資格或制度權利；涉及安全、法規和設備時，正文要求回查現行原始指引。",
+      "changes": "把對畫線、重讀和摘要的概括限制寫成依任務判斷，不暗示完全無用；新增臺灣校園、證照和工作文件的讀者例子，並用實際作答與操作驗收理解和應用。",
+      "source_status": "本輪現行來源均於2026-10-29按記載方法讀取；未以未讀附件或首頁替代具體主張。",
+      "source_ids": [
+        "ch23_techniques_recheck_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_techniques"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_techniques",
+          "replacement_ids": [
+            "ch23_techniques_recheck_20261029"
+          ],
+          "reason": "本篇本輪改以2026-10-29實際讀取並記錄方法的來源版本支持更新主張；舊來源物件保留在runtime及Git歷史，不覆寫其他條目的歷史查核。",
+          "prior_source_sha256": "094d13a3ff24249c625e038e6d77a5c55513ae276162ffe5ac2da486ef92753a"
+        }
+      ],
+      "previous_review_claims": [
+        "十種學習技巧回顧支持練習測驗與分散練習的較廣通用性，並指出畫線、重讀、摘要用途受限制。"
+      ],
+      "review_path": "localization/reviews/TW-23-016.json",
+      "source_checks": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1177/1529100612453266",
+          "claim": "十種技巧回顧將練習測驗與分散練習評為較廣泛適用，畫線、重讀、摘要需按任務看待，並非對所有人完全無效。",
+          "supporting_passage": "編者摘要（非逐字引文）：技巧評級依成效是否穩定、能否跨學習者和材料推廣；未授權把有限通用性改寫成完全無效。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29讀取SAGE文章頁可見摘要、技巧分類及出版資料；無法確認付費正文未公開部分，不以未讀附件支持額外主張。"
+        }
+      ],
+      "statistics_assessed": [],
+      "limits": [
+        "研究回顧比較技巧的整體適用證據，不是個人診斷；筆記方法仍要按任務和正確回饋判斷。",
+        "本次為AI輔助核對出版社可見文章內容，未取得獨立教育專業審閱；未公開的付費正文未納入查核。"
+      ],
+      "reviewer_limit": "本次為AI輔助核對出版社可見文章內容，未取得獨立教育專業審閱；未公開的付費正文未納入查核。"
+    },
+    {
+      "id": "TW-23-017",
+      "before_sha256": "f72421cde606f4fc1f6ac6f988578e1bc6ea65e512016afe017a2de5d454f946",
+      "after_sha256": "422bb543ea3a4a2b5905f6c3d428ae5912e3bb01225449963e874c569c40f25a",
+      "prior_revision": "80b1df944cf6807d91bbf32a0c45a56d149c2136",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a341d112b0d73091bd807789eb8dba9f6053bfc5f970905eda07b30b56a6e2dc",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "準備學校考試或技術士技能檢定時，先依當年度考科與簡章確認範圍，再從已學會的基本題型中挑容易混淆的題目穿插練習；危險作業不在正式現場任意切換。",
+      "frequency_assessment": "學習方法不是自然事件，發生率不適用。59項研究中的任務效果不是臺灣考生分數或個人成功率；未找到臺灣各科全國成效母數，不作外推估算。",
+      "legal_status_assessment": "本篇不判斷個人檢定資格或職業授權；實際職類、級別、梯次和安全要求依主管機關當年度公告及工作規範確認。",
+      "changes": "明確定義交錯練習為穿插不同題型，列出59項研究、238個效果量、158個樣本、總體與材料別效果，補正區塊練習對單字較佳的反例；加入臺灣考試及技能檢定情境並保留安全界線。",
+      "source_status": "本輪現行來源均於2026-10-29按記載方法讀取；未以未讀附件或首頁替代具體主張。",
+      "source_ids": [
+        "ch23_interleave_recheck_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_interleave"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_interleave",
+          "replacement_ids": [
+            "ch23_interleave_recheck_20261029"
+          ],
+          "reason": "本篇本輪改以2026-10-29實際讀取並記錄方法的來源版本支持更新主張；舊來源物件保留在runtime及Git歷史，不覆寫其他條目的歷史查核。",
+          "prior_source_sha256": "6549615284f5227202cc8d27e64a34af609794a8530df15cdd19b4b0a09d659f"
+        }
+      ],
+      "previous_review_claims": [
+        "交錯練習的統合分析發現效果依材料而變，文字材料沒有一致優勢，單字可由區塊練習較佳。"
+      ],
+      "review_path": "localization/reviews/TW-23-017.json",
+      "source_checks": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31556629/",
+          "claim": "59項研究、238個效果量及158個樣本的分析發現整體g=0.42，效果依材料而變；單字材料有利區塊練習。",
+          "supporting_passage": "編者摘要（非逐字引文）：研究報告繪畫、數學、說明文、味覺和單字材料結果不同，單字交錯效果g=-0.39。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取PubMed文獻摘要與書目，核對樣本、效果量、材料差異及線上刊登日期；未宣稱已讀付費全文。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_interleave_recheck_20261029"
+      ],
+      "limits": [
+        "效果受材料與任務影響；統合分析平均值不是臺灣各考試的個人分數預測。",
+        "本次為AI輔助逐項來源核對，未取得獨立教育或技術檢定專業審閱。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育或技術檢定專業審閱。"
+    },
+    {
+      "id": "TW-23-018",
+      "before_sha256": "4b2e16f687cbf89905c45aca338c6dcfab457faedc589e6f4395a915b2604ee9",
+      "after_sha256": "7366fd9373bcd837e5c4ec873d60242ee7a6c19a664158e47e588ff58005fa58",
+      "prior_revision": "80b1df944cf6807d91bbf32a0c45a56d149c2136",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "dcbb86460f833ab6f0f7cf66e92c542d935d4e7ec154e7f8abf641540c72cf8d",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣國民中小學採多元評量；高級中等以下學校特殊教育課程、教材、教法及評量依個別需求設計，載明於個別化教育計畫或個別輔導計畫。身心障礙學生特定領域或科目及格基準及相關調整，依辦法第9條條件辦理並載明於個別化教育計畫。學習風格標籤不能取代個別化支持，也不能作為拒絕無障礙需求的理由。",
+      "frequency_assessment": "學習風格不是事件發生率。2024、2025回顧報告的是研究中的學習結果效果量，並非臺灣學生風格分類盛行率或個人風險；未找到臺灣全國代表性風格配對成效母數，不推估比例。",
+      "legal_status_assessment": "查閱教育部主管法規系統現行《國民小學及國民中學學生學習評量辦法》（最近修正2024-04-24）及《高級中等以下學校特殊教育課程教材教法及評量實施辦法》（最近修正2023-12-07；第14條自發布日施行）。特殊教育辦法第2條適用高級中等以下學校，要求課程、教材、教法及評量載明於個別化教育計畫或個別輔導計畫；第9條對符合條件的身心障礙學生彈性調整及格基準，並要求相關課程、評量及定期評量合理調整服務載明於個別化教育計畫。僅說明上述學制和程序，不外推至大專院校，也不判斷個別學校調整是否合法。",
+      "changes": "更新2009年回顧後的證據，並列2024年有小幅平均效果但交叉結果有限、2025年直接配對統合結果接近零的差異；將結論收斂為不據標籤固定分類或保證成效。補入臺灣國民中小學評量規定，以及特殊教育課程依個別化教育計畫或個別輔導計畫實施、特定身心障礙學生評量調整應載明於個別化教育計畫的法規界線；明確區分偏好和無障礙支持，並改用臺灣自然口氣。",
+      "source_status": "本輪現行來源均於2026-10-29按記載方法讀取；未以未讀附件或首頁替代具體主張。",
+      "source_ids": [
+        "ch23_learning_styles_pashler_recheck_20261029",
+        "ch23_learning_styles_meta_2024_20261029",
+        "ch23_learning_styles_review_2025_20261029",
+        "ch23_moe_assessment_recheck_20261029",
+        "ch23_moe_specialed_recheck_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_styles"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_styles",
+          "replacement_ids": [
+            "ch23_learning_styles_pashler_recheck_20261029",
+            "ch23_learning_styles_meta_2024_20261029",
+            "ch23_learning_styles_review_2025_20261029",
+            "ch23_moe_assessment_recheck_20261029",
+            "ch23_moe_specialed_recheck_20261029"
+          ],
+          "reason": "本篇本輪改以2026-10-29實際讀取並記錄方法的來源版本支持更新主張；舊來源物件保留在runtime及Git歷史，不覆寫其他條目的歷史查核。",
+          "prior_source_sha256": "a0d48999b35ce5e98b23584719678a1bcdd971e268ae8c8e9ff355d777c2f17f"
+        }
+      ],
+      "previous_review_claims": [
+        "2009年研究指出偏好存在不等於依標籤配對教學可提升成效；不應以此否定視聽或個別支持需求。"
+      ],
+      "review_path": "localization/reviews/TW-23-018.json",
+      "source_checks": [
+        {
+          "url": "https://journals.sagepub.com/doi/10.1111/j.1539-6053.2009.01038.x",
+          "claim": "風格配對要有不同偏好群體分別受益的交叉結果；2009回顧認為當時證據不足以支持廣泛採用風格測驗。",
+          "supporting_passage": "編者摘要（非逐字引文）：回顧說明單有偏好分類或偏好與成績相關，不能證明依偏好配對教法有效。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29讀取SAGE出版頁可見摘要、相關方法說明和出版資訊；期刊卷期標為2008年第9卷第3期，線上刊登日為2009-12-01，不把兩個日期混為一談。"
+        },
+        {
+          "url": "https://doi.org/10.3389/fpsyg.2024.1428732",
+          "claim": "21項研究、101個效果量及1,712名參與者合併g=0.31；42個結果中約26%符合配對假說的交叉條件。",
+          "supporting_passage": "編者摘要（非逐字引文）：全文摘要報告平均效益及信賴區間，並指出只有少數結果呈現支持配對假說的交叉互動。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取Frontiers全文的摘要、方法、結果與討論，核對納入研究、參與者、效果量、交叉互動比例及作者對研究品質和廣泛採用的限制。"
+        },
+        {
+          "url": "https://doi.org/10.1007/s10648-025-10002-w",
+          "claim": "直接檢驗配對假說的四篇統合分析涵蓋143項研究、401個效果量，合併d=0.04、SE=0.21；相關性研究沒有直接測試配對效果。",
+          "supporting_passage": "編者摘要（非逐字引文）：作者把直接配對測試和偏好相關研究分開，前者合併效果接近零。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取Springer Nature開放全文摘要、資料來源說明及配對假說結果，核對17篇統合分析背景與四篇直接配對統合分析的研究數、效果量及不確定性。"
+        },
+        {
+          "url": "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL008949&media=print",
+          "claim": "國民中小學現行評量規定涵蓋平時與定期及多元評量方式，範圍限國小與國中。",
+          "supporting_passage": "編者摘要（非逐字引文）：現行第4、5條包括彈性調整、紙筆使用頻率最小化及多元評量。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取教育部主管法規系統現行全文，核對最近修正日113-04-24及第4、5條；引用範圍限國民中小學學生學習評量。"
+        },
+        {
+          "url": "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL009140&media=print",
+          "claim": "現行第2條要求高級中等以下學校特殊教育課程、教材、教法及評量載明於個別化教育計畫或個別輔導計畫；第9條規定符合條件的身心障礙學生得調整特定領域或科目的及格基準，並要求相關調整措施及定期評量合理調整服務載明於個別化教育計畫。",
+          "supporting_passage": "編者摘要（非逐字引文）：第2條列出個別化教育計畫或個別輔導計畫；第4、8條規範個別課程和評量調整；第9條限定身心障礙學生調整及格基準的條件，並指定相關措施記載於個別化教育計畫。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取教育部主管法規系統現行全文，核對最近修正日期112-12-07、第2、4、7、8、9及14條與施行條文。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_learning_styles_meta_2024_20261029",
+        "ch23_learning_styles_review_2025_20261029"
+      ],
+      "limits": [
+        "2024與2025回顧採用的研究範圍及分析方法不同，結果不完全一致；沒有臺灣代表性個人預測。",
+        "本次為AI輔助核對研究全文和教育部現行法規，未取得獨立教育、特殊教育或無障礙專業審閱；不是個別學生的學習或評量決定。"
+      ],
+      "reviewer_limit": "本次為AI輔助核對研究全文和教育部現行法規，未取得獨立教育、特殊教育或無障礙專業審閱；不是個別學生的學習或評量決定。"
+    },
+    {
+      "id": "TW-23-019",
+      "before_sha256": "d76feadfff03a7e51c5ea66d6ee780b9b94ad208b2589720d62703e5c845ca94",
+      "after_sha256": "40edc7fbc5809a2b54ca892ce5b7ef5ae0c44ae627cecbe1ff6cb58236816310",
+      "prior_revision": "80b1df944cf6807d91bbf32a0c45a56d149c2136",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "f7733f6924a77b355d3266327d5dc0043eaeddb7a77532aae6dafd79405259e3",
+      "prior_reviewed_at": "2026-10-16",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-29",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣技術士技能檢定需按當年度職類、級別和梯次查簡章；官方頁面說明並非所有職類和級別每梯次都辦。題庫熟練不能取代現場訓練、安全要求或必要資格。",
+      "frequency_assessment": "學習遷移不是自然事件發生率。研究樣本和標準化效果量不是臺灣考試或職場個人機率；未找到特定臺灣職務的全國練習轉移分母，不據此估算。",
+      "legal_status_assessment": "官方技能檢定頁面用於當年度公告和梯次查詢，不足以判定個人報檢資格或職場操作授權；須按職類及級別另看簡章和工作場所安全規範。",
+      "changes": "補上192個遷移效果量、122項實驗、67篇研究、10,382名參與者、比較組與信賴區間；說明不同任務遷移效果不一。把臺灣技能檢定的當年度職類、級別和梯次查詢加進操作情境，避免把題庫熟悉度寫成職場能力或授權。",
+      "source_status": "本輪現行來源均於2026-10-29按記載方法讀取；未以未讀附件或首頁替代具體主張。",
+      "source_ids": [
+        "ch23_transfer_recheck_20261029",
+        "ch23_skill_exam_20261029"
+      ],
+      "previous_source_ids": [
+        "ch23_transfer"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch23_transfer",
+          "replacement_ids": [
+            "ch23_transfer_recheck_20261029",
+            "ch23_skill_exam_20261029"
+          ],
+          "reason": "本篇本輪改以2026-10-29實際讀取並記錄方法的來源版本支持更新主張；舊來源物件保留在runtime及Git歷史，不覆寫其他條目的歷史查核。",
+          "prior_source_sha256": "a3002c4bb5018c829117c2149e5cd27f79481dbd90af3777ce951f48fdfabdbb"
+        }
+      ],
+      "previous_review_claims": [
+        "測驗練習可能產生遷移，但平均效果受任務、回想方式和初次表現等因素影響，不保證遠距遷移。"
+      ],
+      "review_path": "localization/reviews/TW-23-019.json",
+      "source_checks": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29733621/",
+          "claim": "192個遷移效果量、122項實驗、67篇文章與10,382名參與者的分析，相較未測驗重新接觸教材組，d=0.40（95% CI 0.31至0.50）。",
+          "supporting_passage": "編者摘要（非逐字引文）：PubMed摘要列出比較組、合併效果和強弱遷移任務及調節因素。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29透過PubMed可檢索摘要和書目核對研究數、樣本數、比較條件、效果量和調節因素；未宣稱已讀期刊全文。"
+        },
+        {
+          "url": "https://skill.tcte.edu.tw/notice.php",
+          "claim": "115年度技能檢定官方入口可查職類、級別及梯次，且明示並非所有職類和級別每梯次都辦理。",
+          "supporting_passage": "編者摘要（非逐字引文）：官方年度頁面提供簡章、職類梯次、報名費用和日程查詢，提示各梯次辦理範圍不同。",
+          "accessed_at": "2026-10-29",
+          "retrieval_method": "2026-10-29直接讀取115年度技能檢定官方網站最新公告列表和重要日程，核對該年度梯次提示；不把115年度日期外推為未來年度資訊。"
+        }
+      ],
+      "statistics_assessed": [
+        "ch23_transfer_recheck_20261029"
+      ],
+      "limits": [
+        "研究的任務與樣本不等於臺灣考試或職場；題庫練習不代表資格、現場能力或安全授權。",
+        "本次為AI輔助逐項來源核對，未取得獨立教育、技職訓練或職業安全專業審閱。"
+      ],
+      "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育、技職訓練或職業安全專業審閱。"
     }
   ],
   "reader_copy_cleanups": [
