@@ -1,6 +1,6 @@
 // 原作統計只同步原作來源閱讀器，不放在臺灣版 README。
-// --check 唯讀；--no-screenshot 同步文字但不重新產生圖片。
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdtempSync, rmSync, statSync } from 'node:fs';
+// --check 唯讀；--no-screenshot 跳過重新產生封面圖片。
+import { readFileSync, readdirSync, existsSync, mkdtempSync, rmSync, statSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
@@ -38,28 +38,16 @@ if(badWho.length){console.error('不認識的適用對象標籤：'+badWho.join(
 const tagged=ratio['極高']+ratio['高']+ratio['一般'];
 if(tagged!==entries)console.warn('成本標籤數與條目數不同');
 if(grade.A+grade.B+grade.C!==entries)console.warn('證據等級數與條目數不同');
+if(!indexText.includes('目前顯示 <b id="cnt">–</b> 則，共 <span id="tot">–</span> 則'))throw Error('source.html缺少動態項目數欄位');
 const ORDER=['極高','高','一般'];const pct={},rem={};
 for(const k of ORDER){const exact=ratio[k]*100/entries;pct[k]=Math.floor(exact);rem[k]=exact-pct[k];}
 const short=100-ORDER.reduce((s,k)=>s+pct[k],0);
 for(const k of [...ORDER].sort((a,b)=>rem[b]-rem[a]).slice(0,Math.max(short,0)))pct[k]++;
 console.log(`原作${entries}條／${sections}章；A ${grade.A}、B ${grade.B}、C ${grade.C}；爭議${dispute}、待核${todo}、來源連結${links}`);
-const EDITS=[
-  ['source.html','來源描述',/(\d+) 條建議/g,`${entries} 條建議`],
-  ['source.html','頁頭條目數',/原作 (\d+) 章、(\d+) 條建議/g,`原作 ${sections} 章、${entries} 條建議`],
-  ['source.html','頁腳文件數',/資料夾下的 (\d+) 個檔案/g,`資料夾下的 ${sections} 個檔案`],
-];
-const texts=new Map(),stale=[];
-for(const [file,label,pattern,repl] of EDITS){
-  const text=texts.get(file)??read(file);const found=[...text.matchAll(pattern)];
-  if(!found.length)throw Error(`${file}缺少${label}標記`);
-  const updated=text.replace(pattern,()=>repl);texts.set(file,updated);
-  if(updated!==text)stale.push(`${file} ${label}`);
-}
 if(CHECK){
-  if(!stale.length&&!badWho.length){console.log('PASS：原作來源閱讀器統計一致。');process.exit(0);}
-  console.error('統計過時或標籤錯誤：'+stale.join('、'));process.exit(1);
+  if(!badWho.length){console.log('PASS：原作來源閱讀器統計與動態項目數欄位一致。');process.exit(0);}
+  console.error('適用對象標籤錯誤：'+badWho.join('、'));process.exit(1);
 }
-for(const [file,text] of texts)if(text!==read(file))writeFileSync(join(ROOT,file),text);
 const runTool=name=>spawnSync(process.execPath,[join(ROOT,'tools',name)],{stdio:'inherit'}).status;
 if(runTool('check-refs.mjs')!==0)throw Error('交叉引用檢查失敗');
 if(runTool('check-plain.mjs')!==0)console.warn('文字易讀性檢查有待修正項目');

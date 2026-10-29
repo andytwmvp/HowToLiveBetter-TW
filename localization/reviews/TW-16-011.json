@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-20",
   "review_due_at": "2026-12-31",
   "target_path": "locales/zh-TW/book/ch16/TW-16-011.md",
-  "target_sha256": "0649ca94692c6633110373bb634f20db25ea4cfb39f29d6ae5d91ae1674e6ed8",
+  "target_sha256": "87be5152271e980afb98443832a3a804aa983e2f8168047a80a6dc21da5e2eac",
   "source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4809&pid=18092",
@@ -51,12 +51,12 @@
     "獨立醫師、藥師、肝臟專科、法律與照護專業審查尚待；AI來源核對不是臨床、核付、院所核准或契約個案判定。",
     "法規整編截止2026-10-08，未逐筆核之後公報、全部當期支付附件及各院所/機構個案；未做實際申請、諮詢或即時庫存查詢。"
   ],
-  "source_reviewed_sha256": "10bf345ba1065dd573760a77cbf7a1050b788253c0bf3b969fa106e469eb0287",
+  "source_reviewed_sha256": "0649ca94692c6633110373bb634f20db25ea4cfb39f29d6ae5d91ae1674e6ed8",
   "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "10bf345ba1065dd573760a77cbf7a1050b788253c0bf3b969fa106e469eb0287",
-    "after_sha256": "0649ca94692c6633110373bb634f20db25ea4cfb39f29d6ae5d91ae1674e6ed8",
-    "before_reader_sha256": "ec9febd15dd18f141fa6d075a7811234d11c86a921b1528a0aa3f64cfb728caa",
-    "after_reader_sha256": "813e27d359ef6b969f1d623e917358bd122f242e5de02045837cafe8fd673636"
+    "transform": "reader_copy_cleanup_v3",
+    "before_sha256": "0649ca94692c6633110373bb634f20db25ea4cfb39f29d6ae5d91ae1674e6ed8",
+    "after_sha256": "87be5152271e980afb98443832a3a804aa983e2f8168047a80a6dc21da5e2eac",
+    "before_reader_sha256": "813e27d359ef6b969f1d623e917358bd122f242e5de02045837cafe8fd673636",
+    "after_reader_sha256": "c51c4adb71c356a50a0283ff275534377422f8592e52e015035793010bbc43a8"
   }
 }

@@ -1,5 +1,6 @@
 """回溯稽核：既有正式正文、導航和原作 765 條均須動態覆蓋。"""
 import json
+import hashlib
 import re
 import sys
 import unittest
@@ -194,9 +195,23 @@ class RetroactiveAuditTests(unittest.TestCase):
             r"AI輔助(?:來源)?(?:核對|再審)|資料庫整編(?:截止|至)|"
             r"預定複查日|下次複查|非獨立(?:法律|醫療|專業)審閱"
         )
+        cleanup_rows = audit.reader_copy_cleanup_rows(audit.ROOT)
         for item in runtime["items"]:
-            cleaned, _ = audit.normalize_reader_item(item)
-            self.assertEqual(cleaned, item, f"{item['id']} 尚未整理成實際閱讀文字")
+            digest = hashlib.sha256(item["body"].encode("utf-8")).hexdigest()
+            active_cleanups = [row for row in cleanup_rows
+                               if row.get("id") == item["id"] and row.get("after_sha256") == digest]
+            if active_cleanups:
+                self.assertEqual(len(active_cleanups), 1, item["id"])
+                previous = audit.validate_reader_copy_cleanup_history(
+                    audit.ROOT, active_cleanups[0], item
+                )
+                self.assertTrue(
+                    audit.documented_reader_item_cleanup(previous, item, active_cleanups[0]),
+                    f"{item['id']} 尚未依記錄整理成實際閱讀文字",
+                )
+            else:
+                cleaned, _ = audit.normalize_reader_item(item)
+                self.assertEqual(cleaned, item, f"{item['id']} 尚未整理成實際閱讀文字")
             if item.get("target_path"):
                 target = audit.ROOT / item["target_path"]
                 self.assertEqual(target.read_text(encoding="utf-8"), item["body"])
@@ -279,9 +294,15 @@ class RetroactiveAuditTests(unittest.TestCase):
         runtime = json.loads((audit.ROOT / "localization/tw-edition/runtime.json").read_text(encoding="utf-8"))
         item = next(value for value in runtime["items"] if value["id"] == "TW-13-042")
         notice = audit.READER_PROFESSIONAL_LIMITS["TW-13-042"]
-        normalized, _ = audit.normalize_reader_item(item)
-        self.assertIn(notice, item["body"])
-        self.assertIn(notice, normalized["body"])
+        review = json.loads((audit.ROOT / "localization/reviews/TW-13-042.json").read_text(encoding="utf-8"))
+        register = audit.load(audit.ROOT, "localization/retroactive-review-register-20261019.json")
+        self.assertNotIn(notice, item["body"])
+        self.assertIn("若要處理個人醫療或保護需求，請向醫療團隊、社工或所在地主管機關確認。", item["body"])
+        self.assertIn("AI輔助", review["reviewer"])
+        self.assertTrue(any("獨立專業審閱尚待取得" in limit for limit in review["limits"]))
+        self.assertTrue(any("獨立專業審閱尚待取得" in limit
+                            for row in register["substantive_rechecks"] if row["id"] == item["id"]
+                            for limit in row["limits"]))
         self.assertNotIn("器官條例", item["body"])
         self.assertNotIn("本次實質再審", item["body"])
 
@@ -294,21 +315,21 @@ class RetroactiveAuditTests(unittest.TestCase):
         self.assertIn("在電腦上閱讀及使用生活自我檢視", readme)
         self.assertNotIn("](selfcheck.html)", readme)
         self.assertNotIn("已核對的臺灣內容", readme)
-        self.assertIn("在電腦上啟動閱讀頁面", readme)
+        self.assertIn("在電腦上開啟閱讀頁面", readme)
         self.assertNotIn("請從網站", readme)
         self.assertIn("在電腦上閱讀", guide)
         self.assertIn("開啟終端機，下載專案並切換到資料夾", guide)
-        self.assertIn("伺服器啟動後，在瀏覽器輸入 http://127.0.0.1:8000/ 閱讀", guide)
+        self.assertIn("閱讀頁開啟後，在瀏覽器前往 http://127.0.0.1:8000/", guide)
         self.assertIn("py -3 -m http.server 8000 --bind 127.0.0.1", guide)
         self.assertIn("python3 -m http.server 8000 --bind 127.0.0.1", guide)
         self.assertNotIn("已核對的臺灣內容", guide)
-        self.assertIn("找不到主題", guide)
+        self.assertIn("目錄沒有的主題，目前尚未整理相關指引", guide)
         self.assertIn("尚無該主題的臺灣指引", (audit.ROOT / "assets/tw-runtime.js").read_text(encoding="utf-8"))
-        self.assertIn("目前只顯示已收錄的指引", readme)
-        self.assertIn("本目錄整理目前收錄的台灣版文章", edition_index)
-        self.assertIn("原作內容的 PDF 預覽", guide)
+        self.assertIn("只列目前收錄的台灣指引", readme)
+        self.assertIn("本目錄列出台灣生活指南目前收錄的文章", edition_index)
+        self.assertIn("要製作原作 PDF", guide)
         self.assertIn("node tools/pdf/build.mjs", guide)
-        self.assertIn("不是台灣版生活指南", guide)
+        self.assertIn("要找台灣生活指引", guide)
 
     def test_reader_entry_pages_do_not_contain_batch_audit_logs(self):
         paths = (
