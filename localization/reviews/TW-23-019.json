@@ -1,29 +1,39 @@
 {
   "id": "TW-23-019",
-  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；未取得獨立教育、特殊教育或職業訓練專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-16",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-10-29",
+  "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-019.md",
-  "target_sha256": "d76feadfff03a7e51c5ea66d6ee780b9b94ad208b2589720d62703e5c845ca94",
+  "target_sha256": "40edc7fbc5809a2b54ca892ce5b7ef5ae0c44ae627cecbe1ff6cb58236816310",
   "source_checks": [
     {
       "url": "https://pubmed.ncbi.nlm.nih.gov/29733621/",
-      "claim": "測驗增強學習的遷移統合分析顯示效果取決於目標與練習關係等條件，不保證遷移到任意新任務。",
-      "supporting_passage": "編者摘要（非逐字引文）：測驗增強學習的遷移統合分析顯示效果取決於目標與練習關係等條件，不保證遷移到任意新任務。",
-      "accessed_at": "2026-10-16",
-      "retrieval_method": "以PubMed第一手文獻搜尋索引摘要核對樣本、調節因素及範圍；直接頁面驗證受限，未宣稱通讀全文。"
+      "claim": "192個遷移效果量、122項實驗、67篇文章與10,382名參與者的分析，相較未測驗重新接觸教材組，d=0.40（95% CI 0.31至0.50）。",
+      "supporting_passage": "編者摘要（非逐字引文）：PubMed摘要列出比較組、合併效果和強弱遷移任務及調節因素。",
+      "accessed_at": "2026-10-29",
+      "retrieval_method": "2026-10-29透過PubMed可檢索摘要和書目核對研究數、樣本數、比較條件、效果量和調節因素；未宣稱已讀期刊全文。"
+    },
+    {
+      "url": "https://skill.tcte.edu.tw/notice.php",
+      "claim": "115年度技能檢定官方入口可查職類、級別及梯次，且明示並非所有職類和級別每梯次都辦理。",
+      "supporting_passage": "編者摘要（非逐字引文）：官方年度頁面提供簡章、職類梯次、報名費用和日程查詢，提示各梯次辦理範圍不同。",
+      "accessed_at": "2026-10-29",
+      "retrieval_method": "2026-10-29直接讀取115年度技能檢定官方網站最新公告列表和重要日程，核對該年度梯次提示；不把115年度日期外推為未來年度資訊。"
     }
   ],
-  "localization_changes": "將原題背誦改成用途與情境驗收，加入研究調節因素和安全授權界線。",
-  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
-  "source_reviewed_sha256": "7c74eb18850670177160c502054c80edb6338e9e6ba612524b4ed65771e28b9c",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "7c74eb18850670177160c502054c80edb6338e9e6ba612524b4ed65771e28b9c",
-    "after_sha256": "d76feadfff03a7e51c5ea66d6ee780b9b94ad208b2589720d62703e5c845ca94",
-    "before_reader_sha256": "ee7804f9bf4f1effc108dc1bbe9816a4a519c1046beee0fa31ea1708f2adbc2f",
-    "after_reader_sha256": "c13afde56c783a7b959e732e0c03f5d66fe692a2ac71d0c497e7aae38d9ece4b"
-  }
+  "localization_changes": "補上192個遷移效果量、122項實驗、67篇研究、10,382名參與者、比較組與信賴區間；說明不同任務遷移效果不一。把臺灣技能檢定的當年度職類、級別和梯次查詢加進操作情境，避免把題庫熟悉度寫成職場能力或授權。",
+  "legal_scope": "官方技能檢定頁面用於當年度公告和梯次查詢，不足以判定個人報檢資格或職場操作授權；須按職類及級別另看簡章和工作場所安全規範。",
+  "review_method": "按source_checks逐一核對可見的PubMed、作者典藏、出版頁或教育部現行法規；每筆標明未讀全文或適用範圍。研究效果量不當成臺灣事件發生率或個人保證；法規只限列明學制，技能檢定頁只作當年度查詢入口。",
+  "source_reviewed_sha256": "40edc7fbc5809a2b54ca892ce5b7ef5ae0c44ae627cecbe1ff6cb58236816310",
+  "limits": [
+    "研究的任務與樣本不等於臺灣考試或職場；題庫練習不代表資格、現場能力或安全授權。",
+    "本次為AI輔助逐項來源核對，未取得獨立教育、技職訓練或職業安全專業審閱。"
+  ],
+  "frequency_assessment": "學習遷移不是自然事件發生率。研究樣本和標準化效果量不是臺灣考試或職場個人機率；未找到特定臺灣職務的全國練習轉移分母，不據此估算。",
+  "statistics_assessed": [
+    "ch23_transfer_recheck_20261029"
+  ],
+  "taiwan_context": "臺灣技術士技能檢定需按當年度職類、級別和梯次查簡章；官方頁面說明並非所有職類和級別每梯次都辦。題庫熟練不能取代現場訓練、安全要求或必要資格。",
+  "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育、技職訓練或職業安全專業審閱。"
 }

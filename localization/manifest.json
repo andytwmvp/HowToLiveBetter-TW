@@ -11406,9 +11406,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-014.md",
       "sources": [
-        "https://pubmed.ncbi.nlm.nih.gov/33683913/"
+        "https://pubmed.ncbi.nlm.nih.gov/33683913/",
+        "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL008949&media=print"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "學完先合上書自己考一遍，別回頭重讀",
@@ -11427,7 +11428,7 @@
       "sources": [
         "https://digitalcommons.usf.edu/psy_facpub/1771/"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "把同樣的時間攤到幾天，別一次學完",
@@ -11446,7 +11447,7 @@
       "sources": [
         "https://journals.sagepub.com/doi/10.1177/1529100612453266"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "別把劃重點、反覆讀、寫摘要當成主要學法",
@@ -11465,7 +11466,7 @@
       "sources": [
         "https://pubmed.ncbi.nlm.nih.gov/31556629/"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "幾種題型混著練，別一種連做二十道",
@@ -11482,9 +11483,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-018.md",
       "sources": [
-        "https://journals.sagepub.com/doi/10.1111/j.1539-6053.2009.01038.x"
+        "https://journals.sagepub.com/doi/10.1111/j.1539-6053.2009.01038.x",
+        "https://doi.org/10.3389/fpsyg.2024.1428732",
+        "https://doi.org/10.1007/s10648-025-10002-w",
+        "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL008949&media=print",
+        "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL009140&media=print"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "別按「我是視覺型、他是聽覺型」挑學法",
@@ -11501,9 +11506,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch23/TW-23-019.md",
       "sources": [
-        "https://pubmed.ncbi.nlm.nih.gov/29733621/"
+        "https://pubmed.ncbi.nlm.nih.gov/29733621/",
+        "https://skill.tcte.edu.tw/notice.php"
       ],
-      "verified_at": "2026-10-16",
+      "verified_at": "2026-10-29",
       "upstream_path_uri": "book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md",
       "display_path": "book/23-學什麼技能划算.md",
       "source_title_zh_tw": "要背的內容按將來的用法出題考自己，別原樣背一遍就算完",

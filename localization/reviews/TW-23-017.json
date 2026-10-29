@@ -1,29 +1,32 @@
 {
   "id": "TW-23-017",
-  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立人工、法律、醫療或教育專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；未取得獨立教育、特殊教育或職業訓練專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-16",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-10-29",
+  "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch23/TW-23-017.md",
-  "target_sha256": "f72421cde606f4fc1f6ac6f988578e1bc6ea65e512016afe017a2de5d454f946",
+  "target_sha256": "422bb543ea3a4a2b5905f6c3d428ae5912e3bb01225449963e874c569c40f25a",
   "source_checks": [
     {
       "url": "https://pubmed.ncbi.nlm.nih.gov/31556629/",
-      "claim": "59項研究的統合分析發現交錯效果有材料差異，文字未有一致優勢，單字資料可能較支持區塊練習。",
-      "supporting_passage": "編者摘要（非逐字引文）：59項研究的統合分析發現交錯效果有材料差異，文字未有一致優勢，單字資料可能較支持區塊練習。",
-      "accessed_at": "2026-10-16",
-      "retrieval_method": "以PubMed第一手文獻搜尋索引摘要核對材料差異與主要結果；直接頁面驗證受限，未通讀全文。"
+      "claim": "59項研究、238個效果量及158個樣本的分析發現整體g=0.42，效果依材料而變；單字材料有利區塊練習。",
+      "supporting_passage": "編者摘要（非逐字引文）：研究報告繪畫、數學、說明文、味覺和單字材料結果不同，單字交錯效果g=-0.39。",
+      "accessed_at": "2026-10-29",
+      "retrieval_method": "2026-10-29直接讀取PubMed文獻摘要與書目，核對樣本、效果量、材料差異及線上刊登日期；未宣稱已讀付費全文。"
     }
   ],
-  "localization_changes": "加入材料反例與基礎能力條件，區分交錯、區塊及分心多工。",
-  "legal_scope": "依各來源指定段落與取材範圍核對；法規最後修正日不等於所有條文施行日。學位授予法本批不採待施行的第4條及第5條第1項；招生及補助以當期資格另核對。研究只支持已列出的群體結論，不是個人因果或結果保證。",
-  "review_method": "各來源method個別記錄HTML、機構典藏摘要、出版社摘要或官方搜尋索引摘要。未取得全文者不宣稱全文審閱；不把索引摘要用來新增未見的效應、細目或個案資格。",
-  "source_reviewed_sha256": "e55c3c6358295711e6f6bedfb452d8bcba6640da40b2cfcea2f2f96020cf4831",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "e55c3c6358295711e6f6bedfb452d8bcba6640da40b2cfcea2f2f96020cf4831",
-    "after_sha256": "f72421cde606f4fc1f6ac6f988578e1bc6ea65e512016afe017a2de5d454f946",
-    "before_reader_sha256": "0eb15ebb5c9ebb8b48f89de1015c0011b5520ad7daf3c3da2480e6a047b55226",
-    "after_reader_sha256": "2b5baca8c7d85d5c3997715e3b699f6ece0ed96d9a6b9eaff10a14e3f11254fd"
-  }
+  "localization_changes": "明確定義交錯練習為穿插不同題型，列出59項研究、238個效果量、158個樣本、總體與材料別效果，補正區塊練習對單字較佳的反例；加入臺灣考試及技能檢定情境並保留安全界線。",
+  "legal_scope": "本篇不判斷個人檢定資格或職業授權；實際職類、級別、梯次和安全要求依主管機關當年度公告及工作規範確認。",
+  "review_method": "按source_checks逐一核對可見的PubMed、作者典藏、出版頁或教育部現行法規；每筆標明未讀全文或適用範圍。研究效果量不當成臺灣事件發生率或個人保證；法規只限列明學制，技能檢定頁只作當年度查詢入口。",
+  "source_reviewed_sha256": "422bb543ea3a4a2b5905f6c3d428ae5912e3bb01225449963e874c569c40f25a",
+  "limits": [
+    "效果受材料與任務影響；統合分析平均值不是臺灣各考試的個人分數預測。",
+    "本次為AI輔助逐項來源核對，未取得獨立教育或技術檢定專業審閱。"
+  ],
+  "frequency_assessment": "學習方法不是自然事件，發生率不適用。59項研究中的任務效果不是臺灣考生分數或個人成功率；未找到臺灣各科全國成效母數，不作外推估算。",
+  "statistics_assessed": [
+    "ch23_interleave_recheck_20261029"
+  ],
+  "taiwan_context": "準備學校考試或技術士技能檢定時，先依當年度考科與簡章確認範圍，再從已學會的基本題型中挑容易混淆的題目穿插練習；危險作業不在正式現場任意切換。",
+  "reviewer_limit": "本次為AI輔助逐項來源核對，未取得獨立教育或技術檢定專業審閱。"
 }
