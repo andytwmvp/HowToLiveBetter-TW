@@ -12283,9 +12283,13 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380237",
         "https://moda.gov.tw/ADI/news/latest-news/16388",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080063"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080063",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380131",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380238",
+        "https://www-api.moda.gov.tw/File/Get/adi/zh-tw/mvNKyTiNRNBILuQ",
+        "https://www-api.moda.gov.tw/File/Get/moda/zh-tw/b4RLKc8Mn5Y5Sj9"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "平臺不要自己收錢再轉給賣家，讓錢走持牌支付機構直接結算",
@@ -12431,9 +12435,14 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=12&pcode=B0000001",
+        "https://www.mol.gov.tw/1607/28690/2282/2284/2294/7260/",
+        "https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=2&id=FL073962",
+        "https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=7&id=FL073962",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "不給未滿 16 週歲的人開直播，打賞按年齡分檔處理",
@@ -12470,10 +12479,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch26/TW-26-010.md",
       "sources": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-        "https://www.pdpc.gov.tw/News_Html/100/"
+        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "用戶信息不要隨手放到境外，出境有法定條件和人數門檻",
@@ -12511,11 +12520,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch26/TW-26-012.md",
       "sources": [
+        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-        "https://www.pdpc.gov.tw/News_Html/100/",
-        "https://www.nics.nat.gov.tw/cybersecurity_resources/reference_guide/Common_Standards/"
+        "https://s.moda.gov.tw/c1DWBHH7BkKH",
+        "https://www.twcert.org.tw/tw/sp-geno-guide-1.html",
+        "https://web.moda.gov.tw/ACS/press/report/21106"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "網站或 App 裡的用戶信息洩露了，馬上補救，通知用戶和主管部門，被人攻擊的去公安報案",

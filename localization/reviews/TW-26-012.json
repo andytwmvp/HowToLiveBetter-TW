@@ -1,47 +1,53 @@
 {
   "id": "TW-26-012",
-  "reviewer": "ChatGPT（AI輔助來源核對；非獨立法律、支付、稅務、個資或資安專業簽證）",
+  "reviewer": "AI輔助逐項來源核對；未取得獨立法律、支付、勞動、個資或資安專業審閱",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-17",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-10-30",
+  "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch26/TW-26-012.md",
-  "target_sha256": "24d1ec4f6663620ca827b1d2bd7979764595580b6feb57c663035e8145355478",
+  "target_sha256": "15bbdf84ea01177abd2009206e6fd817af1f999e8d84a3e9e3f8d14314c61f4d",
   "source_checks": [
     {
+      "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+      "claim": "現行有效個資法第12條要求違法致個資遭竊取、洩漏、竄改或其他侵害者，查明後以適當方式通知當事人。",
+      "supporting_passage": "直接閱讀112-05-31歷史版本第12條並核對其為目前有效文字。",
+      "accessed_at": "2026-10-30",
+      "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫歷史版本及現行生效註記。"
+    },
+    {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-      "claim": "TW-26-012：本批核對第2、3、5、8、10、11、13、14、19、20條；不把全部最新修正當成已施行。",
-      "supporting_passage": "編者摘要（非逐字引文）：本批核對第2、3、5、8、10、11、13、14、19、20條；不把全部最新修正當成已施行。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "claim": "2025-11-11公布的個資法部分修正及新事故通報條文尚未施行。",
+      "supporting_passage": "直接核對現行法規頁首生效狀態，不宣稱新規定已生效。",
+      "accessed_at": "2026-10-30",
+      "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫現行個資法頁。"
     },
     {
-      "url": "https://www.pdpc.gov.tw/News_Html/100/",
-      "claim": "TW-26-012：114年11月修正個資法部分條文包括新第12條尚待施行；當事人通知、業別通報及時限須按實際生效條文處理。",
-      "supporting_passage": "編者摘要（非逐字引文）：114年11月修正個資法部分條文包括新第12條尚待施行；當事人通知、業別通報及時限須按實際生效條文處理。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "url": "https://s.moda.gov.tw/c1DWBHH7BkKH",
+      "claim": "2026年7月資安事件應變行動指引列事件圍堵、紀錄保全、通報與外部溝通、復原等處理步驟。",
+      "supporting_passage": "直接讀取23頁官方PDF目錄及應變處理章節；其內容作實務建議，不替代法定期限。",
+      "accessed_at": "2026-10-30",
+      "retrieval_method": "2026-10-30直接閱讀資通安全署官方PDF。"
     },
     {
-      "url": "https://www.nics.nat.gov.tw/cybersecurity_resources/reference_guide/Common_Standards/",
-      "claim": "TW-26-012：提供系統安全、備援、事件應變與營運持續等實務參考；不等於所有民間小站都有相同法定標準，也不保證付贖金可恢復。",
-      "supporting_passage": "編者摘要（非逐字引文）：提供系統安全、備援、事件應變與營運持續等實務參考；不等於所有民間小站都有相同法定標準，也不保證付贖金可恢復。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "url": "https://www.twcert.org.tw/tw/sp-geno-guide-1.html",
+      "claim": "TWCERT/CC一般資安通報頁提供一般企業線上通報與電子郵件方式；政府部門及學術機構依身分轉往專屬網站。",
+      "supporting_passage": "直接核對通報身分分流與線上通報說明。",
+      "accessed_at": "2026-10-30",
+      "retrieval_method": "2026-10-30直接閱讀TWCERT/CC官方通報頁。"
+    },
+    {
+      "url": "https://web.moda.gov.tw/ACS/press/report/21106",
+      "claim": "資安署2026年9月官方月報可見摘要列204件政府資安事件通報，其中95件含攻防演練。",
+      "supporting_passage": "只採月報可見摘要中的期間、件數和演練範圍；這不是個資外洩統計，亦無全體公私部門暴露分母。",
+      "accessed_at": "2026-10-30",
+      "retrieval_method": "2026-10-30核對資通安全署官方月報頁及其可見摘要；未取得全臺個資外洩原始資料。"
     }
   ],
-  "localization_changes": "按臺灣支付、稅籍、消保、著作權、兒少、個資及資安情境重寫；草案與法定義務分開。",
-  "review_method": "AI輔助逐條對讀官方來源與適用範圍，非獨立專業簽證。",
+  "localization_changes": "改為先圍堵和保存證據，再按現行法律與業別規定通知或通報；加入資安署2026年7月事件應變指引與TWCERT/CC企業通報入口，分清法定義務和自願求助；加入政府月報數據並明確排除為個資外洩率或個人機率。",
+  "review_method": "逐條對讀臺灣法規、主管機關資料及官方統計；區分法律效力、行政通報與實際事件頻率。AI輔助查核不等於獨立專業簽證。",
   "limits": [
-    "個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。",
-    "第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。",
-    "2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強製法規。"
+    "截至2026-10-30，2025-11-11公布的個資法部分修正尚未施行；新事故通報規範不是所有業者已生效的共同期限。政府資安通報含攻防演練且不等於個資外洩；個案通知、通報期限按現行法律、業別規定及契約確認。",
+    "截至2026-10-30，個資法2025-11-11部分修正尚未施行；現行有效第12條為查明後以適當方式通知當事人，新通報機制尚不能當成通用現行期限。個別業別可能另有通報義務。"
   ],
-  "source_reviewed_sha256": "8fc19c75a94128c1e30afcbd45f1bc12aed1cd11502961f70959eea1c84cb529",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "8fc19c75a94128c1e30afcbd45f1bc12aed1cd11502961f70959eea1c84cb529",
-    "after_sha256": "24d1ec4f6663620ca827b1d2bd7979764595580b6feb57c663035e8145355478",
-    "before_reader_sha256": "e5abc1323be6c8ad45f730d2045aeac0d6053374f1fa01a1106aa84b7bd89f8a",
-    "after_reader_sha256": "338ef7180d1a5d930b4865f28f62859ad5eeb3972b052eb35d9d887c042ff177"
-  }
+  "source_reviewed_sha256": "15bbdf84ea01177abd2009206e6fd817af1f999e8d84a3e9e3f8d14314c61f4d"
 }
