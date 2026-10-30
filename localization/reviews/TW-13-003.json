@@ -1,48 +1,55 @@
 {
   "id": "TW-13-003",
-  "reviewer": "ChatGPT（AI輔助核對臺灣官方公開HTML，非醫療、救護或災防專業簽證）",
+  "reviewer": "ChatGPT（AI輔助核對台灣官方公開資料，非獨立醫療、急救或消防專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-19",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-10-31",
+  "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch13/TW-13-003.md",
-  "target_sha256": "6b916c85fc21418ad9c618d10be941c942676152001c532c414145ba0a4423fa",
+  "target_sha256": "ae1fdc68a6f44921658a36088cc739142cefc1ebfc813189ab4cbe51a08edfdd",
   "source_checks": [
     {
-      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=631&pid=15126&sid=1185",
-      "claim": "TW-13-003：嘴角歪斜、單側手部無力及說話不清，任一異常便應撥119。",
-      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：嘴角歪斜、單側手部無力及說話不清，任一異常便應撥119。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "2026-10-19 web及直接HTTPS重取未成功（TLS）；accessed_at保留上次實讀日，不冒稱本日重讀。修訂另由可讀官方頁支持，專業審閱仍pending。"
-    },
-    {
       "url": "https://mohw.gov.tw/cp-2704-44431-1.html",
-      "claim": "TW-13-003：FAST代表臉、手、說話與時間，記錄發作時間並儘速通知119。",
-      "supporting_passage": "對官方公開HTML相關正文之AI輔助摘要，非逐字引文：FAST代表臉、手、說話與時間，記錄發作時間並儘速通知119。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "2026-10-19重新讀取官方HTML相關段落，未以首頁或檢索摘要替代，不採舊數據作現況。"
+      "claim": "TW-13-003：突然臉歪、單側手腳無力或說話異常時，FAST協助辨識並立即通知119。",
+      "supporting_passage": "衛福部國健署頁面列出FAST臉、手、說話與時間口訣，並指示出現任一警訊記錄時間、通知119；舊頁面數據不作現況統計。",
+      "accessed_at": "2026-10-31",
+      "retrieval_method": "2026-10-31直接閱讀衛福部官方頁面症狀辨識與求援段落，未採用其中舊死亡數或3小時作為治療截止。"
     },
     {
-      "url": "https://802.mnd.gov.tw/articles/stroke?locale=zh-TW",
-      "claim": "臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
-      "supporting_passage": "實讀官方相關正文之獨立語意摘要，非逐字引文：臉、手、說話異常記時間及119；區分梗塞與出血，不將舊3小時宣導當治療截止或成功保證。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "實際核對官方HTML；頁首2026-02-26與文內初刊2024-03-18分列，不採70至75%作全國發生率。"
+      "url": "https://www.mohw.gov.tw/cp-6560-76091-1.html",
+      "claim": "TW-13-003：急性缺血性腦中風的健保治療給付時窗曾更新；一般民眾不應將舊3小時宣導當成放棄求救的截止線。",
+      "supporting_passage": "衛福部說明健保署自2023-10-01放寬急性缺血性腦中風血栓溶解劑施行時間；治療適用仍須醫療團隊評估。",
+      "accessed_at": "2026-10-31",
+      "retrieval_method": "2026-10-31直接閱讀衛福部官方政策說明，核對日期、給付內容和適用條件。"
+    },
+    {
+      "url": "https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf",
+      "claim": "2025年健保署統計列出腦血管疾病480千人及缺血性心臟病642千人就醫人數。",
+      "supporting_passage": "PDF第一頁全國就醫人數表列腦血管疾病480、缺血性心臟病642，單位為千人；資料取自門診、交付機構及住院明細檔，產製日2026-09-01。疾病群定義頁列I60-I69及I20-I25。",
+      "accessed_at": "2026-10-31",
+      "retrieval_method": "2026-10-31直接閱讀健保署2025年統計PDF表格、資料來源、產製日期和疾病代碼列表。"
     }
   ],
-  "localization_changes": "改採臺灣衛福部FAST及119求援，記錄最後正常時間，避免把治療窗口當個案保證。 本次再審：強化FAST任一警訊即119，揭露舊統計與3小時宣導非截止門檻；補可讀公立醫院佐證，原HPA TLS失敗保留日期。",
-  "review_method": "臺灣主管機關公開網頁AI輔助對照；非專業實際操作、臨床或個案認證。",
+  "localization_changes": "移除本次無法讀取的國健署來源及單一公立醫院來源；以衛福部FAST、腦中風給付時窗更新及健保署2025年腦血管疾病就醫人數重寫；刪除舊死亡數與把固定3小時當門檻的暗示。",
+  "review_method": "逐項比對現行台灣求援流程、讀者實際可做步驟、來源中的統計對象與定義；行政就醫人數、救護結果及個人發生率分開處理。",
   "limits": [
-    "在排除吞嚥異常與出血性中風前，不要強迫喝水、吞藥、吃食物或自行服用阿斯匹靈；不要花時間查網路偏方、針刺放血或等待血壓自行恢復。單靠FAST不能確診，症狀消退也不可排除重大疾病。原作使用120，臺灣急救電話應為119；也不應把中國醫院分級及特殊治療時間直接套用到臺灣。",
-    "情境及醫療費用可能不同，應聽從當地救護專業人員並複查官方更新。",
-    "原衛福部2018頁引用2017死亡數與類型占比，不能當2026全國中風發生率；本次未取得同定義新發病例及曝險母數，亦不把全部腦血管死亡當新發中風。",
-    "AI輔助來源實質再核對，醫師、毒物及消防專業審閱仍待取得。"
+    "FAST是警訊辨識方式，不能確診或排除腦中風。健保署2025年腦血管疾病就醫人數是廣義ICD-10-CM I60至I69疾病群，不是新發腦中風病例或發生率。不要自行給食物、飲水或阿斯匹靈。",
+    "本次為AI輔助逐項閱讀官方來源與台灣情境，尚未取得獨立醫療、急救或消防專業審閱。"
   ],
-  "source_reviewed_sha256": "1e8920c5ca1bda1efaa035b752bd28ad7dd28a603c8a5cd588d2d9788a8fb855",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "1e8920c5ca1bda1efaa035b752bd28ad7dd28a603c8a5cd588d2d9788a8fb855",
-    "after_sha256": "6b916c85fc21418ad9c618d10be941c942676152001c532c414145ba0a4423fa",
-    "before_reader_sha256": "6ddb5e69768af2637907092a75fa3939477b9a224c5f1b4587f9b90eaf422d00",
-    "after_reader_sha256": "489063c5af499534a1f4054763308d9ade22ac24e887841e6de7c17a719ac58c"
-  }
+  "source_reviewed_sha256": "ae1fdc68a6f44921658a36088cc739142cefc1ebfc813189ab4cbe51a08edfdd",
+  "statistics_assessed": [
+    {
+      "value": "480",
+      "unit": "千名就醫人數（約480,000人）",
+      "period": "2025年全年",
+      "geographic_scope": "全國健保申報資料",
+      "population": "腦血管疾病ICD-10-CM疾病群I60-I69的就醫人數",
+      "numerator": "年度就醫人數約480,000",
+      "denominator": "此為人數，不是發生率；沒有新發腦中風或人口暴露分母",
+      "event_definition": "健保署疾病分類群組的年度就醫人數，不等同急性新發中風事件",
+      "data_type": "全民健保門診、交付機構及住院申報行政統計",
+      "source_id": "retro_nhi_disease_2025",
+      "accessed_at": "2026-10-31",
+      "limitations": "數字以千人為單位呈現且四捨五入；疾病群包含多種腦血管疾病，不等同新發中風病例數或個人風險。"
+    }
+  ]
 }

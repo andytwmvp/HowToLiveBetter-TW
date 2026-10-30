@@ -24,7 +24,7 @@ class VaccinesRetroreviewTests(unittest.TestCase):
   self.assertIn('PCV21',b['TW-01-022']);self.assertIn('8週例外不適用僅打PPV23',b['TW-01-022']);self.assertIn('Q10',b['TW-01-022']);self.assertIn('不是所有肺炎',b['TW-01-022'])
   self.assertIn('終身一次',b['TW-01-023']);self.assertIn('民眾可領450元',b['TW-01-023']);self.assertIn('缺',b['TW-01-023']);self.assertIn('4週',b['TW-01-023'])
   self.assertIn('每2年一次',b['TW-01-024']);self.assertIn('戒菸未達15年',b['TW-01-024']);self.assertIn('不是每個結節都需開刀',b['TW-01-024'])
-  self.assertIn('資料不足',b['TW-13-012']);self.assertIn('15／30',read('localization/reviews/TW-13-014.json')['limits'][-1])
+  self.assertIn('無法估算個人發生率',b['TW-13-012']);self.assertIn('15／30',read('localization/reviews/TW-13-014.json')['limits'][-1])
   self.assertIn('全球食物過敏',b['TW-13-015']);self.assertIn('所有溺水者獲救後應送醫',b['TW-13-025'])
  def test_actual_history_and_all_prior_content_preserved_or_rechecked(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();items={x['id']:x for x in rt['items']};sources={s['id']:s for s in rt['sources']}
