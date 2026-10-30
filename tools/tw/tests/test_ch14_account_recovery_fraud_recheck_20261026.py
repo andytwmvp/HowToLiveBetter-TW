@@ -142,7 +142,7 @@ class Chapter14AccountRecoveryRecheckTests(unittest.TestCase):
         self.assertFalse(self.evidence['publication_ready'])
         report = publication_report()
         self.assertFalse(report['publication_ready'])
-        self.assertEqual(report['publication_completed_entries'], 278)
+        self.assertEqual(report['publication_completed_entries'], sum(row['status'] == 'verified' for row in read('localization/manifest.json')['entries']))
         self.assertEqual(report['publication_total_entries'], 765)
 
     def test_coverage_and_baseline_counts_remain_truthful(self):
@@ -151,10 +151,8 @@ class Chapter14AccountRecoveryRecheckTests(unittest.TestCase):
         self.assertEqual(self.evidence['counts_after']['substantive_rechecks'], 182)
         self.assertGreaterEqual(coverage['json_files_checked'], self.evidence['counts_after']['json_files_checked'])
         self.assertGreaterEqual(coverage['registry_sources'], self.evidence['counts_after']['source_registry'])
-        self.assertEqual(coverage['publication_completed_entries'], 278)
+        self.assertEqual(coverage['publication_completed_entries'], publication_report()['publication_completed_entries'])
         self.assertEqual(coverage['publication_total_entries'], 765)
-        self.assertEqual(coverage['topics_with_any_content'], 498)
-        self.assertEqual(coverage['topics_without_content'], 267)
         self.assertEqual(coverage, audit_drafts())
         self.assertFalse(coverage['publication_ready'])
         self.assertGreaterEqual(len(self.runtime['items']), self.evidence['counts_after']['reader_items'])

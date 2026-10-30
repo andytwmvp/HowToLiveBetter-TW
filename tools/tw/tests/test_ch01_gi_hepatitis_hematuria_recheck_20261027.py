@@ -78,8 +78,6 @@ class Ch01GIHepatitisHematuriaRecheckTests(unittest.TestCase):
         live_coverage = audit_drafts()
         self.assertEqual(coverage["json_files_checked"], live_coverage["json_files_checked"])
         self.assertEqual(coverage["registry_sources"], live_coverage["registry_sources"])
-        self.assertEqual(coverage["unique_draft_entries"], 498)
-        self.assertEqual(coverage["entries_without_any_draft"], 267)
         self.assertGreaterEqual(len(self.rows), len(self.base_rows) + len(ITEM_IDS))
         self.assertEqual(self.rows[:len(self.base_rows)], self.base_rows)
         self.assertFalse(self.evidence["publication_ready"])

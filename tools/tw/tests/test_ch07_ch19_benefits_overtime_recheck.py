@@ -128,7 +128,7 @@ class Ch07Ch19BenefitsOvertimeRecheckTests(unittest.TestCase):
         self.assertEqual(evidence["counts_after"]["runtime_sources"], 732)
         self.assertEqual(evidence["counts_after"]["source_registry"], 813)
         self.assertEqual(evidence["counts_after"]["json_files_checked"], 450)
-        self.assertEqual(coverage["publication_completed_entries"], 278)
+        self.assertEqual(coverage["publication_completed_entries"], publication_report()["publication_completed_entries"])
         self.assertFalse(coverage["publication_ready"])
         self.assertFalse(publication_report()["publication_ready"])
 

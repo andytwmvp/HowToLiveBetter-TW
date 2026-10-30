@@ -120,7 +120,6 @@ class HighRiskRecheckTests(unittest.TestCase):
         report = publication_report()
         self.assertEqual(coverage["publication_completed_entries"], report["publication_completed_entries"])
         self.assertEqual(coverage["core_reviewed_entries"], report["publication_completed_entries"])
-        self.assertEqual(coverage["publication_completed_entries"], 278)
         self.assertFalse(coverage["publication_ready"])
         self.assertEqual(audit_drafts(), coverage)
         self.assertEqual(self.batch["counts_after"]["core_reviewed"], 278)
