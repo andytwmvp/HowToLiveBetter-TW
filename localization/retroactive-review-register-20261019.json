@@ -26953,6 +26953,462 @@
         "現有醫院衛教沒有全國同定義CO個案分母與後續追蹤隊列；遲發神經症狀須由醫療人員評估。",
         "獨立急救、醫療、消防及統計專業審閱仍待取得。"
       ]
+    },
+    {
+      "id": "TW-26-001",
+      "before_sha256": "27de29a0df930a1a4f403734daaef3884a86cfdad425c671f399a2494450e402",
+      "after_sha256": "1b3124a45bc922be2d833281d7d9f1a0051bfa4f8bb7fabd080c4177c3dbc243",
+      "prior_revision": "798f6cd6604ac2f6c448f09c8fb9b20d3c9c7fd3",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "556c3938ba15534fd418188633bd11dda7a11e7b5a47806598d7053ab4f8f1d9",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣常見網路市集、團購、超商取貨付款、信用卡收款、賣家分帳及退款爭議；按實際資金控制和款項餘額判斷法規，不把消費者都視為支付業者。",
+      "frequency_assessment": "數位發展部2026年4月報告：2025年查核57家、裁罰10家、廢止登錄3家、罰鍰283萬元；2026年截至2月底已查核1家。數位產業署官方名單2026-09-22更新時列53家通過登錄。這些是監理、裁處及登錄資料，不是消費者事故統計；裁罰與廢止可能重疊，沒有全市場交易量或消費者暴露分母，不能換算違規率或個人機率。",
+      "legal_status_assessment": "截至2026-10-30，《電子支付機構管理條例》第4、5條及第五條限額辦法現行有效；一年日平均餘額超過新臺幣20億元後，依計算期間末日次日起算6個月內申請許可。第三方支付服務另依洗錢防制法第6條及數位發展部登錄規定分開判斷。",
+      "changes": "改寫平台多賣家金流流程，補正電子支付許可和第三方支付登錄為不同制度；列明只代理收付實質交易款且符合20億元一年日平均餘額及未兼營要件的法定例外，並加入按一年日平均餘額計算，超過20億元後自計算期間末日次日起算6個月內申請電子支付許可的期限；以2026年9月登錄名單和2026年4月業務報告更新監理數據，標明統計限制。",
+      "source_status": "2026-10-30逐項查閱現行支付法規、數位產業署2026-09-22名冊及數位發展部2026-04業務報告；補核第5條第3項及限額辦法第5條所定期限起算方式。監理資料沒有全市場交易與消費者暴露分母，未換算違規率或個人機率；未取得獨立法律或支付專業審閱。",
+      "source_ids": [
+        "epayment",
+        "thirdpay",
+        "ch26_aml",
+        "ch26_aml_act_20261030",
+        "ch26_epayment_threshold_20261030",
+        "ch26_tpp_active_list_20260922",
+        "ch26_moda_tpp_audit_202604"
+      ],
+      "previous_source_ids": [
+        "epayment",
+        "thirdpay",
+        "ch26_aml"
+      ],
+      "retired_sources": [],
+      "previous_review_claims": [
+        "市集買賣款項如何收取、保管、結算、退款及處理爭議。",
+        "電子支付機構管理條例第4條許可業務、第5條非電子支付機構原則禁止及代理收付限額例外。",
+        "第三方支付服務洗錢防制及服務能量登錄要求。",
+        "不同監理件數不可當成市場違規率或消費者個人發生率。"
+      ],
+      "review_path": "localization/reviews/TW-26-001.json",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380237",
+          "claim": "電子支付機構管理條例第4、5條規範許可業務與代理收付實質交易款限額例外；符合第5條第1項第2款者，所保管代理收付款項總餘額逾主管機關規定金額後，應依第5條第3項於法定期間內申請電子支付機構許可。",
+          "supporting_passage": "直接核對第4條及第5條第1項第2款、第3項：許可業務範圍、非電子支付機構營業例外條件，以及總餘額逾一定金額後六個月內申請許可的規定。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫第4、5條現行條文。"
+        },
+        {
+          "url": "https://moda.gov.tw/ADI/news/latest-news/16388",
+          "claim": "數位發展部說明提供第三方支付服務須完成洗錢防制及服務能量登錄，並列監理作法。",
+          "supporting_passage": "官方說明指出未完成洗錢防制及服務能量登錄不得提供第三方支付服務；將該制度與電子支付機構許可分開。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀數位產業署官方說明正文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080063",
+          "claim": "登錄辦法規定申請資格、應備文件、洗錢防制內控及信託／履約保證要求。",
+          "supporting_passage": "直接核對第2、4、8、9條，不以公司登記本身替代服務能量登錄。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀全國法規資料庫條文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380131",
+          "claim": "洗錢防制法第6條要求第三方支付服務業者先完成洗錢防制及服務能量登記或登錄。",
+          "supporting_passage": "直接核對現行第6條。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫現行條文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380238",
+          "claim": "第五條授權辦法定義代理收付款項限額及一年日平均餘額，並規定超過新臺幣20億元後，依計算期間末日次日起算六個月內申請許可。",
+          "supporting_passage": "直接核對第2、3條的一年日平均餘額及新臺幣20億元門檻，並核對第4、5條計算期間及自期間末日次日起算六個月內申請許可的方式。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫第2、3條。"
+        },
+        {
+          "url": "https://www-api.moda.gov.tw/File/Get/adi/zh-tw/mvNKyTiNRNBILuQ",
+          "claim": "數位產業署名單頁於2026-09-22更新，所連結PDF列出53家通過能量登錄的業者。",
+          "supporting_passage": "官方名單PDF序號1至53列為通過能量登錄業者；名單頁更新日期為2026-09-22。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "先查閱數位產業署名單頁更新日期，再直接讀取PDF附件，逐列確認名冊序號1至53。"
+        },
+        {
+          "url": "https://www-api.moda.gov.tw/File/Get/moda/zh-tw/b4RLKc8Mn5Y5Sj9",
+          "claim": "數位發展部2026年4月業務概況報告記載2025年查核57家、裁罰10家、廢止登錄3家、裁罰總額283萬元；2026年截至2月底已查核1家。",
+          "supporting_passage": "報告第三方支付章節列出114年度查核57家、廢止登錄3家、裁罰10家及罰鍰新臺幣283萬元，並記載115年截至2月底已查核1家。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "直接閱讀數位發展部115年4月立法院業務概況書面報告第三方支付段落。"
+        }
+      ],
+      "limits": [
+        "電子支付許可及第三方支付洗錢防制、服務能量登錄須分別依實際業務判斷。20億元門檻只適用於法定代理收付實質交易款例外；監理家數不代表消費者受害機率。",
+        "截至2026-10-30，《電子支付機構管理條例》第4、5條及第五條限額辦法現行有效；第5條限額例外只涵蓋指定代理收付業務，並須符合一年日平均餘額未逾新臺幣20億元及未兼營收受儲值或小額匯兌等條件；超過20億元後，依授權辦法自計算期間末日次日起算6個月內申請許可。第三方支付服務另受洗錢防制法第6條及數位發展部登錄規定管制。"
+      ],
+      "statistics_assessed": [
+        {
+          "name": "第三方支付服務業查核與裁處",
+          "period": "2025全年；另列2026年1月1日至2月28日",
+          "value": {
+            "companies_audited_2025": 57,
+            "providers_fined_2025": 10,
+            "registrations_revoked_2025": 3,
+            "total_fines_ntd_2025": 2830000,
+            "companies_audited_2026_to_20260228": 1
+          },
+          "unit": "業者家數及新臺幣罰鍰金額",
+          "geographic_scope": "數位發展部第三方支付服務業監理",
+          "population": "報告所列2025年受查業者及2026年截至2月底受查業者；不含消費者交易暴露資料",
+          "numerator_definition": "115年4月報告稱114年共查核57家、廢止登錄3家、裁罰10家，罰鍰合計新臺幣283萬元；115年截至2月底已查核1家。",
+          "denominator": null,
+          "denominator_definition": "報告未提供可與所有第三方支付業者、全市場交易量或消費者暴露相配的共同分母；亦未說明裁罰與廢止家數是否重疊。",
+          "data_type": "主管機關行政監理、查核與裁處紀錄",
+          "source_ids": [
+            "ch26_moda_tpp_audit_202604"
+          ],
+          "published_at": null,
+          "accessed_at": "2026-10-30",
+          "limitations": [
+            "查核家數、裁罰家數、廢止登錄家數與罰鍰金額是不同單位。",
+            "裁罰及廢止是否涉及同一業者未說明，不可相加為不同業者數。",
+            "不是消費者受害案件或交易事故發生率。",
+            "沒有全市場業者、交易量或消費者暴露分母，不能估算個別風險。"
+          ]
+        },
+        {
+          "name": "第三方支付服務業有效能量登錄名單",
+          "period": "截至官方名單頁2026-09-22更新",
+          "value": {
+            "approved_registered_providers": 53
+          },
+          "unit": "家通過能量登錄業者",
+          "geographic_scope": "數位產業署公布之臺灣第三方支付服務業能量登錄名單",
+          "population": "官方名單更新日列出的通過能量登錄業者；不涵蓋所有未登錄或其他類型支付服務者",
+          "numerator_definition": "官方PDF附件依序列出53家通過能量登錄業者。",
+          "denominator": null,
+          "denominator_definition": "名單不是全市場支付服務提供者、交易總量或消費者人數的母數。",
+          "data_type": "主管機關行政登錄名冊",
+          "source_ids": [
+            "ch26_tpp_active_list_20260922"
+          ],
+          "published_at": "2026-09-22",
+          "accessed_at": "2026-10-30",
+          "limitations": [
+            "名單反映更新日狀態，之後可能有新增、展延、失效或廢止。",
+            "登錄家數不是違規家數、受害者人數或個人發生機率。",
+            "不可用登錄業者家數推估全市場分母。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-26-008",
+      "before_sha256": "532836ed60cb55c4571cb6bb4d46a81a646af65b2e153faa29d6bdc9f2cac86e",
+      "after_sha256": "6e91841918fc53c6c5610d1306ac48c2fd88b6e360bc063be3c5cf40003bff82",
+      "prior_revision": "798f6cd6604ac2f6c448f09c8fb9b20d3c9c7fd3",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "84b168a5b421820f97e894cf470072df67f7779142eabc0636535c775fab4958",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣直播、短影音、社群平台、廣告合作、平台分潤與家長監護情境；先區分觀看、付費消費和有報酬提供勞務，依年齡和工作安排分流。",
+      "frequency_assessment": "未找到可涵蓋全臺並分辨兒少觀看、付費、直播接案與受僱工作的全國統計及相應分母；單一平台數據或個案不能代替全國發生率。依法需許可的工作不因缺少頻率資料而免除。",
+      "legal_status_assessment": "截至2026-10-30，勞基法第44至48條及兒少法第46條、民法第12、13、77至79條適用現行條文；未滿15歲許可適用對象依勞基法第45條及審查辦法第2條判斷，適用者依第7條於開始前90日至20日向勞務提供地地方政府申請。實際工作關係、契約與許可個案仍按所在地主管機關及個案事實確認。",
+      "changes": "改以臺灣平台、兒少直播、廣告合作、分潤及直播送禮情境重寫；依勞基法與審查辦法區分國中畢業、未畢業及非僱傭有償勞務的許可範圍，加入開始前90至20日的申請期間、受理機關、應備文件、開始後10日投保證明及最長1年許可期限；補上未滿15歲童工保護與未成年人契約能力來源，明示全國頻率資料不足。",
+      "source_status": "2026-10-30直接核對臺灣現行勞動法、地方許可問答、審查辦法第2及7條、民法第12、13、77、79條、兒少法與消保法；補列申請期間、受理機關、文件、保險補件和未成年人契約規則。未取得獨立法律專業審閱。",
+      "source_ids": [
+        "childact",
+        "lsa",
+        "ch26_consumer",
+        "ch26_civil_code_20261030",
+        "ch26_mol_under15_permit_20261030",
+        "ch26_lsa45_permit_rule_20261030",
+        "ch26_lsa45_permit_timeline_20261030",
+        "ch26_civil_code_capacity_20261030"
+      ],
+      "previous_source_ids": [
+        "childact",
+        "lsa",
+        "ch26_consumer"
+      ],
+      "retired_sources": [],
+      "previous_review_claims": [
+        "兒少平台防護、直播付費及工作需分開判斷。",
+        "未滿15歲工作的法定例外和未成年工時、夜間工作限制。",
+        "家長同意與成年年齡不能取代工作許可或其他消費規定。"
+      ],
+      "review_path": "localization/reviews/TW-26-008.json",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001",
+          "claim": "兒少福利法第46條要求平台訂定自律規範及採取明確可行防護措施。",
+          "supporting_passage": "直接核對第46條平台責任；條文不是未滿16歲一律不得直播的禁令。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫第46條。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030001",
+          "claim": "勞基法第44至48條涵蓋童工年齡、未滿15歲工作例外及無僱傭關係但提供勞務取得報酬的保護、未成年受僱文件、工時、夜間及危險工作限制。",
+          "supporting_passage": "直接核對第44至48條，區分15歲以上未滿16歲童工、16至18歲勞工及未滿15歲提供勞務者。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀全國法規資料庫第45至48條及現行第44條資料。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+          "claim": "消保法第18、19條分別規範通訊交易資訊揭露及解除權與合理例外。",
+          "supporting_passage": "直接核對法條；不將七日解除權說成所有數位服務均無例外。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30查閱法務部全國法規資料庫條文及官方可見全文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=12&pcode=B0000001",
+          "claim": "民法第12條規定滿18歲為成年。",
+          "supporting_passage": "直接核對第12條，成年與勞動及平台服務規則分開描述。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫第12條。"
+        },
+        {
+          "url": "https://www.mol.gov.tw/1607/28690/2282/2284/2294/7260/",
+          "claim": "勞動部問答頁於2026-04-21更新，說明未滿15歲提供勞務應依規定先申請；許可適用範圍依審查辦法第2條分辨是否完成國中及是否具有勞僱關係。",
+          "supporting_passage": "直接核對更新日期及答覆正文，與審查辦法第2條併讀；FAQ「依規定」不能取代法規所列適用對象。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀勞動部官方問答頁正文並以勞動部法規查詢系統審查辦法第2條確認範圍。"
+        },
+        {
+          "url": "https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=2&id=FL073962",
+          "claim": "審查辦法第2條將須先申請許可的未滿15歲工作者限於國中未畢業受僱者，以及未具勞僱關係而提供勞務者；國中畢業受僱例外不延伸至後者。",
+          "supporting_passage": "第2條第1款列國民中學未畢業且未滿15歲受僱者；第2款列未滿15歲透過他人替第三人提供勞務，或直接提供勞務取得報酬且未具勞僱關係者。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀勞動部勞動法令查詢系統審查辦法第2條現行文字。"
+        },
+        {
+          "url": "https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?flno=7&id=FL073962",
+          "claim": "審查辦法第7條規定適用案件須於勞務開始日前90日至20日間，向勞務提供地直轄市或縣（市）政府申請；另規定申請文件、開始後10日內補送投保證明及每次最長許可1年。",
+          "supporting_passage": "第7條第1項列申請期間、受理機關和應備文件；第2項規定開始工作日起10日內補送投保證明；第3項規定每次許可最長1年。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30讀取勞動部法令查詢系統第7條搜尋呈現條文，並交叉核對地方政府申辦說明。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+          "claim": "民法第13、77、79條分別規範未成年人行為能力、限制行為能力人意思表示的允許原則與例外，以及未經允許所訂契約須經法定代理人承認始生效力。",
+          "supporting_passage": "直接核對第13條年齡界定、第77條允許及例外、第79條契約承認規定；不將未成年人付款概括說成必然可退款。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫民法第13、77、79條。"
+        }
+      ],
+      "limits": [
+        "目前沒有涵蓋全臺、可區分兒少觀看、付費與有報酬工作的統計，不能推算個人發生機率。未滿15歲受僱許可須區分是否完成國中；非僱傭有償勞務依法仍須先申請，實際適用依工作關係及所在地主管機關判斷。",
+        "截至2026-10-30，勞基法第44至48條及兒少法第46條、民法第12、13、77至79條適用現行條文；未滿15歲許可適用對象依勞基法第45條及審查辦法第2條判斷，適用者依第7條於開始前90日至20日向勞務提供地地方政府申請。實際工作關係、契約與許可個案仍按所在地主管機關及個案事實確認。"
+      ],
+      "statistics_assessed": []
+    },
+    {
+      "id": "TW-26-010",
+      "before_sha256": "8792b1737cfcf438536b5c4b80cbe09bd56f1a3a5587982b6f1bb5e3ecc322ec",
+      "after_sha256": "e0247a1b4922ca53bc03c54c0fd9fdf8abf00446d7cbc3425ad11dce3da9b357",
+      "prior_revision": "798f6cd6604ac2f6c448f09c8fb9b20d3c9c7fd3",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "b2e7bc3cb49f1a8aac5702d6edee2071d5f5e3e9a2e34f420336e4b81d0aed5f",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣組織使用海外雲端、客服、備份、生成式AI與境外維運人員的情境；區分資料所在地、境外存取、蒐集告知、委外管理和特定產業規範。",
+      "frequency_assessment": "未找到能代表所有臺灣業者跨境處理個資活動與違法事件、且有相配暴露分母的全國統計；裁罰及新聞個案不能換算個別業者或民眾風險。",
+      "legal_status_assessment": "截至2026-10-30，法務部資料庫標示2025-11-11公布的個資法部分修正尚未施行；跨境判斷依目前仍有效的個資法文字及適用業別規定。",
+      "changes": "將跨境定義、告知事項及國際傳輸限制逐條對照仍有效的個資法歷史版本，並以現行法頁確認2025-11-11修正尚未施行；刪除不受臺灣法規支持的人數門檻推論，明示沒有可換算違法機率的全國分母。",
+      "source_status": "2026-10-30逐項查閱此記錄列明之臺灣法律、主管機關官方頁面或指引。對政府資安月報只採其可見官方摘要並保留範圍限制；未取得獨立專業審閱。",
+      "source_ids": [
+        "ch26_pdpa_effective_text_20261030",
+        "ch26_pdpa_amendment_status_20261030"
+      ],
+      "previous_source_ids": [
+        "pdpa",
+        "ch26_pdpa_status"
+      ],
+      "retired_sources": [
+        {
+          "id": "pdpa",
+          "replacement_ids": [
+            "ch26_pdpa_effective_text_20261030",
+            "ch26_pdpa_amendment_status_20261030"
+          ],
+          "reason": "原來源的支持範圍未涵蓋本篇跨境定義、現行有效條文及新修正施行狀態，改採指定歷史法規版本與現行生效狀態頁。",
+          "prior_source_sha256": "d4f397d1887a9a41a98ae044cb3bf66e6618b7b7c0842474005a3975427ef15d"
+        },
+        {
+          "id": "ch26_pdpa_status",
+          "replacement_ids": [
+            "ch26_pdpa_amendment_status_20261030"
+          ],
+          "reason": "原來源為舊公告入口，改用法務部現行法規頁面直接核對2025修正的生效狀態。",
+          "prior_source_sha256": "d8d57beb873367d6ce19de88a055211fc7c48e998c791f3fa61ce4f5faedbfbe"
+        }
+      ],
+      "previous_review_claims": [
+        "個資法現行權利、告知及非公務機關蒐用要件。",
+        "2025年部分修正尚待施行；當事人通知及業別通報依實際生效條文處理。"
+      ],
+      "review_path": "localization/reviews/TW-26-010.json",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+          "claim": "個資法第2條定義國際傳輸，第8條規定適用告知事項，第21條列主管機關得限制國際傳輸的特定情形。",
+          "supporting_passage": "直接閱讀112-05-31歷史版本指定條文，並與現行頁生效註記交叉比對。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫歷史版本及相關條文。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+          "claim": "現行法規頁標示2025-11-11公布的部分修正尚未生效，施行日期未定。",
+          "supporting_passage": "讀取頁首生效狀態及修正條文清單；未將未生效條文當作現行義務。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫現行個資法頁。"
+        }
+      ],
+      "limits": [
+        "截至2026-10-30，2025-11-11公布的個資法部分修正尚未施行；依法規當時有效條文及適用業別判斷。沒有可估算所有業者跨境處理個資違法率的全國統計與分母。",
+        "截至2026-10-30，法務部資料庫標示2025-11-11公布的個資法部分修正尚未施行；跨境判斷依目前仍有效的個資法文字及適用業別規定。"
+      ],
+      "statistics_assessed": []
+    },
+    {
+      "id": "TW-26-012",
+      "before_sha256": "24d1ec4f6663620ca827b1d2bd7979764595580b6feb57c663035e8145355478",
+      "after_sha256": "15bbdf84ea01177abd2009206e6fd817af1f999e8d84a3e9e3f8d14314c61f4d",
+      "prior_revision": "798f6cd6604ac2f6c448f09c8fb9b20d3c9c7fd3",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "d610834e379be8faf2c74a7f416ad7921eaba355696fd9c27a81b672ed702853",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣中小企業網站、雲端帳號、委外維運及勒索事件；先限制帳號與設備、保留日誌和備份，分開一般企業資安求助與法定個資／業別通報。",
+      "frequency_assessment": "資安署2026年9月月報摘要列204件政府資安事件通報，其中95件含攻防演練。這是行政通報數，統計對象為政府資安事件，不是個資外洩件數，也無全體公私部門組織暴露分母；目前沒有可估算全臺個資外洩率的同口徑全國資料。",
+      "legal_status_assessment": "截至2026-10-30，個資法2025-11-11部分修正尚未施行；現行有效第12條為查明後以適當方式通知當事人，新通報機制尚不能當成通用現行期限。個別業別可能另有通報義務。",
+      "changes": "改為先圍堵和保存證據，再按現行法律與業別規定通知或通報；加入資安署2026年7月事件應變指引與TWCERT/CC企業通報入口，分清法定義務和自願求助；加入政府月報數據並明確排除為個資外洩率或個人機率。",
+      "source_status": "2026-10-30逐項查閱此記錄列明之臺灣法律、主管機關官方頁面或指引。對政府資安月報只採其可見官方摘要並保留範圍限制；未取得獨立專業審閱。",
+      "source_ids": [
+        "ch26_pdpa_effective_text_20261030",
+        "ch26_pdpa_amendment_status_20261030",
+        "ch26_acs_incident_response_guide_20260731",
+        "ch26_twcert_incident_report_20261030",
+        "ch26_acs_monthly_stats_202609_20261030"
+      ],
+      "previous_source_ids": [
+        "pdpa",
+        "ch26_pdpa_status",
+        "ransomware"
+      ],
+      "retired_sources": [
+        {
+          "id": "pdpa",
+          "replacement_ids": [
+            "ch26_pdpa_effective_text_20261030",
+            "ch26_pdpa_amendment_status_20261030"
+          ],
+          "reason": "原來源支持範圍未明列目前有效第12條及新修法狀態，改採現行有效歷史版本和現行生效狀態頁。",
+          "prior_source_sha256": "d4f397d1887a9a41a98ae044cb3bf66e6618b7b7c0842474005a3975427ef15d"
+        },
+        {
+          "id": "ch26_pdpa_status",
+          "replacement_ids": [
+            "ch26_pdpa_amendment_status_20261030"
+          ],
+          "reason": "原來源為舊公告入口，改用法務部現行法規頁直接確認修法生效狀態。",
+          "prior_source_sha256": "d8d57beb873367d6ce19de88a055211fc7c48e998c791f3fa61ce4f5faedbfbe"
+        },
+        {
+          "id": "ransomware",
+          "replacement_ids": [
+            "ch26_acs_incident_response_guide_20260731",
+            "ch26_twcert_incident_report_20261030",
+            "ch26_acs_monthly_stats_202609_20261030"
+          ],
+          "reason": "原來源為未指定版本的共通參考首頁，改用資安署現行事件應變指引、TWCERT/CC實際通報入口及具期間與範圍限制的官方月報。",
+          "prior_source_sha256": "71f33d79fe5bd88a971e64cdafd2d0e6b50d4b20931d1657c5a3d05b7d047637"
+        }
+      ],
+      "previous_review_claims": [
+        "個資法現行通知義務及未生效的新通報規範須分開。",
+        "資安實務指引提供系統安全、備援與事件應變參考，不是所有民間組織相同法定標準。"
+      ],
+      "review_path": "localization/reviews/TW-26-012.json",
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+          "claim": "現行有效個資法第12條要求違法致個資遭竊取、洩漏、竄改或其他侵害者，查明後以適當方式通知當事人。",
+          "supporting_passage": "直接閱讀112-05-31歷史版本第12條並核對其為目前有效文字。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫歷史版本及現行生效註記。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+          "claim": "2025-11-11公布的個資法部分修正及新事故通報條文尚未施行。",
+          "supporting_passage": "直接核對現行法規頁首生效狀態，不宣稱新規定已生效。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫現行個資法頁。"
+        },
+        {
+          "url": "https://s.moda.gov.tw/c1DWBHH7BkKH",
+          "claim": "2026年7月資安事件應變行動指引列事件圍堵、紀錄保全、通報與外部溝通、復原等處理步驟。",
+          "supporting_passage": "直接讀取23頁官方PDF目錄及應變處理章節；其內容作實務建議，不替代法定期限。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀資通安全署官方PDF。"
+        },
+        {
+          "url": "https://www.twcert.org.tw/tw/sp-geno-guide-1.html",
+          "claim": "TWCERT/CC一般資安通報頁提供一般企業線上通報與電子郵件方式；政府部門及學術機構依身分轉往專屬網站。",
+          "supporting_passage": "直接核對通報身分分流與線上通報說明。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀TWCERT/CC官方通報頁。"
+        },
+        {
+          "url": "https://web.moda.gov.tw/ACS/press/report/21106",
+          "claim": "資安署2026年9月官方月報可見摘要列204件政府資安事件通報，其中95件含攻防演練。",
+          "supporting_passage": "只採月報可見摘要中的期間、件數和演練範圍；這不是個資外洩統計，亦無全體公私部門暴露分母。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30核對資通安全署官方月報頁及其可見摘要；未取得全臺個資外洩原始資料。"
+        }
+      ],
+      "limits": [
+        "截至2026-10-30，2025-11-11公布的個資法部分修正尚未施行；新事故通報規範不是所有業者已生效的共同期限。政府資安通報含攻防演練且不等於個資外洩；個案通知、通報期限按現行法律、業別規定及契約確認。",
+        "截至2026-10-30，個資法2025-11-11部分修正尚未施行；現行有效第12條為查明後以適當方式通知當事人，新通報機制尚不能當成通用現行期限。個別業別可能另有通報義務。"
+      ],
+      "statistics_assessed": [
+        {
+          "name": "政府資安事件月報通報數",
+          "period": "2026年9月",
+          "value": {
+            "reported_events": 204,
+            "attack_defense_exercises_included": 95
+          },
+          "unit": "件政府資安事件通報，其中95件包含攻防演練",
+          "geographic_scope": "資通安全署月報所列政府資安事件通報",
+          "population": "官方月報所涵蓋的政府機關資安通報，不是全臺公私部門所有組織",
+          "numerator_definition": "資安署官方月報可見摘要列2026年9月共204件通報，其中95件為攻防演練。",
+          "denominator": null,
+          "denominator_definition": "沒有全體公私部門組織、受監測系統或個資資料庫的暴露分母。",
+          "data_type": "政府資安行政通報，含演練通報",
+          "source_ids": [
+            "ch26_acs_monthly_stats_202609_20261030"
+          ],
+          "published_at": null,
+          "accessed_at": "2026-10-30",
+          "limitations": [
+            "通報件數包含演練，不等於實際個資外洩事故。",
+            "統計對象限於月報列出的政府資安通報。",
+            "不能估算全臺個資外洩率、企業發生率或個人機率。"
+          ]
+        }
+      ]
     }
   ],
   "reader_copy_cleanups": [
