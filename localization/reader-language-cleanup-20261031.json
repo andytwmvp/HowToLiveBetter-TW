@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "prior_revision": "b0367db7a5f817462020670bfafdfef3dd020fab",
+  "reviewed_at": "2026-10-31",
+  "purpose": "同步 README、閱讀說明、章節目錄、共用 runtime 與網站初始畫面的台灣版可閱讀範圍說明。",
+  "reader_surfaces": [
+    {
+      "path": "README.md",
+      "before_sha256": "ba79e247e052e3db5bd42367dc6342a23503f550e4fcda724fa8b3d9a3093d55",
+      "after_sha256": "86e4ab29e439925e00cff52f0673f7924e40b7f17a8d25534e57404b0a8eb2a4",
+      "change": "將內部進度式缺漏說法改為讀者可確認的台灣版閱讀範圍，並同步閱讀入口。"
+    },
+    {
+      "path": "REPOSITORY_GUIDE.md",
+      "before_sha256": "4efc4f765e6a9d2bd23b6bd772387c62144bb038fc0302dacb77c03d257bd0f2",
+      "after_sha256": "2f81b117797387c003d5d168513e1ae64a22dda68e44b87d22d92d3492f5094f",
+      "change": "將內部進度式缺漏說法改為讀者可確認的台灣版閱讀範圍，並同步閱讀入口。"
+    },
+    {
+      "path": "locales/zh-TW/README.md",
+      "before_sha256": "81696af4f47f96dfbf06cbc4549b2de50aa4cd1d80f4e43992ed06933b2aa7d2",
+      "after_sha256": "ae98f6e876ffd0c72c61bf8bcb59fb44a61c219c578dc7181dd5ca9a7329580c",
+      "change": "將內部進度式缺漏說法改為讀者可確認的台灣版閱讀範圍，並同步閱讀入口。"
+    },
+    {
+      "path": "localization/tw-edition/runtime.json",
+      "before_sha256": "10236bc5a8f76a0d0961763ace1e357b5203b11156cc4b06d5f1cd7ddd89a3ea",
+      "after_sha256": "aa59270fe9cffd85eb29b2845dba02b468aee08dd0826050bb36c35849487c79",
+      "change": "將內部進度式缺漏說法改為讀者可確認的台灣版閱讀範圍，並同步閱讀入口。"
+    },
+    {
+      "path": "index.html",
+      "before_sha256": "b929de122534b689ed5edfb38407c99ce6e9e9a67defa8878a918c63bc523a9d",
+      "after_sha256": "2538975728d01ae51d3c0767279c13e4e51a7694654bbc664dea4bba10287d81",
+      "change": "將內部進度式缺漏說法改為讀者可確認的台灣版閱讀範圍，並同步閱讀入口。"
+    },
+    {
+      "path": "selfcheck.html",
+      "before_sha256": "38b8c0b96e2d64dbca85ad64a9614ee254883b2a0da6c7cc1e9d0932cf7a60cf",
+      "after_sha256": "98afeb6b39a1cbec60f91a8ff08f6a7dc8a58f6b506973e3ef2028052c6bfaf2",
+      "change": "將內部進度式缺漏說法改為讀者可確認的台灣版閱讀範圍，並同步閱讀入口。"
+    }
+  ]
+}

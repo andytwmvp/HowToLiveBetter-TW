@@ -64,9 +64,36 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
                 self.assertNotIn("tw-bootstrap-v1", text)
                 self.assertNotRegex(text, r"本批證據|累計\d+篇|PR #\d+|CI 成功|下方為原作")
         self.assertIn("台灣生活中的實際做法", self.read("README.md"))
-        self.assertIn("在電腦上開啟台灣生活指南", self.read("REPOSITORY_GUIDE.md"))
+        self.assertIn("在電腦上閱讀台灣生活指南", self.read("REPOSITORY_GUIDE.md"))
         review = json.loads(self.read("localization/reviews/TW-13-042.json"))
         self.assertIn("AI輔助", review["reviewer"])
+
+    def test_20261031_reader_scope_copy_is_synchronized_and_hash_tracked(self):
+        base = "b0367db7a5f817462020670bfafdfef3dd020fab"
+        evidence = json.loads(self.read("localization/reader-language-cleanup-20261031.json"))
+        surfaces = {row["path"]: row for row in evidence["reader_surfaces"]}
+        self.assertEqual(evidence["prior_revision"], base)
+        self.assertEqual(evidence["reviewed_at"], "2026-10-31")
+        expected_paths = {
+            "README.md", "REPOSITORY_GUIDE.md", "locales/zh-TW/README.md",
+            "localization/tw-edition/runtime.json", "index.html", "selfcheck.html",
+        }
+        self.assertEqual(set(surfaces), expected_paths)
+        for path, row in surfaces.items():
+            with self.subTest(path=path):
+                prior = subprocess.check_output(["git", "show", f"{base}:{path}"], cwd=ROOT)
+                current = (ROOT / path).read_bytes()
+                self.assertEqual(hashlib.sha256(prior).hexdigest(), row["before_sha256"])
+                self.assertEqual(hashlib.sha256(current).hexdigest(), row["after_sha256"])
+
+        runtime = json.loads(self.read("localization/tw-edition/runtime.json"))
+        scope = runtime["scope"]
+        self.assertEqual(runtime["updated_at"], "2026-10-31")
+        self.assertIn("目錄未列出的主題，目前沒有可供閱讀的台灣版指引", scope)
+        self.assertNotIn("尚未整理相關指引", scope)
+        for path in ("index.html", "selfcheck.html"):
+            with self.subTest(path=path):
+                self.assertIn(scope, self.read(path))
 
     def test_published_reader_surfaces_exclude_internal_batch_notes(self):
         runtime = json.loads(self.read("localization/tw-edition/runtime.json"))
@@ -150,7 +177,7 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
         batch = batches[0]
         self.assertEqual(batch["base_main_sha"], base)
         self.assertEqual(batch["source_count"], len(batch["sources"]))
-        self.assertEqual(runtime["updated_at"], "2026-10-30")
+        self.assertGreaterEqual(runtime["updated_at"], "2026-10-30")
 
         before_runtime = json.loads(subprocess.check_output(
             ["git", "show", f"{base}:localization/tw-edition/runtime.json"],
