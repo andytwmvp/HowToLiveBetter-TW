@@ -88,14 +88,32 @@ class ChapterTwoHealthSafetyFoodTests(unittest.TestCase):
         current = validate_runtime()
         prior_items = {item["id"]: item for item in prior["items"]}
         current_items = {item["id"]: item for item in current["items"]}
+        prior_item_ids = [item["id"] for item in prior["items"]]
+        current_item_ids = [item["id"] for item in current["items"]]
+        self.assertEqual(current_item_ids[:len(prior_item_ids)], prior_item_ids)
+        self.assertEqual(set(current_item_ids[len(prior_item_ids):]), NEW_IDS)
         for item in prior["items"]:
             retroactive_audit.assert_preserved_or_rechecked(self, item, current_items[item["id"]])
 
+        prior_source_ids = [source["id"] for source in prior["sources"]]
+        current_source_ids = [source["id"] for source in current["sources"]]
+        self.assertEqual(current_source_ids[:len(prior_source_ids)], prior_source_ids)
         register = load("localization/retroactive-review-register-20261019.json")
         edge = next(
             record for record in register["substantive_rechecks"]
             if record["id"] == "TW-13-019" and record["reviewed_at"] == "2026-10-30"
         )
+        base_register = json.loads(
+            subprocess.check_output(
+                ["git", "show", f"{BASE}:localization/retroactive-review-register-20261019.json"],
+                cwd=ROOT,
+                text=True,
+            )
+        )
+        prior_rechecks = base_register["substantive_rechecks"]
+        current_rechecks = register["substantive_rechecks"]
+        self.assertEqual(current_rechecks[:len(prior_rechecks)], prior_rechecks)
+        self.assertIn(edge, current_rechecks[len(prior_rechecks):])
         self.assertEqual(edge["previous_source_ids"], prior_items["TW-13-019"]["source_ids"])
         self.assertEqual(edge["source_ids"], current_items["TW-13-019"]["source_ids"])
         retroactive_audit.validate_recheck_history(ROOT, edge, current_items["TW-13-019"])
