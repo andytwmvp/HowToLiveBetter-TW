@@ -1,12 +1,12 @@
-"""驗證第13章急救首批4條與原有來源審閱資料完全保留。"""
+"""驗證第13章急救指引、來源口徑與歷史審閱資料。"""
 import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from retroactive_audit import assert_preserved_or_rechecked
+from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from body_renderer import body_blocks
 BASE='5437a44b4d640657f5542a7e259e1e6ea294c9ad'
-IDS={'TW-13-001','TW-13-003','TW-13-007','TW-13-030'}
+IDS={'TW-13-001','TW-13-003','TW-13-007','TW-13-012','TW-13-030'}
 def read(p):return json.loads((ROOT/p).read_text(encoding='utf8'))
 class EmergencyTests(unittest.TestCase):
  def test_markdowns_sources_and_reviews(self):
@@ -34,12 +34,22 @@ class EmergencyTests(unittest.TestCase):
   self.assertIn('FAST',d['TW-13-003'])
   self.assertIn('最後一次確認',d['TW-13-003'])
   self.assertIn('不能等到胸痛超過十五分鐘',d['TW-13-007'])
+  self.assertIn('6,301人',d['TW-13-001'])
+  self.assertIn('48萬名就醫人數',d['TW-13-003'])
+  self.assertIn('64.2萬名就醫人數',d['TW-13-007'])
+  self.assertIn('手腳大量出血',d['TW-13-012'])
+  self.assertIn('不能使用止血帶',d['TW-13-012'])
+  self.assertNotIn('不適用臺灣',d['TW-13-001'])
+  self.assertNotIn('加入叫叫壓電',d['TW-13-001'])
   self.assertIn('趴下、掩護、穩住',d['TW-13-030'])
  def test_preserve_all_old_runtime_rows(self):
   base=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
   new=validate_runtime();items={x['id']:x for x in new['items']};sources={s['id']:s for s in new['sources']}
   for old in base['items']:assert_preserved_or_rechecked(self,old,items[old['id']])
   for old in base['sources']:self.assertEqual(sources[old['id']],old)
+  records={r['id']:r for r in read('localization/retroactive-review-register-20261019.json')['substantive_rechecks'] if r['id'] in IDS}
+  for key in ('TW-13-001','TW-13-003','TW-13-007','TW-13-012'):
+   validate_recheck_history(ROOT,records[key],items[key])
   registry=read('localization/tw-edition/sources/ch13-emergency-20261017.json')['sources']
   self.assertEqual(len(registry),8)
   for source in registry:self.assertEqual(sources[source[0]]['url'],source[2])

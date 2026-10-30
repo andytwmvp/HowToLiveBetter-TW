@@ -7435,8 +7435,12 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-001.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "ch13_cpr_fire",
+        "ch13_cpr_faq",
+        "retro_nfa_ohca_2024"
+      ],
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "有人倒地沒呼吸，立刻用力按壓胸口，讓旁人打 120 並找 AED",
@@ -7474,11 +7478,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-003.md",
       "sources": [
-        "ch13_stroke_hpa",
         "ch13_stroke_mohw",
-        "retro_stroke_802"
+        "retro_stroke_nhia_2023",
+        "retro_nhi_disease_2025"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "突然嘴歪、一側胳膊沒勁、說話說不清，立刻打 120，不要等、不要自己開車去",
@@ -7560,9 +7564,9 @@
       "sources": [
         "ch13_heart_mohw",
         "ch13_heart_fire",
-        "retro_heart_hch2026"
+        "retro_nhi_disease_2025"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "胸口壓著疼、悶、發緊超過 15 分鐘不緩解，或者疼時出冷汗、噁心、喘不上氣，打 120，不要自己扛也不要自己開車",
@@ -7647,10 +7651,9 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-012.md",
       "sources": [
-        "ch13_bleeding_mnd",
-        "ch13_bleeding_nfa"
+        "ch13_bleeding_mnd"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "大出血先用手死死壓住傷口，四肢壓不住就上止血帶，同時打 120",

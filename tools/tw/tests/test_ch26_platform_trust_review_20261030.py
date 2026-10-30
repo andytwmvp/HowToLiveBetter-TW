@@ -68,19 +68,36 @@ class PlatformTrustReviewTests(unittest.TestCase):
         self.assertEqual(before["registry_sources_before"], before_coverage["registry_sources"])
         self.assertEqual(before["json_files_before"], before_coverage["json_files_checked"])
         self.assertEqual(before["substantive_rechecks_before"], len(before_register["substantive_rechecks"]))
-        self.assertEqual(after["core_completed"], coverage["publication_completed_entries"])
-        self.assertEqual(after["core_total"], coverage["publication_total_entries"])
-        self.assertEqual(after["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(after["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(after["substantive_rechecks"], len(current_register["substantive_rechecks"]))
-        # A later reader-copy provenance record adds one checked JSON file;
-        # retain the original batch's immutable count and verify the live count.
-        self.assertEqual(after["json_files"] + 1, coverage["json_files_checked"])
-        self.assertEqual(after["registry_sources"], coverage["registry_sources"])
-        self.assertEqual(after["unresolved_source_ids"], len(coverage["unresolved_source_ids"]))
+        # `counts_after` is the immutable snapshot from this October 30 batch.
+        # Later reviews append sources and history, so validate the batch's
+        # own arithmetic separately from today's live, cumulative coverage.
         self.assertEqual(
-            after["unresolved_reference_occurrences"],
-            coverage["unresolved_reference_occurrences"],
+            after["runtime_sources"],
+            before["runtime_sources_before"] + len(self.evidence["new_source_ids"]),
+        )
+        self.assertEqual(
+            after["registry_sources"],
+            before["registry_sources_before"] + len(self.evidence["new_source_ids"]),
+        )
+        self.assertEqual(
+            after["substantive_rechecks"],
+            before["substantive_rechecks_before"] + len(ITEM_IDS),
+        )
+        self.assertEqual(after["json_files"], before["json_files_before"] + 2)
+        self.assertGreaterEqual(
+            coverage["publication_completed_entries"], after["core_completed"]
+        )
+        self.assertEqual(after["core_total"], coverage["publication_total_entries"])
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(
+            len(current_register["substantive_rechecks"]), after["substantive_rechecks"]
+        )
+        self.assertGreaterEqual(coverage["json_files_checked"], after["json_files"])
+        self.assertGreaterEqual(coverage["registry_sources"], after["registry_sources"])
+        self.assertEqual(
+            len(coverage["unresolved_source_ids"]),
+            len(set(coverage["unresolved_source_ids"])),
         )
         self.assertFalse(after["publication_ready"])
         self.assertFalse(coverage["publication_ready"])
@@ -138,8 +155,8 @@ class PlatformTrustReviewTests(unittest.TestCase):
         registry = read(REGISTRY_PATH)
         registry_ids = {row[0] for row in registry["sources"]}
         new_ids = set(self.sources) - set(previous)
-        self.assertEqual(new_ids, set(self.evidence["new_source_ids"]))
-        self.assertEqual(new_ids, registry_ids)
+        self.assertTrue(set(self.evidence["new_source_ids"]).issubset(new_ids))
+        self.assertEqual(set(self.evidence["new_source_ids"]), registry_ids)
         for source_id, source in previous.items():
             with self.subTest(source=source_id):
                 self.assertEqual(self.sources[source_id], source)

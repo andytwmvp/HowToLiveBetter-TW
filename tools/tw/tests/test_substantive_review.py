@@ -53,7 +53,7 @@ class SubstantiveReviewTests(unittest.TestCase):
                 data['substantive_rechecks'][0]['prior_review_sha256'] = 'a' * 64
             return data
         with patch.object(audit, 'load', side_effect=altered):
-            with self.assertRaisesRegex(ValueError, '原始審閱 SHA'):
+            with self.assertRaisesRegex(ValueError, 'SHA 不符'):
                 audit.audit()
 
     def test_recheck_may_append_sources_but_never_remove_or_reorder_prior_sources(self):

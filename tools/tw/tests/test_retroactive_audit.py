@@ -284,7 +284,16 @@ class RetroactiveAuditTests(unittest.TestCase):
             )
             previous = next(item for item in previous_runtime["items"] if item["id"] == key)
             normalized, _ = audit.normalize_reader_item(previous)
-            self.assertEqual(normalized, items[key], key)
+            if key == "TW-13-012":
+                digest = hashlib.sha256(normalized["body"].encode("utf-8")).hexdigest()
+                recheck = next(
+                    item for item in register["substantive_rechecks"]
+                    if item["id"] == key and item["before_sha256"] == digest
+                )
+                self.assertEqual(recheck["previous_body"], normalized["body"])
+                audit.validate_recheck_history(audit.ROOT, recheck, items[key])
+            else:
+                self.assertEqual(normalized, items[key], key)
 
         self.assertNotIn("特殊傷勢依119指導，\n", items["TW-13-012"]["body"])
         self.assertIn("迷路或受困時", items["TW-13-027"]["body"])

@@ -79,12 +79,38 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
             "localization/tw-edition/runtime.json", "index.html", "selfcheck.html",
         }
         self.assertEqual(set(surfaces), expected_paths)
+        # The evidence records the output at the commit that introduced the
+        # cleanup. Later batches may update the shared runtime, so validate
+        # that historical snapshot from Git instead of comparing it to the
+        # current cumulative runtime file.
+        recorded_revision = subprocess.check_output(
+            [
+                "git",
+                "log",
+                "-1",
+                "--format=%H",
+                "--",
+                "localization/reader-language-cleanup-20261031.json",
+            ],
+            cwd=ROOT,
+            text=True,
+        ).strip()
+        self.assertRegex(recorded_revision, r"^[0-9a-f]{40}$")
         for path, row in surfaces.items():
             with self.subTest(path=path):
                 prior = subprocess.check_output(["git", "show", f"{base}:{path}"], cwd=ROOT)
+                recorded_after = subprocess.check_output(
+                    ["git", "show", f"{recorded_revision}:{path}"], cwd=ROOT
+                )
                 current = (ROOT / path).read_bytes()
                 self.assertEqual(hashlib.sha256(prior).hexdigest(), row["before_sha256"])
-                self.assertEqual(hashlib.sha256(current).hexdigest(), row["after_sha256"])
+                self.assertEqual(
+                    hashlib.sha256(recorded_after).hexdigest(), row["after_sha256"]
+                )
+                if path != "localization/tw-edition/runtime.json":
+                    self.assertEqual(
+                        hashlib.sha256(current).hexdigest(), row["after_sha256"]
+                    )
 
         runtime = json.loads(self.read("localization/tw-edition/runtime.json"))
         scope = runtime["scope"]
