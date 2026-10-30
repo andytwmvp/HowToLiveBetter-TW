@@ -12331,7 +12331,7 @@
         "https://www.tipo.gov.tw/tw/copyright/692-63396.html",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "做直播要網絡文化經營許可證，做視聽節目的那張證民營基本拿不到",
@@ -12390,12 +12390,20 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch26/TW-26-006.md",
       "sources": [
+        "https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL002523?date=20230215",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050023",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080079",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080080",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080226",
+        "https://law.moda.gov.tw/LawContent.aspx?id=GL000157",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+        "https://www.tipo.gov.tw/tw/copyright/768-4911.html",
         "https://siarc.mohw.gov.tw/service.php",
-        "https://www.tipo.gov.tw/tw/copyright/694-17493.html",
-        "https://moda.gov.tw/press/bulletin/14538"
+        "https://www.mohw.gov.tw/dl-99978-5364a5f2-c39a-40fc-9a8f-94731490bbd7.html",
+        "https://www.mohw.gov.tw/dl-99969-c1f6ae78-5f82-4c52-bfeb-15581648da80.html"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "用戶發的內容你要管：審核機制、舉報入口、發現違法立即停傳並報告",
@@ -12412,11 +12420,14 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch26/TW-26-007.md",
       "sources": [
+        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-        "https://www.pdpc.gov.tw/News_Html/100/",
-        "https://moda.gov.tw/press/bulletin/14534"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080226",
+        "https://law.moda.gov.tw/LawContent.aspx?id=GL000158",
+        "https://ipfs.moda.gov.tw/ADI/news/latest-news/16544.html",
+        "https://moda.gov.tw/press/bulletin/14158"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "提供信息發佈、即時通訊服務，必須要求用戶提供真實身份信息",
@@ -12460,9 +12471,10 @@
       "target_path": "locales/zh-TW/book/ch26/TW-26-009.md",
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
-        "https://www.tipo.gov.tw/tw/copyright/694-17493.html"
+        "https://www.tipo.gov.tw/tw/copyright/694-17493.html",
+        "https://www.tipo.gov.tw/tw/copyright/768-4911.html"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-10-30",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "接到侵權通知要及時處理，轉送聲明後 15 日沒有下文就恢復",

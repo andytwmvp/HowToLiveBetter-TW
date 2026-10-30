@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "batch": "第26章平台、性影像及著作權內容歷史再審",
+  "baseline_main_sha": "d7554a66c62caaae07e7dfd7c02beee24aac5e41",
+  "reviewed_at": "2026-10-30",
+  "scope": "四篇既有核心條目逐主張再核對；未新增核心條目。",
+  "counts_before": {
+    "core_completed": 282,
+    "core_total": 765,
+    "runtime_items": 293,
+    "runtime_sources_before": 983,
+    "registry_sources_before": 1064,
+    "json_files_before": 518,
+    "substantive_rechecks_before": 283,
+    "unresolved_source_ids_before": 113,
+    "unresolved_reference_occurrences_before": 296
+  },
+  "new_source_ids": [
+    "ch26_copyright_law_20261030",
+    "ch26_tipo_live_20261030",
+    "ch26_child_act46_20261030",
+    "ch26_ysepa_art8_effective_20230215",
+    "ch26_ysepa_effective_status_20261030",
+    "ch26_sexassault_art13_20261030",
+    "ch26_sexassault_rules_20261030",
+    "ch26_siarc_service_20261030",
+    "ch26_siarc_stats_2025_ppt_20261030",
+    "ch26_siarc_stats_2025_annual_20261030",
+    "ch26_adfraud_act_20261030",
+    "ch26_adfraud_notice_20241130",
+    "ch26_ad_identity_rules_20241130",
+    "ch26_ad_platform_list_20250915",
+    "ch26_ad_scale_criterion_20261030",
+    "ch26_tipo_false_notice_20261030",
+    "ch26_tipo_notice_reply_20261030"
+  ],
+  "items": [
+    {
+      "id": "TW-26-003",
+      "before_sha256": "279ed7d0696b7546525c117099a0d0762c7f0c74ec9b70f82b6a071f5ab3503e",
+      "after_sha256": "c816fb9298cc2e2111e9ad701590792bfd08e176733ae11374c3256521b1eb19",
+      "prior_review_sha256": "621bb99c20eabe532a0ee62ee69f69c6702350df707b94da43bc359c05e601bc",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch26_copyright_law_20261030",
+        "ch26_tipo_live_20261030",
+        "ch26_child_act46_20261030"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+          "claim": "著作權法按網路服務類型規範民事免責和通知回復期限。",
+          "supporting_passage": "第90條之4至第90條之11依網路服務類型規定民事免責與通知回復；第90條之9規定資訊儲存服務的回復通知轉送、10及14個工作日各自起算點，第90條之11規定不實通知損害責任。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：著作權法：網路服務提供者及通知回復程序。"
+        },
+        {
+          "url": "https://www.tipo.gov.tw/tw/copyright/692-63396.html",
+          "claim": "直播演唱歌曲可能涉及公開傳輸，回看可能另涉及重製；授權依內容與用途判斷。",
+          "supporting_passage": "直播演唱他人歌曲可能涉及詞曲及錄音著作公開傳輸；提供回看可能另涉及重製，是否取得權利須按平台、內容及用途確認。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：智慧財產局：直播演唱歌曲與回看涉及的權利。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001",
+          "claim": "網路平台依兒少防護機制訂定自律規範並採取明確措施，主管機關通知後應限制兒少接取或移除。",
+          "supporting_passage": "網路平台應訂自律規範並採取明確可行的兒少防護措施；主管機關告知內容有害或防護不足後，平台應限制兒少接取或先行移除。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：兒童及少年福利與權益保障法第46條。"
+        }
+      ],
+      "statistics_assessed": []
+    },
+    {
+      "id": "TW-26-006",
+      "before_sha256": "0465a457ebef95e062ca47f9fd17780313389a765c5cc77c37dda07402a723aa",
+      "after_sha256": "cb6d5965eff18fdf9165293e26119f39dbb3e3ca0209387610a17fba79484a57",
+      "prior_review_sha256": "1185cc9caea45849b7d019ce2329732d7804c58e8630fae58d3ab25bbde1e04e",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch26_ysepa_art8_effective_20230215",
+        "ch26_ysepa_effective_status_20261030",
+        "ch26_sexassault_art13_20261030",
+        "ch26_sexassault_rules_20261030",
+        "ch26_child_act46_20261030",
+        "ch26_adfraud_act_20261030",
+        "ch26_adfraud_notice_20241130",
+        "ch26_copyright_law_20261030",
+        "ch26_tipo_false_notice_20261030",
+        "ch26_siarc_service_20261030",
+        "ch26_siarc_stats_2025_ppt_20261030",
+        "ch26_siarc_stats_2025_annual_20261030"
+      ],
+      "source_checks": [
+        {
+          "url": "https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL002523?date=20230215",
+          "claim": "2023有效第8條規定法定業者在特定機關告知疑似犯罪後先行限制或移除並保留資料180日，沒有統一24小時期限。",
+          "supporting_passage": "第8條對特定網路平台、應用服務及接取服務業者，在指定機關或內容防護機構告知疑似第四章犯罪後要求先行限制瀏覽或移除，並保留相關網頁、嫌疑人個資及網路使用紀錄180日；適用文字未列統一24小時期限。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "直接核對臺北市法規查詢系統所載2023-02-15中央歷史法規第8條，並與現行法頁施行狀態交叉比對。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050023",
+          "claim": "2024年修正第3、8、8-1、47條截至查閱日尚未施行。",
+          "supporting_passage": "法務部法規資料庫截至2026-10-30標示2024年8月7日修正之第3、8、8-1、47條施行日期未定；適用時須區分未生效修文與既有有效條文。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：兒童及少年性剝削防制條例：2024年修正施行狀態。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080079",
+          "claim": "成人性侵害犯罪網頁依性侵害犯罪防治法第13條處置並保留必要資料。",
+          "supporting_passage": "對法定網路業者知悉性侵害犯罪網頁資料，規定先行限制瀏覽或移除及特定犯罪網頁資料保留180日；目的事業主管機關再依施行細則書面命令及期限處置。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：性侵害犯罪防治法第13條。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080080",
+          "claim": "目的事業主管機關書面命令後性侵害犯罪24小時、刑法第319條之1至之4犯罪72小時，另列保存180日起訖。",
+          "supporting_passage": "目的事業主管機關書面命令網路業者限制瀏覽或移除時，性侵害犯罪期限為24小時，刑法第319條之1至第319條之4犯罪為72小時，並記載180日資料保存起訖日期。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：性侵害犯罪防治法施行細則第7條。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050001",
+          "claim": "兒少有害網路內容依兒少法第46條自律防護與主管機關通知處置。",
+          "supporting_passage": "網路平台應訂自律規範並採取明確可行的兒少防護措施；主管機關告知內容有害或防護不足後，平台應限制兒少接取或先行移除。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：兒童及少年福利與權益保障法第46條。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080226",
+          "claim": "詐欺犯罪危害防制條例限定法定廣告平台及詐欺廣告處置。",
+          "supporting_passage": "第27條限定一定規模網路廣告平台；第30條要求驗證委託刊播者及出資者；第32條規範詐欺廣告通知處置。這些規定不是一般留言的普遍義務。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30由法務部全國法規資料庫官方搜尋結果及法規全文核對第27、30至32條。"
+        },
+        {
+          "url": "https://law.moda.gov.tw/LawContent.aspx?id=GL000157",
+          "claim": "指定機關通知法定網路廣告平台後24小時內處置詐欺廣告，公告2024-11-30生效。",
+          "supporting_passage": "法定網路廣告平台經司法警察、數位經濟產業主管機關或目的事業主管機關通知廣告涉及詐欺後，24小時內移除、限制瀏覽、停止播送或採取必要措施；公告2024-11-30生效。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：數發部：詐欺犯罪危害防制條例第32條通知期限。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+          "claim": "網路服務類型及著作權通知回復期限依著作權法；故意或過失不實通知造成損害可能負賠償責任。",
+          "supporting_passage": "第90條之4至第90條之11依網路服務類型規定民事免責與通知回復；第90條之9規定資訊儲存服務的回復通知轉送、10及14個工作日各自起算點，第90條之11規定不實通知損害責任。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：著作權法：網路服務提供者及通知回復程序。"
+        },
+        {
+          "url": "https://www.tipo.gov.tw/tw/copyright/768-4911.html",
+          "claim": "智慧財產局說明通知回復及不實通知責任，不以通用期限處理。",
+          "supporting_passage": "智慧財產局說明使用者提出回復通知及故意或過失不實通知造成損害的責任；實際期限仍須依著作權法服務類型與起算點判斷。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：智慧財產局：不實通知及使用者回復流程。"
+        },
+        {
+          "url": "https://siarc.mohw.gov.tw/service.php",
+          "claim": "衛福部中心提供證據指引、下架協助及求助轉介，列明專線服務時間。",
+          "supporting_passage": "中心說明保存網址、含網址帳號時間的頁面截圖及對話紀錄，協助聯繫平台下架與後續資源轉介；專線02-6605-7373每日9時至22時全年無休，並提供線上服務。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：衛福部性影像處理中心：證據保留、移除及求助服務。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-99978-5364a5f2-c39a-40fc-9a8f-94731490bbd7.html",
+          "claim": "114年度分析簡報列2,478件、6,687個網址及1,521人，為中心行政服務量且無暴露分母。",
+          "supporting_passage": "114年度案件分析簡報列2,478件申訴案件、6,687個性影像網址及1,521名被害人；是中心處理服務量，不是全國盛行率或個人風險。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "直接讀取衛福部官方114年度14頁案件分析簡報並核對統計表；只視為中心行政服務量，沒有暴露分母。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-99969-c1f6ae78-5f82-4c52-bfeb-15581648da80.html",
+          "claim": "另一份114年度業務統計頁可見6,688個網址及1,520名協助對象；附件直接讀取逾時。",
+          "supporting_passage": "衛福部另一份114年度業務統計可見欄位列6,688件申訴網址及協助1,520位被害人；口徑與年度分析簡報相差1，不可拼成單一總數或個人機率。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "查閱衛福部官方114年度業務統計頁面可見表格欄位；附件直接開啟逾時，僅記錄官方可見值，與分析簡報分開。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "name": "性影像處理中心114年度案件分析簡報服務量",
+          "period": "2025年度（民國114年）",
+          "value": {
+            "complaint_cases": 2478,
+            "image_urls": 6687,
+            "victims": 1521
+          },
+          "unit": "申訴案件／網址／人",
+          "geographic_scope": "衛福部性影像處理中心服務案件，非台灣全體人口或平台使用者。",
+          "population": "114年度中心案件分析簡報所列受理與服務個案。",
+          "numerator_definition": "簡報第5頁分別列2,478件申訴案件、6,687個性影像網址及1,521名被害人。",
+          "denominator": null,
+          "denominator_definition": "未提供全台居民、網路使用者、影像暴露或未通報事件分母。",
+          "data_type": "行政申訴與服務量統計",
+          "source_ids": [
+            "ch26_siarc_stats_2025_ppt_20261030"
+          ],
+          "published_at": null,
+          "accessed_at": "2026-10-30",
+          "limitations": [
+            "案件、網址與人數為不同統計單位，不可相加。",
+            "不是盛行率或個人發生機率。",
+            "僅涵蓋中心可見受理與服務資料，未通報事件不在分子。"
+          ]
+        },
+        {
+          "name": "性影像處理中心114年度業務統計頁可見服務量",
+          "period": "2025年度（民國114年）",
+          "value": {
+            "complaint_urls": 6688,
+            "assisted_people": 1520
+          },
+          "unit": "申訴網址／人",
+          "geographic_scope": "衛福部性影像處理中心業務統計頁面所列服務量。",
+          "population": "官方年度業務統計可見欄位所代表的中心服務對象。",
+          "numerator_definition": "官方頁面可見欄位列6,688個申訴網址及1,520名協助對象；附件直接讀取逾時，未以簡報數字替代。",
+          "denominator": null,
+          "denominator_definition": "沒有全體人口、使用者、影像暴露或未通報案件分母。",
+          "data_type": "行政業務統計；官方頁面可見表格值，附件未能直接讀取",
+          "source_ids": [
+            "ch26_siarc_stats_2025_annual_20261030"
+          ],
+          "published_at": null,
+          "accessed_at": "2026-10-30",
+          "limitations": [
+            "與同年度分析簡報的網址及人數各差1，應分開保留原表口徑。",
+            "附件直接開啟逾時；不推論數字差異原因。",
+            "不能換算盛行率或個人發生機率。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-26-007",
+      "before_sha256": "6ab532b78488d8e0c9e5c2c3b87f4afd77fec7232077a250c381670170276e0b",
+      "after_sha256": "ed542a529ea546b91b38a470ed0f8fa72844d74e038ee93b11d1c73c7fe068f8",
+      "prior_review_sha256": "fedfdf33e157e05a828281e3697a93bcb82bd0c8e9aa5cd028022a33bbf8cf3e",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch26_pdpa_effective_text_20261030",
+        "ch26_pdpa_amendment_status_20261030",
+        "ch26_adfraud_act_20261030",
+        "ch26_ad_identity_rules_20241130",
+        "ch26_ad_platform_list_20250915",
+        "ch26_ad_scale_criterion_20261030"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+          "claim": "個資法目前有效文字規範個資蒐集告知、法律依據及資料保護義務。",
+          "supporting_passage": "直接核對112年5月31日有效版本指定條文，並與現行法的修法狀態交叉確認。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫目前有效的個資法歷史版本。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+          "claim": "個資法2025年11月11日部分修正尚未生效，施行日期由行政院另定。",
+          "supporting_passage": "現行法頁標示2025-11-11修正之部分條文尚未生效，施行日未定。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀法務部全國法規資料庫現行個資法及生效狀態。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080226",
+          "claim": "詐欺犯罪危害防制條例第27、30條限定一定規模廣告平台並要求驗證委託刊播者及出資者。",
+          "supporting_passage": "第27條限定一定規模網路廣告平台；第30條要求驗證委託刊播者及出資者；第32條規範詐欺廣告通知處置。這些規定不是一般留言的普遍義務。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30由法務部全國法規資料庫官方搜尋結果及法規全文核對第27、30至32條。"
+        },
+        {
+          "url": "https://law.moda.gov.tw/LawContent.aspx?id=GL000158",
+          "claim": "身分驗證技術方式及透明度規範於2024-11-30生效。",
+          "supporting_passage": "數發部公告一定規模網路廣告平台驗證委託刊播者及出資者身分的技術方式與透明度報告規範，自2024-11-30生效。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：網路廣告平台身分驗證技術及防詐透明度規範。"
+        },
+        {
+          "url": "https://ipfs.moda.gov.tw/ADI/news/latest-news/16544.html",
+          "claim": "數發部公告納管Google、YouTube、LINE、Facebook、Instagram、Threads及TikTok等7個平台。",
+          "supporting_passage": "數發部2025-09-26更新頁面列Google、YouTube、LINE、Facebook、Instagram、Threads及TikTok等7個平台；公告名單會依風險與平台規模調整。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：數發部：一定規模網路廣告平台公告名單。"
+        },
+        {
+          "url": "https://moda.gov.tw/press/bulletin/14158",
+          "claim": "平台規模認定綜合詐騙廣告風險及月獨立訪客數大於人口5%等標準。",
+          "supporting_passage": "規模認定綜合詐騙廣告風險及台灣每月獨立訪客數；每月獨立訪客數大於台灣人口5%為計算標準之一，不是一般使用者的個資受害率。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：數發部：一定規模網路廣告平台計算基準。"
+        }
+      ],
+      "statistics_assessed": []
+    },
+    {
+      "id": "TW-26-009",
+      "before_sha256": "dfa345ca228885b069384e839590ac0363e2005d1018ed223a03673c77134b77",
+      "after_sha256": "9f316ddf602daf5fa3984316e554c1da69eef5f502c30c505ec409900747ac99",
+      "prior_review_sha256": "3c38a2459474ce35a99232277372dde9c66b27400e72e9c1e6e235aad41e35e7",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "source_ids": [
+        "ch26_copyright_law_20261030",
+        "ch26_tipo_notice_reply_20261030",
+        "ch26_tipo_false_notice_20261030"
+      ],
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070017",
+          "claim": "著作權法按服務類型規範免責與回復；資訊儲存服務的10及14個工作日期限各自起算。",
+          "supporting_passage": "第90條之4至第90條之11依網路服務類型規定民事免責與通知回復；第90條之9規定資訊儲存服務的回復通知轉送、10及14個工作日各自起算點，第90條之11規定不實通知損害責任。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：著作權法：網路服務提供者及通知回復程序。"
+        },
+        {
+          "url": "https://www.tipo.gov.tw/tw/copyright/694-17493.html",
+          "claim": "智慧財產局第90條之9頁直接列明資訊儲存服務者與兩個期限。",
+          "supporting_passage": "智慧財產局第90條之9頁列明資訊儲存服務者收到回復通知後立即轉送、權利人10個工作日訴訟證明期限及業者14個工作日回復期限；頁面更新日期為2025-04-28。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：智慧財產局：著作權法第90條之9通知回復期限。"
+        },
+        {
+          "url": "https://www.tipo.gov.tw/tw/copyright/768-4911.html",
+          "claim": "智慧財產局說明回復通知及不實通知造成損害的救濟。",
+          "supporting_passage": "智慧財產局說明使用者提出回復通知及故意或過失不實通知造成損害的責任；實際期限仍須依著作權法服務類型與起算點判斷。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接閱讀台灣主管機關官方法規或資料頁：智慧財產局：不實通知及使用者回復流程。"
+        }
+      ],
+      "statistics_assessed": []
+    }
+  ],
+  "counts_after": {
+    "core_completed": 282,
+    "core_total": 765,
+    "runtime_items": 293,
+    "runtime_sources": 1000,
+    "registry_sources": 1081,
+    "json_files": 520,
+    "substantive_rechecks": 287,
+    "unresolved_source_ids": 113,
+    "unresolved_reference_occurrences": 296,
+    "publication_ready": false
+  }
+}
