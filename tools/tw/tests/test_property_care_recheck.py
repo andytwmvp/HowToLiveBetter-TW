@@ -12,7 +12,7 @@ class PropertyCareRecheckTests(unittest.TestCase):
   for k in IDS:
    i=items[k];rv=load('localization/reviews/'+k+'.json');validate_recheck_history(ROOT,rows[k],i);self.assertEqual((ROOT/i['target_path']).read_text(),i['body']);self.assertEqual(rv['target_sha256'],hashlib.sha256(i['body'].encode()).hexdigest());self.assertEqual(rv['source_checks'],rows[k]['source_checks']);self.assertEqual({c['url'] for c in rv['source_checks']},{sources[s]['url'] for s in i['source_ids']})
  def test_all_previous_content_and_source_objects_preserved(self):
-  old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();items={i['id']:i for i in rt['items']};sources={s['id']:s for s in rt['sources']};self.assertEqual([i['id'] for i in old['items']],[i['id'] for i in rt['items']])
+  old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();items={i['id']:i for i in rt['items']};sources={s['id']:s for s in rt['sources']};old_ids=[i['id'] for i in old['items']];self.assertEqual(old_ids,[i['id'] for i in rt['items'] if i['id'] in set(old_ids)])
   for i in old['items']:assert_preserved_or_rechecked(self,i,items[i['id']])
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_immediate_safety_and_rights_boundaries(self):

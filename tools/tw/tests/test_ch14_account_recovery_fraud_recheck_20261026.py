@@ -142,7 +142,8 @@ class Chapter14AccountRecoveryRecheckTests(unittest.TestCase):
         self.assertFalse(self.evidence['publication_ready'])
         report = publication_report()
         self.assertFalse(report['publication_ready'])
-        self.assertEqual(report['publication_completed_entries'], sum(row['status'] == 'verified' for row in read('localization/manifest.json')['entries']))
+        manifest = json.loads((ROOT / 'localization/manifest.json').read_text())
+        self.assertEqual(report['publication_completed_entries'], sum(row['status'] == 'verified' for row in manifest['entries']))
         self.assertEqual(report['publication_total_entries'], 765)
 
     def test_coverage_and_baseline_counts_remain_truthful(self):

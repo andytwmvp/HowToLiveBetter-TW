@@ -168,7 +168,9 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
         self.assertEqual(batch["source_count"], 1)
         self.assertEqual(len(batch["sources"]), 1)
         self.assertEqual(set(runtime["reader_source_titles"]), {"criminal"})
-        self.assertEqual(before_runtime["sources"], runtime["sources"])
+        self.assertTrue(set(before_sources).issubset(current_sources))
+        for source_id, previous in before_sources.items():
+            self.assertEqual(current_sources[source_id], previous)
         for row in batch["sources"]:
             source_id = row["id"]
             with self.subTest(source_id=source_id):

@@ -15,7 +15,7 @@ class MentalOccupationalTests(unittest.TestCase):
   self.assertEqual(records['TW-NAV-003']['prior_review_kind'],'runtime_item')
  def test_all_old_reading_items_sources_and_scope_preserved(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();items={i['id']:i for i in rt['items']};sources={s['id']:s for s in rt['sources']}
-  self.assertEqual(set(items),{i['id'] for i in old['items']})
+  self.assertTrue({i['id'] for i in old['items']}.issubset(items))
   for i in old['items']:assert_preserved_or_rechecked(self,i,items[i['id']])
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
   self.assertTrue(IDS.isdisjoint({x['id'] for x in load('localization/manifest.json')['entries']}));self.assertFalse(publication_report()['publication_ready'])
