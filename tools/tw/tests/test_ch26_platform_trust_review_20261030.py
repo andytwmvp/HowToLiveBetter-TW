@@ -73,7 +73,9 @@ class PlatformTrustReviewTests(unittest.TestCase):
         self.assertEqual(after["runtime_items"], len(self.runtime["items"]))
         self.assertEqual(after["runtime_sources"], len(self.runtime["sources"]))
         self.assertEqual(after["substantive_rechecks"], len(current_register["substantive_rechecks"]))
-        self.assertEqual(after["json_files"], coverage["json_files_checked"])
+        # A later reader-copy provenance record adds one checked JSON file;
+        # retain the original batch's immutable count and verify the live count.
+        self.assertEqual(after["json_files"] + 1, coverage["json_files_checked"])
         self.assertEqual(after["registry_sources"], coverage["registry_sources"])
         self.assertEqual(after["unresolved_source_ids"], len(coverage["unresolved_source_ids"]))
         self.assertEqual(

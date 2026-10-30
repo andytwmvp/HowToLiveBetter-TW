@@ -198,8 +198,12 @@ class Ch23LearningMethodsRecheckTests(unittest.TestCase):
             row["path"]: row
             for row in read("localization/reader-language-cleanup-20261029.json")["reader_documents"]
         }
+        current_cleanup = read("localization/reader-language-cleanup-20261031.json")
+        current_surfaces = {row["path"]: row for row in current_cleanup["reader_surfaces"]}
         self.assertEqual(set(documents), READER_DOCUMENTS)
         self.assertEqual(set(cleanups), {"README.md", "REPOSITORY_GUIDE.md", "locales/zh-TW/README.md"})
+        self.assertTrue(set(cleanups).issubset(current_surfaces))
+        self.assertEqual(current_cleanup["prior_revision"], "b0367db7a5f817462020670bfafdfef3dd020fab")
         self.assertEqual(
             read("localization/reader-language-cleanup-20261029.json")["prior_revision"],
             "454c0b6a193b2503749a5f579c882311631edc41",
@@ -213,13 +217,18 @@ class Ch23LearningMethodsRecheckTests(unittest.TestCase):
                 if path in cleanups:
                     self.assertEqual(row["after_sha256"], next_documents[path]["before_sha256"])
                     self.assertEqual(next_documents[path]["after_sha256"], cleanups[path]["before_sha256"])
-                    self.assertEqual(current_sha256, cleanups[path]["after_sha256"])
+                    main_prior = subprocess.check_output(
+                        ["git", "show", f"{current_cleanup['prior_revision']}:{path}"], cwd=ROOT
+                    )
+                    self.assertEqual(hashlib.sha256(main_prior).hexdigest(), cleanups[path]["after_sha256"])
+                    self.assertEqual(current_surfaces[path]["before_sha256"], cleanups[path]["after_sha256"])
+                    self.assertEqual(current_sha256, current_surfaces[path]["after_sha256"])
                 else:
                     self.assertEqual(current_sha256, row["after_sha256"])
 
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         guide = (ROOT / "REPOSITORY_GUIDE.md").read_text(encoding="utf-8")
-        self.assertIn("目錄也沒有的主題，目前尚未整理相關指引", readme)
+        self.assertIn("目錄未列出的主題，目前沒有可供閱讀的台灣版指引", readme)
         self.assertIn("在 GitHub 上直接開啟 HTML 檔會看到程式碼", readme)
         self.assertIn("開啟終端機，下載專案並切換到資料夾", guide)
         self.assertIn("py -3 -m http.server 8000 --bind 127.0.0.1", guide)
