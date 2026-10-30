@@ -24,7 +24,8 @@ class GamblingPrepBoneTests(unittest.TestCase):
   self.assertIn('35歲',b['TW-01-038']);self.assertIn('72小時',b['TW-01-038']);self.assertIn('名額',b['TW-01-038']);self.assertNotIn('約七成',b['TW-01-038'])
   self.assertIn('14.1%',b['TW-01-039']);self.assertIn('不是',b['TW-01-039']);self.assertIn('健保',b['TW-01-039'])
   self.assertIn('不能取代',b['TW-01-040']);self.assertIn('2026-08-01',b['TW-01-040']);self.assertIn('停藥',b['TW-01-040'])
-  self.assertIn('不是所有人都等五分鐘',b['TW-13-016']);self.assertIn('能安全吞嚥',b['TW-13-017']);self.assertIn('找冰或把固定做得完美延誤救援',b['TW-13-041']);self.assertIn('冰水容器',b['TW-13-047']);self.assertIn('1911',b['TW-13-018']);self.assertIn('頻率',b['TW-13-019'])
+  self.assertIn('不是所有人都等五分鐘',b['TW-13-016']);self.assertIn('能安全吞嚥',b['TW-13-017']);self.assertIn('找冰或把固定做得完美延誤救援',b['TW-13-041']);self.assertIn('冰水容器',b['TW-13-047']);self.assertIn('1911',b['TW-13-018'])
+  co=b['TW-13-019'];self.assertIn('事件資料與限制',co);self.assertIn('事故22件',co);self.assertIn('5人死亡',co);self.assertIn('59人送醫',co);self.assertIn('不能換算個人發生率',co)
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
   rt=validate_runtime();batch=read('localization/ch01-gambling-prep-bone-20261019.json');counts=batch['counts']

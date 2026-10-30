@@ -14,6 +14,7 @@ from review_contract import ROOT, publication_report, validate_runtime
 
 
 BASE = "2090d5865c46c037afb82d09bbd9acfd09529725"
+REVIEW_REGISTER_BASE = "a853321583f76ef502ec88738af8d221b8d696d4"
 IDS = ("TW-21-003", "TW-21-004", "TW-21-011", "TW-15-018")
 
 
@@ -30,6 +31,11 @@ class HighRiskRecheckTests(unittest.TestCase):
         cls.sources = {source["id"]: source for source in cls.runtime["sources"]}
         cls.manifest = {item["id"]: item for item in read("localization/manifest.json")["entries"]}
         cls.register = read("localization/retroactive-review-register-20261019.json")
+        cls.base_register = json.loads(subprocess.check_output(
+            ["git", "show", f"{REVIEW_REGISTER_BASE}:localization/retroactive-review-register-20261019.json"],
+            cwd=ROOT,
+            text=True,
+        ))
 
     def test_four_reader_articles_match_manifest_runtime_and_new_review_edges(self):
         self.assertEqual(self.batch["base_main_sha"], BASE)
@@ -120,12 +126,14 @@ class HighRiskRecheckTests(unittest.TestCase):
         report = publication_report()
         self.assertEqual(coverage["publication_completed_entries"], report["publication_completed_entries"])
         self.assertEqual(coverage["core_reviewed_entries"], report["publication_completed_entries"])
-        self.assertEqual(coverage["publication_completed_entries"], 278)
         self.assertFalse(coverage["publication_ready"])
         self.assertEqual(audit_drafts(), coverage)
         self.assertEqual(self.batch["counts_after"]["core_reviewed"], 278)
-        self.assertEqual(self.batch["counts_after"]["substantive_rechecks"],
-                         len(self.register["substantive_rechecks"]))
+        prior_rechecks = self.base_register["substantive_rechecks"]
+        current_rechecks = self.register["substantive_rechecks"]
+        self.assertEqual(len(prior_rechecks), self.batch["counts_after"]["substantive_rechecks"])
+        self.assertEqual(current_rechecks[:len(prior_rechecks)], prior_rechecks)
+        self.assertGreater(len(current_rechecks), len(prior_rechecks))
 
     def test_reader_documents_and_taiwan_routing_survive_runtime_normalization(self):
         documents = {row["path"]: row for row in self.batch["reader_documents"]}

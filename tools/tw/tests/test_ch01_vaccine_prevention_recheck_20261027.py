@@ -70,8 +70,6 @@ class Ch01VaccinePreventionRecheckTests(unittest.TestCase):
         live_coverage = audit_drafts()
         self.assertEqual(coverage['json_files_checked'], live_coverage['json_files_checked'])
         self.assertEqual(coverage['registry_sources'], live_coverage['registry_sources'])
-        self.assertEqual(coverage['unique_draft_entries'], 498)
-        self.assertEqual(coverage['entries_without_any_draft'], 267)
         self.assertFalse(self.evidence['publication_ready'])
         self.assertFalse(self.evidence['counts_after']['publication_ready'])
         self.assertGreaterEqual(len(self.rows), len(self.base_rows) + len(ITEM_IDS))

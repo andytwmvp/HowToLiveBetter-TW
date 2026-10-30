@@ -1107,9 +1107,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "applicable",
+      "official_statistics_and_denominators": "2025年全國22件CO事故、5人死亡、59人送醫為消防署行政統計的地方轉引；缺少人口與設備暴露分母，不得換算個人發生率、事故致死率或器具專項風險。"
     },
     {
       "id": "TW-13-020",
@@ -26891,6 +26891,67 @@
       },
       "unresolved": [
         "未取得獨立相關專業審閱；法規、給付、境外求助與個案權利仍應由主管機關或專業人員確認。"
+      ]
+    },
+    {
+      "id": "TW-13-019",
+      "before_sha256": "2d25af663a5605cd0f2f8f4e2cf92e5588dcb810067e4136f6b6974021929ed9",
+      "after_sha256": "7e9ca5099a98507a9b2d55354f4af4c8ed243d048cb890b1be62471369744ab7",
+      "prior_revision": "a853321583f76ef502ec88738af8d221b8d696d4",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "d22f3793164cad493deb1b53cf0921a270234f86f127711b5cdbdb34eb5a2ca3",
+      "prior_reviewed_at": "2026-10-19",
+      "prior_review_due_at": "2026-12-31",
+      "reviewed_at": "2026-10-30",
+      "review_due_at": "2027-01-31",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "冬季公寓與租屋通風、燃氣熱水器、炭火、卡式爐、車輛廢氣及露營等臺灣常見燃燒暴露情境；現場疑似中毒時先到戶外並撥119，不因設備或統計而延誤救援。",
+      "frequency_assessment": "消防署114年（2025）統計經基隆市消防局轉引為22件全國事故、5人死亡、59人送醫；分別是件與人，沒有人口、使用設備的家戶數或暴露時數分母。不能估算個人發生率、事故致死率、特定器具風險或遲發神經病變比例。",
+      "legal_status_assessment": "本條為緊急安全與就醫分流，未涉及需更新之法規或給付資格；疑似急症按119派遣及醫療人員處置。",
+      "changes": "逐項重讀臺南消防局和臺北榮總CO指引，加入消防署2025全年事故、死亡及送醫的可查數據和分母限制；清除正文末尾編輯工作紀錄，保留即時撤離、119求援、施救者安全與遲發症狀追蹤。另將統計分母限制改為台灣慣用詞「使用設備的家戶數」。",
+      "source_status": "本次直接閱讀臺南市消防局、臺北榮總及基隆市消防局官方頁面；2025數字由地方消防局明確轉引消防署年度統計，並未將事故數當作個人機率或器具專項發生率。",
+      "source_ids": [
+        "ch13_co_fire2026",
+        "ch13_co_hospital",
+        "tw_co_nfa_statistics_2025"
+      ],
+      "previous_source_ids": [
+        "ch13_co_fire2026",
+        "ch13_co_hospital"
+      ],
+      "retired_sources": [],
+      "previous_review_claims": [
+        "原文已提供撤離、119求援與遲發症狀方向，但頻率段稱無全國統計，未列已公開的消防署2025全年事故、死亡及送醫行政數字；文末尚有內部編輯紀錄句。"
+      ],
+      "review_path": "localization/reviews/TW-13-019.json",
+      "source_checks": [
+        {
+          "url": "https://119.tainan.gov.tw/cp.aspx?n=25534&s=17377",
+          "claim": "臺南市消防局說明同一環境多人頭痛、噁心等症狀時應警覺一氧化碳暴露，移往室外安全處並撥119。",
+          "supporting_passage": "消防局燃氣熱水器衛教說明一氧化碳可能無色無味，出現身體不適者應到通風處並求援。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接讀取臺南市政府消防局官方網頁正文。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/522",
+          "claim": "臺北榮總列出燃氣熱水器、木炭、內燃機廢氣等一氧化碳來源，說明症狀可能從頭暈噁心惡化至意識混亂、抽搐或昏迷，治療後也可能出現遲發神經症狀。",
+          "supporting_passage": "公立醫院護理衛教列出症狀分級、迅速移離暴露處、送醫及後續追蹤；症狀相似並不等於確診。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接讀取臺北榮總護理部健康e點通可見全文。"
+        },
+        {
+          "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
+          "claim": "基隆市消防局2025年12月31日轉引消防署114年統計：全國一氧化碳事故22件、死亡5人、送醫59人；資料沒有個人、使用設備的家戶數或暴露時間分母。",
+          "supporting_passage": "地方消防局公告明示數字來源為消防署年度行政統計；事故件數、死亡人數和送醫人數的單位不同，不能互相換算或推論個人風險。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接讀取基隆市政府消防局官方公告正文，並記錄其為轉引消防署統計。"
+        }
+      ],
+      "limits": [
+        "消防署2025年全國事故統計由基隆市消防局轉引；無人口、使用設備的家戶數或暴露時數分母，不能估算個人發生率或事故致死率。消防事故數不涵蓋所有火場及其他暴露，醫院衛教也未提供可估算遲發神經病變比例的全國追蹤隊列。",
+        "2025事故數、死亡數與送醫數無個人或設備暴露分母，不能換算個人發生率、致死率或特定器具風險。",
+        "現有醫院衛教沒有全國同定義CO個案分母與後續追蹤隊列；遲發神經症狀須由醫療人員評估。",
+        "獨立急救、醫療、消防及統計專業審閱仍待取得。"
       ]
     }
   ],

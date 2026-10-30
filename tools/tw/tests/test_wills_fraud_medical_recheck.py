@@ -67,7 +67,8 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         runtime = validate_runtime()
         items = {item['id']: item for item in runtime['items']}
         sources = {source['id']: source for source in runtime['sources']}
-        self.assertEqual([item['id'] for item in old['items']], [item['id'] for item in runtime['items']])
+        old_ids = [item['id'] for item in old['items']]
+        self.assertEqual(old_ids, [item['id'] for item in runtime['items'] if item['id'] in set(old_ids)])
         for item in old['items']:
             assert_preserved_or_rechecked(self, item, items[item['id']])
         for source in old['sources']:

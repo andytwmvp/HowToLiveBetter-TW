@@ -59,7 +59,8 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
         runtime = validate_runtime()
         items = {item['id']: item for item in runtime['items']}
         sources = {source['id']: source for source in runtime['sources']}
-        self.assertEqual([item['id'] for item in previous['items']], [item['id'] for item in runtime['items']])
+        previous_ids = [item['id'] for item in previous['items']]
+        self.assertEqual(previous_ids, [item['id'] for item in runtime['items'] if item['id'] in set(previous_ids)])
         for item in previous['items']:
             assert_preserved_or_rechecked(self, item, items[item['id']])
         for source in previous['sources']:

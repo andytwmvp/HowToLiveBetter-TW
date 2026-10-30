@@ -168,7 +168,7 @@ class Ch19FourRightsRecheckTests(unittest.TestCase):
         self.assertEqual(evidence["counts_after"]["json_files_checked"], 464)
         self.assertEqual(evidence["counts_after"]["unresolved_source_ids"], 115)
         self.assertEqual(evidence["counts_after"]["unresolved_reference_occurrences"], 306)
-        self.assertEqual(coverage["publication_completed_entries"], 278)
+        self.assertEqual(coverage["publication_completed_entries"], publication_report()["publication_completed_entries"])
         self.assertFalse(coverage["publication_ready"])
         self.assertFalse(publication_report()["publication_ready"])
 

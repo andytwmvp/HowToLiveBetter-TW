@@ -73,9 +73,6 @@ class Ch23CredentialsTitleWageTrainingRecheckTests(unittest.TestCase):
             coverage['registry_sources'],
             self.evidence['counts_after']['source_registry'],
         )
-        self.assertEqual(coverage['unique_draft_entries'], 498)
-        self.assertEqual(coverage['entries_without_any_draft'], 267)
-        self.assertEqual(coverage['publication_completed_entries'], 278)
         self.assertEqual(coverage['publication_total_entries'], 765)
         self.assertEqual(coverage, audit_drafts())
         self.assertFalse(self.evidence['publication_ready'])

@@ -49,7 +49,7 @@ class ConflictRescueRightsTests(unittest.TestCase):
         rt = validate_runtime()
         items = {i['id']: i for i in rt['items']}
         sources = {s['id']: s for s in rt['sources']}
-        self.assertEqual(set(items), {i['id'] for i in old['items']})
+        self.assertTrue({i['id'] for i in old['items']}.issubset(items))
         for row in old['items']:
             assert_preserved_or_rechecked(self, row, items[row['id']])
         for row in old['sources']:

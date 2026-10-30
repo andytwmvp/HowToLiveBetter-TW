@@ -62,7 +62,8 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
         coverage = read("localization/tw-edition/coverage.json")
         self.assertGreaterEqual(coverage["registry_sources"], after["source_registry"])
         self.assertGreaterEqual(coverage["json_files_checked"], after["json_files_checked"])
-        self.assertEqual((coverage["publication_completed_entries"], coverage["publication_total_entries"]), (278, 765))
+        self.assertEqual(coverage["publication_completed_entries"], audit_drafts()["publication_completed_entries"])
+        self.assertEqual(coverage["publication_total_entries"], 765)
         self.assertFalse(coverage["publication_ready"])
 
     def test_all_four_historical_rechecks_sync_hashes_reviews_and_sources(self):

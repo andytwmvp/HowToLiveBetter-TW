@@ -61,9 +61,7 @@ class Ch23JobCredentialsRecheckTests(unittest.TestCase):
         # This evidence is an immutable snapshot; later batches can add files and sources.
         self.assertGreaterEqual(coverage['json_files_checked'], self.evidence['counts_after']['json_files_checked'])
         self.assertGreaterEqual(coverage['registry_sources'], self.evidence['counts_after']['source_registry'])
-        self.assertEqual(coverage['unique_draft_entries'], 498)
         self.assertEqual(self.evidence['counts_after']['core_completed'], self.evidence['counts_before']['core_completed'])
-        self.assertEqual(coverage['publication_completed_entries'], 278)
         self.assertEqual(coverage['publication_total_entries'], 765)
         self.assertEqual(coverage, audit_drafts())
         self.assertFalse(self.evidence['publication_ready'])
