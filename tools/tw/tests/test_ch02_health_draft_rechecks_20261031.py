@@ -78,6 +78,8 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
                 self.assertEqual(review["current_draft"], rows[key])
                 self.assertEqual(record["before_sha256"], review["before_sha256"])
                 self.assertEqual(record["after_sha256"], review["after_sha256"])
+                for field in ("taiwan_context", "frequency_assessment", "changes", "unresolved_questions"):
+                    self.assertEqual(record[field], review[field])
                 self.assertTrue(record["taiwan_context"].strip())
                 self.assertTrue(record["frequency_assessment"].strip())
                 self.assertTrue(record["changes"].strip())
@@ -120,6 +122,20 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
             return value
 
         with patch.object(audit, "load", side_effect=load_with_wrong_revision):
+            with self.assertRaisesRegex(ValueError, "證據檔與登錄"):
+                audit.validate_draft_recheck_records(ROOT, self.register, self.manifest, self.runtime)
+
+    def test_audit_rejects_review_register_limitation_drift(self):
+        record = next(row for row in self.register["draft_substantive_rechecks"] if row["id"] == "TW-02-008")
+        original_load = audit.load
+
+        def load_with_missing_limit(root, relative):
+            value = original_load(root, relative)
+            if relative == record["review_path"]:
+                value["unresolved_questions"] = value["unresolved_questions"][:-1]
+            return value
+
+        with patch.object(audit, "load", side_effect=load_with_missing_limit):
             with self.assertRaisesRegex(ValueError, "證據檔與登錄"):
                 audit.validate_draft_recheck_records(ROOT, self.register, self.manifest, self.runtime)
 

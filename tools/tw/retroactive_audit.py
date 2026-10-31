@@ -1672,6 +1672,8 @@ def validate_draft_recheck_records(root: Path, register: dict, manifest: dict, r
         review = load(root, review_path)
         if (review.get("id") != key or review.get("jurisdiction") != "TW"
                 or review.get("prior_revision") != revision
+                or any(review.get(field) != record.get(field) for field in (
+                    "taiwan_context", "frequency_assessment", "changes", "unresolved_questions"))
                 or review.get("reviewed_at") != record["reviewed_at"]
                 or review.get("review_due_at") != record["review_due_at"]
                 or review.get("original_draft") != original
