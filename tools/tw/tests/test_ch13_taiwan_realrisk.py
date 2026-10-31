@@ -23,7 +23,7 @@ class Chapter13TaiwanRealRiskTests(unittest.TestCase):
     self.assertEqual({x["url"] for x in review["source_checks"]},{sources[s]["url"] for s in items[key]["source_ids"]})
  def test_emergency_taiwan_specificity_and_frequency_denominators(self):
   b={x["id"]:x["body"].split("## 官方來源及改寫說明")[0] for x in validate_runtime()["items"]}
-  self.assertIn("455件",b["TW-13-027"]);self.assertIn("1,416面",b["TW-13-027"])
+  self.assertIn("502件",b["TW-13-027"]);self.assertIn("695人",b["TW-13-027"]);self.assertIn("1,416面",b["TW-13-027"])
   self.assertIn("VoLTE",b["TW-13-027"]);self.assertIn("119",b["TW-13-027"])
   self.assertIn("30分鐘",b["TW-13-032"]);self.assertIn("涼亭",b["TW-13-032"])
   self.assertIn("72小時",b["TW-13-038"]);self.assertIn("28天",b["TW-13-038"])

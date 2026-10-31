@@ -25,7 +25,7 @@ class IceToolsCrisisAFTests(unittest.TestCase):
   self.assertIn('配件額定轉速不得低於工具最高轉速',b['TW-01-042']);self.assertIn('護罩',b['TW-01-042']);self.assertIn('切割黏結式砂輪時使用切割護罩',b['TW-01-042']);self.assertNotIn('鋸齒片一律禁止',b['TW-01-042']);self.assertIn('17例人造石矽肺症',b['TW-01-042'])
   self.assertIn('不要承諾保密',b['TW-01-043']);self.assertIn('119',b['TW-01-043']);self.assertIn('資料限制',b['TW-01-043'])
   self.assertIn('32,817',b['TW-01-044']);self.assertIn('169.06',b['TW-01-044']);self.assertIn('112.38',b['TW-01-044']);self.assertIn('2021',b['TW-01-044']);self.assertIn('阿斯匹靈',b['TW-01-044']);self.assertIn('人年',b['TW-01-044'])
-  self.assertIn('不等找出物質',b['TW-13-021']);self.assertIn('退燒藥',b['TW-13-022']);self.assertIn('監測人次',b['TW-13-023']);self.assertIn('不採333',b['TW-13-027'])
+  self.assertIn('不等找出物質',b['TW-13-021']);self.assertIn('退燒藥',b['TW-13-022']);self.assertIn('監測人次',b['TW-13-023']);self.assertIn('不要套用「3-3-3」',b['TW-13-027'])
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
   rt=validate_runtime();batch=read('localization/ch01-ice-tools-crisis-af-20261019.json');counts=batch['counts']

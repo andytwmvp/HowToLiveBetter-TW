@@ -7972,11 +7972,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-027.md",
       "sources": [
-        "mountain_nps_rescue_109",
         "mountain_forest_signal_115",
-        "mountain_nfa_dataset"
+        "ch13_mountain_nfa_20260528",
+        "ch13_mountain_cause_nfa_20250626"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "在戈壁、沙漠、無人區迷路或車壞了，留在原地或車旁，先報位置，再遮陽保溫，省水，不亂走",
@@ -7995,10 +7995,10 @@
       "sources": [
         "ch13_cold_vgh",
         "ch13_cold_nfa",
-        "ch13_cold_nhs",
-        "mountain_forest_signal_115"
+        "mountain_forest_signal_115",
+        "ch13_cold_cdc"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "發抖、說話含糊、走路打晃是失溫，換掉溼衣、包起來，先暖軀幹，喝熱甜飲不喝酒",
@@ -8016,9 +8016,10 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-029.md",
       "sources": [
         "ch13_snake_mohw",
-        "ch13_snake_cdc"
+        "ch13_snake_cdc",
+        "ch13_snake_cdc_epidemiology_2025"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "被蛇咬，坐下別動、摘掉戒指手錶、儘快送醫院打抗蛇毒血清，不切、不吸、不綁死",
@@ -8341,8 +8342,12 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-043.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "ch13_infant_choke_tpe",
+        "ch13_infant_choke_faq_tpe",
+        "ch13_infant_peds_bls_aha_2025"
+      ],
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "不滿 1 歲的嬰兒噎住哭不出聲，趴著拍背 5 下、翻過來按胸口 5 下，輪著做，別按肚子",
@@ -8358,8 +8363,13 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-044.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "ch13_infant_cpr_vghtc",
+        "ch13_infant_cpr_video_vghtc",
+        "ch13_infant_peds_bls_aha_2025",
+        "ch13_infant_cpr_lay_aha_2025"
+      ],
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "不滿 1 歲的嬰兒沒反應、沒正常呼吸，開免提打 120，做嬰兒心肺復甦：按 30 下吹 2 口氣",

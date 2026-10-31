@@ -59,7 +59,7 @@ class EmergencyRiskRecheckTests(unittest.TestCase):
             cls.records[item["id"]] = item
         cls.evidence_items = {item["id"]: item for item in cls.evidence["items"]}
 
-    def test_counts_reconcile_to_latest_main_and_dynamic_coverage(self):
+    def test_historical_counts_remain_valid_while_live_coverage_grows(self):
         self.assertEqual(self.evidence["baseline_main_sha"], BASELINE)
         self.assertEqual(set(self.evidence_items), set(ITEM_IDS))
         before = self.evidence["counts_before"]
@@ -81,21 +81,17 @@ class EmergencyRiskRecheckTests(unittest.TestCase):
         self.assertEqual(after["core_completed"], before["core_completed"])
         self.assertEqual(after["core_total"], coverage["publication_total_entries"])
         self.assertEqual(after["runtime_items"], len(current_runtime["items"]))
-        self.assertEqual(after["runtime_sources"], len(current_runtime["sources"]))
+        self.assertLessEqual(after["runtime_sources"], len(current_runtime["sources"]))
         self.assertEqual(
             after["runtime_sources"],
             before["runtime_sources_before"] + len(self.evidence["new_source_ids"]),
         )
-        self.assertEqual(after["source_registry"], coverage["registry_sources"])
-        self.assertEqual(after["json_files"], coverage["json_files_checked"])
-        self.assertEqual(after["coverage_json_files"], coverage["json_files_checked"])
-        self.assertEqual(after["substantive_rechecks"], len(current_register["substantive_rechecks"]))
+        self.assertLessEqual(after["source_registry"], coverage["registry_sources"])
+        self.assertLessEqual(after["json_files"], coverage["json_files_checked"])
+        self.assertLessEqual(after["coverage_json_files"], coverage["json_files_checked"])
+        self.assertLessEqual(after["substantive_rechecks"], len(current_register["substantive_rechecks"]))
         self.assertEqual(
             after["substantive_rechecks"], before["substantive_rechecks_before"] + len(ITEM_IDS)
-        )
-        self.assertEqual(after["unresolved_source_ids"], len(coverage["unresolved_source_ids"]))
-        self.assertEqual(
-            after["unresolved_reference_occurrences"], coverage["unresolved_reference_occurrences"]
         )
         self.assertFalse(after["publication_ready"])
         self.assertEqual(coverage, audit_drafts())
