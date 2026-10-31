@@ -102,12 +102,15 @@ class PlatformLawRecheckTests(unittest.TestCase):
         )
         self.assertGreaterEqual(coverage["json_files_checked"], counts_after["json_files"])
         self.assertGreaterEqual(coverage["registry_sources"], counts_after["registry_sources"])
-        self.assertEqual(
-            counts_after["unresolved_source_ids"], len(coverage["unresolved_source_ids"])
+        # Later batches can resolve previously missing citations; keep this
+        # historical snapshot from freezing the live unresolved-source count.
+        self.assertLessEqual(
+            len(coverage["unresolved_source_ids"]),
+            counts_after["unresolved_source_ids"],
         )
-        self.assertEqual(
-            counts_after["unresolved_reference_occurrences"],
+        self.assertLessEqual(
             coverage["unresolved_reference_occurrences"],
+            counts_after["unresolved_reference_occurrences"],
         )
         self.assertFalse(counts_after["publication_ready"])
         self.assertFalse(coverage["publication_ready"])
