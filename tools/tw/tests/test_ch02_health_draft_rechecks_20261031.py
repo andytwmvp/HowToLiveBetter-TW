@@ -5,6 +5,7 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import retroactive_audit as audit
@@ -55,6 +56,16 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
         self.assertIn("2017-2020", rows["TW-02-045"][2])
         self.assertIn("不是每年新發病例或個人發病機率", rows["TW-02-045"][4])
 
+    def test_oral_bleeding_warning_has_a_specific_official_source(self):
+        row = next(row for row in self.chapter["entries"] if row[0] == 8)
+        self.assertIn("出血", row[3])
+        self.assertIn("oral_bleeding_warning", row[5].split())
+        record = next(row for row in self.register["draft_substantive_rechecks"] if row["id"] == "TW-02-008")
+        review = read(record["review_path"])
+        check = next(source for source in review["source_checks"] if source["source_id"] == "oral_bleeding_warning")
+        self.assertIn("出血", check["supporting_passage"])
+        self.assertIn("hpa.gov.tw", check["url"])
+
     def test_each_draft_review_preserves_before_after_row_and_source_evidence(self):
         records = {row["id"]: row for row in self.register["draft_substantive_rechecks"]}
         rows = {f"TW-02-{row[0]:03}": row for row in self.chapter["entries"]}
@@ -97,6 +108,20 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
         published["items"].append({"id": "TW-02-006"})
         with self.assertRaises(ValueError):
             validator(ROOT, self.register, self.manifest, published)
+
+    def test_audit_rejects_a_review_with_a_different_prior_revision(self):
+        record = next(row for row in self.register["draft_substantive_rechecks"] if row["id"] == "TW-02-008")
+        original_load = audit.load
+
+        def load_with_wrong_revision(root, relative):
+            value = original_load(root, relative)
+            if relative == record["review_path"]:
+                value["prior_revision"] = "0" * 40
+            return value
+
+        with patch.object(audit, "load", side_effect=load_with_wrong_revision):
+            with self.assertRaisesRegex(ValueError, "證據檔與登錄"):
+                audit.validate_draft_recheck_records(ROOT, self.register, self.manifest, self.runtime)
 
     @staticmethod
     def _row_at(revision, key):

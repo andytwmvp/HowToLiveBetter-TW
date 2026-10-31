@@ -32168,13 +32168,14 @@
       "reviewed_at": "2026-10-31",
       "review_due_at": "2027-04-30",
       "before_sha256": "de4fab307ff913be68f054487c8a3eb3c5dc818abd0b6bdc4492bebb41356533",
-      "after_sha256": "3a1c97c85767a9d05ed670961e1e59ca260b7733c57b9bea3c588ad55222c930",
+      "after_sha256": "cd90cde58873a4e80125835ad7a7518b856e1a3c10bedeb5e8870884bfb0cc54",
       "review_path": "localization/reviews/drafts/TW-02-008.json",
       "source_ids": [
         "betel",
         "cancer",
         "oral_screening",
-        "oral_warning_signs"
+        "oral_warning_signs",
+        "oral_bleeding_warning"
       ],
       "taiwan_context": "台灣仍有嚼檳榔與口腔癌防治、口腔黏膜篩檢及戒檳服務需求；內容涵蓋已戒者篩檢資格、原住民族年齡條件、健保特約院所與口腔症狀就醫，不將篩檢當成戒檳替代品。",
       "frequency_assessment": "112年（2023）癌症登記列口腔、口咽及下咽合計8,522例新登記病例，年齡標準化發生率21.2/10萬，依2000年世界標準人口標準化。此分類包括口咽與下咽，不是檳榔可歸因病例數，亦非個人風險。",
