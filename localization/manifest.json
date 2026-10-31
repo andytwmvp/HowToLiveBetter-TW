@@ -7860,18 +7860,17 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-022.md",
       "sources": [
-        "ch13_heat_firstaid",
-        "ch13_heat_diagnosis",
         "ch13_heat_ntuh",
         "ch13_heat_niosh",
-        "ch13_heat_dataset"
+        "ch13_heat_hpa_20250822"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "高溫下頭暈、噁心、不出汗或意識不清，立刻挪到陰涼處脫衣潑水降溫，意識不清的不喂水、打 120",
       "language_status": "traditionalized",
-      "language_converted_at": "2026-10-15"
+      "language_converted_at": "2026-10-15",
+      "title": "高溫下出現意識異常，先打119並盡快降溫"
     },
     {
       "id": "TW-13-023",
@@ -7908,15 +7907,15 @@
       "sources": [
         "ch13_fire_nfa2026",
         "ch13_fire_nfa2",
-        "ch01_fire_escape_taipei2026",
         "ch01_nfa_fire_2025"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "火災時貼地爬、摸門再開門、門燙就別開，走樓梯不坐電梯，出去了別回頭",
       "language_status": "traditionalized",
-      "language_converted_at": "2026-10-15"
+      "language_converted_at": "2026-10-15",
+      "title": "火警時先看逃生路線有沒有煙，無路可走就關門報119"
     },
     {
       "id": "TW-13-025",
@@ -7929,16 +7928,16 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-025.md",
       "sources": [
         "ch13_drown_wda",
-        "ch13_drown_nfa",
         "retro_drown_nfa_2025",
         "retro_drown_taipei_care"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "看到有人溺水，先叫人和打 110/120，伸竿、拋漂浮物，自己不下水",
       "language_status": "traditionalized",
-      "language_converted_at": "2026-10-15"
+      "language_converted_at": "2026-10-15",
+      "title": "看到有人溺水，先求援並從岸上伸手或拋浮具"
     },
     {
       "id": "TW-13-026",
@@ -7949,13 +7948,19 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-026.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "ch13_choke_tyfd_20260409",
+        "ch13_choke_aha_adult_2025",
+        "ch13_choke_aha_pediatric_2025",
+        "ch13_choke_mohw_death_2025"
+      ],
+      "verified_at": "2026-10-31",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "有人噎住說不出話，1 歲以上的站到背後做 5 次拍背加 5 次腹部衝擊，倒下就做心肺復甦",
       "language_status": "traditionalized",
-      "language_converted_at": "2026-10-15"
+      "language_converted_at": "2026-10-15",
+      "title": "成人與一歲以上兒童嚴重哽塞，先打119並交替拍背、腹部推擠"
     },
     {
       "id": "TW-13-027",

@@ -30,7 +30,7 @@ class Chapter13SafetyTests(unittest.TestCase):
   self.assertIn('頸部',b['TW-13-012'])
   self.assertIn('15至30分鐘',b['TW-13-014'])
   self.assertIn('失溫',b['TW-13-014'])
-  self.assertIn('不要冒險穿過濃煙',b['TW-13-024'])
+  self.assertIn('不要進入或硬闖',b['TW-13-024'])
   self.assertIn('關門',b['TW-13-024'])
  def test_previous_195_items_unchanged(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))

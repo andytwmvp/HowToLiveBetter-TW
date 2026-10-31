@@ -35,7 +35,7 @@ class PreventionBatchTests(unittest.TestCase):
 
     def test_safety_correction_and_statistical_boundaries(self):
         items={x['id']:x['body'] for x in validate_runtime()['items']}
-        self.assertIn('先讓患者前傾',items['TW-13-026'])
+        self.assertIn('身體前傾',items['TW-13-026'])
         self.assertNotIn('未受訓者不要胡亂按壓胸腹',items['TW-13-026'])
         self.assertIn('非高危險群尚無須全面追加',items['TW-01-014'])
         self.assertIn('2026年當年累計4例',items['TW-01-015'])
@@ -43,7 +43,7 @@ class PreventionBatchTests(unittest.TestCase):
         self.assertIn('目前依學校通知核對本人名冊、接種日及補接種期限',items['TW-01-016'])
         frequency_limits={
             'TW-13-001':'消防署113年全國消防機關統計記錄，院外心跳停止患者急救成功6,301人、康復出院1,249人',
-            'TW-13-026':'臺灣目前沒有全國一致的哽塞事件數及用餐、吞嚥障礙族群母數',
+            'TW-13-026':'沒有進食、吞嚥或異物暴露人次分母',
             'TW-13-043':'目前沒有全國未滿一歲嬰兒哽塞事件數及暴露分母',
             'TW-13-044':'目前沒有與嬰兒相同母群及結果定義的全國院外心跳停止資料',
         }
