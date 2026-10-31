@@ -21,6 +21,14 @@ class PolicyTests(unittest.TestCase):
             with self.subTest(value=value):
                 self.assertEqual(policy.canonical(value), policy.canonical(text.normalized(value, [])))
 
+    def test_official_cancer_anatomic_terms_keep_pharynx_character(self):
+        # 癌症登記的「口咽、下咽」是解剖部位；OpenCC 會誤轉成「口嚥、下嚥」。
+        value = '口咽及下咽癌症統計'
+        self.assertEqual(policy.canonical(value), policy.canonical(text.normalized(value, [])))
+        # 一般「下嚥」是正確的台灣用語，不得放寬成「下咽」。
+        self.assertEqual(policy.canonical('難以下嚥'), policy.canonical(text.normalized('難以下嚥', [])))
+        self.assertNotEqual(policy.canonical('難以下咽'), policy.canonical(text.normalized('難以下咽', [])))
+
     def test_official_term_exception_is_not_a_global_waiver(self):
         self.assertNotEqual(policy.canonical('任意划分任務'), policy.canonical('任意劃分任務'))
         self.assertNotEqual(policy.canonical('划出錯誤的路線'), policy.canonical('劃出錯誤的路線'))

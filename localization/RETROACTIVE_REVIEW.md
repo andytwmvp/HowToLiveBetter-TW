@@ -6,6 +6,7 @@
 
 - `retroactive-review-register-20261019.json`：逐條記錄歷史再審日期、正文前後 SHA、來源 ID、台灣情境、頻率判斷、未解事項和複查期限。
 - `reviews/TW-*.json`：記錄各條目的來源主張對應、查閱方法、審閱範圍與專業審閱限制。
+- `reviews/drafts/TW-*.json` 與登錄檔的 `draft_substantive_rechecks`：只追蹤尚未發布草稿的來源再核對；草稿仍須維持 `pending`、沒有正式閱讀路徑或來源清單，且不得加入共用 runtime。若日後完成正式專業審閱，須依正式發布流程重新核准並遷移追蹤紀錄，不能把 AI 來源再核對直接當成 `verified`。
 - `tw-edition/runtime.json`：供網站、自我檢視、Skill 和離線輸出共用的正式閱讀內容及已核對來源。
 - `tw-edition/coverage.json`：最新核心完成狀態、未核對稿件、未起稿主題與來源缺口。
 - `localization/` 內的批次 JSON：保留原始研究或官方資料的讀取方式、統計範圍和完整來源證據；不把這些工作紀錄輸出成讀者正文。

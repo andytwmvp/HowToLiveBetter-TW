@@ -1597,6 +1597,106 @@ def risk(chapter: int | None, key: str) -> str:
     return "P2"
 
 
+def _draft_row_sha256(row: list) -> str:
+    payload = json.dumps(row, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def validate_draft_recheck_records(root: Path, register: dict, manifest: dict, runtime: dict) -> list[dict]:
+    """Validate source rechecks for unpublished drafts without treating them as verified content.
+
+    The new register field is optional so historical registers remain readable. A draft record
+    is valid only while the manifest still marks that core item pending and the item is absent
+    from the shared reader runtime.
+    """
+    records = register.get("draft_substantive_rechecks", [])
+    if not isinstance(records, list):
+        raise ValueError("未發布草稿實質再審紀錄必須為清單")
+    manifest_entries = {entry["id"]: entry for entry in manifest.get("entries", [])}
+    runtime_ids = {item["id"] for item in runtime.get("items", [])}
+    source_registry: dict[str, list[str]] = {}
+    source_dir = root / "localization/tw-edition/sources"
+    for path in sorted(source_dir.glob("*.json")):
+        for row in load(root, path.relative_to(root).as_posix()).get("sources", []):
+            if not isinstance(row, list) or len(row) != 4:
+                raise ValueError("草稿再審來源目錄格式錯誤：" + str(path))
+            source_id = row[0]
+            if source_id in source_registry and source_registry[source_id] != row:
+                raise ValueError("草稿再審來源 ID 衝突：" + str(source_id))
+            source_registry[source_id] = row
+
+    seen: set[str] = set()
+    for record in records:
+        key = record.get("id", "")
+        if not ID.fullmatch(key) or key in seen:
+            raise ValueError("未發布草稿再審 ID 不合法或重複：" + str(key))
+        seen.add(key)
+        entry = manifest_entries.get(key)
+        if (entry is None or entry.get("status") != "pending" or entry.get("target_path") is not None
+                or entry.get("sources") != [] or key in runtime_ids):
+            raise ValueError("未發布草稿再審不得提升為正式閱讀內容：" + key)
+        if record.get("status") != "ai_source_rechecked_draft_unpublished":
+            raise ValueError("草稿再審狀態不符：" + key)
+        revision = record.get("prior_revision", "")
+        if not re.fullmatch(r"[0-9a-f]{40}", revision):
+            raise ValueError("草稿再審起始版本不符：" + key)
+        for field in ("before_sha256", "after_sha256"):
+            if not re.fullmatch(r"[0-9a-f]{64}", record.get(field, "")):
+                raise ValueError("草稿再審 SHA-256 格式錯誤：" + key)
+        for field in ("reviewed_at", "review_due_at"):
+            if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", record.get(field, "")):
+                raise ValueError("草稿再審日期缺漏：" + key)
+        if record["review_due_at"] <= record["reviewed_at"]:
+            raise ValueError("草稿再審複查日期必須晚於審閱日：" + key)
+        for field in ("taiwan_context", "frequency_assessment", "changes"):
+            if not isinstance(record.get(field), str) or not record[field].strip():
+                raise ValueError("草稿再審缺少 " + field + "：" + key)
+        if not record.get("unresolved_questions"):
+            raise ValueError("草稿再審須保留未解問題與專業審閱限制：" + key)
+
+        chapter = int(key[3:5])
+        draft_path = f"localization/tw-edition/chapters/{chapter:02}.json"
+        review_path = f"localization/reviews/drafts/{key}.json"
+        if record.get("review_path") != review_path:
+            raise ValueError("草稿再審紀錄路徑不符：" + key)
+        original_chapter = _git_json(root, revision, draft_path)
+        current_chapter = load(root, draft_path)
+        original_rows = {f"TW-{chapter:02}-{row[0]:03}": row for row in original_chapter["entries"]}
+        current_rows = {f"TW-{chapter:02}-{row[0]:03}": row for row in current_chapter["entries"]}
+        original = original_rows.get(key)
+        current = current_rows.get(key)
+        if (original is None or current is None
+                or _draft_row_sha256(original) != record["before_sha256"]
+                or _draft_row_sha256(current) != record["after_sha256"]):
+            raise ValueError("草稿再審正文前後 SHA 或條目版本不符：" + key)
+        review = load(root, review_path)
+        if (review.get("id") != key or review.get("jurisdiction") != "TW"
+                or review.get("prior_revision") != revision
+                or any(review.get(field) != record.get(field) for field in (
+                    "taiwan_context", "frequency_assessment", "changes", "unresolved_questions"))
+                or review.get("reviewed_at") != record["reviewed_at"]
+                or review.get("review_due_at") != record["review_due_at"]
+                or review.get("original_draft") != original
+                or review.get("current_draft") != current
+                or review.get("before_sha256") != record["before_sha256"]
+                or review.get("after_sha256") != record["after_sha256"]):
+            raise ValueError("草稿再審證據檔與登錄或正文不一致：" + key)
+        source_ids = current[5].split()
+        if len(source_ids) != len(set(source_ids)) or record.get("source_ids") != source_ids:
+            raise ValueError("草稿再審來源 ID 與草稿正文不一致：" + key)
+        checks = review.get("source_checks", [])
+        if not checks or {check.get("source_id") for check in checks} != set(source_ids):
+            raise ValueError("草稿再審來源主張核對不完整：" + key)
+        for check in checks:
+            source = source_registry.get(check.get("source_id"))
+            if (source is None or check.get("title") != source[1] or check.get("url") != source[2]
+                    or check.get("accessed_at") != record["reviewed_at"]
+                    or not check.get("claim") or not check.get("supporting_passage")
+                    or not check.get("retrieval_method")):
+                raise ValueError("草稿再審來源依據不完整或來源目錄不一致：" + key)
+    return records
+
+
 def audit(root: Path = ROOT) -> dict:
     manifest = load(root, "localization/manifest.json")
     runtime = load(root, "localization/tw-edition/runtime.json")
@@ -1690,6 +1790,7 @@ def audit(root: Path = ROOT) -> dict:
     if coverage["original_entries"] != len(entries):
         raise ValueError("動態 coverage 核心原始總數與來源不符")
     register = load(root, "localization/retroactive-review-register-20261019.json")
+    draft_rechecks = validate_draft_recheck_records(root, register, manifest, runtime)
     rechecks = register.get("substantive_rechecks", [])
     if not isinstance(rechecks, list):
         raise ValueError("實質再審紀錄必須為清單")
@@ -1761,10 +1862,12 @@ def audit(root: Path = ROOT) -> dict:
             "topics_without_any_draft": coverage["entries_without_any_draft"],
             "previously_reviewed_items_still_needing_new_standard_substantive_recheck": len(reviewed) + len(nav),
             "ai_source_rechecked_professional_pending": len(rechecks),
+            "draft_substantive_rechecks": len(draft_rechecks),
             "reader_copy_cleanups": active_cleanups,
             "publication_ready": False,
         },
         "ai_source_rechecks": rechecks,
+        "draft_substantive_rechecks": draft_rechecks,
         "per_chapter": [{"chapter": n, **v} for n, v in sorted(per_chapter.items())],
         "core": result,
         "navigation": nav,
