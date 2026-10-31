@@ -284,11 +284,12 @@ class RetroactiveAuditTests(unittest.TestCase):
             )
             previous = next(item for item in previous_runtime["items"] if item["id"] == key)
             normalized, _ = audit.normalize_reader_item(previous)
-            if key == "TW-13-012":
+            if key in {"TW-13-012", "TW-13-027"}:
                 digest = hashlib.sha256(normalized["body"].encode("utf-8")).hexdigest()
                 recheck = next(
                     item for item in register["substantive_rechecks"]
                     if item["id"] == key and item["before_sha256"] == digest
+                    and (key != "TW-13-027" or item["after_sha256"] == hashlib.sha256(items[key]["body"].encode("utf-8")).hexdigest())
                 )
                 self.assertEqual(recheck["previous_body"], normalized["body"])
                 audit.validate_recheck_history(audit.ROOT, recheck, items[key])
@@ -296,7 +297,7 @@ class RetroactiveAuditTests(unittest.TestCase):
                 self.assertEqual(normalized, items[key], key)
 
         self.assertNotIn("特殊傷勢依119指導，\n", items["TW-13-012"]["body"])
-        self.assertIn("迷路或受困時", items["TW-13-027"]["body"])
+        self.assertIn("有人受傷、受困於危險地點或需要搜救時", items["TW-13-027"]["body"])
         self.assertIn("本指南不能取代醫療診斷或職安人員對工作現場的評估。", items["TW-13-023"]["body"])
 
     def test_high_risk_reader_copy_keeps_its_professional_review_limit(self):
