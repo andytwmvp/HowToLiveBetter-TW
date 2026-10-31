@@ -32131,5 +32131,106 @@
       "after_reader_sha256": "1dbc52a6e7930c2078cfb03385111a5835272c90445ff6bbfb17fa93f5b866cd",
       "prior_review_sha256": "630ea81f4d4b3568c7fd7938b301e2df2f78f189bf8db8279a136f6d09d3c698"
     }
+  ],
+  "draft_substantive_rechecks": [
+    {
+      "id": "TW-02-006",
+      "status": "ai_source_rechecked_draft_unpublished",
+      "prior_revision": "171783959adfc988ad6cd2cff04cfcdf21a745f6",
+      "reviewed_at": "2026-10-31",
+      "review_due_at": "2027-04-30",
+      "before_sha256": "f66045475d4aef6e0eb168b994a11db9930f5293db77467ee1c03f309ef1d678",
+      "after_sha256": "04ea34d6586cd1b8695bf3c83dbd6008be7e48047f469b846003d9ae98bbd251",
+      "review_path": "localization/reviews/drafts/TW-02-006.json",
+      "source_ids": [
+        "tobaccoact",
+        "tobaccoact_effective",
+        "ecig_bill",
+        "billstatus",
+        "smoking",
+        "youthsurvey",
+        "youthsurvey_method"
+      ],
+      "taiwan_context": "電子煙透過網路、社群、同儕與代購進入台灣生活；校園學生可由校護、衛生所及戒菸服務協助。電子煙與依法核准的指定菸品法律分類不同，不能混為一談。",
+      "frequency_assessment": "國健署114年調查定義目前使用為過去30天有使用；在學國中2.1%、高中職5.1%。調查抽樣50,840人、有效完訪44,594人、完訪率87.7%，涵蓋22縣市494校、1,930班。公開摘要沒有原始使用人數分子；這是校園學生加權盛行率，不涵蓋未在學青少年或成人，也不是個人終身機率。",
+      "changes": "移除可能暗示電子煙是合法戒菸替代品的模糊說法；改列現行類菸品定義、禁行為與使用罰則，明確區分單純持有及尚未施行的持有罰則草案。補上最新校園使用率、調查範圍與限制、免費戒菸及回收入口。",
+      "unresolved_questions": [
+        "未取得法律專業人員對單純持有及其他可能併行法規的獨立法律意見；正文限於《菸害防制法》第15、40條。",
+        "持有罰則修法、協商及實際施行日期可能改變，發布前須再次核對現行法規及行政院公告。",
+        "戒菸專線服務時段與回收點可能更新，發布前須核對即時服務頁。",
+        "目前為AI輔助來源再審，未取得公共衛生、成癮醫療或法律專業審閱。"
+      ]
+    },
+    {
+      "id": "TW-02-008",
+      "status": "ai_source_rechecked_draft_unpublished",
+      "prior_revision": "171783959adfc988ad6cd2cff04cfcdf21a745f6",
+      "reviewed_at": "2026-10-31",
+      "review_due_at": "2027-04-30",
+      "before_sha256": "de4fab307ff913be68f054487c8a3eb3c5dc818abd0b6bdc4492bebb41356533",
+      "after_sha256": "3a1c97c85767a9d05ed670961e1e59ca260b7733c57b9bea3c588ad55222c930",
+      "review_path": "localization/reviews/drafts/TW-02-008.json",
+      "source_ids": [
+        "betel",
+        "cancer",
+        "oral_screening",
+        "oral_warning_signs"
+      ],
+      "taiwan_context": "台灣仍有嚼檳榔與口腔癌防治、口腔黏膜篩檢及戒檳服務需求；內容涵蓋已戒者篩檢資格、原住民族年齡條件、健保特約院所與口腔症狀就醫，不將篩檢當成戒檳替代品。",
+      "frequency_assessment": "112年（2023）癌症登記列口腔、口咽及下咽合計8,522例新登記病例，年齡標準化發生率21.2/10萬，依2000年世界標準人口標準化。此分類包括口咽與下咽，不是檳榔可歸因病例數，亦非個人風險。",
+      "changes": "補上檳榔子本身致癌及配料不改變安全性；補上112年癌登範圍與標準化率限制、公費篩檢資格／頻率、口腔警訊及就醫科別。避免把全部口腔癌病例直接歸因於檳榔。",
+      "unresolved_questions": [
+        "癌症登記病例數與標準化率不能證明個人因果或當年檳榔可歸因病例比例。",
+        "篩檢資格及院所名單可能更新，正式發布前需查最新版。",
+        "尚待牙科、口腔顎面外科或耳鼻喉頭頸專業審閱；目前只有AI來源再核對。"
+      ]
+    },
+    {
+      "id": "TW-02-021",
+      "status": "ai_source_rechecked_draft_unpublished",
+      "prior_revision": "171783959adfc988ad6cd2cff04cfcdf21a745f6",
+      "reviewed_at": "2026-10-31",
+      "review_due_at": "2027-04-30",
+      "before_sha256": "efe94aa13cebb67952879c5a6c160b378d30b27ec9daff222adc4480dd091bb5",
+      "after_sha256": "45aaad2ada15fae3b1898870560c880b59c0f7936a930035aa1dbeafe87ceef5",
+      "review_path": "localization/reviews/drafts/TW-02-021.json",
+      "source_ids": [
+        "alcohol",
+        "alcoholwithdrawal"
+      ],
+      "taiwan_context": "台灣飲酒情境可在家中、聚餐、工作應酬及下班後發生；行動入口包含本人或家屬、家醫科／身心科／成癮醫療、中央免費諮詢及地方治療機構。戒斷是醫療風險，不只是意志力或家庭溝通問題。",
+      "frequency_assessment": "本次未找到可表示全國酒癮盛行率的近期具代表性統計。衛福部2026年列130家治療機構，並稱114年有4,000多位受補助個案；這是服務供給及行政服務量，不是盛行率、發生率或個人機率。",
+      "changes": "移除「談幾分鐘」可處理飲酒問題的淡化敘述；加入飲酒紀錄、免費專線、治療補助及資格限制，並加入停止飲酒風險分流、急症警訊與119求援。",
+      "unresolved_questions": [
+        "未找到近期全國代表性、明確診斷定義及母數的酒癮盛行率，不以求助或受補助數替代。",
+        "每人每年最高補助額、處置範圍與資格需依就診年度計畫及機構核定，不保證全額或每人適用。",
+        "戒斷評估與治療由醫師依個人狀況安排；尚未取得成癮醫學或急診專業審閱。"
+      ]
+    },
+    {
+      "id": "TW-02-045",
+      "status": "ai_source_rechecked_draft_unpublished",
+      "prior_revision": "171783959adfc988ad6cd2cff04cfcdf21a745f6",
+      "reviewed_at": "2026-10-31",
+      "review_due_at": "2027-04-30",
+      "before_sha256": "5935e305981ba1025f96878a216ab2bb40f789ca04f7b4f38cc52e6a9acd9d4d",
+      "after_sha256": "7f539be73b74d55b8c9cfe562687c5743ac6c546123c03ef4a6370e51ed17721",
+      "review_path": "localization/reviews/drafts/TW-02-045.json",
+      "source_ids": [
+        "diabetes",
+        "bmi",
+        "physicalactivity",
+        "hpa_my_plate"
+      ],
+      "taiwan_context": "適用於收到成人健檢或其他抽血報告顯示血糖偏高、需要確認下一步的台灣成人；把公費成人預防保健資格與已有異常者的個別追蹤分開，並考慮外食或超商餐點等日常安排。",
+      "frequency_assessment": "本次找到的全國性公開估計為2017至2020年、18歲以上成人、以空腹血糖100至125 mg/dL界定的糖尿病前期盛行率約25%。這是橫斷調查盛行率；官方摘要未列原始分子、分母或此分析未加權樣本數，不自行反推。不能當成年發生率、個人發病或進展機率。",
+      "changes": "移除「每半年人人複查」及只靠少吃即可防止糖尿病的簡化指示；補上台灣全國盛行率、調查定義與資料缺口、血糖參考範圍、公費健檢年齡／間隔及已有異常者的個別追蹤原則，加入外食及活動的可執行改變。",
+      "unresolved_questions": [
+        "公開盛行率摘要未提供分析的原始分子、分母或未加權樣本數；只保留官方約數和調查年份。",
+        "本次未找到比2017至2020更新且定義可直接比較的全國盛行率；高血糖或已確診糖尿病不是相同指標。",
+        "成人健檢週期不是糖尿病前期個人追蹤建議；由醫療人員決定何時複驗。",
+        "尚待家醫科、新陳代謝科或營養專業人員審閱；AI查核不能確認個人診斷或治療計畫。"
+      ]
+    }
   ]
 }
