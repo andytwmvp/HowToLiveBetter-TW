@@ -30,10 +30,10 @@ class Chapter13ThirdBatchTests(unittest.TestCase):
   self.assertIn('119',b['TW-13-019']);self.assertIn('室外',b['TW-13-019'])
   self.assertIn('02-2871-7121',b['TW-13-020']);self.assertIn('禁止自行催吐',b['TW-13-020'])
   self.assertIn('生石灰',b['TW-13-021']);self.assertIn('遇水反應',b['TW-13-021'])
-  self.assertIn('可能仍然流汗',b['TW-13-022']);self.assertIn('不可強迫喝水',b['TW-13-022'])
+  self.assertIn('中暑也可能大量流汗',b['TW-13-022']);self.assertIn('不要餵水或灌水',b['TW-13-022'])
   self.assertIn('限水',b['TW-13-023']);self.assertIn('醫療劑量',b['TW-13-023'])
   self.assertIn('叫、叫、伸、拋、划',b['TW-13-025']);self.assertIn('118',b['TW-13-025'])
-  self.assertIn('切勿貿然入水',b['TW-13-025']);self.assertIn('輕柔地',b['TW-13-028'])
+  self.assertIn('不要因為會游泳就直接跳下水',b['TW-13-025']);self.assertIn('輕柔地',b['TW-13-028'])
   for key in IDS:self.assertNotIn('撥120',b[key]);self.assertNotIn('打120',b[key])
  def test_old_reading_rows_are_unchanged(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
