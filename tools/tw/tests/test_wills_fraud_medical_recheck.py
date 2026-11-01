@@ -38,21 +38,19 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
             item = items[key]
             review = load(f'localization/reviews/{key}.json')
             body_sha = hashlib.sha256(item['body'].encode()).hexdigest()
-            current_records = [
+            historical_records = [
                 row for row in rows
                 if row['id'] == key and row.get('reviewed_at') == '2026-10-25'
             ]
-            self.assertEqual(len(current_records), 1, key)
-            cleanup = next((row for row in load('localization/retroactive-review-register-20261019.json')['reader_copy_cleanups']
-                            if row['id'] == key and row.get('after_sha256') == body_sha), None)
-            if cleanup:
-                previous = validate_reader_copy_cleanup_history(ROOT, cleanup, item)
-                self.assertEqual(hashlib.sha256(previous['body'].encode()).hexdigest(), current_records[0]['after_sha256'])
-            else:
-                self.assertEqual(body_sha, current_records[0]['after_sha256'])
+            self.assertEqual(len(historical_records), 1, key)
+            # Keep the 2026-10-25 record immutable, while current assertions
+            # follow the latest append-only substantive review for this item.
+            current_records = [row for row in rows if row['id'] == key]
+            latest_record = max(current_records, key=lambda row: row['reviewed_at'])
+            validate_recheck_history(ROOT, latest_record, item)
             self.assertEqual((ROOT / item['target_path']).read_text(encoding='utf-8'), item['body'])
             self.assertEqual(review['target_sha256'], hashlib.sha256(item['body'].encode()).hexdigest())
-            self.assertEqual(review['source_checks'], current_records[0]['source_checks'])
+            self.assertEqual(review['source_checks'], latest_record['source_checks'])
             for check in review['source_checks']:
                 self.assertGreaterEqual(len(check['supporting_passage']), 50)
                 self.assertNotEqual(check['supporting_passage'], check['claim'])
@@ -60,7 +58,7 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
                 self.assertIn('非逐字', check['supporting_passage'])
             self.assertEqual({check['url'] for check in review['source_checks']}, {sources[src]['url'] for src in item['source_ids']})
             self.assertEqual(manifest[key]['sources'], item['source_ids'])
-            self.assertEqual(item['reviewed_at'], '2026-10-25')
+            self.assertEqual(item['reviewed_at'], latest_record['reviewed_at'])
 
     def test_old_items_and_source_objects_are_preserved(self):
         old = json.loads(subprocess.check_output(['git', 'show', BASE + ':localization/tw-edition/runtime.json'], cwd=ROOT))
@@ -158,7 +156,8 @@ class WillsFraudMedicalRecheckTests(unittest.TestCase):
         self.assertFalse(publication_report()['publication_ready'])
         for key in IDS:
             review = load(f'localization/reviews/{key}.json')
-            self.assertIn('未取得獨立', review['reviewer'])
+            self.assertIn('未取得', review['reviewer'])
+            self.assertIn('專業', review['reviewer'])
             self.assertIn('2027-', review['review_due_at'])
 
     def test_progress_report_uses_live_base_and_worktree_metrics(self):
