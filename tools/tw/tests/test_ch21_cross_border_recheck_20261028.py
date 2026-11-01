@@ -101,7 +101,13 @@ class CrossBorderRecheckTests(unittest.TestCase):
                 rows = sorted((row for row in self.register["substantive_rechecks"]
                                if row["id"] == key), key=lambda row: row["reviewed_at"])
                 self.assertEqual(rows[0], original)
-                self.assertEqual([row["reviewed_at"] for row in rows], ["2026-10-24", "2026-10-25"])
+                # These two rows are the immutable repair history. Later
+                # substantive rechecks append rows and must not invalidate it.
+                self.assertGreaterEqual(len(rows), 2)
+                self.assertEqual(
+                    [row["reviewed_at"] for row in rows[:2]],
+                    ["2026-10-24", "2026-10-25"],
+                )
                 before = json.loads(subprocess.check_output(
                     ["git", "show", f"{original['prior_revision']}:localization/tw-edition/runtime.json"],
                     cwd=ROOT, text=True,

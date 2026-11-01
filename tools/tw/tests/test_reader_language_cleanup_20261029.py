@@ -37,7 +37,9 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
         runtime = json.loads(self.read("localization/tw-edition/runtime.json"))
         register = json.loads(self.read("localization/retroactive-review-register-20261019.json"))
         items = {item["id"]: item for item in runtime["items"]}
-        substantive = {row["id"]: row for row in register["substantive_rechecks"]}
+        substantive = {}
+        for row in register["substantive_rechecks"]:
+            substantive.setdefault(row["id"], []).append(row)
         for item_id in ("TW-01-015", "TW-16-005", "TW-16-011", "TW-17-011", "TW-24-014", "TW-24-006", "TW-13-042"):
             item = items[item_id]
             body_sha = hashlib.sha256(item["body"].encode("utf-8")).hexdigest()
@@ -48,13 +50,22 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
                 self.assertNotIn("前後SHA", item["body"])
                 self.assertNotIn("本篇核對現行法", item["body"])
                 self.assertNotIn("尚未經醫療、社工、法律及急救專業人員獨立審閱", item["body"])
-                matches = [row for row in register["reader_copy_cleanups"]
-                           if row.get("id") == item_id and row.get("after_sha256") == body_sha]
-                self.assertEqual(len(matches), 1)
-                self.assertEqual(matches[0]["transform"], "reader_copy_cleanup_v3")
-                validate_reader_copy_cleanup_history(ROOT, matches[0], item)
-                if item_id in substantive:
-                    validate_recheck_history(ROOT, substantive[item_id], item)
+                cleanup_rows = [row for row in register["reader_copy_cleanups"]
+                                if row.get("id") == item_id
+                                and row.get("transform") == "reader_copy_cleanup_v3"]
+                matches = [row for row in cleanup_rows if row.get("after_sha256") == body_sha]
+                if matches:
+                    self.assertEqual(len(matches), 1)
+                    validate_reader_copy_cleanup_history(ROOT, matches[0], item)
+                else:
+                    # A later substantive recheck may legitimately replace the
+                    # cleaned reader copy. Preserve the cleanup edge in history
+                    # and validate the newer edge against the current body.
+                    self.assertTrue(cleanup_rows, item_id)
+                    self.assertTrue(substantive.get(item_id), item_id)
+                if substantive.get(item_id):
+                    latest = max(substantive[item_id], key=lambda row: row["reviewed_at"])
+                    validate_recheck_history(ROOT, latest, item)
 
     def test_entry_points_use_reader_language_without_batch_status(self):
         paths = ("README.md", "REPOSITORY_GUIDE.md", "locales/zh-TW/README.md")

@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-01",
+  "base_main_sha": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-24-008",
+    "TW-24-001",
+    "TW-16-001",
+    "TW-16-004",
+    "TW-17-011"
+  ],
+  "risk_order_basis": "先核對危急病人急救與醫療費用困難時的求助權益，再核對急症與一般門診分流；接著處理慢性藥物漏服／停用與補充品交互作用；最後更新住宿式照護契約和查找入口。排序依傷害嚴重度及可採取行動，不宣稱代表事件發生率。",
+  "professional_review": "pending",
+  "source_counts": {
+    "runtime_sources_before": 1020,
+    "runtime_sources_after": 1022,
+    "sources_added": 2,
+    "references_retired": 1,
+    "source_objects_retained_for_history": 1
+  },
+  "new_source_ids": [
+    "ch16_fda_food_adverse_report_20260203",
+    "ch17_ltc_gis_map"
+  ],
+  "reused_source_ids": [
+    "care_residential_contract",
+    "ch13_ana_hch",
+    "ch16_fda_meds",
+    "ch16_hpa_bp",
+    "ch17_contractrefund",
+    "ch17_facilitycontract",
+    "ch17_institution",
+    "ch24_copay",
+    "ch24_major",
+    "ch24_medlaw",
+    "ch24_nfa_119_20220705",
+    "ch24_referral",
+    "follow_ltc_law",
+    "hpa_emergency",
+    "rights_ems",
+    "rights_major_scope",
+    "rights_nhi_aid",
+    "rights_socialaid",
+    "risk_supp_interaction",
+    "tw_central_law_standard"
+  ],
+  "core_progress": {
+    "verified_before": 282,
+    "verified_after": 282,
+    "total": 765,
+    "new_core_articles": 0
+  },
+  "frequency_assessments": {
+    "TW-24-001": {
+      "assessment": "未找到可用同口徑全國資料估計穩定門診轉診或特定急症的個人發生率；健保門診人次與轉診政策無個人急症暴露分母，不用來推算急症機率。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-16-001": {
+      "assessment": "未找到按一致不良反應或漏服／自行停藥傷害定義、涵蓋全臺不同慢性病藥使用者且有追蹤時間與用藥分母的發生率。國健署公開摘要所列30.4%盛行率與302萬推估沒有提供原始分子、分母或完整調查口徑；其調查介紹頁稱2021年疫情期間中斷、2022年重啟並規劃2022至2025調查，與另一頁的2020至2024描述不一致。盛行率也不是漏服或停藥傷害率，故不拿來估個人風險。",
+      "statistic_ids": [
+        "HPA-BP-30.4-2020-2024-excluded"
+      ],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-16-004": {
+      "assessment": "未找到能涵蓋不同品牌、成分、劑量、併用藥與臺灣使用暴露分母的全國交互作用發生率；食藥署非預期反應通報是安全監測資料，可能漏報、重複及因果未明，不能當個人機率。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-24-008": {
+      "assessment": "未找到定義、期間與分母一致的全臺因無力繳費延誤急救發生率、社會救助醫療補助核准率或急難救助核准率。急診人次、欠費案件與低收入戶數不代表此類事件的個人發生機率。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-17-011": {
+      "assessment": "未找到依住宿機構法律類型、住民人數與住宿期間有一致定義的全臺不當收費或照護傷害發生率；評鑑、裁罰及申訴行政數量不是住民暴露分母。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    }
+  },
+  "statistics": [
+    {
+      "item_id": "TW-16-001",
+      "source_id": "ch16_hpa_bp",
+      "value": "30.4%; 摘要另稱302萬人，排除於正文",
+      "unit": "20歲以上人口盛行率及推估人數",
+      "period": "來源摘要寫2020至2024；HPA調查說明稱第三波因2021停調、2022重啟並規劃2022至2025",
+      "scope": "臺灣全國，20歲以上國人（依摘要文字）",
+      "population": "HPA公開頁面所稱20歲以上人口；分析樣本及加權估計母體未由該摘要充分說明",
+      "numerator": null,
+      "denominator": null,
+      "event_definition": "來源摘要稱高血壓盛行率；未取得原始表格以核對診斷定義與分析口徑。",
+      "data_type": "官方網站轉述之調查盛行率摘要，非藥害通報或用藥結果研究。",
+      "method": "2026-11-01查閱HPA公開高血壓頁、國民營養健康調查方法說明頁及最新調查介紹；沒有原始分析表及未加權樣本。",
+      "accessed_at": "2026-11-01",
+      "limitations": "不使用於正文：摘要缺分子、分母及樣本資訊；調查期間標示與官方調查週期頁面不一致；盛行率不等於慢性病藥漏服、停用或不良反應發生率。",
+      "status": "assessed_excluded_from_reader_claim"
+    }
+  ],
+  "legal_evidence": [
+    {
+      "law": "醫療法2026-09-23修正條文（第60、73條未修正）",
+      "announced_at": "2026-09-23",
+      "effective_at": "2026-09-25",
+      "date_basis": "總統府公報於2026-09-23公布該次修正；醫療法第123條明定自公布日施行，依中央法規標準法第13條自公布日起算至第三日起發生效力，因此該次修正於2026-09-25生效。該次修正清單未列第60、73條，這是修正條文生效日，不是第60、73條原始施行日。2026-11-01重新核對現行條文及沿革。",
+      "urls": [
+        "https://www.president.gov.tw/Page/294/50409",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+      ],
+      "accessed_at": "2026-11-01",
+      "rule_source_id": "tw_central_law_standard"
+    },
+    {
+      "law": "健保門診基本部分負擔表",
+      "announced_at": "2017-02-18",
+      "effective_at": "2017-04-15",
+      "date_basis": "健保署公告調整方案日期與其部分負擔表所列生效日期；截至2026-11-01頁面仍列相同基本費率，頁面更新日2025-04-22。",
+      "urls": [
+        "https://www.nhi.gov.tw/ch/cp-7917-4aace-3255-1.html",
+        "https://www.nhi.gov.tw/ch/cp-5163-9803c-2737-1.html"
+      ]
+    },
+    {
+      "law": "社會救助法第18至21條（現行整編版本）",
+      "announced_at": "2015-12-30",
+      "effective_at": "2016-02-01",
+      "date_basis": "全國法規資料庫現行修正日及沿革列示最後修正條文自2016-02-01施行；地方醫療補助標準依第20條另訂。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050078"
+      ]
+    },
+    {
+      "law": "長期照顧服務法2021-06-09修正條文（第3、35、39、42、45條為本次核對之現行條文）",
+      "announced_at": "2021-06-09",
+      "effective_at": "2021-06-11",
+      "date_basis": "全國法規資料庫沿革列示2021-06-09修正；第66條規定該次修正條文自公布日施行，依中央法規標準法第13條自公布日起算至第三日起生效，即2021-06-11。這是該次修正條文生效日，不是第3、35、39、42、45條各自首次施行日；2017-01-26修正條文另依明文自2017-06-03施行。2026-11-01重新核對現行條文及沿革。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070040",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+      ],
+      "accessed_at": "2026-11-01",
+      "rule_source_id": "tw_central_law_standard"
+    },
+    {
+      "law": "機構住宿式服務類長照機構定型化契約應記載及不得記載事項",
+      "announced_at": "2024-03-15",
+      "effective_at": "2024-03-15",
+      "date_basis": "衛福部公告明載2024-03-15公告，並自即日生效；本輪直接核對正式行政院PDF相關條款。",
+      "urls": [
+        "https://1966.gov.tw/LTC/cp-6440-78036-207.html",
+        "https://www.ey.gov.tw/File/9EF94BA07ED95416?A=C"
+      ]
+    }
+  ],
+  "changes": {
+    "TW-24-001": "依健保署目前頁面補明西醫門診基本部分負擔的公告生效日（2017-04-15）與頁面更新日（2025-04-22），並重申金額不是整次就醫總價；重新核對醫療法、雙向轉診、119及心臟／中風求援來源。",
+    "TW-16-001": "重查國健署慢性病停藥衛教、食藥署2026用藥提醒與公立醫院嚴重過敏警訊；明確說明目前沒有可估臺灣漏服／停藥傷害風險的同口徑全國分母，不以高血壓盛行率或通報件數替代，並記錄國健署公開摘要的調查週期與推估口徑限制。",
+    "TW-16-004": "重新核對食藥署2026-06-17維護的交互作用衛教，移除含過時通報路徑的2016來源參照，改連結2026-02-03維護的官方食品通報入口；補上適用產品範圍、保存產品批號及通報不取代就醫的實用步驟。",
+    "TW-24-008": "重讀現行醫療法第60、73條、緊急救護辦法、健保部分負擔及重大傷病範圍；將社會救助法第18條醫療補助與第21條急難救助分開，補上戶籍地主管機關及地方審查限制，不承諾核准或撥款時間。",
+    "TW-17-011": "重讀長期照顧服務法及2024-03-15公告生效的正式住宿式長照契約全文；補入安全或健康危害時簽約者得直接通知終止、7個工作日退費的適用範圍，以及衛福部長照地圖查找入口和床位即時性限制。"
+  },
+  "source_limitations": [
+    "健保署及部分NHI頁面由官方搜尋結果顯示完整主文摘要；本機直接請求對部分頁面回覆403，已在各source_checks中標示。",
+    "國健署慢性病盛行率摘要未提供原始分子、分母、樣本數或完整估計方法，且調查期間標示與調查方法頁不一致；因此沒有拿來估算任何藥物風險。",
+    "長照地圖是搜尋入口而非即時床位或品質保證；未逐家機構確認執照、評鑑、裁罰及空床。",
+    "AI來源核對仍待醫師、藥師、急診、社工及長照法律專業人員獨立審閱。"
+  ],
+  "review_history": {
+    "TW-24-001": {
+      "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
+      "prior_body_sha256": "4a9ba0554130658db814b6f71ba5bbd19e946749bb3713f85b9029117403a99f",
+      "after_body_sha256": "482865e896cf23d50b473ad400885777770eda553fcf757c0b9c73d7d52b4d35",
+      "prior_review_sha256": "fd85150b435dcb4f696b246894d280568addbc70365cfb0a5153c58feaa5851d",
+      "reviewed_at": "2026-11-01",
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-25",
+      "prior_review_due_at": "2027-01-31"
+    },
+    "TW-16-001": {
+      "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
+      "prior_body_sha256": "9e8634af0cec836f1ff8872686961454208deb95c08b9d24eefe1743ee39fb2a",
+      "after_body_sha256": "31a400ed174e232f929aaa7680dd043888da47cb5ed356e9b17368f3bdb2d707",
+      "prior_review_sha256": "2796d07b786a34de02553ab771d5a8b4b11b0bf07a3971059b9cfc51a6dadc34",
+      "reviewed_at": "2026-11-01",
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
+    },
+    "TW-16-004": {
+      "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
+      "prior_body_sha256": "5f1f109cae883c20b003f3cb8dda907f59ae9d0d6d6e4f5fb9c0b49520730774",
+      "after_body_sha256": "b4815492c5fd218c8ec4c0c9bf0a9941bf4b326dc9e4d7caf8326b3b0e4c65a5",
+      "prior_review_sha256": "0bfcdd8b9306ba41785f9c9b46d73253b5d08a9a804eda20f95d6d3b87b1eaf0",
+      "reviewed_at": "2026-11-01",
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
+    },
+    "TW-24-008": {
+      "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
+      "prior_body_sha256": "df7f9a22cbd81a8af809dd69da7d357f97983c8c30321947142e1c223111860a",
+      "after_body_sha256": "6fbc48a6cbed47b3003f5f4b3c472021f1954b41d143e11e46adbbb7091a07b6",
+      "prior_review_sha256": "b3afb273cd0550f4f2775061917165b14614f279bab0741fa092269e7a428ef4",
+      "reviewed_at": "2026-11-01",
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_review_due_at": "2026-12-31"
+    },
+    "TW-17-011": {
+      "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
+      "prior_body_sha256": "cd5373d50c40eabd7435baec437c6423f81f6cf762d3cc8ff02c809ee6d2124f",
+      "after_body_sha256": "64371dd66b37cefd569c3874faf9d6cb97c59962870bb02a3d2b9b382d0b02c6",
+      "prior_review_sha256": "b7e861d21c3fe13c10b0fa36f55187d66d137b75c6396dc278a86a2de3b6fb81",
+      "reviewed_at": "2026-11-01",
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
+    }
+  }
+}
