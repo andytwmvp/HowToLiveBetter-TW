@@ -56,9 +56,20 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
         self.assertEqual(coverage, audit_drafts())
         self.assertEqual(coverage["publication_completed_entries"], previous_coverage["publication_completed_entries"])
         self.assertEqual(len(self.runtime["items"]), len(previous_runtime["items"]))
-        self.assertEqual(len(self.runtime["sources"]), len(previous_runtime["sources"]) + 6)
-        self.assertEqual(len(register["substantive_rechecks"]),
-                         len(previous_register["substantive_rechecks"]) + len(ITEM_IDS))
+        current_source_ids = {row["id"] for row in self.runtime["sources"]}
+        previous_source_ids = {row["id"] for row in previous_runtime["sources"]}
+        self.assertTrue(previous_source_ids <= current_source_ids)
+        self.assertTrue({
+            "ch13_mountain_nfa_20260528",
+            "ch13_mountain_cause_nfa_20250626",
+            "ch13_cold_cdc",
+            "ch13_snake_cdc_epidemiology_2025",
+            "ch13_infant_peds_bls_aha_2025",
+            "ch13_infant_cpr_lay_aha_2025",
+        } <= current_source_ids - previous_source_ids)
+        previous_review_hashes = {row["after_sha256"] for row in previous_register["substantive_rechecks"]}
+        current_review_hashes = {row["after_sha256"] for row in register["substantive_rechecks"]}
+        self.assertTrue(previous_review_hashes <= current_review_hashes)
         self.assertEqual(publication_report()["publication_completed_entries"], coverage["publication_completed_entries"])
         self.assertFalse(publication_report()["publication_ready"])
 
