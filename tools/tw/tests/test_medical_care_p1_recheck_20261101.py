@@ -79,6 +79,18 @@ class MedicalCareP1RecheckTests(unittest.TestCase):
                     self.assertTrue(check["retrieval_method"].strip())
                 audit.validate_recheck_history(ROOT, row, item)
 
+        law_check = next(
+            check for check in read("localization/reviews/TW-17-007.json")["source_checks"]
+            if check["url"] == "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070040"
+        )
+        self.assertIn("第2條規定中央與地方主管機關", law_check["supporting_passage"])
+        self.assertIn("第3條第1款定義", law_check["supporting_passage"])
+        self.assertEqual(law_check["supporting_passage"], next(
+            check["supporting_passage"]
+            for check in records["TW-17-007"]["source_checks"]
+            if check["url"] == law_check["url"]
+        ))
+
         self.assertEqual(items["TW-17-008"]["source_ids"].count("ch17_pressure"), 0)
         retired = records["TW-17-008"]["retired_sources"]
         self.assertEqual([entry["id"] for entry in retired], ["ch17_pressure"])
