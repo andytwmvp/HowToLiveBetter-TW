@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "base_main_sha": "349bbc8957a9ceff7d75dcec2327c6544af764ec",
+  "reviewed_at": "2026-11-01",
+  "review_due_at": "2027-01-31",
+  "new_core_entries": [],
+  "items": [
+    {
+      "id": "TW-16-014",
+      "statistics_assessed": [
+        "challenge_5y_disease_free_survival",
+        "challenge_8y_overall_survival",
+        "challenge_musculoskeletal_adverse_events"
+      ],
+      "professional_review": "pending",
+      "limits": [
+        "只核對PubMed摘要與ClinicalTrials.gov登錄，未取得NEJM全文或補充附件。",
+        "研究並非臺灣人口樣本；不能換算為臺灣癌症患者發生率或個人治療效果。"
+      ]
+    },
+    {
+      "id": "TW-17-007",
+      "statistics_assessed": [],
+      "frequency_assessment": "長照申請、服務涵蓋與給付額度不是失能發生率、個人核准機率或服務等待時間；目前未找到同定義全臺失能發生率及地方即時供給母數。",
+      "professional_review": "pending"
+    },
+    {
+      "id": "TW-17-008",
+      "statistics_assessed": [],
+      "frequency_assessment": "目前沒有採一致分期、具追蹤分母且可代表全臺居家臥床者的近期壓力性損傷發生率；院所指標與國外翻身試驗不能直接換算。",
+      "professional_review": "pending"
+    },
+    {
+      "id": "TW-24-007",
+      "statistics_assessed": [],
+      "frequency_assessment": "檢傷等級是急診處理優先順序，不是事件發生率；未找到2026年全臺各院、時段及級別同定義候診分佈。衛福部頁面所列2014年醫學中心資料不作目前候診保證。",
+      "professional_review": "pending"
+    }
+  ],
+  "statistics": [
+    {
+      "id": "challenge_5y_disease_free_survival",
+      "source_id": "ch16_challenge_os_2026",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40450658/",
+      "source_publication_date": "2025-06-01 online; 2025-07-03 journal issue",
+      "accessed_at": "2026-11-01",
+      "value": {
+        "exercise_group_percent": 80.3,
+        "health_education_group_percent": 73.9,
+        "difference_percentage_points": 6.4,
+        "difference_95_ci_percentage_points": [0.6, 12.2]
+      },
+      "unit": "5年疾病無事件存活估計（百分比及百分點差）",
+      "period": "試驗收案期間2009至2024年；追蹤中位數7.9年；結果估計時間點為5年",
+      "geographic_scope": "55個國際研究中心；非臺灣全國資料",
+      "population": "第三期隨機試驗納入完成輔助化療的結腸癌患者；登錄條件限特定高風險第二期或第三期、治療後60至180日、活動量低於門檻並通過運動測試者。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "隨機分派共889人（運動組445人、健康教育組444人），但摘要未提供5年估計時仍在風險集的人數或原始事件數；此存活分析估計不可用隨機分組人數直接反推。",
+      "event_definition": "疾病無事件存活的事件包含結腸癌復發、新原發癌或任何原因死亡。",
+      "data_type": "第三期隨機對照試驗的時間至事件存活估計",
+      "method": "摘要列出組別存活估計、兩組差及95%信賴區間；未依摘要推算原始事件人數或臺灣風險。",
+      "limitations": "不是臺灣全國發生率或個人機率；分組總人數不是該時間點分母，摘要未列風險集人數與原始事件數。"
+    },
+    {
+      "id": "challenge_8y_overall_survival",
+      "source_id": "ch16_challenge_os_2026",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40450658/",
+      "source_publication_date": "2025-06-01 online; 2025-07-03 journal issue",
+      "accessed_at": "2026-11-01",
+      "value": {
+        "exercise_group_percent": 90.3,
+        "health_education_group_percent": 83.2,
+        "difference_percentage_points": 7.1,
+        "difference_95_ci_percentage_points": [1.8, 12.3]
+      },
+      "unit": "8年整體存活估計（百分比及百分點差）",
+      "period": "試驗收案期間2009至2024年；追蹤中位數7.9年；結果估計時間點為8年",
+      "geographic_scope": "55個國際研究中心；非臺灣全國資料",
+      "population": "第三期隨機試驗納入完成輔助化療的結腸癌患者；登錄條件限特定高風險第二期或第三期、治療後60至180日、活動量低於門檻並通過運動測試者。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "隨機分派共889人（運動組445人、健康教育組444人），但摘要未提供8年估計時仍在風險集的人數或原始死亡數；整體存活估計不可用隨機分組人數直接反推。",
+      "event_definition": "整體存活以任何原因死亡為事件；不同於疾病無事件存活。",
+      "data_type": "第三期隨機對照試驗的時間至事件存活估計",
+      "method": "摘要列出組別存活估計、兩組差及95%信賴區間；未依摘要推算原始事件人數或臺灣風險。",
+      "limitations": "不是臺灣全國死亡率或個人預後保證；分組總人數不是該時間點分母，摘要未列風險集人數與原始死亡數。"
+    },
+    {
+      "id": "challenge_musculoskeletal_adverse_events",
+      "source_id": "ch16_challenge_os_2026",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40450658/",
+      "source_publication_date": "2025-06-01 online; 2025-07-03 journal issue",
+      "accessed_at": "2026-11-01",
+      "value": {
+        "exercise_group_percent": 18.5,
+        "health_education_group_percent": 11.5
+      },
+      "unit": "摘要報告的肌肉骨骼不良事件比例（百分比）",
+      "period": "試驗期間；摘要未單獨列出不良事件觀察時間窗",
+      "geographic_scope": "55個國際研究中心；非臺灣全國資料",
+      "population": "同一第三期隨機試驗中的結腸癌患者；摘要報告運動組與健康教育組比較。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "摘要報告18.5%與11.5%，未提供對應原始件數、實際分析分母或單一患者重複事件的計數方式；隨機分派人數445及444不能直接當成已核實的不良事件分母。",
+      "event_definition": "摘要所稱肌肉骨骼不良事件；不據摘要推定嚴重度、因果歸屬或個人運動禁忌。",
+      "data_type": "試驗摘要所報告的不良事件比例",
+      "method": "依PubMed摘要轉錄兩組比例；不推算分子或個人機率。",
+      "limitations": "不等於臺灣患者發生率；摘要未列原始事件數、分析分母及單一患者重複事件計數方式，個人活動安全仍須由治療團隊評估。"
+    }
+  ]
+}

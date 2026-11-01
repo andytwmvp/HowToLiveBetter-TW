@@ -114,7 +114,7 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
 
         runtime = json.loads(self.read("localization/tw-edition/runtime.json"))
         scope = runtime["scope"]
-        self.assertEqual(runtime["updated_at"], "2026-10-31")
+        self.assertGreaterEqual(runtime["updated_at"], evidence["reviewed_at"])
         self.assertIn("目錄未列出的主題，目前沒有可供閱讀的台灣版指引", scope)
         self.assertNotIn("尚未整理相關指引", scope)
         for path in ("index.html", "selfcheck.html"):

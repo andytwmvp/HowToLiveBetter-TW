@@ -17,8 +17,11 @@ class CancerEyeGoutCareLeaveTests(unittest.TestCase):
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_urgent_actions_and_individual_exceptions(self):
   b={i['id']:i['body'] for i in validate_runtime()['items']}
-  for k in IDS:self.assertLess(b[k].index('119'),b[k].index('事件頻率'))
-  terms={'TW-16-014':['60至180日','不要自行套用網路年齡心率表','不是單純「復發率」','反推事件數'],'TW-17-009':['立即至急診','處置前二日','病人留一份','不規定人人固定幾週'],'TW-16-010':['證據確定性很低','不能取代必要降尿酸藥','避免斷食','不永久禁掉所有魚'],'TW-17-012':['不是任何輪班10小時','選定後不得變更','考核仍依勞雇約定','七加十四日']}
+  for k in IDS:
+   if k=='TW-16-014':
+    self.assertLess(b[k].index('運動中胸痛'),b[k].index('研究數據與臺灣適用限制'))
+   else:self.assertLess(b[k].index('119'),b[k].index('事件頻率'))
+  terms={'TW-16-014':['60至180日','不要自行套用網路年齡心率表','不是單純復發率','推算事件數'],'TW-17-009':['立即至急診','處置前二日','病人留一份','不規定人人固定幾週'],'TW-16-010':['證據確定性很低','不能取代必要降尿酸藥','避免斷食','不永久禁掉所有魚'],'TW-17-012':['不是任何輪班10小時','選定後不得變更','考核仍依勞雇約定','七加十四日']}
   for k,ts in terms.items():
    for t in ts:self.assertIn(t,b[k])
  def test_trial_and_law_evidence_units(self):

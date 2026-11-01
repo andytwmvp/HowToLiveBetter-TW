@@ -21,9 +21,10 @@ class MedicalCareTests(unittest.TestCase):
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_emergency_action_precedes_frequency_context(self):
   bodies={i['id']:i['body'] for i in validate_runtime()['items']}
-  for key in IDS:
+  for key in IDS-{'TW-16-014'}:
    self.assertLess(bodies[key].index('119'),bodies[key].index('事件頻率'))
-  for key,terms in {'TW-16-012':['不能等','長效藥','停電','不自行估算'],'TW-24-007':['重新評估','不同階段','安全期限','不表示所有費用免費'],'TW-17-013':['即使原有失智','不自行加鎮靜藥','確診不等於自動補助'],'TW-17-008':['醫療管路','不為減壓拔除','證據確定性極低','不能解讀成買氣墊床就自行延長']}.items():
+  self.assertLess(bodies['TW-16-014'].index('運動中胸痛'),bodies['TW-16-014'].index('研究數據與臺灣適用限制'))
+  for key,terms in {'TW-16-012':['不能等','長效藥','停電','不自行估算'],'TW-24-007':['重新評估','不同階段','安全期限','不表示所有費用免費'],'TW-17-013':['即使原有失智','不自行加鎮靜藥','確診不等於自動補助'],'TW-17-008':['醫療管路','不為減壓拔除','證據確定性極低','不能因買了氣墊床就自行延長間隔']}.items():
    for t in terms:self.assertIn(t,bodies[key])
  def test_survey_scope_and_missing_raw_denominators(self):
   batch=load('localization/medical-care-20261020.json');s=batch['statistics'][0]
