@@ -42,7 +42,8 @@
     "rights_major_scope",
     "rights_nhi_aid",
     "rights_socialaid",
-    "risk_supp_interaction"
+    "risk_supp_interaction",
+    "tw_central_law_standard"
   ],
   "core_progress": {
     "verified_before": 282,
@@ -100,14 +101,17 @@
   ],
   "legal_evidence": [
     {
-      "law": "醫療法第60、73條（現行條文；第60、73條未受2026-09-23該次修法修改）",
+      "law": "醫療法2026-09-23修正條文（第60、73條未修正）",
       "announced_at": "2026-09-23",
-      "effective_at": "2026-09-23",
-      "date_basis": "總統府公報2026-09-23公布該次修法，現行醫療法第123條規定本法自公布日施行；該次修法列修正第24、49、50、53、72、84、88、106、107條及新增第100-1、114-1條，未修第60、73條。",
+      "effective_at": "2026-09-25",
+      "date_basis": "總統府公報於2026-09-23公布該次修正；醫療法第123條明定自公布日施行，依中央法規標準法第13條自公布日起算至第三日起發生效力，因此該次修正於2026-09-25生效。該次修正清單未列第60、73條，這是修正條文生效日，不是第60、73條原始施行日。2026-11-01重新核對現行條文及沿革。",
       "urls": [
         "https://www.president.gov.tw/Page/294/50409",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021"
-      ]
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+      ],
+      "accessed_at": "2026-11-01",
+      "rule_source_id": "tw_central_law_standard"
     },
     {
       "law": "健保門診基本部分負擔表",
@@ -129,13 +133,16 @@
       ]
     },
     {
-      "law": "長期照顧服務法第3、35、39、42、45條（現行條文）",
+      "law": "長期照顧服務法2021-06-09修正條文（第3、35、39、42、45條為本次核對之現行條文）",
       "announced_at": "2021-06-09",
-      "effective_at": "2021-06-09",
-      "date_basis": "法規資料庫現行修正日2021-06-09；第66條規定2017-01-26修正條文自2017-06-03施行，其餘修正條文自公布日施行。",
+      "effective_at": "2021-06-11",
+      "date_basis": "全國法規資料庫沿革列示2021-06-09修正；第66條規定該次修正條文自公布日施行，依中央法規標準法第13條自公布日起算至第三日起生效，即2021-06-11。這是該次修正條文生效日，不是第3、35、39、42、45條各自首次施行日；2017-01-26修正條文另依明文自2017-06-03施行。2026-11-01重新核對現行條文及沿革。",
       "urls": [
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070040"
-      ]
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070040",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+      ],
+      "accessed_at": "2026-11-01",
+      "rule_source_id": "tw_central_law_standard"
     },
     {
       "law": "機構住宿式服務類長照機構定型化契約應記載及不得記載事項",
@@ -168,7 +175,9 @@
       "after_body_sha256": "482865e896cf23d50b473ad400885777770eda553fcf757c0b9c73d7d52b4d35",
       "prior_review_sha256": "fd85150b435dcb4f696b246894d280568addbc70365cfb0a5153c58feaa5851d",
       "reviewed_at": "2026-11-01",
-      "review_due_at": "2027-01-31"
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-25",
+      "prior_review_due_at": "2027-01-31"
     },
     "TW-16-001": {
       "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
@@ -176,7 +185,9 @@
       "after_body_sha256": "31a400ed174e232f929aaa7680dd043888da47cb5ed356e9b17368f3bdb2d707",
       "prior_review_sha256": "2796d07b786a34de02553ab771d5a8b4b11b0bf07a3971059b9cfc51a6dadc34",
       "reviewed_at": "2026-11-01",
-      "review_due_at": "2027-01-31"
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
     },
     "TW-16-004": {
       "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
@@ -184,7 +195,9 @@
       "after_body_sha256": "b4815492c5fd218c8ec4c0c9bf0a9941bf4b326dc9e4d7caf8326b3b0e4c65a5",
       "prior_review_sha256": "0bfcdd8b9306ba41785f9c9b46d73253b5d08a9a804eda20f95d6d3b87b1eaf0",
       "reviewed_at": "2026-11-01",
-      "review_due_at": "2027-01-31"
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
     },
     "TW-24-008": {
       "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
@@ -192,7 +205,9 @@
       "after_body_sha256": "6fbc48a6cbed47b3003f5f4b3c472021f1954b41d143e11e46adbbb7091a07b6",
       "prior_review_sha256": "b3afb273cd0550f4f2775061917165b14614f279bab0741fa092269e7a428ef4",
       "reviewed_at": "2026-11-01",
-      "review_due_at": "2027-01-31"
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_review_due_at": "2026-12-31"
     },
     "TW-17-011": {
       "prior_revision": "6369232c36a5f4c002ddacbc421b1ec4a96699ec",
@@ -200,7 +215,9 @@
       "after_body_sha256": "64371dd66b37cefd569c3874faf9d6cb97c59962870bb02a3d2b9b382d0b02c6",
       "prior_review_sha256": "b7e861d21c3fe13c10b0fa36f55187d66d137b75c6396dc278a86a2de3b6fb81",
       "reviewed_at": "2026-11-01",
-      "review_due_at": "2027-01-31"
+      "review_due_at": "2027-01-31",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
     }
   }
 }
