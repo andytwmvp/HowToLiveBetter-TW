@@ -18,7 +18,9 @@ class Chapter13HeadVteDentalTests(unittest.TestCase):
     raw=(ROOT/e["target_path"]).read_bytes();review=load("localization/reviews/"+key+".json")
     self.assertGreater(len(raw),1700);self.assertEqual(hashlib.sha256(raw).hexdigest(),review["target_sha256"])
     self.assertEqual(raw.decode("utf-8"),items[key]["body"])
-    self.assertEqual(sum(x["tag"]=="h3" for x in body_blocks(items[key])),5)
+    headings=[x["text"] for x in body_blocks(items[key]) if x["tag"]=="h3"]
+    self.assertEqual(len(headings),6 if key=="TW-13-010" else 5)
+    if key=="TW-13-010":self.assertEqual(headings[-1],"資料來源")
     self.assertEqual({x["url"] for x in review["source_checks"]},{sources[x]["url"] for x in items[key]["source_ids"]})
  def test_taiwan_emergencies(self):
   data={e["id"]:e["body"].split("## 官方來源及改寫說明")[0] for e in validate_runtime()["items"]}

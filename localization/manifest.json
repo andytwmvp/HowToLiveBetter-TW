@@ -7501,11 +7501,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-004.md",
       "sources": [
-        "ch13_cerebellar_tpe",
         "ch13_cerebellar_vghtpe",
-        "retro_stroke_802"
+        "retro_stroke_802",
+        "ch13_nhia_stroke_alert_20231129"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "突然天旋地轉站不穩、看東西成雙、一隻眼發黑，或者手指點不到自己鼻尖，也按卒中打 120",
@@ -7524,9 +7524,10 @@
       "sources": [
         "ch13_amaurosis_tpe",
         "ch13_cerebellar_vghtpe",
-        "retro_stroke_802"
+        "retro_stroke_802",
+        "ch13_nhia_stroke_alert_20231129"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "一隻眼睛突然像拉下窗簾一樣黑掉，哪怕幾分鐘就自己好了，也當天按卒中去急診",
@@ -7584,8 +7585,12 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-008.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "ch13_aorta_vghtpe",
+        "ch13_aortic_dissection_femh_202512",
+        "ch13_aortic_dissection_taiwan_nhi_2023"
+      ],
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "突然像被撕開一樣的劇痛，從胸口往後背、往腰一路挪，打 120 並說清「像撕開一樣」",
@@ -7618,8 +7623,12 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-010.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "head_2026_vghtc",
+        "head_er_vghtc",
+        "ch13_csdh_taiwan_nhi_2014"
+      ],
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "老人磕過頭之後兩三週到幾個月變得走路不穩、遲鈍、嗜睡或者一側沒勁，去做頭顱 CT",

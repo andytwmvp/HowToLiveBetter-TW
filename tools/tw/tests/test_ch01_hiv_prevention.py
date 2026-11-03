@@ -17,7 +17,10 @@ class HivPreventionTests(unittest.TestCase):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
+    headings=[x['text'] for x in body_blocks(i) if x['tag']=='h3']
+    expected_headings=6 if key in {'TW-13-004','TW-13-005'} else 5
+    self.assertEqual(len(headings),expected_headings)
+    if key in {'TW-13-004','TW-13-005'}:self.assertEqual(headings[-1],'資料來源')
  def test_urgent_care_window_and_statistical_limits(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('不保證',b['TW-01-029']);self.assertIn('不自行停藥',b['TW-01-029'])
@@ -26,12 +29,12 @@ class HivPreventionTests(unittest.TestCase):
   self.assertIn('不是等待',b['TW-01-032']);self.assertIn('119',b['TW-01-032']);self.assertIn('1925',b['TW-01-032']);self.assertNotIn('oai_link_source',b['TW-01-032'])
   frequency_limits={
    'TW-13-002':'原始調查未列母數，不能據此估算個人風險',
-   'TW-13-004':'不能用所有腦血管疾病死亡數當眩暈者中風機率',
-   'TW-13-005':'案例不是全國發生率',
+   'TW-13-004':'不能用所有腦中風或腦血管疾病死亡數換算個人機率',
+   'TW-13-005':'醫院病例不是全國統計',
    'TW-13-006':'不能換算急性隅角閉鎖發生率',
   }
   for key in RECHECK:self.assertIn(frequency_limits[key],b[key])
-  self.assertIn('不以年輕',b['TW-13-004']);self.assertIn('不是全國發生率',b['TW-13-005']);self.assertIn('不能換算',b['TW-13-006'])
+  self.assertIn('不能排除後腦部位的中風',b['TW-13-004']);self.assertIn('不能因單一案例推論每位患者都有頸動脈狹窄',b['TW-13-005']);self.assertIn('不能換算',b['TW-13-006'])
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
   rt=validate_runtime();batch=read('localization/ch01-hiv-prevention-20261019.json');counts=batch['counts']

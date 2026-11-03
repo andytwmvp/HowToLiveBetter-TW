@@ -32,7 +32,10 @@ class Chapter13AortaInfantTests(unittest.TestCase):
                 self.assertGreater(len(raw), 1800)
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review["target_sha256"])
                 self.assertEqual(raw.decode("utf-8"), items[key]["body"])
-                self.assertEqual(sum(x["tag"] == "h3" for x in body_blocks(items[key])), 5)
+                headings = [x["text"] for x in body_blocks(items[key]) if x["tag"] == "h3"]
+                self.assertEqual(len(headings), 6 if key == "TW-13-008" else 5)
+                if key == "TW-13-008":
+                    self.assertEqual(headings[-1], "資料來源")
                 self.assertEqual({x["url"] for x in review["source_checks"]},
                                  {sources[s]["url"] for s in items[key]["source_ids"]})
     def test_official_taiwan_wording_survives_opencc_without_general_exemption(self):
