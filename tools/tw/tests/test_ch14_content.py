@@ -5,13 +5,17 @@ import json
 from collections import Counter
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from urllib.parse import urlsplit
+import zipfile
+import sqlite3
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, publication_report, validate_entry, validate_runtime
 from body_renderer import body_blocks, body_html
+from edition import build_anki
 
 BASE='37d33f484ee85736170694754528f4392e8ee94d'
 IDS={f'TW-14-{n:03}' for n in range(1,13)}
@@ -141,6 +145,41 @@ class ChapterContentTests(unittest.TestCase):
         script="const fs=require('fs');const {bodyBlocks}=require('./assets/tw-runtime.js');console.log(JSON.stringify(bodyBlocks(JSON.parse(fs.readFileSync(0,'utf8')))));"
         actual=json.loads(subprocess.check_output(['node','-e',script],input=json.dumps(entry),text=True,cwd=ROOT))
         self.assertEqual(actual,expected)
+
+    def test_text_after_valid_link_and_unlinked_bracket_note_is_preserved(self):
+        url='https://www.nhi.gov.tw/ch/np-2926-1.html'
+        entry={
+            'id':'TW-14-001','title':'測試','target_path':'locales/zh-TW/example.md',
+            'body':f'# 測試\n\n<!-- TW-ID: TW-14-001 -->\n\n重要提醒：[健保署說明]({url}) 重要：不要自行停藥[註1]。',
+        }
+        expected_text='重要提醒：健保署說明 重要：不要自行停藥[註1]。'
+        blocks=body_blocks(entry)
+        self.assertEqual(blocks[0]['text'],expected_text)
+        self.assertEqual(blocks[0]['segments'],[
+            {'text':'重要提醒：'},
+            {'text':'健保署說明','url':url},
+            {'text':' 重要：不要自行停藥[註1]。'},
+        ])
+        self.assertIn('重要：不要自行停藥[註1]。',body_html(entry))
+        script="const fs=require('fs');const {bodyBlocks}=require('./assets/tw-runtime.js');console.log(JSON.stringify(bodyBlocks(JSON.parse(fs.readFileSync(0,'utf8')))));"
+        actual=json.loads(subprocess.check_output(['node','-e',script],input=json.dumps(entry),text=True,cwd=ROOT))
+        self.assertEqual(actual,blocks)
+
+    def test_anki_internal_reference_has_search_hint_without_dead_anchor(self):
+        runtime=validate_runtime()
+        item=next(row for row in runtime['items'] if row['id']=='TW-24-004')
+        rendered=body_html(item,internal_link_mode='anki')
+        self.assertIn('請在 Anki 中搜尋「TW-16-002」',rendered)
+        self.assertNotIn('href="#TW-16-002"',rendered)
+        with tempfile.TemporaryDirectory() as directory:
+            output=Path(directory)/'taiwan.apkg'
+            build_anki(output,runtime)
+            with zipfile.ZipFile(output) as package:
+                with sqlite3.connect(':memory:') as db:
+                    db.deserialize(package.read('collection.anki2'))
+                    fields=db.execute('SELECT flds FROM notes WHERE guid = ?',('hltb-tw-TW-24-004',)).fetchone()[0]
+            self.assertIn('請在 Anki 中搜尋「TW-16-002」',fields)
+            self.assertNotIn('href="#TW-16-002"',fields)
 
     def test_existing_adjacent_sources_keep_registered_urls(self):
         runtime=validate_runtime()

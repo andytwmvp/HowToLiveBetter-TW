@@ -8,20 +8,21 @@ def _markdown_segments(value, strip_bullet=False):
     if strip_bullet:
         value = re.sub(r'^[-*]\s+', '', value, count=1)
     segments = []
-    cursor = 0
+    output_cursor = 0
+    search_cursor = 0
     link_count = 0
-    while cursor < len(value):
-        start = value.find('[', cursor)
+    while search_cursor < len(value):
+        start = value.find('[', search_cursor)
         if start < 0:
             break
         label_end = value.find('](', start + 1)
         if label_end < 0:
-            cursor = start + 1
+            search_cursor = start + 1
             continue
         label = value[start + 1:label_end]
         url_start = label_end + 2
         if not label:
-            cursor = start + 1
+            search_cursor = start + 1
             continue
         url_end = url_start
         parentheses = 0
@@ -39,10 +40,10 @@ def _markdown_segments(value, strip_bullet=False):
                 parentheses -= 1
             url_end += 1
         if invalid or url_end >= len(value) or value[url_end] != ')' or parentheses:
-            cursor = start + 1
+            search_cursor = start + 1
             continue
-        if start > cursor:
-            segments.append({'text': value[cursor:start]})
+        if start > output_cursor:
+            segments.append({'text': value[output_cursor:start]})
         destination = value[url_start:url_end]
         segment = {'text': label}
         if destination.startswith('https://'):
@@ -57,11 +58,12 @@ def _markdown_segments(value, strip_bullet=False):
                 segment['href'] = '#' + target_id[1]
         segments.append(segment)
         link_count += 1
-        cursor = url_end + 1
+        output_cursor = url_end + 1
+        search_cursor = url_end + 1
     if not link_count:
         return None
-    if cursor < len(value):
-        segments.append({'text': value[cursor:]})
+    if output_cursor < len(value):
+        segments.append({'text': value[output_cursor:]})
     return segments
 
 
@@ -106,19 +108,30 @@ def body_blocks(entry):
     return blocks
 
 
-def body_html(entry):
+def _segment_html(segment, internal_link_mode):
+    label = html.escape(segment['text'])
+    if 'url' in segment:
+        return '<a href="' + html.escape(segment['url'], quote=True) + '">' + label + '</a>'
+    if 'href' in segment:
+        if internal_link_mode == 'anki':
+            target = re.fullmatch(r'#(TW-(?:NAV-\d{3}|\d{2}-\d{3}))', segment['href'])
+            if target:
+                return label + ' <small>（請在 Anki 中搜尋「' + target[1] + '」）</small>'
+        return '<a href="' + html.escape(segment['href'], quote=True) + '">' + label + '</a>'
+    return label
+
+
+def body_html(entry, *, internal_link_mode='anchor'):
+    if internal_link_mode not in {'anchor', 'anki'}:
+        raise ValueError('不支援的內部連結呈現方式')
     rendered = []
     for block in body_blocks(entry):
         if 'segments' in block:
-            value = ''.join(
-                '<a href="' + html.escape(segment.get('url', segment.get('href')), quote=True) + '">' + html.escape(segment['text']) + '</a>'
-                if 'url' in segment or 'href' in segment else html.escape(segment['text'])
-                for segment in block['segments']
-            )
+            value = ''.join(_segment_html(segment, internal_link_mode) for segment in block['segments'])
         else:
             value = html.escape(block['text'])
         if 'url' in block or 'href' in block:
-            value = '<a href="' + html.escape(block.get('url', block.get('href')), quote=True) + '">' + value + '</a>'
+            value = _segment_html({key: block[key] for key in ('text', 'url', 'href') if key in block}, internal_link_mode)
             value += html.escape(block.get('suffix', ''))
         rendered.append('<' + block['tag'] + '>' + value + '</' + block['tag'] + '>')
     return ''.join(rendered)

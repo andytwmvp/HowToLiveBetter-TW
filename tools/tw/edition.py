@@ -107,7 +107,7 @@ def build_anki(output: Path, data: dict) -> None:
             for order,e in enumerate(data['items']):
                 identity = int.from_bytes(hashlib.sha256(e['id'].encode()).digest()[:6],'big')
                 nid = 1792100000000 + identity
-                body = body_html(e)+'<br>'+html.escape(e['limits'])+'<br><small>'+html.escape(freshness_copy(e))+'</small>'
+                body = body_html(e, internal_link_mode='anki')+'<br>'+html.escape(e['limits'])+'<br><small>'+html.escape(freshness_copy(e))+'</small>'
                 links = '<br>'.join(f'<a href="{html.escape(s["url"],quote=True)}">{html.escape(s["title"])}</a>' for s in refs(e,data))
                 flds = '\x1f'.join([html.escape(e['title']),body,links])
                 checksum = int(hashlib.sha1(e['title'].encode()).hexdigest()[:8],16)

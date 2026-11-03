@@ -129,6 +129,8 @@ def run(render: bool,browser_test: bool) -> None:
                 assert card.locator('a').filter(has_text=title).count()==1,'臺灣閱讀頁未顯示讀者用來源標題：'+path
                 assert card.locator('a').filter(has_text='本批核對').count()==0,'臺灣閱讀頁仍顯示內部批次文字：'+path
             result['checks'].append('網站與離線HTML顯示讀者用外部來源與可用內部連結，不露出Markdown語法。')
+            from check_internal_link_navigation_browser import check_internal_link_navigation_browser
+            result['checks'].extend(check_internal_link_navigation_browser(page, url))
             from check_navigation import check_navigation
             result['checks'].extend(check_navigation(page,context,url,review))
             from check_prevention_rechecks_browser import check_prevention_rechecks_browser

@@ -113,16 +113,17 @@
     let line = raw.trim();
     if (stripBullet) line = line.replace(/^[-*]\s+/, '');
     const segments = [];
-    let cursor = 0;
+    let outputCursor = 0;
+    let searchCursor = 0;
     let links = 0;
-    while (cursor < line.length) {
-      const start = line.indexOf('[', cursor);
+    while (searchCursor < line.length) {
+      const start = line.indexOf('[', searchCursor);
       if (start < 0) break;
       const labelEnd = line.indexOf('](', start + 1);
-      if (labelEnd < 0) { cursor = start + 1; continue; }
+      if (labelEnd < 0) { searchCursor = start + 1; continue; }
       const label = line.slice(start + 1, labelEnd);
       const urlStart = labelEnd + 2;
-      if (!label) { cursor = start + 1; continue; }
+      if (!label) { searchCursor = start + 1; continue; }
       let urlEnd = urlStart;
       let parentheses = 0;
       let invalid = false;
@@ -136,8 +137,8 @@
         }
         urlEnd++;
       }
-      if (invalid || urlEnd >= line.length || line[urlEnd] !== ')' || parentheses) { cursor = start + 1; continue; }
-      if (start > cursor) segments.push({text: line.slice(cursor, start)});
+      if (invalid || urlEnd >= line.length || line[urlEnd] !== ')' || parentheses) { searchCursor = start + 1; continue; }
+      if (start > outputCursor) segments.push({text: line.slice(outputCursor, start)});
       const destination = line.slice(urlStart, urlEnd);
       const segment = {text: label};
       if (destination.startsWith('https://')) segment.url = destination;
@@ -148,10 +149,11 @@
       }
       segments.push(segment);
       links++;
-      cursor = urlEnd + 1;
+      outputCursor = urlEnd + 1;
+      searchCursor = urlEnd + 1;
     }
     if (!links) return null;
-    if (cursor < line.length) segments.push({text: line.slice(cursor)});
+    if (outputCursor < line.length) segments.push({text: line.slice(outputCursor)});
     return segments;
   }
   function bodyBlocks(entry) {
@@ -198,6 +200,7 @@
   const answers = new Map();
   const byId = id => document.getElementById(id);
   let catalog;
+  let forcedTarget = null;
   function eligible(rule, profile) {
     if (profile.sex && rule.sex && profile.sex !== rule.sex) return false;
     if (profile.age !== null) {
@@ -226,7 +229,10 @@
     const profile = {age, sex: byId('sex').value, family: byId('family').value};
     const q = byId('q').value.trim().toLocaleLowerCase('zh-TW');
     const today = taipeiToday();
-    const rows = catalog.items.filter(e => eligible(e.eligibility, profile) && `${e.title} ${e.body} ${e.limits}`.toLocaleLowerCase('zh-TW').includes(q));
+    const matches = catalog.items.filter(e => eligible(e.eligibility, profile) && `${e.title} ${e.body} ${e.limits}`.toLocaleLowerCase('zh-TW').includes(q));
+    const forcedEntry = forcedTarget ? catalog.items.find(e => e.id === forcedTarget) : null;
+    const rows = [...matches];
+    if (forcedEntry && !rows.some(e => e.id === forcedEntry.id)) rows.push(forcedEntry);
     const container = byId('cards'); container.replaceChildren();
     for (const e of rows) {
       const article = node('article', undefined, 'q'); article.id = e.id; article.dataset.id = e.id;
@@ -272,7 +278,10 @@
       }
       container.append(article);
     }
-    byId('status').textContent = `找到 ${rows.length} 篇符合條件的文章。未填的條件不代表符合個人資格。`;
+    const forcedMessage = forcedEntry && !matches.some(e => e.id === forcedEntry.id)
+      ? ` 已為開啟站內連結而顯示「${forcedEntry.title}」；這不代表符合目前篩選條件或個人資格。`
+      : '';
+    byId('status').textContent = `找到 ${matches.length} 篇符合條件的文章。未填的條件不代表符合個人資格。${forcedMessage}`;
     if (!rows.length) container.append(node('p', '目前沒有符合條件的文章；可能是搜尋字詞不合，也可能尚無該主題的臺灣指引。請調整搜尋或從章節目錄瀏覽。'));
   }
   function showFailure(error) {
@@ -291,10 +300,22 @@
       if (response && !response.ok) throw Error(`HTTP ${response.status}`);
       catalog = validate(window.__TW_RUNTIME__ || parseRuntimeJson(await response.text()));
       byId('scope').textContent = catalog.scope;
-      for (const id of ['age', 'sex', 'family', 'q']) byId(id).addEventListener('input', render);
+      forcedTarget = null;
+      for (const id of ['age', 'sex', 'family', 'q']) byId(id).addEventListener('input', () => { forcedTarget = null; render(); });
+      byId('cards').addEventListener('click', event => {
+        const link = event.target.closest?.('a[href^="#TW-"]');
+        if (!link) return;
+        const target = decodeTarget(link.hash);
+        if (!target || !catalog.items.some(e => e.id === target)) return;
+        event.preventDefault();
+        forcedTarget = target;
+        render();
+        if (location.hash === '#' + target) byId(target)?.scrollIntoView();
+        else location.hash = target;
+      });
       byId('reset').addEventListener('click', () => {
         for (const id of ['age', 'sex', 'family', 'q']) byId(id).value = '';
-        answers.clear(); render();
+        answers.clear(); forcedTarget = null; render();
       });
       render(); window.TWRuntime.ready = !!catalog;
       document.addEventListener('visibilitychange', () => { if (!document.hidden && catalog) render(); });
