@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import atexit
 from collections import Counter, defaultdict
 import hashlib
 import json
@@ -340,6 +341,23 @@ READER_COPY_V3_REPLACEMENTS = {
     "將當天打一針改為外傷急迫性與接種史分流。疾管署資料未提供完整傷口決策附件的新版日期或逐項修訂說明，不自行推定。": "",
     "本篇尚未經醫療、社工、法律及急救專業人員獨立審閱；若要處理個人醫療或保護需求，請向醫療團隊、社工或所在地主管機關確認。":
         "若要處理個人醫療或保護需求，請向醫療團隊、社工或所在地主管機關確認。",
+}
+READER_COPY_V4_REPLACEMENTS = {
+    "已改寫為臺灣的證明、需求評估、地方補助及輔具申請流程。": "",
+    "以2025年11月更新的勞動部失業服務入口、現行《就業服務法》第24條及公立就服資訊重核。沒有適用的全國資格／受領母數，故不自行估算補助頻率或成功率。": "",
+    "臺灣改寫與來源重核：2026-10-25；長者跌倒調查摘要未揭露原始樣本分母，臺北市行政查獲數無外出分母，單一傷害個案不代表頻率。": "",
+    "醫療法（第21、22、60、61、63、64、71至74條；本次核對第60、73條）":
+        "全國法規資料庫：《醫療法》",
+    "臺灣改寫與來源重核：2026-10-25；本文不把一般感謝行為概括定罪，也不替讀者認定受贈者的任用身分。":
+        "一般致謝不等於違法；特定廉政規範是否適用，仍要看醫療人員的任用身分與個案情況。",
+    "以臺灣法定許可和公私立分工改寫；時間、費率和環保葬安排按地方與個案確認，不把政府導航中的估計天數寫成強制期限。":
+        "各地接運、保存與環保葬的時間、費率和申辦安排可能不同；政府入口的預估天數僅供參考，不是各案一律適用的法定期限。",
+    "以臺灣勞保、國保、勞退、職災保險及商業保險制度獨立改寫；期限依各主管機關現行說明分列，不新增未逐一驗證的給付金額或核准承諾。不同制度申請件數沒有個人暴露母數，不能據此推算個人請領機率。":
+        "各項申請案件數無法說明有多少人符合資格或可能提出申請，因此不能用來估算個人請領機率。",
+    "以臺灣個資法適用範圍及官方產品程序改寫，清楚區分資料保存、身分資格、授權及裝置清除的不可逆風險。": "",
+    "按臺灣知悉得繼承、法院聲明、通知與清冊程序改寫；各條法律效果分開，未用民法未施行的第166條之1推導本節。": "",
+    "不作臺灣標準。":
+        "各地接運、保存與殯葬服務安排可能不同，不能把單一業者的做法視為全臺統一標準。",
 }
 HIGH_RISK = {1, 13}
 ELEVATED_RISK = {7, 16, 17, 19, 23, 24, 25}
@@ -713,7 +731,8 @@ READER_COPY_POST_REPLACEMENTS = {
 }
 
 
-def normalize_reader_copy(body: str, *, include_v3: bool = False) -> tuple[str, list[str]]:
+def normalize_reader_copy(body: str, *, include_v3: bool = False,
+                          include_v4: bool = False) -> tuple[str, list[str]]:
     """Remove review-workflow prose, retain reader-relevant limits, and rename headings.
 
     Source-linked reference paragraphs are left intact. Removed clauses remain in
@@ -735,6 +754,9 @@ def normalize_reader_copy(body: str, *, include_v3: bool = False) -> tuple[str, 
         body = body.replace(original, replacement)
     if include_v3:
         for original, replacement in READER_COPY_V3_REPLACEMENTS.items():
+            body = body.replace(original, replacement)
+    if include_v4:
+        for original, replacement in READER_COPY_V4_REPLACEMENTS.items():
             body = body.replace(original, replacement)
     for original, replacement in READER_COPY_POST_REPLACEMENTS.items():
         body = body.replace(original, replacement)
@@ -810,6 +832,9 @@ def normalize_reader_copy(body: str, *, include_v3: bool = False) -> tuple[str, 
     if include_v3:
         for original, replacement in READER_COPY_V3_REPLACEMENTS.items():
             cleaned = cleaned.replace(original, replacement)
+    if include_v4:
+        for original, replacement in READER_COPY_V4_REPLACEMENTS.items():
+            cleaned = cleaned.replace(original, replacement)
     if had_final_newline and cleaned:
         cleaned += "\n"
     return cleaned, removed
@@ -875,6 +900,27 @@ def normalize_reader_item_v3(item: dict) -> tuple[dict, list[str]]:
     return cleaned, removed
 
 
+def normalize_reader_item_v4(item: dict) -> tuple[dict, list[str]]:
+    """Apply the established v2/v3 rules plus the current reader-copy updates."""
+    if not isinstance(item, dict):
+        raise TypeError("讀者條目必須是物件")
+    cleaned, removed = normalize_reader_item_v3(item)
+    for field in ("title", "body", "limits", "question"):
+        value = cleaned.get(field)
+        if not isinstance(value, str):
+            continue
+        for _ in range(8):
+            previous = value
+            value, field_removed = normalize_reader_copy(value, include_v4=True)
+            removed.extend(f"{field}: {entry}" for entry in field_removed)
+            if value == previous:
+                break
+        else:
+            raise ValueError("讀者文字整理在八次內未收斂：" + str(item.get("id")))
+        cleaned[field] = value
+    return cleaned, removed
+
+
 def _reader_fields_sha256(item: dict) -> str:
     fields = {key: item.get(key) for key in ("title", "body", "limits", "question") if key in item}
     payload = json.dumps(fields, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
@@ -931,9 +977,13 @@ def documented_reader_cleanup(old: dict, new: dict, record: dict) -> bool:
 def documented_reader_item_cleanup(old: dict, new: dict, record: dict) -> bool:
     if (not isinstance(old, dict) or not isinstance(new, dict) or not isinstance(record, dict)
             or old.get("id") != new.get("id") or record.get("id") != old.get("id")
-            or record.get("transform") not in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}):
+            or record.get("transform") not in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"}):
         return False
-    normalize = normalize_reader_item_v3 if record["transform"] == "reader_copy_cleanup_v3" else normalize_reader_item
+    normalize = {
+        "reader_copy_cleanup_v2": normalize_reader_item,
+        "reader_copy_cleanup_v3": normalize_reader_item_v3,
+        "reader_copy_cleanup_v4": normalize_reader_item_v4,
+    }[record["transform"]]
     normalized, _removed = normalize(old)
     return (
         normalized == new
@@ -965,7 +1015,7 @@ def validate_reader_copy_cleanup_history(root: Path, record: dict, new: dict) ->
     key = new.get("id")
     revision = record.get("prior_revision", "")
     if (not re.fullmatch(r"[0-9a-f]{40}", revision)
-            or record.get("transform") not in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}
+            or record.get("transform") not in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"}
             or record.get("id") != key):
         raise ValueError("讀者正文整理紀錄的版本或轉換種類不符：" + str(key))
     transform = record["transform"]
@@ -998,7 +1048,7 @@ def validate_reader_copy_cleanup_history(root: Path, record: dict, new: dict) ->
         "before_sha256": before,
         "after_sha256": after,
     }
-    if transform in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
+    if transform in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"}:
         expected_review["reader_copy_cleanup"].update({
             "before_reader_sha256": record.get("before_reader_sha256"),
             "after_reader_sha256": record.get("after_reader_sha256"),
@@ -1020,7 +1070,34 @@ def _pre_cleanup_reviewed_item(
     root: Path, item: dict, cleanup: dict, target_sha256: str | None = None
 ) -> dict:
     """Follow committed reader-copy cleanups back to the substantive review text."""
-    current = validate_reader_copy_cleanup_history(root, cleanup, item)
+    current_review = load(root, f"localization/reviews/{item['id']}.json")
+    active_cleanup = current_review.get("reader_copy_cleanup", {})
+    expected_active_cleanup = {
+        "transform": cleanup.get("transform"),
+        "before_sha256": cleanup.get("before_sha256"),
+        "after_sha256": cleanup.get("after_sha256"),
+    }
+    if cleanup.get("transform") in {
+        "reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"
+    }:
+        expected_active_cleanup.update({
+            "before_reader_sha256": cleanup.get("before_reader_sha256"),
+            "after_reader_sha256": cleanup.get("after_reader_sha256"),
+        })
+    is_active = active_cleanup == expected_active_cleanup
+    if is_active:
+        # The worktree review must exactly describe the active reader-copy edge.
+        current = validate_reader_copy_cleanup_history(root, cleanup, item)
+    else:
+        # Earlier cleanup reviews have since been advanced by later, append-only
+        # cleanups. Validate that edge against the immutable review/runtime
+        # snapshot at its own Git commit, rather than comparing it with today's
+        # review file.
+        matching = [old for old, new, record in _historical_reader_copy_edges(root, item["id"])
+                    if record == cleanup and new == item]
+        if len(matching) != 1:
+            raise ValueError("無法核對歷史讀者正文整理版本：" + item["id"])
+        current = matching[0]
     if target_sha256 and hashlib.sha256(current.get("body", "").encode("utf-8")).hexdigest() == target_sha256:
         return current
     edges = _historical_reader_copy_edges(root, item["id"])
@@ -1134,7 +1211,9 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
     return True
 
 
-def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
+def validate_recheck_history(
+    root: Path, record: dict, new: dict, *, rechecked_item: dict | None = None
+) -> None:
     key = new["id"]
     revision = record.get("prior_revision", "")
     if not re.fullmatch(r"[0-9a-f]{40}", revision):
@@ -1160,9 +1239,10 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
         raise ValueError("再審原始審閱 SHA 不符：" + key)
     digest = hashlib.sha256(new.get("body", "").encode("utf-8")).hexdigest()
     cleanup = _reader_copy_cleanup_for(root, key, digest)
-    reviewed_new = _pre_cleanup_reviewed_item(
-        root, new, cleanup, record.get("after_sha256")
-    ) if cleanup else new
+    reviewed_new = (rechecked_item if rechecked_item is not None else
+                    _pre_cleanup_reviewed_item(
+                        root, new, cleanup, record.get("after_sha256")
+                    ) if cleanup else new)
     if not documented_revision(old, reviewed_new, record):
         raise ValueError("實質再審證據或前後正文 SHA 不符：" + key)
     if record.get("retired_sources"):
@@ -1175,18 +1255,18 @@ def validate_recheck_history(root: Path, record: dict, new: dict) -> None:
                     or row["prior_source_sha256"] != retired_digest):
                 raise ValueError("退役引用的歷史來源物件或 SHA 未保全：" + row["id"])
     current_review = load(root, "localization/reviews/" + key + ".json")
-    if new.get("source_ids", []) != old.get("source_ids", []):
+    if reviewed_new.get("source_ids", []) != old.get("source_ids", []):
         runtime = load(root, "localization/tw-edition/runtime.json")
         sources = {s["id"]: s for s in runtime["sources"]}
         manifest = load(root, "localization/manifest.json")
         entry = next((e for e in manifest["entries"] if e["id"] == key), None)
         urls = {c["url"] for c in current_review["source_checks"]}
-        expected_urls = [sources[source_id]["url"] for source_id in new["source_ids"] if source_id in sources]
+        expected_urls = [sources[source_id]["url"] for source_id in reviewed_new["source_ids"] if source_id in sources]
         manifest_refs = entry.get("sources") if entry is not None else None
         if ((entry is None and not key.startswith("TW-NAV-"))
-                or (entry is not None and manifest_refs not in (new["source_ids"], expected_urls))
-                or any(s not in sources for s in new["source_ids"])
-                or {sources[s]["url"] for s in new["source_ids"]} != urls):
+                or (entry is not None and manifest_refs not in (reviewed_new["source_ids"], expected_urls))
+                or any(s not in sources for s in reviewed_new["source_ids"])
+                or {sources[s]["url"] for s in reviewed_new["source_ids"]} != urls):
             raise ValueError("再審追加來源未完整登錄或對應審閱：" + key)
     if key.startswith("TW-NAV-"):
         reviewed_digest = hashlib.sha256(reviewed_new["body"].encode("utf-8")).hexdigest()
@@ -1211,15 +1291,150 @@ _HISTORY_EDGE_CACHE: dict[tuple[str, str], list[tuple[dict, dict, dict]]] = {}
 _HISTORY_COPY_EDGE_CACHE: dict[tuple[str, str], list[tuple[dict, dict, dict]]] = {}
 _GIT_OBJECT_CACHE: dict[tuple[str, str, str], bytes] = {}
 _GIT_JSON_CACHE: dict[tuple[str, str, str], dict] = {}
+_GIT_BATCH_READERS: dict[str, subprocess.Popen] = {}
 _HISTORY_REVISIONS_CACHE: dict[tuple[str, str], list[str]] = {}
+_HISTORY_REGISTER_INDEX_CACHE: dict[tuple[str, str], dict[tuple[str, str], str]] = {}
+
+
+def _history_register_revision_index(root: Path, head: str) -> dict[tuple[str, str], str]:
+    """Index append-only review rows by the first mainline commit that contains them.
+
+    `git log -S <sha>` is exact but expensive when the history-preservation
+    tests resolve hundreds of independent article hashes. The register changes
+    in a bounded number of commits, so read each immutable snapshot once and
+    build an exact row-to-commit index without weakening any hash checks.
+    """
+    cache_key = (str(root.resolve()), head)
+    if cache_key in _HISTORY_REGISTER_INDEX_CACHE:
+        return _HISTORY_REGISTER_INDEX_CACHE[cache_key]
+
+    register_path = "localization/retroactive-review-register-20261019.json"
+    revisions_key = cache_key
+    if revisions_key not in _HISTORY_REVISIONS_CACHE:
+        _HISTORY_REVISIONS_CACHE[revisions_key] = subprocess.check_output(
+            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--", register_path],
+            cwd=root, text=True, stderr=subprocess.DEVNULL).splitlines()
+
+    wanted: set[tuple[str, str]] = set()
+    register = load(root, register_path)
+    fields = ("substantive_rechecks", "reader_copy_cleanups")
+    for field in fields:
+        for row in register.get(field, []):
+            wanted.add((field, json.dumps(row, ensure_ascii=False, sort_keys=True)))
+
+    index: dict[tuple[str, str], str] = {}
+    for revision in reversed(_HISTORY_REVISIONS_CACHE[revisions_key]):
+        try:
+            snapshot = json.loads(subprocess.check_output(
+                ["git", "show", revision + ":" + register_path], cwd=root,
+                stderr=subprocess.DEVNULL))
+        except (json.JSONDecodeError, subprocess.CalledProcessError):
+            continue
+        for field in fields:
+            for row in snapshot.get(field, []):
+                signature = (field, json.dumps(row, ensure_ascii=False, sort_keys=True))
+                if signature in wanted and signature not in index:
+                    index[signature] = revision
+
+    _HISTORY_REGISTER_INDEX_CACHE[cache_key] = index
+    return index
+
+
+def _register_record_signature(field: str, record: dict) -> tuple[str, str]:
+    return field, json.dumps(record, ensure_ascii=False, sort_keys=True)
+
+
+def _recheck_record_supersedes(later: dict, earlier: dict) -> bool:
+    """Accept an explicit pointer to a superseded, uncommitted intermediate review."""
+    fields = (
+        "id", "reviewed_at", "prior_revision", "before_sha256",
+        "after_sha256", "prior_review_sha256",
+    )
+    pointer = later.get("supersedes") if isinstance(later, dict) else None
+    if (not isinstance(earlier, dict) or not isinstance(pointer, dict)
+            or set(pointer) != set(fields)):
+        return False
+    if pointer != {field: earlier.get(field) for field in fields}:
+        return False
+    if (later.get("id") != earlier.get("id")
+            or later.get("prior_revision") != earlier.get("prior_revision")
+            or later.get("before_sha256") != earlier.get("before_sha256")
+            or later.get("prior_review_sha256") != earlier.get("prior_review_sha256")
+            or later.get("after_sha256") == earlier.get("after_sha256")):
+        return False
+    try:
+        from datetime import date
+        return date.fromisoformat(later["reviewed_at"]) > date.fromisoformat(earlier["reviewed_at"])
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def _close_git_batch_reader(root: Path) -> None:
+    """Close a persistent cat-file reader, primarily for isolated tests."""
+    key = str(root.resolve())
+    process = _GIT_BATCH_READERS.pop(key, None)
+    if process is None:
+        return
+    if process.stdin and not process.stdin.closed:
+        process.stdin.close()
+    try:
+        process.wait(timeout=2)
+    except subprocess.TimeoutExpired:
+        process.terminate()
+        process.wait(timeout=2)
+    finally:
+        if process.stdout and not process.stdout.closed:
+            process.stdout.close()
+        if process.stderr and not process.stderr.closed:
+            process.stderr.close()
+
+
+def _close_all_git_batch_readers() -> None:
+    for key in list(_GIT_BATCH_READERS):
+        _close_git_batch_reader(Path(key))
+
+
+atexit.register(_close_all_git_batch_readers)
 
 
 def _git_blob(root: Path, revision: str, path: str) -> bytes:
-    """Read each immutable Git snapshot blob once during a test or audit process."""
+    """Read exact immutable Git blobs through one reusable cat-file process per worktree."""
     cache_key = (str(root.resolve()), revision, path)
     if cache_key not in _GIT_OBJECT_CACHE:
-        _GIT_OBJECT_CACHE[cache_key] = subprocess.check_output(
-            ["git", "show", revision + ":" + path], cwd=root, stderr=subprocess.DEVNULL)
+        root_key = cache_key[0]
+        process = _GIT_BATCH_READERS.get(root_key)
+        if process is None or process.poll() is not None:
+            process = subprocess.Popen(
+                ["git", "cat-file", "--batch"], cwd=root,
+                stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+            _GIT_BATCH_READERS[root_key] = process
+
+        spec = revision + ":" + path
+        command = ["git", "show", spec]
+        try:
+            if process.stdin is None or process.stdout is None:
+                raise OSError("git cat-file --batch pipes were not created")
+            process.stdin.write(spec.encode("utf-8") + b"\n")
+            process.stdin.flush()
+            header = process.stdout.readline()
+            parts = header.rstrip(b"\n").split()
+            if (len(parts) != 3 or parts[1] != b"blob" or not parts[2].isdigit()):
+                raise subprocess.CalledProcessError(128, command, output=header)
+            size = int(parts[2])
+            chunks = []
+            remaining = size
+            while remaining:
+                chunk = process.stdout.read(remaining)
+                if not chunk:
+                    raise subprocess.CalledProcessError(128, command, output=header)
+                chunks.append(chunk)
+                remaining -= len(chunk)
+            if process.stdout.read(1) != b"\n":
+                raise subprocess.CalledProcessError(128, command, output=header)
+            _GIT_OBJECT_CACHE[cache_key] = b"".join(chunks)
+        except (OSError, BrokenPipeError) as error:
+            _close_git_batch_reader(root)
+            raise subprocess.CalledProcessError(128, command) from error
     return _GIT_OBJECT_CACHE[cache_key]
 
 
@@ -1321,10 +1536,7 @@ def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, di
     records = [record for record in load(root, register_path).get("substantive_rechecks", [])
                if record.get("id") == key]
     revisions_key = (str(root.resolve()), head)
-    if revisions_key not in _HISTORY_REVISIONS_CACHE:
-        _HISTORY_REVISIONS_CACHE[revisions_key] = subprocess.check_output(
-            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--", register_path],
-            cwd=root, text=True, stderr=subprocess.DEVNULL).splitlines()
+    register_index = _history_register_revision_index(root, head)
     order = {revision: index for index, revision in enumerate(reversed(_HISTORY_REVISIONS_CACHE[revisions_key]))}
     ranked_edges: list[tuple[int, tuple[dict, dict, dict]]] = []
     seen: set[tuple[str, str]] = set()
@@ -1333,33 +1545,32 @@ def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, di
         after_sha = record.get("after_sha256", "")
         if not re.fullmatch(r"[0-9a-f]{64}", after_sha):
             continue
-        candidates = subprocess.check_output(
-            ["git", "log", "--first-parent", "--full-history", "--format=%H", "-S", after_sha,
-             "--", register_path], cwd=root, text=True, stderr=subprocess.DEVNULL).splitlines()
-        for revision in reversed(candidates):
-            try:
-                commit_register = _git_json(root, revision, register_path)
-                committed = next((item for item in commit_register.get("substantive_rechecks", [])
-                                  if item == record), None)
-                if committed is None:
-                    continue
-                pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
-                if pair in seen:
-                    continue
-                if revision not in runtime_cache:
-                    runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
-                prior_revision = committed.get("prior_revision", "")
-                if prior_revision not in runtime_cache:
-                    runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
-                old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
-                new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
-                old, new = old_items.get(key), new_items.get(key)
-                if old is None or new is None or not _historical_edge_is_valid(root, revision, committed, old, new):
-                    continue
-                seen.add(pair)
-                ranked_edges.append((order.get(revision, -1), (old, new, committed)))
-            except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+        revision = register_index.get(_register_record_signature("substantive_rechecks", record))
+        if revision is None:
+            continue
+        try:
+            commit_register = _git_json(root, revision, register_path)
+            committed = next((item for item in commit_register.get("substantive_rechecks", [])
+                              if item == record), None)
+            if committed is None:
                 continue
+            pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
+            if pair in seen:
+                continue
+            if revision not in runtime_cache:
+                runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
+            prior_revision = committed.get("prior_revision", "")
+            if prior_revision not in runtime_cache:
+                runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+            old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
+            new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
+            old, new = old_items.get(key), new_items.get(key)
+            if old is None or new is None or not _historical_edge_is_valid(root, revision, committed, old, new):
+                continue
+            seen.add(pair)
+            ranked_edges.append((order.get(revision, -1), (old, new, committed)))
+        except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+            continue
     edges = [edge for _, edge in sorted(ranked_edges, key=lambda entry: entry[0])]
     _HISTORY_EDGE_CACHE[cache_key] = edges
     return edges
@@ -1372,7 +1583,7 @@ def _historical_reader_copy_edge_is_valid(
     if record.get("transform") == "reader_copy_cleanup_v1":
         if not documented_reader_cleanup(old, new, record):
             return False
-    elif record.get("transform") in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
+    elif record.get("transform") in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"}:
         if not documented_reader_item_cleanup(old, new, record):
             return False
     else:
@@ -1407,7 +1618,7 @@ def _historical_reader_copy_edge_is_valid(
             "before_sha256": before_sha,
             "after_sha256": after_sha,
         }
-        if record["transform"] in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
+        if record["transform"] in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"}:
             expected_review["reader_copy_cleanup"].update({
                 "before_reader_sha256": record.get("before_reader_sha256"),
                 "after_reader_sha256": record.get("after_reader_sha256"),
@@ -1436,11 +1647,7 @@ def _historical_reader_copy_edges(root: Path, key: str) -> list[tuple[dict, dict
     register_path = "localization/retroactive-review-register-20261019.json"
     records = [record for record in reader_copy_cleanup_rows(root) if record.get("id") == key]
     revisions_key = (str(root.resolve()), head)
-    if revisions_key not in _HISTORY_REVISIONS_CACHE:
-        _HISTORY_REVISIONS_CACHE[revisions_key] = subprocess.check_output(
-            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--", register_path],
-            cwd=root, text=True, stderr=subprocess.DEVNULL,
-        ).splitlines()
+    register_index = _history_register_revision_index(root, head)
     order = {revision: index for index, revision in enumerate(reversed(_HISTORY_REVISIONS_CACHE[revisions_key]))}
     ranked_edges: list[tuple[int, tuple[dict, dict, dict]]] = []
     seen: set[tuple[str, str]] = set()
@@ -1449,42 +1656,40 @@ def _historical_reader_copy_edges(root: Path, key: str) -> list[tuple[dict, dict
         after_sha = record.get("after_sha256", "")
         if not re.fullmatch(r"[0-9a-f]{64}", after_sha):
             continue
-        candidates = subprocess.check_output(
-            ["git", "log", "--first-parent", "--full-history", "--format=%H", "-S", after_sha,
-             "--", register_path], cwd=root, text=True, stderr=subprocess.DEVNULL,
-        ).splitlines()
-        for revision in reversed(candidates):
-            try:
-                commit_register = _git_json(root, revision, register_path)
-                committed = next((item for item in commit_register.get("reader_copy_cleanups", [])
-                                  if item == record), None)
-                if committed is None:
-                    continue
-                pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
-                if pair in seen:
-                    continue
-                if revision not in runtime_cache:
-                    runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
-                prior_revision = committed.get("prior_revision", "")
-                if prior_revision not in runtime_cache:
-                    runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
-                old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
-                new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
-                old, new = old_items.get(key), new_items.get(key)
-                if (old is None or new is None
-                        or not _historical_reader_copy_edge_is_valid(root, revision, committed, old, new)):
-                    continue
-                seen.add(pair)
-                ranked_edges.append((order.get(revision, -1), (old, new, committed)))
-            except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+        revision = register_index.get(_register_record_signature("reader_copy_cleanups", record))
+        if revision is None:
+            continue
+        try:
+            commit_register = _git_json(root, revision, register_path)
+            committed = next((item for item in commit_register.get("reader_copy_cleanups", [])
+                              if item == record), None)
+            if committed is None:
                 continue
+            pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
+            if pair in seen:
+                continue
+            if revision not in runtime_cache:
+                runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
+            prior_revision = committed.get("prior_revision", "")
+            if prior_revision not in runtime_cache:
+                runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+            old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
+            new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
+            old, new = old_items.get(key), new_items.get(key)
+            if (old is None or new is None
+                    or not _historical_reader_copy_edge_is_valid(root, revision, committed, old, new)):
+                continue
+            seen.add(pair)
+            ranked_edges.append((order.get(revision, -1), (old, new, committed)))
+        except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
+            continue
     edges = [edge for _, edge in sorted(ranked_edges, key=lambda entry: entry[0])]
     _HISTORY_COPY_EDGE_CACHE[cache_key] = edges
     return edges
 
 
 def _documented_history_edge(old: dict, new: dict, record: dict) -> bool:
-    if record.get("transform") in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}:
+    if record.get("transform") in {"reader_copy_cleanup_v1", "reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"}:
         return (documented_reader_cleanup(old, new, record)
                 if record.get("transform") == "reader_copy_cleanup_v1"
                 else documented_reader_item_cleanup(old, new, record))
@@ -1544,16 +1749,33 @@ def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
         return
     current_digest = hashlib.sha256(new.get("body", "").encode("utf-8")).hexdigest()
     cleanup = _reader_copy_cleanup_for(ROOT, old.get("id", ""), current_digest)
-    reviewed_new = validate_reader_copy_cleanup_history(ROOT, cleanup, new) if cleanup else new
-    if old == reviewed_new:
+    if cleanup:
+        # The historical snapshot may already be an intermediate reader-copy
+        # revision (for example, after an earlier cleanup but before a later
+        # one). Prove that exact object is an ancestor of today's copy-only
+        # chain before looking for a substantive recheck edge.
+        old_digest = hashlib.sha256(old.get("body", "").encode("utf-8")).hexdigest()
+        if _pre_cleanup_reviewed_item(ROOT, new, cleanup, old_digest) == old:
+            return
+    before_copy_cleanups = (_pre_cleanup_reviewed_item(ROOT, new, cleanup)
+                            if cleanup else new)
+    if old == before_copy_cleanups:
         return
     register = load(ROOT, "localization/retroactive-review-register-20261019.json")
     records = [r for r in register.get("substantive_rechecks", []) if r.get("id") == old.get("id")]
     case.assertTrue(records, "正文變更必須有再審紀錄")
     for record in sorted(records, key=lambda item: (item.get("reviewed_at", ""), item.get("after_sha256", "")), reverse=True):
+        reviewed_new = (_pre_cleanup_reviewed_item(
+            ROOT, new, cleanup, record.get("after_sha256")
+        ) if cleanup else new)
+        if old == reviewed_new:
+            return
         if (documented_revision(old, reviewed_new, record)
                 or _registered_history_connects(ROOT, old, reviewed_new, record)):
-            validate_recheck_history(ROOT, record, new)
+            # A copy-only cleanup is a separate, already hash-validated edge.
+            # Validate the substantive review against its intermediate body,
+            # before that final reader-copy edge.
+            validate_recheck_history(ROOT, record, new, rechecked_item=reviewed_new)
             return
     case.fail("未登錄、證據缺漏或雜湊不同的正文修訂歷史鏈")
 
@@ -1808,12 +2030,23 @@ def audit(root: Path = ROOT) -> dict:
             raise ValueError("實質再審原版本不符")
         grouped[key].append(record)
     for key, item_records in grouped.items():
+        for later in item_records:
+            if "supersedes" not in later:
+                continue
+            if not any(earlier is not later and _recheck_record_supersedes(later, earlier)
+                       for earlier in item_records):
+                raise ValueError("實質再審取代指標未精確指向較早紀錄：" + key)
         if len(item_records) == 1:
             validate_recheck_history(root, item_records[0], published_map[key])
             continue
         historical = _historical_recheck_edges(root, key)
         for record in item_records:
             if any(edge[2] == record for edge in historical):
+                continue
+            if any(_recheck_record_supersedes(later, record) for later in item_records):
+                # A completed later review may supersede a provisional edit that
+                # was never committed as its own immutable runtime revision.
+                # The superseding row is still validated through this same loop.
                 continue
             revision = record["prior_revision"]
             try:
@@ -1838,7 +2071,7 @@ def audit(root: Path = ROOT) -> dict:
         seen_cleanups.add(token)
         current_digest = hashlib.sha256(item.get("body", "").encode("utf-8")).hexdigest()
         current_reader_digest = _reader_fields_sha256(item)
-        active_digest = (record.get("after_reader_sha256") if record.get("transform") in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3"}
+        active_digest = (record.get("after_reader_sha256") if record.get("transform") in {"reader_copy_cleanup_v2", "reader_copy_cleanup_v3", "reader_copy_cleanup_v4"}
                          else record.get("after_sha256"))
         if current_reader_digest == active_digest or current_digest == active_digest:
             validate_reader_copy_cleanup_history(root, record, item)

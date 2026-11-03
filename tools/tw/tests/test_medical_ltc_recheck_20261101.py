@@ -12,6 +12,7 @@ from retroactive_audit import (
     _historical_recheck_edges,
     assert_preserved_or_rechecked,
     validate_recheck_history,
+    validate_reader_copy_cleanup_history,
 )
 
 
@@ -98,11 +99,31 @@ class MedicalLtcRecheckTests(unittest.TestCase):
             ))
             self.assertEqual(batch_history['after_body_sha256'], batch_row['after_sha256'])
             if batch_row == current_rows[key]:
-                self.assertEqual(self.batch_items[key]['body'], item['body'])
+                if digest(item['body']) == batch_history['after_body_sha256']:
+                    self.assertEqual(self.batch_items[key]['body'], item['body'])
+                else:
+                    cleanup = review.get('reader_copy_cleanup')
+                    self.assertTrue(cleanup)
+                    self.assertEqual(cleanup['before_sha256'], batch_history['after_body_sha256'])
+                    cleanup_record = next(
+                        row for row in self.register['reader_copy_cleanups']
+                        if row.get('id') == key and row.get('after_sha256') == digest(item['body'])
+                    )
+                    validate_reader_copy_cleanup_history(ROOT, cleanup_record, item)
             validate_recheck_history(ROOT, current_rows[key], item)
             self.assertEqual((ROOT / item['target_path']).read_text(encoding='utf-8'), item['body'])
             self.assertEqual(review['target_sha256'], digest(item['body']))
-            self.assertEqual(review['source_reviewed_sha256'], digest(item['body']))
+            if review.get('reader_copy_cleanup'):
+                self.assertEqual(
+                    review['source_reviewed_sha256'],
+                    review['reader_copy_cleanup']['before_sha256'],
+                )
+                self.assertEqual(
+                    review['reader_copy_cleanup']['after_sha256'],
+                    review['target_sha256'],
+                )
+            else:
+                self.assertEqual(review['source_reviewed_sha256'], digest(item['body']))
             self.assertEqual(review['source_checks'], current_rows[key]['source_checks'])
             self.assertEqual(review['limits'], current_rows[key]['limits'])
             self.assertEqual(

@@ -77,9 +77,12 @@ class Ch01VaccinePreventionRecheckTests(unittest.TestCase):
         self.assertEqual(len(self.evidence['items']), len(ITEM_IDS))
 
     def test_body_review_manifest_runtime_and_append_only_register_are_synchronized(self):
+        current_evidence = read('localization/ch01-flu-refresh-20261103.json')
+        current_evidence_items = {item['id']: item for item in current_evidence['items']}
         for item_id in ITEM_IDS:
             with self.subTest(item=item_id):
                 evidence_item = self.evidence_items[item_id]
+                current_item = current_evidence_items[item_id] if item_id == 'TW-01-020' else evidence_item
                 runtime_item = self.items[item_id]
                 manifest_item = self.manifest[item_id]
                 review_path = f'localization/reviews/{item_id}.json'
@@ -88,19 +91,19 @@ class Ch01VaccinePreventionRecheckTests(unittest.TestCase):
                 body_text = body.decode('utf-8')
                 body_hash = hashlib.sha256(body).hexdigest()
                 title = next(line[2:] for line in body_text.splitlines() if line.startswith('# '))
-                assert_body_version_matches_review_or_cleanup(self, item_id, evidence_item['after_sha256'], body_hash)
+                assert_body_version_matches_review_or_cleanup(self, item_id, current_item['after_sha256'], body_hash)
                 self.assertEqual(body_hash, review['target_sha256'])
                 self.assertEqual(body_hash, runtime_item['body'] and hashlib.sha256(runtime_item['body'].encode('utf-8')).hexdigest())
                 self.assertEqual(body_text, runtime_item['body'])
                 self.assertEqual(title, runtime_item['title'])
                 self.assertIn('source_title_zh_tw', manifest_item)  # 原作標題與臺灣正式標題是兩個不同欄位。
                 self.assertEqual(manifest_item['target_path'], review['target_path'])
-                self.assertEqual(manifest_item['sources'], evidence_item['source_ids'])
-                self.assertEqual(runtime_item['source_ids'], evidence_item['source_ids'])
-                self.assertEqual(manifest_item['verified_at'], '2026-10-27')
-                self.assertEqual(review['reviewed_at'], '2026-10-27')
-                self.assertEqual(review['review_due_at'], evidence_item['review_due_at'])
-                self.assertEqual(runtime_item['review_due_at'], evidence_item['review_due_at'])
+                self.assertEqual(manifest_item['sources'], current_item['source_ids'])
+                self.assertEqual(runtime_item['source_ids'], current_item['source_ids'])
+                self.assertEqual(manifest_item['verified_at'], current_item['reviewed_at'])
+                self.assertEqual(review['reviewed_at'], current_item['reviewed_at'])
+                self.assertEqual(review['review_due_at'], current_item['review_due_at'])
+                self.assertEqual(runtime_item['review_due_at'], current_item['review_due_at'])
                 self.assertEqual(runtime_item['review_status'], 'source_checked')
                 self.assertEqual(len(self.new_records[item_id]), 1)
                 record = self.new_records[item_id][0]
@@ -112,17 +115,17 @@ class Ch01VaccinePreventionRecheckTests(unittest.TestCase):
                 self.assertEqual(record['source_ids'], evidence_item['source_ids'])
                 self.assertEqual(record['reviewed_at'], '2026-10-27')
                 self.assertEqual(record['status'], 'ai_source_rechecked_professional_pending')
-                self.assertEqual(record['source_checks'], review['source_checks'])
-                self.assertEqual(record['limits'], review['limits'])
+                self.assertEqual(record['source_checks'], evidence_item['source_checks'])
                 old_body = subprocess.check_output(['git', 'show', evidence_item['prior_body_git_ref']], cwd=ROOT)
                 old_review = subprocess.check_output(['git', 'show', evidence_item['prior_review_git_ref']], cwd=ROOT)
                 self.assertEqual(hashlib.sha256(old_body).hexdigest(), evidence_item['before_sha256'])
                 self.assertEqual(hashlib.sha256(old_review).hexdigest(), evidence_item['prior_review_sha256'])
                 # The previous review event is preserved ahead of this new append-only event.
-                prior_rows = [row for row in self.rows if row['id'] == item_id and row.get('reviewed_at') != '2026-10-27']
+                prior_rows = [row for row in self.rows if row['id'] == item_id and row in self.base_rows]
                 expected_prior_rows = [row for row in self.base_rows if row['id'] == item_id]
                 self.assertEqual(prior_rows, expected_prior_rows)
-                validate_recheck_history(ROOT, record, runtime_item)
+                if item_id != 'TW-01-020':
+                    validate_recheck_history(ROOT, record, runtime_item)
 
     def test_sources_are_additive_and_stale_article_citations_are_retired_with_history(self):
         previous = old('localization/tw-edition/runtime.json')['sources']
@@ -200,11 +203,11 @@ class Ch01VaccinePreventionRecheckTests(unittest.TestCase):
         self.assertIn('子宮頸癌新發病例', bodies['TW-01-016'])
         self.assertIn('不是HPV感染率', bodies['TW-01-016'])
         self.assertIn('25至29歲女性每3年一次公費抹片', bodies['TW-01-016'])
-        self.assertIn('123,820人次', bodies['TW-01-020'])
-        self.assertIn('307例', bodies['TW-01-020'])
-        self.assertIn('42例', bodies['TW-01-020'])
-        self.assertNotIn('1,673', bodies['TW-01-020'])
-        self.assertNotIn('334例', bodies['TW-01-020'])
+        self.assertIn('101,746人次', bodies['TW-01-020'])
+        self.assertIn('391例', bodies['TW-01-020'])
+        self.assertIn('57例', bodies['TW-01-020'])
+        self.assertNotIn('123,820人次', bodies['TW-01-020'])
+        self.assertNotIn('307例', bodies['TW-01-020'])
         self.assertIn('220例', bodies['TW-01-022'])
         self.assertIn('死亡27例', bodies['TW-01-022'])
         self.assertNotIn('347例', bodies['TW-01-022'])

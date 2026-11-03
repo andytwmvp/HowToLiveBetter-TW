@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "batch": "高風險醫療照護法規文字補核：慢箋調劑與失智照護資格",
+  "base_main_sha": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+  "prior_batch": "localization/medical-eldercare-recheck-20261102.json",
+  "reviewed_at": "2026-11-03",
+  "review_due_at": "2027-02-03",
+  "rechecked_ids": [
+    "TW-16-002",
+    "TW-17-013",
+    "TW-17-005"
+  ],
+  "corrections": [
+    {
+      "id": "TW-16-002",
+      "interim_batch_review_sha256": "62de641b9902be495ff0323760d9c0b0fb4f313dfa0b8850615d1f5da32aac43",
+      "final_sha256": "951273656fc39338e850a85ef9b87dc924cd151baf30d6e6a3b8802e2762e272",
+      "change": "明確說明慢箋可至特約藥局調劑，跨縣市本身不構成限制；改至其他特約醫院或衛生所須同時符合無法前往原處方院所及第15條列明情況。",
+      "supporting_source_url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=L0060009",
+      "source_accessed_at": "2026-11-03",
+      "professional_review": "pending"
+    },
+    {
+      "id": "TW-17-013",
+      "interim_batch_review_sha256": "47022f53ea4b65992d164e0739b13aa498f76ec9b2d9ff22a11f73078b41e9f1",
+      "final_sha256": "aca03ae6e0c0a243eb97819ade6c48fb951ce596ec2257c539b71354ab7e25cb",
+      "change": "將長照對象改為官方修正公告的「全年齡失智且失能者」，並補充照管評估、給付核定限制及公告／施行日期。",
+      "supporting_source_url": "https://1966.gov.tw/LTC/cp-6440-82812-207.html",
+      "source_accessed_at": "2026-11-03",
+      "announced_at": "2025-06-19",
+      "effective_at": "2026-01-01",
+      "professional_review": "pending"
+    },
+    {
+      "id": "TW-17-005",
+      "interim_batch_review_sha256": "0094ca5aead7eabac83c38452a5cce6276ed5da033d726de68206dceb0fa50ca",
+      "final_sha256": "4b8cc653e6f46f31a6814edb6990e9790d3387da0c3927c0f5438009403484ff",
+      "change": "改以臺北市社會局115年度方案申請說明核實保留床位住院日可計入住期；按月認列時住院達半個月則該月不計補助，並與1月至8月180日過渡門檻分開表述。",
+      "supporting_source_url": "https://www.mohw.gov.tw/dl-102600-e2676cd5-c570-41fd-8f29-0e1921ca8efe.html",
+      "supporting_source_id": "care_ltc_residential_subsidy_faq_20261019",
+      "source_accessed_at": "2026-11-03",
+      "professional_review": "pending",
+      "corroborating_source_url": "https://dosw.gov.taipei/cp.aspx?n=414602A64AE60024&s=25E183FD48252EE0",
+      "corroborating_source_id": "care_ltc_residential_subsidy_hospital_taipei_20261103",
+      "corroborating_source_accessed_at": "2026-11-03"
+    }
+  ],
+  "new_source_ids": [
+    "care_ltc_all_age_dementia_disability_20261103",
+    "care_ltc_residential_subsidy_hospital_taipei_20261103"
+  ],
+  "reused_source_ids": [
+    "nhi_medical_art15_20261025",
+    "ch17_ltc",
+    "care_ltc_residential_subsidy_faq_20261019"
+  ],
+  "source_counts": {
+    "runtime_sources_before": 1040,
+    "runtime_sources_after": 1042,
+    "registry_sources_before": 1123,
+    "registry_sources_after": 1125,
+    "json_files_before": 534,
+    "json_files_after": 536,
+    "substantive_rechecks_before": 317,
+    "substantive_rechecks_after": 318
+  },
+  "professional_review": {
+    "status": "pending",
+    "obtained": false,
+    "required": "藥師／健保專業人員，以及長照或失智照護專業人員獨立審閱"
+  },
+  "limitations": [
+    "慢箋第15條只支持條文明列的調劑途徑；個別藥品能否由特定藥局調劑仍需藥師核對處方及庫存。",
+    "長照資格須按現行規定完成地方照管評估及個案核定；官方公告未使失智診斷自動等同給付資格。",
+    "未新增發生率估計；既有全國社區失智盛行率仍非新發率、機構盛行率或個人確診機率。",
+    "住宿補助不同年度和月份的過渡、按月及住院規則有別；需按實際入住、資格及受理縣市核定。"
+  ],
+  "method_limit": "本次為AI輔助官方法規與主管機關公告對讀；未取得藥師、健保或長照專業人員獨立審閱。"
+}

@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-02",
+  "base_main_sha": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-16-012",
+    "TW-17-013",
+    "TW-17-009",
+    "TW-17-005",
+    "TW-24-003",
+    "TW-16-002",
+    "TW-24-004"
+  ],
+  "risk_order_basis": "急症惡化與照護中斷優先，其次為長者急性混亂、視力與跌倒安全、長照契約及財產損失，再處理掛號防詐和慢箋／跨縣市制度；排序按損害嚴重度，不代表個人機率。",
+  "professional_review": "pending",
+  "source_counts": {
+    "runtime_sources_before": 1022,
+    "runtime_sources_after": 1038,
+    "sources_added": 16,
+    "references_retired": 8,
+    "source_objects_retained_for_history": 8,
+    "registry_sources_before": 1105,
+    "registry_sources_after": 1121
+  },
+  "new_source_ids": [
+    "tspccm_copd_guideline_2023",
+    "nhi_copd_careplan_2026",
+    "care_delirium_vghtc_20260911",
+    "nhi_cataract_differential_rules_20261102",
+    "nhi_cataract_special_materials_20261021",
+    "ch24_medlaw61_20261102",
+    "nhi_medical_art14_20261102",
+    "ch17_postfraud_20261102",
+    "law_trustact_20261102",
+    "law_bankact_5_1_20261102",
+    "law_bankact_29_20261102",
+    "law_bankact_29_1_20261102",
+    "law_bankact_history_20261102",
+    "care_ltc_residential_subsidy_2026",
+    "care_ltc_residential_subsidy_notice_20260914",
+    "care_ltc_residential_subsidy_faq_20261019"
+  ],
+  "reused_source_ids": [
+    "care_copd_home",
+    "care_dementia_pdf",
+    "care_dementia_survey",
+    "care_inhaler",
+    "care_oxygen",
+    "ch17_165",
+    "ch17_dementia",
+    "ch17_dementiacenter",
+    "ch17_facilitycontract",
+    "ch17_institution",
+    "ch17_ltc",
+    "ch17_ltc_gis_map",
+    "ch24_copay",
+    "ch24_medlaw",
+    "ch24_nfa_119_20220705",
+    "ch24_nhi_fraud_alert_20260813",
+    "ch24_post_antifraud_20261025",
+    "ch24_referral",
+    "next_cataract_aftercare",
+    "nhi_medical_art15_20261025",
+    "nhi_medical_art3_20261025",
+    "nhi_provider_search_20261025",
+    "property_contract",
+    "property_contract_notice",
+    "property_elderlaw"
+  ],
+  "core_progress": {
+    "before": {
+      "original_entries": 765,
+      "publication_completed_entries": 282,
+      "publication_ready": false,
+      "unique_draft_entries": 498,
+      "topics_without_content": 267
+    },
+    "after": {
+      "original_entries": 765,
+      "publication_completed_entries": 282,
+      "publication_ready": false,
+      "unique_draft_entries": 498,
+      "topics_without_content": 267,
+      "registry_sources": 1121,
+      "runtime_sources": 1038
+    }
+  },
+  "frequency_assessments": {
+    "TW-16-012": {
+      "assessment": "未找到同一急性惡化定義、全國患者母體、追蹤期間與分母完整的台灣個人發生率。2023台灣臨床指引列出的照護方案急診利用比沒有同時提供可重算分子、分母及觀察期間；不引用該比值估算發生率。",
+      "statistic_ids": [
+        "TW-COPD-P4P-ED-RATIO-2023-EXCLUDED"
+      ],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-17-013": {
+      "assessment": "官方調查報告2020至2023年全台22縣市社區65歲以上人口的失智症盛行率7.99%；這是盛行率而非新發率。摘要沒有原始分子、有效樣本分母或信賴區間，研究附件使用的操作定義涉及輕度認知障礙範圍，不能當機構住民率或個人確診機率。",
+      "statistic_ids": [
+        "TW-DEMENTIA-7.99-2020-2023"
+      ],
+      "credible_taiwan_rate_found": true
+    },
+    "TW-17-009": {
+      "assessment": "未找到年齡、定義、追蹤期間一致且有全台分母的白內障新發率、術後急症率或手術降低跌倒的個人發生率；申報件數和海外研究不作個人風險。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-17-005": {
+      "assessment": "未找到按機構法定類型、預付款定義和住民暴露期間一致的全台損失／詐騙發生率；申訴、裁罰和評鑑數不具個人暴露分母。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-24-003": {
+      "assessment": "未找到全台同一定義的號販／付費代掛損失或醫療預約詐騙率及個人接觸分母；165通報和單一假訊息案例不換算個人機率。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-16-002": {
+      "assessment": "未找到以慢箋中斷或長療程延誤為同一定義、並有全台患者分母及追蹤期的發生率；處方箋與調劑人次不代表個人中斷機率。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    },
+    "TW-24-004": {
+      "assessment": "未找到同一定義、期間和個人暴露分母估算跨縣市門診延誤、額外支出或未能就診的全台發生率；門診人次不能替代個人機率。",
+      "statistic_ids": [],
+      "credible_taiwan_rate_found": false
+    }
+  },
+  "statistics": [
+    {
+      "id": "TW-DEMENTIA-7.99-2020-2023",
+      "value": 7.99,
+      "unit": "percent",
+      "measure": "盛行率",
+      "period": "2020至2023",
+      "geography": "全台22縣市",
+      "population": "社區居住且年滿65歲者",
+      "numerator": null,
+      "denominator": null,
+      "event_definition": "官方調查摘要稱失智症；先由受訓訪員以家戶面訪量表篩檢，再由合格醫師面訪評估。附件操作定義含量表門檻並涉及輕度認知障礙範圍。",
+      "data_type": "分層多階段群集抽樣調查及兩階段訪視",
+      "accessed_at": "2026-11-02",
+      "source_ids": [
+        "care_dementia_survey",
+        "care_dementia_pdf"
+      ],
+      "limitations": "摘要未提供可重算病例數、有效樣本分母及信賴區間；不能換算新發率、機構住民率或個人診斷機率。正文只稱官方報告的社區65歲以上盛行率估計，沒有反推病例數。"
+    },
+    {
+      "id": "TW-COPD-P4P-ED-RATIO-2023-EXCLUDED",
+      "value": "3.5%與1.2%",
+      "unit": "指引所列急診利用比，依醫院型與基層型照護方案參與者分類",
+      "measure": "健保品質指標／急診利用比（非發生率）",
+      "period": "2023指引所引用之方案成果；觀察期間未清楚揭示",
+      "geography": "台灣健保肺阻塞照護方案參與機構及個案",
+      "population": "指引摘要列20,401位醫院型及1,150位基層型方案參與者，指標本身未給足分母定義",
+      "numerator": null,
+      "denominator": null,
+      "event_definition": "指引將兩種照護方案的COPD相關急診利用比列為3.5%與1.2%，但未清楚交代該指標的計算分子、分母及追蹤期間。",
+      "data_type": "健保方案行政品質指標摘要",
+      "accessed_at": "2026-11-02",
+      "source_ids": [
+        "tspccm_copd_guideline_2023"
+      ],
+      "limitations": "不作個人風險、全國發生率或年度急診率；正文只揭露資料不足並排除該數值。"
+    }
+  ],
+  "legal_evidence": [
+    {
+      "law": "醫療法2026-09-23修正公報及第61條",
+      "announced_at": "2026-09-23",
+      "effective_at": "2026-09-25",
+      "date_basis": "公報列出的修正條文不含第61條；依同法第123條及中央法規標準法第13條，明定自公布日施行者自公布日起算至第三日起生效。第61條以現行全文核對，不將修法日誤稱為其首次施行日。",
+      "urls": [
+        "https://www.president.gov.tw/Page/294/50409",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=61&pcode=L0020021",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=13&pcode=A0030133"
+      ]
+    },
+    {
+      "law": "老人福利法第37、39條現行文本",
+      "announced_at": "2020-05-27",
+      "effective_at": null,
+      "date_basis": "2025-08-01法規整編頁可讀現行第37、39條；沿革顯示相關條文於2020-05-27修正，但本輪取得的官方沿革未能確認個別施行日期，故標記未知，不推定等於公布日或整編日。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050037",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050037"
+      ]
+    },
+    {
+      "law": "機構住宿式服務類長照機構定型化契約應記載及不得記載事項",
+      "announced_at": "2024-03-15",
+      "effective_at": "2024-03-15",
+      "date_basis": "衛福部公告影像明載2024-03-15公告並自即日生效；本輪直接閱讀10頁契約PDF。",
+      "urls": [
+        "https://www.mohw.gov.tw/dl-87922-9417ee81-6592-4abb-8b27-a5d16da7b1dc.html",
+        "https://www.mohw.gov.tw/dl-87918-530550d6-1944-4a1e-bae2-8e29ef939e59.html"
+      ]
+    },
+    {
+      "law": "全民健康保險醫療辦法第14、15條及健保署慢性阻塞性肺病醫療給付改善方案",
+      "announced_at": "2024-06-20（醫療辦法現行全文最後修正日）；2025-12-29（方案頁更新）",
+      "effective_at": "2026-01-01（肺阻塞方案現行附件）",
+      "date_basis": "醫療辦法以現行全文與單條頁核對；健保署方案頁明列115-01-01生效版本。未把整體法規最後修正日說成每條首次施行日。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=14&pcode=L0060009",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=15&pcode=L0060009",
+        "https://www.nhi.gov.tw/ch/cp-6000-8c822-2833-1.html"
+      ]
+    },
+    {
+      "law": "信託法第1、2及86條",
+      "announced_at": "1996-01-26（制定公布）；2009-12-30（98年修正條文公布）",
+      "effective_at": "1996-01-26（本法）；2009-11-23（98年修正條文）",
+      "date_basis": "全國法規資料庫沿革列首次制定公布日、98年12月30日修正公布及98年11月23日修正條文施行日；第1、2條定義據現行全文核對，不把老人福利法營運擔保推定成已設信託。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0020024",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=I0020024"
+      ]
+    },
+    {
+      "law": "銀行法第5-1、29及29-1條",
+      "announced_at": "1981-07-17（第29條修正公布）；1989-07-17（增訂第5-1、29-1條公布）",
+      "effective_at": null,
+      "date_basis": "金管會官方沿革明載各條公布日期，但未載相關條文個別施行日；本輪現行條文分別依全國法規資料庫直接核對。沒有足夠官方資料確認個別施行日，故標記未知，不推定等於公布日。",
+      "urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=5-1&pcode=G0380001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=29&pcode=G0380001",
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=29-1&pcode=G0380001",
+        "https://law.fsc.gov.tw/LawContentSource.aspx?id=FL006378"
+      ]
+    }
+  ],
+  "changes": {
+    "TW-16-012": "肺阻塞急性惡化先求援，吸入器與肺復健依評估安排：更換為台灣2023臨床指引及2026健保肺阻塞方案來源，保留公立醫院裝置安全和119內容；更清楚補寫出院接續、肺復健、居家氧氣安全與頻率證據限制。 並將正文拆分為清楚的小節以符合網站目錄導覽。",
+    "TW-17-013": "長輩突然混亂先排急症，記憶退化再安排失智評估與長照：移除英國制度來源，改用台灣公立醫院譫妄衛教；更新長照申請對象，描述調查盛行率的母體和不能重算分母限制。 並將正文拆分為清楚的小節以符合網站目錄導覽。 2026-11-03依長照新制正式公告修正納入對象與施行日。",
+    "TW-17-009": "白內障影響看路或日常活動，先評估手術與水晶體差額：將過時水晶體資料替換為健保署差額材料現行規則和清單，刪除讀者不需要的編輯流程文字，補足費用逐項核對和術後急症流程。 並將正文拆分為清楚的小節以符合網站目錄導覽。 補入差額說明書提前交付與病人或家屬留存兩份文件的具體權益。",
+    "TW-17-005": "退休住宅、住宿長照與投資分開看，預付款和保證金先核對：重讀老人福利法第37、39條、住宿式長照契約與公告，界定機構法律類型，並區分特定契約的審閱期和保證金與其他退休住宅。 並將正文拆分為清楚的小節以符合網站目錄導覽。 同時移除重複參考連結。 補入信託法的定義與沿革，說明營運擔保不是當然信託，並提示核對契約、受託人、受益人及涵蓋款項。 補入銀行法第5-1、29、29-1條，說明不當吸金的法律條件與個案判斷界線。 補入2026年住宿式服務使用者補助的金額、資格、追溯日期、按月認列及個案核定限制。 依2026-10-19官方FAQ補入既有住民資格、不同補助額、2026年度申請期限及跨縣市轉住受理規則。 補充2025年度舊制12萬元住民在2026年1至8月的180日過渡保障、住院月排除及不符合過渡保障者不補足規則。",
+    "TW-24-003": "門診掛號用院所正式管道，遇到代辦或假訊息先查證：以現行165入口替換舊FAQ，直接核對醫療法第61條和2026修法範圍；保留代掛不當然違法的具體行為判斷。 並將正文拆分為清楚的小節以符合網站目錄導覽。",
+    "TW-16-002": "慢箋領藥與跨縣市長療程，先確認調劑和接續安排：修正重複字，補充健保醫療辦法第14條，重寫慢箋調劑及長療程銜接步驟；和TW-24-004明確分工。 並將正文拆分為清楚的小節以符合網站目錄導覽。",
+    "TW-24-004": "跨縣市看健保特約門診，核對身分、轉診與費用：聚焦一般跨縣市門診，排除慢箋操作細節並連至TW-16-002；保留身分、轉診、費用及特殊服務的界線。 並將正文拆分為清楚的小節以符合網站目錄導覽。"
+  },
+  "source_limitations": [
+    "健保署肺阻塞方案頁由官方瀏覽器頁面讀取；本機HTTP請求回覆403，未聲稱下載附件。",
+    "台灣社區失智調查附件未列可重算分子、有效樣本分母和信賴區間；7.99%僅按官方定義記為盛行率。",
+    "肺阻塞方案急診利用比缺少可重算分子、分母及期間，已記錄但不作正文頻率或個人風險。",
+    "老人福利法2020修正第37、39條個別施行日未由本輪可取得沿革核實，明列未知。",
+    "AI來源核對並非醫師、藥師、護理、社工、長照、眼科或法律專業者獨立簽證。",
+    "銀行法第5-1、29及29-1條的公布日期可由金管會沿革核實；沿革未載個別施行日，故保留未知。法條適用於個案仍須依招募對象、契約、實際金流及報酬安排判斷。",
+    "2026年住宿式服務補助依當年度方案及地方政府資格審核；正文僅摘要主要金額與規則，不替讀者核定個案補助。",
+    "2026-11-02核對時，衛福部1966補助頁已更新至當日；另直接閱讀2026-10-19民眾版FAQ中Q1、Q4、Q19、Q21、Q28所在頁，採用其中既有住民資格、補助額、申請起算、轉住受理及2026-12-16期限。未以未讀頁面支持其他主張；年度期限須於後續年度重新核對。"
+  ],
+  "review_history": {
+    "TW-16-012": {
+      "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+      "before_body_sha256": "5543c06b957fef4211850855bf9ad77ffb721d53df700dd9ce31ad1984d77b9e",
+      "after_body_sha256": "28bef2759d4eb90f1f2f600f75236dcf2a9b588df25c9420054ddaab0232863a",
+      "prior_review_sha256": "7e33810afbd1a10d39284e8113d0cd9a7c32f61f1309eedda8d73db79e259089",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
+    },
+    "TW-17-013": {
+      "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+      "before_body_sha256": "027fe17583227889c3af60e03766d3219c3fd20031e63f539ab38aadb4da0d5a",
+      "after_body_sha256": "aca03ae6e0c0a243eb97819ade6c48fb951ce596ec2257c539b71354ab7e25cb",
+      "prior_review_sha256": "8c2683fb2f4075302d0abfc5eb74b5fd317e5395ac9389bf0509e281b9cfc0cc",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
+    },
+    "TW-17-009": {
+      "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+      "before_body_sha256": "64204c5ffd7ab54b6cb4fc211abc1c8d8fa072a65b3af644c389024ecdb563a3",
+      "after_body_sha256": "e97b28a0b65ff70acc930d494f0c19048fffdbf48c83d0d443b4fb78461c413f",
+      "prior_review_sha256": "de0098b172dba7da02b676b1e69666b0c15abd80fadb0e7baa50d117997d06b0",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_review_due_at": "2026-12-31"
+    },
+    "TW-17-005": {
+      "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+      "before_body_sha256": "2ba071249ca16c4b437d952691e27d70709a5b3952de02e6e5f46c2cbff4bd96",
+      "after_body_sha256": "0094ca5aead7eabac83c38452a5cce6276ed5da033d726de68206dceb0fa50ca",
+      "prior_review_sha256": "06f84d4ed486a35c7ee01e01867da565f05d2207a95fc8a9794dcb483f3caf33",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_review_due_at": "2026-12-31"
+    },
+    "TW-24-003": {
+      "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+      "before_body_sha256": "ba23898ea7bbfef144c31e264c46dd315a8e2143ef964ac97ee3a62dbc8f59d5",
+      "after_body_sha256": "5d8a5ab9df1beef86cbb76cee138597130bbbe0d47c18c0ca56c1c90923d0b7e",
+      "prior_review_sha256": "de543fc6add9515e5550f5bf08cdd5c461d48a601faa33ecf8bc807dd756a4e5",
+      "prior_reviewed_at": "2026-10-25",
+      "prior_review_due_at": "2027-01-31"
+    },
+    "TW-16-002": {
+      "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+      "before_body_sha256": "70614fa82038a6ee9cb45ab8afbd7a8d3dc34701df10438a6dbcac3966288fe7",
+      "after_body_sha256": "951273656fc39338e850a85ef9b87dc924cd151baf30d6e6a3b8802e2762e272",
+      "prior_review_sha256": "e79f520d20c96d951388df55f55272a0082a5e3030d937d2fd72e32458a031ac",
+      "prior_reviewed_at": "2026-10-25",
+      "prior_review_due_at": "2027-01-31"
+    },
+    "TW-24-004": {
+      "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+      "before_body_sha256": "0aa0a1dcca88c85f41ad580fa75fd233792858eac56ce76fcf7869e3c5f73e46",
+      "after_body_sha256": "59f41e0d8b86ccf4762b72fae8f8f5b1cd9946cf8e75c0f0b045fd04cca65179",
+      "prior_review_sha256": "b4e7b46d3e3d7f496d94da01c8366bad677c43b1f6f06b7664dff5b7c8d6afd3",
+      "prior_reviewed_at": "2026-10-25",
+      "prior_review_due_at": "2027-01-31"
+    }
+  },
+  "policy_evidence": [
+    {
+      "id": "care_ltc_residential_subsidy_2026",
+      "program": "住宿式服務機構使用者補助方案（115年度調整）",
+      "announced_at": "2026-09-14",
+      "effective_at": "2026-01-01（追溯適用）",
+      "geography": "台灣；由地方政府受理及核定",
+      "eligibility": "經地方照管中心評估長照需要等級第4級以上或持中度以上身心障礙證明者；另有既有住民資格：112-01-01前實際入住並持續至補助計算期間者，即使未曾評估或評估未達第4級仍可申請。若未另符合第4級以上或中度以上身心障礙條件，按既有住民資格每月5,000元、全年最高60,000元。",
+      "amount": "一般符合第4級以上或中度以上身心障礙資格者每月最高新臺幣1萬5,000元、全年最高18萬元；僅以既有住民資格申請者每月5,000元、全年最高6萬元。各類仍依資格、實際入住月份及過渡規則核算。",
+      "monthly_recognition": "一般按月認列時，當月實際入住達該月日曆天數二分之一以上才認列一個月；當月住院日數達當月日曆天數二分之一以上者，該月不認列。曾於2025年度核定領取本方案12萬元者，2026年1月1日至8月31日累計入住達180日者依過渡規則核給12萬元，適用過渡保障者自2026年9月起按月認列。",
+      "limitations": "須依方案向地方政府申請或補正並經資格審核；不同機構類型、既有住民、身心障礙補助銜接及入住日期會影響資格、金額與起算日，不自動抵扣契約月費。2026年度期限不可外推至後續年度。 2026年度須區分2025年已核定領取12萬元者的1至8月過渡保障、一般按月案件及住院月排除。",
+      "source_ids": [
+        "care_ltc_residential_subsidy_2026",
+        "care_ltc_residential_subsidy_notice_20260914",
+        "care_ltc_residential_subsidy_faq_20261019"
+      ],
+      "accessed_at": "2026-11-02",
+      "implementation_qa_published_at": "2026-10-19",
+      "application_window": "2026-09-30前已入住者可於2026-12-16前提出第二階段申請，按115年度實際入住月份追溯認列；2026-10-01後新入住者原則自申請日起算。年度內換機構（含跨縣市）須重新申請，由最近入住機構所在地縣市受理。",
+      "transition_rule": "曾於2025年度核定領取本方案12萬元者，如2026年1月1日至8月31日實際入住累計達180日，該期間依過渡規則核給12萬元；期間死亡但已達180日者仍依規定核給。未曾於2025年度核定領取本方案12萬元或不符合過渡保障條件者，不因全年累計入住180日而補足至12萬元。"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
   "reviewed_at": "2026-11-01",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch24/TW-24-008.md",
-  "target_sha256": "6fbc48a6cbed47b3003f5f4b3c472021f1954b41d143e11e46adbbb7091a07b6",
+  "target_sha256": "ca73400652fdf2c029406c43f397440dd53a99774cbbbbf6ef3f63c6294c5708",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
@@ -67,5 +67,12 @@
     "本輪AI來源核對不是醫師、社工、健保或法律專業簽證，也未代辦申請或確認個案給付。",
     "法定急救義務不等於所有費用免費；社會救助法醫療補助、急難救助及健保紓困措施分別審查資格與費用，不保證核准或撥款時程。"
   ],
-  "source_reviewed_sha256": "6fbc48a6cbed47b3003f5f4b3c472021f1954b41d143e11e46adbbb7091a07b6"
+  "source_reviewed_sha256": "6fbc48a6cbed47b3003f5f4b3c472021f1954b41d143e11e46adbbb7091a07b6",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v4",
+    "before_sha256": "6fbc48a6cbed47b3003f5f4b3c472021f1954b41d143e11e46adbbb7091a07b6",
+    "after_sha256": "ca73400652fdf2c029406c43f397440dd53a99774cbbbbf6ef3f63c6294c5708",
+    "before_reader_sha256": "a08f13009cfcf0bfd5814d59db53e88b51212d789648266f41f472b46081a452",
+    "after_reader_sha256": "5e96986fb9f143b6ae4962a45fe87bfd08a7e1a68028978e88d2a0d6d401ab98"
+  }
 }

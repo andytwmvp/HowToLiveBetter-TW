@@ -23,7 +23,8 @@ class ScreeningInfluenzaTests(unittest.TestCase):
                 self.assertEqual(items[key]['body'],raw.decode())
                 self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
                 self.assertEqual({x['url'] for x in review['source_checks']},{sources[s]['url'] for s in items[key]['source_ids']})
-                self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(items[key])),5)
+                expected_sections = 6 if key == 'TW-01-020' else 5
+                self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(items[key])),expected_sections)
 
     def test_policy_and_frequency_do_not_become_personal_probability(self):
         b={x['id']:x['body'] for x in validate_runtime()['items']}
@@ -32,11 +33,12 @@ class ScreeningInfluenzaTests(unittest.TestCase):
         self.assertIn('19,074',b['TW-01-019']);self.assertIn('間歇',b['TW-01-019'])
         for n in (17,18,19):
             self.assertIn('2000',b[f'TW-01-{n:03}']);self.assertIn('不含原位癌',b[f'TW-01-{n:03}'])
-        self.assertIn('11月2日才開放',b['TW-01-020']);self.assertIn('也不代表確診流感',b['TW-01-020'])
-        self.assertIn('123,820人次',b['TW-01-020'])
-        self.assertIn('307例流感併發重症及42例死亡',b['TW-01-020'])
-        self.assertIn('不以42除以307',b['TW-01-020'])
-        self.assertEqual(next(x for x in validate_runtime()['items'] if x['id']=='TW-01-020')['review_due_at'],'2026-11-02')
+        self.assertIn('第二階段已於11月2日開放',b['TW-01-020']);self.assertIn('不是確診流感人數',b['TW-01-020'])
+        self.assertNotIn('預定11月2日',b['TW-01-020'])
+        self.assertIn('101,746人次',b['TW-01-020'])
+        self.assertIn('391例流感併發重症及57例死亡',b['TW-01-020'])
+        self.assertIn('不能換算成個人感染機率',b['TW-01-020'])
+        self.assertEqual(next(x for x in validate_runtime()['items'] if x['id']=='TW-01-020')['review_due_at'],'2027-02-03')
 
     def test_all_prior_items_and_sources_unchanged(self):
         old=json.loads(subprocess.check_output(['git','show','4d3080f84f778fa55d070cf66ea75de80c56f988:localization/tw-edition/runtime.json'],cwd=ROOT))

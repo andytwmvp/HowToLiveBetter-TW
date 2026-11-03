@@ -28,7 +28,9 @@ class Chapter16Tests(unittest.TestCase):
  def test_taiwan_and_medical_distinctions(self):
   items={e['id']:e['body'] for e in validate_runtime()['items']}
   self.assertIn('自行停藥',items['TW-16-001'])
-  self.assertIn('異地備案',items['TW-16-002'])
+  self.assertIn('不會只因跨縣市就必須回原院所',items['TW-16-002'])
+  self.assertIn('所在地沒有特約藥局',items['TW-16-002'])
+  self.assertNotIn('異地備案',items['TW-16-002'])
   self.assertIn('722',items['TW-16-003'])
   self.assertIn('交互作用',items['TW-16-004'])
   self.assertIn('分次調劑',items['TW-16-005'])
