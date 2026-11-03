@@ -14,6 +14,23 @@ import retroactive_audit as audit
 
 
 class RetroactiveAuditTests(unittest.TestCase):
+    def test_same_day_rechecks_follow_append_only_register_order_not_hash_order(self):
+        intermediate = {
+            "id": "TW-13-016",
+            "reviewed_at": "2026-11-04",
+            "after_sha256": "7" * 64,
+        }
+        final = {
+            "id": "TW-13-016",
+            "reviewed_at": "2026-11-04",
+            "after_sha256": "6" * 64,
+        }
+
+        self.assertEqual(
+            audit._newest_recheck_records([intermediate, final]),
+            [final, intermediate],
+        )
+
     def test_git_blob_reuses_one_batch_process_for_multiple_history_reads(self):
         with tempfile.TemporaryDirectory(prefix="tw-git-batch-test-") as folder:
             root = Path(folder)

@@ -1741,6 +1741,15 @@ def _registered_history_connects(root: Path, old: dict, new: dict, record: dict)
     return connects(copy_edges + edges)
 
 
+def _newest_recheck_records(records: list[dict]) -> list[dict]:
+    """Order same-day rechecks by append-only register order, newest first."""
+    return [record for _, record in sorted(
+        enumerate(records),
+        key=lambda pair: (pair[1].get("reviewed_at", ""), pair[0]),
+        reverse=True,
+    )]
+
+
 def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
     """Require unchanged content or a complete, evidence-backed Git history chain.
 
@@ -1767,7 +1776,10 @@ def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
     register = load(ROOT, "localization/retroactive-review-register-20261019.json")
     records = [r for r in register.get("substantive_rechecks", []) if r.get("id") == old.get("id")]
     case.assertTrue(records, "正文變更必須有再審紀錄")
-    for record in sorted(records, key=lambda item: (item.get("reviewed_at", ""), item.get("after_sha256", "")), reverse=True):
+    # The register is append-only, so its row order resolves multiple reviews
+    # on the same day. Hash order is unrelated to review chronology and can
+    # select an intermediate snapshot over the final same-day recheck.
+    for record in _newest_recheck_records(records):
         reviewed_new = (_pre_cleanup_reviewed_item(
             ROOT, new, cleanup, record.get("after_sha256")
         ) if cleanup else new)
