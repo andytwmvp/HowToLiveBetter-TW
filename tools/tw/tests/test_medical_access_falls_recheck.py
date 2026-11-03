@@ -24,10 +24,13 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
         runtime = validate_runtime()
         items = {item['id']: item for item in runtime['items']}
         sources = {source['id']: source for source in runtime['sources']}
-        rows = {
-            row['id']: row
-            for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
+        all_rows = load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
+        rows = {row['id']: row for row in all_rows if row['id'] in IDS}
+        october_rows = {
+            row['id']: row for row in all_rows
+            if row['id'] in IDS and row.get('reviewed_at') == '2026-10-25'
         }
+        self.assertEqual(set(october_rows), IDS)
         manifest = {row['id']: row for row in load('localization/manifest.json')['entries']}
         for key in IDS:
             item = items[key]
@@ -42,13 +45,16 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
                 {sources[source_id]['url'] for source_id in item['source_ids']},
             )
             self.assertEqual(manifest[key]['sources'], item['source_ids'])
-            self.assertEqual(item['reviewed_at'], '2026-10-25')
-            self.assertEqual(item['review_due_at'], '2027-01-31')
+            self.assertEqual(item['reviewed_at'], register_row['reviewed_at'])
+            self.assertEqual(item['review_due_at'], register_row['review_due_at'])
             self.assertEqual(register_row['status'], 'ai_source_rechecked_professional_pending')
             for check in review['source_checks']:
                 self.assertGreaterEqual(len(check['supporting_passage']), 50)
                 self.assertNotEqual(check['claim'], check['supporting_passage'])
                 self.assertIn('非逐字', check['supporting_passage'])
+        for row in october_rows.values():
+            self.assertEqual(row['prior_revision'], BASE)
+            self.assertEqual(row['review_due_at'], '2027-01-31')
 
     def test_previous_runtime_items_and_source_objects_are_preserved(self):
         previous = json.loads(
@@ -106,10 +112,11 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
         for key in IDS:
             self.assertEqual(items[key].count('\n## '), 5)
         self.assertIn('第15條', items['TW-16-002'])
-        self.assertIn('條文列出的特定情形', items['TW-16-002'])
+        self.assertIn('條文列明的特定情況', items['TW-16-002'])
         self.assertIn('第3條', items['TW-24-004'])
-        self.assertIn('一般特約門診', items['TW-24-004'])
-        self.assertIn('不能判定每一第三方服務都觸法', items['TW-24-003'])
+        self.assertIn('居住地以外看一般健保特約門診', items['TW-24-004'])
+        self.assertIn('沒有因跨縣市本身另設一項備案程序', items['TW-24-004'])
+        self.assertIn('是否涉及違法不能只看「代掛」字眼', items['TW-24-003'])
         self.assertIn('簡訊驗證碼', items['TW-24-003'])
         self.assertIn('公立醫院依法任用、受俸的編制醫事人員', items['TW-24-011'])
         self.assertIn('約聘僱醫師不適用該規範本身', items['TW-24-011'])
@@ -126,6 +133,7 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
         rows = {
             row['id']: row
             for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
+            if row.get('reviewed_at') == '2026-10-25'
         }
         previous = json.loads(
             subprocess.check_output(
@@ -152,10 +160,19 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
         batch = load(BATCH)
         self.assertEqual(batch['professional_review'], 'pending')
         self.assertFalse(publication_report()['publication_ready'])
+        rows = {
+            row['id']: row
+            for row in load('localization/retroactive-review-register-20261019.json')['substantive_rechecks']
+            if row['id'] in IDS
+        }
         for key in IDS:
             review = load(f'localization/reviews/{key}.json')
-            self.assertIn('ChatGPT', review['reviewer'])
-            self.assertIn('非', review['reviewer'])
+            self.assertIn('AI', review['reviewer'])
+            self.assertEqual(rows[key]['status'], 'ai_source_rechecked_professional_pending')
+            self.assertTrue(any(
+                ('尚無' in limit or '尚待' in limit) and '專業' in limit
+                for limit in review['limits']
+            ))
 
     def test_legal_article_versions_have_verified_effective_dates(self):
         rows = {row['law']: row for row in load(BATCH)['legal_evidence']}

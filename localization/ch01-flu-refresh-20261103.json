@@ -1,0 +1,452 @@
+{
+  "schema_version": 1,
+  "batch": "TW-01-020流感疫苗接種時程與監測資料緊急更新",
+  "base_main_sha": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+  "reviewed_at": "2026-11-03",
+  "review_due_at": "2027-02-03",
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-01-020"
+  ],
+  "core_progress": {
+    "before": 282,
+    "after": 282,
+    "total": 765,
+    "publication_ready": false
+  },
+  "source_counts": {
+    "runtime_before": 1038,
+    "runtime_after": 1040,
+    "registry_before": 1121,
+    "registry_after": 1123,
+    "json_files_before": 532,
+    "json_files_after": 534,
+    "prior_substantive_rechecks": 316,
+    "substantive_rechecks_after": 317
+  },
+  "new_source_ids": [
+    "ch01_cdc_flu_phase2_open_20261102",
+    "ch01_cdc_flu_surveillance_20261027"
+  ],
+  "reused_source_ids": [
+    "ch01_flu_plan_20260929",
+    "ch01_cdc_flu_vaccine_2026",
+    "ch01_cdc_flu_effect_safety",
+    "hpa_emergency"
+  ],
+  "retired_source_ids": [
+    "ch01_cdc_flu_surveillance_20261020"
+  ],
+  "source_objects_preserved": true,
+  "statistics": [
+    {
+      "id": "influenza_ili_visits_week42_2026",
+      "value": 101746,
+      "unit": "次門診與急診就診人次",
+      "period": "2026年第42週（2026-10-18至2026-10-24）",
+      "geography": "臺灣全國監測",
+      "population": "全國被通報為類流感之門急診就診人次",
+      "numerator": 101746,
+      "denominator": null,
+      "denominator_description": "未提供所有可能感染者或人口分母；一次就醫記一次人次，同一人可能多次就醫。",
+      "event_definition": "類流感症狀門急診就診，不等同實驗室確診流感個案。",
+      "data_type": "疾管署行政監測與醫療服務就診人次",
+      "method": "疾管署第42週全國類流感門急診監測彙整；公告指出該週颱風放假及門診休診影響就醫量。",
+      "source_id": "ch01_cdc_flu_surveillance_20261027",
+      "source_accessed_at": "2026-11-03",
+      "limitations": [
+        "人次可能重複，不能當成確診個案數或個人感染率。",
+        "週人次較前週下降18.8%，官方指出有颱風休診影響，不能單獨解讀為感染風險下降。"
+      ]
+    },
+    {
+      "id": "influenza_severe_cases_2026_season_to_20261026",
+      "value": 391,
+      "unit": "例流感併發重症監測病例",
+      "period": "115至116年流感季，截至2026-10-26",
+      "geography": "臺灣全國監測",
+      "population": "該流感季疾管署通報的流感併發重症監測病例",
+      "numerator": 391,
+      "denominator": null,
+      "denominator_description": "沒有所有流感感染者分母，不能估計重症發生率或個人風險。",
+      "event_definition": "疾管署公告的流感併發重症病例數，按公告所列流感季累計。",
+      "data_type": "行政傳染病監測病例數",
+      "method": "衛福部疾管署2026-10-27疫情公告。",
+      "source_id": "ch01_cdc_flu_surveillance_20261027",
+      "source_accessed_at": "2026-11-03",
+      "limitations": [
+        "監測病例數不等於所有感染者，無感染者母數；不推算感染後重症率或疫苗效果。"
+      ]
+    },
+    {
+      "id": "influenza_deaths_2026_season_to_20261026",
+      "value": 57,
+      "unit": "例死亡監測病例",
+      "period": "115至116年流感季，截至2026-10-26",
+      "geography": "臺灣全國監測",
+      "population": "該流感季疾管署公告的流感併發重症死亡病例",
+      "numerator": 57,
+      "denominator": null,
+      "denominator_description": "沒有所有流感感染者分母，不能計算感染後致死率或個人死亡機率。",
+      "event_definition": "疾管署公告的流感季累計死亡病例數。",
+      "data_type": "行政傳染病監測死亡病例數",
+      "method": "衛福部疾管署2026-10-27疫情公告。",
+      "source_id": "ch01_cdc_flu_surveillance_20261027",
+      "source_accessed_at": "2026-11-03",
+      "limitations": [
+        "不得除以重症數作為感染致死率；監測死亡病例沒有全部感染者分母。"
+      ]
+    }
+  ],
+  "frequency_assessment": "疾管署2026-10-27公告：2026年第42週（10/18-10/24）類流感門急診101,746人次，較前週少18.8%，公告說明颱風放假及門診休診會影響就醫量；115-116流感季截至10/26累計391例流感併發重症及57例死亡。前者是可能重複的就醫人次、非確診流感數；後兩項是監測病例數。均未提供所有感染者分母，不估算個人發生率、感染致死率或疫苗效果。疾管署NIDSS統計頁於11/2更新的日曆年／年週數字跨越流感季界線，未與季累計混用。",
+  "excluded_sources": [
+    {
+      "url": "https://nidss.cdc.gov.tw/nndss/disease?id=487a",
+      "title": "疾管署傳染病統計資料查詢系統：流感併發重症病例統計",
+      "accessed_at": "2026-11-03",
+      "data_snapshot": "頁面顯示資料更新時間2026-11-02 08:30；依發病日統計，2026年今年累計1986例、今年累計死亡452例，2026年第43週上週累計數51例；頁面提示未來資料可能修正。",
+      "exclusion_reason": "該頁的「今年」年度累計包含不同流感季，並採發病日、年與週的查詢口徑；週別值與疾管署10-27週報公告的115-116流感季統計並非同一分組。未完成時間區間與病例定義對齊前，不以其替換流感季截至10-26的官方季累計，也不在正文並列混用。"
+    }
+  ],
+  "review_history": {
+    "prior_revision": "41fe7b26fc9643e4ed077d17f70909cc78a72f21",
+    "prior_body_git_ref": "41fe7b26fc9643e4ed077d17f70909cc78a72f21:locales/zh-TW/book/ch01/TW-01-020.md",
+    "prior_review_git_ref": "41fe7b26fc9643e4ed077d17f70909cc78a72f21:localization/reviews/TW-01-020.json",
+    "prior_body_sha256": "319af5861fd33592d6810d929b2bc7812617ba7279c6daa312424d2e13eb9c77",
+    "prior_review_sha256": "afb040561f260a3ba3fbeb88f51e86fae45741dd383a978b6c9a3a29b2732136",
+    "prior_reviewed_at": "2026-10-27",
+    "prior_review_due_at": "2026-11-02",
+    "before_sha256": "319af5861fd33592d6810d929b2bc7812617ba7279c6daa312424d2e13eb9c77",
+    "after_sha256": "63a3226d48cb6162ede51336cf7a718cce3bf731b8ea80e8f7995b15902bec4f",
+    "source_ids_before": [
+      "ch01_flu_plan_20260929",
+      "ch01_cdc_flu_vaccine_2026",
+      "ch01_cdc_flu_effect_safety",
+      "ch01_cdc_flu_surveillance_20261020"
+    ],
+    "source_ids_after": [
+      "ch01_flu_plan_20260929",
+      "ch01_cdc_flu_vaccine_2026",
+      "ch01_cdc_flu_effect_safety",
+      "hpa_emergency",
+      "ch01_cdc_flu_phase2_open_20261102",
+      "ch01_cdc_flu_surveillance_20261027"
+    ],
+    "status": "ai_source_rechecked_professional_pending"
+  },
+  "professional_review": {
+    "status": "pending",
+    "required": "感染科、家庭醫學科或疫苗／公共衛生專業人員獨立審閱",
+    "obtained": false
+  },
+  "source_checks": [
+    {
+      "url": "https://mohw.gov.tw/cp-16-88084-1.html",
+      "claim": "2026年度第一階段於10月1日開始，原始政策公告安排50至64歲無高風險慢性病成人於11月2日進入第二階段；實際已開放情形另以2026-11-02公告確認。",
+      "supporting_passage": "初始公告的獨立語意摘要：第一階段自2026-10-01開始，50至64歲無高風險慢性病成人安排於2026-11-02進入第二階段；本次不以原始預定日期單獨證明已開放。",
+      "accessed_at": "2026-11-03",
+      "retrieval_method": "保留先前直接閱讀的衛福部政策公告，僅用於說明初始時程；與2026-11-02實際開放公告交叉核對。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/Page/LnrbufSY9uTyIprhOZ15NA",
+      "claim": "疾管署建議滿6個月以上兒童及成人每年流感季前接種；成人與幼兒依年齡、過去接種史決定劑次，並列出接種禁忌和注意事項。頁面最後更新日期為2026-09-24。",
+      "supporting_passage": "疾管署頁面獨立語意摘要：6個月以上兒童及成人每年流感季前建議接種；9歲以上通常1劑，未滿9歲依年齡及累計接種史判斷1或2劑；發燒、急性中重疾病、疫苗成分嚴重過敏或曾有嚴重接種反應者需依指引處理。",
+      "accessed_at": "2026-11-03",
+      "retrieval_method": "2026-11-03直接讀取疾管署流感疫苗頁，核對頁面標示更新日期、年度建議、劑次表與接種注意事項。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Category/QAPage/ZtgdkdK4_XGPN-OlS2s7sg",
+      "claim": "接種後約兩週產生保護力，仍可能感染流感；局部不適及常見輕微反應多可恢復，呼吸困難、嘴唇或眼睛腫脹、頭暈等可能是嚴重過敏警訊；出現副作用應就醫。",
+      "supporting_passage": "疾管署Q&A獨立語意摘要：完整保護力約需兩週；接種後仍可能感染，效果依年齡及健康狀況不同；嚴重過敏反應可能在接種後數分鐘至數小時出現，若有呼吸困難、聲音沙啞、眼唇腫脹或頭暈等症狀應立即處理。",
+      "accessed_at": "2026-11-03",
+      "retrieval_method": "2026-11-03直接讀取疾管署疫苗有效性與安全性問答，記錄個別問答更新日期至2026-08-14；未將國外保護力數字套用至臺灣個人。"
+    },
+    {
+      "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+      "claim": "臺灣出現胸痛、呼吸困難或中風警訊等急症時應立即撥打119，不自行開車；本篇將此作為嚴重急症的臺灣求援入口。",
+      "supporting_passage": "國健署2026-03-11衛教獨立語意摘要：胸痛、呼吸困難等心臟病徵兆及中風警訊應立即撥打119，並記下發作時間；切勿自行開車。",
+      "accessed_at": "2026-11-03",
+      "retrieval_method": "2026-11-03直接閱讀衛福部／國健署公開頁，核對急症警訊、119求援與不自行開車指引；此來源支持臺灣急救入口，不替代疾管署疫苗不良反應處理資料。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Bulletin/Detail/HGWcz7qahX4V2DxoqL-vXA?typeid=9",
+      "claim": "115年度公費流感及新冠疫苗第二階段於2026-11-02開放，第一階段符合資格者仍可接種，第二階段增加50至64歲無高風險慢性病成人；民眾可透過地方衛生局、疾管署疫苗地圖、疾管家或1922查詢接種點並提前電話預約。",
+      "supporting_passage": "疾管署2026-11-02公告確認：第二階段已於當日開放；第一階段長者、幼兒、孕婦及慢性病患者等高風險族群仍可持續接種；第二階段增加50至64歲無高風險慢性病成人。民眾可透過地方衛生局網站、疾管署疫苗地圖、疾管家或1922查詢合約院所，並提前電話預約。",
+      "accessed_at": "2026-11-03",
+      "retrieval_method": "2026-11-03直接閱讀疾管署2026-11-02公告，核對發布日期、第二階段實際開放、第一階段續行、第二階段對象，以及地方衛生局、疫苗地圖、疾管家、1922與電話預約等服務資訊。"
+    },
+    {
+      "url": "https://www.cdc.gov.tw/Bulletin/Detail/bducEkV6VKgqlJ2iaiFxiA?typeid=9",
+      "claim": "2026-10-27疾管署公告：第42週（10/18-10/24）類流感門急診101,746人次；115-116年流感季截至10/26累計391例流感併發重症、57例死亡；第42週就醫量受颱風休診影響。",
+      "supporting_passage": "疾管署公告獨立語意摘要：第42週類流感門急診就診101,746人次，較前週下降18.8%，並說明颱風放假使門診休診；115-116年流感季累計391例重症及57例死亡，截至2026-10-26。",
+      "accessed_at": "2026-11-03",
+      "retrieval_method": "2026-11-03直接讀取疾管署公開公告，分別核對週別門急診人次、流感季累計病例及死亡數的時間範圍與事件類型。"
+    }
+  ],
+  "limitations": [
+    "第42週類流感門急診人次是可重複的就醫服務量，不是確診流感病例；沒有全體感染者分母，不能換算成個人感染機率。",
+    "流感季累計重症及死亡病例沒有全部感染者分母，不推算感染後致死率或個人疫苗效果。",
+    "公費資格、兒童劑次、接種禁忌與院所庫存依當季疾管署公告、個人狀況及接種院所確認。",
+    "本次為AI輔助直接核對官方公開資料，尚未取得感染科、家庭醫學科或疫苗專業人員獨立審閱。"
+  ],
+  "sources_added": [
+    {
+      "id": "ch01_cdc_flu_phase2_open_20261102",
+      "title": "疾管署：115年度公費流感及新冠疫苗第二階段已開放",
+      "url": "https://www.cdc.gov.tw/Bulletin/Detail/HGWcz7qahX4V2DxoqL-vXA?typeid=9",
+      "published_at": "2026-11-02",
+      "accessed_at": "2026-11-03",
+      "supports": "115年度公費流感及新冠疫苗第二階段於2026-11-02開放，第一階段符合資格者仍可接種，第二階段增加50至64歲無高風險慢性病成人；民眾可透過地方衛生局、疾管署疫苗地圖、疾管家或1922查詢接種點並提前電話預約。",
+      "retrieval_method": "2026-11-03直接閱讀疾管署2026-11-02公告，核對發布日期、第二階段實際開放、第一階段續行、第二階段對象，以及地方衛生局、疫苗地圖、疾管家、1922與電話預約等服務資訊。",
+      "evidence_type": "臺灣中央政府疫苗接種政策公告"
+    },
+    {
+      "id": "ch01_cdc_flu_surveillance_20261027",
+      "title": "疾管署：2026-10-27流感監測與公費接種資訊",
+      "url": "https://www.cdc.gov.tw/Bulletin/Detail/bducEkV6VKgqlJ2iaiFxiA?typeid=9",
+      "published_at": "2026-10-27",
+      "accessed_at": "2026-11-03",
+      "supports": "2026年第42週（10/18-10/24）類流感門急診101,746人次，較前週下降18.8%，公告說明颱風休假與門診休診影響就醫量；115-116流感季截至2026-10-26累計391例流感併發重症及57例死亡。數據為不同期間與事件定義的行政監測／就醫服務量，沒有全部感染者分母。",
+      "retrieval_method": "2026-11-03直接閱讀疾管署2026-10-27公告，核對公告日、第42週起訖日、就醫人次、颱風休診說明及流感季重症／死亡統計的截止日和定義。",
+      "evidence_type": "臺灣中央政府官方疫情監測與服務資料"
+    }
+  ],
+  "sources_retired": [
+    {
+      "id": "ch01_cdc_flu_surveillance_20261020",
+      "replacement_ids": [
+        "ch01_cdc_flu_surveillance_20261027"
+      ],
+      "reason": "以2026-10-27疾管署公告更新較新的第42週就醫資料及115-116流感季截至10/26的重症、死亡數；舊來源物件保留於runtime供歷史追溯。",
+      "prior_source_sha256": "eb12e63ef2f23da9463d4422fe66fe3145708105e441cec245d2a14ffb13ca0e"
+    }
+  ],
+  "method_limit": "本次直接讀取官方頁面；疾管署NIDSS統計頁雖較新，但其年／週與發病日口徑跨流感季，故不與週報季累計混用。AI查核不取代專業審閱。 國健署2026-03-11資料另支持臺灣119急症求援入口與不自行開車。",
+  "counts_before": {
+    "publication_completed_entries": 282,
+    "publication_total_entries": 765,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "publication_completed_entries": 282,
+    "publication_total_entries": 765,
+    "publication_ready": false,
+    "registry_sources": 1123,
+    "json_files_checked": 534,
+    "unique_draft_entries": 498,
+    "entries_without_any_draft": 267,
+    "unresolved_source_ids": {
+      "adultcheck": 5,
+      "afib": 1,
+      "anger": 1,
+      "battery": 1,
+      "bsmi": 4,
+      "caffeine": 3,
+      "carcontract": 2,
+      "cdic": 4,
+      "childsafety": 3,
+      "civil125": 2,
+      "co": 3,
+      "compulsoryauto": 1,
+      "coolingoff": 1,
+      "copayment": 2,
+      "crisis": 13,
+      "cvdrisk": 1,
+      "deescalation": 1,
+      "disasterkit": 1,
+      "drinkingwater": 1,
+      "drowning": 1,
+      "dysmenorrhea": 1,
+      "emsact": 4,
+      "energylabel": 1,
+      "erectile": 2,
+      "expressivewriting": 1,
+      "falls": 4,
+      "firesafe": 5,
+      "firstaid": 6,
+      "fishsafety": 1,
+      "fitnesscontract": 2,
+      "foi": 2,
+      "foodsafety": 6,
+      "forex": 1,
+      "fscinvest": 10,
+      "gambling": 3,
+      "gas": 1,
+      "genericdrugs": 1,
+      "giwarning": 1,
+      "hbp": 1,
+      "hbv": 1,
+      "hcv": 1,
+      "healthbank": 1,
+      "heatsafety": 1,
+      "hematuria": 1,
+      "hivpep": 2,
+      "hivprep": 2,
+      "hivtest": 2,
+      "hotdrinks": 1,
+      "hpv": 3,
+      "hpylori": 2,
+      "iarcmeat": 1,
+      "influenza": 1,
+      "insomnia": 4,
+      "insurance": 9,
+      "insuranceact": 1,
+      "insurancecooling": 1,
+      "laboradr": 1,
+      "laborcoverage": 1,
+      "leverage": 1,
+      "longterm": 1,
+      "meddispute": 3,
+      "medicalact": 13,
+      "medrecords": 2,
+      "menopause": 1,
+      "microbike": 2,
+      "nationalpension": 1,
+      "nhimedical": 8,
+      "nistauth": 1,
+      "nutrition": 15,
+      "oralcare": 1,
+      "oshconfined": 1,
+      "osteoporosis": 3,
+      "overseasinvest": 1,
+      "perfectionism": 1,
+      "pneumococcal": 1,
+      "poison": 3,
+      "radiation": 1,
+      "ransom": 2,
+      "roadfatigue": 4,
+      "rumination": 2,
+      "safetyplan": 2,
+      "seats": 2,
+      "shiftwork": 3,
+      "sleep": 14,
+      "sleepapnea": 2,
+      "spotlight": 1,
+      "stroke": 1,
+      "sunsafety": 1,
+      "taxfiling": 1,
+      "taxoverseas": 1,
+      "telecom": 1,
+      "telemedical": 1,
+      "tetanus": 1,
+      "tfda": 5,
+      "toolsafety": 1,
+      "trafficact": 3,
+      "travelcontract": 1,
+      "twseetf": 3,
+      "usedcar": 1,
+      "virtualassets": 1,
+      "vouchers": 1,
+      "whodiet": 3,
+      "whosalt": 1,
+      "zoster": 1
+    },
+    "unresolved_reference_occurrences": 260
+  },
+  "items": [
+    {
+      "id": "TW-01-020",
+      "chapter": 1,
+      "target_path": "locales/zh-TW/book/ch01/TW-01-020.md",
+      "title": "流感疫苗依當季資格安排，長者與慢性病者先確認",
+      "prior_body_git_ref": "41fe7b26fc9643e4ed077d17f70909cc78a72f21:locales/zh-TW/book/ch01/TW-01-020.md",
+      "prior_review_git_ref": "41fe7b26fc9643e4ed077d17f70909cc78a72f21:localization/reviews/TW-01-020.json",
+      "before_sha256": "319af5861fd33592d6810d929b2bc7812617ba7279c6daa312424d2e13eb9c77",
+      "after_sha256": "63a3226d48cb6162ede51336cf7a718cce3bf731b8ea80e8f7995b15902bec4f",
+      "prior_review_sha256": "afb040561f260a3ba3fbeb88f51e86fae45741dd383a978b6c9a3a29b2732136",
+      "prior_reviewed_at": "2026-10-27",
+      "prior_review_due_at": "2026-11-02",
+      "reviewed_at": "2026-11-03",
+      "review_due_at": "2027-02-03",
+      "source_ids": [
+        "ch01_flu_plan_20260929",
+        "ch01_cdc_flu_vaccine_2026",
+        "ch01_cdc_flu_effect_safety",
+        "hpa_emergency",
+        "ch01_cdc_flu_phase2_open_20261102",
+        "ch01_cdc_flu_surveillance_20261027"
+      ],
+      "previous_source_ids": [
+        "ch01_flu_plan_20260929",
+        "ch01_cdc_flu_vaccine_2026",
+        "ch01_cdc_flu_effect_safety",
+        "ch01_cdc_flu_surveillance_20261020"
+      ],
+      "previous_review_claims": [
+        "2026-10-27再審時，50至64歲無高風險慢性病成人第二階段仍是預定11月2日開放；該日已過，須改為核對實際開放公告。",
+        "原監測資料截至2026-10-19：第41週類流感門急診123,820人次、流感季累計307例重症及42例死亡，已由2026-10-27公告更新。",
+        "原正文誤寫成人「每季一劑」，須釐清為每個流感季通常接種一劑；兒童依年齡及接種史分流。"
+      ],
+      "taiwan_context": "臺灣115年度公費流感疫苗分兩階段開放，2026-11-02起第二階段涵蓋50至64歲無高風險慢性病成人；長者及其他高風險對象可依第一階段規定接種。接種地點與庫存因院所而異，應透過官方地圖查詢並先聯絡院所。秋冬流感監測須分清類流感門急診人次、流感季重症病例與死亡數。",
+      "frequency_assessment": "疾管署2026-10-27公告：2026年第42週（10/18-10/24）類流感門急診101,746人次，較前週少18.8%，公告說明颱風放假及門診休診會影響就醫量；115-116流感季截至10/26累計391例流感併發重症及57例死亡。前者是可能重複的就醫人次、非確診流感數；後兩項是監測病例數。均未提供所有感染者分母，不估算個人發生率、感染致死率或疫苗效果。疾管署NIDSS統計頁於11/2更新的日曆年／年週數字跨越流感季界線，未與季累計混用。",
+      "changes": "將第二階段狀態更新為已於2026-11-02開放，並明列50至64歲無高風險慢性病成人及第一階段條件；以2026-10-27疾管署公告替換第41週及10/19的舊監測數；修正成人劑次為每個流感季通常一劑，並保留未滿9歲兒童依年齡及既往接種史安排劑次；更新官方預約、費用詢問、接種前評估及嚴重不良反應處置。；補上嚴重症狀離開接種處後立即撥119、請旁人協助且不自行開車的臺灣急救入口。",
+      "source_status": "AI輔助直接核對臺灣官方頁面；統計口徑差異已揭露，119求援建議另由國健署急症頁交叉核對；未取得感染科、家庭醫學科或疫苗／公共衛生專業獨立審閱。",
+      "source_checks": [
+        {
+          "url": "https://mohw.gov.tw/cp-16-88084-1.html",
+          "claim": "2026年度第一階段於10月1日開始，原始政策公告安排50至64歲無高風險慢性病成人於11月2日進入第二階段；實際已開放情形另以2026-11-02公告確認。",
+          "supporting_passage": "初始公告的獨立語意摘要：第一階段自2026-10-01開始，50至64歲無高風險慢性病成人安排於2026-11-02進入第二階段；本次不以原始預定日期單獨證明已開放。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "保留先前直接閱讀的衛福部政策公告，僅用於說明初始時程；與2026-11-02實際開放公告交叉核對。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Category/Page/LnrbufSY9uTyIprhOZ15NA",
+          "claim": "疾管署建議滿6個月以上兒童及成人每年流感季前接種；成人與幼兒依年齡、過去接種史決定劑次，並列出接種禁忌和注意事項。頁面最後更新日期為2026-09-24。",
+          "supporting_passage": "疾管署頁面獨立語意摘要：6個月以上兒童及成人每年流感季前建議接種；9歲以上通常1劑，未滿9歲依年齡及累計接種史判斷1或2劑；發燒、急性中重疾病、疫苗成分嚴重過敏或曾有嚴重接種反應者需依指引處理。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接讀取疾管署流感疫苗頁，核對頁面標示更新日期、年度建議、劑次表與接種注意事項。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Category/QAPage/ZtgdkdK4_XGPN-OlS2s7sg",
+          "claim": "接種後約兩週產生保護力，仍可能感染流感；局部不適及常見輕微反應多可恢復，呼吸困難、嘴唇或眼睛腫脹、頭暈等可能是嚴重過敏警訊；出現副作用應就醫。",
+          "supporting_passage": "疾管署Q&A獨立語意摘要：完整保護力約需兩週；接種後仍可能感染，效果依年齡及健康狀況不同；嚴重過敏反應可能在接種後數分鐘至數小時出現，若有呼吸困難、聲音沙啞、眼唇腫脹或頭暈等症狀應立即處理。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接讀取疾管署疫苗有效性與安全性問答，記錄個別問答更新日期至2026-08-14；未將國外保護力數字套用至臺灣個人。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+          "claim": "臺灣出現胸痛、呼吸困難或中風警訊等急症時應立即撥打119，不自行開車；本篇將此作為嚴重急症的臺灣求援入口。",
+          "supporting_passage": "國健署2026-03-11衛教獨立語意摘要：胸痛、呼吸困難等心臟病徵兆及中風警訊應立即撥打119，並記下發作時間；切勿自行開車。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接閱讀衛福部／國健署公開頁，核對急症警訊、119求援與不自行開車指引；此來源支持臺灣急救入口，不替代疾管署疫苗不良反應處理資料。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Bulletin/Detail/HGWcz7qahX4V2DxoqL-vXA?typeid=9",
+          "claim": "115年度公費流感及新冠疫苗第二階段於2026-11-02開放，第一階段符合資格者仍可接種，第二階段增加50至64歲無高風險慢性病成人；民眾可透過地方衛生局、疾管署疫苗地圖、疾管家或1922查詢接種點並提前電話預約。",
+          "supporting_passage": "疾管署2026-11-02公告確認：第二階段已於當日開放；第一階段長者、幼兒、孕婦及慢性病患者等高風險族群仍可持續接種；第二階段增加50至64歲無高風險慢性病成人。民眾可透過地方衛生局網站、疾管署疫苗地圖、疾管家或1922查詢合約院所，並提前電話預約。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接閱讀疾管署2026-11-02公告，核對發布日期、第二階段實際開放、第一階段續行、第二階段對象，以及地方衛生局、疫苗地圖、疾管家、1922與電話預約等服務資訊。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Bulletin/Detail/bducEkV6VKgqlJ2iaiFxiA?typeid=9",
+          "claim": "2026-10-27疾管署公告：第42週（10/18-10/24）類流感門急診101,746人次；115-116年流感季截至10/26累計391例流感併發重症、57例死亡；第42週就醫量受颱風休診影響。",
+          "supporting_passage": "疾管署公告獨立語意摘要：第42週類流感門急診就診101,746人次，較前週下降18.8%，並說明颱風放假使門診休診；115-116年流感季累計391例重症及57例死亡，截至2026-10-26。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接讀取疾管署公開公告，分別核對週別門急診人次、流感季累計病例及死亡數的時間範圍與事件類型。"
+        }
+      ],
+      "statistics_assessed": [
+        "influenza_ili_visits_week42_2026",
+        "influenza_severe_cases_2026_season_to_20261026",
+        "influenza_deaths_2026_season_to_20261026"
+      ],
+      "unresolved": [
+        "第42週類流感門急診人次是可重複的就醫服務量，不是確診流感病例；沒有全體感染者分母，不能換算成個人感染機率。",
+        "流感季累計重症及死亡病例沒有全部感染者分母，不推算感染後致死率或個人疫苗效果。",
+        "公費資格、兒童劑次、接種禁忌與院所庫存依當季疾管署公告、個人狀況及接種院所確認。",
+        "本次為AI輔助直接核對官方公開資料，尚未取得感染科、家庭醫學科或疫苗專業人員獨立審閱。"
+      ],
+      "reviewer_limit": "第42週類流感門急診人次是可重複的就醫服務量，不是確診流感病例；沒有全體感染者分母，不能換算成個人感染機率。；流感季累計重症及死亡病例沒有全部感染者分母，不推算感染後致死率或個人疫苗效果。；公費資格、兒童劑次、接種禁忌與院所庫存依當季疾管署公告、個人狀況及接種院所確認。；本次為AI輔助直接核對官方公開資料，尚未取得感染科、家庭醫學科或疫苗專業人員獨立審閱。",
+      "retired_sources": [
+        {
+          "id": "ch01_cdc_flu_surveillance_20261020",
+          "replacement_ids": [
+            "ch01_cdc_flu_surveillance_20261027"
+          ],
+          "reason": "以2026-10-27疾管署公告更新較新的第42週就醫資料及115-116流感季截至10/26的重症、死亡數；舊來源物件保留於runtime供歷史追溯。",
+          "prior_source_sha256": "eb12e63ef2f23da9463d4422fe66fe3145708105e441cec245d2a14ffb13ca0e"
+        }
+      ]
+    }
+  ]
+}

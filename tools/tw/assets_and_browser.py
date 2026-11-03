@@ -110,10 +110,25 @@ def run(render: bool,browser_test: bool) -> None:
             for path in ('index.html','dist/HowToLiveBetter-TW.html'):
                 page.goto(url+path,wait_until='domcontentloaded')
                 page.wait_for_function('window.TWRuntime?.ready === true',timeout=30000)
+                rendered_copy=page.locator('[data-id]').evaluate_all('''cards => ({
+                  rawMarkdown: cards.some(card => card.innerText.includes('](')),
+                  brokenInternal: [...document.querySelectorAll('[data-id] a[href^="#TW-"]')]
+                    .filter(link => !document.getElementById(decodeURIComponent(link.hash.slice(1))))
+                    .map(link => link.href)
+                })''')
+                assert not rendered_copy['rawMarkdown'],'臺灣閱讀頁仍顯示Markdown連結語法：'+path
+                assert not rendered_copy['brokenInternal'],(path,rendered_copy['brokenInternal'])
+                for source_id,target_id in (
+                    ('TW-24-004','TW-16-002'),
+                    ('TW-13-038','TW-13-042'),
+                    ('TW-13-042','TW-13-038'),
+                    ('TW-13-031','TW-13-012'),
+                ):
+                    assert page.locator(f'[data-id="{source_id}"] a[href="#{target_id}"]').count()>=1,(path,source_id,target_id)
                 card=page.locator(f'[data-id="{item["id"]}"]')
                 assert card.locator('a').filter(has_text=title).count()==1,'臺灣閱讀頁未顯示讀者用來源標題：'+path
                 assert card.locator('a').filter(has_text='本批核對').count()==0,'臺灣閱讀頁仍顯示內部批次文字：'+path
-            result['checks'].append('網站與離線HTML以讀者用標題顯示刑法來源連結。')
+            result['checks'].append('網站與離線HTML顯示讀者用外部來源與可用內部連結，不露出Markdown語法。')
             from check_navigation import check_navigation
             result['checks'].extend(check_navigation(page,context,url,review))
             from check_prevention_rechecks_browser import check_prevention_rechecks_browser

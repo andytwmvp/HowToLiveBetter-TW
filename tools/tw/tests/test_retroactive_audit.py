@@ -3,14 +3,70 @@ import json
 import hashlib
 import re
 import sys
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import retroactive_audit as audit
 
 
 class RetroactiveAuditTests(unittest.TestCase):
+    def test_git_blob_reuses_one_batch_process_for_multiple_history_reads(self):
+        with tempfile.TemporaryDirectory(prefix="tw-git-batch-test-") as folder:
+            root = Path(folder)
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.name", "Test"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.email", "test@example.invalid"], cwd=root, check=True)
+            (root / "one.txt").write_text("第一份歷史內容", encoding="utf-8")
+            (root / "two.txt").write_text("第二份歷史內容", encoding="utf-8")
+            subprocess.run(["git", "add", "one.txt", "two.txt"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "test snapshot"], cwd=root, check=True)
+            revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            try:
+                with patch.object(audit.subprocess, "Popen", wraps=subprocess.Popen) as popen:
+                    self.assertEqual(audit._git_blob(root, revision, "one.txt"), "第一份歷史內容".encode())
+                    self.assertEqual(audit._git_blob(root, revision, "two.txt"), "第二份歷史內容".encode())
+                    self.assertEqual(audit._git_blob(root, revision, "one.txt"), "第一份歷史內容".encode())
+                    self.assertEqual(popen.call_count, 1)
+            finally:
+                close_reader = getattr(audit, "_close_git_batch_reader", None)
+                if close_reader:
+                    close_reader(root)
+
+    def test_explicit_recheck_supersession_requires_exact_prior_record(self):
+        previous = {
+            "id": "TW-17-005",
+            "reviewed_at": "2026-11-02",
+            "prior_revision": "a" * 40,
+            "before_sha256": "b" * 64,
+            "after_sha256": "c" * 64,
+            "prior_review_sha256": "d" * 64,
+        }
+        later = {
+            **previous,
+            "reviewed_at": "2026-11-03",
+            "after_sha256": "e" * 64,
+        }
+        pointer_fields = (
+            "id", "reviewed_at", "prior_revision", "before_sha256",
+            "after_sha256", "prior_review_sha256",
+        )
+        later["supersedes"] = {field: previous[field] for field in pointer_fields}
+        self.assertTrue(audit._recheck_record_supersedes(later, previous))
+
+        for field in pointer_fields:
+            with self.subTest(field=field):
+                malformed = {**later, "supersedes": dict(later["supersedes"])}
+                malformed["supersedes"][field] = "wrong"
+                self.assertFalse(audit._recheck_record_supersedes(malformed, previous))
+
+        same_day = {**later, "reviewed_at": previous["reviewed_at"]}
+        self.assertFalse(audit._recheck_record_supersedes(same_day, previous))
+
     def test_reader_copy_cleanup_removes_process_footer_but_keeps_source_and_limits(self):
         normalize = getattr(audit, "normalize_reader_copy", None)
         self.assertTrue(callable(normalize), "稽核器需提供可重現的讀者正文整理規則")
@@ -270,20 +326,43 @@ class RetroactiveAuditTests(unittest.TestCase):
         for key in ("TW-13-021", "TW-13-022", "TW-13-027"):
             self.assertNotIn("不是個案診療或作業合格認證", items[key]["body"], key)
         self.assertIn("工作場所的機具防護、風險評估與教育訓練", items["TW-01-042"]["body"])
+        for key in ("TW-07-008", "TW-07-012", "TW-17-010", "TW-24-008", "TW-24-011",
+                    "TW-25-003", "TW-25-009", "TW-25-010", "TW-25-011"):
+            body = items[key]["body"]
+            self.assertNotIn("臺灣改寫與來源重核", body, key)
+            self.assertNotIn("本次核對第", body, key)
+            self.assertNotIn("獨立改寫", body, key)
+        self.assertIn("目前沒有臺灣長者遛狗時跌倒的全國統計", items["TW-17-010"]["body"])
+        self.assertIn("《醫療法》", items["TW-24-008"]["body"])
+        self.assertIn("一般致謝不等於違法", items["TW-24-011"]["body"])
+        self.assertIn("預估天數僅供參考", items["TW-25-003"]["body"])
+        self.assertIn("不能用來估算個人請領機率", items["TW-25-009"]["body"])
 
     def test_recent_reader_copy_normalization_is_reproducible_and_complete(self):
         runtime = json.loads((audit.ROOT / "localization/tw-edition/runtime.json").read_text(encoding="utf-8"))
         items = {item["id"]: item for item in runtime["items"]}
         register = audit.load(audit.ROOT, "localization/retroactive-review-register-20261019.json")
-        cleanup_rows = {row["id"]: row for row in register["reader_copy_cleanups"]}
+        cleanup_rows = register["reader_copy_cleanups"]
 
-        for key in ("TW-13-012", "TW-13-023", "TW-13-027"):
-            row = cleanup_rows[key]
+        for key in ("TW-13-012", "TW-13-023", "TW-13-027", "TW-07-008", "TW-07-012",
+                    "TW-17-010", "TW-24-008", "TW-24-011", "TW-25-003", "TW-25-009",
+                    "TW-25-010", "TW-25-011"):
+            if key in {"TW-13-012", "TW-13-027"}:
+                row = next(row for row in reversed(cleanup_rows) if row["id"] == key)
+            else:
+                digest = hashlib.sha256(items[key]["body"].encode("utf-8")).hexdigest()
+                row = next(row for row in cleanup_rows
+                           if row["id"] == key and row["after_sha256"] == digest)
             previous_runtime = audit._git_json(
                 audit.ROOT, row["prior_revision"], "localization/tw-edition/runtime.json"
             )
             previous = next(item for item in previous_runtime["items"] if item["id"] == key)
-            normalized, _ = audit.normalize_reader_item(previous)
+            normalize = {
+                "reader_copy_cleanup_v2": audit.normalize_reader_item,
+                "reader_copy_cleanup_v3": audit.normalize_reader_item_v3,
+                "reader_copy_cleanup_v4": audit.normalize_reader_item_v4,
+            }[row["transform"]]
+            normalized, _ = normalize(previous)
             if key in {"TW-13-012", "TW-13-027"}:
                 digest = hashlib.sha256(normalized["body"].encode("utf-8")).hexdigest()
                 recheck = next(

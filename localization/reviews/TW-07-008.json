@@ -5,7 +5,7 @@
   "reviewed_at": "2026-10-26",
   "review_due_at": "2027-01-31",
   "target_path": "locales/zh-TW/book/ch07/TW-07-008.md",
-  "target_sha256": "f5a20aba3d14d1a06b9e7cb9b0fe92dce89ba3886691d4e4ce2801b0a69aca02",
+  "target_sha256": "12de6967afd49da7a12a860650b322e31e974e4a3562aeb124fbe418086243a9",
   "source_checks": [
     {
       "url": "https://www.mohw.gov.tw/cp-6654-77519-1.html",
@@ -50,12 +50,12 @@
     "各地輔具項目、補助額度、費用分擔及時程不同，未逐縣市盤點。",
     "尚無社工、輔具、醫療或法律專業人員獨立審閱。"
   ],
-  "source_reviewed_sha256": "1e7e3d1513af259d90ddd1b8e882c36828761e46508a8a1ffbf056b50f921112",
+  "source_reviewed_sha256": "f5a20aba3d14d1a06b9e7cb9b0fe92dce89ba3886691d4e4ce2801b0a69aca02",
   "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "1e7e3d1513af259d90ddd1b8e882c36828761e46508a8a1ffbf056b50f921112",
-    "after_sha256": "f5a20aba3d14d1a06b9e7cb9b0fe92dce89ba3886691d4e4ce2801b0a69aca02",
-    "before_reader_sha256": "9a9dc0b339905d8dcc97265dfd45e16fbc06b0ac9d3d482c996776a43706f460",
-    "after_reader_sha256": "6c041b70aaf604068f2285f5c3f5796b63ea619e071bb12b6942617c076f45b9"
+    "transform": "reader_copy_cleanup_v4",
+    "before_sha256": "f5a20aba3d14d1a06b9e7cb9b0fe92dce89ba3886691d4e4ce2801b0a69aca02",
+    "after_sha256": "12de6967afd49da7a12a860650b322e31e974e4a3562aeb124fbe418086243a9",
+    "before_reader_sha256": "6c041b70aaf604068f2285f5c3f5796b63ea619e071bb12b6942617c076f45b9",
+    "after_reader_sha256": "8ca09ae7666aefd40eea6e1239e1dfb2f7f8115677629f59ca6daa522c5c7fcd"
   }
 }

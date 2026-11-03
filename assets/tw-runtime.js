@@ -108,7 +108,52 @@
       return /^TW-(?:NAV-\d{3}|\d{2}-\d{3})$/.test(id) ? id : null;
     } catch (_) { return null; }
   }
-  // 本專案正文格式只接受段落、二級標題與獨立HTTPS來源連結，不執行原始HTML。
+  // 本專案正文格式只接受段落、二級標題與HTTPS來源連結清單，不執行原始HTML。
+  function markdownSegments(raw, stripBullet = false) {
+    let line = raw.trim();
+    if (stripBullet) line = line.replace(/^[-*]\s+/, '');
+    const segments = [];
+    let cursor = 0;
+    let links = 0;
+    while (cursor < line.length) {
+      const start = line.indexOf('[', cursor);
+      if (start < 0) break;
+      const labelEnd = line.indexOf('](', start + 1);
+      if (labelEnd < 0) { cursor = start + 1; continue; }
+      const label = line.slice(start + 1, labelEnd);
+      const urlStart = labelEnd + 2;
+      if (!label) { cursor = start + 1; continue; }
+      let urlEnd = urlStart;
+      let parentheses = 0;
+      let invalid = false;
+      while (urlEnd < line.length) {
+        const char = line[urlEnd];
+        if (/\s/.test(char) || char === '<' || char === '>') { invalid = true; break; }
+        if (char === '(') parentheses++;
+        else if (char === ')') {
+          if (parentheses === 0) break;
+          parentheses--;
+        }
+        urlEnd++;
+      }
+      if (invalid || urlEnd >= line.length || line[urlEnd] !== ')' || parentheses) { cursor = start + 1; continue; }
+      if (start > cursor) segments.push({text: line.slice(cursor, start)});
+      const destination = line.slice(urlStart, urlEnd);
+      const segment = {text: label};
+      if (destination.startsWith('https://')) segment.url = destination;
+      else {
+        const target = !destination.startsWith('/') && /^(?:\.\.?\/)*[A-Za-z0-9_./-]+\.md$/.test(destination);
+        const targetId = /(TW-(?:NAV-\d{3}|\d{2}-\d{3}))\.md$/.exec(destination);
+        if (target && targetId) segment.href = '#' + targetId[1];
+      }
+      segments.push(segment);
+      links++;
+      cursor = urlEnd + 1;
+    }
+    if (!links) return null;
+    if (cursor < line.length) segments.push({text: line.slice(cursor)});
+    return segments;
+  }
   function bodyBlocks(entry) {
     if (!entry.target_path) return [{tag: 'p', text: entry.body}];
     const blocks = [];
@@ -117,8 +162,25 @@
       if (chunk.startsWith('## ') && !chunk.includes('\n')) {
         blocks.push({tag: 'h3', text: chunk.slice(3)}); continue;
       }
-      const match = /^\[([^\]\n]+)\]\((https:\/\/[^\s<>]+)\)$/.exec(chunk);
-      blocks.push(match ? {tag: 'p', text: match[1], url: match[2]} : {tag: 'p', text: chunk});
+      const lines = chunk.split(/\r\n?|\n/);
+      const rows = lines.map(line => /^[-*]\s+/.test(line.trim()) ? markdownSegments(line, true) : null);
+      const parsedRows = rows.length && rows.every(Boolean) ? rows : [markdownSegments(chunk)];
+      if (parsedRows.length && parsedRows.every(Boolean)) {
+        for (const segments of parsedRows) {
+          const links = segments.filter(segment => segment.url || segment.href);
+          if (segments.length === 1 && !links.length) blocks.push({tag: 'p', text: segments[0].text});
+          else if (links.length === 1 && segments[0] === links[0]) {
+            const block = {tag: 'p', text: links[0].text};
+            if (links[0].url) block.url = links[0].url;
+            if (links[0].href) block.href = links[0].href;
+            const suffix = segments.slice(1).map(segment => segment.text).join('');
+            if (suffix) block.suffix = suffix;
+            blocks.push(block);
+          } else {
+            blocks.push({tag: 'p', text: segments.map(segment => segment.text).join(''), segments});
+          }
+        }
+      } else blocks.push({tag: 'p', text: chunk});
     }
     return blocks;
   }
@@ -171,8 +233,17 @@
       article.append(node('h2', e.title));
       for (const block of bodyBlocks(e)) {
         const part = node(block.tag);
-        if (block.url) {
-          const link = node('a', block.text); link.href = block.url; link.rel = 'noopener noreferrer'; part.append(link);
+        if (block.segments) {
+          for (const segment of block.segments) {
+            if (segment.url || segment.href) {
+              const link = node('a', segment.text); link.href = segment.url || segment.href;
+              if (segment.url) link.rel = 'noopener noreferrer';
+              part.append(link);
+            } else part.append(document.createTextNode(segment.text));
+          }
+        } else if (block.url || block.href) {
+          const link = node('a', block.text); link.href = block.url || block.href; if (block.url) link.rel = 'noopener noreferrer'; part.append(link);
+          if (block.suffix) part.append(document.createTextNode(block.suffix));
         } else part.textContent = block.text;
         article.append(part);
       }
