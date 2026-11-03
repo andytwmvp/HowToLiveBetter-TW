@@ -91,7 +91,7 @@
     {
       "id": "TW-13-005",
       "before_sha256": "52b2c5bffc17f04d98a87a318eda3d91409513738f340170ea8d10dd011a2e67",
-      "after_sha256": "85ee9480999b86efa91d94e21a7ae87b58809003a0e3fc09166d8c8ff850f400",
+      "after_sha256": "0530b98901ebaefc68fcc20e22a83a15dbc4b7db85410b697b85573a6d43844d",
       "prior_revision": "d5edd26bd6487ace6f1b94d8ee7a6bf6adc7831b",
       "prior_review_kind": "review_file",
       "prior_review_sha256": "e8294e7552bb2cc3e71a5b39019095a0bcabd568d7dc3a2cf0bb6154643d2bb4",
@@ -102,12 +102,13 @@
       "status": "ai_source_rechecked_professional_pending",
       "taiwan_context": "台灣機車通勤時突發單眼視線變暗，先安全停車、停止操作並安排急診評估；不把單一騎士案例當成全國發生率。",
       "frequency_assessment": "截至2026-11-04未找到台灣短暫單眼黑矇的全國病例分子與暴露分母。臺北市立聯合醫院騎士病例是單一個案，健保署衛教沒有頻率資料；不能估算個人中風機率。",
-      "changes": "保留台灣機車騎士單一病例作情境例而非頻率證據；加入健保署對短暫單眼視力惡化及症狀消退仍就醫的警訊，分開持續或合併神經症狀時撥119與已恢復時陪同急診；不再把單一病例暗示為一般風險。",
+      "changes": "保留台灣機車騎士單一病例作情境例而非頻率證據；加入健保署對短暫單眼視力惡化及症狀消退仍就醫的警訊，並依健保署委託醫藥品查驗中心的官方評估資料，補明即使症狀恢復也要記錄時間並撥119，依派遣員指示送醫；不再把單一病例暗示為一般風險。",
       "source_ids": [
         "ch13_amaurosis_tpe",
         "ch13_cerebellar_vghtpe",
         "retro_stroke_802",
-        "ch13_nhia_stroke_alert_20231129"
+        "ch13_nhia_stroke_alert_20231129",
+        "ch13_stroke_resolved_symptoms_ambulance_nhia_20230605"
       ],
       "previous_source_ids": [
         "ch13_amaurosis_tpe",
@@ -147,6 +148,14 @@
           "supporting_passage": "國軍高雄總醫院頁面標示2026-02-26；FAST段落指示記錄時間並撥119，症狀段列出複視、視野缺損與步態不穩。",
           "accessed_at": "2026-11-04",
           "retrieval_method": "2026-11-04重讀指定醫院HTML與更新日期，僅採症狀及FAST分流段落。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/dl-47977-0b0c7e6d2d824b78a20a40313153d14a-1.pdf",
+          "claim": "突然單眼或雙眼視力模糊、複視或喪失，即使症狀消退仍應記錄時間並叫救護車送醫。",
+          "supporting_passage": "健保署委託醫藥品查驗中心於2023-06-05完成的補充評估報告PDF第5/52頁，列出單眼或雙眼視力突然模糊、複視或喪失等腦中風警訊，並明確建議即使症狀消退仍記下發作時間、叫救護車送醫；本篇只採用警訊與求援段落，不據此引述治療時窗或給付條件。",
+          "accessed_at": "2026-11-04",
+          "retrieval_method": "2026-11-04讀取健保署網站所連結的52頁醫療科技評估補充報告，核對完成日期及PDF第5頁警訊／救護段落；僅採求援建議，不採報告中的治療時窗或給付內容。",
+          "source_id": "ch13_stroke_resolved_symptoms_ambulance_nhia_20230605"
         }
       ],
       "statistics_assessed": [
@@ -166,7 +175,7 @@
         }
       ],
       "limits": [
-        "短暫單眼視線變暗不一定是中風，也可能有視網膜、角膜或其他眼疾原因；民眾無法自行診斷，症狀恢復仍應儘速評估。",
+        "短暫單眼視線變暗不一定是中風，也可能有視網膜、角膜或其他眼疾原因；民眾無法自行診斷，但症狀恢復仍須記錄時間並撥119求援。",
         "單一騎士病例不是台灣全國發生率或個人風險估計，沒有相同定義的母數時不推算機率。",
         "本次為AI輔助來源再核對，未取得獨立醫師或救護專業審閱。"
       ],
@@ -221,7 +230,7 @@
           "source_id": "ch13_aortic_dissection_taiwan_nhi_2023",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10111447/",
           "claim": "台灣健保研究報告2005至2018年成年人主動脈剝離年平均新診斷率男性12.69/10萬、女性5.34/10萬，並說明診斷與分母定義及漏計限制。",
-          "supporting_passage": "原始研究以台灣健保理賠資料連結死亡登記，納入年滿18歲者2005-01-01至2018-12-31的住院ICD-9-CM 441.0x及ICD-10-CM I71.0x診斷，另以急診診斷、CT申報且3日內死亡嘗試納入院前死亡。發生率分母為當年新診斷健保對象中、前兩年沒有主動脈剝離診斷者；年平均已診斷率（95% CI）男性12.69（12.50–12.89）、女性5.34（5.22–5.47）/10萬。作者指出未納入未接受醫療便在家死亡者，故是已診斷率並可能低估。摘要和結果女性總人數存在7052與7054差異，本篇未使用總人數。",
+          "supporting_passage": "原始研究以台灣健保理賠資料連結死亡登記，納入年滿18歲者2005-01-01至2018-12-31的住院ICD-9-CM 441.0x及ICD-10-CM I71.0x診斷，另以急診診斷、CT申報且3日內死亡嘗試納入院前死亡。發生率分母為當年健保對象中、前兩年沒有主動脈剝離診斷者；年平均已診斷率（95% CI）男性12.69（12.50–12.89）、女性5.34（5.22–5.47）/10萬。作者指出未納入未接受醫療便在家死亡者，故是已診斷率並可能低估。摘要和結果女性總人數存在7052與7054差異，本篇未使用總人數。",
           "accessed_at": "2026-11-04",
           "retrieval_method": "2026-11-04閱讀JAHA原始研究全文HTML及PubMed書目資料；核對研究設計、資料期間、納入定義、分母、率值與限制。"
         },
@@ -338,7 +347,8 @@
     "ch13_nhia_stroke_alert_20231129",
     "ch13_aortic_dissection_taiwan_nhi_2023",
     "ch13_aortic_dissection_femh_202512",
-    "ch13_csdh_taiwan_nhi_2014"
+    "ch13_csdh_taiwan_nhi_2014",
+    "ch13_stroke_resolved_symptoms_ambulance_nhia_20230605"
   ],
   "professional_review": {
     "required": true,
@@ -356,8 +366,8 @@
   "counts_after": {
     "core_completed": 282,
     "runtime_items": 293,
-    "runtime_sources": 1059,
-    "registry_sources": 1142,
+    "runtime_sources": 1060,
+    "registry_sources": 1143,
     "json_files": 543
   }
 }

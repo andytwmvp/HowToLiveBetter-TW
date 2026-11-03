@@ -7525,7 +7525,8 @@
         "ch13_amaurosis_tpe",
         "ch13_cerebellar_vghtpe",
         "retro_stroke_802",
-        "ch13_nhia_stroke_alert_20231129"
+        "ch13_nhia_stroke_alert_20231129",
+        "ch13_stroke_resolved_symptoms_ambulance_nhia_20230605"
       ],
       "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",

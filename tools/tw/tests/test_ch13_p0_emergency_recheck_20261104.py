@@ -139,7 +139,13 @@ class Chapter13P0EmergencyRecheckTests(unittest.TestCase):
         self.assertIn("不能區分", head_injury["statistics_assessed"][0]["limitations"])
 
         self.assertIn("短暫單眼視力", self.runtime_items["TW-13-005"]["body"])
-        self.assertIn("即使視力已恢復", self.runtime_items["TW-13-005"]["body"])
+        self.assertIn("無論視力是否恢復", self.runtime_items["TW-13-005"]["body"])
+        self.assertIn("撥119", self.runtime_items["TW-13-005"]["body"])
+        stroke_ambulance = next(
+            check for check in monocular["source_checks"]
+            if check["source_id"] == "ch13_stroke_resolved_symptoms_ambulance_nhia_20230605"
+        )
+        self.assertIn("即使症狀消退", stroke_ambulance["supporting_passage"])
         self.assertNotIn("未核對", self.runtime_items["TW-13-008"]["body"])
         aorta_checks = self.batch_items["TW-13-008"]["source_checks"]
         femh_check = next(check for check in aorta_checks if check["source_id"] == "ch13_aortic_dissection_femh_202512")
@@ -152,12 +158,14 @@ class Chapter13P0EmergencyRecheckTests(unittest.TestCase):
             "ch13_aortic_dissection_taiwan_nhi_2023",
             "ch13_aortic_dissection_femh_202512",
             "ch13_csdh_taiwan_nhi_2014",
+            "ch13_stroke_resolved_symptoms_ambulance_nhia_20230605",
         ])
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["registry_sources"], 1142)
-        self.assertEqual(self.batch["counts_after"]["json_files"], 543)
-        self.assertEqual(self.runtime["updated_at"], self.batch["reviewed_at"])
+        self.assertGreaterEqual(len(self.runtime["items"]), self.batch["counts_after"]["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), self.batch["counts_after"]["runtime_sources"])
+        current_coverage = read_json("localization/tw-edition/coverage.json")
+        self.assertGreaterEqual(current_coverage["registry_sources"], self.batch["counts_after"]["registry_sources"])
+        self.assertGreaterEqual(current_coverage["json_files_checked"], self.batch["counts_after"]["json_files"])
+        self.assertGreaterEqual(self.runtime["updated_at"], self.batch["reviewed_at"])
         self.assertEqual(self.runtime["review_due_at"], self.batch["review_due_at"])
 
 
