@@ -39,11 +39,12 @@ class GamblingPrepBoneTests(unittest.TestCase):
  def test_recheck_metadata_changes_are_bound_to_body_and_protected_fields(self):
   import copy
   from retroactive_audit import documented_revision,validate_recheck_history
-  old=next(x for x in json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT))['items'] if x['id']=='TW-13-016')
-  new=next(x for x in validate_runtime()['items'] if x['id']==old['id'])
+  new=next(x for x in validate_runtime()['items'] if x['id']=='TW-13-016')
   register=read('localization/retroactive-review-register-20261019.json')
   current_sha=hashlib.sha256((ROOT/new['target_path']).read_bytes()).hexdigest()
-  rec=next(x for x in register['substantive_rechecks'] if x['id']==old['id'] and x['after_sha256']==current_sha)
+  rec=next(x for x in register['substantive_rechecks'] if x['id']==new['id'] and x['after_sha256']==current_sha)
+  prior_runtime=json.loads(subprocess.check_output(['git','show',rec['prior_revision']+':localization/tw-edition/runtime.json'],cwd=ROOT))
+  old=next(x for x in prior_runtime['items'] if x['id']==new['id'])
   validate_recheck_history(ROOT,rec,new)
   self.assertTrue(documented_revision(old,new,rec))
   for field,value in [('title','與正文不同的標題'),('limits','正文沒有的限制'),('eligibility',{'automatic':True}),('target_path','locales/zh-TW/wrong.md'),('review_status','verified'),('question','沒有對應正文的提問')]:

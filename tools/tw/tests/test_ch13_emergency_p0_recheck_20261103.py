@@ -15,6 +15,8 @@ from retroactive_audit import validate_recheck_history
 BASE = "58bdcaa0906c01e1a663c3dc41bf4e75fa911bc3"
 BATCH_PATH = "localization/ch13-p0-emergency-recheck-20261103.json"
 SOURCE_PATH = "localization/tw-edition/sources/ch13-p0-emergency-recheck-20261103.json"
+FOLLOWUP_PATH = "localization/ch13-seizure-postictal-review-20261104.json"
+FOLLOWUP_SOURCE_PATH = "localization/tw-edition/sources/ch13-seizure-postictal-review-20261104.json"
 ITEM_IDS = ("TW-13-015", "TW-13-016", "TW-13-020", "TW-13-045")
 
 
@@ -38,6 +40,14 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
         cls.batch = read_json(BATCH_PATH)
         cls.batch_items = {item["id"]: item for item in cls.batch["items"]}
         cls.evidence_sources = read_json(SOURCE_PATH)["sources"]
+        cls.followup = read_json(FOLLOWUP_PATH)
+        cls.followup_item = cls.followup["items"][0]
+        cls.followup_sources = read_json(FOLLOWUP_SOURCE_PATH)["sources"]
+        batch_runtime = json.loads(subprocess.check_output(
+            ["git", "show", f"{cls.followup['prior_revision']}:localization/tw-edition/runtime.json"],
+            cwd=ROOT,
+        ))
+        cls.batch_runtime_items = {item["id"]: item for item in batch_runtime["items"]}
 
     def test_batch_records_append_actual_body_and_review_hash_edges(self):
         self.assertEqual(self.batch["baseline_main_sha"], BASE)
@@ -60,15 +70,16 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
             with self.subTest(item_id=item_id):
                 item = self.runtime_items[item_id]
                 review = self.reviews[item_id]
-                record = self.batch_items[item_id]
+                batch_record = self.batch_items[item_id]
                 history = [
                     row for row in self.register["substantive_rechecks"]
                     if row["id"] == item_id and row["reviewed_at"] == self.batch["reviewed_at"]
                 ]
                 self.assertEqual(len(history), 1)
-                self.assertEqual(history[0], record)
-                self.assertEqual(record["status"], "ai_source_rechecked_professional_pending")
-                self.assertEqual(record["review_due_at"], self.batch["review_due_at"])
+                self.assertEqual(history[0], batch_record)
+                self.assertEqual(batch_record["status"], "ai_source_rechecked_professional_pending")
+                self.assertEqual(batch_record["review_due_at"], self.batch["review_due_at"])
+                record = self.followup_item if item_id == "TW-13-016" else batch_record
                 self.assertEqual(review["reviewed_at"], record["reviewed_at"])
                 self.assertEqual(review["review_due_at"], record["review_due_at"])
 
@@ -76,18 +87,22 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
                 body = body_path.read_text(encoding="utf-8")
                 body_sha = hashlib.sha256(body_path.read_bytes()).hexdigest()
                 self.assertEqual(body, item["body"])
+                self.assertEqual(
+                    hashlib.sha256(self.batch_runtime_items[item_id]["body"].encode("utf-8")).hexdigest(),
+                    batch_record["after_sha256"],
+                )
                 self.assertEqual(body_sha, record["after_sha256"])
                 self.assertEqual(body_sha, review["target_sha256"])
                 self.assertEqual(self.manifest_items[item_id]["target_path"], item["target_path"])
                 self.assertEqual(self.manifest_items[item_id]["status"], "verified")
 
-                current_source_ids = set(item["source_ids"])
+                current_source_ids = set(record["source_ids"])
                 review_urls = {source["url"] for source in review["source_checks"]}
                 runtime_urls = {self.runtime_sources[source_id]["url"] for source_id in current_source_ids}
                 body_urls = set(re.findall(r"\]\((https?://[^)]+)\)", body))
                 self.assertEqual(review_urls, runtime_urls)
                 self.assertEqual(body_urls, runtime_urls)
-                self.assertEqual(set(record["source_ids"]), current_source_ids)
+                self.assertEqual(set(item["source_ids"]), current_source_ids)
                 self.assertEqual(review.get("reader_copy_cleanup"), None)
                 self.assertNotRegex(
                     body,
@@ -95,6 +110,43 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
                 )
 
                 validate_recheck_history(ROOT, record, item)
+
+    def test_postictal_followup_preserves_the_november_3_review_edge(self):
+        item = self.runtime_items["TW-13-016"]
+        previous = self.batch_items["TW-13-016"]
+        followup = self.followup_item
+        self.assertEqual(self.followup["reviewed_at"], "2026-11-04")
+        self.assertEqual(self.followup["review_due_at"], "2027-02-04")
+        self.assertEqual(followup["id"], item["id"])
+        self.assertEqual(followup["before_sha256"], previous["after_sha256"])
+        self.assertEqual(followup["prior_reviewed_at"], "2026-11-03")
+        self.assertEqual(followup["prior_review_sha256"], hashlib.sha256(
+            subprocess.check_output(
+                ["git", "show", f"{followup['prior_revision']}:localization/reviews/TW-13-016.json"],
+                cwd=ROOT,
+            )
+        ).hexdigest())
+        self.assertEqual(followup["after_sha256"], hashlib.sha256(item["body"].encode("utf-8")).hexdigest())
+        self.assertEqual(
+            followup["source_ids"][:len(followup["previous_source_ids"])],
+            followup["previous_source_ids"],
+        )
+        self.assertEqual(
+            {row[0] for row in self.followup_sources},
+            set(self.followup["new_source_ids"]),
+        )
+        for source_row in self.followup_sources:
+            runtime_source = self.runtime_sources[source_row[0]]
+            self.assertEqual(source_row, [
+                runtime_source["id"], runtime_source["title"],
+                runtime_source["url"], runtime_source["supports"],
+            ])
+            self.assertIn(source_row[0], followup["source_ids"])
+        self.assertIn("抽搐停止後", item["body"])
+        self.assertIn("協助側躺", item["body"])
+        self.assertIn("完全清醒且能安全吞嚥前，不要給食物、飲水或口服藥物", item["body"])
+        self.assertIn("先打119並遵從派遣員指示", item["body"])
+        validate_recheck_history(ROOT, followup, item)
 
     def test_retired_sources_are_preserved_and_unmeasured_frequency_stays_explicit(self):
         baseline = json.loads(
@@ -154,12 +206,16 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
 
     def test_batch_source_counts_match_runtime_registry_and_file_inventory(self):
         self.assertEqual(len(self.batch["new_source_ids"]), 10)
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["registry_sources"], read_json("localization/tw-edition/coverage.json")["registry_sources"])
-        self.assertEqual(self.batch["counts_after"]["json_files"], read_json("localization/tw-edition/coverage.json")["json_files_checked"])
+        self.assertEqual(self.batch["counts_after"]["runtime_sources"], self.followup["counts_before"]["runtime_sources_before"])
+        self.assertEqual(self.batch["counts_after"]["registry_sources"], self.followup["counts_before"]["registry_sources_before"])
+        self.assertEqual(self.batch["counts_after"]["json_files"], self.followup["counts_before"]["json_files_before"])
+        self.assertEqual(self.followup["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
+        self.assertEqual(self.followup["counts_after"]["registry_sources"], read_json("localization/tw-edition/coverage.json")["registry_sources"])
+        self.assertEqual(self.followup["counts_after"]["json_files"], read_json("localization/tw-edition/coverage.json")["json_files_checked"])
         self.assertEqual(self.batch["counts_after"]["runtime_sources"], 1052)
-        self.assertEqual(self.batch["counts_after"]["registry_sources"], 1135)
-        self.assertEqual(self.batch["counts_after"]["json_files"], 538)
+        self.assertEqual(self.followup["counts_after"]["runtime_sources"], 1055)
+        self.assertEqual(self.followup["counts_after"]["registry_sources"], 1138)
+        self.assertEqual(self.followup["counts_after"]["json_files"], 540)
 
     def test_emergency_guidance_keeps_taiwan_specific_safety_boundaries(self):
         bodies = {item_id: self.runtime_items[item_id]["body"] for item_id in ITEM_IDS}
