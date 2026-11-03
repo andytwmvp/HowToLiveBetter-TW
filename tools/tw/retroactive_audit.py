@@ -1297,12 +1297,14 @@ _HISTORY_REGISTER_INDEX_CACHE: dict[tuple[str, str], dict[tuple[str, str], str]]
 
 
 def _history_register_revision_index(root: Path, head: str) -> dict[tuple[str, str], str]:
-    """Index append-only review rows by the first mainline commit that contains them.
+    """Index append-only review rows by the first reachable commit that contains them.
 
-    `git log -S <sha>` is exact but expensive when the history-preservation
-    tests resolve hundreds of independent article hashes. The register changes
-    in a bounded number of commits, so read each immutable snapshot once and
-    build an exact row-to-commit index without weakening any hash checks.
+    GitHub Actions tests pull requests from a synthetic merge commit. First-
+    parent traversal sees the merge snapshot but omits the pull request's
+    intermediate commits, which can contain distinct append-only review rows.
+    Walk the reachable commit graph in parent-before-child order so both the
+    base and pull request histories remain available for exact validation.
+    Reading each immutable snapshot once avoids a costly `git log -S` per row.
     """
     cache_key = (str(root.resolve()), head)
     if cache_key in _HISTORY_REGISTER_INDEX_CACHE:
@@ -1312,7 +1314,8 @@ def _history_register_revision_index(root: Path, head: str) -> dict[tuple[str, s
     revisions_key = cache_key
     if revisions_key not in _HISTORY_REVISIONS_CACHE:
         _HISTORY_REVISIONS_CACHE[revisions_key] = subprocess.check_output(
-            ["git", "log", "--first-parent", "--full-history", "--format=%H", "--", register_path],
+            ["git", "rev-list", "--reverse", "--topo-order", "--full-history",
+             head, "--", register_path],
             cwd=root, text=True, stderr=subprocess.DEVNULL).splitlines()
 
     wanted: set[tuple[str, str]] = set()
@@ -1323,7 +1326,7 @@ def _history_register_revision_index(root: Path, head: str) -> dict[tuple[str, s
             wanted.add((field, json.dumps(row, ensure_ascii=False, sort_keys=True)))
 
     index: dict[tuple[str, str], str] = {}
-    for revision in reversed(_HISTORY_REVISIONS_CACHE[revisions_key]):
+    for revision in _HISTORY_REVISIONS_CACHE[revisions_key]:
         try:
             snapshot = json.loads(subprocess.check_output(
                 ["git", "show", revision + ":" + register_path], cwd=root,
@@ -1521,7 +1524,7 @@ def _historical_edge_is_valid(root: Path, revision: str, record: dict, old: dict
 
 
 def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, dict]]:
-    """Return valid committed revisions for one item, in mainline order.
+    """Return valid committed revisions for one item, in reachable history order.
 
     Use Git's string search to locate commits that introduced each recorded
     after-hash, then validate those immutable snapshots. Reading every full
@@ -1537,7 +1540,7 @@ def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, di
                if record.get("id") == key]
     revisions_key = (str(root.resolve()), head)
     register_index = _history_register_revision_index(root, head)
-    order = {revision: index for index, revision in enumerate(reversed(_HISTORY_REVISIONS_CACHE[revisions_key]))}
+    order = {revision: index for index, revision in enumerate(_HISTORY_REVISIONS_CACHE[revisions_key])}
     ranked_edges: list[tuple[int, tuple[dict, dict, dict]]] = []
     seen: set[tuple[str, str]] = set()
     runtime_cache: dict[str, dict] = {}

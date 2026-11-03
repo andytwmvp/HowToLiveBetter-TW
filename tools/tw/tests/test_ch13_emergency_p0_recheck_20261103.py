@@ -17,6 +17,7 @@ BATCH_PATH = "localization/ch13-p0-emergency-recheck-20261103.json"
 SOURCE_PATH = "localization/tw-edition/sources/ch13-p0-emergency-recheck-20261103.json"
 FOLLOWUP_PATH = "localization/ch13-seizure-postictal-review-20261104.json"
 FOLLOWUP_SOURCE_PATH = "localization/tw-edition/sources/ch13-seizure-postictal-review-20261104.json"
+CLARIFICATION_PATH = "localization/ch13-seizure-movement-clarification-20261104.json"
 ITEM_IDS = ("TW-13-015", "TW-13-016", "TW-13-020", "TW-13-045")
 
 
@@ -43,6 +44,8 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
         cls.followup = read_json(FOLLOWUP_PATH)
         cls.followup_item = cls.followup["items"][0]
         cls.followup_sources = read_json(FOLLOWUP_SOURCE_PATH)["sources"]
+        cls.clarification = read_json(CLARIFICATION_PATH)
+        cls.clarification_item = cls.clarification["items"][0]
         batch_runtime = json.loads(subprocess.check_output(
             ["git", "show", f"{cls.followup['prior_revision']}:localization/tw-edition/runtime.json"],
             cwd=ROOT,
@@ -79,7 +82,7 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
                 self.assertEqual(history[0], batch_record)
                 self.assertEqual(batch_record["status"], "ai_source_rechecked_professional_pending")
                 self.assertEqual(batch_record["review_due_at"], self.batch["review_due_at"])
-                record = self.followup_item if item_id == "TW-13-016" else batch_record
+                record = self.clarification_item if item_id == "TW-13-016" else batch_record
                 self.assertEqual(review["reviewed_at"], record["reviewed_at"])
                 self.assertEqual(review["review_due_at"], record["review_due_at"])
 
@@ -115,6 +118,7 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
         item = self.runtime_items["TW-13-016"]
         previous = self.batch_items["TW-13-016"]
         followup = self.followup_item
+        clarification = self.clarification_item
         self.assertEqual(self.followup["reviewed_at"], "2026-11-04")
         self.assertEqual(self.followup["review_due_at"], "2027-02-04")
         self.assertEqual(followup["id"], item["id"])
@@ -126,7 +130,28 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
                 cwd=ROOT,
             )
         ).hexdigest())
-        self.assertEqual(followup["after_sha256"], hashlib.sha256(item["body"].encode("utf-8")).hexdigest())
+        first_followup_runtime = json.loads(subprocess.check_output(
+            ["git", "show", f"{self.clarification['prior_revision']}:localization/tw-edition/runtime.json"],
+            cwd=ROOT,
+        ))
+        first_followup_item = next(
+            row for row in first_followup_runtime["items"] if row["id"] == "TW-13-016"
+        )
+        self.assertEqual(
+            followup["after_sha256"],
+            hashlib.sha256(first_followup_item["body"].encode("utf-8")).hexdigest(),
+        )
+        self.assertEqual(clarification["before_sha256"], followup["after_sha256"])
+        self.assertEqual(clarification["prior_reviewed_at"], "2026-11-04")
+        self.assertEqual(clarification["after_sha256"], hashlib.sha256(item["body"].encode("utf-8")).hexdigest())
+        self.assertEqual(
+            self.clarification["counts_before"]["json_files_before"],
+            self.followup["counts_after"]["json_files"],
+        )
+        self.assertEqual(
+            self.clarification["counts_after"]["json_files"],
+            read_json("localization/tw-edition/coverage.json")["json_files_checked"],
+        )
         self.assertEqual(
             followup["source_ids"][:len(followup["previous_source_ids"])],
             followup["previous_source_ids"],
@@ -146,7 +171,10 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
         self.assertIn("協助側躺", item["body"])
         self.assertIn("完全清醒且能安全吞嚥前，不要給食物、飲水或口服藥物", item["body"])
         self.assertIn("先打119並遵從派遣員指示", item["body"])
-        validate_recheck_history(ROOT, followup, item)
+        self.assertIn("不要在抽搐期間硬翻身或搬動患者", item["body"])
+        self.assertIn("抽搐停止後，則依前述呼吸及受傷狀況判斷是否協助側躺", item["body"])
+        self.assertNotIn("不要硬翻身或搬動患者", item["body"])
+        validate_recheck_history(ROOT, clarification, item)
 
     def test_retired_sources_are_preserved_and_unmeasured_frequency_stays_explicit(self):
         baseline = json.loads(
@@ -209,9 +237,9 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
         self.assertEqual(self.batch["counts_after"]["runtime_sources"], self.followup["counts_before"]["runtime_sources_before"])
         self.assertEqual(self.batch["counts_after"]["registry_sources"], self.followup["counts_before"]["registry_sources_before"])
         self.assertEqual(self.batch["counts_after"]["json_files"], self.followup["counts_before"]["json_files_before"])
-        self.assertEqual(self.followup["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.followup["counts_after"]["registry_sources"], read_json("localization/tw-edition/coverage.json")["registry_sources"])
-        self.assertEqual(self.followup["counts_after"]["json_files"], read_json("localization/tw-edition/coverage.json")["json_files_checked"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), self.followup["counts_after"]["runtime_sources"])
+        self.assertGreaterEqual(read_json("localization/tw-edition/coverage.json")["registry_sources"], self.followup["counts_after"]["registry_sources"])
+        self.assertGreaterEqual(read_json("localization/tw-edition/coverage.json")["json_files_checked"], self.followup["counts_after"]["json_files"])
         self.assertEqual(self.batch["counts_after"]["runtime_sources"], 1052)
         self.assertEqual(self.followup["counts_after"]["runtime_sources"], 1055)
         self.assertEqual(self.followup["counts_after"]["registry_sources"], 1138)
