@@ -14,6 +14,23 @@ import retroactive_audit as audit
 
 
 class RetroactiveAuditTests(unittest.TestCase):
+    def test_same_day_rechecks_follow_append_only_register_order_not_hash_order(self):
+        intermediate = {
+            "id": "TW-13-016",
+            "reviewed_at": "2026-11-04",
+            "after_sha256": "7" * 64,
+        }
+        final = {
+            "id": "TW-13-016",
+            "reviewed_at": "2026-11-04",
+            "after_sha256": "6" * 64,
+        }
+
+        self.assertEqual(
+            audit._newest_recheck_records([intermediate, final]),
+            [final, intermediate],
+        )
+
     def test_git_blob_reuses_one_batch_process_for_multiple_history_reads(self):
         with tempfile.TemporaryDirectory(prefix="tw-git-batch-test-") as folder:
             root = Path(folder)
@@ -36,6 +53,56 @@ class RetroactiveAuditTests(unittest.TestCase):
                 close_reader = getattr(audit, "_close_git_batch_reader", None)
                 if close_reader:
                     close_reader(root)
+
+    def test_history_register_index_includes_pull_request_commits_in_merge_commit(self):
+        with tempfile.TemporaryDirectory(prefix="tw-merge-history-test-") as folder:
+            root = Path(folder)
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.name", "Test"], cwd=root, check=True)
+            subprocess.run(["git", "config", "user.email", "test@example.invalid"], cwd=root, check=True)
+            subprocess.run(["git", "branch", "-M", "main"], cwd=root, check=True)
+            register_path = root / "localization/retroactive-review-register-20261019.json"
+            register_path.parent.mkdir(parents=True)
+            register_path.write_text(
+                json.dumps({"substantive_rechecks": [], "reader_copy_cleanups": []}),
+                encoding="utf-8",
+            )
+            subprocess.run(["git", "add", str(register_path.relative_to(root))], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "initial history"], cwd=root, check=True)
+            subprocess.run(["git", "checkout", "-qb", "pull-request"], cwd=root, check=True)
+
+            first = {"id": "TW-13-016", "reviewed_at": "2026-11-03", "after_sha256": "a" * 64}
+            data = {"substantive_rechecks": [first], "reader_copy_cleanups": []}
+            register_path.write_text(json.dumps(data), encoding="utf-8")
+            subprocess.run(["git", "add", str(register_path.relative_to(root))], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "first review in pull request"], cwd=root, check=True)
+            first_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            second = {"id": "TW-13-016", "reviewed_at": "2026-11-04", "after_sha256": "b" * 64}
+            data["substantive_rechecks"].append(second)
+            register_path.write_text(json.dumps(data), encoding="utf-8")
+            subprocess.run(["git", "add", str(register_path.relative_to(root))], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "follow-up review in pull request"], cwd=root, check=True)
+            second_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            subprocess.run(["git", "checkout", "main"], cwd=root, check=True, capture_output=True)
+            (root / "main-only.txt").write_text("base branch update", encoding="utf-8")
+            subprocess.run(["git", "add", "main-only.txt"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "main branch update"], cwd=root, check=True)
+            subprocess.run(["git", "merge", "--no-ff", "-qm", "synthetic GitHub pull request merge", "pull-request"], cwd=root, check=True)
+            head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+
+            try:
+                index = audit._history_register_revision_index(root, head)
+                first_signature = audit._register_record_signature("substantive_rechecks", first)
+                second_signature = audit._register_record_signature("substantive_rechecks", second)
+                self.assertEqual(index[first_signature], first_commit)
+                self.assertEqual(index[second_signature], second_commit)
+                revisions = audit._HISTORY_REVISIONS_CACHE[(str(root.resolve()), head)]
+                self.assertLess(revisions.index(first_commit), revisions.index(second_commit))
+            finally:
+                audit._HISTORY_REGISTER_INDEX_CACHE.pop((str(root.resolve()), head), None)
+                audit._HISTORY_REVISIONS_CACHE.pop((str(root.resolve()), head), None)
 
     def test_explicit_recheck_supersession_requires_exact_prior_record(self):
         previous = {

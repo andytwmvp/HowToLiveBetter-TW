@@ -41,6 +41,7 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
         cls.register = load('localization/retroactive-review-register-20261019.json')
         cls.batch = load(BATCH)
         cls.correction = load('localization/medical-eldercare-correction-20261103.json')
+        cls.following_batch = load('localization/ch13-p0-emergency-recheck-20261103.json')
         cls.rows = {}
         for item_id in IDS:
             review = load(f'localization/reviews/{item_id}.json')
@@ -117,9 +118,21 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
         self.assertEqual(followup['source_counts']['registry_before'], self.batch['core_progress']['after']['registry_sources'])
         self.assertEqual(followup['source_counts']['runtime_after'], correction['source_counts']['runtime_sources_before'])
         self.assertEqual(followup['source_counts']['registry_after'], correction['source_counts']['registry_sources_before'])
-        self.assertEqual(correction['source_counts']['runtime_sources_after'], len(self.runtime['sources']))
-        self.assertEqual(correction['source_counts']['registry_sources_after'], coverage['registry_sources'])
-        self.assertEqual(correction['source_counts']['json_files_after'], coverage['json_files_checked'])
+        self.assertEqual(
+            correction['source_counts']['runtime_sources_after'],
+            self.following_batch['counts_before']['runtime_sources_before'],
+        )
+        self.assertEqual(
+            correction['source_counts']['registry_sources_after'],
+            self.following_batch['counts_before']['registry_sources_before'],
+        )
+        self.assertGreaterEqual(len(self.runtime['sources']), self.following_batch['counts_after']['runtime_sources'])
+        self.assertGreaterEqual(coverage['registry_sources'], self.following_batch['counts_after']['registry_sources'])
+        self.assertGreaterEqual(coverage['json_files_checked'], self.following_batch['counts_after']['json_files'])
+        self.assertEqual(
+            correction['source_counts']['json_files_after'],
+            self.following_batch['counts_before']['json_files_before'],
+        )
         self.assertEqual(self.batch['source_counts']['references_retired'], 8)
         for item_id, row in self.rows.items():
             previous = next(item for item in old_runtime['items'] if item['id'] == item_id)
@@ -184,8 +197,14 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
         self.assertNotIn(duplicate_id, source_evidence_ids)
 
         coverage = load('localization/tw-edition/coverage.json')
-        self.assertEqual(self.correction['source_counts']['runtime_sources_after'], len(self.runtime['sources']))
-        self.assertEqual(self.correction['source_counts']['registry_sources_after'], coverage['registry_sources'])
+        self.assertEqual(
+            self.correction['source_counts']['runtime_sources_after'],
+            self.following_batch['counts_before']['runtime_sources_before'],
+        )
+        self.assertEqual(
+            self.correction['source_counts']['registry_sources_after'],
+            self.following_batch['counts_before']['registry_sources_before'],
+        )
         self.assertEqual(self.correction['source_counts']['runtime_sources_after'], 1042)
         self.assertEqual(self.correction['source_counts']['registry_sources_after'], 1125)
 

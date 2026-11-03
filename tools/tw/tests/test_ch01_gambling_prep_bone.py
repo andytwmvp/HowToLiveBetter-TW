@@ -4,8 +4,8 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from body_renderer import body_blocks
-from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history,validate_reader_copy_cleanup_history
-BASE='201fd64e138880528ce6d9effc86d06fe67f36cb'
+from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
+BASE='58bdcaa0906c01e1a663c3dc41bf4e75fa911bc3'
 NEW={f'TW-01-{n:03}' for n in range(37,41)}
 RECHECK={f'TW-13-{n:03}' for n in (16,17,18,19)}
 def read(p):return json.loads((ROOT/p).read_text())
@@ -38,16 +38,17 @@ class GamblingPrepBoneTests(unittest.TestCase):
   self.assertEqual(counts['core_after'],counts['core_before']+len(batch['new_core_ids']));self.assertGreaterEqual(core,counts['core_after']);self.assertIn('臺灣生活情境',rt['scope']);self.assertNotRegex(rt['scope'],r'\d+\s*(?:條|項)')
  def test_recheck_metadata_changes_are_bound_to_body_and_protected_fields(self):
   import copy
-  from retroactive_audit import documented_revision
-  old=next(x for x in json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT))['items'] if x['id']=='TW-13-016')
-  new=next(x for x in validate_runtime()['items'] if x['id']==old['id'])
+  from retroactive_audit import documented_revision,validate_recheck_history
+  new=next(x for x in validate_runtime()['items'] if x['id']=='TW-13-016')
   register=read('localization/retroactive-review-register-20261019.json')
-  rec=next(x for x in register['substantive_rechecks'] if x['id']==old['id'])
-  cleanup=next(x for x in register['reader_copy_cleanups'] if x['id']==old['id'] and x['after_sha256']==hashlib.sha256(new['body'].encode()).hexdigest())
-  rechecked=validate_reader_copy_cleanup_history(ROOT,cleanup,new)
-  self.assertTrue(documented_revision(old,rechecked,rec))
+  current_sha=hashlib.sha256((ROOT/new['target_path']).read_bytes()).hexdigest()
+  rec=next(x for x in register['substantive_rechecks'] if x['id']==new['id'] and x['after_sha256']==current_sha)
+  prior_runtime=json.loads(subprocess.check_output(['git','show',rec['prior_revision']+':localization/tw-edition/runtime.json'],cwd=ROOT))
+  old=next(x for x in prior_runtime['items'] if x['id']==new['id'])
+  validate_recheck_history(ROOT,rec,new)
+  self.assertTrue(documented_revision(old,new,rec))
   for field,value in [('title','與正文不同的標題'),('limits','正文沒有的限制'),('eligibility',{'automatic':True}),('target_path','locales/zh-TW/wrong.md'),('review_status','verified'),('question','沒有對應正文的提問')]:
-   bad=copy.deepcopy(rechecked);bad[field]=value
+   bad=copy.deepcopy(new);bad[field]=value
    with self.subTest(field=field):self.assertFalse(documented_revision(old,bad,rec))
  def test_all_prior_content_and_actual_review_history(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT));rt=validate_runtime();ii={x['id']:x for x in rt['items']};ss={s['id']:s for s in rt['sources']}
