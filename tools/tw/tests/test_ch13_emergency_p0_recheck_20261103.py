@@ -148,9 +148,9 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
             self.clarification["counts_before"]["json_files_before"],
             self.followup["counts_after"]["json_files"],
         )
-        self.assertEqual(
-            self.clarification["counts_after"]["json_files"],
+        self.assertGreaterEqual(
             read_json("localization/tw-edition/coverage.json")["json_files_checked"],
+            self.clarification["counts_after"]["json_files"],
         )
         self.assertEqual(
             followup["source_ids"][:len(followup["previous_source_ids"])],

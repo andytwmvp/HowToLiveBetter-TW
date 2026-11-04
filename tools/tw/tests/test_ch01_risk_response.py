@@ -17,15 +17,23 @@ class RiskResponseTests(unittest.TestCase):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
+    headings=[x['text'] for x in body_blocks(i) if x['tag']=='h3']
+    self.assertEqual(len(headings),6 if key in {'TW-13-008','TW-13-010'} else 5)
+    if key in {'TW-13-008','TW-13-010'}:self.assertEqual(headings[-1],'資料來源')
  def test_emergency_actions_and_denominator_boundaries(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('先撥119',b['TW-01-033']);self.assertIn('不催吐',b['TW-01-033']);self.assertIn('不能保證',b['TW-01-033'])
   self.assertLess(b['TW-01-034'].index('119'),b['TW-01-034'].index('136'));self.assertIn('不是墜落者致死率',b['TW-01-034'])
   self.assertIn('無償',b['TW-01-035']);self.assertIn('2015年7月1日',b['TW-01-035']);self.assertIn('2023年1月1日',b['TW-01-035']);self.assertNotIn('2015-07-03',b['TW-01-035']);self.assertNotIn('86%',b['TW-01-035'])
   self.assertIn('不觸碰',b['TW-01-036']);self.assertIn('0800-088-928',b['TW-01-036']);self.assertIn('不能保證安全',b['TW-01-036'])
-  for key in RECHECK:self.assertIn('頻率',b[key])
-  self.assertIn('分母',b['TW-13-008']);self.assertIn('90%',b['TW-13-009']);self.assertIn('無法估算',b['TW-13-010']);self.assertIn('不自行扳腳尖',b['TW-13-011'])
+  statistical_limits={
+   'TW-13-008':'新診斷率',
+   'TW-13-009':'頻率',
+   'TW-13-010':'找不到較新的台灣全國資料可用來估算目前長者撞頭後短期延遲性出血的機率',
+   'TW-13-011':'頻率',
+  }
+  for key,phrase in statistical_limits.items():self.assertIn(phrase,b[key])
+  self.assertIn('分母',b['TW-13-008']);self.assertIn('90%',b['TW-13-009']);self.assertIn('不自行扳腳尖',b['TW-13-011'])
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
   rt=validate_runtime();batch=read('localization/ch01-risk-response-20261019.json');counts=batch['counts']
