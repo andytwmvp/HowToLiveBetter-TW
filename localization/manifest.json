@@ -7718,11 +7718,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-014.md",
       "sources": [
-        "ch13_burn_mohw",
-        "ch13_burn_prior",
-        "retro_burn_ntuh_limits"
+        "ch13_nhi_burn_firstaid",
+        "ch13_burn_hpa_20261104",
+        "ch13_burn_tw_nhi_2010"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "燙傷後立刻用涼的流動水衝 20 分鐘，別抹牙膏醬油",
@@ -7784,11 +7784,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-017.md",
       "sources": [
-        "ch13_hypo_hpa",
-        "ch13_hypo_vghtpe",
-        "ch13_hypo_ada_swallow"
+        "ch13_hypo_hpa_20261104",
+        "ch13_hypo_ada_swallow_20261104",
+        "ch13_firstaid_mnd",
+        "ch13_firstaid_ntfd_cpr"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "糖尿病人突然發抖、出冷汗、說話不清，先給 15 克糖，15 分鐘後複測",
@@ -7805,11 +7806,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-018.md",
       "sources": [
-        "ch13_electric_nhi",
-        "ch13_electric_vghtpe",
-        "ch13_electric_taipower"
+        "ch13_electric_taipower_typhoon",
+        "ch13_electric_nfa_safety",
+        "ch13_firstaid_mnd",
+        "ch13_firstaid_ntfd_cpr"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "有人觸電，先斷電，再用乾燥的木棍之類挑開電源，不要直接上手拉",
@@ -7866,11 +7868,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-021.md",
       "sources": [
-        "ch13_chemical_vgh",
-        "ch13_chemical_nfa",
-        "ch13_chemical_ntuh_eye"
+        "ch13_chemical_nfa_20261104",
+        "ch13_nhi_burn_firstaid",
+        "ch13_eyeinjury_vghks"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "酸鹼等化學品濺到身上，立刻脫掉汙染的衣服、用大量流動清水衝，眼睛要掰開眼皮衝，衝夠時間再走",
@@ -7909,13 +7911,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-023.md",
       "sources": [
-        "ch13_heat_firstaid",
-        "ch13_heat_2026",
-        "ch13_heat_mohw_202608",
-        "ch13_heat_niosh",
-        "ch13_heat_dataset"
+        "ch13_heat_firstaid_20261104",
+        "ch13_heat_niosh_20261104",
+        "ch13_heat_dataset_20261104",
+        "ch13_firstaid_mnd",
+        "ch13_firstaid_ntfd_cpr"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "中暑的人只要清醒，就少量多次喝涼的淡鹽水或運動飲料，別猛灌、別喝酒和高糖飲料",
@@ -8435,11 +8437,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-046.md",
       "sources": [
-        "alcohol_cch_202512",
-        "alcohol_tpech_202606",
-        "ch13_alcohol_niaaa"
+        "alcohol_cch_202512_20261104",
+        "alcohol_tpech_202606_20261104",
+        "ch13_firstaid_mnd",
+        "ch13_firstaid_ntfd_cpr",
+        "ch13_alcohol_niaaa_20261104"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "有人喝醉了，讓他側躺、有人一直守著，別讓他一個人睡；叫不醒、呼吸慢或不規律、抽搐、身上發涼就打 120",

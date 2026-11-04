@@ -1,55 +1,62 @@
 {
   "id": "TW-13-023",
-  "reviewer": "ChatGPT（AI輔助逐主張公開來源實讀與臺灣適用核對，非獨立專業簽證）",
+  "reviewer": "ChatGPT（AI輔助來源與台灣情境再核對，非獨立醫療、急救、消防、職安或眼科專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-19",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-04",
+  "review_due_at": "2027-02-04",
   "target_path": "locales/zh-TW/book/ch13/TW-13-023.md",
-  "target_sha256": "9749f944a9388a36056187da2037d40e71174d7daeaa2169ad31c76614a0236c",
+  "target_sha256": "1fe1ed57f2dafc9e5b6a0e3f59d4e8a8d3ef9a2418f67fe52da7c786829bcf1d",
   "source_checks": [
     {
+      "source_id": "ch13_heat_firstaid_20261104",
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10751&sid=18379",
-      "claim": "嚴重熱傷害須立即求援並快速降溫，只有意識清楚可安全吞嚥者才能飲水，119求援不可拖延。",
-      "supporting_passage": "前次審閱所載主張，本輪未重讀：嚴重熱傷害須立即求援並快速降溫，只有意識清楚可安全吞嚥者才能飲水，119求援不可拖延。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "本輪web／直接HTTPS取回失敗；保留前次2026-10-17實讀紀錄及來源，不冒稱本輪重讀，以新增可讀來源交叉支持。"
+      "claim": "熱中暑重症須迅速降溫並求援；意識不清或抽搐不可飲水，送醫途中仍持續降溫。",
+      "supporting_passage": "國健署急救頁搜尋索引標示2026-01-21更新，列出意識改變／抽搐的急救、快速降溫及119；直接頁面抓取本輪逾時。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "本輪核對官方搜尋索引；直接開啟失敗，以查閱限制列明。"
     },
     {
-      "url": "https://www.hpa.gov.tw/5020/20255/n",
-      "claim": "2026年夏季宣導少量多次補水，大量出汗時可適度補電解質；嚴重症狀應立即就醫。",
-      "supporting_passage": "前次審閱所載主張，本輪未重讀：2026年夏季宣導少量多次補水，大量出汗時可適度補電解質；嚴重症狀應立即就醫。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "本輪web／直接HTTPS取回失敗；保留前次2026-10-17實讀紀錄及來源，不冒稱本輪重讀，以新增可讀來源交叉支持。"
-    },
-    {
-      "url": "https://mohw.gov.tw/cp-2704-87454-1.html",
-      "claim": "少量多次補水是一般預防範例，熱症狀惡化須求援，不是對所有人灌水的定量療程。",
-      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：少量多次補水是一般預防範例，熱症狀惡化須求援，不是對所有人灌水的定量療程。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "直接HTTPS及web實讀2026-08-14公告；不將預防飲水範例套給意識不清或限水患者。"
-    },
-    {
+      "source_id": "ch13_heat_niosh_20261104",
       "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
-      "claim": "熱中暑可大量流汗且意識改變；立即求援與快速降溫，熱衰竭也需醫療評估。",
-      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：熱中暑可大量流汗且意識改變；立即求援與快速降溫，熱衰竭也需醫療評估。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "實讀2026-03-03 HTML熱中暑與熱衰竭段落；僅一般醫學原則，電話依台灣119。"
+      "claim": "熱中暑警訊含意識改變、昏厥或抽搐，應呼叫緊急醫療、移到陰涼處並快速降溫。",
+      "supporting_passage": "NIOSH頁面標示2026-03-03，逐項列出意識改變、昏厥、抽搐及移至涼爽處降溫；正文電話採台灣119。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取NIOSH HTML相關段落。"
     },
     {
+      "source_id": "ch13_heat_dataset_20261104",
       "url": "https://data.gov.tw/dataset/157637",
-      "claim": "資料為部分醫院監測人次，診斷定義含多類熱傷害，非全國所有病例或唯一病人。",
-      "supporting_passage": "實讀相關段落後獨立摘要，非逐字引文：資料為部分醫院監測人次，診斷定義含多類熱傷害，非全國所有病例或唯一病人。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "實讀2026-10-14更新metadata及截至1151011資源標籤；CSV取回失敗，未計算總人次或發生率。"
+      "claim": "熱傷害監測只涵蓋部分院所、含多類診斷，欄位為監測就醫人次；本輪CSV加總為2024年3942、2025年3496及2026年至10月26日2919人次。",
+      "supporting_passage": "平台metadata更新於2026-10-29 16:41，資源截至1151026並明示未涵蓋所有院所；本輪下載Big5 CSV 967225 bytes、SHA-256 de59b386382753110b1b0be3ded3debba2102661385b614a0e6921af11ae76b8、29308列，按admit_date及SUM_of_count加總三期間。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取政府資料開放平台metadata並下載、解析官方CSV；未將人次換算成個人發生率。"
+    },
+    {
+      "source_id": "ch13_firstaid_mnd",
+      "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+      "claim": "無反應者撥119並檢查正常呼吸；無呼吸CPR/AED，仍有呼吸採復原姿勢。",
+      "supporting_passage": "國防部全民安全指引的失去意識處理段落列出拍肩呼叫、請旁人打119、確認正常呼吸、無呼吸CPR/AED及有呼吸時復原姿勢。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取官方HTML第154至180行相關段落。"
+    },
+    {
+      "source_id": "ch13_firstaid_ntfd_cpr",
+      "url": "https://www.ntfd.gov.tw/index.php?act=article&code=detail&ids=625",
+      "claim": "只有瀕死式或喘息式呼吸不是正常呼吸，應立即求援並CPR/AED。",
+      "supporting_passage": "南投縣消防局急救教學說明喘息式呼吸可能出現在心跳停止，應呼救、指定119與AED並開始CPR。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取地方消防機關HTML第34至50行。"
     }
   ],
-  "localization_changes": "維持吞嚥分流，新增不得等待飲水觀察、不同族群水量限制、可讀2026公告及監測定義。",
-  "review_method": "實讀指定HTML與PDF頁段，逐條比對正文與台灣生活情境；取回失敗、統計分母與專業限制分項保留。",
+  "localization_changes": "把原正文過期的2026-10-14／截至10-11描述更新為實際下載並計算的截至10-26 CSV資料，增列三段監測人次及其不涵蓋全國、非唯一患者、非個人風險的限制；更新國健署急救頁連結至目前可查的18380頁，加入119、喘息式呼吸CPR/AED分流並刪除與急救無直接關係的舊預防補水重複來源。",
+  "review_method": "逐項重讀正文、上次review及原作主題；核對國健署急救資料、NIOSH急救原則與官方熱急症監測metadata，直接下載並核算原始CSV期間加總；限制中分別列出頁面直接讀取失敗及部分院所口徑。",
   "limits": [
-    "心腎疾病、限水限鹽及特殊用藥者按個別醫囑；不要猛灌、用酒精或高糖飲料替代安全飲水。頻率限制：官方熱傷害資料是部分醫院監測人次，不是唯一病人、全部熱衰竭個案或全國發生率；2026-10-14更新頁列截至1151011，本輪未讀CSV，不把資源日期當總病例。原國健署頁取回失敗，保留前次查閱日，以衛福部可讀原公告鏡像及NIOSH交叉支持。",
-    "獨立醫療、心理、職安、消防及法律專業審閱仍待取得。"
+    "熱傷害監測資料來自部分院所、採多類ICD-9-CM熱影響與過熱分類，單位為監測就醫人次；不等於全國病例、獨立患者或個人發生率。",
+    "2026年數值只到2026-10-26，未滿全年，不能與完整年度直接比較。",
+    "國健署急救頁本輪直接抓取逾時，使用其官方搜尋索引摘要核對現行急救資訊；資料集metadata與CSV本輪直接讀取。",
+    "本次為AI輔助來源與情境再核對，未取得獨立急診、消防、職安或醫療專業審閱。"
   ],
-  "source_reviewed_sha256": "393e3283dbb6c36621702adf8a2f15646f5c984ce81c9679452da7a4f6a8370e",
+  "source_reviewed_sha256": "1fe1ed57f2dafc9e5b6a0e3f59d4e8a8d3ef9a2418f67fe52da7c786829bcf1d",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "393e3283dbb6c36621702adf8a2f15646f5c984ce81c9679452da7a4f6a8370e",

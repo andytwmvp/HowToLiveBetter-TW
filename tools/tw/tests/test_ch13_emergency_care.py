@@ -25,7 +25,7 @@ class Chapter13EmergencyCareTests(unittest.TestCase):
   for key in IDS:
    self.assertIn('119',body[key]);self.assertNotIn('打120',body[key]);self.assertNotIn('撥120',body[key])
   self.assertIn('自動注射器',body['TW-13-015']);self.assertIn('五分鐘',body['TW-13-016'])
-  self.assertIn('禁止強行餵',body['TW-13-017']);self.assertIn('高壓',body['TW-13-018'])
+  self.assertIn('不要餵食、灌水',body['TW-13-017']);self.assertIn('高壓',body['TW-13-018'])
   self.assertIn('仍能用力咳嗽',body['TW-13-026']);self.assertIn('五要五不',body['TW-13-029'])
   self.assertIn('不要旋轉',body['TW-13-040']);self.assertIn('不要牽拉',body['TW-13-041'])
  def test_previous_208_items_and_sources_untouched(self):

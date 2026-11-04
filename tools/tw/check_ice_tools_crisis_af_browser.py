@@ -28,7 +28,7 @@ def check_ice_tools_crisis_af_browser(page, context, url, review):
         page.locator('#q').fill('169.06')
         assert page.locator('#TW-01-044').count() == 1
         page.locator('#reset').click()
-        page.locator('#q').fill('不等找出物質')
+        page.locator('#q').fill('不要等找出物質名稱')
         assert page.locator('#TW-13-021').count() == 1
         page.screenshot(path=str(review / f'ice-tools-crisis-af-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})

@@ -1,41 +1,53 @@
 {
   "id": "TW-13-018",
-  "reviewer": "ChatGPT（AI輔助臺灣官方／公立醫院HTML來源核對，非獨立醫療、救護或急診專業簽證）",
+  "reviewer": "ChatGPT（AI輔助來源與台灣情境再核對，非獨立醫療、急救、消防、職安或眼科專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-19",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-04",
+  "review_due_at": "2027-02-04",
   "target_path": "locales/zh-TW/book/ch13/TW-13-018.md",
-  "target_sha256": "744b97e02c2a2ecbee92d6bf2870c2ba30ef7610c5623b6feac1eb2fa5214f6d",
+  "target_sha256": "91d26ef55b48cd001638d7bc2f636528cee3e88d3dd8678fbb47152333a199c6",
   "source_checks": [
     {
-      "url": "https://www.nhi.gov.tw/ch/cp-2783-1eb08-2951-1.html",
-      "claim": "觸電應先切斷電源、確保施救者安全，可能導致心律、呼吸及深層組織傷害。",
-      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：觸電應先切斷電源、確保施救者安全，可能導致心律、呼吸及深層組織傷害。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "2026-10-19實讀相關公開HTML正文；圖像影片不宣稱已驗證。"
+      "source_id": "ch13_electric_taipower_typhoon",
+      "url": "https://branch.taipower.com.tw/files/file_pool/1/0P315608842096404797/%E9%A2%B1%E9%A2%A8%E7%81%BD%E5%BE%8C%E5%BE%A9%E9%9B%BB%E5%AE%89%E5%85%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%28%E8%99%95%E9%95%B7%E6%A0%B8%E5%AE%9A%29.pdf",
+      "claim": "掉落或下垂電線一律視為帶電、保持距離並撥1911；不得在積水中走動或操作電器。",
+      "supporting_passage": "台電颱風復電安全資料搜尋摘要及已讀PDF明確提醒掉落／下垂導線保持距離、1911通報及避免積水電器。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "核對台電公開PDF搜尋摘錄和既有逐頁紀錄；本輪直接抓取回應502，因此不宣稱本輪重新讀取PDF全文。"
     },
     {
-      "url": "https://ihealth.vghtpe.gov.tw/media/882",
-      "claim": "電流可能傷害神經、心臟與腎臟等深部器官，救援者應先安全移除或切斷電源。",
-      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：電流可能傷害神經、心臟與腎臟等深部器官，救援者應先安全移除或切斷電源。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "2026-10-19實讀相關公開HTML正文；圖像影片不宣稱已驗證。"
+      "source_id": "ch13_electric_nfa_safety",
+      "url": "https://www.nfa.gov.tw/upload/pro/attachment/d1067cb0bc2248848d9c9165549ba94d.pdf",
+      "claim": "未知帶電設備及潮濕環境可能造成救援者二次觸電；專業人員應先確認隔離，民眾保持距離。",
+      "supporting_passage": "消防署救援安全資料說明未知電源、潮濕與金屬環境的帶電危害；只引用保守保持距離原則，不移植專業操作。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "核對消防署官方公開PDF搜尋摘要及既有來源紀錄；不宣稱完整重新下載附件。"
     },
     {
-      "url": "https://service.taipower.com.tw/branch/d106/xmdoc/cont?XsmSId=0M242581314052489462",
-      "claim": "電線掉落或導線外露切勿自行處置，通知台電1911派員處理。",
-      "supporting_passage": "相關原始公開資料的獨立編輯摘要，非逐字引文：電線掉落或導線外露切勿自行處置，通知台電1911派員處理。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "實讀原始公開HTML相關正文；未讀影片、圖像或其他附件不宣稱已驗證。"
+      "source_id": "ch13_firstaid_mnd",
+      "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+      "claim": "無反應者撥119並檢查正常呼吸；無呼吸CPR/AED，仍有呼吸採復原姿勢。",
+      "supporting_passage": "國防部全民安全指引的失去意識處理段落列出拍肩呼叫、請旁人打119、確認正常呼吸、無呼吸CPR/AED及有呼吸時復原姿勢。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取官方HTML第154至180行相關段落。"
+    },
+    {
+      "source_id": "ch13_firstaid_ntfd_cpr",
+      "url": "https://www.ntfd.gov.tw/index.php?act=article&code=detail&ids=625",
+      "claim": "只有瀕死式或喘息式呼吸不是正常呼吸，應立即求援並CPR/AED。",
+      "supporting_passage": "南投縣消防局急救教學說明喘息式呼吸可能出現在心跳停止，應呼救、指定119與AED並開始CPR。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取地方消防機關HTML第34至50行。"
     }
   ],
-  "localization_changes": "以健保署與臺北榮總的電傷急救資料，新增臺灣活動場館用電情境，明確避免將低壓家電『乾木棍』教學泛化到高壓或不明電源。 本輪補充：**掉落或外露電線由台電1911派員處理；有人受傷先119，安全隔離前不接觸傷者或設備。**木棍、橡皮手套及「110伏特可觀察」的舊概述不能作一般民眾的安全測試；不自行判電壓或用沒外傷保證無深部傷害。警戒位置也不能讓自己進入帶電區。",
-  "review_method": "本輪逐條重讀相關HTML，辨識不適用與有風險的原文，不將機器盤點當專業審查。",
+  "localization_changes": "退役健保署與臺北榮總舊急救頁中容易被誤套用的木棒／橡膠手套和110伏特觀察建議，也以台電較完整的颱風後復電安全、消防署救援者安全提醒及國防部／南投消防局正常呼吸與CPR/AED資料取代舊來源；把安全隔離前不接觸傷者、帶電線及積水寫在第一步。",
+  "review_method": "逐項重讀正文、上次review與原作主題，核對台電災後復電安全、消防署高危害救援安全及國防部／南投消防局心肺復甦分流；移除可被誤套的木棒、手套和110伏特指示。",
   "limits": [
-    "健保署居家急救文字雖提及乾木棒，但並不代表所有木棒具足夠絕緣能力，尤其**高壓、電弧、未知電壓、潮濕現場不可套用**。不潑水、不打腳底、不捏人中、不用人身直接拖離帶電設備；復原清醒但有心臟或呼吸症狀仍要就醫。電氣設備檢修及斷電須由有資格者依安全規範處理。 頻率限制：台電停電事故件數或全體職災死亡，不是居民觸電、電燒傷或某電壓致死率；本次未取得全國同定義觸電事件及曝險分母，保留資料不足。 **掉落或外露電線由台電1911派員處理；有人受傷先119，安全隔離前不接觸傷者或設備。**木棍、橡皮手套及「110伏特可觀察」的舊概述不能作一般民眾的安全測試；不自行判電壓或用沒外傷保證無深部傷害。警戒位置也不能讓自己進入帶電區。",
-    "獨立急救、醫療及相關專業審閱仍待取得。"
+    "沒有全國同定義觸電、電傷或電壓別死亡分子及居民曝險分母；不得由停電通報、職災死亡或個案新聞推估。",
+    "消防署文件為專業救援安全資料；本篇只採取遠離未知帶電風險及先確認安全的保守原則，不提供民眾接近或移動帶電物的操作方法。",
+    "本次為AI輔助來源與情境再核對，未取得獨立急救、電氣工程或醫療專業審閱。"
   ],
-  "source_reviewed_sha256": "af27be3019ebfd4ba778d86ae8a132ba7033a7e1c93e3c351671827c1f3acf18",
+  "source_reviewed_sha256": "91d26ef55b48cd001638d7bc2f636528cee3e88d3dd8678fbb47152333a199c6",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "af27be3019ebfd4ba778d86ae8a132ba7033a7e1c93e3c351671827c1f3acf18",
