@@ -7870,9 +7870,10 @@
       "sources": [
         "ch13_chemical_nfa_20261104",
         "ch13_nhi_burn_firstaid",
-        "ch13_eyeinjury_vghks"
+        "ch13_eyeinjury_vghks",
+        "ch13_poisoncenter_eye_20261105"
       ],
-      "verified_at": "2026-11-04",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "酸鹼等化學品濺到身上，立刻脫掉汙染的衣服、用大量流動清水衝，眼睛要掰開眼皮衝，衝夠時間再走",
