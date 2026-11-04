@@ -28,13 +28,13 @@ class HivPreventionTests(unittest.TestCase):
   self.assertLess(b['TW-01-031'].index('72小時'),b['TW-01-031'].index('3至12週'));self.assertIn('確認檢驗',b['TW-01-031']);self.assertIn('3至6個月',b['TW-01-031'])
   self.assertIn('不是等待',b['TW-01-032']);self.assertIn('119',b['TW-01-032']);self.assertIn('1925',b['TW-01-032']);self.assertNotIn('oai_link_source',b['TW-01-032'])
   frequency_limits={
-   'TW-13-002':'原始調查未列母數，不能據此估算個人風險',
+   'TW-13-002':'表格未列此估計的加權事件分子或信賴區間',
    'TW-13-004':'不能用所有腦中風或腦血管疾病死亡數換算個人機率',
    'TW-13-005':'醫院病例不是全國統計',
-   'TW-13-006':'不能換算急性隅角閉鎖發生率',
+   'TW-13-006':'不能用來推算紅眼或眼痛者個人的病因機率',
   }
   for key in RECHECK:self.assertIn(frequency_limits[key],b[key])
-  self.assertIn('不能排除後腦部位的中風',b['TW-13-004']);self.assertIn('不能因單一案例推論每位患者都有頸動脈狹窄',b['TW-13-005']);self.assertIn('不能換算',b['TW-13-006'])
+  self.assertIn('不能排除後腦部位的中風',b['TW-13-004']);self.assertIn('不能因單一案例推論每位患者都有頸動脈狹窄',b['TW-13-005']);self.assertIn('不等於目前急性發作率',b['TW-13-006'])
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
   rt=validate_runtime();batch=read('localization/ch01-hiv-prevention-20261019.json');counts=batch['counts']

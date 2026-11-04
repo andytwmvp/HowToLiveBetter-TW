@@ -7461,9 +7461,15 @@
       "sources": [
         "ch13_fall_hpa",
         "ch13_fall_fire",
-        "head_2026_vghtc"
+        "head_2026_vghtc",
+        "aid_ems_law_14_2",
+        "conflict_ems_history",
+        "tw_central_law_standard",
+        "ch13_falls_hpa_nhis_2021",
+        "ch13_headinjury_nhia_2023",
+        "ch13_headinjury_nice_ng232"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "老人摔倒、有人倒地，先蹲下喊他、打 120，別急著把人扶起來；陌生人這檔走開在國內也合法，停下來就別上手搬",
@@ -7545,11 +7551,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-006.md",
       "sources": [
-        "ch13_glaucoma_tpe",
-        "ch13_glaucoma_vghtpe",
-        "retro_glaucoma_vgh455"
+        "retro_glaucoma_vgh455",
+        "ch13_acute_glaucoma_tsem_2025",
+        "ch13_pacg_tmu_nhi_2008"
       ],
-      "verified_at": "2026-10-19",
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "一隻眼又脹又痛、發紅，看燈有一圈彩虹，還頭痛惡心想吐，當天去眼科急診",
@@ -7607,8 +7613,10 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-009.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "ch13_thunderclap_ntuh_2023_epaper"
+      ],
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "突然一記「這輩子最疼的頭痛」，一小時內就到最疼，立刻去急診做頭顱 CT",
@@ -7645,8 +7653,11 @@
       "treatment": "unclassified",
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-011.md",
-      "sources": [],
-      "verified_at": "2026-10-19",
+      "sources": [
+        "dvt_care_vghtpe",
+        "ch13_vte_taiwan_nhi_2010"
+      ],
+      "verified_at": "2026-11-04",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "一條腿突然腫起來、發緊、按著疼，儘快就醫；再加上突然喘不上氣或者胸痛，立刻打 120",

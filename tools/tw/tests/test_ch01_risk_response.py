@@ -28,12 +28,14 @@ class RiskResponseTests(unittest.TestCase):
   self.assertIn('不觸碰',b['TW-01-036']);self.assertIn('0800-088-928',b['TW-01-036']);self.assertIn('不能保證安全',b['TW-01-036'])
   statistical_limits={
    'TW-13-008':'新診斷率',
-   'TW-13-009':'頻率',
+   'TW-13-009':'以雷擊性頭痛就醫者為分母的統計',
    'TW-13-010':'找不到較新的台灣全國資料可用來估算目前長者撞頭後短期延遲性出血的機率',
-   'TW-13-011':'頻率',
+   'TW-13-011':'不是單側腿腫者的罹病機率',
   }
   for key,phrase in statistical_limits.items():self.assertIn(phrase,b[key])
-  self.assertIn('分母',b['TW-13-008']);self.assertIn('90%',b['TW-13-009']);self.assertIn('不自行扳腳尖',b['TW-13-011'])
+  self.assertIn('分母',b['TW-13-008'])
+  self.assertIn('一般頭痛的概述比例不能用來推算個人風險',b['TW-13-009'])
+  self.assertIn('扳動腳踝確認或排除血栓',b['TW-13-011'])
  def test_report_uses_registry_and_live_reading_counts(self):
   from ci_language_policy import audit_drafts
   rt=validate_runtime();batch=read('localization/ch01-risk-response-20261019.json');counts=batch['counts']

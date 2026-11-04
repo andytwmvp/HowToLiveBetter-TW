@@ -26,8 +26,9 @@ class Chapter13HeadVteDentalTests(unittest.TestCase):
   data={e["id"]:e["body"].split("## 官方來源及改寫說明")[0] for e in validate_runtime()["items"]}
   for k in IDS:self.assertIn("119",data[k]);self.assertNotIn("撥120",data[k])
   self.assertIn("慢性硬腦膜下血腫",data["TW-13-010"])
-  self.assertIn("Homan",data["TW-13-011"])
-  self.assertIn("不要按摩",data["TW-13-011"])
+  self.assertIn("扳動腳踝",data["TW-13-011"])
+  self.assertNotIn("Homan",data["TW-13-011"])
+  self.assertIn("不要自行服用抗凝血藥",data["TW-13-011"])
   self.assertIn("斷指直接碰冰水",data["TW-13-047"])
   self.assertIn("乳牙不可",data["TW-13-048"])
  def test_earlier_224_items_and_sources_unchanged(self):

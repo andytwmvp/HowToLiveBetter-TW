@@ -32,7 +32,7 @@ def check_risk_response_browser(page, context, url, review):
         page.locator('#q').fill('0800-088-928')
         assert page.locator('#TW-01-036').count() == 1
         page.locator('#reset').click()
-        page.locator('#q').fill('不自行扳腳尖')
+        page.locator('#q').fill('扳動腳踝')
         assert page.locator('#TW-13-011').count() == 1
         page.screenshot(path=str(review / f'risk-response-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})
