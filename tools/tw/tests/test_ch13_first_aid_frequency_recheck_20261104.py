@@ -244,9 +244,13 @@ class Chapter13FirstAidFrequencyRecheckTests(unittest.TestCase):
 
     def test_chemical_powder_and_urgent_actions_are_not_overgeneralized(self):
         body = self.runtime_items["TW-13-021"]["body"]
-        self.assertIn("液體化學品濺眼", body)
+        self.assertIn("化學液體濺入眼睛時", body)
         self.assertIn("持續沖洗至少15分鐘", body)
-        self.assertIn("成分不明粉末", body)
+        self.assertIn("成分不明的乾粉或粉狀／金屬化學品入眼時", body)
+        self.assertIn("無法由這些資料確認是否適合直接沖洗", body)
+        self.assertIn("立即聯絡24小時毒藥物防治諮詢中心", body)
+        self.assertIn("安排就近急診", body)
+        self.assertIn("不要等回電", body)
         self.assertIn("撥119", body)
         self.assertNotIn("粉末本身不代表一律不能用水", body)
         self.assertIn("眼球穿破", body)

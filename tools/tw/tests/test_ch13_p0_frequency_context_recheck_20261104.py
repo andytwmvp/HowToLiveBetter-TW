@@ -181,8 +181,8 @@ class Chapter13P0FrequencyContextRecheckTests(unittest.TestCase):
         self.assertGreaterEqual(coverage["core_reviewed_entries"], self.batch["counts_after"]["core_completed"])
         self.assertGreaterEqual(coverage["registry_sources"], self.batch["counts_after"]["registry_sources"])
         self.assertGreaterEqual(coverage["json_files_checked"], self.batch["counts_after"]["json_files"])
-        self.assertEqual(self.runtime["updated_at"], self.batch["reviewed_at"])
-        self.assertEqual(self.runtime["review_due_at"], self.batch["review_due_at"])
+        self.assertGreaterEqual(self.runtime["updated_at"], self.batch["reviewed_at"])
+        self.assertGreaterEqual(self.runtime["review_due_at"], self.batch["review_due_at"])
 
 
 if __name__ == "__main__":

@@ -7870,8 +7870,10 @@
       "sources": [
         "ch13_chemical_nfa_20261104",
         "ch13_nhi_burn_firstaid",
-        "ch13_eyeinjury_vghks",
-        "ch13_poisoncenter_eye_20261105"
+        "ch13_poisoncenter_eye_20261105",
+        "ch13_vgh_eye_penetrating_20261105",
+        "ch13_vgh_chemical_burn_20261105",
+        "ch13_moenv_calcium_oxide_eyes_20261105"
       ],
       "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",

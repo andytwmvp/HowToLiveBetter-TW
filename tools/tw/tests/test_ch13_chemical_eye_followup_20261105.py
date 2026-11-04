@@ -1,4 +1,4 @@
-"""TW-13-021 follow-up: unknown powder, urgent decontamination and provenance."""
+"""TW-13-021 same-day correction: eye-specific chemical guidance and history."""
 import hashlib
 import json
 import re
@@ -9,26 +9,46 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime
-from retroactive_audit import validate_recheck_history
+from retroactive_audit import documented_revision, validate_recheck_history
+import retroactive_audit as audit
 
 
 MAIN_BASE = "5b0235927b13f544aac9a46d9e618e4cae0ec120"
-PRIOR_HEAD = "1e2d6a4904123d09217c50c50107df76c7b3e80f"
-EVIDENCE_PATH = "localization/ch13-021-chemical-eye-followup-20261105.json"
-SOURCE_PATH = "localization/tw-edition/sources/ch13-021-chemical-eye-followup-20261105.json"
+FIRST_RECHECK_HEAD = "a1d9d0f32a8131b2740e0ee1b68554490fd9f7fc"
+FIRST_RECHECK_BASE = "1e2d6a4904123d09217c50c50107df76c7b3e80f"
+FIRST_EVIDENCE_PATH = "localization/ch13-021-chemical-eye-followup-20261105.json"
+CORRECTION_EVIDENCE_PATH = "localization/ch13-021-chemical-eye-correction-20261105.json"
+CORRECTION_SOURCE_PATH = "localization/tw-edition/sources/ch13-021-chemical-eye-correction-20261105.json"
+REGISTER_PATH = "localization/retroactive-review-register-20261019.json"
 ITEM_PATH = "locales/zh-TW/book/ch13/TW-13-021.md"
-SOURCE_ID = "ch13_poisoncenter_eye_20261105"
+RUNTIME_PATH = "localization/tw-edition/runtime.json"
+REVIEW_PATH = "localization/reviews/TW-13-021.json"
+NEW_SOURCE_IDS = {
+    "ch13_vgh_eye_penetrating_20261105",
+    "ch13_vgh_chemical_burn_20261105",
+    "ch13_moenv_calcium_oxide_eyes_20261105",
+}
 
 
 def read_json(path):
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
 
 
+def git_bytes(revision, path):
+    return subprocess.check_output(["git", "show", f"{revision}:{path}"], cwd=ROOT)
+
+
+def digest(data):
+    return hashlib.sha256(data).hexdigest()
+
+
 class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.evidence = read_json(EVIDENCE_PATH)
-        cls.item = cls.evidence["item"]
+        cls.first_evidence = read_json(FIRST_EVIDENCE_PATH)
+        cls.first_item = cls.first_evidence["item"]
+        cls.correction_evidence = read_json(CORRECTION_EVIDENCE_PATH)
+        cls.correction = cls.correction_evidence["item"]
         cls.runtime = validate_runtime()
         cls.items = {row["id"]: row for row in cls.runtime["items"]}
         cls.sources = {row["id"]: row for row in cls.runtime["sources"]}
@@ -36,62 +56,102 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
         cls.manifest_item = next(
             row for row in cls.manifest["entries"] if row["id"] == "TW-13-021"
         )
-        cls.review = read_json("localization/reviews/TW-13-021.json")
-        cls.register = read_json("localization/retroactive-review-register-20261019.json")
+        cls.review = read_json(REVIEW_PATH)
+        cls.register = read_json(REGISTER_PATH)
 
-    def test_followup_is_append_only_and_hash_linked(self):
-        rows = [
-            row
-            for row in self.register["substantive_rechecks"]
+    def test_same_day_records_are_append_only_and_hash_linked(self):
+        current_register = self.register["substantive_rechecks"]
+        rows = [row for row in current_register if row["id"] == "TW-13-021"]
+        baseline_register = json.loads(git_bytes(FIRST_RECHECK_HEAD, REGISTER_PATH))
+        baseline_rows = [
+            row for row in baseline_register["substantive_rechecks"]
             if row["id"] == "TW-13-021"
         ]
-        prior = next(row for row in rows if row["reviewed_at"] == "2026-11-04")
-        current = [row for row in rows if row["reviewed_at"] == "2026-11-05"]
-        self.assertEqual(len(current), 1)
-        record = current[0]
-        self.assertEqual(record, self.item)
-        self.assertEqual(record, self.evidence["item"])
-        self.assertEqual(rows[-1], record)
-        self.assertEqual(self.evidence["reviewed_at"], "2026-11-05")
-        self.assertEqual(self.evidence["prior_revision"], PRIOR_HEAD)
-        self.assertEqual(record["prior_revision"], PRIOR_HEAD)
-        self.assertEqual(record["reviewed_at"], "2026-11-05")
-        self.assertEqual(record["review_due_at"], "2027-02-05")
-        self.assertEqual(prior["reviewed_at"], "2026-11-04")
+        self.assertEqual(rows[:-1], baseline_rows)
+        self.assertEqual(rows[-1], self.correction)
 
-        previous = subprocess.check_output(
-            ["git", "show", f"{PRIOR_HEAD}:{ITEM_PATH}"], cwd=ROOT
-        )
-        body_path = ROOT / ITEM_PATH
-        body_bytes = body_path.read_bytes()
-        body = body_bytes.decode("utf-8")
-        self.assertEqual(record["before_sha256"], hashlib.sha256(previous).hexdigest())
-        self.assertEqual(record["after_sha256"], hashlib.sha256(body_bytes).hexdigest())
-        self.assertEqual(record["body"], body)
-        self.assertEqual(record["previous_body"], previous.decode("utf-8"))
-        self.assertEqual(self.items["TW-13-021"]["body"], body)
-        self.assertEqual(self.review["target_sha256"], record["after_sha256"])
-        self.assertEqual(self.review["source_reviewed_sha256"], record["after_sha256"])
-        self.assertEqual(self.review["source_checks"], record["source_checks"])
-        self.assertEqual(self.review["reviewed_at"], "2026-11-05")
-        self.assertEqual(self.review["review_due_at"], "2027-02-05")
-        self.assertEqual(self.manifest_item["sources"], record["source_ids"])
-        self.assertEqual(self.items["TW-13-021"]["source_ids"], record["source_ids"])
-        self.assertEqual(record["status"], "ai_source_rechecked_professional_pending")
-        self.assertEqual(record["source_ids"], self.evidence["item"]["source_ids"])
-        validate_recheck_history(ROOT, record, self.items["TW-13-021"])
+        same_day = [row for row in rows if row["reviewed_at"] == "2026-11-05"]
+        self.assertEqual(len(same_day), 2)
+        first = same_day[0]
+        self.assertEqual(first, self.first_item)
+        self.assertEqual(same_day[1], self.correction)
+        self.assertEqual(first["prior_revision"], FIRST_RECHECK_BASE)
+        self.assertEqual(self.correction["prior_revision"], FIRST_RECHECK_HEAD)
+        self.assertEqual(self.correction["reviewed_at"], "2026-11-05")
+        self.assertEqual(self.correction["review_due_at"], "2027-02-05")
+        self.assertEqual(self.correction_evidence["baseline_main_sha"], MAIN_BASE)
 
-    def test_unknown_powder_gets_immediate_action_and_known_water_reactive_exception(self):
+        old_body = git_bytes(FIRST_RECHECK_BASE, ITEM_PATH)
+        first_body = git_bytes(FIRST_RECHECK_HEAD, ITEM_PATH)
+        current_body = (ROOT / ITEM_PATH).read_bytes()
+        self.assertEqual(first["before_sha256"], digest(old_body))
+        self.assertEqual(first["after_sha256"], digest(first_body))
+        self.assertEqual(first["previous_body"].encode("utf-8"), old_body)
+        self.assertEqual(first["body"].encode("utf-8"), first_body)
+        prior_runtime = json.loads(git_bytes(FIRST_RECHECK_BASE, RUNTIME_PATH))
+        first_runtime = json.loads(git_bytes(FIRST_RECHECK_HEAD, RUNTIME_PATH))
+        old_item = next(row for row in prior_runtime["items"] if row["id"] == "TW-13-021")
+        first_item = next(row for row in first_runtime["items"] if row["id"] == "TW-13-021")
+        self.assertTrue(audit._historical_edge_is_valid(
+            ROOT, FIRST_RECHECK_HEAD, first, old_item, first_item
+        ))
+
+        correction_before = git_bytes(FIRST_RECHECK_HEAD, ITEM_PATH)
+        prior_review = git_bytes(FIRST_RECHECK_HEAD, REVIEW_PATH)
+        current = self.items["TW-13-021"]
+        self.assertEqual(self.correction["before_sha256"], digest(correction_before))
+        self.assertEqual(self.correction["after_sha256"], digest(current_body))
+        self.assertEqual(self.correction["prior_review_sha256"], digest(prior_review))
+        self.assertEqual(self.correction["previous_body"].encode("utf-8"), correction_before)
+        self.assertEqual(self.correction["body"].encode("utf-8"), current_body)
+        self.assertEqual(current["body"], current_body.decode("utf-8"))
+        self.assertEqual(self.review["target_sha256"], self.correction["after_sha256"])
+        self.assertEqual(self.review["source_reviewed_sha256"], self.correction["after_sha256"])
+        self.assertEqual(self.review["source_checks"], self.correction["source_checks"])
+        self.assertEqual(self.manifest_item["sources"], self.correction["source_ids"])
+        self.assertEqual(current["source_ids"], self.correction["source_ids"])
+        self.assertEqual(self.correction["status"], "ai_source_rechecked_professional_pending")
+        self.assertTrue(self.correction["question_change_reason"])
+        self.assertEqual(current["limits"], self.review["limits"][0])
+        validate_recheck_history(ROOT, self.correction, current)
+
+        self.assertTrue(documented_revision(first_item, current, self.correction))
+        undocumented = dict(self.correction)
+        undocumented.pop("question_change_reason")
+        self.assertFalse(documented_revision(old_item, current, undocumented))
+        incomplete_question = dict(current, question="我已瞭解化學品入眼要怎麼處理嗎？")
+        self.assertFalse(documented_revision(old_item, incomplete_question, self.correction))
+
+    def test_powder_guidance_cites_specific_reactive_powder_and_keeps_unknown_limit(self):
         body = self.items["TW-13-021"]["body"]
-        self.assertIn("不明粉末", body)
-        self.assertIn("立即", body)
-        self.assertIn("沖洗", body)
-        self.assertIn("沖洗同時", body)
+        introduction = body.split("## 臺灣實作與下一步", 1)[0]
+        self.assertIn("化學液體濺入眼睛", introduction)
+        self.assertNotIn("化學液體或粉末入眼時", introduction)
+        powder = body.split("成分不明的乾粉或粉狀／金屬化學品入眼時", 1)[1].split(
+            "\n\n皮膚接觸要依皮膚的專屬處置", 1
+        )[0]
+        unresolved = powder.split("環境部化學知識地圖", 1)[0]
+        self.assertIn("先離開粉塵或外洩區", powder)
+        self.assertIn("不要揉眼、壓眼", powder)
+        self.assertIn("沒有說明後一項如何套用到眼睛", powder)
+        self.assertIn("眼睛接觸", powder)
+        self.assertIn("依其「眼睛接觸」專屬指示處理", powder)
+        self.assertIn("粉狀或金屬化學物質不可用水清洗", powder)
+        self.assertIn("立即聯絡24小時毒藥物防治諮詢中心", unresolved)
+        self.assertIn("安排就近急診", unresolved)
+        self.assertIn("不要等回電", unresolved)
+        self.assertNotIn("立刻以大量流動清水或生理食鹽水", unresolved)
+        self.assertIn("氧化鈣（生石灰，白色粉末", powder)
+        self.assertIn("30分鐘", powder)
+        self.assertIn("未知粉末的處置界線仍待毒物及眼科專業確認", powder)
         self.assertIn("不要揉眼", body)
-        self.assertIn("禁水", body)
-        self.assertIn("生石灰", body)
+        self.assertIn("立刻以大量流動清水或生理食鹽水", body)
+        self.assertIn("同步聯絡毒藥物防治諮詢中心", body)
+        self.assertIn("安排急診評估", body)
         self.assertIn("02-2871-7121", body)
         self.assertIn("02-2875-7525分機85500", body)
+        self.assertIn("撥119", body)
+        self.assertIn("眼球穿刺傷勿沖洗、揉搓或拔除異物", body)
         self.assertNotIn("粉末一律不能碰水", body)
         self.assertNotRegex(
             body,
@@ -99,36 +159,60 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
         )
         self.assertNotIn("撥120", body)
 
-    def test_taiwan_poison_center_source_and_runtime_outputs_are_synchronized(self):
-        catalog = read_json(SOURCE_PATH)["sources"]
-        row = next(source for source in catalog if source[0] == SOURCE_ID)
-        source = self.sources[SOURCE_ID]
-        self.assertEqual(row, [source["id"], source["title"], source["url"], source["supports"]])
-        self.assertEqual(source["accessed_at"], "2026-11-05")
-        self.assertEqual(source["url"], "https://www.pcc-vghtpe.tw/active-detail1260.htm")
-        self.assertIn("由內往外沖洗15分鐘", source["supports"])
-        self.assertIn(SOURCE_ID, self.manifest_item["sources"])
-        self.assertIn(SOURCE_ID, self.items["TW-13-021"]["source_ids"])
-        check = next(item for item in self.review["source_checks"] if item["source_id"] == SOURCE_ID)
-        self.assertEqual(check["accessed_at"], "2026-11-05")
-        self.assertIn("眼睛暴露", check["supporting_passage"])
+    def test_runtime_self_check_question_covers_the_same_emergency_branches(self):
+        question = self.items["TW-13-021"]["question"]
+        for token in (
+            "液體化學品", "成分不明粉末", "避免揉挖", "立即求助", "毒物中心",
+            "已知物質", "眼球穿刺傷", "立即就醫", "毒物中心", "119"
+        ):
+            with self.subTest(token=token):
+                self.assertIn(token, question)
+        self.assertIn("question_change_reason", self.correction)
+
+    def test_source_retirement_and_new_official_sources_are_synchronized(self):
+        source_rows = read_json(CORRECTION_SOURCE_PATH)["sources"]
+        rows_by_id = {row[0]: row for row in source_rows}
+        self.assertEqual(set(rows_by_id), NEW_SOURCE_IDS)
+        for source_id in NEW_SOURCE_IDS:
+            source = self.sources[source_id]
+            self.assertEqual(
+                rows_by_id[source_id],
+                [source["id"], source["title"], source["url"], source["supports"]],
+            )
+            self.assertEqual(source["accessed_at"], "2026-11-05")
+        retired = self.correction["retired_sources"][0]
+        historical_runtime = json.loads(git_bytes(FIRST_RECHECK_HEAD, RUNTIME_PATH))
+        old_source = next(
+            row for row in historical_runtime["sources"] if row["id"] == retired["id"]
+        )
+        self.assertEqual(retired["id"], "ch13_eyeinjury_vghks")
+        self.assertEqual(
+            retired["prior_source_sha256"],
+            digest(json.dumps(old_source, ensure_ascii=False, sort_keys=True).encode("utf-8")),
+        )
+        self.assertEqual(retired["replacement_ids"], ["ch13_vgh_eye_penetrating_20261105"])
+        self.assertIn(retired["id"], self.sources)
+
+        source_ids = self.items["TW-13-021"]["source_ids"]
         body_urls = set(re.findall(r"\]\((https?://[^)]+)\)", self.items["TW-13-021"]["body"]))
-        runtime_urls = {
-            self.sources[source_id]["url"]
-            for source_id in self.items["TW-13-021"]["source_ids"]
-        }
+        runtime_urls = {self.sources[source_id]["url"] for source_id in source_ids}
         review_urls = {check["url"] for check in self.review["source_checks"]}
         self.assertEqual(body_urls, runtime_urls)
         self.assertEqual(review_urls, runtime_urls)
-        self.assertTrue(self.evidence["professional_review"]["required"])
-        self.assertFalse(self.evidence["professional_review"]["obtained"])
+        self.assertIn(
+            "https://topic.moenv.gov.tw/chemiknowledgemap/sp-chemical-7-20-5.html",
+            body_urls,
+        )
+        self.assertTrue(self.correction_evidence["professional_review"]["required"])
+        self.assertFalse(self.correction_evidence["professional_review"]["obtained"])
 
-    def test_coverage_counts_include_followup_and_do_not_claim_publication_ready(self):
+    def test_coverage_counts_include_correction_and_do_not_claim_publication_ready(self):
         coverage = read_json("localization/tw-edition/coverage.json")
-        self.assertEqual(coverage["json_files_checked"], self.evidence["counts_after"]["json_files"])
-        self.assertEqual(coverage["registry_sources"], self.evidence["counts_after"]["registry_sources"])
-        self.assertEqual(len(self.runtime["items"]), self.evidence["counts_after"]["runtime_items"])
-        self.assertEqual(len(self.runtime["sources"]), self.evidence["counts_after"]["runtime_sources"])
+        counts = self.correction_evidence["counts_after"]
+        self.assertEqual(coverage["json_files_checked"], counts["json_files"])
+        self.assertEqual(coverage["registry_sources"], counts["registry_sources"])
+        self.assertEqual(len(self.runtime["items"]), counts["runtime_items"])
+        self.assertEqual(len(self.runtime["sources"]), counts["runtime_sources"])
         self.assertFalse(coverage["publication_ready"])
 
 
