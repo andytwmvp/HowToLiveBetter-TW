@@ -19,7 +19,8 @@ class Chapter13HeadVteDentalTests(unittest.TestCase):
     self.assertGreater(len(raw),1700);self.assertEqual(hashlib.sha256(raw).hexdigest(),review["target_sha256"])
     self.assertEqual(raw.decode("utf-8"),items[key]["body"])
     headings=[x["text"] for x in body_blocks(items[key]) if x["tag"]=="h3"]
-    self.assertEqual(len(headings),6 if key=="TW-13-010" else 5)
+    expected_headings={"TW-13-010":6,"TW-13-048":7}.get(key,5)
+    self.assertEqual(len(headings),expected_headings)
     if key=="TW-13-010":self.assertEqual(headings[-1],"資料來源")
     self.assertEqual({x["url"] for x in review["source_checks"]},{sources[x]["url"] for x in items[key]["source_ids"]})
  def test_taiwan_emergencies(self):

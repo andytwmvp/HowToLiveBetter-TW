@@ -7,18 +7,22 @@ import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
-from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history
+from retroactive_audit import assert_preserved_or_rechecked
+from recheck_history_assertions import assert_historical_recheck_edge
 from body_renderer import body_blocks
 
 BASE = 'ee8f6ed08267350e3808302c8be9dc9f47cad0f9'
+BATCH_REVISION = 'b5c299375ba3b2a24ec3da72421b826bbabfb11e'
 IDS = {f'TW-13-{n:03}' for n in (36, 37, 39)}
+EXPECTED_HEADINGS = {'TW-13-036': 6, 'TW-13-037': 7, 'TW-13-039': 5}
 
 class ConflictRescueRightsTests(unittest.TestCase):
     def test_actionable_safety_boundaries(self):
         b = {i['id']: i['body'] for i in validate_runtime()['items']}
-        for text in ('七類', '2024年9月', '不要為了財物突然追趕', '無聲', '不要尾隨'):
+        for text in ('七類', '2024年9月', '不要為了保住財物而突然扭打、追趕', '沒有按街道、車站或戶外活動暴露量計算的分母', '不要尾隨'):
             self.assertIn(text, b['TW-13-036'])
-        for text in ('第24條', '2023-07-01', '七類', '不要為蒐證', '心理'):
+        self.assertNotIn('警政服務App', b['TW-13-036'])
+        for text in ('第24條', '2023年7月1日', '七類案件數', '不要上前拉架', '心理', '打110', '打119'):
             self.assertIn(text, b['TW-13-037'])
         for text in ('2013-01-18', '非值勤', '第24條', '第176條', '2023-07-01', '免責不是補助'):
             self.assertIn(text, b['TW-13-039'])
@@ -28,21 +32,21 @@ class ConflictRescueRightsTests(unittest.TestCase):
         items = {i['id']: i for i in rt['items']}
         sources = {s['id']: s for s in rt['sources']}
         records = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())
-        records = {r['id']: r for r in records['substantive_rechecks']}
+        records = {r['id']: r for r in records['substantive_rechecks'] if r.get('reviewed_at') == '2026-10-20'}
         manifest = json.loads((ROOT/'localization/manifest.json').read_text())
         manifest = {e['id']: e for e in manifest['entries']}
         for key in IDS:
             with self.subTest(key=key):
                 row = records[key]
                 self.assertEqual(row['prior_revision'], BASE)
-                validate_recheck_history(ROOT, row, items[key])
+                assert_historical_recheck_edge(self, ROOT, row, merged_revision=BATCH_REVISION)
                 self.assertTrue(validate_entry(manifest[key]))
                 review = json.loads((ROOT/f'localization/reviews/{key}.json').read_text())
                 raw = (ROOT/items[key]['target_path']).read_bytes()
                 self.assertEqual(raw.decode(), items[key]['body'])
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review['target_sha256'])
                 self.assertEqual({s['url'] for s in review['source_checks']}, {sources[s]['url'] for s in items[key]['source_ids']})
-                self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(items[key])), 5)
+                self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(items[key])), EXPECTED_HEADINGS[key])
 
     def test_original_items_sources_and_publication_limit_preserved(self):
         old = json.loads(subprocess.check_output(['git', 'show', BASE+':localization/tw-edition/runtime.json'], cwd=ROOT))

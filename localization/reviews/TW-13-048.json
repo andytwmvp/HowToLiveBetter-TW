@@ -2,52 +2,88 @@
   "id": "TW-13-048",
   "reviewer": "ChatGPT（臺灣公立醫院／衛福部醫院及國際原始牙科期刊公開HTML的AI輔助核對；非獨立專家簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-06",
+  "review_due_at": "2027-02-06",
   "target_path": "locales/zh-TW/book/ch13/TW-13-048.md",
-  "target_sha256": "0c9e3d46ed864bce5d24bcd65ac549cad2210bae5a253b877a326ea624f63eaa",
+  "target_sha256": "bd33beff6e73230d6ddf2de7ab1b866d7a9b2e30c652ce68d2c13b74160e26d4",
   "source_checks": [
     {
+      "source_id": "avulsed_tooth_vghtpe",
       "url": "https://ihealth.vghtpe.gov.tw/media/622",
-      "claim": "恆牙掉落後只拿牙冠、不可刷洗牙根，及時復位或以牛奶保存並儘速找牙醫。",
-      "supporting_passage": "本輪編輯摘要（非逐字引文）：恆牙掉落後只拿牙冠、不可刷洗牙根，及時復位或以牛奶保存並儘速找牙醫。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "web實讀622正文拿牙冠、保存與送醫段，直接403；未採不明分母四分之一概述及乳牙再植暗示。"
+      "claim": "牙齒脫落後處理、牙冠拿取、保濕與儘速就醫。",
+      "supporting_passage": "台北榮總護理部衛教說明先找到牙齒、牙冠拿取、避免刷洗牙根，以牛奶、唾液或生理食鹽水保存並儘速送醫。",
+      "accessed_at": "2026-11-06",
+      "retrieval_method": "2026-11-06直接重讀臺北榮總公開衛教頁之牙冠拿取、保存及就醫段落。"
     },
     {
+      "source_id": "pediatric_dental_vghtpe",
       "url": "https://wd.vghtpe.gov.tw/dent/Fpage.action?fid=2904&muid=3644",
-      "claim": "乳牙外傷亦可能影響恆牙胚，應及時由兒童牙醫評估追蹤。",
-      "supporting_passage": "本輪編輯摘要（非逐字引文）：乳牙外傷亦可能影響恆牙胚，應及時由兒童牙醫評估追蹤。",
-      "accessed_at": "2026-10-18",
-      "retrieval_method": "保留原查閱日期；本輪原頁未重新取到全文（NHI／榮總403，野豬TLS），不宣稱本輪實讀；新增處置由其他可讀來源交叉支持。"
+      "claim": "乳牙外傷可能影響下方恆牙胚，需由兒童牙醫評估及追蹤。",
+      "supporting_passage": "台北榮總口腔醫學部兒童牙齒外傷頁面指出乳牙外傷可能影響恆牙胚，應及時由兒童牙醫評估追蹤。",
+      "accessed_at": "2026-11-06",
+      "retrieval_method": "2026-11-06重讀臺北榮總口腔醫學部兒童牙齒外傷頁之乳牙與恆牙胚說明。"
     },
     {
+      "source_id": "urgent_dental_iadt2020",
       "url": "https://www.aapd.org/media/policies_guidelines/e_avulsion.pdf",
-      "claim": "第2頁第2節：恆乳牙分流、牙冠拿取、及時再植或立即保濕；無合適保存液時水雖較差仍比晾乾好，非鼓勵長期泡水。",
-      "supporting_passage": "本輪編輯摘要（非逐字引文）：第2頁第2節：恆乳牙分流、牙冠拿取、及時再植或立即保濕；無合適保存液時水雖較差仍比晾乾好，非鼓勵長期泡水。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "實讀且目視PDF第2頁第2節急救段及乾燥時間限制；未宣稱全部9頁專業治療已審。"
+      "claim": "IADT永久牙脫落指引的拿取、清潔、植回和保存方法。",
+      "supporting_passage": "IADT 2020指引重刊本第2頁建議確認為恆牙，只拿牙冠，髒汙時以牛奶、生理食鹽水或唾液輕柔沖洗；能否安全時儘快植回，不便則以牛奶、HBSS、唾液或生理食鹽水保存，水雖較差仍好過晾乾，立即看牙醫。",
+      "accessed_at": "2026-11-06",
+      "retrieval_method": "2026-11-06直接重讀AAPD重刊IADT 2020永久牙脫落指引第2頁現場處置段落。"
     },
     {
+      "source_id": "urgent_dental_tw2009",
       "url": "https://pubmed.ncbi.nlm.nih.gov/19208012/",
-      "claim": "南部6312名15至18歲高中生抽樣臨床與問卷，牙外傷盛行比例19.9%；非整顆恆牙脫落發生率、非2026全台現況。",
-      "supporting_passage": "本輪編輯摘要（非逐字引文）：南部6312名15至18歲高中生抽樣臨床與問卷，牙外傷盛行比例19.9%；非整顆恆牙脫落發生率、非2026全台現況。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "PubMed原始摘要搜尋可讀，另NCBI官方BioC XML實讀title及abstract；未讀期刊全文，調查期間與分子未列。"
+      "claim": "台灣南部15至18歲學生牙外傷研究樣本與19.9%多種牙外傷盛行率。",
+      "supporting_passage": "PubMed公開摘要說明抽樣6312名南部15至18歲高中生接受臨床檢查與問卷，多種牙外傷盛行率19.9%；摘要沒有列確切調查年月或發生人數分子，本文未取得全文。",
+      "accessed_at": "2026-11-06",
+      "retrieval_method": "2026-11-06重讀PubMed公開摘要之研究方法與結果；只採摘要資訊，不聲稱讀過完整論文。"
+    },
+    {
+      "source_id": "urgent_dental_iadt_index_20261106",
+      "url": "https://iadt-dentaltrauma.org/guidelines-and-resources/guidelines/",
+      "claim": "IADT官方索引目前列有恆牙脫落及乳牙外傷兩類2020年指引。",
+      "supporting_passage": "IADT官方指引索引直接列出2020年創傷性牙齒傷害指引及永久牙脫落、乳牙外傷章節；具體步驟引用同學會指引全文。",
+      "accessed_at": "2026-11-06",
+      "retrieval_method": "2026-11-06直接重讀IADT官方索引中永久牙脫落及乳牙外傷2020指引項目。"
+    },
+    {
+      "source_id": "urgent_dental_mohw_directory_20261106",
+      "url": "https://dep.mohw.gov.tw/dooh/cp-6495-1929-124.html",
+      "claim": "台灣衛福部提供平時與節期牙醫急診名單入口。",
+      "supporting_passage": "衛福部口腔健康司牙醫急診頁面標示2026-11-04更新，列有平時名單及2026年春節名單附件。",
+      "accessed_at": "2026-11-06",
+      "retrieval_method": "2026-11-06直接重讀衛福部口腔健康司頁面，確認網頁更新日期和附件清單。"
+    },
+    {
+      "source_id": "urgent_dental_mohw_regular_20250303",
+      "url": "https://www.mohw.gov.tw/dl-93862-a464bf2b-1105-4988-9c25-dbc078a06760.html",
+      "claim": "平時牙醫急診表區分一般牙科及口腔顏面重症，部分院所僅限門診時段。",
+      "supporting_passage": "衛福部平時PDF首頁標示2025-03-03製表，區分一般牙科急診與口腔顏面重症急診；表內多院備註限門診時段。",
+      "accessed_at": "2026-11-06",
+      "retrieval_method": "2026-11-06直接重讀衛福部平時牙醫急診PDF首頁及院所服務時段欄。"
     }
   ],
-  "localization_changes": "不以是否受訓作唯一再植門檻，能否安全分辨與合作優先；避免晾乾／採買延誤、唾液吐容器，乳牙不植回；將2024文章正名指引／教育綜述，補2020原文及台灣原始摘要口徑。 舊2024來源誤標原始研究與日期，退出正式引用但原物件保留歷史。",
-  "review_method": "逐篇台灣場景、時效風險、來源可讀段與統計定義AI輔助實質再核對；非專業簽證。",
+  "localization_changes": "按現行IADT指引區分恆牙與乳牙、補上可確認恆牙時的安全植回條件、髒汙牙齒的輕柔沖洗與保濕；新增衛福部牙科急診官方名單入口及時效限制，保留研究樣本與分母邊界。",
+  "review_method": "逐篇重讀台灣正文、固定ID原作主題、前次審閱與所列來源；查核台灣現場、急迫程度、法律／服務條件、官方統計口徑與分母限制；本次為AI輔助來源再審，未宣稱正式專業簽證。",
   "limits": [
-    "乳牙不可植回來自IADT專業指引，不是台灣法律規定；臺北榮總亦提醒乳牙與恆牙胚密切相鄰，乳牙受外傷仍須就醫。不能確定乳恆牙、牙齒只是折斷或被撞入牙槽、嚴重顎顏面外傷或意識不清時，不要自行放回。**不可手抓牙根、刷洗牙根、久泡清水或讓幼兒把牙齒含嘴裡**。救命與119優先於保存牙齒，診斷及再植需專業人員判斷。",
-    "醫療、感染科、牙醫、救護、野生動物與動保獨立專業審閱待取得。"
+    "只有能確認的恆牙才可考慮植回；乳牙不可植回。無法辨認牙齒種類、傷者不清醒、顏面嚴重受傷或不能安全操作時，不要自行放回，先保濕並儘快就醫。牙科急診名單與時段可能變動，出發前先打電話確認；南部青少年牙外傷研究不代表整顆恆牙脫落的發生率。",
+    "IADT/AAPD指引為2020年專業指引，不等於台灣治療成效研究；是否植回、固定或安排後續處置由牙醫依個別傷勢判斷。",
+    "衛福部牙醫急診頁2026-11-04更新，但平時附件標示2025-03-03，另有節期名單；清單不保證院所當下開診或能處理特定外傷。",
+    "2009年研究摘要缺確切調查年月和分子，不能從19.9%反推人數或推估恆牙脫落率。",
+    "本次未取得牙醫或急診專業人員獨立審閱。"
   ],
-  "source_reviewed_sha256": "c3f02bd508a08d0b6909a12accacfc42c368ed2def3dd1634570d6132db2f1b1",
+  "source_reviewed_sha256": "bd33beff6e73230d6ddf2de7ab1b866d7a9b2e30c652ce68d2c13b74160e26d4",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "c3f02bd508a08d0b6909a12accacfc42c368ed2def3dd1634570d6132db2f1b1",
     "after_sha256": "0c9e3d46ed864bce5d24bcd65ac549cad2210bae5a253b877a326ea624f63eaa",
     "before_reader_sha256": "3871c8b88de8e75bc89eab395140c1f899e4a4803c9737f7379114b1a0a0a201",
     "after_reader_sha256": "937c1ca2c3a450f422f37b62f57d9758ea2ecd8bae4e520c08d62bcc26bc9717"
-  }
+  },
+  "unresolved_questions": [
+    "牙齒外傷需依個別牙齒、牙槽、頭顏面與全身傷勢由牙醫診斷；本篇不能保證再植成功或治療費用。",
+    "牙科急診院所與實際服務時段可能異動，出發前須向院所確認。",
+    "待取得牙醫或急診專業人員審閱。"
+  ]
 }

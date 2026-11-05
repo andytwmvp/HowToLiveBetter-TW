@@ -6,6 +6,7 @@ from body_renderer import body_blocks
 def check_pep_fracture_dental_wildlife_browser(page, context, url, review):
     runtime = validate_runtime()
     ids = {f'TW-13-{n:03}' for n in (31, 38, 41, 48)}
+    expected_headings = {'TW-13-031': 7, 'TW-13-038': 5, 'TW-13-041': 5, 'TW-13-048': 7}
     items = {e['id']: e for e in runtime['items']}
     sources = {s['id']: s for s in runtime['sources']}
     for width, height in ((1440, 1000), (390, 844)):
@@ -17,7 +18,7 @@ def check_pep_fracture_dental_wildlife_browser(page, context, url, review):
                 article = page.locator('#' + key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text()
-                assert article.locator('h3').count() == 5, key
+                assert article.locator('h3').count() == expected_headings[key], key
                 rendered = article.text_content()
                 for block in body_blocks(items[key]):
                     assert block['text'] in rendered, (target, key, block['text'][:50])
@@ -36,4 +37,4 @@ def check_pep_fracture_dental_wildlife_browser(page, context, url, review):
         assert page.locator('#TW-13-048').count() == 1
         page.screenshot(path=str(review / f'pep-fracture-dental-wildlife-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})
-    return ['四篇PEP／骨折／恆牙脫落／遇獸再審，桌機1440及手機390、閱讀／自查／離線逐段全文、五標題及來源一致；870病例與6,312人樣本搜尋、自查按鈕及無水平溢出通過。非醫療牙科或野生動物專業認證。']
+    return ['四篇PEP／骨折／恆牙脫落／遇獸再審，桌機1440及手機390、閱讀／自查／離線逐段全文、各篇標題數及來源一致；870病例與6,312人樣本搜尋、自查按鈕及無水平溢出通過。非醫療牙科或野生動物專業認證。']
