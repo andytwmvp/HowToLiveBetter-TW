@@ -1,41 +1,61 @@
 {
   "id": "TW-13-046",
-  "reviewer": "ChatGPT（AI輔助指定公開段落與台灣情境再核對，非獨立專業簽證）",
+  "reviewer": "ChatGPT（AI輔助來源與台灣情境再核對，非獨立醫療、急救、消防、職安或眼科專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-19",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-04",
+  "review_due_at": "2027-02-04",
   "target_path": "locales/zh-TW/book/ch13/TW-13-046.md",
-  "target_sha256": "0cc8296e73307aa83b72c057eaa7cc59f57cfeaf4ee6c3d6a4dc2482691d4106",
+  "target_sha256": "f872f27172539cebbc7911b4dcbb9cb890cf803bf0b2a387d6044237a64ed600",
   "source_checks": [
     {
+      "source_id": "alcohol_cch_202512_20261104",
       "url": "https://dpt.cch.org.tw/layout/layout_3/qa.aspx?ID=7327&p=4",
-      "claim": "飲酒後叫不醒、呼吸慢、不規則、嘴唇發青等應立即119，仍正常呼吸時側臥避免嗆入。",
-      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：飲酒後叫不醒、呼吸慢、不規則、嘴唇發青等應立即119，仍正常呼吸時側臥避免嗆入。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "2026-10-19實讀相關HTML正文；附件、圖像與個案微資料未宣稱全面驗證。"
+      "claim": "大量飲酒後叫不醒、呼吸變慢或不規則、皮膚冰冷或發青時立即撥119。",
+      "supporting_passage": "彰基毒藥物中心FAQ明列危急警訊及立即119、側臥保持呼吸道暢通。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取彰基HTML第24至29行。"
     },
     {
+      "source_id": "alcohol_tpech_202606_20261104",
       "url": "https://tpech.gov.taipei/mp109201/cp.aspx?n=0A54B0293641823A",
-      "claim": "短時間大量飲酒有急性危害，飲酒方式與長期酒癮不同；本頁沒有全臺急性酒精中毒的發生率母數。",
-      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：短時間大量飲酒有急性危害，飲酒方式與長期酒癮不同；本頁沒有全臺急性酒精中毒的發生率母數。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "實讀HTML認識酒精段；09酒精中毒PDF只有入口、未讀附件，不冒稱PDF全文或頁面更新日期代表全文重修。"
+      "claim": "松德院區介紹酒精危害與成癮；頁面列有酒精中毒PDF附件，但本次未讀附件全文。",
+      "supporting_passage": "可讀HTML介紹飲酒安全性、酒精危害和成癮；該頁PDF附件本次只確認為下載項目，未引用附件操作或急救主張。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取松德院區HTML第213至258行，未下載其酒精中毒PDF。"
     },
     {
+      "source_id": "ch13_firstaid_mnd",
+      "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+      "claim": "無反應者撥119並檢查正常呼吸；無呼吸CPR/AED，仍有呼吸採復原姿勢。",
+      "supporting_passage": "國防部全民安全指引的失去意識處理段落列出拍肩呼叫、請旁人打119、確認正常呼吸、無呼吸CPR/AED及有呼吸時復原姿勢。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取官方HTML第154至180行相關段落。"
+    },
+    {
+      "source_id": "ch13_firstaid_ntfd_cpr",
+      "url": "https://www.ntfd.gov.tw/index.php?act=article&code=detail&ids=625",
+      "claim": "只有瀕死式或喘息式呼吸不是正常呼吸，應立即求援並CPR/AED。",
+      "supporting_passage": "南投縣消防局急救教學說明喘息式呼吸可能出現在心跳停止，應呼救、指定119與AED並開始CPR。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取地方消防機關HTML第34至50行。"
+    },
+    {
+      "source_id": "ch13_alcohol_niaaa_20261104",
       "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-dangers-of-alcohol-overdose",
-      "claim": "停止飲酒或昏迷後血中酒精仍可能上升；咖啡、冷水澡與睡覺不代替急救。",
-      "supporting_passage": "相關段落的獨立編輯摘要，非逐字引文：停止飲酒或昏迷後血中酒精仍可能上升；咖啡、冷水澡與睡覺不代替急救。",
-      "accessed_at": "2026-10-19",
-      "retrieval_method": "實讀HTML持續吸收、警訊及急救限制；不移植美國杯數、血中濃度門檻或電話。"
+      "claim": "停止飲酒後酒精仍可能持續吸收，混用鎮靜或鴉片類藥物會增加呼吸抑制風險。",
+      "supporting_passage": "NIAAA頁說明停飲後仍可能因體內吸收而惡化，列出鎮靜藥物與鴉片類藥物併用風險；正文不採其美國酒量門檻或求助電話。",
+      "accessed_at": "2026-11-04",
+      "retrieval_method": "2026-11-04直接讀取NIAAA HTML危險與症狀段落。"
     }
   ],
-  "localization_changes": "加入最後一杯後持續吸收與不可用數值等待，交叉核對側臥與無正常呼吸CPR分流；附件未讀明列。",
-  "review_method": "逐主張核對實讀HTML、PDF指定頁及圖表，分開頻率口徑、來源失敗與專業限制。",
+  "localization_changes": "加入國防部全民安全指引及南投消防局的失去意識、喘息式呼吸、CPR/AED和復原姿勢分流；保留彰基急性酒精中毒警訊與美國NIAAA的持續吸收原則但不移植美國飲酒門檻、電話或統計；明確記錄全國分母不足。",
+  "review_method": "逐項重讀正文、上次review與原作主題；直接讀取彰基急性酒精中毒FAQ、松德院區HTML、國防部／南投消防局急救流程及NIAAA一般危害資料；未把美國酒量或電話套用台灣，並明確標示松德PDF附件未讀。",
   "limits": [
-    "酒味不能用來排除腦中風、頭傷、低血糖或其他藥物中毒，務必由醫護鑑別。**側臥不取代CPR**：若無正常呼吸或只有不正常喘息，必須依119指示急救。皮膚冰冷、反覆嘔吐等要警覺惡化；不能放人『睡過去』。臺灣急救電話為119而非原作120。現有兩份臺灣醫院公開衛教並沒有全國急性酒精中毒的發生率母數，不能據此創造固定年發生數。\n\n本輪重讀彰基HTML與松德介紹頁，後者酒精中毒PDF僅見入口，未冒稱讀全文。美國NIAAA只採持續吸收與危急原則，不移植美國杯數、族群風險或發生率；台灣急性中毒分母仍不足。",
-    "獨立醫療、職安、消防及法律專業審閱仍待取得。"
+    "沒有全國急性酒精中毒病例分子與飲酒總人次或曝險人時分母，不得以酒駕、酒癮門診或國外統計推估。",
+    "松德院區頁面提供酒精一般危害資訊，其所列酒精中毒PDF附件本次未下載或核對全文，未引用該附件具體急救步驟。",
+    "本次為AI輔助來源與情境再核對，未取得獨立急診、成癮醫學或急救專業審閱。"
   ],
-  "source_reviewed_sha256": "35178cbfc7c1aac8f2bd0f92925104c3a1b1a38f9dc3e0f1286ac0dcb8ec53fb",
+  "source_reviewed_sha256": "f872f27172539cebbc7911b4dcbb9cb890cf803bf0b2a387d6044237a64ed600",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "35178cbfc7c1aac8f2bd0f92925104c3a1b1a38f9dc3e0f1286ac0dcb8ec53fb",

@@ -29,6 +29,20 @@ class SubstantiveReviewTests(unittest.TestCase):
         old, new, record = self.fixture()
         self.assertTrue(audit.documented_revision(old, new, record))
 
+    def test_emergency_question_exception_is_bound_to_chemical_eye_review(self):
+        old, new, record = self.fixture()
+        old['question'] = '舊的化學眼傷自查問題嗎？'
+        new['question'] = '我已瞭解液體化學品入眼時要立即沖洗、成分不明粉末要避免揉挖並立即求助、已知物質依眼睛專屬指示、眼球穿刺傷勿沖洗，以及聯絡毒物中心、立即就醫與撥119的分流時機嗎？'
+        record['question_change_reason'] = (
+            '原自查問題未分清液體化學品沖洗與未知粉末未定分流，也未涵蓋已知物質眼睛專屬指示、'
+            '眼球穿刺傷和求援時機；依正文同步補上立即求助及就醫限制。'
+        )
+        self.assertFalse(audit.documented_revision(old, new, record))
+        old['id'] = new['id'] = record['id'] = 'TW-13-021'
+        self.assertTrue(audit.documented_revision(old, new, record))
+        bad_reason = dict(record, question_change_reason='任意理由')
+        self.assertFalse(audit.documented_revision(old, new, bad_reason))
+
     def test_unrecorded_body_metadata_and_missing_evidence_are_rejected(self):
         old, new, record = self.fixture()
         for field in ('before_sha256','after_sha256','source_checks','limits','frequency_assessment','prior_review_sha256'):

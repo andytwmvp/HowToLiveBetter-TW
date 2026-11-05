@@ -418,6 +418,14 @@ class RetroactiveAuditTests(unittest.TestCase):
                 row = next(row for row in reversed(cleanup_rows) if row["id"] == key)
             else:
                 digest = hashlib.sha256(items[key]["body"].encode("utf-8")).hexdigest()
+                current_rechecks = [row for row in register["substantive_rechecks"]
+                                    if row["id"] == key and row["after_sha256"] == digest]
+                if current_rechecks:
+                    self.assertEqual(len(current_rechecks), 1, key)
+                    audit.validate_recheck_history(audit.ROOT, current_rechecks[0], items[key])
+                    normalized, _ = audit.normalize_reader_item(items[key])
+                    self.assertEqual(normalized, items[key], key)
+                    continue
                 row = next(row for row in cleanup_rows
                            if row["id"] == key and row["after_sha256"] == digest)
             previous_runtime = audit._git_json(

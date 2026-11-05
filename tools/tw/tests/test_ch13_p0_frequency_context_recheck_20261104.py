@@ -174,14 +174,15 @@ class Chapter13P0FrequencyContextRecheckTests(unittest.TestCase):
         self.assertIn("不是單側腿腫者的罹病機率", bodies["TW-13-011"])
 
     def test_counts_and_runtime_are_synchronized(self):
-        self.assertEqual(len(self.runtime["items"]), self.batch["counts_after"]["runtime_items"])
-        self.assertEqual(len(self.runtime["sources"]), self.batch["counts_after"]["runtime_sources"])
+        # This batch records a historical snapshot; later batches may add reader sources.
+        self.assertGreaterEqual(len(self.runtime["items"]), self.batch["counts_after"]["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), self.batch["counts_after"]["runtime_sources"])
         coverage = read_json("localization/tw-edition/coverage.json")
-        self.assertEqual(coverage["core_reviewed_entries"], self.batch["counts_after"]["core_completed"])
-        self.assertEqual(coverage["registry_sources"], self.batch["counts_after"]["registry_sources"])
-        self.assertEqual(coverage["json_files_checked"], self.batch["counts_after"]["json_files"])
-        self.assertEqual(self.runtime["updated_at"], self.batch["reviewed_at"])
-        self.assertEqual(self.runtime["review_due_at"], self.batch["review_due_at"])
+        self.assertGreaterEqual(coverage["core_reviewed_entries"], self.batch["counts_after"]["core_completed"])
+        self.assertGreaterEqual(coverage["registry_sources"], self.batch["counts_after"]["registry_sources"])
+        self.assertGreaterEqual(coverage["json_files_checked"], self.batch["counts_after"]["json_files"])
+        self.assertGreaterEqual(self.runtime["updated_at"], self.batch["reviewed_at"])
+        self.assertGreaterEqual(self.runtime["review_due_at"], self.batch["review_due_at"])
 
 
 if __name__ == "__main__":
