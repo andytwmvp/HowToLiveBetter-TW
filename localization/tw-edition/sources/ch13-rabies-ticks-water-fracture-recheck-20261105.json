@@ -1,0 +1,52 @@
+{
+  "sources": [
+    [
+      "ch13_rabies_intro",
+      "疾管署：狂犬病疾病介紹與傳播方式",
+      "https://www.cdc.gov.tw/Category/Page/iHUOIaLSAbQowJjnNGH2uQ",
+      "狂犬病毒可隨動物唾液經抓咬傷口、既有傷口或黏膜進入人體；國內動物疫情主要涉及野生哺乳動物，應即時接受醫療評估。"
+    ],
+    [
+      "ch13_animal_report_aphia",
+      "防檢署：狂犬病通報專線與地方動物防疫機關",
+      "https://www.aphia.gov.tw/ws.php?id=11004",
+      "疑似異常動物通報專線0800-761-590，並列各縣市動物防疫機關聯絡方式；民眾遭動物咬傷應清洗傷口並立即就醫。"
+    ],
+    [
+      "care_rabies_aphia_20261031",
+      "防檢署：2026年10月狂犬病監測結果",
+      "https://www.aphia.gov.tw/upload/aphia//files/web_structure/10980/Rabies%20ppt%201151031.pdf",
+      "截至2026-10-31動物監測1,332件、46件陽性（44鼬獾、2白鼻心）；2026年10月新增5件鼬獾陽性；1至10月食肉目野生動物咬人通報7件，相關動物3陽性、4陰性。這些是動物檢驗與咬人通報數，非人類感染率。"
+    ],
+    [
+      "tick_nidss_sfts_20261105",
+      "疾管署傳染病統計資料查詢系統：SFTS全國病例表",
+      "https://nidss.cdc.gov.tw/nndss/disease?id=SFTS",
+      "依發病日查詢本土與境外移入SFTS確定病例；截至2026-11-05 07:32，2026年累計1例、死亡0例，最近發病日2026-02-27，資料可能修正。"
+    ],
+    [
+      "water_fda_spring_20260211",
+      "食藥署：春節食安掌握352口訣",
+      "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=31422",
+      "山泉水可能含病原、寄生蟲及野生動物排洩物，也可能含煮沸難以去除的重金屬或農藥。"
+    ],
+    [
+      "water_fda_noro_2016",
+      "食藥署：山泉水檢出諾羅病毒",
+      "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=21252",
+      "食藥署調查2015年及2016年上半年數起食品中毒事件環境水樣本，3起山泉水或混用山泉水案例檢出諾羅病毒；未提供全部樣本或飲水人口分母。"
+    ],
+    [
+      "water_wra_heavyrain_20251121",
+      "水利署：大雨後河川湖泊水體混濁與用水提醒",
+      "https://www.wra.gov.tw/epaper/Article_Detail.aspx?n=30177&s=10174",
+      "豪雨可能將裸露土壤、農地肥料及動物排洩物帶入水體，增加濁度及短暫細菌滋生；提醒大雨後不要直接取溪水或山泉水飲用、煮食。"
+    ],
+    [
+      "tick_cdc_sfts_guide",
+      "疾管署：發熱伴血小板減少綜合症蜱蟲防護資料",
+      "https://www.cdc.gov.tw/Category/MPage/cjWQ-JCMU6RNVAocWR42hg",
+      "疾管署資料說明蜱蟲棲息於草叢、樹林，臺灣主要活動季節為4月至10月；SFTS主要由蜱蟲叮咬傳播，潛伏期約7至14天。"
+    ]
+  ]
+}

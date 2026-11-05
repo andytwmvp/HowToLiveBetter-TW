@@ -22,7 +22,7 @@ class PepFractureDentalWildlifeTests(unittest.TestCase):
         b = {i['id']: i['body'] for i in validate_runtime()['items']}
         for text in ('不要等對方', '870', '依診斷日', '不是當年新感染發生數', '2025年12月1日', '急診'):
             self.assertIn(text, b['TW-13-038'])
-        for text in ('先處理', '骨頭', '不要為製作夾板', '沒有變形'):
+        for text in ('先打119', '骨頭', '不要為了找冰', '沒有變形'):
             self.assertIn(text, b['TW-13-041'])
         for text in ('晾乾', '容器', '6,312', '19.9%', '30分鐘'):
             self.assertIn(text, b['TW-13-048'])

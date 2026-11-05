@@ -7695,13 +7695,12 @@
       "sources": [
         "ch13_rabies_qna",
         "ch13_rabies_2026",
-        "care_rabies_qual",
-        "care_rabies_exposure",
-        "care_rabies_monitor",
         "ch13_bleeding_mnd",
-        "care_rabies_202609"
+        "ch13_rabies_intro",
+        "ch13_animal_report_aphia",
+        "care_rabies_aphia_20261031"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "被狗、貓咬傷或抓破皮，先用肥皂水和流水交替衝 15 分鐘，當天去打疫苗",
@@ -8164,11 +8163,11 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-034.md",
       "sources": [
         "tick_cdc_202603",
-        "tick_cdc_sfts",
-        "tick_cdc_faq",
-        "care_tick_cdc_us"
+        "care_tick_cdc_us",
+        "tick_cdc_sfts_guide",
+        "tick_nidss_sfts_20261105"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "被蜱蟲叮住，用尖頭鑷子貼著皮膚穩穩拉出來，別塗油別用火燒",
@@ -8185,12 +8184,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-035.md",
       "sources": [
-        "water_tfda_202602",
-        "water_tfda_noro_2016",
-        "water_mohw_flood",
-        "care_water_cdc_us"
+        "care_water_cdc_us",
+        "water_fda_spring_20260211",
+        "water_fda_noro_2016",
+        "water_wra_heavyrain_20251121"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "野外的水一律燒開再喝，滾開一分鐘就夠，常見的旅行海拔上不用因為海拔高多煮",
@@ -8326,11 +8325,10 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-041.md",
       "sources": [
-        "ch13_fracture_nhi",
         "ch13_bleeding_mnd",
         "urgent_fracture_aha"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "懷疑骨折就別再動那個部位，託著不動、冷敷 20 分鐘以內，別自己掰正",

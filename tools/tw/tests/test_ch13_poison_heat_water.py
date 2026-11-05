@@ -26,7 +26,7 @@ class Chapter13ThirdBatchTests(unittest.TestCase):
     self.assertEqual({row['url'] for row in review['source_checks']},{sources[s]['url'] for s in items[key]['source_ids']})
  def test_taiwan_specific_immediate_safety(self):
   b={x['id']:x['body'].split('## 官方來源及改寫說明')[0] for x in validate_runtime()['items']}
-  self.assertIn('疫苗',b['TW-13-013']);self.assertIn('十五分鐘',b['TW-13-013'])
+  self.assertIn('疫苗',b['TW-13-013']);self.assertIn('至少15分鐘',b['TW-13-013'])
   self.assertIn('119',b['TW-13-019']);self.assertIn('室外',b['TW-13-019'])
   self.assertIn('02-2871-7121',b['TW-13-020']);self.assertIn('禁止自行催吐',b['TW-13-020'])
   chemical_eye=b['TW-13-021']

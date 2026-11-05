@@ -29,7 +29,7 @@ def check_bites_ticks_water_assault_amputation_browser(page, context, url, revie
         button = page.locator('#TW-13-013 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        page.locator('#q').fill('1,146')
+        page.locator('#q').fill('1,332')
         assert page.locator('#TW-13-013').count() == 1
         page.locator('#reset').click()
         page.locator('#q').fill('3,643')

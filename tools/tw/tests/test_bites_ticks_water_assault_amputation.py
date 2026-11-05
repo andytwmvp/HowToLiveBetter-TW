@@ -18,11 +18,11 @@ IDS = {f'TW-13-{n:03}' for n in (13, 34, 35, 42, 47)}
 class BitesTicksWaterAssaultAmputationTests(unittest.TestCase):
     def test_actionable_safety_boundaries(self):
         b = {i['id']: i['body'] for i in validate_runtime()['items']}
-        for text in ('先止血', '黏膜', '至少十五分鐘', '1,146件', '41件', '不能當成人被咬後的感染機率'):
+        for text in ('大量出血', '撥119', '止血', '黏膜', '至少15分鐘', '1,332件', '46件', '不能換算個人感染機率'):
             self.assertIn(text, b['TW-13-013'])
-        for text in ('儘速移除', '不要旋轉', '不要為等', '商業檢測'):
+        for text in ('儘快移除', '不要扭轉', '不要等商業蜱蟲檢測結果', '商業蜱蟲檢測'):
             self.assertIn(text, b['TW-13-034'])
-        for text in ('不能生飲', '化學汙染煮沸仍有風險', '重金屬', '全臺水汙染率', '感染機率'):
+        for text in ('不能生飲', '化學汙染煮沸仍有風險', '重金屬', '全臺水源汙染率', '感染機率'):
             self.assertIn(text, b['TW-13-035'])
         for text in ('3,643人', '3,078人', '同意', '法定通報', '2023年2月17日', '暫停'):
             self.assertIn(text, b['TW-13-042'])

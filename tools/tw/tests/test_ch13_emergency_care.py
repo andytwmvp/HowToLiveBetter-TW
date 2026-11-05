@@ -27,7 +27,7 @@ class Chapter13EmergencyCareTests(unittest.TestCase):
   self.assertIn('自動注射器',body['TW-13-015']);self.assertIn('五分鐘',body['TW-13-016'])
   self.assertIn('不要餵食、灌水',body['TW-13-017']);self.assertIn('高壓',body['TW-13-018'])
   self.assertIn('仍能用力咳嗽',body['TW-13-026']);self.assertIn('五要五不',body['TW-13-029'])
-  self.assertIn('不要旋轉',body['TW-13-040']);self.assertIn('不要牽拉',body['TW-13-041'])
+  self.assertIn('不要旋轉',body['TW-13-040']);self.assertIn('不要拉直、扭轉或試著把骨頭推回去',body['TW-13-041'])
  def test_previous_208_items_and_sources_untouched(self):
   old=json.loads(subprocess.check_output(['git','show',BASE+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True))
   now=validate_runtime();items={e['id']:e for e in now['items']};sources={s['id']:s for s in now['sources']}

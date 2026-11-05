@@ -1,53 +1,56 @@
 {
   "id": "TW-13-034",
-  "reviewer": "ChatGPT（AI輔助逐主張、台灣情境及統計口徑核對，非專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐主張再核對，非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-05",
+  "review_due_at": "2027-02-05",
   "target_path": "locales/zh-TW/book/ch13/TW-13-034.md",
-  "target_sha256": "c60427291889320d8ed63064531068dac7457b7a39658e5078b5793071785793",
+  "target_sha256": "8bda272d5b3219faa58fc729d403af9ae76e5dd9134a2778761ca3d226ae80f6",
   "source_checks": [
     {
+      "source_id": "tick_cdc_202603",
       "url": "https://www.cdc.gov.tw/En/Category/ListContent/kpBYBdd1WKIy8ATJWSWKww?uaid=kEDGe_ZPotUYmqikBePlHQ",
-      "claim": "2026年3月宣布新增1例SFTS，蜱蟲在臺灣主要於4月至10月活動；1例不是所有蜱叮咬的統計。",
-      "supporting_passage": "本輪獨立編輯摘要，非逐字引文：2026年3月宣布新增1例SFTS，蜱蟲在臺灣主要於4月至10月活動；1例不是所有蜱叮咬的統計。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字，不宣稱未取得附件、圖像或個案原始資料全面驗證。"
+      "claim": "疾管署2026-03-17公告1例本土SFTS確診並提醒山林活動防蜱。",
+      "supporting_passage": "本輪閱讀來源相關段落後的獨立摘要（非逐字引文）：疾管署2026-03-17公告1例本土SFTS確診並提醒山林活動防蜱。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀官方新聞列表和公告可見摘要；公告所述單一病例不作為蜱蟲叮咬發生率。"
     },
     {
-      "url": "https://www.cdc.gov.tw/Category/Page/-BXxXFCs_EDa3eOOpcJ4zg",
-      "claim": "蜱媒病毒可能導致發燒、噁心等症狀，須按活動地點與暴露史就醫評估；潛伏期約7至14天。",
-      "supporting_passage": "本輪獨立編輯摘要，非逐字引文：蜱媒病毒可能導致發燒、噁心等症狀，須按活動地點與暴露史就醫評估；潛伏期約7至14天。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "web擷取不完整或逾時，另以驗證HTTPS直接實讀指定HTML正文；導航列及頁尾更新不當內容發布日。"
+      "source_id": "tick_cdc_sfts_guide",
+      "url": "https://www.cdc.gov.tw/Category/MPage/cjWQ-JCMU6RNVAocWR42hg",
+      "claim": "疾管署指引說明臺灣蜱蟲主要活動季節為4至10月，SFTS主要經蜱蟲叮咬傳播，潛伏期約7至14天。",
+      "supporting_passage": "閱讀疾管署指引與防護資料後的獨立摘要（非逐字引文）：蜱蟲棲地、臺灣活動季節、SFTS傳播途徑及潛伏期。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05查讀疾管署官方「重要指引及教材」之SFTS防治資料，並與疾管署2026年病例公告交叉核對；採用臺灣季節與一般傳播資訊，不引用境外病例率。"
     },
     {
-      "url": "https://www.cdc.gov.tw/Category/QAPage/8rz8HFwRBkAvSA9pl9OhWg",
-      "claim": "蜱蟲應以鑷子夾住口器小心移除，再以肥皂清洗；有發燒不適應告知醫師暴露史。",
-      "supporting_passage": "本輪獨立編輯摘要，非逐字引文：蜱蟲應以鑷子夾住口器小心移除，再以肥皂清洗；有發燒不適應告知醫師暴露史。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "web擷取不完整或逾時，另以驗證HTTPS直接實讀指定HTML正文；導航列及頁尾更新不當內容發布日。"
-    },
-    {
+      "source_id": "care_tick_cdc_us",
       "url": "https://www.cdc.gov/ticks/after-a-tick-bite/index.html",
-      "claim": "儘速近皮膚夾取、穩定拉出不旋轉；殘留口器不易取出不反覆挖，勿等商業蜱檢結果才就醫。",
-      "supporting_passage": "本輪獨立編輯摘要，非逐字引文：儘速近皮膚夾取、穩定拉出不旋轉；殘留口器不易取出不反覆挖，勿等商業蜱檢結果才就醫。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字，不宣稱未取得附件、圖像或個案原始資料全面驗證。"
+      "claim": "儘速用鑷子靠近皮膚夾取，穩定向外拉、不扭轉；不塗抹物質或用熱源，不等商業檢測結果決定就醫。",
+      "supporting_passage": "本輪閱讀來源相關段落後的獨立摘要（非逐字引文）：儘速用鑷子靠近皮膚夾取，穩定向外拉、不扭轉；不塗抹物質或用熱源，不等商業檢測結果決定就醫。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀美國CDC 2026-06-09更新的蜱蟲移除與後續處理正文；只採一般移除方法，不套用美國蜱種分佈或疾病盛行率。"
+    },
+    {
+      "source_id": "tick_nidss_sfts_20261105",
+      "url": "https://nidss.cdc.gov.tw/nndss/disease?id=SFTS",
+      "claim": "NIDSS依發病日顯示本土與境外移入SFTS確定病例，2026累計1例、死亡0例，最近發病日2月27日；頁面標明更新日期且資料可修正。",
+      "supporting_passage": "本輪閱讀來源相關段落後的獨立摘要（非逐字引文）：NIDSS依發病日顯示本土與境外移入SFTS確定病例，2026累計1例、死亡0例，最近發病日2月27日；頁面標明更新日期且資料可修正。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05 07:32直接讀取NIDSS統計表；這是確診病例行政統計，不包含蜱蟲叮咬或戶外活動總人次。"
     }
   ],
-  "localization_changes": "移除不能為等就醫或工具而拖延，近皮膚穩拉不旋轉，不能因口器殘留反覆挖或等商業蜱檢；發燒暴露史不要求看見叮咬。",
-  "review_method": "實讀指定HTML、PDF指定頁與圖表，分開實際取回、網頁入口、統計分母及專業限制。",
+  "localization_changes": "逐段重核臺灣戶外接觸、蜱蟲移除、症狀後就醫及最新NIDSS病例表；將單一新聞數字改為依發病日的年度確診表，並標明病例數沒有叮咬人次分母。",
+  "review_method": "2026-11-05逐條重讀臺灣正文、固定ID上游主題、前次審閱與來源；查核官方頁面及可讀指南對應主張、台灣情境、處置、頻率口徑與限制。此為AI輔助來源再審，沒有宣稱正式專業簽證。",
   "limits": [
-    "**不要塗油、凡士林、酒精或精油逼蟲退出，也不能點火、壓爆或用指甲挖出**。蜱蟲與傳播恙蟲病的恙蟎不相同，兩類疾病不能混算；4至10月是活動較明顯的季節，並非其餘月份絕無風險。SFTS、萊姆病等疾病是否存在感染風險由醫師評估，不能因網路照片自行確診。2026年單次報告新增1例沒有蜱叮咬總人次的母數，**不能推估每個人的感染機率**。\n\n本輪重讀台灣疾管署疾病介紹與Q&A正文，並以美國CDC一般移除原則交叉核對；未移植美國蜱種分佈、萊姆病預防用藥或叮咬時數門檻。主要活動季節與單次新增1例公告都不能當全國叮咬發生率；國外或跨地區致死率概述也不作台灣個人風險。",
-    "醫療、防疫、救護、法律及社工獨立專業審閱尚待取得。"
+    "蜱蟲活動季節、蜱蟲叮咬數及感染疾病病例數是不同資料，不能互相換算。疾管署傳染病統計表依發病日統計本土與境外移入SFTS確定病例；截至2026年11月5日07:32，2026年累計1例、死亡0例，最近發病日為2月27日。3月疾管署新聞說明該病例為本土個案。這是確診病例數，不是蜱蟲叮咬件數；統計沒有野外活動或蜱蟲叮咬總人次分母，不能推算個人感染機率。",
+    "美國CDC資料只支撐一般移除方式，未套用美國蜱種分佈、疾病盛行率或治療規則。",
+    "未取得感染科、皮膚科或公共衛生專業人員獨立審閱。"
   ],
-  "source_reviewed_sha256": "44d31a4f709c089e0b53e804f23dcd7ae80f73ccf102c2d3cf8ec2de0e5a9363",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "44d31a4f709c089e0b53e804f23dcd7ae80f73ccf102c2d3cf8ec2de0e5a9363",
-    "after_sha256": "c60427291889320d8ed63064531068dac7457b7a39658e5078b5793071785793",
-    "before_reader_sha256": "2077b946d444857a2d46b2a5d863ae7afc1e6dc000e7778f69eb8897bfb206e1",
-    "after_reader_sha256": "c0c898b92fd4b3e456ec6354c33074440c0f300b1deaa02a647101e5f7324d96"
-  }
+  "source_reviewed_sha256": "8bda272d5b3219faa58fc729d403af9ae76e5dd9134a2778761ca3d226ae80f6",
+  "unresolved_questions": [
+    "2026年NIDSS顯示1例確診，不代表蜱蟲叮咬數或個人感染機率；監測表可能隨後續修正。",
+    "美國CDC資料只支撐一般移除方式，未套用美國蜱種分佈、疾病盛行率或治療規則。",
+    "未取得感染科、皮膚科或公共衛生專業人員獨立審閱。"
+  ]
 }
