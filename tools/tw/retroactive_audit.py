@@ -1147,12 +1147,25 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
             "原自查問題未分清液體化學品沖洗與未知粉末未定分流，也未涵蓋已知物質眼睛專屬指示、"
             "眼球穿刺傷和求援時機；依正文同步補上立即求助及就醫限制。"
         )
+        skin_safety_question_tokens = safety_question_tokens + (
+            "液體沾皮膚", "乾粉或金屬化學物質沾皮膚", "禁水指引"
+        )
+        skin_safety_question_reason = (
+            "收尾複審指出皮膚液體暴露缺少立即沖洗，且乾粉／金屬化學品需依禁水警語分流；"
+            "依本次來源核對同步補入皮膚處置與求援步驟。"
+        )
         documented_safety_change = (
             old.get("id") == "TW-13-021"
             and isinstance(new.get("question"), str)
             and new["question"].endswith("？")
-            and all(token in new["question"] for token in safety_question_tokens)
-            and record.get("question_change_reason") == safety_question_reason
+            and any(
+                all(token in new["question"] for token in tokens)
+                and record.get("question_change_reason") == reason
+                for tokens, reason in (
+                    (safety_question_tokens, safety_question_reason),
+                    (skin_safety_question_tokens, skin_safety_question_reason),
+                )
+            )
         )
         if not (title_substitution or documented_safety_change):
             return False

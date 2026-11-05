@@ -16,9 +16,12 @@ import retroactive_audit as audit
 MAIN_BASE = "5b0235927b13f544aac9a46d9e618e4cae0ec120"
 FIRST_RECHECK_HEAD = "a1d9d0f32a8131b2740e0ee1b68554490fd9f7fc"
 FIRST_RECHECK_BASE = "1e2d6a4904123d09217c50c50107df76c7b3e80f"
+SKIN_FOLLOWUP_BASE = "e9afea2e6d896400900882e278edd91b0e93c1fd"
 FIRST_EVIDENCE_PATH = "localization/ch13-021-chemical-eye-followup-20261105.json"
 CORRECTION_EVIDENCE_PATH = "localization/ch13-021-chemical-eye-correction-20261105.json"
 CORRECTION_SOURCE_PATH = "localization/tw-edition/sources/ch13-021-chemical-eye-correction-20261105.json"
+SKIN_FOLLOWUP_EVIDENCE_PATH = "localization/ch13-021-skin-exposure-followup-20261105.json"
+SKIN_SOURCE_PATH = "localization/tw-edition/sources/ch13-021-skin-exposure-followup-20261105.json"
 REGISTER_PATH = "localization/retroactive-review-register-20261019.json"
 ITEM_PATH = "locales/zh-TW/book/ch13/TW-13-021.md"
 RUNTIME_PATH = "localization/tw-edition/runtime.json"
@@ -27,6 +30,10 @@ NEW_SOURCE_IDS = {
     "ch13_vgh_eye_penetrating_20261105",
     "ch13_vgh_chemical_burn_20261105",
     "ch13_moenv_calcium_oxide_eyes_20261105",
+}
+SKIN_SOURCE_IDS = {
+    "ch13_poisoncenter_skin_20261105",
+    "ch13_vgh_chemical_skin_burn_20261105",
 }
 
 
@@ -47,7 +54,9 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
     def setUpClass(cls):
         cls.first_evidence = read_json(FIRST_EVIDENCE_PATH)
         cls.first_item = cls.first_evidence["item"]
-        cls.correction_evidence = read_json(CORRECTION_EVIDENCE_PATH)
+        cls.prior_correction_evidence = read_json(CORRECTION_EVIDENCE_PATH)
+        cls.prior_correction = cls.prior_correction_evidence["item"]
+        cls.correction_evidence = read_json(SKIN_FOLLOWUP_EVIDENCE_PATH)
         cls.correction = cls.correction_evidence["item"]
         cls.runtime = validate_runtime()
         cls.items = {row["id"]: row for row in cls.runtime["items"]}
@@ -67,16 +76,18 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
             row for row in baseline_register["substantive_rechecks"]
             if row["id"] == "TW-13-021"
         ]
-        self.assertEqual(rows[:-1], baseline_rows)
-        self.assertEqual(rows[-1], self.correction)
+        self.assertEqual(rows[:-2], baseline_rows)
+        self.assertEqual(rows[-2:], [self.prior_correction, self.correction])
 
         same_day = [row for row in rows if row["reviewed_at"] == "2026-11-05"]
-        self.assertEqual(len(same_day), 2)
+        self.assertEqual(len(same_day), 3)
         first = same_day[0]
         self.assertEqual(first, self.first_item)
-        self.assertEqual(same_day[1], self.correction)
+        self.assertEqual(same_day[1], self.prior_correction)
+        self.assertEqual(same_day[2], self.correction)
         self.assertEqual(first["prior_revision"], FIRST_RECHECK_BASE)
-        self.assertEqual(self.correction["prior_revision"], FIRST_RECHECK_HEAD)
+        self.assertEqual(self.prior_correction["prior_revision"], FIRST_RECHECK_HEAD)
+        self.assertEqual(self.correction["prior_revision"], SKIN_FOLLOWUP_BASE)
         self.assertEqual(self.correction["reviewed_at"], "2026-11-05")
         self.assertEqual(self.correction["review_due_at"], "2027-02-05")
         self.assertEqual(self.correction_evidence["baseline_main_sha"], MAIN_BASE)
@@ -96,8 +107,15 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
             ROOT, FIRST_RECHECK_HEAD, first, old_item, first_item
         ))
 
-        correction_before = git_bytes(FIRST_RECHECK_HEAD, ITEM_PATH)
-        prior_review = git_bytes(FIRST_RECHECK_HEAD, REVIEW_PATH)
+        first_correction_before = git_bytes(FIRST_RECHECK_HEAD, ITEM_PATH)
+        first_correction_body = git_bytes(SKIN_FOLLOWUP_BASE, ITEM_PATH)
+        self.assertEqual(self.prior_correction["before_sha256"], digest(first_correction_before))
+        self.assertEqual(self.prior_correction["after_sha256"], digest(first_correction_body))
+        self.assertEqual(self.prior_correction["previous_body"].encode("utf-8"), first_correction_before)
+        self.assertEqual(self.prior_correction["body"].encode("utf-8"), first_correction_body)
+
+        correction_before = git_bytes(SKIN_FOLLOWUP_BASE, ITEM_PATH)
+        prior_review = git_bytes(SKIN_FOLLOWUP_BASE, REVIEW_PATH)
         current = self.items["TW-13-021"]
         self.assertEqual(self.correction["before_sha256"], digest(correction_before))
         self.assertEqual(self.correction["after_sha256"], digest(current_body))
@@ -115,12 +133,14 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
         self.assertEqual(current["limits"], self.review["limits"][0])
         validate_recheck_history(ROOT, self.correction, current)
 
-        self.assertTrue(documented_revision(first_item, current, self.correction))
+        prior_runtime = json.loads(git_bytes(SKIN_FOLLOWUP_BASE, RUNTIME_PATH))
+        prior_item = next(row for row in prior_runtime["items"] if row["id"] == "TW-13-021")
+        self.assertTrue(documented_revision(prior_item, current, self.correction))
         undocumented = dict(self.correction)
         undocumented.pop("question_change_reason")
-        self.assertFalse(documented_revision(old_item, current, undocumented))
+        self.assertFalse(documented_revision(prior_item, current, undocumented))
         incomplete_question = dict(current, question="我已瞭解化學品入眼要怎麼處理嗎？")
-        self.assertFalse(documented_revision(old_item, incomplete_question, self.correction))
+        self.assertFalse(documented_revision(prior_item, incomplete_question, self.correction))
 
     def test_powder_guidance_cites_specific_reactive_powder_and_keeps_unknown_limit(self):
         body = self.items["TW-13-021"]["body"]
@@ -159,11 +179,28 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
         )
         self.assertNotIn("撥120", body)
 
+    def test_skin_exposure_separates_liquid_rinse_from_dry_powder_caution(self):
+        body = self.items["TW-13-021"]["body"]
+        skin = body.split("皮膚接觸要依皮膚的專屬處置", 1)[1].split(
+            "\n\n若尖銳物刺入眼球", 1
+        )[0]
+        self.assertIn("一般液體化學品沾到皮膚", skin)
+        self.assertIn("立即以大量流動清水沖洗至少15分鐘", skin)
+        self.assertIn("旁人同步聯絡毒物中心", skin)
+        self.assertIn("化學灼傷", skin)
+        self.assertIn("沖洗至少30分鐘", skin)
+        self.assertIn("成分不明乾粉或粉狀／金屬化學物質", skin)
+        self.assertIn("不要揉擦、揚起或自行加水測試", skin)
+        self.assertIn("先去除殘留物再沖洗", skin)
+        self.assertIn("這些特定皮膚處置不能套用到其他乾粉或眼睛", skin)
+        self.assertIn("立即撥119", skin)
+
     def test_runtime_self_check_question_covers_the_same_emergency_branches(self):
         question = self.items["TW-13-021"]["question"]
         for token in (
             "液體化學品", "成分不明粉末", "避免揉挖", "立即求助", "毒物中心",
-            "已知物質", "眼球穿刺傷", "立即就醫", "毒物中心", "119"
+            "已知物質", "眼球穿刺傷", "立即就醫", "毒物中心", "119",
+            "液體沾皮膚", "乾粉或金屬化學物質沾皮膚", "禁水指引", "化學灼傷"
         ):
             with self.subTest(token=token):
                 self.assertIn(token, question)
@@ -180,7 +217,7 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
                 [source["id"], source["title"], source["url"], source["supports"]],
             )
             self.assertEqual(source["accessed_at"], "2026-11-05")
-        retired = self.correction["retired_sources"][0]
+        retired = self.prior_correction["retired_sources"][0]
         historical_runtime = json.loads(git_bytes(FIRST_RECHECK_HEAD, RUNTIME_PATH))
         old_source = next(
             row for row in historical_runtime["sources"] if row["id"] == retired["id"]
@@ -192,6 +229,18 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
         )
         self.assertEqual(retired["replacement_ids"], ["ch13_vgh_eye_penetrating_20261105"])
         self.assertIn(retired["id"], self.sources)
+
+        skin_source = read_json(SKIN_SOURCE_PATH)["sources"]
+        self.assertEqual({row[0] for row in skin_source}, SKIN_SOURCE_IDS)
+        self.assertEqual(set(self.correction_evidence["new_source_ids"]), SKIN_SOURCE_IDS)
+        for row in skin_source:
+            skin_source_id = row[0]
+            self.assertEqual(
+                row,
+                [self.sources[skin_source_id]["id"], self.sources[skin_source_id]["title"],
+                 self.sources[skin_source_id]["url"], self.sources[skin_source_id]["supports"]],
+            )
+            self.assertIn("皮膚", self.sources[skin_source_id]["supports"])
 
         source_ids = self.items["TW-13-021"]["source_ids"]
         body_urls = set(re.findall(r"\]\((https?://[^)]+)\)", self.items["TW-13-021"]["body"]))
