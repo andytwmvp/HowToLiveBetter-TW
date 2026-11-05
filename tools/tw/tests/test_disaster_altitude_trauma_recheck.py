@@ -7,37 +7,38 @@ import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
-from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history
+from retroactive_audit import assert_preserved_or_rechecked
 from body_renderer import body_blocks
+from recheck_history_assertions import assert_historical_recheck_edge
 
 BASE = 'c530f53fbf97b9c90ba6e90824e57b36cb2bafcb'
+BATCH_REVISION = 'a803e23ee57613c8e8356dd257b5f216e9801dab'
 IDS = {f'TW-13-{n:03}' for n in (30, 32, 33, 40)}
 
 class DisasterAltitudeTraumaTests(unittest.TestCase):
     def test_actionable_safety_boundaries(self):
         b = {i['id']: i['body'] for i in validate_runtime()['items']}
-        for text in ('不等待警報', '不為關瓦斯', '不是個人受傷機率'):
+        for text in ('不等警報確認', '只有能順手關火時才關', '不能當成個人受傷機率'):
             self.assertIn(text, b['TW-13-030'])
         for text in ('不會殘留電荷', '水管', '最後一次雷聲或閃電', '不是可靠避雷所'):
             self.assertIn(text, b['TW-13-032'])
-        for text in ('1066', '2007年4月至2008年3月', '871', '就醫者', '氧氣罐', '血氧'):
+        for text in ('1,066份', '2007年4月至2008年3月', '871名', '就醫者', '氧氣罐', '血氧'):
             self.assertIn(text, b['TW-13-033'])
-        for text in ('四肢', '持續加壓', '胸腹', '不為沖洗', '不要旋轉、推入或拔出異物'):
+        for text in ('四肢', '持續加壓', '胸腹', '不要為了清洗傷口而延誤119', '不要旋轉、推入或拔出異物'):
             self.assertIn(text, b['TW-13-040'])
 
     def test_recheck_history_and_body_source_contracts(self):
         rt = validate_runtime()
         items = {i['id']: i for i in rt['items']}
         sources = {s['id']: s for s in rt['sources']}
-        records = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())
-        records = {r['id']: r for r in records['substantive_rechecks']}
+        records = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())['substantive_rechecks']
         manifest = json.loads((ROOT/'localization/manifest.json').read_text())
         manifest = {e['id']: e for e in manifest['entries']}
         for key in IDS:
             with self.subTest(key=key):
-                row = records[key]
+                row = next(r for r in records if r['id'] == key and r['reviewed_at'] == '2026-10-20')
                 self.assertEqual(row['prior_revision'], BASE)
-                validate_recheck_history(ROOT, row, items[key])
+                assert_historical_recheck_edge(self, ROOT, row, merged_revision=BATCH_REVISION)
                 self.assertTrue(validate_entry(manifest[key]))
                 review = json.loads((ROOT/f'localization/reviews/{key}.json').read_text())
                 raw = (ROOT/items[key]['target_path']).read_bytes()

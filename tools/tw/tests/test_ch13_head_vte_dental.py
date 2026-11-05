@@ -29,7 +29,7 @@ class Chapter13HeadVteDentalTests(unittest.TestCase):
   self.assertIn("扳動腳踝",data["TW-13-011"])
   self.assertNotIn("Homan",data["TW-13-011"])
   self.assertIn("不要自行服用抗凝血藥",data["TW-13-011"])
-  self.assertIn("斷指直接碰冰水",data["TW-13-047"])
+  self.assertIn("不要讓組織直接接觸冰塊或冰水",data["TW-13-047"])
   self.assertIn("乳牙不可",data["TW-13-048"])
  def test_earlier_224_items_and_sources_unchanged(self):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))

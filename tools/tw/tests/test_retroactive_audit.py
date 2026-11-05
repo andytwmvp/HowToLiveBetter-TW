@@ -328,12 +328,13 @@ class RetroactiveAuditTests(unittest.TestCase):
                 previous = audit.validate_reader_copy_cleanup_history(
                     audit.ROOT, active_cleanups[0], item
                 )
+                cleaned = item
                 self.assertTrue(
                     audit.documented_reader_item_cleanup(previous, item, active_cleanups[0]),
                     f"{item['id']} 尚未依記錄整理成實際閱讀文字",
                 )
             else:
-                cleaned, _ = audit.normalize_reader_item(item)
+                cleaned, _ = audit.normalize_reader_item_v5(item)
                 self.assertEqual(cleaned, item, f"{item['id']} 尚未整理成實際閱讀文字")
             if item.get("target_path"):
                 target = audit.ROOT / item["target_path"]
@@ -457,14 +458,14 @@ class RetroactiveAuditTests(unittest.TestCase):
     def test_high_risk_reader_copy_keeps_its_professional_review_limit(self):
         runtime = json.loads((audit.ROOT / "localization/tw-edition/runtime.json").read_text(encoding="utf-8"))
         item = next(value for value in runtime["items"] if value["id"] == "TW-13-042")
-        notice = audit.READER_PROFESSIONAL_LIMITS["TW-13-042"]
+        notice = "本篇尚未經醫療、社工、法律及急救專業人員獨立審閱；"
         review = json.loads((audit.ROOT / "localization/reviews/TW-13-042.json").read_text(encoding="utf-8"))
         register = audit.load(audit.ROOT, "localization/retroactive-review-register-20261019.json")
         self.assertNotIn(notice, item["body"])
-        self.assertIn("若要處理個人醫療或保護需求，請向醫療團隊、社工或所在地主管機關確認。", item["body"])
+        self.assertIn("若要處理個人安全、醫療或保護需求，可請醫療人員、社工或113協助轉介。", item["body"])
         self.assertIn("AI輔助", review["reviewer"])
-        self.assertTrue(any("獨立專業審閱尚待取得" in limit for limit in review["limits"]))
-        self.assertTrue(any("獨立專業審閱尚待取得" in limit
+        self.assertTrue(any("未取得性侵害服務、醫療、社工或法律專業人員獨立審閱" in limit for limit in review["limits"]))
+        self.assertTrue(any("未取得性侵害服務、醫療、社工或法律專業人員獨立審閱" in limit
                             for row in register["substantive_rechecks"] if row["id"] == item["id"]
                             for limit in row["limits"]))
         self.assertNotIn("器官條例", item["body"])

@@ -921,6 +921,26 @@ def normalize_reader_item_v4(item: dict) -> tuple[dict, list[str]]:
     return cleaned, removed
 
 
+def normalize_reader_item_v5(item: dict) -> tuple[dict, list[str]]:
+    """Apply current reader-copy rules without exposing professional-review workflow."""
+    cleaned, removed = normalize_reader_item_v4(item)
+    if cleaned.get("id") == "TW-13-042":
+        notice = READER_PROFESSIONAL_LIMITS["TW-13-042"]
+        followup = "若要處理個人安全、醫療或保護需求，可請醫療人員、社工或113協助轉介。"
+        prior_followup = "若要處理個人醫療或保護需求，請向醫療團隊、社工或所在地主管機關確認。"
+        body = cleaned.get("body", "")
+        if followup in body:
+            paragraphs = body.split("\n\n")
+            paragraphs = [paragraph for paragraph in paragraphs
+                          if paragraph not in {notice, prior_followup}]
+            body = "\n\n".join(paragraphs)
+        else:
+            body = body.replace(notice, followup, 1)
+            body = body.replace(prior_followup, followup, 1)
+        cleaned["body"] = body
+    return cleaned, removed
+
+
 def _reader_fields_sha256(item: dict) -> str:
     fields = {key: item.get(key) for key in ("title", "body", "limits", "question") if key in item}
     payload = json.dumps(fields, ensure_ascii=False, sort_keys=True, separators=(",", ":"))

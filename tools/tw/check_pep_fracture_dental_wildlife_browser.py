@@ -29,11 +29,11 @@ def check_pep_fracture_dental_wildlife_browser(page, context, url, review):
         button = page.locator('#TW-13-038 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        page.locator('#q').fill('776')
+        page.locator('#q').fill('870')
         assert page.locator('#TW-13-038').count() == 1
         page.locator('#reset').click()
         page.locator('#q').fill('6,312')
         assert page.locator('#TW-13-048').count() == 1
         page.screenshot(path=str(review / f'pep-fracture-dental-wildlife-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})
-    return ['四篇PEP／骨折／恆牙脫落／遇獸再審，桌機1440及手機390、閱讀／自查／離線逐段全文、五標題及來源一致；776病例與6312人樣本搜尋、自查按鈕及無水平溢出通過。非醫療牙科或野生動物專業認證。']
+    return ['四篇PEP／骨折／恆牙脫落／遇獸再審，桌機1440及手機390、閱讀／自查／離線逐段全文、五標題及來源一致；870病例與6,312人樣本搜尋、自查按鈕及無水平溢出通過。非醫療牙科或野生動物專業認證。']

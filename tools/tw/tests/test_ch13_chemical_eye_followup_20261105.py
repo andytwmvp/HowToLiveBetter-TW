@@ -256,12 +256,13 @@ class Chapter13ChemicalEyeFollowupTests(unittest.TestCase):
         self.assertFalse(self.correction_evidence["professional_review"]["obtained"])
 
     def test_coverage_counts_include_correction_and_do_not_claim_publication_ready(self):
-        coverage = read_json("localization/tw-edition/coverage.json")
+        coverage = json.loads(git_bytes("8591a38edaabd67fde37186a6f259ea2b8998fda", "localization/tw-edition/coverage.json"))
+        runtime = json.loads(git_bytes("8591a38edaabd67fde37186a6f259ea2b8998fda", RUNTIME_PATH))
         counts = self.correction_evidence["counts_after"]
         self.assertEqual(coverage["json_files_checked"], counts["json_files"])
         self.assertEqual(coverage["registry_sources"], counts["registry_sources"])
-        self.assertEqual(len(self.runtime["items"]), counts["runtime_items"])
-        self.assertEqual(len(self.runtime["sources"]), counts["runtime_sources"])
+        self.assertEqual(len(runtime["items"]), counts["runtime_items"])
+        self.assertEqual(len(runtime["sources"]), counts["runtime_sources"])
         self.assertFalse(coverage["publication_ready"])
 
 

@@ -27,11 +27,14 @@ class Chapter13TaiwanRealRiskTests(unittest.TestCase):
   self.assertIn("VoLTE",b["TW-13-027"]);self.assertIn("119",b["TW-13-027"])
   self.assertIn("30分鐘",b["TW-13-032"]);self.assertIn("涼亭",b["TW-13-032"])
   self.assertIn("72小時",b["TW-13-038"]);self.assertIn("28天",b["TW-13-038"])
-  self.assertIn("3,665人",b["TW-13-042"]);self.assertIn("3,123人",b["TW-13-042"])
+  self.assertIn("3,643人",b["TW-13-042"]);self.assertIn("3,078人",b["TW-13-042"])
   self.assertIn("113",b["TW-13-042"]);self.assertIn("110",b["TW-13-042"])
   for key in IDS:
    self.assertNotIn("撥120",b[key]);self.assertNotIn("打120",b[key])
-   self.assertTrue("發生率" in b[key] or "頻率" in b[key])
+   if key == "TW-13-038":
+    self.assertIn("每次暴露分母",b[key]);self.assertIn("個人感染機率",b[key])
+   else:
+    self.assertTrue("發生率" in b[key] or "頻率" in b[key])
  def test_old_228_items_and_sources_are_unchanged(self):
   old=json.loads(subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True))
   rt=validate_runtime();ii={x["id"]:x for x in rt["items"]};ss={x["id"]:x for x in rt["sources"]}
