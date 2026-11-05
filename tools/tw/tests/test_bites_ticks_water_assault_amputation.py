@@ -7,10 +7,12 @@ import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
-from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history
+from retroactive_audit import assert_preserved_or_rechecked
 from body_renderer import body_blocks
+from recheck_history_assertions import assert_historical_recheck_edge
 
 BASE = '48433c16d9efedabf9f5775d33f06a0597b94750'
+BATCH_REVISION = '06c1b0f1842f2a79f988a6cfe59f001669ca1d70'
 IDS = {f'TW-13-{n:03}' for n in (13, 34, 35, 42, 47)}
 
 class BitesTicksWaterAssaultAmputationTests(unittest.TestCase):
@@ -22,24 +24,23 @@ class BitesTicksWaterAssaultAmputationTests(unittest.TestCase):
             self.assertIn(text, b['TW-13-034'])
         for text in ('不能生飲', '化學汙染煮沸仍有風險', '重金屬', '全臺水汙染率', '感染機率'):
             self.assertIn(text, b['TW-13-035'])
-        for text in ('3,643人', '3,078人', '同意', '法定通報', '2023-02-17', '暫停'):
+        for text in ('3,643人', '3,078人', '同意', '法定通報', '2023年2月17日', '暫停'):
             self.assertIn(text, b['TW-13-042'])
-        for text in ('不為找冰', '記錄', '同一口徑', '6小時'):
+        for text in ('不要為找器材延誤119與送醫', '記下使用時間', '全國同一口徑', '6小時'):
             self.assertIn(text, b['TW-13-047'])
 
     def test_recheck_history_and_body_source_contracts(self):
         rt = validate_runtime()
         items = {i['id']: i for i in rt['items']}
         sources = {s['id']: s for s in rt['sources']}
-        records = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())
-        records = {r['id']: r for r in records['substantive_rechecks']}
+        records = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())['substantive_rechecks']
         manifest = json.loads((ROOT/'localization/manifest.json').read_text())
         manifest = {e['id']: e for e in manifest['entries']}
         for key in IDS:
             with self.subTest(key=key):
-                row = records[key]
+                row = next(r for r in records if r['id'] == key and r['reviewed_at'] == '2026-10-20')
                 self.assertEqual(row['prior_revision'], BASE)
-                validate_recheck_history(ROOT, row, items[key])
+                assert_historical_recheck_edge(self, ROOT, row, merged_revision=BATCH_REVISION)
                 self.assertTrue(validate_entry(manifest[key]))
                 review = json.loads((ROOT/f'localization/reviews/{key}.json').read_text())
                 raw = (ROOT/items[key]['target_path']).read_bytes()

@@ -2,59 +2,78 @@
   "id": "TW-13-030",
   "reviewer": "ChatGPT（AI輔助逐主張再核對，非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-05",
+  "review_due_at": "2027-02-05",
   "target_path": "locales/zh-TW/book/ch13/TW-13-030.md",
-  "target_sha256": "a8ac5afaf8d53e6564fd972d1dfd0da22020723a1b51684dda83d0725fe7de2d",
+  "target_sha256": "ae7db8bed2dbc863bf9ed7f36ea74f3357ddb3268444478872443503d0abcf7c",
   "source_checks": [
     {
+      "source_id": "ch13_quake_cwa",
       "url": "https://scweb.cwa.gov.tw/zh-tw/page/intro/11",
       "claim": "地震發生時室內採趴下、掩護、穩住；保護頭頸，不要慌張衝往室外。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：地震發生時室內採趴下、掩護、穩住；保護頭頸，不要慌張衝往室外。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：地震發生時室內採趴下、掩護、穩住；保護頭頸，不要慌張衝往室外。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
+      "source_id": "ch13_quake_nfa",
       "url": "https://www.nfa.gov.tw/cht/index.php?article_id=16075&code=list&flag=detail&ids=21",
-      "claim": "TW-13-030：地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
-      "supporting_passage": "前次主張，本輪未重讀：TW-13-030：地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "本輪web與直接HTTPS均失敗（TLS憑證），保留前查閱日；交叉核對可讀氣象署及臺中消防正文。"
+      "claim": "地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：地震先護住頭頸，趴下掩護穩住，並在平時固定傢俱與準備防災物資。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
+      "source_id": "disaster_cwa_tsunami",
       "url": "https://scweb.cwa.gov.tw/zh-tw/guidance/faqdetail/107",
       "claim": "海邊劇烈搖晃、海水異常或海嘯警報須離開水域、往高處或內陸，不等警報確認。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：海邊劇烈搖晃、海水異常或海嘯警報須離開水域、往高處或內陸，不等警報確認。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：海邊劇烈搖晃、海水異常或海嘯警報須離開水域、往高處或內陸，不等警報確認。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
+      "source_id": "disaster_cwa_frequency",
       "url": "https://scweb.cwa.gov.tw/zh-TW/Guidance/FAQdetail/55",
       "claim": "監測設備提升會改變偵測量；頁面概括年均量未列平均期間，不當個人受傷機率。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：監測設備提升會改變偵測量；頁面概括年均量未列平均期間，不當個人受傷機率。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：監測設備提升會改變偵測量；頁面概括年均量未列平均期間，不當個人受傷機率。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
+      "source_id": "disaster_taichung_gas",
       "url": "https://www.taichung.gov.tw/1391133/1391134/1391160/nodeCp?nodeId=3338813",
       "claim": "劇烈搖晃先掩護，不急著關瓦斯；停搖確認安全後再檢查，公共場所避免推擠與折返。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：劇烈搖晃先掩護，不急著關瓦斯；停搖確認安全後再檢查，公共場所避免推擠與折返。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：劇烈搖晃先掩護，不急著關瓦斯；停搖確認安全後再檢查，公共場所避免推擠與折返。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
+    },
+    {
+      "source_id": "disaster_cwa_earthquake_guide_20261105",
+      "url": "https://scweb.cwa.gov.tw/webdata/PDF/Earthquake_precautions/index.html",
+      "claim": "氣象署提供臺灣住家及交通等地震情境的避難步驟。",
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：中央氣象署互動指南按住家、臥室、浴室、廚房、辦公室、電影院、車站／捷運、電梯旁、戶外和車上提供相應指引；包含就地掩護、避免人潮推擠及留意掉落物。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
+    },
+    {
+      "source_id": "disaster_cwa_observation_network_20261105",
+      "url": "https://scweb.cwa.gov.tw/zh-tw/page/observationnetwork",
+      "claim": "監測系統及測站能力會影響地震偵測件數，不代表人身傷害風險。",
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：中央氣象署說明觀測網和偵測能力會影響每年可記錄的地震數，因而不能將監測件數當作相同口徑的個人受傷機率。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     }
   ],
-  "localization_changes": "補海嘯自然警訊不等待警報，強震不為關瓦斯移動、機車安全停車與震後避開受損建物；加監測件數界線。",
-  "review_method": "台灣情境、原始研究摘要與安全原則逐項核對，分開未讀附件及全文、取回失敗與專業限制。",
+  "localization_changes": "重寫住宅、公共場所、捷運台鐵、機車、海嘯及停搖後撤離步驟；以氣象署現行互動指南與觀測網取代模糊頻率表述，移除編輯流程備註。",
+  "review_method": "逐篇重讀臺灣正文、固定ID原作主題、前次審閱與來源；直接核對現行臺灣官方網頁、法規和可讀研究摘要，檢查場景、急迫性、資料口徑及具體行動；本次為AI輔助來源再審，沒有宣稱正式專業簽證。",
   "limits": [
-    "趴下、掩護、穩住是一般情境優先原則，不是建物結構鑑定，也不能保證嚴重受損建築仍安全。若遇火災、瓦斯洩漏或海嘯威脅，須依現場及權責機關指示處理；停搖後當心餘震，切勿貿然回到已受損建築。戶外、山區、行車及行動不便者的避難方式因情境不同，需要另行判斷。\n\n台灣事件頻率：氣象署說明監測設備與涵蓋範圍會改變可偵測件數；概括年均數沒有交代完整平均期間，不當成2026年固定次數。地震事件數不是個人受傷機率，也不能據此判斷某屋齡建物會否倒塌；本輪未讀年次圖表或逐屋結構資料。",
-    "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
+    "地震監測數不是個人受傷機率；建物安全由專業人員評估，停搖後依官方警報及119指示撤離。",
+    "沒有可把地震監測件數換算成臺灣個人受傷機率的全國暴露模型；建物安全需由主管機關及專業人員評估。",
+    "本次未取得建築、消防或救災專業人員獨立審閱。"
   ],
-  "source_reviewed_sha256": "005faff80eebc65da89534c908b9f86112caa117de4f9dab9723459d6e2829b1",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "005faff80eebc65da89534c908b9f86112caa117de4f9dab9723459d6e2829b1",
-    "after_sha256": "a8ac5afaf8d53e6564fd972d1dfd0da22020723a1b51684dda83d0725fe7de2d",
-    "before_reader_sha256": "9c33dff0210a7bbc6f4a12e504d08751af2be2a7c1ccefb3010acc0a77406453",
-    "after_reader_sha256": "ca8a295eecc3ad453d688e00e7bd0e7b4ebccb61547aa04d1d90b367bf209363"
-  }
+  "source_reviewed_sha256": "ae7db8bed2dbc863bf9ed7f36ea74f3357ddb3268444478872443503d0abcf7c",
+  "unresolved_questions": [
+    "沒有可把地震監測件數換算成臺灣個人受傷機率的全國暴露模型；建物安全需由主管機關及專業人員評估。",
+    "本次未取得建築、消防或救災專業人員獨立審閱。"
+  ]
 }

@@ -11,14 +11,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history, documented_revision, validate_reader_copy_cleanup_history
 from body_renderer import body_blocks
+from recheck_history_assertions import assert_historical_recheck_edge
 
 BASE = '8c9685deee6efa0936178695582d4c908c1c5599'
+BATCH_REVISION = 'b680b7f820f9a3ca9bb52301eb7bd4c5fa180687'
 IDS = {f'TW-13-{n:03}' for n in (31, 38, 41, 48)}
 
 class PepFractureDentalWildlifeTests(unittest.TestCase):
     def test_actionable_safety_boundaries(self):
         b = {i['id']: i['body'] for i in validate_runtime()['items']}
-        for text in ('不要等對方', '776', '679', '97', '2025-12-01', '急診欄'):
+        for text in ('不要等對方', '870', '依診斷日', '不是當年新感染發生數', '2025年12月1日', '急診'):
             self.assertIn(text, b['TW-13-038'])
         for text in ('先處理', '骨頭', '不要為製作夾板', '沒有變形'):
             self.assertIn(text, b['TW-13-041'])
@@ -31,15 +33,14 @@ class PepFractureDentalWildlifeTests(unittest.TestCase):
         rt = validate_runtime()
         items = {i['id']: i for i in rt['items']}
         sources = {s['id']: s for s in rt['sources']}
-        records = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())
-        records = {r['id']: r for r in records['substantive_rechecks']}
+        records = json.loads((ROOT/'localization/retroactive-review-register-20261019.json').read_text())['substantive_rechecks']
         manifest = json.loads((ROOT/'localization/manifest.json').read_text())
         manifest = {e['id']: e for e in manifest['entries']}
         for key in IDS:
             with self.subTest(key=key):
-                row = records[key]
+                row = next(r for r in records if r['id'] == key and r['reviewed_at'] == '2026-10-20')
                 self.assertEqual(row['prior_revision'], BASE)
-                validate_recheck_history(ROOT, row, items[key])
+                assert_historical_recheck_edge(self, ROOT, row, merged_revision=BATCH_REVISION)
                 self.assertTrue(validate_entry(manifest[key]))
                 review = json.loads((ROOT/f'localization/reviews/{key}.json').read_text())
                 raw = (ROOT/items[key]['target_path']).read_bytes()

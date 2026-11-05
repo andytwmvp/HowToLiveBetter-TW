@@ -8074,9 +8074,11 @@
         "ch13_quake_nfa",
         "disaster_cwa_tsunami",
         "disaster_cwa_frequency",
-        "disaster_taichung_gas"
+        "disaster_taichung_gas",
+        "disaster_cwa_earthquake_guide_20261105",
+        "disaster_cwa_observation_network_20261105"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "地震時先看自己在什麼房子裡：符合抗震設防的樓裡就地躲，會垮的老房子門在幾步外就出去",
@@ -8140,12 +8142,11 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-033.md",
       "sources": [
         "altitude_nps_202609",
-        "altitude_yushan_hist_2017",
         "disaster_cdc_altitude",
         "disaster_ams_2010",
         "disaster_ams_2026"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "上高原按睡眠海拔（當晚睡在多高）慢慢升，症狀加重就下撤，不要硬扛",
@@ -8254,14 +8255,12 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-038.md",
       "sources": [
         "hiv_pep_cdc_2026",
-        "hiv_pep_cdc_faq",
         "urgent_pep_hosp",
         "urgent_pep_occup",
         "urgent_pep_guide",
-        "urgent_pep_us",
-        "urgent_hiv_monthly"
+        "urgent_hiv_nidss_20261105"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "可能被 HIV 暴露了，72 小時內去拿阻斷藥，越早越好",
@@ -8308,10 +8307,9 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-040.md",
       "sources": [
         "ch13_impaled_tainan",
-        "ch13_bleeding_mnd",
-        "disaster_nhs_embedded"
+        "ch13_bleeding_mnd"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "刀、鋼筋、玻璃扎進身體，壓住異物周圍止血，不要把它拔出來",
@@ -8351,16 +8349,17 @@
       "sources": [
         "assault_mohw_care",
         "assault_113_dops",
-        "assault_mohw_medical_113",
         "assault_taipei_police",
         "care_assault_portal",
         "care_assault_hospitals",
         "care_assault_law",
         "care_assault_history",
         "ch01_law_effective_day",
-        "hiv_pep_cdc_2026"
+        "hiv_pep_cdc_2026",
+        "assault_mohw_service_stats_20261105",
+        "assault_mohw_victim_counts_2008_2025"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "被性侵之後，先到安全的地方打 110；驗傷之前別洗澡、別洗衣服、別收拾房間，72 小時內去醫院",
@@ -8465,11 +8464,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-047.md",
       "sources": [
-        "amputated_vghtpe",
         "care_amputation_wda",
-        "ch13_bleeding_mnd"
+        "ch13_bleeding_mnd",
+        "amputated_vghtpe_20261105"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-05",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "手指、腳趾被切斷，先壓住傷口止血，斷下來的部分用溼紗布包好裝進密封袋，袋子放進冰水裡，去有手外科的醫院",

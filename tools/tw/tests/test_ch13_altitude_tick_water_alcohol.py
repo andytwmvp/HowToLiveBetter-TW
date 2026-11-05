@@ -22,7 +22,8 @@ class Chapter13AltitudeTickWaterAlcoholTests(unittest.TestCase):
     self.assertEqual({x["url"] for x in review["source_checks"]},{sources[s]["url"] for s in items[k]["source_ids"]})
  def test_taiwan_season_frequencies_and_emergency_gates(self):
   b={x["id"]:x["body"].split("## 官方來源及改寫說明")[0] for x in validate_runtime()["items"]}
-  self.assertIn("2017",b["TW-13-033"]);self.assertIn("下撤",b["TW-13-033"])
+  self.assertIn("2010年",b["TW-13-033"]);self.assertIn("1,066份",b["TW-13-033"]);self.assertIn("下撤",b["TW-13-033"])
+  self.assertNotIn("2017",b["TW-13-033"])
   self.assertIn("4至10月",b["TW-13-034"]);self.assertIn("鑷子",b["TW-13-034"])
   self.assertIn("3起",b["TW-13-035"]);self.assertIn("重金屬",b["TW-13-035"])
   self.assertIn("119",b["TW-13-046"]);self.assertIn("CPR",b["TW-13-046"])

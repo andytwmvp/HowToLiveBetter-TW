@@ -1,46 +1,47 @@
 {
   "id": "TW-13-047",
-  "reviewer": "ChatGPT（AI輔助逐主張、台灣情境及統計口徑核對，非專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐主張再核對，非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-05",
+  "review_due_at": "2027-02-05",
   "target_path": "locales/zh-TW/book/ch13/TW-13-047.md",
-  "target_sha256": "37b55ad622e03e5a5c68dba0933ec9a1323d001253ef980aa18869f814a57cea",
+  "target_sha256": "af79bd04a402b240b32fbd05d02c82495deda5a3fc9c587eac3962df5805daa7",
   "source_checks": [
     {
-      "url": "https://ihealth.vghtpe.gov.tw/media/479",
-      "claim": "以微濕紗布包覆斷肢並密封於袋內，外袋放冰水間接冷藏，不能直接泡水或冰凍。",
-      "supporting_passage": "本輪獨立編輯摘要，非逐字引文：以微濕紗布包覆斷肢並密封於袋內，外袋放冰水間接冷藏，不能直接泡水或冰凍。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "web實讀衛教HTML正文；直接HTTPS回403，未稱來源失效或取得圖像；6小時與4℃非可等待或放棄門檻。"
-    },
-    {
+      "source_id": "care_amputation_wda",
       "url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb38f07673c018f0a223e4d0613",
       "claim": "中文HTML說明乾淨包覆、防水袋密封、間接冰水保存與儘速救護；原發布2024-04-27、更新2026-10-03。",
-      "supporting_passage": "本輪獨立編輯摘要，非逐字引文：中文HTML說明乾淨包覆、防水袋密封、間接冰水保存與儘速救護；原發布2024-04-27、更新2026-10-03。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "實讀中文HTML正文與發布／更新日期；未採用外語譯文、圖片、廣告、追蹤或LINE加入導流。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：中文HTML說明乾淨包覆、防水袋密封、間接冰水保存與儘速救護；原發布2024-04-27、更新2026-10-03。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
+      "source_id": "ch13_bleeding_mnd",
       "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
       "claim": "大量出血應立即打119並先加壓止血；危及生命的四肢大量出血可用止血帶，頭頸不可用止血帶。",
-      "supporting_passage": "本輪獨立編輯摘要，非逐字引文：大量出血應立即打119並先加壓止血；危及生命的四肢大量出血可用止血帶，頭頸不可用止血帶。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪只實讀HTML大量出血的119及四肢段，不取用小橘書PDF、圖、影片或其他段落。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：大量出血應立即打119並先加壓止血；危及生命的四肢大量出血可用止血帶，頭頸不可用止血帶。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
+    },
+    {
+      "source_id": "amputated_vghtpe_20261105",
+      "url": "https://ihealth.vghtpe.gov.tw/media/479",
+      "claim": "斷離組織密封後用冰水間接冷藏，不直接浸水或冷凍，並儘速送醫。",
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：臺北榮總頁面列出微濕紗布包覆、乾燥密封袋、外袋放入冰水間接冷藏，並明確提醒不可直接浸水、接觸冰塊或冷凍。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     }
   ],
-  "localization_changes": "器材不足不等冰、量溫或清洗延醫；記錄止血帶與受傷時間，未全斷保護不硬掰，6小時不是可等待或放棄門檻；補頻率不足。",
-  "review_method": "實讀指定HTML、PDF指定頁與圖表，分開實際取回、網頁入口、統計分母及專業限制。",
+  "localization_changes": "重核2026-11-05臺北榮總保存方式與119大量出血指引，區分傷者優先、間接冷藏和「6小時」不是等待期限；保留無全國同口徑數據限制。",
+  "review_method": "逐篇重讀臺灣正文、固定ID原作主題、前次審閱與來源；直接核對現行臺灣官方網頁、法規和可讀研究摘要，檢查場景、急迫性、資料口徑及具體行動；本次為AI輔助來源再審，沒有宣稱正式專業簽證。",
   "limits": [
-    "不可以將斷指放入冰塊堆、直接浸泡冰水、酒精或消毒藥劑，亦不能冷凍或用止血帶綁已離體組織。未完全斷離不能自行割斷，不能硬拉復位。醫院文章的接合時間並非超過後就放棄就醫的界線；患者持續失血和意識、呼吸危險永遠優先於斷指保存。\n\n台灣事件頻率資料不足：本輪榮總與勞動部是保存衛教，未提供全國同定義斷指／斷肢事故與作業暴露分母；不能用全部職災死亡或單院接合成功率推估。勞動部原頁2024-04-27發布、2026-10-03更新，只讀中文HTML，未宣稱各語圖片已查核或取得再利用授權；本文獨立撰寫不複製圖。",
-    "醫療、防疫、救護、法律及社工獨立專業審閱尚待取得。"
+    "沒有全國同口徑發生率；「6小時」不是等待期限，先撥119、止血及送醫。",
+    "沒有全國斷指／肢事故分母及同一定義的全國件數；6小時是單一院方衛教的緊急性提醒，不是接合適應症判定。",
+    "未取得手外科、急診或職業安全專業人員獨立審閱。"
   ],
-  "source_reviewed_sha256": "6fc088f29cae7991a80513e6eb0b4050698b023d037bdbca82cd1c5be57f9b33",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "6fc088f29cae7991a80513e6eb0b4050698b023d037bdbca82cd1c5be57f9b33",
-    "after_sha256": "37b55ad622e03e5a5c68dba0933ec9a1323d001253ef980aa18869f814a57cea",
-    "before_reader_sha256": "e27433d30b2a36f0b9dbd72cf7f57413f7d8aa9c3d2e0daa75473fd01384b686",
-    "after_reader_sha256": "6a7552811e580ca3a643fc2503be4d1215be318126a8264adfdf36f9eda31807"
-  }
+  "source_reviewed_sha256": "af79bd04a402b240b32fbd05d02c82495deda5a3fc9c587eac3962df5805daa7",
+  "unresolved_questions": [
+    "沒有全國斷指／肢事故分母及同一定義的全國件數；6小時是單一院方衛教的緊急性提醒，不是接合適應症判定。",
+    "未取得手外科、急診或職業安全專業人員獨立審閱。"
+  ]
 }

@@ -2,59 +2,54 @@
   "id": "TW-13-033",
   "reviewer": "ChatGPT（AI輔助逐主張再核對，非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-05",
+  "review_due_at": "2027-02-05",
   "target_path": "locales/zh-TW/book/ch13/TW-13-033.md",
-  "target_sha256": "561c79bf30571141ae97ebd1b733f8a6aa4d81a6f381f1d71b56fd146d7298fd",
+  "target_sha256": "1414d4daaa2a861c410ba7bef7ac3ca8f33160b2efb881cf86ea000e923e4a47",
   "source_checks": [
     {
+      "source_id": "altitude_nps_202609",
       "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/news/33929.html",
       "claim": "高山症即使體能好也可能發生；惡化、喘、意識或步態異常須停止上升，盡速下撤並求援；PAC僅為暫時輔助。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：高山症即使體能好也可能發生；惡化、喘、意識或步態異常須停止上升，盡速下撤並求援；PAC僅為暫時輔助。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：高山症即使體能好也可能發生；惡化、喘、意識或步態異常須停止上升，盡速下撤並求援；PAC僅為暫時輔助。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
-      "url": "https://www.taiwan.nps.gov.tw/home/zh-tw/news/27365",
-      "claim": "2017年舊公告曾引用玉山山友36%估值，但沒有完整樣本、期間與定義，不是2026年全臺登山發生率。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：2017年舊公告曾引用玉山山友36%估值，但沒有完整樣本、期間與定義，不是2026年全臺登山發生率。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
-    },
-    {
+      "source_id": "disaster_cdc_altitude",
       "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html",
       "claim": "有症狀不往更高處過夜，惡化需下降；嚴重症狀要減少用力，氧氣小罐與加壓袋不取代撤離。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：有症狀不往更高處過夜，惡化需下降；嚴重症狀要減少用力，氧氣小罐與加壓袋不取代撤離。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪實讀相關HTML文字；附件、圖像及個案原始資料未宣稱核對。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：有症狀不往更高處過夜，惡化需下降；嚴重症狀要減少用力，氧氣小罐與加壓袋不取代撤離。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
+      "source_id": "disaster_ams_2010",
       "url": "https://pubmed.ncbi.nlm.nih.gov/20367488/",
       "claim": "2007年4月至2008年3月排雲山莊1066份問卷，以Lake Louise評估，摘要報告36%樣本盛行比例；非全國現況。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：2007年4月至2008年3月排雲山莊1066份問卷，以Lake Louise評估，摘要報告36%樣本盛行比例；非全國現況。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "PubMed頁遇機器驗證；透過NCBI官方E-utilities efetch XML實讀該PMID原始摘要與書目，未讀全文，不冒稱完整研究方法及原始數據審查。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：2007年4月至2008年3月排雲山莊1066份問卷，以Lake Louise評估，摘要報告36%樣本盛行比例；非全國現況。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     },
     {
+      "source_id": "disaster_ams_2026",
       "url": "https://pubmed.ncbi.nlm.nih.gov/41643499/",
       "claim": "2023至2024排雲醫療站871名就醫者中558人臨床診斷AMS（64.1%），並以2018 Lake Louise核對；非全體登山者。",
-      "supporting_passage": "獨立編輯摘要，非逐字引文：2023至2024排雲醫療站871名就醫者中558人臨床診斷AMS（64.1%），並以2018 Lake Louise核對；非全體登山者。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "PubMed頁遇機器驗證；透過NCBI官方E-utilities efetch XML實讀該PMID原始摘要與書目，未讀全文，不冒稱完整研究方法及原始數據審查。"
+      "supporting_passage": "指定來源相關公開文字摘要（非逐字引文）：2023至2024排雲醫療站871名就醫者中558人臨床診斷AMS（64.1%），並以2018 Lake Louise核對；非全體登山者。",
+      "accessed_at": "2026-11-05",
+      "retrieval_method": "2026-11-05重讀指定官方頁面或文件，核對與本篇讀者主張直接相關的段落；未閱讀的附件或研究全文不作支持。"
     }
   ],
-  "localization_changes": "追到36%原始摘要並加最新醫療站樣本不同分母；補症狀不往更高處過夜、血氧不能單獨放行、氧氣罐不代替救援。",
-  "review_method": "台灣情境、原始研究摘要與安全原則逐項核對，分開未讀附件及全文、取回失敗與專業限制。",
+  "localization_changes": "移除未附原始研究的2017二手36%公告，改核對2010原始摘要及2026就醫研究並分開樣本；保留119、停止上升、下撤、PAC限制，移除抽樣流程內部備註。",
+  "review_method": "逐篇重讀臺灣正文、固定ID原作主題、前次審閱與來源；直接核對現行臺灣官方網頁、法規和可讀研究摘要，檢查場景、急迫性、資料口徑及具體行動；本次為AI輔助來源再審，沒有宣稱正式專業簽證。",
   "limits": [
-    "低血糖、感染、脫水與失溫可能出現類似症狀，不由同伴自行確診或保證藥物有效。頭痛止痛藥不代表已適應海拔；症狀持續或加劇絕不可勉強上升。2017年36％公告本身沒有原研究引文，2026年『多起』沒有精確件數；新補的兩個原研究摘要也有不同選樣限制，**不能當成個別登山者今年的發生率**。下撤若遇夜間暴雨、崩壁或雷擊危險，應由119評估更安全的待援與撤離方式。\n\n原始摘要未提供完整抽樣拒訪、所有評分閾值與資料清理流程，本輪未驗證全文、原始問卷或重算結果；原研究就醫者樣本不能推廣至未就醫者。國外高山病處置只採一般原則，不移植美國發生率、處方劑量或氧氣供應制度。",
-    "獨立醫療、消防、氣象及建築安全專業審閱仍待取得。"
+    "研究樣本不能代表全臺登山者；嚴重或惡化症狀應停止上升、下撤並求援119。",
+    "高山症兩項研究只可代表其各自樣本，無全國登山者暴露分母；未取得高山醫學或山域救援專業審閱。",
+    "研究摘要未列的2010病例分子與評分門檻無法由公開摘要核實。"
   ],
-  "source_reviewed_sha256": "ab16b756027219451f3b17c110fe3917b4c7a4d125039f0d2e1ec16d3f518441",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "ab16b756027219451f3b17c110fe3917b4c7a4d125039f0d2e1ec16d3f518441",
-    "after_sha256": "561c79bf30571141ae97ebd1b733f8a6aa4d81a6f381f1d71b56fd146d7298fd",
-    "before_reader_sha256": "727a09ce6b08356851b2e33b8101eea6c1d36bb97c66435aebec75b96465731b",
-    "after_reader_sha256": "fd089e4bef95f64fa80f8c834659df46b93adc7f4fbc7f0b63fd2eee9907edcf"
-  }
+  "source_reviewed_sha256": "1414d4daaa2a861c410ba7bef7ac3ca8f33160b2efb881cf86ea000e923e4a47",
+  "unresolved_questions": [
+    "高山症兩項研究只可代表其各自樣本，無全國登山者暴露分母；未取得高山醫學或山域救援專業審閱。",
+    "研究摘要未列的2010病例分子與評分門檻無法由公開摘要核實。"
+  ]
 }

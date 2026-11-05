@@ -25,11 +25,11 @@ def check_disaster_altitude_trauma_browser(page, context, url, review):
         button = page.locator('#TW-13-040 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        page.locator('#q').fill('1066')
+        page.locator('#q').fill('1,066')
         assert page.locator('#TW-13-033').count() == 1
         page.locator('#reset').click()
-        page.locator('#q').fill('不等待警報')
+        page.locator('#q').fill('不等警報確認')
         assert page.locator('#TW-13-030').count() == 1
         page.screenshot(path=str(review / f'disaster-altitude-trauma-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})
-    return ['四篇地震／雷擊／高山症／穿刺異物再審，在桌機、手機、正式閱讀、自查與離線之ID、五段正文及來源一致；1066問卷與不等待警報搜尋、自查按鈕及無水平溢出通過。工程驗證不代表醫療、消防或建築安全認證。']
+    return ['四篇地震／雷擊／高山症／穿刺異物再審，在桌機、手機、正式閱讀、自查與離線之ID、五段正文及來源一致；1,066份問卷與不等警報確認搜尋、自查按鈕及無水平溢出通過。工程驗證不代表醫療、消防或建築安全認證。']
