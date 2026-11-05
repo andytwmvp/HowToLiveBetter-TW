@@ -7,6 +7,7 @@ from review_contract import ROOT,validate_entry,validate_runtime,publication_rep
 from body_renderer import body_blocks
 BASE="51c8b3c0148b31f833d5a79b7af16e5d94516fb7"
 IDS={"TW-13-031","TW-13-036","TW-13-037","TW-13-039"}
+EXPECTED_HEADINGS={"TW-13-031":7,"TW-13-036":6,"TW-13-037":7,"TW-13-039":5}
 def load(p): return json.loads((ROOT/p).read_text(encoding="utf-8"))
 class Chapter13AnimalsPublicSafetyTests(unittest.TestCase):
  def test_source_review_sha_and_renderer(self):
@@ -22,14 +23,14 @@ class Chapter13AnimalsPublicSafetyTests(unittest.TestCase):
     self.assertGreater(len(raw),1800)
     self.assertEqual(hashlib.sha256(raw).hexdigest(),review["target_sha256"])
     self.assertEqual(raw.decode("utf-8"),items[key]["body"])
-    self.assertEqual(sum(b["tag"]=="h3" for b in body_blocks(items[key])),5)
+    self.assertEqual(sum(b["tag"]=="h3" for b in body_blocks(items[key])),EXPECTED_HEADINGS[key])
     self.assertEqual({x["url"] for x in review["source_checks"]},{sources[s]["url"] for s in items[key]["source_ids"]})
  def test_risk_and_frequency_boundaries(self):
   b={x["id"]:x["body"].split("## 官方來源及改寫說明")[0] for x in validate_runtime()["items"]}
   self.assertIn("黑熊",b["TW-13-031"]);self.assertIn("野豬",b["TW-13-031"]);self.assertIn("犬群",b["TW-13-031"])
   self.assertIn("119",b["TW-13-031"]);self.assertIn("1959",b["TW-13-031"])
   self.assertIn("130件",b["TW-13-036"]);self.assertIn("118件",b["TW-13-036"])
-  self.assertIn("不是偏僻山路",b["TW-13-036"])
+  self.assertIn("沒有按街道、車站或戶外活動暴露量計算的分母",b["TW-13-036"])
   self.assertIn("110",b["TW-13-037"]);self.assertIn("119",b["TW-13-037"])
   self.assertIn("第14條之2",b["TW-13-039"]);self.assertIn("第150條",b["TW-13-039"])
   self.assertIn("0800-005-850",b["TW-13-039"])

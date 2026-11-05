@@ -8094,14 +8094,15 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-031.md",
       "sources": [
-        "animal_bear_forest_2024",
         "animal_boar_taipei_zoo",
-        "animal_dog_ntpc_2016",
-        "animal_dog_tcapo_1959",
         "urgent_bear_faq",
-        "urgent_bear2026"
+        "urgent_bear2026",
+        "animal_wildlife_wish_reports",
+        "animal_dog_chpb_2026",
+        "animal_dog_moa_1959",
+        "violence_npa_110"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "遇到熊、野豬、成群野狗，別跑，側身慢慢退開",
@@ -8206,13 +8207,11 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch13/TW-13-036.md",
       "sources": [
-        "violence_ntpc_robbery",
         "violence_npa_114cases",
         "violence_npa_110",
-        "conflict_stats_pdf",
-        "conflict_report_app"
+        "conflict_stats_pdf"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "荒郊野外被陌生人索財，錢給他，不動手，記特徵，脫身後報警",
@@ -8230,13 +8229,14 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-037.md",
       "sources": [
         "violence_npa_110",
-        "violence_victim_witness",
         "conflict_stats_pdf",
         "aid_victim_law_2023",
-        "conflict_victim_history",
-        "ch13_bleeding_mnd"
+        "ch13_bleeding_mnd",
+        "conflict_victim_avs_counseling",
+        "conflict_victim_enforcement_rules",
+        "conflict_victim_legal_history"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "撞見一群人打架，退開走人，別上去拉架、別圍觀、別撿地上的傢伙；要報警就退到安全距離打 110",
@@ -8486,9 +8486,12 @@
         "avulsed_tooth_vghtpe",
         "pediatric_dental_vghtpe",
         "urgent_dental_iadt2020",
-        "urgent_dental_tw2009"
+        "urgent_dental_tw2009",
+        "urgent_dental_iadt_index_20261106",
+        "urgent_dental_mohw_directory_20261106",
+        "urgent_dental_mohw_regular_20250303"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "恆牙（換牙之後長出來的牙）整顆撞掉，捏住牙冠衝一下，能放回去就放回去，放不回就泡在牛奶裡，馬上去看牙；乳牙別放回去",

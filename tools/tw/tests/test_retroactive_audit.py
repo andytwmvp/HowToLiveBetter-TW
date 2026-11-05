@@ -359,7 +359,7 @@ class RetroactiveAuditTests(unittest.TestCase):
 
         items = {item["id"]: item for item in runtime["items"]}
         item_text = "\n".join(item["body"] for item in runtime["items"])
-        self.assertIn("[大量出血處理](TW-13-012.md)", item_text)
+        self.assertIn("[大量出血的處理方式](TW-13-012.md)", item_text)
         self.assertIn("[疑似HIV暴露後儘早評估PEP](TW-13-038.md)", item_text)
         self.assertIn("公開摘要未列完整方法與補充資料", items["TW-23-002"]["limits"])
         self.assertIn("法律責任依個案事證判斷", items["TW-15-001"]["limits"])
