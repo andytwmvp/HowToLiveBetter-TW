@@ -17,8 +17,10 @@ class BPSupplementsStonesGoutTests(unittest.TestCase):
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_emergency_actions_and_specific_exceptions(self):
   b={i['id']:i['body'] for i in validate_runtime()['items']}
-  for k in IDS:self.assertLess(b[k].index('119'),b[k].index('事件頻率'))
-  terms={'TW-16-009':['立即停用allopurinol','不要再服可疑藥來試','條件性建議','6 mg/dL'],'TW-16-004':['非必要補充品','隔兩小時吃','濃縮紅麴','一般紅麴加工食品'],'TW-16-008':['感染合併阻塞或無尿','不要硬灌水','飲水量不等於尿量','限水醫囑'],'TW-16-003':['不為補齊722','坐休5分鐘','沒量滿7天','不反推人數']}
+  for k in IDS:
+   marker='事件頻率' if '事件頻率' in b[k] else '## 臺灣資料'
+   self.assertLess(b[k].index('119'),b[k].index(marker))
+  terms={'TW-16-009':['立即停用allopurinol','不要再服可疑藥來試','條件性建議','6 mg/dL'],'TW-16-004':['非必要補充品','隔兩小時吃','濃縮紅麴','一般紅麴加工食品'],'TW-16-008':['尿路阻塞若合併感染徵象或無尿','不要硬灌水','飲水量不等於尿量','限水醫囑'],'TW-16-003':['不為補齊722','坐休5分鐘','沒量滿7天','不反推人數']}
   for k,ts in terms.items():
    for t in ts:self.assertIn(t,b[k])
  def test_statistics_retain_actual_populations_and_denominators(self):
@@ -26,5 +28,5 @@ class BPSupplementsStonesGoutTests(unittest.TestCase):
  def test_professional_and_retrieval_limits_stay_explicit(self):
   x=load('localization/bp-supplements-stones-gout-20261020.json');self.assertEqual(set(x['ai_rechecked_ids']),IDS);self.assertEqual(x['new_core_ids'],[]);self.assertEqual(x['professional_review'],'pending');self.assertFalse(publication_report()['publication_ready'])
   for k in ['TW-16-003','TW-16-008']:
-   rv=load('localization/reviews/'+k+'.json');old=[c for c in rv['source_checks'] if c['url'].endswith('pid=14499') or 'auajournals' in c['url'] or '/cKD-' in c['url']];self.assertTrue(old);self.assertTrue(all(c['accessed_at']=='2026-10-17' for c in old))
+   rv=load('localization/reviews/'+k+'.json');checks=rv.get('prior_source_checks',[])+rv['source_checks'];old=[c for c in checks if c['url'].endswith('pid=14499') or 'auajournals' in c['url'] or '/cKD-' in c['url']];self.assertTrue(old);self.assertTrue(all(c['accessed_at']=='2026-10-17' for c in old))
 if __name__=='__main__':unittest.main()

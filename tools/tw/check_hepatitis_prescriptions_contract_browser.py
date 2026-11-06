@@ -29,7 +29,7 @@ def check_hepatitis_prescriptions_contract_browser(page, context, url, review):
         button = page.locator('#TW-16-011 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        for key, text in (('TW-16-011','1.88%'), ('TW-16-005','前10日內'), ('TW-24-014','三者條件不同'), ('TW-17-011','機構名義專戶')):
+        for key, text in (('TW-16-011','41,779人年'), ('TW-16-005','前10日內'), ('TW-24-014','三者條件不同'), ('TW-17-011','機構名義專戶')):
             page.locator('#q').fill(text)
             article = page.locator('#'+key)
             assert article.count() == 1, (key, text)
@@ -37,4 +37,4 @@ def check_hepatitis_prescriptions_contract_browser(page, context, url, review):
             page.screenshot(path=str(review/f'contract-{key}-{width}.png'), animations='disabled')
         page.locator('#reset').click()
     page.set_viewport_size({'width':1440, 'height':1000})
-    return ['四篇肝炎慢箋與照護契約於1440／390、閱讀／自查／離線逐段全文與來源一致；孕婦比例、領藥效期、代領遠距與保證金搜尋、自查按鈕及無水平溢出通過；非醫療法律專業驗收。']
+    return ['四篇肝炎慢箋與照護契約於1440／390、閱讀／自查／離線逐段全文與來源一致；肝癌世代人年、領藥效期、代領遠距與保證金搜尋、自查按鈕及無水平溢出通過；非醫療法律專業驗收。']

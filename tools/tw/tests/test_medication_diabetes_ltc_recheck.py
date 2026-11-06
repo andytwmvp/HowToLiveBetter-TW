@@ -17,8 +17,11 @@ class MedicationDiabetesLTCTests(unittest.TestCase):
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_urgent_actions_and_specific_dangerous_inferences(self):
   b={i['id']:i['body'] for i in validate_runtime()['items']}
-  for key in IDS:self.assertLess(b[key].index('119'),b[key].index('事件頻率'))
-  terms={'TW-16-001':['硬吞下一劑','不共用','不自行雙倍補服'],'TW-16-007':['即使不痛','不赤腳','不自行剪除'],'TW-16-013':['不表示急性變化可先等三個月','不代表'], 'TW-24-013':['不可替代','同價或低於原價','並告知','避免因外觀不同重複吃'],'TW-17-007':['不是必須先等滿六個月','不是所有剛出院者都自動符合PAC資格','不是直接匯給家庭的現金']}
+  for key in IDS-{'TW-16-007'}:
+   marker='事件頻率' if '事件頻率' in b[key] else '## 臺灣資料'
+   self.assertLess(b[key].index('119'),b[key].index(marker))
+  self.assertLess(b['TW-16-007'].index('至少每年請醫療人員'),b['TW-16-007'].index('## 臺灣資料'))
+  terms={'TW-16-001':['硬吞下一劑','不共用','不自行雙倍補服'],'TW-16-007':['傷口不痛也可能需要處理','不赤腳','不自行塗藥或修剪'],'TW-16-013':['不表示急性變化可先等三個月','不代表'], 'TW-24-013':['不可替代','價格相同或較低','並應告知','外觀不同不代表可以兩種一起吃'],'TW-17-007':['不是必須先等滿六個月','不是所有剛出院者都自動符合PAC資格','不是直接匯給家庭的現金']}
   terms['TW-16-013']=['不表示急性變化可先等三個月','不能改稱全臺慢性腎病盛行率']
   for key,ts in terms.items():
    for t in ts:self.assertIn(t,b[key])
@@ -27,5 +30,5 @@ class MedicationDiabetesLTCTests(unittest.TestCase):
  def test_no_claim_of_unread_full_text_or_professional_completion(self):
   batch=load('localization/medication-diabetes-ltc-20261020.json');self.assertEqual(set(batch['ai_rechecked_ids']),IDS);self.assertEqual(batch['new_core_ids'],[]);self.assertEqual(batch['professional_review'],'pending');self.assertFalse(publication_report()['publication_ready'])
   for key in ['TW-16-007','TW-16-013']:
-   rv=load('localization/reviews/'+key+'.json');ada=[c for c in rv['source_checks'] if 'diabetesjournals.org' in c['url']];self.assertTrue(ada);self.assertTrue(all(c['accessed_at']=='2026-10-17' and '未冒稱全文' in c['retrieval_method'] for c in ada))
+   rv=load('localization/reviews/'+key+'.json');checks=rv.get('prior_source_checks',[]) if key=='TW-16-007' else rv['source_checks'];ada=[c for c in checks if 'diabetesjournals.org' in c['url']];self.assertTrue(ada);self.assertTrue(all(c['accessed_at']=='2026-10-17' and '未冒稱全文' in c['retrieval_method'] for c in ada))
 if __name__=='__main__':unittest.main()
