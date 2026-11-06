@@ -17,13 +17,15 @@ class HepatitisPrescriptionContractTests(unittest.TestCase):
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_emergency_and_key_service_boundaries(self):
   b={i['id']:i['body'] for i in validate_runtime()['items']}
-  for k in IDS:self.assertLess(b[k].index('119'),b[k].index('事件頻率'))
-  terms={'TW-16-011':['不等例行','不因肝指數正常','AFP不能單獨','不是管理照護費申報間隔'],'TW-16-005':['前10日內','出具切結','腹膜透析液','不因提早拿到就提早加吃'],'TW-24-014':['三者條件不同','限繼續相同方劑','通常限複診','有法定例外'],'TW-17-011':['不能要求拋棄審閱權','機構名義專戶','7個工作日內','不能把這個範圍套到護理之家']}
+  for k in IDS:
+   marker='事件頻率' if '事件頻率' in b[k] else '## 臺灣資料'
+   self.assertLess(b[k].index('119'),b[k].index(marker))
+  terms={'TW-16-011':['不要等例行','不因肝指數正常','AFP不能單獨','收案管理不代表抗病毒藥一定符合健保給付','追蹤間隔須由熟悉病況的醫療團隊決定'],'TW-16-005':['前10日內','出具切結','腹膜透析液','不因提早拿到就提早加吃'],'TW-24-014':['三者條件不同','限繼續相同方劑','通常限複診','有法定例外'],'TW-17-011':['不能要求拋棄審閱權','機構名義專戶','7個工作日內','不能把這個範圍套到護理之家']}
   for k,ts in terms.items():
    for t in ts:self.assertIn(t,b[k])
  def test_specific_population_and_effective_dates(self):
   b=load('localization/hepatitis-prescriptions-care-contract-20261020.json');s=b['statistics'][0];self.assertEqual(s['value'],1.88);self.assertEqual(s['period'],'2024年');self.assertIsNone(s['numerator']);self.assertIsNone(s['denominator']);self.assertIn('孕婦',s['scope']);self.assertIn('非2026成人',s['limitations']);d={x['topic']:x for x in b['legal_evidence']};self.assertEqual(d['通訊診察治療辦法']['effective_at'],'2024-07-01');self.assertEqual(d['住宿式長照定型化契約應記載及不得記載事項']['effective_at'],'2024-03-15');self.assertEqual(d['肝炎醫療給付改善方案第九版']['effective_at'],'2026-08-19')
  def test_unread_sources_and_professional_limits_not_upgraded(self):
   b=load('localization/hepatitis-prescriptions-care-contract-20261020.json');self.assertEqual(set(b['ai_rechecked_ids']),IDS);self.assertEqual(b['new_core_ids'],[]);self.assertEqual(b['professional_review'],'pending');self.assertFalse(publication_report()['publication_ready'])
-  rv=load('localization/reviews/TW-16-011.json');old=[c for c in rv['source_checks'] if 'hpa.gov.tw' in c['url'] or 'pmc.ncbi' in c['url']];self.assertEqual(len(old),2);self.assertTrue(all(c['accessed_at']=='2026-10-17' for c in old));self.assertIn('草案',next(c['retrieval_method'] for c in load('localization/reviews/TW-17-011.json')['source_checks'] if 'moj.gov.tw/2204' in c['url']))
+  rv=load('localization/reviews/TW-16-011.json');old=[c for c in rv.get('prior_source_checks',[]) if 'hpa.gov.tw' in c['url'] or 'pmc.ncbi' in c['url']];self.assertEqual(len(old),2);self.assertTrue(all(c['accessed_at']=='2026-10-17' for c in old));self.assertIn('草案',next(c['retrieval_method'] for c in load('localization/reviews/TW-17-011.json')['source_checks'] if 'moj.gov.tw/2204' in c['url']))
 if __name__=='__main__':unittest.main()

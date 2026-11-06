@@ -29,7 +29,7 @@ def check_medication_diabetes_ltc_browser(page, context, url, review):
         button = page.locator('#TW-16-001 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        for key, text in (('TW-16-001','硬吞下一劑'), ('TW-24-013','不可替代'), ('TW-16-007','即使不痛'), ('TW-16-013','15%'), ('TW-17-007','先等滿六個月')):
+        for key, text in (('TW-16-001','硬吞下一劑'), ('TW-24-013','不可替代'), ('TW-16-007','傷口不痛也可能需要處理'), ('TW-16-013','15%'), ('TW-17-007','先等滿六個月')):
             page.locator('#q').fill(text)
             article = page.locator('#'+key)
             assert article.count() == 1, (key, text)

@@ -1,12 +1,106 @@
 {
   "id": "TW-16-011",
-  "reviewer": "ChatGPT（AI輔助原始來源與臺灣制度核對，非執業醫師、藥師或獨立醫療專業簽證）",
+  "reviewer": "ChatGPT（AI輔助原始來源實質核對，非執業醫師、藥師或獨立醫療專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
   "target_path": "locales/zh-TW/book/ch16/TW-16-011.md",
-  "target_sha256": "87be5152271e980afb98443832a3a804aa983e2f8168047a80a6dc21da5e2eac",
+  "target_sha256": "50cbb3ecf4510fa81783aaef54bab8b970d38f4b91c5578ad0158c123b6a1dc8",
   "source_checks": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10663390/",
+      "claim": "AASLD高風險肝癌監測使用每6個月超音波合併AFP，須依風險、影像可視性及異常後診斷流程處理，不是所有HBsAg陽性者一致適用。",
+      "supporting_passage": "編者摘要，非逐字：高風險肝癌族群以每6個月超音波與AFP監測為主要做法，並須依風險及影像品質調整；非所有HBsAg陽性者可一律套用。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "讀取PMC所收AASLD肝癌指引之指定監測建議和高風險族群段落；未將該美國指引當作臺灣健保給付規則。"
+    },
+    {
+      "url": "https://www.nhi.gov.tw/ch/cp-20367-b89ff-3258-1.html",
+      "claim": "健保署公告修訂肝炎醫療給付改善方案並載明自公告日起生效；本批按公告與第九版分別核對生效日和實際收案條件。",
+      "supporting_passage": "編者摘要，非逐字：健保署公告修訂肝炎醫療給付改善方案並載明自公告日起生效；須區分方案生效日、醫療追蹤安排與藥品個別給付審查。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接讀取健保署正式公告頁面及其生效文字，確認公告日期為2026-08-19；不將方案管理費申報週期當成病人就醫間隔。"
+    },
+    {
+      "url": "https://www.nhi.gov.tw/ch/dl-101559-283463c94b83443aa2848a6a3deb7a57-1.pdf",
+      "claim": "第九版列明同院所近6個月診斷且至少就醫2次等條件、解釋並取得病人同意、遷移可轉介；抗病毒藥給付另依藥物標準。",
+      "supporting_passage": "編者摘要，非逐字：第九版標示2026-08-19修訂；B肝個案需符合同院所近6個月診斷與至少2次就醫等收案條件、解釋並取得同意；工作或遷移可辦理轉介銜接；抗病毒藥仍依藥品給付規定另審。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接讀取健保署7頁第九版PDF第1至2頁的版本日期、收案條件、同意與轉介段落及用藥規定；不推定個案已符合收案或藥費給付。"
+    },
+    {
+      "url": "https://www.idsociety.org/practice-guideline/hepatitis-b/hepatitis-b/",
+      "claim": "IDSA官方指引頁列AASLD/IDSA慢性B肝治療指引更新於2025-11-04公布，當時為accepted manuscript。",
+      "supporting_passage": "編者摘要，非逐字：美國感染症醫學會官方頁列出慢性B型肝炎治療指引更新於2025-11-04公布，並說明其目前為accepted manuscript；日期與狀態不代表臺灣健保給付條件。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接讀取IDSA官方指引頁之公布日期、稿件狀態及指引範圍；僅用來校正來源日期，臨床與健保適用仍待臺灣專業團隊判斷。"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16391218/",
+      "claim": "臺灣7個鄉鎮招募3,653名30至65歲HBsAg陽性、anti-HCV陰性者，平均追蹤11.4年、41,779人年記錄164例肝癌；分層發生率依基線HBV DNA由108至1,152/10萬人年。",
+      "supporting_passage": "編者摘要，非逐字：臺灣7個鄉鎮於1991至1992年招募30至65歲HBsAg陽性、anti-HCV陰性者3,653人；平均追蹤11.4年、41,779人年記錄164例肝癌。按基線HBV DNA分組發生率由每10萬人年108至1,152例，屬治療普及前的歷史特定世代。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "讀取PubMed完整摘要的研究對象、招募期間、事件數、人年及分層率；這是治療普及前的歷史社區世代，不代表目前個人或所有感染者風險。"
+    }
+  ],
+  "localization_changes": "逐項修正固定半年檢查及舊健保方案描述；核對第九版的公布與生效日期、同院所收案資格、病人同意、轉介和藥品另依給付規定；以臺灣REVEAL-HBV說明病毒量分層的人年資料及其歷史世代限制，更新AASLD/IDSA指引公布日期。",
+  "review_method": "逐篇比對原作固定ID、現行正文、先前review、臺灣官方制度及可讀取的原始研究；依來源實際可讀範圍記錄直接閱讀或索引摘要，逐條核對主張和統計分母。AI協助不等於專業醫療簽證。",
+  "limits": [
+    "REVEAL-HBV為1991至1992年招募的特定臺灣社區世代，統計分層為基線病毒量、分母為人年；不可當成目前不同治療狀況患者的個人風險。未找到可代表所有臺灣B肝感染者的近期統一全國發生率。",
+    "健保肝炎方案收案、院所轉介和抗病毒藥品給付是不同條件；方案自2026-08-19起採第九版，但不代表每人符合收案、每項檢查免費或抗病毒藥一定核付。肝癌監測及治療需依個別風險由醫療團隊判斷。",
+    "本次為AI協助來源核對，尚未取得肝膽腸胃科、感染科、藥師或健保核付專業審閱。"
+  ],
+  "source_reviewed_sha256": "50cbb3ecf4510fa81783aaef54bab8b970d38f4b91c5578ad0158c123b6a1dc8",
+  "source_ids": [
+    "ch16_aasld_hcc",
+    "tw16_nhi_hbv_notice_20260819",
+    "tw16_nhi_hbv_program_v9_20260819",
+    "tw16_aasld_idsa_hbv_2025",
+    "tw16_reveal_hbv_2006"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "臺灣REVEAL-HBV歷史社區世代肝癌發生率",
+      "value": "3,653名參與者平均追蹤11.4年，共41,779人年並記錄164例肝癌；依基線HBV DNA低於300 copies/mL至至少1,000,000 copies/mL，發生率108至1,152/100,000人年",
+      "unit": "肝細胞癌事件數及分層人年發生率",
+      "period": "1991至1992年招募，平均追蹤11.4年；論文2006年發表",
+      "geographic_scope": "臺灣7個鄉鎮社區世代",
+      "population": "3,653名30至65歲HBsAg陽性且anti-HCV陰性成人",
+      "numerator": "164例新發肝細胞癌；病毒量分層的事件人數摘要未列",
+      "denominator": "總計41,779人年；各病毒量層級的分層人年摘要未列",
+      "event_definition": "追蹤檢查並連結癌症登記及死亡證明資料確認肝細胞癌",
+      "data_type": "前瞻性社區世代研究",
+      "source_id": "tw16_reveal_hbv_2006",
+      "accessed_at": "2026-11-07",
+      "limitations": "為1990年代招募且主要為抗病毒治療普及前的特定族群；基線病毒量分層不等於現代治療下個人風險或給付資格。"
+    },
+    {
+      "topic": "臺灣目前所有B肝感染者的近期全國個人肝癌風險",
+      "value": "未找到能套用所有感染者、按治療狀態及風險分層、同一定義計算的近期全國個人發生率",
+      "unit": "資料不足，未估算",
+      "period": "截至2026-11-07查核",
+      "geographic_scope": "臺灣全國；缺少可直接套用所有治療與風險族群的同一個人追蹤分母",
+      "population": "慢性B肝感染者及不同治療、纖維化與肝癌監測風險層級",
+      "numerator": "本次未找到可涵蓋上述全部族群且相同事件定義的近期全國分子",
+      "denominator": "未找到能配對該分子、治療狀態與個人追蹤時間的全國分母",
+      "event_definition": "須區分HBsAg陽性、慢性肝炎、肝硬化、HBV DNA及治療狀態，不能以單一事件定義涵蓋",
+      "data_type": "官方方案、臨床指引與原始研究檢索；不自行推估",
+      "source_id": "tw16_reveal_hbv_2006",
+      "accessed_at": "2026-11-07",
+      "limitations": "個別肝癌監測及抗病毒治療應依專業風險分層，不以歷史世代率替代個人評估。"
+    }
+  ],
+  "frequency_assessment": "臺灣REVEAL-HBV提供特定歷史世代按基線病毒量分層的人年發生率；目前未找到涵蓋不同治療與風險層級的近期全國個人率。急性失代償和肝癌嚴重度高，追蹤與監測依醫師風險評估。",
+  "unresolved_questions": [
+    "未取得肝膽腸胃科／感染科專業人員對風險分層、肝癌監測和2026年方案收案之審閱。",
+    "健保藥品給付附件與個人治療資格需依實際就醫時現行版本確認。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": "醫師、藥師或相應醫療專業人員依條目主題審閱。"
+  },
+  "prior_source_checks": [
     {
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4809&pid=18092",
       "claim": "TW-16-011：歷史3至6月追蹤摘要本輪未重新取得，不作本批固定頻率依據。",
@@ -42,21 +136,5 @@
       "accessed_at": "2026-10-20",
       "retrieval_method": "實讀疾管署2026特寫HTML之2024孕婦1.88%段落；原始資料及調查方法未附，不反推人數、全人口或個人肝癌率。"
     }
-  ],
-  "localization_changes": "本批獨立補寫急症分流、臺灣領藥／肝炎／契約流程與統計界線，未更動原作保全。",
-  "review_method": "逐條AI輔助實讀臺灣官方HTML、指定法條與PDF文字，區分未取原頁／部分索引與完整附件範圍；本批具體修改、統計定義與施行日期另記批次證據。",
-  "limits": [
-    "原作要求每位HBsAg陽性者都「每半年B超加AFP」過度一體適用；超音波、肝功能與AFP用途不同，抗病毒藥是否開始、停用與復發監測不可自行決定。黃疸、意識變化、腹水增加或吐血應急速就醫。",
-    "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。",
-    "獨立醫師、藥師、肝臟專科、法律與照護專業審查尚待；AI來源核對不是臨床、核付、院所核准或契約個案判定。",
-    "法規整編截止2026-10-08，未逐筆核之後公報、全部當期支付附件及各院所/機構個案；未做實際申請、諮詢或即時庫存查詢。"
-  ],
-  "source_reviewed_sha256": "0649ca94692c6633110373bb634f20db25ea4cfb39f29d6ae5d91ae1674e6ed8",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v3",
-    "before_sha256": "0649ca94692c6633110373bb634f20db25ea4cfb39f29d6ae5d91ae1674e6ed8",
-    "after_sha256": "87be5152271e980afb98443832a3a804aa983e2f8168047a80a6dc21da5e2eac",
-    "before_reader_sha256": "813e27d359ef6b969f1d623e917358bd122f242e5de02045837cafe8fd673636",
-    "after_reader_sha256": "c51c4adb71c356a50a0283ff275534377422f8592e52e015035793010bbc43a8"
-  }
+  ]
 }
