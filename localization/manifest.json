@@ -1707,13 +1707,12 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch02/TW-02-020.md",
       "sources": [
-        "tw02_mohw_alcohol_manual",
-        "tw02_taichung_vgh_alcohol_withdrawal",
         "tw02_taichung_vgh_seizure_firstaid",
-        "tw02_mohw_alcohol_steps",
-        "tw02_mohw_county_hotlines"
+        "tw02_mohw_county_hotlines",
+        "tw02_taichung_vgh_alcohol_treatment_20261106",
+        "tw02_mohw_alcohol_subsidy_115"
       ],
-      "verified_at": "2026-10-30",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/02-%E4%B8%8D%E8%A6%81%E6%85%A2%E6%85%A2%E6%AD%BB.md",
       "display_path": "book/02-不要慢慢死.md",
       "source_title_zh_tw": "每天都喝酒、一停就手抖心慌的人，別自己硬戒",
@@ -1870,9 +1869,10 @@
         "tw02_ntpc_camping_2024",
         "tw02_taoyuan_co_fuel_devices",
         "tw02_bsmi_cassette_stove_2026",
-        "tw_co_nfa_statistics_2025"
+        "tw_co_nfa_statistics_2025",
+        "tw02_twhch_co_enclosed_balcony_2026"
       ],
-      "verified_at": "2026-10-30",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/02-%E4%B8%8D%E8%A6%81%E6%85%A2%E6%85%A2%E6%AD%BB.md",
       "display_path": "book/02-不要慢慢死.md",
       "source_title_zh_tw": "做飯、取暖不燒煤和柴，換成電或燃氣",
@@ -2164,7 +2164,7 @@
         "tw02_tfda_mycotoxin_sample_2026",
         "tw02_tfda_mycotoxin_guidance"
       ],
-      "verified_at": "2026-10-30",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/02-%E4%B8%8D%E8%A6%81%E6%85%A2%E6%85%A2%E6%AD%BB.md",
       "display_path": "book/02-不要慢慢死.md",
       "source_title_zh_tw": "家裡的花生、玉米、堅果和米麵發了黴，整包扔掉，別挑掉黴的吃剩下的；嚼到發苦的堅果馬上吐掉",
@@ -2182,11 +2182,10 @@
       "target_path": "locales/zh-TW/book/ch02/TW-02-047.md",
       "sources": [
         "tw02_tfda_food_poisoning_stats_2025",
-        "tw02_tfda_food_safety_2026",
-        "tw02_tfda_food_poisoning_reporting",
-        "tw02_cdc_clonorchis_2019"
+        "tw02_cdc_clonorchis_2019",
+        "tw02_tfda_food_safety_faq_20261106"
       ],
-      "verified_at": "2026-10-30",
+      "verified_at": "2026-11-06",
       "upstream_path_uri": "book/02-%E4%B8%8D%E8%A6%81%E6%85%A2%E6%85%A2%E6%AD%BB.md",
       "display_path": "book/02-不要慢慢死.md",
       "source_title_zh_tw": "別吃淡水魚蝦做的魚生、生魚片、魚生粥和醉蝦，常吃過的去醫院查一次肝吸蟲，查出來按醫囑吃吡喹酮",
