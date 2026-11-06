@@ -1,47 +1,79 @@
 {
   "id": "TW-26-004",
-  "reviewer": "ChatGPT（AI輔助來源核對；非獨立法律、支付、稅務、個資或資安專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐項官方來源核對；非獨立領務、法律、稅務、隱私或資安專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-17",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
   "target_path": "locales/zh-TW/book/ch26/TW-26-004.md",
-  "target_sha256": "d74c62299095cb4c4f6b3e89700fa7da2ef57a817868b6ffc9f93c59559f3af9",
+  "target_sha256": "1bbf0443bac68dce7b02d7bbf68cc574cfeae6dd54a24dfb50a26ecc11f8ced1",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-      "claim": "TW-26-004：本批核對第2、3、5、8、10、11、13、14、19、20條；不把全部最新修正當成已施行。",
-      "supporting_passage": "編者摘要（非逐字引文）：本批核對第2、3、5、8、10、11、13、14、19、20條；不把全部最新修正當成已施行。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "claim": "全國法規資料庫現行個資法頁標示2025-11-11公布的部分修正條文尚未生效，施行日期未定；不能提前把新條文當成所有業者現行共同通報期限。",
+      "supporting_passage": "編者摘要（非逐字）：全國法規資料庫標示2025-11-11修正的部分條文尚未生效、最後生效日期未定；因此要分清公布修法和實際施行。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀全國法規資料庫現行個資法頁首的修正日期、部分條文未生效註記及施行日期欄位。"
     },
     {
-      "url": "https://www.pdpc.gov.tw/News_Html/100/",
-      "claim": "TW-26-004：114年11月修正個資法部分條文包括新第12條尚待施行；當事人通知、業別通報及時限須按實際生效條文處理。",
-      "supporting_passage": "編者摘要（非逐字引文）：114年11月修正個資法部分條文包括新第12條尚待施行；當事人通知、業別通報及時限須按實際生效條文處理。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+      "claim": "112-05-31法規版本的現行有效條文包括特定目的及必要範圍、目的終止後停止或刪除、非公務機關安全維護措施，以及主管機關在法定條件下得限制國際傳輸。",
+      "supporting_passage": "編者摘要（非逐字）：112-05-31有效版本第5條規定個資蒐用不得逾越特定目的必要範圍；第11條涵蓋目的消失或期限屆滿後刪除、停止處理或利用；第21條列出得限制國際傳輸的情形；第27條要求適當安全措施。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀全國法規資料庫112-05-31歷史版本第5、11、19、20、21及27條，並與現行頁的尚未生效註記交叉核對。"
     },
     {
-      "url": "https://www.nics.nat.gov.tw/cybersecurity_resources/reference_guide/Common_Standards/",
-      "claim": "TW-26-004：提供系統安全、備援、事件應變與營運持續等實務參考；不等於所有民間小站都有相同法定標準，也不保證付贖金可恢復。",
-      "supporting_passage": "編者摘要（非逐字引文）：提供系統安全、備援、事件應變與營運持續等實務參考；不等於所有民間小站都有相同法定標準，也不保證付贖金可恢復。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "url": "https://s.moda.gov.tw/c1DWBHH7BkKH",
+      "claim": "資安署2026年7月發布的中小企業實務指引分為準備、偵測與應變、通報與外部溝通、復原與持續改善四階段，列出六種常見威脅；指引不是所有民間網站的統一法定通知期限。",
+      "supporting_passage": "編者摘要（非逐字）：資安署行動指引目錄列出準備、偵測與應變處理、通報與外部溝通、復原與持續改善四階段，並分別整理六種常見情境的應變行動。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀資安署新聞稿及連結的23頁《資安事件應變處理行動指引》目錄和應變流程，將其作為中小企業實務參考而非法律義務。"
     }
   ],
-  "localization_changes": "按臺灣支付、稅籍、消保、著作權、兒少、個資及資安情境重寫；草案與法定義務分開。",
-  "review_method": "AI輔助逐條對讀官方來源與適用範圍，非獨立專業簽證。",
+  "localization_changes": "刪除無法直接支持一般民間網站的舊資安參考頁，改用資安署2026年中小企業應變指引；以個資法現行有效版本與未生效修法狀態分開說明，補足資料流、跨境存取、委外、備份復原與契約檢核。",
+  "review_method": "逐條對讀原作固定主題、先前正文與審閱紀錄，直接查閱所列台灣官方頁面、法規條文或政府指引；未把行政服務量、法律門檻或威脅分類當成個人發生率，也未以AI核對宣稱完成專業審閱。",
   "limits": [
-    "個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。",
-    "第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。",
-    "2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強製法規。"
+    "個資法部分修正公布日為2025-11-11；截至2026-11-07法規資料庫仍標示部分條文未生效，施行日期未定。",
+    "雲端服務所在地不代表所有備份、遠端存取或分包位置；特定產業可能另有要求。本次為AI輔助來源核對，尚未取得獨立個資或資安專業審閱。"
   ],
-  "source_reviewed_sha256": "5e41960b25702af6de7e94fe65beee70fd75b32454e7e7466cee8084cc414f10",
+  "source_reviewed_sha256": "1bbf0443bac68dce7b02d7bbf68cc574cfeae6dd54a24dfb50a26ecc11f8ced1",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "5e41960b25702af6de7e94fe65beee70fd75b32454e7e7466cee8084cc414f10",
     "after_sha256": "d74c62299095cb4c4f6b3e89700fa7da2ef57a817868b6ffc9f93c59559f3af9",
     "before_reader_sha256": "093543627415e3af82a300d11ae19ced001dc0f364a2f4c35a9be4649e16f193",
     "after_reader_sha256": "602cc274e42ba72b30dfbc67dc20e77bd698c5e6344a704f85d307e6ba4a5ef5"
-  }
+  },
+  "taiwan_context_assessment": {
+    "actual_scenario": "臺灣網站使用境內外雲端服務時，實際資料流、遠端維運、備份和分包商都可能影響個資及產業義務；沒有只靠機房所在地即可判定所有風險的通則。",
+    "independent_of_frequency": true,
+    "legal_status": "個資法部分修正於2025-11-11公布，但截至2026-11-07法規資料庫標示尚未施行且施行日未定；操作指引依112-05-31有效條文與個案適用產業規範。",
+    "frequency_not_used_as_legal_test": true
+  },
+  "statistics_assessed": [
+    {
+      "topic": "臺灣網站或平臺發生個資外洩/資安事件的發生率",
+      "value": null,
+      "unit": "未找到可配對的臺灣全國發生率；不估個人機率",
+      "period": "截至2026-11-07查核",
+      "geographic_scope": "臺灣居民、企業或實際服務對象；依條目定義，詳見族群欄位。",
+      "population": "臺灣網站、服務及各規模營運者；本次沒有以網站數、資產暴露或使用者數配對的全國率。",
+      "numerator": "本次查核的指定臺灣官方統計與原始資料中，未找到與本主題事件定義相符且可代表全國的分子。",
+      "denominator": null,
+      "event_definition": "指引列舉的攻擊情境與法規通報條文，並不等於統計事件或已證實的外洩案件。",
+      "data_type": "現行法規、修法狀態和中小企業資安實務指引；非具代表性的事件抽樣統計。",
+      "source_ids": [
+        "pdpa",
+        "ch26_pdpa_effective_text_20261030",
+        "ch26_acs_incident_response_guide_20260731"
+      ],
+      "sources_examined_for_frequency": [
+        "pdpa",
+        "ch26_pdpa_effective_text_20261030",
+        "ch26_acs_incident_response_guide_20260731"
+      ],
+      "accessed_at": "2026-11-07",
+      "limitations": "未找到可代表臺灣網站營運者、含事件定義及相應分母的資安事件率；不以指引威脅數量或通報件數估算單一網站中招機率。"
+    }
+  ],
+  "frequency_assessment": "未找到可代表臺灣網站營運者、含事件定義及相應分母的資安事件率；不以指引威脅數量或通報件數估算單一網站中招機率。"
 }

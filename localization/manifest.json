@@ -10773,7 +10773,7 @@
         "https://www.boca.gov.tw/sp-trwa-list-1.html",
         "https://www.boca.gov.tw/cp-86-65-ea80f-1.html"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/21-%E5%87%BA%E5%9B%BD%E6%97%85%E8%A1%8C%E4%B8%8E%E5%A2%83%E5%A4%96%E5%AE%89%E5%85%A8.md",
       "display_path": "book/21-出國旅行與境外安全.md",
       "source_title_zh_tw": "出發前查一次外交部安全提醒，標了「暫勿前往」的地方就別去",
@@ -10793,7 +10793,7 @@
         "https://www.boca.gov.tw/cp-87-2121-7a5da-1.html",
         "https://www.boca.gov.tw/cp-85-244-cdfdb-1.html"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/21-%E5%87%BA%E5%9B%BD%E6%97%85%E8%A1%8C%E4%B8%8E%E5%A2%83%E5%A4%96%E5%AE%89%E5%85%A8.md",
       "display_path": "book/21-出國旅行與境外安全.md",
       "source_title_zh_tw": "把 12308 和當地使領館的領保電話存進手機，再抄一份放錢包，別等出事再找",
@@ -10898,7 +10898,7 @@
         "https://www.boca.gov.tw/cp-86-65-ea80f-1.html",
         "https://www.boca.gov.tw/fp-56-7988-2110e-1.html"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/21-%E5%87%BA%E5%9B%BD%E6%97%85%E8%A1%8C%E4%B8%8E%E5%A2%83%E5%A4%96%E5%AE%89%E5%85%A8.md",
       "display_path": "book/21-出國旅行與境外安全.md",
       "source_title_zh_tw": "護照、簽證、身份證都拍照存一份在雲端，丟了先報警再補旅行證",
@@ -12388,9 +12388,10 @@
       "sources": [
         "https://www.etax.nat.gov.tw/etwmain/tax-info/network-transaction-taxtation-area/seller/notice",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340087"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "收費的網站多數要許可證，自己賣貨不讓別人入駐的不用，撮合交易的是另一類許可，免費的只要備案",
@@ -12429,10 +12430,10 @@
       "target_path": "locales/zh-TW/book/ch26/TW-26-004.md",
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
-        "https://www.pdpc.gov.tw/News_Html/100/",
-        "https://www.nics.nat.gov.tw/cybersecurity_resources/reference_guide/Common_Standards/"
+        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+        "https://s.moda.gov.tw/c1DWBHH7BkKH"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "服務器放境內就要備案，App 和小程序上架前也要備案，接入商必須自己持有增值電信許可",
@@ -12451,9 +12452,13 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
         "https://www.etax.nat.gov.tw/etwmain/tax-info/network-transaction-taxtation-area/seller/notice",
-        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340087",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340010",
+        "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?pcode=I0050021",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380131"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "讓用戶上來賣東西，平臺就要核驗登記、報送信息、留存三年",
