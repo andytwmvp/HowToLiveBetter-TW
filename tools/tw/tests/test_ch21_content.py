@@ -60,7 +60,7 @@ class TravelChapterTests(unittest.TestCase):
   self.assertTrue(all(e['status']!='verified' and not e['target_path'] for e in prior if e['id'] in IDS))
  def test_warnings_not_refund_or_entry_guarantees(self):
   t=bodies()['TW-21-001']
-  for value in ('灰色','黃色','橙色','紅色','不直接','未列警示','陸委會','保險'):self.assertIn(value,t)
+  for value in ('灰色','黃色','橙色','紅色','沒有列警示不代表一定安全','不會自動決定','大陸委員會','保險理賠'):self.assertIn(value,t)
  def test_phone_costs_and_loan_exceptions(self):
   texts=bodies();t=texts['TW-21-002']
   for value in ('0800-085-095','+886-800-085-095','自付國際電話費','800-0885-0885','eSIM'):self.assertIn(value,t)
@@ -73,7 +73,7 @@ class TravelChapterTests(unittest.TestCase):
   for value in ('每人每次','美金1萬元','新臺幣10萬元','人民幣2萬元','超額即使申報','金融卡','預借現金'):self.assertIn(value,t)
  def test_passport_and_driving_exceptions(self):
   t=bodies()['TW-21-007']
-  for value in ('不受理','遺失護照說明書','入國證明書','轉機','不保證'):self.assertIn(value,t)
+  for value in ('不受理','遺失護照說明書','入國證明書','轉機','返臺文件也不代表目的地或轉機地一定許可登機或入境'):self.assertIn(value,t)
   t=bodies()['TW-21-008']
   for value in ('三年','日文譯本','入境日起一年','較短','再入境','交車'):self.assertIn(value,t)
  def test_agent_invitation_and_jobscam_limits(self):
