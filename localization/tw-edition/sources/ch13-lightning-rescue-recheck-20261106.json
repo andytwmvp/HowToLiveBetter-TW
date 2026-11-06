@@ -1,0 +1,40 @@
+{
+  "sources": [
+    [
+      "lightning_cwa_qpeplus_20261106",
+      "中央氣象署：新一代劇烈天氣監測系統（QPEplus）",
+      "https://qpeplus.cwa.gov.tw/",
+      "中央氣象署提供的劇烈天氣監測入口，可查閱閃電觀測及雷雨期間的即時天氣資訊；即時觀測不是個人安全保證或傷亡統計。"
+    ],
+    [
+      "lightning_cwa_observation_spec_20261106",
+      "中央氣象署：閃電落雷系統即時觀測說明",
+      "https://www.cwa.gov.tw/Data/data_catalog/3-1-1.pdf",
+      "規格說明臺灣本島、離島及鄰近海域的閃電監測網，包含雲對地與雲間閃電的時間、位置及型態欄位；產品每5分鐘更新前1小時資料。"
+    ],
+    [
+      "lightning_cwa_thunder_alert_20261106",
+      "中央氣象署：大雷雨即時訊息產品說明",
+      "https://www.cwa.gov.tw/Data/data_catalog/6-4-2.pdf",
+      "產品說明大雷雨即時訊息用於短時間、局部區域的雷擊、強降雨、強陣風及冰雹等劇烈天氣提醒；未收到警示不代表安全。"
+    ],
+    [
+      "lightning_mohw_death_stats_114",
+      "衛生福利部：114年死因統計年報",
+      "https://dep.mohw.gov.tw/dos/fp-5069-87715-113.html",
+      "衛福部全國死因年報沒有戶外活動暴露人次；本次檢視的年報表格未找到可直接辨認的雷擊死因列，不能把未列出解讀為零死亡或換算個人風險。"
+    ],
+    [
+      "aid_firefighter_injury_report_111",
+      "內政部消防署：111年度消防人員傷亡案件初步統計分析報告",
+      "https://mag.nfa.gov.tw/article.php?id=3591",
+      "報告登錄205件消防人員勤務事件，其中94件為未造成人員受傷的近失事件，其餘111件有人員受傷；對象為消防及義勇消防人員，不能作為一般民眾臨時施救受傷率。"
+    ],
+    [
+      "aid_civil_law_150_recheck_20261106",
+      "全國法規資料庫：民法第150條單條頁",
+      "https://law.moj.gov.tw/LawClass/LawSingle.aspx?flno=150&pcode=B0000001",
+      "民法第150條規範急迫危險行為的必要程度、損害界線，以及行為人對危險發生有責任時的賠償責任。"
+    ]
+  ]
+}
