@@ -5,7 +5,7 @@
   "reviewed_at": "2026-11-06",
   "review_due_at": "2027-02-06",
   "target_path": "locales/zh-TW/book/ch02/TW-02-047.md",
-  "target_sha256": "376c789266bbc3061b43d2b18d0d45af85831b52130058de8f0ffcedf57bdc7f",
+  "target_sha256": "44e3a1981c852ad1ec180d73c4392c21fb1e74de4e074abd7857b381e0e7a568",
   "source_checks": [
     {
       "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639117646086696727&type=4",
@@ -35,7 +35,7 @@
     "民國114年（2025）1,212件是通報案件、5,650人是患者數、死亡0人；資料沒有全臺人口、餐次或個人暴露分母，不能換算個人發生率。疾管署疾病頁只支持特定淡水魚傳播方式，不提供可估算目前全國病例頻率的資料。",
     "本次為AI輔助逐項來源核對，未取得獨立食品安全、感染症或統計專業審閱；重症依119派遣及醫療人員判斷。"
   ],
-  "source_reviewed_sha256": "376c789266bbc3061b43d2b18d0d45af85831b52130058de8f0ffcedf57bdc7f",
+  "source_reviewed_sha256": "44e3a1981c852ad1ec180d73c4392c21fb1e74de4e074abd7857b381e0e7a568",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "14cd28e5e302f047cf934b8b7af2159d9f2223b2552b95e9854522cbf3ab86de",
   "source_ids": [

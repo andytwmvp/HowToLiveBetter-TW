@@ -5,7 +5,7 @@
   "reviewed_at": "2026-11-06",
   "review_due_at": "2027-02-06",
   "target_path": "locales/zh-TW/book/ch02/TW-02-046.md",
-  "target_sha256": "8042d7399bd8bc09ab22b1940acd6ffdcffdab13423bf9948b7053ecce773b8e",
+  "target_sha256": "5c7b10f7d47d2f4693c445fad4f748d7acff3c6a6389e4ac1a50ee44021d9030",
   "source_checks": [
     {
       "url": "https://www.fda.gov.tw/tc/csmnewsContent.aspx?id=t634554&mid=267",
@@ -28,7 +28,7 @@
     "南投縣民國115年度38件市售商品抽驗只代表該縣、該年度及抽驗品項，不是全臺市場普查或家庭暴露分母；目前查閱的官方資料不足以估算一般家庭黃麴毒素暴露率。",
     "本次為AI輔助逐項來源核對，未取得獨立食品安全、毒理或醫療專業審閱；不適症狀由醫療人員依個別暴露評估。"
   ],
-  "source_reviewed_sha256": "8042d7399bd8bc09ab22b1940acd6ffdcffdab13423bf9948b7053ecce773b8e",
+  "source_reviewed_sha256": "5c7b10f7d47d2f4693c445fad4f748d7acff3c6a6389e4ac1a50ee44021d9030",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "f4f2e04c38ee52d5778c45b66be5dcbcaacc93034e4bab865bae62404377d304",
   "source_ids": [

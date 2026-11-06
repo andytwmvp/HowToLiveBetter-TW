@@ -5,7 +5,7 @@
   "reviewed_at": "2026-11-06",
   "review_due_at": "2027-02-06",
   "target_path": "locales/zh-TW/book/ch02/TW-02-020.md",
-  "target_sha256": "5933e9597cdcf929a0e8108f49379aa3422594da419b2b6dc6d5f302beafc89b",
+  "target_sha256": "bd1b082291ecd6a1a32592eedf6c188ac2fb6e2bdfa8ead2d167921ea9a98265",
   "source_checks": [
     {
       "url": "https://ihealth.vghtc.gov.tw/media/680",
@@ -42,7 +42,7 @@
     "截至2026-11-06查閱到的官方資料沒有可估算臺灣個人酒精戒斷風險的全國同定義發生率；臨床症狀出現時序不能作為在家等待的安全時限。治療補助按年度公告，資格與費用須依當年度方案和個別醫療評估確認。",
     "本次為AI輔助逐項來源核對，未取得獨立成癮醫療或急診專業審閱；急症依119派遣與現場醫療人員判斷。"
   ],
-  "source_reviewed_sha256": "5933e9597cdcf929a0e8108f49379aa3422594da419b2b6dc6d5f302beafc89b",
+  "source_reviewed_sha256": "bd1b082291ecd6a1a32592eedf6c188ac2fb6e2bdfa8ead2d167921ea9a98265",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "77966d40ebe293d0c34f514c8e53450423d4ae6a65cc22816d7b9931f37e3947",
   "source_ids": [

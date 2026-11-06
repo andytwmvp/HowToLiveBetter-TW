@@ -29,6 +29,8 @@ class ChapterTwoHealthSafetyFoodTests(unittest.TestCase):
 
         batch = load("localization/tw-edition/sources/ch02-health-safety-food-20261030.json")
         batch_sources = {row[0]: row for row in batch["sources"]}
+        recheck_sources = load("localization/tw-edition/sources/ch02-health-safety-recheck-20261106.json")
+        batch_sources.update({row[0]: row for row in recheck_sources["sources"]})
         for key in NEW_IDS:
             with self.subTest(id=key):
                 entry = manifest[key]
