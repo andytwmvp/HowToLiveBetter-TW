@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "baseline_main_sha": "3cac9b35a0a3079c66b92c223a460cd6238e4e81",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
+  "risk_order": [
+    "TW-15-016",
+    "TW-21-008",
+    "TW-21-009",
+    "TW-21-010",
+    "TW-26-013"
+  ],
+  "new_core_ids": [],
+  "rechecked_ids": [
+    "TW-15-016",
+    "TW-21-008",
+    "TW-21-009",
+    "TW-21-010",
+    "TW-26-013"
+  ],
+  "items": [
+    {
+      "id": "TW-21-008",
+      "before_sha256": "474bed014ba62bcb0d6735e95fa174e1fed89235d3f12b408f364131d09ca559",
+      "after_sha256": "98b09e3416d30f20e242165268f715fc64c13cf1c250df413b77e106acb68854",
+      "prior_revision": "3cac9b35a0a3079c66b92c223a460cd6238e4e81",
+      "prior_review_sha256": "b472794bae50c3a827a529d21b0ccf0d7d9a86718bfe774edd6e88e74a855265",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch21_idp",
+        "ch21_japan_drive",
+        "thb_idp_application_20261107"
+      ],
+      "previous_source_ids": [
+        "ch21_idp",
+        "ch21_japan_drive"
+      ],
+      "retired_sources": [],
+      "statistics_assessed": [
+        {
+          "topic": "臺灣旅客境外自駕事故的發生頻率",
+          "value": null,
+          "unit": "沒有可比較的臺灣全國發生率；不推算個人機率",
+          "period": "截至2026-11-07查核",
+          "geographic_scope": "臺灣駕照申領程序及各目的地道路交通規則；境外事故發生地依旅客實際駕駛的國家或地區而異。",
+          "population": "持臺灣駕照且在境外實際駕駛汽車或機車的臺灣旅客；現有材料沒有可配對的完整暴露母群。",
+          "numerator": "本次核對的臺灣公路局及目的地主管機關規則沒有提供臺灣旅客境外自駕事故的全國事件分子。",
+          "denominator": null,
+          "event_definition": "需界定境外自駕交通事故、事故責任及就醫/財損層級；官方國際駕照申領數不等於境外實際駕駛人數或事故件數。",
+          "data_type": "臺灣行政服務資料及目的地交通規則；未取得可計算旅外自駕事故頻率的統計資料。",
+          "source_ids": [
+            "ch21_idp",
+            "ch21_japan_drive",
+            "thb_idp_application_20261107"
+          ],
+          "sources_examined_for_frequency": [
+            "ch21_idp",
+            "ch21_japan_drive",
+            "thb_idp_application_20261107"
+          ],
+          "accessed_at": "2026-11-07",
+          "limitations": "本次未找到能配對臺灣旅客境外自駕事故分子及駕駛人次或人時分母的全國資料；不以申領國際駕照數推估個人風險。"
+        }
+      ],
+      "unresolved_questions": [
+        "各目的地主管機關對臺灣駕照的承認、譯本發行機構及居留者規則可能變動，需在出發前按實際地點重查。"
+      ]
+    },
+    {
+      "id": "TW-21-009",
+      "before_sha256": "1f1f71935004aa1b558b2f9faf00e9272bfc32b946ee1769d7534e8d8e24521c",
+      "after_sha256": "71e5afffa78b36b92b8b474b1b123060c2a077172d0c0c59f5eeec887478bb40",
+      "prior_revision": "3cac9b35a0a3079c66b92c223a460cd6238e4e81",
+      "prior_review_sha256": "86ebed6ff9f1d8da921d76782586df3a58698121ceb3588043d622dedb1643a7",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch21_agents",
+        "ch21_us_visa",
+        "nia_immigration_act_20261107",
+        "nia_immigration_agencies_20261106",
+        "moe_overseas_study_contract_20240613"
+      ],
+      "previous_source_ids": [
+        "ch21_agents",
+        "ch21_us_visa"
+      ],
+      "retired_sources": [],
+      "statistics_assessed": [
+        {
+          "topic": "臺灣民眾使用移民、留學與簽證代辦服務時發生詐欺或錯辦的頻率",
+          "value": null,
+          "unit": "沒有可比較的臺灣全國發生率；不推算個人機率",
+          "period": "截至2026-11-07查核",
+          "geographic_scope": "臺灣移民法規所管制的境內移民代辦業務及臺灣留學服務契約；簽證與入學結果另依目的地及學校規則。",
+          "population": "使用臺灣境內留學、移民或簽證代辦服務的申請人；不同服務類別和目的地不能混為單一母群。",
+          "numerator": "本次核對的移民業務資格、留學契約和行政公告未提供同一服務類型的全國違規或詐欺事件分子。",
+          "denominator": null,
+          "event_definition": "需要區分無照承作法定移民業務、契約違約、假文件詐欺及簽證未核准，不能以單一裁罰或申訴件數代表同一事件。",
+          "data_type": "臺灣法律、移民署業者清冊及教育部契約規範；未取得能代表各類代辦服務風險的統計資料。",
+          "source_ids": [
+            "ch21_agents",
+            "ch21_us_visa",
+            "nia_immigration_act_20261107",
+            "nia_immigration_agencies_20261106",
+            "moe_overseas_study_contract_20240613"
+          ],
+          "sources_examined_for_frequency": [
+            "ch21_agents",
+            "ch21_us_visa",
+            "nia_immigration_act_20261107",
+            "nia_immigration_agencies_20261106",
+            "moe_overseas_study_contract_20240613"
+          ],
+          "accessed_at": "2026-11-07",
+          "limitations": "本次未找到可配對同一服務類型的案件分子與申請服務人數分母；不以裁罰件數或新聞個案推算個人受騙機率。"
+        }
+      ],
+      "unresolved_questions": [
+        "移民署清冊依更新日期分別列出律師與移民公司，簽約時應查最新清冊及個別業者實際服務項目。",
+        "目的地的移民法律、簽證規則與海外法律代理資格須按國家及案件另行查核。"
+      ]
+    },
+    {
+      "id": "TW-21-010",
+      "before_sha256": "b78b7f808b60ed61d97654ac4375a2759cb95edc378a9b689588a364dfe04961",
+      "after_sha256": "3d560d3cbd3c16111a32aa22cf3583e9df951ceb92094f083abc6af1876c25e7",
+      "prior_revision": "3cac9b35a0a3079c66b92c223a460cd6238e4e81",
+      "prior_review_sha256": "648273b4dbc0742652e93c4ecb7c24a7bc29cea2bcc7e5474651f6d4a0fbb708",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch21_identity",
+        "ch21_us_visa",
+        "passport_act_20210120"
+      ],
+      "previous_source_ids": [
+        "ch21_identity",
+        "ch21_us_visa"
+      ],
+      "retired_sources": [],
+      "statistics_assessed": [
+        {
+          "topic": "臺灣護照遭交付冒名使用及不實海外邀請文件的發生頻率",
+          "value": null,
+          "unit": "沒有可比較的臺灣全國發生率；不推算個人機率",
+          "period": "截至2026-11-07查核",
+          "geographic_scope": "臺灣居民出具海外邀請或費用文件及臺灣護照的合法使用；簽證申請規則依目的地國家和簽證類別。",
+          "population": "可能出具海外邀請文件或持有臺灣護照的民眾；不同文件和違法行為不能共用一個母群。",
+          "numerator": "本次核對的護照規範及領務提醒未提供可配對邀請文件、護照冒名事件與相關使用母群的全國分子。",
+          "denominator": null,
+          "event_definition": "護照交付供冒名、冒名使用他人護照及邀請文件內容錯誤/詐欺是不同事件，需分別統計。",
+          "data_type": "臺灣護照法規、領務提醒及單一目的地簽證說明；不是邀請文件或冒名事件統計。",
+          "source_ids": [
+            "ch21_identity",
+            "ch21_us_visa",
+            "passport_act_20210120"
+          ],
+          "sources_examined_for_frequency": [
+            "ch21_identity",
+            "ch21_us_visa",
+            "passport_act_20210120"
+          ],
+          "accessed_at": "2026-11-07",
+          "limitations": "本次未找到可配對各類事件分子和護照/邀請文件申請分母的全國統計；不以法定刑度或單一案件推估個人機率。"
+        }
+      ],
+      "unresolved_questions": [
+        "各目的地邀請文件、經濟擔保及入境規定會依國籍、簽證類別與行程不同，應按受理機關最新表格核對。"
+      ]
+    },
+    {
+      "id": "TW-15-016",
+      "before_sha256": "a119febe89db5172db31e2ebae5216b8090568ba48e62b2f900465e1909cc888",
+      "after_sha256": "f0af711d2d7a87fe2a5663e9b96a8cfba1ec502db368a94d4326294cdfbf39e0",
+      "prior_revision": "3cac9b35a0a3079c66b92c223a460cd6238e4e81",
+      "prior_review_sha256": "a5a4c6f32991a9250ead22c1ef65e829581cea316ff527f0381aea4f889e2a74",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "youthloan3",
+        "ch15_mortgagecontract",
+        "nta_youthloan3_faq_20260728",
+        "nta_youthloan3_release_20260728"
+      ],
+      "previous_source_ids": [
+        "youthloan3",
+        "ch15_mortgagecontract"
+      ],
+      "retired_sources": [],
+      "statistics_assessed": [
+        {
+          "topic": "青安3.0借款戶逾期、違約或無法負擔貸款的發生頻率",
+          "value": null,
+          "unit": "沒有可比較的臺灣全國發生率；不推算個人機率",
+          "period": "截至2026-11-07查核",
+          "geographic_scope": "臺灣青年安心成家購屋優惠貸款3.0申貸制度；房價上限依臺北市、新北市及新竹縣市、其他縣市區分，不代表其他住宅貸款方案。",
+          "population": "2026-08-01起申辦青安3.0的借款戶；與先前青安方案、所有房貸或一般人口不同。",
+          "numerator": "截至查閱日，主管機關已公告青安3.0申貸規則，但未找到足以計算該方案逾期或違約頻率的成熟全國分子。",
+          "denominator": null,
+          "event_definition": "需界定逾期/違約狀態、計算期間、貸款戶或本金為分母；核貸戶數或累積撥貸金額本身不等於事件數。",
+          "data_type": "財政部方案問答、公告與房貸契約規範；非貸款績效統計或代表性調查。",
+          "source_ids": [
+            "youthloan3",
+            "ch15_mortgagecontract",
+            "nta_youthloan3_faq_20260728",
+            "nta_youthloan3_release_20260728"
+          ],
+          "sources_examined_for_frequency": [
+            "youthloan3",
+            "ch15_mortgagecontract",
+            "nta_youthloan3_faq_20260728",
+            "nta_youthloan3_release_20260728"
+          ],
+          "accessed_at": "2026-11-07",
+          "limitations": "青安3.0開始受理僅數月，本次未找到方案本身已有成熟且定義清楚的逾期/違約分子與貸款戶或本金分母；不推估個人風險。"
+        }
+      ],
+      "unresolved_questions": [
+        "青安3.0後續利率、補貼公告及個別銀行承作條件可能變動；簽約或送件前應向承辦公股銀行取得當期書面說明和還款試算。"
+      ]
+    },
+    {
+      "id": "TW-26-013",
+      "before_sha256": "4c2fff02d9b7e9d515ae398257fbbeed9c87bf15912379ff196e5027da66946d",
+      "after_sha256": "c31d2097036e2610d16ae99158668bbfbdc7e1e6fd36d5a0b31f57c088cbd533",
+      "prior_revision": "3cac9b35a0a3079c66b92c223a460cd6238e4e81",
+      "prior_review_sha256": "da74bacf94836068cfacdf418afb04197943d047e20b17ef790a65fc5b56e95c",
+      "prior_reviewed_at": "2026-10-17",
+      "prior_review_due_at": "2026-12-31",
+      "source_ids": [
+        "ch26_consumer",
+        "ch26_exception",
+        "moda_online_retail_terms_20160715",
+        "moda_internet_teaching_terms_20191115",
+        "moda_retail_subscription_draft_20260116",
+        "cpc_app_subscription_cancel_2026"
+      ],
+      "previous_source_ids": [
+        "ch26_consumer",
+        "ch26_exception",
+        "renewaldraft"
+      ],
+      "retired_sources": [
+        {
+          "id": "renewaldraft",
+          "replacement_ids": [
+            "moda_retail_subscription_draft_20260116"
+          ],
+          "reason": "原政策參與頁非現行法規公告入口，且本次無法直接核對其頁面內容；改引用數位產業署草案預告清單與現行法規頁交叉驗證。",
+          "prior_source_sha256": "a7efa9c141a74a1172b4c008d593b75b42b99c48e5650a761018a2b3f35718c2"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "臺灣消費者遇到訂閱自動續扣、取消失敗或退款爭議的發生頻率",
+          "value": null,
+          "unit": "沒有可比較的臺灣全國發生率；不推算個人機率",
+          "period": "截至2026-11-07查核",
+          "geographic_scope": "臺灣消費者使用的網路訂閱服務；應依服務產業、付款平台、交易方式及個別契約例外分層。",
+          "population": "在臺灣使用各類付費訂閱、免費試用或應用程式商店服務的消費者；不同付款平台、產業與服務契約應分開計算。",
+          "numerator": "本次核對的消費者法規、產業契約規範、草案公告及取消指引未提供全國續扣、取消失敗或退款爭議的同定義事件分子。",
+          "denominator": null,
+          "event_definition": "忘記取消、未授權扣款、取消失敗及退款爭議是不同事件；消費申訴數不等於所有實際爭議或訂閱帳戶數。",
+          "data_type": "臺灣消費者法規、特定產業定型化契約、行政指引及尚未施行的草案公告；不是訂閱爭議頻率統計。",
+          "source_ids": [
+            "ch26_consumer",
+            "ch26_exception",
+            "moda_online_retail_terms_20160715",
+            "moda_internet_teaching_terms_20191115",
+            "moda_retail_subscription_draft_20260116",
+            "cpc_app_subscription_cancel_2026"
+          ],
+          "sources_examined_for_frequency": [
+            "ch26_consumer",
+            "ch26_exception",
+            "moda_online_retail_terms_20160715",
+            "moda_internet_teaching_terms_20191115",
+            "moda_retail_subscription_draft_20260116",
+            "cpc_app_subscription_cancel_2026"
+          ],
+          "accessed_at": "2026-11-07",
+          "limitations": "本次未找到可與全國訂閱帳戶、訂閱週期或扣款筆數配對的同定義分母；不以申訴數推估個人被扣款機率。"
+        }
+      ],
+      "unresolved_questions": [
+        "訂閱扣款、取消入口、試用期限和退款條件會依平台及個別契約改變，消費者須保留自己的付款與取消確認紀錄。",
+        "網路零售契約修正草案是否已於日後公告施行，應依最新法規系統再次查核。"
+      ]
+    }
+  ],
+  "source_registry_before": 1218,
+  "runtime_source_ids_added": [
+    "thb_idp_application_20261107",
+    "nia_immigration_act_20261107",
+    "nia_immigration_agencies_20261106",
+    "moe_overseas_study_contract_20240613",
+    "passport_act_20210120",
+    "nta_youthloan3_faq_20260728",
+    "nta_youthloan3_release_20260728",
+    "moda_online_retail_terms_20160715",
+    "moda_internet_teaching_terms_20191115",
+    "moda_retail_subscription_draft_20260116",
+    "cpc_app_subscription_cancel_2026"
+  ],
+  "retired_source_ids": [
+    "renewaldraft"
+  ],
+  "professional_review": {
+    "obtained": false,
+    "status": "待取得獨立金融、移民/法律、交通/保險、領務/法律及消費者保護專業審閱。"
+  },
+  "publication_ready": false,
+  "source_registry_after": 1229,
+  "runtime_sources_before": 1135,
+  "runtime_sources_after": 1146,
+  "formal_rechecks_before": 371,
+  "formal_rechecks_after": 376,
+  "json_files_checked_before": 567,
+  "json_files_checked_after": 569,
+  "core_verified_before": 282,
+  "core_verified_after": 282
+}

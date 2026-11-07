@@ -1,47 +1,98 @@
 {
   "id": "TW-26-013",
-  "reviewer": "ChatGPT（AI輔助來源核對；非獨立法律、支付、稅務、個資或資安專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐項來源核對；非獨立交通、領務、移民、法律、金融或消費者保護專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-17",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
   "target_path": "locales/zh-TW/book/ch26/TW-26-013.md",
-  "target_sha256": "4c2fff02d9b7e9d515ae398257fbbeed9c87bf15912379ff196e5027da66946d",
+  "target_sha256": "c31d2097036e2610d16ae99158668bbfbdc7e1e6fd36d5a0b31f57c088cbd533",
   "source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
-      "claim": "TW-26-013：通訊交易應揭露經營者、價格、付款、解除權及申訴方式；7日解除權有法定合理例外，不是所有數位服務均一律不得退費。",
-      "supporting_passage": "編者摘要（非逐字引文）：通訊交易應揭露經營者、價格、付款、解除權及申訴方式；7日解除權有法定合理例外，不是所有數位服務均一律不得退費。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "claim": "通訊交易應揭露重要契約資訊，且7日解除權有適用範圍。",
+      "supporting_passage": "編者摘要（非逐字）：《消費者保護法》第18條列通訊交易資訊揭露事項，第19條規定解除權原則及法律例外；不宣稱所有已開始的訂閱均可全額退款。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀來源列出的官方頁面與本條相關法規/操作段落；未以搜尋摘要或未讀附件代替核對。"
     },
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170012",
-      "claim": "TW-26-013：無形數位內容或提供即完成的線上服務，須事先同意提供及告知排除7日解除權等前提，不能因商品是數位的就一概免除。",
-      "supporting_passage": "編者摘要（非逐字引文）：無形數位內容或提供即完成的線上服務，須事先同意提供及告知排除7日解除權等前提，不能因商品是數位的就一概免除。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "claim": "數位內容/提供即完成的線上服務排除解除權需滿足告知及事先同意條件。",
+      "supporting_passage": "編者摘要（非逐字）：合理例外準則第2條第5款明定非有形媒介數位內容或一經提供即完成的線上服務，須經消費者事先同意並由業者告知排除解除權。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀來源列出的官方頁面與本條相關法規/操作段落；未以搜尋摘要或未讀附件代替核對。"
     },
     {
-      "url": "https://join.gov.tw/policies/detail/866671a7-5a37-4989-aa3d-50f5799deab5",
-      "claim": "TW-26-013：2026年1月草案預告頁，僅證明修法討論，不能當作所有訂閱已一律適用的新法。",
-      "supporting_passage": "編者摘要（非逐字引文）：2026年1月草案預告頁，僅證明修法討論，不能當作所有訂閱已一律適用的新法。",
-      "accessed_at": "2026-10-17",
-      "retrieval_method": "官方指定條文、說明或指引；沿用既有來源者核對本章適用範圍，未讀附件不作依據。"
+      "url": "https://law.moda.gov.tw/LawContent.aspx?id=GL000024&media=print",
+      "claim": "現行零售業等網路交易契約規範的適用範圍和條文日期。",
+      "supporting_passage": "編者摘要（非逐字）：數位部法規頁列最近修正日2016-07-15，並限定於經濟部主管零售業等透過網路與消費者交易的契約。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀數位發展部法規系統所列現行網路交易契約條款、修正日期和適用範圍。"
+    },
+    {
+      "url": "https://law.moda.gov.tw/LawContent.aspx?id=GL000019&media=print",
+      "claim": "特定網際網路教學服務契約的定義、排除範圍和至少3日審閱。",
+      "supporting_passage": "編者摘要（非逐字）：法規頁列公告日2019-11-15，定義適用網際網路教學服務，排除正規教育及補習學校等，契約審閱至少3日。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀法規頁的公告日期、服務定義、排除範圍及契約審閱期間。"
+    },
+    {
+      "url": "https://moda.gov.tw/ADI/services/laws-regulations/draftforum/1093",
+      "claim": "網路零售自動續約草案預告日期與預告期間，及其尚非現行施行法規的性質。",
+      "supporting_passage": "編者摘要（非逐字）：數位產業署草案預告清單列2026-01-16公告，預告起迄為2026-01-17至2026-02-23；法規系統現行條款仍列2016-07-15修正，預告本身不等同公告施行。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀數位產業署草案預告清單的公告日、草案名稱和預告起迄日，並與現行主管法規系統的條文頁交叉核對。"
+    },
+    {
+      "url": "https://cpc.ey.gov.tw/Page/8644AFB8F5DCB8A3/a6cad45f-8418-4c7b-b999-9f833c96ef11",
+      "claim": "應用程式訂閱取消方式、刪除APP與停止扣款的差異及不明扣款處理。",
+      "supporting_passage": "編者摘要（非逐字）：消保會指出刪除APP不會終止訂閱，應依服務或Apple、Google、Microsoft等平台流程取消並關閉自動更新；不明扣款要聯絡平台、銀行或電信業者。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接閱讀消保會APP訂閱取消說明中的取消步驟、刪除APP與停止扣款的差異及不明扣款處理方式。"
     }
   ],
-  "localization_changes": "按臺灣支付、稅籍、消保、著作權、兒少、個資及資安情境重寫；草案與法定義務分開。",
-  "review_method": "AI輔助逐條對讀官方來源與適用範圍，非獨立專業簽證。",
+  "localization_changes": "刪除原文重複的價格/續扣段落及與消費者無關的平台資安成本，加入臺灣通訊交易揭露與解除權、數位內容例外前提、APP刪除不會取消、依實際付款平台停扣，以及不同網路服務定型化契約的適用界線。將join.gov.tw舊引用退役，改用數位產業署2026年草案公告頁及現行法規頁交叉查核。",
+  "review_method": "逐條重讀原作固定主題、目前正式正文、前次審閱和來源主張，直接查閱所列台灣官方法規、主管機關頁面及服務流程；統計頻率另以事件定義與可配對母數核查。AI來源核對不等同獨立專業審閱。",
   "limits": [
-    "個資法2025年部分修正尚待施行，不能把新第12條通報機制當現行全部業者共同時限。",
-    "第三方支付能量登錄與電子支付許可、消保7日解除與數位內容例外均須個別判斷。",
-    "2026自動續約預告及政府資安參考指引不得冒稱現行所有民間業者強製法規。"
+    "7日解除權及數位內容例外依通訊交易、服務開始時間、事前告知與消費者同意等條件判斷，不能概括保證所有訂閱都可退費。 網路零售及網際網路教學服務定型化契約各有適用範圍；2026年修正草案預告不等於現行生效法規。 臺灣缺乏與全國訂閱帳戶/扣款筆數配對的訂閱爭議發生率；本次AI來源核對尚未取得獨立消費者保護或法律專業審閱。"
   ],
-  "source_reviewed_sha256": "7445a782d08ab06ee07396e8fcff9a74ed42782a858f1f4bcd91fd0389531422",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "7445a782d08ab06ee07396e8fcff9a74ed42782a858f1f4bcd91fd0389531422",
-    "after_sha256": "4c2fff02d9b7e9d515ae398257fbbeed9c87bf15912379ff196e5027da66946d",
-    "before_reader_sha256": "d3377b0b781954811f18a86840462c166cb223efbdeae9f2310d7ba57de8ee74",
-    "after_reader_sha256": "ecc1aab9f89612582fa3dd599f7105e770f086ee0d5b8b6afe6d7100269f86d0"
-  }
+  "source_reviewed_sha256": "c31d2097036e2610d16ae99158668bbfbdc7e1e6fd36d5a0b31f57c088cbd533",
+  "taiwan_context_assessment": {
+    "actual_scenario": "臺灣居民常透過影音、雲端、軟體、行動應用程式商店或電信帳單訂閱服務，取消流程依付款平台、服務類型和契約而異；刪除應用程式本身不等於停止扣款。",
+    "independent_of_frequency": true,
+    "legal_status": "《消費者保護法》第18、19條適用於通訊交易的資訊揭露與解除權，數位內容例外須先告知且取得消費者事先同意。數位部網路零售及網際網路教學契約條款各有適用範圍；2026-01-16公布的第9點修正草案預告不等於已公告施行的通用訂閱規則。",
+    "frequency_not_used_as_legal_test": true
+  },
+  "statistics_assessed": [
+    {
+      "topic": "臺灣消費者遇到訂閱自動續扣、取消失敗或退款爭議的發生頻率",
+      "value": null,
+      "unit": "沒有可比較的臺灣全國發生率；不推算個人機率",
+      "period": "截至2026-11-07查核",
+      "geographic_scope": "臺灣消費者使用的網路訂閱服務；應依服務產業、付款平台、交易方式及個別契約例外分層。",
+      "population": "在臺灣使用各類付費訂閱、免費試用或應用程式商店服務的消費者；不同付款平台、產業與服務契約應分開計算。",
+      "numerator": "本次核對的消費者法規、產業契約規範、草案公告及取消指引未提供全國續扣、取消失敗或退款爭議的同定義事件分子。",
+      "denominator": null,
+      "event_definition": "忘記取消、未授權扣款、取消失敗及退款爭議是不同事件；消費申訴數不等於所有實際爭議或訂閱帳戶數。",
+      "data_type": "臺灣消費者法規、特定產業定型化契約、行政指引及尚未施行的草案公告；不是訂閱爭議頻率統計。",
+      "source_ids": [
+        "ch26_consumer",
+        "ch26_exception",
+        "moda_online_retail_terms_20160715",
+        "moda_internet_teaching_terms_20191115",
+        "moda_retail_subscription_draft_20260116",
+        "cpc_app_subscription_cancel_2026"
+      ],
+      "sources_examined_for_frequency": [
+        "ch26_consumer",
+        "ch26_exception",
+        "moda_online_retail_terms_20160715",
+        "moda_internet_teaching_terms_20191115",
+        "moda_retail_subscription_draft_20260116",
+        "cpc_app_subscription_cancel_2026"
+      ],
+      "accessed_at": "2026-11-07",
+      "limitations": "本次未找到可與全國訂閱帳戶、訂閱週期或扣款筆數配對的同定義分母；不以申訴數推估個人被扣款機率。"
+    }
+  ],
+  "frequency_assessment": "未找到能與全國訂閱帳戶數、扣款筆數或消費者暴露配對的訂閱爭議發生率；行政申訴或案件數不能換算個人被扣款機率。"
 }

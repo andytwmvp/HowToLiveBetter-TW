@@ -9104,9 +9104,11 @@
       "target_path": "locales/zh-TW/book/ch15/TW-15-016.md",
       "sources": [
         "https://www.ey.gov.tw/Page/448DE008087A1971/1cb37b62-d127-4876-9cce-95016f49bcbe",
-        "https://law.fsc.gov.tw/LawContent.aspx?id=GL001398&media=print"
+        "https://law.fsc.gov.tw/LawContent.aspx?id=GL001398&media=print",
+        "https://www.nta.gov.tw/singlehtml/109",
+        "https://www.nta.gov.tw/singlehtml/238?cntId=f6277610210249d1a6e9d796264c9686"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md",
       "display_path": "book/15-租房與買房.md",
       "source_title_zh_tw": "買首套房要貸款的，先用住房公積金貸款，額度不夠再加商業貸款做組合貸，別直接全做商業貸款",
@@ -10916,9 +10918,10 @@
       "target_path": "locales/zh-TW/book/ch21/TW-21-008.md",
       "sources": [
         "https://168.motc.gov.tw/theme/news/post/2302241437190",
-        "https://www.npa.go.jp/policies/application/license_renewal/have_DL_issed_another_country.html"
+        "https://www.npa.go.jp/policies/application/license_renewal/have_DL_issed_another_country.html",
+        "https://www.thb.gov.tw/cp.aspx?n=96"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/21-%E5%87%BA%E5%9B%BD%E6%97%85%E8%A1%8C%E4%B8%8E%E5%A2%83%E5%A4%96%E5%AE%89%E5%85%A8.md",
       "display_path": "book/21-出國旅行與境外安全.md",
       "source_title_zh_tw": "境外自駕先確認當地認不認中國駕照，網上賣的「國際駕照」多數是廢紙",
@@ -10936,9 +10939,12 @@
       "target_path": "locales/zh-TW/book/ch21/TW-21-009.md",
       "sources": [
         "https://www.immigration.gov.tw/5385/7229/7238/413754/cp_news",
-        "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html"
+        "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080132",
+        "https://www.immigration.gov.tw/5385/7445/7749/7755/",
+        "https://edu.law.moe.gov.tw/LawContent.aspx?id=FL028946&media=print"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/21-%E5%87%BA%E5%9B%BD%E6%97%85%E8%A1%8C%E4%B8%8E%E5%A2%83%E5%A4%96%E5%AE%89%E5%85%A8.md",
       "display_path": "book/21-出國旅行與境外安全.md",
       "source_title_zh_tw": "找中介辦簽證、留學、移民，先問它有沒有在移民管理機構備案",
@@ -10956,9 +10962,10 @@
       "target_path": "locales/zh-TW/book/ch21/TW-21-010.md",
       "sources": [
         "https://www.boca.gov.tw/fp-56-7988-2110e-1.html",
-        "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html"
+        "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=E0030001"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/21-%E5%87%BA%E5%9B%BD%E6%97%85%E8%A1%8C%E4%B8%8E%E5%A2%83%E5%A4%96%E5%AE%89%E5%85%A8.md",
       "display_path": "book/21-出國旅行與境外安全.md",
       "source_title_zh_tw": "別替陌生人出具邀請函，也別讓人借你的名義辦出入境手續",
@@ -12642,9 +12649,12 @@
       "sources": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170012",
-        "https://join.gov.tw/policies/detail/866671a7-5a37-4989-aa3d-50f5799deab5"
+        "https://law.moda.gov.tw/LawContent.aspx?id=GL000024&media=print",
+        "https://law.moda.gov.tw/LawContent.aspx?id=GL000019&media=print",
+        "https://moda.gov.tw/ADI/services/laws-regulations/draftforum/1093",
+        "https://cpc.ey.gov.tw/Page/8644AFB8F5DCB8A3/a6cad45f-8418-4c7b-b999-9f833c96ef11"
       ],
-      "verified_at": "2026-10-17",
+      "verified_at": "2026-11-07",
       "upstream_path_uri": "book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md",
       "display_path": "book/26-做一個網站或平臺.md",
       "source_title_zh_tw": "賣自動續費會員的，開通前和每次扣錢前都要顯著提醒用戶，取消入口要好找",
