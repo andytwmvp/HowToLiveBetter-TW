@@ -13,8 +13,8 @@ import retroactive_audit as audit
 ROOT = audit.ROOT
 BASE = "171783959adfc988ad6cd2cff04cfcdf21a745f6"
 IDS = {"TW-02-006", "TW-02-008", "TW-02-021", "TW-02-045"}
-PENDING_IDS = {"TW-02-008", "TW-02-021", "TW-02-045"}
-PUBLISHED_FROM_REVIEWED_DRAFT = {"TW-02-006"}
+PENDING_IDS = {"TW-02-021"}
+PUBLISHED_FROM_REVIEWED_DRAFT = {"TW-02-006", "TW-02-008", "TW-02-045"}
 
 
 def read(relative):
@@ -29,7 +29,7 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
         cls.register = read("localization/retroactive-review-register-20261019.json")
         cls.chapter = read("localization/tw-edition/chapters/02.json")
 
-    def test_selected_topics_remain_pending_and_unpublished(self):
+    def test_selected_topics_keep_current_publication_state(self):
         entries = {entry["id"]: entry for entry in self.manifest["entries"]}
         runtime_ids = {item["id"] for item in self.runtime["items"]}
         for key in PENDING_IDS:
