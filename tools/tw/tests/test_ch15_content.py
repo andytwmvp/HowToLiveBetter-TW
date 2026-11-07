@@ -65,7 +65,7 @@ class HousingChapterTests(unittest.TestCase):
    self.assertTrue(historical_ids.issubset(current_ids|retired_ids))
    self.assertTrue(retired_ids.issubset(historical_ids))
    self.assertEqual({all_sources[k]['url'] for k in current_ids},{c['url'] for c in checks})
-   self.assertTrue(all('非逐字引文' in c['supporting_passage'] for c in checks))
+  self.assertTrue(all(c['supporting_passage'].startswith('編者摘要') and '非逐字' in c['supporting_passage'] for c in checks))
  def test_counts_without_duplicate_draft_progress(self):
   data=audit_drafts()
   self.assertGreaterEqual(data['publication_completed_entries'],114)
@@ -97,8 +97,8 @@ class HousingChapterTests(unittest.TestCase):
  def test_loan_cost_and_current_policy(self):
   texts=bodies()
   for s in ('總費用年百分率','3年','24個月','不是市場報價'):self.assertIn(s,texts['TW-15-015'])
-  for s in ('3.0','2026-08-01','2029-07-31','未滿50歲','200萬元','40年','3+3','最高'):self.assertIn(s,texts['TW-15-016'])
-  self.assertIn('不是整段40年',texts['TW-15-016'])
+  for s in ('3.0','2026年8月1日','2029年7月31日','未滿50歲','200萬元','40年','撥貸日起3年內','期滿後再按第1至第3年逐步遞減','第4年起回復原貸款利率','最高'):self.assertIn(s,texts['TW-15-016'])
+  self.assertIn('不是整段40年都維持優惠利率',texts['TW-15-016'])
  def test_hooks_and_no_one_shot_writers(self):
   code=(ROOT/'tools/tw/assets_and_browser.py').read_text()
   for hook in ('check_navigation','check_ch07_browser','check_ch23_browser','check_ch25_browser','check_ch15_browser'):

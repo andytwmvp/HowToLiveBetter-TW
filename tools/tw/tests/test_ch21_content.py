@@ -75,10 +75,10 @@ class TravelChapterTests(unittest.TestCase):
   t=bodies()['TW-21-007']
   for value in ('不受理','遺失護照說明書','入國證明書','轉機','返臺文件也不代表目的地或轉機地一定許可登機或入境'):self.assertIn(value,t)
   t=bodies()['TW-21-008']
-  for value in ('三年','日文譯本','入境日起一年','較短','再入境','交車'):self.assertIn(value,t)
+  for value in ('最長為三年','不得超過原駕照效期','日文譯本','入境日起一年','較短','再入境','交車'):self.assertIn(value,t)
  def test_agent_invitation_and_jobscam_limits(self):
   t=bodies()['TW-21-009']
-  for value in ('非觀光','許可','註冊','退款','不實'):self.assertIn(value,t)
+  for value in ('非觀光','許可','註冊','退款','不實資料','偽造文件'):self.assertIn(value,t)
   t=bodies()['TW-21-010']
   for value in ('B類','不是必備','不能','空白','冒用'):self.assertIn(value,t)
   self.assertIn('不要因此把所有海外工作、特定地區或特定族群一概當成犯罪',bodies()['TW-21-005'])
