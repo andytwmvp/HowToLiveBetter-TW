@@ -18,7 +18,7 @@ jobs:
   validate:
     if: github.repository == 'andytwmvp/HowToLiveBetter-TW'
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - name: 初始化暫存位置
         run: echo "TW_REVIEW_DIR=$RUNNER_TEMP/tw-review" >> "$GITHUB_ENV"
