@@ -1,0 +1,92 @@
+{
+  "id": "TW-02-002",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-002.md",
+  "target_sha256": "6928da7eea5b4233e3839925ee1683abf7ad26e9e73672ab8984111356a32d2b",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_adult_survey_20261107",
+      "title": "國民健康署：國人吸菸行為調查結果（成人吸菸及家庭二手菸）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1718&pid=9913",
+      "claim": "113年家庭二手菸暴露率35.6%及成人調查結果。",
+      "supporting_passage": "113年（2024）18歲以上成人標準化目前吸菸率12.8%、家庭二手菸暴露率35.6%；結果頁定義期間與分析對象，並記載菸害防制法於2023-03-22施行。成人吸菸率不等於戒菸成功率；家庭暴露率是成人受訪者指標，不是家庭比例。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱國健署成人調查結果頁，核對113年數值、分析對象、標準化說明、家庭暴露定義及法規施行日。"
+    },
+    {
+      "source_id": "tw02_hpa_adult_sample_20261107",
+      "title": "國民健康署：國人吸菸行為調查有效完訪樣本數",
+      "url": "https://www.hpa.gov.tw/EngPages/List.aspx?nodeid=1710",
+      "claim": "家庭暴露調查的成人樣本數。",
+      "supporting_passage": "113年調查共24,156份有效樣本，其中18歲以上成人樣本23,795人；此為樣本數，不是個別指標的未加權分母。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "查閱國健署調查樣本數頁，核對113年總樣本與成人樣本；不以總樣本替代特定指標的有效分母。"
+    },
+    {
+      "source_id": "tw02_hpa_adult_definitions_20261107",
+      "title": "國民健康署：國人吸菸行為調查名詞定義",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=1717",
+      "claim": "過去一週在家暴露定義、閉鎖陽台及聞到菸味計入方式、計算母數。",
+      "supporting_passage": "成人目前吸菸者定義為累計吸菸超過100支且最近30天曾吸菸；家庭二手菸暴露率以過去一週在家中有人於受訪者面前吸菸計算，閉鎖陽台算在家且聞到菸味亦計入；公式分母為有效完訪樣本。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱國健署指標定義與計算公式，核對成人吸菸及家庭二手菸兩項指標的事件定義、期間和分母方式。"
+    },
+    {
+      "source_id": "tw02_hpa_secondhand_ventilation_20261107",
+      "title": "國民健康署：室內通風或空氣清淨設備不能消除二手菸",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=17423",
+      "claim": "室內通風、空調、風扇與空氣清淨設備不能消除二手菸。",
+      "supporting_passage": "國健署說明風扇、空調、空氣清淨器與通風設備不能消除室內二手菸，任何暴露濃度都可能危及旁人。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "查閱國健署官方衛教頁全文及更新日期，只引用設備不能消除暴露的範圍。"
+    },
+    {
+      "source_id": "tw02_moj_tobacco_hazards_act_20261107",
+      "title": "全國法規資料庫：菸害防制法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070021",
+      "claim": "現行菸害防制法對類菸品、指定菸品及特定公共場所的規範；第20條對孕婦或未滿3歲兒童在場室內場所的禁菸規定。",
+      "supporting_passage": "現行法第3條定義類菸品；第7條規定指定菸品製造或輸入前須通過健康風險評估；第15條規範類菸品及未核定指定菸品的製造、輸入、販賣、供應、展示、廣告和使用；第20條明定孕婦或未滿3歲兒童在場的室內場所不得吸菸；第40條規定違法使用類菸品或未核定指定菸品處新臺幣2,000元至1萬元罰鍰。私人住家不因此一概等同公共禁菸場所；法規資料庫整編截止日為2026-10-30。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱法務部全國法規資料庫現行全文第3、7、15、20及40條，核對禁制、罰則及資料庫整編截止日。"
+    }
+  ],
+  "localization_changes": "將原作室內禁菸建議改為台灣公寓、封閉陽台、租屋與汽車情境，說明通風或清淨設備不能消除二手菸；區分私人住家與法律列舉的公共禁菸場所，不把鄰戶菸味一概寫成違法。 補明第20條對孕婦或未滿3歲兒童在場室內場所的禁菸規定，並保留私人住宅與公共禁菸場所的適用區別。",
+  "review_method": "逐條重讀原作主題、現有結構化草稿和來源。查核台灣生活情境、現行法規／服務、可執行步驟、資格費用及來源是否支持具體主張。對適用統計記錄期間、範圍、對象、分子、分母、事件定義、資料型態及限制；未公開的原始分子或逐題分母不反推，海外研究不改寫成台灣個人機率。本次為AI輔助來源查核，未取得獨立醫療、公共衛生、統計或法律專業審閱。",
+  "limits": [
+    "35.6%是成人受訪者過去一週家庭二手菸暴露的標準化比率，不是住戶比例；公開資料未列指標原始分子與逐題有效分母。私人住宅不因有人吸菸就自動成為菸害防制法上的公共禁菸場所；共用空間、公共場所及鄰戶菸味應依具體位置和規約分別處理。",
+    "本次未取得獨立醫療、公共衛生、成癮治療、統計或法律專業審閱；個人治療與法律疑義應由適當專業人員依個案判斷。"
+  ],
+  "source_reviewed_sha256": "6928da7eea5b4233e3839925ee1683abf7ad26e9e73672ab8984111356a32d2b",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "a5f3d81154c67ea273a9e5a6184dd7c9a9a7866aa3ed14bbbb5b5ec316629932",
+  "source_ids": [
+    "tw02_hpa_adult_survey_20261107",
+    "tw02_hpa_adult_sample_20261107",
+    "tw02_hpa_adult_definitions_20261107",
+    "tw02_hpa_secondhand_ventilation_20261107",
+    "tw02_moj_tobacco_hazards_act_20261107"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "成人家庭二手菸暴露率",
+      "value": "35.6%",
+      "period": "民國113年（2024）",
+      "geographic_scope": "台灣全國",
+      "population": "18歲以上成人；調查成人有效樣本23,795人，電話訪問並按人口特徵加權、標準化",
+      "numerator": "官方公布頁未列原始暴露人數；比率為加權標準化估計，不反推家庭數或人數",
+      "denominator": "有效完訪成人樣本23,795人；家庭暴露指標逐題有效分母未公布",
+      "event_definition": "過去一週在家時有他人在受訪者面前吸菸；封閉陽台算在家，聞到菸味也算",
+      "data_type": "全國成人電話抽樣調查；官方公布標準化估計",
+      "limitations": "是成人受訪者暴露率，不是有暴露家庭占比；公開資料無原始分子和逐題分母，不能換算個人或家庭機率。",
+      "source_ids": [
+        "tw02_hpa_adult_survey_20261107",
+        "tw02_hpa_adult_sample_20261107",
+        "tw02_hpa_adult_definitions_20261107"
+      ]
+    }
+  ],
+  "prior_structured_draft_sha256": "eb86c2b4e9b1f7069e061cb686c828509462d9316f9c7c2ac1d46cc0ed4a419e"
+}

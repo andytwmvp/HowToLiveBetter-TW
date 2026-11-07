@@ -93,7 +93,7 @@ class ChapterTwoHealthSafetyFoodTests(unittest.TestCase):
         prior_item_ids = [item["id"] for item in prior["items"]]
         current_item_ids = [item["id"] for item in current["items"]]
         self.assertEqual(current_item_ids[:len(prior_item_ids)], prior_item_ids)
-        self.assertEqual(set(current_item_ids[len(prior_item_ids):]), NEW_IDS)
+        self.assertTrue(NEW_IDS.issubset(set(current_item_ids[len(prior_item_ids):])))
         for item in prior["items"]:
             retroactive_audit.assert_preserved_or_rechecked(self, item, current_items[item["id"]])
 

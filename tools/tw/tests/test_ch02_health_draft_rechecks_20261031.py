@@ -13,6 +13,8 @@ import retroactive_audit as audit
 ROOT = audit.ROOT
 BASE = "171783959adfc988ad6cd2cff04cfcdf21a745f6"
 IDS = {"TW-02-006", "TW-02-008", "TW-02-021", "TW-02-045"}
+PENDING_IDS = {"TW-02-008", "TW-02-021", "TW-02-045"}
+PUBLISHED_FROM_REVIEWED_DRAFT = {"TW-02-006"}
 
 
 def read(relative):
@@ -30,12 +32,21 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
     def test_selected_topics_remain_pending_and_unpublished(self):
         entries = {entry["id"]: entry for entry in self.manifest["entries"]}
         runtime_ids = {item["id"] for item in self.runtime["items"]}
-        for key in IDS:
+        for key in PENDING_IDS:
             with self.subTest(id=key):
                 self.assertEqual(entries[key]["status"], "pending")
                 self.assertIsNone(entries[key]["target_path"])
                 self.assertEqual(entries[key]["sources"], [])
                 self.assertNotIn(key, runtime_ids)
+
+    def test_a_formally_published_item_keeps_its_historical_draft_review(self):
+        entries = {entry["id"]: entry for entry in self.manifest["entries"]}
+        runtime_ids = {item["id"] for item in self.runtime["items"]}
+        for key in PUBLISHED_FROM_REVIEWED_DRAFT:
+            with self.subTest(id=key):
+                self.assertEqual(entries[key]["status"], "verified")
+                self.assertIsInstance(entries[key]["target_path"], str)
+                self.assertIn(key, runtime_ids)
 
     def test_draft_rechecks_are_append_only_and_separate_from_published_rechecks(self):
         rows = self.register.get("draft_substantive_rechecks")
@@ -96,20 +107,26 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
         self.assertEqual(len(records), len(self.register["draft_substantive_rechecks"]))
         self.assertTrue(IDS.issubset({item["id"] for item in records}))
         self.assertTrue(IDS.isdisjoint({item["id"] for item in self.register["substantive_rechecks"]}))
+        self.assertTrue(PUBLISHED_FROM_REVIEWED_DRAFT.issubset({item["id"] for item in records}))
         self.assertFalse(audit.load(ROOT, "localization/tw-edition/coverage.json")["publication_ready"])
 
-    def test_audit_rejects_a_draft_recheck_if_manifest_or_runtime_promotes_it(self):
+    def test_audit_rejects_a_draft_recheck_if_manifest_and_runtime_are_out_of_sync(self):
         validator = getattr(audit, "validate_draft_recheck_records", None)
         self.assertTrue(callable(validator))
-        published = copy.deepcopy(self.manifest)
-        next(entry for entry in published["entries"] if entry["id"] == "TW-02-006")["status"] = "verified"
+        unpublished = copy.deepcopy(self.manifest)
+        entry = next(entry for entry in unpublished["entries"] if entry["id"] == "TW-02-006")
+        entry["status"] = "pending"
+        entry["target_path"] = None
+        entry["sources"] = []
         with self.assertRaises(ValueError):
-            validator(ROOT, self.register, published, self.runtime)
+            validator(ROOT, self.register, unpublished, self.runtime)
 
-        published = copy.deepcopy(self.runtime)
-        published["items"].append({"id": "TW-02-006"})
+        runtime_without_publication = copy.deepcopy(self.runtime)
+        runtime_without_publication["items"] = [
+            item for item in runtime_without_publication["items"] if item["id"] != "TW-02-006"
+        ]
         with self.assertRaises(ValueError):
-            validator(ROOT, self.register, self.manifest, published)
+            validator(ROOT, self.register, self.manifest, runtime_without_publication)
 
     def test_audit_rejects_a_review_with_a_different_prior_revision(self):
         record = next(row for row in self.register["draft_substantive_rechecks"] if row["id"] == "TW-02-008")

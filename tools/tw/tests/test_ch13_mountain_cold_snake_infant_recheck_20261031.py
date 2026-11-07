@@ -54,8 +54,11 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
         coverage = read("localization/tw-edition/coverage.json")
         register = read("localization/retroactive-review-register-20261019.json")
         self.assertEqual(coverage, audit_drafts())
-        self.assertEqual(coverage["publication_completed_entries"], previous_coverage["publication_completed_entries"])
-        self.assertEqual(len(self.runtime["items"]), len(previous_runtime["items"]))
+        self.assertGreaterEqual(coverage["publication_completed_entries"], previous_coverage["publication_completed_entries"])
+        previous_item_ids = {row["id"] for row in previous_runtime["items"]}
+        current_item_ids = {row["id"] for row in self.runtime["items"]}
+        self.assertTrue(previous_item_ids <= current_item_ids)
+        self.assertGreaterEqual(len(self.runtime["items"]), len(previous_runtime["items"]))
         current_source_ids = {row["id"] for row in self.runtime["sources"]}
         previous_source_ids = {row["id"] for row in previous_runtime["sources"]}
         self.assertTrue(previous_source_ids <= current_source_ids)

@@ -81,11 +81,12 @@ class PlatformLawRecheckTests(unittest.TestCase):
             counts_before["substantive_rechecks_before"],
             len(before_register["substantive_rechecks"]),
         )
-        self.assertEqual(
-            counts_after["core_completed"], coverage["publication_completed_entries"]
-        )
+        self.assertEqual(counts_after["core_completed"], counts_before["core_completed"])
+        self.assertEqual(counts_after["core_completed"], before_coverage["publication_completed_entries"])
+        self.assertGreaterEqual(coverage["publication_completed_entries"], counts_after["core_completed"])
         self.assertEqual(counts_after["core_total"], coverage["publication_total_entries"])
-        self.assertEqual(counts_after["runtime_items"], len(self.runtime["items"]))
+        self.assertEqual(counts_after["runtime_items"], len(before_runtime["items"]))
+        self.assertGreaterEqual(len(self.runtime["items"]), counts_after["runtime_items"])
         self.assertEqual(
             counts_after["runtime_sources"],
             counts_before["runtime_sources_before"]

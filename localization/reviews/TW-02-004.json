@@ -1,0 +1,71 @@
+{
+  "id": "TW-02-004",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-004.md",
+  "target_sha256": "f9f526f13b8cded18144b7ac22c502317147d429e8cd3c566c3ceaa50d5002ee",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_cessation_guideline_20261107",
+      "title": "國民健康署：臺灣臨床戒菸服務指引簡要版",
+      "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22630.pdf",
+      "claim": "個人化諮詢、評估、行為支持及藥物治療依臨床判斷。",
+      "supporting_passage": "國健署指引採個別化諮詢及評估、支持性介入與戒菸藥物治療，並強調服務人員依個人狀況判斷；指引供臨床參考，不取代臨床判斷。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "查閱國健署指引摘要及條目，核對個別化諮詢、支持與治療方向；不將指引寫成個別處方或保證成功。"
+    },
+    {
+      "source_id": "tw02_pubmed_abrupt_gradual_trial_2016",
+      "title": "Lindson-Hawley 等：逐步減量與直接停止吸菸的隨機對照試驗",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26975007/",
+      "claim": "英國隨機試驗研究設計、共同介入及6個月結果。",
+      "supporting_passage": "英國基層醫療697位成年吸菸者的試驗比較兩週逐步減量和直接停止，兩組均接受護理人員行為支持與尼古丁替代療法；6個月持續且經驗證戒菸率為15.5%與22.0%。此為英國試驗的組別平均結果，不是台灣發生率或個人成功機率。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱PubMed所載隨機對照試驗摘要，確認研究地點、受試者數、兩組介入、結果定義與6個月數值。"
+    },
+    {
+      "source_id": "tw02_ucl_abrupt_gradual_fulltext_2016",
+      "title": "牛津大學研究典藏庫：逐步減量與直接停止戒菸的隨機試驗全文",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/1477650/",
+      "claim": "隨機試驗的兩組隨機分派分母及6個月CO驗證持續戒菸的原始人數。",
+      "supporting_passage": "接受稿Table 2列漸進減量組342人、直接停止組355人；戒菸日後6個月呼氣一氧化碳驗證的持續戒菸分別為53/342（15.5%）及78/355（22.0%）。分組人數是隨機分派分母，結果為英國基層醫療試驗，不能外推成台灣人個別成功機率。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "查閱牛津大學研究典藏庫所保存的原始試驗接受稿Table 2，核對兩組隨機分派人數、6個月CO驗證持續戒菸分子與分母；再與PubMed摘要交叉核對。"
+    }
+  ],
+  "localization_changes": "修正原作把一次停止寫成唯一正確方法的絕對說法；加入台灣臨床戒菸服務的個人化評估，並以英國隨機試驗作為有限背景，明確保留地區、受試者、共同介入與外推限制。 追加全文Table 2的兩組分母與驗證戒菸人數，不再只記總樣本數。",
+  "review_method": "逐條重讀原作主題、現有結構化草稿和來源。查核台灣生活情境、現行法規／服務、可執行步驟、資格費用及來源是否支持具體主張。對適用統計記錄期間、範圍、對象、分子、分母、事件定義、資料型態及限制；未公開的原始分子或逐題分母不反推，海外研究不改寫成台灣個人機率。本次為AI輔助來源查核，未取得獨立醫療、公共衛生、統計或法律專業審閱。",
+  "limits": [
+    "英國試驗樣本為特定基層醫療中的成年吸菸者，兩組均接受支持和尼古丁替代療法；結果不能直接轉成台灣民眾或個人的成功率。若採減量，應和戒菸人員一起訂明確停止日與追蹤，不把延後戒菸當成無期限計畫。",
+    "本次未取得獨立醫療、公共衛生、成癮治療、統計或法律專業審閱；個人治療與法律疑義應由適當專業人員依個案判斷。"
+  ],
+  "source_reviewed_sha256": "f9f526f13b8cded18144b7ac22c502317147d429e8cd3c566c3ceaa50d5002ee",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "25b765bb27bf7749157137f9d053f3e93137f33c5d185016fbde5761aa13becd",
+  "source_ids": [
+    "tw02_hpa_cessation_guideline_20261107",
+    "tw02_pubmed_abrupt_gradual_trial_2016",
+    "tw02_ucl_abrupt_gradual_fulltext_2016"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "英國戒菸方式隨機試驗的6個月結果",
+      "value": "漸進減量15.5%；直接停止22.0%",
+      "period": "試驗發表於2016年；追蹤戒菸日後6個月",
+      "geographic_scope": "英國基層醫療",
+      "population": "英國基層醫療697位成年吸菸者；漸減組342人、直接停止組355人；兩組均接受護理人員行為支持及尼古丁替代療法。",
+      "numerator": "漸減組53人；直接停止組78人。",
+      "denominator": "隨機分派分母：漸減組342人；直接停止組355人。",
+      "event_definition": "持續戒菸並經驗證（prolonged validated abstinence）",
+      "data_type": "隨機對照試驗；國際原始研究",
+      "limitations": "英國特定服務場域、成年樣本且兩組共同接受支持與NRT；原始研究以隨機分派人數為分母並將未追蹤者按吸菸處理；不能外推成台灣平均效果或個人成功機率。",
+      "source_ids": [
+        "tw02_pubmed_abrupt_gradual_trial_2016",
+        "tw02_ucl_abrupt_gradual_fulltext_2016"
+      ]
+    }
+  ],
+  "prior_structured_draft_sha256": "89de9a1472301293fb4181b38d3389e98ce1e7bb361d3db33bc2adf658ac701c"
+}

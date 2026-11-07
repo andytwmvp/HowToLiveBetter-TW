@@ -121,8 +121,14 @@ class Chapter13RabiesTicksWaterFractureRecheckTests(unittest.TestCase):
             self.assertEqual(row, [self.sources[row[0]]["id"], self.sources[row[0]]["title"],
                                    self.sources[row[0]]["url"], self.sources[row[0]]["supports"]])
         after = self.batch["counts_after"]
-        self.assertEqual(after["core_reviewed"], coverage["core_reviewed_entries"])
-        self.assertEqual(after["runtime_items"], len(self.runtime["items"]))
+        baseline_coverage = json.loads(subprocess.check_output(
+            ["git", "show", f"{BASE}:localization/tw-edition/coverage.json"], cwd=ROOT, text=True
+        ))
+        self.assertEqual(after["core_reviewed"], baseline_coverage["publication_completed_entries"])
+        self.assertGreaterEqual(coverage["core_reviewed_entries"], after["core_reviewed"])
+        self.assertEqual(after["runtime_items"], self.batch["counts_before"]["runtime_items"])
+        self.assertEqual(after["runtime_items"], len(self.base_runtime["items"]))
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
         self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
         self.assertGreaterEqual(coverage["registry_sources"], after["source_registry"])
         self.assertGreaterEqual(coverage["json_files_checked"], after["json_files_checked"])

@@ -46,8 +46,10 @@ class MedicalCareP1RecheckTests(unittest.TestCase):
 
         self.assertEqual(old_runtime["sources"], [row for row in runtime["sources"] if row["id"] in old_sources])
         self.assertTrue(NEW_SOURCE_IDS <= set(current_sources) - set(old_sources))
-        self.assertEqual({row["id"] for row in runtime["items"] if not row["id"].startswith("TW-NAV-")},
-                         {row["id"] for row in old_runtime["items"] if not row["id"].startswith("TW-NAV-")})
+        self.assertTrue(
+            {row["id"] for row in old_runtime["items"] if not row["id"].startswith("TW-NAV-")}
+            <= {row["id"] for row in runtime["items"] if not row["id"].startswith("TW-NAV-")}
+        )
 
         for item_id in IDS:
             with self.subTest(item_id=item_id):
@@ -134,7 +136,7 @@ class MedicalCareP1RecheckTests(unittest.TestCase):
         old_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
         current_core = {row["id"] for row in current["items"] if not row["id"].startswith("TW-NAV-")}
         old_core = {row["id"] for row in old_runtime["items"] if not row["id"].startswith("TW-NAV-")}
-        self.assertEqual(current_core, old_core)
+        self.assertTrue(old_core <= current_core)
         report = publication_report()
         coverage = read("localization/tw-edition/coverage.json")
         draft_coverage = audit_drafts()

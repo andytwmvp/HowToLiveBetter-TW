@@ -77,10 +77,12 @@ class EmergencyRiskRecheckTests(unittest.TestCase):
         self.assertEqual(before["runtime_items"], len(previous_runtime["items"]))
         self.assertEqual(before["runtime_sources_before"], len(previous_runtime["sources"]))
         self.assertEqual(before["substantive_rechecks_before"], len(previous_register["substantive_rechecks"]))
-        self.assertEqual(after["core_completed"], coverage["publication_completed_entries"])
         self.assertEqual(after["core_completed"], before["core_completed"])
+        self.assertEqual(after["core_completed"], previous_coverage["publication_completed_entries"])
+        self.assertGreaterEqual(coverage["publication_completed_entries"], after["core_completed"])
         self.assertEqual(after["core_total"], coverage["publication_total_entries"])
-        self.assertEqual(after["runtime_items"], len(current_runtime["items"]))
+        self.assertEqual(after["runtime_items"], len(previous_runtime["items"]))
+        self.assertGreaterEqual(len(current_runtime["items"]), after["runtime_items"])
         self.assertLessEqual(after["runtime_sources"], len(current_runtime["sources"]))
         self.assertEqual(
             after["runtime_sources"],
