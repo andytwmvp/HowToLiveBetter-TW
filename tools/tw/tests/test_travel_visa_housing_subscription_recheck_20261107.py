@@ -128,8 +128,11 @@ class TravelHousingSubscriptionRecheckTests(unittest.TestCase):
             self.assertNotIn(phrase, combined)
 
         loan = bodies["TW-15-016"]
-        for phrase in ("不是只給第一次買房的人", "曾經持有房屋", "2026年8月1日", "一段式機動利率", "不代表銀行會核准到上限"):
+        for phrase in ("不是只給第一次買房的人", "曾經持有房屋", "2026年8月1日", "申請日前6個月內取得", "核准後6個月內完成登記", "一段式機動利率", "不代表銀行會核准到上限"):
             self.assertIn(phrase, loan)
+        nta_check = next(check for check in self.records["TW-15-016"]["source_checks"]
+                         if check["url"] == "https://www.nta.gov.tw/singlehtml/109")
+        self.assertIn("申請日前6個月內或核准後6個月內完成", nta_check["supporting_passage"])
         chapter15 = (ROOT / "locales/zh-TW/book/ch15/README.md").read_text(encoding="utf-8")
         self.assertIn("申辦青安3.0前先核對資格、月付與自備款", chapter15)
         self.assertNotIn("首購優惠", chapter15)
