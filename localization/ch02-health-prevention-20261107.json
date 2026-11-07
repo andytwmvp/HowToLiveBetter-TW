@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "batch": "第2章檳榔、低鈉鹽、飲酒與糖尿病前期四篇台灣版首次正式發布",
+  "baseline_main_sha": "c735834dde3fc678f018f2e4e5fb8e7d6319188c",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
+  "counts_before": {
+    "core_reviewed": 288,
+    "runtime_items": 299,
+    "runtime_sources": 1164,
+    "source_registry": 1247,
+    "json_files_checked": 577,
+    "substantive_rechecks": 376
+  },
+  "items": [
+    {
+      "id": "TW-02-008",
+      "title": "檳榔不因加料而安全：停止嚼檳並安排口腔檢查",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c735834dde3fc678f018f2e4e5fb8e7d6319188c",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "fde48a35a1e02ba23ff666ca7901358ad3688aadbc8cbc5694aaf50d67d8ecd6",
+      "prior_content_status": "historic_structured_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "a02deb0cc89c8c3ad41d5653a64c24e29e779fe559258d7543c4bc2eb6a6e400",
+      "before_sha256": null,
+      "after_sha256": "eca27742544338688bc381c0572b5ae1edf42e6acfe792621e7e38b60276829a",
+      "review_path": "localization/reviews/TW-02-008.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-008.md",
+      "source_ids": [
+        "tw02_hpa_betel_hazard_20261107",
+        "tw02_mohw_oral_screen_20261107",
+        "tw02_mohw_betel_cessation_20261107",
+        "tw02_hpa_oral_warning_20261107",
+        "tw02_mohw_cancer_registry_2023_20261107"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_betel_hazard_20261107",
+          "title": "國民健康署：檳榔沒有加紅白灰，就不會致癌？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=12329",
+          "claim": "國健署說明檳榔子本身具致癌性，不論是否添加紅灰、白灰，不能把未加料檳榔視為安全。",
+          "supporting_passage": "國健署說明檳榔子本身具致癌性，不論是否添加紅灰、白灰，不能把未加料檳榔視為安全。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署檳榔健康危害衛教頁，核對檳榔子本身及加料的說明；不採用沒有合適分母的風險倍數。"
+        },
+        {
+          "source_id": "tw02_mohw_oral_screen_20261107",
+          "title": "衛福部口腔健康司：口腔癌篩檢及院所查詢",
+          "url": "https://dep.mohw.gov.tw/DOOH/fp-7148-80480-124.html",
+          "claim": "公費口腔黏膜檢查每2年1次：30歲以上曾嚼檳榔（含已戒）或吸菸者，以及18歲至未滿30歲曾嚼檳榔（含已戒）的原住民；提供健保特約院所與衛生局所查詢，並提醒檢查並非百分之百準確。頁面最後更新115-11-04，篩檢資訊內容更新115-09-24。",
+          "supporting_passage": "公費口腔黏膜檢查每2年1次：30歲以上曾嚼檳榔（含已戒）或吸菸者，以及18歲至未滿30歲曾嚼檳榔（含已戒）的原住民；提供健保特約院所與衛生局所查詢，並提醒檢查並非百分之百準確。頁面最後更新115-11-04，篩檢資訊內容更新115-09-24。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱口腔健康司官方頁，核對對象、間隔、健保卡及院所查詢、檢查限制與異常後就醫流程。"
+        },
+        {
+          "source_id": "tw02_mohw_betel_cessation_20261107",
+          "title": "衛福部口腔健康司：戒檳諮詢服務醫療機構查詢",
+          "url": "https://dep.mohw.gov.tw/DOOH/fp-7148-83616-124.html",
+          "claim": "口腔健康司提供戒檳諮詢服務醫療機構名冊，民眾可就近洽詢或請地方政府衛生局協助轉介；名冊標示115年7月31日更新。",
+          "supporting_passage": "口腔健康司提供戒檳諮詢服務醫療機構名冊，民眾可就近洽詢或請地方政府衛生局協助轉介；名冊標示115年7月31日更新。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱口腔健康司戒檳諮詢名冊說明及附件更新日期；正文連結動態入口，不固定院所數量。"
+        },
+        {
+          "source_id": "tw02_hpa_oral_warning_20261107",
+          "title": "國民健康署：口腔癌防治照護流程與警訊",
+          "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22360-4.pdf",
+          "claim": "國健署照護流程列口腔破損或潰瘍超過2週、紅白斑、變硬或腫塊、張口困難及舌頭活動受限等需就醫評估的警訊；這些情況不是癌症診斷。",
+          "supporting_passage": "國健署照護流程列口腔破損或潰瘍超過2週、紅白斑、變硬或腫塊、張口困難及舌頭活動受限等需就醫評估的警訊；這些情況不是癌症診斷。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署照護流程PDF中口腔自我檢查與就醫段落，僅把症狀寫成就醫警訊，不當作診斷條件。"
+        },
+        {
+          "source_id": "tw02_mohw_cancer_registry_2023_20261107",
+          "title": "衛福部：112年癌症登記報告資料表",
+          "url": "https://www.mohw.gov.tw/dl-98499-cd0fe70e-8e08-42cc-be15-3860b40d7f4d.html",
+          "claim": "2023年癌症登記表列口腔、口咽及下咽合計8,522例新登記癌症，年齡標準化發生率每10萬人口21.2例，採2000年世界標準人口；分類不是檳榔可歸因病例數。",
+          "supporting_passage": "2023年癌症登記表列口腔、口咽及下咽合計8,522例新登記癌症，年齡標準化發生率每10萬人口21.2例，採2000年世界標準人口；分類不是檳榔可歸因病例數。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱衛福部癌症登記資料表與表註，核對發生人數、涵蓋部位及2000年世界標準人口標準化說明。"
+        }
+      ],
+      "taiwan_context": "檳榔使用與工作、休息、騎車駕車及聚餐等日常情境相關；本文提供台灣戒檳諮詢名冊、地方衛生局轉介、公費篩檢資格及異狀就醫入口。",
+      "frequency_assessment": "未找到可直接配對台灣嚼檳族群、個人追蹤時間及口腔癌事件的同口徑近期全國發生率。2023年癌登合併口腔、口咽及下咽共8,522例新登記癌症，年齡標準化發生率每10萬人口21.2例；它涵蓋不同解剖部位及各種病因，不能估算嚼檳者個人風險或檳榔可歸因病例。",
+      "statistics_assessed": [
+        {
+          "topic": "2023年台灣口腔、口咽及下咽癌登",
+          "value": "8,522例新登記癌症；年齡標準化發生率每10萬人口21.2例",
+          "unit": "新登記病例數；每10萬人口年齡標準化發生率",
+          "period": "2023年（民國112年）",
+          "geographic_scope": "台灣全國癌症登記",
+          "population": "癌症登記所涵蓋的新發口腔、口咽及下咽惡性腫瘤；分類合計，不等同嚼檳人口",
+          "numerator": "8,522例新登記病例",
+          "denominator": "表格未列與粗發生率配對的原始人口分母；21.2/10萬為以2000年世界標準人口計算的年齡標準化率",
+          "event_definition": "癌症登記中口腔、口咽及下咽新登記惡性腫瘤（不含原位癌）",
+          "data_type": "全國癌症登記行政資料及人口標準化統計",
+          "limitations": "合併分類不全是口腔癌，也未依檳榔使用分層或病因歸因；無法換算嚼檳者個人發生機率。",
+          "source_ids": [
+            "tw02_mohw_cancer_registry_2023_20261107"
+          ]
+        }
+      ],
+      "changes": "將原作單純「不嚼檳榔」的生活要求改為說明檳榔子本身致癌、不因加料或不加料而安全，並提供台灣戒檳諮詢名冊、公費口腔黏膜篩檢資格、異常警訊與實際就醫科別；癌登資料清楚限定在口腔、口咽及下咽，不作檳榔歸因或個人風險。",
+      "limits": "2023年癌症登記數字包括口腔、口咽及下咽，不能解讀為檳榔可歸因病例或個人風險；口腔黏膜檢查也不能百分之百排除病變。戒檳名冊及公費篩檢資訊以主管機關最新頁面為準。",
+      "unresolved_questions": [
+        "尚待相關專業人員獨立審閱。"
+      ],
+      "prior_structured_draft_review": {
+        "sha256": "a02deb0cc89c8c3ad41d5653a64c24e29e779fe559258d7543c4bc2eb6a6e400",
+        "reviewed_at": "2026-10-31",
+        "review_due_at": "2027-04-30",
+        "prior_revision": "171783959adfc988ad6cd2cff04cfcdf21a745f6",
+        "review_status": "本條為未發布草稿；起始版本無正式來源核對或專業審閱紀錄。"
+      },
+      "formal_review": {
+        "reviewed_at": "2026-11-07",
+        "review_due_at": "2027-02-07",
+        "target_sha256": "eca27742544338688bc381c0572b5ae1edf42e6acfe792621e7e38b60276829a",
+        "professional_review": {
+          "required": true,
+          "obtained": false,
+          "scope": [
+            "牙醫及口腔顎面外科",
+            "耳鼻喉頭頸外科",
+            "公共衛生與癌症流行病學"
+          ]
+        }
+      }
+    },
+    {
+      "id": "TW-02-009",
+      "title": "低鈉鹽不是人人適用：先減少總鈉，使用鉀鹽前先詢問",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c735834dde3fc678f018f2e4e5fb8e7d6319188c",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "dc3ca79b4d2cd0e57d6221e5f3b53783c96b55c24fc61c2e19ac8eb0101e3220",
+      "prior_content_status": "no_prior_taiwan_draft",
+      "prior_structured_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "de0e3233bc5db1bdfaa57d80d3268870486e544255bef80e23622caabc631cf5",
+      "review_path": "localization/reviews/TW-02-009.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-009.md",
+      "source_ids": [
+        "tw02_hpa_sodium_intake_20261107",
+        "tw02_hpa_ckd_diet_20261107",
+        "tw02_ntuh_hyperkalemia_diet_20261107",
+        "tw02_neal_salt_substitute_trial_2021"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_sodium_intake_20261107",
+          "title": "國民健康署：全國社區營養調查與鈉攝取資料",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20236",
+          "claim": "國健署2026-08-07公告引用2017至2020年國民營養健康調查，19歲以上成人每日平均鈉攝取量超過3,000毫克；這是調查平均值，公開公告未列該估計的原始分子及統計指標未加權分母。",
+          "supporting_passage": "國健署2026-08-07公告引用2017至2020年國民營養健康調查，19歲以上成人每日平均鈉攝取量超過3,000毫克；這是調查平均值，公開公告未列該估計的原始分子及統計指標未加權分母。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署2026-08-07社區營養調查公告及其所引2017至2020年全國調查摘要；未把平均值當成每個人的攝取量，亦不推算公告未列的分子或樣本分母。"
+        },
+        {
+          "source_id": "tw02_hpa_ckd_diet_20261107",
+          "title": "國民健康署：慢性腎臟病患者飲食與低鈉鹽提醒",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=14504",
+          "claim": "國健署頁面於2026-10-05更新；腎功能下降可能減弱排鉀能力，晚期腎臟病及洗腎者須注意高血鉀並減少低鈉鹽等含鉀調味料，應由醫師或營養師依病況評估。",
+          "supporting_passage": "國健署頁面於2026-10-05更新；腎功能下降可能減弱排鉀能力，晚期腎臟病及洗腎者須注意高血鉀並減少低鈉鹽等含鉀調味料，應由醫師或營養師依病況評估。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署慢性腎臟病飲食頁及2026-10-05更新日期，只將限鉀建議限於病況與醫療評估，不概括要求所有腎臟病患者採相同飲食。"
+        },
+        {
+          "source_id": "tw02_ntuh_hyperkalemia_diet_20261107",
+          "title": "臺大醫院藥劑部：血鉀偏高時的飲食與低鈉鹽注意事項",
+          "url": "https://www.ntuh.gov.tw/phr/Faq.action?agroup=a&fid=2379&q_type=A02",
+          "claim": "臺大醫院藥劑部提醒血鉀偏高、尤其慢性腎臟病排鉀困難者避免以氯化鉀為主成分的低鈉鹽；某些藥物也可能影響血鉀，需個別評估。",
+          "supporting_passage": "臺大醫院藥劑部提醒血鉀偏高、尤其慢性腎臟病排鉀困難者避免以氯化鉀為主成分的低鈉鹽；某些藥物也可能影響血鉀，需個別評估。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱臺大醫院藥劑部FAQ中血鉀及低鈉鹽段落，核對需限鉀族群與藥物風險提醒。"
+        },
+        {
+          "source_id": "tw02_neal_salt_substitute_trial_2021",
+          "title": "Neal等：代鹽對心血管事件與死亡的影響（SSaSS隨機試驗）",
+          "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2105675",
+          "claim": "中國農村600個村的群集隨機試驗納入20,995人，參與者曾中風或年滿60歲且血壓控制不佳；使用75%氯化鈉、25%氯化鉀代鹽，平均追蹤4.74年。中風、重大心血管事件及死亡率較低；嚴重臨床高血鉀事件率未顯著增加，但未對所有人定期抽血監測血鉀。",
+          "supporting_passage": "中國農村600個村的群集隨機試驗納入20,995人，參與者曾中風或年滿60歲且血壓控制不佳；使用75%氯化鈉、25%氯化鉀代鹽，平均追蹤4.74年。中風、重大心血管事件及死亡率較低；嚴重臨床高血鉀事件率未顯著增加，但未對所有人定期抽血監測血鉀。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "讀取NEJM原始試驗摘要與可取得的結果／方法段，核對族群、村數、代鹽比例、追蹤期間、結果定義與高血鉀監測限制；不把中國特定高風險族群效果外推成台灣家庭個人效益。"
+        }
+      ],
+      "taiwan_context": "台灣家庭烹調、外食、麵食、火鍋、滷味、醬料及加工食品都可能是減鈉實作情境；含氯化鉀代鹽則需留意腎功能、血鉀與用藥。",
+      "frequency_assessment": "國健署引用2017至2020年調查稱19歲以上成人每日平均鈉攝取量超過3,000毫克；公開公告未列此平均值的原始分子或統計指標樣本分母。這是群體平均，不代表每個人的攝取量。台灣沒有全國性資料可計算一般民眾使用含鉀代鹽後高血鉀發生率。中國SSaSS研究不是台灣全國事件頻率，也不是台灣一般家庭的個人機率。",
+      "statistics_assessed": [
+        {
+          "topic": "台灣成年人平均鈉攝取量",
+          "value": "每日平均超過3,000毫克",
+          "unit": "毫克／人日的調查平均值",
+          "period": "2017至2020年國民營養健康調查；國健署於2026-08-07引用",
+          "geographic_scope": "台灣全國",
+          "population": "調查中的19歲以上成人；國健署公開新聞摘要未列此估計的原始統計樣本數",
+          "numerator": "平均攝取量的加總／估計過程及個人原始分佈未見於該公告，不自行反推",
+          "denominator": "公告未列該平均值的指標有效樣本分母；調查平均值非事件率",
+          "event_definition": "每日膳食鈉攝取量的群體平均，不是疾病發生或盛行率",
+          "data_type": "全國國民營養健康調查摘要；公告未提供完整計算方法",
+          "limitations": "期間為2017至2020，不能視為2026現況；平均值不代表每個人攝取量；無法從新聞摘要核實原始分佈或個人超標比例。",
+          "source_ids": [
+            "tw02_hpa_sodium_intake_20261107"
+          ]
+        },
+        {
+          "topic": "SSaSS含氯化鉀代鹽隨機試驗",
+          "value": "20,995人、600個中國農村村落、平均追蹤4.74年；代鹽對照組中風率29.14與33.65/1,000人年（率比0.86），重大心血管事件49.09與56.29/1,000人年（率比0.87），全死因死亡39.28與44.61/1,000人年（率比0.88）；嚴重臨床高血鉀事件率3.35與3.30/1,000人年（率比1.04，差異不顯著）",
+          "unit": "試驗樣本數、人年率及率比",
+          "period": "平均追蹤4.74年；論文2021年發表",
+          "geographic_scope": "中國農村600個村落",
+          "population": "曾中風者，或年滿60歲且血壓控制不佳者；平均年齡65.4歲",
+          "numerator": "論文摘要報告各組每1,000人年事件率及率比；本批未用摘要反推事件人數",
+          "denominator": "隨機分派20,995人，事件率以各組人年為分母；摘要未在本文整理時提供各組精確人年總數",
+          "event_definition": "中風、重大不良心血管事件、全死因死亡；安全結果為臨床嚴重高血鉀事件",
+          "data_type": "600村開放標籤群集隨機對照試驗",
+          "limitations": "中國特定高風險族群及飲食環境，不代表台灣一般家戶；臨床高血鉀沒有顯著組間差異不等同排除風險，且非所有參與者均有定期血鉀檢測。",
+          "source_ids": [
+            "tw02_neal_salt_substitute_trial_2021"
+          ]
+        }
+      ],
+      "changes": "將原作「家裡全面換低鈉鹽」改成先減少烹調與外食中的總鈉、閱讀標示，並提醒含氯化鉀代鹽對部分腎病、血鉀異常或用藥者可能不合適。以中國隨機試驗補充該特定族群的效果與監測限制，不把研究效果外推成台灣個人利益。",
+      "limits": "國內沒有足以估算一般民眾使用含鉀代鹽後高血鉀發生率的全國資料。中國試驗只研究特定高風險參與者，且未以定期抽血方式監測所有人的血鉀；不能據此說一般台灣家庭使用後一定安全或一定有益。",
+      "unresolved_questions": [
+        "尚待相關專業人員獨立審閱。"
+      ],
+      "prior_structured_draft_review": null,
+      "formal_review": {
+        "reviewed_at": "2026-11-07",
+        "review_due_at": "2027-02-07",
+        "target_sha256": "de0e3233bc5db1bdfaa57d80d3268870486e544255bef80e23622caabc631cf5",
+        "professional_review": {
+          "required": true,
+          "obtained": false,
+          "scope": [
+            "腎臟科",
+            "臨床營養",
+            "藥事",
+            "心臟科與流行病學"
+          ]
+        }
+      }
+    },
+    {
+      "id": "TW-02-019",
+      "title": "少喝或不喝酒：不為健康開始喝，也不在有戒斷風險時自行停酒",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c735834dde3fc678f018f2e4e5fb8e7d6319188c",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "bc2e133a7a330b29beb16fec6359dbdad6e742b11daff570f9ccad76dcc80608",
+      "prior_content_status": "no_prior_taiwan_draft",
+      "prior_structured_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "27a7a54410801d3d1ed63e8786d44eb8eb7e649087241eb3f68df7d46f8f2fde",
+      "review_path": "localization/reviews/TW-02-019.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-019.md",
+      "source_ids": [
+        "tw02_hpa_alcohol_survey_2021",
+        "tw02_who_alcohol_cancer_2025",
+        "tw02_mohw_alcohol_pressure_20261107",
+        "tw02_mohw_alcohol_hotline_20261107",
+        "tw02_mohw_alcohol_treatment_20261107"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_alcohol_survey_2021",
+          "title": "國民健康署：110年國民健康訪問調查飲酒統計表",
+          "url": "https://health99.hpa.gov.tw/storage/files/articles/%E3%80%90%E6%96%B0%E8%81%9E%E7%A8%BF%E9%99%84%E4%BB%B6%E3%80%9111304508%E5%81%A5%E5%BA%B7%E7%BD%B2-%E3%80%8C18%E6%AD%B2%E4%BB%A5%E4%B8%8A%E5%9C%8B%E4%BA%BA%20%20%E6%AF%8F4%E4%BA%BA%E6%9C%891%E4%BA%BA%E9%A3%B2%E9%85%92%20%E6%8B%92%E7%B5%95%E5%8B%B8%E9%85%925%E6%8B%9B%20%20%E5%B7%A7%E5%A6%99%E9%81%A9%E7%95%B6%E9%81%8B%E7%94%A8%20%E3%80%8D.pdf",
+          "claim": "110年調查表列18歲以上過去一個月飲酒率：完訪樣本20,488人，4,596人表示過去一個月曾飲酒，加權樣本數20,595人，加權估計24.4%；是自陳期間盛行率，不能代表飲酒量或酒癮。",
+          "supporting_passage": "110年調查表列18歲以上過去一個月飲酒率：完訪樣本20,488人，4,596人表示過去一個月曾飲酒，加權樣本數20,595人，加權估計24.4%；是自陳期間盛行率，不能代表飲酒量或酒癮。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署110年國民健康訪問調查附件PDF飲酒表，核對全國列的完訪樣本、加權樣本、曾飲酒人數及加權百分比；區分原始人數和加權估計。"
+        },
+        {
+          "source_id": "tw02_who_alcohol_cancer_2025",
+          "title": "世界衛生組織歐洲區：酒精與癌症",
+          "url": "https://www.who.int/europe/news-room/fact-sheets/item/alcohol-and-cancer",
+          "claim": "WHO歐洲區2025-11-26資料說明酒精與癌症關聯，包括乙醇及代謝產物乙醛的致癌性；就癌症風險而言沒有確認為安全的飲酒量。這是全球致癌證據摘要，不把歐洲區疾病數字當台灣統計。",
+          "supporting_passage": "WHO歐洲區2025-11-26資料說明酒精與癌症關聯，包括乙醇及代謝產物乙醛的致癌性；就癌症風險而言沒有確認為安全的飲酒量。這是全球致癌證據摘要，不把歐洲區疾病數字當台灣統計。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱WHO歐洲區酒精與癌症資料表；只採用其致癌證據說明，不引用歐洲區酒害頻率作為台灣數據。"
+        },
+        {
+          "source_id": "tw02_mohw_alcohol_pressure_20261107",
+          "title": "衛生福利部：拒絕勸酒文化，無酒更健康",
+          "url": "https://www.mohw.gov.tw/cp-16-69441-1.html",
+          "claim": "衛福部說明台灣朋友聚會可能遇到勸酒，並建議沒有飲酒習慣者不必因勸酒而飲酒；頁面引用的學生調查不作為本文成人飲酒率。",
+          "supporting_passage": "衛福部說明台灣朋友聚會可能遇到勸酒，並建議沒有飲酒習慣者不必因勸酒而飲酒；頁面引用的學生調查不作為本文成人飲酒率。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱衛福部衛教頁的聚會勸酒情境與拒酒建議；排除該頁較舊的學生調查數字，不將其外推至成人。"
+        },
+        {
+          "source_id": "tw02_mohw_alcohol_hotline_20261107",
+          "title": "衛福部心理健康司：各縣市衛生局酒癮治療諮詢專線",
+          "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-4382-51624-107.html",
+          "claim": "依所在地查詢衛生局酒癮治療諮詢電話，取得轉介與在地服務資訊；頁面為動態縣市名冊，使用前應核對最新內容。",
+          "supporting_passage": "依所在地查詢衛生局酒癮治療諮詢電話，取得轉介與在地服務資訊；頁面為動態縣市名冊，使用前應核對最新內容。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱心理健康司各縣市動態專線頁，使用中央查詢入口，不轉錄可能更新的縣市電話。"
+        },
+        {
+          "source_id": "tw02_mohw_alcohol_treatment_20261107",
+          "title": "衛福部心理健康司：酒癮治療補助方案與公告機構",
+          "url": "https://dep.mohw.gov.tw/DOMHAOH/lp-4100-107.html",
+          "claim": "衛福部心理健康司提供各年度酒癮治療補助方案及公告機構；補助資格、名額與院所資訊以最新公告和治療院所確認。",
+          "supporting_passage": "衛福部心理健康司提供各年度酒癮治療補助方案及公告機構；補助資格、名額與院所資訊以最新公告和治療院所確認。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱心理健康司酒癮治療補助專區及最新公告日期，正文不固定列出可能改變的補助金額或院所數。"
+        }
+      ],
+      "taiwan_context": "台灣尾牙、家庭聚餐和朋友聚會可能遇到勸酒；本文提供拒酒說法、無酒精替代、交通安排、在地酒癮諮詢入口，並將戒斷風險與減量建議分流。",
+      "frequency_assessment": "2021年國民健康訪問調查中，18歲以上成人完訪樣本20,488人，4,596人自陳過去一個月飲酒；加權飲酒盛行率24.4%，不是飲酒量、酒癮或個人傷害機率。未找到較新且事件定義可直接比較的台灣全國成人過去一個月飲酒率，不用學生調查或酒害通報數代替。",
+      "statistics_assessed": [
+        {
+          "topic": "18歲以上過去一個月飲酒盛行率",
+          "value": "加權估計24.4%；原始完訪樣本20,488人中4,596人自陳過去一個月飲酒",
+          "unit": "過去一個月飲酒盛行率",
+          "period": "2021年（民國110年）國民健康訪問調查",
+          "geographic_scope": "台灣全國",
+          "population": "18歲以上成人；完訪樣本20,488人，加權樣本數20,595人",
+          "numerator": "4,596位完訪受訪者自陳過去一個月有飲酒",
+          "denominator": "20,488位成人完訪樣本；統計估計使用加權樣本數20,595人及調查權重，逐題有效分母在摘要表未另列",
+          "event_definition": "受訪者自陳過去一個月曾飲酒；期間盛行率",
+          "data_type": "全國國民健康訪問調查自陳資料及加權估計",
+          "limitations": "自陳可能有回憶或社會期許偏差；2021年資料非2026現況；24.4%為加權估計，不等於4,596/20,488的未加權比例，不表示飲酒量、酒癮或個人風險。",
+          "source_ids": [
+            "tw02_hpa_alcohol_survey_2021"
+          ]
+        }
+      ],
+      "changes": "將原作少喝酒的通則改成台灣聚餐與職場常見勸酒場合可用的拒絕及交通安排方法，說明WHO對癌症風險的證據、台灣衛生局酒癮諮詢及年度治療補助入口；對疑似依賴或戒斷風險者提醒先求醫、避免獨自突然停酒，不複製另一篇TW-02-020的戒斷症狀處理細節。",
+      "limits": "飲酒統計來自2021年自陳調查，不可當成2026年飲酒率、飲酒量、酒癮比例或個人健康損害機率。酒癮補助、專線和合作機構可能變動；有長期大量飲酒或戒斷史者，停酒計畫應先由醫療人員評估。",
+      "unresolved_questions": [
+        "尚待相關專業人員獨立審閱。"
+      ],
+      "prior_structured_draft_review": null,
+      "formal_review": {
+        "reviewed_at": "2026-11-07",
+        "review_due_at": "2027-02-07",
+        "target_sha256": "27a7a54410801d3d1ed63e8786d44eb8eb7e649087241eb3f68df7d46f8f2fde",
+        "professional_review": {
+          "required": true,
+          "obtained": false,
+          "scope": [
+            "成癮醫學與精神醫療",
+            "公共衛生",
+            "流行病學與統計"
+          ]
+        }
+      }
+    },
+    {
+      "id": "TW-02-045",
+      "title": "糖尿病前期先確認檢查，再和醫療人員安排追蹤",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c735834dde3fc678f018f2e4e5fb8e7d6319188c",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "8a0b2865986eabc142754162d196ba905aa3b4b7bcfde4cc6905150a3d36c6bf",
+      "prior_content_status": "historic_structured_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "8cc784062751293c9f3a3e0876c793eadced2bbd47f9280285ec3d79296ca31c",
+      "before_sha256": null,
+      "after_sha256": "c8c4b7532eb9e37965fcd9decfb9aa5d532fa2ada4c6e825b3b01867def2d13b",
+      "review_path": "localization/reviews/TW-02-045.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-045.md",
+      "source_ids": [
+        "tw02_hpa_prediabetes_survey_2017_2020",
+        "tw02_hpa_prediabetes_guidance_20261107",
+        "tw02_hpa_adult_preventive_20261107",
+        "tw02_hpa_diabetes_prevalence_20261103"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_prediabetes_survey_2017_2020",
+          "title": "國民健康署：2017至2020年糖尿病前期盛行率",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4306&pid=14702",
+          "claim": "國健署引用2017至2020年國民營養健康狀況變遷調查，18歲以上成人以空腹血糖100至125 mg/dL界定的糖尿病前期盛行率約25%；公開摘要未列估計的原始分子、未加權樣本分母或信賴區間。",
+          "supporting_passage": "國健署引用2017至2020年國民營養健康狀況變遷調查，18歲以上成人以空腹血糖100至125 mg/dL界定的糖尿病前期盛行率約25%；公開摘要未列估計的原始分子、未加權樣本分母或信賴區間。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署以2017至2020全國調查為基礎的糖尿病前期資料頁；保留盛行率、族群及檢驗界定，不補算未公布的分子、分母或信賴區間。"
+        },
+        {
+          "source_id": "tw02_hpa_prediabetes_guidance_20261107",
+          "title": "國民健康署：糖尿病前期參考值與生活調整",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19042",
+          "claim": "國健署一般衛教列空腹血糖100至125 mg/dL或HbA1c 5.7%至6.4%為糖尿病前期參考範圍，並建議一般成人每週累積150分鐘身體活動；須由醫療人員依個人情形判讀與調整。",
+          "supporting_passage": "國健署一般衛教列空腹血糖100至125 mg/dL或HbA1c 5.7%至6.4%為糖尿病前期參考範圍，並建議一般成人每週累積150分鐘身體活動；須由醫療人員依個人情形判讀與調整。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署糖尿病衛教內容及血糖參考範圍；將每週活動量呈現為一般衛教而非適用所有人的個別運動處方。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_preventive_20261107",
+          "title": "國民健康署：成人預防保健服務",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=189",
+          "claim": "截至2026-11-07之成人預防保健服務資格：30至未滿40歲每5年1次、40至未滿65歲每3年1次、55歲以上原住民及35歲以上小兒麻痺者與65歲以上每年1次；這是公費例行篩檢週期，不是異常血糖的個別追蹤處方。",
+          "supporting_passage": "截至2026-11-07之成人預防保健服務資格：30至未滿40歲每5年1次、40至未滿65歲每3年1次、55歲以上原住民及35歲以上小兒麻痺者與65歲以上每年1次；這是公費例行篩檢週期，不是異常血糖的個別追蹤處方。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署成人預防保健現行服務頁，核對年齡、族群及頻率；區分例行公費篩檢和異常檢查後的個別追蹤。"
+        },
+        {
+          "source_id": "tw02_hpa_diabetes_prevalence_20261103",
+          "title": "國民健康署：2020至2024年20歲以上糖尿病盛行率",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20454",
+          "claim": "國健署2026-11-03公布2020至2024年20歲以上糖尿病盛行率13.1%；此為糖尿病而非糖尿病前期，公開公告未提供糖尿病前期對應率或同口徑分子、分母。",
+          "supporting_passage": "國健署2026-11-03公布2020至2024年20歲以上糖尿病盛行率13.1%；此為糖尿病而非糖尿病前期，公開公告未提供糖尿病前期對應率或同口徑分子、分母。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署2026-11-03公告，核對調查期間、20歲以上族群及13.1%疾病盛行率，避免拿來替代糖尿病前期指標。"
+        }
+      ],
+      "taiwan_context": "台灣健檢、成人預防保健及門診抽血是常見發現血糖異常的入口；本文說明現行公費成健資格，同時避免讓讀者把例行篩檢週期當成異常後的等待時間。",
+      "frequency_assessment": "國健署引用2017至2020年全國國民營養健康調查，18歲以上成人以空腹血糖100至125 mg/dL界定的糖尿病前期盛行率約25%。摘要未提供原始分子、未加權分母或信賴區間，因此不換算為年發生率或個人進展機率。國健署2026-11-03公布的2020至2024年20歲以上糖尿病盛行率13.1%是不同疾病狀態，不能取代前期統計。",
+      "statistics_assessed": [
+        {
+          "topic": "台灣成人糖尿病前期盛行率",
+          "value": "約25%",
+          "unit": "盛行率",
+          "period": "2017至2020年國民營養健康狀況變遷調查",
+          "geographic_scope": "台灣全國",
+          "population": "18歲以上成人，以空腹血糖100至125 mg/dL定義",
+          "numerator": "國健署公開摘要未列原始分子",
+          "denominator": "國健署公開摘要未列未加權樣本分母或信賴區間",
+          "event_definition": "調查時符合空腹血糖100至125 mg/dL之糖尿病前期盛行率",
+          "data_type": "全國國民營養健康狀況變遷調查之盛行率估計",
+          "limitations": "不是年發生率或個人日後罹患糖尿病機率；公開摘要未列原始分子、未加權分母及信賴區間。",
+          "source_ids": [
+            "tw02_hpa_prediabetes_survey_2017_2020"
+          ]
+        },
+        {
+          "topic": "20歲以上糖尿病盛行率（與糖尿病前期不同）",
+          "value": "13.1%",
+          "unit": "盛行率",
+          "period": "2020至2024年調查，國健署公告日2026-11-03",
+          "geographic_scope": "台灣全國",
+          "population": "20歲以上民眾",
+          "numerator": "國健署公告未列原始分子",
+          "denominator": "公告未列未加權樣本分母或信賴區間",
+          "event_definition": "糖尿病盛行率，非糖尿病前期",
+          "data_type": "國民營養健康調查之群體盛行率摘要",
+          "limitations": "受疾病定義不同及年齡下限不同影響，不能替代18歲以上糖尿病前期指標或個人風險。",
+          "source_ids": [
+            "tw02_hpa_diabetes_prevalence_20261103"
+          ]
+        }
+      ],
+      "changes": "刪除原作要求每半年複查的固定間隔及泛化的自行減重建議，改成帶檢驗報告、用藥與病史詢問家醫科或新陳代謝科，加入台灣糖尿病前期參考值、公費成人預防保健年齡與週期，以及例行篩檢和異常後追蹤的差異；保留生活調整並避免用一般運動量取代個別醫療判斷。",
+      "limits": "約25%為2017至2020年全國調查盛行率，官方摘要未列原始分子、未加權分母及信賴區間，不能解讀為個人每年發病機率。2020至2024年公布的13.1%是20歲以上糖尿病盛行率，不是糖尿病前期。公費成人健檢週期不等同異常數值的個別追蹤間隔。",
+      "unresolved_questions": [
+        "尚待相關專業人員獨立審閱。"
+      ],
+      "prior_structured_draft_review": {
+        "sha256": "8cc784062751293c9f3a3e0876c793eadced2bbd47f9280285ec3d79296ca31c",
+        "reviewed_at": "2026-10-31",
+        "review_due_at": "2027-04-30",
+        "prior_revision": "171783959adfc988ad6cd2cff04cfcdf21a745f6",
+        "review_status": "本條為未發布草稿；起始版本無正式來源核對或專業審閱紀錄。"
+      },
+      "formal_review": {
+        "reviewed_at": "2026-11-07",
+        "review_due_at": "2027-02-07",
+        "target_sha256": "c8c4b7532eb9e37965fcd9decfb9aa5d532fa2ada4c6e825b3b01867def2d13b",
+        "professional_review": {
+          "required": true,
+          "obtained": false,
+          "scope": [
+            "新陳代謝與內分泌科",
+            "家庭醫學",
+            "營養與運動專業",
+            "公共衛生與流行病學"
+          ]
+        }
+      }
+    }
+  ],
+  "new_source_ids": [
+    "tw02_hpa_betel_hazard_20261107",
+    "tw02_mohw_oral_screen_20261107",
+    "tw02_mohw_betel_cessation_20261107",
+    "tw02_hpa_oral_warning_20261107",
+    "tw02_mohw_cancer_registry_2023_20261107",
+    "tw02_hpa_sodium_intake_20261107",
+    "tw02_hpa_ckd_diet_20261107",
+    "tw02_ntuh_hyperkalemia_diet_20261107",
+    "tw02_neal_salt_substitute_trial_2021",
+    "tw02_hpa_alcohol_survey_2021",
+    "tw02_who_alcohol_cancer_2025",
+    "tw02_mohw_alcohol_pressure_20261107",
+    "tw02_mohw_alcohol_hotline_20261107",
+    "tw02_mohw_alcohol_treatment_20261107",
+    "tw02_hpa_prediabetes_survey_2017_2020",
+    "tw02_hpa_prediabetes_guidance_20261107",
+    "tw02_hpa_adult_preventive_20261107",
+    "tw02_hpa_diabetes_prevalence_20261103"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "公共衛生",
+      "公共衛生與流行病學",
+      "公共衛生與癌症流行病學",
+      "家庭醫學",
+      "心臟科與流行病學",
+      "成癮醫學與精神醫療",
+      "新陳代謝與內分泌科",
+      "流行病學與統計",
+      "營養與運動專業",
+      "牙醫及口腔顎面外科",
+      "耳鼻喉頭頸外科",
+      "腎臟科",
+      "臨床營養",
+      "藥事"
+    ]
+  },
+  "unresolved_questions": [
+    "尚無相關臨床、牙科、營養、成癮治療或公共衛生專業人員對本批全部內容作獨立審閱。",
+    "鈉攝取與糖尿病前期調查公開摘要未列統計指標的完整原始分子、未加權分母或信賴區間，本文不自行推算。",
+    "酒癮補助、服務院所、篩檢名冊和行政入口會更新，依使用時主管機關公告確認。"
+  ],
+  "counts_after": {
+    "core_reviewed": 292,
+    "runtime_items": 303,
+    "runtime_sources": 1182,
+    "source_registry": 1265,
+    "json_files_checked": 583,
+    "substantive_rechecks": 376,
+    "unique_draft_entries": 498,
+    "entries_without_any_draft": 267,
+    "unresolved_source_ids": 104,
+    "unresolved_reference_occurrences": 260,
+    "publication_ready": false
+  },
+  "follow_up_source_updates": [
+    {
+      "article_id": "TW-02-008",
+      "updated_at": "2026-11-08",
+      "previous_reviewed_at": "2026-11-07",
+      "previous_review_due_at": "2027-02-07",
+      "source_id": "tw02_mohw_betel_cessation_20261107",
+      "reason": "即時複核發現相同主管機關名冊已有較新更新頁面；以115-08-19版本取代115-07-31連結。正文實質建議未變，只更新來源連結與來源日期。",
+      "prior_source": {
+        "title": "衛福部口腔健康司：戒檳諮詢服務醫療機構查詢",
+        "url": "https://dep.mohw.gov.tw/DOOH/fp-7148-83616-124.html",
+        "accessed_at": "2026-11-07",
+        "supports": "口腔健康司提供戒檳諮詢服務醫療機構名冊，民眾可就近洽詢或請地方政府衛生局協助轉介；名冊標示115年7月31日更新。",
+        "claim": "口腔健康司提供戒檳諮詢服務醫療機構名冊，民眾可就近洽詢或請地方政府衛生局協助轉介；名冊標示115年7月31日更新。",
+        "reviewed_at": "2026-11-07",
+        "review_due_at": "2027-02-07",
+        "target_sha256": "eca27742544338688bc381c0572b5ae1edf42e6acfe792621e7e38b60276829a"
+      },
+      "current_source": {
+        "title": "衛福部口腔健康司：戒檳諮詢服務醫療機構查詢",
+        "url": "https://dep.mohw.gov.tw/DOOH/cp-7148-87465-124.html",
+        "accessed_at": "2026-11-08",
+        "supports": "口腔健康司提供戒檳諮詢服務醫療機構名冊，民眾可就近洽詢或請地方政府衛生局協助轉介；目前官方名冊頁標示115年8月19日更新。",
+        "reviewed_at": "2026-11-08",
+        "review_due_at": "2027-02-08",
+        "target_sha256": "e6b6cab8ff2cba2c30ec1327ec5278fc12f22006c2840b5e5bfdd3a04dd5a33a"
+      },
+      "current_check": {
+        "source_id": "tw02_mohw_betel_cessation_20261107",
+        "title": "衛福部口腔健康司：戒檳諮詢服務醫療機構查詢",
+        "url": "https://dep.mohw.gov.tw/DOOH/cp-7148-87465-124.html",
+        "claim": "口腔健康司提供戒檳諮詢服務醫療機構名冊，民眾可就近洽詢或請地方政府衛生局協助轉介；目前官方名冊頁標示115年8月19日更新。",
+        "supporting_passage": "口腔健康司提供戒檳諮詢服務醫療機構名冊，民眾可就近洽詢或請地方政府衛生局協助轉介；目前官方名冊頁標示115年8月19日更新。",
+        "accessed_at": "2026-11-08",
+        "retrieval_method": "2026-11-08直接複核衛福部口腔健康司名冊頁，確認較新的115-08-19更新版仍提供戒檳諮詢機構查詢及地方衛生局轉介入口；不固定院所數量或電話。"
+      }
+    }
+  ]
+}
