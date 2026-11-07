@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+from review_contract import safe_path
 
 ROOT = Path(__file__).resolve().parents[2]
 ID = re.compile(r"TW-\d{2}-\d{3}\Z")
@@ -1892,17 +1893,20 @@ def _draft_row_sha256(row: list) -> str:
 
 
 def validate_draft_recheck_records(root: Path, register: dict, manifest: dict, runtime: dict) -> list[dict]:
-    """Validate source rechecks for unpublished drafts without treating them as verified content.
+    """Validate dated source reviews of draft snapshots without promoting them implicitly.
 
-    The new register field is optional so historical registers remain readable. A draft record
-    is valid only while the manifest still marks that core item pending and the item is absent
-    from the shared reader runtime.
+    The register field is optional so historical registers remain readable. A draft review can
+    remain as provenance after a later, separately reviewed publication. While still pending,
+    the current chapter row must match the reviewed snapshot. After publication, the draft
+    snapshot is checked against its preserved review file and the separate formal review.
     """
     records = register.get("draft_substantive_rechecks", [])
     if not isinstance(records, list):
         raise ValueError("未發布草稿實質再審紀錄必須為清單")
     manifest_entries = {entry["id"]: entry for entry in manifest.get("entries", [])}
-    runtime_ids = {item["id"] for item in runtime.get("items", [])}
+    runtime_items = {item["id"]: item for item in runtime.get("items", [])}
+    runtime_ids = set(runtime_items)
+    formal_reviews: dict[str, dict] = {}
     source_registry: dict[str, list[str]] = {}
     source_dir = root / "localization/tw-edition/sources"
     for path in sorted(source_dir.glob("*.json")):
@@ -1921,9 +1925,17 @@ def validate_draft_recheck_records(root: Path, register: dict, manifest: dict, r
             raise ValueError("未發布草稿再審 ID 不合法或重複：" + str(key))
         seen.add(key)
         entry = manifest_entries.get(key)
-        if (entry is None or entry.get("status") != "pending" or entry.get("target_path") is not None
-                or entry.get("sources") != [] or key in runtime_ids):
-            raise ValueError("未發布草稿再審不得提升為正式閱讀內容：" + key)
+        is_pending = (
+            entry is not None and entry.get("status") == "pending"
+            and entry.get("target_path") is None and entry.get("sources") == []
+            and key not in runtime_ids
+        )
+        is_published = (
+            entry is not None and entry.get("status") == "verified"
+            and isinstance(entry.get("target_path"), str) and key in runtime_ids
+        )
+        if not (is_pending or is_published):
+            raise ValueError("草稿再審紀錄與目前正式狀態不相容：" + key)
         if record.get("status") != "ai_source_rechecked_draft_unpublished":
             raise ValueError("草稿再審狀態不符：" + key)
         revision = record.get("prior_revision", "")
@@ -1954,10 +1966,8 @@ def validate_draft_recheck_records(root: Path, register: dict, manifest: dict, r
         current_rows = {f"TW-{chapter:02}-{row[0]:03}": row for row in current_chapter["entries"]}
         original = original_rows.get(key)
         current = current_rows.get(key)
-        if (original is None or current is None
-                or _draft_row_sha256(original) != record["before_sha256"]
-                or _draft_row_sha256(current) != record["after_sha256"]):
-            raise ValueError("草稿再審正文前後 SHA 或條目版本不符：" + key)
+        if original is None or current is None or _draft_row_sha256(original) != record["before_sha256"]:
+            raise ValueError("草稿再審原始正文 SHA 或條目版本不符：" + key)
         review = load(root, review_path)
         if (review.get("id") != key or review.get("jurisdiction") != "TW"
                 or review.get("prior_revision") != revision
@@ -1966,11 +1976,34 @@ def validate_draft_recheck_records(root: Path, register: dict, manifest: dict, r
                 or review.get("reviewed_at") != record["reviewed_at"]
                 or review.get("review_due_at") != record["review_due_at"]
                 or review.get("original_draft") != original
-                or review.get("current_draft") != current
+                or (is_pending and review.get("current_draft") != current)
                 or review.get("before_sha256") != record["before_sha256"]
                 or review.get("after_sha256") != record["after_sha256"]):
             raise ValueError("草稿再審證據檔與登錄或正文不一致：" + key)
-        source_ids = current[5].split()
+        if (_draft_row_sha256(review["current_draft"]) != record["after_sha256"]
+                or (is_pending and _draft_row_sha256(current) != record["after_sha256"])):
+            raise ValueError("草稿再審後正文未保存在證據檔或待處理草稿中：" + key)
+        if is_published:
+            formal = formal_reviews.setdefault(
+                key, load(root, f"localization/reviews/{key}.json")
+            )
+            target = entry["target_path"]
+            try:
+                raw = safe_path(root, target, "locales/zh-TW/").read_bytes()
+                published_at = formal.get("reviewed_at", "")
+                published_digest = hashlib.sha256(raw).hexdigest()
+            except (OSError, ValueError, KeyError, TypeError) as error:
+                raise ValueError("已發布草稿缺少可核對的正式正文或審閱：" + key) from error
+            if (formal.get("id") != key or formal.get("target_path") != target
+                    or formal.get("target_sha256") != published_digest
+                    or formal.get("source_reviewed_sha256", formal.get("target_sha256")) != published_digest
+                    or not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", published_at)
+                    or published_at <= record["reviewed_at"]
+                    or runtime_items[key].get("target_path") != target
+                    or runtime_items[key].get("body") != raw.decode("utf-8")):
+                raise ValueError("草稿後續正式發布未有較新的正文、審閱與 runtime 證據：" + key)
+        reviewed_draft = review["current_draft"]
+        source_ids = reviewed_draft[5].split()
         if len(source_ids) != len(set(source_ids)) or record.get("source_ids") != source_ids:
             raise ValueError("草稿再審來源 ID 與草稿正文不一致：" + key)
         checks = review.get("source_checks", [])

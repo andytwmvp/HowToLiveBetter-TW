@@ -1,0 +1,92 @@
+{
+  "id": "TW-02-001",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-001.md",
+  "target_sha256": "b84760404ba92a5aca90914cf9a7eaedcad1d87fcf9218432e38c3ec9ee71e6d",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_adult_survey_20261107",
+      "title": "國民健康署：國人吸菸行為調查結果（成人吸菸及家庭二手菸）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1718&pid=9913",
+      "claim": "113年成人標準化吸菸率、家庭暴露率的年度結果及調查背景。",
+      "supporting_passage": "113年（2024）18歲以上成人標準化目前吸菸率12.8%、家庭二手菸暴露率35.6%；結果頁定義期間與分析對象，並記載菸害防制法於2023-03-22施行。成人吸菸率不等於戒菸成功率；家庭暴露率是成人受訪者指標，不是家庭比例。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱國健署成人調查結果頁，核對113年數值、分析對象、標準化說明、家庭暴露定義及法規施行日。"
+    },
+    {
+      "source_id": "tw02_hpa_adult_sample_20261107",
+      "title": "國民健康署：國人吸菸行為調查有效完訪樣本數",
+      "url": "https://www.hpa.gov.tw/EngPages/List.aspx?nodeid=1710",
+      "claim": "113年成人有效樣本量。",
+      "supporting_passage": "113年調查共24,156份有效樣本，其中18歲以上成人樣本23,795人；此為樣本數，不是個別指標的未加權分母。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "查閱國健署調查樣本數頁，核對113年總樣本與成人樣本；不以總樣本替代特定指標的有效分母。"
+    },
+    {
+      "source_id": "tw02_hpa_adult_definitions_20261107",
+      "title": "國民健康署：國人吸菸行為調查名詞定義",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=1717",
+      "claim": "成人目前吸菸率的100支與過去30天定義。",
+      "supporting_passage": "成人目前吸菸者定義為累計吸菸超過100支且最近30天曾吸菸；家庭二手菸暴露率以過去一週在家中有人於受訪者面前吸菸計算，閉鎖陽台算在家且聞到菸味亦計入；公式分母為有效完訪樣本。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱國健署指標定義與計算公式，核對成人吸菸及家庭二手菸兩項指標的事件定義、期間和分母方式。"
+    },
+    {
+      "source_id": "tw02_hpa_cessation_resources_20261107",
+      "title": "國民健康署：我想戒菸，有哪些戒菸資源？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4341",
+      "claim": "台灣戒菸管道、免費專線、服務時段。",
+      "supporting_passage": "國健署列合約醫事機構（醫院、基層診所、社區藥局）的戒菸治療及衛教，以及免費戒菸專線0800-636-363、週一至週六09:00至21:00；專業支持可配合個人需要。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱國健署官方戒菸資源頁，核對服務形式、電話及時段；正文不使用未核對的服務量或成功率。"
+    },
+    {
+      "source_id": "tw02_hpa_cessation_guideline_20261107",
+      "title": "國民健康署：臺灣臨床戒菸服務指引簡要版",
+      "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22630.pdf",
+      "claim": "戒菸服務應依個別狀況諮詢、評估與安排支持。",
+      "supporting_passage": "國健署指引採個別化諮詢及評估、支持性介入與戒菸藥物治療，並強調服務人員依個人狀況判斷；指引供臨床參考，不取代臨床判斷。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "查閱國健署指引摘要及條目，核對個別化諮詢、支持與治療方向；不將指引寫成個別處方或保證成功。"
+    }
+  ],
+  "localization_changes": "保留原作鼓勵戒菸的生活目標，但改為台灣的成人吸菸資料、國健署戒菸專線與合約服務入口，避免把海外成功率寫成個人保證；加入復吸後調整計畫及特殊族群尋求合適支持。",
+  "review_method": "逐條重讀原作主題、現有結構化草稿和來源。查核台灣生活情境、現行法規／服務、可執行步驟、資格費用及來源是否支持具體主張。對適用統計記錄期間、範圍、對象、分子、分母、事件定義、資料型態及限制；未公開的原始分子或逐題分母不反推，海外研究不改寫成台灣個人機率。本次為AI輔助來源查核，未取得獨立醫療、公共衛生、統計或法律專業審閱。",
+  "limits": [
+    "國健署113年成人吸菸率是標準化調查盛行率，定義為累計吸菸逾100支且近30天曾吸菸；成人樣本23,795人，但公開頁面未列原始分子及各指標有效分母。此數字不能當作戒菸成功率或個人發生機率。戒菸方式與藥物需依個人狀況評估。",
+    "本次未取得獨立醫療、公共衛生、成癮治療、統計或法律專業審閱；個人治療與法律疑義應由適當專業人員依個案判斷。"
+  ],
+  "source_reviewed_sha256": "b84760404ba92a5aca90914cf9a7eaedcad1d87fcf9218432e38c3ec9ee71e6d",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "df099c9d6967e6de39beac8eee1f4578e941a77c296b07af24efa2e32ec88735",
+  "source_ids": [
+    "tw02_hpa_adult_survey_20261107",
+    "tw02_hpa_adult_sample_20261107",
+    "tw02_hpa_adult_definitions_20261107",
+    "tw02_hpa_cessation_resources_20261107",
+    "tw02_hpa_cessation_guideline_20261107"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "成人目前吸菸率",
+      "value": "12.8%",
+      "period": "民國113年（2024）",
+      "geographic_scope": "台灣全國",
+      "population": "18歲以上成人；國健署調查成人有效樣本23,795人，電話訪問並按人口特徵加權、標準化",
+      "numerator": "官方結果頁未列原始吸菸人數；百分比為加權標準化估計，不反推人數",
+      "denominator": "有效完訪成人樣本23,795人；特定指標無回應者與逐題有效分母未於結果頁列出，標準化率不等同原始樣本比例",
+      "event_definition": "一生累計吸菸超過100支且最近30天曾吸菸；目前吸菸盛行率",
+      "data_type": "全國成人電話抽樣調查；官方公布標準化估計",
+      "limitations": "此為特定調查定義的成人盛行率，不是戒菸成功率或個人未來機率；無原始分子與逐題有效分母，不宜據此重算；不涵蓋未成年學生指標。",
+      "source_ids": [
+        "tw02_hpa_adult_survey_20261107",
+        "tw02_hpa_adult_sample_20261107",
+        "tw02_hpa_adult_definitions_20261107"
+      ]
+    }
+  ],
+  "prior_structured_draft_sha256": "2e4c141381592beb3ac5105313d1e84c001b924d6aead22abd7f1e6f3afe3474"
+}

@@ -13,6 +13,7 @@ from review_contract import ROOT, validate_runtime
 
 
 BASE = "3cac9b35a0a3079c66b92c223a460cd6238e4e81"
+HISTORICAL_HEAD = "f20b9fc962c471779378f569c5baf3cff2d4c070"
 IDS = ("TW-15-016", "TW-21-008", "TW-21-009", "TW-21-010", "TW-26-013")
 NEW_SOURCES = {
     "thb_idp_application_20261107",
@@ -38,6 +39,10 @@ EXPECTED_GEOGRAPHIC_SCOPE = {
 
 def read(path):
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
+
+
+def read_at(revision, path):
+    return json.loads(subprocess.check_output(["git", "show", f"{revision}:{path}"], cwd=ROOT, text=True))
 
 
 class TravelHousingSubscriptionRecheckTests(unittest.TestCase):
@@ -162,21 +167,33 @@ class TravelHousingSubscriptionRecheckTests(unittest.TestCase):
         for source_id in NEW_SOURCES:
             self.assertEqual(catalog_sources[source_id][2], self.sources[source_id]["url"])
 
-        self.assertEqual(self.batch["runtime_sources_before"], 1135)
-        self.assertEqual(self.batch["runtime_sources_after"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["source_registry_before"], 1218)
-        self.assertEqual(self.batch["formal_rechecks_before"], 371)
-        self.assertEqual(self.batch["formal_rechecks_after"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(self.batch["json_files_checked_before"], 567)
+        baseline_runtime = read_at(BASE, "localization/tw-edition/runtime.json")
+        baseline_coverage = read_at(BASE, "localization/tw-edition/coverage.json")
+        baseline_register = read_at(BASE, "localization/retroactive-review-register-20261019.json")
+        historical_runtime = read_at(HISTORICAL_HEAD, "localization/tw-edition/runtime.json")
+        historical_coverage = read_at(HISTORICAL_HEAD, "localization/tw-edition/coverage.json")
+        current_coverage = read("localization/tw-edition/coverage.json")
 
-        coverage = read("localization/tw-edition/coverage.json")
-        self.assertEqual(coverage, audit_drafts())
-        self.assertEqual(self.batch["source_registry_after"], coverage["registry_sources"])
-        self.assertEqual(self.batch["json_files_checked_after"], coverage["json_files_checked"])
-        self.assertEqual(self.batch["core_verified_before"], 282)
-        self.assertEqual(self.batch["core_verified_after"], 282)
-        self.assertEqual(self.batch["core_verified_after"], coverage["publication_completed_entries"])
-        self.assertFalse(coverage["publication_ready"])
+        self.assertEqual(self.batch["runtime_sources_before"], len(baseline_runtime["sources"]))
+        self.assertEqual(self.batch["source_registry_before"], baseline_coverage["registry_sources"])
+        self.assertEqual(self.batch["formal_rechecks_before"], len(baseline_register["substantive_rechecks"]))
+        self.assertEqual(self.batch["json_files_checked_before"], baseline_coverage["json_files_checked"])
+        self.assertEqual(self.batch["runtime_sources_after"], len(historical_runtime["sources"]))
+        self.assertEqual(self.batch["source_registry_after"], historical_coverage["registry_sources"])
+        self.assertEqual(self.batch["json_files_checked_after"], historical_coverage["json_files_checked"])
+        self.assertEqual(self.batch["core_verified_before"], baseline_coverage["publication_completed_entries"])
+        self.assertEqual(self.batch["core_verified_after"], historical_coverage["publication_completed_entries"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), self.batch["runtime_sources_after"])
+        self.assertGreaterEqual(current_coverage["registry_sources"], self.batch["source_registry_after"])
+        self.assertGreaterEqual(current_coverage["json_files_checked"], self.batch["json_files_checked_after"])
+        self.assertGreaterEqual(current_coverage["publication_completed_entries"], self.batch["core_verified_after"])
+        self.assertEqual(self.batch["runtime_sources_after"], self.batch["runtime_sources_before"] + len(self.batch["runtime_source_ids_added"]))
+        self.assertEqual(self.batch["source_registry_after"], self.batch["source_registry_before"] + len(self.batch["runtime_source_ids_added"]))
+        self.assertEqual(self.batch["core_verified_after"], self.batch["core_verified_before"])
+        self.assertEqual(self.batch["formal_rechecks_after"], self.batch["formal_rechecks_before"] + len(IDS))
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), self.batch["formal_rechecks_after"])
+        self.assertEqual(current_coverage, audit_drafts())
+        self.assertFalse(current_coverage["publication_ready"])
         self.assertFalse(self.batch["professional_review"]["obtained"])
 
         self.assertEqual(self.batch["retired_source_ids"], ["renewaldraft"])

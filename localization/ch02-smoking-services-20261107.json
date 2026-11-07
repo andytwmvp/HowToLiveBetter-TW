@@ -1,0 +1,623 @@
+{
+  "schema_version": 1,
+  "batch": "TW-02戒菸、二手菸與電子煙六篇首次正式台灣發布",
+  "baseline_main_sha": "f20b9fc962c471779378f569c5baf3cff2d4c070",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
+  "counts_before": {
+    "core_reviewed": 282,
+    "runtime_items": 293,
+    "runtime_sources": 1146,
+    "source_registry": 1229,
+    "json_files_checked": 569,
+    "substantive_rechecks": 376
+  },
+  "items": [
+    {
+      "id": "TW-02-001",
+      "title": "戒菸值得從今天開始：先找支持，再選適合的方法",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "f20b9fc962c471779378f569c5baf3cff2d4c070",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "df099c9d6967e6de39beac8eee1f4578e941a77c296b07af24efa2e32ec88735",
+      "prior_structured_draft": [
+        1,
+        "戒菸值得從今天開始，不必等待完美時機",
+        "先記錄最常吸菸的時間、地點與誘因，選一個可執行的戒菸計畫。戒菸對不同年齡的人仍有健康意義，不以已吸多年就來不及否定自己。",
+        "聯絡台灣戒菸門診或0800-636363戒菸專線，討論藥物與行為支持；告訴身邊人不要遞菸，移除菸具並安排想吸時的替代活動。",
+        "再次吸菸不是整個人失敗，而是要調整方法。孕婦、青少年、精神疾病或多種用藥者，需要合適的專業方案，不自行購買不明戒菸藥。",
+        "smoking",
+        "health",
+        "先使用公費或補助戒菸資源，節省的菸費可用於必要生活或自己重視的事。"
+      ],
+      "prior_structured_draft_sha256": "2e4c141381592beb3ac5105313d1e84c001b924d6aead22abd7f1e6f3afe3474",
+      "after_sha256": "b84760404ba92a5aca90914cf9a7eaedcad1d87fcf9218432e38c3ec9ee71e6d",
+      "review_path": "localization/reviews/TW-02-001.json",
+      "source_ids": [
+        "tw02_hpa_adult_survey_20261107",
+        "tw02_hpa_adult_sample_20261107",
+        "tw02_hpa_adult_definitions_20261107",
+        "tw02_hpa_cessation_resources_20261107",
+        "tw02_hpa_cessation_guideline_20261107"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_adult_survey_20261107",
+          "title": "國民健康署：國人吸菸行為調查結果（成人吸菸及家庭二手菸）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1718&pid=9913",
+          "claim": "113年成人標準化吸菸率、家庭暴露率的年度結果及調查背景。",
+          "supporting_passage": "113年（2024）18歲以上成人標準化目前吸菸率12.8%、家庭二手菸暴露率35.6%；結果頁定義期間與分析對象，並記載菸害防制法於2023-03-22施行。成人吸菸率不等於戒菸成功率；家庭暴露率是成人受訪者指標，不是家庭比例。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署成人調查結果頁，核對113年數值、分析對象、標準化說明、家庭暴露定義及法規施行日。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_sample_20261107",
+          "title": "國民健康署：國人吸菸行為調查有效完訪樣本數",
+          "url": "https://www.hpa.gov.tw/EngPages/List.aspx?nodeid=1710",
+          "claim": "113年成人有效樣本量。",
+          "supporting_passage": "113年調查共24,156份有效樣本，其中18歲以上成人樣本23,795人；此為樣本數，不是個別指標的未加權分母。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署調查樣本數頁，核對113年總樣本與成人樣本；不以總樣本替代特定指標的有效分母。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_definitions_20261107",
+          "title": "國民健康署：國人吸菸行為調查名詞定義",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=1717",
+          "claim": "成人目前吸菸率的100支與過去30天定義。",
+          "supporting_passage": "成人目前吸菸者定義為累計吸菸超過100支且最近30天曾吸菸；家庭二手菸暴露率以過去一週在家中有人於受訪者面前吸菸計算，閉鎖陽台算在家且聞到菸味亦計入；公式分母為有效完訪樣本。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署指標定義與計算公式，核對成人吸菸及家庭二手菸兩項指標的事件定義、期間和分母方式。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_resources_20261107",
+          "title": "國民健康署：我想戒菸，有哪些戒菸資源？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4341",
+          "claim": "台灣戒菸管道、免費專線、服務時段。",
+          "supporting_passage": "國健署列合約醫事機構（醫院、基層診所、社區藥局）的戒菸治療及衛教，以及免費戒菸專線0800-636-363、週一至週六09:00至21:00；專業支持可配合個人需要。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署官方戒菸資源頁，核對服務形式、電話及時段；正文不使用未核對的服務量或成功率。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_guideline_20261107",
+          "title": "國民健康署：臺灣臨床戒菸服務指引簡要版",
+          "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22630.pdf",
+          "claim": "戒菸服務應依個別狀況諮詢、評估與安排支持。",
+          "supporting_passage": "國健署指引採個別化諮詢及評估、支持性介入與戒菸藥物治療，並強調服務人員依個人狀況判斷；指引供臨床參考，不取代臨床判斷。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署指引摘要及條目，核對個別化諮詢、支持與治療方向；不將指引寫成個別處方或保證成功。"
+        }
+      ],
+      "taiwan_context": "台灣成人紙菸使用仍是日常健康議題；戒菸不必等到意志力完美才開始，適合的方法可和專業人員一起調整。",
+      "frequency_assessment": "國健署113年（2024）調查估計，18歲以上成人目前吸菸率12.8%；定義為累計吸菸超過100支且最近30天曾吸菸。成人有效樣本23,795人，結果採加權及標準化；公開結果沒有原始吸菸人數或逐題有效分母。這是盛行率，不是戒菸成功率或個人未來風險。",
+      "statistics_assessed": [
+        {
+          "topic": "成人目前吸菸率",
+          "value": "12.8%",
+          "period": "民國113年（2024）",
+          "geographic_scope": "台灣全國",
+          "population": "18歲以上成人；國健署調查成人有效樣本23,795人，電話訪問並按人口特徵加權、標準化",
+          "numerator": "官方結果頁未列原始吸菸人數；百分比為加權標準化估計，不反推人數",
+          "denominator": "有效完訪成人樣本23,795人；特定指標無回應者與逐題有效分母未於結果頁列出，標準化率不等同原始樣本比例",
+          "event_definition": "一生累計吸菸超過100支且最近30天曾吸菸；目前吸菸盛行率",
+          "data_type": "全國成人電話抽樣調查；官方公布標準化估計",
+          "limitations": "此為特定調查定義的成人盛行率，不是戒菸成功率或個人未來機率；無原始分子與逐題有效分母，不宜據此重算；不涵蓋未成年學生指標。",
+          "source_ids": [
+            "tw02_hpa_adult_survey_20261107",
+            "tw02_hpa_adult_sample_20261107",
+            "tw02_hpa_adult_definitions_20261107"
+          ]
+        }
+      ],
+      "changes": "保留原作鼓勵戒菸的生活目標，但改為台灣的成人吸菸資料、國健署戒菸專線與合約服務入口，避免把海外成功率寫成個人保證；加入復吸後調整計畫及特殊族群尋求合適支持。",
+      "unresolved_questions": [
+        "尚未取得獨立成癮醫療、公共衛生或法律專業審閱；必要時請專業人員覆核個人醫療或法律疑義。",
+        "官方調查指標的原始分子與逐題有效分母未公開，本文不反推、不換算個人機率。",
+        "戒菸服務、掛號費、產品核准清單及電子煙修法進度可能更新，使用前以主管機關最新公告為準。"
+      ]
+    },
+    {
+      "id": "TW-02-002",
+      "title": "住家與車內維持無菸：開窗和空氣清淨機都不能取代",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "f20b9fc962c471779378f569c5baf3cff2d4c070",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "a5f3d81154c67ea273a9e5a6184dd7c9a9a7866aa3ed14bbbb5b5ec316629932",
+      "prior_structured_draft": [
+        2,
+        "家裡與車內不吸菸，開窗不是替代方法",
+        "與同住者約定住宅與車內完全不吸菸，也請訪客配合。二手菸不只影響吸菸者，兒童、孕婦及呼吸道疾病者尤其需要避免。",
+        "把不吸菸規則清楚告知家人、房客與照顧者，遇鄰戶或公共空間菸害時，記錄情況並向管理單位或衛生局詢問可用處理途徑。",
+        "抽油煙機、空氣清淨機與開窗不能消除所有暴露。不要把菸移到出入口、他人窗邊或兒童活動區，造成另一處菸害。",
+        "smoking tobaccoact",
+        "health",
+        "先改變使用習慣與環境規則，不把高價空氣清淨機當成室內吸菸許可。"
+      ],
+      "prior_structured_draft_sha256": "eb86c2b4e9b1f7069e061cb686c828509462d9316f9c7c2ac1d46cc0ed4a419e",
+      "after_sha256": "6928da7eea5b4233e3839925ee1683abf7ad26e9e73672ab8984111356a32d2b",
+      "review_path": "localization/reviews/TW-02-002.json",
+      "source_ids": [
+        "tw02_hpa_adult_survey_20261107",
+        "tw02_hpa_adult_sample_20261107",
+        "tw02_hpa_adult_definitions_20261107",
+        "tw02_hpa_secondhand_ventilation_20261107",
+        "tw02_moj_tobacco_hazards_act_20261107"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_adult_survey_20261107",
+          "title": "國民健康署：國人吸菸行為調查結果（成人吸菸及家庭二手菸）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1718&pid=9913",
+          "claim": "113年家庭二手菸暴露率35.6%及成人調查結果。",
+          "supporting_passage": "113年（2024）18歲以上成人標準化目前吸菸率12.8%、家庭二手菸暴露率35.6%；結果頁定義期間與分析對象，並記載菸害防制法於2023-03-22施行。成人吸菸率不等於戒菸成功率；家庭暴露率是成人受訪者指標，不是家庭比例。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署成人調查結果頁，核對113年數值、分析對象、標準化說明、家庭暴露定義及法規施行日。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_sample_20261107",
+          "title": "國民健康署：國人吸菸行為調查有效完訪樣本數",
+          "url": "https://www.hpa.gov.tw/EngPages/List.aspx?nodeid=1710",
+          "claim": "家庭暴露調查的成人樣本數。",
+          "supporting_passage": "113年調查共24,156份有效樣本，其中18歲以上成人樣本23,795人；此為樣本數，不是個別指標的未加權分母。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署調查樣本數頁，核對113年總樣本與成人樣本；不以總樣本替代特定指標的有效分母。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_definitions_20261107",
+          "title": "國民健康署：國人吸菸行為調查名詞定義",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=1717",
+          "claim": "過去一週在家暴露定義、閉鎖陽台及聞到菸味計入方式、計算母數。",
+          "supporting_passage": "成人目前吸菸者定義為累計吸菸超過100支且最近30天曾吸菸；家庭二手菸暴露率以過去一週在家中有人於受訪者面前吸菸計算，閉鎖陽台算在家且聞到菸味亦計入；公式分母為有效完訪樣本。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署指標定義與計算公式，核對成人吸菸及家庭二手菸兩項指標的事件定義、期間和分母方式。"
+        },
+        {
+          "source_id": "tw02_hpa_secondhand_ventilation_20261107",
+          "title": "國民健康署：室內通風或空氣清淨設備不能消除二手菸",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=17423",
+          "claim": "室內通風、空調、風扇與空氣清淨設備不能消除二手菸。",
+          "supporting_passage": "國健署說明風扇、空調、空氣清淨器與通風設備不能消除室內二手菸，任何暴露濃度都可能危及旁人。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署官方衛教頁全文及更新日期，只引用設備不能消除暴露的範圍。"
+        },
+        {
+          "source_id": "tw02_moj_tobacco_hazards_act_20261107",
+          "title": "全國法規資料庫：菸害防制法",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070021",
+          "claim": "現行菸害防制法對類菸品、指定菸品及特定公共場所的規範；第20條對孕婦或未滿3歲兒童在場室內場所的禁菸規定。",
+          "supporting_passage": "現行法第3條定義類菸品；第7條規定指定菸品製造或輸入前須通過健康風險評估；第15條規範類菸品及未核定指定菸品的製造、輸入、販賣、供應、展示、廣告和使用；第20條明定孕婦或未滿3歲兒童在場的室內場所不得吸菸；第40條規定違法使用類菸品或未核定指定菸品處新臺幣2,000元至1萬元罰鍰。私人住家不因此一概等同公共禁菸場所；法規資料庫整編截止日為2026-10-30。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱法務部全國法規資料庫現行全文第3、7、15、20及40條，核對禁制、罰則及資料庫整編截止日。"
+        }
+      ],
+      "taiwan_context": "台灣住家常見公寓、集合住宅、租屋與機車汽車通勤；菸味可能從門窗、陽台和共用空間飄進室內。",
+      "frequency_assessment": "國健署113年（2024）家庭二手菸暴露率為35.6%，定義為18歲以上受訪者過去一週在家時有人在面前吸菸，封閉陽台算在家，聞到菸味亦計入。成人有效樣本23,795人；逐題有效分母和原始暴露人數未公開，且此為加權標準化的成人受訪者比率，不是35.6%的家庭。",
+      "statistics_assessed": [
+        {
+          "topic": "成人家庭二手菸暴露率",
+          "value": "35.6%",
+          "period": "民國113年（2024）",
+          "geographic_scope": "台灣全國",
+          "population": "18歲以上成人；調查成人有效樣本23,795人，電話訪問並按人口特徵加權、標準化",
+          "numerator": "官方公布頁未列原始暴露人數；比率為加權標準化估計，不反推家庭數或人數",
+          "denominator": "有效完訪成人樣本23,795人；家庭暴露指標逐題有效分母未公布",
+          "event_definition": "過去一週在家時有他人在受訪者面前吸菸；封閉陽台算在家，聞到菸味也算",
+          "data_type": "全國成人電話抽樣調查；官方公布標準化估計",
+          "limitations": "是成人受訪者暴露率，不是有暴露家庭占比；公開資料無原始分子和逐題分母，不能換算個人或家庭機率。",
+          "source_ids": [
+            "tw02_hpa_adult_survey_20261107",
+            "tw02_hpa_adult_sample_20261107",
+            "tw02_hpa_adult_definitions_20261107"
+          ]
+        }
+      ],
+      "changes": "將原作室內禁菸建議改為台灣公寓、封閉陽台、租屋與汽車情境，說明通風或清淨設備不能消除二手菸；區分私人住家與法律列舉的公共禁菸場所，不把鄰戶菸味一概寫成違法。 補入第20條對孕婦或未滿3歲兒童在場室內場所的禁菸規定，避免只用公共場所規定描述住家。",
+      "unresolved_questions": [
+        "尚未取得獨立成癮醫療、公共衛生或法律專業審閱；必要時請專業人員覆核個人醫療或法律疑義。",
+        "官方調查指標的原始分子與逐題有效分母未公開，本文不反推、不換算個人機率。",
+        "戒菸服務、掛號費、產品核准清單及電子煙修法進度可能更新，使用前以主管機關最新公告為準。"
+      ]
+    },
+    {
+      "id": "TW-02-003",
+      "title": "戒菸藥物與諮詢一起評估：別自行加減藥或混用",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "f20b9fc962c471779378f569c5baf3cff2d4c070",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "32de9d45a688bd4859d9031f9bda07fdcdeb69c3d4d38f6b57d3c98c898d3b94",
+      "prior_structured_draft": [
+        3,
+        "戒菸藥物與諮詢一起評估，不只靠硬忍",
+        "尼古丁替代療法及其他核准戒菸藥物可作為戒菸方案的一部分；由醫師或藥師依健康狀況、先前經驗及偏好選擇。",
+        "問清楚何時開始、療程多久、常見不適、忘用怎麼辦，以及何時回診。若先前戒菸未成功，帶用藥與誘因紀錄調整，而不是隻換另一款廣告產品。",
+        "不同藥物的禁忌、交互作用與供應狀況不同；不能拿研究平均成功率承諾個人一定成功。情緒或身體出現明顯變化，及早聯繫醫療團隊。",
+        "smoking tfda",
+        "health",
+        "確認戒菸補助及自付費用，避免自行買來源不明的跨境藥品。"
+      ],
+      "prior_structured_draft_sha256": "1c47ca6189f05a1bf5cfd986d143be83b783b71eae9fd51f26ca89df31164513",
+      "after_sha256": "6c6c4ac7d6abd881fcde8bfb2d8a0a08a6c0f6aba964ed7a913d55b0c29a7ecc",
+      "review_path": "localization/reviews/TW-02-003.json",
+      "source_ids": [
+        "tw02_hpa_cessation_resources_20261107",
+        "tw02_hpa_cessation_treatment_20261107",
+        "tw02_hpa_cessation_fees_20261107",
+        "tw02_hpa_cessation_guideline_20261107"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_cessation_resources_20261107",
+          "title": "國民健康署：我想戒菸，有哪些戒菸資源？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4341",
+          "claim": "合約院所、診所、社區藥局與免費戒菸諮詢。",
+          "supporting_passage": "國健署列合約醫事機構（醫院、基層診所、社區藥局）的戒菸治療及衛教，以及免費戒菸專線0800-636-363、週一至週六09:00至21:00；專業支持可配合個人需要。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署官方戒菸資源頁，核對服務形式、電話及時段；正文不使用未核對的服務量或成功率。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_treatment_20261107",
+          "title": "國民健康署：二代戒菸服務常見問答",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1812&pid=10193&sid=990",
+          "claim": "藥物治療年齡、健保身分、依賴度／每日吸菸量及戒菸衛教資格、療程條件。",
+          "supporting_passage": "戒菸治療資格為18歲以上全民健保保險對象，尼古丁依賴度量表達4分以上或平均每日吸菸10支以上；有戒菸意願的全民健保吸菸者可接受戒菸衛教，包含孕婦、青少年及不適合用藥者；每年各有2個治療及衛教療程，每療程最長8週，同一院所或藥局90天內完成。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "核對國健署二代戒菸服務官方FAQ顯示的資格與療程條件；直接開啟頁面逾時，僅採用搜尋索引呈現的明確FAQ原文摘要，未推定其他資格。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_fees_20261107",
+          "title": "國民健康署：利用戒菸服務需要額外付費嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4337",
+          "claim": "掛號費可能自付，戒菸藥物部分負擔免收及服務費界線。",
+          "supporting_passage": "國健署FAQ指出利用戒菸服務除各醫事機構所訂掛號費外，無需繳交其他費用；藥物部分負擔自2022-05-15起免收。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "核對國健署FAQ索引所呈現的費用說明與更新日期；直接開啟頁面逾時，因此正文仍提醒先向服務機構確認掛號費及其他非服務支出。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_guideline_20261107",
+          "title": "國民健康署：臺灣臨床戒菸服務指引簡要版",
+          "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22630.pdf",
+          "claim": "臨床人員依個人狀況評估諮詢和藥物治療。",
+          "supporting_passage": "國健署指引採個別化諮詢及評估、支持性介入與戒菸藥物治療，並強調服務人員依個人狀況判斷；指引供臨床參考，不取代臨床判斷。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署指引摘要及條目，核對個別化諮詢、支持與治療方向；不將指引寫成個別處方或保證成功。"
+        }
+      ],
+      "taiwan_context": "台灣戒菸服務可在合約醫院、診所與社區藥局取得；藥物選擇要看依賴程度、健康狀況、其他用藥和個人偏好。",
+      "frequency_assessment": "本篇說明戒菸治療與衛教資格，沒有引用戒菸服務人次或成功率作為個人機率。國健署臨床指引支持個別化諮詢、評估和處置；不以海外研究或服務使用量推算台灣個人戒菸成效。",
+      "statistics_assessed": [],
+      "changes": "依國健署現行台灣服務資格說明18歲以上健保對象與尼古丁依賴門檻，補上孕婦、青少年及不適合用藥者可使用戒菸衛教服務；說清楚藥物部分負擔與掛號費不同。",
+      "unresolved_questions": [
+        "尚未取得獨立成癮醫療、公共衛生或法律專業審閱；必要時請專業人員覆核個人醫療或法律疑義。",
+        "官方調查指標的原始分子與逐題有效分母未公開，本文不反推、不換算個人機率。",
+        "戒菸服務、掛號費、產品核准清單及電子煙修法進度可能更新，使用前以主管機關最新公告為準。"
+      ]
+    },
+    {
+      "id": "TW-02-004",
+      "title": "訂下戒菸日，也可安排減量：讓停止日期和支持計畫都明確",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "f20b9fc962c471779378f569c5baf3cff2d4c070",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "25b765bb27bf7749157137f9d053f3e93137f33c5d185016fbde5761aa13becd",
+      "prior_structured_draft": [
+        4,
+        "約定戒菸日，也允許依專業計畫逐步減量",
+        "挑一個能準備支持、藥物與環境的日期，事前預想餐後、聚會與壓力大的時候怎麼應對。重點是有具體策略，而不是隻有一句從明天起不抽。",
+        "可以和戒菸人員討論直接停止或有計畫地減量後停止，選能配合你的方式。把每次想吸的原因記下，練習延後、離開情境、喝水或找人談。",
+        "原作把一次停掉寫成唯一正確方法過於絕對；不同人的接受度與支持不同。減量不能變成無期限拖延，也不以改抽淡菸當成已戒菸。",
+        "smoking",
+        "health",
+        "紙筆紀錄與公共諮詢即可開始，不必購買保證幾天戒成的套裝課程。"
+      ],
+      "prior_structured_draft_sha256": "89de9a1472301293fb4181b38d3389e98ce1e7bb361d3db33bc2adf658ac701c",
+      "after_sha256": "f9f526f13b8cded18144b7ac22c502317147d429e8cd3c566c3ceaa50d5002ee",
+      "review_path": "localization/reviews/TW-02-004.json",
+      "source_ids": [
+        "tw02_hpa_cessation_guideline_20261107",
+        "tw02_pubmed_abrupt_gradual_trial_2016",
+        "tw02_ucl_abrupt_gradual_fulltext_2016"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_cessation_guideline_20261107",
+          "title": "國民健康署：臺灣臨床戒菸服務指引簡要版",
+          "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22630.pdf",
+          "claim": "個人化諮詢、評估、行為支持及藥物治療依臨床判斷。",
+          "supporting_passage": "國健署指引採個別化諮詢及評估、支持性介入與戒菸藥物治療，並強調服務人員依個人狀況判斷；指引供臨床參考，不取代臨床判斷。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署指引摘要及條目，核對個別化諮詢、支持與治療方向；不將指引寫成個別處方或保證成功。"
+        },
+        {
+          "source_id": "tw02_pubmed_abrupt_gradual_trial_2016",
+          "title": "Lindson-Hawley 等：逐步減量與直接停止吸菸的隨機對照試驗",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26975007/",
+          "claim": "英國隨機試驗研究設計、共同介入及6個月結果。",
+          "supporting_passage": "英國基層醫療697位成年吸菸者的試驗比較兩週逐步減量和直接停止，兩組均接受護理人員行為支持與尼古丁替代療法；6個月持續且經驗證戒菸率為15.5%與22.0%。此為英國試驗的組別平均結果，不是台灣發生率或個人成功機率。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱PubMed所載隨機對照試驗摘要，確認研究地點、受試者數、兩組介入、結果定義與6個月數值。"
+        },
+        {
+          "source_id": "tw02_ucl_abrupt_gradual_fulltext_2016",
+          "title": "牛津大學研究典藏庫：逐步減量與直接停止戒菸的隨機試驗全文",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/1477650/",
+          "claim": "隨機試驗的兩組隨機分派分母及6個月CO驗證持續戒菸的原始人數。",
+          "supporting_passage": "接受稿Table 2列漸進減量組342人、直接停止組355人；戒菸日後6個月呼氣一氧化碳驗證的持續戒菸分別為53/342（15.5%）及78/355（22.0%）。分組人數是隨機分派分母，結果為英國基層醫療試驗，不能外推成台灣人個別成功機率。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱牛津大學研究典藏庫所保存的原始試驗接受稿Table 2，核對兩組隨機分派人數、6個月CO驗證持續戒菸分子與分母；再與PubMed摘要交叉核對。"
+        }
+      ],
+      "taiwan_context": "台灣聚餐、工作休息、通勤或與同事家人相處，都可能形成吸菸習慣；直接停止或先減量應配合可執行的支持，不必把單一方法當成人人標準。",
+      "frequency_assessment": "這是2016年英國基層醫療隨機試驗的戒菸結果，不是台灣頻率資料。試驗共697位成人，漸減組342人、直接停止組355人；6個月CO驗證持續戒菸為53/342（15.5%）與78/355（22.0%）。兩組均接受護理支持和尼古丁替代療法，不能外推為台灣人或個人的成功機率。",
+      "statistics_assessed": [
+        {
+          "topic": "英國戒菸方式隨機試驗的6個月結果",
+          "value": "漸進減量15.5%；直接停止22.0%",
+          "period": "試驗發表於2016年；追蹤戒菸日後6個月",
+          "geographic_scope": "英國基層醫療",
+          "population": "英國基層醫療697位成年吸菸者；漸減組342人、直接停止組355人；兩組均接受護理人員行為支持及尼古丁替代療法。",
+          "numerator": "漸減組53人；直接停止組78人。",
+          "denominator": "隨機分派分母：漸減組342人；直接停止組355人。",
+          "event_definition": "持續戒菸並經驗證（prolonged validated abstinence）",
+          "data_type": "隨機對照試驗；國際原始研究",
+          "limitations": "英國特定服務場域、成年樣本且兩組共同接受支持與NRT；原始研究以隨機分派人數為分母並將未追蹤者按吸菸處理；不能外推成台灣平均效果或個人成功機率。",
+          "source_ids": [
+            "tw02_pubmed_abrupt_gradual_trial_2016",
+            "tw02_ucl_abrupt_gradual_fulltext_2016"
+          ]
+        }
+      ],
+      "changes": "修正原作把一次停止寫成唯一正確方法的絕對說法；加入台灣臨床戒菸服務的個人化評估，並以英國隨機試驗作為有限背景，明確保留地區、受試者、共同介入與外推限制。 查讀原始全文Table 2補上分組分母、戒菸人數及CO驗證方式。",
+      "unresolved_questions": [
+        "尚未取得獨立成癮醫療、公共衛生或法律專業審閱；必要時請專業人員覆核個人醫療或法律疑義。",
+        "官方調查指標的原始分子與逐題有效分母未公開，本文不反推、不換算個人機率。",
+        "戒菸服務、掛號費、產品核准清單及電子煙修法進度可能更新，使用前以主管機關最新公告為準。"
+      ]
+    },
+    {
+      "id": "TW-02-005",
+      "title": "戒菸需要協助時：打0800-636-363或查合約服務機構",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "f20b9fc962c471779378f569c5baf3cff2d4c070",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "29c860293314d79debc506185b071ac21f005d6d62c06f122cb171b8b5e28925",
+      "prior_structured_draft": [
+        5,
+        "台灣戒菸服務用0800-636363與合約院所",
+        "需要戒菸協助可撥0800-636363，或查國健署戒菸服務院所。台灣不使用原作12320作為戒菸諮詢入口。",
+        "預約時說明吸菸量、起床後多久吸第一根、曾嘗試的方法、病史及用藥；回診討論困難與副作用，不只領藥後獨自撐著。",
+        "專線服務時段與院所提供項目可能調整，應查官方最新資訊。戒菸困難不代表缺乏意志力，可能需要多次嘗試與不同支持。",
+        "smoking",
+        "health",
+        "先查公費與補助資格；交通、回診時間及自付部分一起安排。"
+      ],
+      "prior_structured_draft_sha256": "9a86b810f821e0c8ebd8168462e83feda34c69f6b031ca34b7be2083647f7436",
+      "after_sha256": "b286eeaab408e9c7a505330059cb7fa30f223d0f7a1e529e657b08a82ea9507b",
+      "review_path": "localization/reviews/TW-02-005.json",
+      "source_ids": [
+        "tw02_hpa_cessation_resources_20261107",
+        "tw02_hpa_cessation_locator_20261107",
+        "tw02_hpa_cessation_treatment_20261107",
+        "tw02_hpa_cessation_fees_20261107"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_cessation_resources_20261107",
+          "title": "國民健康署：我想戒菸，有哪些戒菸資源？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4341",
+          "claim": "免費專線號碼、服務時間、可使用的諮詢及合約服務。",
+          "supporting_passage": "國健署列合約醫事機構（醫院、基層診所、社區藥局）的戒菸治療及衛教，以及免費戒菸專線0800-636-363、週一至週六09:00至21:00；專業支持可配合個人需要。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署官方戒菸資源頁，核對服務形式、電話及時段；正文不使用未核對的服務量或成功率。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_locator_20261107",
+          "title": "國民健康署委託戒菸治療與管理中心：合約服務機構查詢",
+          "url": "https://ttc.hpa.gov.tw/Web/Agency.aspx",
+          "claim": "國健署合約戒菸服務機構查詢入口。",
+          "supporting_passage": "國健署戒菸資源頁提供合約醫事機構查詢入口，可依縣市查找提供戒菸服務的院所或社區藥局；服務項目需向個別機構確認。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "由國健署官方戒菸資源頁連至合約機構查詢入口；本次引用為服務查找路徑，不使用未逐家核對的機構數。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_treatment_20261107",
+          "title": "國民健康署：二代戒菸服務常見問答",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1812&pid=10193&sid=990",
+          "claim": "治療及衛教資格與補助療程限制。",
+          "supporting_passage": "戒菸治療資格為18歲以上全民健保保險對象，尼古丁依賴度量表達4分以上或平均每日吸菸10支以上；有戒菸意願的全民健保吸菸者可接受戒菸衛教，包含孕婦、青少年及不適合用藥者；每年各有2個治療及衛教療程，每療程最長8週，同一院所或藥局90天內完成。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "核對國健署二代戒菸服務官方FAQ顯示的資格與療程條件；直接開啟頁面逾時，僅採用搜尋索引呈現的明確FAQ原文摘要，未推定其他資格。"
+        },
+        {
+          "source_id": "tw02_hpa_cessation_fees_20261107",
+          "title": "國民健康署：利用戒菸服務需要額外付費嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4337",
+          "claim": "服務可能有掛號費；藥物部分負擔免收。",
+          "supporting_passage": "國健署FAQ指出利用戒菸服務除各醫事機構所訂掛號費外，無需繳交其他費用；藥物部分負擔自2022-05-15起免收。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "核對國健署FAQ索引所呈現的費用說明與更新日期；直接開啟頁面逾時，因此正文仍提醒先向服務機構確認掛號費及其他非服務支出。"
+        }
+      ],
+      "taiwan_context": "台灣各縣市可透過電話、醫院、診所、衛生所或社區藥局取得戒菸支持；服務項目和掛號安排要依機構確認。",
+      "frequency_assessment": "本篇處理服務入口，不以戒菸專線來電數、服務人次或個案追蹤結果推算吸菸率或個人成功機率。專線服務時間及機構名單會更新，以國健署即時公告為準。",
+      "statistics_assessed": [],
+      "changes": "將原作境外戒菸電話替換為台灣國健署0800-636-363專線與合約機構查詢入口；保留服務時間、親友可詢問、治療資格與費用界線，避免硬編服務機構數量。",
+      "unresolved_questions": [
+        "尚未取得獨立成癮醫療、公共衛生或法律專業審閱；必要時請專業人員覆核個人醫療或法律疑義。",
+        "官方調查指標的原始分子與逐題有效分母未公開，本文不反推、不換算個人機率。",
+        "戒菸服務、掛號費、產品核准清單及電子煙修法進度可能更新，使用前以主管機關最新公告為準。"
+      ]
+    },
+    {
+      "id": "TW-02-006",
+      "title": "電子煙在台灣不能使用：戒菸請走合法服務",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "f20b9fc962c471779378f569c5baf3cff2d4c070",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "afd0140f5a26b47495c98586dbf8bcff6ad5a74b7fbaa1790187b8bc4aae5bb0",
+      "prior_structured_draft": [
+        6,
+        "電子煙在台灣屬違法類菸品；戒菸可找合法服務",
+        "《菸害防制法》第3、15及40條把電子煙納入類菸品管理，禁止製造、輸入、販賣、供應、展示、廣告及使用；違法使用可處新臺幣2,000至10,000元罰鍰。國健署114年調查中，過去30天曾使用電子煙的在學國中生為2.1%、高中職學生為5.1%。",
+        "自己或家人想戒菸，可打免費戒菸專線0800-636363，或找戒菸合約醫療院所討論適合的方式。把紙菸、電子煙、加熱菸及使用頻率說清楚，讓醫療人員安排合法治療。已持有電子煙者可查國健署公告的各地回收點；學生可找校護、衛生所或可信任的大人協助。",
+        "單純持有目前未列入《菸害防制法》第15條的獨立處罰行為，不得單獨處罰持有；衛福部提出的持有罰則修法仍須以立法、公布及施行日期為準。這不代表可購買、輸入、供應或使用。114年調查只涵蓋在學學生，不能代表所有青少年或成人。",
+        "tobaccoact tobaccoact_effective ecig_bill billstatus smoking youthsurvey youthsurvey_method",
+        "rule",
+        "免費諮詢先確認戒菸服務與回收方式，不購買網路或境外電子煙。"
+      ],
+      "prior_structured_draft_sha256": "04ea34d6586cd1b8695bf3c83dbd6008be7e48047f469b846003d9ae98bbd251",
+      "after_sha256": "59e841545d4b842b3251b6bd969c8139aec07c621753838c4a9295acf7158aab",
+      "review_path": "localization/reviews/TW-02-006.json",
+      "source_ids": [
+        "tw02_moj_tobacco_hazards_act_20261107",
+        "tw02_hpa_adult_survey_20261107",
+        "tw02_mohw_ecig_amendment_20261107",
+        "tw02_ly_ecig_amendment_20261107",
+        "tw02_hpa_ecig_return_20261107",
+        "tw02_hpa_youth_ecig_20261107",
+        "tw02_hpa_youth_method_20261107",
+        "tw02_hpa_htp_review_20261107"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_moj_tobacco_hazards_act_20261107",
+          "title": "全國法規資料庫：菸害防制法",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070021",
+          "claim": "類菸品定義、指定菸品審查、製造輸入販售供應展示廣告與使用禁令，以及使用罰鍰。",
+          "supporting_passage": "現行法第3條定義類菸品；第7條規定指定菸品製造或輸入前須通過健康風險評估；第15條禁止類菸品及其組合元件的製造、輸入、販賣、供應、展示、廣告及使用，也禁止未核定指定菸品的相關行為；第40條規定違法使用類菸品或未核定指定菸品處新臺幣2,000元至1萬元罰鍰；法規資料庫整編截止日為2026-10-30。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱法務部全國法規資料庫現行全文第3、7、15及40條，核對修正日期、罰則及資料庫整編截止日。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_survey_20261107",
+          "title": "國民健康署：國人吸菸行為調查結果（成人吸菸及家庭二手菸）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1718&pid=9913",
+          "claim": "菸害防制法修正施行日期2023-03-22及現行調查入口。",
+          "supporting_passage": "113年（2024）18歲以上成人標準化目前吸菸率12.8%、家庭二手菸暴露率35.6%；結果頁定義期間與分析對象，並記載菸害防制法於2023-03-22施行。成人吸菸率不等於戒菸成功率；家庭暴露率是成人受訪者指標，不是家庭比例。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接查閱國健署成人調查結果頁，核對113年數值、分析對象、標準化說明、家庭暴露定義及法規施行日。"
+        },
+        {
+          "source_id": "tw02_mohw_ecig_amendment_20261107",
+          "title": "衛生福利部：電子煙修法增訂持有罰則與回收資訊",
+          "url": "https://www.mohw.gov.tw/cp-7403-87793-1.html",
+          "claim": "持有相關修法仍為草案及衛福部回收方案資訊。",
+          "supporting_passage": "衛福部說明電子煙持有相關修法草案經行政院通過並送立法院審議，尚不能當成已公布施行的現行罰則；並提供已持有電子煙民眾自主回收資訊。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱衛福部官方公告搜尋索引與內容摘要，核對草案狀態及回收資訊；不把草案內容寫成現行法。"
+        },
+        {
+          "source_id": "tw02_ly_ecig_amendment_20261107",
+          "title": "立法院議事暨公報資訊網：菸害防制法修法議案進度",
+          "url": "https://ppg.ly.gov.tw/ppg/bills/202110162450000/details",
+          "claim": "立法院相關草案的審查、協商進度；議案頁並非公布施行證明。",
+          "supporting_passage": "立法院議案頁記錄菸害防制法部分條文修正草案於2026年7月審查完畢、7月30日協商會議；本頁是議案進度，不是法律公布或施行證明。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "直接開啟立法院議事暨公報資訊網議案頁並核對狀態欄與會議日期；與現行法規資料庫交叉確認。"
+        },
+        {
+          "source_id": "tw02_hpa_ecig_return_20261107",
+          "title": "國民健康署：全臺電子煙回收據點",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=5089",
+          "claim": "國健署即時電子煙回收點、投遞方式及動態期限。",
+          "supporting_passage": "國健署公告各縣市衛生局、衛生所等電子煙回收桶據點及投遞方式；回收點數量與期限可能隨公告更新，應依即時頁面確認。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署官方回收據點頁內容，使用動態縣市入口，不在正文固定回收點數量或期限。"
+        },
+        {
+          "source_id": "tw02_hpa_youth_ecig_20261107",
+          "title": "國民健康署：民國114年青少年吸菸行為調查結果",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1725&pid=9931&sid=18906",
+          "claim": "114年國中與高中職電子煙使用率及過去30天定義。",
+          "supporting_passage": "114年調查顯示在學國中生電子煙使用率2.1%、高中職生5.1%；目前使用定義為過去30天內有使用，官方頁說明調查年度及使用率。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署青少年調查結果頁，核對兩學段數值與過去30天事件定義；不將比率外推到未在學青少年或成人。"
+        },
+        {
+          "source_id": "tw02_hpa_youth_method_20261107",
+          "title": "國民健康署：青少年吸菸暨健康行為調查抽樣與有效樣本",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=1489",
+          "claim": "校園調查抽樣數、有效完訪數、完訪率及調查範圍。",
+          "supporting_passage": "114年調查抽取50,840名在學樣本，有效完訪44,594人、完訪率87.7%；國中樣本24,840、完成22,261，高中職樣本26,000、完成22,333。調查為校園樣本且存在未完訪與自陳限制。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署調查方法與樣本頁，核對抽樣、完訪數及完訪率；不從加權比率反推使用者原始人數。"
+        },
+        {
+          "source_id": "tw02_hpa_htp_review_20261107",
+          "title": "國民健康署：指定菸品健康風險評估審查情形",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=4783",
+          "claim": "加熱菸依指定菸品審查清單按品項確認，不一概視為同一法律狀態。",
+          "supporting_passage": "國健署維護指定菸品健康風險評估的申請及審查清單；截至2026-10-27的頁面資料可查各品項狀態。加熱菸屬指定菸品分類，不能概括說所有加熱菸一律違法或一律核准。",
+          "accessed_at": "2026-11-07",
+          "retrieval_method": "查閱國健署指定菸品審查專區及頁面標示統計日期；正文只說明依品項查核，不抄錄可能變動的品牌清單。"
+        }
+      ],
+      "taiwan_context": "台灣電子煙可能經網路、社群、同儕或旅客攜入接觸；加熱菸另有指定菸品健康風險評估制度，不能混為一談。",
+      "frequency_assessment": "國健署114年（2025）調查中，過去30天使用電子煙的在學國中生為2.1%、高中職生為5.1%。抽樣50,840名、有效完訪44,594名、完訪率87.7%；比率為全國在學學生抽樣調查結果，公開摘要沒有使用者原始分子和逐題未加權有效分母，不能代表未在學青少年、成年人或個人終身風險。",
+      "statistics_assessed": [
+        {
+          "topic": "在學學生過去30天電子煙使用率",
+          "value": "國中2.1%；高中職5.1%",
+          "period": "民國114年（2025）",
+          "geographic_scope": "台灣全國在學國中及高中職學生抽樣",
+          "population": "抽樣50,840名學生，有效完訪44,594名，完訪率87.7%；國中完成22,261名、高中職完成22,333名",
+          "numerator": "官方公開摘要未提供各組原始使用人數；調查比率經加權估計，不自行反推分子",
+          "denominator": "樣本完成數為國中22,261、高中職22,333；比率使用調查權重及各題有效樣本，官方摘要未提供逐題未加權有效分母",
+          "event_definition": "過去30天內曾使用電子煙；目前使用率／盛行率",
+          "data_type": "全國代表性校園抽樣、自陳問卷與加權估計",
+          "limitations": "不含未在學青少年與成年人；自陳及未完訪可能造成偏差；使用率不是個人終身機率。",
+          "source_ids": [
+            "tw02_hpa_youth_ecig_20261107",
+            "tw02_hpa_youth_method_20261107"
+          ]
+        }
+      ],
+      "changes": "依現行《菸害防制法》第3、7、15、40條分清電子煙類菸品的禁制與使用罰則、單純持有和待審修法，以及加熱菸指定品項審查；核對青年調查定義、方法、服務與回收入口，沒有將修法草案寫成現行法。",
+      "unresolved_questions": [
+        "尚未取得獨立成癮醫療、公共衛生或法律專業審閱；必要時請專業人員覆核個人醫療或法律疑義。",
+        "官方調查指標的原始分子與逐題有效分母未公開，本文不反推、不換算個人機率。",
+        "戒菸服務、掛號費、產品核准清單及電子煙修法進度可能更新，使用前以主管機關最新公告為準。"
+      ]
+    }
+  ],
+  "new_source_ids": [
+    "tw02_hpa_adult_definitions_20261107",
+    "tw02_hpa_adult_sample_20261107",
+    "tw02_hpa_adult_survey_20261107",
+    "tw02_hpa_cessation_fees_20261107",
+    "tw02_hpa_cessation_guideline_20261107",
+    "tw02_hpa_cessation_locator_20261107",
+    "tw02_hpa_cessation_resources_20261107",
+    "tw02_hpa_cessation_treatment_20261107",
+    "tw02_hpa_ecig_return_20261107",
+    "tw02_hpa_htp_review_20261107",
+    "tw02_hpa_secondhand_ventilation_20261107",
+    "tw02_hpa_youth_ecig_20261107",
+    "tw02_hpa_youth_method_20261107",
+    "tw02_ly_ecig_amendment_20261107",
+    "tw02_mohw_ecig_amendment_20261107",
+    "tw02_moj_tobacco_hazards_act_20261107",
+    "tw02_pubmed_abrupt_gradual_trial_2016",
+    "tw02_ucl_abrupt_gradual_fulltext_2016"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "醫療與成癮治療",
+      "公共衛生與流行病學",
+      "菸害防制法"
+    ]
+  },
+  "evidence_limits": [
+    "六篇均為AI輔助來源查核，正式專業審閱仍待取得。",
+    "成人與青少年官方統計公開標準化比率但未列原始分子或指標逐題有效分母；不自行反推。",
+    "外國戒菸隨機試驗僅作研究情境說明，不當作台灣效果估計。"
+  ],
+  "counts_after": {
+    "core_reviewed": 288,
+    "runtime_items": 299,
+    "runtime_sources": 1164,
+    "source_registry": 1247,
+    "json_files_checked": 577,
+    "substantive_rechecks": 376
+  }
+}

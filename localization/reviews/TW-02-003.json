@@ -1,0 +1,64 @@
+{
+  "id": "TW-02-003",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-07",
+  "review_due_at": "2027-02-07",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-003.md",
+  "target_sha256": "6c6c4ac7d6abd881fcde8bfb2d8a0a08a6c0f6aba964ed7a913d55b0c29a7ecc",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_cessation_resources_20261107",
+      "title": "國民健康署：我想戒菸，有哪些戒菸資源？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4341",
+      "claim": "合約院所、診所、社區藥局與免費戒菸諮詢。",
+      "supporting_passage": "國健署列合約醫事機構（醫院、基層診所、社區藥局）的戒菸治療及衛教，以及免費戒菸專線0800-636-363、週一至週六09:00至21:00；專業支持可配合個人需要。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "直接查閱國健署官方戒菸資源頁，核對服務形式、電話及時段；正文不使用未核對的服務量或成功率。"
+    },
+    {
+      "source_id": "tw02_hpa_cessation_treatment_20261107",
+      "title": "國民健康署：二代戒菸服務常見問答",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1812&pid=10193&sid=990",
+      "claim": "藥物治療年齡、健保身分、依賴度／每日吸菸量及戒菸衛教資格、療程條件。",
+      "supporting_passage": "戒菸治療資格為18歲以上全民健保保險對象，尼古丁依賴度量表達4分以上或平均每日吸菸10支以上；有戒菸意願的全民健保吸菸者可接受戒菸衛教，包含孕婦、青少年及不適合用藥者；每年各有2個治療及衛教療程，每療程最長8週，同一院所或藥局90天內完成。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "核對國健署二代戒菸服務官方FAQ顯示的資格與療程條件；直接開啟頁面逾時，僅採用搜尋索引呈現的明確FAQ原文摘要，未推定其他資格。"
+    },
+    {
+      "source_id": "tw02_hpa_cessation_fees_20261107",
+      "title": "國民健康署：利用戒菸服務需要額外付費嗎？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=808&pid=4337",
+      "claim": "掛號費可能自付，戒菸藥物部分負擔免收及服務費界線。",
+      "supporting_passage": "國健署FAQ指出利用戒菸服務除各醫事機構所訂掛號費外，無需繳交其他費用；藥物部分負擔自2022-05-15起免收。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "核對國健署FAQ索引所呈現的費用說明與更新日期；直接開啟頁面逾時，因此正文仍提醒先向服務機構確認掛號費及其他非服務支出。"
+    },
+    {
+      "source_id": "tw02_hpa_cessation_guideline_20261107",
+      "title": "國民健康署：臺灣臨床戒菸服務指引簡要版",
+      "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22630.pdf",
+      "claim": "臨床人員依個人狀況評估諮詢和藥物治療。",
+      "supporting_passage": "國健署指引採個別化諮詢及評估、支持性介入與戒菸藥物治療，並強調服務人員依個人狀況判斷；指引供臨床參考，不取代臨床判斷。",
+      "accessed_at": "2026-11-07",
+      "retrieval_method": "查閱國健署指引摘要及條目，核對個別化諮詢、支持與治療方向；不將指引寫成個別處方或保證成功。"
+    }
+  ],
+  "localization_changes": "依國健署現行台灣服務資格說明18歲以上健保對象與尼古丁依賴門檻，補上孕婦、青少年及不適合用藥者可使用戒菸衛教服務；說清楚藥物部分負擔與掛號費不同。",
+  "review_method": "逐條重讀原作主題、現有結構化草稿和來源。查核台灣生活情境、現行法規／服務、可執行步驟、資格費用及來源是否支持具體主張。對適用統計記錄期間、範圍、對象、分子、分母、事件定義、資料型態及限制；未公開的原始分子或逐題分母不反推，海外研究不改寫成台灣個人機率。本次為AI輔助來源查核，未取得獨立醫療、公共衛生、統計或法律專業審閱。",
+  "limits": [
+    "戒菸藥物是否適合、種類、療程與注意事項須由醫師或藥師依個別情況評估；法定服務資格、藥品給付和掛號費可能變動，預約前應向合約機構確認。此篇不是個別處方。",
+    "本次未取得獨立醫療、公共衛生、成癮治療、統計或法律專業審閱；個人治療與法律疑義應由適當專業人員依個案判斷。"
+  ],
+  "source_reviewed_sha256": "6c6c4ac7d6abd881fcde8bfb2d8a0a08a6c0f6aba964ed7a913d55b0c29a7ecc",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "32de9d45a688bd4859d9031f9bda07fdcdeb69c3d4d38f6b57d3c98c898d3b94",
+  "source_ids": [
+    "tw02_hpa_cessation_resources_20261107",
+    "tw02_hpa_cessation_treatment_20261107",
+    "tw02_hpa_cessation_fees_20261107",
+    "tw02_hpa_cessation_guideline_20261107"
+  ],
+  "statistics_assessed": [],
+  "prior_structured_draft_sha256": "1c47ca6189f05a1bf5cfd986d143be83b783b71eae9fd51f26ca89df31164513"
+}

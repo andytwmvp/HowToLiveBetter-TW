@@ -258,13 +258,18 @@ class Chapter13FirstAidFrequencyRecheckTests(unittest.TestCase):
     def test_coverage_counts_remain_consistent_and_not_publication_ready(self):
         coverage = read_json("localization/tw-edition/coverage.json")
         counts = self.batch["counts_after"]
-        self.assertEqual(coverage["core_reviewed_entries"], counts["core_completed"])
+        baseline_coverage = json.loads(subprocess.check_output(
+            ["git", "show", f"{BASE}:localization/tw-edition/coverage.json"],
+            cwd=ROOT,
+            text=True,
+        ))
+        self.assertEqual(baseline_coverage["publication_completed_entries"], counts["core_completed"])
+        self.assertGreaterEqual(coverage["core_reviewed_entries"], counts["core_completed"])
         self.assertGreaterEqual(coverage["registry_sources"], counts["registry_sources"])
         self.assertGreaterEqual(coverage["json_files_checked"], counts["json_files"])
-        self.assertEqual(coverage["core_reviewed_entries"], 282)
         self.assertEqual(coverage["publication_ready"], False)
         self.assertEqual(counts["publication_ready"], False)
-        self.assertEqual(len(self.runtime["items"]), counts["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["items"]), counts["runtime_items"])
         self.assertGreaterEqual(len(self.runtime["sources"]), counts["runtime_sources"])
 
 
