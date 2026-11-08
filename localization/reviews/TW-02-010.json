@@ -1,0 +1,79 @@
+{
+  "id": "TW-02-010",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-010.md",
+  "target_sha256": "ff68b4962050709ac8b9a79e10a39ede54b7ce9769a1f4fbf21051b09a3c6506",
+  "source_checks": [
+    {
+      "source_id": "tw02_mohw_oral_care_20261109",
+      "title": "衛福部口腔健康司：牙周病預防與日常口腔清潔",
+      "url": "https://dep.mohw.gov.tw/DOOH/cp-6545-72339-124.html",
+      "claim": "建議餐後及睡前刷牙，每次至少2分鐘，使用含氟量至少1,000 ppm牙膏；滿12歲民眾健保給付每6個月洗牙一次。",
+      "supporting_passage": "建議餐後及睡前刷牙，每次至少2分鐘，使用含氟量至少1,000 ppm牙膏；滿12歲民眾健保給付每6個月洗牙一次。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_nhi_dental_scaling_20261109",
+      "title": "健保署：孕期及特定族群口腔照護服務",
+      "url": "https://www.nhi.gov.tw/ch/cp-1649-f6465-3255-1.html",
+      "claim": "特定懷孕、疾病或風險族群可能適用不同口腔照護或洗牙服務；須由牙醫師和健保規定判定實際資格。",
+      "supporting_passage": "特定懷孕、疾病或風險族群可能適用不同口腔照護或洗牙服務；須由牙醫師和健保規定判定實際資格。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_nhi_periodontal_services_20261109",
+      "title": "健保署：健保給付牙周病治療與自費項目說明",
+      "url": "https://www.nhi.gov.tw/ch/cp-6968-7f6d8-3255-1.html",
+      "claim": "健保給付範圍內牙周病治療不得另向民眾收費；部分非給付治療或材料可能涉及自費。",
+      "supporting_passage": "健保給付範圍內牙周病治療不得另向民眾收費；部分非給付治療或材料可能涉及自費。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_tph_dental_emergency_20261109",
+      "title": "衛福部臺北醫院：牙科感染與急症警訊",
+      "url": "https://www.tph.mohw.gov.tw/?aid=801&iid=1035&page_name=detail&pid=20",
+      "claim": "牙科感染若合併臉部腫脹、發燒、張口困難或吞嚥／呼吸問題，需儘速醫療評估；呼吸困難屬急症。",
+      "supporting_passage": "牙科感染若合併臉部腫脹、發燒、張口困難或吞嚥／呼吸問題，需儘速醫療評估；呼吸困難屬急症。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    }
+  ],
+  "localization_changes": "補上含氟牙膏、刷牙時間、牙縫與假牙植牙清潔、台灣健保洗牙與特定族群服務、自費前詢問和牙科感染急症分流；不推算個人疾病機率。",
+  "review_method": "重讀原作固定ID、台灣結構化草稿和引用主張，查核台灣情境、行動步驟、費用及服務入口；對統計核對期間、範圍、對象、事件定義、分子分母、資料型態與限制。未找到可信、同口徑台灣資料時明確保留資料不足，不自行推估。AI查核不等同正式專業審閱。",
+  "limits": [
+    "沒有可轉成個人機率的全國牙科疾病或牙科急診資料；疾病、年齡和就醫資料口徑不能互換。",
+    "健保資格、特殊服務、自費項目與急診量能依現行規定及地方院所確認。"
+  ],
+  "source_reviewed_sha256": "ff68b4962050709ac8b9a79e10a39ede54b7ce9769a1f4fbf21051b09a3c6506",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "bcc36c202b46ffc976a771f5ef560d0d21690c4a9dccbb595ba837b78eeaa1f1",
+  "source_ids": [
+    "tw02_mohw_oral_care_20261109",
+    "tw02_nhi_dental_scaling_20261109",
+    "tw02_nhi_periodontal_services_20261109",
+    "tw02_tph_dental_emergency_20261109"
+  ],
+  "statistics_assessed": [],
+  "frequency_assessment": "未找到可用同一事件定義和分母代表台灣居民牙科疾病或牙科急診個人機率的近期全國資料。牙周病、蛀牙、牙痛和感染急診是不同事件；不拿舊盛行率、單院急診數或健保服務量互相替代。",
+  "unresolved_questions": [
+    "需由牙科專業人員確認一般清潔頻率、特殊族群給付及急症分流。",
+    "地方牙科急診服務時間與量能會變動。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "牙周病與一般牙科",
+      "牙科急診"
+    ]
+  },
+  "prior_chapter_draft_sha256": "224ee4ecf047ce6a16b46f6a5643e2726da62bfdfd5787db9c11a99883625e16",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}

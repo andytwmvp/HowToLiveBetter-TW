@@ -1,0 +1,86 @@
+{
+  "id": "TW-02-007",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-007.md",
+  "target_sha256": "e528e6c9e727bc8d5c8779c354168f8a921fb4f47104582ae2510abc3eba2be8",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_nutrition_survey_20261109",
+      "title": "國健署：國民營養健康調查與年度報告",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=3998",
+      "claim": "國健署定期辦理全國營養健康調查，公開頁面提供不同調查年度和資料報告；跨年度比較須核對調查期程、抽樣對象和指標定義。",
+      "supporting_passage": "國健署定期辦理全國營養健康調查，公開頁面提供不同調查年度和資料報告；跨年度比較須核對調查期程、抽樣對象和指標定義。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_hpa_sugar_drink_guidance_20261109",
+      "title": "國健署：成人肥胖防治實證指引",
+      "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22062.pdf",
+      "claim": "指引支持降低含糖飲料攝取；飲用水或無糖飲品可作替代，含非糖甜味劑飲料不是減重保證。",
+      "supporting_passage": "指引支持降低含糖飲料攝取；飲用水或無糖飲品可作替代，含非糖甜味劑飲料不是減重保證。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_hpa_sugar_prevalence_2013_2016_20261109",
+      "title": "國健署：成人肥胖防治指引所引含糖飲料調查",
+      "url": "https://health99.hpa.gov.tw/media/public/pdf/22070.pdf",
+      "claim": "2013至2016年19至44歲民眾自陳每週至少喝一次含糖飲料者為83.6%；公開摘要未列原始分子和未加權分母。",
+      "supporting_passage": "2013至2016年19至44歲民眾自陳每週至少喝一次含糖飲料者為83.6%；公開摘要未列原始分子和未加權分母。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    }
+  ],
+  "localization_changes": "移除原作將含糖飲料和觀察性死亡風險直接連結、並把無糖代糖飲料概括判為無效的結論；改為降低頻率與份量、看標示、選水或無糖飲品，並將舊調查限縮為歷史背景。",
+  "review_method": "重讀原作固定ID、台灣結構化草稿和引用主張，查核台灣情境、行動步驟、費用及服務入口；對統計核對期間、範圍、對象、事件定義、分子分母、資料型態與限制。未找到可信、同口徑台灣資料時明確保留資料不足，不自行推估。AI查核不等同正式專業審閱。",
+  "limits": [
+    "83.6%來自2013至2016年19至44歲自陳調查；公開摘要未列分子與未加權分母，不代表現況或個人健康機率。",
+    "一般飲食指引不取代糖尿病、腎臟病或其他疾病的個別飲食建議。"
+  ],
+  "source_reviewed_sha256": "e528e6c9e727bc8d5c8779c354168f8a921fb4f47104582ae2510abc3eba2be8",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "f92c662b077389e6a9d6a8f6e799f6917c5a2c53ae6cf293ce36271ff76f427e",
+  "source_ids": [
+    "tw02_hpa_nutrition_survey_20261109",
+    "tw02_hpa_sugar_drink_guidance_20261109",
+    "tw02_hpa_sugar_prevalence_2013_2016_20261109"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "19至44歲每週至少一次含糖飲料（歷史調查）",
+      "value": "83.6%",
+      "unit": "自陳每週至少飲用一次的比例",
+      "period": "2013至2016年國民營養健康調查",
+      "geographic_scope": "台灣全國調查",
+      "population": "19至44歲民眾",
+      "numerator": "公開摘要未列原始人數",
+      "denominator": "公開摘要未列未加權樣本數",
+      "event_definition": "自陳每週至少一次飲用含糖飲料",
+      "data_type": "全國營養健康調查自陳頻率統計",
+      "limitations": "調查年代久且摘要未列分子、未加權分母或信賴區間，不能代表2026年飲用狀況或個人健康風險。",
+      "source_ids": [
+        "tw02_hpa_sugar_prevalence_2013_2016_20261109"
+      ]
+    }
+  ],
+  "frequency_assessment": "國健署可查到較早期全國調查：2013至2016年19至44歲民眾自陳每週至少飲用一次含糖飲料者為83.6%。原始分子和未加權分母未見於公開摘要，且資料年代久，不能稱為目前盛行率或個人罹病機率；未找到可按相同年齡、飲料種類和頻率口徑代表2026年全台的更新數字。",
+  "unresolved_questions": [
+    "需持續查看國健署是否發布口徑、分母完整且可比較的含糖飲料頻率資料。",
+    "未取得營養或代謝專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "公共衛生與流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "c2ef0059dd98184eb06c49ffdc5e3935575842a20a8c4e82ec34739bba177a67",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}

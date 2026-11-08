@@ -1,0 +1,98 @@
+{
+  "id": "TW-02-012",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-012.md",
+  "target_sha256": "402291101f32a8961d2b192a1cc1d9c1e5be1535669b4b3c34fcdc089a128975",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_adult_checkup_20261109",
+      "title": "國健署：成人預防保健服務資格與檢查內容",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=189",
+      "claim": "服務間隔依年齡及特定族群：30至未滿40歲每5年一次、40至未滿65歲每3年一次、65歲以上每年一次；例行篩檢不能替代異常後追蹤。",
+      "supporting_passage": "服務間隔依年齡及特定族群：30至未滿40歲每5年一次、40至未滿65歲每3年一次、65歲以上每年一次；例行篩檢不能替代異常後追蹤。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_hpa_lipid_checkup_stats_20261109",
+      "title": "國健署：2025年成人預防保健參與者血脂資料",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20399",
+      "claim": "2025年約35.5萬名30至39歲成人預防保健服務使用者中近2成檢查出血脂異常；此為服務參與者資料，未列精確異常人數。",
+      "supporting_passage": "2025年約35.5萬名30至39歲成人預防保健服務使用者中近2成檢查出血脂異常；此為服務參與者資料，未列精確異常人數。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_taiwan_lipid_consensus_2025",
+      "title": "台灣血脂與動脈粥樣硬化學會等：2025年血脂異常照護指引",
+      "url": "https://www.tsim.org.tw/ehc-tsim/s/viewFile?documentId=cfbd43c6ce2945d3bbab029c1607ddbd",
+      "claim": "2025年台灣臨床指引依心血管風險訂定LDL-C目標；開始statin後約6至8週檢查，劑量調整後依個案約1至3個月複驗。",
+      "supporting_passage": "2025年台灣臨床指引依心血管風險訂定LDL-C目標；開始statin後約6至8週檢查，劑量調整後依個案約1至3個月複驗。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_mohw_lipid_coverage_20260901",
+      "title": "衛福部：2026年降血脂藥物健保給付調整",
+      "url": "https://mohw.gov.tw/cp-7402-87716-1.html",
+      "claim": "部分statin、ezetimibe及複方降血脂藥物健保給付條件自2026年9月1日起調整，依當時規定和臨床風險辦理。",
+      "supporting_passage": "部分statin、ezetimibe及複方降血脂藥物健保給付條件自2026年9月1日起調整，依當時規定和臨床風險辦理。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    }
+  ],
+  "localization_changes": "移除原作40歲起每年檢查的固定規則，改用台灣成人預防保健資格，區分例行篩檢和治療追蹤，加入服務參與者血脂資料、風險分層、2026年健保給付變動與不可自行停藥提醒。",
+  "review_method": "重讀原作固定ID、台灣結構化草稿和引用主張，查核台灣情境、行動步驟、費用及服務入口；對統計核對期間、範圍、對象、事件定義、分子分母、資料型態與限制。未找到可信、同口徑台灣資料時明確保留資料不足，不自行推估。AI查核不等同正式專業審閱。",
+  "limits": [
+    "近2成異常比例來自2025年約35.5萬名30至39歲成人預防保健服務使用者，公告未列精確病例數或異常閾值，不能推廣至全體同齡人口。",
+    "給付和治療目標需依個人風險及當時規定解讀。"
+  ],
+  "source_reviewed_sha256": "402291101f32a8961d2b192a1cc1d9c1e5be1535669b4b3c34fcdc089a128975",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "1d3a36395ca9698e32f7e30855c0af4c401e9090a58714457833fcd2e598388e",
+  "source_ids": [
+    "tw02_hpa_adult_checkup_20261109",
+    "tw02_hpa_lipid_checkup_stats_20261109",
+    "tw02_taiwan_lipid_consensus_2025",
+    "tw02_mohw_lipid_coverage_20260901"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "30至39歲成人預防保健服務參與者血脂異常",
+      "value": "近2成",
+      "unit": "檢查參與者中的公告近似比例",
+      "period": "2025年",
+      "geographic_scope": "台灣全國成人預防保健服務行政資料",
+      "population": "約35.5萬名30至39歲成健服務使用者",
+      "numerator": "公告未提供精確血脂異常人數",
+      "denominator": "約35.5萬名服務使用者，該指標精確有效分母未公布",
+      "event_definition": "成人預防保健檢查結果被歸類為血脂異常",
+      "data_type": "公費成人預防保健服務行政資料摘要",
+      "limitations": "服務使用者不是同齡全人口；公告未列精確病例數、異常切點或信賴區間。",
+      "source_ids": [
+        "tw02_hpa_lipid_checkup_stats_20261109"
+      ]
+    }
+  ],
+  "frequency_assessment": "國健署2025年成人預防保健行政資料中，約35.5萬名30至39歲服務使用者近2成血脂檢查異常；公告未提供精確病例數或異常切點，不能當成同齡全人口盛行率或個人心血管事件機率。",
+  "unresolved_questions": [
+    "需由心臟內科、家醫科、新陳代謝科或藥事專業人員複核追蹤時程及給付條件。",
+    "健保給付和成健資格可能更新，需依最新公告再核對。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "心臟內科",
+      "家庭醫學",
+      "新陳代謝與內分泌科",
+      "臨床藥學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "136deb73b9a97c264724d729016eb389f95e078377be1230e8631a09989b87d2",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}

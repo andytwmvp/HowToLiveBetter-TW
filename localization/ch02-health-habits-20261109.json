@@ -1,0 +1,476 @@
+{
+  "schema_version": 1,
+  "batch": "第2章飲食、口腔保健、身體活動、血脂與睡眠五篇台灣版首次正式發布",
+  "baseline_main_sha": "5571669a51ac5d3999b0249c584a905cb631ee07",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "counts_before": {
+    "core_reviewed": 292,
+    "runtime_items": 303,
+    "runtime_sources": 1186,
+    "source_registry": 1269,
+    "json_files_checked": 585,
+    "substantive_rechecks": 379
+  },
+  "items": [
+    {
+      "id": "TW-02-007",
+      "title": "含糖飲料先減頻率與份量：白開水或無糖飲品都能替代",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "5571669a51ac5d3999b0249c584a905cb631ee07",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "f92c662b077389e6a9d6a8f6e799f6917c5a2c53ae6cf293ce36271ff76f427e",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": null,
+      "prior_chapter_draft_sha256": "c2ef0059dd98184eb06c49ffdc5e3935575842a20a8c4e82ec34739bba177a67",
+      "before_sha256": null,
+      "after_sha256": "e528e6c9e727bc8d5c8779c354168f8a921fb4f47104582ae2510abc3eba2be8",
+      "review_path": "localization/reviews/TW-02-007.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-007.md",
+      "source_ids": [
+        "tw02_hpa_nutrition_survey_20261109",
+        "tw02_hpa_sugar_drink_guidance_20261109",
+        "tw02_hpa_sugar_prevalence_2013_2016_20261109"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_nutrition_survey_20261109",
+          "title": "國健署：國民營養健康調查與年度報告",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=3998",
+          "claim": "國健署定期辦理全國營養健康調查，公開頁面提供不同調查年度和資料報告；跨年度比較須核對調查期程、抽樣對象和指標定義。",
+          "supporting_passage": "國健署定期辦理全國營養健康調查，公開頁面提供不同調查年度和資料報告；跨年度比較須核對調查期程、抽樣對象和指標定義。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_hpa_sugar_drink_guidance_20261109",
+          "title": "國健署：成人肥胖防治實證指引",
+          "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22062.pdf",
+          "claim": "指引支持降低含糖飲料攝取；飲用水或無糖飲品可作替代，含非糖甜味劑飲料不是減重保證。",
+          "supporting_passage": "指引支持降低含糖飲料攝取；飲用水或無糖飲品可作替代，含非糖甜味劑飲料不是減重保證。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_hpa_sugar_prevalence_2013_2016_20261109",
+          "title": "國健署：成人肥胖防治指引所引含糖飲料調查",
+          "url": "https://health99.hpa.gov.tw/media/public/pdf/22070.pdf",
+          "claim": "2013至2016年19至44歲民眾自陳每週至少喝一次含糖飲料者為83.6%；公開摘要未列原始分子和未加權分母。",
+          "supporting_passage": "2013至2016年19至44歲民眾自陳每週至少喝一次含糖飲料者為83.6%；公開摘要未列原始分子和未加權分母。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        }
+      ],
+      "taiwan_context": "納入台灣常見手搖飲、瓶裝茶、汽水、超商咖啡和外送飲料，以調整購買頻率、份量和配料等低成本做法取代單一禁止式建議。",
+      "frequency_assessment": "國健署可查到較早期全國調查：2013至2016年19至44歲民眾自陳每週至少飲用一次含糖飲料者為83.6%。原始分子和未加權分母未見於公開摘要，且資料年代久，不能稱為目前盛行率或個人罹病機率；未找到可按相同年齡、飲料種類和頻率口徑代表2026年全台的更新數字。",
+      "statistics_assessed": [
+        {
+          "topic": "19至44歲每週至少一次含糖飲料（歷史調查）",
+          "value": "83.6%",
+          "unit": "自陳每週至少飲用一次的比例",
+          "period": "2013至2016年國民營養健康調查",
+          "geographic_scope": "台灣全國調查",
+          "population": "19至44歲民眾",
+          "numerator": "公開摘要未列原始人數",
+          "denominator": "公開摘要未列未加權樣本數",
+          "event_definition": "自陳每週至少一次飲用含糖飲料",
+          "data_type": "全國營養健康調查自陳頻率統計",
+          "limitations": "調查年代久且摘要未列分子、未加權分母或信賴區間，不能代表2026年飲用狀況或個人健康風險。",
+          "source_ids": [
+            "tw02_hpa_sugar_prevalence_2013_2016_20261109"
+          ]
+        }
+      ],
+      "changes": "移除原作將含糖飲料和觀察性死亡風險直接連結、並把無糖代糖飲料概括判為無效的結論；改為降低頻率與份量、看標示、選水或無糖飲品，並將舊調查限縮為歷史背景。",
+      "limits": [
+        "83.6%來自2013至2016年19至44歲自陳調查；公開摘要未列分子與未加權分母，不代表現況或個人健康機率。",
+        "一般飲食指引不取代糖尿病、腎臟病或其他疾病的個別飲食建議。"
+      ],
+      "unresolved_questions": [
+        "需持續查看國健署是否發布口徑、分母完整且可比較的含糖飲料頻率資料。",
+        "未取得營養或代謝專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "公共衛生與流行病學"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-010",
+      "title": "每天刷牙兩次、清潔牙縫：牙痛腫脹要盡快就醫",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "5571669a51ac5d3999b0249c584a905cb631ee07",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "bcc36c202b46ffc976a771f5ef560d0d21690c4a9dccbb595ba837b78eeaa1f1",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": null,
+      "prior_chapter_draft_sha256": "224ee4ecf047ce6a16b46f6a5643e2726da62bfdfd5787db9c11a99883625e16",
+      "before_sha256": null,
+      "after_sha256": "ff68b4962050709ac8b9a79e10a39ede54b7ce9769a1f4fbf21051b09a3c6506",
+      "review_path": "localization/reviews/TW-02-010.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-010.md",
+      "source_ids": [
+        "tw02_mohw_oral_care_20261109",
+        "tw02_nhi_dental_scaling_20261109",
+        "tw02_nhi_periodontal_services_20261109",
+        "tw02_tph_dental_emergency_20261109"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_mohw_oral_care_20261109",
+          "title": "衛福部口腔健康司：牙周病預防與日常口腔清潔",
+          "url": "https://dep.mohw.gov.tw/DOOH/cp-6545-72339-124.html",
+          "claim": "建議餐後及睡前刷牙，每次至少2分鐘，使用含氟量至少1,000 ppm牙膏；滿12歲民眾健保給付每6個月洗牙一次。",
+          "supporting_passage": "建議餐後及睡前刷牙，每次至少2分鐘，使用含氟量至少1,000 ppm牙膏；滿12歲民眾健保給付每6個月洗牙一次。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_nhi_dental_scaling_20261109",
+          "title": "健保署：孕期及特定族群口腔照護服務",
+          "url": "https://www.nhi.gov.tw/ch/cp-1649-f6465-3255-1.html",
+          "claim": "特定懷孕、疾病或風險族群可能適用不同口腔照護或洗牙服務；須由牙醫師和健保規定判定實際資格。",
+          "supporting_passage": "特定懷孕、疾病或風險族群可能適用不同口腔照護或洗牙服務；須由牙醫師和健保規定判定實際資格。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_nhi_periodontal_services_20261109",
+          "title": "健保署：健保給付牙周病治療與自費項目說明",
+          "url": "https://www.nhi.gov.tw/ch/cp-6968-7f6d8-3255-1.html",
+          "claim": "健保給付範圍內牙周病治療不得另向民眾收費；部分非給付治療或材料可能涉及自費。",
+          "supporting_passage": "健保給付範圍內牙周病治療不得另向民眾收費；部分非給付治療或材料可能涉及自費。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_tph_dental_emergency_20261109",
+          "title": "衛福部臺北醫院：牙科感染與急症警訊",
+          "url": "https://www.tph.mohw.gov.tw/?aid=801&iid=1035&page_name=detail&pid=20",
+          "claim": "牙科感染若合併臉部腫脹、發燒、張口困難或吞嚥／呼吸問題，需儘速醫療評估；呼吸困難屬急症。",
+          "supporting_passage": "牙科感染若合併臉部腫脹、發燒、張口困難或吞嚥／呼吸問題，需儘速醫療評估；呼吸困難屬急症。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        }
+      ],
+      "taiwan_context": "納入健保洗牙與台灣牙科院所、自費項目詢價、牙科急症分流，以及兒童、高齡、假牙植牙和慢性病照護情境。",
+      "frequency_assessment": "未找到可用同一事件定義和分母代表台灣居民牙科疾病或牙科急診個人機率的近期全國資料。牙周病、蛀牙、牙痛和感染急診是不同事件；不拿舊盛行率、單院急診數或健保服務量互相替代。",
+      "statistics_assessed": [],
+      "changes": "補上含氟牙膏、刷牙時間、牙縫與假牙植牙清潔、台灣健保洗牙與特定族群服務、自費前詢問和牙科感染急症分流；不推算個人疾病機率。",
+      "limits": [
+        "沒有可轉成個人機率的全國牙科疾病或牙科急診資料；疾病、年齡和就醫資料口徑不能互換。",
+        "健保資格、特殊服務、自費項目與急診量能依現行規定及地方院所確認。"
+      ],
+      "unresolved_questions": [
+        "需由牙科專業人員確認一般清潔頻率、特殊族群給付及急症分流。",
+        "地方牙科急診服務時間與量能會變動。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "牙周病與一般牙科",
+          "牙科急診"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-011",
+      "title": "活動量逐步累積：以每週150分鐘中等強度為起點",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "5571669a51ac5d3999b0249c584a905cb631ee07",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "3a8bf0937ee5c8eed79865481240316569d1291a990615113060c944613ae527",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": null,
+      "prior_chapter_draft_sha256": "4b8d12e575954d086a2f207648589ec6663e25a07ed41b44c0ba8ea3963182da",
+      "before_sha256": null,
+      "after_sha256": "f540a85c69fcc32ea32a64739d92594c6001b3cc2e7529ef933a6463cda5a8cd",
+      "review_path": "localization/reviews/TW-02-011.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-011.md",
+      "source_ids": [
+        "tw02_hpa_activity_guideline_20261109",
+        "tw02_hpa_commute_activity_20261109",
+        "tw02_sports_survey_2025_20261109"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_activity_guideline_20261109",
+          "title": "國健署：全民身體活動指引",
+          "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1411",
+          "claim": "國健署指引依成人、長者、慢性病、身心障礙及孕期等族群提供身體活動建議；個別限制須調整。",
+          "supporting_passage": "國健署指引依成人、長者、慢性病、身心障礙及孕期等族群提供身體活動建議；個別限制須調整。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_hpa_commute_activity_20261109",
+          "title": "國健署：通勤走路是否足以取代額外運動",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19968",
+          "claim": "通勤步行量及強度不同，需以活動時間與中等強度判斷；步數多不等於已達身體活動建議。",
+          "supporting_passage": "通勤步行量及強度不同，需以活動時間與中等強度判斷；步數多不等於已達身體活動建議。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_sports_survey_2025_20261109",
+          "title": "教育部體育署：2025年運動現況調查",
+          "url": "https://ws.sports.gov.tw/Download.ashx?n=6YGL5YuV6YOo6Zu75a2Q5aCxXzE1N%2Bacny5wZGY%3D&u=L0ZTMDEvRmlsZVBhdGgvMS9yZWxmaWxlLzAvNjk0OS8zZjk4OGUyOC1kMzZjLTRiMmQtYTRiNy1iM2ZlYmExZDZlOWUucGRm",
+          "claim": "2025年6至8月電話抽樣調查13歲以上民眾，有效樣本25,472名；約35.6%符合每週至少3次、每次至少30分鐘且流汗與呼吸加快的規律運動定義。此定義不等於每週150分鐘中等強度指南達標率。",
+          "supporting_passage": "2025年6至8月電話抽樣調查13歲以上民眾，有效樣本25,472名；約35.6%符合每週至少3次、每次至少30分鐘且流汗與呼吸加快的規律運動定義。此定義不等於每週150分鐘中等強度指南達標率。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        }
+      ],
+      "taiwan_context": "納入台灣通勤步行、道路交通、炎熱潮濕、雷雨颱風和空氣品質等活動情境，提供戶內替代及個別健康限制。",
+      "frequency_assessment": "體育署2025調查約35.6%的13歲以上受訪者符合其規律運動定義（每週至少3次、每次30分鐘以上並流汗且呼吸加快），有效樣本25,472人。這一自陳群體指標不等同每週150分鐘中等強度活動達標率，也不能換算為個人健康事件風險。",
+      "statistics_assessed": [
+        {
+          "topic": "2025年規律運動調查",
+          "value": "35.6%",
+          "unit": "符合調查「規律運動」定義的加權比例",
+          "period": "2025年6月至8月",
+          "geographic_scope": "台灣全國電話抽樣調查",
+          "population": "13歲以上民眾；有效樣本25,472人",
+          "numerator": "官方摘要未列原始規律運動人數",
+          "denominator": "有效樣本25,472人；摘要未列各題未加權有效分母",
+          "event_definition": "每週至少3次、每次至少30分鐘，且流汗與呼吸加快",
+          "data_type": "電話抽樣、自陳調查與加權估計",
+          "limitations": "不等同每週150分鐘中等強度指南達標率；自陳和未接通偏差可能存在，不能估算個人疾病機率。",
+          "source_ids": [
+            "tw02_sports_survey_2025_20261109"
+          ]
+        }
+      ],
+      "changes": "移除固定步數作為及格線的暗示，改用漸進累積中等強度活動、肌力活動、通勤及天候／道路安全；明確區分體育署「規律運動」調查和活動指南。",
+      "limits": [
+        "體育署35.6%是2025年13歲以上調查中符合其每週3次、每次30分鐘且流汗呼吸加快定義的估計，不是150分鐘活動指南達標率；公告未列原始人數。"
+      ],
+      "unresolved_questions": [
+        "需由運動醫學、復健或公共衛生專業人員複核活動強度和個別警訊。",
+        "體育署原始調查PDF擷取服務本次回應付款錯誤；統計依該官方文件此前可讀取資料及摘要核對，需再人工確認原始表格及權重說明。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "運動醫學",
+          "復健醫學",
+          "公共衛生"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-012",
+      "title": "血脂篩檢和異常追蹤分開安排：不要自行停藥",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "5571669a51ac5d3999b0249c584a905cb631ee07",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "1d3a36395ca9698e32f7e30855c0af4c401e9090a58714457833fcd2e598388e",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": null,
+      "prior_chapter_draft_sha256": "136deb73b9a97c264724d729016eb389f95e078377be1230e8631a09989b87d2",
+      "before_sha256": null,
+      "after_sha256": "402291101f32a8961d2b192a1cc1d9c1e5be1535669b4b3c34fcdc089a128975",
+      "review_path": "localization/reviews/TW-02-012.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-012.md",
+      "source_ids": [
+        "tw02_hpa_adult_checkup_20261109",
+        "tw02_hpa_lipid_checkup_stats_20261109",
+        "tw02_taiwan_lipid_consensus_2025",
+        "tw02_mohw_lipid_coverage_20260901"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_adult_checkup_20261109",
+          "title": "國健署：成人預防保健服務資格與檢查內容",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=189",
+          "claim": "服務間隔依年齡及特定族群：30至未滿40歲每5年一次、40至未滿65歲每3年一次、65歲以上每年一次；例行篩檢不能替代異常後追蹤。",
+          "supporting_passage": "服務間隔依年齡及特定族群：30至未滿40歲每5年一次、40至未滿65歲每3年一次、65歲以上每年一次；例行篩檢不能替代異常後追蹤。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_hpa_lipid_checkup_stats_20261109",
+          "title": "國健署：2025年成人預防保健參與者血脂資料",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20399",
+          "claim": "2025年約35.5萬名30至39歲成人預防保健服務使用者中近2成檢查出血脂異常；此為服務參與者資料，未列精確異常人數。",
+          "supporting_passage": "2025年約35.5萬名30至39歲成人預防保健服務使用者中近2成檢查出血脂異常；此為服務參與者資料，未列精確異常人數。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_taiwan_lipid_consensus_2025",
+          "title": "台灣血脂與動脈粥樣硬化學會等：2025年血脂異常照護指引",
+          "url": "https://www.tsim.org.tw/ehc-tsim/s/viewFile?documentId=cfbd43c6ce2945d3bbab029c1607ddbd",
+          "claim": "2025年台灣臨床指引依心血管風險訂定LDL-C目標；開始statin後約6至8週檢查，劑量調整後依個案約1至3個月複驗。",
+          "supporting_passage": "2025年台灣臨床指引依心血管風險訂定LDL-C目標；開始statin後約6至8週檢查，劑量調整後依個案約1至3個月複驗。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_mohw_lipid_coverage_20260901",
+          "title": "衛福部：2026年降血脂藥物健保給付調整",
+          "url": "https://mohw.gov.tw/cp-7402-87716-1.html",
+          "claim": "部分statin、ezetimibe及複方降血脂藥物健保給付條件自2026年9月1日起調整，依當時規定和臨床風險辦理。",
+          "supporting_passage": "部分statin、ezetimibe及複方降血脂藥物健保給付條件自2026年9月1日起調整，依當時規定和臨床風險辦理。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        }
+      ],
+      "taiwan_context": "納入台灣成人預防保健年齡資格、健保藥物給付變動、風險分層和異常後醫療追蹤入口。",
+      "frequency_assessment": "國健署2025年成人預防保健行政資料中，約35.5萬名30至39歲服務使用者近2成血脂檢查異常；公告未提供精確病例數或異常切點，不能當成同齡全人口盛行率或個人心血管事件機率。",
+      "statistics_assessed": [
+        {
+          "topic": "30至39歲成人預防保健服務參與者血脂異常",
+          "value": "近2成",
+          "unit": "檢查參與者中的公告近似比例",
+          "period": "2025年",
+          "geographic_scope": "台灣全國成人預防保健服務行政資料",
+          "population": "約35.5萬名30至39歲成健服務使用者",
+          "numerator": "公告未提供精確血脂異常人數",
+          "denominator": "約35.5萬名服務使用者，該指標精確有效分母未公布",
+          "event_definition": "成人預防保健檢查結果被歸類為血脂異常",
+          "data_type": "公費成人預防保健服務行政資料摘要",
+          "limitations": "服務使用者不是同齡全人口；公告未列精確病例數、異常切點或信賴區間。",
+          "source_ids": [
+            "tw02_hpa_lipid_checkup_stats_20261109"
+          ]
+        }
+      ],
+      "changes": "移除原作40歲起每年檢查的固定規則，改用台灣成人預防保健資格，區分例行篩檢和治療追蹤，加入服務參與者血脂資料、風險分層、2026年健保給付變動與不可自行停藥提醒。",
+      "limits": [
+        "近2成異常比例來自2025年約35.5萬名30至39歲成人預防保健服務使用者，公告未列精確病例數或異常閾值，不能推廣至全體同齡人口。",
+        "給付和治療目標需依個人風險及當時規定解讀。"
+      ],
+      "unresolved_questions": [
+        "需由心臟內科、家醫科、新陳代謝科或藥事專業人員複核追蹤時程及給付條件。",
+        "健保給付和成健資格可能更新，需依最新公告再核對。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "心臟內科",
+          "家庭醫學",
+          "新陳代謝與內分泌科",
+          "臨床藥學"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-013",
+      "title": "睡眠長短看需要與白天狀態：打鼾憋氣或嗜睡要求助",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "5571669a51ac5d3999b0249c584a905cb631ee07",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "c84070b25852be8fcd58de7cae87e5be4967bbbddba41bacd3f1461dac7c62a4",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": null,
+      "prior_chapter_draft_sha256": "43f9c3ca11d5762d8cf2c3ba0d3e61809ea7c55db71defd79428edb0f5455373",
+      "before_sha256": null,
+      "after_sha256": "7d727368d6ebe8e5e0ba78fa9b90bb25b39d6ece7f07c4a3dbb067062f08b2ff",
+      "review_path": "localization/reviews/TW-02-013.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-013.md",
+      "source_ids": [
+        "tw02_nhi_sleep_advice_20261109",
+        "tw02_ntuh_sleep_apnea_20261109",
+        "tw02_vghtpe_sleep_safety_20261109"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_nhi_sleep_advice_20261109",
+          "title": "健保署：成人睡眠與生活型態衛教",
+          "url": "https://www.nhi.gov.tw/ch/lp-4009-1.html?cat=4",
+          "claim": "健保署衛教提供成人睡眠時數一般參考；睡眠需求會因年齡及個人狀況不同。",
+          "supporting_passage": "健保署衛教提供成人睡眠時數一般參考；睡眠需求會因年齡及個人狀況不同。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_ntuh_sleep_apnea_20261109",
+          "title": "臺大醫院：打鼾及阻塞型睡眠呼吸中止症",
+          "url": "https://hmc.ntuh.gov.tw/disease-symptoms/0m209407642724907379",
+          "claim": "打鼾不等於睡眠呼吸中止症；觀察到呼吸中止、白天嗜睡或注意力下降時可就醫評估，診斷需由醫師判讀檢查。",
+          "supporting_passage": "打鼾不等於睡眠呼吸中止症；觀察到呼吸中止、白天嗜睡或注意力下降時可就醫評估，診斷需由醫師判讀檢查。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        },
+        {
+          "source_id": "tw02_vghtpe_sleep_safety_20261109",
+          "title": "臺北榮總：阻塞性睡眠呼吸中止症照護",
+          "url": "https://ihealth.vghtpe.gov.tw/media/494",
+          "claim": "睡眠檢查可協助診斷睡眠呼吸中止症；白天嗜睡可能影響駕駛和操作危險機械安全。",
+          "supporting_passage": "睡眠檢查可協助診斷睡眠呼吸中止症；白天嗜睡可能影響駕駛和操作危險機械安全。",
+          "accessed_at": "2026-11-09",
+          "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+        }
+      ],
+      "taiwan_context": "納入台灣輪班、家庭照顧及機車／汽車通勤情境；日間嗜睡時避免駕駛或操作危險機具，提供家醫科及睡眠評估入口。",
+      "frequency_assessment": "未找到使用一致定義、能核對全國分子分母且可代表台灣成人睡眠不足或失眠現況的近期統計。睡眠不足、失眠症狀及睡眠呼吸中止是不同指標；不從外國研究或單院檢查數推算台灣個人發生機率。",
+      "statistics_assessed": [],
+      "changes": "移除每晚固定七小時的單一要求，改為成人一般7至9小時參考、白天功能、睡眠呼吸中止評估線索、輪班照顧者與疲勞駕駛安全；不以打鼾或單晚時數診斷。",
+      "limits": [
+        "7至9小時是成人一般參考，不是診斷或每個人的必要睡眠處方；未找到可比較的台灣全國發生率。",
+        "症狀和用藥需個別評估。"
+      ],
+      "unresolved_questions": [
+        "需由睡眠醫學或職業醫學專業人員複核症狀、睡眠檢查和日間駕駛安全文字。",
+        "全國睡眠統計的定義和調查期間不一致，需持續監看。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "睡眠醫學",
+          "家庭醫學",
+          "職業醫學",
+          "交通安全"
+        ]
+      }
+    }
+  ],
+  "new_source_ids": [
+    "tw02_hpa_nutrition_survey_20261109",
+    "tw02_hpa_sugar_drink_guidance_20261109",
+    "tw02_hpa_sugar_prevalence_2013_2016_20261109",
+    "tw02_mohw_oral_care_20261109",
+    "tw02_nhi_dental_scaling_20261109",
+    "tw02_nhi_periodontal_services_20261109",
+    "tw02_tph_dental_emergency_20261109",
+    "tw02_hpa_activity_guideline_20261109",
+    "tw02_hpa_commute_activity_20261109",
+    "tw02_sports_survey_2025_20261109",
+    "tw02_hpa_adult_checkup_20261109",
+    "tw02_hpa_lipid_checkup_stats_20261109",
+    "tw02_taiwan_lipid_consensus_2025",
+    "tw02_mohw_lipid_coverage_20260901",
+    "tw02_nhi_sleep_advice_20261109",
+    "tw02_ntuh_sleep_apnea_20261109",
+    "tw02_vghtpe_sleep_safety_20261109"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "交通安全",
+      "公共衛生",
+      "公共衛生與流行病學",
+      "家庭醫學",
+      "復健醫學",
+      "心臟內科",
+      "新陳代謝與內分泌科",
+      "營養學",
+      "牙周病與一般牙科",
+      "牙科急診",
+      "睡眠醫學",
+      "職業醫學",
+      "臨床藥學",
+      "運動醫學"
+    ]
+  }
+}

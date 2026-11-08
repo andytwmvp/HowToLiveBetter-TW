@@ -1,0 +1,71 @@
+{
+  "id": "TW-02-013",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-013.md",
+  "target_sha256": "7d727368d6ebe8e5e0ba78fa9b90bb25b39d6ece7f07c4a3dbb067062f08b2ff",
+  "source_checks": [
+    {
+      "source_id": "tw02_nhi_sleep_advice_20261109",
+      "title": "健保署：成人睡眠與生活型態衛教",
+      "url": "https://www.nhi.gov.tw/ch/lp-4009-1.html?cat=4",
+      "claim": "健保署衛教提供成人睡眠時數一般參考；睡眠需求會因年齡及個人狀況不同。",
+      "supporting_passage": "健保署衛教提供成人睡眠時數一般參考；睡眠需求會因年齡及個人狀況不同。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_ntuh_sleep_apnea_20261109",
+      "title": "臺大醫院：打鼾及阻塞型睡眠呼吸中止症",
+      "url": "https://hmc.ntuh.gov.tw/disease-symptoms/0m209407642724907379",
+      "claim": "打鼾不等於睡眠呼吸中止症；觀察到呼吸中止、白天嗜睡或注意力下降時可就醫評估，診斷需由醫師判讀檢查。",
+      "supporting_passage": "打鼾不等於睡眠呼吸中止症；觀察到呼吸中止、白天嗜睡或注意力下降時可就醫評估，診斷需由醫師判讀檢查。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_vghtpe_sleep_safety_20261109",
+      "title": "臺北榮總：阻塞性睡眠呼吸中止症照護",
+      "url": "https://ihealth.vghtpe.gov.tw/media/494",
+      "claim": "睡眠檢查可協助診斷睡眠呼吸中止症；白天嗜睡可能影響駕駛和操作危險機械安全。",
+      "supporting_passage": "睡眠檢查可協助診斷睡眠呼吸中止症；白天嗜睡可能影響駕駛和操作危險機械安全。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    }
+  ],
+  "localization_changes": "移除每晚固定七小時的單一要求，改為成人一般7至9小時參考、白天功能、睡眠呼吸中止評估線索、輪班照顧者與疲勞駕駛安全；不以打鼾或單晚時數診斷。",
+  "review_method": "重讀原作固定ID、台灣結構化草稿和引用主張，查核台灣情境、行動步驟、費用及服務入口；對統計核對期間、範圍、對象、事件定義、分子分母、資料型態與限制。未找到可信、同口徑台灣資料時明確保留資料不足，不自行推估。AI查核不等同正式專業審閱。",
+  "limits": [
+    "7至9小時是成人一般參考，不是診斷或每個人的必要睡眠處方；未找到可比較的台灣全國發生率。",
+    "症狀和用藥需個別評估。"
+  ],
+  "source_reviewed_sha256": "7d727368d6ebe8e5e0ba78fa9b90bb25b39d6ece7f07c4a3dbb067062f08b2ff",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "c84070b25852be8fcd58de7cae87e5be4967bbbddba41bacd3f1461dac7c62a4",
+  "source_ids": [
+    "tw02_nhi_sleep_advice_20261109",
+    "tw02_ntuh_sleep_apnea_20261109",
+    "tw02_vghtpe_sleep_safety_20261109"
+  ],
+  "statistics_assessed": [],
+  "frequency_assessment": "未找到使用一致定義、能核對全國分子分母且可代表台灣成人睡眠不足或失眠現況的近期統計。睡眠不足、失眠症狀及睡眠呼吸中止是不同指標；不從外國研究或單院檢查數推算台灣個人發生機率。",
+  "unresolved_questions": [
+    "需由睡眠醫學或職業醫學專業人員複核症狀、睡眠檢查和日間駕駛安全文字。",
+    "全國睡眠統計的定義和調查期間不一致，需持續監看。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "睡眠醫學",
+      "家庭醫學",
+      "職業醫學",
+      "交通安全"
+    ]
+  },
+  "prior_chapter_draft_sha256": "43f9c3ca11d5762d8cf2c3ba0d3e61809ea7c55db71defd79428edb0f5455373",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}

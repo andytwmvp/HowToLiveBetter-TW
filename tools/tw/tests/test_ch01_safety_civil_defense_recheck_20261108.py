@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
-from review_contract import ROOT, validate_runtime
+from review_contract import ROOT, publication_report, validate_runtime
 
 
 BASE = "333667bb54ad11631baf61bf206509850840701a"
@@ -183,11 +183,22 @@ class Chapter01SafetyCivilDefenseRecheckTests(unittest.TestCase):
     def test_coverage_counts_match_live_audit_without_publication_claim(self):
         coverage = read_json("localization/tw-edition/coverage.json")
         self.assertEqual(coverage, audit_drafts())
-        self.assertEqual(coverage["core_reviewed_entries"], 292)
-        self.assertEqual(len(self.runtime["items"]), 303)
-        self.assertEqual(len(self.runtime["sources"]), 1186)
-        self.assertEqual(coverage["registry_sources"], 1269)
-        self.assertEqual(len(self.register["substantive_rechecks"]), 379)
+        self.assertEqual(
+            coverage["core_reviewed_entries"],
+            publication_report()["publication_completed_entries"],
+        )
+        navigation_items = sum(item["id"].startswith("TW-NAV-") for item in self.runtime["items"])
+        self.assertEqual(len(self.runtime["items"]), coverage["core_reviewed_entries"] + navigation_items)
+        self.assertGreaterEqual(
+            len(self.runtime["sources"]), self.batch["counts_after"]["runtime_sources"]
+        )
+        self.assertGreaterEqual(
+            coverage["registry_sources"], self.batch["counts_after"]["source_registry"]
+        )
+        self.assertGreaterEqual(
+            len(self.register["substantive_rechecks"]),
+            self.batch["counts_after"]["substantive_rechecks"],
+        )
         self.assertFalse(coverage["publication_ready"])
 
 
