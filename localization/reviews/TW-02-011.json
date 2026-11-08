@@ -1,0 +1,86 @@
+{
+  "id": "TW-02-011",
+  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-011.md",
+  "target_sha256": "f540a85c69fcc32ea32a64739d92594c6001b3cc2e7529ef933a6463cda5a8cd",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_activity_guideline_20261109",
+      "title": "國健署：全民身體活動指引",
+      "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1411",
+      "claim": "國健署指引依成人、長者、慢性病、身心障礙及孕期等族群提供身體活動建議；個別限制須調整。",
+      "supporting_passage": "國健署指引依成人、長者、慢性病、身心障礙及孕期等族群提供身體活動建議；個別限制須調整。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_hpa_commute_activity_20261109",
+      "title": "國健署：通勤走路是否足以取代額外運動",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19968",
+      "claim": "通勤步行量及強度不同，需以活動時間與中等強度判斷；步數多不等於已達身體活動建議。",
+      "supporting_passage": "通勤步行量及強度不同，需以活動時間與中等強度判斷；步數多不等於已達身體活動建議。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_sports_survey_2025_20261109",
+      "title": "教育部體育署：2025年運動現況調查",
+      "url": "https://ws.sports.gov.tw/Download.ashx?n=6YGL5YuV6YOo6Zu75a2Q5aCxXzE1N%2Bacny5wZGY%3D&u=L0ZTMDEvRmlsZVBhdGgvMS9yZWxmaWxlLzAvNjk0OS8zZjk4OGUyOC1kMzZjLTRiMmQtYTRiNy1iM2ZlYmExZDZlOWUucGRm",
+      "claim": "2025年6至8月電話抽樣調查13歲以上民眾，有效樣本25,472名；約35.6%符合每週至少3次、每次至少30分鐘且流汗與呼吸加快的規律運動定義。此定義不等於每週150分鐘中等強度指南達標率。",
+      "supporting_passage": "2025年6至8月電話抽樣調查13歲以上民眾，有效樣本25,472名；約35.6%符合每週至少3次、每次至少30分鐘且流汗與呼吸加快的規律運動定義。此定義不等於每週150分鐘中等強度指南達標率。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    }
+  ],
+  "localization_changes": "移除固定步數作為及格線的暗示，改用漸進累積中等強度活動、肌力活動、通勤及天候／道路安全；明確區分體育署「規律運動」調查和活動指南。",
+  "review_method": "重讀原作固定ID、台灣結構化草稿和引用主張，查核台灣情境、行動步驟、費用及服務入口；對統計核對期間、範圍、對象、事件定義、分子分母、資料型態與限制。未找到可信、同口徑台灣資料時明確保留資料不足，不自行推估。AI查核不等同正式專業審閱。",
+  "limits": [
+    "體育署35.6%是2025年13歲以上調查中符合其每週3次、每次30分鐘且流汗呼吸加快定義的估計，不是150分鐘活動指南達標率；公告未列原始人數。"
+  ],
+  "source_reviewed_sha256": "f540a85c69fcc32ea32a64739d92594c6001b3cc2e7529ef933a6463cda5a8cd",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "3a8bf0937ee5c8eed79865481240316569d1291a990615113060c944613ae527",
+  "source_ids": [
+    "tw02_hpa_activity_guideline_20261109",
+    "tw02_hpa_commute_activity_20261109",
+    "tw02_sports_survey_2025_20261109"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "2025年規律運動調查",
+      "value": "35.6%",
+      "unit": "符合調查「規律運動」定義的加權比例",
+      "period": "2025年6月至8月",
+      "geographic_scope": "台灣全國電話抽樣調查",
+      "population": "13歲以上民眾；有效樣本25,472人",
+      "numerator": "官方摘要未列原始規律運動人數",
+      "denominator": "有效樣本25,472人；摘要未列各題未加權有效分母",
+      "event_definition": "每週至少3次、每次至少30分鐘，且流汗與呼吸加快",
+      "data_type": "電話抽樣、自陳調查與加權估計",
+      "limitations": "不等同每週150分鐘中等強度指南達標率；自陳和未接通偏差可能存在，不能估算個人疾病機率。",
+      "source_ids": [
+        "tw02_sports_survey_2025_20261109"
+      ]
+    }
+  ],
+  "frequency_assessment": "體育署2025調查約35.6%的13歲以上受訪者符合其規律運動定義（每週至少3次、每次30分鐘以上並流汗且呼吸加快），有效樣本25,472人。這一自陳群體指標不等同每週150分鐘中等強度活動達標率，也不能換算為個人健康事件風險。",
+  "unresolved_questions": [
+    "需由運動醫學、復健或公共衛生專業人員複核活動強度和個別警訊。",
+    "體育署原始調查PDF擷取服務本次回應付款錯誤；統計依該官方文件此前可讀取資料及摘要核對，需再人工確認原始表格及權重說明。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "運動醫學",
+      "復健醫學",
+      "公共衛生"
+    ]
+  },
+  "prior_chapter_draft_sha256": "4b8d12e575954d086a2f207648589ec6663e25a07ed41b44c0ba8ea3963182da",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}
