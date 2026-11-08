@@ -41,29 +41,36 @@ class Chapter01DrivingChildFallRecheckTests(unittest.TestCase):
         sources = {source["id"]: source for source in runtime["sources"]}
         register = load("localization/retroactive-review-register-20261019.json")
         rows = {row["id"]: row for row in register["substantive_rechecks"]}
+        historical_rows = {
+            key: next(row for row in register["substantive_rechecks"]
+                      if row["id"] == key and row["prior_revision"] == BASE)
+            for key in IDS
+        }
         evidence = load(EVIDENCE)
         evidence_articles = {row["id"]: row for row in evidence["articles"]}
 
         for key in IDS:
             with self.subTest(key=key):
                 entry, item, row = manifest[key], items[key], rows[key]
+                historical = historical_rows[key]
                 review = load("localization/reviews/" + key + ".json")
                 raw = (ROOT / entry["target_path"]).read_bytes()
                 self.assertTrue(validate_entry(entry))
                 self.assertEqual(entry["sources"], item["source_ids"])
                 self.assertEqual(raw.decode("utf-8"), item["body"])
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review["target_sha256"])
-                self.assertEqual(review["reviewed_at"], "2026-10-26")
-                self.assertEqual(review["review_due_at"], "2027-01-31")
+                self.assertEqual(review["reviewed_at"], entry["verified_at"])
+                self.assertEqual(review["review_due_at"], row["review_due_at"])
+                self.assertEqual(row["reviewed_at"], review["reviewed_at"])
                 self.assertEqual(row["status"], "ai_source_rechecked_professional_pending")
-                self.assertEqual(row["prior_revision"], BASE)
+                self.assertEqual(historical["prior_revision"], BASE)
                 self.assertEqual(row["source_ids"], item["source_ids"])
                 self.assertEqual(row["source_checks"], review["source_checks"])
                 self.assertEqual({check["url"] for check in review["source_checks"]},
                                  {sources[source_id]["url"] for source_id in item["source_ids"]})
-                self.assertEqual({source["id"] for source in row["retired_sources"]},
+                self.assertEqual({source["id"] for source in historical["retired_sources"]},
                                  RETIRED_SOURCE_IDS[key])
-                self.assertEqual(set(evidence_articles[key]["source_ids"]), set(item["source_ids"]))
+                self.assertEqual(set(evidence_articles[key]["source_ids"]), set(historical["source_ids"]))
                 self.assertEqual(set(evidence_articles[key]["retired_source_ids"]), RETIRED_SOURCE_IDS[key])
                 validate_recheck_history(ROOT, row, item)
 

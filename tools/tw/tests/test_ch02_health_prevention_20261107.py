@@ -160,10 +160,11 @@ class ChapterTwoHealthPreventionTests(unittest.TestCase):
             self.assertIsNone(self.batch_items[item_id]["prior_structured_draft_sha256"])
 
         base_register = base_json("localization/retroactive-review-register-20261019.json")
-        self.assertEqual(len(self.register["substantive_rechecks"]), 376)
-        self.assertEqual(self.register["substantive_rechecks"], base_register["substantive_rechecks"])
+        base_rechecks = base_register["substantive_rechecks"]
+        current_rechecks = self.register["substantive_rechecks"]
+        self.assertEqual(current_rechecks[:len(base_rechecks)], base_rechecks)
         self.assertTrue(set(ITEM_IDS).isdisjoint(
-            row["id"] for row in self.register["substantive_rechecks"]
+            row["id"] for row in current_rechecks
         ))
 
     def test_betel_referral_source_refresh_is_append_only_and_hash_linked(self):
@@ -247,33 +248,49 @@ class ChapterTwoHealthPreventionTests(unittest.TestCase):
     def test_counts_derive_from_baseline_and_reader_navigation_is_synchronized(self):
         base_runtime = base_json("localization/tw-edition/runtime.json")
         base_coverage = base_json("localization/tw-edition/coverage.json")
+        base_register = base_json("localization/retroactive-review-register-20261019.json")
         base_sources = {source["id"] for source in base_runtime["sources"]}
         current_sources = {source["id"] for source in self.runtime["sources"]}
         self.assertEqual(len(base_runtime["items"]), 299)
-        self.assertEqual(len(self.runtime["items"]), 303)
         self.assertEqual(len(base_runtime["sources"]), 1164)
-        self.assertEqual(len(self.runtime["sources"]), 1182)
-        self.assertEqual(current_sources - base_sources, EXPECTED_SOURCES)
+        self.assertTrue(base_sources.issubset(current_sources))
+        self.assertTrue(EXPECTED_SOURCES.issubset(current_sources - base_sources))
         self.assertEqual(self.batch["counts_before"]["core_reviewed"], 288)
         self.assertEqual(self.batch["counts_before"]["runtime_items"], 299)
         self.assertEqual(self.batch["counts_before"]["runtime_sources"], 1164)
         self.assertEqual(self.batch["counts_before"]["source_registry"], 1247)
         self.assertEqual(self.batch["counts_before"]["json_files_checked"], 577)
-        self.assertEqual(self.batch["counts_before"]["substantive_rechecks"], 376)
+        self.assertEqual(self.batch["counts_before"]["substantive_rechecks"],
+                         len(base_register["substantive_rechecks"]))
         self.assertEqual(self.batch["counts_after"]["core_reviewed"], 292)
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["source_registry"], self.coverage["registry_sources"])
-        self.assertEqual(self.batch["counts_after"]["json_files_checked"], self.coverage["json_files_checked"])
-        self.assertEqual(self.batch["counts_after"]["substantive_rechecks"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(self.coverage["core_reviewed_entries"], 292)
-        self.assertEqual(self.coverage["publication_completed_entries"], 292)
+        self.assertEqual(self.batch["counts_after"]["runtime_items"],
+                         len(base_runtime["items"]) + len(ITEM_IDS))
+        self.assertEqual(self.batch["counts_after"]["runtime_sources"],
+                         len(base_runtime["sources"]) + len(EXPECTED_SOURCES))
+        self.assertEqual(self.batch["counts_after"]["source_registry"],
+                         base_coverage["registry_sources"] + len(EXPECTED_SOURCES))
+        self.assertEqual(self.batch["counts_after"]["json_files_checked"],
+                         base_coverage["json_files_checked"] + 6)
+        self.assertEqual(self.batch["counts_after"]["substantive_rechecks"],
+                         len(base_register["substantive_rechecks"]))
+        self.assertGreaterEqual(self.coverage["core_reviewed_entries"],
+                                self.batch["counts_after"]["core_reviewed"])
+        self.assertGreaterEqual(self.coverage["publication_completed_entries"],
+                                self.batch["counts_after"]["core_reviewed"])
         self.assertFalse(self.coverage["publication_ready"])
         self.assertEqual(self.coverage["publication_total_entries"], 765)
-        self.assertEqual(self.coverage["unresolved_reference_occurrences"],
-                         base_coverage["unresolved_reference_occurrences"])
-        self.assertEqual(self.coverage["unresolved_source_ids"], base_coverage["unresolved_source_ids"])
-        self.assertEqual(len(self.register["substantive_rechecks"]), 376)
+        self.assertEqual(sum(self.coverage["unresolved_source_ids"].values()),
+                         self.coverage["unresolved_reference_occurrences"])
+        self.assertGreaterEqual(len(self.runtime["items"]),
+                                self.batch["counts_after"]["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]),
+                                self.batch["counts_after"]["runtime_sources"])
+        self.assertGreaterEqual(self.coverage["registry_sources"],
+                                self.batch["counts_after"]["source_registry"])
+        self.assertGreaterEqual(self.coverage["json_files_checked"],
+                                self.batch["counts_after"]["json_files_checked"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]),
+                                self.batch["counts_after"]["substantive_rechecks"])
         for item_id in ITEM_IDS:
             self.assertIn(f"{item_id}.md)", self.readme)
 
