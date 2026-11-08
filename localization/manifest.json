@@ -393,14 +393,16 @@
         "ch01_fda_wildmushroom_202411",
         "ch01_khh_wildmushroom_202608",
         "ch01_vghtpe_poison_mushroom_firstaid_202404",
-        "ch01_vghtpe_poison_hotline_202404"
+        "ch01_vghtpe_poison_hotline_202404",
+        "ch01_vghtpe_poison_hotline_20261108"
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-11-08",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "不採、不買、不吃野生蘑菇，任何「土辦法鑑別」都不成立",
       "language_status": "traditionalized",
-      "language_converted_at": "2026-10-15"
+      "language_converted_at": "2026-10-15",
+      "title": "雨後野菇不採不食：臺灣公園山區毒菇與中毒急救分流"
     },
     {
       "id": "TW-01-006",
@@ -482,14 +484,17 @@
       "sources": [
         "ch01_motc_dui_2025",
         "ch01_moj_road_act_handheld_2026",
-        "ch01_motc_distraction_a1_2026janapr"
+        "ch01_motc_distraction_a1_2026janapr",
+        "ch01_motc_dui_2026janaug",
+        "ch01_road_act_31_1_effective_dates_2026"
       ],
-      "verified_at": "2026-10-26",
+      "verified_at": "2026-11-08",
       "upstream_path_uri": "book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md",
       "display_path": "book/01-不要早死.md",
       "source_title_zh_tw": "開車不超速、不酒駕，不看手機，困了就停車歇",
       "language_status": "traditionalized",
-      "language_converted_at": "2026-10-15"
+      "language_converted_at": "2026-10-15",
+      "title": "臺灣通勤與返鄉不酒駕不分心：疲勞、行動裝置與替代交通"
     },
     {
       "id": "TW-01-010",
