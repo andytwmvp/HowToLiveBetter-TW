@@ -105,11 +105,19 @@ def run(render: bool,browser_test: bool) -> None:
         audit_assets(rendered=render)
         if browser_test:
             runtime=json.loads(read('localization/tw-edition/runtime.json'))
+            expected_ids={row['id'] for row in runtime['items']}
+            chapter_two=[row for row in runtime['items'] if row['id'].startswith('TW-02-')]
             item=next(row for row in runtime['items'] if 'criminal' in row['source_ids'])
             title=runtime['reader_source_titles']['criminal']
-            for path in ('index.html','dist/HowToLiveBetter-TW.html'):
+            for path in ('index.html','selfcheck.html','dist/HowToLiveBetter-TW.html'):
                 page.goto(url+path,wait_until='domcontentloaded')
                 page.wait_for_function('window.TWRuntime?.ready === true',timeout=30000)
+                rendered_ids=set(page.locator('[data-id]').evaluate_all('cards => cards.map(card => card.dataset.id)'))
+                assert rendered_ids==expected_ids,(path,'臺灣閱讀入口未顯示完整已核對runtime目錄',sorted(expected_ids-rendered_ids),sorted(rendered_ids-expected_ids))
+                for chapter_item in chapter_two:
+                    page.locator('#q').fill(chapter_item['title'])
+                    assert page.locator(f'[data-id="{chapter_item["id"]}"]').count()==1,(path,chapter_item['id'],'搜尋無法找到正式第2章文章')
+                page.locator('#q').fill('')
                 rendered_copy=page.locator('[data-id]').evaluate_all('''cards => ({
                   rawMarkdown: cards.some(card => card.innerText.includes('](')),
                   brokenInternal: [...document.querySelectorAll('[data-id] a[href^="#TW-"]')]
@@ -128,7 +136,7 @@ def run(render: bool,browser_test: bool) -> None:
                 card=page.locator(f'[data-id="{item["id"]}"]')
                 assert card.locator('a').filter(has_text=title).count()==1,'臺灣閱讀頁未顯示讀者用來源標題：'+path
                 assert card.locator('a').filter(has_text='本批核對').count()==0,'臺灣閱讀頁仍顯示內部批次文字：'+path
-            result['checks'].append('網站與離線HTML顯示讀者用外部來源與可用內部連結，不露出Markdown語法。')
+            result['checks'].append('網站、自我檢視與離線HTML呈現全部runtime文章；第2章每篇都可搜尋，且來源與站內連結正常。')
             from check_internal_link_navigation_browser import check_internal_link_navigation_browser
             result['checks'].extend(check_internal_link_navigation_browser(page, url))
             from check_navigation import check_navigation
