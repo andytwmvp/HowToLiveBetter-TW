@@ -7,7 +7,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from review_contract import ROOT
+from reader_copy_snapshots import historical_reader_copy_sha256
 
 
 CORE_ID = re.compile(r"TW-(\d{2})-(\d{3})\Z")
@@ -51,6 +53,13 @@ class ReaderCatalogNavigationTests(unittest.TestCase):
                 (ROOT / f"locales/zh-TW/book/ch{chapter:02d}/README.md").is_file(),
                 f"第{chapter}章目錄不存在",
             )
+
+    def test_chapter_two_link_is_the_only_change_to_the_historical_catalog_copy(self):
+        catalog = (ROOT / "locales/zh-TW/README.md").read_bytes()
+        self.assertEqual(
+            historical_reader_copy_sha256("locales/zh-TW/README.md", catalog),
+            "ae98f6e876ffd0c72c61bf8bcb59fb44a61c219c578dc7181dd5ca9a7329580c",
+        )
 
     def test_each_chapter_catalog_links_every_published_core_article_once(self):
         manifest = {item["id"]: item for item in self.manifest["entries"]}

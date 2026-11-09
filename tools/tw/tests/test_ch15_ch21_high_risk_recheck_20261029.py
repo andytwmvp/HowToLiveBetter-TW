@@ -8,8 +8,10 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ci_language_policy import audit_drafts
 from retroactive_audit import normalize_reader_item, validate_recheck_history
+from reader_copy_snapshots import historical_reader_copy_sha256
 from review_contract import ROOT, publication_report, validate_runtime
 
 
@@ -166,7 +168,10 @@ class HighRiskRecheckTests(unittest.TestCase):
             )
             self.assertEqual(hashlib.sha256(main_prior).hexdigest(), cleanup["after_sha256"])
             self.assertEqual(current_surfaces[path]["before_sha256"], cleanup["after_sha256"])
-            self.assertEqual(hashlib.sha256(current).hexdigest(), current_surfaces[path]["after_sha256"])
+            self.assertEqual(
+                historical_reader_copy_sha256(path, current),
+                current_surfaces[path]["after_sha256"],
+            )
 
         item = self.items["TW-21-011"]
         normalized, _ = normalize_reader_item(item)
