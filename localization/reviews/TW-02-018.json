@@ -1,0 +1,88 @@
+{
+  "id": "TW-02-018",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-018.md",
+  "target_sha256": "dbec10aafc53d93727b71a1dbfc16bec019d8d29e6ad190398d26b7acb159f30",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_protein_food_guide_2026",
+      "title": "國健署：到底怎麼吃才均衡？（均衡飲食與蛋白質選擇）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4687&pid=11677",
+      "claim": "國健署均衡飲食頁建議依豆、魚、蛋、肉的方向選擇蛋白質食物，並提醒避免加工肉品，支持用多樣食物替換日常加工肉。",
+      "supporting_passage": "頁面發布日2019-10-23、更新日2024-11-21；豆魚蛋肉段說明黃豆製品、海鮮、蛋與肉的選擇順序；「我的餐盤」並明確提醒避免加工肉品。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱國健署「到底怎麼吃才均衡？」官方頁（2019-10-23發布、2024-11-21更新）；核對豆魚蛋肉選擇方向及避免加工肉品的文字。"
+    },
+    {
+      "source_id": "tw02_iarc_processed_meat_qa_2015",
+      "title": "IARC：紅肉與加工肉類致癌性問答及第114卷摘要",
+      "url": "https://www.iarc.who.int/wp-content/uploads/2018/11/Monographs-QA_Vol114.pdf",
+      "claim": "IARC加工肉定義、Group 1分類表示證據強度、10項研究估計每日50克與大腸直腸癌相對風險約增加18%；未提供台灣絕對風險，亦無法由摘要判定安全門檻。",
+      "supporting_passage": "問答定義加工肉包含鹽漬、醃製、發酵、煙燻等處理；Group 1指人體致癌證據充分，不代表風險大小等同菸品；每天50克的統合分析估計相對風險約高18%。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接閱讀IARC第114卷紅肉與加工肉問答PDF；核對加工肉定義、Group 1分類意義、10項研究的50克／18%相對風險估計及無法判定安全門檻的限制。"
+    },
+    {
+      "source_id": "tw02_who_processed_meat_2026",
+      "title": "WHO：紅肉與加工肉類致癌性問答（2026-09-23更新）",
+      "url": "https://www.who.int/news-room/questions-and-answers/item/cancer-carcinogenicity-of-the-consumption-of-red-meat-and-processed-meat",
+      "claim": "WHO 2026更新問答延續原始評估無法確定安全攝取量的說明，並指出動物性食物攝取指引仍在研擬；危害分類不等同特定暴露下的風險大小。",
+      "supporting_passage": "WHO頁面日期2026-09-23；答覆指出原評估資料不足以判定是否存在安全攝取量，WHO正研擬包含紅肉與加工肉建議的動物性食物指引。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱WHO於2026-09-23更新的官方問答；核對加工肉定義、Group 1危害分類與風險的區別、原始評估無安全量結論及新指引研擬狀態。"
+    }
+  ],
+  "localization_changes": "以台灣常見早餐、便當、泡麵與火鍋情境說明減少加工肉及替換蛋白質；從原作全因死亡觀察關聯改採IARC加工肉與大腸直腸癌證據，區分相對風險、台灣絕對風險及偶爾食用。",
+  "review_method": "重讀原作固定ID與原作來源、台灣結構化草稿及本篇來源，逐項核對主張、研究族群、期間、統計口徑、台灣生活情境、可執行步驟、成本與安全界線。只採用可直接支持本篇主張的官方頁面或研究；沒有可信台灣頻率分母時明示資料不足，不自行推估。AI查核不等於正式專業審閱。",
+  "limits": [
+    "IARC每天習慣性攝取50克加工肉與大腸直腸癌相對風險增加約18%的估計，並非台灣絕對風險、18個百分點或單次食用的個人機率。",
+    "WHO 2026年更新問答仍說明原始評估資料無法判定安全攝取量，並正在研擬動物性食物指引；不能由此推論偶爾食用必然致癌。"
+  ],
+  "source_reviewed_sha256": "dbec10aafc53d93727b71a1dbfc16bec019d8d29e6ad190398d26b7acb159f30",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "bc99503085345dad5f7153ef29d6200d30819e1b36d6a7dc24147275fa1fca60",
+  "source_ids": [
+    "tw02_hpa_protein_food_guide_2026",
+    "tw02_iarc_processed_meat_qa_2015",
+    "tw02_who_processed_meat_2026"
+  ],
+  "frequency_assessment": "IARC納入的國際10項研究統合估計，習慣性每天攝取50克加工肉與大腸直腸癌相對風險增加約18%相關；問答未列合併人數、病例分子分母或台灣絕對風險。WHO 2026-09-23問答仍說明原評估無法判定安全攝取量。不得將此換算成台灣發生率或個人機率。",
+  "statistics_assessed": [
+    {
+      "topic": "加工肉每日攝取與大腸直腸癌相對風險",
+      "value": "約增加18%",
+      "unit": "每天習慣性攝取每50克加工肉的相對風險增加估計，不是18個百分點",
+      "period": "IARC第114卷評估及問答，2015年；WHO更新問答2026-09-23",
+      "geographic_scope": "國際10項流行病學研究的統合估計；非台灣全國估計",
+      "population": "IARC評估納入的10項研究對象；問答摘要未列合併研究的精確人數及族群明細",
+      "numerator": "問答摘要未提供原始病例數；這是研究間估計的相對風險變化",
+      "denominator": "問答摘要未列原始分子／分母，也未提供台灣基準風險",
+      "event_definition": "習慣性每天攝取加工肉每增加50克與大腸直腸癌風險的關聯",
+      "data_type": "IARC對國際流行病學研究的危害評估及10項研究劑量關聯摘要",
+      "limitations": "約18%是每天習慣性50克加工肉暴露與大腸直腸癌的國際相對風險估計，不是18個百分點、台灣絕對風險或偶爾吃一份的個人機率；摘要未提供合併研究人數及病例分子分母。WHO 2026問答稱原始評估資料無法判定安全攝取量，動物性食物指引仍在研擬。",
+      "source_ids": [
+        "tw02_iarc_processed_meat_qa_2015"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "未找到可用一致暴露及事件定義計算台灣加工肉相關大腸直腸癌絕對風險的全國估計。",
+    "追蹤WHO動物性食物攝取指引是否發布；2026-09-23問答仍標示指引研擬中。",
+    "未取得營養或腫瘤流行病學專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "腫瘤流行病學",
+      "公共衛生"
+    ]
+  },
+  "prior_chapter_draft_sha256": "1efa6e9482c661100b04326eb18b7a607c416157ba1a1ad1b5d154ebe39a8f0d",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}

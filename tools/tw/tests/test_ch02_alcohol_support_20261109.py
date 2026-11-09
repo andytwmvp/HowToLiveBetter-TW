@@ -144,13 +144,18 @@ class ChapterTwoAlcoholSupportTests(unittest.TestCase):
     def test_coverage_matches_live_draft_and_publication_audits(self):
         report = audit_drafts()
         self.assertEqual(self.coverage, report)
-        self.assertEqual(self.coverage["core_reviewed_entries"], 298)
-        self.assertEqual(self.coverage["registry_sources"], 1290)
-        self.assertEqual(self.coverage["json_files_checked"], 595)
+        after = self.batch["counts_after"]
+        self.assertEqual(after["core_reviewed"], 298)
+        self.assertEqual(after["runtime_items"], 309)
+        self.assertEqual(after["runtime_sources"], 1207)
+        self.assertEqual(after["source_registry"], 1290)
+        self.assertEqual(after["json_files_checked"], 595)
+        self.assertGreaterEqual(self.coverage["core_reviewed_entries"], after["core_reviewed"])
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(self.coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(self.coverage["json_files_checked"], after["json_files_checked"])
         self.assertFalse(self.coverage["publication_ready"])
-        self.assertEqual(self.batch["counts_after"]["core_reviewed"], 298)
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
 
 
 if __name__ == "__main__":

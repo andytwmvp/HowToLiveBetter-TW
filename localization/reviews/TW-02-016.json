@@ -1,0 +1,102 @@
+{
+  "id": "TW-02-016",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-016.md",
+  "target_sha256": "13fdaacfbd581aa657c71c6ced9c1116dd83c226c16a909b86c9109b00efb7e2",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_activity_guideline_20261109",
+      "title": "國健署：全民身體活動指引",
+      "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1411",
+      "claim": "國健署指引依成人與有慢性病、年長或身心障礙族群提供活動建議及安全考量。",
+      "supporting_passage": "指引列有成年人、老年人、慢性病、身心障礙及孕產婦活動建議與安全注意事項。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱國健署「全民身體活動指引」官方介紹頁及原始PDF（民國106年11月版）；核對成人、老年人、慢性病、身心障礙、孕期與產後章節及安全注意事項。"
+    },
+    {
+      "source_id": "tw02_who_activity_guideline_2020",
+      "title": "WHO：身體活動與久坐行為指南（2020）",
+      "url": "https://www.who.int/publications/i/item/9789240015128",
+      "claim": "WHO 2020指南建議成人每週至少兩天涵蓋主要肌群的肌力活動，並提供長者及慢性病族群建議。",
+      "supporting_passage": "WHO指南包含成人肌力活動建議及長者、慢性病、身心障礙和孕產期族群調整。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱WHO 2020正式指南出版頁及指南內容，核對成人活動量、肌力活動、久坐與特殊族群建議。"
+    },
+    {
+      "source_id": "tw02_bjsm_strength_meta_2022",
+      "title": "Momma等：肌力活動與非傳染性疾病及死亡風險之世代研究統合分析",
+      "url": "https://doi.org/10.1136/bjsports-2021-105061",
+      "claim": "16項前瞻性世代研究統合分析；全因死亡兩組比較7項研究、263,058人與42,133例死亡，RR 0.85，95% CI 0.79–0.93，I²=83%，GRADE極低；劑量曲線的30至60分鐘是群體觀察關聯而非個人處方。",
+      "supporting_passage": "原文Results報告全因死亡兩組分析7項研究、42,133例／263,058人，RR 0.85，I²=83%；補充GRADE表將全因死亡確定性列為very low。劑量分析全因死亡最低RR約在40分鐘／週，心血管疾病約60分鐘／週，總癌症約30分鐘／週；作者概述的最大風險下降區間約30至60分鐘／週。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接閱讀British Journal of Sports Medicine原始論文與補充GRADE表；核對檢索截止日、納入世代數、結果樣本與病例數、異質性、非線性劑量曲線及證據確定性。"
+    }
+  ],
+  "localization_changes": "改以每週規律肌力活動及漸進負荷提供做法；將原作30至60分鐘的低確定性觀察劑量關聯說明為非個人處方、非上限。 移除「原作提到」的編輯比較文字，改以讀者可理解的研究背景說明；統計數值、限制與來源不變。",
+  "review_method": "重讀原作固定ID與原作來源、台灣結構化草稿及本篇來源，逐項核對主張、研究族群、期間、統計口徑、台灣生活情境、可執行步驟、成本與安全界線。只採用可直接支持本篇主張的官方頁面或研究；沒有可信台灣頻率分母時明示資料不足，不自行推估。AI查核不等於正式專業審閱。",
+  "limits": [
+    "全因死亡兩組比較為263,058人、42,133例，異質性I²=83%，GRADE確定性極低；相對風險不等於個人絕對風險。",
+    "每週約30至60分鐘的觀察性劑量曲線不是普遍最佳量、上限或傷害門檻；個人訓練方式須依健康和功能調整。"
+  ],
+  "source_reviewed_sha256": "13fdaacfbd581aa657c71c6ced9c1116dd83c226c16a909b86c9109b00efb7e2",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "0ae613f530ce8fa580ccdc8183f9cba740c082e901a8d68ac9d0ce68f0c4588e",
+  "source_ids": [
+    "tw02_hpa_activity_guideline_20261109",
+    "tw02_who_activity_guideline_2020",
+    "tw02_bjsm_strength_meta_2022"
+  ],
+  "frequency_assessment": "未找到能代表台灣居民、依相同肌力活動暴露定義估算死亡或疾病風險的全國資料。國際世代統合分析呈現觀察性劑量關聯，不能換算為台灣個人風險或可直接套用的最佳訓練量。",
+  "statistics_assessed": [
+    {
+      "topic": "肌力活動與全因死亡之關聯（有無肌力活動兩組比較）",
+      "value": "RR 0.85（95% CI 0.79–0.93）；42,133例死亡／263,058名參與者；I²=83%；GRADE極低",
+      "unit": "前瞻性世代研究統合分析之相對風險，不是絕對風險或台灣發生率",
+      "period": "系統性檢索至2021-06；論文電子出版2022-02-28",
+      "geographic_scope": "國際研究，多數來自美國，另有英格蘭、蘇格蘭、澳洲及日本研究；非台灣全國估計",
+      "population": "7項前瞻性世代研究之成人（至少18歲；基線排除嚴重健康狀況）",
+      "numerator": "42,133例全因死亡",
+      "denominator": "263,058名參與者",
+      "event_definition": "研究追蹤期間全因死亡；比較有與無肌力活動",
+      "data_type": "觀察性世代研究的隨機效應統合分析；相對風險估計",
+      "limitations": "研究間異質性高（I²=83%）；GRADE證據確定性極低，可能有殘餘混雜與活動自陳誤差；RR不代表個人絕對風險或因果效果。",
+      "source_ids": [
+        "tw02_bjsm_strength_meta_2022"
+      ]
+    },
+    {
+      "topic": "肌力活動時間與全因死亡、心血管疾病及總癌症劑量曲線",
+      "value": "作者概述約每週30至60分鐘有最大相對風險下降；曲線最低點估計分別約為全因死亡40分鐘、心血管疾病60分鐘、總癌症30分鐘",
+      "unit": "劑量反應模型中的相對風險曲線位置；不是處方、個人最佳量或安全上限",
+      "period": "系統性檢索至2021-06；論文電子出版2022-02-28",
+      "geographic_scope": "國際成人前瞻性世代研究；主要來自西方國家，並非台灣族群估計",
+      "population": "劑量曲線分別納入全因死亡6項、心血管疾病5項、總癌症4項世代研究；嚴重健康狀況者於基線排除",
+      "numerator": "劑量曲線分析未報告可對應各曲線點的單一合併病例數；全因死亡兩組比較病例數另見前項",
+      "denominator": "劑量曲線分析未提供可對應各曲線點的單一合併參與者分母；研究數如族群欄所列",
+      "event_definition": "全因死亡、心血管疾病及總癌症結果；依每週肌力活動分鐘數建立非線性關聯曲線",
+      "data_type": "觀察性世代研究劑量反應統合分析，採限制立方樣條模型",
+      "limitations": "曲線來自有限項觀察性研究且暴露測量存在差異；證據確定性低至極低，不能證明訓練劑量造成結果，亦不能視為人人適用的最佳劑量。",
+      "source_ids": [
+        "tw02_bjsm_strength_meta_2022"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "未取得運動醫學、復健或老年醫學專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "運動醫學",
+      "復健醫學",
+      "老年醫學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "419731b11d56425cfe1907c2b7a262b398a9a97648111a38d07596495100dddd",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}
