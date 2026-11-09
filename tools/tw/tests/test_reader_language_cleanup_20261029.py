@@ -12,8 +12,10 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from retroactive_audit import validate_reader_copy_cleanup_history, validate_recheck_history
 from edition import build_anki, build_epub, refs as export_refs
+from reader_copy_snapshots import historical_reader_copy_sha256
 
 
 INTERNAL_READER_NOTE_PATTERNS = (
@@ -120,7 +122,8 @@ class ReaderLanguageCleanupTests(unittest.TestCase):
                 )
                 if path != "localization/tw-edition/runtime.json":
                     self.assertEqual(
-                        hashlib.sha256(current).hexdigest(), row["after_sha256"]
+                        historical_reader_copy_sha256(path, current),
+                        row["after_sha256"],
                     )
 
         runtime = json.loads(self.read("localization/tw-edition/runtime.json"))
