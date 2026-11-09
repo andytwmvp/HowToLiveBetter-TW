@@ -1,0 +1,107 @@
+{
+  "id": "TW-02-015",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-015.md",
+  "target_sha256": "81103aeaf2697f14c11be13c776757f6448ac5a488cc4f0193a70dcbb6c19922",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_activity_guideline_20261109",
+      "title": "國健署：全民身體活動指引",
+      "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1411",
+      "claim": "國健署指引提供成年人每週活動建議及不同族群調整方向。",
+      "supporting_passage": "成人、長者、慢性病、身心障礙、孕期及產後族群均有活動建議。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱國健署「全民身體活動指引」官方介紹頁及原始PDF（民國106年11月版）；核對成人、老年人、慢性病、身心障礙、孕期與產後章節及安全注意事項。"
+    },
+    {
+      "source_id": "tw02_hpa_commute_activity_20261109",
+      "title": "國健署：通勤走路是否足以取代額外運動",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19968",
+      "claim": "國健署2026年通勤問答建議每週至少150分鐘中度活動、以能說話不能唱歌辨別強度，且仍寫每次至少10分鐘；本文公開說明與WHO口徑差異。",
+      "supporting_passage": "頁面更新2026年5月1日，寫每週150分鐘中度活動、談話但無法唱歌，並稱每次活動至少10分鐘。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱國健署2026-05-01更新的通勤問答，核對每週活動建議、中等強度口訣及每次至少10分鐘的原文口徑。"
+    },
+    {
+      "source_id": "tw02_who_physical_activity_2026",
+      "title": "WHO：Physical activity（2026年11月更新）",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity/",
+      "claim": "WHO 2026年11月更新資料將工作、交通、家務及休閒的活動都納入，並指出任何活動量都比完全不動好。",
+      "supporting_passage": "WHO 2026年11月4日頁面指出所有活動時間長短皆有益，活動可來自通勤、工作、家務及休閒。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱WHO於2026-11-04更新的官方身體活動說明，核對活動來源、任何活動量皆有益及成人每週建議。"
+    },
+    {
+      "source_id": "tw02_who_activity_guideline_2020",
+      "title": "WHO：身體活動與久坐行為指南（2020）",
+      "url": "https://www.who.int/publications/i/item/9789240015128",
+      "claim": "WHO 2020指南說明活動不以單次至少10分鐘為必要門檻，並給出成人活動目標。",
+      "supporting_passage": "WHO指南提供成人及長者的有氧活動、肌力及久坐建議，著重活動總量與各族群調整。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱WHO 2020正式指南出版頁及指南內容，核對成人活動量、肌力活動、久坐與特殊族群建議。"
+    },
+    {
+      "source_id": "tw02_stamatakis_vilpa_2022",
+      "title": "Stamatakis等：日常短促劇烈活動與死亡率之英國生物資料庫研究",
+      "url": "https://doi.org/10.1038/s41591-022-02100-x",
+      "claim": "英國生物資料庫研究為穿戴裝置觀察性研究；其短促劇烈活動與死亡率的關聯不能改寫成每個人的衝刺處方。",
+      "supporting_passage": "25,241名基線不運動者，平均追蹤6.9年、852人死亡；約4至5分鐘每日活動量的統計關聯不能證明介入效果。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱Nature Medicine原始論文及摘要；核對英國生物資料庫樣本、追蹤年數、全因死亡數和中位活動時間，並確認為觀察性研究。"
+    }
+  ],
+  "localization_changes": "把原作四至五分鐘的研究數字轉為安全的日常短段活動建議；比較WHO任何時長原則與國健署仍列10分鐘單次口徑，明確禁止以追車或衝樓梯作處方。",
+  "review_method": "重讀原作固定ID與原作來源、台灣結構化草稿及本篇來源，逐項核對主張、研究族群、期間、統計口徑、台灣生活情境、可執行步驟、成本與安全界線。只採用可直接支持本篇主張的官方頁面或研究；沒有可信台灣頻率分母時明示資料不足，不自行推估。AI查核不等於正式專業審閱。",
+  "limits": [
+    "國健署2026年通勤問答仍寫每次至少10分鐘；WHO 2020指南採任何時長活動均可計入的口徑。正文已並列說明，不將短促活動的英國觀察關聯寫成普遍處方。",
+    "英國生物資料庫研究是觀察性研究，受試者與台灣居民及日常環境不同，不能換算個人風險。"
+  ],
+  "source_reviewed_sha256": "81103aeaf2697f14c11be13c776757f6448ac5a488cc4f0193a70dcbb6c19922",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "3497e037bcf49cda7013e57edcad76c5a7371c4e67c5f9bf0dc356989f363db4",
+  "source_ids": [
+    "tw02_hpa_activity_guideline_20261109",
+    "tw02_hpa_commute_activity_20261109",
+    "tw02_who_physical_activity_2026",
+    "tw02_who_activity_guideline_2020",
+    "tw02_stamatakis_vilpa_2022"
+  ],
+  "frequency_assessment": "未找到可代表台灣且能回答本主題發生頻率的可信全國資料；不以國外觀察研究換算台灣個人機率，也不自行推估。",
+  "statistics_assessed": [
+    {
+      "topic": "英國非運動者短促劇烈日常活動與死亡率之關聯",
+      "value": "樣本每日VILPA中位數4.4分鐘；與全因及癌症死亡率相對低26–30%、心血管死亡率相對低32–34%相關",
+      "unit": "研究樣本中位暴露分鐘／日及觀察性相對風險差異；非介入效果或台灣發生率",
+      "period": "平均追蹤6.9年；論文發表2022-12-08，非運動狀態較加速度計基線早約5.5年回報",
+      "geographic_scope": "英國UK Biobank",
+      "population": "非運動者全因死亡分析25,241人，平均年齡61.8歲；與台灣一般成人不同",
+      "numerator": "追蹤期間852例全因死亡；死因分項及其他分析另有不同人數",
+      "denominator": "全因死亡分析25,241名非運動者；平均追蹤6.9年",
+      "event_definition": "全因死亡；另分心血管及癌症死亡，本文不把關聯轉為個人機率",
+      "data_type": "穿戴式加速度計與自陳活動史連結的前瞻性觀察世代研究",
+      "limitations": "未隨機分派活動量，健康狀況與生活型態可能混雜；中位4.4分鐘是研究樣本暴露，不是安全介入試驗或普遍運動處方；不能換算台灣個人風險。",
+      "source_ids": [
+        "tw02_stamatakis_vilpa_2022"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "需定期複查國健署單次活動時間口徑與WHO指引是否更新。",
+    "未取得運動醫學及職業安全專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "運動醫學",
+      "公共衛生與流行病學",
+      "職業安全"
+    ]
+  },
+  "prior_chapter_draft_sha256": "15a3b8e25420f43eb5bfb0b00c2746501b7bc58ef279f831a276ce058fcea8f6",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}

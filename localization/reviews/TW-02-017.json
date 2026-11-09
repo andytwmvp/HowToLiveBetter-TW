@@ -1,0 +1,96 @@
+{
+  "id": "TW-02-017",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-017.md",
+  "target_sha256": "59dbeca9cbae24d4fd1f4888d96233c6943de8de8de1990aca097df50fa768dc",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_nhis_activity_sitting_2021",
+      "title": "國健署：民國110年國民健康訪問調查報告，身體活動及久坐表",
+      "url": "https://www.hpa.gov.tw/Pages/ashx/GetFile.ashx?lang=c&sid=7bdbac4973314a5e83120f326f400d34&type=1",
+      "claim": "調查表列2021年18歲以上每日坐著至少6小時之加權比例50.7%、平均6.1小時、有效完訪樣本19,480人及加權樣本19,928人。",
+      "supporting_passage": "國健署110年國民健康訪問調查報告第202至203頁表2.3.3.3：總計每日平均坐著6.1小時；以每日總坐著至少6小時為久坐分類，比例50.7%，完訪樣本19,480、加權樣本19,928。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "閱讀國健署2021年國民健康訪問調查報告原始PDF第203頁表2.3.3.3；核對成人範圍、有效完訪與加權樣本數、久坐定義及加權估計，報告未列比例對應事件人數。"
+    },
+    {
+      "source_id": "tw02_who_activity_guideline_2020",
+      "title": "WHO：身體活動與久坐行為指南（2020）",
+      "url": "https://www.who.int/publications/i/item/9789240015128",
+      "claim": "WHO指南建議限制久坐，並以整體活動量和個別能力安排活動。",
+      "supporting_passage": "WHO指南對成人與長者提供活動、肌力及久坐行為建議。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱WHO 2020正式指南出版頁及指南內容，核對成人活動量、肌力活動、久坐與特殊族群建議。"
+    },
+    {
+      "source_id": "tw02_diaz_sedentary_cohort_2017",
+      "title": "Diaz等：美國中高齡成人久坐型態與死亡率之全國世代研究",
+      "url": "https://doi.org/10.7326/M17-0212",
+      "claim": "美國中高齡成人世代研究不能確立人人適用的起身時距；本文不列固定幾分鐘的規則。",
+      "supporting_passage": "研究以中高齡成人觀察每日總久坐與連續久坐型態；不能從觀察性資料推定普遍最佳休息頻率。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱Annals of Internal Medicine原始論文摘要及方法摘要；核對美國中高齡世代研究設計與限制，不從中推導通用起身間隔。"
+    },
+    {
+      "source_id": "tw02_ekelund_sitting_meta_2016",
+      "title": "Ekelund等：身體活動是否減弱久坐與死亡率關聯之統合分析",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27475271/",
+      "claim": "多研究統合分析提供活動量和久坐的群體關聯，不能保證固定活動時間可完全抵銷個人久坐風險。",
+      "supporting_passage": "16項研究含1,005,791人；最高活動組長時間坐著者的群體死亡率關聯不顯著，但研究是觀察性統合分析。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱BMJ原始研究摘要及統合分析方法；核對研究數、參與者數與分層分析性質，不將群體關聯寫成個人風險抵銷保證。"
+    }
+  ],
+  "localization_changes": "加入台灣2021年全國久坐調查的期間、定義、未加權與加權樣本、分母限制；以工作節點安排安全活動，刪除運動可以完全抵銷久坐的保證及固定起身間隔。",
+  "review_method": "重讀原作固定ID與原作來源、台灣結構化草稿及本篇來源，逐項核對主張、研究族群、期間、統計口徑、台灣生活情境、可執行步驟、成本與安全界線。只採用可直接支持本篇主張的官方頁面或研究；沒有可信台灣頻率分母時明示資料不足，不自行推估。AI查核不等於正式專業審閱。",
+  "limits": [
+    "50.7%及平均6.1小時來自2021年自陳調查；久坐表有效完訪樣本19,480、加權樣本19,928，報告未列原始或加權事件人數，也不能推估個人罹病機率。",
+    "國際久坐研究不能確立通用起身間隔；高活動組的群體關聯不代表可以保證抵銷個人久坐風險。"
+  ],
+  "source_reviewed_sha256": "59dbeca9cbae24d4fd1f4888d96233c6943de8de8de1990aca097df50fa768dc",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "12171bb6741d93848bffedc1d1926dbb0e5b31d4719ffb90e389efa3515c7f43",
+  "source_ids": [
+    "tw02_hpa_nhis_activity_sitting_2021",
+    "tw02_who_activity_guideline_2020",
+    "tw02_diaz_sedentary_cohort_2017",
+    "tw02_ekelund_sitting_meta_2016"
+  ],
+  "frequency_assessment": "國健署2021年全國調查報告中，18歲以上受訪者每日總坐著時間至少6小時的加權比例為50.7%，平均坐著6.1小時；久坐表有效完訪樣本19,480人、加權樣本19,928人。這是2021年自陳的群體估計，定義不是連續坐滿6小時，且不能推算個人疾病機率或代表2026年現況。",
+  "statistics_assessed": [
+    {
+      "topic": "2021年18歲以上成人每日坐著至少6小時",
+      "value": "50.7%",
+      "unit": "符合調查操作定義之加權比例",
+      "period": "2021年民國110年國民健康訪問調查",
+      "geographic_scope": "台灣全國調查",
+      "population": "18歲以上受訪者；久坐表有效完訪樣本19,480人，加權樣本19,928人",
+      "numerator": "報告未提供此加權比例的原始或加權事件人數；不得以百分比乘加權樣本數推算人數",
+      "denominator": "有效完訪樣本19,480人；加權估計樣本數19,928人",
+      "event_definition": "依報告操作定義，每日總坐著時間至少6小時；不是連續坐滿6小時",
+      "data_type": "國健署全國調查、自陳資料、樣本權值加權估計",
+      "limitations": "資料反映2021年自陳情形且表格未列原始加權事件數；不能代表2026年現況、不能換算個人機率，也不能和不同年份或不同坐姿定義直接比較。",
+      "source_ids": [
+        "tw02_hpa_nhis_activity_sitting_2021"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "未找到後續年度可直接比較、同定義且公開分母的久坐全國統計。",
+    "未取得職業醫學或公共衛生專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "職業醫學",
+      "公共衛生與流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "9129e3c0d35df5ce2dfe042ff3dac6d6c76831604d9659db6185cc4028cf4383",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}

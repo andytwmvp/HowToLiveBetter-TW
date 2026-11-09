@@ -1,0 +1,85 @@
+{
+  "id": "TW-02-014",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-09",
+  "review_due_at": "2027-02-09",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-014.md",
+  "target_sha256": "ba2ffb2661110d3a4f19151f3b7b11f12560170d4f7a5da50bdaa318b0ac2015",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_activity_guideline_20261109",
+      "title": "國健署：全民身體活動指引",
+      "url": "https://www.hpa.gov.tw/Pages/EBook.aspx?nodeid=1411",
+      "claim": "國健署指引將身體活動作為不同年齡及健康狀況民眾可依體能選擇的方式，支持本文以活動選擇而非單一球種排名提供建議。",
+      "supporting_passage": "國健署指引說明成人、長者、慢性病、身心障礙、孕期及產後活動建議；需按個別狀況選擇。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "直接查閱國健署「全民身體活動指引」官方介紹頁及原始PDF（民國106年11月版）；核對成人、老年人、慢性病、身心障礙、孕期與產後章節及安全注意事項。"
+    },
+    {
+      "source_id": "tw02_bjsm_racquet_cohort_2016",
+      "title": "Oja等：蘇格蘭與英格蘭球拍運動人口世代研究",
+      "url": "https://doi.org/10.1136/bjsports-2016-096822",
+      "claim": "英國成人世代研究中球拍運動參與和較低死亡率相關；研究為觀察性世代，不能證明因果或推廣成台灣個人效果。",
+      "supporting_passage": "80,306名英國30歲以上成人；球拍運動參與與較低全因及心血管死亡風險相關，研究設計為觀察性世代研究。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱原始研究書目及PubMed摘要；核對蘇格蘭與英格蘭研究範圍、80,306名成人、年齡摘要和死亡率HR；摘要未列運動分組的分母及死亡事件數。"
+    },
+    {
+      "source_id": "tw02_who_activity_guideline_2020",
+      "title": "WHO：身體活動與久坐行為指南（2020）",
+      "url": "https://www.who.int/publications/i/item/9789240015128",
+      "claim": "WHO 2020指南涵蓋長者、孕產婦、慢性病及身心障礙者，並採不要求每次至少10分鐘的成人活動計量原則。",
+      "supporting_passage": "WHO正式指南摘要說明包含一般成人、長者、孕產婦、慢性病及身心障礙族群；成人活動不以至少10分鐘為必要門檻。",
+      "accessed_at": "2026-11-09",
+      "retrieval_method": "查閱WHO 2020正式指南出版頁及指南內容，核對成人活動量、肌力活動、久坐與特殊族群建議。"
+    }
+  ],
+  "localization_changes": "保留球拍運動作為個人活動選項；以台灣活動指引、場館交通成本與天候安全重寫，將英國死亡率關聯限縮為觀察結果，不推薦球種排名或延壽保證。 另移除參考資料段落間多餘空行；不變更主張或來源。",
+  "review_method": "重讀原作固定ID與原作來源、台灣結構化草稿及本篇來源，逐項核對主張、研究族群、期間、統計口徑、台灣生活情境、可執行步驟、成本與安全界線。只採用可直接支持本篇主張的官方頁面或研究；沒有可信台灣頻率分母時明示資料不足，不自行推估。AI查核不等於正式專業審閱。",
+  "limits": [
+    "球拍運動比較來自英國觀察性世代資料，可能受基線健康、收入、場地、社交和其他活動差異影響；不能證明因果或當作台灣個人效益。",
+    "未找到以一致方法代表台灣、比較球拍運動及其他活動對壽命的全國統計。"
+  ],
+  "source_reviewed_sha256": "ba2ffb2661110d3a4f19151f3b7b11f12560170d4f7a5da50bdaa318b0ac2015",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "4be9cc1dbc497e98fe46e1bdbefe15ab7b9c02592f0d4af29db57536ca466bb9",
+  "source_ids": [
+    "tw02_hpa_activity_guideline_20261109",
+    "tw02_who_activity_guideline_2020",
+    "tw02_bjsm_racquet_cohort_2016"
+  ],
+  "frequency_assessment": "未找到可代表台灣且能回答本主題發生頻率的可信全國資料；不以國外觀察研究換算台灣個人機率，也不自行推估。",
+  "statistics_assessed": [
+    {
+      "topic": "球拍運動參與與全因及心血管死亡率之關聯",
+      "value": "全因死亡 HR 0.53（95% CI 0.40–0.69）；心血管死亡 HR 0.44（95% CI 0.24–0.83）",
+      "unit": "觀察性世代研究 hazard ratio；非台灣發生率或絕對風險",
+      "period": "研究論文發表2017年（電子出版2016-11-28）；PubMed摘要未列完整招募期間與追蹤時間",
+      "geographic_scope": "蘇格蘭與英格蘭人口樣本",
+      "population": "80,306名成人；平均年齡52歲，標準差14；54%為女性",
+      "numerator": "PubMed摘要未列按運動種類分層的死亡事件數",
+      "denominator": "全體分析樣本80,306人；各運動暴露分層人數未列於摘要",
+      "event_definition": "全因死亡及心血管疾病死亡；球拍運動參與的觀察性關聯",
+      "data_type": "合併人口世代資料與Cox比例風險模型；摘要未列個人層級原始資料",
+      "limitations": "參與者自陳運動可能有選擇偏差與殘餘混雜；不同運動分組不是隨機分派；不可推論球拍運動造成效果、不可當成台灣風險或運動排名。",
+      "source_ids": [
+        "tw02_bjsm_racquet_cohort_2016"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "未取得運動醫學或公共衛生專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "運動醫學",
+      "公共衛生與流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "1a5b6a296676a921df797650b9fe0792f355210be78912e44bac6359c7b8c8ae",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null
+}
