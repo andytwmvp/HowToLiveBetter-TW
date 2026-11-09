@@ -1,0 +1,50 @@
+{
+  "id": "TW-02-023",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-023.md",
+  "target_sha256": "ebbee476208b5eb6046a54046bc9ec2f843f37ccf297b00a39e0b5722124472f",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_protein_food_guide_2026",
+      "title": "國健署：到底怎麼吃才均衡？（均衡飲食與蛋白質選擇）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4687&pid=11677",
+      "claim": "官方頁面支持本文所述的蛋白質食物多樣化建議及加工肉提醒。",
+      "supporting_passage": "頁面於2024-11-21更新，說明「我的餐盤」的豆魚蛋肉選擇方向及避免加工肉品。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "查閱國健署均衡飲食官方頁，核對豆魚蛋肉選擇方向及支持本篇的具體主張。"
+    }
+  ],
+  "localization_changes": "將原作單向要求以魚禽替代紅肉，改為國健署豆魚蛋肉的多樣化選擇；明確指出不是人人須戒某種肉，避免低收入者被引導購買高價食材，也補足慢性腎病、透析和營養不良風險族群的個別化提醒。",
+  "review_method": "重讀原作固定ID與主題、最新manifest資料及未核對結構化草稿；逐項查核台灣官方飲食、食品標示或救護來源，核對主張、適用族群、台灣生活情境、可執行步驟、費用、風險及統計口徑。沒有可信台灣個人頻率資料時明示資料不足，不以國外研究或通報數推算個人機率。AI協助來源查核不等於正式專業審閱。",
+  "limits": [
+    "豆魚蛋肉的選擇順序是飲食方向，不等於個人疾病風險或特定肉類完全禁止。",
+    "蛋白質需求會隨疾病、透析、體重變化及營養狀況改變。"
+  ],
+  "source_reviewed_sha256": "ebbee476208b5eb6046a54046bc9ec2f843f37ccf297b00a39e0b5722124472f",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "df3993e8d03d82086b36e45c9a1ddf5a375c4fec0d0d9eb43b2f6e246f514f13",
+  "source_ids": [
+    "tw02_hpa_protein_food_guide_2026"
+  ],
+  "frequency_assessment": "這篇是日常飲食選擇建議，沒有可靠的台灣統計可把單餐蛋白質來源替換換算成個人的疾病發生率或風險下降；未引用國外觀察性數據推估台灣個人效益。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "若未來新增蛋白質份量數字，須先補足適用年齡、體重、疾病狀況及正式來源。",
+    "未取得營養學及腎臟營養專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "腎臟營養",
+      "高齡及疾病營養照護"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "ad83f8f5be915d67af7dc6666022cd931cdd970afc551ef96b0f71b2319478ce",
+  "prior_structured_draft_review": null
+}

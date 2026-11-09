@@ -1,0 +1,50 @@
+{
+  "id": "TW-02-024",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-024.md",
+  "target_sha256": "3bdcc8a357ce71336f14e58118d8d9d688b085a96caf9ba308aba68cb9bdd117",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_external_dining_guidance_2024",
+      "title": "國健署：常吃外食真的容易發胖嗎？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=18127",
+      "claim": "國健署外食建議支持逐步增加全穀及未精製雜糧，並以無糖茶取代含糖飲料。",
+      "supporting_passage": "頁面於2024-06-25發布、2024-11-18更新；第4點建議至少1/3主食以糙米、五穀米、玉米、地瓜、南瓜或馬鈴薯取代白飯，第5點建議多喝白開水、以無糖茶取代含糖飲料。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱國健署2024-11-18更新的外食建議頁，核對全穀替換比例、無糖茶建議及正式頁面日期。"
+    }
+  ],
+  "localization_changes": "把原作直接替換精米白麵的指令改成逐步增加全穀的台灣可行做法；明列國健署約三分之一主食建議及台灣常見替換選項，避免把地瓜等另算成不受限制的配菜。",
+  "review_method": "重讀原作固定ID與主題、最新manifest資料及未核對結構化草稿；逐項查核台灣官方飲食、食品標示或救護來源，核對主張、適用族群、台灣生活情境、可執行步驟、費用、風險及統計口徑。沒有可信台灣個人頻率資料時明示資料不足，不以國外研究或通報數推算個人機率。AI協助來源查核不等於正式專業審閱。",
+  "limits": [
+    "全穀主食仍有碳水化合物和熱量，不是不限量食物。",
+    "糖尿病、腎臟病及特殊腸胃、吞嚥狀況需要個別調整。"
+  ],
+  "source_reviewed_sha256": "3bdcc8a357ce71336f14e58118d8d9d688b085a96caf9ba308aba68cb9bdd117",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "63b742bc754b1db41dac245a0e8478fca0ae95afce13c4371c8b6bcf488c04a8",
+  "source_ids": [
+    "tw02_hpa_external_dining_guidance_2024"
+  ],
+  "frequency_assessment": "本篇是飲食選擇指引，沒有可代表台灣個人疾病機率的統計；國健署的全穀替換比例屬飲食建議，不是發生率或保證效果，故不以海外研究推估個人收益。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "國健署飲食建議頁面日後若更新替換比例或食物分類，需複查正文。",
+    "未取得營養、糖尿病照護及腎臟營養專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "糖尿病營養照護",
+      "腎臟營養"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "be0cd68c1f2f009ff0a1abff859e5e8c73deb310521d834c1ba95c9e8cb02d2c",
+  "prior_structured_draft_review": null
+}

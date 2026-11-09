@@ -1,0 +1,115 @@
+{
+  "id": "TW-02-027",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-027.md",
+  "target_sha256": "3894ed69cbcac2c3966d9c239a5408df184d74ebff604816fedcf7344465e873",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_vegfruit_guidance_2023",
+      "title": "國健署：蔬菜吃不多，以水果替代可以嗎？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=17418",
+      "claim": "國健署建議每日蔬菜3至5份、水果2至4份，且水果不能長期取代蔬菜。",
+      "supporting_passage": "國健署頁面於2023-09-19發布及更新，明載蔬菜3至5份、水果2至4份，並說明份數依每日飲食指南或我的餐盤調整。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱國健署2023-09-19更新的蔬果建議頁，核對份數、蔬果不可長期替代及資料日期。"
+    },
+    {
+      "source_id": "tw02_hpa_food_exchange_portions_2024",
+      "title": "國健署：健康飲食標準與食物代換份量",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=987",
+      "claim": "食物代換表列出的堅果與種子每份重量會依種類不同；蔬菜與水果份量也有不同重量範圍。",
+      "supporting_passage": "頁面於2018-03-13發布、2024-12-04更新；表格列杏仁與核桃仁7公克、開心果／腰果／部分種子10公克、花生仁13公克；蔬菜一份可食生重約100公克，水果約80至120公克。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱國健署健康飲食標準頁與食物代換表附件，核對堅果種類別重量、蔬菜及水果份量和頁面更新日期。"
+    },
+    {
+      "source_id": "tw02_hpa_wholefruit_juice_2019",
+      "title": "國健署：喝果汁跟吃水果一樣好？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1425&pid=11285",
+      "claim": "完整水果與果汁不能一概視為相同攝取方式；果汁可能少纖維且較容易讓糖攝取集中。",
+      "supporting_passage": "國健署頁面於2019-08-12發布、2019-08-26更新；說明市售果汁可能濾掉果渣、降低膳食纖維，建議以原態水果為主。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱國健署喝果汁與水果比較頁，核對果渣、纖維及原態水果建議和頁面日期。"
+    },
+    {
+      "source_id": "tw02_hpa_nutrition_survey_2017_2020",
+      "title": "國健署：國民營養健康狀況變遷調查成果報告2017至2020年",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=3999&pid=15562",
+      "claim": "國健署2017至2020全國營養調查報告表3.3.2列出19歲以上蔬菜達3份與水果達2份比例，並提供未加權樣本數及加權分析方法。",
+      "supporting_passage": "成果報告第37至38頁說明以飲食頻率問卷和24小時飲食回憶估算每日份數，採個人份數方法呈現描述；19歲以上全體樣本6,537人，蔬菜至少3份個人份數達標率22.8%，水果至少2份11.2%，分析經SUDAAN加權調整。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "查閱國健署成果報告頁並下載附件，直接核對報告第37至38頁研究方法、表3.3.2母數、個人份數定義及加權說明。"
+    }
+  ],
+  "localization_changes": "將原作固定五份約400公克的單一目標，改用國健署依熱量需要列出的蔬菜3至5份、水果2至4份；加入實際份量、蔬果不可長期互換、果汁限制及可核對的全國調查方法與分母限制。",
+  "review_method": "重讀原作固定ID與主題、最新manifest資料及未核對結構化草稿；逐項查核台灣官方飲食、食品標示或救護來源，核對主張、適用族群、台灣生活情境、可執行步驟、費用、風險及統計口徑。沒有可信台灣個人頻率資料時明示資料不足，不以國外研究或通報數推算個人機率。AI協助來源查核不等於正式專業審閱。",
+  "limits": [
+    "飲食份數依每日熱量需求不同，不能將固定克數套用所有人。",
+    "2017至2020年調查是歷史攝取資料，非2026年現況或個人疾病風險。",
+    "報告列出未加權樣本數，但未提供原始加權分子、分母或信賴區間。"
+  ],
+  "source_reviewed_sha256": "3894ed69cbcac2c3966d9c239a5408df184d74ebff604816fedcf7344465e873",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "5ba13578a8b4300185024ebe3a265e3db54e590f98f4a692de5eb22d4f5345d4",
+  "source_ids": [
+    "tw02_hpa_vegfruit_guidance_2023",
+    "tw02_hpa_food_exchange_portions_2024",
+    "tw02_hpa_wholefruit_juice_2019",
+    "tw02_hpa_nutrition_survey_2017_2020"
+  ],
+  "frequency_assessment": "國健署2017至2020年全國營養調查報告以個人份數法列19歲以上蔬菜達每日3份比例22.8%、水果達每日2份比例11.2%；未加權成人樣本6,537人，分析經SUDAAN加權。該數據是歷史飲食指南達標率，不是2026年現況、疾病風險或個人機率；報告表未列原始加權分子、加權分母與信賴區間。",
+  "statistics_assessed": [
+    {
+      "topic": "19歲以上成人每日蔬菜攝取至少3份",
+      "value": "22.8%",
+      "unit": "經複雜抽樣加權後的個人份數達標比例",
+      "period": "2017至2020年",
+      "geographic_scope": "台灣全國營養調查",
+      "population": "19歲以上成人；未加權樣本6,537人",
+      "numerator": "報告未列原始達標人數或加權分子；表列加權比例22.8%",
+      "denominator": "未加權分析樣本6,537人；加權估計母群分母未列為原始人數",
+      "event_definition": "依個人份數法估算每日蔬菜攝取量至少3份；食物頻率問卷頻率乘以24小時飲食回憶平均份量",
+      "data_type": "全國橫斷式營養健康調查；複雜抽樣並以SUDAAN加權",
+      "limitations": "歷史調查結果非2026年現況或疾病盛行率；表格未列原始加權分子、分母與信賴區間；飲食頻率與24小時回憶有自陳及回憶誤差，不推估個人疾病風險。",
+      "source_ids": [
+        "tw02_hpa_nutrition_survey_2017_2020"
+      ]
+    },
+    {
+      "topic": "19歲以上成人每日水果攝取至少2份",
+      "value": "11.2%",
+      "unit": "經複雜抽樣加權後的個人份數達標比例",
+      "period": "2017至2020年",
+      "geographic_scope": "台灣全國營養調查",
+      "population": "19歲以上成人；未加權樣本6,537人",
+      "numerator": "報告未列原始達標人數或加權分子；表列加權比例11.2%",
+      "denominator": "未加權分析樣本6,537人；加權估計母群分母未列為原始人數",
+      "event_definition": "依個人份數法估算每日水果攝取量至少2份；食物頻率問卷頻率乘以24小時飲食回憶平均份量",
+      "data_type": "全國橫斷式營養健康調查；複雜抽樣並以SUDAAN加權",
+      "limitations": "歷史調查結果非2026年現況或疾病盛行率；表格未列原始加權分子、分母與信賴區間；飲食頻率與24小時回憶有自陳及回憶誤差，不推估個人疾病風險。",
+      "source_ids": [
+        "tw02_hpa_nutrition_survey_2017_2020"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "後續若國健署公布更新一波營養調查，需以相同定義確認可比性後再更新正文。",
+    "未取得營養、腎臟營養、糖尿病照護及流行病學專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "腎臟營養",
+      "糖尿病營養照護",
+      "公共衛生與流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "dc60662d95846fd3853715dad586bd9747736b07116e9b0ba47a0937b3288391",
+  "prior_structured_draft_review": null
+}

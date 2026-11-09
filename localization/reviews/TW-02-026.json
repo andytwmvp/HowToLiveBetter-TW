@@ -1,0 +1,62 @@
+{
+  "id": "TW-02-026",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-026.md",
+  "target_sha256": "beec3a45c7ee3fcf9a33d3c8555523a003d364059a395b2ddacecb3f52bef06a",
+  "source_checks": [
+    {
+      "source_id": "tw02_tfda_caffeine_guidance_2025",
+      "title": "食藥署：咖啡聰明選，安心喝",
+      "url": "https://www.fda.gov.tw/TC/siteListContent.aspx?id=51249&sid=13694",
+      "claim": "台灣食藥署列出的咖啡因建議上限依成人、青少年及孕婦／兒童而異，且應依個人狀況調整。",
+      "supporting_passage": "食藥署頁面發布並維護於2025-10-07：成人每日不超過300毫克、12至18歲不超過100毫克，孕婦與兒童建議避免；並列心悸、焦慮、胃酸及失眠等過量或敏感時可能出現的不適。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱食藥署2025-10-07官方咖啡說明，核對不同年齡建議、症狀及咖啡因來源。"
+    },
+    {
+      "source_id": "tw02_hpa_pregnancy_caffeine_2025",
+      "title": "國健署：孕媽咪常見10大孕期營養問題",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4306&pid=13853",
+      "claim": "國健署孕期資料與食藥署2025年一般咖啡因資料對孕婦的說法不一致；國健署建議孕婦前三個月減少咖啡或茶並以不超過200毫克為參考，依醫囑調整。",
+      "supporting_passage": "國健署頁面2021-03-25發布、2025-03-20更新；孕期咖啡因段落建議前三個月減少喝咖啡或茶，每日不超過200毫克，並先請教醫師、遵循醫囑。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "查閱國健署孕期營養問答，核對發布與更新日期及孕期咖啡因建議，並與食藥署2025-10-07一般建議逐字比對其適用族群差異。"
+    }
+  ],
+  "localization_changes": "撤除原作每天三至四杯及400毫克上限，改用台灣食藥署2025年的成人及青少年建議；並明列食藥署與國健署孕期資料差異，要求孕期依產檢醫囑，不把成人上限誤套孕婦。",
+  "review_method": "重讀原作固定ID與主題、最新manifest資料及未核對結構化草稿；逐項查核台灣官方飲食、食品標示或救護來源，核對主張、適用族群、台灣生活情境、可執行步驟、費用、風險及統計口徑。沒有可信台灣個人頻率資料時明示資料不足，不以國外研究或通報數推算個人機率。AI協助來源查核不等於正式專業審閱。",
+  "limits": [
+    "一般成人每日300毫克及12至18歲每日100毫克為食藥署建議上限，不代表人人需要攝取至此。",
+    "食藥署2025一般資料建議孕婦避免，國健署2025孕期頁則列200毫克上限且依醫囑，官方資料不一致。",
+    "不同飲品杯量、沖泡方式、品牌及標示精度不同，無法以杯數精確換算。"
+  ],
+  "source_reviewed_sha256": "beec3a45c7ee3fcf9a33d3c8555523a003d364059a395b2ddacecb3f52bef06a",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "098fcb956d5c419a24a3a61e270013dbe9a9692bf6268844e81aef924ac23fe2",
+  "source_ids": [
+    "tw02_tfda_caffeine_guidance_2025",
+    "tw02_hpa_pregnancy_caffeine_2025"
+  ],
+  "frequency_assessment": "此篇建議的是咖啡因暴露量與個人耐受性，不是疾病發生率。未找到適用於所有台灣民眾、可用杯數計算咖啡因不適個人機率的可靠統計；官方毫克建議是攝取界線而非事件率。孕期指引存在官方文字差異，須由產檢醫療團隊依個人情況解釋。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "需定期確認食藥署與國健署是否統一孕期咖啡因建議及適用族群。",
+    "未取得婦產科、營養學與睡眠醫學專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "婦產科",
+      "營養學",
+      "睡眠醫學",
+      "公共衛生"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "32ea9bef1c91bb6e477ab02e1608da245073aad938184071ea2628a106844339",
+  "prior_structured_draft_review": null
+}

@@ -1,0 +1,92 @@
+{
+  "id": "TW-02-022",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-022.md",
+  "target_sha256": "e88584eabc6e87217610b631c2d14409e68ed9121e0a67d83442ced55e295cad",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_food_exchange_portions_2024",
+      "title": "國健署：健康飲食標準與食物代換份量",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=987",
+      "claim": "食物代換表列出的堅果與種子每份重量會依種類不同；蔬菜與水果份量也有不同重量範圍。",
+      "supporting_passage": "頁面於2018-03-13發布、2024-12-04更新；表格列杏仁與核桃仁7公克、開心果／腰果／部分種子10公克、花生仁13公克；蔬菜一份可食生重約100公克，水果約80至120公克。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱國健署健康飲食標準頁與食物代換表附件，核對堅果種類別重量、蔬菜及水果份量和頁面更新日期。"
+    },
+    {
+      "source_id": "tw02_tfda_allergen_rule_2018_2020",
+      "title": "食藥署：食品過敏原標示規定（107年公告、109年施行）",
+      "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?cid=42303&id=f639057140744869584&type=2",
+      "claim": "台灣規定市售包裝食品含公告堅果類或花生等過敏原時須依規定標示；本規定有明確公告與施行日期。",
+      "supporting_passage": "規定發文日期為2018-08-21，法定適用範圍為市售有容器或包裝食品的11項過敏原，包含花生及堅果類；自2020-07-01施行，以產品產製日期為準。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱食藥署公告的現行「食品過敏原標示規定」原文，核對公告日、適用產品範圍、過敏原項目及施行日。"
+    },
+    {
+      "source_id": "tw02_hpa_infant_choking_handbook_2025",
+      "title": "國健署：兒童衛教手冊（幼兒進食與哽塞預防）",
+      "url": "https://health99.hpa.gov.tw/media/public/pdf/22075.pdf",
+      "claim": "國健署兒童衛教手冊提醒堅果等堅硬、圓形食物可能造成幼兒哽塞。",
+      "supporting_passage": "兒童衛教手冊預防事故傷害段落將堅果列入堅硬、圓形且可能造成哽塞的食物例子；本輪PDF連線逾時，使用先前已讀取的官方PDF文字並以國健署兒童衛教手冊目錄確認文件來源。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "先前直接查閱國健署兒童衛教手冊相關PDF文字；本輪再次確認國健署兒童衛教手冊官方下載頁與PDF網址，但PDF服務逾時，未把失敗下載描述為重新讀取成功。"
+    },
+    {
+      "source_id": "tw02_nfa_anaphylaxis_2026",
+      "title": "消防署：過敏性休克的到院前救護案例與辨識",
+      "url": "https://mag.nfa.gov.tw/article.php?id=4073",
+      "claim": "食物等過敏原可引發嚴重全身過敏；呼吸道水腫、呼吸困難或血壓下降屬急症，不能當成普通食物不耐受觀察。",
+      "supporting_passage": "消防署2026-04-30刊登的到院前救護案例說明嚴重過敏可由食物、藥物或蜂螫引起，可能造成呼吸道水腫、血壓驟降及呼吸困難。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱消防署2026-04-30救護天地文章，僅採用過敏性休克的急症性質與食物可能為致敏原，不移用其專業人員藥物劑量或山區個案細節。"
+    },
+    {
+      "source_id": "tw02_nfa_emergency_119",
+      "title": "消防署：119與112緊急報案資訊",
+      "url": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=66",
+      "claim": "台灣發生呼吸困難等危急狀況可撥119啟動緊急救護。",
+      "supporting_passage": "消防署119與112專頁說明119為消防與緊急救護報案管道，另列手機無一般訊號時可用的112資訊。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱內政部消防署119、112官方報案說明，核對台灣緊急救護入口。"
+    }
+  ],
+  "localization_changes": "把原作固定每日一小把的說法改為依食物份量與個人情況選擇；補上台灣包裝食品過敏原規定的公告日與施行日、未包裝餐點的限制、幼兒整顆堅果哽塞風險及嚴重過敏求援。",
+  "review_method": "重讀原作固定ID與主題、最新manifest資料及未核對結構化草稿；逐項查核台灣官方飲食、食品標示或救護來源，核對主張、適用族群、台灣生活情境、可執行步驟、費用、風險及統計口徑。沒有可信台灣個人頻率資料時明示資料不足，不以國外研究或通報數推算個人機率。AI協助來源查核不等於正式專業審閱。",
+  "limits": [
+    "食物代換重量是估算參考，不是每個人的固定每日目標。",
+    "未找到足以估算台灣個人堅果過敏或幼兒堅果哽塞機率的全國統計。",
+    "過敏原強制標示規定針對市售包裝食品，不等於未包裝餐點或餐飲現場有相同標示。"
+  ],
+  "source_reviewed_sha256": "e88584eabc6e87217610b631c2d14409e68ed9121e0a67d83442ced55e295cad",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "4861816ac4bccf7de683b1dfb1da37c6ed49cebb6befd8346f08d3f1944beb4c",
+  "source_ids": [
+    "tw02_hpa_food_exchange_portions_2024",
+    "tw02_tfda_allergen_rule_2018_2020",
+    "tw02_hpa_infant_choking_handbook_2025",
+    "tw02_nfa_anaphylaxis_2026",
+    "tw02_nfa_emergency_119"
+  ],
+  "frequency_assessment": "未找到可用一致定義和分母計算台灣一般居民堅果過敏或幼兒堅果哽塞發生率的全國統計。不能由單一急救案例、通報數或國外研究推估個人機率；正文先提供已知過敏者避食、包裝標示範圍及幼兒避免整顆堅果的行動。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "國健署兒童衛教手冊PDF本輪連線逾時；已依先前讀取的手冊內容與官方目錄交叉核對，須在後續來源複查時重開原PDF。",
+    "未取得過敏免疫、兒科及營養專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "兒科與兒童進食安全",
+      "過敏免疫",
+      "食品標示法規"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "86ab16285a993a038bdc57297fa8d9b131bc28542d6619c8aba85808f279e231",
+  "prior_structured_draft_review": null
+}

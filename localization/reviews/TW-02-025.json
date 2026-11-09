@@ -1,0 +1,59 @@
+{
+  "id": "TW-02-025",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-025.md",
+  "target_sha256": "57b7f18a5762cd954b89902e9762013f8b121705119f8d4cde8a4dd15b38156e",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_external_dining_guidance_2024",
+      "title": "國健署：常吃外食真的容易發胖嗎？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=18127",
+      "claim": "國健署外食建議支持逐步增加全穀及未精製雜糧，並以無糖茶取代含糖飲料。",
+      "supporting_passage": "頁面於2024-06-25發布、2024-11-18更新；第4點建議至少1/3主食以糙米、五穀米、玉米、地瓜、南瓜或馬鈴薯取代白飯，第5點建議多喝白開水、以無糖茶取代含糖飲料。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱國健署2024-11-18更新的外食建議頁，核對全穀替換比例、無糖茶建議及正式頁面日期。"
+    },
+    {
+      "source_id": "tw02_tfda_caffeine_guidance_2025",
+      "title": "食藥署：咖啡聰明選，安心喝",
+      "url": "https://www.fda.gov.tw/TC/siteListContent.aspx?id=51249&sid=13694",
+      "claim": "台灣食藥署列出的咖啡因建議上限依成人、青少年及孕婦／兒童而異，且應依個人狀況調整。",
+      "supporting_passage": "食藥署頁面發布並維護於2025-10-07：成人每日不超過300毫克、12至18歲不超過100毫克，孕婦與兒童建議避免；並列心悸、焦慮、胃酸及失眠等過量或敏感時可能出現的不適。",
+      "accessed_at": "2026-11-10",
+      "retrieval_method": "直接查閱食藥署2025-10-07官方咖啡說明，核對不同年齡建議、症狀及咖啡因來源。"
+    }
+  ],
+  "localization_changes": "移除原作固定每週飲茶次數和延壽暗示，改用國健署對台灣外食者的無糖茶替代建議；交代茶含咖啡因及濃度差異，連結下一篇總咖啡因指引。",
+  "review_method": "重讀原作固定ID與主題、最新manifest資料及未核對結構化草稿；逐項查核台灣官方飲食、食品標示或救護來源，核對主張、適用族群、台灣生活情境、可執行步驟、費用、風險及統計口徑。沒有可信台灣個人頻率資料時明示資料不足，不以國外研究或通報數推算個人機率。AI協助來源查核不等於正式專業審閱。",
+  "limits": [
+    "沒有證據支持把固定飲茶週次當作個人延壽處方。",
+    "茶飲咖啡因含量受種類、沖泡及杯量影響，不能只按杯數換算。"
+  ],
+  "source_reviewed_sha256": "57b7f18a5762cd954b89902e9762013f8b121705119f8d4cde8a4dd15b38156e",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "8e061acbe2863e6cdabfc6b2c4e3328685d851717926bcd9e7d3f093ccec4619",
+  "source_ids": [
+    "tw02_hpa_external_dining_guidance_2024",
+    "tw02_tfda_caffeine_guidance_2025"
+  ],
+  "frequency_assessment": "目前沒有可信台灣資料支持「每週喝茶達固定次數即可延壽」或可換算個人風險的說法。正文只採國健署以無糖茶替代含糖飲料的飲食選項，不轉用國外觀察性茶飲研究當個人處方。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "未取得營養或心血管流行病學專業人員獨立審閱。",
+    "若國健署無糖飲品建議或台灣含糖飲料標示規範更新，需重新核對。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "公共衛生與流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "8353a3e2b02b00843827b86d086c359fdcc16ee818a057c802810a09f40bd946",
+  "prior_structured_draft_review": null
+}

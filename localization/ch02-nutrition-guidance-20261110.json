@@ -1,0 +1,511 @@
+{
+  "schema_version": 1,
+  "batch": "第2章堅果、蛋白質、全穀、茶、咖啡因與蔬果六篇台灣版首次正式發布",
+  "baseline_main_sha": "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "counts_before": {
+    "core_reviewed": 303,
+    "runtime_items": 314,
+    "runtime_sources": 1218,
+    "source_registry": 1301,
+    "json_files_checked": 602,
+    "substantive_rechecks": 379
+  },
+  "new_source_ids": [
+    "tw02_hpa_food_exchange_portions_2024",
+    "tw02_hpa_external_dining_guidance_2024",
+    "tw02_tfda_caffeine_guidance_2025",
+    "tw02_hpa_pregnancy_caffeine_2025",
+    "tw02_hpa_infant_choking_handbook_2025",
+    "tw02_tfda_allergen_rule_2018_2020",
+    "tw02_hpa_vegfruit_guidance_2023",
+    "tw02_hpa_wholefruit_juice_2019",
+    "tw02_hpa_nutrition_survey_2017_2020",
+    "tw02_nfa_anaphylaxis_2026",
+    "tw02_nfa_emergency_119"
+  ],
+  "counts_after": {
+    "core_reviewed": 309,
+    "runtime_items": 320,
+    "runtime_sources": 1229,
+    "source_registry": 1312,
+    "json_files_checked": 610,
+    "substantive_rechecks": 379,
+    "unresolved_source_ids": 104,
+    "unresolved_reference_occurrences": 260,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "publication_ready": false
+  },
+  "new_source_bundle": "localization/tw-edition/sources/ch02-nutrition-guidance-20261110.json",
+  "items": [
+    {
+      "id": "TW-02-022",
+      "title": "堅果看份量與過敏：幼兒不吃整顆堅果",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "4861816ac4bccf7de683b1dfb1da37c6ed49cebb6befd8346f08d3f1944beb4c",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "86ab16285a993a038bdc57297fa8d9b131bc28542d6619c8aba85808f279e231",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "e88584eabc6e87217610b631c2d14409e68ed9121e0a67d83442ced55e295cad",
+      "review_path": "localization/reviews/TW-02-022.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-022.md",
+      "source_ids": [
+        "tw02_hpa_food_exchange_portions_2024",
+        "tw02_tfda_allergen_rule_2018_2020",
+        "tw02_hpa_infant_choking_handbook_2025",
+        "tw02_nfa_anaphylaxis_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_food_exchange_portions_2024",
+          "title": "國健署：健康飲食標準與食物代換份量",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=987",
+          "claim": "食物代換表列出的堅果與種子每份重量會依種類不同；蔬菜與水果份量也有不同重量範圍。",
+          "supporting_passage": "頁面於2018-03-13發布、2024-12-04更新；表格列杏仁與核桃仁7公克、開心果／腰果／部分種子10公克、花生仁13公克；蔬菜一份可食生重約100公克，水果約80至120公克。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署健康飲食標準頁與食物代換表附件，核對堅果種類別重量、蔬菜及水果份量和頁面更新日期。"
+        },
+        {
+          "source_id": "tw02_tfda_allergen_rule_2018_2020",
+          "title": "食藥署：食品過敏原標示規定（107年公告、109年施行）",
+          "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?cid=42303&id=f639057140744869584&type=2",
+          "claim": "台灣規定市售包裝食品含公告堅果類或花生等過敏原時須依規定標示；本規定有明確公告與施行日期。",
+          "supporting_passage": "規定發文日期為2018-08-21，法定適用範圍為市售有容器或包裝食品的11項過敏原，包含花生及堅果類；自2020-07-01施行，以產品產製日期為準。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱食藥署公告的現行「食品過敏原標示規定」原文，核對公告日、適用產品範圍、過敏原項目及施行日。"
+        },
+        {
+          "source_id": "tw02_hpa_infant_choking_handbook_2025",
+          "title": "國健署：兒童衛教手冊（幼兒進食與哽塞預防）",
+          "url": "https://health99.hpa.gov.tw/media/public/pdf/22075.pdf",
+          "claim": "國健署兒童衛教手冊提醒堅果等堅硬、圓形食物可能造成幼兒哽塞。",
+          "supporting_passage": "兒童衛教手冊預防事故傷害段落將堅果列入堅硬、圓形且可能造成哽塞的食物例子；本輪PDF連線逾時，使用先前已讀取的官方PDF文字並以國健署兒童衛教手冊目錄確認文件來源。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "先前直接查閱國健署兒童衛教手冊相關PDF文字；本輪再次確認國健署兒童衛教手冊官方下載頁與PDF網址，但PDF服務逾時，未把失敗下載描述為重新讀取成功。"
+        },
+        {
+          "source_id": "tw02_nfa_anaphylaxis_2026",
+          "title": "消防署：過敏性休克的到院前救護案例與辨識",
+          "url": "https://mag.nfa.gov.tw/article.php?id=4073",
+          "claim": "食物等過敏原可引發嚴重全身過敏；呼吸道水腫、呼吸困難或血壓下降屬急症，不能當成普通食物不耐受觀察。",
+          "supporting_passage": "消防署2026-04-30刊登的到院前救護案例說明嚴重過敏可由食物、藥物或蜂螫引起，可能造成呼吸道水腫、血壓驟降及呼吸困難。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱消防署2026-04-30救護天地文章，僅採用過敏性休克的急症性質與食物可能為致敏原，不移用其專業人員藥物劑量或山區個案細節。"
+        },
+        {
+          "source_id": "tw02_nfa_emergency_119",
+          "title": "消防署：119與112緊急報案資訊",
+          "url": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=66",
+          "claim": "台灣發生呼吸困難等危急狀況可撥119啟動緊急救護。",
+          "supporting_passage": "消防署119與112專頁說明119為消防與緊急救護報案管道，另列手機無一般訊號時可用的112資訊。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱內政部消防署119、112官方報案說明，核對台灣緊急救護入口。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_hpa_food_exchange_portions_2024",
+        "tw02_tfda_allergen_rule_2018_2020",
+        "tw02_hpa_infant_choking_handbook_2025",
+        "tw02_nfa_anaphylaxis_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "taiwan_context": "以台灣早餐店、麵包店、便當、自助餐及包裝零食等常見購買情境說明過敏原標示的適用範圍，也涵蓋家庭照顧幼兒及119緊急求援。",
+      "frequency_assessment": "未找到可用一致定義和分母計算台灣一般居民堅果過敏或幼兒堅果哽塞發生率的全國統計。不能由單一急救案例、通報數或國外研究推估個人機率；正文先提供已知過敏者避食、包裝標示範圍及幼兒避免整顆堅果的行動。",
+      "statistics_assessed": [],
+      "changes": "把原作固定每日一小把的說法改為依食物份量與個人情況選擇；補上台灣包裝食品過敏原規定的公告日與施行日、未包裝餐點的限制、幼兒整顆堅果哽塞風險及嚴重過敏求援。",
+      "limits": [
+        "食物代換重量是估算參考，不是每個人的固定每日目標。",
+        "未找到足以估算台灣個人堅果過敏或幼兒堅果哽塞機率的全國統計。",
+        "過敏原強制標示規定針對市售包裝食品，不等於未包裝餐點或餐飲現場有相同標示。"
+      ],
+      "unresolved_questions": [
+        "國健署兒童衛教手冊PDF本輪連線逾時；已依先前讀取的手冊內容與官方目錄交叉核對，須在後續來源複查時重開原PDF。",
+        "未取得過敏免疫、兒科及營養專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "兒科與兒童進食安全",
+          "過敏免疫",
+          "食品標示法規"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-023",
+      "title": "豆、魚、蛋、肉輪替：不必只追求少吃某一種肉",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "df3993e8d03d82086b36e45c9a1ddf5a375c4fec0d0d9eb43b2f6e246f514f13",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "ad83f8f5be915d67af7dc6666022cd931cdd970afc551ef96b0f71b2319478ce",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "ebbee476208b5eb6046a54046bc9ec2f843f37ccf297b00a39e0b5722124472f",
+      "review_path": "localization/reviews/TW-02-023.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-023.md",
+      "source_ids": [
+        "tw02_hpa_protein_food_guide_2026"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_protein_food_guide_2026",
+          "title": "國健署：到底怎麼吃才均衡？（均衡飲食與蛋白質選擇）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4687&pid=11677",
+          "claim": "官方頁面支持本文所述的蛋白質食物多樣化建議及加工肉提醒。",
+          "supporting_passage": "頁面於2024-11-21更新，說明「我的餐盤」的豆魚蛋肉選擇方向及避免加工肉品。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "查閱國健署均衡飲食官方頁，核對豆魚蛋肉選擇方向及支持本篇的具體主張。"
+        }
+      ],
+      "new_source_ids": [],
+      "taiwan_context": "納入早餐店、台灣便當、家中煮飯、便利商店及市場常見豆製品、雞蛋、魚類與肉品；費用依品項、季節及地區而變，提供可按預算替換的做法。",
+      "frequency_assessment": "這篇是日常飲食選擇建議，沒有可靠的台灣統計可把單餐蛋白質來源替換換算成個人的疾病發生率或風險下降；未引用國外觀察性數據推估台灣個人效益。",
+      "statistics_assessed": [],
+      "changes": "將原作單向要求以魚禽替代紅肉，改為國健署豆魚蛋肉的多樣化選擇；明確指出不是人人須戒某種肉，避免低收入者被引導購買高價食材，也補足慢性腎病、透析和營養不良風險族群的個別化提醒。",
+      "limits": [
+        "豆魚蛋肉的選擇順序是飲食方向，不等於個人疾病風險或特定肉類完全禁止。",
+        "蛋白質需求會隨疾病、透析、體重變化及營養狀況改變。"
+      ],
+      "unresolved_questions": [
+        "若未來新增蛋白質份量數字，須先補足適用年齡、體重、疾病狀況及正式來源。",
+        "未取得營養學及腎臟營養專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "腎臟營養",
+          "高齡及疾病營養照護"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-024",
+      "title": "主食逐步增加全穀：白飯白麵不必一次全換",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "63b742bc754b1db41dac245a0e8478fca0ae95afce13c4371c8b6bcf488c04a8",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "be0cd68c1f2f009ff0a1abff859e5e8c73deb310521d834c1ba95c9e8cb02d2c",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "3bdcc8a357ce71336f14e58118d8d9d688b085a96caf9ba308aba68cb9bdd117",
+      "review_path": "localization/reviews/TW-02-024.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-024.md",
+      "source_ids": [
+        "tw02_hpa_external_dining_guidance_2024"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_external_dining_guidance_2024",
+          "title": "國健署：常吃外食真的容易發胖嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=18127",
+          "claim": "國健署外食建議支持逐步增加全穀及未精製雜糧，並以無糖茶取代含糖飲料。",
+          "supporting_passage": "頁面於2024-06-25發布、2024-11-18更新；第4點建議至少1/3主食以糙米、五穀米、玉米、地瓜、南瓜或馬鈴薯取代白飯，第5點建議多喝白開水、以無糖茶取代含糖飲料。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署2024-11-18更新的外食建議頁，核對全穀替換比例、無糖茶建議及正式頁面日期。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_hpa_external_dining_guidance_2024"
+      ],
+      "taiwan_context": "以家中煮白飯、早餐吐司或饅頭、台灣便當與超商主食為例，採部分替換、看取得性與口感的做法。",
+      "frequency_assessment": "本篇是飲食選擇指引，沒有可代表台灣個人疾病機率的統計；國健署的全穀替換比例屬飲食建議，不是發生率或保證效果，故不以海外研究推估個人收益。",
+      "statistics_assessed": [],
+      "changes": "把原作直接替換精米白麵的指令改成逐步增加全穀的台灣可行做法；明列國健署約三分之一主食建議及台灣常見替換選項，避免把地瓜等另算成不受限制的配菜。",
+      "limits": [
+        "全穀主食仍有碳水化合物和熱量，不是不限量食物。",
+        "糖尿病、腎臟病及特殊腸胃、吞嚥狀況需要個別調整。"
+      ],
+      "unresolved_questions": [
+        "國健署飲食建議頁面日後若更新替換比例或食物分類，需複查正文。",
+        "未取得營養、糖尿病照護及腎臟營養專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "糖尿病營養照護",
+          "腎臟營養"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-025",
+      "title": "喝茶不用設定每週次數：無糖茶可作飲品選項",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "8e061acbe2863e6cdabfc6b2c4e3328685d851717926bcd9e7d3f093ccec4619",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "8353a3e2b02b00843827b86d086c359fdcc16ee818a057c802810a09f40bd946",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "57b7f18a5762cd954b89902e9762013f8b121705119f8d4cde8a4dd15b38156e",
+      "review_path": "localization/reviews/TW-02-025.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-025.md",
+      "source_ids": [
+        "tw02_hpa_external_dining_guidance_2024",
+        "tw02_tfda_caffeine_guidance_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_external_dining_guidance_2024",
+          "title": "國健署：常吃外食真的容易發胖嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=18127",
+          "claim": "國健署外食建議支持逐步增加全穀及未精製雜糧，並以無糖茶取代含糖飲料。",
+          "supporting_passage": "頁面於2024-06-25發布、2024-11-18更新；第4點建議至少1/3主食以糙米、五穀米、玉米、地瓜、南瓜或馬鈴薯取代白飯，第5點建議多喝白開水、以無糖茶取代含糖飲料。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署2024-11-18更新的外食建議頁，核對全穀替換比例、無糖茶建議及正式頁面日期。"
+        },
+        {
+          "source_id": "tw02_tfda_caffeine_guidance_2025",
+          "title": "食藥署：咖啡聰明選，安心喝",
+          "url": "https://www.fda.gov.tw/TC/siteListContent.aspx?id=51249&sid=13694",
+          "claim": "台灣食藥署列出的咖啡因建議上限依成人、青少年及孕婦／兒童而異，且應依個人狀況調整。",
+          "supporting_passage": "食藥署頁面發布並維護於2025-10-07：成人每日不超過300毫克、12至18歲不超過100毫克，孕婦與兒童建議避免；並列心悸、焦慮、胃酸及失眠等過量或敏感時可能出現的不適。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱食藥署2025-10-07官方咖啡說明，核對不同年齡建議、症狀及咖啡因來源。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_hpa_external_dining_guidance_2024",
+        "tw02_tfda_caffeine_guidance_2025"
+      ],
+      "taiwan_context": "以早餐店、便利商店及手搖飲的無糖茶、白開水與含糖飲料選擇為情境；不假設每人都有喝茶習慣或相同價格及咖啡因攝取量。",
+      "frequency_assessment": "目前沒有可信台灣資料支持「每週喝茶達固定次數即可延壽」或可換算個人風險的說法。正文只採國健署以無糖茶替代含糖飲料的飲食選項，不轉用國外觀察性茶飲研究當個人處方。",
+      "statistics_assessed": [],
+      "changes": "移除原作固定每週飲茶次數和延壽暗示，改用國健署對台灣外食者的無糖茶替代建議；交代茶含咖啡因及濃度差異，連結下一篇總咖啡因指引。",
+      "limits": [
+        "沒有證據支持把固定飲茶週次當作個人延壽處方。",
+        "茶飲咖啡因含量受種類、沖泡及杯量影響，不能只按杯數換算。"
+      ],
+      "unresolved_questions": [
+        "未取得營養或心血管流行病學專業人員獨立審閱。",
+        "若國健署無糖飲品建議或台灣含糖飲料標示規範更新，需重新核對。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "公共衛生與流行病學"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-026",
+      "title": "咖啡看總咖啡因與身體反應：不必每天喝三四杯",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "098fcb956d5c419a24a3a61e270013dbe9a9692bf6268844e81aef924ac23fe2",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "32ea9bef1c91bb6e477ab02e1608da245073aad938184071ea2628a106844339",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "beec3a45c7ee3fcf9a33d3c8555523a003d364059a395b2ddacecb3f52bef06a",
+      "review_path": "localization/reviews/TW-02-026.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-026.md",
+      "source_ids": [
+        "tw02_tfda_caffeine_guidance_2025",
+        "tw02_hpa_pregnancy_caffeine_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_tfda_caffeine_guidance_2025",
+          "title": "食藥署：咖啡聰明選，安心喝",
+          "url": "https://www.fda.gov.tw/TC/siteListContent.aspx?id=51249&sid=13694",
+          "claim": "台灣食藥署列出的咖啡因建議上限依成人、青少年及孕婦／兒童而異，且應依個人狀況調整。",
+          "supporting_passage": "食藥署頁面發布並維護於2025-10-07：成人每日不超過300毫克、12至18歲不超過100毫克，孕婦與兒童建議避免；並列心悸、焦慮、胃酸及失眠等過量或敏感時可能出現的不適。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱食藥署2025-10-07官方咖啡說明，核對不同年齡建議、症狀及咖啡因來源。"
+        },
+        {
+          "source_id": "tw02_hpa_pregnancy_caffeine_2025",
+          "title": "國健署：孕媽咪常見10大孕期營養問題",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4306&pid=13853",
+          "claim": "國健署孕期資料與食藥署2025年一般咖啡因資料對孕婦的說法不一致；國健署建議孕婦前三個月減少咖啡或茶並以不超過200毫克為參考，依醫囑調整。",
+          "supporting_passage": "國健署頁面2021-03-25發布、2025-03-20更新；孕期咖啡因段落建議前三個月減少喝咖啡或茶，每日不超過200毫克，並先請教醫師、遵循醫囑。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "查閱國健署孕期營養問答，核對發布與更新日期及孕期咖啡因建議，並與食藥署2025-10-07一般建議逐字比對其適用族群差異。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_tfda_caffeine_guidance_2025",
+        "tw02_hpa_pregnancy_caffeine_2025"
+      ],
+      "taiwan_context": "涵蓋台灣常見大杯手搖茶、便利商店咖啡、能量飲料、可樂及產檢中的孕期諮詢情境；按總咖啡因而非杯數規劃。",
+      "frequency_assessment": "此篇建議的是咖啡因暴露量與個人耐受性，不是疾病發生率。未找到適用於所有台灣民眾、可用杯數計算咖啡因不適個人機率的可靠統計；官方毫克建議是攝取界線而非事件率。孕期指引存在官方文字差異，須由產檢醫療團隊依個人情況解釋。",
+      "statistics_assessed": [],
+      "changes": "撤除原作每天三至四杯及400毫克上限，改用台灣食藥署2025年的成人及青少年建議；並明列食藥署與國健署孕期資料差異，要求孕期依產檢醫囑，不把成人上限誤套孕婦。",
+      "limits": [
+        "一般成人每日300毫克及12至18歲每日100毫克為食藥署建議上限，不代表人人需要攝取至此。",
+        "食藥署2025一般資料建議孕婦避免，國健署2025孕期頁則列200毫克上限且依醫囑，官方資料不一致。",
+        "不同飲品杯量、沖泡方式、品牌及標示精度不同，無法以杯數精確換算。"
+      ],
+      "unresolved_questions": [
+        "需定期確認食藥署與國健署是否統一孕期咖啡因建議及適用族群。",
+        "未取得婦產科、營養學與睡眠醫學專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "婦產科",
+          "營養學",
+          "睡眠醫學",
+          "公共衛生"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-027",
+      "title": "蔬果分配到三餐：多選整顆水果與當季蔬菜",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "5ba13578a8b4300185024ebe3a265e3db54e590f98f4a692de5eb22d4f5345d4",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "dc60662d95846fd3853715dad586bd9747736b07116e9b0ba47a0937b3288391",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "3894ed69cbcac2c3966d9c239a5408df184d74ebff604816fedcf7344465e873",
+      "review_path": "localization/reviews/TW-02-027.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-027.md",
+      "source_ids": [
+        "tw02_hpa_vegfruit_guidance_2023",
+        "tw02_hpa_food_exchange_portions_2024",
+        "tw02_hpa_wholefruit_juice_2019",
+        "tw02_hpa_nutrition_survey_2017_2020"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_vegfruit_guidance_2023",
+          "title": "國健署：蔬菜吃不多，以水果替代可以嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=17418",
+          "claim": "國健署建議每日蔬菜3至5份、水果2至4份，且水果不能長期取代蔬菜。",
+          "supporting_passage": "國健署頁面於2023-09-19發布及更新，明載蔬菜3至5份、水果2至4份，並說明份數依每日飲食指南或我的餐盤調整。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署2023-09-19更新的蔬果建議頁，核對份數、蔬果不可長期替代及資料日期。"
+        },
+        {
+          "source_id": "tw02_hpa_food_exchange_portions_2024",
+          "title": "國健署：健康飲食標準與食物代換份量",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=987",
+          "claim": "食物代換表列出的堅果與種子每份重量會依種類不同；蔬菜與水果份量也有不同重量範圍。",
+          "supporting_passage": "頁面於2018-03-13發布、2024-12-04更新；表格列杏仁與核桃仁7公克、開心果／腰果／部分種子10公克、花生仁13公克；蔬菜一份可食生重約100公克，水果約80至120公克。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署健康飲食標準頁與食物代換表附件，核對堅果種類別重量、蔬菜及水果份量和頁面更新日期。"
+        },
+        {
+          "source_id": "tw02_hpa_wholefruit_juice_2019",
+          "title": "國健署：喝果汁跟吃水果一樣好？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1425&pid=11285",
+          "claim": "完整水果與果汁不能一概視為相同攝取方式；果汁可能少纖維且較容易讓糖攝取集中。",
+          "supporting_passage": "國健署頁面於2019-08-12發布、2019-08-26更新；說明市售果汁可能濾掉果渣、降低膳食纖維，建議以原態水果為主。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署喝果汁與水果比較頁，核對果渣、纖維及原態水果建議和頁面日期。"
+        },
+        {
+          "source_id": "tw02_hpa_nutrition_survey_2017_2020",
+          "title": "國健署：國民營養健康狀況變遷調查成果報告2017至2020年",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=3999&pid=15562",
+          "claim": "國健署2017至2020全國營養調查報告表3.3.2列出19歲以上蔬菜達3份與水果達2份比例，並提供未加權樣本數及加權分析方法。",
+          "supporting_passage": "成果報告第37至38頁說明以飲食頻率問卷和24小時飲食回憶估算每日份數，採個人份數方法呈現描述；19歲以上全體樣本6,537人，蔬菜至少3份個人份數達標率22.8%，水果至少2份11.2%，分析經SUDAAN加權調整。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "查閱國健署成果報告頁並下載附件，直接核對報告第37至38頁研究方法、表3.3.2母數、個人份數定義及加權說明。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_hpa_vegfruit_guidance_2023",
+        "tw02_hpa_food_exchange_portions_2024",
+        "tw02_hpa_wholefruit_juice_2019",
+        "tw02_hpa_nutrition_survey_2017_2020"
+      ],
+      "taiwan_context": "使用台灣市場當季蔬果、便當配菜、早餐與超商餐點、冷凍蔬菜及果汁選擇等日常情境，並說明地方供應與價格會變。",
+      "frequency_assessment": "國健署2017至2020年全國營養調查報告以個人份數法列19歲以上蔬菜達每日3份比例22.8%、水果達每日2份比例11.2%；未加權成人樣本6,537人，分析經SUDAAN加權。該數據是歷史飲食指南達標率，不是2026年現況、疾病風險或個人機率；報告表未列原始加權分子、加權分母與信賴區間。",
+      "statistics_assessed": [
+        {
+          "topic": "19歲以上成人每日蔬菜攝取至少3份",
+          "value": "22.8%",
+          "unit": "經複雜抽樣加權後的個人份數達標比例",
+          "period": "2017至2020年",
+          "geographic_scope": "台灣全國營養調查",
+          "population": "19歲以上成人；未加權樣本6,537人",
+          "numerator": "報告未列原始達標人數或加權分子；表列加權比例22.8%",
+          "denominator": "未加權分析樣本6,537人；加權估計母群分母未列為原始人數",
+          "event_definition": "依個人份數法估算每日蔬菜攝取量至少3份；食物頻率問卷頻率乘以24小時飲食回憶平均份量",
+          "data_type": "全國橫斷式營養健康調查；複雜抽樣並以SUDAAN加權",
+          "limitations": "歷史調查結果非2026年現況或疾病盛行率；表格未列原始加權分子、分母與信賴區間；飲食頻率與24小時回憶有自陳及回憶誤差，不推估個人疾病風險。",
+          "source_ids": [
+            "tw02_hpa_nutrition_survey_2017_2020"
+          ]
+        },
+        {
+          "topic": "19歲以上成人每日水果攝取至少2份",
+          "value": "11.2%",
+          "unit": "經複雜抽樣加權後的個人份數達標比例",
+          "period": "2017至2020年",
+          "geographic_scope": "台灣全國營養調查",
+          "population": "19歲以上成人；未加權樣本6,537人",
+          "numerator": "報告未列原始達標人數或加權分子；表列加權比例11.2%",
+          "denominator": "未加權分析樣本6,537人；加權估計母群分母未列為原始人數",
+          "event_definition": "依個人份數法估算每日水果攝取量至少2份；食物頻率問卷頻率乘以24小時飲食回憶平均份量",
+          "data_type": "全國橫斷式營養健康調查；複雜抽樣並以SUDAAN加權",
+          "limitations": "歷史調查結果非2026年現況或疾病盛行率；表格未列原始加權分子、分母與信賴區間；飲食頻率與24小時回憶有自陳及回憶誤差，不推估個人疾病風險。",
+          "source_ids": [
+            "tw02_hpa_nutrition_survey_2017_2020"
+          ]
+        }
+      ],
+      "changes": "將原作固定五份約400公克的單一目標，改用國健署依熱量需要列出的蔬菜3至5份、水果2至4份；加入實際份量、蔬果不可長期互換、果汁限制及可核對的全國調查方法與分母限制。",
+      "limits": [
+        "飲食份數依每日熱量需求不同，不能將固定克數套用所有人。",
+        "2017至2020年調查是歷史攝取資料，非2026年現況或個人疾病風險。",
+        "報告列出未加權樣本數，但未提供原始加權分子、分母或信賴區間。"
+      ],
+      "unresolved_questions": [
+        "後續若國健署公布更新一波營養調查，需以相同定義確認可比性後再更新正文。",
+        "未取得營養、腎臟營養、糖尿病照護及流行病學專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "腎臟營養",
+          "糖尿病營養照護",
+          "公共衛生與流行病學"
+        ]
+      }
+    }
+  ],
+  "note": "本批新增6篇台灣獨立正文，保留固定ID、原作commit與原始主題；未覆寫localization/tw-edition/chapters/02.json。回歸測試會以基準SHA確認整份結構化草稿檔及022至027各列雜湊均未變。TW-02-026記錄食藥署與國健署孕期咖啡因官方建議差異；TW-02-027採國健署2017至2020原始報告，列出未加權樣本與加權結果限制。回溯歷史實質再審數不增加。",
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "兒科與兒童進食安全",
+      "過敏免疫",
+      "婦產科",
+      "腎臟營養",
+      "糖尿病營養照護",
+      "公共衛生與流行病學"
+    ]
+  }
+}
