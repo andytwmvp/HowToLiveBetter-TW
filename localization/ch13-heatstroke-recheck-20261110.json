@@ -1,0 +1,71 @@
+{
+  "baseline_main_sha": "a5482a74c68ef521a3f306bd758398053436b8b9",
+  "reviewed_at": "2026-11-10",
+  "review_due_at": "2027-02-10",
+  "items": [
+    {
+      "id": "TW-13-022",
+      "before_sha256": "67631669dc7f092c34f885a6b55fd40d041f6950529588cf242377b18369a4e6",
+      "after_sha256": "c0bf50cefc8832455ce775bb4916893c12536e0267c7e5e96110efc031e6e1bf",
+      "prior_review_sha256": "8507a16c3b0cf42b5b0d91f384ee8694d5fe9d2cc5e4ed98f6407c934bce4f87",
+      "review_sha256": "a0fd33a0e605f69bc09f666f2041a0ac30d6b87c2914f9c6a8b8f1204f5fe93a",
+      "prior_sources": [
+        "ch13_heat_ntuh",
+        "ch13_heat_niosh",
+        "ch13_heat_hpa_20250822"
+      ],
+      "current_sources": [
+        "ch13_heat_hpa_firstaid_20261110",
+        "ch13_heat_niosh_20261110",
+        "ch13_heat_monitor_csv_20261110"
+      ],
+      "stats_resource_sha256": "de59b386382753110b1b0be3ded3debba2102661385b614a0e6921af11ae76b8",
+      "stats_resource_rows_including_header": 29309,
+      "stats_rows_by_year": {
+        "2024": 2586,
+        "2025": 2460,
+        "2026_through_2026-10-26": 2047
+      },
+      "stats_encounters_by_year": {
+        "2024": 3942,
+        "2025": 3496,
+        "2026_through_2026-10-26": 2919
+      },
+      "denominator": "無；監測人次未提供高溫暴露或人口分母，也無法識別重複就醫者",
+      "professional_review": "not obtained; remains pending"
+    }
+  ],
+  "new_source_ids": [
+    "ch13_heat_hpa_firstaid_20261110",
+    "ch13_heat_niosh_20261110",
+    "ch13_heat_monitor_csv_20261110"
+  ],
+  "source_records_reused": [],
+  "source_records_retired_from_item": [
+    "ch13_heat_ntuh",
+    "ch13_heat_niosh",
+    "ch13_heat_hpa_20250822"
+  ],
+  "counts_before": {
+    "manifest_entries": 765,
+    "runtime_items": 320,
+    "runtime_sources": 1229,
+    "review_rechecks": 379,
+    "coverage_json_files": 610,
+    "registry_sources": 1312
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "runtime_items": 320,
+    "runtime_sources": 1232,
+    "review_rechecks": 380,
+    "coverage_json_files": 612,
+    "registry_sources": 1315
+  },
+  "limitations": [
+    "2026資料僅涵蓋2026-01-01至2026-10-26。",
+    "政府資料集未涵蓋所有醫療院所，且包含多類熱傷害與過熱診斷。",
+    "無全人口或暴露時間分母、無唯一患者識別；不得推算個人發生率。",
+    "沒有取得獨立急救、醫療、職業安全或流行病學專業審閱。"
+  ]
+}

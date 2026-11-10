@@ -50,6 +50,17 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         }
         cls.batch = read_json(BATCH_PATH)
         cls.batch_items = {row["id"]: row for row in cls.batch["items"]}
+        cls.register = read_json("localization/retroactive-review-register-20261019.json")
+        base_register = json.loads(
+            subprocess.check_output(
+                ["git", "show", f"{BASE}:localization/retroactive-review-register-20261019.json"],
+                cwd=ROOT,
+                text=True,
+            )
+        )
+        cls.later_rechecks = cls.register["substantive_rechecks"][
+            len(base_register["substantive_rechecks"]):
+        ]
         cls.base_runtime = json.loads(
             subprocess.check_output(
                 ["git", "show", f"{BASE}:localization/tw-edition/runtime.json"],
@@ -135,7 +146,17 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         for source_id, old in base_sources.items():
             self.assertEqual(self.sources[source_id], old)
         for item_id, old in base_items.items():
-            self.assertEqual(self.items[item_id], old)
+            current = self.items[item_id]
+            if current == old:
+                continue
+            rechecks = [row for row in self.later_rechecks if row["id"] == item_id]
+            self.assertTrue(rechecks, f"{item_id} changed without a later recorded recheck")
+            old_sha = hashlib.sha256(old["body"].encode("utf-8")).hexdigest()
+            current_sha = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
+            self.assertEqual(rechecks[0]["before_sha256"], old_sha)
+            for previous, following in zip(rechecks, rechecks[1:]):
+                self.assertEqual(following["before_sha256"], previous["after_sha256"])
+            self.assertEqual(rechecks[-1]["after_sha256"], current_sha)
 
         source_bundle = read_json(SOURCE_PATH)["sources"]
         self.assertEqual({row[0] for row in source_bundle}, NEW_SOURCE_IDS)

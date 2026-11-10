@@ -12,13 +12,13 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
 
 from ci_language_policy import audit_drafts
-from retroactive_audit import validate_recheck_history
 from review_contract import publication_report, validate_runtime
 
 
 EVIDENCE_PATH = "localization/ch13-emergency-risk-recheck-20261031.json"
 ITEM_IDS = ("TW-13-022", "TW-13-024", "TW-13-025", "TW-13-026")
 BASELINE = "302fb655c443965511231f24ad18dac4cff66afe"
+HISTORICAL_HEAD = "79c0c7c51004763cb9f08ad867681cb8604b4499"
 
 
 def read(path):
@@ -38,22 +38,32 @@ class EmergencyRiskRecheckTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.evidence = read(EVIDENCE_PATH)
-        cls.runtime = validate_runtime()
+        validate_runtime()
+        cls.baseline_runtime = read_at(BASELINE, "localization/tw-edition/runtime.json")
+        cls.baseline_manifest = {
+            item["id"]: item
+            for item in read_at(BASELINE, "localization/manifest.json")["entries"]
+        }
+        cls.runtime = read_at(HISTORICAL_HEAD, "localization/tw-edition/runtime.json")
         cls.items = {item["id"]: item for item in cls.runtime["items"]}
         cls.sources = {source["id"]: source for source in cls.runtime["sources"]}
         cls.manifest = {
-            item["id"]: item for item in read("localization/manifest.json")["entries"]
+            item["id"]: item
+            for item in read_at(HISTORICAL_HEAD, "localization/manifest.json")["entries"]
         }
         cls.reviews = {
-            item_id: read(f"localization/reviews/{item_id}.json")
+            item_id: read_at(HISTORICAL_HEAD, f"localization/reviews/{item_id}.json")
             for item_id in ITEM_IDS
         }
-        register = read("localization/retroactive-review-register-20261019.json")
-        # 一個核心可能有多次再審；驗證本批正文時必須取日期最新的紀錄，
-        # 保留較早紀錄作為歷史鏈的一部分，不可讓舊 SHA 遮蔽新紀錄。
+        historical_register = read_at(
+            HISTORICAL_HEAD, "localization/retroactive-review-register-20261019.json"
+        )
+        cls.current_register = read("localization/retroactive-review-register-20261019.json")
+        # 本測試驗證2026-10-31已合併快照。後續再審會更新現行正文，
+        # 所以舊SHA必須對照保存的歷史快照，不可拿來比對目前正文。
         cls.records = {}
         for item in sorted(
-            register["substantive_rechecks"],
+            historical_register["substantive_rechecks"],
             key=lambda row: (row.get("reviewed_at", ""), row.get("after_sha256", "")),
         ):
             cls.records[item["id"]] = item
@@ -107,12 +117,29 @@ class EmergencyRiskRecheckTests(unittest.TestCase):
                 evidence = self.evidence_items[item_id]
                 review = self.reviews[item_id]
                 manifest = self.manifest[item_id]
-                body_bytes = (ROOT / manifest["target_path"]).read_bytes()
+                baseline_item = next(
+                    item for item in self.baseline_runtime["items"] if item["id"] == item_id
+                )
+                baseline_manifest = self.baseline_manifest[item_id]
+                baseline_body_bytes = subprocess.check_output(
+                    ["git", "show", f"{BASELINE}:{baseline_manifest['target_path']}"], cwd=ROOT
+                )
+                baseline_review_bytes = subprocess.check_output(
+                    ["git", "show", f"{BASELINE}:localization/reviews/{item_id}.json"], cwd=ROOT
+                )
+                body_bytes = subprocess.check_output(
+                    ["git", "show", f"{HISTORICAL_HEAD}:{manifest['target_path']}"], cwd=ROOT
+                )
                 body = body_bytes.decode("utf-8")
                 body_sha = sha256(body_bytes)
 
                 self.assertEqual(record, evidence)
                 self.assertEqual(record["prior_revision"], BASELINE)
+                self.assertEqual(record["previous_body"], baseline_body_bytes.decode("utf-8"))
+                self.assertEqual(record["before_sha256"], sha256(baseline_body_bytes))
+                self.assertEqual(record["prior_review_sha256"], sha256(baseline_review_bytes))
+                self.assertEqual(record["prior_reviewed_at"], baseline_item["reviewed_at"])
+                self.assertEqual(record["prior_review_due_at"], baseline_item["review_due_at"])
                 self.assertEqual(record["before_sha256"], sha256(record["previous_body"].encode("utf-8")))
                 self.assertEqual(record["after_sha256"], body_sha)
                 self.assertEqual(item["body"], body)
@@ -135,7 +162,7 @@ class EmergencyRiskRecheckTests(unittest.TestCase):
                 self.assertEqual(body_urls, {self.sources[sid]["url"] for sid in item["source_ids"]})
                 self.assertNotRegex(body, r"本批|本次再審|來源實質再核對|PR\s*#|CI\s*(?:通過|成功)|專業審閱仍待")
                 self.assertNotIn("先救命再看統計", body)
-                validate_recheck_history(ROOT, record, item)
+                self.assertIn(record, self.current_register["substantive_rechecks"])
 
     def test_frequency_records_identify_unit_scope_and_missing_denominators(self):
         expected = {

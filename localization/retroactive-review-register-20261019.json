@@ -1167,9 +1167,9 @@
         "frequency_term_marker": false,
         "year_marker": false
       },
-      "new_standard_substantive_review": "pending",
-      "frequency_applicability": "to_be_decided_by_editor",
-      "official_statistics_and_denominators": "not_reverified_in_this_scan"
+      "new_standard_substantive_review": "ai_source_rechecked_professional_pending",
+      "frequency_applicability": "relevant_but_no_individual_exposure_denominator; legal_status_reviewed_separately",
+      "official_statistics_and_denominators": "data.gov.tw監測CSV截至2026-10-26：2026年部分年度2,919、2025全年3,496、2024全年3,942為部分院所熱傷害就醫人次，包含多類診斷；無全國完整涵蓋、唯一患者或暴露分母，不推算個人發生率。"
     },
     {
       "id": "TW-13-023",
@@ -38591,6 +38591,195 @@
           "disposition": "僅作尋找臺灣官方原始資料的線索，未移植民間文章或課程內容。"
         }
       ]
+    },
+    {
+      "id": "TW-13-022",
+      "before_sha256": "67631669dc7f092c34f885a6b55fd40d041f6950529588cf242377b18369a4e6",
+      "after_sha256": "c0bf50cefc8832455ce775bb4916893c12536e0267c7e5e96110efc031e6e1bf",
+      "prior_revision": "a5482a74c68ef521a3f306bd758398053436b8b9",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "8507a16c3b0cf42b5b0d91f384ee8694d5fe9d2cc5e4ed98f6407c934bce4f87",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "reviewed_at": "2026-11-10",
+      "review_due_at": "2027-02-10",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣高溫高濕環境中的戶外工作、運動、排隊、騎車及通風不良室內；先119並快速降溫，依頭部支撐及呼吸道安全決定處置方式。",
+      "taiwan_context_assessment": {
+        "actual_scenario": "戶外工作、運動、排隊、騎車與悶熱室內都可能出現高溫暴露；意識改變時不以是否流汗或體溫量測延誤求援。",
+        "safety_application": "冷水浸泡是快速降溫方式；僅在有人全程扶穩頭部並確保口鼻離水、且無抽搐或呼吸不穩時採用。否則冷水淋濕與搧風，並依119派遣指示維持呼吸道及觀察呼吸。"
+      },
+      "frequency_assessment": "data.gov.tw的疾管署熱傷害監測CSV截至2026-10-26：2026年1月1日至10月26日2,919人次、2025全年3,496人次、2024全年3,942人次。資料只含部分院所，合併中暑、熱暈厥、熱痙攣、熱衰竭等診斷，非唯一患者或全國總數；無高溫暴露或全人口分母，不推算個人發生率，也不把2026部分年度與全年作趨勢比較。",
+      "legal_status_assessment": "不涉及特定法律或申請資格；緊急醫療求援使用台灣119。",
+      "changes": "補充國健署快速降溫方法與呼吸道安全條件；昏迷、抽搐或呼吸不穩者不浸泡，改用冷水淋濕及搧風，另補失去意識但仍有正常呼吸時依119指示側躺維持呼吸道。以截至2026-10-26的官方監測CSV取代2025年7月單月值，列出年度人次及資料範圍、診斷和分母限制。 統計段補充2026資料為部分年度，不應與完整年度直接比較趨勢。",
+      "source_status": "國健署急救頁及NIOSH官方HTML於2026-11-10重讀；data.gov.tw metadata於2026-10-29更新，CSV資源截至2026-10-26並於2026-11-10下載核對。保存CSV SHA、列數、編碼及分年加總；舊來源與舊審閱仍保留。",
+      "source_ids": [
+        "ch13_heat_hpa_firstaid_20261110",
+        "ch13_heat_niosh_20261110",
+        "ch13_heat_monitor_csv_20261110"
+      ],
+      "previous_source_ids": [
+        "ch13_heat_ntuh",
+        "ch13_heat_niosh",
+        "ch13_heat_hpa_20250822"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch13_heat_ntuh",
+          "replacement_ids": [
+            "ch13_heat_hpa_firstaid_20261110"
+          ],
+          "reason": "本次以重新閱讀的現行官方急救資料或較新的官方監測CSV取代正文引用；舊來源物件及歷史審閱均保留。",
+          "prior_source_sha256": "7b10b88f28f07a00e41840d6ff72490a7071ece64638b5bed77e911c6957b931"
+        },
+        {
+          "id": "ch13_heat_niosh",
+          "replacement_ids": [
+            "ch13_heat_niosh_20261110"
+          ],
+          "reason": "本次以重新閱讀的現行官方急救資料或較新的官方監測CSV取代正文引用；舊來源物件及歷史審閱均保留。",
+          "prior_source_sha256": "b50286ea37b03db6b59b6251d9f5fb565857f5d960b228ceaa9179f17dc811ab"
+        },
+        {
+          "id": "ch13_heat_hpa_20250822",
+          "replacement_ids": [
+            "ch13_heat_monitor_csv_20261110"
+          ],
+          "reason": "本次以重新閱讀的現行官方急救資料或較新的官方監測CSV取代正文引用；舊來源物件及歷史審閱均保留。",
+          "prior_source_sha256": "4a87cbff000eac7fa589b53ea2ea7a1d6e8d9c00b848692c7f5b918dae039995"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_heat_hpa_firstaid_20261110",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=577&pid=10751&sid=18379",
+          "claim": "國健署熱傷害急救處理頁（更新日期2026-01-21）指出嚴重中暑須快速降溫；冷水浸泡最快且頭部需保持水面上，無法浸泡時可冷水潑濕並搧風；失去意識或劇烈痙攣時先求援、維持呼吸道並送醫。",
+          "supporting_passage": "國健署官方頁相關急救段落：嚴重中暑快速降溫，冷水浸泡頭部保持水面上；無法浸泡時冷水潑濕並搧風；失去意識或劇烈痙攣時求援、暢通呼吸道並送醫；不使用酒精或退燒藥。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "2026-11-10重新開啟國健署官方HTML並核對更新日期及急救段落。讀者版將浸泡限於有人全程扶穩頭部、確保口鼻離水且沒有抽搐或呼吸不穩；無法確保呼吸道安全時改採淋水與搧風，避免一般民眾造成嗆水。"
+        },
+        {
+          "source_id": "ch13_heat_niosh_20261110",
+          "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+          "claim": "NIOSH 2026-03-03更新頁列出熱中暑可有意識混亂、昏迷、抽搐、極高體溫，也可能大量流汗；須立即求援、陪伴並快速降溫。",
+          "supporting_passage": "官方頁熱中暑症狀及急救段落：可能意識混亂、昏迷、抽搐或大量流汗；立即呼叫緊急醫療服務、留在患者身旁、移到陰涼處、鬆開衣物並快速以冷水、濕布或風扇降溫。美國911不套用，台灣使用119。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "2026-11-10直接重新讀取NIOSH官方HTML及2026-03-03更新日期；僅採一般急救原則，不採用美國求援電話或統計。"
+        },
+        {
+          "source_id": "ch13_heat_monitor_csv_20261110",
+          "url": "https://data.gov.tw/dataset/157637",
+          "claim": "資料集說明數據來自疾管署即時疫情監視及預警系統、未涵蓋所有醫療院所，且ICD-9-CM分類包含多種熱及光之影響與過熱診斷。",
+          "supporting_passage": "資料集說明、備註及資源標題（截至2026-10-26）；Big5官方CSV共29,309列含表頭，SHA-256 de59b386382753110b1b0be3ded3debba2102661385b614a0e6921af11ae76b8。SUM_of_count按年加總：2024年3,942、2025年3,496、2026年1月1日至10月26日2,919人次。未提供高溫暴露或全人口分母，亦無唯一患者識別。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "2026-11-10直接閱讀data.gov.tw資料集說明、截至2026-10-26資源標題並下載官方CSV；重現記錄編碼、檔案SHA、列數及按年加總，保留平台明示的部分院所和多類診斷限制，不將人次換算成發生率。"
+        }
+      ],
+      "previous_review_claims": [
+        "熱傷害應降溫並盡速就醫；意識異常或吞嚥困難時不可灌水，退燒藥不能治療中暑。",
+        "熱中暑可能大量流汗且有意識改變；立即求援並快速降溫。",
+        "國民健康署引用疾管署即時疫情監測系統，2025年7月熱傷害急診就醫683人次。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://epaper.ntuh.gov.tw/health/202005/child_1.html",
+          "claim": "熱傷害應降溫並盡速就醫；意識異常或吞嚥困難時不可灌水，退燒藥不能治療中暑。",
+          "supporting_passage": "熱傷害應降溫並盡速就醫；意識異常或吞嚥困難時不可灌水，退燒藥不能治療中暑。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀臺大醫院公開衛教相關段落；頁面為2020年兒童衛教，急救原則與現行NIOSH建議交叉核對。"
+        },
+        {
+          "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+          "claim": "熱中暑可能大量流汗且有意識改變；立即求援並快速降溫。",
+          "supporting_passage": "熱中暑可能大量流汗且有意識改變；立即求援並快速降溫。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接讀取NIOSH 2026-03-03更新的熱相關疾病與急救頁；將美國求援電話依台灣情境替換為119。"
+        },
+        {
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19339",
+          "claim": "國民健康署引用疾管署即時疫情監測系統，2025年7月熱傷害急診就醫683人次。",
+          "supporting_passage": "國民健康署引用疾管署即時疫情監測系統，2025年7月熱傷害急診就醫683人次。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "官方頁直接開啟逾時；2026-10-31讀取官方搜尋索引呈現的原頁正文統計，未推估唯一患者、全人口率或暴露風險。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "台灣熱傷害監測急診就醫人次；非中暑單一診斷發生率",
+          "value": "3942",
+          "unit": "部分監測院所急診就醫人次",
+          "period": "2024全年",
+          "geographic_scope": "疾管署即時疫情監視及預警系統所涵蓋之台灣部分院所；不是全國完整院所範圍",
+          "population": "監測院所中按資料集ICD-9-CM分類登錄的熱及光之影響或過熱就醫人次；無法辨識同一人重複就醫",
+          "numerator": "SUM_of_count欄加總為3942人次",
+          "denominator": null,
+          "denominator_definition": "沒有全人口、高溫暴露人時或唯一就醫者分母，不能計算發生率或個人機率。",
+          "event_definition": "資料集包含中暑、熱暈厥、熱痙攣、熱衰竭及其他熱及光之影響與過熱診斷，不是熱中暑單一診斷。",
+          "data_type": "衛生福利部國民健康署公開的疾管署急診行政監測CSV；以SUM_of_count依年份加總",
+          "source_ids": [
+            "ch13_heat_monitor_csv_20261110"
+          ],
+          "sources_examined_for_frequency": [
+            "ch13_heat_monitor_csv_20261110"
+          ],
+          "accessed_at": "2026-11-10",
+          "limitations": "平台資料只涵蓋部分院所，且合併多類熱傷害／過熱診斷；不是全國完整就醫總數、熱中暑單一診斷或不重複患者數。未提供全人口或高溫暴露分母，不估算發生率或個人機率。 不代表各年度全部醫院人次。"
+        },
+        {
+          "topic": "台灣熱傷害監測急診就醫人次；非中暑單一診斷發生率",
+          "value": "3496",
+          "unit": "部分監測院所急診就醫人次",
+          "period": "2025全年",
+          "geographic_scope": "疾管署即時疫情監視及預警系統所涵蓋之台灣部分院所；不是全國完整院所範圍",
+          "population": "監測院所中按資料集ICD-9-CM分類登錄的熱及光之影響或過熱就醫人次；無法辨識同一人重複就醫",
+          "numerator": "SUM_of_count欄加總為3496人次",
+          "denominator": null,
+          "denominator_definition": "沒有全人口、高溫暴露人時或唯一就醫者分母，不能計算發生率或個人機率。",
+          "event_definition": "資料集包含中暑、熱暈厥、熱痙攣、熱衰竭及其他熱及光之影響與過熱診斷，不是熱中暑單一診斷。",
+          "data_type": "衛生福利部國民健康署公開的疾管署急診行政監測CSV；以SUM_of_count依年份加總",
+          "source_ids": [
+            "ch13_heat_monitor_csv_20261110"
+          ],
+          "sources_examined_for_frequency": [
+            "ch13_heat_monitor_csv_20261110"
+          ],
+          "accessed_at": "2026-11-10",
+          "limitations": "平台資料只涵蓋部分院所，且合併多類熱傷害／過熱診斷；不是全國完整就醫總數、熱中暑單一診斷或不重複患者數。未提供全人口或高溫暴露分母，不估算發生率或個人機率。 不代表各年度全部醫院人次。"
+        },
+        {
+          "topic": "台灣熱傷害監測急診就醫人次；非中暑單一診斷發生率",
+          "value": "2919",
+          "unit": "部分監測院所急診就醫人次",
+          "period": "2026-01-01至2026-10-26",
+          "geographic_scope": "疾管署即時疫情監視及預警系統所涵蓋之台灣部分院所；不是全國完整院所範圍",
+          "population": "監測院所中按資料集ICD-9-CM分類登錄的熱及光之影響或過熱就醫人次；無法辨識同一人重複就醫",
+          "numerator": "SUM_of_count欄加總為2919人次",
+          "denominator": null,
+          "denominator_definition": "沒有全人口、高溫暴露人時或唯一就醫者分母，不能計算發生率或個人機率。",
+          "event_definition": "資料集包含中暑、熱暈厥、熱痙攣、熱衰竭及其他熱及光之影響與過熱診斷，不是熱中暑單一診斷。",
+          "data_type": "衛生福利部國民健康署公開的疾管署急診行政監測CSV；以SUM_of_count依年份加總",
+          "source_ids": [
+            "ch13_heat_monitor_csv_20261110"
+          ],
+          "sources_examined_for_frequency": [
+            "ch13_heat_monitor_csv_20261110"
+          ],
+          "accessed_at": "2026-11-10",
+          "limitations": "平台資料只涵蓋部分院所，且合併多類熱傷害／過熱診斷；不是全國完整就醫總數、熱中暑單一診斷或不重複患者數。未提供全人口或高溫暴露分母，不估算發生率或個人機率。 2026資料僅至10月26日，不能與2024、2025全年直接比較年度趨勢。"
+        }
+      ],
+      "limits": [
+        "2026年2,919、2025年3,496及2024年3,942是平台監測之急診就醫人次，涵蓋部分院所及多種熱傷害／過熱診斷；不是全國完整總數、熱中暑單一診斷或不重複患者數。",
+        "資料缺少高溫暴露人時或全人口分母，不能推算發生率、個人機率或看成年度風險變化。",
+        "冷水浸泡須有人全程扶穩頭部、確保口鼻離水；患者昏迷、抽搐、呼吸不穩或無法安全看顧呼吸道時不要浸泡，改用冷水淋濕與搧風並依119派遣指示。",
+        "本次為AI輔助來源核對，尚未取得獨立急救、醫療、職安或流行病學專業審閱。"
+      ],
+      "unresolved_questions": [
+        "平台未提供可與熱暴露人時或全人口相配的分母，不能估算全國發生率或個人風險。",
+        "尚未取得獨立急救、醫療、職業安全及流行病學專業審閱；下次複查應確認平台是否提供更新至2026-10-26之後的CSV。"
+      ],
+      "previous_body": "<!-- TW-ID: TW-13-022 -->\n\n# 高溫下出現意識異常，先打119並盡快降溫\n\n## 先做什麼\n\n在戶外工作、運動、排隊，或待在悶熱的室內後，如果有人突然混亂、昏倒、抽搐、走不穩或反應變差，先請旁人打119，並馬上協助降溫。不要等量到特定體溫，也不要因為患者還在流汗就排除熱中暑；中暑也可能大量流汗。\n\n## 處理步驟\n\n把患者移到陰涼通風或有冷氣的地方，鬆開多餘衣物，用涼水弄濕皮膚並搧風。手邊有冰袋時，用布包住後放在頸部、腋下或鼠蹊部，避免冰塊直接貼皮膚。請一人留在患者身旁，持續注意意識和呼吸，並把發病時間、所在位置及高溫暴露情形告訴119。救護人員到場前繼續降溫，不必等降完溫才求救或送醫。\n\n意識不清、吞嚥困難或一直嘔吐的人，不要餵水或灌水。若患者沒有反應且沒有正常呼吸，立即告知119，開擴音並依派遣員指示開始CPR；請旁人拿AED。\n\n## 熱傷害統計與平時準備\n\n國民健康署引用疾管署即時疫情監測系統資料，2025年7月全台熱傷害急診就醫共683人次。這是急診就醫人次，不等於683位不同的人，也不只代表熱中暑；資料沒有高溫暴露人時或全人口分母，不能拿來換算個人發生率。身體出現上述警訊時，先打119和降溫，不必等候或查詢統計。\n\n先移到陰涼處、濕潤皮膚和搧風不需要特殊設備。戶外工作、運動或辦活動前，安排陰涼休息處、飲水、通報分工和可用的降溫方式；工作場所依現場風險做好高溫作業防護。必要時叫救護車，不要因擔心費用而延誤急救。\n\n## 常見錯誤\n\n不要用退燒藥取代降溫，也不要用酒精擦拭。意識改變不是單靠補水就能處理的狀況；即使患者後來清醒，也不要讓他獨自離開或立即回去工作，應交由救護人員評估。若症狀可能是中風、心臟病或其他急症，119同樣能協助判斷與送醫。\n\n## 參考資料\n\n- [臺大醫院：兒童夏日熱傷害](https://epaper.ntuh.gov.tw/health/202005/child_1.html)：熱傷害降溫、就醫，以及意識異常時不要灌水。\n- [美國職業安全衛生研究所：熱相關疾病與急救](https://www.cdc.gov/niosh/heat-stress/about/illnesses.html)：熱中暑可能大量流汗；立即求援並快速降溫。求援電話依台灣情況使用119。\n- [國民健康署：近日高溫，留意熱傷害](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19339)：引用2025年7月熱傷害急診就醫683人次。\n",
+      "review_path": "localization/reviews/TW-13-022.json"
     }
   ],
   "reader_copy_cleanups": [
