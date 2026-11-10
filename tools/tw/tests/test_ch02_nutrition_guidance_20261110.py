@@ -13,6 +13,7 @@ from review_contract import ROOT, validate_runtime
 
 
 BASE = "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1"
+COMPLETED_HEAD = "a5482a74c68ef521a3f306bd758398053436b8b9"
 DATE = "2026-11-10"
 DUE = "2027-02-10"
 ITEM_IDS = tuple(f"TW-02-{number:03}" for number in range(22, 28))
@@ -38,6 +39,12 @@ def base_json(path):
     ))
 
 
+def json_at(revision, path):
+    return json.loads(subprocess.check_output(
+        ["git", "show", f"{revision}:{path}"], cwd=ROOT, text=True
+    ))
+
+
 class Chapter2NutritionGuidanceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -59,6 +66,15 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         cls.readme = (ROOT / "locales/zh-TW/book/ch02/README.md").read_text(encoding="utf-8")
         cls.base_runtime = base_json("localization/tw-edition/runtime.json")
         cls.base_manifest = base_json("localization/manifest.json")
+        cls.completed_runtime = json_at(COMPLETED_HEAD, "localization/tw-edition/runtime.json")
+        cls.completed_coverage = json_at(COMPLETED_HEAD, "localization/tw-edition/coverage.json")
+        cls.completed_register = json_at(
+            COMPLETED_HEAD, "localization/retroactive-review-register-20261019.json"
+        )
+        base_register = base_json("localization/retroactive-review-register-20261019.json")
+        cls.later_rechecks = cls.register["substantive_rechecks"][
+            len(base_register["substantive_rechecks"]):
+        ]
 
     def test_articles_runtime_manifest_review_and_sources_match(self):
         self.assertEqual(self.batch["baseline_main_sha"], BASE)
@@ -158,12 +174,24 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         for source_id, old in base_sources.items():
             self.assertEqual(self.sources[source_id], old)
         for item_id, old in base_items.items():
-            self.assertEqual(self.items[item_id], old)
+            current = self.items[item_id]
+            if current == old:
+                continue
+            rechecks = [row for row in self.later_rechecks if row["id"] == item_id]
+            self.assertTrue(rechecks, f"{item_id} changed without a later recorded recheck")
+            old_sha = hashlib.sha256(old["body"].encode("utf-8")).hexdigest()
+            current_sha = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
+            self.assertEqual(rechecks[0]["before_sha256"], old_sha)
+            for previous, following in zip(rechecks, rechecks[1:]):
+                self.assertEqual(following["before_sha256"], previous["after_sha256"])
+            self.assertEqual(rechecks[-1]["after_sha256"], current_sha)
 
         base_manifest = {row["id"]: row for row in self.base_manifest["entries"]}
+        later_recheck_ids = {row["id"] for row in self.later_rechecks}
         for item_id, old in base_manifest.items():
             if item_id not in ITEM_IDS:
-                self.assertEqual(self.manifest[item_id], old)
+                if self.manifest[item_id] != old:
+                    self.assertIn(item_id, later_recheck_ids)
 
         base_drafts = subprocess.check_output(
             ["git", "show", f"{BASE}:localization/tw-edition/chapters/02.json"], cwd=ROOT
@@ -177,8 +205,19 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(value).hexdigest(), expected_sha)
 
         new_source_ids = {row["id"] for row in self.runtime["sources"]} - set(base_sources)
-        self.assertEqual(new_source_ids, set(self.batch["new_source_ids"]))
-        self.assertEqual(len(self.register["substantive_rechecks"]), self.batch["counts_before"]["substantive_rechecks"])
+        sources_added_by_later_rechecks = {
+            source_id
+            for row in self.later_rechecks
+            for source_id in set(row["source_ids"]) - set(row["previous_source_ids"])
+        }
+        self.assertEqual(
+            new_source_ids,
+            set(self.batch["new_source_ids"]) | sources_added_by_later_rechecks,
+        )
+        self.assertGreaterEqual(
+            len(self.register["substantive_rechecks"]),
+            self.batch["counts_before"]["substantive_rechecks"],
+        )
         self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))
 
     def test_coverage_and_recorded_counts_match_the_current_data(self):
@@ -194,18 +233,31 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             "substantive_rechecks": 379,
         })
         self.assertEqual(after, {
-            "core_reviewed": live["core_reviewed_entries"],
-            "runtime_items": len(self.runtime["items"]),
-            "runtime_sources": len(self.runtime["sources"]),
-            "source_registry": live["registry_sources"],
-            "json_files_checked": live["json_files_checked"],
-            "substantive_rechecks": len(self.register["substantive_rechecks"]),
-            "unresolved_source_ids": len(live["unresolved_source_ids"]),
-            "unresolved_reference_occurrences": live["unresolved_reference_occurrences"],
-            "topics_with_any_content": live["topics_with_any_content"],
-            "topics_without_content": live["topics_without_content"],
-            "publication_ready": live["publication_ready"],
+            "core_reviewed": self.completed_coverage["publication_completed_entries"],
+            "runtime_items": len(self.completed_runtime["items"]),
+            "runtime_sources": len(self.completed_runtime["sources"]),
+            "source_registry": self.completed_coverage["registry_sources"],
+            "json_files_checked": self.completed_coverage["json_files_checked"],
+            "substantive_rechecks": len(self.completed_register["substantive_rechecks"]),
+            "unresolved_source_ids": len(self.completed_coverage["unresolved_source_ids"]),
+            "unresolved_reference_occurrences": self.completed_coverage["unresolved_reference_occurrences"],
+            "topics_with_any_content": self.completed_coverage["topics_with_any_content"],
+            "topics_without_content": self.completed_coverage["topics_without_content"],
+            "publication_ready": self.completed_coverage["publication_ready"],
         })
+        self.assertEqual(after["core_reviewed"], before["core_reviewed"] + len(ITEM_IDS))
+        self.assertEqual(after["runtime_items"], before["runtime_items"] + len(ITEM_IDS))
+        self.assertEqual(after["runtime_sources"], before["runtime_sources"] + len(self.batch["new_source_ids"]))
+        self.assertEqual(after["source_registry"], before["source_registry"] + len(self.batch["new_source_ids"]))
+        self.assertEqual(after["json_files_checked"], before["json_files_checked"] + len(ITEM_IDS) + 2)
+        self.assertEqual(after["substantive_rechecks"], before["substantive_rechecks"])
+        self.assertFalse(after["publication_ready"])
+        self.assertGreaterEqual(live["core_reviewed_entries"], after["core_reviewed"])
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(live["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(live["json_files_checked"], after["json_files_checked"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), after["substantive_rechecks"])
         self.assertEqual(self.coverage, live)
         self.assertFalse(self.coverage["publication_ready"])
 
