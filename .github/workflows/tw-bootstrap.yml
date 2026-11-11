@@ -74,6 +74,14 @@ jobs:
         timeout-minutes: 15
         run: |
           set -euo pipefail
+          # Use the official US archive directly; the hosted runner's default Azure mirror alias repeatedly failed DNS.
+          APT_SOURCE_CONFIG=/etc/apt/sources.list.d/ubuntu.sources
+          if ! grep -Fq 'mirror+file:/etc/apt/apt-mirrors.txt' "$APT_SOURCE_CONFIG"; then
+            echo "Ubuntu runner 的套件來源格式與預期不同：$APT_SOURCE_CONFIG" >&2
+            exit 1
+          fi
+          sudo sed -i 's|mirror+file:/etc/apt/apt-mirrors.txt|https://us.archive.ubuntu.com/ubuntu/|g' "$APT_SOURCE_CONFIG"
+          grep -E '^(URIs|Suites):' "$APT_SOURCE_CONFIG"
           python3 -m pip install -q 'playwright==1.55.0'
           python3 -m playwright install --with-deps chromium 2>&1 | tee "$RUNNER_TEMP/tw-install.log"
           sudo apt-get install -y --no-install-recommends fonts-noto-cjk 2>&1 | tee -a "$RUNNER_TEMP/tw-install.log"
