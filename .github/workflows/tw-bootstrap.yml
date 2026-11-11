@@ -75,8 +75,23 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m pip install -q 'playwright==1.55.0'
-          python3 -m playwright install --with-deps chromium 2>&1 | tee "$RUNNER_TEMP/tw-install.log"
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk 2>&1 | tee -a "$RUNNER_TEMP/tw-install.log"
+          # Keep CJK screenshots legible without relying on the hosted runner's failing Ubuntu apt mirrors.
+          NOTO_CJK_COMMIT=523d033d6cb47f4a80c58a35753646f5c3608a78
+          NOTO_FONT="$RUNNER_TEMP/NotoSansCJKtc-Regular.otf"
+          NOTO_LICENSE="$RUNNER_TEMP/Noto-CJK-LICENSE"
+          curl --fail --location --retry 3 --retry-all-errors --max-time 120 \
+            "https://raw.githubusercontent.com/notofonts/noto-cjk/$NOTO_CJK_COMMIT/Sans/OTF/TraditionalChinese/NotoSansCJKtc-Regular.otf" \
+            --output "$NOTO_FONT"
+          printf '%s  %s\n' 'dce08bd4fd91aa8aa76ed8fea4b694c2dfb8550f67871e326843212ddbeb88b4' "$NOTO_FONT" | sha256sum --check -
+          curl --fail --location --retry 3 --retry-all-errors --max-time 120 \
+            "https://raw.githubusercontent.com/notofonts/noto-cjk/$NOTO_CJK_COMMIT/LICENSE" \
+            --output "$NOTO_LICENSE"
+          grep -Fq 'SIL OPEN FONT LICENSE Version 1.1' "$NOTO_LICENSE"
+          sudo install -D -m 644 "$NOTO_FONT" /usr/local/share/fonts/opentype/noto/NotoSansCJKtc-Regular.otf
+          sudo install -m 644 "$NOTO_LICENSE" /usr/local/share/fonts/opentype/noto/OFL.txt
+          sudo fc-cache -f
+          fc-match --format='%{family}\n' 'Noto Sans CJK TC' | grep -F 'Noto Sans CJK TC'
+          python3 -m playwright install chromium 2>&1 | tee "$RUNNER_TEMP/tw-install.log"
       - name: 桌機、手機、自查與離線互動
         run: |
           set -euo pipefail

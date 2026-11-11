@@ -75,6 +75,23 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         cls.later_rechecks = cls.register["substantive_rechecks"][
             len(base_register["substantive_rechecks"]):
         ]
+        cls.later_first_publication_ids = set()
+        cls.later_first_publication_source_ids = set()
+        cls.completed_or_later_main_shas = set(subprocess.check_output(
+            ["git", "rev-list", f"{COMPLETED_HEAD}..HEAD"], cwd=ROOT, text=True
+        ).splitlines()) | {COMPLETED_HEAD}
+        for path in (ROOT / "localization").glob("ch*.json"):
+            try:
+                later_batch = read_json(path.relative_to(ROOT).as_posix())
+            except (json.JSONDecodeError, OSError):
+                continue
+            batch_base = later_batch.get("baseline_main_sha")
+            if batch_base not in cls.completed_or_later_main_shas:
+                continue
+            for row in later_batch.get("items", []):
+                if isinstance(row, dict) and row.get("before_sha256") is None:
+                    cls.later_first_publication_ids.add(row["id"])
+            cls.later_first_publication_source_ids.update(later_batch.get("new_source_ids", []))
 
     def test_articles_runtime_manifest_review_and_sources_match(self):
         self.assertEqual(self.batch["baseline_main_sha"], BASE)
@@ -189,7 +206,7 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         base_manifest = {row["id"]: row for row in self.base_manifest["entries"]}
         later_recheck_ids = {row["id"] for row in self.later_rechecks}
         for item_id, old in base_manifest.items():
-            if item_id not in ITEM_IDS:
+            if item_id not in set(ITEM_IDS) | self.later_first_publication_ids:
                 if self.manifest[item_id] != old:
                     self.assertIn(item_id, later_recheck_ids)
 
@@ -212,7 +229,9 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         }
         self.assertEqual(
             new_source_ids,
-            set(self.batch["new_source_ids"]) | sources_added_by_later_rechecks,
+            set(self.batch["new_source_ids"])
+            | sources_added_by_later_rechecks
+            | self.later_first_publication_source_ids,
         )
         self.assertGreaterEqual(
             len(self.register["substantive_rechecks"]),

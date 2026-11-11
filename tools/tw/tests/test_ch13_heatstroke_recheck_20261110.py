@@ -182,22 +182,41 @@ class HeatstrokeRecheckTests(unittest.TestCase):
                          len(baseline_register["substantive_rechecks"]))
         self.assertEqual(self.batch["counts_before"]["coverage_json_files"],
                          baseline_coverage["json_files_checked"])
-        self.assertEqual(self.batch["counts_after"]["manifest_entries"], len(self.manifest))
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["review_rechecks"],
-                         len(self.register["substantive_rechecks"]))
-        self.assertEqual(self.batch["counts_after"]["coverage_json_files"],
-                         coverage["json_files_checked"])
-        self.assertEqual(self.batch["counts_after"]["registry_sources"], coverage["registry_sources"])
+        counts_before = self.batch["counts_before"]
+        counts_after = self.batch["counts_after"]
+        self.assertEqual(counts_after["manifest_entries"], counts_before["manifest_entries"])
+        self.assertEqual(counts_after["runtime_items"], counts_before["runtime_items"])
+        self.assertEqual(counts_after["runtime_sources"],
+                         counts_before["runtime_sources"] + len(self.batch["new_source_ids"]))
+        self.assertEqual(counts_after["review_rechecks"],
+                         counts_before["review_rechecks"] + len(self.history))
+        source_bundle = f"localization/tw-edition/sources/{Path(BATCH_PATH).name}"
+        batch_json_paths = {BATCH_PATH, source_bundle} | {
+            row["review_path"] for row in self.batch["items"] if row.get("review_path")
+        }
+        baseline_json_paths = set(subprocess.check_output(
+            ["git", "ls-tree", "-r", "--name-only", BASE, "--", "localization"],
+            cwd=ROOT,
+            text=True,
+        ).splitlines())
+        added_json_files = len(batch_json_paths - baseline_json_paths)
+        self.assertEqual(counts_after["coverage_json_files"],
+                         counts_before["coverage_json_files"] + added_json_files)
+        self.assertEqual(counts_after["registry_sources"],
+                         counts_before["registry_sources"] + len(self.batch["new_source_ids"]))
+        self.assertGreaterEqual(len(self.manifest), counts_after["manifest_entries"])
+        self.assertGreaterEqual(len(self.runtime["items"]), counts_after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), counts_after["runtime_sources"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), counts_after["review_rechecks"])
+        self.assertGreaterEqual(coverage["json_files_checked"], counts_after["coverage_json_files"])
+        self.assertGreaterEqual(coverage["registry_sources"], counts_after["registry_sources"])
         self.assertEqual(coverage, audit_drafts())
         self.assertEqual(coverage["publication_completed_entries"],
                          publication_report()["publication_completed_entries"])
-        self.assertEqual(coverage["core_reviewed_entries"], baseline_coverage["core_reviewed_entries"])
+        self.assertGreaterEqual(coverage["core_reviewed_entries"],
+                                baseline_coverage["core_reviewed_entries"])
         self.assertFalse(coverage["publication_ready"])
         self.assertGreaterEqual(len(self.runtime["items"]), len(baseline_runtime_items))
-        self.assertEqual(self.batch["counts_after"]["review_rechecks"],
-                         self.batch["counts_before"]["review_rechecks"] + 1)
 
 
 if __name__ == "__main__":

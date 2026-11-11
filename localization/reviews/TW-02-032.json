@@ -1,0 +1,100 @@
+{
+  "id": "TW-02-032",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-11",
+  "review_due_at": "2027-02-11",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-032.md",
+  "target_sha256": "a6ece5ad41ea07ed0ba0a50990c92ab11beceb0598180174a9e5655472707a81",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_adult_bmi_standard_2025",
+      "title": "國健署：成人健康體位標準",
+      "url": "https://www.hpa.gov.tw/542/9737/n",
+      "claim": "台灣18歲以上成人BMI分類與腰圍參考範圍；BMI為簡易指標，不是完整診斷。",
+      "supporting_passage": "頁面2025-09-11更新，列出18歲以上成人四個BMI分類、男性腰圍小於90公分及女性小於80公分，並提醒不同個案可能有所差異。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱國健署成人健康體位標準頁，核對BMI分類、成人適用年齡、腰圍數值及更新日期。"
+    },
+    {
+      "source_id": "tw02_hpa_nutrition_survey_bmi_2020_2024",
+      "title": "國健署：2020至2024年國民營養健康調查摘要",
+      "url": "https://www.hpa.gov.tw/5020/19885/n",
+      "claim": "台灣2020至2024年18歲以上調查對象中，51.3%達國健署成人過重及肥胖分類。",
+      "supporting_passage": "國健署2026-03-04世界肥胖日新聞稿引用2020至2024年國民營養健康調查，稱18歲以上成年人51.3%達過重及肥胖標準；新聞摘要未列樣本數、原始人數、分母、估計方法或信賴區間。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "查閱國健署官方新聞稿及索引內容，核對調查期間、18歲以上族群和51.3%比例；頁面直連本次檢索工具逾時，故統計方法限制依公開摘要記錄。"
+    },
+    {
+      "source_id": "tw02_hpa_adult_preventive_check_2026",
+      "title": "國健署：成人預防保健服務資格與補助",
+      "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=189",
+      "claim": "成人預防保健年齡區間、原住民和小兒麻痺提前適用條件及每案880元公費補助。",
+      "supporting_passage": "國健署成人預防保健官方頁列30至39歲每5年1次、40至64歲每3年1次、55歲以上原住民、35歲以上小兒麻痺患者及65歲以上每年1次；每案補助880元。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "查閱國健署官方成人預防保健服務頁及官方搜尋索引摘要；頁面直連本次檢索工具逾時，以可見官方表格摘要核對資格與補助。"
+    },
+    {
+      "source_id": "tw02_hpa_adult_preventive_check_detail_2026",
+      "title": "國健署：成人預防保健服務內容與年齡資格（英文）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1076&pid=18516",
+      "claim": "交叉核對現行成人預防保健各年齡間隔及原住民、小兒麻痺提前適用年齡。",
+      "supporting_passage": "國健署官方英文頁於2026-08-05更新，列出30至39歲每5年、40至未滿65歲每3年、65歲以上每年，並說明55歲原住民及35歲小兒麻痺者提早適用。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接開啟國健署2026-08-05更新的官方英文服務說明頁，核對年齡間隔與提前適用族群，並與中文服務頁摘要交叉核對補助。"
+    }
+  ],
+  "localization_changes": "移除不適用台灣成人的原作BMI 20至25目標與海外死亡風險數字，改用國健署成人分類、腰圍限制和2020至2024年調查；補入成人預防保健常規年齡間隔及55歲原住民、35歲以上小兒麻痺者每年資格，並澄清880元是公費補助額。",
+  "review_method": "依固定原作ID、上游commit及原始主題重讀現有Markdown草稿、結構化草稿列與最新manifest；直接查閱本次來源清單中的台灣主管機關法規、服務入口、官方調查、原始研究與國際分類資料，逐項核對正文主張、適用族群、台灣生活情境、統計期間與分母、施行日期、費用、流程和來源限制。來源不足時明確記錄，不把AI輔助來源查核當成專業審閱。",
+  "limits": [
+    "BMI不能單獨診斷健康，兒童及青少年須用生長評估；懷孕、長者、運動員及疾病治療中的體重變化需個別判斷。",
+    "51.3%是2020至2024年調查摘要的群體比例，摘要未提供完整統計方法及分母，不能視為2026年現況或個人機率。",
+    "成人預防保健每案880元為補助額；資格、方案內容及院所額外自費項目應預約前確認。"
+  ],
+  "source_reviewed_sha256": "a6ece5ad41ea07ed0ba0a50990c92ab11beceb0598180174a9e5655472707a81",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "0ce733d7ee13a632584c59c6e1bd193d81e3243f095ee70b31f825f6dd57925c",
+  "source_ids": [
+    "tw02_hpa_adult_bmi_standard_2025",
+    "tw02_hpa_nutrition_survey_bmi_2020_2024",
+    "tw02_hpa_adult_preventive_check_2026",
+    "tw02_hpa_adult_preventive_check_detail_2026"
+  ],
+  "frequency_assessment": "國健署2020至2024年全國國民營養健康調查摘要報告18歲以上成年人51.3%達過重及肥胖標準。這是調查期間的群體比例，不是發生率、疾病盛行率或個人罹病機率；公開摘要未交代樣本數、原始分子、分母、估計方法與信賴區間，不能據此推估個人風險。",
+  "statistics_assessed": [
+    {
+      "topic": "國健署調查18歲以上成人達過重或肥胖分類",
+      "value": "51.3%",
+      "unit": "官方調查摘要所列群體比例",
+      "period": "2020至2024年",
+      "geographic_scope": "台灣全國國民營養健康調查",
+      "population": "18歲以上成年人",
+      "numerator": "公開新聞摘要未列原始人數或分子",
+      "denominator": "公開新聞摘要未列樣本數或原始分母",
+      "event_definition": "調查對象達國健署成人BMI過重（24至未滿27）或肥胖（27以上）分類；新聞摘要未交代詳細估計操作與測量方法",
+      "data_type": "全國國民營養健康調查之官方摘要；估計方法、加權方式與不確定性未在公開新聞摘要交代",
+      "limitations": "2020至2024調查不是2026年個人測量；公開摘要未列樣本數、分子、分母、估計方法及信賴區間；不將此群體比例換算為個人肥胖、疾病或未來事件機率。",
+      "source_ids": [
+        "tw02_hpa_nutrition_survey_bmi_2020_2024"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "若國健署公開調查技術報告或微資料，後續應補核樣本數、抽樣設計、量測及加權估計方法。",
+    "每案880元補助及成人預防保健資格可能調整，複查時須核對國健署最新公告。",
+    "未取得家醫科、肥胖醫學、營養或流行病學專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "家庭醫學",
+      "肥胖與代謝醫學",
+      "營養學",
+      "公共衛生與流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "ee0bc517312f78c189a6e96d27f4e8dd616f72cbfc8ccd9cdb2b3b5d9d18a7ea",
+  "prior_structured_draft_sha256": "29e1651d0607d868fc973fa472ee9eaaa615f40dcc57e90f96a7232c7083e482",
+  "prior_structured_draft_review": null
+}

@@ -1,0 +1,150 @@
+{
+  "id": "TW-02-039",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-11",
+  "review_due_at": "2027-02-11",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-039.md",
+  "target_sha256": "4b2c03df7ab077f9b624f2d90528e6e4fae5ef72e043bed8aeea45c2d8e6cd73",
+  "source_checks": [
+    {
+      "source_id": "tw02_osha_nightwork_guideline_2022",
+      "title": "職安署：職場夜間工作安全衛生指引",
+      "url": "https://www.osha.gov.tw/48110/48713/48735/133667/",
+      "claim": "夜班工作現場可依工作風險安排支援、照明、緊急通報及暴力預防；沒有大眾運輸時可與雇主討論通勤安排。",
+      "supporting_passage": "職安署2022-03-14發布、2022-03-24修正的指引，提出夜間工作風險評估、環境與暴力預防、緊急措施；夜間沒有大眾運輸時建議雇主考量通勤協助或住宿安排。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱職安署夜間工作安全衛生指引PDF及其官方發布頁，核對通勤、現場安全、暴力防護與緊急應變內容。"
+    },
+    {
+      "source_id": "tw02_mol_labor_survey_nightwork_114",
+      "title": "勞動部：114年勞工生活及就業狀況調查統計結果",
+      "url": "https://www.mol.gov.tw/1607/1632/1633/87690/post",
+      "claim": "114年調查對象中8.5%表示需要夜間工作；此調查比例不是夜班健康危害或事故發生率。",
+      "supporting_passage": "勞動部2026-01-23公布的114年調查摘要列有效樣本4,029份，並稱需於晚上10時至翌日上午6時工作的勞工占8.5%。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱勞動部調查統計結果頁，核對調查對象、有效樣本數、夜間工作定義及8.5%比例。"
+    },
+    {
+      "source_id": "tw02_mol_labor_survey_report_114",
+      "title": "勞動部：114年勞工生活及就業狀況調查圖表",
+      "url": "https://www.mol.gov.tw/media/okujqjdh/%E9%99%84%E4%BB%B6_114%E5%B9%B4%E5%8B%9E%E5%B7%A5%E7%94%9F%E6%B4%BB%E5%8F%8A%E5%B0%B1%E6%A5%AD%E7%8B%80%E6%B3%81%E8%AA%BF%E6%9F%A5%E7%B5%B1%E8%A8%88%E7%B5%90%E6%9E%9C-%E5%90%AB%E5%9C%96%E8%A1%A8.pdf?mediaDL=true",
+      "claim": "8.5%對應114年5月調查表7定義的夜間工作，不是夜班累積年數或健康事件。",
+      "supporting_passage": "PDF第1頁載明調查對象與4,029份有效樣本；第7頁表7標為114年5月，夜間工作定義為晚上10時至隔日上午6時，總計8.5%。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "下載並直接查閱勞動部官方PDF第1頁與第7頁，核對調查對象、有效樣本、期間、事件定義及表7數值。"
+    },
+    {
+      "source_id": "tw02_moj_oshrule_324_2_2026",
+      "title": "全國法規資料庫：職業安全衛生設施規則第324條之2",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060009",
+      "claim": "台灣雇主對輪班、夜間或長時間工作有異常工作負荷疾病預防責任；法條不等於全面禁止夜班。",
+      "supporting_passage": "現行第324條之2列高風險辨識、醫師面談與健康指導、調整或縮短工時、更換工作內容、健康檢查管理與成效改善紀錄。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱全國法規資料庫現行《職業安全衛生設施規則》第324條之2及法規最新修正資訊。"
+    },
+    {
+      "source_id": "tw02_moj_labor_health_nightwork_2026",
+      "title": "全國法規資料庫：勞工健康保護規則第2條、第18條及第29條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060022",
+      "claim": "長期夜間工作特定健檢條文尚未生效，將於2028-01-01生效；符合門檻依前一年度夜間工時認定。",
+      "supporting_passage": "法規資料庫標示2026-06-26修正，依第29條第2條及第18條自民國117年1月1日施行；第2條定義含每月工作日數二分之一、累計6個月、每日至少3小時或年度700小時條件。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱全國法規資料庫規則全文、生效狀態、第2條、第18條及第29條，逐項核對公告與施行日期、夜間時段及門檻。"
+    },
+    {
+      "source_id": "tw02_moj_osh_act18_2025",
+      "title": "全國法規資料庫：職業安全衛生法第18條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+      "claim": "立即危險時停工及退避的法定條件與反報復保障。",
+      "supporting_passage": "現行第18條第1至3項載明雇主停工退避義務、勞工自行停止作業與報告權，以及雇主不得解僱、調職、不給停工工資或作其他不利處分的保障和濫用例外。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱全國法規資料庫現行《職業安全衛生法》第18條全文與最近修正日期。"
+    },
+    {
+      "source_id": "tw02_osha_worker_health_0800068580",
+      "title": "職安署：勞工健康服務中心與免費諮詢",
+      "url": "https://www.osha.gov.tw/48110/48461/48649/48651/58788/",
+      "claim": "夜班工作者可使用職安署勞工健康服務中心免費諮詢。",
+      "supporting_passage": "職安署勞工個人服務頁列全國免費諮詢專線0800-068580，提供工作健康影響、健檢異常指導及心理諮詢。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱職安署官方勞工個人服務頁，核對專線、服務項目及頁面更新日期。"
+    },
+    {
+      "source_id": "tw02_mol_labor_inspection_complaint_2026",
+      "title": "勞動部：申訴與勞動檢查",
+      "url": "https://www.mol.gov.tw/1607/28162/28296/81778/81802/81948/",
+      "claim": "勞動權益或雇主是否違法有疑問時，可向地方勞工主管機關或勞動檢查機構洽詢、檢舉。",
+      "supporting_passage": "勞動部2026-07-09更新之申訴／勞檢頁，明列地方政府勞工局（處）或社會局（處）及勞動檢查機構為洽詢或檢舉入口。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱勞動部申訴與勞動檢查官方入口，核對最後更新日期和實際受理窗口。"
+    },
+    {
+      "source_id": "tw02_motc_fatigue_driving_2025",
+      "title": "交通部168交通安全入口網：拒絕分心與疲勞駕駛",
+      "url": "https://168.motc.gov.tw/theme/motorcycle/post/2506231146842",
+      "claim": "夜班後若疲倦、恍神或注意力難以維持，不應硬騎機車或開車。",
+      "supporting_passage": "交通部168交通安全入口網2025-06-25疲勞駕駛宣導提醒不要在疲勞狀態繼續騎乘，應安全停車休息。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱交通部168交通安全入口網機車疲勞駕駛宣導頁及發布日期。"
+    }
+  ],
+  "localization_changes": "將原作「夜班越久心血管風險越高、能轉崗就趁早轉」改為台灣可採取的現場安全、疲勞通勤、健康服務和申訴指引；加入現行雇主預防責任與職安法第18條停工保障，區分2028年生效的長期夜班健檢；用勞動部調查比例說明暴露範圍，不誤稱疾病發生率。",
+  "review_method": "依固定原作ID、上游commit及原始主題重讀現有Markdown草稿、結構化草稿列與最新manifest；直接查閱本次來源清單中的台灣主管機關法規、服務入口、官方調查、原始研究與國際分類資料，逐項核對正文主張、適用族群、台灣生活情境、統計期間與分母、施行日期、費用、流程和來源限制。來源不足時明確記錄，不把AI輔助來源查核當成專業審閱。",
+  "limits": [
+    "114年勞動調查只涵蓋其指定的本國籍受僱勞工保險調查對象；8.5%不是台灣所有工作者比例、夜班人口多年累積率或疾病事故率。",
+    "長期夜間工作的特定健康檢查第2條、第18條依現行施行條文自2028-01-01生效；其他現行職安預防責任仍依現行規定辦理。",
+    "具體調班、醫療處置、工資及申訴結果依個案事實和主管機關認定；本文提供一般資訊，不替代個案法律或職業醫學評估。"
+  ],
+  "source_reviewed_sha256": "4b2c03df7ab077f9b624f2d90528e6e4fae5ef72e043bed8aeea45c2d8e6cd73",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "b24f51c986478888522b3e6963d19011d883dc9c774e7f48990c55acaee3bd96",
+  "source_ids": [
+    "tw02_osha_nightwork_guideline_2022",
+    "tw02_mol_labor_survey_nightwork_114",
+    "tw02_mol_labor_survey_report_114",
+    "tw02_moj_oshrule_324_2_2026",
+    "tw02_moj_labor_health_nightwork_2026",
+    "tw02_moj_osh_act18_2025",
+    "tw02_osha_worker_health_0800068580",
+    "tw02_mol_labor_inspection_complaint_2026",
+    "tw02_motc_fatigue_driving_2025"
+  ],
+  "frequency_assessment": "勞動部114年勞工生活及就業狀況調查的有效樣本4,029份，調查對象為參加勞工保險、就業保險及職災保險的本國籍受僱勞工；表7以114年5月為期間，8.5%表示需在22時至翌日6時工作。報告未列此題原始人數、加權分母或信賴區間。它是特定調查對象的夜間工作比例，不是夜班疾病或事故發生率；未找到可代表台灣夜班者疾病個人機率的同口徑全國統計。",
+  "statistics_assessed": [
+    {
+      "topic": "114年調查受訪者需要夜間工作之比例",
+      "value": "8.5%",
+      "unit": "勞工生活及就業狀況調查所列比例",
+      "period": "民國114年5月",
+      "geographic_scope": "台灣全國調查對象範圍；不代表所有居住或工作於台灣的人",
+      "population": "參加勞工保險、就業保險及職業災害保險之本國籍受僱勞工；調查有效樣本4,029份",
+      "numerator": "官方圖表未列需夜間工作的原始受訪人數",
+      "denominator": "調查有效樣本共4,029份；公開摘要未列本題原始分母、加權分母或信賴區間",
+      "event_definition": "受訪者表示工作時間需於晚上10時至翌日上午6時內工作；表7列114年5月統計",
+      "data_type": "勞動部年度勞工生活及就業狀況抽樣調查結果與表7；不是職業傷病通報、事故或死亡資料",
+      "limitations": "調查對象限於參加三類保險的本國籍受僱勞工；未列本題原始人數、加權分母及信賴區間，不涵蓋所有外籍工作者、自營作業者或其他未納入調查者；不可解讀為個人夜班健康風險。",
+      "source_ids": [
+        "tw02_mol_labor_survey_nightwork_114",
+        "tw02_mol_labor_survey_report_114"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "每年重新核對職業安全衛生法規及施行日期，尤其2028年長期夜班檢查規則。",
+    "勞工健康服務0800-068580及地方申訴入口下次複查時重新確認可用時間、服務項目和聯絡方式。",
+    "未取得職業醫學、職業安全衛生及勞動法專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "職業醫學",
+      "職業安全衛生",
+      "勞動法"
+    ]
+  },
+  "prior_chapter_draft_sha256": "6951f635b900aeb64412f45c7aadb5e0fb90da26bf0737c7d7a420bcbadc2491",
+  "prior_structured_draft_sha256": "6b3f156898871785ad21db7968ee4ab790ae3d31b7065bb5458a3bd54728443a",
+  "prior_structured_draft_review": null
+}

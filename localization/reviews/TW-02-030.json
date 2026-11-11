@@ -1,0 +1,70 @@
+{
+  "id": "TW-02-030",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-11",
+  "review_due_at": "2027-02-11",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-030.md",
+  "target_sha256": "ac12b0c443e2981d0d0d530abad658127c09a36ebca449cc3c2e2a5f6e4b5ba9",
+  "source_checks": [
+    {
+      "source_id": "tw02_iarc_hot_drinks_2016",
+      "title": "國際癌症研究機構：非常燙飲料與食道癌",
+      "url": "https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/",
+      "claim": "IARC的攝氏65度界線和第2A類是證據分類，不是個人罹癌機率或安全切線；現有資料未估算可歸因病例比例。",
+      "supporting_passage": "IARC 2016-06-15事實說明列出第2A類、攝氏65度以上定義，並明言非常燙飲料可歸因的食道癌病例比例尚未知；多數研究在有此飲用習慣的地區進行。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱IARC官方事實說明，核對發布日期、溫度定義、分類含義及病例歸因限制。"
+    },
+    {
+      "source_id": "tw02_hpa_child_burn_first_aid_2026",
+      "title": "國健署：兒童防燙與燒燙傷急救原則",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20457",
+      "claim": "熱飲造成燙傷時，以流動冷水沖洗15至30分鐘，不硬扯黏住皮膚的衣物，覆蓋並就醫。",
+      "supporting_passage": "國健署2026-11-04兒童防燙官方衛教列燙傷急救「沖、脫、泡、蓋、送」，其中「沖」為持續沖冷水15至30分鐘。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "查閱國健署2026-11-04官方頁面及該頁索引摘要；頁面直連於本次檢索工具逾時，但官方摘要明列沖冷水15至30分鐘及兒童防燙原則。"
+    },
+    {
+      "source_id": "tw02_nfa_emergency_119",
+      "title": "消防署：119與112緊急報案資訊",
+      "url": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=66",
+      "claim": "燙傷嚴重或患者出現呼吸、意識急症時，可撥119求助。",
+      "supporting_passage": "消防署119緊急報案頁說明119為消防及緊急救護報案電話。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱消防署官方119緊急報案資訊。"
+    }
+  ],
+  "localization_changes": "將原作對「燙」的抽象提醒改成台灣茶飲、湯品、外帶容器和兒童燙傷情境；交代IARC分類的證據意義與歸因比例未知，依國健署最新兒童防燙衛教列冷水沖洗及避免錯誤偏方。",
+  "review_method": "依固定原作ID、上游commit及原始主題重讀現有Markdown草稿、結構化草稿列與最新manifest；直接查閱本次來源清單中的台灣主管機關法規、服務入口、官方調查、原始研究與國際分類資料，逐項核對正文主張、適用族群、台灣生活情境、統計期間與分母、施行日期、費用、流程和來源限制。來源不足時明確記錄，不把AI輔助來源查核當成專業審閱。",
+  "limits": [
+    "IARC事實說明發布於2016年，所列研究地區和暴露型態不能直接當成台灣風險率。",
+    "國健署2026-11-04燒燙傷頁的直接讀取在本次檢索工具逾時；可見官方索引摘要明列冷水沖洗15至30分鐘，後續複查應確認官方頁仍可讀且建議未變。"
+  ],
+  "source_reviewed_sha256": "ac12b0c443e2981d0d0d530abad658127c09a36ebca449cc3c2e2a5f6e4b5ba9",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "c82ed1798d22d67527389a0e9cc7e49128a6eff437d2d1aeb1c2ae2c0779d534",
+  "source_ids": [
+    "tw02_iarc_hot_drinks_2016",
+    "tw02_hpa_child_burn_first_aid_2026",
+    "tw02_nfa_emergency_119"
+  ],
+  "frequency_assessment": "本次未找到能代表台灣飲用非常燙飲料暴露或相關食道癌可歸因比例的全國統計。IARC資料指出可歸因病例比例尚未知且研究多來自不同飲食地區；不把第2A類、攝氏65度或海外癌症率解讀為台灣個人發生機率。燙傷出現時先安全沖洗與求援，不等待統計。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "下次複查需重新核對國健署燒燙傷急救頁全文、兒童與成人處置界線及119分流。",
+    "未取得急診醫學、燒燙傷照護或腫瘤流行病學專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "急診醫學",
+      "燒燙傷照護",
+      "腫瘤流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "50b52af5f08e460feda157c3b2703b85587bf7e2a42d08cde5ead06dd18f20be",
+  "prior_structured_draft_sha256": "15a7a0ad1d53e3fbea5d4513773e104f9d957b4012b389a1e015cbd84d7163aa",
+  "prior_structured_draft_review": null
+}
