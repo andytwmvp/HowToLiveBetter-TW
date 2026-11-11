@@ -67,6 +67,7 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         cls.base_runtime = base_json("localization/tw-edition/runtime.json")
         cls.base_manifest = base_json("localization/manifest.json")
         cls.completed_runtime = json_at(COMPLETED_HEAD, "localization/tw-edition/runtime.json")
+        cls.completed_manifest = json_at(COMPLETED_HEAD, "localization/manifest.json")
         cls.completed_coverage = json_at(COMPLETED_HEAD, "localization/tw-edition/coverage.json")
         cls.completed_register = json_at(
             COMPLETED_HEAD, "localization/retroactive-review-register-20261019.json"
@@ -109,10 +110,50 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
                 entry = self.manifest[item_id]
                 review = self.reviews[item_id]
                 record = self.batch_items[item_id]
-                body_path = ROOT / entry["target_path"]
-                body_bytes = body_path.read_bytes()
-                body = body_bytes.decode("utf-8")
-                digest = hashlib.sha256(body_bytes).hexdigest()
+                current_item = item
+                current_entry = entry
+                current_review = review
+                current_body_path = ROOT / current_entry["target_path"]
+                current_body = current_body_path.read_text(encoding="utf-8")
+                current_digest = hashlib.sha256(current_body_path.read_bytes()).hexdigest()
+
+                later_rechecks = [row for row in self.later_rechecks if row["id"] == item_id]
+                if later_rechecks:
+                    # Validate the 11/10 batch against its exact merged snapshot, then
+                    # validate the append-only review chain to the current article.
+                    completed_items = {
+                        row["id"]: row for row in self.completed_runtime["items"]
+                    }
+                    completed_entries = {
+                        row["id"]: row for row in self.completed_manifest["entries"]
+                    }
+                    item = completed_items[item_id]
+                    entry = completed_entries[item_id]
+                    review = json.loads(subprocess.check_output(
+                        ["git", "show", f"{COMPLETED_HEAD}:localization/reviews/{item_id}.json"],
+                        cwd=ROOT,
+                        text=True,
+                    ))
+                    body = item["body"]
+                    body_bytes = body.encode("utf-8")
+                    digest = hashlib.sha256(body_bytes).hexdigest()
+                    self.assertEqual(record["after_sha256"], digest)
+                    self.assertEqual(later_rechecks[0]["before_sha256"], digest)
+                    for previous, following in zip(later_rechecks, later_rechecks[1:]):
+                        self.assertEqual(following["before_sha256"], previous["after_sha256"])
+                    self.assertEqual(later_rechecks[-1]["after_sha256"], current_digest)
+                    self.assertEqual(current_item["body"], current_body)
+                    self.assertEqual(current_review["target_sha256"], current_digest)
+                    self.assertEqual(current_review["source_reviewed_sha256"], current_digest)
+                    self.assertEqual(current_review["reviewed_at"], later_rechecks[-1]["reviewed_at"])
+                    self.assertEqual(current_item["reviewed_at"], later_rechecks[-1]["reviewed_at"])
+                    self.assertEqual(current_entry["verified_at"], later_rechecks[-1]["reviewed_at"])
+                    self.assertIn("日本研究", current_body)
+                else:
+                    body_path = ROOT / entry["target_path"]
+                    body_bytes = body_path.read_bytes()
+                    body = body_bytes.decode("utf-8")
+                    digest = hashlib.sha256(body_bytes).hexdigest()
 
                 self.assertEqual(entry["status"], "verified")
                 self.assertEqual(entry["treatment"], "taiwan_independent_rewrite")
@@ -214,10 +255,26 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             ["git", "show", f"{BASE}:localization/tw-edition/chapters/02.json"], cwd=ROOT
         )
         current_drafts = (ROOT / "localization/tw-edition/chapters/02.json").read_bytes()
-        self.assertEqual(current_drafts, base_drafts)
+        base_draft_data = json.loads(base_drafts)
         draft_data = json.loads(current_drafts)
+        base_rows = {f"TW-02-{row[0]:03}": row for row in base_draft_data["entries"]}
         rows = {f"TW-02-{row[0]:03}": row for row in draft_data["entries"]}
+        self.assertEqual(set(rows), set(base_rows))
+        for item_id, old_row in base_rows.items():
+            if item_id not in {"TW-02-025", "TW-02-036", "TW-02-047"}:
+                self.assertEqual(rows[item_id], old_row)
+        self.assertIn("日本研究", rows["TW-02-025"][1])
+        self.assertIn("日本研究探討心血管與健康老化", rows["TW-02-036"][1])
+        self.assertIn("生淡水魚的中華肝吸蟲風險", rows["TW-02-047"][1])
+        self.assertIn("喝茶、泡澡等健康研究", draft_data["intro"])
         for item_id, expected_sha in DRAFT_ROW_SHA256.items():
+            if item_id == "TW-02-025":
+                # The former draft hash remains in the immutable 11/10 batch record;
+                # the current row reflects the later source-backed re-review.
+                original = base_rows[item_id]
+                value = json.dumps(original, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+                self.assertEqual(hashlib.sha256(value).hexdigest(), expected_sha)
+                continue
             value = json.dumps(rows[item_id], ensure_ascii=False, separators=(",", ":")).encode("utf-8")
             self.assertEqual(hashlib.sha256(value).hexdigest(), expected_sha)
 
@@ -237,7 +294,12 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             len(self.register["substantive_rechecks"]),
             self.batch["counts_before"]["substantive_rechecks"],
         )
-        self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))
+        reviewed_ids = {row["id"] for row in self.register["substantive_rechecks"]}
+        self.assertEqual(set(ITEM_IDS) & reviewed_ids, {"TW-02-025"})
+        self.assertTrue(any(
+            row["id"] == "TW-02-025" and row["reviewed_at"] == "2026-11-12"
+            for row in self.later_rechecks
+        ))
 
     def test_coverage_and_recorded_counts_match_the_current_data(self):
         before = self.batch["counts_before"]

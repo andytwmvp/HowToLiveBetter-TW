@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "phase": "第2章主題保真度回溯；保留有價值的日本研究並避免強迫在地化替代",
+  "baseline_main_sha": "fa47b5ad2a8c05a04d40c5e51b401f18baaeddfb",
+  "reviewed_at": "2026-11-12",
+  "review_due_at": "2027-02-12",
+  "scope": [
+    "TW-02-025",
+    "TW-02-036",
+    "TW-02-047"
+  ],
+  "content_policy": "主要目標為去除中國大陸制度、法律與文化預設；外國研究若與讀者問題相關且方法可信，保留並標明研究地域與外推限制。不得把國外研究改說成台灣統計。",
+  "items": [
+    {
+      "id": "TW-02-025",
+      "change_kind": "historical topic-fidelity recheck",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-025.md",
+      "before_sha256": "57b7f18a5762cd954b89902e9762013f8b121705119f8d4cde8a4dd15b38156e",
+      "after_sha256": "8671f803f512c2b905529a88de754dcee40526b85742c49b0efddd542548aab9",
+      "prior_review_sha256": "ea1223ba9f59253c11f377a3c76ff2b4271557120e8a8801289175644fdb64f3",
+      "review_sha256": "28c95ff31490a4b9ca413866528dd4347f9dd76040bc4efc405de1fc1aa1359c",
+      "topic_fidelity_assessment": "Restore Japanese green tea mortality research removed during localization, with cohort scope and noncausal caveats.",
+      "taiwan_frequency_limits": "日本八個人口世代合併分析：313,381人、平均追蹤17.3年、52,943人死亡；每天至少5杯相較每天少於1杯，全因死亡HR男性0.90、女性0.82。這是日本觀察性關聯，摘要未提供各暴露組分子／分母，不能換算個人絕對風險或台灣發生率。台灣未以此研究制定固定飲茶次數或延壽建議。",
+      "source_ids": [
+        "tw02_hpa_external_dining_guidance_2024",
+        "tw02_tfda_caffeine_guidance_2025",
+        "tw02_jphc_green_tea_mortality_2019"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "公共衛生與流行病學"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-036",
+      "change_kind": "new core article preserving source topic",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-036.md",
+      "before_sha256": null,
+      "after_sha256": "6f071b52d5ae1ee4b32f4a4aaaccbad30dd215ac7650785e2357d3e2fb5f12f4",
+      "prior_review_sha256": null,
+      "review_sha256": "66f5d827f1be8555296a4380dfbb180af88e1a7e8c511f9fa04033e91c228693",
+      "topic_fidelity_assessment": "Restore Japanese bathing culture and health research rather than collapsing the topic into bathroom safety: include the JAGES older-adult functional-disability cohort and JPHC cardiovascular cohort with observational limits.",
+      "taiwan_frequency_limits": "日本JAGES 2010–2012年基線調查納入13,786名65歲以上且日常生活可自理的社區長者，來自18個市町村、8個都道府縣；追蹤3年，1,203人（8.7%）新取得日本長期照顧保險需要認定。每週至少7次相較每週0–2次，調整後HR夏季0.72（95% CI 0.60–0.85）、冬季0.71（0.60–0.84）；這是失能認定關聯，不是壽命或死亡率。日本JPHC 1990–2009年研究納入30,076名40–59歲參與者，累計538,373人年及2,097起新發心血管事件；幾乎每天泡澡相較每週0–2次HR 0.72（0.62–0.84），也不是死亡或延壽結果。兩者均為觀察性研究；日本浴缸死亡數缺少泡澡暴露分母。台灣2024年65歲以上整體跌倒死亡率25.2/10萬；2017調查所報15.5%與摘要人數無法直接互算，兩項均非泡澡事故率。",
+      "source_ids": [
+        "tw02_japan_bathing_culture_review_2022",
+        "tw02_jages_bath_frequency_disability_2019",
+        "tw02_jphc_tub_bathing_cv_2020",
+        "tw02_japan_caa_bathtub_drowning_2024",
+        "tw02_hpa_falls_death_2024_2026",
+        "tw02_hpa_falls_locations_2017",
+        "tw02_mohw_falls_survey_counts_2017",
+        "tw02_nfa_emergency_119"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "老年醫學與健康老化流行病學",
+          "心臟科／心血管流行病學",
+          "浴室安全與防跌"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-047",
+      "change_kind": "historical topic-fidelity recheck",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-047.md",
+      "before_sha256": "44e3a1981c852ad1ec180d73c4392c21fb1e74de4e074abd7857b381e0e7a568",
+      "after_sha256": "62c586410fb43adf97d5af5c169708d454fc19791e5589cdf6c9eb163d2552cf",
+      "prior_review_sha256": "627dcfdc409ac3659a5d9afdacbc99dc65a495099a1dec939eb9a47162bc1362",
+      "review_sha256": "268ebb4dc34934f09392e89b85eeac336fa92c9e922034ade233eaf69b954b62",
+      "topic_fidelity_assessment": "Make the original freshwater fish/Clonorchis topic visible in title and section; it was present but obscured by the broad food-safety title.",
+      "taiwan_frequency_limits": "2025年食藥署全台食品中毒行政通報1,212件、列計患者5,650人、死亡0人；沒有餐次、人口或個人暴露分母，且未明病因不等於確診特定病原。疾管署2019年疾病頁只支持中華肝吸蟲的淡水魚及交叉汙染傳播途徑，不提供可估算目前全台感染頻率的資料。標題可發現性修正不改變此頻率判斷。",
+      "source_ids": [
+        "tw02_tfda_food_poisoning_stats_2025",
+        "tw02_cdc_clonorchis_2019",
+        "tw02_tfda_food_safety_faq_20261106"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "食品安全",
+          "感染症"
+        ]
+      }
+    }
+  ],
+  "new_source_ids": [
+    "tw02_jphc_green_tea_mortality_2019",
+    "tw02_jphc_tub_bathing_cv_2020",
+    "tw02_japan_caa_bathtub_drowning_2024",
+    "tw02_hpa_falls_death_2024_2026",
+    "tw02_hpa_falls_locations_2017",
+    "tw02_mohw_falls_survey_counts_2017",
+    "tw02_japan_bathing_culture_review_2022",
+    "tw02_jages_bath_frequency_disability_2019"
+  ],
+  "source_records_reused": [
+    "tw02_hpa_external_dining_guidance_2024",
+    "tw02_tfda_caffeine_guidance_2025",
+    "tw02_nfa_emergency_119",
+    "tw02_tfda_food_poisoning_stats_2025",
+    "tw02_cdc_clonorchis_2019",
+    "tw02_tfda_food_safety_faq_20261106"
+  ],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "runtime_items": 325,
+    "runtime_sources": 1253,
+    "source_registry": 1336,
+    "review_rechecks": 380,
+    "coverage_json_files": 619,
+    "core_verified": 314
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1261,
+    "source_registry": 1344,
+    "review_rechecks": 382,
+    "coverage_json_files": 622,
+    "unresolved_source_id_kinds": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "professional_review_status": "營養／流行病學、日式入浴文化與老年健康、心血管／防跌、食安／感染症專業審閱仍待取得；本輪為AI輔助來源與主張核對。",
+  "reader_copy_cleanup": "正文不含本批進度、AI狀態或內部管理文字；主題取捨理由僅存於review、回溯登錄和本批證據。"
+}
