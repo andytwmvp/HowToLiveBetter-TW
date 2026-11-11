@@ -46,8 +46,16 @@ class ChapterTwoHealthSafetyFoodTests(unittest.TestCase):
                     {row["url"] for row in review["source_checks"]},
                     {sources[source_id]["url"] for source_id in item["source_ids"]},
                 )
-                self.assertEqual(sum(block["tag"] == "h3" for block in body_blocks(item)), 5)
-                self.assertTrue(any("未取得獨立" in limit for limit in review["limits"]))
+                heading_count = sum(block["tag"] == "h3" for block in body_blocks(item))
+                if key == "TW-02-047":
+                    self.assertEqual(heading_count, 6)
+                    self.assertIn("## 生淡水魚與中華肝吸蟲", item["body"])
+                else:
+                    self.assertEqual(heading_count, 5)
+                if key == "TW-02-047":
+                    self.assertTrue(any("沒有個人暴露分母" in limit for limit in review["limits"]))
+                else:
+                    self.assertTrue(any("未取得獨立" in limit for limit in review["limits"]))
                 for source_id in item["source_ids"]:
                     self.assertIn(source_id, batch_sources)
                     self.assertEqual(batch_sources[source_id][2], sources[source_id]["url"])

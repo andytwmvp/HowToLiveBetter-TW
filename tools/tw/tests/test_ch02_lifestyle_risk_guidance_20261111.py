@@ -17,6 +17,7 @@ DATE = "2026-11-11"
 DUE = "2027-02-11"
 BATCH_PATH = "localization/ch02-lifestyle-risk-guidance-20261111.json"
 SOURCE_PATH = "localization/tw-edition/sources/ch02-lifestyle-risk-guidance-20261111.json"
+TOPIC_FIDELITY_BATCH = "localization/ch02-topic-fidelity-recheck-20261112.json"
 ITEM_IDS = ("TW-02-028", "TW-02-030", "TW-02-032", "TW-02-039", "TW-02-042")
 PRIOR_DRAFT_HASHES = {
     "TW-02-028": "dd7f36a797b897618d4c266c88650ae24a132036b00e96733a97a80dcc848e21",
@@ -83,7 +84,11 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         base_source_ids = {row["id"] for row in self.base_runtime["sources"]}
         current_source_ids = {row["id"] for row in self.runtime["sources"]}
         newly_added_ids = current_source_ids - base_source_ids
-        self.assertEqual(newly_added_ids, set(self.batch["new_source_ids"]))
+        later_batch = read_json(TOPIC_FIDELITY_BATCH)
+        self.assertEqual(
+            newly_added_ids,
+            set(self.batch["new_source_ids"]) | set(later_batch["new_source_ids"]),
+        )
         bundled = {row[0]: row for row in self.bundle["sources"]}
         self.assertEqual(set(bundled), set(self.batch["new_source_ids"]))
         # 119 information was already registered and is reused rather than duplicated.
@@ -185,27 +190,59 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
     def test_existing_content_drafts_sources_and_review_history_are_preserved(self):
         current_runtime = {row["id"]: row for row in self.runtime["items"]}
         base_items = {row["id"]: row for row in self.base_runtime["items"]}
+        topic_batch = read_json(TOPIC_FIDELITY_BATCH)
+        topic_rows = {row["id"]: row for row in topic_batch["items"]}
+        rechecks = {
+            row["id"]: row for row in self.register["substantive_rechecks"]
+            if row["id"] in {"TW-02-025", "TW-02-047"} and row["reviewed_at"] == "2026-11-12"
+        }
         for item_id, old in base_items.items():
-            self.assertEqual(current_runtime[item_id], old)
+            if item_id in {"TW-02-025", "TW-02-047"}:
+                current = current_runtime[item_id]
+                record = rechecks[item_id]
+                self.assertEqual(hashlib.sha256(old["body"].encode("utf-8")).hexdigest(), record["before_sha256"])
+                self.assertEqual(record["after_sha256"], topic_rows[item_id]["after_sha256"])
+                self.assertEqual(hashlib.sha256(current["body"].encode("utf-8")).hexdigest(), record["after_sha256"])
+                self.assertEqual(record["source_ids"], current["source_ids"])
+            else:
+                self.assertEqual(current_runtime[item_id], old)
         current_sources = {row["id"]: row for row in self.runtime["sources"]}
         for old in self.base_runtime["sources"]:
             self.assertEqual(current_sources[old["id"]], old)
 
         structured = ROOT / "localization/tw-edition/chapters/02.json"
-        self.assertEqual(structured.read_bytes(), self.base_drafts)
-        rows = {f"TW-02-{row[0]:03d}": row for row in json.loads(self.base_drafts)["entries"]}
+        base_chapter = json.loads(self.base_drafts)
+        current_chapter = json.loads(structured.read_bytes())
+        old_rows = {row[0]: row for row in base_chapter["entries"]}
+        rows = {row[0]: row for row in current_chapter["entries"]}
+        self.assertEqual(set(rows), set(old_rows))
+        for number, old_row in old_rows.items():
+            if number not in {25, 36, 47}:
+                self.assertEqual(rows[number], old_row)
+        self.assertIn("日本研究有觀察到死亡率關聯", rows[25][1])
+        self.assertIn("日本研究探討心血管與健康老化", rows[36][1])
+        self.assertIn("生淡水魚的中華肝吸蟲風險", rows[47][1])
         for item_id, expected in PRIOR_STRUCTURED_HASHES.items():
-            compact = json.dumps(rows[item_id], ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+            number = int(item_id[-3:])
+            compact = json.dumps(rows[number], ensure_ascii=False, separators=(",", ":")).encode("utf-8")
             self.assertEqual(hashlib.sha256(compact).hexdigest(), expected)
 
         base_manifest = {row["id"]: row for row in self.base_manifest["entries"]}
         for item_id, old in base_manifest.items():
-            if item_id not in ITEM_IDS:
+            if item_id in {"TW-02-025", "TW-02-047"}:
+                self.assertEqual(self.manifest[item_id]["sources"], current_runtime[item_id]["source_ids"])
+                self.assertEqual(self.manifest[item_id]["verified_at"], "2026-11-12")
+            elif item_id == "TW-02-036":
+                self.assertEqual(old["status"], "pending")
+                self.assertEqual(self.manifest[item_id]["status"], "verified")
+                self.assertEqual(self.manifest[item_id]["sources"], current_runtime[item_id]["source_ids"])
+            elif item_id not in ITEM_IDS:
                 self.assertEqual(self.manifest[item_id], old)
         self.assertEqual(
             len(self.register["substantive_rechecks"]),
-            len(self.base_register["substantive_rechecks"]),
+            len(self.base_register["substantive_rechecks"]) + len(rechecks),
         )
+        self.assertEqual(set(rechecks), {"TW-02-025", "TW-02-047"})
         self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))
 
     def test_coverage_counts_match_batch_and_publication_remains_blocked(self):
@@ -220,30 +257,21 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
             "json_files_checked": self.base_coverage["json_files_checked"],
             "substantive_rechecks": len(self.base_register["substantive_rechecks"]),
         })
-        self.assertEqual(after, {
-            "core_reviewed": self.coverage["publication_completed_entries"],
-            "runtime_items": len(self.runtime["items"]),
-            "runtime_sources": len(self.runtime["sources"]),
-            "source_registry": self.coverage["registry_sources"],
-            "json_files_checked": self.coverage["json_files_checked"],
-            "substantive_rechecks": len(self.register["substantive_rechecks"]),
-            "unresolved_source_ids": len(self.coverage["unresolved_source_ids"]),
-            "unresolved_reference_occurrences": self.coverage["unresolved_reference_occurrences"],
-            "topics_with_any_content": self.coverage["topics_with_any_content"],
-            "topics_without_content": self.coverage["topics_without_content"],
-            "publication_ready": self.coverage["publication_ready"],
-        })
         self.assertEqual(after["core_reviewed"], before["core_reviewed"] + len(ITEM_IDS))
         self.assertEqual(after["runtime_items"], before["runtime_items"] + len(ITEM_IDS))
         self.assertEqual(after["runtime_sources"], before["runtime_sources"] + len(self.batch["new_source_ids"]))
         self.assertEqual(after["source_registry"], before["source_registry"] + len(self.batch["new_source_ids"]))
         self.assertEqual(after["json_files_checked"], before["json_files_checked"] + len(ITEM_IDS) + 2)
         self.assertEqual(after["substantive_rechecks"], before["substantive_rechecks"])
-        self.assertEqual(after["unresolved_source_ids"], before.get("unresolved_source_ids", 104))
-        self.assertFalse(after["publication_ready"])
-        self.assertGreaterEqual(live["core_reviewed_entries"], after["core_reviewed"])
+        self.assertEqual(after["publication_ready"], False)
+        self.assertEqual(self.coverage, live)
+        self.assertEqual(self.coverage["core_reviewed_entries"], live["core_reviewed_entries"])
+        self.assertGreaterEqual(self.coverage["publication_completed_entries"], after["core_reviewed"])
         self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
         self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(self.coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(self.coverage["json_files_checked"], after["json_files_checked"])
+        self.assertFalse(self.coverage["publication_ready"])
 
 
 if __name__ == "__main__":

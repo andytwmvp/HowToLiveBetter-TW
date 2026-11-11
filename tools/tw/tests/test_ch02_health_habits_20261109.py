@@ -8,6 +8,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from ci_language_policy import audit_drafts
 from review_contract import ROOT, validate_runtime
 
 BASE = "5571669a51ac5d3999b0249c584a905cb631ee07"
@@ -133,13 +134,29 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         base_chapter = subprocess.check_output(
             ["git", "show", f"{BASE}:localization/tw-edition/chapters/02.json"], cwd=ROOT
         )
-        current_chapter = (ROOT / "localization/tw-edition/chapters/02.json").read_bytes()
-        self.assertEqual(current_chapter, base_chapter)
+        old_chapter = json.loads(base_chapter)
+        current_chapter = read_json("localization/tw-edition/chapters/02.json")
+        old_rows = {row[0]: row for row in old_chapter["entries"]}
+        current_rows = {row[0]: row for row in current_chapter["entries"]}
+        topic_fidelity_rows = {25, 36, 47}
+        self.assertEqual(set(current_rows), set(old_rows))
+        for number, row in old_rows.items():
+            if number not in topic_fidelity_rows:
+                self.assertEqual(current_rows[number], row)
+        self.assertIn("日本研究有觀察到死亡率關聯", current_rows[25][1])
+        self.assertIn("日本研究探討心血管與健康老化", current_rows[36][1])
+        self.assertIn("生淡水魚的中華肝吸蟲風險", current_rows[47][1])
+        self.assertIn("文化脈絡與觀察性證據", current_chapter["intro"])
         base_register = base_json("localization/retroactive-review-register-20261019.json")
         base_ids = [row["id"] for row in base_register["substantive_rechecks"]]
         current_ids = [row["id"] for row in self.register["substantive_rechecks"]]
         self.assertEqual(current_ids[: len(base_ids)], base_ids)
         self.assertTrue(set(ITEM_IDS).isdisjoint(current_ids))
+        topic_rechecks = [
+            row for row in self.register["substantive_rechecks"]
+            if row["reviewed_at"] == "2026-11-12" and row["id"] in {"TW-02-025", "TW-02-047"}
+        ]
+        self.assertEqual({row["id"] for row in topic_rechecks}, {"TW-02-025", "TW-02-047"})
 
     def test_coverage_counts_match_actual_incremental_publication(self):
         before = self.batch["counts_before"]
@@ -156,7 +173,7 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         self.assertGreaterEqual(self.coverage["json_files_checked"], before["json_files_checked"] + len(ITEM_IDS) + 2)
         self.assertEqual(self.coverage["unique_draft_entries"], 498)
         self.assertEqual(self.coverage["entries_without_any_draft"], 267)
-        self.assertEqual(self.coverage["unresolved_reference_occurrences"], 260)
+        self.assertEqual(self.coverage["unresolved_reference_occurrences"], audit_drafts()["unresolved_reference_occurrences"])
         self.assertGreaterEqual(len(self.register["substantive_rechecks"]), before["substantive_rechecks"])
         self.assertFalse(self.coverage["publication_ready"])
 

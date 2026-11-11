@@ -63,12 +63,41 @@ class Chapter2HealthSafetyRecheckTests(unittest.TestCase):
 
         for item_id in ITEM_IDS:
             with self.subTest(item_id=item_id):
-                item = self.items[item_id]
                 record = self.batch_items[item_id]
-                review = self.reviews[item_id]
-                body_path = ROOT / item["target_path"]
-                body_bytes = body_path.read_bytes()
-                body = body_bytes.decode("utf-8")
+                followup = next((row for row in self.register["substantive_rechecks"]
+                                 if row["id"] == item_id and row["reviewed_at"] == "2026-11-12"), None)
+                if followup is not None:
+                    # TW-02-047 was substantively re-reviewed after this batch.
+                    # Validate the 11/06 object against the exact prior snapshot,
+                    # then validate the append-only edge to the current object.
+                    self.assertEqual(item_id, "TW-02-047")
+                    revision = followup["prior_revision"]
+                    snapshot_runtime = json.loads(subprocess.check_output(
+                        ["git", "show", f"{revision}:localization/tw-edition/runtime.json"],
+                        cwd=ROOT,
+                        text=True,
+                    ))
+                    item = next(row for row in snapshot_runtime["items"] if row["id"] == item_id)
+                    prior_review_bytes = subprocess.check_output(
+                        ["git", "show", f"{revision}:localization/reviews/{item_id}.json"],
+                        cwd=ROOT,
+                    )
+                    review = json.loads(prior_review_bytes)
+                    snapshot_manifest = json.loads(subprocess.check_output(
+                        ["git", "show", f"{revision}:localization/manifest.json"],
+                        cwd=ROOT,
+                        text=True,
+                    ))
+                    manifest_entry = next(row for row in snapshot_manifest["entries"] if row["id"] == item_id)
+                    body = followup["previous_body"]
+                    body_bytes = body.encode("utf-8")
+                else:
+                    item = self.items[item_id]
+                    review = self.reviews[item_id]
+                    manifest_entry = self.manifest[item_id]
+                    body_path = ROOT / item["target_path"]
+                    body_bytes = body_path.read_bytes()
+                    body = body_bytes.decode("utf-8")
                 body_sha = hashlib.sha256(body_bytes).hexdigest()
                 history = [
                     row for row in self.register["substantive_rechecks"]
@@ -89,9 +118,9 @@ class Chapter2HealthSafetyRecheckTests(unittest.TestCase):
                 self.assertEqual(review["review_due_at"], "2027-02-06")
                 self.assertEqual(item["reviewed_at"], "2026-11-06")
                 self.assertEqual(item["review_due_at"], "2027-02-06")
-                self.assertEqual(self.manifest[item_id]["sources"], item["source_ids"])
-                self.assertEqual(self.manifest[item_id]["verified_at"], "2026-11-06")
-                self.assertEqual(self.manifest[item_id]["status"], "verified")
+                self.assertEqual(manifest_entry["sources"], item["source_ids"])
+                self.assertEqual(manifest_entry["verified_at"], "2026-11-06")
+                self.assertEqual(manifest_entry["status"], "verified")
                 self.assertEqual(record["source_ids"], item["source_ids"])
 
                 body_urls = set(re.findall(r"\]\((https?://[^)]+)\)", body))
@@ -110,7 +139,17 @@ class Chapter2HealthSafetyRecheckTests(unittest.TestCase):
                         "denominator", "event_definition", "data_type", "limitations",
                     ):
                         self.assertTrue(statistic[key], (item_id, statistic["topic"], key))
-                validate_recheck_history(ROOT, record, item)
+                if followup is None:
+                    self.assertEqual(record["after_sha256"], body_sha)
+                    validate_recheck_history(ROOT, record, item)
+                else:
+                    self.assertEqual(followup["before_sha256"], record["after_sha256"])
+                    self.assertEqual(hashlib.sha256(body_bytes).hexdigest(), record["after_sha256"])
+                    self.assertEqual(hashlib.sha256(prior_review_bytes).hexdigest(), followup["prior_review_sha256"])
+                    self.assertEqual(review["target_sha256"], record["after_sha256"])
+                    current_item = self.items[item_id]
+                    self.assertEqual(followup["after_sha256"], hashlib.sha256(current_item["body"].encode("utf-8")).hexdigest())
+                    validate_recheck_history(ROOT, followup, current_item)
 
     def test_source_history_is_preserved_and_replaced_sources_are_explicit(self):
         base_sources = {source["id"]: source for source in self.base_runtime["sources"]}
@@ -162,7 +201,7 @@ class Chapter2HealthSafetyRecheckTests(unittest.TestCase):
         self.assertIn("不要冷凍", food)
         self.assertNotIn("sid=3158", food)
         self.assertIn("海水魚生魚片不是這種寄生蟲的感染途徑", food)
-        self.assertIn("沒有提供足以估算目前全臺病例頻率的資料", food)
+        self.assertIn("沒有提供足以估算目前台灣病例頻率的資料", food)
 
     def test_coverage_matches_counts_and_publication_stays_blocked(self):
         coverage = read_json("localization/tw-edition/coverage.json")

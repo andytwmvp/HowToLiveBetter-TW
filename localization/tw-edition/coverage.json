@@ -1,21 +1,21 @@
 {
   "schema_version": 2,
   "scope": "草稿結構盤點，不代表內容查核完成",
-  "json_files_checked": 619,
+  "json_files_checked": 622,
   "original_entries": 765,
   "structured_draft_chapters": 14,
   "structured_draft_entries": 373,
-  "legacy_markdown_draft_entries": 314,
+  "legacy_markdown_draft_entries": 315,
   "unique_draft_entries": 498,
   "entries_without_any_draft": 267,
-  "registry_sources": 1336,
+  "registry_sources": 1344,
   "unresolved_source_ids": {
     "adultcheck": 5,
     "afib": 1,
     "anger": 1,
     "battery": 1,
     "bsmi": 4,
-    "caffeine": 3,
+    "caffeine": 2,
     "carcontract": 2,
     "cdic": 4,
     "childsafety": 3,
@@ -35,7 +35,7 @@
     "energylabel": 1,
     "erectile": 2,
     "expressivewriting": 1,
-    "falls": 4,
+    "falls": 3,
     "firesafe": 5,
     "firstaid": 6,
     "fishsafety": 1,
@@ -52,7 +52,6 @@
     "hbv": 1,
     "hcv": 1,
     "healthbank": 1,
-    "heatsafety": 1,
     "hematuria": 1,
     "hivpep": 2,
     "hivprep": 2,
@@ -78,7 +77,7 @@
     "nationalpension": 1,
     "nhimedical": 8,
     "nistauth": 1,
-    "nutrition": 15,
+    "nutrition": 14,
     "oralcare": 1,
     "oshconfined": 1,
     "osteoporosis": 3,
@@ -115,7 +114,7 @@
     "whosalt": 1,
     "zoster": 1
   },
-  "unresolved_reference_occurrences": 260,
+  "unresolved_reference_occurrences": 256,
   "chapters": [
     {
       "chapter": 1,
@@ -217,14 +216,13 @@
     }
   ],
   "publication_ready": false,
-  "publication_completed_entries": 314,
+  "publication_completed_entries": 315,
   "publication_total_entries": 765,
   "publication_blockers": [
     "TW-02-031:尚未完成來源審閱",
     "TW-02-033:尚未完成來源審閱",
     "TW-02-034:尚未完成來源審閱",
     "TW-02-035:尚未完成來源審閱",
-    "TW-02-036:尚未完成來源審閱",
     "TW-02-037:尚未完成來源審閱",
     "TW-02-038:尚未完成來源審閱",
     "TW-02-040:尚未完成來源審閱",
@@ -674,7 +672,7 @@
   ],
   "publication_scope": "驗證資料結構、審閱紀錄與閱讀一致性；不代表獨立事實查核或醫療法律專業簽證。",
   "topics_with_any_content": 498,
-  "topics_with_unreviewed_content": 184,
+  "topics_with_unreviewed_content": 183,
   "topics_without_content": 267,
-  "core_reviewed_entries": 314
+  "core_reviewed_entries": 315
 }

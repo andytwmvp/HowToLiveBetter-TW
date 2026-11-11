@@ -140,7 +140,7 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         self.assertIn("IARC第1類代表人體致癌證據充分", articles["TW-02-018"])
         self.assertIn("WHO於2026年9月23日更新", articles["TW-02-018"])
 
-    def test_sources_are_additive_and_structured_draft_is_unchanged(self):
+    def test_sources_are_additive_and_unrelated_structured_drafts_are_preserved(self):
         base_sources = {row["id"]: row for row in self.base_runtime["sources"]}
         base_items = {row["id"]: row for row in self.base_runtime["items"]}
         for source_id, old in base_sources.items():
@@ -170,7 +170,20 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         draft = subprocess.check_output(
             ["git", "show", f"{BASE}:localization/tw-edition/chapters/02.json"], cwd=ROOT
         )
-        self.assertEqual(draft, (ROOT / "localization/tw-edition/chapters/02.json").read_bytes())
+        old_chapter = json.loads(draft)
+        current_chapter = json.loads(
+            (ROOT / "localization/tw-edition/chapters/02.json").read_bytes()
+        )
+        old_rows = {row[0]: row for row in old_chapter["entries"]}
+        current_rows = {row[0]: row for row in current_chapter["entries"]}
+        self.assertEqual(set(current_rows), set(old_rows))
+        for number, old_row in old_rows.items():
+            if number not in {25, 36, 47}:
+                self.assertEqual(current_rows[number], old_row)
+        self.assertIn("日本研究有觀察到死亡率關聯", current_rows[25][1])
+        self.assertIn("日本研究探討心血管與健康老化", current_rows[36][1])
+        self.assertIn("生淡水魚的中華肝吸蟲風險", current_rows[47][1])
+        self.assertIn("喝茶、泡澡等健康研究", current_chapter["intro"])
 
     def test_coverage_counts_and_publication_gate_remain_accurate(self):
         coverage = read_json("localization/tw-edition/coverage.json")
