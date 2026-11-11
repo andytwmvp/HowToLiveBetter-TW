@@ -1,0 +1,70 @@
+{
+  "id": "TW-02-028",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-11",
+  "review_due_at": "2027-02-11",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-028.md",
+  "target_sha256": "60b0d7264e4ba06710c3c6325b27783a6c2a27e774464439f96ebb6b252e357b",
+  "source_checks": [
+    {
+      "source_id": "tw02_cy_ultra_processed_report_2025",
+      "title": "監察院：超加工食品調查報告",
+      "url": "https://www.cy.gov.tw/CyBsBoxContent.aspx?n=133&s=49382",
+      "claim": "台灣資料不足以估算全國超加工食品攝取頻率或其健康影響；不能把國外研究直接換成個人機率。",
+      "supporting_passage": "調查報告第3至5頁指出，截至114年11月尚無系統管理措施及國人本土健康影響研究；第4頁說明NOVA分類尚未成為全球一致標準，分類標準亦有爭議。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接開啟監察院調查報告頁並閱讀其公布的PDF附件，核對調查日期、資料建置情形及NOVA分類限制。"
+    },
+    {
+      "source_id": "tw02_tfda_nutrition_labeling_rule",
+      "title": "食藥署：包裝食品營養標示應遵行事項",
+      "url": "https://foodlabel.fda.gov.tw/FdaFrontEndApp/Law/Edit?SystemId=f27b8c5e-35c2-4a86-9b8b-d7cbbef409ab&clPublishStatus=1&key=%E5%8C%85%E8%A3%9D%E9%A3%9F%E5%93%81%E7%87%9F%E9%A4%8A%E6%A8%99%E7%A4%BA%E6%87%89%E9%81%B5%E8%A1%8C%E4%BA%8B%E9%A0%85",
+      "claim": "依台灣包裝食品營養標示規定，消費者可先看每份、每100公克或毫升及本包裝份數，再用相同基準比較同類食品。",
+      "supporting_passage": "應遵行事項第3點及附表要求標示每份與每100公克（或毫升）及包裝份數，並列熱量、脂肪、飽和脂肪、碳水化合物、糖及鈉等營養資訊。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "查閱食藥署食品標示諮詢服務平台的現行法規項目及官方規定文字，核對每份、每100公克／毫升及包裝份數。"
+    },
+    {
+      "source_id": "tw02_hpa_myplate_2024",
+      "title": "國健署：我的餐盤",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4687&pid=11677",
+      "claim": "可依台灣國健署「我的餐盤」及個人預算安排餐點，不需把某一個加工分類當作全面禁食規則。",
+      "supporting_passage": "國健署「我的餐盤」頁面提供日常餐點與食物類別搭配建議，適合作為一般飲食安排參考。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱國健署官方「我的餐盤」衛教頁及頁面更新日期。"
+    }
+  ],
+  "localization_changes": "移除原作把國外觀察性死亡風險數字直接套用的做法，改寫為台灣食品加工程度分類與本土資料缺口；加入早餐店、超商、便當與包裝營養標示的可執行選擇。",
+  "review_method": "依固定原作ID、上游commit及原始主題重讀現有Markdown草稿、結構化草稿列與最新manifest；直接查閱本次來源清單中的台灣主管機關法規、服務入口、官方調查、原始研究與國際分類資料，逐項核對正文主張、適用族群、台灣生活情境、統計期間與分母、施行日期、費用、流程和來源限制。來源不足時明確記錄，不把AI輔助來源查核當成專業審閱。",
+  "limits": [
+    "監察院調查反映截至民國114年11月的行政與本土研究狀態；後續制度及研究可能變化。",
+    "NOVA食品加工分類不是台灣包裝食品法定營養分級；營養標示也不能單獨判定整餐或個人健康。"
+  ],
+  "source_reviewed_sha256": "60b0d7264e4ba06710c3c6325b27783a6c2a27e774464439f96ebb6b252e357b",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "6d4da8b3065944e4979bec65e8ab4ccc9e22cad3d5d70a6803b1db36c59836b8",
+  "source_ids": [
+    "tw02_cy_ultra_processed_report_2025",
+    "tw02_tfda_nutrition_labeling_rule",
+    "tw02_hpa_myplate_2024"
+  ],
+  "frequency_assessment": "監察院2025年調查報告指出，截至民國114年11月，台灣尚無超加工食品系統性管理和國人健康影響本土研究。本次未找到可代表全國的攝取頻率或健康影響發生率；不以國外觀察性研究估算台灣個人機率，也不把資料不足解讀成零風險。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "如衛福部日後公布台灣攝食調查或加工程度分類制度，須確認定義、研究母群和年份後更新。",
+    "未取得營養學、食品科學或公共衛生專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "食品科學",
+      "公共衛生與流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": "dd7f36a797b897618d4c266c88650ae24a132036b00e96733a97a80dcc848e21",
+  "prior_structured_draft_sha256": "abf3fd264c725ca3617ce12c83037a10167d39193c3f4f3c898d1c7c3d3b4bc9",
+  "prior_structured_draft_review": null
+}

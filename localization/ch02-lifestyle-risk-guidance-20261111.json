@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "batch": "第2章超加工食品、熱飲、BMI、夜班職安及廚房通風五篇台灣版首次正式發布",
+  "baseline_main_sha": "886a47907fa0a70b9e9889357ccd2c92411ba519",
+  "reviewed_at": "2026-11-11",
+  "review_due_at": "2027-02-11",
+  "counts_before": {
+    "core_reviewed": 309,
+    "runtime_items": 320,
+    "runtime_sources": 1232,
+    "source_registry": 1315,
+    "json_files_checked": 612,
+    "substantive_rechecks": 380
+  },
+  "new_source_ids": [
+    "tw02_cy_ultra_processed_report_2025",
+    "tw02_tfda_nutrition_labeling_rule",
+    "tw02_hpa_myplate_2024",
+    "tw02_iarc_hot_drinks_2016",
+    "tw02_hpa_child_burn_first_aid_2026",
+    "tw02_hpa_adult_bmi_standard_2025",
+    "tw02_hpa_nutrition_survey_bmi_2020_2024",
+    "tw02_hpa_adult_preventive_check_2026",
+    "tw02_hpa_adult_preventive_check_detail_2026",
+    "tw02_osha_nightwork_guideline_2022",
+    "tw02_mol_labor_survey_nightwork_114",
+    "tw02_mol_labor_survey_report_114",
+    "tw02_moj_oshrule_324_2_2026",
+    "tw02_moj_labor_health_nightwork_2026",
+    "tw02_moj_osh_act18_2025",
+    "tw02_osha_worker_health_0800068580",
+    "tw02_mol_labor_inspection_complaint_2026",
+    "tw02_motc_fatigue_driving_2025",
+    "tw02_moenv_indoor_air_sources_2026",
+    "tw02_nfa_gas_stove_safety_2023",
+    "tw02_ntu_kitchen_ventilation_cfd_2025"
+  ],
+  "counts_after": {
+    "core_reviewed": 314,
+    "runtime_items": 325,
+    "runtime_sources": 1253,
+    "source_registry": 1336,
+    "json_files_checked": 619,
+    "substantive_rechecks": 380,
+    "unresolved_source_ids": 104,
+    "unresolved_reference_occurrences": 260,
+    "topics_with_any_content": 498,
+    "topics_without_content": 267,
+    "publication_ready": false
+  },
+  "new_source_bundle": "localization/tw-edition/sources/ch02-lifestyle-risk-guidance-20261111.json",
+  "items": [
+    {
+      "id": "TW-02-028",
+      "title": "超加工食品不必一概禁吃：先看餐點搭配與營養標示",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "886a47907fa0a70b9e9889357ccd2c92411ba519",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "6d4da8b3065944e4979bec65e8ab4ccc9e22cad3d5d70a6803b1db36c59836b8",
+      "prior_content_status": "legacy_markdown_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "abf3fd264c725ca3617ce12c83037a10167d39193c3f4f3c898d1c7c3d3b4bc9",
+      "prior_chapter_draft_sha256": "dd7f36a797b897618d4c266c88650ae24a132036b00e96733a97a80dcc848e21",
+      "before_sha256": null,
+      "after_sha256": "60b0d7264e4ba06710c3c6325b27783a6c2a27e774464439f96ebb6b252e357b",
+      "review_path": "localization/reviews/TW-02-028.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-028.md",
+      "source_ids": [
+        "tw02_cy_ultra_processed_report_2025",
+        "tw02_tfda_nutrition_labeling_rule",
+        "tw02_hpa_myplate_2024"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_cy_ultra_processed_report_2025",
+          "title": "監察院：超加工食品調查報告",
+          "url": "https://www.cy.gov.tw/CyBsBoxContent.aspx?n=133&s=49382",
+          "claim": "台灣資料不足以估算全國超加工食品攝取頻率或其健康影響；不能把國外研究直接換成個人機率。",
+          "supporting_passage": "調查報告第3至5頁指出，截至114年11月尚無系統管理措施及國人本土健康影響研究；第4頁說明NOVA分類尚未成為全球一致標準，分類標準亦有爭議。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接開啟監察院調查報告頁並閱讀其公布的PDF附件，核對調查日期、資料建置情形及NOVA分類限制。"
+        },
+        {
+          "source_id": "tw02_tfda_nutrition_labeling_rule",
+          "title": "食藥署：包裝食品營養標示應遵行事項",
+          "url": "https://foodlabel.fda.gov.tw/FdaFrontEndApp/Law/Edit?SystemId=f27b8c5e-35c2-4a86-9b8b-d7cbbef409ab&clPublishStatus=1&key=%E5%8C%85%E8%A3%9D%E9%A3%9F%E5%93%81%E7%87%9F%E9%A4%8A%E6%A8%99%E7%A4%BA%E6%87%89%E9%81%B5%E8%A1%8C%E4%BA%8B%E9%A0%85",
+          "claim": "依台灣包裝食品營養標示規定，消費者可先看每份、每100公克或毫升及本包裝份數，再用相同基準比較同類食品。",
+          "supporting_passage": "應遵行事項第3點及附表要求標示每份與每100公克（或毫升）及包裝份數，並列熱量、脂肪、飽和脂肪、碳水化合物、糖及鈉等營養資訊。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "查閱食藥署食品標示諮詢服務平台的現行法規項目及官方規定文字，核對每份、每100公克／毫升及包裝份數。"
+        },
+        {
+          "source_id": "tw02_hpa_myplate_2024",
+          "title": "國健署：我的餐盤",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4687&pid=11677",
+          "claim": "可依台灣國健署「我的餐盤」及個人預算安排餐點，不需把某一個加工分類當作全面禁食規則。",
+          "supporting_passage": "國健署「我的餐盤」頁面提供日常餐點與食物類別搭配建議，適合作為一般飲食安排參考。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱國健署官方「我的餐盤」衛教頁及頁面更新日期。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_cy_ultra_processed_report_2025",
+        "tw02_tfda_nutrition_labeling_rule",
+        "tw02_hpa_myplate_2024"
+      ],
+      "taiwan_context": "以台灣常見早餐店、便利商店、便當店、冷凍蔬菜、殺菌乳及罐裝豆類為例；按預算與附近供應逐步搭配餐點，不把加工一詞當成禁食標籤。",
+      "frequency_assessment": "監察院2025年調查報告指出，截至民國114年11月，台灣尚無超加工食品系統性管理和國人健康影響本土研究。本次未找到可代表全國的攝取頻率或健康影響發生率；不以國外觀察性研究估算台灣個人機率，也不把資料不足解讀成零風險。",
+      "statistics_assessed": [],
+      "changes": "移除原作把國外觀察性死亡風險數字直接套用的做法，改寫為台灣食品加工程度分類與本土資料缺口；加入早餐店、超商、便當與包裝營養標示的可執行選擇。",
+      "limits": [
+        "監察院調查反映截至民國114年11月的行政與本土研究狀態；後續制度及研究可能變化。",
+        "NOVA食品加工分類不是台灣包裝食品法定營養分級；營養標示也不能單獨判定整餐或個人健康。"
+      ],
+      "unresolved_questions": [
+        "如衛福部日後公布台灣攝食調查或加工程度分類制度，須確認定義、研究母群和年份後更新。",
+        "未取得營養學、食品科學或公共衛生專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "食品科學",
+          "公共衛生與流行病學"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-030",
+      "title": "熱飲先試溫度：避免燙傷，也減少反覆吞下過燙飲料",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "886a47907fa0a70b9e9889357ccd2c92411ba519",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "c82ed1798d22d67527389a0e9cc7e49128a6eff437d2d1aeb1c2ae2c0779d534",
+      "prior_content_status": "legacy_markdown_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "15a7a0ad1d53e3fbea5d4513773e104f9d957b4012b389a1e015cbd84d7163aa",
+      "prior_chapter_draft_sha256": "50b52af5f08e460feda157c3b2703b85587bf7e2a42d08cde5ead06dd18f20be",
+      "before_sha256": null,
+      "after_sha256": "ac12b0c443e2981d0d0d530abad658127c09a36ebca449cc3c2e2a5f6e4b5ba9",
+      "review_path": "localization/reviews/TW-02-030.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-030.md",
+      "source_ids": [
+        "tw02_iarc_hot_drinks_2016",
+        "tw02_hpa_child_burn_first_aid_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_iarc_hot_drinks_2016",
+          "title": "國際癌症研究機構：非常燙飲料與食道癌",
+          "url": "https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/",
+          "claim": "IARC的攝氏65度界線和第2A類是證據分類，不是個人罹癌機率或安全切線；現有資料未估算可歸因病例比例。",
+          "supporting_passage": "IARC 2016-06-15事實說明列出第2A類、攝氏65度以上定義，並明言非常燙飲料可歸因的食道癌病例比例尚未知；多數研究在有此飲用習慣的地區進行。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱IARC官方事實說明，核對發布日期、溫度定義、分類含義及病例歸因限制。"
+        },
+        {
+          "source_id": "tw02_hpa_child_burn_first_aid_2026",
+          "title": "國健署：兒童防燙與燒燙傷急救原則",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20457",
+          "claim": "熱飲造成燙傷時，以流動冷水沖洗15至30分鐘，不硬扯黏住皮膚的衣物，覆蓋並就醫。",
+          "supporting_passage": "國健署2026-11-04兒童防燙官方衛教列燙傷急救「沖、脫、泡、蓋、送」，其中「沖」為持續沖冷水15至30分鐘。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "查閱國健署2026-11-04官方頁面及該頁索引摘要；頁面直連於本次檢索工具逾時，但官方摘要明列沖冷水15至30分鐘及兒童防燙原則。"
+        },
+        {
+          "source_id": "tw02_nfa_emergency_119",
+          "title": "消防署：119與112緊急報案資訊",
+          "url": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=66",
+          "claim": "燙傷嚴重或患者出現呼吸、意識急症時，可撥119求助。",
+          "supporting_passage": "消防署119緊急報案頁說明119為消防及緊急救護報案電話。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱消防署官方119緊急報案資訊。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_iarc_hot_drinks_2016",
+        "tw02_hpa_child_burn_first_aid_2026"
+      ],
+      "taiwan_context": "涵蓋茶、咖啡、豆漿、熱湯、外帶杯與家中幼兒接觸熱水壺的情境，並先列燙傷處理及119求援。",
+      "frequency_assessment": "本次未找到能代表台灣飲用非常燙飲料暴露或相關食道癌可歸因比例的全國統計。IARC資料指出可歸因病例比例尚未知且研究多來自不同飲食地區；不把第2A類、攝氏65度或海外癌症率解讀為台灣個人發生機率。燙傷出現時先安全沖洗與求援，不等待統計。",
+      "statistics_assessed": [],
+      "changes": "將原作對「燙」的抽象提醒改成台灣茶飲、湯品、外帶容器和兒童燙傷情境；交代IARC分類的證據意義與歸因比例未知，依國健署最新兒童防燙衛教列冷水沖洗及避免錯誤偏方。",
+      "limits": [
+        "IARC事實說明發布於2016年，所列研究地區和暴露型態不能直接當成台灣風險率。",
+        "國健署2026-11-04燒燙傷頁的直接讀取在本次檢索工具逾時；可見官方索引摘要明列冷水沖洗15至30分鐘，後續複查應確認官方頁仍可讀且建議未變。"
+      ],
+      "unresolved_questions": [
+        "下次複查需重新核對國健署燒燙傷急救頁全文、兒童與成人處置界線及119分流。",
+        "未取得急診醫學、燒燙傷照護或腫瘤流行病學專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "急診醫學",
+          "燒燙傷照護",
+          "腫瘤流行病學"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-032",
+      "title": "成人BMI以台灣標準作參考，不能單獨診斷健康",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "886a47907fa0a70b9e9889357ccd2c92411ba519",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "0ce733d7ee13a632584c59c6e1bd193d81e3243f095ee70b31f825f6dd57925c",
+      "prior_content_status": "legacy_markdown_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "29e1651d0607d868fc973fa472ee9eaaa615f40dcc57e90f96a7232c7083e482",
+      "prior_chapter_draft_sha256": "ee0bc517312f78c189a6e96d27f4e8dd616f72cbfc8ccd9cdb2b3b5d9d18a7ea",
+      "before_sha256": null,
+      "after_sha256": "a6ece5ad41ea07ed0ba0a50990c92ab11beceb0598180174a9e5655472707a81",
+      "review_path": "localization/reviews/TW-02-032.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-032.md",
+      "source_ids": [
+        "tw02_hpa_adult_bmi_standard_2025",
+        "tw02_hpa_nutrition_survey_bmi_2020_2024",
+        "tw02_hpa_adult_preventive_check_2026",
+        "tw02_hpa_adult_preventive_check_detail_2026"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_adult_bmi_standard_2025",
+          "title": "國健署：成人健康體位標準",
+          "url": "https://www.hpa.gov.tw/542/9737/n",
+          "claim": "台灣18歲以上成人BMI分類與腰圍參考範圍；BMI為簡易指標，不是完整診斷。",
+          "supporting_passage": "頁面2025-09-11更新，列出18歲以上成人四個BMI分類、男性腰圍小於90公分及女性小於80公分，並提醒不同個案可能有所差異。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱國健署成人健康體位標準頁，核對BMI分類、成人適用年齡、腰圍數值及更新日期。"
+        },
+        {
+          "source_id": "tw02_hpa_nutrition_survey_bmi_2020_2024",
+          "title": "國健署：2020至2024年國民營養健康調查摘要",
+          "url": "https://www.hpa.gov.tw/5020/19885/n",
+          "claim": "台灣2020至2024年18歲以上調查對象中，51.3%達國健署成人過重及肥胖分類。",
+          "supporting_passage": "國健署2026-03-04世界肥胖日新聞稿引用2020至2024年國民營養健康調查，稱18歲以上成年人51.3%達過重及肥胖標準；新聞摘要未列樣本數、原始人數、分母、估計方法或信賴區間。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "查閱國健署官方新聞稿及索引內容，核對調查期間、18歲以上族群和51.3%比例；頁面直連本次檢索工具逾時，故統計方法限制依公開摘要記錄。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_preventive_check_2026",
+          "title": "國健署：成人預防保健服務資格與補助",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=189",
+          "claim": "成人預防保健年齡區間、原住民和小兒麻痺提前適用條件及每案880元公費補助。",
+          "supporting_passage": "國健署成人預防保健官方頁列30至39歲每5年1次、40至64歲每3年1次、55歲以上原住民、35歲以上小兒麻痺患者及65歲以上每年1次；每案補助880元。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "查閱國健署官方成人預防保健服務頁及官方搜尋索引摘要；頁面直連本次檢索工具逾時，以可見官方表格摘要核對資格與補助。"
+        },
+        {
+          "source_id": "tw02_hpa_adult_preventive_check_detail_2026",
+          "title": "國健署：成人預防保健服務內容與年齡資格（英文）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1076&pid=18516",
+          "claim": "交叉核對現行成人預防保健各年齡間隔及原住民、小兒麻痺提前適用年齡。",
+          "supporting_passage": "國健署官方英文頁於2026-08-05更新，列出30至39歲每5年、40至未滿65歲每3年、65歲以上每年，並說明55歲原住民及35歲小兒麻痺者提早適用。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接開啟國健署2026-08-05更新的官方英文服務說明頁，核對年齡間隔與提前適用族群，並與中文服務頁摘要交叉核對補助。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_hpa_adult_bmi_standard_2025",
+        "tw02_hpa_nutrition_survey_bmi_2020_2024",
+        "tw02_hpa_adult_preventive_check_2026",
+        "tw02_hpa_adult_preventive_check_detail_2026"
+      ],
+      "taiwan_context": "使用國健署台灣成人BMI及腰圍標準，並說明公費成人預防保健年齡間隔、原住民和小兒麻痺提前適用條件、每案補助與合約醫療院所預約方式。",
+      "frequency_assessment": "國健署2020至2024年全國國民營養健康調查摘要報告18歲以上成年人51.3%達過重及肥胖標準。這是調查期間的群體比例，不是發生率、疾病盛行率或個人罹病機率；公開摘要未交代樣本數、原始分子、分母、估計方法與信賴區間，不能據此推估個人風險。",
+      "statistics_assessed": [
+        {
+          "topic": "國健署調查18歲以上成人達過重或肥胖分類",
+          "value": "51.3%",
+          "unit": "官方調查摘要所列群體比例",
+          "period": "2020至2024年",
+          "geographic_scope": "台灣全國國民營養健康調查",
+          "population": "18歲以上成年人",
+          "numerator": "公開新聞摘要未列原始人數或分子",
+          "denominator": "公開新聞摘要未列樣本數或原始分母",
+          "event_definition": "調查對象達國健署成人BMI過重（24至未滿27）或肥胖（27以上）分類；新聞摘要未交代詳細估計操作與測量方法",
+          "data_type": "全國國民營養健康調查之官方摘要；估計方法、加權方式與不確定性未在公開新聞摘要交代",
+          "limitations": "2020至2024調查不是2026年個人測量；公開摘要未列樣本數、分子、分母、估計方法及信賴區間；不將此群體比例換算為個人肥胖、疾病或未來事件機率。",
+          "source_ids": [
+            "tw02_hpa_nutrition_survey_bmi_2020_2024"
+          ]
+        }
+      ],
+      "changes": "移除不適用台灣成人的原作BMI 20至25目標與海外死亡風險數字，改用國健署成人分類、腰圍限制和2020至2024年調查；補入成人預防保健常規年齡間隔及55歲原住民、35歲以上小兒麻痺者每年資格，並澄清880元是公費補助額。",
+      "limits": [
+        "BMI不能單獨診斷健康，兒童及青少年須用生長評估；懷孕、長者、運動員及疾病治療中的體重變化需個別判斷。",
+        "51.3%是2020至2024年調查摘要的群體比例，摘要未提供完整統計方法及分母，不能視為2026年現況或個人機率。",
+        "成人預防保健每案880元為補助額；資格、方案內容及院所額外自費項目應預約前確認。"
+      ],
+      "unresolved_questions": [
+        "若國健署公開調查技術報告或微資料，後續應補核樣本數、抽樣設計、量測及加權估計方法。",
+        "每案880元補助及成人預防保健資格可能調整，複查時須核對國健署最新公告。",
+        "未取得家醫科、肥胖醫學、營養或流行病學專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "家庭醫學",
+          "肥胖與代謝醫學",
+          "營養學",
+          "公共衛生與流行病學"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-039",
+      "title": "夜班安全：一起規劃作業、健康、通勤與求援",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "886a47907fa0a70b9e9889357ccd2c92411ba519",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "b24f51c986478888522b3e6963d19011d883dc9c774e7f48990c55acaee3bd96",
+      "prior_content_status": "legacy_markdown_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "6b3f156898871785ad21db7968ee4ab790ae3d31b7065bb5458a3bd54728443a",
+      "prior_chapter_draft_sha256": "6951f635b900aeb64412f45c7aadb5e0fb90da26bf0737c7d7a420bcbadc2491",
+      "before_sha256": null,
+      "after_sha256": "4b2c03df7ab077f9b624f2d90528e6e4fae5ef72e043bed8aeea45c2d8e6cd73",
+      "review_path": "localization/reviews/TW-02-039.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-039.md",
+      "source_ids": [
+        "tw02_osha_nightwork_guideline_2022",
+        "tw02_mol_labor_survey_nightwork_114",
+        "tw02_mol_labor_survey_report_114",
+        "tw02_moj_oshrule_324_2_2026",
+        "tw02_moj_labor_health_nightwork_2026",
+        "tw02_moj_osh_act18_2025",
+        "tw02_osha_worker_health_0800068580",
+        "tw02_mol_labor_inspection_complaint_2026",
+        "tw02_motc_fatigue_driving_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_osha_nightwork_guideline_2022",
+          "title": "職安署：職場夜間工作安全衛生指引",
+          "url": "https://www.osha.gov.tw/48110/48713/48735/133667/",
+          "claim": "夜班工作現場可依工作風險安排支援、照明、緊急通報及暴力預防；沒有大眾運輸時可與雇主討論通勤安排。",
+          "supporting_passage": "職安署2022-03-14發布、2022-03-24修正的指引，提出夜間工作風險評估、環境與暴力預防、緊急措施；夜間沒有大眾運輸時建議雇主考量通勤協助或住宿安排。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱職安署夜間工作安全衛生指引PDF及其官方發布頁，核對通勤、現場安全、暴力防護與緊急應變內容。"
+        },
+        {
+          "source_id": "tw02_mol_labor_survey_nightwork_114",
+          "title": "勞動部：114年勞工生活及就業狀況調查統計結果",
+          "url": "https://www.mol.gov.tw/1607/1632/1633/87690/post",
+          "claim": "114年調查對象中8.5%表示需要夜間工作；此調查比例不是夜班健康危害或事故發生率。",
+          "supporting_passage": "勞動部2026-01-23公布的114年調查摘要列有效樣本4,029份，並稱需於晚上10時至翌日上午6時工作的勞工占8.5%。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱勞動部調查統計結果頁，核對調查對象、有效樣本數、夜間工作定義及8.5%比例。"
+        },
+        {
+          "source_id": "tw02_mol_labor_survey_report_114",
+          "title": "勞動部：114年勞工生活及就業狀況調查圖表",
+          "url": "https://www.mol.gov.tw/media/okujqjdh/%E9%99%84%E4%BB%B6_114%E5%B9%B4%E5%8B%9E%E5%B7%A5%E7%94%9F%E6%B4%BB%E5%8F%8A%E5%B0%B1%E6%A5%AD%E7%8B%80%E6%B3%81%E8%AA%BF%E6%9F%A5%E7%B5%B1%E8%A8%88%E7%B5%90%E6%9E%9C-%E5%90%AB%E5%9C%96%E8%A1%A8.pdf?mediaDL=true",
+          "claim": "8.5%對應114年5月調查表7定義的夜間工作，不是夜班累積年數或健康事件。",
+          "supporting_passage": "PDF第1頁載明調查對象與4,029份有效樣本；第7頁表7標為114年5月，夜間工作定義為晚上10時至隔日上午6時，總計8.5%。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "下載並直接查閱勞動部官方PDF第1頁與第7頁，核對調查對象、有效樣本、期間、事件定義及表7數值。"
+        },
+        {
+          "source_id": "tw02_moj_oshrule_324_2_2026",
+          "title": "全國法規資料庫：職業安全衛生設施規則第324條之2",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060009",
+          "claim": "台灣雇主對輪班、夜間或長時間工作有異常工作負荷疾病預防責任；法條不等於全面禁止夜班。",
+          "supporting_passage": "現行第324條之2列高風險辨識、醫師面談與健康指導、調整或縮短工時、更換工作內容、健康檢查管理與成效改善紀錄。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱全國法規資料庫現行《職業安全衛生設施規則》第324條之2及法規最新修正資訊。"
+        },
+        {
+          "source_id": "tw02_moj_labor_health_nightwork_2026",
+          "title": "全國法規資料庫：勞工健康保護規則第2條、第18條及第29條",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060022",
+          "claim": "長期夜間工作特定健檢條文尚未生效，將於2028-01-01生效；符合門檻依前一年度夜間工時認定。",
+          "supporting_passage": "法規資料庫標示2026-06-26修正，依第29條第2條及第18條自民國117年1月1日施行；第2條定義含每月工作日數二分之一、累計6個月、每日至少3小時或年度700小時條件。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱全國法規資料庫規則全文、生效狀態、第2條、第18條及第29條，逐項核對公告與施行日期、夜間時段及門檻。"
+        },
+        {
+          "source_id": "tw02_moj_osh_act18_2025",
+          "title": "全國法規資料庫：職業安全衛生法第18條",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+          "claim": "立即危險時停工及退避的法定條件與反報復保障。",
+          "supporting_passage": "現行第18條第1至3項載明雇主停工退避義務、勞工自行停止作業與報告權，以及雇主不得解僱、調職、不給停工工資或作其他不利處分的保障和濫用例外。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱全國法規資料庫現行《職業安全衛生法》第18條全文與最近修正日期。"
+        },
+        {
+          "source_id": "tw02_osha_worker_health_0800068580",
+          "title": "職安署：勞工健康服務中心與免費諮詢",
+          "url": "https://www.osha.gov.tw/48110/48461/48649/48651/58788/",
+          "claim": "夜班工作者可使用職安署勞工健康服務中心免費諮詢。",
+          "supporting_passage": "職安署勞工個人服務頁列全國免費諮詢專線0800-068580，提供工作健康影響、健檢異常指導及心理諮詢。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱職安署官方勞工個人服務頁，核對專線、服務項目及頁面更新日期。"
+        },
+        {
+          "source_id": "tw02_mol_labor_inspection_complaint_2026",
+          "title": "勞動部：申訴與勞動檢查",
+          "url": "https://www.mol.gov.tw/1607/28162/28296/81778/81802/81948/",
+          "claim": "勞動權益或雇主是否違法有疑問時，可向地方勞工主管機關或勞動檢查機構洽詢、檢舉。",
+          "supporting_passage": "勞動部2026-07-09更新之申訴／勞檢頁，明列地方政府勞工局（處）或社會局（處）及勞動檢查機構為洽詢或檢舉入口。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱勞動部申訴與勞動檢查官方入口，核對最後更新日期和實際受理窗口。"
+        },
+        {
+          "source_id": "tw02_motc_fatigue_driving_2025",
+          "title": "交通部168交通安全入口網：拒絕分心與疲勞駕駛",
+          "url": "https://168.motc.gov.tw/theme/motorcycle/post/2506231146842",
+          "claim": "夜班後若疲倦、恍神或注意力難以維持，不應硬騎機車或開車。",
+          "supporting_passage": "交通部168交通安全入口網2025-06-25疲勞駕駛宣導提醒不要在疲勞狀態繼續騎乘，應安全停車休息。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱交通部168交通安全入口網機車疲勞駕駛宣導頁及發布日期。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_osha_nightwork_guideline_2022",
+        "tw02_mol_labor_survey_nightwork_114",
+        "https://www.osha.gov.tw/48110/48713/48735/133667/",
+        "tw02_moj_oshrule_324_2_2026",
+        "tw02_moj_labor_health_nightwork_2026",
+        "tw02_moj_osh_act18_2025",
+        "tw02_osha_worker_health_0800068580",
+        "tw02_mol_labor_inspection_complaint_2026",
+        "tw02_motc_fatigue_driving_2025"
+      ],
+      "taiwan_context": "以台灣常見醫療照護、製造、物流、保全、餐飲、零售、機車與大眾運輸下班通勤為情境；分清雇主現行預防義務、立即危險停工權、申訴窗口與2028年才施行的長期夜班特定健檢。",
+      "frequency_assessment": "勞動部114年勞工生活及就業狀況調查的有效樣本4,029份，調查對象為參加勞工保險、就業保險及職災保險的本國籍受僱勞工；表7以114年5月為期間，8.5%表示需在22時至翌日6時工作。報告未列此題原始人數、加權分母或信賴區間。它是特定調查對象的夜間工作比例，不是夜班疾病或事故發生率；未找到可代表台灣夜班者疾病個人機率的同口徑全國統計。",
+      "statistics_assessed": [
+        {
+          "topic": "114年調查受訪者需要夜間工作之比例",
+          "value": "8.5%",
+          "unit": "勞工生活及就業狀況調查所列比例",
+          "period": "民國114年5月",
+          "geographic_scope": "台灣全國調查對象範圍；不代表所有居住或工作於台灣的人",
+          "population": "參加勞工保險、就業保險及職業災害保險之本國籍受僱勞工；調查有效樣本4,029份",
+          "numerator": "官方圖表未列需夜間工作的原始受訪人數",
+          "denominator": "調查有效樣本共4,029份；公開摘要未列本題原始分母、加權分母或信賴區間",
+          "event_definition": "受訪者表示工作時間需於晚上10時至翌日上午6時內工作；表7列114年5月統計",
+          "data_type": "勞動部年度勞工生活及就業狀況抽樣調查結果與表7；不是職業傷病通報、事故或死亡資料",
+          "limitations": "調查對象限於參加三類保險的本國籍受僱勞工；未列本題原始人數、加權分母及信賴區間，不涵蓋所有外籍工作者、自營作業者或其他未納入調查者；不可解讀為個人夜班健康風險。",
+          "source_ids": [
+            "tw02_mol_labor_survey_nightwork_114",
+            "tw02_mol_labor_survey_report_114"
+          ]
+        }
+      ],
+      "changes": "將原作「夜班越久心血管風險越高、能轉崗就趁早轉」改為台灣可採取的現場安全、疲勞通勤、健康服務和申訴指引；加入現行雇主預防責任與職安法第18條停工保障，區分2028年生效的長期夜班健檢；用勞動部調查比例說明暴露範圍，不誤稱疾病發生率。",
+      "limits": [
+        "114年勞動調查只涵蓋其指定的本國籍受僱勞工保險調查對象；8.5%不是台灣所有工作者比例、夜班人口多年累積率或疾病事故率。",
+        "長期夜間工作的特定健康檢查第2條、第18條依現行施行條文自2028-01-01生效；其他現行職安預防責任仍依現行規定辦理。",
+        "具體調班、醫療處置、工資及申訴結果依個案事實和主管機關認定；本文提供一般資訊，不替代個案法律或職業醫學評估。"
+      ],
+      "unresolved_questions": [
+        "每年重新核對職業安全衛生法規及施行日期，尤其2028年長期夜班檢查規則。",
+        "勞工健康服務0800-068580及地方申訴入口下次複查時重新確認可用時間、服務項目和聯絡方式。",
+        "未取得職業醫學、職業安全衛生及勞動法專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "職業醫學",
+          "職業安全衛生",
+          "勞動法"
+        ]
+      }
+    },
+    {
+      "id": "TW-02-042",
+      "title": "烹調時使用抽油煙機，依室外空氣與廚房格局換氣",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "886a47907fa0a70b9e9889357ccd2c92411ba519",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "15ed12b72ad548f52320f8d465327d27ba8e7e7af747ec0fa74541796be65d9c",
+      "prior_content_status": "legacy_markdown_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "753ef26d44d39ea22b01fc556db7d08d5af0e630eac8fd8713db909e1b6056aa",
+      "prior_chapter_draft_sha256": "ba87799b4f088222ba1141a6fb3492d166b2df2a6e2306ac2b028d7f0bfdf58a",
+      "before_sha256": null,
+      "after_sha256": "76dbd30533ab3d83c47b18c4655bef33887dacf707a7ff68dfd6100b579b61a0",
+      "review_path": "localization/reviews/TW-02-042.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-042.md",
+      "source_ids": [
+        "tw02_moenv_indoor_air_sources_2026",
+        "tw02_nfa_gas_stove_safety_2023",
+        "tw02_ntu_kitchen_ventilation_cfd_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_moenv_indoor_air_sources_2026",
+          "title": "環境部：室內空氣汙染物的主要來源",
+          "url": "https://iaq.moenv.gov.tw/indoorair/introduction_mainSource.aspx",
+          "claim": "烹調使用燃燒設備時應留意室內通風及燃燒汙染物。",
+          "supporting_passage": "環境部室內空品頁2026-10-30更新，列烹飪與取暖為室內常見燃燒活動，燃燒木材、煤、油、瓦斯可能產生CO、NO及NO2；室外汙染物可經自然或機械通風進入室內。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱環境部室內空氣品質資訊網最新來源頁，核對燃燒汙染物及通風傳輸說明與更新日期。"
+        },
+        {
+          "source_id": "tw02_nfa_gas_stove_safety_2023",
+          "title": "消防署：淺談瓦斯爐使用安全",
+          "url": "https://mag.nfa.gov.tw/article.php?id=3714",
+          "claim": "瓦斯爐使用時應保持通風並依規定安裝維護；瓦斯異味時不要操作電器開關。",
+          "supporting_passage": "消防署2023-12-29瓦斯爐安全文章建議燃燒時保持室內通風並可使用排油煙機；聞到瓦斯味時關閉瓦斯、勿開啟電器開關、開窗通風並聯絡合格人員。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱消防署瓦斯爐安全文章，核對通風、排油煙、合格安裝維護及瓦斯異味處理步驟。"
+        },
+        {
+          "source_id": "tw02_ntu_kitchen_ventilation_cfd_2025",
+          "title": "臺灣大學學術典藏：台式廚房抽油煙機與通風開口研究（2025）",
+          "url": "https://scholars.lib.ntu.edu.tw/entities/publication/66cf1f23-caf7-432b-8828-6a254512760b",
+          "claim": "特定台灣典型廚房CFD模擬結果顯示，換氣開口與氣流影響烹調後汙染物；其結果不能當作每戶實測效果或個人健康保證。",
+          "supporting_passage": "2025-04-15發表之Journal of Building Engineering研究摘要說明以驗證過的CFD模型模擬台式廚房情境；模型中前後門皆開時10分鐘移除超過95%殘留汙染物，抽油煙機延長運轉不必然改善移除效果，結果依開口與氣候條件改變。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱臺灣大學學術典藏原始研究頁與摘要、期刊卷期、發表日期及DOI；將CFD模擬結果限定於研究條件，不外推全台家庭效果。"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_moenv_indoor_air_sources_2026",
+        "tw02_nfa_gas_stove_safety_2023",
+        "tw02_ntu_kitchen_ventilation_cfd_2025"
+      ],
+      "taiwan_context": "以台灣公寓共用排氣管、透天厝、租屋、瓦斯爐、窗外車流與台式廚房門窗配置為生活情境；提供安全排氣、維護及瓦斯異味處理。",
+      "frequency_assessment": "本次未找到可代表台灣家庭烹調油煙暴露、抽油煙機使用或相關健康事件的全國統計，也沒有可配對家庭數、烹調暴露與疾病分子的同口徑資料；不推估個人發生率。2025年台式廚房研究是特定模型的CFD模擬，不是全國家庭抽樣調查或臨床發生率。",
+      "statistics_assessed": [],
+      "changes": "將原作單一「從開火一直開到做完」指令改為依排氣設備、室外空氣與台灣住屋格局換氣；加入瓦斯燃燒通風、維護及漏氣求援；使用台灣典型廚房研究作為有邊界的模擬例子，不把模型結果外推每個家庭。",
+      "limits": [
+        "環境部室內汙染源頁同時描述燃燒汙染物與設備名稱；正文只將相關燃燒汙染物主張用於瓦斯等燃燒設備，不推論電熱設備會燃燒產生CO。",
+        "2025年研究以特定台式廚房CFD模型模擬，不是一般住戶實測，也不能保證每戶達到相同去除率。",
+        "抽油煙機型式、排氣管線、共用管道、室外空氣、住屋安全和安裝費用因屋況而異；改裝前應詢問管理單位及合格人員。"
+      ],
+      "unresolved_questions": [
+        "後續可查找更多不同縣市、住宅型態、燃料與實測條件的台灣室內空氣研究；不得以單一模擬取代全國暴露統計。",
+        "未取得室內空氣品質、通風工程、消防燃氣安全或環境健康專業人員獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "室內空氣品質",
+          "通風與建築設備",
+          "燃氣與消防安全",
+          "環境健康"
+        ]
+      }
+    }
+  ],
+  "note": "本批依最新main首次發布五篇未核對Markdown草稿，保留固定ID、原作commit、既有結構化草稿及所有歷史資料；未修改localization/tw-edition/chapters/02.json。第2章README新增正式閱讀入口。AI來源核對與專業審閱分開記錄，五篇專業審閱均未取得；本批不是歷史verified條目的回溯再審。",
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "公共衛生與流行病學",
+      "勞動法",
+      "室內空氣品質",
+      "家庭醫學",
+      "急診醫學",
+      "燃氣與消防安全",
+      "燒燙傷照護",
+      "營養學",
+      "環境健康",
+      "職業安全衛生",
+      "職業醫學",
+      "肥胖與代謝醫學",
+      "腫瘤流行病學",
+      "通風與建築設備",
+      "食品科學"
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "TW-02-042",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-11",
+  "review_due_at": "2027-02-11",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-042.md",
+  "target_sha256": "76dbd30533ab3d83c47b18c4655bef33887dacf707a7ff68dfd6100b579b61a0",
+  "source_checks": [
+    {
+      "source_id": "tw02_moenv_indoor_air_sources_2026",
+      "title": "環境部：室內空氣汙染物的主要來源",
+      "url": "https://iaq.moenv.gov.tw/indoorair/introduction_mainSource.aspx",
+      "claim": "烹調使用燃燒設備時應留意室內通風及燃燒汙染物。",
+      "supporting_passage": "環境部室內空品頁2026-10-30更新，列烹飪與取暖為室內常見燃燒活動，燃燒木材、煤、油、瓦斯可能產生CO、NO及NO2；室外汙染物可經自然或機械通風進入室內。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱環境部室內空氣品質資訊網最新來源頁，核對燃燒汙染物及通風傳輸說明與更新日期。"
+    },
+    {
+      "source_id": "tw02_nfa_gas_stove_safety_2023",
+      "title": "消防署：淺談瓦斯爐使用安全",
+      "url": "https://mag.nfa.gov.tw/article.php?id=3714",
+      "claim": "瓦斯爐使用時應保持通風並依規定安裝維護；瓦斯異味時不要操作電器開關。",
+      "supporting_passage": "消防署2023-12-29瓦斯爐安全文章建議燃燒時保持室內通風並可使用排油煙機；聞到瓦斯味時關閉瓦斯、勿開啟電器開關、開窗通風並聯絡合格人員。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱消防署瓦斯爐安全文章，核對通風、排油煙、合格安裝維護及瓦斯異味處理步驟。"
+    },
+    {
+      "source_id": "tw02_ntu_kitchen_ventilation_cfd_2025",
+      "title": "臺灣大學學術典藏：台式廚房抽油煙機與通風開口研究（2025）",
+      "url": "https://scholars.lib.ntu.edu.tw/entities/publication/66cf1f23-caf7-432b-8828-6a254512760b",
+      "claim": "特定台灣典型廚房CFD模擬結果顯示，換氣開口與氣流影響烹調後汙染物；其結果不能當作每戶實測效果或個人健康保證。",
+      "supporting_passage": "2025-04-15發表之Journal of Building Engineering研究摘要說明以驗證過的CFD模型模擬台式廚房情境；模型中前後門皆開時10分鐘移除超過95%殘留汙染物，抽油煙機延長運轉不必然改善移除效果，結果依開口與氣候條件改變。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "直接查閱臺灣大學學術典藏原始研究頁與摘要、期刊卷期、發表日期及DOI；將CFD模擬結果限定於研究條件，不外推全台家庭效果。"
+    }
+  ],
+  "localization_changes": "將原作單一「從開火一直開到做完」指令改為依排氣設備、室外空氣與台灣住屋格局換氣；加入瓦斯燃燒通風、維護及漏氣求援；使用台灣典型廚房研究作為有邊界的模擬例子，不把模型結果外推每個家庭。",
+  "review_method": "依固定原作ID、上游commit及原始主題重讀現有Markdown草稿、結構化草稿列與最新manifest；直接查閱本次來源清單中的台灣主管機關法規、服務入口、官方調查、原始研究與國際分類資料，逐項核對正文主張、適用族群、台灣生活情境、統計期間與分母、施行日期、費用、流程和來源限制。來源不足時明確記錄，不把AI輔助來源查核當成專業審閱。",
+  "limits": [
+    "環境部室內汙染源頁同時描述燃燒汙染物與設備名稱；正文只將相關燃燒汙染物主張用於瓦斯等燃燒設備，不推論電熱設備會燃燒產生CO。",
+    "2025年研究以特定台式廚房CFD模型模擬，不是一般住戶實測，也不能保證每戶達到相同去除率。",
+    "抽油煙機型式、排氣管線、共用管道、室外空氣、住屋安全和安裝費用因屋況而異；改裝前應詢問管理單位及合格人員。"
+  ],
+  "source_reviewed_sha256": "76dbd30533ab3d83c47b18c4655bef33887dacf707a7ff68dfd6100b579b61a0",
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "15ed12b72ad548f52320f8d465327d27ba8e7e7af747ec0fa74541796be65d9c",
+  "source_ids": [
+    "tw02_moenv_indoor_air_sources_2026",
+    "tw02_nfa_gas_stove_safety_2023",
+    "tw02_ntu_kitchen_ventilation_cfd_2025"
+  ],
+  "frequency_assessment": "本次未找到可代表台灣家庭烹調油煙暴露、抽油煙機使用或相關健康事件的全國統計，也沒有可配對家庭數、烹調暴露與疾病分子的同口徑資料；不推估個人發生率。2025年台式廚房研究是特定模型的CFD模擬，不是全國家庭抽樣調查或臨床發生率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "後續可查找更多不同縣市、住宅型態、燃料與實測條件的台灣室內空氣研究；不得以單一模擬取代全國暴露統計。",
+    "未取得室內空氣品質、通風工程、消防燃氣安全或環境健康專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "室內空氣品質",
+      "通風與建築設備",
+      "燃氣與消防安全",
+      "環境健康"
+    ]
+  },
+  "prior_chapter_draft_sha256": "ba87799b4f088222ba1141a6fb3492d166b2df2a6e2306ac2b028d7f0bfdf58a",
+  "prior_structured_draft_sha256": "753ef26d44d39ea22b01fc556db7d08d5af0e630eac8fd8713db909e1b6056aa",
+  "prior_structured_draft_review": null
+}
