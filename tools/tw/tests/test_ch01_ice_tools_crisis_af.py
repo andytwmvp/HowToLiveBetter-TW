@@ -21,7 +21,7 @@ class IceToolsCrisisAFTests(unittest.TestCase):
     self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
  def test_emergency_actions_and_denominator_boundaries(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
-  self.assertIn('高山天候快速變化',b['TW-01-041']);self.assertIn('事故案件502件、事故人數695人',b['TW-01-041']);self.assertIn('不能換算單次行程風險',b['TW-01-041']);self.assertNotIn('不以15公分',b['TW-01-041']);self.assertNotIn('海外冰湖',b['TW-01-041']);self.assertNotIn('較常需要面對',b['TW-01-041'])
+  self.assertIn('高山天候快速變化',b['TW-01-041']);self.assertIn('502件、695人',b['TW-01-041']);self.assertIn('531件、涉及727人',b['TW-01-041']);self.assertIn('不能混算或據此推估個人風險',b['TW-01-041']);self.assertNotIn('天然冰面',b['TW-01-041']);self.assertNotIn('加拿大',b['TW-01-041']);self.assertNotIn('較常需要面對',b['TW-01-041'])
   self.assertIn('配件額定轉速不得低於工具最高轉速',b['TW-01-042']);self.assertIn('護罩',b['TW-01-042']);self.assertIn('切割黏結式砂輪時使用切割護罩',b['TW-01-042']);self.assertNotIn('鋸齒片一律禁止',b['TW-01-042']);self.assertIn('17例人造石矽肺症',b['TW-01-042'])
   self.assertIn('不要承諾保密',b['TW-01-043']);self.assertIn('119',b['TW-01-043']);self.assertIn('資料限制',b['TW-01-043'])
   self.assertIn('32,817',b['TW-01-044']);self.assertIn('169.06',b['TW-01-044']);self.assertIn('112.38',b['TW-01-044']);self.assertIn('2021',b['TW-01-044']);self.assertIn('阿斯匹靈',b['TW-01-044']);self.assertIn('人年',b['TW-01-044'])

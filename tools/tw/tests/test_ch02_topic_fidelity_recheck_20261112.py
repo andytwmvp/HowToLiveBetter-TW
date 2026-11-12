@@ -149,10 +149,39 @@ class Chapter2TopicFidelityTests(unittest.TestCase):
         self.assertFalse(coverage["publication_ready"])
         self.assertEqual(len(self.batch["new_source_ids"]), 8)
         self.assertEqual(len(read("localization/tw-edition/sources/ch02-topic-fidelity-recheck-20261112.json")["sources"]), 8)
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["source_registry"], coverage["registry_sources"])
-        self.assertEqual(self.batch["counts_after"]["review_rechecks"], len(self.register["substantive_rechecks"]))
+        # counts_after is the immutable snapshot at this chapter 2 batch. Later
+        # cross-chapter work may add sources and review rows; reconcile the old
+        # snapshot to its recorded main baseline and let the live audit validate
+        # today's aggregate state.
+        baseline_runtime = json.loads(subprocess.check_output(
+            ["git", "show", f"{self.batch['baseline_main_sha']}:localization/tw-edition/runtime.json"],
+            cwd=ROOT, text=True,
+        ))
+        baseline_coverage = json.loads(subprocess.check_output(
+            ["git", "show", f"{self.batch['baseline_main_sha']}:localization/tw-edition/coverage.json"],
+            cwd=ROOT, text=True,
+        ))
+        baseline_register = json.loads(subprocess.check_output(
+            ["git", "show", f"{self.batch['baseline_main_sha']}:localization/retroactive-review-register-20261019.json"],
+            cwd=ROOT, text=True,
+        ))
+        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(baseline_runtime["items"]) + 1)
+        self.assertEqual(
+            self.batch["counts_after"]["runtime_sources"],
+            len(baseline_runtime["sources"]) + len(self.batch["new_source_ids"]),
+        )
+        self.assertEqual(
+            self.batch["counts_after"]["source_registry"],
+            baseline_coverage["registry_sources"] + len(self.batch["new_source_ids"]),
+        )
+        self.assertEqual(
+            self.batch["counts_after"]["review_rechecks"],
+            len(baseline_register["substantive_rechecks"]) + 2,
+        )
+        self.assertGreaterEqual(len(self.runtime["items"]), self.batch["counts_after"]["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), self.batch["counts_after"]["runtime_sources"])
+        self.assertGreaterEqual(coverage["registry_sources"], self.batch["counts_after"]["source_registry"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), self.batch["counts_after"]["review_rechecks"])
 
 
 if __name__ == "__main__":

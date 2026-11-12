@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "phase": "全書歷史主題保真度回溯：排除中國制度預設，恢復有價值的海外研究與旅遊安全內容",
+  "baseline_main_sha": "7c41a725a69f6d4dbd7b5dac614dcb4aaaab5e9c",
+  "reviewed_at": "2026-11-12",
+  "review_due_at": "2027-02-12",
+  "scope": [
+    "TW-01-035",
+    "TW-01-041"
+  ],
+  "content_policy": "台灣制度、生活與安全行動以台灣證據為準；不保留不適用的中國大陸制度與文化預設。海外研究、文化或情境若仍能回答讀者問題，應保留其來源地、適用範圍及外推限制，不強迫改成無關的台灣類比；海外數據不得充作台灣頻率。",
+  "items": [
+    {
+      "id": "TW-01-035",
+      "change_kind": "歷史主題保真度實質再審",
+      "target_path": "locales/zh-TW/book/ch01/TW-01-035.md",
+      "before_sha256": "650d01ef7e1ed3231fd2a34bae5a585d2cce6f6ab6e983d7aa08e69248425fe6",
+      "after_sha256": "c5a25aad5cda5d2be7c23ea2bc7f4dd8a56b74cb2e58e862b5f809ab07efe8af",
+      "prior_review_sha256": "43b8338ed05b5e07a8544f4746c47e2b9a789154c63a1a97e8ac95ab410f8c0c",
+      "review_sha256": "f46bacd67df97fce37473c0c6032779c4b2184aad08e1011c056283fc63d8c27",
+      "topic_fidelity_assessment": "先前在地改寫保留了臺灣法律與合法捐贈流程，卻刪去原作主題中有價值的印度賣腎者研究；本次恢復該研究並明確限制其外推範圍。",
+      "taiwan_frequency_limits": "樣本只含既有賣腎者、非代表性臺灣樣本，且無未出售者對照組；健康結果屬自述，摘要沒有各結果有效分母，不能證明因果或推估臺灣風險。; 未找到具一致事件定義及暴露分母的全國統計，不能估算個人發生率；不得把法律禁止表述為低頻即可忽略。",
+      "source_ids": [
+        "ch01_organ_law_history_20261027",
+        "ch01_mohw_transplant_hospitals_20261027",
+        "ch01_organ_law_tw_20261112",
+        "ch01_organ_india_jama_2002"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch01_organ_law_tw_20261028",
+          "replacement_ids": [
+            "ch01_organ_law_tw_20261112"
+          ],
+          "reason": "2026-11-12重新直接閱讀現行條文並更新查閱日期；保留舊來源物件及雜湊作歷史版本，以本次重讀來源替代現行引用。",
+          "prior_source_sha256": "87863c972fe5bb79f3ae31b176f85d9919484bb19b27c11ea1981829ea627059",
+          "article_id": "TW-01-035",
+          "current_source_object_unchanged": true
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "移植醫學",
+          "法律／社工"
+        ]
+      }
+    },
+    {
+      "id": "TW-01-041",
+      "change_kind": "歷史主題保真度實質再審",
+      "target_path": "locales/zh-TW/book/ch01/TW-01-041.md",
+      "before_sha256": "80aa9c881c7c05d1e7eeb358ce5dba2e4abee00f7d634edcc0c98b508dd4ab2d",
+      "after_sha256": "558a02378debd53633746aec0f1120c48bb1f8e9f5a72b889aebdd8fa183f354",
+      "prior_review_sha256": "8be76472882a776cccbc7a7f9932130965aac942975571a92f2861d95bad1e5b",
+      "review_sha256": "5ae0da85304b464a7ecfcad5157b2777ff5743eee9ae8f7def65eae53075261a",
+      "topic_fidelity_assessment": "重讀原題與先前替代理由後，確認原題所指可供一般民眾上冰活動的天然結冰湖面或河面，在臺灣不是常見日常情境；臺灣高山雪地、步道或道路結冰則是不同的安全問題，已有本地求援與撤退指引。加拿大冰面指引適用當地活動，未找到可配對臺灣旅客海外暴露與事故的資料。因此不把湖河冰面活動恢復到臺灣正文；外國題目逐項判斷，不因曾被刪除就全部補回。",
+      "taiwan_frequency_limits": "兩份2025年山域統計發布數字不同且未說明差異，沒有登山暴露分母，不能推估個人或單次行程風險。天然冰面在臺灣日常情境罕見；加拿大來源已重新核對但不恢復到讀者正文。",
+      "source_ids": [
+        "ch01_mountain_taiwan_nps_guide_20261027",
+        "ch01_mountain_spnp_autumn_20261027",
+        "ch01_mountain_nfa_rescue_20261027",
+        "ch01_mountain_moi_stats_20260528",
+        "ch01_mountain_ombudsman_stats_20260717"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch01_mountain_nfa_stats_20261027",
+          "replacement_ids": [
+            "ch01_mountain_moi_stats_20260528",
+            "ch01_mountain_ombudsman_stats_20260717"
+          ],
+          "reason": "較早登錄來源未能在本次確認到與正文舊數字相符的原始統計說明，且2026年官方新聞稿出現502／695與531／727兩個發布版本；改以兩個可直接核對的發布頁並明示差異，舊source物件保留供歷史追溯。",
+          "prior_source_sha256": "bcd3633af0d3f4c054e73ff9432c5eacf6893137b28d062742a1a3eb7721be6a",
+          "article_id": "TW-01-041",
+          "current_source_object_unchanged": true
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "山域搜救／高山醫學",
+          "臺灣戶外安全"
+        ]
+      },
+      "reviewed_sources_not_used": [
+        "ch01_ice_parks_banff_natural_2025",
+        "ch01_ice_canada_coast_guard_20260217",
+        "ch01_ice_canadian_redcross_2014"
+      ]
+    }
+  ],
+  "new_source_ids": [
+    "ch01_organ_law_tw_20261112",
+    "ch01_organ_india_jama_2002",
+    "ch01_mountain_moi_stats_20260528",
+    "ch01_mountain_ombudsman_stats_20260717",
+    "ch01_ice_parks_banff_natural_2025",
+    "ch01_ice_canada_coast_guard_20260217",
+    "ch01_ice_canadian_redcross_2014"
+  ],
+  "source_records_reused": [
+    "ch01_organ_law_history_20261027",
+    "ch01_mohw_transplant_hospitals_20261027",
+    "ch01_mountain_taiwan_nps_guide_20261027",
+    "ch01_mountain_spnp_autumn_20261027",
+    "ch01_mountain_nfa_rescue_20261027"
+  ],
+  "source_records_retired": [
+    {
+      "id": "ch01_organ_law_tw_20261028",
+      "replacement_ids": [
+        "ch01_organ_law_tw_20261112"
+      ]
+    },
+    {
+      "id": "ch01_mountain_nfa_stats_20261027",
+      "replacement_ids": [
+        "ch01_mountain_moi_stats_20260528",
+        "ch01_mountain_ombudsman_stats_20260717"
+      ]
+    }
+  ],
+  "counts_before": {
+    "manifest_entries": 765,
+    "runtime_items": 326,
+    "runtime_sources": 1261,
+    "source_registry": 1344,
+    "review_rechecks": 382,
+    "coverage_json_files": 622,
+    "core_verified": 315
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1268,
+    "source_registry": 1351,
+    "review_rechecks": 384,
+    "coverage_json_files": 624,
+    "unresolved_source_id_kinds": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "topic": "2001年印度清奈有償賣腎者調查結果",
+      "value": {
+        "debt_motive_percent": 96,
+        "mean_sale_amount_usd_2001": 1070,
+        "family_income_mean_decline_fraction": 0.333,
+        "still_in_debt_percent": 75,
+        "self_reported_health_decline_percent": 86,
+        "would_not_recommend_sale_percent": 79
+      },
+      "unit": "受訪者百分比、美元（2001研究報告值）、家庭收入相對變化",
+      "period": "2001年2月訪問；平均在賣腎約6年後受訪；2002年發表",
+      "geographic_scope": "印度清奈單一地區",
+      "population": "305名曾出售腎臟者，非臺灣居民，且非抽樣代表性全國人口",
+      "numerator": "PubMed摘要只列百分比與平均數；未提供各項精確分子或各問題有效回答人數，不反推人數",
+      "denominator": "研究樣本305人；摘要未列各題有效答題分母或缺值處理",
+      "event_definition": "既有賣腎者回報出售原因、金額、經濟狀態、健康變化及是否建議他人出售",
+      "data_type": "橫斷面訪問調查；回溯性自陳；單地區選定樣本",
+      "source_ids": [
+        "ch01_organ_india_jama_2002"
+      ],
+      "accessed_at": "2026-11-12",
+      "limitations": "樣本只含既有賣腎者、非代表性臺灣樣本，且無未出售者對照組；健康結果屬自述，摘要沒有各結果有效分母，不能證明因果或推估臺灣風險。"
+    },
+    {
+      "topic": "臺灣非法器官交易或民眾接觸仲介的個人發生率",
+      "value": null,
+      "unit": "無可計算發生率",
+      "period": "截至2026-11-12本次核對",
+      "geographic_scope": "臺灣全國",
+      "population": "臺灣居民及可能接觸非法器官交易邀約者",
+      "numerator": "本次未找到具一致定義的全國事件或仲介接觸統計",
+      "denominator": "沒有可配對居民或暴露母數",
+      "event_definition": "非法有償器官提供、取得或仲介；不含依法無償捐贈",
+      "data_type": "資料不足；不推估個人機率；法律狀態另依現行法條判斷",
+      "source_ids": [
+        "ch01_organ_law_tw_20261112"
+      ],
+      "accessed_at": "2026-11-12",
+      "limitations": "未找到具一致事件定義及暴露分母的全國統計，不能估算個人發生率；不得把法律禁止表述為低頻即可忽略。"
+    },
+    {
+      "topic": "臺灣114年度山域事故救援統計（兩份官方發布版本）",
+      "value": {
+        "moi_release_2026_05_28": {
+          "incident_cases": 502,
+          "incident_people": 695
+        },
+        "ombudsman_release_2026_07_17": {
+          "rescue_notifications": 531,
+          "people_involved": 727,
+          "deaths": 34
+        }
+      },
+      "unit": "事故救援案件／通報、涉事故人數、死亡人數",
+      "period": "2025年（民國114年）；官方摘要發布於2026-05-28與2026-07-17",
+      "geographic_scope": "臺灣全國山域事故救援統計",
+      "population": "消防署統計所列山域事故救援案件與涉事故者",
+      "numerator": "較早內政部新聞稿502件、695人；較後監察院新聞稿引用消防署資料531件、727人、34人死亡；兩數據版本未於摘要解釋差異",
+      "denominator": null,
+      "event_definition": "官方資料稱山域事故案件／救援通報及涉事故者；摘要沒有可供本次重建的完整納入與去重定義",
+      "data_type": "行政救援統計的官方新聞稿摘要，存在同年度不同發布版本",
+      "source_ids": [
+        "ch01_mountain_moi_stats_20260528",
+        "ch01_mountain_ombudsman_stats_20260717"
+      ],
+      "accessed_at": "2026-11-12",
+      "limitations": "兩份發布摘要數字不同、未說明差異；沒有登山暴露分母，不能推估個人或單次行程風險；不可用於估算海外天然冰面事故率。",
+      "denominator_definition": "沒有登山人次、獨立登山者、行程或暴露時間分母；兩份摘要均未提供。"
+    }
+  ],
+  "professional_review_status": "移植醫學、法律／社工、山域搜救／高山醫學、冰面與冷水救援及戶外安全等正式專業審閱尚未取得；本批為AI協助逐項來源核對。",
+  "reader_copy_cleanup": "正文只保留讀者需要的台灣法律、行動方式、海外研究與情境界線；審查流程、SHA、專業審閱狀態及批次資訊留在review與本批證據。"
+}
