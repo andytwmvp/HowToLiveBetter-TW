@@ -18,6 +18,7 @@ DUE = "2027-02-11"
 BATCH_PATH = "localization/ch02-lifestyle-risk-guidance-20261111.json"
 SOURCE_PATH = "localization/tw-edition/sources/ch02-lifestyle-risk-guidance-20261111.json"
 TOPIC_FIDELITY_BATCH = "localization/ch02-topic-fidelity-recheck-20261112.json"
+DECHINA_RECHECK_BATCH = "localization/topic-fidelity-dechina-recheck-20261112.json"
 ITEM_IDS = ("TW-02-028", "TW-02-030", "TW-02-032", "TW-02-039", "TW-02-042")
 PRIOR_DRAFT_HASHES = {
     "TW-02-028": "dd7f36a797b897618d4c266c88650ae24a132036b00e96733a97a80dcc848e21",
@@ -85,9 +86,12 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         current_source_ids = {row["id"] for row in self.runtime["sources"]}
         newly_added_ids = current_source_ids - base_source_ids
         later_batch = read_json(TOPIC_FIDELITY_BATCH)
+        dechina_batch = read_json(DECHINA_RECHECK_BATCH)
         self.assertEqual(
             newly_added_ids,
-            set(self.batch["new_source_ids"]) | set(later_batch["new_source_ids"]),
+            set(self.batch["new_source_ids"])
+            | set(later_batch["new_source_ids"])
+            | set(dechina_batch["new_source_ids"]),
         )
         bundled = {row[0]: row for row in self.bundle["sources"]}
         self.assertEqual(set(bundled), set(self.batch["new_source_ids"]))
@@ -190,6 +194,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
     def test_existing_content_drafts_sources_and_review_history_are_preserved(self):
         current_runtime = {row["id"]: row for row in self.runtime["items"]}
         base_items = {row["id"]: row for row in self.base_runtime["items"]}
+        dechina_batch = read_json(DECHINA_RECHECK_BATCH)
+        dechina_items = {row["id"]: row for row in dechina_batch["items"]}
         topic_batch = read_json(TOPIC_FIDELITY_BATCH)
         topic_rows = {row["id"]: row for row in topic_batch["items"]}
         rechecks = {
@@ -204,6 +210,17 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 self.assertEqual(record["after_sha256"], topic_rows[item_id]["after_sha256"])
                 self.assertEqual(hashlib.sha256(current["body"].encode("utf-8")).hexdigest(), record["after_sha256"])
                 self.assertEqual(record["source_ids"], current["source_ids"])
+            elif item_id in dechina_items:
+                current = current_runtime[item_id]
+                record = dechina_items[item_id]
+                review = read_json(f"localization/reviews/{item_id}.json")
+                self.assertEqual(
+                    hashlib.sha256(current["body"].encode("utf-8")).hexdigest(),
+                    record["after_sha256"],
+                )
+                self.assertEqual(review["target_sha256"], record["after_sha256"])
+                self.assertEqual(review["reviewed_at"], dechina_batch["reviewed_at"])
+                self.assertEqual(current["source_ids"], record["source_ids"])
             else:
                 self.assertEqual(current_runtime[item_id], old)
         current_sources = {row["id"]: row for row in self.runtime["sources"]}
@@ -236,11 +253,25 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 self.assertEqual(old["status"], "pending")
                 self.assertEqual(self.manifest[item_id]["status"], "verified")
                 self.assertEqual(self.manifest[item_id]["sources"], current_runtime[item_id]["source_ids"])
+            elif item_id in dechina_items:
+                self.assertEqual(self.manifest[item_id]["verified_at"], dechina_batch["reviewed_at"])
+                expected_sources = current_runtime[item_id]["source_ids"]
+                if old["sources"] and old["sources"][0].startswith("http"):
+                    expected_sources = [
+                        self.sources[source_id]["url"]
+                        for source_id in current_runtime[item_id]["source_ids"]
+                    ]
+                self.assertEqual(
+                    self.manifest[item_id]["sources"],
+                    expected_sources,
+                )
             elif item_id not in ITEM_IDS:
                 self.assertEqual(self.manifest[item_id], old)
         self.assertEqual(
             len(self.register["substantive_rechecks"]),
-            len(self.base_register["substantive_rechecks"]) + len(rechecks),
+            len(self.base_register["substantive_rechecks"])
+            + len(rechecks)
+            + len(dechina_items),
         )
         self.assertEqual(set(rechecks), {"TW-02-025", "TW-02-047"})
         self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))

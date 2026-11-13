@@ -32,4 +32,4 @@ def check_ice_tools_crisis_af_browser(page, context, url, review):
         assert page.locator('#TW-13-021').count() == 1
         page.screenshot(path=str(review / f'ice-tools-crisis-af-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})
-    return ['四篇冰面／砂輪機職安／危機對話／AF與四篇急救再審在桌機、手機、自查及離線的ID、五段正文及來源連結一致；AF與未知粉末求助搜尋、自查按鈕與無水平溢出通過；未以瀏覽器檢查宣稱醫療或消防專業認證。']
+    return ['四篇山域安全／砂輪機職安／危機對話／AF與四篇急救再審在桌機、手機、自查及離線的ID、正文結構及來源連結一致；AF與未知粉末求助搜尋、自查按鈕與無水平溢出通過；未以瀏覽器檢查宣稱醫療或消防專業認證。']

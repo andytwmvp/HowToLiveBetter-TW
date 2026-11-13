@@ -284,11 +284,24 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             for row in self.later_rechecks
             for source_id in set(row["source_ids"]) - set(row["previous_source_ids"])
         }
+        topic_fidelity_batch = json.loads(
+            (ROOT / "localization/topic-fidelity-dechina-recheck-20261112.json").read_text(encoding="utf-8")
+        )
+        reviewed_sources_not_used = {
+            source_id
+            for row in topic_fidelity_batch["items"]
+            for source_id in row.get("reviewed_sources_not_used", [])
+        }
+        registered_source_ids = {row["id"] for row in self.runtime["sources"]}
+        cited_source_ids = {source_id for row in self.runtime["items"] for source_id in row["source_ids"]}
+        self.assertTrue(reviewed_sources_not_used.issubset(registered_source_ids))
+        self.assertTrue(reviewed_sources_not_used.isdisjoint(cited_source_ids))
         self.assertEqual(
             new_source_ids,
             set(self.batch["new_source_ids"])
             | sources_added_by_later_rechecks
-            | self.later_first_publication_source_ids,
+            | self.later_first_publication_source_ids
+            | reviewed_sources_not_used,
         )
         self.assertGreaterEqual(
             len(self.register["substantive_rechecks"]),

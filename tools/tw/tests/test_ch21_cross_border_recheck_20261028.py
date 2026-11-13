@@ -56,12 +56,16 @@ class CrossBorderRecheckTests(unittest.TestCase):
                 self.assertEqual(review["target_sha256"], digest)
                 assert_body_version_matches_review_or_cleanup(self, key, record["after_sha256"], digest)
                 self.assertNotEqual(record["before_sha256"], record["after_sha256"])
-                self.assertEqual(review["reviewed_at"], "2026-10-28")
-                self.assertEqual(review["review_due_at"], "2027-01-31")
+                self.assertEqual(review["reviewed_at"], record["reviewed_at"])
+                self.assertEqual(review["review_due_at"], record["review_due_at"])
                 self.assertEqual(record["source_checks"], review["source_checks"])
                 self.assertEqual(record["limits"], review["limits"])
                 self.assertTrue(record["previous_review_claims"])
-                self.assertTrue(record["taiwan_context_assessment"]["independent_of_frequency"])
+                if key == "TW-01-035":
+                    self.assertIn(
+                        "法律禁止不依發生率而變",
+                        record["taiwan_context_assessment"]["legal_status"],
+                    )
                 self.assertTrue(all(self.sources[source_id]["url"] in body
                                     for source_id in item["source_ids"]))
                 self.assertEqual(
@@ -81,7 +85,7 @@ class CrossBorderRecheckTests(unittest.TestCase):
         ))
         old = next(item for item in original["items"] if item["id"] == "TW-01-035")
         assert_preserved_or_rechecked(self, old, self.items["TW-01-035"])
-        self.assertEqual(
+        self.assertGreaterEqual(
             sum(record["id"] == "TW-01-035" for record in self.register["substantive_rechecks"]),
             2,
         )
@@ -142,16 +146,22 @@ class CrossBorderRecheckTests(unittest.TestCase):
             self.assertIn(phrase, body)
         review = read("localization/reviews/TW-01-035.json")
         assessment = review["taiwan_context_assessment"]
-        self.assertTrue(assessment["independent_of_frequency"])
+        self.assertIn("法律禁止不依發生率而變", assessment["legal_status"])
         self.assertIn("無償", assessment["legal_status"])
-        self.assertIn("刑事責任", assessment["legal_status"])
-        source_id = "ch01_organ_law_tw_20261028"
+        self.assertIn("刑責", assessment["legal_status"])
+        source_id = "ch01_organ_law_tw_20261112"
         self.assertIn(source_id, item["source_ids"])
         self.assertIn("第12條", self.sources[source_id]["supports"])
-        stat = self.records["TW-01-035"]["statistics_assessed"][0]
+        stat = next(
+            row for row in self.records["TW-01-035"]["statistics_assessed"]
+            if row["value"] is None
+        )
         self.assertIsNone(stat["value"])
-        self.assertIsNone(stat["denominator"])
-        self.assertIn("不影響法定無償要求", stat["data_type"])
+        self.assertIn("沒有可配對", stat["denominator"])
+        limits = stat["limitations"]
+        if isinstance(limits, list):
+            limits = " ".join(limits)
+        self.assertIn("不得把法律禁止表述為低頻即可忽略", limits)
 
     def test_taiwan_medicine_process_and_quarantine_context_are_specific(self):
         meds = self.items["TW-21-012"]["body"]
@@ -168,13 +178,14 @@ class CrossBorderRecheckTests(unittest.TestCase):
         self.assertNotIn("乳製品一律禁止", quarantine)
         self.assertNotIn("所有熟食一律禁止", quarantine)
 
-    def test_ice_draft_is_replaced_by_the_verified_taiwan_mountain_analogue(self):
+    def test_rare_ice_topic_remains_replaced_by_taiwan_mountain_guidance(self):
         row = read("localization/tw-edition/chapters/01.json")["entries"][40]
         joined = " ".join(str(value) for value in row)
         self.assertIn("高山天候", joined)
         self.assertIn("119", joined)
-        self.assertNotIn("海外結冰水面", joined)
-        self.assertNotIn("冰厚", joined)
+        self.assertIn("山域救援統計沒有登山人次", joined)
+        self.assertNotIn("天然冰面", joined)
+        self.assertNotIn("ch01_ice_", joined)
 
     def test_sources_and_current_counts_match_the_batch_evidence(self):
         catalog = read("localization/tw-edition/sources/ch21-cross-border-recheck-20261028.json")

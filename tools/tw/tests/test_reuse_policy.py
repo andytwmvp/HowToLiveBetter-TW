@@ -46,6 +46,19 @@ class ReusePolicyTests(unittest.TestCase):
         for term in ("公開的 GitHub 儲存庫", "非公開且具權限控管", "不得故意寫錯救護電話", "不套用中國制度"):
             self.assertIn(term, txt)
 
+    def test_foreign_topics_are_reviewed_individually_not_restored_or_removed_in_bulk(self):
+        txt = policy.read(policy.POLICY_PATH)
+        for term in (
+            "原題保真與是否恢復的逐題判準",
+            "不把「曾被刪除」當成必須恢復的理由",
+            "也不把「在臺灣少見或研究來自國外」當成必須刪除的理由",
+            "若臺灣題材與原題核心需求不同，不得用「在地化」或寬泛的相似性掩蓋差異",
+            "日本泡澡健康研究可作為有範圍的比較",
+            "天然結冰湖面或河面在臺灣不是常見日常情境",
+            "審閱但未採用",
+        ):
+            self.assertIn(term, txt)
+
 
 if __name__ == "__main__":
     unittest.main()
