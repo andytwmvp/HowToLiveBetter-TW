@@ -441,13 +441,27 @@ class RetroactiveAuditTests(unittest.TestCase):
             normalized, _ = normalize(previous)
             if key in {"TW-13-012", "TW-13-027"}:
                 digest = hashlib.sha256(normalized["body"].encode("utf-8")).hexdigest()
-                recheck = next(
-                    item for item in register["substantive_rechecks"]
-                    if item["id"] == key and item["before_sha256"] == digest
-                    and (key != "TW-13-027" or item["after_sha256"] == hashlib.sha256(items[key]["body"].encode("utf-8")).hexdigest())
-                )
+                recheck = next(item for item in register["substantive_rechecks"]
+                               if item["id"] == key and item["before_sha256"] == digest)
                 self.assertEqual(recheck["previous_body"], normalized["body"])
-                audit.validate_recheck_history(audit.ROOT, recheck, items[key])
+                if key == "TW-13-027":
+                    # A later substantive review advances the current body and
+                    # review file. Keep the earlier cleanup edge immutable and
+                    # validate the latest edge against the live runtime.
+                    current_digest = hashlib.sha256(items[key]["body"].encode("utf-8")).hexdigest()
+                    latest = next(item for item in reversed(register["substantive_rechecks"])
+                                  if item["id"] == key and item["after_sha256"] == current_digest)
+                    prior_runtime = audit._git_json(
+                        audit.ROOT, latest["prior_revision"], "localization/tw-edition/runtime.json"
+                    )
+                    prior_item = next(item for item in prior_runtime["items"] if item["id"] == key)
+                    prior_digest = hashlib.sha256(prior_item["body"].encode("utf-8")).hexdigest()
+                    self.assertEqual(recheck["after_sha256"], latest["before_sha256"])
+                    self.assertEqual(latest["before_sha256"], prior_digest)
+                    self.assertEqual(latest["previous_body"], prior_item["body"])
+                    audit.validate_recheck_history(audit.ROOT, latest, items[key])
+                else:
+                    audit.validate_recheck_history(audit.ROOT, recheck, items[key])
             else:
                 self.assertEqual(normalized, items[key], key)
 

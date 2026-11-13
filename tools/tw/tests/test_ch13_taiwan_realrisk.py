@@ -19,7 +19,8 @@ class Chapter13TaiwanRealRiskTests(unittest.TestCase):
     self.assertGreater(len(raw),2000)
     self.assertEqual(hashlib.sha256(raw).hexdigest(),review["target_sha256"])
     self.assertEqual(raw.decode("utf-8"),items[key]["body"])
-    self.assertEqual(sum(b["tag"]=="h3" for b in body_blocks(items[key])),5)
+    expected_headings = 6 if key == "TW-13-027" else 5
+    self.assertEqual(sum(b["tag"]=="h3" for b in body_blocks(items[key])),expected_headings)
     self.assertEqual({x["url"] for x in review["source_checks"]},{sources[s]["url"] for s in items[key]["source_ids"]})
  def test_emergency_taiwan_specificity_and_frequency_denominators(self):
   b={x["id"]:x["body"].split("## 官方來源及改寫說明")[0] for x in validate_runtime()["items"]}

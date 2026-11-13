@@ -42,8 +42,9 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
         cls.manifest = {item["id"]: item for item in read("localization/manifest.json")["entries"]}
         cls.reviews = {key: read(f"localization/reviews/{key}.json") for key in ITEM_IDS}
         register = read("localization/retroactive-review-register-20261019.json")
+        cls.recheck_history = register["substantive_rechecks"]
         cls.records = {}
-        for row in sorted(register["substantive_rechecks"],
+        for row in sorted(cls.recheck_history,
                            key=lambda entry: (entry.get("reviewed_at", ""), entry.get("after_sha256", ""))):
             cls.records[row["id"]] = row
 
@@ -83,9 +84,40 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
                 record = self.records[item_id]
                 review = self.reviews[item_id]
                 manifest = self.manifest[item_id]
+                later_record = None
+                if item_id == "TW-13-027":
+                    # Keep this historical batch bound to its 10/31 snapshot; a
+                    # later 11/14 recheck now advances the live article and review.
+                    record = next(
+                        row for row in self.recheck_history
+                        if row["id"] == item_id and row["reviewed_at"] == "2026-10-31"
+                    )
+                    later_record = next(
+                        row for row in self.recheck_history
+                        if row["id"] == item_id and row["reviewed_at"] == "2026-11-14"
+                    )
+                    prior = read_at(later_record["prior_revision"], "localization/tw-edition/runtime.json")
+                    item = next(row for row in prior["items"] if row["id"] == item_id)
+                    prior_review = read_at(later_record["prior_revision"], f"localization/reviews/{item_id}.json")
+                    prior_manifest = read_at(later_record["prior_revision"], "localization/manifest.json")
+                    review = prior_review
+                    manifest = next(row for row in prior_manifest["entries"] if row["id"] == item_id)
                 raw = (ROOT / manifest["target_path"]).read_bytes()
-                body = raw.decode("utf-8")
-                digest = sha256(raw)
+                body = item["body"]
+                digest = sha256(body.encode("utf-8"))
+
+                if item_id == "TW-13-027":
+                    self.assertEqual(record["after_sha256"], digest)
+                    self.assertEqual(later_record["before_sha256"], digest)
+                    self.assertEqual(later_record["previous_body"], body)
+                    self.assertEqual(
+                        later_record["prior_review_sha256"],
+                        sha256(subprocess.check_output(
+                            ["git", "show", f"{later_record['prior_revision']}:localization/reviews/{item_id}.json"],
+                            cwd=ROOT,
+                        )),
+                    )
+                    validate_recheck_history(ROOT, later_record, self.items[item_id])
 
                 self.assertEqual(record["prior_revision"], BASELINE)
                 self.assertEqual(record["after_sha256"], digest)
@@ -103,14 +135,20 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
                 self.assertEqual(set(re.findall(r"\]\((https://[^)]+)\)", body)), expected_urls)
                 self.assertNotRegex(body, r"本批|本次再審|來源實質再核對|\bPR\s*#|CI\s*(?:通過|成功)|AI輔助")
                 self.assertNotRegex(item["limits"], r"本次|本批|\bPR\s*#|AI輔助")
-                validate_recheck_history(ROOT, record, item)
+                if later_record is None:
+                    validate_recheck_history(ROOT, record, item)
 
     def test_frequency_claims_keep_population_and_denominator_limits(self):
         mountain = self.records["TW-13-027"]["statistics_assessed"]
-        accidents = next(row for row in mountain if "179件" in row["value"])
-        self.assertEqual(accidents["unit"], "山域事故件數（件）")
+        accidents = next(row for row in mountain if row["topic"].startswith("臺灣山域事故件數"))
+        self.assertEqual(accidents["value"], {
+            "2015_incident_cases": 179,
+            "2025_incident_cases": 502,
+            "2025_involved_people": 695,
+        })
+        self.assertEqual(accidents["unit"], "行政山域事故件數及涉入人數")
         self.assertIsNone(accidents["denominator"])
-        self.assertIn("登山活動人次", accidents["denominator_definition"])
+        self.assertIn("登山人次", accidents["denominator_definition"])
 
         snake = self.records["TW-13-029"]["statistics_assessed"]
         fatality = next(row for row in snake if "0.18%" in row["value"])
