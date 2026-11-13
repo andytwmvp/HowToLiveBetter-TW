@@ -287,6 +287,7 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         topic_fidelity_batch = json.loads(
             (ROOT / "localization/topic-fidelity-dechina-recheck-20261112.json").read_text(encoding="utf-8")
         )
+        current_recheck_batch = read_json("localization/topic-fidelity-fraud-osh-recheck-20261114.json")
         reviewed_sources_not_used = {
             source_id
             for row in topic_fidelity_batch["items"]
@@ -301,7 +302,8 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             set(self.batch["new_source_ids"])
             | sources_added_by_later_rechecks
             | self.later_first_publication_source_ids
-            | reviewed_sources_not_used,
+            | reviewed_sources_not_used
+            | set(current_recheck_batch["new_source_ids"]),
         )
         self.assertGreaterEqual(
             len(self.register["substantive_rechecks"]),
