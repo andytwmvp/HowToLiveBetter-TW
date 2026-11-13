@@ -12,7 +12,6 @@ import retroactive_audit as audit
 from body_renderer import body_blocks
 from review_contract import ROOT
 
-BASE = "2174e94843e4b034b18ebe851dbe9663b2ca6342"
 IDS = ("TW-19-009", "TW-19-010", "TW-19-011", "TW-19-012", "TW-19-016")
 
 
@@ -22,30 +21,34 @@ def read(path):
 
 class WorkplaceSafetyRecheckTests(unittest.TestCase):
     def test_each_record_hashes_the_actual_base_and_current_article(self):
-        old_runtime = json.loads(subprocess.check_output(
-            ["git", "show", BASE + ":localization/tw-edition/runtime.json"],
-            cwd=ROOT,
-        ))
         current_runtime = read("localization/tw-edition/runtime.json")
         manifest = read("localization/manifest.json")
         register = read("localization/retroactive-review-register-20261019.json")
-        old_items = {item["id"]: item for item in old_runtime["items"]}
         current_items = {item["id"]: item for item in current_runtime["items"]}
-        records = {row["id"]: row for row in register["substantive_rechecks"]}
+        records = {item_id: [row for row in register["substantive_rechecks"] if row["id"] == item_id]
+                   for item_id in IDS}
         entries = {entry["id"]: entry for entry in manifest["entries"]}
         sources = {source["id"]: source for source in current_runtime["sources"]}
 
         for item_id in IDS:
             with self.subTest(item_id=item_id):
-                old = old_items[item_id]
                 current = current_items[item_id]
-                record = records[item_id]
+                history = records[item_id]
+                self.assertTrue(history, item_id)
+                # A later batch can re-review one of these articles. Read its
+                # recorded parent revision instead of assuming this test's
+                # original snapshot is still the current revision baseline.
+                record = max(enumerate(history), key=lambda pair: (pair[1]["reviewed_at"], pair[0]))[1]
+                old_runtime = json.loads(subprocess.check_output(
+                    ["git", "show", record["prior_revision"] + ":localization/tw-edition/runtime.json"],
+                    cwd=ROOT,
+                ))
+                old = next(item for item in old_runtime["items"] if item["id"] == item_id)
                 review = read(f"localization/reviews/{item_id}.json")
                 before = hashlib.sha256(old["body"].encode("utf-8")).hexdigest()
                 after = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
                 markdown = (ROOT / entries[item_id]["target_path"]).read_bytes()
                 self.assertNotEqual(before, after)
-                self.assertEqual(record["prior_revision"], BASE)
                 self.assertEqual(record["before_sha256"], before)
                 assert_body_version_matches_review_or_cleanup(self, item_id, record["after_sha256"], after)
                 self.assertEqual(markdown.decode("utf-8"), current["body"])
@@ -63,12 +66,14 @@ class WorkplaceSafetyRecheckTests(unittest.TestCase):
     def test_emergency_guidance_precedes_statistics_and_limits_are_explicit(self):
         runtime = {item["id"]: item for item in read("localization/tw-edition/runtime.json")["items"]}
         safety = runtime["TW-19-010"]["body"]
-        self.assertLess(safety.index("撥119"), safety.index("重大職災死亡109人"))
-        for phrase in ("營造業58人", "墜落占62%", "沒有工作者人數或工作時數分母", "不能當個人事故發生率", "不要下去救人"):
+        self.assertLess(safety.index("撥119"), safety.index("重大職災死亡193人"))
+        for phrase in ("營造業102人", "營造業死亡事故約62%屬墜落", "沒有工作者人數或工時分母", "不能解讀為個人事故率", "不要貿然進入救援"):
             self.assertIn(phrase, safety)
         for item_id in IDS:
             with self.subTest(item_id=item_id):
-                self.assertEqual(sum(block["tag"] == "h3" for block in body_blocks(runtime[item_id])), 5)
+                expected_headings=sum(line.startswith("## ") for line in runtime[item_id]["body"].splitlines())
+                self.assertGreaterEqual(expected_headings,5)
+                self.assertEqual(sum(block["tag"] == "h3" for block in body_blocks(runtime[item_id])), expected_headings)
         health_exam = runtime["TW-19-009"]["body"]
         self.assertIn("每年或在變更作業時安排特殊健康檢查", health_exam)
 

@@ -10,11 +10,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
 
-from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
 from review_contract import validate_runtime
 
 BASE = "7c41a725a69f6d4dbd7b5dac614dcb4aaaab5e9c"
+STAGE_SNAPSHOT = "c2d62828028a01322bb24aa77b74118a4502712f"
 BATCH = "localization/topic-fidelity-dechina-recheck-20261112.json"
 REGISTER = "localization/retroactive-review-register-20261019.json"
 
@@ -128,7 +128,16 @@ class Chapter1TopicFidelityRecheckTests(unittest.TestCase):
         self.assertIsNone(mountain_stats["denominator"])
         self.assertIn("沒有登山暴露分母", mountain_stats["limitations"])
 
-    def test_retired_sources_are_preserved_and_batch_counts_are_live(self):
+    def test_topic_fidelity_policy_requires_reader_value_review_not_bulk_restoration(self):
+        policy = (ROOT / "localization/TAIWAN_REUSE_POLICY.md").read_text(encoding="utf-8")
+        self.assertIn("### 逐題篩選順序與正文去留", policy)
+        self.assertIn("來源可信只是必要條件，不代表每筆資料都要放進正文", policy)
+        self.assertIn("不設單一分數或「海外研究一律收錄」規則", policy)
+        self.assertIn("臺灣讀者也可能在家中或旅宿泡澡", policy)
+        self.assertIn("不必把冰面操作整批搬回", policy)
+        self.assertIn("不能延伸成其他主題的自動規則", policy)
+
+    def test_retired_sources_are_preserved_and_batch_counts_remain_historical(self):
         runtime_at_base = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
         old_sources = {x["id"]: x for x in runtime_at_base["sources"]}
         for record in self.batch["items"]:
@@ -136,14 +145,26 @@ class Chapter1TopicFidelityRecheckTests(unittest.TestCase):
                 old = old_sources[retired["id"]]
                 self.assertEqual(retired["prior_source_sha256"], sha(json.dumps(old, ensure_ascii=False, sort_keys=True).encode("utf-8")))
                 self.assertEqual(self.sources[retired["id"]], old)
-        coverage = read("localization/tw-edition/coverage.json")
-        self.assertEqual(coverage, audit_drafts())
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["source_registry"], coverage["registry_sources"])
-        self.assertEqual(self.batch["counts_after"]["review_rechecks"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(self.batch["counts_after"]["coverage_json_files"], coverage["json_files_checked"])
-        self.assertFalse(self.batch["counts_after"]["publication_ready"])
+        # Historical completion snapshots stay tied to the main revision at the
+        # end of that stage; later batches must not rewrite old counts to today's totals.
+        snapshot_runtime = json.loads(git_bytes(STAGE_SNAPSHOT, "localization/tw-edition/runtime.json"))
+        snapshot_manifest = json.loads(git_bytes(STAGE_SNAPSHOT, "localization/manifest.json"))
+        snapshot_coverage = json.loads(git_bytes(STAGE_SNAPSHOT, "localization/tw-edition/coverage.json"))
+        snapshot_register = json.loads(git_bytes(STAGE_SNAPSHOT, REGISTER))
+        expected = {
+            "manifest_entries": len(snapshot_manifest["entries"]),
+            "verified_core_entries": sum(row.get("status") == "verified" for row in snapshot_manifest["entries"]),
+            "runtime_items": len(snapshot_runtime["items"]),
+            "runtime_sources": len(snapshot_runtime["sources"]),
+            "source_registry": snapshot_coverage["registry_sources"],
+            "review_rechecks": len(snapshot_register["substantive_rechecks"]),
+            "coverage_json_files": snapshot_coverage["json_files_checked"],
+            "unresolved_source_id_kinds": len(snapshot_coverage["unresolved_source_ids"]),
+            "unresolved_reference_occurrences": snapshot_coverage["unresolved_reference_occurrences"],
+            "publication_completed_entries": snapshot_coverage["publication_completed_entries"],
+            "publication_ready": snapshot_coverage["publication_ready"],
+        }
+        self.assertEqual(self.batch["counts_after"], expected)
 
 
 if __name__ == "__main__":

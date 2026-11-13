@@ -41,7 +41,9 @@ class Chapter19CompletionTests(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(entry['body'].encode()).hexdigest(),review['target_sha256'])
                 assert_professional_review_pending(self, review['reviewer'])
                 self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
-                self.assertEqual(len([b for b in body_blocks(entry) if b['tag']=='h3']),5)
+                expected_headings=sum(line.startswith('## ') for line in entry['body'].splitlines())
+                self.assertGreaterEqual(expected_headings,5)
+                self.assertEqual(len([b for b in body_blocks(entry) if b['tag']=='h3']),expected_headings)
 
     def test_old_thirty_four_items_and_sources_preserved(self):
         old=before('localization/tw-edition/runtime.json');new=validate_runtime()

@@ -1,4 +1,5 @@
 """職安、職災、工作急症、霸凌與健檢歷史再審全文及互動。"""
+import re
 from review_contract import ROOT, validate_runtime
 from body_renderer import body_blocks
 
@@ -18,7 +19,10 @@ def check_workplace_safety_recheck_browser(page, context, url, review):
                 article = page.locator('#'+key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text(), (target, key)
-                assert article.locator('h3').count() == 5, (target, key)
+                expected_sections = len(re.findall(r'(?m)^##\s+', items[key]['body']))
+                assert article.locator('h3').count() == expected_sections, (target, key)
+                if key == 'TW-19-009':
+                    assert article.locator('h3').filter(has_text='離開特定有害作業後的追蹤健檢').count() == 1
                 rendered = article.text_content()
                 for block in body_blocks(items[key]):
                     assert block['text'] in rendered, (target, key, block['text'][:50])
@@ -35,7 +39,7 @@ def check_workplace_safety_recheck_browser(page, context, url, review):
         assert button.get_attribute('aria-pressed') == 'true'
         searches = (
             ('TW-19-009', '2028-01-01才施行'),
-            ('TW-19-010', '未經主管機關或現場應變負責人確認危害已排除'),
+            ('TW-19-010', '危害未經主管機關或現場應變負責人確認已排除前'),
             ('TW-19-011', '前2個月按平均月投保薪資發給'),
             ('TW-19-012', '不自行餵食或給藥'),
             ('TW-19-016', '30至99人雇主應自收到申訴翌日起4個月內作成決定'),

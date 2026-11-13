@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "phase": "逐題主題保真、台灣情境、職安長期暴露與來源時效再審",
+  "baseline_main_sha": "c2d62828028a01322bb24aa77b74118a4502712f",
+  "reviewed_at": "2026-11-14",
+  "review_due_at": "2027-02-14",
+  "scope": "TW-17-004、TW-19-009、TW-19-010；保留固定ID，逐條核對原作主題、現行台灣正文、法規、來源、研究範圍與讀者行動。",
+  "content_policy": "不因外國來源一律刪除，也不因曾刪除就一律恢復；僅保留能回答台灣讀者相同問題的限縮研究，將不適用制度替換為台灣規則，並分別記錄頻率與法律界線。",
+  "items": [
+    {
+      "id": "TW-17-004",
+      "change_kind": "歷史主題保真度與台灣實質再審",
+      "target_path": "locales/zh-TW/book/ch17/TW-17-004.md",
+      "before_sha256": "1d7e22611428dd206ad514577ea8d39e59b3791fd8b066f4ef8a3a4fb9e48c09",
+      "after_sha256": "edf579ac06df3441de62f486b3221b814e0da738d5eaea51da8c1fe63d8034d7",
+      "prior_review_sha256": "8888fe25a2c6b0741aeb49686684d0747083a81b083238996b5bca8683f1f751",
+      "review_sha256": "679f53642da47a53d5cd8b568ffa8efe4818300a83d2b5c4e939118a59a26c10",
+      "topic_fidelity_assessment": "原題想讓長者遇到催促時有一句話可暫停決策；台灣讀者同樣會遇到電話、網路與金融詐騙，也可使用自主查證句。以通用說法取代必須詢問家人的安排，並補回有界線的海外研究，而非恢復外地行政或防詐流程。",
+      "taiwan_frequency_limits": "刑事局公告引述165儀錶板記載2026年9月全國受理10,775件、總財損39.3億餘元。這是警方行政受理件數與彙總財損，沒有個人暴露分母，也不是長者專屬發生率。兩篇海外研究不代表台灣頻率。",
+      "source_ids": [
+        "ch17_165",
+        "ch17_postfraud",
+        "ch17_cib_statistics_20261014",
+        "ch17_npa_recovery_20251102",
+        "violence_npa_110",
+        "tw17_fraud_arousal_kircanski_2018",
+        "tw17_fraud_forewarning_scheibe_2014"
+      ],
+      "retired_sources": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "金融防詐／消費者保護",
+          "高齡金融自主",
+          "法律"
+        ]
+      },
+      "source_checks": [
+        {
+          "url": "https://165.npa.gov.tw/",
+          "claim": "165為警政署反詐查證入口；其動態首頁本次未用來支持案例或統計。",
+          "supporting_passage": "編者非逐字摘述：本次僅將165列為官方求助入口；主要操作建議由已讀取的中華郵政、刑事局與警政署110內容支持。",
+          "accessed_at": "2026-10-24",
+          "retrieval_method": "前次直接開啟僅見JavaScript入口外殼；本次不使用其動態統計。"
+        },
+        {
+          "url": "https://subservices.post.gov.tw/post/internet/Anti-Fraud/common_practices.jsp",
+          "claim": "中華郵政防詐資訊建議勿交付帳戶或個資、注意認證話術並撥165查證。",
+          "supporting_passage": "編者非逐字摘述：防詐專區列舉免費贈品、實名／金流認證等詐騙手法，建議查證、不提供個資及金融帳戶，可撥165或至打詐儀錶板查證。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=33d6fe82-407d-4ac7-bf71-493116d124e3",
+          "claim": "2026年9月全國電信網路詐騙行政受理數與總財損。",
+          "supporting_passage": "編者非逐字摘述：刑事局公告引述165打詐儀錶板：2026年9月全國受理10,775件、總財損39.3億餘元；此為行政受理案件與彙總財損，不提供個人暴露分母。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.pbs.npa.gov.tw/ch/app/news/view?id=18740&module=wg183&serno=e027903f-5995-4aee-9431-973d11b0238c",
+          "claim": "宣稱特殊管道可追回遭詐款項、要求先付費或交金融資料可能造成二次詐騙。",
+          "supporting_passage": "編者非逐字摘述：前次2026-10-24直接讀取警察廣播電臺轉載刑事局提醒；本次直接開啟逾時，保留前次已讀來源與正文主張，列為下次複查項。",
+          "accessed_at": "2026-10-24",
+          "retrieval_method": "2026-10-24直接讀取官方頁；本次重開失敗，未以搜尋摘要補充新主張。"
+        },
+        {
+          "url": "https://www.npa.gov.tw/ch/app/artwebsite/view?module=artwebsite&id=1048&serno=e3ad2889-4dee-41cf-aef8-9b9d26dc6950",
+          "claim": "110是需要警方即時處理或人身安全受威脅時的求助入口。",
+          "supporting_passage": "編者非逐字摘述：警政署官方「110報案」頁提供治安事件及急難報案入口；一般防詐查詢另可用165。這是服務入口資訊，不是案件分類判定。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6005691/",
+          "claim": "實驗研究檢視情緒喚起與誤導性廣告購買意願。",
+          "supporting_passage": "編者非逐字摘述：研究納入116名65至85歲成人與115名30至40歲成人；高正向及負向情緒喚起下自陳購買意願高於低喚起組，年齡組間效果差異未達顯著；不是實際交易或台灣發生率。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4199235/",
+          "claim": "事前提醒研究對象為美國既有郵件詐騙受害者，結局是模擬電話詐騙反應。",
+          "supporting_passage": "編者非逐字摘述：895名既有受害者初始聯絡名單中511人接到模擬電話；事前提醒組較少毫無保留地接受，較多表現懷疑；測試只詢問收下資料包與帳單，沒有實際付款。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        }
+      ]
+    },
+    {
+      "id": "TW-19-009",
+      "change_kind": "歷史主題保真度與台灣實質再審",
+      "target_path": "locales/zh-TW/book/ch19/TW-19-009.md",
+      "before_sha256": "b4571fcca1a5013cd2cc019867477f99de81e59fac81db881cd5b315448b4092",
+      "after_sha256": "0028b7bf937b52d6873f5a410cff845cdb314b331950f6fcc1bdec3ff60e591d",
+      "prior_review_sha256": "c18fa949f547ff95ea3d25ef78a9117736c5745df32192700c33b10e1b6b491c",
+      "review_sha256": "62b540e8cb696a6548749a23c89d32796be63d8fe4eab20482defd29b41d3a40",
+      "topic_fidelity_assessment": "原題聚焦粉塵、噪音、化學品等職場暴露與健康檢查，不應只留在職一般健檢。台灣有雇主依法安排的在職健檢，也有列舉作業者特定離職後追蹤制度；把中國原作制度替換為台灣現行資格、申請與服務入口，保留長期健康追蹤需求。",
+      "taiwan_frequency_limits": "本次未找到有一致病例定義及全國職業病暴露分母的可靠統計；健檢人次、院所名單與申請服務數不能換算發生率或個人罹病機率。",
+      "source_ids": [
+        "oshact",
+        "oshhealth",
+        "ch19_health_2021",
+        "oshhistory",
+        "osha_health_exam_providers_2026q3",
+        "tw19_postemployment_rules_20261114",
+        "tw19_postemployment_bli_20261022"
+      ],
+      "retired_sources": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "職業醫學",
+          "職業安全衛生",
+          "勞動法與職災保險"
+        ]
+      },
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+          "claim": "職安法第20條規範到職與在職健康檢查、認可醫療機構及雇主負擔費用。",
+          "supporting_passage": "編者非逐字引文：直接核對現行第20條：檢查類型、認可醫療機構、雇主提供特殊作業經歷並負擔法定檢查費用。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060022",
+          "claim": "2026年修正規則分期施行；第17條一般健檢新週期於2028-01-01生效，第19條特殊健康檢查依指定作業辦理。",
+          "supporting_passage": "編者非逐字引文：法規資料庫標示2026-06-26修正及第29條施行日期：除列明延後條文外於2026-07-01施行，第17條自2028-01-01施行；第19條規範特殊健檢。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawOldVer.aspx?lnndate=20211222&lser=001&pcode=N0060022",
+          "claim": "新第17條施行前一般在職健檢沿用既有年齡與週期。",
+          "supporting_passage": "編者非逐字引文：沿用2026-10-25讀取之官方歷史版本，核對新制尚未生效時既有一般健檢週期。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接核對全國法規資料庫官方歷史法規版本；本次現行生效日期另以最新規則頁交叉核對。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48713/207079/207115/207278/post",
+          "claim": "職安法修正及配套規則採分期施行，完整法規施行日優先於摘要表格。",
+          "supporting_passage": "編者非逐字引文：沿用2026-10-25閱讀職安署施行說明；新制生效日以全國法規資料庫第29條為準。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取主管機關施行說明，並以完整現行法規核對分期日期。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48423/212782/post",
+          "claim": "健檢院所認可名單列出類別和期間，預約時須核對實際認可項目。",
+          "supporting_passage": "編者非逐字引文：沿用2026-10-25直接查閱第3梯次院所公告；名單按檢查類別及有效期間列示，不能以招牌推定所有項目都能做。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "直接讀取職安署公告及附件名單；提醒讀者以最新梯次和院所預約資訊為準。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060077",
+          "claim": "附表二列舉可申請健康追蹤檢查的作業，並規定連續加保一年、離職／變更作業／退保後申請及年限。",
+          "supporting_passage": "編者非逐字引文：第2條指向附表二；第4條規定曾從事列舉作業且加保年資連續滿一年者，離職、退保或變更作業後得申請；第5條原則一年一次；第6條須經保險人審查核發證明。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0110294.html",
+          "claim": "勞保局2026-10-22說明特定作業追蹤健檢資格、線上／書面申請與費用核付。",
+          "supporting_passage": "編者非逐字引文：公告說明16類特定有害作業、連續加保滿一年、離開有害作業後可申請；提供線上及書面方式，檢查費用由勞動部依規定核付。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        }
+      ]
+    },
+    {
+      "id": "TW-19-010",
+      "change_kind": "歷史主題保真度與台灣實質再審",
+      "target_path": "locales/zh-TW/book/ch19/TW-19-010.md",
+      "before_sha256": "e81e1c53871053cf45d6e504cf506d85c15c69a7a0d2cbc805ce90ec38394770",
+      "after_sha256": "d0dcb9d83873f8f8743195607b456b8bf1b05d281116c56bc5da119d67c03f84",
+      "prior_review_sha256": "4cbdc7e552cfd66c4a323937ec19c17b567373483318693d17095bcd9ab91cca",
+      "review_sha256": "4672ccb0a76b7575d895f01a210b962d272c766ead41f79c9837ac79a693edc2",
+      "topic_fidelity_assessment": "原作題目核心是長期粉塵、噪音與化學暴露可能造成健康損害及工作場所防護，而不只眼前立即危險。台灣同樣有這些暴露與職業病風險；保留立即避難內容的同時補回長期控制、健康評估及申訴路徑，不沿用原作中國法定拒工文字。",
+      "taiwan_frequency_limits": "2026年前3季全產業重大職災死亡193人、營造業102人，其中營造業死亡事故約62%屬墜落；行政死亡統計無工作者或工時分母。人造石產業2022至2026年群聚調查訪視60家、305人健檢、4名疑似工作相關肺部異常，樣本非全國代表性。未找到全台職業病一致病例定義及暴露分母。",
+      "source_ids": [
+        "oshact",
+        "hpa_emergency",
+        "osha_inspection_agency_directory_2026",
+        "osha_scaffold_safety_2026",
+        "osha_confined_space_hazards_2026",
+        "osha_high_temperature_work_2026",
+        "osha_2026q3_fatality_stats",
+        "tw19_silica_cluster_20261028",
+        "tw19_occupational_disease_diagnosis_faq",
+        "tw19_occupational_medicine_hospitals_20261020"
+      ],
+      "retired_sources": [
+        {
+          "id": "osha_2026h1_fatality_stats",
+          "replacement_ids": [
+            "osha_2026q3_fatality_stats"
+          ],
+          "reason": "本次已公布並直接核對2026年前3季官方統計，期間較長且更新；上半年來源保留在runtime與歷史版本，不再作本文現行統計引用。",
+          "prior_source_sha256": "210d3bbfafceab6e0a411e28c3e33141f2f003c226f1902603a062c29ec59bc4",
+          "article_id": "TW-19-010",
+          "current_source_object_unchanged": true
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "職業醫學",
+          "職業安全衛生與勞動檢查",
+          "勞動法",
+          "急救"
+        ]
+      },
+      "source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+          "claim": "職安法第37條第2項限定死亡、罹災3人以上、至少1人需住院治療及中央主管機關公告的職災，由雇主於8小時內通報勞動檢查機構；另有現場保全義務。",
+          "supporting_passage": "編者非逐字引文：第37條第2項列出死亡、罹災人數3人以上、至少1人罹災且需住院治療，以及中央主管機關公告的其他職災；發生這些職災時雇主須於8小時內通報勞動檢查機構。依第4項，除必要急救與搶救外，未經司法機關或勞動檢查機構許可，雇主不得移動或破壞現場。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-2704-85748-1.html",
+          "claim": "心臟病或中風警訊應立即撥119並依衛福部說明求援。",
+          "supporting_passage": "編者非逐字引文：現行衛福部頁面列心臟病與中風警訊及119求援建議；頁面標題為寒流健康提醒，本文僅援引急症警訊與求援。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/215089/?cprint=pt",
+          "claim": "2026年前3季全產業重大職災死亡、營造業死亡及營造業墜落比例。",
+          "supporting_passage": "編者非逐字引文：職安署新聞稿：截至2026-09-30全產業193人、營造業102人；營造業死亡事故中約62%屬墜落。這些行政死亡數無工作者或工時分母。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48331/48333/48341/51482/post",
+          "claim": "依工作場所所在地查找勞動檢查機構及其責任區域。",
+          "supporting_passage": "編者非逐字引文：職安署2026-09-02更新的一覽表列檢查機構、電話與責任區域。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48129/48177/48181/49941/",
+          "claim": "施工架組配、拆除及使用需要依規範設置防護並管理。",
+          "supporting_passage": "編者非逐字引文：職安署施工架安全專區提供施工架安全檢查重點及注意事項；頁面指出組配、拆除與使用屬高風險作業。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48207/48299/48301/50484/?cprint=pt",
+          "claim": "局限空間可能缺氧或有毒氣體，感官無法可靠辨識，未防護救援可能增加傷亡。",
+          "supporting_passage": "編者非逐字引文：職安署列下水道、汙水槽、坑井、塔槽等例，指出缺氧或毒氣及救援受限造成多人傷亡風險。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48207/48309/48313/50517/",
+          "claim": "戶外高溫法規要求雇主依熱風險採取遮陽降溫、飲水、休息及健康管理等措施。",
+          "supporting_passage": "編者非逐字引文：職安署頁列設置降溫及陰涼休息處、提供適當飲料、調整作業時間、增加巡視、健康管理及熱適應措施。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48417/48419/214823/post",
+          "claim": "2022至2026年台灣人造石產業群聚調查的工作場所訪視、受檢人數與疑似異常人數。",
+          "supporting_passage": "編者非逐字引文：2026-10-28職安署公告：訪視60家事業單位，協助305名勞工接受粉塵特殊健檢，4人經評估有疑似工作相關肺部異常；屬特定產業群聚調查。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48363/133486/133489/133536/post",
+          "claim": "職業病診斷需要職業醫學專科醫師綜合工作經歷、暴露、健檢及病史評估。",
+          "supporting_passage": "編者非逐字引文：職安署FAQ列出既往作業經歷、職業暴露、歷年健檢、生活史及家族病史，並指向認可職業傷病診治門診。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        },
+        {
+          "url": "https://www.osha.gov.tw/48110/48363/133456/133462/133511/",
+          "claim": "職安署職業傷病專責與網絡醫院查詢入口及服務範圍。",
+          "supporting_passage": "編者非逐字引文：職安署2026-10-20頁面列全台專責及網絡醫院，說明可提供職業傷病診斷、治療、復健與轉介。",
+          "accessed_at": "2026-11-14",
+          "retrieval_method": "直接閱讀官方原始頁面或研究全文，核對其適用範圍及具體主張；不以搜尋摘要代替。"
+        }
+      ]
+    }
+  ],
+  "new_source_ids": [
+    "tw17_fraud_arousal_kircanski_2018",
+    "tw17_fraud_forewarning_scheibe_2014",
+    "tw19_postemployment_rules_20261114",
+    "tw19_postemployment_bli_20261022",
+    "osha_2026q3_fatality_stats",
+    "tw19_silica_cluster_20261028",
+    "tw19_occupational_disease_diagnosis_faq",
+    "tw19_occupational_medicine_hospitals_20261020"
+  ],
+  "source_records_reused": [
+    "oshact",
+    "oshhealth",
+    "ch19_health_2021",
+    "oshhistory",
+    "osha_health_exam_providers_2026q3",
+    "ch17_165",
+    "ch17_postfraud",
+    "ch17_cib_statistics_20261014",
+    "ch17_npa_recovery_20251102",
+    "violence_npa_110",
+    "hpa_emergency",
+    "osha_inspection_agency_directory_2026",
+    "osha_scaffold_safety_2026",
+    "osha_confined_space_hazards_2026",
+    "osha_high_temperature_work_2026"
+  ],
+  "source_records_retired": [
+    {
+      "id": "osha_2026h1_fatality_stats",
+      "replacement_id": "osha_2026q3_fatality_stats",
+      "article_id": "TW-19-010",
+      "reason": "更新至已公布的2026年前3季官方統計；舊來源物件與歷史SHA保留。",
+      "prior_source_sha256": "210d3bbfafceab6e0a411e28c3e33141f2f003c226f1902603a062c29ec59bc4"
+    }
+  ],
+  "counts_before": {
+    "runtime_items": 326,
+    "runtime_sources": 1268,
+    "source_registry": 1351,
+    "review_rechecks": 384,
+    "coverage_json_files": 624,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "runtime_items": 326,
+    "runtime_sources": 1276,
+    "source_registry": 1359,
+    "review_rechecks": 387,
+    "coverage_json_files": 626,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "topic": "2026年9月全國電信網路詐騙受理數與財損",
+      "value": {
+        "cases": 10775,
+        "total_loss_twd_over": 3930000000
+      },
+      "unit": "受理件數／新臺幣總財損",
+      "period": "2026-09-01至2026-09-30",
+      "geographic_scope": "台灣全國",
+      "population": "165打詐儀錶板所列警方受理的電信網路詐騙案件",
+      "numerator": "10,775件行政受理案件；總財損新臺幣39.3億餘元",
+      "denominator": null,
+      "event_definition": "警方行政受理的電信網路詐騙案件；公告未提供可配對個人暴露人口",
+      "data_type": "行政受理案件與財損彙總",
+      "source_ids": [
+        "ch17_cib_statistics_20261014"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "不是獨立被害人數、全部實際事件、長者專屬發生率或個人機率；無暴露分母。"
+    },
+    {
+      "topic": "情緒喚起與誤導性廣告自陳購買意願",
+      "value": {
+        "older_adults_n": 116,
+        "older_age_years": "65–85",
+        "younger_adults_n": 115,
+        "younger_age_years": "30–40",
+        "finding": "高正向及負向情緒喚起條件的自陳購買意願高於低喚起條件；年齡組效果差異未達顯著"
+      },
+      "unit": "實驗參與者與自陳量表結果",
+      "period": "2018年發表；研究資料收集期間未在本篇另行估計",
+      "geographic_scope": "海外實驗研究，非台灣代表性樣本",
+      "population": "符合條件並完成實驗的65至85歲與30至40歲成人",
+      "numerator": "參與實驗人數231；結局為誤導廣告可信度和購買意願評分",
+      "denominator": "研究樣本，不是台灣居民或詐騙暴露母群",
+      "event_definition": "實驗誘發情緒後，對FTC標記的誤導廣告自評可信度與購買意願",
+      "data_type": "隨機分派實驗；非實際詐騙案件或受害統計",
+      "source_ids": [
+        "tw17_fraud_arousal_kircanski_2018"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "不能推估台灣盛行率、個人受騙機率或實際財損；不支持年長者必然更易受騙，也未測試文中建議句。"
+    },
+    {
+      "topic": "事前提醒與模擬電話詐騙反應",
+      "value": {
+        "initial_prior_victim_contacts": 895,
+        "mock_scam_reached": 511,
+        "finding": "事前提醒組直接無保留接受比例較低，懷疑式接受比例較高"
+      },
+      "unit": "既有美國郵件詐騙受害者與模擬回應分類",
+      "period": "2014年發表；警示後2或4週進行模擬聯絡",
+      "geographic_scope": "美國研究",
+      "population": "曾遭郵件詐騙並被研究團隊聯絡的受試者；樣本含大量年長者但無完整人口資料",
+      "numerator": "511人完成模擬詐騙反應測試；原始名單895人",
+      "denominator": "受訪受害者名單，不是一般居民或台灣暴露母群",
+      "event_definition": "是否接受模擬電話所提議寄送的資料包／帳單及受試者回應類別",
+      "data_type": "田野實驗，行為代理結果",
+      "source_ids": [
+        "tw17_fraud_forewarning_scheibe_2014"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "研究沒有要求或觀察實際付款，不能等同避免實際財損、推估台灣效果或證明特定拒絕句有效。"
+    },
+    {
+      "topic": "2026年前3季台灣重大職災死亡",
+      "value": {
+        "all_industry_deaths": 193,
+        "construction_deaths": 102,
+        "construction_death_accidents_fall_share_percent": 62
+      },
+      "unit": "死亡人數；營造業死亡事故成因比例",
+      "period": "2026-01-01至2026-09-30",
+      "geographic_scope": "台灣全國",
+      "population": "職安署重大職災死亡行政統計所列各產業及營造業案件",
+      "numerator": "全產業193人死亡、營造業102人；營造業死亡事故約62%屬墜落",
+      "denominator": null,
+      "event_definition": "主管機關重大職災死亡行政統計；墜落比例的範圍為營造業死亡事故",
+      "data_type": "行政通報／統計彙總",
+      "source_ids": [
+        "osha_2026q3_fatality_stats"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "沒有工作者人數或工時分母，不能換算個人事故率；62%不是全產業墜落比例或個人機率。"
+    },
+    {
+      "topic": "人造石產業粉塵暴露群聚調查",
+      "value": {
+        "workplaces_visited": 60,
+        "workers_examined": 305,
+        "suspected_work_related_lung_abnormalities": 4
+      },
+      "unit": "事業單位／受檢勞工／疑似異常人數",
+      "period": "2022年至2026年（公告於2026-10-28）",
+      "geographic_scope": "台灣人造石產業特定群聚調查",
+      "population": "被調查選取的人造石事業單位與粉塵作業勞工",
+      "numerator": "4名經評估有疑似工作相關肺部健康異常",
+      "denominator": "305名接受特殊健檢者；非全產業暴露人數",
+      "event_definition": "主管機關群聚調查中經評估的疑似與工作相關肺部健康異常",
+      "data_type": "特定產業群聚調查，非抽樣盛行率",
+      "source_ids": [
+        "tw19_silica_cluster_20261028"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "不計算或宣稱4/305為台灣盛行率；樣本非代表性全國抽樣，不能估算一般工作者或個人風險。"
+    }
+  ],
+  "professional_review_status": "本批三篇均為AI輔助來源再核對，未取得正式獨立專業審閱；職業醫學、職安、勞動法及防詐／高齡金融審閱仍待取得。",
+  "reader_copy_cleanup": "未將批次摘要、SHA、AI狀態、管理說明或內部審閱流程寫入讀者正文；正文保留會影響讀者理解統計與研究適用範圍的限制。"
+}
