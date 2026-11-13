@@ -48,7 +48,8 @@ def check_navigation(page, context, url, review):
     page.goto(url+'index.html#TW-19-009',wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     health=page.locator('#TW-19-009')
-    assert health.locator('h3').count()==5 and '2028-01-01' in health.inner_text()
+    assert health.locator('h3').count()==6 and '2028-01-01' in health.inner_text()
+    assert health.locator('h3').filter(has_text='離開特定有害作業後的追蹤健檢').count()==1
     assert health.locator('a[href*="LawOldVer.aspx"]').count()>=1
     page.locator('#q').fill('191,000')
     assert page.locator('#TW-19-018').count()==1

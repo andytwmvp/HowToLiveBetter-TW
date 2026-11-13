@@ -26,7 +26,11 @@ class Chapter17Tests(unittest.TestCase):
     self.assertEqual(runtime[key]['body'],raw.decode('utf8'))
     self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
     self.assertIn('AI',review['reviewer'])
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(runtime[key])),5)
+    # Subsequent substantive rechecks may add a reader-facing section while
+    # preserving the fixed ID and original review history.
+    expected_headings=sum(line.startswith('## ') for line in runtime[key]['body'].splitlines())
+    self.assertGreaterEqual(expected_headings,5)
+    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(runtime[key])),expected_headings)
     self.assertTrue(set(runtime[key]['source_ids']).issubset(sources))
     self.assertEqual({s['url'] for s in review['source_checks']},{sources[s]['url'] for s in runtime[key]['source_ids']})
  def test_taiwan_law_and_service_clarifications(self):
