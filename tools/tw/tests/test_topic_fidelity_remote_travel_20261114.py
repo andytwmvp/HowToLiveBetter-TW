@@ -121,12 +121,21 @@ class RemoteTravelTopicFidelityTests(unittest.TestCase):
 
     def test_progress_snapshot_is_bound_to_base_and_current_artifacts(self):
         coverage = read("localization/tw-edition/coverage.json")
+        later_batch = read("localization/topic-fidelity-eldercare-prepayment-20261114.json")
         self.assertEqual(self.batch["counts_before"]["runtime_sources"], 1276)
         self.assertEqual(self.batch["counts_before"]["review_rechecks"], 387)
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["review_rechecks"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(self.batch["counts_after"]["coverage_json_files"], coverage["json_files_checked"])
-        self.assertEqual(self.batch["counts_after"]["registry_sources"], coverage["registry_sources"])
+        self.assertEqual(self.batch["counts_after"]["runtime_sources"], later_batch["counts_before"]["runtime_sources"])
+        self.assertEqual(self.batch["counts_after"]["review_rechecks"], later_batch["counts_before"]["review_rechecks"])
+        self.assertEqual(self.batch["counts_after"]["coverage_json_files"], later_batch["counts_before"]["coverage_json_files"])
+        self.assertEqual(self.batch["counts_after"]["registry_sources"], later_batch["counts_before"]["source_registry"])
+        self.assertEqual(later_batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
+        self.assertEqual(later_batch["counts_after"]["review_rechecks"], len(self.register["substantive_rechecks"]))
+        self.assertEqual(later_batch["counts_after"]["coverage_json_files"], coverage["json_files_checked"])
+        self.assertEqual(later_batch["counts_after"]["source_registry"], coverage["registry_sources"])
+        self.assertEqual(
+            later_batch["counts_after"]["runtime_sources"],
+            later_batch["counts_before"]["runtime_sources"] + len(later_batch["new_source_ids"]),
+        )
         self.assertFalse(coverage["publication_ready"])
 
 

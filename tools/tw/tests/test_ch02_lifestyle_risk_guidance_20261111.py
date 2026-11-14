@@ -21,6 +21,7 @@ TOPIC_FIDELITY_BATCH = "localization/ch02-topic-fidelity-recheck-20261112.json"
 DECHINA_RECHECK_BATCH = "localization/topic-fidelity-dechina-recheck-20261112.json"
 CURRENT_RECHECK_BATCH = "localization/topic-fidelity-fraud-osh-recheck-20261114.json"
 REMOTE_TRAVEL_RECHECK_BATCH = "localization/topic-fidelity-remote-travel-20261114.json"
+ELDERCARE_RECHECK_BATCH = "localization/topic-fidelity-eldercare-prepayment-20261114.json"
 ITEM_IDS = ("TW-02-028", "TW-02-030", "TW-02-032", "TW-02-039", "TW-02-042")
 PRIOR_DRAFT_HASHES = {
     "TW-02-028": "dd7f36a797b897618d4c266c88650ae24a132036b00e96733a97a80dcc848e21",
@@ -91,13 +92,15 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         dechina_batch = read_json(DECHINA_RECHECK_BATCH)
         current_recheck_batch = read_json(CURRENT_RECHECK_BATCH)
         remote_travel_batch = read_json(REMOTE_TRAVEL_RECHECK_BATCH)
+        eldercare_recheck_batch = read_json(ELDERCARE_RECHECK_BATCH)
         self.assertEqual(
             newly_added_ids,
             set(self.batch["new_source_ids"])
             | set(later_batch["new_source_ids"])
             | set(dechina_batch["new_source_ids"])
             | set(current_recheck_batch["new_source_ids"])
-            | set(remote_travel_batch["new_source_ids"]),
+            | set(remote_travel_batch["new_source_ids"])
+            | set(eldercare_recheck_batch["new_source_ids"]),
         )
         bundled = {row[0]: row for row in self.bundle["sources"]}
         self.assertEqual(set(bundled), set(self.batch["new_source_ids"]))
@@ -208,6 +211,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         current_recheck_rows = {row["id"]: row for row in current_recheck_batch["items"]}
         remote_travel_batch = read_json(REMOTE_TRAVEL_RECHECK_BATCH)
         remote_travel_rows = {row["id"]: row for row in remote_travel_batch["items"]}
+        eldercare_batch = read_json(ELDERCARE_RECHECK_BATCH)
+        eldercare_rows = {row["id"]: row for row in eldercare_batch["items"]}
         rechecks = {
             row["id"]: row for row in self.register["substantive_rechecks"]
             if row["id"] in {"TW-02-025", "TW-02-047"} and row["reviewed_at"] == "2026-11-12"
@@ -258,6 +263,19 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 self.assertEqual(record["after_sha256"], current_sha)
                 self.assertEqual(review["target_sha256"], current_sha)
                 self.assertEqual(review["reviewed_at"], remote_travel_batch["reviewed_at"])
+                self.assertEqual(current["source_ids"], record["source_ids"])
+            elif item_id in eldercare_rows:
+                current = current_runtime[item_id]
+                record = eldercare_rows[item_id]
+                review = read_json(f"localization/reviews/{item_id}.json")
+                current_sha = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
+                self.assertEqual(
+                    hashlib.sha256(old["body"].encode("utf-8")).hexdigest(),
+                    record["before_sha256"],
+                )
+                self.assertEqual(record["after_sha256"], current_sha)
+                self.assertEqual(review["target_sha256"], current_sha)
+                self.assertEqual(review["reviewed_at"], eldercare_batch["reviewed_at"])
                 self.assertEqual(current["source_ids"], record["source_ids"])
             else:
                 self.assertEqual(current_runtime[item_id], old)
@@ -313,6 +331,11 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 expected["sources"] = current_runtime[item_id]["source_ids"]
                 expected["verified_at"] = remote_travel_batch["reviewed_at"]
                 self.assertEqual(self.manifest[item_id], expected)
+            elif item_id in eldercare_rows:
+                expected = dict(old)
+                expected["sources"] = current_runtime[item_id]["source_ids"]
+                expected["verified_at"] = eldercare_batch["reviewed_at"]
+                self.assertEqual(self.manifest[item_id], expected)
             elif item_id not in ITEM_IDS:
                 self.assertEqual(self.manifest[item_id], old)
         self.assertEqual(
@@ -321,7 +344,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
             + len(rechecks)
             + len(dechina_items)
             + len(current_recheck_rows)
-            + len(remote_travel_rows),
+            + len(remote_travel_rows)
+            + len(eldercare_rows),
         )
         self.assertEqual(set(rechecks), {"TW-02-025", "TW-02-047"})
         self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))

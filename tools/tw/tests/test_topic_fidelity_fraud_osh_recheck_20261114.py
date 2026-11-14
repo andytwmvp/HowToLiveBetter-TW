@@ -132,8 +132,9 @@ class TopicFidelityFraudOshRecheckTests(unittest.TestCase):
         self.assertIn("每一題都要重新判斷", policy)
         # This batch snapshot is immutable. Reconcile it with the next append-only
         # batch, then compare the live state with that later batch's recorded result.
-        later_batch = read("localization/topic-fidelity-remote-travel-20261114.json")
-        later_before = later_batch["counts_before"]
+        remote_travel_batch = read("localization/topic-fidelity-remote-travel-20261114.json")
+        eldercare_batch = read("localization/topic-fidelity-eldercare-prepayment-20261114.json")
+        later_before = remote_travel_batch["counts_before"]
         for old_key, later_key in (
             ("runtime_items", "runtime_items"),
             ("runtime_sources", "runtime_sources"),
@@ -144,10 +145,21 @@ class TopicFidelityFraudOshRecheckTests(unittest.TestCase):
             ("publication_ready", "publication_ready"),
         ):
             self.assertEqual(self.batch["counts_after"][old_key], later_before[later_key])
-        later_counts = later_batch["counts_after"]
+        eldercare_before = eldercare_batch["counts_before"]
+        for remote_key, eldercare_key in (
+            ("runtime_items", "runtime_items"),
+            ("runtime_sources", "runtime_sources"),
+            ("registry_sources", "source_registry"),
+            ("review_rechecks", "review_rechecks"),
+            ("coverage_json_files", "coverage_json_files"),
+            ("publication_completed_entries", "publication_completed_entries"),
+            ("publication_ready", "publication_ready"),
+        ):
+            self.assertEqual(remote_travel_batch["counts_after"][remote_key], eldercare_before[eldercare_key])
+        later_counts = eldercare_batch["counts_after"]
         self.assertEqual(later_counts["runtime_items"], len(self.runtime["items"]))
         self.assertEqual(later_counts["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(later_counts["registry_sources"], audit_drafts()["registry_sources"])
+        self.assertEqual(later_counts["source_registry"], audit_drafts()["registry_sources"])
         self.assertEqual(later_counts["review_rechecks"], len(self.register["substantive_rechecks"]))
         self.assertEqual(later_counts["coverage_json_files"], audit_drafts()["json_files_checked"])
         self.assertFalse(self.batch["counts_after"]["publication_ready"])
