@@ -9790,12 +9790,15 @@
       "sources": [
         "ch17_reverse",
         "ch17_165",
-        "ch17_civil",
         "property_bot",
         "property_landcount",
-        "ch17_postfraud"
+        "ch17_postfraud",
+        "ch17_mohw_reverse",
+        "ch17_reverse_mortgage_scam_case_20260127",
+        "ch14_financial_law",
+        "foi_dispute_process_current"
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-15",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "除了保險公司的住房反向抵押養老保險，其他「以房養老」都別碰，絕不抵押房子去買理財",

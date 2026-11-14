@@ -283,6 +283,7 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             source_id
             for row in self.later_rechecks
             for source_id in set(row["source_ids"]) - set(row["previous_source_ids"])
+            if source_id not in base_sources
         }
         topic_fidelity_batch = json.loads(
             (ROOT / "localization/topic-fidelity-dechina-recheck-20261112.json").read_text(encoding="utf-8")
