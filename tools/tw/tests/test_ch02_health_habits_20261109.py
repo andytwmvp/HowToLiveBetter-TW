@@ -17,6 +17,8 @@ DUE = "2027-02-09"
 ITEM_IDS = ("TW-02-007", "TW-02-010", "TW-02-011", "TW-02-012", "TW-02-013")
 BATCH_PATH = "localization/ch02-health-habits-20261109.json"
 SOURCE_PATH = "localization/tw-edition/sources/ch02-health-habits-20261109.json"
+ORAL_CARE_RECHECK_PATH = "localization/topic-fidelity-oral-care-recheck-20261115.json"
+ORAL_CARE_SOURCE_PATH = "localization/tw-edition/sources/ch02-oral-care-topic-fidelity-20261115.json"
 OLD_DRAFT_HASHES = {
     "TW-02-007": "c2ef0059dd98184eb06c49ffdc5e3935575842a20a8c4e82ec34739bba177a67",
     "TW-02-010": "224ee4ecf047ce6a16b46f6a5643e2726da62bfdfd5787db9c11a99883625e16",
@@ -60,6 +62,11 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         self.assertFalse(self.batch["professional_review"]["obtained"])
 
         bundled_sources = {row[0]: row for row in self.bundle["sources"]}
+        oral_recheck = read_json(ORAL_CARE_RECHECK_PATH)
+        oral_item = oral_recheck["items"][0]
+        oral_sources = {
+            row[0]: row for row in read_json(ORAL_CARE_SOURCE_PATH)["sources"]
+        }
         for item_id in ITEM_IDS:
             with self.subTest(item_id=item_id):
                 item = self.items[item_id]
@@ -69,22 +76,31 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
                 raw = (ROOT / item["target_path"]).read_bytes()
                 body = raw.decode("utf-8")
                 digest = hashlib.sha256(raw).hexdigest()
+                was_rechecked = item_id == "TW-02-010"
+                expected_review_date = oral_recheck["reviewed_at"] if was_rechecked else DATE
+                expected_due_date = oral_recheck["review_due_at"] if was_rechecked else DUE
                 self.assertEqual(manifest["status"], "verified")
                 self.assertEqual(manifest["treatment"], "taiwan_independent_rewrite")
-                self.assertEqual(manifest["verified_at"], DATE)
+                self.assertEqual(manifest["verified_at"], expected_review_date)
                 self.assertEqual(manifest["target_path"], item["target_path"])
                 self.assertEqual(manifest["sources"], item["source_ids"])
                 self.assertEqual(item["body"], body)
                 self.assertEqual(item["review_status"], "source_checked")
-                self.assertEqual((item["reviewed_at"], item["review_due_at"]), (DATE, DUE))
+                self.assertEqual((item["reviewed_at"], item["review_due_at"]), (expected_review_date, expected_due_date))
                 self.assertEqual(review["target_sha256"], digest)
                 self.assertEqual(review["source_reviewed_sha256"], digest)
                 self.assertIsNone(batch["before_sha256"])
-                self.assertEqual(batch["after_sha256"], digest)
+                if was_rechecked:
+                    self.assertEqual(batch["after_sha256"], oral_item["before_sha256"])
+                    self.assertEqual(oral_item["after_sha256"], digest)
+                    self.assertTrue(set(batch["source_ids"]).issubset(item["source_ids"]))
+                    self.assertEqual(set(item["source_ids"]) - set(batch["source_ids"]), set(oral_recheck["new_source_ids"]))
+                else:
+                    self.assertEqual(batch["after_sha256"], digest)
+                    self.assertEqual(batch["source_ids"], item["source_ids"])
                 self.assertEqual(review["source_ids"], item["source_ids"])
-                self.assertEqual(batch["source_ids"], item["source_ids"])
-                self.assertEqual(review["reviewed_at"], DATE)
-                self.assertEqual(review["review_due_at"], DUE)
+                self.assertEqual(review["reviewed_at"], expected_review_date)
+                self.assertEqual(review["review_due_at"], expected_due_date)
                 self.assertTrue(review["professional_review"]["required"])
                 self.assertFalse(review["professional_review"]["obtained"])
                 self.assertIsNone(review["prior_structured_draft_sha256"])
@@ -99,11 +115,13 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
                 self.assertEqual(review_urls, source_urls)
                 self.assertEqual({row["source_id"] for row in review["source_checks"]}, set(item["source_ids"]))
                 for sid in item["source_ids"]:
-                    self.assertIn(sid, bundled_sources)
-                    _, title, url, supports = bundled_sources[sid]
+                    source_bundle_row = bundled_sources.get(sid, oral_sources.get(sid))
+                    self.assertIsNotNone(source_bundle_row, sid)
+                    _, title, url, supports = source_bundle_row
                     source = self.sources[sid]
                     self.assertEqual((source["title"], source["url"], source["supports"]), (title, url, supports))
-                    self.assertEqual(source["accessed_at"], DATE)
+                    expected_access_date = oral_recheck["reviewed_at"] if sid in oral_recheck["new_source_ids"] else DATE
+                    self.assertEqual(source["accessed_at"], expected_access_date)
                 self.assertNotRegex(
                     body,
                     r"(批次摘要|AI協助|本次.{0,12}(?:審查|再審|核對)|CI\s*(?:成功|通過)|PR\s*#\d+|專業審閱仍待|待專業審閱|fork管理)",
@@ -151,7 +169,12 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         base_ids = [row["id"] for row in base_register["substantive_rechecks"]]
         current_ids = [row["id"] for row in self.register["substantive_rechecks"]]
         self.assertEqual(current_ids[: len(base_ids)], base_ids)
-        self.assertTrue(set(ITEM_IDS).isdisjoint(current_ids))
+        self.assertEqual(set(ITEM_IDS) & set(current_ids), {"TW-02-010"})
+        oral_rechecks = [
+            row for row in self.register["substantive_rechecks"]
+            if row["reviewed_at"] == "2026-11-15" and row["id"] in ITEM_IDS
+        ]
+        self.assertEqual([row["id"] for row in oral_rechecks], ["TW-02-010"])
         topic_rechecks = [
             row for row in self.register["substantive_rechecks"]
             if row["reviewed_at"] == "2026-11-12" and row["id"] in {"TW-02-025", "TW-02-047"}

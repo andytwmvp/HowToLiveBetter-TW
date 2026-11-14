@@ -117,6 +117,12 @@ class OralCareTopicFidelityTests(unittest.TestCase):
         self.assertEqual(runtime_urls, review_urls)
         self.assertEqual(set(self.batch["new_source_ids"]), NEW_SOURCE_IDS)
         self.assertEqual({row[0] for row in source_rows}, NEW_SOURCE_IDS)
+        source_records = {row[0]: row for row in source_rows}
+        for source_id, row in source_records.items():
+            self.assertEqual(
+                row,
+                [self.sources[source_id][key] for key in ("id", "title", "url", "supports")],
+            )
         self.assertEqual(set(self.item["source_ids"][-2:]), NEW_SOURCE_IDS)
         self.assertIn("https://doi.org/10.1016/j.jdent.2026.106789", runtime_urls)
         self.assertIn("https://pmc.ncbi.nlm.nih.gov/articles/PMC7133541/", runtime_urls)
