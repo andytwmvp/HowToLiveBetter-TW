@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "chapter": 26,
+  "batch": "ch26-stream-licensing-recheck-20261115",
+  "sources": [
+    [
+      "ch26_broadcast_act_20261115",
+      "廣播電視法（第2條、第10條）",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=P0050001",
+      "現行第2條第1、2款以無線電播送定義廣播與電視；第10條規定經營該法所稱廣播、電視事業須取得許可及執照。"
+    ],
+    [
+      "ch26_cable_act_20261115",
+      "有線廣播電視法（第2條、第5條）",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=P0050008",
+      "現行第2條第1款界定有線廣播電視服務；第5條規定經營該法所稱服務須經中央主管機關許可並取得經營許可執照。"
+    ],
+    [
+      "ch26_satellite_act_20261115",
+      "衛星廣播電視法（第2條、第6條）",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=P0050013",
+      "現行第2條界定衛星廣播電視及相關事業型態；第6條規定衛星廣播電視事業之經營須申請並取得執照。法規沿革及各條文日期另見本批機器可追溯法律狀態評估。"
+    ],
+    [
+      "ch26_ncc_entry_20261115",
+      "國家通訊傳播委員會（官方業務入口）",
+      "https://www.ncc.gov.tw/",
+      "國家通訊傳播委員會官方入口，導向通訊傳播業務申辦及聯絡資料；僅供讀者查詢主管機關服務入口，不用作判定個別服務是否須取得許可的法律依據。"
+    ]
+  ]
+}

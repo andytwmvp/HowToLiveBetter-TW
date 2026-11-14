@@ -174,6 +174,7 @@ class OralCareTopicFidelityTests(unittest.TestCase):
         self.assertEqual(after["publication_completed_entries"], before["publication_completed_entries"])
         self.assertFalse(after["publication_ready"])
 
+        next_batch = read("localization/topic-fidelity-stream-licensing-recheck-20261115.json")
         audit = audit_drafts()
         coverage = read("localization/tw-edition/coverage.json")
         publication = publication_report()
@@ -190,7 +191,8 @@ class OralCareTopicFidelityTests(unittest.TestCase):
             "publication_completed_entries": publication["publication_completed_entries"],
             "publication_ready": publication["publication_ready"],
         }
-        self.assertEqual(after, actual)
+        self.assertEqual(after, next_batch["counts_before"])
+        self.assertEqual(next_batch["counts_after"], actual)
         self.assertEqual(coverage, audit)
         self.assertFalse(publication["publication_ready"])
 
