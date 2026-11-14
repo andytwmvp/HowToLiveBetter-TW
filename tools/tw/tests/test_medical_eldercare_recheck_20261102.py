@@ -21,6 +21,7 @@ IDS = {
     'TW-24-003', 'TW-16-002', 'TW-24-004',
 }
 BATCH = 'localization/medical-eldercare-recheck-20261102.json'
+CURRENT_RECHECK_BATCH = 'localization/topic-fidelity-eldercare-prepayment-20261114.json'
 
 
 def load(path):
@@ -40,6 +41,8 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
         cls.manifest = {entry['id']: entry for entry in load('localization/manifest.json')['entries']}
         cls.register = load('localization/retroactive-review-register-20261019.json')
         cls.batch = load(BATCH)
+        cls.current_batch = load(CURRENT_RECHECK_BATCH)
+        cls.current_batch_items = {row['id']: row for row in cls.current_batch['items']}
         cls.correction = load('localization/medical-eldercare-correction-20261103.json')
         cls.following_batch = load('localization/ch13-p0-emergency-recheck-20261103.json')
         cls.rows = {}
@@ -66,14 +69,25 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
             self.assertEqual(body_path.read_text(encoding='utf-8'), item['body'])
             self.assertEqual(review['jurisdiction'], 'TW')
             self.assertEqual(review['reviewed_at'], row['reviewed_at'])
-            expected_due = '2027-02-03' if review['reviewed_at'] == '2026-11-03' else DUE
+            expected_due = {
+                '2026-11-02': DUE,
+                '2026-11-03': '2027-02-03',
+                '2026-11-14': '2027-02-14',
+            }[review['reviewed_at']]
             self.assertEqual(review['review_due_at'], expected_due)
             self.assertEqual(review['target_sha256'], body_sha)
             self.assertEqual(review['source_reviewed_sha256'], body_sha)
-            self.assertEqual(row['before_sha256'], history['before_body_sha256'])
-            self.assertEqual(row['after_sha256'], body_sha)
-            self.assertEqual(row['prior_revision'], BASE)
-            self.assertEqual(row['prior_review_sha256'], history['prior_review_sha256'])
+            if item_id in self.current_batch_items:
+                current_record = self.current_batch_items[item_id]
+                self.assertEqual(row['before_sha256'], current_record['before_sha256'])
+                self.assertEqual(row['after_sha256'], current_record['after_sha256'])
+                self.assertEqual(row['prior_revision'], self.current_batch['baseline_main_sha'])
+                self.assertEqual(row['prior_review_sha256'], current_record['prior_review_sha256'])
+            else:
+                self.assertEqual(row['before_sha256'], history['before_body_sha256'])
+                self.assertEqual(row['after_sha256'], body_sha)
+                self.assertEqual(row['prior_revision'], BASE)
+                self.assertEqual(row['prior_review_sha256'], history['prior_review_sha256'])
             self.assertEqual(row['status'], 'ai_source_rechecked_professional_pending')
             self.assertEqual(self.manifest[item_id]['sources'], item['source_ids'])
             self.assertEqual(self.manifest[item_id]['verified_at'], review['reviewed_at'])
@@ -135,7 +149,10 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
         )
         self.assertEqual(self.batch['source_counts']['references_retired'], 8)
         for item_id, row in self.rows.items():
-            previous = next(item for item in old_runtime['items'] if item['id'] == item_id)
+            prior_runtime = json.loads(subprocess.check_output(
+                ['git', 'show', f"{row['prior_revision']}:localization/tw-edition/runtime.json"], cwd=ROOT
+            ))
+            previous = next(item for item in prior_runtime['items'] if item['id'] == item_id)
             self.assertEqual(row['previous_source_ids'], previous['source_ids'])
             self.assertEqual(row['previous_body'], previous['body'])
             for retired in row['retired_sources']:
@@ -155,8 +172,14 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
             body_path = ROOT / item['target_path']
             body_sha = hashlib.sha256(body_path.read_bytes()).hexdigest()
             self.assertEqual(correction['source_accessed_at'], '2026-11-03')
-            self.assertEqual(correction['final_sha256'], body_sha)
-            self.assertEqual(review['target_sha256'], body_sha)
+            if item_id in self.current_batch_items:
+                current_record = self.current_batch_items[item_id]
+                self.assertEqual(correction['final_sha256'], current_record['before_sha256'])
+                self.assertEqual(review['target_sha256'], current_record['after_sha256'])
+                self.assertEqual(current_record['after_sha256'], body_sha)
+            else:
+                self.assertEqual(correction['final_sha256'], body_sha)
+                self.assertEqual(review['target_sha256'], body_sha)
             self.assertIn(correction['supporting_source_url'], {row['url'] for row in review['source_checks']})
             if item_id == 'TW-17-005':
                 self.assertIn(correction['corroborating_source_url'], {row['url'] for row in review['source_checks']})
@@ -182,7 +205,13 @@ class MedicalEldercareRecheckTests(unittest.TestCase):
         self.assertIn('Q30', faq_sources[0]['supports'])
         review = load('localization/reviews/TW-17-005.json')
         faq_checks = [row for row in review['source_checks'] if row['url'] == faq_url]
-        self.assertEqual({row['accessed_at'] for row in faq_checks}, {'2026-11-02', '2026-11-03'})
+        self.assertEqual({row['accessed_at'] for row in faq_checks}, {'2026-11-03', '2026-11-14'})
+        historic_row = next(
+            row for row in self.register['substantive_rechecks']
+            if row.get('id') == 'TW-17-005' and row.get('reviewed_at') == '2026-11-02'
+        )
+        historic_faq_checks = [row for row in historic_row['source_checks'] if row['url'] == faq_url]
+        self.assertIn('2026-11-02', {row['accessed_at'] for row in historic_faq_checks})
 
         correction = next(row for row in self.correction['corrections'] if row['id'] == 'TW-17-005')
         item = self.items['TW-17-005']
