@@ -63,7 +63,8 @@ class Chapter17Tests(unittest.TestCase):
   ))
   by_id={row[0]:row for row in sources}
   baseline_by_id={row[0]:row for row in baseline_sources}
-  reused_additions=set(batch['source_records_reused'])-set(baseline_by_id)
+  shared_source_ids=set(batch['shared_source_ids'])
+  reused_additions=(set(batch['source_records_reused'])-set(baseline_by_id))-shared_source_ids
   self.assertEqual(set(by_id),set(baseline_by_id)|set(batch['new_source_ids'])|reused_additions)
   for source_id,old_source in baseline_by_id.items():
    self.assertEqual(by_id[source_id],old_source)
@@ -73,6 +74,15 @@ class Chapter17Tests(unittest.TestCase):
   for source_id in reused_additions:
    source=baseline_runtime_sources[source_id]
    self.assertEqual(by_id[source_id],[source_id,source['title'],source['url'],source['supports']])
+  all_bundle_rows={}
+  for path in (ROOT/'localization/tw-edition/sources').glob('*.json'):
+   for row in get(path.relative_to(ROOT).as_posix())['sources']:
+    self.assertNotIn(row[0],all_bundle_rows)
+    all_bundle_rows[row[0]]=row
+  for source_id in shared_source_ids:
+   source=baseline_runtime_sources[source_id]
+   self.assertEqual(all_bundle_rows[source_id],[source_id,source['title'],source['url'],source['supports']])
+   self.assertNotIn(source_id,by_id)
  def test_progress_and_publication_not_finished(self):
   report=publication_report()
   coverage=get('localization/tw-edition/coverage.json')

@@ -73,6 +73,12 @@
     "ch14_financial_law",
     "foi_dispute_process_current"
   ],
+  "shared_source_ids": [
+    "property_bot",
+    "property_landcount",
+    "ch14_financial_law",
+    "foi_dispute_process_current"
+  ],
   "source_records_retired": [
     {
       "id": "ch17_civil",

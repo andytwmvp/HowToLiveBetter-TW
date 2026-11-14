@@ -145,7 +145,12 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
             "ch17_mohw_reverse", "ch17_reverse_mortgage_scam_case_20260127"
         })
         self.assertTrue(set(self.batch["new_source_ids"]).issubset(ledger_ids))
-        self.assertTrue({"ch14_financial_law", "foi_dispute_process_current"}.issubset(ledger_ids))
+        shared_source_ids = set(self.batch["shared_source_ids"])
+        self.assertEqual(shared_source_ids, {
+            "property_bot", "property_landcount", "ch14_financial_law", "foi_dispute_process_current"
+        })
+        self.assertTrue(shared_source_ids.issubset(self.sources))
+        self.assertTrue(shared_source_ids.isdisjoint(ledger_ids))
         self.assertNotIn("ch17_civil", self.item["source_ids"])
         self.assertEqual(self.sources["ch17_civil"], old_civil)
         self.assertTrue(any(row["id"] == "ch17_reverse_mortgage_scam_case_20260127"

@@ -134,6 +134,7 @@ class TopicFidelityFraudOshRecheckTests(unittest.TestCase):
         # batch, then compare the live state with that later batch's recorded result.
         remote_travel_batch = read("localization/topic-fidelity-remote-travel-20261114.json")
         eldercare_batch = read("localization/topic-fidelity-eldercare-prepayment-20261114.json")
+        reverse_mortgage_batch = read("localization/topic-fidelity-reverse-mortgage-recheck-20261114.json")
         later_before = remote_travel_batch["counts_before"]
         for old_key, later_key in (
             ("runtime_items", "runtime_items"),
@@ -156,12 +157,16 @@ class TopicFidelityFraudOshRecheckTests(unittest.TestCase):
             ("publication_ready", "publication_ready"),
         ):
             self.assertEqual(remote_travel_batch["counts_after"][remote_key], eldercare_before[eldercare_key])
+        # Preserve the eldercare batch as an immutable historical snapshot and
+        # reconcile it with the next batch's recorded starting point. The newest
+        # batch is responsible for comparing current runtime/coverage to live data.
         later_counts = eldercare_batch["counts_after"]
-        self.assertEqual(later_counts["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(later_counts["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(later_counts["source_registry"], audit_drafts()["registry_sources"])
-        self.assertEqual(later_counts["review_rechecks"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(later_counts["coverage_json_files"], audit_drafts()["json_files_checked"])
+        current_before = reverse_mortgage_batch["counts_before"]
+        for key in (
+            "runtime_items", "runtime_sources", "source_registry", "review_rechecks",
+            "coverage_json_files", "publication_completed_entries", "publication_ready",
+        ):
+            self.assertEqual(later_counts[key], current_before[key])
         self.assertFalse(self.batch["counts_after"]["publication_ready"])
         catalog = read(SOURCE_FILE)["sources"]
         self.assertEqual(len(catalog), len(self.batch["new_source_ids"]))
