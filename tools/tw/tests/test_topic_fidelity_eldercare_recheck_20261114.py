@@ -118,20 +118,50 @@ class EldercareTopicFidelityTests(unittest.TestCase):
 
     def test_counts_reflect_live_data_without_claiming_publication_ready(self):
         counts = self.batch["counts_after"]
-        audit = audit_drafts()
-        publication = publication_report()
-        unresolved = audit["unresolved_source_ids"]
+        baseline_coverage = json.loads(git_bytes(BASE, "localization/tw-edition/coverage.json"))
+        baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
+        baseline_register = json.loads(git_bytes(BASE, REGISTER_PATH))
+        baseline_manifest = json.loads(git_bytes(BASE, "localization/manifest.json"))
+        before = self.batch["counts_before"]
 
-        self.assertEqual(counts["manifest_entries"], len(read("localization/manifest.json")["entries"]))
-        self.assertEqual(counts["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(counts["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(counts["source_registry"], audit["registry_sources"])
-        self.assertEqual(counts["review_rechecks"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(counts["coverage_json_files"], audit["json_files_checked"])
-        self.assertEqual(counts["unresolved_source_ids"], len(unresolved))
-        self.assertEqual(counts["unresolved_reference_occurrences"], sum(unresolved.values()))
-        self.assertEqual(counts["publication_completed_entries"], publication["publication_completed_entries"])
+        self.assertEqual(before["manifest_entries"], len(baseline_manifest["entries"]))
+        self.assertEqual(before["verified_core_entries"], baseline_coverage["core_reviewed_entries"])
+        self.assertEqual(before["runtime_items"], len(baseline_runtime["items"]))
+        self.assertEqual(before["runtime_sources"], len(baseline_runtime["sources"]))
+        self.assertEqual(before["source_registry"], baseline_coverage["registry_sources"])
+        self.assertEqual(before["review_rechecks"], len(baseline_register["substantive_rechecks"]))
+        self.assertEqual(before["coverage_json_files"], baseline_coverage["json_files_checked"])
+        self.assertEqual(before["unresolved_source_ids"], len(baseline_coverage["unresolved_source_ids"]))
+        self.assertEqual(
+            before["unresolved_reference_occurrences"],
+            baseline_coverage["unresolved_reference_occurrences"],
+        )
+        self.assertEqual(before["publication_completed_entries"], baseline_coverage["publication_completed_entries"])
+        self.assertEqual(before["publication_ready"], baseline_coverage["publication_ready"])
+
+        self.assertEqual(counts["manifest_entries"], before["manifest_entries"])
+        self.assertEqual(counts["verified_core_entries"], before["verified_core_entries"])
+        self.assertEqual(counts["runtime_items"], before["runtime_items"])
+        self.assertEqual(counts["runtime_sources"], before["runtime_sources"] + len(self.batch["new_source_ids"]))
+        self.assertEqual(counts["source_registry"], before["source_registry"] + len(self.batch["new_source_ids"]))
+        self.assertEqual(counts["review_rechecks"], before["review_rechecks"] + 1)
+        self.assertEqual(counts["coverage_json_files"], before["coverage_json_files"] + 2)
+        self.assertEqual(counts["unresolved_source_ids"], before["unresolved_source_ids"])
+        self.assertEqual(counts["unresolved_reference_occurrences"], before["unresolved_reference_occurrences"])
+        self.assertEqual(counts["publication_completed_entries"], before["publication_completed_entries"])
         self.assertFalse(counts["publication_ready"])
+
+        # This test preserves the historical PR snapshot while allowing later batches to advance live totals.
+        audit = audit_drafts()
+        live_coverage = read("localization/tw-edition/coverage.json")
+        publication = publication_report()
+        self.assertGreaterEqual(len(self.runtime["sources"]), counts["runtime_sources"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), counts["review_rechecks"])
+        self.assertGreaterEqual(live_coverage["registry_sources"], counts["source_registry"])
+        self.assertGreaterEqual(live_coverage["json_files_checked"], counts["coverage_json_files"])
+        self.assertEqual(live_coverage["registry_sources"], audit["registry_sources"])
+        self.assertEqual(live_coverage["json_files_checked"], audit["json_files_checked"])
+        self.assertEqual(live_coverage["publication_ready"], publication["publication_ready"])
 
 
 if __name__ == "__main__":

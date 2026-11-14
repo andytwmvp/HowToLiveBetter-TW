@@ -7,6 +7,7 @@ from review_contract import ROOT, validate_runtime,validate_entry,publication_re
 from body_renderer import body_blocks
 BASE='72ea775426cdcbc4b716ae506152607b56fc5ca7'
 IDS={f'TW-17-{i:03d}' for i in range(1,14)}
+REVERSE_MORTGAGE_RECHECK_BATCH='localization/topic-fidelity-reverse-mortgage-recheck-20261114.json'
 def get(path):return json.loads((ROOT/path).read_text(encoding='utf8'))
 class Chapter17Tests(unittest.TestCase):
  def test_thirteen_markdowns_and_reviews(self):
@@ -51,9 +52,27 @@ class Chapter17Tests(unittest.TestCase):
   for source in base['sources']:self.assertEqual(current_sources[source['id']],source)
   self.assertTrue(IDS.issubset(current_items))
   self.assertGreaterEqual(len(after['items']),191)
-  sources=get('localization/tw-edition/sources/ch17-elder-20261017.json')['sources']
-  self.assertEqual(len(sources),17)
-  self.assertEqual(len({s[0] for s in sources}),17)
+  bundle_path='localization/tw-edition/sources/ch17-elder-20261017.json'
+  sources=get(bundle_path)['sources']
+  batch=get(REVERSE_MORTGAGE_RECHECK_BATCH)
+  baseline_sources=json.loads(subprocess.check_output(
+   ['git','show',batch['baseline_main_sha']+':'+bundle_path],cwd=ROOT,text=True
+  ))['sources']
+  baseline_runtime=json.loads(subprocess.check_output(
+   ['git','show',batch['baseline_main_sha']+':localization/tw-edition/runtime.json'],cwd=ROOT,text=True
+  ))
+  by_id={row[0]:row for row in sources}
+  baseline_by_id={row[0]:row for row in baseline_sources}
+  reused_additions=set(batch['source_records_reused'])-set(baseline_by_id)
+  self.assertEqual(set(by_id),set(baseline_by_id)|set(batch['new_source_ids'])|reused_additions)
+  for source_id,old_source in baseline_by_id.items():
+   self.assertEqual(by_id[source_id],old_source)
+  for source_id in batch['new_source_ids']:
+   self.assertIn(source_id,by_id)
+  baseline_runtime_sources={row['id']:row for row in baseline_runtime['sources']}
+  for source_id in reused_additions:
+   source=baseline_runtime_sources[source_id]
+   self.assertEqual(by_id[source_id],[source_id,source['title'],source['url'],source['supports']])
  def test_progress_and_publication_not_finished(self):
   report=publication_report()
   coverage=get('localization/tw-edition/coverage.json')

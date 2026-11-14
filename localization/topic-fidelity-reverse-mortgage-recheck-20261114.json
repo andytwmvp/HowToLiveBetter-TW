@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "phase": "全書歷史主題忠實度回溯：中國保險型以房養老與臺灣銀行逆向抵押貸款的逐題判斷",
+  "baseline_main_sha": "72a6139a3426f75a8b40f8a5073520bb1a4477aa",
+  "reviewed_at": "2026-11-15",
+  "review_due_at": "2027-02-15",
+  "scope": [
+    "TW-17-006"
+  ],
+  "content_policy": "不因外地制度直接刪除或一律恢復；抽取原題讀者問題，按臺灣現行產品、證據可移用範圍、讀者行動與正文淨效益逐題判斷。",
+  "items": [
+    {
+      "id": "TW-17-006",
+      "change_kind": "歷史主題忠實度實質再審：保留臺灣銀行逆向抵押貸款核心，限縮保留有界線臺灣假投資案例",
+      "target_path": "locales/zh-TW/book/ch17/TW-17-006.md",
+      "before_sha256": "557ce06e4b6e15b8bf4a67b9405ec6b0b4cf726b8941cedfe0ad6b4a9841eff3",
+      "after_sha256": "fca1129b50f3615b54d3ab8d20e57370dbc1df0dbf5c4aaead18fb36b5a52204",
+      "prior_review_sha256": "cf0b6d3db95bfffb42b43bf517590683d50bf67009b1899b93cbe7de8cf06ed6",
+      "review_sha256": "abb01fe0e8d20053ec24f8347b22d0162ba180fa5faa55fa21474a80871772bd",
+      "topic_fidelity_assessment": "原作第6條希望長者分辨合法產品與假借以房養老之名誘騙抵押房產後投資。原作依賴中國2021年保險型住房反向抵押養老保險試點和監管風險提示，不能作為臺灣合法產品唯一型態或投資利率標準。臺灣衛福部社家署2026-10-07仍列商業型銀行逆向抵押貸款，也包含信託、保險結合方案，說明臺灣情境和中國不能等同。臺灣讀者仍有評估住宅抵押貸款、辨識假投資和保護共同居住者的實際需要；刑事警察局單一案件是一般抵押貸款，不是以房養老，僅作範圍清楚的相近警示。",
+      "taiwan_frequency_limits": "土銀官方頁截至2025年底列單行累積承作2,723件，沒有申請或符合資格人口分母；刑事局2026-01-27公布一宗新北假投資案，一名年齡未載婦人抵押兩屋借款，損失逾新臺幣2,000萬元。該案不是以房養老貸款，沒有全臺案件總數或暴露分母。未取得全臺以房養老違約、失屋、受騙或財損可比率。",
+      "source_ids": [
+        "ch17_reverse",
+        "ch17_165",
+        "property_bot",
+        "property_landcount",
+        "ch17_postfraud",
+        "ch17_mohw_reverse",
+        "ch17_reverse_mortgage_scam_case_20260127",
+        "ch14_financial_law",
+        "foi_dispute_process_current"
+      ],
+      "source_records_retired": [
+        {
+          "id": "ch17_civil",
+          "replacement_ids": [
+            "ch17_reverse"
+          ],
+          "reason": "舊審閱曾用民法意定監護／遺囑來源支持通知義務人與意思能力背景；現行正文不再提出民法條文主張。保留更直接的金管會2017函釋來源 ch17_reverse 作為通知義務人段落依據，並保留舊來源物件供歷史追溯。",
+          "prior_source_sha256": "8177366780a843990fc3908719baa7739c780c770134a82ba0e795d61e57394e",
+          "article_id": "TW-17-006",
+          "current_source_object_unchanged": true
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "臺灣金融法規與金融消費",
+          "銀行商業型不動產逆向抵押貸款及信託／保險方案",
+          "高齡金融自主與詐騙防制"
+        ]
+      },
+      "taiwan_context_assessment": {
+        "actual_scenario": "長者可能需要以自有住宅補充退休與照護現金流；臺灣有銀行商業型逆向抵押貸款。假投資招攬也可能誘使民眾抵押一般房屋借款後匯出，須分清正式銀行貸款與把借款交給招攬者。",
+        "topic_fidelity_assessment": "原作第6條希望長者分辨合法產品與假借以房養老之名誘騙抵押房產後投資。原作依賴中國2021年保險型住房反向抵押養老保險試點和監管風險提示，不能作為臺灣合法產品唯一型態或投資利率標準。臺灣衛福部社家署2026-10-07仍列商業型銀行逆向抵押貸款，也包含信託、保險結合方案，說明臺灣情境和中國不能等同。臺灣讀者仍有評估住宅抵押貸款、辨識假投資和保護共同居住者的實際需要；刑事警察局單一案件是一般抵押貸款，不是以房養老，僅作範圍清楚的相近警示。",
+        "decision": "retain_localized_core_with_scoped_taiwan_case",
+        "legal_status": "衛福部2026-10-07頁面明列臺灣商業型以房養老貸款及一般貸款、結合信託／保險方案。金管會2017-10-27行政函只說不宜僅因繼承資格者不同意／不願任通知義務人而拒貸；未找到該函對各行核貸形成普遍保證的依據。原作中國保險產品限定和收益率數字不是臺灣法律界線。 金融消費者就金融商品或服務民事爭議，依金保法第13條先向金融服務業申訴；業者30日內適當處理回覆，不接受結果或逾期未處理者，可自收受結果或期限屆滿日起60日內申請評議。第13條程序依制定全文自2011-12-30施行；2023-12-06修正第3、11-1、19條並自2024-02-01施行，未修改第13條。申訴或評議不保證獲賠。",
+        "frequency_evidence": "土銀官方頁截至2025年底列單行累積承作2,723件，沒有申請或符合資格人口分母；刑事局2026-01-27公布一宗新北假投資案，一名年齡未載婦人抵押兩屋借款，損失逾新臺幣2,000萬元。該案不是以房養老貸款，沒有全臺案件總數或暴露分母。未取得全臺以房養老違約、失屋、受騙或財損可比率。"
+      }
+    }
+  ],
+  "new_source_ids": [
+    "ch17_mohw_reverse",
+    "ch17_reverse_mortgage_scam_case_20260127"
+  ],
+  "source_records_reused": [
+    "ch17_reverse",
+    "ch17_165",
+    "property_bot",
+    "property_landcount",
+    "ch17_postfraud",
+    "ch14_financial_law",
+    "foi_dispute_process_current"
+  ],
+  "source_records_retired": [
+    {
+      "id": "ch17_civil",
+      "replacement_ids": [
+        "ch17_reverse"
+      ],
+      "reason": "舊審閱曾用民法意定監護／遺囑來源支持通知義務人與意思能力背景；現行正文不再提出民法條文主張。保留更直接的金管會2017函釋來源 ch17_reverse 作為通知義務人段落依據，並保留舊來源物件供歷史追溯。",
+      "prior_source_sha256": "8177366780a843990fc3908719baa7739c780c770134a82ba0e795d61e57394e",
+      "article_id": "TW-17-006",
+      "current_source_object_unchanged": true
+    }
+  ],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1278,
+    "source_registry": 1361,
+    "review_rechecks": 389,
+    "coverage_json_files": 630,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1280,
+    "source_registry": 1363,
+    "review_rechecks": 390,
+    "coverage_json_files": 631,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "topic": "臺灣土地銀行商業型以房養老貸款承作量",
+      "value": {
+        "cumulative_cases": 2723
+      },
+      "unit": "單一銀行累積行政業務件數",
+      "period": "2016年推出至2025-12-31",
+      "geographic_scope": "臺灣土地銀行承作業務",
+      "population": "該行樂活養老貸款累積承作案件，不是全臺借款人",
+      "numerator": "土地銀行頁載截至2025年底累計承作2,723件",
+      "denominator": null,
+      "denominator_definition": "官方頁未列符合資格人口、申請總數、拒貸件數或貸款戶暴露期間。",
+      "event_definition": "土地銀行自2016年推出之樂活養老貸款，截至2025年底累積承作案件數。",
+      "data_type": "單一銀行行政業務量，不是抽樣調查、全國年發生率或個人機率。",
+      "source_ids": [
+        "property_landcount"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "沒有申請分母，也不是全臺總量、新增件數、核貸率、違約率或失屋機率。"
+    },
+    {
+      "topic": "新北假投資詐騙後抵押房屋借款之個案",
+      "value": {
+        "reported_cases": 1,
+        "reported_victims": 1,
+        "mortgaged_homes": 2,
+        "reported_loss_twd_over": 20000000
+      },
+      "unit": "單一官方新聞發布案例及報導財損新臺幣金額",
+      "period": "事件發生於2026年1月；發布日期2026-01-27",
+      "geographic_scope": "新北市",
+      "population": "一名女性；官方報導未載年齡，不代表長者或逆向抵押貸款借款人",
+      "numerator": "一名受害人；兩間房屋抵押借款；報導財損超過新臺幣2,000萬元",
+      "denominator": null,
+      "denominator_definition": "官方單一案例未列同類案件總數、投資接觸者、抵押戶數或其他相關暴露母群。",
+      "event_definition": "假投資招攬後，以一般房屋抵押貸款／融資借款加碼投資；不是商業型以房養老貸款。",
+      "data_type": "警政署轉載刑事警察局單一行政／新聞案例，不是全國統計或抽樣調查。",
+      "source_ids": [
+        "ch17_reverse_mortgage_scam_case_20260127"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "不能推算年度發生率、長者受騙率、一般房貸或以房養老產品損失率及個人機率；年齡未載，且非以房養老貸款。"
+    },
+    {
+      "topic": "臺灣商業型以房養老貸款之受騙、違約、失屋或財損發生率",
+      "value": null,
+      "unit": "無可計算的可比發生率",
+      "period": "截至2026-11-14查核",
+      "geographic_scope": "臺灣全國",
+      "population": "商業型逆向抵押貸款申請者與借款人之可比母群未取得",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "未找到同一事件定義下可配對的案件數與申請、借款戶或暴露時間分母。",
+      "event_definition": "以房養老申請、借款後違約／被迫處分，以及以房產借款投入假投資分開統計；目前未取得以房養老產品專屬可比數據。",
+      "data_type": "資料不足；土銀單行累積承作量與一般房貸詐騙單一案都不能替代以房養老貸款風險率。",
+      "source_ids": [],
+      "accessed_at": "2026-11-14",
+      "limitations": "不以銀行承作件數、單一警方案例、一般房貸數據或中國／海外資料估算臺灣借款人風險。"
+    }
+  ],
+  "professional_review_status": "本批為AI輔助來源、臺灣制度與主題適用性實質再審；金融、法律及高齡財務專業審閱尚未取得。",
+  "reader_copy_cleanup": "正文補入衛福部商業型以房養老制度說明及一宗清楚標為一般房屋抵押借款的臺灣假投資案例；未恢復中國保險業者限定或6%、8%、10%門檻，也未加入批次摘要、AI審閱狀態或內部管理文字。 增列金融消費申訴與評議的官方法條及入口，標明法定期限且不承諾一定獲賠。"
+}
