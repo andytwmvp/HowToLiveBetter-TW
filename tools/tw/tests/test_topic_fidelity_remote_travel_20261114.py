@@ -123,6 +123,7 @@ class RemoteTravelTopicFidelityTests(unittest.TestCase):
         coverage = read("localization/tw-edition/coverage.json")
         later_batch = read("localization/topic-fidelity-eldercare-prepayment-20261114.json")
         current_batch = read("localization/topic-fidelity-reverse-mortgage-recheck-20261114.json")
+        next_batch = read("localization/topic-fidelity-oral-care-recheck-20261115.json")
         self.assertEqual(self.batch["counts_before"]["runtime_sources"], 1276)
         self.assertEqual(self.batch["counts_before"]["review_rechecks"], 387)
         self.assertEqual(self.batch["counts_after"]["runtime_sources"], later_batch["counts_before"]["runtime_sources"])
@@ -134,14 +135,15 @@ class RemoteTravelTopicFidelityTests(unittest.TestCase):
             "coverage_json_files", "publication_completed_entries", "publication_ready",
         ):
             self.assertEqual(later_batch["counts_after"][key], current_batch["counts_before"][key])
+        self.assertEqual(current_batch["counts_after"], next_batch["counts_before"])
         self.assertEqual(
             later_batch["counts_after"]["runtime_sources"],
             later_batch["counts_before"]["runtime_sources"] + len(later_batch["new_source_ids"]),
         )
-        self.assertEqual(current_batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(current_batch["counts_after"]["review_rechecks"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(current_batch["counts_after"]["coverage_json_files"], coverage["json_files_checked"])
-        self.assertEqual(current_batch["counts_after"]["source_registry"], coverage["registry_sources"])
+        self.assertEqual(next_batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
+        self.assertEqual(next_batch["counts_after"]["review_rechecks"], len(self.register["substantive_rechecks"]))
+        self.assertEqual(next_batch["counts_after"]["coverage_json_files"], coverage["json_files_checked"])
+        self.assertEqual(next_batch["counts_after"]["source_registry"], coverage["registry_sources"])
         self.assertFalse(coverage["publication_ready"])
 
 
