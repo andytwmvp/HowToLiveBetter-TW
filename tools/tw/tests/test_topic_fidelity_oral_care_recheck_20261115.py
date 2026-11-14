@@ -123,6 +123,12 @@ class OralCareTopicFidelityTests(unittest.TestCase):
         for source_id in NEW_SOURCE_IDS:
             self.assertTrue(self.sources[source_id]["supports"])
             self.assertEqual(self.sources[source_id]["accessed_at"], "2026-11-15")
+        checks = {row["source_id"]: row for row in self.review["source_checks"]}
+        self.assertTrue(all(row["accessed_at"] == self.review["reviewed_at"] for row in checks.values()))
+        self.assertIn("最後更新115-11-04", checks["tw02_mohw_oral_care_20261109"]["retrieval_method"])
+        self.assertIn("更新112-11-29", checks["tw02_nhi_periodontal_services_20261109"]["retrieval_method"])
+        self.assertIn("回應403", checks["tw02_tph_dental_emergency_20261109"]["retrieval_method"])
+        self.assertIn("2026-11-09直接查閱紀錄", checks["tw02_tph_dental_emergency_20261109"]["retrieval_method"])
         jages = next(row for row in self.review["statistics_assessed"] if row["topic"].startswith("日本社區居住"))
         self.assertEqual(jages["value"]["mortality_incidence_rate"], 17.3)
         self.assertIn("每1,000人年17.3件", jages["unit"])
