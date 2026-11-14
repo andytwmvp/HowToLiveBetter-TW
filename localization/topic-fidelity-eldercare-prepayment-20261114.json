@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "phase": "全書歷史主題保真度回溯：長者住宿預付款、投資招攬與台灣案例",
+  "baseline_main_sha": "c46443b55942139d0067e2011d2f004fad1e44eb",
+  "reviewed_at": "2026-11-14",
+  "review_due_at": "2027-02-14",
+  "scope": [
+    "TW-17-005"
+  ],
+  "content_policy": "逐題保留臺灣讀者仍有用途的核心需求；不恢復不適用的中國法制與概括結論。海外／外地案例須逐項說明來源地、對象、事件定義、讀者效益與限制，不把單一案件當成發生率。",
+  "items": [
+    {
+      "id": "TW-17-005",
+      "change_kind": "歷史主題忠實度實質再審並補入有界線的台灣假投資案例",
+      "target_path": "locales/zh-TW/book/ch17/TW-17-005.md",
+      "before_sha256": "4b8cc653e6f46f31a6814edb6990e9790d3387da0c3927c0f5438009403484ff",
+      "after_sha256": "565790bbc11a2c3b9aa57a50b8e8d7bf0b070ffa1cd9d20b5fd3af7e484196a3",
+      "prior_review_sha256": "6b71e0b59bed1ba49f9ede277cbac4a4662a40e5d516285b7a330e954861138a",
+      "review_sha256": "b0ce6e286e9391e82ca656b32c15ccd24560c394fbd4db2dfa2737334b9a20bf",
+      "topic_fidelity_assessment": "原題要提醒長者及家屬先辨識養老服務／投資名義下的大額付款風險；需求在臺灣存在，但原題把中國法制與多種商業行為一概判作非法集資，不能照搬。保留臺灣服務契約與法律界線，補一宗範圍清楚的臺灣假投資案例。",
+      "taiwan_frequency_limits": "截至2026-11-14未找到依機構類型、預付款／投資事件定義及長者暴露母群一致的全台發生率。官方單一案例無分母；廣泛高齡詐騙統計不等於本題事件率。",
+      "source_ids": [
+        "ch17_institution",
+        "ch17_facilitycontract",
+        "ch17_165",
+        "property_elderlaw",
+        "property_contract",
+        "property_contract_notice",
+        "ch17_postfraud_20261102",
+        "ch17_ltc_gis_map",
+        "law_trustact_20261102",
+        "law_bankact_5_1_20261102",
+        "law_bankact_29_20261102",
+        "law_bankact_29_1_20261102",
+        "law_bankact_history_20261102",
+        "care_ltc_residential_subsidy_2026",
+        "care_ltc_residential_subsidy_notice_20260914",
+        "care_ltc_residential_subsidy_faq_20261019",
+        "care_ltc_residential_subsidy_hospital_taipei_20261103",
+        "ch17_fake_eldercare_project_investment_20260315"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "臺灣金融法規與金融消費",
+          "老人福利／長照服務契約",
+          "機構預付款與消費者保護"
+        ]
+      },
+      "taiwan_context_assessment": {
+        "actual_scenario": "臺灣讀者可能同時接觸退休住宅、老人福利機構、住宿式長照契約與以照護名義招攬的投資；服務預付款與投資需分開辨識。",
+        "topic_fidelity_assessment": "原題要提醒長者及家屬先辨識養老服務／投資名義下的大額付款風險；需求在臺灣存在，但原題把中國法制與多種商業行為一概判作非法集資，不能照搬。保留臺灣服務契約與法律界線，補一宗範圍清楚的臺灣假投資案例。",
+        "decision": "retain_localized_core_with_scoped_taiwan_case",
+        "legal_status": "老人福利法第37至39條僅適用老人福利機構相關義務；銀行法第5-1、29及29-1條依收款對象、資金、還本／報酬安排及法定例外判斷，不是所有預付款或投資約定均違法。",
+        "frequency_evidence": "截至2026-11-14未找到依機構類型、預付款／投資事件定義及長者暴露母群一致的全台發生率。官方單一案例無分母；廣泛高齡詐騙統計不等於本題事件率。"
+      }
+    }
+  ],
+  "new_source_ids": [
+    "ch17_fake_eldercare_project_investment_20260315"
+  ],
+  "source_records_reused": [
+    "ch17_institution",
+    "ch17_facilitycontract",
+    "ch17_165",
+    "property_elderlaw",
+    "property_contract",
+    "property_contract_notice",
+    "ch17_postfraud_20261102",
+    "ch17_ltc_gis_map",
+    "law_trustact_20261102",
+    "law_bankact_5_1_20261102",
+    "law_bankact_29_20261102",
+    "law_bankact_29_1_20261102",
+    "law_bankact_history_20261102",
+    "care_ltc_residential_subsidy_2026",
+    "care_ltc_residential_subsidy_notice_20260914",
+    "care_ltc_residential_subsidy_faq_20261019",
+    "care_ltc_residential_subsidy_hospital_taipei_20261103"
+  ],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1277,
+    "source_registry": 1360,
+    "review_rechecks": 388,
+    "coverage_json_files": 628,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1278,
+    "source_registry": 1361,
+    "review_rechecks": 389,
+    "coverage_json_files": 630,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "topic": "臺灣以養老院開發案名義包裝之假投資個案",
+      "value": {
+        "reported_cases": 1,
+        "reported_loss_twd_over": 12000000
+      },
+      "unit": "單一官方轉述案件及該案通報財損（新臺幣）",
+      "period": "報導發布於2026-03-15；事件日期未載",
+      "geographic_scope": "臺灣北部個案；報導未列更精確地點",
+      "population": "一名女性；年齡未載，不代表高齡者或住宿長照住民",
+      "numerator": "一宗報導個案；報導稱財損新臺幣1,200萬餘元",
+      "denominator": null,
+      "denominator_definition": "單一案例報導未提供總案件數、投資人數、接觸人數或相關投資暴露母群。",
+      "event_definition": "透過社群免費贈書廣告接觸後，被引導下載假投資APP，所稱標的是養老院開發案；不是已確認的住宿服務預付款交易。",
+      "data_type": "警察廣播電臺轉述刑事局的單一行政／新聞案例，不是全國統計或抽樣調查。",
+      "source_ids": [
+        "ch17_fake_eldercare_project_investment_20260315"
+      ],
+      "accessed_at": "2026-11-14",
+      "limitations": "不能推算年度發生率、長者／長照住民風險、投資受害比例或個人機率；報導沒有說明當事人年齡。"
+    },
+    {
+      "topic": "全台住宿服務預付款或退休住宅投資詐騙發生率",
+      "value": null,
+      "unit": "無可計算的可比發生率",
+      "period": "截至2026-11-14查核",
+      "geographic_scope": "臺灣全國",
+      "population": "依法設立機構、退休住宅／投資接觸者及入住者之可比母群未取得",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "未找到同一事件定義下可配對的案件數與相關人口、交易或住民暴露量。",
+      "event_definition": "住宿／長照預付款損失或以退休／養老投資名義招攬的詐騙；不與一般高齡詐騙或投資詐騙混算。",
+      "data_type": "資料不足；單一案件與廣泛高齡詐騙行政數不能替代本題事件率。",
+      "source_ids": [],
+      "accessed_at": "2026-11-14",
+      "limitations": "不把通報件數、單一案件、一般高齡詐騙或其他法域案件當作個人發生率。"
+    }
+  ],
+  "professional_review_status": "本批為AI輔助來源與主題適用性實質再審；金融法規、長照契約與消費者保護專業審閱仍未取得。",
+  "reader_copy_cleanup": "正文新增一則有來源、地區、發布日期、單一案例及適用限制的讀者資訊；未加入批次摘要、AI審閱狀態或內部管理文字。"
+}
