@@ -130,11 +130,26 @@ class TopicFidelityFraudOshRecheckTests(unittest.TestCase):
         self.assertIn("不要從「這個資料是外國的」直接跳到保留或刪除", policy)
         self.assertIn("不設單一分數或「海外研究一律收錄」規則", policy)
         self.assertIn("每一題都要重新判斷", policy)
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["source_registry"], audit_drafts()["registry_sources"])
-        self.assertEqual(self.batch["counts_after"]["review_rechecks"], len(self.register["substantive_rechecks"]))
-        self.assertEqual(self.batch["counts_after"]["coverage_json_files"], audit_drafts()["json_files_checked"])
+        # This batch snapshot is immutable. Reconcile it with the next append-only
+        # batch, then compare the live state with that later batch's recorded result.
+        later_batch = read("localization/topic-fidelity-remote-travel-20261114.json")
+        later_before = later_batch["counts_before"]
+        for old_key, later_key in (
+            ("runtime_items", "runtime_items"),
+            ("runtime_sources", "runtime_sources"),
+            ("source_registry", "registry_sources"),
+            ("review_rechecks", "review_rechecks"),
+            ("coverage_json_files", "coverage_json_files"),
+            ("publication_completed_entries", "publication_completed_entries"),
+            ("publication_ready", "publication_ready"),
+        ):
+            self.assertEqual(self.batch["counts_after"][old_key], later_before[later_key])
+        later_counts = later_batch["counts_after"]
+        self.assertEqual(later_counts["runtime_items"], len(self.runtime["items"]))
+        self.assertEqual(later_counts["runtime_sources"], len(self.runtime["sources"]))
+        self.assertEqual(later_counts["registry_sources"], audit_drafts()["registry_sources"])
+        self.assertEqual(later_counts["review_rechecks"], len(self.register["substantive_rechecks"]))
+        self.assertEqual(later_counts["coverage_json_files"], audit_drafts()["json_files_checked"])
         self.assertFalse(self.batch["counts_after"]["publication_ready"])
         catalog = read(SOURCE_FILE)["sources"]
         self.assertEqual(len(catalog), len(self.batch["new_source_ids"]))

@@ -16,7 +16,8 @@ def check_ice_tools_crisis_af_browser(page, context, url, review):
                 article = page.locator('#' + key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text()
-                assert article.locator('h3').count() == 5, key
+                expected_headings = 6 if key == 'TW-13-027' else 5
+                assert article.locator('h3').count() == expected_headings, key
                 for source_id in items[key]['source_ids']:
                     assert article.locator('a').evaluate_all('(xs, u) => xs.some(a => a.href === u)', sources[source_id]['url']), (key, source_id)
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), target
@@ -32,4 +33,4 @@ def check_ice_tools_crisis_af_browser(page, context, url, review):
         assert page.locator('#TW-13-021').count() == 1
         page.screenshot(path=str(review / f'ice-tools-crisis-af-{width}.png'), animations='disabled')
     page.set_viewport_size({'width': 1440, 'height': 1000})
-    return ['四篇山域安全／砂輪機職安／危機對話／AF與四篇急救再審在桌機、手機、自查及離線的ID、正文結構及來源連結一致；AF與未知粉末求助搜尋、自查按鈕與無水平溢出通過；未以瀏覽器檢查宣稱醫療或消防專業認證。']
+    return ['四篇山域安全／砂輪機職安／危機對話／AF與急救再審在桌機、手機、自查及離線的ID、正文結構及來源連結一致；TW-13-027含新增旅外安全段落；AF與未知粉末求助搜尋、自查按鈕與無水平溢出通過；未以瀏覽器檢查宣稱醫療或消防專業認證。']

@@ -18,7 +18,8 @@ class IceToolsCrisisAFTests(unittest.TestCase):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
+    expected_headings = 6 if key == 'TW-13-027' else 5
+    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),expected_headings)
  def test_emergency_actions_and_denominator_boundaries(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('高山天候快速變化',b['TW-01-041']);self.assertIn('502件、695人',b['TW-01-041']);self.assertIn('531件、涉及727人',b['TW-01-041']);self.assertIn('不能混算或據此推估個人風險',b['TW-01-041']);self.assertNotIn('天然冰面',b['TW-01-041']);self.assertNotIn('加拿大',b['TW-01-041']);self.assertNotIn('較常需要面對',b['TW-01-041'])
