@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "phase": "逐題主題忠實度與高齡口腔研究回溯再審",
+  "baseline_main_sha": "52aad87ab9034492f71807a12bbc0683df45ca9f",
+  "reviewed_at": "2026-11-15",
+  "review_due_at": "2027-02-15",
+  "scope": [
+    "TW-02-010"
+  ],
+  "content_policy": "不因外地制度直接刪除或一律恢復；按台灣讀者實際問題、來源可移用範圍、正文淨效益、重複及誤用風險逐項判斷。",
+  "items": [
+    {
+      "id": "TW-02-010",
+      "change_kind": "歷史主題忠實度實質再審：限縮恢復日本口腔健康老化研究與電動牙刷工具比較，不恢復缺牙延命推論",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-010.md",
+      "before_sha256": "ff68b4962050709ac8b9a79e10a39ede54b7ce9769a1f4fbf21051b09a3c6506",
+      "after_sha256": "4d42fc0322b601166cc1baaf2015b928ed5774639ed93c91b84c520bd093d0da",
+      "prior_review_sha256": "2ed0f1961be4277b072ff9d2719b5673d131f5cb2c837bdaeb01c1c6d9429537",
+      "review_sha256": "0d65c3c43ae8c0ba0d49ff5539f91e88d359d5c425a52a3e5770eda802967a04",
+      "topic_fidelity_assessment": "原題將口腔清潔、牙齒流失及牙刷工具和長期健康結果放在同一慢性風險主題。原先台灣稿保留日常清潔與就醫行動，但因在地化刪掉了可供台灣讀者理解的日本高齡者口腔習慣與全因死亡研究。本次只恢復能回答台灣讀者相同清潔與健康老化問題的有界線研究，並補充有助牙刷選擇的Cochrane短期指標比較；不把所有外地研究或原作主張一律搬回。",
+      "taiwan_frequency_limits": "沒有找到可代表台灣居民口腔習慣與個人全因死亡機率關係的同口徑資料。日本研究報告的是日本社區長者的調整後觀察性HR及全體人年死亡率，不能換算台灣居民個人機率。電動與手動牙刷回顧測量菌斑和牙齦炎指標，沒有死亡率或缺牙事件分母。",
+      "source_ids": [
+        "tw02_mohw_oral_care_20261109",
+        "tw02_nhi_dental_scaling_20261109",
+        "tw02_nhi_periodontal_services_20261109",
+        "tw02_tph_dental_emergency_20261109",
+        "tw02_jages_oral_mortality_2026",
+        "tw02_cochrane_powered_brushing_2014"
+      ],
+      "source_records_retired": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "牙周病與一般牙科",
+          "牙科急診",
+          "口腔衛生工具與老年口腔流行病學"
+        ]
+      },
+      "taiwan_context_assessment": {
+        "actual_scenario": "台灣讀者會使用牙刷、牙線或牙間刷、處理缺牙並選擇手動或電動牙刷；研究中日本高齡族群生活條件需與台灣讀者區分。",
+        "topic_fidelity_assessment": "限縮保留一項日本JAGES口腔清潔與全因死亡觀察研究，並保留一項Cochrane電動／手動牙刷的口腔指標回顧，兩者各自標明研究對象和可支持範圍。缺牙與死亡統合分析不納入正文：它合併的是高異質性的觀察關聯，不能證明補牙或植牙會降低死亡；目前正文已提醒缺牙應接受牙科評估。",
+        "decision": "retain_taiwan_core_with_bounded_foreign_research_and_tool_evidence",
+        "legal_status": "本次不新增法律主張。",
+        "frequency_evidence": "沒有找到可代表台灣居民口腔習慣與個人全因死亡機率關係的同口徑資料。日本研究報告的是日本社區長者的調整後觀察性HR及全體人年死亡率，不能換算台灣居民個人機率。電動與手動牙刷回顧測量菌斑和牙齦炎指標，沒有死亡率或缺牙事件分母。",
+        "historical_claim_decisions": [
+          {
+            "claim": "日本JAGES高齡者使用牙間清潔工具及舌苔清潔工具與較低全因死亡危險比相關",
+            "decision": "bounded_reader_restoration",
+            "reason": "台灣也有相同清潔行為；研究直接回答健康老化問題。限定日本社區高齡且生活功能獨立樣本，保留觀察性、非因果及不適用台灣個人機率限制。"
+          },
+          {
+            "claim": "電動牙刷比手動牙刷降低牙菌斑及牙齦炎指標",
+            "decision": "bounded_reader_restoration",
+            "reason": "隨機試驗回顧可幫助實際工具選擇；正文只報指數和期間，不宣稱防死亡或取代正確刷牙。"
+          },
+          {
+            "claim": "缺牙或無牙長者的死亡風險較高，因此補缺牙可延長壽命",
+            "decision": "not_restored_to_reader_body",
+            "reason": "原研究是高異質性觀察關聯，不能證明假牙、植牙或補牙改善死亡；正文已保留缺牙需牙科評估的行動，不以死亡數字推導療效。"
+          }
+        ]
+      }
+    }
+  ],
+  "new_source_ids": [
+    "tw02_jages_oral_mortality_2026",
+    "tw02_cochrane_powered_brushing_2014"
+  ],
+  "source_records_reused": [
+    "tw02_mohw_oral_care_20261109",
+    "tw02_nhi_dental_scaling_20261109",
+    "tw02_nhi_periodontal_services_20261109",
+    "tw02_tph_dental_emergency_20261109"
+  ],
+  "shared_source_ids": [],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1280,
+    "source_registry": 1363,
+    "review_rechecks": 390,
+    "coverage_json_files": 631,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1282,
+    "source_registry": 1365,
+    "review_rechecks": 391,
+    "coverage_json_files": 633,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 315,
+    "publication_ready": false
+  },
+  "statistics": [
+    {
+      "topic": "日本社區居住長者日常口腔清潔習慣與全因死亡的關聯",
+      "value": {
+        "mortality_incidence_rate": 17.3,
+        "interdental_cleaner_adjusted_HR": 0.89,
+        "interdental_cleaner_95_CI": [
+          0.8,
+          0.99
+        ],
+        "tongue_cleaner_adjusted_HR": 0.77,
+        "tongue_cleaner_95_CI": [
+          0.68,
+          0.87
+        ]
+      },
+      "unit": "全因死亡發生率每1,000人年17.3件；調整後危險比（HR）",
+      "period": "2016年10月3日至11月14日基線問卷，死亡追蹤至2023年6月20日；論文稱約6年追蹤",
+      "geographic_scope": "日本JAGES全國性社區長者研究",
+      "population": "9,676名社區居住65歲以上長者；平均73.7歲、46.5%男性；未取得日本長期照護保險需要認定、生活功能獨立且至少有一顆牙",
+      "numerator": "出版社摘要未列HR比較的原始死亡事件分組分子；摘要只報全體每1,000人年發生率17.3",
+      "denominator": "全體樣本9,676人；摘要未提供計算17.3/1,000人年所用總人年分母；調整後HR為加權Cox模型估計，不能以總樣本數代替分母",
+      "denominator_definition": "基線符合資格且完成含口腔習慣題組的社區長者；不是台灣居民或清潔工具使用者的分母",
+      "event_definition": "追蹤期間全因死亡；不是口腔疾病發生、急診或個人終生死亡機率",
+      "data_type": "日本觀察性世代研究；自陳口腔習慣，逆機率加權Cox比例風險模型；研究採target trial emulation分析框架，並非隨機分派清潔工具",
+      "source_ids": [
+        "tw02_jages_oral_mortality_2026"
+      ],
+      "accessed_at": "2026-11-15",
+      "limitations": "外國、特定高齡且生活功能獨立樣本；問卷自陳與殘餘混雜限制因果判斷。調整後HR不等於個人絕對風險或工具的因果效益，不能外推為台灣發生率。出版社全文頁回應403，未讀取全文；摘要未列HR比較原始分子及人年分母。"
+    },
+    {
+      "topic": "電動牙刷與手動牙刷的短期牙菌斑及牙齦炎指標",
+      "value": {
+        "plaque_index_reduction_1_to_3_months_percent": 11,
+        "plaque_index_reduction_over_3_months_percent": 21,
+        "gingivitis_index_reduction_1_to_3_months_percent": 6,
+        "gingivitis_index_reduction_over_3_months_percent": 11
+      },
+      "unit": "相對於手動牙刷的牙菌斑指數與牙齦炎指標平均降低百分比；非疾病發生率或死亡率",
+      "period": "資料庫搜尋截至2014年1月23日；納入研究於1964至2011年間發表，依1至3個月及超過3個月追蹤分組",
+      "geographic_scope": "56項多國隨機試驗的系統性回顧；非台灣疾病盛行率",
+      "population": "5,068名隨機分派至電動或手動牙刷的參與者；回顧主要納入沒有影響刷牙能力之障礙者",
+      "numerator": "不適用：合併分析的是牙菌斑與牙齦炎指數變化，並非死亡或新發病例數",
+      "denominator": "56項試驗、共5,068人；各效果比較納入人數依研究與指標而異",
+      "denominator_definition": "可納入隨機試驗且完成指定期間指標測量的參與者；不是台灣人口樣本",
+      "event_definition": "牙菌斑量表分數與牙齦炎量表分數；不是心血管事件、缺牙或全因死亡",
+      "data_type": "隨機試驗系統性回顧與統合分析；作者評定中等品質證據",
+      "source_ids": [
+        "tw02_cochrane_powered_brushing_2014"
+      ],
+      "accessed_at": "2026-11-15",
+      "limitations": "證據搜尋截至2014年，結果是替代性口腔指標；長期臨床意義不明，費用、可靠性及副作用資料不一致。不能推論牙刷能延長壽命，也不能表示手動牙刷無效。"
+    }
+  ],
+  "professional_review_status": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "牙周病與一般牙科",
+      "牙科急診",
+      "口腔衛生工具與老年口腔流行病學"
+    ]
+  },
+  "reader_copy_cleanup": "正文只寫讀者理解研究、選擇清潔工具和就醫所需資訊；未加入批次摘要、AI審查狀態、管理文字或未完成橫幅。"
+}
