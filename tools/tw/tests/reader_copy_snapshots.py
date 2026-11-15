@@ -2,20 +2,21 @@
 import hashlib
 
 
-CHAPTER_TWO_CATALOG_LINK = (
-    "[第2章：建立能持續的健康生活](book/ch02/README.md) · ".encode("utf-8")
+ADDITIVE_CHAPTER_CATALOG_LINKS = (
+    "[第2章：建立能持續的健康生活](book/ch02/README.md) · ".encode("utf-8"),
+    "[第22章：休閒與紓壓](book/ch22/README.md) · ".encode("utf-8"),
 )
 
 
 def historical_reader_copy_sha256(path, content):
-    """Hash a reader document after removing only the new Chapter 2 catalog link.
+    """Hash a reader document after removing links added after its snapshot.
 
-    Old cleanup records hash the pre-Chapter-2 chapter catalog. When validating
-    those immutable records, normalize exactly the one additive link; any other
-    catalog or wording change remains part of the digest and fails the snapshot.
+    Old cleanup records predate the Chapter 2 and Chapter 22 catalog links. When
+    validating those immutable records, normalize only those exact additive
+    links; any other catalog or wording change remains part of the digest.
     """
     if path == "locales/zh-TW/README.md":
-        count = content.count(CHAPTER_TWO_CATALOG_LINK)
-        if count == 1:
-            content = content.replace(CHAPTER_TWO_CATALOG_LINK, b"", 1)
+        for link in ADDITIVE_CHAPTER_CATALOG_LINKS:
+            if content.count(link) == 1:
+                content = content.replace(link, b"", 1)
     return hashlib.sha256(content).hexdigest()

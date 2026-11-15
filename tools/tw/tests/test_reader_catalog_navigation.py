@@ -54,7 +54,7 @@ class ReaderCatalogNavigationTests(unittest.TestCase):
                 f"第{chapter}章目錄不存在",
             )
 
-    def test_chapter_two_link_is_the_only_change_to_the_historical_catalog_copy(self):
+    def test_additive_chapter_links_are_the_only_changes_to_historical_catalog_copy(self):
         catalog = (ROOT / "locales/zh-TW/README.md").read_bytes()
         self.assertEqual(
             historical_reader_copy_sha256("locales/zh-TW/README.md", catalog),

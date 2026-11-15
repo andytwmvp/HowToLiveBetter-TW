@@ -11,6 +11,12 @@ def source_bundle_ids_added_since(root: Path, revision: str) -> set[str]:
         cwd=root,
         text=True,
     ).splitlines()
+    untracked_paths = subprocess.check_output(
+        ["git", "ls-files", "--others", "--exclude-standard", "--", bundle_dir],
+        cwd=root,
+        text=True,
+    ).splitlines()
+    changed_paths = sorted(set(changed_paths) | set(untracked_paths))
 
     def ids(document):
         return {

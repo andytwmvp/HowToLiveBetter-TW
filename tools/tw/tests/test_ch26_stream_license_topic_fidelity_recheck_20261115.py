@@ -187,7 +187,13 @@ class StreamLicenseTopicFidelityTests(unittest.TestCase):
     def test_coverage_remains_dynamic_and_does_not_mark_publication_ready(self):
         coverage = read("localization/tw-edition/coverage.json")
         self.assertEqual(coverage, audit_drafts())
-        self.assertEqual(coverage["publication_completed_entries"], 315)
+        self.assertEqual(
+            self.batch["counts_after"]["publication_completed_entries"], 315
+        )
+        self.assertGreaterEqual(
+            coverage["publication_completed_entries"],
+            self.batch["counts_after"]["publication_completed_entries"],
+        )
         self.assertEqual(coverage["publication_total_entries"], 765)
         self.assertFalse(coverage["publication_ready"])
         self.assertEqual(len(self.records), 2)
