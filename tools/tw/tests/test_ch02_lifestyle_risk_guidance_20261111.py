@@ -25,6 +25,7 @@ ELDERCARE_RECHECK_BATCH = "localization/topic-fidelity-eldercare-prepayment-2026
 REVERSE_MORTGAGE_RECHECK_BATCH = "localization/topic-fidelity-reverse-mortgage-recheck-20261114.json"
 ORAL_CARE_RECHECK_BATCH = "localization/topic-fidelity-oral-care-recheck-20261115.json"
 STREAM_LICENSE_RECHECK_BATCH = "localization/topic-fidelity-stream-licensing-recheck-20261115.json"
+NIGHTSHIFT_TOPIC_FIDELITY_BATCH = "localization/ch02-nightshift-topic-fidelity-recheck-20261115.json"
 ITEM_IDS = ("TW-02-028", "TW-02-030", "TW-02-032", "TW-02-039", "TW-02-042")
 PRIOR_DRAFT_HASHES = {
     "TW-02-028": "dd7f36a797b897618d4c266c88650ae24a132036b00e96733a97a80dcc848e21",
@@ -99,6 +100,7 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         reverse_mortgage_batch = read_json(REVERSE_MORTGAGE_RECHECK_BATCH)
         oral_care_batch = read_json(ORAL_CARE_RECHECK_BATCH)
         stream_license_batch = read_json(STREAM_LICENSE_RECHECK_BATCH)
+        nightshift_topic_batch = read_json(NIGHTSHIFT_TOPIC_FIDELITY_BATCH)
         self.assertEqual(
             newly_added_ids,
             set(self.batch["new_source_ids"])
@@ -109,7 +111,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
             | set(eldercare_recheck_batch["new_source_ids"])
             | set(reverse_mortgage_batch["new_source_ids"])
             | set(oral_care_batch["new_source_ids"])
-            | set(stream_license_batch["new_source_ids"]),
+            | set(stream_license_batch["new_source_ids"])
+            | set(nightshift_topic_batch["new_source_ids"]),
         )
         bundled = {row[0]: row for row in self.bundle["sources"]}
         self.assertEqual(set(bundled), set(self.batch["new_source_ids"]))
@@ -127,19 +130,27 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 body_bytes = body_path.read_bytes()
                 body = body_bytes.decode("utf-8")
                 digest = hashlib.sha256(body_bytes).hexdigest()
+                later_rechecks = [
+                    row for row in self.register["substantive_rechecks"]
+                    if row["id"] == item_id and row["reviewed_at"] > DATE
+                ]
+                latest_recheck = later_rechecks[-1] if later_rechecks else None
+                effective_review_date = latest_recheck["reviewed_at"] if latest_recheck else DATE
+                expected_review_record = latest_recheck or batch_item
 
                 self.assertEqual(entry["status"], "verified")
                 self.assertEqual(entry["treatment"], "taiwan_independent_rewrite")
-                self.assertEqual(entry["verified_at"], DATE)
+                self.assertEqual(entry["verified_at"], effective_review_date)
                 self.assertEqual(entry["target_path"], item["target_path"])
                 self.assertEqual(entry["sources"], item["source_ids"])
                 self.assertEqual(item["body"], body)
                 self.assertEqual(item["review_status"], "source_checked")
-                self.assertEqual((item["reviewed_at"], item["review_due_at"]), (DATE, DUE))
+                self.assertEqual(item["reviewed_at"], effective_review_date)
+                self.assertEqual(item["review_due_at"], expected_review_record["review_due_at"] if latest_recheck else DUE)
                 self.assertEqual(review["target_path"], entry["target_path"])
                 self.assertEqual(review["target_sha256"], digest)
                 self.assertEqual(review["source_reviewed_sha256"], digest)
-                self.assertEqual(batch_item["after_sha256"], digest)
+                self.assertEqual(expected_review_record["after_sha256"], digest)
                 self.assertIsNone(batch_item["before_sha256"])
                 self.assertEqual(review["prior_chapter_draft_sha256"], PRIOR_DRAFT_HASHES[item_id])
                 self.assertEqual(batch_item["prior_chapter_draft_sha256"], PRIOR_DRAFT_HASHES[item_id])
@@ -147,9 +158,14 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 self.assertEqual(batch_item["prior_structured_draft_sha256"], PRIOR_STRUCTURED_HASHES[item_id])
                 self.assertIsNone(review["prior_structured_draft_review"])
                 self.assertEqual(review["source_ids"], item["source_ids"])
-                self.assertEqual(batch_item["source_ids"], item["source_ids"])
-                self.assertEqual(review["source_checks"], batch_item["source_checks"])
-                self.assertEqual(review["statistics_assessed"], batch_item["statistics_assessed"])
+                if latest_recheck:
+                    self.assertEqual(latest_recheck["previous_source_ids"], batch_item["source_ids"])
+                    self.assertEqual(review["source_checks"], latest_recheck["source_checks"])
+                    self.assertEqual(review["statistics_assessed"], latest_recheck["statistics_assessed"])
+                else:
+                    self.assertEqual(batch_item["source_ids"], item["source_ids"])
+                    self.assertEqual(review["source_checks"], batch_item["source_checks"])
+                    self.assertEqual(review["statistics_assessed"], batch_item["statistics_assessed"])
                 self.assertEqual(review["professional_review"]["required"], True)
                 self.assertEqual(review["professional_review"]["obtained"], False)
 
@@ -159,12 +175,19 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 self.assertEqual({row["url"] for row in review["source_checks"]}, expected_urls)
                 self.assertEqual({row["source_id"] for row in review["source_checks"]}, set(item["source_ids"]))
                 for source_id in item["source_ids"]:
-                    self.assertTrue(self.sources[source_id]["accessed_at"] <= DATE)
+                    self.assertTrue(self.sources[source_id]["accessed_at"] <= effective_review_date)
                     if source_id in bundled:
-                        self.assertEqual(
-                            bundled[source_id],
-                            [self.sources[source_id][key] for key in ("id", "title", "url", "supports")],
-                        )
+                        current_source_record = [
+                            self.sources[source_id][key]
+                            for key in ("id", "title", "url", "supports")
+                        ]
+                        if source_id in set(nightshift_topic_batch.get("updated_source_ids", [])):
+                            # The old batch keeps its checked source snapshot; the current registry
+                            # records the later legal commencement-date correction.
+                            self.assertEqual(bundled[source_id][:3], current_source_record[:3])
+                            self.assertNotEqual(bundled[source_id][3], current_source_record[3])
+                        else:
+                            self.assertEqual(bundled[source_id], current_source_record)
 
                 self.assertTrue(batch_item["frequency_assessment"])
                 for statistic in review["statistics_assessed"]:
@@ -193,7 +216,10 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         self.assertIn("每案補助880元", bmi)
         self.assertIn("8.5%", night_work)
         self.assertIn("2028年1月1日施行", night_work)
-        self.assertIn("不得因此解僱、調職、不給付停止作業期間工資", night_work)
+        self.assertIn("第2條所列「長期夜間工作」定義自2026年7月1日施行", night_work)
+        self.assertNotIn("不得因此解僱、調職、不給付停止作業期間工資", night_work)
+        self.assertIn("相對風險（RR）估計為1.13", night_work)
+        self.assertIn("不是夜班造成心血管疾病或事故的發生率", night_work)
         self.assertIn("0800-068580", night_work)
         self.assertIn("脂肪分佈", bmi)
         self.assertIn("超過95%", kitchen)
@@ -202,9 +228,12 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         bmi_stats = self.reviews["TW-02-032"]["statistics_assessed"]
         night_stats = self.reviews["TW-02-039"]["statistics_assessed"]
         self.assertEqual([row["value"] for row in bmi_stats], ["51.3%"])
-        self.assertEqual([row["value"] for row in night_stats], ["8.5%"])
+        self.assertEqual(night_stats[0]["value"], "8.5%")
+        self.assertEqual(night_stats[1]["value"]["relative_risk"], 1.13)
+        self.assertEqual(night_stats[2]["value"]["relative_risk"], 1.27)
+        self.assertEqual(night_stats[3]["value"]["mortality_RR_per_5_years"], 1.05)
         self.assertIn("不是2026年每位成人的個別測量結果", bmi)
-        self.assertIn("不是夜班造成疾病或事故的發生率", night_work)
+        self.assertIn("不是夜班造成心血管疾病或事故的發生率", night_work)
         self.assertEqual(self.reviews["TW-02-028"]["statistics_assessed"], [])
         self.assertEqual(self.reviews["TW-02-030"]["statistics_assessed"], [])
         self.assertEqual(self.reviews["TW-02-042"]["statistics_assessed"], [])
@@ -228,6 +257,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         oral_care_rows = {row["id"]: row for row in oral_care_batch["items"]}
         stream_license_batch = read_json(STREAM_LICENSE_RECHECK_BATCH)
         stream_license_rows = {row["id"]: row for row in stream_license_batch["items"]}
+        nightshift_topic_batch = read_json(NIGHTSHIFT_TOPIC_FIDELITY_BATCH)
+        nightshift_record = nightshift_topic_batch["item"]
         rechecks = {
             row["id"]: row for row in self.register["substantive_rechecks"]
             if row["id"] in {"TW-02-025", "TW-02-047"} and row["reviewed_at"] == "2026-11-12"
@@ -325,9 +356,18 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 self.assertEqual(review["target_sha256"], current_sha)
                 self.assertEqual(review["reviewed_at"], stream_license_batch["reviewed_at"])
                 self.assertEqual(current["source_ids"], record["source_ids"])
+            elif item_id == nightshift_record["id"]:
+                current = current_runtime[item_id]
+                review = read_json(f"localization/reviews/{item_id}.json")
+                current_sha = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
+                self.assertEqual(current_sha, nightshift_record["after_sha256"])
+                self.assertEqual(review["target_sha256"], current_sha)
+                self.assertEqual(review["reviewed_at"], nightshift_topic_batch["reviewed_at"])
+                self.assertEqual(current["source_ids"], nightshift_record["source_ids"])
             else:
                 self.assertEqual(current_runtime[item_id], old)
         current_sources = {row["id"]: row for row in self.runtime["sources"]}
+        updated_source_ids = set(nightshift_topic_batch["updated_source_ids"])
         for old in self.base_runtime["sources"]:
             self.assertEqual(current_sources[old["id"]], old)
 
@@ -350,7 +390,17 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
 
         base_manifest = {row["id"]: row for row in self.base_manifest["entries"]}
         for item_id, old in base_manifest.items():
-            if item_id in {"TW-02-025", "TW-02-047"}:
+            if item_id in nightshift_topic_batch["scope"]:
+                expected = dict(old)
+                # TW-02-039 was first published by the 2026-11-11 batch, then re-reviewed here.
+                # Project both append-only transitions from the historical baseline.
+                expected["treatment"] = "taiwan_independent_rewrite"
+                expected["status"] = "verified"
+                expected["target_path"] = current_runtime[item_id]["target_path"]
+                expected["sources"] = current_runtime[item_id]["source_ids"]
+                expected["verified_at"] = nightshift_topic_batch["reviewed_at"]
+                self.assertEqual(self.manifest[item_id], expected)
+            elif item_id in {"TW-02-025", "TW-02-047"}:
                 self.assertEqual(self.manifest[item_id]["sources"], current_runtime[item_id]["source_ids"])
                 self.assertEqual(self.manifest[item_id]["verified_at"], "2026-11-12")
             elif item_id == "TW-02-036":
@@ -404,6 +454,11 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 )
                 expected["verified_at"] = stream_license_batch["reviewed_at"]
                 self.assertEqual(self.manifest[item_id], expected)
+            elif item_id in nightshift_topic_batch["scope"]:
+                expected = dict(old)
+                expected["sources"] = current_runtime[item_id]["source_ids"]
+                expected["verified_at"] = nightshift_topic_batch["reviewed_at"]
+                self.assertEqual(self.manifest[item_id], expected)
             elif item_id not in ITEM_IDS:
                 self.assertEqual(self.manifest[item_id], old)
         self.assertEqual(
@@ -416,10 +471,17 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
             + len(eldercare_rows)
             + len(reverse_mortgage_rows)
             + len(oral_care_rows)
-            + len(stream_license_rows),
+            + len(stream_license_rows)
+            + len(nightshift_topic_batch["scope"]),
         )
         self.assertEqual(set(rechecks), {"TW-02-025", "TW-02-047"})
-        self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))
+        self.assertEqual(
+            {row["id"] for row in self.register["substantive_rechecks"]
+             if row.get("source_bundle_path") == NIGHTSHIFT_TOPIC_FIDELITY_BATCH.replace(
+                 "localization/", "localization/tw-edition/sources/"
+             )},
+            set(nightshift_topic_batch["scope"]),
+        )
 
     def test_coverage_counts_match_batch_and_publication_remains_blocked(self):
         before = self.batch["counts_before"]

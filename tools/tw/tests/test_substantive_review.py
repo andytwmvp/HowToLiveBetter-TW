@@ -43,6 +43,49 @@ class SubstantiveReviewTests(unittest.TestCase):
         bad_reason = dict(record, question_change_reason='任意理由')
         self.assertFalse(audit.documented_revision(old, new, bad_reason))
 
+    def test_topic_fidelity_question_change_requires_a_bound_restoration_decision(self):
+        old, new, record = self.fixture()
+        old['question'] = '原先涵蓋夜間職場安全與通勤的問題嗎？'
+        new['title'] = '夜班與心血管風險'
+        new['body'] = '# 夜班與心血管風險\n\n新正文'
+        record['after_sha256'] = hashlib.sha256(new['body'].encode('utf-8')).hexdigest()
+        new['question'] = '夜班工作與心血管風險有哪些研究證據？'
+        record['topic_fidelity_review'] = {
+            'question_change': {
+                'decision': 'realign_with_restored_core_topic',
+                'previous_question': old['question'],
+                'current_question': new['question'],
+                'reason': '恢復原題核心研究主題後，同步調整自查問題。',
+            }
+        }
+        self.assertTrue(audit.documented_revision(old, new, record))
+        for key, value in (
+            ('decision', 'unreviewed_change'),
+            ('previous_question', 'different prior question'),
+            ('current_question', 'different new question'),
+            ('reason', ''),
+        ):
+            bad = copy.deepcopy(record)
+            bad['topic_fidelity_review']['question_change'][key] = value
+            with self.subTest(key=key):
+                self.assertFalse(audit.documented_revision(old, new, bad))
+
+    def test_removed_out_of_scope_claim_does_not_require_a_false_replacement_source(self):
+        old, new, record = self.fixture()
+        old['source_ids'] = ['prior_stop_work_claim']
+        new['source_ids'] = []
+        record['retired_sources'] = [{
+            'id': 'prior_stop_work_claim',
+            'disposition': 'claim_removed_from_scope',
+            'reason': '本篇不再提出該主張，改由職場安全專篇處理。',
+            'replacement_ids': [],
+            'prior_source_sha256': 'a' * 64,
+        }]
+        self.assertTrue(audit.documented_revision(old, new, record))
+        bad = copy.deepcopy(record)
+        bad['retired_sources'][0]['disposition'] = 'replaced'
+        self.assertFalse(audit.documented_revision(old, new, bad))
+
     def test_unrecorded_body_metadata_and_missing_evidence_are_rejected(self):
         old, new, record = self.fixture()
         for field in ('before_sha256','after_sha256','source_checks','limits','frequency_assessment','prior_review_sha256'):

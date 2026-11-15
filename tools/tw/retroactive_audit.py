@@ -1175,6 +1175,18 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
             "收尾複審指出皮膚液體暴露缺少立即沖洗，且乾粉／金屬化學品需依禁水警語分流；"
             "依本次來源核對同步補入皮膚處置與求援步驟。"
         )
+        topic_review = record.get("topic_fidelity_review")
+        topic_question_change = (
+            topic_review.get("question_change") if isinstance(topic_review, dict) else None
+        )
+        documented_topic_fidelity_change = (
+            isinstance(topic_question_change, dict)
+            and topic_question_change.get("decision") == "realign_with_restored_core_topic"
+            and topic_question_change.get("previous_question") == question
+            and topic_question_change.get("current_question") == new.get("question")
+            and isinstance(topic_question_change.get("reason"), str)
+            and bool(topic_question_change["reason"].strip())
+        )
         documented_safety_change = (
             old.get("id") == "TW-13-021"
             and isinstance(new.get("question"), str)
@@ -1188,7 +1200,7 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
                 )
             )
         )
-        if not (title_substitution or documented_safety_change):
+        if not (title_substitution or documented_safety_change or documented_topic_fidelity_change):
             return False
     if new.get("review_due_at") != old.get("review_due_at") and new.get("review_due_at") != record.get("review_due_at"):
         return False
@@ -1209,13 +1221,17 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
         if not isinstance(row, dict):
             return False
         key, replacements = row.get("id"), row.get("replacement_ids")
+        disposition = row.get("disposition", "replaced")
         if (not isinstance(key, str) or key not in prior_ids or key in new_ids
                 or not isinstance(row.get("reason"), str) or not row["reason"].strip()
                 or not isinstance(row.get("prior_source_sha256"), str)
                 or not re.fullmatch(r"[0-9a-f]{64}", row["prior_source_sha256"])
-                or not isinstance(replacements, list) or not replacements
+                or not isinstance(replacements, list)
                 or any(not isinstance(s, str) or s not in new_ids for s in replacements)
-                or len(set(replacements)) != len(replacements)):
+                or len(set(replacements)) != len(replacements)
+                or disposition not in {"replaced", "claim_removed_from_scope"}
+                or (disposition == "replaced" and not replacements)
+                or (disposition == "claim_removed_from_scope" and replacements)):
             return False
         retired_ids.append(key)
     retained = [s for s in prior_ids if s not in retired_ids]
