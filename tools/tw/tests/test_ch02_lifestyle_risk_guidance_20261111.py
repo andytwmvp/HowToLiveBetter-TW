@@ -200,7 +200,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
 
         bmi_stats = self.reviews["TW-02-032"]["statistics_assessed"]
         night_stats = self.reviews["TW-02-039"]["statistics_assessed"]
-        self.assertEqual([row["value"] for row in bmi_stats], ["51.3%"])
+        hpa_bmi_stat = next(row for row in bmi_stats if row["value"] == "51.3%")
+        self.assertIn("2019至2024年", hpa_bmi_stat["period"])
         self.assertEqual(night_stats[0]["value"], "8.5%")
         self.assertEqual(night_stats[1]["value"]["relative_risk"], 1.13)
         self.assertEqual(night_stats[2]["value"]["relative_risk"], 1.27)

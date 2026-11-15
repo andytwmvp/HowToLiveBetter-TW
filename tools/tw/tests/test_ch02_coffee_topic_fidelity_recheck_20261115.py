@@ -79,9 +79,12 @@ class CoffeeTopicFidelityTests(unittest.TestCase):
         self.assertEqual(self.record["status"], "ai_source_rechecked_professional_pending")
         self.assertFalse(self.review["professional_review"]["obtained"])
         old_register = json.loads(git_bytes(BASE, REGISTER_PATH))
+        prior_rows = old_register["substantive_rechecks"]
+        self.assertEqual(self.register["substantive_rechecks"][:len(prior_rows)], prior_rows)
+        appended = self.register["substantive_rechecks"][len(prior_rows):]
         self.assertEqual(
-            len(self.register["substantive_rechecks"]),
-            len(old_register["substantive_rechecks"]) + 1,
+            [row for row in appended if row["id"] == ITEM_ID and row["reviewed_at"] == DATE],
+            [self.record],
         )
 
     def test_reader_keeps_relevant_research_without_turning_it_into_a_prescription(self):

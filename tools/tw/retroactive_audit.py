@@ -1206,7 +1206,12 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
         return False
     if new.get("limits") != old.get("limits"):
         limits = new.get("limits")
-        if not isinstance(limits, str) or not limits.strip() or not isinstance(record.get("limits"), list) or limits not in record["limits"]:
+        recorded_limits = record.get("limits")
+        if (not isinstance(limits, str) or not limits.strip()
+                or not isinstance(recorded_limits, list)
+                or not recorded_limits
+                or not all(isinstance(value, str) and value.strip() for value in recorded_limits)
+                or (limits not in recorded_limits and limits != " ".join(recorded_limits))):
             return False
     prior_ids, new_ids = old.get("source_ids", []), new.get("source_ids", [])
     if (not isinstance(prior_ids, list) or not isinstance(new_ids, list)
@@ -1236,9 +1241,11 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
         retired_ids.append(key)
     retained = [s for s in prior_ids if s not in retired_ids]
     # 退役須逐項留證，保留來源的順序仍不可任意變動。
+    retained_positions = [new_ids.index(source_id) for source_id in retained if source_id in new_ids]
     if (len(set(retired_ids)) != len(retired_ids)
             or set(prior_ids) - set(new_ids) != set(retired_ids)
-            or new_ids[:len(retained)] != retained):
+            or len(retained_positions) != len(retained)
+            or retained_positions != sorted(retained_positions)):
         return False
     if {k: v for k, v in old.items() if k not in allowed} != {k: v for k, v in new.items() if k not in allowed}:
         return False

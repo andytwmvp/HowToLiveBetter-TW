@@ -2,87 +2,205 @@
   "id": "TW-02-032",
   "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-11-11",
-  "review_due_at": "2027-02-11",
+  "reviewed_at": "2026-11-16",
+  "review_due_at": "2027-02-16",
   "target_path": "locales/zh-TW/book/ch02/TW-02-032.md",
-  "target_sha256": "a6ece5ad41ea07ed0ba0a50990c92ab11beceb0598180174a9e5655472707a81",
+  "target_sha256": "e507d865ab3ff0ae46f7e95230259721edd7d7640bf16206252cfef760043ae3",
   "source_checks": [
     {
       "source_id": "tw02_hpa_adult_bmi_standard_2025",
       "title": "國健署：成人健康體位標準",
       "url": "https://www.hpa.gov.tw/542/9737/n",
-      "claim": "台灣18歲以上成人BMI分類與腰圍參考範圍；BMI為簡易指標，不是完整診斷。",
-      "supporting_passage": "頁面2025-09-11更新，列出18歲以上成人四個BMI分類、男性腰圍小於90公分及女性小於80公分，並提醒不同個案可能有所差異。",
-      "accessed_at": "2026-11-11",
-      "retrieval_method": "直接查閱國健署成人健康體位標準頁，核對BMI分類、成人適用年齡、腰圍數值及更新日期。"
+      "claim": "台灣18歲以上成人BMI參考分類為未滿18.5、18.5至未滿24、24至未滿27及27以上；成年男性與女性腰圍參考分別小於90公分與小於80公分。",
+      "supporting_passage": "國健署頁面標示2025-09-11更新；分類表及腰圍欄列出四個成人BMI區間與性別腰圍參考，並提醒個案可能有所差異。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "2026-11-16直接查閱國健署成人健康體位標準頁，核對更新日、成人BMI分類及腰圍值。"
     },
     {
-      "source_id": "tw02_hpa_nutrition_survey_bmi_2020_2024",
-      "title": "國健署：2020至2024年國民營養健康調查摘要",
-      "url": "https://www.hpa.gov.tw/5020/19885/n",
-      "claim": "台灣2020至2024年18歲以上調查對象中，51.3%達國健署成人過重及肥胖分類。",
-      "supporting_passage": "國健署2026-03-04世界肥胖日新聞稿引用2020至2024年國民營養健康調查，稱18歲以上成年人51.3%達過重及肥胖標準；新聞摘要未列樣本數、原始人數、分母、估計方法或信賴區間。",
-      "accessed_at": "2026-11-11",
-      "retrieval_method": "查閱國健署官方新聞稿及索引內容，核對調查期間、18歲以上族群和51.3%比例；頁面直連本次檢索工具逾時，故統計方法限制依公開摘要記錄。"
+      "source_id": "tw02_hpa_nutrition_survey_bmi_2019_2024",
+      "title": "國健署：成人過重及肥胖率統計（民國108至113年）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=591&pid=978&sid=979",
+      "claim": "成人過重及肥胖率51.3%對應民國108至113年（2019至2024年）國民營養健康調查摘要。",
+      "supporting_passage": "國健署頁面列成人過重及肥胖率107-111年50.8%、108-112年51.9%、108-113年51.3%；公開摘要未列該估計的樣本數、分子、分母或估計方法。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "2026-11-16直接查閱國健署官方統計頁，核對三組調查期間及成人過重與肥胖率；依民國年換算民國108至113年為2019至2024年。頁面公開摘要未提供樣本數、分子、分母、估計方法或信賴區間。"
+    },
+    {
+      "source_id": "tw02_taiwan_mj_adiposity_mortality_cohort_2021",
+      "title": "Yu等：台灣463,002名成人脂肪與死亡風險前瞻性世代研究（2021）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32988652/",
+      "claim": "台灣前瞻性健康檢查世代的BMI分組與全因死亡觀察關聯，不能當成個人BMI目標。",
+      "supporting_passage": "索引摘要記載1996-2017年間招募463,002名成人，男女BMI 23.5-24.9組觀察到最低死亡風險；出版社索引內容記載全樣本15,531人死亡，死亡登記追蹤至2019-05-31。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "2026-11-16查閱PubMed索引摘要，並核對出版社可檢索的論文方法與結果摘要片段；未能取得出版社全文，故不聲稱讀取全文。研究對象為自願參加MJ健康檢查者，樣本代表性有限。"
+    },
+    {
+      "source_id": "tw02_global_bmi_mortality_ipd_meta_2016",
+      "title": "Global BMI Mortality Collaboration：跨國BMI與全因死亡個人資料統合分析（2016）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4995441/",
+      "claim": "跨國個人資料統合分析中，受限主要分析樣本與BMI大於25之East Asia全因死亡相對關聯。",
+      "supporting_passage": "全文摘要與方法記載239世代10,625,411人；主要分析為未曾吸菸、基線無慢性病且存活超過5年的3,951,455人及385,879件死亡。全文列East Asia HR per 5 kg/m²為1.39（95% CI 1.34-1.44）；East Asia 46世代、1,074,385人及100,784件死亡列於本文所連結補充附錄。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "2026-11-16直接查閱PMC全文中研究方法、納入條件及主要分析結果，並從同頁連結的補充附錄核對東亞子群世代、參與者與死亡數；主要分析排除了吸菸者、入組時慢性病及前五年死亡以降低混雜與反向因果，並非一般人口的個人風險。"
+    },
+    {
+      "source_id": "tw02_flegal_bmi_mortality_meta_2013",
+      "title": "Flegal等：BMI類別與全因死亡系統性回顧及統合分析（2013）",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/1555137",
+      "claim": "2013統合分析報告超重BMI類別與全因死亡HR 0.94，研究間異質性高。",
+      "supporting_passage": "PubMed摘要列97項研究、逾288萬人與逾27萬人死亡及BMI25-<30相較18.5-<25的HR 0.94（95% CI 0.91-0.96）；JAMA表格列All ages BMI25-<30異質性I² 85.0%。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "2026-11-16直接查閱PubMed摘要核對檢索期間、納入研究數、總樣本及死亡數，再查閱JAMA全文表格核對彙整HR與I²；此為不同族群與調整方式的隨機效應統合分析，不能解讀為台灣超重者受保護。"
     },
     {
       "source_id": "tw02_hpa_adult_preventive_check_2026",
       "title": "國健署：成人預防保健服務資格與補助",
       "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=189",
-      "claim": "成人預防保健年齡區間、原住民和小兒麻痺提前適用條件及每案880元公費補助。",
-      "supporting_passage": "國健署成人預防保健官方頁列30至39歲每5年1次、40至64歲每3年1次、55歲以上原住民、35歲以上小兒麻痺患者及65歲以上每年1次；每案補助880元。",
-      "accessed_at": "2026-11-11",
-      "retrieval_method": "查閱國健署官方成人預防保健服務頁及官方搜尋索引摘要；頁面直連本次檢索工具逾時，以可見官方表格摘要核對資格與補助。"
+      "claim": "成人預防保健現行年齡間隔、特定族群資格及每案880元補助。",
+      "supporting_passage": "國健署中文服務頁目前列30至39歲每5年、40至未滿65歲每3年、65歲以上每年；55歲以上原住民與35歲以上小兒麻痺者每年適用；每案補助880元。服務資格及其他自費項目仍應預約前確認。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "2026-11-16查閱國健署成人預防保健服務中文頁搜尋索引摘要，並與國健署2026-08-05更新的英文服務頁交叉核對年齡間隔及特定族群資格；中文頁直連本次瀏覽工具逾時，故補助以官方索引摘要佐證。"
     },
     {
       "source_id": "tw02_hpa_adult_preventive_check_detail_2026",
       "title": "國健署：成人預防保健服務內容與年齡資格（英文）",
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1076&pid=18516",
-      "claim": "交叉核對現行成人預防保健各年齡間隔及原住民、小兒麻痺提前適用年齡。",
-      "supporting_passage": "國健署官方英文頁於2026-08-05更新，列出30至39歲每5年、40至未滿65歲每3年、65歲以上每年，並說明55歲原住民及35歲小兒麻痺者提早適用。",
-      "accessed_at": "2026-11-11",
-      "retrieval_method": "直接開啟國健署2026-08-05更新的官方英文服務說明頁，核對年齡間隔與提前適用族群，並與中文服務頁摘要交叉核對補助。"
+      "claim": "國健署成人預防保健年齡間隔與55歲原住民、35歲小兒麻痺者提前適用資格。",
+      "supporting_passage": "國健署英文頁標示2026-08-05更新，列30至39歲每5年、40至未滿65歲每3年、65歲以上每年，並列55歲以上原住民及35歲以上小兒麻痺者提前適用。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "2026-11-16直接查閱國健署英文成人健康檢查頁面，頁面標示更新日2026-08-05；核對服務間隔與特殊族群資格。"
     }
   ],
-  "localization_changes": "移除不適用台灣成人的原作BMI 20至25目標與海外死亡風險數字，改用國健署成人分類、腰圍限制和2020至2024年調查；補入成人預防保健常規年齡間隔及55歲原住民、35歲以上小兒麻痺者每年資格，並澄清880元是公費補助額。",
-  "review_method": "依固定原作ID、上游commit及原始主題重讀現有Markdown草稿、結構化草稿列與最新manifest；直接查閱本次來源清單中的台灣主管機關法規、服務入口、官方調查、原始研究與國際分類資料，逐項核對正文主張、適用族群、台灣生活情境、統計期間與分母、施行日期、費用、流程和來源限制。來源不足時明確記錄，不把AI輔助來源查核當成專業審閱。",
+  "localization_changes": "台灣BMI分類、腰圍和預防保健資格維持；補回原題BMI與全因死亡研究，納入台灣463,002人健康檢查世代、Global BMI Mortality Collaboration主要分析及East Asia結果、Flegal等2013相反方向的統合結果；逐項揭露分母、選樣、研究限制與高異質性，不恢復BMI 20至25作全民個人目標。另依國健署現行統計頁將51.3%調查期間由前次記載2020至2024更正為民國108至113年（2019至2024年）。",
+  "review_method": "依固定ID重讀原作第32條、最新正式正文、2026-11-11 review與來源、manifest/runtime及先前改寫紀錄；重新查閱國健署成人BMI與預防保健資料、成人體位調查統計、台灣世代研究索引摘要及出版社可檢索摘要、Global BMI Mortality Collaboration全文與補充附錄、Flegal等系統性回顧與JAMA表格。逐項核對研究期、地區、研究對象、分子分母、死亡事件定義、樣本篩選、BMI切點、HR與異質性。出版社未提供可讀取的台灣世代全文，故只保留摘要支持內容並記錄限制；AI輔助查核不是正式專業審閱。",
   "limits": [
-    "BMI不能單獨診斷健康，兒童及青少年須用生長評估；懷孕、長者、運動員及疾病治療中的體重變化需個別判斷。",
-    "51.3%是2020至2024年調查摘要的群體比例，摘要未提供完整統計方法及分母，不能視為2026年現況或個人機率。",
-    "成人預防保健每案880元為補助額；資格、方案內容及院所額外自費項目應預約前確認。"
+    "國健署成人BMI分類是初步體位指標，不能單獨診斷健康；兒童與青少年應使用生長評估，懷孕、年長者、運動員或受疾病治療影響者需個別評估。",
+    "51.3%是民國108至113年（2019至2024年）官方調查摘要中的群體比例；摘要未公開完整樣本、分子、分母、估計方法及信賴區間，不能當成疾病發生率或個人機率。",
+    "台灣463,002人世代來自MJ健康檢查計畫，15,531件死亡及BMI最低風險分類是該選樣世代中的觀察結果，不代表全國機率或個人最佳BMI；本次未取得出版社全文。",
+    "Global BMI Mortality Collaboration主分析排除吸菸者、基線慢性病者及前五年死亡；East Asia HR是觀察性相對估計，不能當成個人絕對風險或減重效果。",
+    "Flegal等2013統合分析的超重組估計伴隨I²=85%高異質性；研究間切點、族群與調整方法不同，不能說超重具有保護效果。",
+    "尚未取得家庭醫學、肥胖與代謝醫學、營養學或流行病學專業人員的獨立審閱。"
   ],
-  "source_reviewed_sha256": "a6ece5ad41ea07ed0ba0a50990c92ab11beceb0598180174a9e5655472707a81",
+  "source_reviewed_sha256": "e507d865ab3ff0ae46f7e95230259721edd7d7640bf16206252cfef760043ae3",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "0ce733d7ee13a632584c59c6e1bd193d81e3243f095ee70b31f825f6dd57925c",
   "source_ids": [
     "tw02_hpa_adult_bmi_standard_2025",
-    "tw02_hpa_nutrition_survey_bmi_2020_2024",
+    "tw02_hpa_nutrition_survey_bmi_2019_2024",
+    "tw02_taiwan_mj_adiposity_mortality_cohort_2021",
+    "tw02_global_bmi_mortality_ipd_meta_2016",
+    "tw02_flegal_bmi_mortality_meta_2013",
     "tw02_hpa_adult_preventive_check_2026",
     "tw02_hpa_adult_preventive_check_detail_2026"
   ],
-  "frequency_assessment": "國健署2020至2024年全國國民營養健康調查摘要報告18歲以上成年人51.3%達過重及肥胖標準。這是調查期間的群體比例，不是發生率、疾病盛行率或個人罹病機率；公開摘要未交代樣本數、原始分子、分母、估計方法與信賴區間，不能據此推估個人風險。",
+  "frequency_assessment": "台灣成人體位方面，國健署公布民國108至113年（2019至2024年）成人過重及肥胖比例51.3%，是國民營養健康調查的群體估計；公開摘要未列樣本數、分子、分母、加權方法及信賴區間，不能推算個人機率。死亡率證據分別來自自費健康檢查世代和跨國前瞻性世代統合分析，需各自標示研究分母及選樣條件；死亡件數、HR與群體最低BMI分類不是台灣成人的發生率、致死率或個人壽命效果。",
   "statistics_assessed": [
     {
-      "topic": "國健署調查18歲以上成人達過重或肥胖分類",
+      "topic": "國健署成人過重及肥胖調查比例",
       "value": "51.3%",
-      "unit": "官方調查摘要所列群體比例",
-      "period": "2020至2024年",
-      "geographic_scope": "台灣全國國民營養健康調查",
-      "population": "18歲以上成年人",
-      "numerator": "公開新聞摘要未列原始人數或分子",
-      "denominator": "公開新聞摘要未列樣本數或原始分母",
-      "event_definition": "調查對象達國健署成人BMI過重（24至未滿27）或肥胖（27以上）分類；新聞摘要未交代詳細估計操作與測量方法",
-      "data_type": "全國國民營養健康調查之官方摘要；估計方法、加權方式與不確定性未在公開新聞摘要交代",
-      "limitations": "2020至2024調查不是2026年個人測量；公開摘要未列樣本數、分子、分母、估計方法及信賴區間；不將此群體比例換算為個人肥胖、疾病或未來事件機率。",
+      "unit": "官方調查摘要中的成人群體比例",
+      "period": "民國108至113年（2019至2024年）",
+      "geographic_scope": "台灣全國國民營養健康調查；官方摘要同時列其他重疊調查期間",
+      "population": "國民營養健康調查中的18歲以上成人；公開頁面未列此統計估計的完整樣本數",
+      "numerator": "公開統計摘要未提供達過重／肥胖分類的原始人數",
+      "denominator": "公開統計摘要未提供樣本數或估計分母",
+      "denominator_definition": "官方所稱成人過重及肥胖率；以國健署成人BMI分類界定群體，摘要未交代該彙整估計的詳細量測、加權及分母算法",
+      "event_definition": "BMI達台灣成人過重（24至未滿27）或肥胖（27以上）分類；這是體位分類比例，不是疾病新發事件",
+      "data_type": "主管機關國民營養健康調查的官方統計摘要；不是行政通報案件數",
+      "limitations": "公開摘要未列樣本數、原始分子、分母、估計／加權方法或信賴區間；民國108至113年為跨年調查期間，不是單一年度結果，也不換算成個人疾病機率。前次審閱誤記為2020至2024年，現依官方統計頁更正為2019至2024年。",
       "source_ids": [
-        "tw02_hpa_nutrition_survey_bmi_2020_2024"
-      ]
+        "tw02_hpa_nutrition_survey_bmi_2019_2024"
+      ],
+      "accessed_at": "2026-11-16"
+    },
+    {
+      "topic": "台灣MJ健康檢查成人世代BMI分類與全因死亡",
+      "value": {
+        "participants": 463002,
+        "all_cause_deaths": 15531,
+        "lowest_observed_BMI_category": "23.5至24.9 kg/m²"
+      },
+      "unit": "參與者人數、追蹤死亡事件數、研究觀察到最低死亡風險的BMI分類",
+      "period": "1996至2017年招募；死亡登記追蹤至2019-05-31；論文2021年刊期（2020-09-16線上發表）",
+      "geographic_scope": "台灣MJ Health Management健康檢查計畫參與者；非全國機率抽樣",
+      "population": "參與MJ Health Management自費健康檢查的成人；研究摘要稱男女最低風險分類相同",
+      "numerator": "追蹤期間15,531件全因死亡",
+      "denominator": "463,002名納入分析的成人；個別BMI分類的分子／分母未在摘要提供",
+      "denominator_definition": "研究依基線BMI分類並連結台灣死亡登記之納入者；非台灣全體成年人口分母",
+      "event_definition": "死亡登記中的全因死亡；BMI分類之觀察性關聯，不等於BMI造成死亡",
+      "data_type": "前瞻性觀察世代研究；摘要方法稱死亡資料連結台灣國家死亡登記",
+      "limitations": "參與者來自自願／自費健康檢查計畫，健康檢查族群不能代表所有台灣成人；23.5至24.9是群體模型分類結果，不是個人建議目標。出版社全文本次無法取得，正文限於索引摘要及出版社可檢索摘要所能支持的結果。",
+      "source_ids": [
+        "tw02_taiwan_mj_adiposity_mortality_cohort_2021"
+      ],
+      "accessed_at": "2026-11-16"
+    },
+    {
+      "topic": "跨國BMI個人資料統合分析：East Asia BMI大於25之全因死亡相對危險",
+      "value": {
+        "total_cohort_participants": 10625411,
+        "total_prospective_cohorts": 239,
+        "primary_analysis_participants": 3951455,
+        "primary_analysis_cohorts": 189,
+        "primary_analysis_all_cause_deaths": 385879,
+        "east_asian_cohorts": 46,
+        "east_asian_participants": 1074385,
+        "east_asian_all_cause_deaths": 100784,
+        "hazard_ratio_per_5_BMI_above_25": 1.39,
+        "95_confidence_interval": [
+          1.34,
+          1.44
+        ]
+      },
+      "unit": "前瞻性世代人數、全因死亡事件數及每增加5 kg/m² BMI之相對危險比HR；不是絕對機率",
+      "period": "原始研究世代追蹤期不一；整體中位追蹤13.7年；論文2016年發表",
+      "geographic_scope": "亞洲、澳洲／紐西蘭、歐洲及北美；另列East Asia子群",
+      "population": "主分析為189個世代中未曾吸菸、入組時無慢性病且存活超過5年的成人；East Asia子群另依同研究條件分析",
+      "numerator": "主要分析385,879件全因死亡；East Asia子群100,784件全因死亡",
+      "denominator": "主要分析3,951,455人；East Asia子群1,074,385人。初始資料為239世代、10,625,411人；未把初始總數誤當主要分析分母",
+      "denominator_definition": "全因死亡發生於入組BMI分組的前瞻性世代參與者；主要估計排除從未吸菸以外的吸菸者、基線慢性病者及前五年死亡",
+      "event_definition": "全因死亡；BMI大於25範圍內每增加5 kg/m²的調整後HR，不是個人死亡概率或減重介入效果",
+      "data_type": "239個前瞻性世代之個人參與者資料統合分析；主估計採嚴格篩選後的189世代子集；East Asia分組計數列於補充附錄",
+      "limitations": "跨國觀察性研究且主分析排除吸菸、既有慢性病及前五年死亡，估計受樣本選擇、分類、混雜與反向因果處理方式影響；亞洲區域平均不能代替台灣全國估計或個人機率。",
+      "source_ids": [
+        "tw02_global_bmi_mortality_ipd_meta_2016"
+      ],
+      "accessed_at": "2026-11-16"
+    },
+    {
+      "topic": "Flegal等BMI分類與全因死亡統合分析：超重組彙整估計",
+      "value": {
+        "participants_at_least": 2880000,
+        "deaths_at_least": 270000,
+        "prospective_studies": 97,
+        "hazard_ratio_overweight_25_to_under_30_vs_18_5_to_under_25": 0.94,
+        "95_confidence_interval": [
+          0.91,
+          0.96
+        ],
+        "I_squared_percent": 85.0
+      },
+      "unit": "研究數、至少參與者／死亡數、相較BMI參考組的彙整HR與研究間異質性I²",
+      "period": "資料庫檢索截至2012-09-30；2013年發表",
+      "geographic_scope": "多國成人一般人口前瞻性世代研究之統合分析，不是台灣代表性樣本",
+      "population": "97個無重複納入的成人前瞻性研究，合計超過2,880,000人；各研究分組樣本不同",
+      "numerator": "無單一共同死亡分子；研究合計超過270,000件死亡。HR 0.94是隨機效應模型彙整值",
+      "denominator": "97研究合計超過2,880,000人；各研究BMI分類、追蹤與比較組的人數不一，並非單一共同分母",
+      "denominator_definition": "BMI 25至未滿30與18.5至未滿25參考類別的統合比較；BMI定義採該研究標準類別，與台灣成人分類不完全相同",
+      "event_definition": "追蹤期間全因死亡；HR 0.94不能解讀為超重對個人有保護作用或死亡機率降低6個百分點",
+      "data_type": "系統性回顧及隨機效應統合分析；彙整成人前瞻性世代研究",
+      "limitations": "研究間異質性高（I²=85%）；納入與調整方法不同，不能和2016個人資料分析簡化成單方證明正確，也不推論過重具保護性。",
+      "source_ids": [
+        "tw02_flegal_bmi_mortality_meta_2013"
+      ],
+      "accessed_at": "2026-11-16"
     }
   ],
   "unresolved_questions": [
-    "若國健署公開調查技術報告或微資料，後續應補核樣本數、抽樣設計、量測及加權估計方法。",
-    "每案880元補助及成人預防保健資格可能調整，複查時須核對國健署最新公告。",
-    "未取得家醫科、肥胖醫學、營養或流行病學專業人員獨立審閱。"
+    "國健署公開頁未附51.3%調查估計的樣本數、分子、分母、加權估計及信賴區間；如有更完整官方技術報告，後續可補核。",
+    "台灣MJ研究出版社全文本次無法取得；目前依PubMed摘要及出版社索引方法／結果摘錄核對，不能判定未顯示的模型細節。",
+    "尚未取得家庭醫學、肥胖與代謝醫學、營養學或流行病學專業人員獨立審閱。",
+    "成人預防保健年齡資格與補助可能更新；後續複查需再核對國健署最新公告。"
   ],
   "professional_review": {
     "required": true,
@@ -96,5 +214,86 @@
   },
   "prior_chapter_draft_sha256": "ee0bc517312f78c189a6e96d27f4e8dd616f72cbfc8ccd9cdb2b3b5d9d18a7ea",
   "prior_structured_draft_sha256": "29e1651d0607d868fc973fa472ee9eaaa615f40dcc57e90f96a7232c7083e482",
-  "prior_structured_draft_review": null
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留台灣BMI分類、腰圍與預防保健入口；補回一項台灣健康檢查世代、2016跨國個人資料統合分析及2013不同結論的統合分析，逐一寫清研究分母、死亡事件、樣本選擇、異質性與不能推論的部分。更正官方51.3%調查期間標記；不恢復BMI 20至25為每人應達到的減重目標。",
+  "topic_fidelity_review": {
+    "original_topic": "原作第32條以BMI 20至25與全因死亡最低點為核心，引用Global BMI Mortality Collaboration 2016、Flegal等2013並討論兩種分析對吸菸、既有疾病和早期追蹤死亡的不同處理；原先台灣改寫保留本土BMI分類，但將整組死亡研究數字移除。",
+    "taiwan_relevance": "台灣居民會遇到成人BMI分類、健康檢查及減重目標問題；本土健康檢查世代可提供具地域關聯的群體研究，國際分析也能協助理解觀察性研究如何因納入條件不同而得到不同結果。外國BMI切點不完全等同台灣分類，且任何世代結果都不能直接指定台灣個人目標。",
+    "reader_content_decision": "保留台灣BMI分類、腰圍與預防保健入口；補回一項台灣健康檢查世代、2016跨國個人資料統合分析及2013不同結論的統合分析，逐一寫清研究分母、死亡事件、樣本選擇、異質性與不能推論的部分。更正官方51.3%調查期間標記；不恢復BMI 20至25為每人應達到的減重目標。",
+    "decision": "retain_taiwan_core_and_restore_bounded_mortality_research_without_individual_target",
+    "question_change": {
+      "previous_question": "台灣成人應如何理解BMI、腰圍、全國體位調查和成人預防保健資格？",
+      "current_question": "如何參照台灣成人BMI分類、理解死亡率研究並安排合適的健康檢查？",
+      "reason": "原自查問題只問台灣BMI分類、腰圍與健檢資格，沒有涵蓋原題中被刪去的死亡率研究，也未提醒群體研究不能轉成個人BMI或減重目標；本次保留台灣服務入口並補回可限縮解讀的死亡研究問題。",
+      "decision": "realign_with_restored_core_topic"
+    },
+    "historical_claim_decisions": [
+      {
+        "claim": "每個人應把BMI維持在20至25，超過就減重；此範圍證明減重能延壽。",
+        "decision": "do_not_restore_as_individual_target_or_causal_prescription",
+        "reason": "這些研究為不同BMI群體的觀察性死亡關聯，不是隨機減重介入試驗；BMI 20至25作為一律目標會忽略台灣BMI分類、年齡、肌肉量、疾病、體重變化與個別風險。"
+      },
+      {
+        "claim": "2016 Global BMI Mortality Collaboration只留未曾吸菸、基線無慢性病且存活超過5年的樣本，並報告East Asia BMI大於25每增加5 kg/m²的全因死亡HR 1.39。",
+        "decision": "restore_with_sample_selection_and_relative_measure_limits",
+        "reason": "主要分析的限制、分母和East Asia估計可由全文及補充附錄核對；以研究本身的分母與HR呈現，不把它當作台灣個人機率或干預效果。"
+      },
+      {
+        "claim": "Flegal等2013回顧發現BMI 25至未滿30組全因死亡HR低於參考組。",
+        "decision": "restore_as_conflicting_observational_meta_analysis_with_heterogeneity",
+        "reason": "PubMed與JAMA資料支持97項研究、HR 0.94及I²=85%；高異質性與方法差異不支持把這個組間關聯說成超重有保護作用。"
+      },
+      {
+        "claim": "台灣成人死亡風險最低BMI可用國健署18.5至未滿24分類取代，或由單一世代直接設定個人目標。",
+        "decision": "retain_as_local_cohort_context_only",
+        "reason": "463,002人世代有15,531件全因死亡且男女最低風險分類為23.5至24.9；其來源為MJ健康檢查參與者，並非全國機率樣本，研究結果亦不是醫療處方。"
+      },
+      {
+        "claim": "國健署2020至2024年成人過重肥胖率為51.3%。",
+        "decision": "correct_period_to_roc_years_108_to_113",
+        "reason": "最新國健署官方統計頁將51.3%列在民國108至113年；換算西元為2019至2024年。前次review的2020至2024期間標示有誤，改採現行官方統計頁並保留樣本分母未公開的限制。"
+      }
+    ],
+    "frequency_evidence": "台灣成人體位方面，國健署公布民國108至113年（2019至2024年）成人過重及肥胖比例51.3%，是國民營養健康調查的群體估計；公開摘要未列樣本數、分子、分母、加權方法及信賴區間，不能推算個人機率。死亡率證據分別來自自費健康檢查世代和跨國前瞻性世代統合分析，需各自標示研究分母及選樣條件；死亡件數、HR與群體最低BMI分類不是台灣成人的發生率、致死率或個人壽命效果。",
+    "excluded_aspects": [
+      "不恢復BMI 20至25作為全民減重門檻或保證延壽承諾。",
+      "不把觀察性HR轉成個人絕對機率、發生率或死亡機率百分點。",
+      "不將MJ自費健康檢查樣本、East Asia子群或其他國際研究當成全台代表性樣本。",
+      "不把Flegal等分析中HR低於1說成超重具保護效果；正文同時揭露研究間高異質性。"
+    ]
+  },
+  "source_bundle_path": "localization/tw-edition/sources/ch02-bmi-mortality-topic-fidelity-recheck-20261116.json",
+  "source_bundle_sha256": "77dd810b338427b73ffdf3f47dd2d1971dc9611deae90816f2ed6066453c7ad5",
+  "new_source_ids": [
+    "tw02_hpa_nutrition_survey_bmi_2019_2024",
+    "tw02_taiwan_mj_adiposity_mortality_cohort_2021",
+    "tw02_global_bmi_mortality_ipd_meta_2016",
+    "tw02_flegal_bmi_mortality_meta_2013"
+  ],
+  "previous_source_ids": [
+    "tw02_hpa_adult_bmi_standard_2025",
+    "tw02_hpa_nutrition_survey_bmi_2020_2024",
+    "tw02_hpa_adult_preventive_check_2026",
+    "tw02_hpa_adult_preventive_check_detail_2026"
+  ],
+  "source_records_reused": [
+    "tw02_hpa_adult_bmi_standard_2025",
+    "tw02_hpa_adult_preventive_check_2026",
+    "tw02_hpa_adult_preventive_check_detail_2026"
+  ],
+  "retired_sources": [
+    {
+      "id": "tw02_hpa_nutrition_survey_bmi_2020_2024",
+      "disposition": "replaced",
+      "replacement_ids": [
+        "tw02_hpa_nutrition_survey_bmi_2019_2024"
+      ],
+      "prior_source_sha256": "9b5fe1f775d995c4d04178ebb703b0422f86bdc9df759de4b18eb469c627e617",
+      "reason": "前次審查將51.3%標為2020至2024年；現改用國健署現行統計頁的民國108至113年（2019至2024年）標示。舊登錄物件與引用歷史保留，不再作為現行來源。"
+    }
+  ],
+  "prior_review_sha256": "98dbe8c4f22b26f2617dc320f774ec52743de70b4f8f7f2e395e5c8b3904da85",
+  "prior_reviewed_at": "2026-11-11",
+  "prior_review_due_at": "2027-02-11",
+  "prior_source_reviewed_sha256": "a6ece5ad41ea07ed0ba0a50990c92ab11beceb0598180174a9e5655472707a81"
 }
