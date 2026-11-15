@@ -102,16 +102,23 @@ class SubstantiveReviewTests(unittest.TestCase):
         self.assertTrue(all(r['status'] == 'ai_source_rechecked_professional_pending' for r in records))
         self.assertFalse(report['summary']['publication_ready'])
 
-    def test_audit_rejects_well_formed_but_false_history_hash(self):
-        original = audit.load
-        def altered(root, path):
-            data = original(root, path)
-            if path == 'localization/retroactive-review-register-20261019.json':
-                data['substantive_rechecks'][0]['prior_review_sha256'] = 'a' * 64
-            return data
-        with patch.object(audit, 'load', side_effect=altered):
-            with self.assertRaisesRegex(ValueError, 'SHA 不符'):
-                audit.audit()
+    def test_history_validator_rejects_well_formed_but_false_prior_review_hash(self):
+        register = audit.load(
+            audit.ROOT, 'localization/retroactive-review-register-20261019.json'
+        )
+        runtime = audit.load(audit.ROOT, 'localization/tw-edition/runtime.json')
+        item = next(row for row in runtime['items'] if row['id'] == 'TW-23-010')
+        current_sha = hashlib.sha256(item['body'].encode('utf-8')).hexdigest()
+        record = next(
+            row for row in reversed(register['substantive_rechecks'])
+            if row['id'] == item['id'] and row['after_sha256'] == current_sha
+        )
+        altered = copy.deepcopy(record)
+        altered['prior_review_sha256'] = (
+            '0' * 64 if record['prior_review_sha256'] != '0' * 64 else '1' * 64
+        )
+        with self.assertRaisesRegex(ValueError, '原始審閱 SHA 不符'):
+            audit.validate_recheck_history(audit.ROOT, altered, item)
 
     def test_recheck_may_append_sources_but_never_remove_or_reorder_prior_sources(self):
         old, new, record = self.fixture()
