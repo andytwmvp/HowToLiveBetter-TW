@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "phase": "topic_fidelity_substantive_recheck",
+  "baseline_main_sha": "93b22b66bf16ba0ccef10919e826e586ce6abb12",
+  "reviewed_at": "2026-11-15",
+  "review_due_at": "2027-02-15",
+  "scope": "逐題重審TW-02-026咖啡因與長期健康主題；保留台灣官方咖啡因建議，重新評估原作咖啡、長壽、飲用時段、房顫及不加糖主張。",
+  "content_policy": "不以去中國化或在地化為由自動刪除有台灣讀者價值的外地研究；也不因原作收錄或研究顯著就整批恢復。依讀者用途、研究設計、分母、來源支持、外推限制、重複及誤用風險逐項決定。",
+  "item": {
+    "id": "TW-02-026",
+    "title": "咖啡因看總量：咖啡與長期健康研究怎麼看",
+    "change_kind": "bounded_historical_research_restoration_and_substantive_recheck",
+    "target_path": "locales/zh-TW/book/ch02/TW-02-026.md",
+    "before_sha256": "beec3a45c7ee3fcf9a33d3c8555523a003d364059a395b2ddacecb3f52bef06a",
+    "after_sha256": "0db17c87ca22884e0d2c027d2cf7dd11da42976fee1e2881f6ff530d296fe12c",
+    "prior_review_sha256": "a07332fce70dc25a6f2cd8e63f451776780c952fa9715666b8ecfb1b662203b4",
+    "review_sha256": "d4082b45ebb9d3ac18cbc100addd0d6cd7fafe963f9f4783ca512e2912a45995",
+    "previous_question": "如何依台灣建議與個人反應評估咖啡、茶及其他含咖啡因飲品？",
+    "current_question": "咖啡因如何計算，咖啡與長期健康研究能否當成延壽或心律治療建議？",
+    "topic_fidelity_assessment": {
+      "original_topic": "原作以每天3至4杯及400毫克上限為題，討論咖啡攝取與全因死亡、上午與整天飲用時段、房顫、咖啡因劑量及不加糖／奶蓋的主張。",
+      "taiwan_relevance": "咖啡是台灣讀者常見飲品，咖啡因攝取、睡眠和是否能延壽是實際健康疑問。日本隊列與美國研究可提供相關生活方式研究脈絡，但不能改寫成台灣盛行率、個人機率或因果結論；台灣社區論文值得保留為本土研究線索，但公開摘要不足以引用其模型估值。",
+      "reader_content_decision": "保留台灣咖啡因安全資訊，限縮補回全球傘狀回顧、日本一項關聯隊列及另一項未見全因死亡顯著關聯的隊列、台灣論文的研究存在與摘要限制、美國咖啡時段觀察研究，以及特定房顫患者的隨機試驗。逐項寫明設計和適用範圍，不把相關性改寫成延壽處方或房顫治療。",
+      "decision": "retain_taiwan_core_with_bounded_research_and_selected_trial_evidence",
+      "question_change": {
+        "previous_question": "如何依台灣建議與個人反應評估咖啡、茶及其他含咖啡因飲品？",
+        "current_question": "咖啡因如何計算，咖啡與長期健康研究能否當成延壽或心律治療建議？",
+        "reason": "原題只以咖啡因攝取與身體反應為讀者問題，未呈現被刪去的咖啡與長期健康／死亡研究及房顫研究；修訂保留台灣攝取安全，同時重新涵蓋有讀者價值且可限縮說明的研究問題。"
+      },
+      "historical_claim_decisions": [
+        {
+          "claim": "每天3至4杯、總咖啡因不超過400毫克是一般人的建議量或延壽劑量",
+          "decision": "replace_with_current_taiwan_guidance_and_remove_fixed_cup_prescription",
+          "reason": "台灣食藥署依成人、青少年、孕婦及兒童給出不同建議；杯量和咖啡因濃度差異大。每日上限不是必須達到的目標，也不能以延壽研究當作攝取處方。"
+        },
+        {
+          "claim": "每天3至4杯咖啡使死亡機率下降17%，證據等級A",
+          "decision": "bounded_reader_restoration_with_corrected_relative_estimate",
+          "reason": "保留傘狀回顧中RR 0.83及經更正的95%信賴區間，但改稱跨觀察性研究的相對關聯；不稱個人絕對機率、因果效益或證據等級A。"
+        },
+        {
+          "claim": "上午喝咖啡比整天喝能延壽／降低死亡",
+          "decision": "bounded_reader_restoration_as_one_observational_cohort_finding",
+          "reason": "美國NHANES研究有可辨識的研究分母及死亡數，且時段問題與台灣讀者理解生活方式研究相關；只報研究中HR和分類，指出自陳觀察設計與非因果限制，不建議調整台灣個人飲用時段。"
+        },
+        {
+          "claim": "房顫患者不必一律戒咖啡，咖啡消費可能影響復發",
+          "decision": "bounded_restoration_from_randomized_trial_for_selected_patients_only",
+          "reason": "JAMA隨機試驗直接比較成功電復律後特定曾喝咖啡患者的攝取與戒除，但不能推廣至所有房顫、首次發作、其他心律不整或一般人；不提出喝咖啡治療建議。"
+        },
+        {
+          "claim": "咖啡必須不加糖、不加奶蓋才能取得延壽好處",
+          "decision": "not_restored_as_a_longevity_rule",
+          "reason": "本次納入的死亡研究不能證明不加糖或不加奶蓋會延壽，也未支持把含糖飲品的營養問題簡化成咖啡因果效益；若讀者需管理糖攝取，應依整體飲食及相關營養建議判斷。"
+        },
+        {
+          "claim": "每天7杯仍比不喝者死亡風險低10%，可據此鼓勵增加攝取",
+          "decision": "not_restored_as_a_dose_recommendation",
+          "reason": "不同研究的杯量、族群與暴露分類不同，最高攝取組的結果並不一致；台灣官方上限與個人反應優先，觀察性結果不支持鼓勵增加咖啡。"
+        }
+      ],
+      "frequency_evidence": "咖啡攝取與死亡的研究報告的是各研究隊列中的觀察關聯或相對危險，不是咖啡對台灣居民的因果發生率。日本合併研究與日本自治醫科大學隊列結論不完全一致；台灣碩論公開摘要沒有本次引用所需的分析分母和不確定範圍；美國飲用時段研究來自美國NHANES。不得把任一數字換成台灣個人機率。DECAF為特定患者六個月房顫／房撲復發事件，不能作為一般人口事件頻率。",
+      "excluded_aspects": [
+        "不引用原作「證據等級A」標籤，改按研究設計、來源和限制說明。",
+        "不恢復歐洲或加拿大400毫克安全上限作為台灣建議；依台灣現行食藥署資料呈現。",
+        "不把不加糖、不加奶蓋當成延壽必要條件；新增糖與飲品營養不在本篇研究證據可推得的因果結論內。",
+        "不把咖啡攝取或上午飲用寫成治療、預防疾病或必須採行的生活指令。"
+      ]
+    },
+    "source_ids": [
+      "tw02_tfda_caffeine_guidance_2025",
+      "tw02_hpa_pregnancy_caffeine_2025",
+      "tw02_bmj_coffee_health_umbrella_2017",
+      "tw02_bmj_coffee_health_correction_2018",
+      "tw02_jcc_coffee_mortality_2019",
+      "tw02_jichi_coffee_mortality_2021",
+      "tw02_ntu_coffee_life_expectancy_thesis_2020",
+      "tw02_ehj_coffee_timing_mortality_2025",
+      "tw02_jama_coffee_af_trial_2026"
+    ],
+    "statistics_assessed": [
+      {
+        "topic": "咖啡攝取與全因死亡：2017傘狀回顧中每天3至4杯相較不喝咖啡的彙整估計",
+        "value": {
+          "relative_risk": 0.83,
+          "95_confidence_interval": [
+            0.79,
+            0.88
+          ],
+          "observational_meta_analyses": 201
+        },
+        "unit": "相對風險RR；每天3至4杯相較不喝咖啡的彙整觀察關聯，非絕對死亡機率",
+        "period": "回顧研究檢索至2017年7月；2017年11月發表，2018年1月更正信賴區間",
+        "geographic_scope": "跨國成人研究；傘狀回顧不限單一國家",
+        "population": "201篇觀察性研究統合分析，涉及67種健康結果；此項全因死亡估計沿用其中的咖啡攝取研究，並無單一共同樣本",
+        "numerator": "彙整相對風險0.83；不是一個共同分子或單一死亡事件數",
+        "denominator": "各原始研究人數、比較組及統計權重不一；傘狀回顧沒有可作為此RR單一分母的共同人數或絕對風險",
+        "denominator_definition": "研究中每天3至4杯咖啡分類與不喝咖啡組的合併比較；杯量依原始研究定義",
+        "event_definition": "全因死亡；不是任何單一疾病發生率或個人終生死亡機率",
+        "data_type": "傘狀回顧；201篇觀察性研究統合分析，另有17篇介入研究統合分析但介入結果不等同死亡因果證據",
+        "source_ids": [
+          "tw02_bmj_coffee_health_umbrella_2017",
+          "tw02_bmj_coffee_health_correction_2018"
+        ],
+        "accessed_at": "2026-11-15",
+        "limitations": "主要為觀察性研究彙整，不能排除混雜或反向因果；不同研究的杯量、製備及族群不同；RR 0.83不能說成台灣個人絕對機率下降17%，也不是建議攝取量。2018年更正後的95%信賴區間為0.79至0.88。"
+      },
+      {
+        "topic": "日本八個人口世代研究合併分析的咖啡攝取與全因死亡",
+        "value": {
+          "participants": 313381,
+          "men": 144750,
+          "women": 168631,
+          "mean_followup_years": 17,
+          "all_cause_deaths": 52943
+        },
+        "unit": "人、平均追蹤年數及全因死亡事件數",
+        "period": "平均追蹤17年；研究於2019年發表，個別世代基線和追蹤起訖不同",
+        "geographic_scope": "日本八個人口世代研究",
+        "population": "144,750名男性及168,631名女性，合計313,381人",
+        "numerator": "追蹤期間52,943人死亡；摘要未提供本文引用之各咖啡分類全因死亡分子",
+        "denominator": "總樣本313,381人；各咖啡攝取分類的分母未由摘要逐類提供，不能以總樣本取代分組分母",
+        "denominator_definition": "日本各人口世代研究納入的男性及女性成人；不是台灣居民或咖啡飲用者個人分母",
+        "event_definition": "追蹤期間全因死亡；不是咖啡造成的死亡或台灣個人死亡機率",
+        "data_type": "多個前瞻性人口世代合併的觀察性分析；咖啡習慣非隨機分派",
+        "source_ids": [
+          "tw02_jcc_coffee_mortality_2019"
+        ],
+        "accessed_at": "2026-11-15",
+        "limitations": "日本族群及研究杯量不代表台灣；觀察性設計不能證明咖啡因果效應；各分類分子分母未在摘要完整提供；最高攝取組（每日至少5杯）關聯減弱。"
+      },
+      {
+        "topic": "日本自治醫科大學12個社區的咖啡攝取與全因死亡",
+        "value": {
+          "participants": 9946,
+          "communities": 12,
+          "mean_followup_years": 18.4,
+          "all_cause_deaths": 2024,
+          "all_cause_association_significant": false
+        },
+        "unit": "人、社區數、平均追蹤年數及全因死亡事件數",
+        "period": "平均追蹤18.4年；2021年發表",
+        "geographic_scope": "日本12個社區",
+        "population": "9,946名19至93歲男女；男性3,870人、女性6,076人",
+        "numerator": "追蹤期間2,024人死亡；各咖啡分類全因死亡分子未在摘要逐組列出",
+        "denominator": "總樣本9,946人；咖啡分類分母未由摘要逐項提供，不能以總樣本當各組分母",
+        "denominator_definition": "日本12個社區納入的成人世代參與者，不代表台灣居民",
+        "event_definition": "追蹤期間全因死亡；研究另分析癌症、冠心病及腦中風死因，但本文使用全因死亡結果",
+        "data_type": "前瞻性觀察世代；飲用習慣以食物頻率問卷測量，Cox模型估計",
+        "source_ids": [
+          "tw02_jichi_coffee_mortality_2021"
+        ],
+        "accessed_at": "2026-11-15",
+        "limitations": "未發現顯著全因死亡關聯；日本地區性樣本不能推估台灣個人機率；觀察性資料及自陳攝取限制因果判斷。"
+      },
+      {
+        "topic": "台大公共衛生碩士論文的台灣社區咖啡與模型推估平均餘命",
+        "value": "公開摘要報告以四個社區篩檢資料分析咖啡習慣與模型推估平均餘命；本篇不採用其數值推估個人壽命差異",
+        "unit": "平均餘命模型估計；未轉為個人增加年數或發生率",
+        "period": "2020年碩士論文；公開摘要未列出可核對的咖啡分析追蹤起訖",
+        "geographic_scope": "台灣基隆、竹南、彰化與臺東四個社區整合式篩檢資料",
+        "population": "參與四個社區篩檢且有咖啡習慣資料者；公開摘要未列本次咖啡分析的樣本數",
+        "numerator": "公開摘要未列咖啡分析死亡事件數或模型估值不確定範圍",
+        "denominator": "可公開摘要未列咖啡分析的有效樣本分母；全文需進一步查閱，本次國圖紀錄遭圖形驗證阻擋",
+        "denominator_definition": "研究使用四個社區整合篩檢參與者資料；具體進入咖啡平均餘命分析的分母尚未核實",
+        "event_definition": "模型推估平均餘命；不是直接觀察的咖啡可增壽年數或隨機試驗結果",
+        "data_type": "台灣公共衛生碩士論文；觀察性世代資料與多因素／半馬可夫模型推估",
+        "source_ids": [
+          "tw02_ntu_coffee_life_expectancy_thesis_2020"
+        ],
+        "accessed_at": "2026-11-15",
+        "limitations": "公開書目摘要未提供足以判讀估計精確度的咖啡分析樣本數、死亡數、追蹤年限及區間估計；全文未讀取；不得將模型估計值當成喝咖啡的因果或個人效益。"
+      },
+      {
+        "topic": "美國NHANES咖啡飲用時段型態與全因死亡",
+        "value": {
+          "participants": 40725,
+          "all_cause_deaths": 4295,
+          "median_followup_years": 9.8,
+          "group_events": {
+            "noncoffee": "1484/19593",
+            "morning": "1872/14643",
+            "all_day": "939/6489"
+          },
+          "morning_adjusted_HR": 0.84,
+          "morning_95_CI": [
+            0.74,
+            0.95
+          ],
+          "all_day_adjusted_HR": 0.96,
+          "all_day_95_CI": [
+            0.83,
+            1.12
+          ]
+        },
+        "unit": "參與者與死亡事件；分組為追蹤事件數／組內人數；調整後危險比HR及95%信賴區間",
+        "period": "NHANES飲食調查1999至2018年；死亡追蹤至2019年；中位追蹤9.8年（IQR 9.1）",
+        "geographic_scope": "美國NHANES成人資料；飲用時段型態另以美國WLVS／MLVS 1,463名有七日飲食紀錄者外部驗證",
+        "population": "NHANES 40,725名成人；不喝咖啡19,593人、上午型14,643人、整天型6,489人",
+        "numerator": "全因死亡4,295人；不喝咖啡1,484人、上午型1,872人、整天型939人",
+        "denominator": "總樣本40,725人；分組分母分別為19,593、14,643及6,489人，分組死亡事件／人數分別為1,484/19,593、1,872/14,643及939/6,489",
+        "denominator_definition": "完成NHANES飲食回憶與死亡連結資料的美國成人；「上午型」是研究依時段分群，非隨機指定飲用時刻",
+        "event_definition": "追蹤至2019年登錄的全因死亡；比較為危險比而非台灣絕對死亡率",
+        "data_type": "前瞻性觀察性世代分析；飲食時段依24小時回憶與群集分類；外部飲食日誌驗證分類，非隨機試驗",
+        "source_ids": [
+          "tw02_ehj_coffee_timing_mortality_2025"
+        ],
+        "accessed_at": "2026-11-15",
+        "limitations": "美國成人且基線排除若干疾病者；分類依自陳飲食回憶；HR 0.84是調整後相對危險，不是個人絕對機率或因果效果；研究時段分類不等於對台灣人的時間建議。"
+      },
+      {
+        "topic": "DECAF隨機試驗中成功電復律後心房顫動或心房撲動復發",
+        "value": {
+          "participants": 200,
+          "coffee_group_recurrence": "47/100",
+          "abstinence_group_recurrence": "64/100",
+          "followup_months": 6,
+          "hazard_ratio": 0.61,
+          "95_CI": [
+            0.42,
+            0.89
+          ]
+        },
+        "unit": "六個月內臨床偵測到復發人數／各組100人；HR為組間時間事件相對估計",
+        "period": "患者納入2021年11月至2024年12月；最後追蹤2025年6月5日；線上發表2025年11月9日，期刊卷期2026年",
+        "geographic_scope": "美國、加拿大及澳洲五所醫院",
+        "population": "200名目前或近五年曾喝咖啡、持續性心房顫動或心房撲動合併心房顫動病史並計畫電復律的成人；成功電復律後納入隨機分派",
+        "numerator": "六個月內咖啡組47人、戒除組64人有臨床偵測到心房顫動或心房撲動復發",
+        "denominator": "隨機分派咖啡組100人、停止咖啡及咖啡因組100人；部分停咖啡組未完全遵從，依意向治療分析",
+        "denominator_definition": "符合特定房顫／房撲條件且成功電復律的曾喝咖啡患者；不是一般人口或所有心律不整患者",
+        "event_definition": "六個月內臨床偵測到持續至少30秒的心房顫動或心房撲動復發",
+        "data_type": "前瞻性、開放標籤、隨機對照臨床試驗；主要結局為時間至復發",
+        "source_ids": [
+          "tw02_jama_coffee_af_trial_2026"
+        ],
+        "accessed_at": "2026-11-15",
+        "limitations": "小型、開放標籤試驗，對象是已喝咖啡並接受成功電復律的特定患者，追蹤六個月；未研究首次發生房顫、其他心律不整、咖啡對一般民眾的預防或死亡效益；不能用作自行喝咖啡或改變藥物治療的建議。"
+      }
+    ],
+    "professional_review": {
+      "required": true,
+      "obtained": false,
+      "scope": [
+        "營養學",
+        "公共衛生與流行病學",
+        "心臟科／心律不整"
+      ]
+    },
+    "topic_fidelity_question_change": {
+      "previous_question": "如何依台灣建議與個人反應評估咖啡、茶及其他含咖啡因飲品？",
+      "current_question": "咖啡因如何計算，咖啡與長期健康研究能否當成延壽或心律治療建議？",
+      "reason": "原題只以咖啡因攝取與身體反應為讀者問題，未呈現被刪去的咖啡與長期健康／死亡研究及房顫研究；修訂保留台灣攝取安全，同時重新涵蓋有讀者價值且可限縮說明的研究問題。",
+      "decision": "realign_with_restored_core_topic"
+    }
+  },
+  "new_source_ids": [
+    "tw02_bmj_coffee_health_umbrella_2017",
+    "tw02_bmj_coffee_health_correction_2018",
+    "tw02_jcc_coffee_mortality_2019",
+    "tw02_jichi_coffee_mortality_2021",
+    "tw02_ntu_coffee_life_expectancy_thesis_2020",
+    "tw02_ehj_coffee_timing_mortality_2025",
+    "tw02_jama_coffee_af_trial_2026"
+  ],
+  "updated_source_ids": [],
+  "source_records_reused": [
+    "tw02_tfda_caffeine_guidance_2025",
+    "tw02_hpa_pregnancy_caffeine_2025"
+  ],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "publication_completed_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1287,
+    "source_registry": 1370,
+    "coverage_json_files": 637,
+    "review_rechecks": 393,
+    "unresolved_source_id_types": 103,
+    "unresolved_reference_occurrences": 256,
+    "unique_draft_entries": 498,
+    "entries_without_any_draft": 267,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 315,
+    "publication_completed_entries": 315,
+    "runtime_items": 326,
+    "runtime_sources": 1294,
+    "source_registry": 1377,
+    "coverage_json_files": 639,
+    "review_rechecks": 394,
+    "unresolved_source_id_types": 103,
+    "unresolved_reference_occurrences": 256,
+    "unique_draft_entries": 498,
+    "entries_without_any_draft": 267,
+    "publication_ready": false
+  },
+  "professional_review_status": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "公共衛生與流行病學",
+      "心臟科／心律不整"
+    ]
+  },
+  "reader_copy_cleanup": {
+    "internal_review_or_batch_language_added_to_reader_copy": false,
+    "reader_facing_changes": "加入讀者可用的研究脈絡、研究限制及台灣適用界線。"
+  }
+}
