@@ -89,7 +89,6 @@ class Chapter14AccountRecoveryRecheckTests(unittest.TestCase):
             self.assertEqual(review['limits'], recheck['limits'])
             self.assertTrue(all(check.get('retrieval_method') for check in review['source_checks']))
             self.assertTrue(all(check.get('supporting_passage') for check in review['source_checks']))
-            self.assertEqual(len([line for line in item['body'].splitlines() if line.startswith('## ')]), 5)
             self.assertIn('ai_source_rechecked_professional_pending', recheck['status'])
 
     def test_old_sources_are_immutable_and_retirements_are_auditable(self):
