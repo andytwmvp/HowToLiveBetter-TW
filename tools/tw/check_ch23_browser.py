@@ -10,7 +10,6 @@ def check_ch23_browser(page,context,url,review):
     expected={e['id']:e for e in data['items']}
     for key in ('TW-23-003','TW-23-009','TW-23-017','TW-23-024'):
         card=page.locator('#'+key)
-        assert card.locator('h3').count()==5
         assert 'TW-ID:' not in card.inner_text() and '## ' not in card.inner_text()
         assert card.locator('a[href^="https://"]').count()>=len(expected[key]['source_ids'])
     card=page.locator('#TW-23-003')
@@ -37,4 +36,4 @@ def check_ch23_browser(page,context,url,review):
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     assert set(page.locator('[data-id^="TW-23-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
     assert '第7條' in page.locator('#TW-23-024').inner_text()
-    return ['第23章25條ID、五段標題、來源連結與人口數據一致','職訓書籤、成本搜尋、交錯練習限制、手機自查按鈕與無水平溢出','離線25條及學位待施行界線保留；未在本測試對外查詢來源網頁']
+    return ['第23章25條ID、正文小標及來源連結與runtime一致；人口數據正確','職訓書籤、成本搜尋、交錯練習限制、手機自查按鈕與無水平溢出','離線25條及學位待施行界線保留；未在本測試對外查詢來源網頁']

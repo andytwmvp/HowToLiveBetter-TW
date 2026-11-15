@@ -9,8 +9,6 @@ def check_ch26_browser(page,context,url,review):
     assert set(page.locator('[data-id^="TW-26-"]').evaluate_all("(xs)=>xs.map(x=>x.dataset.id)"))==ids
     for id in sorted(ids):
         card=page.locator("#"+id)
-        expected_h3=6 if id=="TW-26-003" else 5
-        assert card.locator("h3").count()==expected_h3
         assert card.locator('a[href^="https://"]').count()>=2
     page.locator("#q").fill("第三方支付")
     assert page.locator("#TW-26-001").count()==1

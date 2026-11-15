@@ -16,6 +16,7 @@ from pathlib import Path
 from urllib.parse import unquote
 from urllib.request import urlopen
 from traditionalize import ROOT, IMAGE_SUFFIXES, current_files, read, dump, cc
+from browser_heading_contract import assert_reader_headings_match_runtime
 
 
 def audit_assets(rendered: bool) -> None:
@@ -112,6 +113,7 @@ def run(render: bool,browser_test: bool) -> None:
             for path in ('index.html','selfcheck.html','dist/HowToLiveBetter-TW.html'):
                 page.goto(url+path,wait_until='domcontentloaded')
                 page.wait_for_function('window.TWRuntime?.ready === true',timeout=30000)
+                assert_reader_headings_match_runtime(page, runtime['items'], path)
                 rendered_ids=set(page.locator('[data-id]').evaluate_all('cards => cards.map(card => card.dataset.id)'))
                 assert rendered_ids==expected_ids,(path,'臺灣閱讀入口未顯示完整已核對runtime目錄',sorted(expected_ids-rendered_ids),sorted(rendered_ids-expected_ids))
                 for chapter_item in chapter_two:
@@ -136,7 +138,7 @@ def run(render: bool,browser_test: bool) -> None:
                 card=page.locator(f'[data-id="{item["id"]}"]')
                 assert card.locator('a').filter(has_text=title).count()==1,'臺灣閱讀頁未顯示讀者用來源標題：'+path
                 assert card.locator('a').filter(has_text='本批核對').count()==0,'臺灣閱讀頁仍顯示內部批次文字：'+path
-            result['checks'].append('網站、自我檢視與離線HTML呈現全部runtime文章；第2章每篇都可搜尋，且來源與站內連結正常。')
+            result['checks'].append('網站、自我檢視與離線HTML的小標順序均與正式runtime一致；全部runtime文章可見，第2章每篇都可搜尋，且來源與站內連結正常。')
             from check_internal_link_navigation_browser import check_internal_link_navigation_browser
             result['checks'].extend(check_internal_link_navigation_browser(page, url))
             from check_navigation import check_navigation
