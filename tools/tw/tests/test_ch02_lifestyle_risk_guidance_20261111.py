@@ -24,6 +24,7 @@ REMOTE_TRAVEL_RECHECK_BATCH = "localization/topic-fidelity-remote-travel-2026111
 ELDERCARE_RECHECK_BATCH = "localization/topic-fidelity-eldercare-prepayment-20261114.json"
 REVERSE_MORTGAGE_RECHECK_BATCH = "localization/topic-fidelity-reverse-mortgage-recheck-20261114.json"
 ORAL_CARE_RECHECK_BATCH = "localization/topic-fidelity-oral-care-recheck-20261115.json"
+STREAM_LICENSE_RECHECK_BATCH = "localization/topic-fidelity-stream-licensing-recheck-20261115.json"
 ITEM_IDS = ("TW-02-028", "TW-02-030", "TW-02-032", "TW-02-039", "TW-02-042")
 PRIOR_DRAFT_HASHES = {
     "TW-02-028": "dd7f36a797b897618d4c266c88650ae24a132036b00e96733a97a80dcc848e21",
@@ -97,6 +98,7 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         eldercare_recheck_batch = read_json(ELDERCARE_RECHECK_BATCH)
         reverse_mortgage_batch = read_json(REVERSE_MORTGAGE_RECHECK_BATCH)
         oral_care_batch = read_json(ORAL_CARE_RECHECK_BATCH)
+        stream_license_batch = read_json(STREAM_LICENSE_RECHECK_BATCH)
         self.assertEqual(
             newly_added_ids,
             set(self.batch["new_source_ids"])
@@ -106,7 +108,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
             | set(remote_travel_batch["new_source_ids"])
             | set(eldercare_recheck_batch["new_source_ids"])
             | set(reverse_mortgage_batch["new_source_ids"])
-            | set(oral_care_batch["new_source_ids"]),
+            | set(oral_care_batch["new_source_ids"])
+            | set(stream_license_batch["new_source_ids"]),
         )
         bundled = {row[0]: row for row in self.bundle["sources"]}
         self.assertEqual(set(bundled), set(self.batch["new_source_ids"]))
@@ -223,6 +226,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         reverse_mortgage_rows = {row["id"]: row for row in reverse_mortgage_batch["items"]}
         oral_care_batch = read_json(ORAL_CARE_RECHECK_BATCH)
         oral_care_rows = {row["id"]: row for row in oral_care_batch["items"]}
+        stream_license_batch = read_json(STREAM_LICENSE_RECHECK_BATCH)
+        stream_license_rows = {row["id"]: row for row in stream_license_batch["items"]}
         rechecks = {
             row["id"]: row for row in self.register["substantive_rechecks"]
             if row["id"] in {"TW-02-025", "TW-02-047"} and row["reviewed_at"] == "2026-11-12"
@@ -310,6 +315,16 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 self.assertEqual(review["target_sha256"], current_sha)
                 self.assertEqual(review["reviewed_at"], oral_care_batch["reviewed_at"])
                 self.assertEqual(current["source_ids"], record["source_ids"])
+            elif item_id in stream_license_rows:
+                current = current_runtime[item_id]
+                record = stream_license_rows[item_id]
+                review = read_json(f"localization/reviews/{item_id}.json")
+                current_sha = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
+                self.assertEqual(hashlib.sha256(old["body"].encode("utf-8")).hexdigest(), record["before_sha256"])
+                self.assertEqual(record["after_sha256"], current_sha)
+                self.assertEqual(review["target_sha256"], current_sha)
+                self.assertEqual(review["reviewed_at"], stream_license_batch["reviewed_at"])
+                self.assertEqual(current["source_ids"], record["source_ids"])
             else:
                 self.assertEqual(current_runtime[item_id], old)
         current_sources = {row["id"]: row for row in self.runtime["sources"]}
@@ -379,6 +394,16 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
                 expected["sources"] = current_runtime[item_id]["source_ids"]
                 expected["verified_at"] = oral_care_batch["reviewed_at"]
                 self.assertEqual(self.manifest[item_id], expected)
+            elif item_id in stream_license_rows:
+                expected = dict(old)
+                current_source_ids = current_runtime[item_id]["source_ids"]
+                expected["sources"] = (
+                    [self.sources[source_id]["url"] for source_id in current_source_ids]
+                    if old["sources"] and old["sources"][0].startswith("http")
+                    else current_source_ids
+                )
+                expected["verified_at"] = stream_license_batch["reviewed_at"]
+                self.assertEqual(self.manifest[item_id], expected)
             elif item_id not in ITEM_IDS:
                 self.assertEqual(self.manifest[item_id], old)
         self.assertEqual(
@@ -390,7 +415,8 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
             + len(remote_travel_rows)
             + len(eldercare_rows)
             + len(reverse_mortgage_rows)
-            + len(oral_care_rows),
+            + len(oral_care_rows)
+            + len(stream_license_rows),
         )
         self.assertEqual(set(rechecks), {"TW-02-025", "TW-02-047"})
         self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))

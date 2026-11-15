@@ -20,7 +20,8 @@ class PlatformComplianceTests(unittest.TestCase):
     self.assertEqual(raw.decode("utf-8"),runtime[id]["body"])
     self.assertEqual(hashlib.sha256(raw).hexdigest(),rev["target_sha256"])
     self.assertGreater(len(raw),850)
-    self.assertEqual(sum(block["tag"]=="h3" for block in body_blocks(runtime[id])),5)
+    expected_h3 = 6 if id == "TW-26-003" else 5
+    self.assertEqual(sum(block["tag"]=="h3" for block in body_blocks(runtime[id])),expected_h3)
  def test_prior_reading_and_source_objects_preserved(self):
   raw=subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True)
   old=json.loads(raw);now=validate_runtime()

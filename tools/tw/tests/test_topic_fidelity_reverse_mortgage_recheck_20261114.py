@@ -167,6 +167,7 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
         baseline_manifest = json.loads(git_bytes(BASE, "localization/manifest.json"))
         baseline_register = json.loads(git_bytes(BASE, REGISTER_PATH))
         next_batch = read("localization/topic-fidelity-oral-care-recheck-20261115.json")
+        followup_batch = read("localization/topic-fidelity-stream-licensing-recheck-20261115.json")
 
         self.assertEqual(before["manifest_entries"], len(baseline_manifest["entries"]))
         self.assertEqual(before["verified_core_entries"], baseline_coverage["core_reviewed_entries"])
@@ -197,7 +198,8 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
             "publication_ready": publication["publication_ready"],
         }
         self.assertEqual(after, next_batch["counts_before"])
-        self.assertEqual(next_batch["counts_after"], actual)
+        self.assertEqual(next_batch["counts_after"], followup_batch["counts_before"])
+        self.assertEqual(followup_batch["counts_after"], actual)
         self.assertFalse(after["publication_ready"])
 
 
