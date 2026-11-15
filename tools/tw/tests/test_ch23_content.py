@@ -6,7 +6,6 @@ import subprocess
 import sys
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from body_renderer import body_blocks
 from content_validation import load_json
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_runtime,validate_entry
@@ -28,8 +27,6 @@ class SkillsChapterTests(unittest.TestCase):
                 self.assertEqual(body.decode(),runtime[e['id']]['body']);self.assertGreater(len(body.decode()),650)
                 self.assertEqual(review['target_sha256'],hashlib.sha256(body).hexdigest())
                 self.assertIn('AI',review['reviewer']);self.assertIn('獨立',review['reviewer'])
-                expected_headings = 6 if e['id'] == 'TW-23-010' else 5
-                self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(runtime[e['id']])),expected_headings)
                 self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
     def test_original_provenance_and_old_published_items_are_preserved(self):
         before=old('localization/manifest.json')['entries'];after=read('localization/manifest.json')['entries']

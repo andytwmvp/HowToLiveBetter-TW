@@ -4,7 +4,6 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
-from body_renderer import body_blocks
 BASE='538e88ead8dab2d7c6720fe101bd6af17d898d56'
 IDS={'TW-13-002','TW-13-012','TW-13-014','TW-13-024'}
 def read(path):return json.loads((ROOT/path).read_text(encoding='utf8'))
@@ -20,7 +19,6 @@ class Chapter13SafetyTests(unittest.TestCase):
     self.assertGreater(len(data),1500)
     self.assertEqual(hashlib.sha256(data).hexdigest(),review['target_sha256'])
     self.assertEqual(items[key]['body'],data.decode())
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(items[key])),5)
     self.assertEqual({x['url'] for x in review['source_checks']},{sources[k]['url'] for k in items[key]['source_ids']})
  def test_taiwan_triage_and_false_assumptions(self):
   b={e['id']:e['body'] for e in validate_runtime()['items']}

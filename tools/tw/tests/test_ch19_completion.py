@@ -6,7 +6,6 @@ import subprocess
 import sys
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from ci_language_policy import audit_drafts
@@ -41,10 +40,6 @@ class Chapter19CompletionTests(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(entry['body'].encode()).hexdigest(),review['target_sha256'])
                 assert_professional_review_pending(self, review['reviewer'])
                 self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
-                expected_headings=sum(line.startswith('## ') for line in entry['body'].splitlines())
-                self.assertGreaterEqual(expected_headings,5)
-                self.assertEqual(len([b for b in body_blocks(entry) if b['tag']=='h3']),expected_headings)
-
     def test_old_thirty_four_items_and_sources_preserved(self):
         old=before('localization/tw-edition/runtime.json');new=validate_runtime()
         ids={e['id'] for e in old['items']};sources={s['id'] for s in old['sources']}

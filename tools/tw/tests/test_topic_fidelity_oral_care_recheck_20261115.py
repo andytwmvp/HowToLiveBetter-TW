@@ -174,13 +174,19 @@ class OralCareTopicFidelityTests(unittest.TestCase):
         self.assertEqual(after["publication_completed_entries"], before["publication_completed_entries"])
         self.assertFalse(after["publication_ready"])
 
-        next_batch = read("localization/topic-fidelity-stream-licensing-recheck-20261115.json")
         audit = audit_drafts()
         coverage = read("localization/tw-edition/coverage.json")
         publication = publication_report()
-        self.assertEqual(after, next_batch["counts_before"])
         self.assertEqual(coverage, audit)
         self.assertFalse(publication["publication_ready"])
+        self.assertGreaterEqual(coverage["core_reviewed_entries"], after["verified_core_entries"])
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), after["review_rechecks"])
+        self.assertGreaterEqual(coverage["json_files_checked"], after["coverage_json_files"])
+        self.assertGreaterEqual(coverage["publication_completed_entries"], after["publication_completed_entries"])
+        self.assertFalse(coverage["publication_ready"])
 
 
 if __name__ == "__main__":

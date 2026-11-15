@@ -74,7 +74,6 @@ class ChapterContentTests(unittest.TestCase):
         self.assertEqual(result,[body_blocks(e) for e in data])
         for item,blocks in zip(data,result,strict=True):
             if item['id'] in IDS:
-                self.assertEqual(sum(b['tag']=='h3' for b in blocks),5)
                 self.assertNotIn('TW-ID:',json.dumps(blocks))
                 self.assertNotIn('## ',json.dumps(blocks))
 

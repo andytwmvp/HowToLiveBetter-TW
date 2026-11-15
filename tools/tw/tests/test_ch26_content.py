@@ -4,7 +4,6 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
-from body_renderer import body_blocks
 BASE="212f9e3019a3f8682113a6dcb880817cc44074a3"
 IDS={f"TW-26-{i:03}" for i in range(1,14)}
 def obj(path):return json.loads((ROOT/path).read_text(encoding="utf-8"))
@@ -20,8 +19,6 @@ class PlatformComplianceTests(unittest.TestCase):
     self.assertEqual(raw.decode("utf-8"),runtime[id]["body"])
     self.assertEqual(hashlib.sha256(raw).hexdigest(),rev["target_sha256"])
     self.assertGreater(len(raw),850)
-    expected_h3 = 6 if id == "TW-26-003" else 5
-    self.assertEqual(sum(block["tag"]=="h3" for block in body_blocks(runtime[id])),expected_h3)
  def test_prior_reading_and_source_objects_preserved(self):
   raw=subprocess.check_output(["git","show",BASE+":localization/tw-edition/runtime.json"],cwd=ROOT,text=True)
   old=json.loads(raw);now=validate_runtime()

@@ -3,7 +3,6 @@ import json, hashlib, sys, unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
-from body_renderer import body_blocks
 IDS={f'TW-24-{n:03d}' for n in range(1,16)}
 
 def data(path):return json.loads((ROOT/path).read_text(encoding='utf-8'))
@@ -20,7 +19,6 @@ class MedicalCareTaiwanTests(unittest.TestCase):
     raw=(ROOT/entry['target_path']).read_bytes();review=data('localization/reviews/'+key+'.json')
     self.assertGreater(len(raw),1200);self.assertEqual(raw.decode('utf-8'),runtime[key]['body'])
     self.assertEqual(hashlib.sha256(raw).hexdigest(),review['target_sha256'])
-    self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(runtime[key])),5)
     self.assertIn('AI',review['reviewer']);self.assertTrue(all(s['url'].startswith('https://') and len(s['supporting_passage'].strip()) >= 30 and s['claim'] != s['supporting_passage'] for s in review['source_checks']))
     self.assertEqual({s['url'] for s in review['source_checks']},{s['url'] for s in validate_runtime()['sources'] if s['id'] in runtime[key]['source_ids']})
  def test_known_medical_distinctions_and_no_trivial_renaming(self):

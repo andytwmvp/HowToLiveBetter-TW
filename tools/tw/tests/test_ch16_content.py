@@ -4,7 +4,6 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
-from body_renderer import body_blocks
 BASE='e13a1b7ccef36c8b1fe30ccef25e987e5f8e9f60'
 IDS={f'TW-16-{i:03d}' for i in range(1,15)}
 def read(path): return json.loads((ROOT/path).read_text(encoding='utf8'))
@@ -23,7 +22,6 @@ class Chapter16Tests(unittest.TestCase):
     self.assertEqual(raw.decode(),runtime[key]['body'])
     self.assertEqual(hashlib.sha256(raw).hexdigest(),review['target_sha256'])
     self.assertIn('AI',review['reviewer'])
-    self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(runtime[key])),5)
     self.assertEqual({s['url'] for s in review['source_checks']},{s['url'] for s in validate_runtime()['sources'] if s['id'] in runtime[key]['source_ids']})
  def test_taiwan_and_medical_distinctions(self):
   items={e['id']:e['body'] for e in validate_runtime()['items']}

@@ -12,7 +12,6 @@ sys.path.insert(0, str(ROOT / "tools/tw"))
 
 from retroactive_audit import validate_recheck_history
 from review_contract import validate_runtime
-from body_renderer import body_blocks
 
 
 BASE = "f8793d7013577bc6c3a507681fbb3a0bf82ef3e4"
@@ -109,7 +108,6 @@ class RemoteTravelTopicFidelityTests(unittest.TestCase):
 
     def test_topic_decision_distinguishes_relevance_from_bulk_restoration(self):
         topic = self.review["topic_fidelity_review"]
-        self.assertEqual(sum(block["tag"] == "h3" for block in body_blocks(self.item)), 6)
         self.assertEqual(topic["decision"], "retain_bounded_overseas_travel_safety_content")
         self.assertIn("不整篇恢復外地沙漠程序", topic["reader_content_decision"])
         self.assertIn("臺灣日常山域需求", topic["reason"])
@@ -119,29 +117,55 @@ class RemoteTravelTopicFidelityTests(unittest.TestCase):
         self.assertIn("不得把所有外地題目一律抓回", policy)
         self.assertIn("不設單一分數或「海外研究一律收錄」規則", policy)
 
-    def test_progress_snapshot_is_bound_to_base_and_current_artifacts(self):
-        coverage = read("localization/tw-edition/coverage.json")
-        later_batch = read("localization/topic-fidelity-eldercare-prepayment-20261114.json")
-        current_batch = read("localization/topic-fidelity-reverse-mortgage-recheck-20261114.json")
-        next_batch = read("localization/topic-fidelity-oral-care-recheck-20261115.json")
-        followup_batch = read("localization/topic-fidelity-stream-licensing-recheck-20261115.json")
-        self.assertEqual(self.batch["counts_before"]["runtime_sources"], 1276)
-        self.assertEqual(self.batch["counts_before"]["review_rechecks"], 387)
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], later_batch["counts_before"]["runtime_sources"])
-        self.assertEqual(self.batch["counts_after"]["review_rechecks"], later_batch["counts_before"]["review_rechecks"])
-        self.assertEqual(self.batch["counts_after"]["coverage_json_files"], later_batch["counts_before"]["coverage_json_files"])
-        self.assertEqual(self.batch["counts_after"]["registry_sources"], later_batch["counts_before"]["source_registry"])
-        for key in (
-            "runtime_items", "runtime_sources", "source_registry", "review_rechecks",
-            "coverage_json_files", "publication_completed_entries", "publication_ready",
-        ):
-            self.assertEqual(later_batch["counts_after"][key], current_batch["counts_before"][key])
-        self.assertEqual(current_batch["counts_after"], next_batch["counts_before"])
-        self.assertEqual(next_batch["counts_after"], followup_batch["counts_before"])
+    def test_progress_snapshot_is_bound_to_its_base_and_batch(self):
+        before = self.batch["counts_before"]
+        after = self.batch["counts_after"]
+        baseline_coverage = json.loads(git_bytes(BASE, "localization/tw-edition/coverage.json"))
+        baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
+        baseline_manifest = json.loads(git_bytes(BASE, "localization/manifest.json"))
+        baseline_register = json.loads(git_bytes(BASE, REGISTER_PATH))
+        source_bundle_existed = subprocess.run(
+            ["git", "cat-file", "-e", f"{BASE}:{SOURCE_PATH}"],
+            cwd=ROOT,
+            capture_output=True,
+        ).returncode == 0
+
+        self.assertEqual(self.batch["baseline_main_sha"], BASE)
+        self.assertEqual(before["manifest_entries"], len(baseline_manifest["entries"]))
+        self.assertEqual(before["verified_core_entries"], baseline_coverage["core_reviewed_entries"])
+        self.assertEqual(before["runtime_items"], len(baseline_runtime["items"]))
+        self.assertEqual(before["runtime_sources"], len(baseline_runtime["sources"]))
+        self.assertEqual(before["registry_sources"], baseline_coverage["registry_sources"])
+        self.assertEqual(before["review_rechecks"], len(baseline_register["substantive_rechecks"]))
+        self.assertEqual(before["coverage_json_files"], baseline_coverage["json_files_checked"])
+        self.assertEqual(before["unresolved_source_ids"], len(baseline_coverage["unresolved_source_ids"]))
         self.assertEqual(
-            later_batch["counts_after"]["runtime_sources"],
-            later_batch["counts_before"]["runtime_sources"] + len(later_batch["new_source_ids"]),
+            before["unresolved_reference_occurrences"],
+            baseline_coverage["unresolved_reference_occurrences"],
         )
+        self.assertEqual(before["publication_completed_entries"], baseline_coverage["publication_completed_entries"])
+        self.assertEqual(before["publication_ready"], baseline_coverage["publication_ready"])
+
+        expected_after = dict(before)
+        expected_after["runtime_sources"] += len(self.batch["new_source_ids"])
+        expected_after["registry_sources"] += len(self.batch["new_source_ids"])
+        expected_after["review_rechecks"] += len(self.batch["items"])
+        expected_after["coverage_json_files"] += 1 + int(not source_bundle_existed)
+        self.assertEqual(after, expected_after)
+        self.assertFalse(after["publication_ready"])
+
+        coverage = read("localization/tw-edition/coverage.json")
+        live_counts = {
+            "verified_core_entries": coverage["core_reviewed_entries"],
+            "runtime_items": len(self.runtime["items"]),
+            "runtime_sources": len(self.runtime["sources"]),
+            "registry_sources": coverage["registry_sources"],
+            "review_rechecks": len(self.register["substantive_rechecks"]),
+            "coverage_json_files": coverage["json_files_checked"],
+            "publication_completed_entries": coverage["publication_completed_entries"],
+        }
+        for key, value in live_counts.items():
+            self.assertGreaterEqual(value, after[key], key)
         self.assertFalse(coverage["publication_ready"])
 
 

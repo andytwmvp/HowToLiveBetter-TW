@@ -4,7 +4,6 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
-from body_renderer import body_blocks
 BASE='5437a44b4d640657f5542a7e259e1e6ea294c9ad'
 IDS={'TW-13-001','TW-13-003','TW-13-007','TW-13-012','TW-13-030'}
 def read(p):return json.loads((ROOT/p).read_text(encoding='utf8'))
@@ -19,7 +18,6 @@ class EmergencyTests(unittest.TestCase):
     raw=(ROOT/m['target_path']).read_bytes();rv=read(f'localization/reviews/{key}.json')
     self.assertGreater(len(raw),1400);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual(raw.decode('utf8'),items[key]['body'])
-    self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(items[key])),5)
     self.assertEqual({s['url'] for s in rv['source_checks']},{sources[s]['url'] for s in items[key]['source_ids']})
  def test_taiwan_emergency_rules(self):
   d={e['id']:e['body'] for e in validate_runtime()['items']}

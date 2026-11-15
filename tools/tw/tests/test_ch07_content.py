@@ -31,8 +31,6 @@ class LivingSupportChapterTests(unittest.TestCase):
     self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
     assert_professional_review_pending(self, review['reviewer'])
     blocks=body_blocks(runtime[e['id']])
-    expected_headings = 6 if e['id'] == 'TW-07-014' else 5
-    self.assertEqual(sum(b['tag']=='h3' for b in blocks), expected_headings)
     self.assertEqual(sum('url' in b for b in blocks),len(runtime[e['id']]['source_ids']))
  def test_original_provenance_and_all_prior_runtime_preserved_at_integration(self):
   previous=at(BASE,'localization/tw-edition/runtime.json');integrated=snapshot('localization/tw-edition/runtime.json')

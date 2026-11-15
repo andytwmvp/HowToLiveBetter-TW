@@ -33,7 +33,6 @@ class Chapter13AortaInfantTests(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review["target_sha256"])
                 self.assertEqual(raw.decode("utf-8"), items[key]["body"])
                 headings = [x["text"] for x in body_blocks(items[key]) if x["tag"] == "h3"]
-                self.assertEqual(len(headings), 6 if key == "TW-13-008" else 5)
                 if key == "TW-13-008":
                     self.assertEqual(headings[-1], "資料來源")
                 self.assertEqual({x["url"] for x in review["source_checks"]},

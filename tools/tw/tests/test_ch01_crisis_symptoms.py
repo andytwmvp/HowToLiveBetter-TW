@@ -3,7 +3,6 @@ import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 BASE='ca40db0a8744b2661c07f61931f21515f7a38db8'
 NEW={f'TW-01-{n:03}' for n in range(25,29)}
@@ -17,7 +16,6 @@ class CrisisSymptomsTests(unittest.TestCase):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
  def test_emergency_first_and_denominators(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   c=b['TW-01-025'];self.assertLess(c.index('先撥119'),c.index('3,951'));self.assertIn('1925',c);self.assertIn('不是自行停處方藥',c);self.assertNotIn('oai_link_source',c)

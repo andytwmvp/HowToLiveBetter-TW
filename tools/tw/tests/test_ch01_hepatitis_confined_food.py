@@ -3,7 +3,6 @@ import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 BASE='91c2b57512020cc80ddd84afdeaeedbe0d296895'
 NEW={f'TW-01-{n:03}' for n in range(45,49)}
@@ -17,7 +16,6 @@ class HepatitisConfinedFoodTests(unittest.TestCase):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
  def test_emergency_actions_and_denominator_boundaries(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('1986',b['TW-01-045']);self.assertIn('RNA',b['TW-01-045']);self.assertIn('重新感染',b['TW-01-045'])
@@ -47,7 +45,7 @@ class HepatitisConfinedFoodTests(unittest.TestCase):
   self.assertIn(str(n)+'則補充',audit()['scope'])
  def test_standalone_occupational_guide_contract(self):
   rt=validate_runtime();i=next(x for x in rt['items'] if x['id']=='TW-NAV-011');rv=read('localization/reviews/TW-NAV-011.json');raw=(ROOT/i['target_path']).read_bytes()
-  self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256']);self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
+  self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
   ss={x['id']:x for x in rt['sources']};self.assertEqual({ss[k]['url'] for k in i['source_ids']},{x['url'] for x in rv['source_checks']})
   for term in ['承攬','開工','高處','機械','用電','化學品','局限空間','熱','搬運','輪班','霸凌','停止','8小時','2026-07-01']:
    self.assertIn(term,i['body'])

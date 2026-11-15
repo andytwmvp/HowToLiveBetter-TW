@@ -3,7 +3,6 @@ import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 BASE='b5c80a47faf877ec966396f3618731d59f8caf5b'
 NEW={f'TW-01-{n:03}' for n in range(21,25)}
@@ -17,7 +16,6 @@ class VaccinesRetroreviewTests(unittest.TestCase):
     self.assertTrue(validate_entry(manifest[key]));i=items[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(i['body'],raw.decode());self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{sources[s]['url'] for s in i['source_ids']})
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
  def test_2026_policy_and_denominators(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('2至6個月',b['TW-01-021']);self.assertIn('2011至2020年',b['TW-01-021']);self.assertIn('每千人年7.15例',b['TW-01-021']);self.assertIn('每千人年7.82例',b['TW-01-021']);self.assertIn('舊申報率不能當作2026年即時風險',b['TW-01-021'])

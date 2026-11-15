@@ -130,44 +130,40 @@ class TopicFidelityFraudOshRecheckTests(unittest.TestCase):
         self.assertIn("不要從「這個資料是外國的」直接跳到保留或刪除", policy)
         self.assertIn("不設單一分數或「海外研究一律收錄」規則", policy)
         self.assertIn("每一題都要重新判斷", policy)
-        # This batch snapshot is immutable. Reconcile it with the next append-only
-        # batch, then compare the live state with that later batch's recorded result.
-        remote_travel_batch = read("localization/topic-fidelity-remote-travel-20261114.json")
-        eldercare_batch = read("localization/topic-fidelity-eldercare-prepayment-20261114.json")
-        reverse_mortgage_batch = read("localization/topic-fidelity-reverse-mortgage-recheck-20261114.json")
-        later_before = remote_travel_batch["counts_before"]
-        for old_key, later_key in (
-            ("runtime_items", "runtime_items"),
-            ("runtime_sources", "runtime_sources"),
-            ("source_registry", "registry_sources"),
-            ("review_rechecks", "review_rechecks"),
-            ("coverage_json_files", "coverage_json_files"),
-            ("publication_completed_entries", "publication_completed_entries"),
-            ("publication_ready", "publication_ready"),
-        ):
-            self.assertEqual(self.batch["counts_after"][old_key], later_before[later_key])
-        eldercare_before = eldercare_batch["counts_before"]
-        for remote_key, eldercare_key in (
-            ("runtime_items", "runtime_items"),
-            ("runtime_sources", "runtime_sources"),
-            ("registry_sources", "source_registry"),
-            ("review_rechecks", "review_rechecks"),
-            ("coverage_json_files", "coverage_json_files"),
-            ("publication_completed_entries", "publication_completed_entries"),
-            ("publication_ready", "publication_ready"),
-        ):
-            self.assertEqual(remote_travel_batch["counts_after"][remote_key], eldercare_before[eldercare_key])
-        # Preserve the eldercare batch as an immutable historical snapshot and
-        # reconcile it with the next batch's recorded starting point. The newest
-        # batch is responsible for comparing current runtime/coverage to live data.
-        later_counts = eldercare_batch["counts_after"]
-        current_before = reverse_mortgage_batch["counts_before"]
-        for key in (
-            "runtime_items", "runtime_sources", "source_registry", "review_rechecks",
-            "coverage_json_files", "publication_completed_entries", "publication_ready",
-        ):
-            self.assertEqual(later_counts[key], current_before[key])
-        self.assertFalse(self.batch["counts_after"]["publication_ready"])
+        before = self.batch["counts_before"]
+        after = self.batch["counts_after"]
+        baseline_coverage = json.loads(git_bytes(BASE, "localization/tw-edition/coverage.json"))
+        baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
+        baseline_register = json.loads(git_bytes(BASE, REGISTER))
+        source_bundle = f"localization/tw-edition/sources/{Path(SOURCE_FILE).name}"
+        source_bundle_existed = subprocess.run(
+            ["git", "cat-file", "-e", f"{BASE}:{source_bundle}"], cwd=ROOT, capture_output=True
+        ).returncode == 0
+        self.assertEqual(before["runtime_items"], len(baseline_runtime["items"]))
+        self.assertEqual(before["runtime_sources"], len(baseline_runtime["sources"]))
+        self.assertEqual(before["source_registry"], baseline_coverage["registry_sources"])
+        self.assertEqual(before["review_rechecks"], len(baseline_register["substantive_rechecks"]))
+        self.assertEqual(before["coverage_json_files"], baseline_coverage["json_files_checked"])
+        self.assertEqual(before["publication_completed_entries"], baseline_coverage["publication_completed_entries"])
+        self.assertEqual(before["publication_ready"], baseline_coverage["publication_ready"])
+
+        expected_after = dict(before)
+        expected_after["runtime_sources"] += len(self.batch["new_source_ids"])
+        expected_after["source_registry"] += len(self.batch["new_source_ids"])
+        expected_after["review_rechecks"] += len(self.batch["items"])
+        expected_after["coverage_json_files"] += 1 + int(not source_bundle_existed)
+        self.assertEqual(after, expected_after)
+        self.assertFalse(after["publication_ready"])
+
+        coverage = read("localization/tw-edition/coverage.json")
+        self.assertEqual(coverage, audit_drafts())
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), after["review_rechecks"])
+        self.assertGreaterEqual(coverage["json_files_checked"], after["coverage_json_files"])
+        self.assertGreaterEqual(coverage["publication_completed_entries"], after["publication_completed_entries"])
+        self.assertFalse(coverage["publication_ready"])
         catalog = read(SOURCE_FILE)["sources"]
         self.assertEqual(len(catalog), len(self.batch["new_source_ids"]))
         self.assertEqual({row[0] for row in catalog}, set(self.batch["new_source_ids"]))
