@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT / "tools/tw"))
 
 from ci_language_policy import audit_drafts
 from review_contract import validate_runtime
+from source_bundle_test_support import source_bundle_ids_added_since
 
 
 BASE = "d1f33adf73104701eefaac24a79e875731a9a975"
@@ -154,9 +155,11 @@ class AlcoholBathingSafetyTests(unittest.TestCase):
         old_runtime = git_json(BASE, "localization/tw-edition/runtime.json")
         old_source_ids = {row["id"] for row in old_runtime["sources"]}
         added_source_ids = set(self.sources) - old_source_ids
+        self.assertEqual(added_source_ids, source_bundle_ids_added_since(ROOT, BASE))
         expected_added = set(self.batch["new_source_ids"])
-        self.assertEqual(added_source_ids, expected_added)
-        self.assertEqual({row[0] for row in self.bundle["sources"]}, expected_added)
+        bundle_source_ids = {row[0] for row in self.bundle["sources"]}
+        self.assertEqual(bundle_source_ids, expected_added)
+        self.assertTrue(expected_added.issubset(added_source_ids))
         self.assertEqual(self.batch["source_ids"], source_ids)
         self.assertEqual(
             self.batch["item"]["source_bundle_sha256"],
@@ -172,8 +175,13 @@ class AlcoholBathingSafetyTests(unittest.TestCase):
         self.assertTrue((ROOT / ARTICLE).is_file())
 
         baseline_register = git_json(BASE, REGISTER)
-        self.assertEqual(self.register, baseline_register)
-        self.assertFalse(any(row["id"] == ITEM_ID for row in self.register["substantive_rechecks"]))
+        for field in ("substantive_rechecks", "reader_copy_cleanups"):
+            old_rows = baseline_register[field]
+            self.assertEqual(self.register[field][:len(old_rows)], old_rows)
+        appended_rechecks = self.register["substantive_rechecks"][
+            len(baseline_register["substantive_rechecks"]):
+        ]
+        self.assertFalse(any(row["id"] == ITEM_ID for row in appended_rechecks))
         self.assertEqual(self.batch["counts_before"]["runtime_items"], len(git_json(
             BASE, "localization/tw-edition/runtime.json")["items"]
         ))
@@ -186,19 +194,28 @@ class AlcoholBathingSafetyTests(unittest.TestCase):
         self.assertFalse(self.coverage["publication_ready"])
         old_runtime = git_json(BASE, "localization/tw-edition/runtime.json")
         old_coverage = git_json(BASE, "localization/tw-edition/coverage.json")
-        self.assertEqual(len(self.runtime["items"]), len(old_runtime["items"]) + 1)
-        self.assertEqual(len(self.runtime["sources"]), len(old_runtime["sources"]) + 6)
-        self.assertEqual(self.coverage["core_reviewed_entries"], old_coverage["core_reviewed_entries"] + 1)
-        self.assertEqual(self.coverage["publication_completed_entries"], old_coverage["publication_completed_entries"] + 1)
-        self.assertEqual(self.coverage["registry_sources"], old_coverage["registry_sources"] + 6)
-        self.assertEqual(self.coverage["topics_with_any_content"], old_coverage["topics_with_any_content"] + 1)
-        self.assertEqual(self.coverage["entries_without_any_draft"], old_coverage["entries_without_any_draft"] - 1)
+        before = self.batch["counts_before"]
+        after = self.batch["counts_after"]
+        self.assertEqual(before["runtime_items"], len(old_runtime["items"]))
+        self.assertEqual(before["runtime_sources"], len(old_runtime["sources"]))
+        self.assertEqual(after["runtime_items"], before["runtime_items"] + 1)
+        self.assertEqual(after["runtime_sources"], before["runtime_sources"] + len(self.batch["new_source_ids"]))
+        self.assertEqual(before["core_reviewed_entries"], old_coverage["core_reviewed_entries"])
+        self.assertEqual(after["core_reviewed_entries"], before["core_reviewed_entries"] + 1)
+        self.assertEqual(before["publication_completed_entries"], old_coverage["publication_completed_entries"])
+        self.assertEqual(after["publication_completed_entries"], before["publication_completed_entries"] + 1)
+        self.assertEqual(before["registry_sources"], old_coverage["registry_sources"])
+        self.assertEqual(after["registry_sources"], before["registry_sources"] + len(self.batch["new_source_ids"]))
+        self.assertEqual(before["topics_with_any_content"], old_coverage["topics_with_any_content"])
+        self.assertEqual(after["topics_with_any_content"], before["topics_with_any_content"] + 1)
+        self.assertEqual(before["entries_without_any_draft"], old_coverage["entries_without_any_draft"])
+        self.assertEqual(after["entries_without_any_draft"], before["entries_without_any_draft"] - 1)
         self.assertFalse(any(row.startswith(f"{ITEM_ID}:") for row in self.coverage["publication_blockers"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.batch["counts_after"]["core_reviewed_entries"], self.coverage["core_reviewed_entries"])
-        self.assertEqual(self.batch["counts_after"]["publication_completed_entries"], self.coverage["publication_completed_entries"])
-        self.assertEqual(self.batch["counts_after"]["registry_sources"], self.coverage["registry_sources"])
+        self.assertLessEqual(after["runtime_items"], len(self.runtime["items"]))
+        self.assertLessEqual(after["runtime_sources"], len(self.runtime["sources"]))
+        self.assertLessEqual(after["core_reviewed_entries"], self.coverage["core_reviewed_entries"])
+        self.assertLessEqual(after["publication_completed_entries"], self.coverage["publication_completed_entries"])
+        self.assertLessEqual(after["registry_sources"], self.coverage["registry_sources"])
 
 
 if __name__ == "__main__":

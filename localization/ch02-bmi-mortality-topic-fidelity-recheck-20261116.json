@@ -14,7 +14,7 @@
     "before_sha256": "a6ece5ad41ea07ed0ba0a50990c92ab11beceb0598180174a9e5655472707a81",
     "after_sha256": "e507d865ab3ff0ae46f7e95230259721edd7d7640bf16206252cfef760043ae3",
     "prior_review_sha256": "98dbe8c4f22b26f2617dc320f774ec52743de70b4f8f7f2e395e5c8b3904da85",
-    "review_sha256": "1a64835498498d20ec423975cd4586f50d6035d2f2ad3b178cced0e6b0e3abae",
+    "review_sha256": "1d71c7c38b80f63a8964aaa1f0568aa44354db5e11b686ff9e0f3aea1c817777",
     "previous_question": "台灣成人應如何理解BMI、腰圍、全國體位調查和成人預防保健資格？",
     "current_question": "如何參照台灣成人BMI分類、理解死亡率研究並安排合適的健康檢查？",
     "topic_fidelity_assessment": "原題核心是BMI與全因死亡的群體研究及研究結論差異。台灣化刪除中國特有制度是必要的，但不應因此刪去可供台灣讀者理解的本土及國際研究。本次保留台灣BMI分類，限縮恢復研究結果，逐項標明群體與研究限制；不恢復BMI 20至25為人人應追求的目標。",

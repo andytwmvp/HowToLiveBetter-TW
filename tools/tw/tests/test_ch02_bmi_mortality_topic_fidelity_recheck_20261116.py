@@ -139,6 +139,9 @@ class BmiMortalityTopicFidelityTests(unittest.TestCase):
         self.assertIn("I²=85%", body)
         self.assertIn("不能證明減到特定數字會延壽", body)
         self.assertNotIn("每個人應把BMI維持在20至25", body)
+        self.assertNotIn("本次未取得出版社全文", self.items[ITEM_ID]["limits"])
+        self.assertNotIn("尚未取得家庭醫學", self.items[ITEM_ID]["limits"])
+        self.assertTrue(any("出版社全文本次無法取得" in value for value in self.review["unresolved_questions"]))
 
         stats = self.review["statistics_assessed"]
         self.assertEqual(len(stats), 4)
