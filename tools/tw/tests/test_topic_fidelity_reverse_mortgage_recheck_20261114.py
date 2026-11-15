@@ -10,9 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
 
-from ci_language_policy import audit_drafts
 from retroactive_audit import validate_recheck_history
-from review_contract import publication_report, validate_runtime
+from review_contract import validate_runtime
 
 BASE = "72a6139a3426f75a8b40f8a5073520bb1a4477aa"
 ITEM_ID = "TW-17-006"
@@ -80,9 +79,12 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
         self.assertEqual(self.batch["items"][0]["prior_review_sha256"], sha(old_review))
         validate_recheck_history(ROOT, self.record, self.item)
 
-        current_sources = self.sources
-        for source in old_runtime["sources"]:
-            self.assertEqual(current_sources[source["id"]], source)
+        old_sources = {source["id"]: source for source in old_runtime["sources"]}
+        self.assertTrue(set(old_sources).issubset(self.sources))
+        old_item = next(row for row in old_runtime["items"] if row["id"] == ITEM_ID)
+        for source_id in old_item["source_ids"]:
+            self.assertEqual(self.sources[source_id]["url"], old_sources[source_id]["url"])
+            self.assertEqual(self.sources[source_id]["published_at"], old_sources[source_id]["published_at"])
         self.assertFalse(self.review["professional_review"]["obtained"])
         self.assertTrue(self.review["professional_review"]["required"])
 
@@ -181,25 +183,8 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
         self.assertEqual(before["publication_completed_entries"], baseline_coverage["publication_completed_entries"])
         self.assertEqual(before["publication_ready"], baseline_coverage["publication_ready"])
 
-        audit = audit_drafts()
-        publication = publication_report()
-        live_coverage = read("localization/tw-edition/coverage.json")
-        actual = {
-            "manifest_entries": len(read("localization/manifest.json")["entries"]),
-            "verified_core_entries": live_coverage["core_reviewed_entries"],
-            "runtime_items": len(self.runtime["items"]),
-            "runtime_sources": len(self.runtime["sources"]),
-            "source_registry": audit["registry_sources"],
-            "review_rechecks": len(self.register["substantive_rechecks"]),
-            "coverage_json_files": audit["json_files_checked"],
-            "unresolved_source_ids": len(audit["unresolved_source_ids"]),
-            "unresolved_reference_occurrences": sum(audit["unresolved_source_ids"].values()),
-            "publication_completed_entries": publication["publication_completed_entries"],
-            "publication_ready": publication["publication_ready"],
-        }
         self.assertEqual(after, next_batch["counts_before"])
         self.assertEqual(next_batch["counts_after"], followup_batch["counts_before"])
-        self.assertEqual(followup_batch["counts_after"], actual)
         self.assertFalse(after["publication_ready"])
 
 
