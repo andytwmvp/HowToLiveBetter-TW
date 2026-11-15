@@ -45,6 +45,79 @@ REQUIRED_HEADINGS = {
     ),
 }
 
+# These articles require their documented section set, but may grow additional
+# sections as Taiwan-specific guidance is improved. Keep those requirements in
+# the shared declarative contract instead of asserting an exact heading count
+# in historical batch tests.
+_CH13_SAFETY_SECTIONS = (
+    "適用情境與第一步",
+    "臺灣實作與下一步",
+    "成本與可期待的效益",
+    "限制與常見誤解",
+    "參考資料",
+)
+REQUIRED_HEADINGS.update(dict.fromkeys(
+    ("TW-13-013", "TW-13-034", "TW-13-035", "TW-13-041"),
+    _CH13_SAFETY_SECTIONS,
+))
+
+_MEDICAL_HIGH_RISK_SECTIONS = (
+    "適用情境與優先做法",
+    "臺灣實作與下一步",
+    "臺灣資料、費用與可期待的效益",
+    "限制、例外與安全界線",
+    "參考資料",
+)
+REQUIRED_HEADINGS.update(dict.fromkeys(
+    ("TW-16-008", "TW-16-011", "TW-16-007"),
+    _MEDICAL_HIGH_RISK_SECTIONS,
+))
+REQUIRED_HEADINGS["TW-24-013"] = (
+    "適用情境與優先做法",
+    "臺灣實際流程與下一步",
+    "臺灣資料、費用與可期待的效益",
+    "限制、例外與常見誤解",
+    "參考資料",
+)
+
+REQUIRED_HEADINGS.update({
+    "TW-16-002": (
+        "適用情境與先做的事",
+        "慢箋調劑規則與步驟",
+        "長期療程銜接與急症處理",
+        "成本、風險與資料限制",
+        "參考資料",
+    ),
+    "TW-17-010": (
+        "適用情境與第一步",
+        "臺灣街道的實際風險與安全做法",
+        "臺灣資料、成本與可期待的效益",
+        "常見錯誤與限制",
+        "參考資料",
+    ),
+    "TW-24-003": (
+        "掛號與轉診",
+        "遇到可疑代辦或假訊息",
+        "法律界線",
+        "發生頻率與資料限制",
+        "參考資料",
+    ),
+    "TW-24-004": (
+        "適用情境",
+        "看診前準備",
+        "跨縣市情境與成本",
+        "資料限制",
+        "參考資料",
+    ),
+    "TW-24-011": (
+        "適用情境與第一步",
+        "餽贈、醫療法與不同任用身分",
+        "成本、效益與可能風險",
+        "發生頻率與限制",
+        "參考資料",
+    ),
+})
+
 
 class BodyStructureContractTests(unittest.TestCase):
     def test_every_published_body_has_complete_rendered_sections_and_registered_sources(self):
@@ -79,6 +152,27 @@ class BodyStructureContractTests(unittest.TestCase):
                 item,
                 known_source_ids={"source-a"},
                 required_headings=("必要的第一步",),
+            ),
+            [],
+        )
+
+    def test_existing_required_sections_allow_a_new_reader_section(self):
+        runtime = validate_runtime()
+        known_source_ids = {source["id"] for source in runtime["sources"]}
+        item = next(row.copy() for row in runtime["items"] if row["id"] == "TW-13-013")
+        reference_heading = "## 參考資料"
+        self.assertIn(reference_heading, item["body"])
+        item["body"] = item["body"].replace(
+            reference_heading,
+            "## 新增的台灣情境\n\n補充適用情況。\n\n" + reference_heading,
+            1,
+        )
+
+        self.assertEqual(
+            body_structure_issues(
+                item,
+                known_source_ids=known_source_ids,
+                required_headings=REQUIRED_HEADINGS[item["id"]],
             ),
             [],
         )

@@ -89,7 +89,6 @@ class MedicalHighRiskRecheckTests(unittest.TestCase):
                 self.assertEqual({check["url"] for check in review["source_checks"]}, urls)
                 self.assertTrue(all(check.get("retrieval_method") and "非逐字" in check["supporting_passage"]
                                     for check in record["source_checks"]))
-                self.assertEqual(item["body"].count("\n## "), 5)
                 self.assertNotRegex(item["body"], r"(?:批次摘要|AI來源再審|專業審閱待取得|內部審查|本次.{0,12}(?:AI|審查|再審|核對))")
                 self.assertTrue(record["statistics_assessed"])
                 for statistic in record["statistics_assessed"]:

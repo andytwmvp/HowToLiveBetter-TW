@@ -94,7 +94,6 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
             self.assertIn('分母', row['limitations'])
             self.assertTrue('不能' in row['limitations'] or '不可' in row['limitations'])
         body = next(item['body'] for item in validate_runtime()['items'] if item['id'] == 'TW-17-010')
-        self.assertEqual(body.count('\n## '), 5)
         self.assertLess(body.index('119'), body.index('臺灣資料、成本與可期待的效益'))
         self.assertIn('跌倒骨折', body)
         self.assertIn('55日', body)
@@ -109,8 +108,6 @@ class MedicalAccessFallsRecheckTests(unittest.TestCase):
 
     def test_medical_guidance_retains_taiwan_specific_legal_boundaries(self):
         items = {item['id']: item['body'] for item in validate_runtime()['items']}
-        for key in IDS:
-            self.assertEqual(items[key].count('\n## '), 5)
         self.assertIn('第15條', items['TW-16-002'])
         self.assertIn('條文列明的特定情況', items['TW-16-002'])
         self.assertIn('第3條', items['TW-24-004'])
