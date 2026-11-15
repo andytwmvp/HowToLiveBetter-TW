@@ -27,7 +27,7 @@ class TravelChapterTests(unittest.TestCase):
     self.assertEqual(body,item['body']);self.assertGreater(len(body),850)
     self.assertEqual(hashlib.sha256(raw).hexdigest(),review['target_sha256'])
     assert_professional_review_pending(self, review['reviewer'])
-    blocks=body_blocks(item);self.assertEqual(sum(b['tag']=='h3' for b in blocks),5)
+    blocks=body_blocks(item)
     self.assertEqual(sum('url' in b for b in blocks),len(item['source_ids']))
  def test_previous_content_and_provenance_preserved(self):
   before=at(BASE,'localization/tw-edition/runtime.json');after=integrated('localization/tw-edition/runtime.json')

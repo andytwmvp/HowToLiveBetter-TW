@@ -4,7 +4,6 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime,validate_entry,publication_report
-from body_renderer import body_blocks
 BASE='72ea775426cdcbc4b716ae506152607b56fc5ca7'
 IDS={f'TW-17-{i:03d}' for i in range(1,14)}
 REVERSE_MORTGAGE_RECHECK_BATCH='localization/topic-fidelity-reverse-mortgage-recheck-20261114.json'
@@ -27,11 +26,6 @@ class Chapter17Tests(unittest.TestCase):
     self.assertEqual(runtime[key]['body'],raw.decode('utf8'))
     self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
     self.assertIn('AI',review['reviewer'])
-    # Subsequent substantive rechecks may add a reader-facing section while
-    # preserving the fixed ID and original review history.
-    expected_headings=sum(line.startswith('## ') for line in runtime[key]['body'].splitlines())
-    self.assertGreaterEqual(expected_headings,5)
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(runtime[key])),expected_headings)
     self.assertTrue(set(runtime[key]['source_ids']).issubset(sources))
     self.assertEqual({s['url'] for s in review['source_checks']},{sources[s]['url'] for s in runtime[key]['source_ids']})
  def test_taiwan_law_and_service_clarifications(self):

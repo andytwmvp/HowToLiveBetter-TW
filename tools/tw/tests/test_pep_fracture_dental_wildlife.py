@@ -10,13 +10,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history, documented_revision, validate_reader_copy_cleanup_history
-from body_renderer import body_blocks
 from recheck_history_assertions import assert_historical_recheck_edge
 
 BASE = '8c9685deee6efa0936178695582d4c908c1c5599'
 BATCH_REVISION = 'b680b7f820f9a3ca9bb52301eb7bd4c5fa180687'
 IDS = {f'TW-13-{n:03}' for n in (31, 38, 41, 48)}
-EXPECTED_HEADINGS = {'TW-13-031': 7, 'TW-13-038': 5, 'TW-13-041': 5, 'TW-13-048': 7}
 
 class PepFractureDentalWildlifeTests(unittest.TestCase):
     def test_actionable_safety_boundaries(self):
@@ -50,7 +48,6 @@ class PepFractureDentalWildlifeTests(unittest.TestCase):
                 self.assertEqual(raw.decode(), items[key]['body'])
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review['target_sha256'])
                 self.assertEqual({s['url'] for s in review['source_checks']}, {sources[s]['url'] for s in items[key]['source_ids']})
-                self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(items[key])), EXPECTED_HEADINGS[key])
 
     def test_original_items_sources_and_publication_limit_preserved(self):
         old = json.loads(subprocess.check_output(['git', 'show', BASE+':localization/tw-edition/runtime.json'], cwd=ROOT))

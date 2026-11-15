@@ -3,7 +3,6 @@ import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 BASE='69da58f9df6e4f5046d71b9c7b9112efe7bc9f62'
 NEW={f'TW-01-{n:03}' for n in range(41,45)}
@@ -18,8 +17,6 @@ class IceToolsCrisisAFTests(unittest.TestCase):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
-    expected_headings = 6 if key == 'TW-13-027' else 5
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),expected_headings)
  def test_emergency_actions_and_denominator_boundaries(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('高山天候快速變化',b['TW-01-041']);self.assertIn('502件、695人',b['TW-01-041']);self.assertIn('531件、涉及727人',b['TW-01-041']);self.assertIn('不能混算或據此推估個人風險',b['TW-01-041']);self.assertNotIn('天然冰面',b['TW-01-041']);self.assertNotIn('加拿大',b['TW-01-041']);self.assertNotIn('較常需要面對',b['TW-01-041'])

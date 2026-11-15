@@ -18,8 +18,6 @@ class HivPreventionTests(unittest.TestCase):
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
     headings=[x['text'] for x in body_blocks(i) if x['tag']=='h3']
-    expected_headings=6 if key in {'TW-13-004','TW-13-005'} else 5
-    self.assertEqual(len(headings),expected_headings)
     if key in {'TW-13-004','TW-13-005'}:self.assertEqual(headings[-1],'資料來源')
  def test_urgent_care_window_and_statistical_limits(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}

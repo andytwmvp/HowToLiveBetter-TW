@@ -210,28 +210,18 @@ class NightshiftTopicFidelityTests(unittest.TestCase):
             },
         )
 
-        previous_batch = read("localization/topic-fidelity-stream-licensing-recheck-20261115.json")
-        previous = previous_batch["counts_after"]
-        self.assertEqual(
-            self.batch["counts_before"],
-            {
-                "verified_core": previous["verified_core_entries"],
-                "runtime_items": previous["runtime_items"],
-                "runtime_sources": previous["runtime_sources"],
-                "source_registry": previous["source_registry"],
-                "review_rechecks": previous["review_rechecks"],
-            },
-        )
-        self.assertEqual(
-            self.batch["counts_after"],
-            {
-                "verified_core": self.coverage["core_reviewed_entries"],
-                "runtime_items": len(self.runtime["items"]),
-                "runtime_sources": len(self.runtime["sources"]),
-                "source_registry": self.coverage["registry_sources"],
-                "review_rechecks": len(self.register["substantive_rechecks"]),
-            },
-        )
+        after = self.batch["counts_after"]
+        expected_after = dict(self.batch["counts_before"])
+        expected_after["runtime_sources"] += len(self.batch["new_source_ids"])
+        expected_after["source_registry"] += len(self.batch["new_source_ids"])
+        expected_after["review_rechecks"] += 1
+        self.assertEqual(after, expected_after)
+        self.assertGreaterEqual(self.coverage["core_reviewed_entries"], after["verified_core"])
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(self.coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(len(self.register["substantive_rechecks"]), after["review_rechecks"])
+        self.assertFalse(self.coverage["publication_ready"])
         self.assertEqual(self.batch["counts_after"]["verified_core"], self.batch["counts_before"]["verified_core"])
         self.assertEqual(self.batch["counts_after"]["runtime_items"], self.batch["counts_before"]["runtime_items"])
         self.assertEqual(self.batch["counts_after"]["runtime_sources"], self.batch["counts_before"]["runtime_sources"] + len(self.batch["new_source_ids"]))

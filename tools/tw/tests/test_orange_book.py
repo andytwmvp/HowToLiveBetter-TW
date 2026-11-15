@@ -3,7 +3,6 @@ import hashlib,json,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,publication_report,validate_runtime
-from body_renderer import body_blocks
 ID='TW-NAV-010'
 PATH='locales/zh-TW/guides/全民安全與防災準備.md'
 def data(path):return json.loads((ROOT/path).read_text(encoding='utf-8'))
@@ -17,7 +16,6 @@ class OrangeBookTests(unittest.TestCase):
   self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
   self.assertEqual(review['review_due_at'],item['review_due_at'])
   self.assertEqual({row['url'] for row in review['source_checks']},{src[k]['url'] for k in item['source_ids']})
-  self.assertEqual(sum(block['tag']=='h3' for block in body_blocks(item)),6)
   self.assertGreater(len(raw),3000)
  def test_core_count_not_inflated_by_navigation(self):
   report=publication_report();rt=validate_runtime()

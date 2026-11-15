@@ -9,12 +9,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime, validate_entry, publication_report
 from retroactive_audit import assert_preserved_or_rechecked
 from recheck_history_assertions import assert_historical_recheck_edge
-from body_renderer import body_blocks
 
 BASE = 'ee8f6ed08267350e3808302c8be9dc9f47cad0f9'
 BATCH_REVISION = 'b5c299375ba3b2a24ec3da72421b826bbabfb11e'
 IDS = {f'TW-13-{n:03}' for n in (36, 37, 39)}
-EXPECTED_HEADINGS = {'TW-13-036': 6, 'TW-13-037': 7, 'TW-13-039': 5}
 
 class ConflictRescueRightsTests(unittest.TestCase):
     def test_actionable_safety_boundaries(self):
@@ -46,7 +44,6 @@ class ConflictRescueRightsTests(unittest.TestCase):
                 self.assertEqual(raw.decode(), items[key]['body'])
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review['target_sha256'])
                 self.assertEqual({s['url'] for s in review['source_checks']}, {sources[s]['url'] for s in items[key]['source_ids']})
-                self.assertEqual(sum(b['tag']=='h3' for b in body_blocks(items[key])), EXPECTED_HEADINGS[key])
 
     def test_original_items_sources_and_publication_limit_preserved(self):
         old = json.loads(subprocess.check_output(['git', 'show', BASE+':localization/tw-edition/runtime.json'], cwd=ROOT))

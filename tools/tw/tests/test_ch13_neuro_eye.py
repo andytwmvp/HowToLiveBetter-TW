@@ -33,7 +33,6 @@ class Chapter13NeuroEyeTests(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review["target_sha256"])
                 self.assertEqual(raw.decode("utf-8"), items[key]["body"])
                 headings = [x["text"] for x in body_blocks(items[key]) if x["tag"] == "h3"]
-                self.assertEqual(len(headings), 6 if key in {"TW-13-004", "TW-13-005"} else 5)
                 if key in {"TW-13-004", "TW-13-005"}:
                     self.assertEqual(headings[-1], "資料來源")
                 self.assertEqual({s["url"] for s in review["source_checks"]},

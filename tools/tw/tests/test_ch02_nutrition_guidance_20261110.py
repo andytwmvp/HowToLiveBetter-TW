@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
 from review_contract import ROOT, validate_runtime
+from source_bundle_test_support import source_bundle_ids_added_since
 
 
 BASE = "ce2bc87f94ccad5421d7dc8a2b9d6dcf008dbff1"
@@ -288,7 +289,6 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         topic_fidelity_batch = json.loads(
             (ROOT / "localization/topic-fidelity-dechina-recheck-20261112.json").read_text(encoding="utf-8")
         )
-        current_recheck_batch = read_json("localization/topic-fidelity-fraud-osh-recheck-20261114.json")
         reviewed_sources_not_used = {
             source_id
             for row in topic_fidelity_batch["items"]
@@ -298,14 +298,10 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         cited_source_ids = {source_id for row in self.runtime["items"] for source_id in row["source_ids"]}
         self.assertTrue(reviewed_sources_not_used.issubset(registered_source_ids))
         self.assertTrue(reviewed_sources_not_used.isdisjoint(cited_source_ids))
-        self.assertEqual(
-            new_source_ids,
-            set(self.batch["new_source_ids"])
-            | sources_added_by_later_rechecks
-            | self.later_first_publication_source_ids
-            | reviewed_sources_not_used
-            | set(current_recheck_batch["new_source_ids"]),
-        )
+        self.assertTrue(sources_added_by_later_rechecks.issubset(new_source_ids))
+        self.assertTrue(self.later_first_publication_source_ids.issubset(new_source_ids))
+        self.assertTrue(reviewed_sources_not_used.issubset(new_source_ids))
+        self.assertEqual(new_source_ids, source_bundle_ids_added_since(ROOT, BASE))
         self.assertGreaterEqual(
             len(self.register["substantive_rechecks"]),
             self.batch["counts_before"]["substantive_rechecks"],

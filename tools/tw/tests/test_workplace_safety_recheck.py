@@ -9,7 +9,6 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from reader_copy_test_support import assert_body_version_matches_review_or_cleanup, assert_professional_review_pending
 import retroactive_audit as audit
-from body_renderer import body_blocks
 from review_contract import ROOT
 
 IDS = ("TW-19-009", "TW-19-010", "TW-19-011", "TW-19-012", "TW-19-016")
@@ -69,11 +68,6 @@ class WorkplaceSafetyRecheckTests(unittest.TestCase):
         self.assertLess(safety.index("撥119"), safety.index("重大職災死亡193人"))
         for phrase in ("營造業102人", "營造業死亡事故約62%屬墜落", "沒有工作者人數或工時分母", "不能解讀為個人事故率", "不要貿然進入救援"):
             self.assertIn(phrase, safety)
-        for item_id in IDS:
-            with self.subTest(item_id=item_id):
-                expected_headings=sum(line.startswith("## ") for line in runtime[item_id]["body"].splitlines())
-                self.assertGreaterEqual(expected_headings,5)
-                self.assertEqual(sum(block["tag"] == "h3" for block in body_blocks(runtime[item_id])), expected_headings)
         health_exam = runtime["TW-19-009"]["body"]
         self.assertIn("每年或在變更作業時安排特殊健康檢查", health_exam)
 

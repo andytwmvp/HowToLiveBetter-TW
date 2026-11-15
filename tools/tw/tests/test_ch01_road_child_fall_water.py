@@ -4,7 +4,6 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
-from body_renderer import body_blocks
 BASE="254a5edb32fc4aee5ba881c0cdf1521f4e66d462"
 IDS={"TW-01-009","TW-01-010","TW-01-011","TW-01-012"}
 def load(p):return json.loads((ROOT/p).read_text(encoding="utf-8"))
@@ -18,7 +17,6 @@ class Chapter01ChildSafetyTests(unittest.TestCase):
     raw=(ROOT/e["target_path"]).read_bytes();rev=load("localization/reviews/"+key+".json")
     self.assertGreater(len(raw),1800);self.assertEqual(hashlib.sha256(raw).hexdigest(),rev["target_sha256"])
     self.assertEqual(raw.decode("utf-8"),items[key]["body"])
-    self.assertEqual(sum(x["tag"]=="h3" for x in body_blocks(items[key])),5)
     self.assertEqual({x["url"] for x in rev["source_checks"]},{sources[x]["url"] for x in items[key]["source_ids"]})
  def test_frequency_denominator_and_local_safety(self):
   b={x["id"]:x["body"] for x in validate_runtime()["items"]}

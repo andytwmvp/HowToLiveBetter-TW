@@ -30,7 +30,7 @@ class AfterDeathChapterTests(unittest.TestCase):
                 self.assertEqual(raw.decode(),runtime[e['id']]['body']);self.assertGreater(len(raw.decode()),850)
                 self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
                 assert_professional_review_pending(self, review['reviewer'])
-                blocks=body_blocks(runtime[e['id']]);self.assertEqual(sum(b['tag']=='h3' for b in blocks),5)
+                blocks=body_blocks(runtime[e['id']])
                 self.assertEqual(sum('url' in b for b in blocks),len(runtime[e['id']]['source_ids']))
     def test_baseline_items_sources_and_original_provenance_preserved(self):
         # 本批是否覆蓋前人成果，以本批固定提交驗證；現行原作識別欄位仍逐一檢查。

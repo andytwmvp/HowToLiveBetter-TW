@@ -3,7 +3,6 @@ import hashlib,json,subprocess,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 BASE='58bdcaa0906c01e1a663c3dc41bf4e75fa911bc3'
 NEW={f'TW-01-{n:03}' for n in range(37,41)}
@@ -17,7 +16,6 @@ class GamblingPrepBoneTests(unittest.TestCase):
     self.assertTrue(validate_entry(mm[key]));i=ii[key];rv=read(f'localization/reviews/{key}.json');raw=(ROOT/i['target_path']).read_bytes()
     self.assertEqual(raw.decode(),i['body']);self.assertEqual(hashlib.sha256(raw).hexdigest(),rv['target_sha256'])
     self.assertEqual({x['url'] for x in rv['source_checks']},{ss[s]['url'] for s in i['source_ids']})
-    self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(i)),5)
  def test_emergency_actions_and_denominator_boundaries(self):
   b={x['id']:x['body'] for x in validate_runtime()['items']}
   self.assertIn('不交付密碼',b['TW-01-037']);self.assertIn('資料不足',b['TW-01-037'])

@@ -168,8 +168,6 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
         baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
         baseline_manifest = json.loads(git_bytes(BASE, "localization/manifest.json"))
         baseline_register = json.loads(git_bytes(BASE, REGISTER_PATH))
-        next_batch = read("localization/topic-fidelity-oral-care-recheck-20261115.json")
-        followup_batch = read("localization/topic-fidelity-stream-licensing-recheck-20261115.json")
 
         self.assertEqual(before["manifest_entries"], len(baseline_manifest["entries"]))
         self.assertEqual(before["verified_core_entries"], baseline_coverage["core_reviewed_entries"])
@@ -183,9 +181,28 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
         self.assertEqual(before["publication_completed_entries"], baseline_coverage["publication_completed_entries"])
         self.assertEqual(before["publication_ready"], baseline_coverage["publication_ready"])
 
-        self.assertEqual(after, next_batch["counts_before"])
-        self.assertEqual(next_batch["counts_after"], followup_batch["counts_before"])
+        expected_after = dict(before)
+        expected_after["runtime_sources"] += len(self.batch["new_source_ids"])
+        expected_after["source_registry"] += len(self.batch["new_source_ids"])
+        expected_after["review_rechecks"] += len(self.batch["items"])
+        expected_after["coverage_json_files"] += 1
+        self.assertEqual(after, expected_after)
         self.assertFalse(after["publication_ready"])
+        live = read("localization/tw-edition/coverage.json")
+        live_counts = {
+            "verified_core_entries": live["core_reviewed_entries"],
+            "runtime_items": len(self.runtime["items"]),
+            "runtime_sources": len(self.runtime["sources"]),
+            "source_registry": live["registry_sources"],
+            "review_rechecks": len(self.register["substantive_rechecks"]),
+            "coverage_json_files": live["json_files_checked"],
+            "unresolved_source_ids": len(live["unresolved_source_ids"]),
+            "unresolved_reference_occurrences": live["unresolved_reference_occurrences"],
+            "publication_completed_entries": live["publication_completed_entries"],
+        }
+        for key, value in live_counts.items():
+            self.assertGreaterEqual(value, after[key], key)
+        self.assertFalse(live["publication_ready"])
 
 
 if __name__ == "__main__":

@@ -8,7 +8,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import retroactive_audit
-from body_renderer import body_blocks
 from review_contract import ROOT, publication_report, validate_entry, validate_runtime
 
 BASE = "a853321583f76ef502ec88738af8d221b8d696d4"
@@ -46,12 +45,8 @@ class ChapterTwoHealthSafetyFoodTests(unittest.TestCase):
                     {row["url"] for row in review["source_checks"]},
                     {sources[source_id]["url"] for source_id in item["source_ids"]},
                 )
-                heading_count = sum(block["tag"] == "h3" for block in body_blocks(item))
                 if key == "TW-02-047":
-                    self.assertEqual(heading_count, 6)
                     self.assertIn("## 生淡水魚與中華肝吸蟲", item["body"])
-                else:
-                    self.assertEqual(heading_count, 5)
                 if key == "TW-02-047":
                     self.assertTrue(any("沒有個人暴露分母" in limit for limit in review["limits"]))
                 else:

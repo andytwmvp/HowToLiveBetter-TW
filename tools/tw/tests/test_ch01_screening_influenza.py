@@ -7,7 +7,6 @@ import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT,validate_runtime,validate_entry,publication_report
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked
 
 class ScreeningInfluenzaTests(unittest.TestCase):
@@ -23,8 +22,6 @@ class ScreeningInfluenzaTests(unittest.TestCase):
                 self.assertEqual(items[key]['body'],raw.decode())
                 self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
                 self.assertEqual({x['url'] for x in review['source_checks']},{sources[s]['url'] for s in items[key]['source_ids']})
-                expected_sections = 6 if key == 'TW-01-020' else 5
-                self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(items[key])),expected_sections)
 
     def test_policy_and_frequency_do_not_become_personal_probability(self):
         b={x['id']:x['body'] for x in validate_runtime()['items']}

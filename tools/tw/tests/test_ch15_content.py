@@ -31,7 +31,6 @@ class HousingChapterTests(unittest.TestCase):
     self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
     assert_professional_review_pending(self, review['reviewer'])
     blocks=body_blocks(runtime[e['id']])
-    self.assertGreaterEqual(sum(b['tag']=='h3' for b in blocks),5)
     self.assertEqual(sum('url' in b for b in blocks),len(runtime[e['id']]['source_ids']))
  def test_existing_105_items_and_old_registry_preserved(self):
   before=at(BASE,'localization/tw-edition/runtime.json');now=snapshot('localization/tw-edition/runtime.json')

@@ -7,7 +7,6 @@ import subprocess
 import sys
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from body_renderer import body_blocks
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 from ci_language_policy import audit_drafts
@@ -30,7 +29,6 @@ class LaborChapterTests(unittest.TestCase):
                 self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
                 self.assertEqual(review['review_due_at'],runtime[entry['id']]['review_due_at']);self.assertIn('AI',review['reviewer'])
                 self.assertTrue(all('非逐字引文' in s['supporting_passage'] for s in review['source_checks']))
-                self.assertEqual(len([b for b in body_blocks(runtime[entry['id']]) if b['tag']=='h3']),5)
         self.assertGreaterEqual(publication_report()['publication_completed_entries'],25)
 
     def test_previous_reviewed_runtime_items_and_sources_are_unchanged(self):

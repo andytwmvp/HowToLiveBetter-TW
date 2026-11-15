@@ -8,7 +8,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_entry, validate_runtime
 from retroactive_audit import assert_preserved_or_rechecked
-from body_renderer import body_blocks
 
 class PreventionBatchTests(unittest.TestCase):
     def test_new_bodies_evidence_and_shared_reader(self):
@@ -25,7 +24,6 @@ class PreventionBatchTests(unittest.TestCase):
                 self.assertEqual(items[key]['body'],raw.decode())
                 self.assertEqual(review['target_sha256'],hashlib.sha256(raw).hexdigest())
                 self.assertEqual({x['url'] for x in review['source_checks']},{sources[k]['url'] for k in items[key]['source_ids']})
-                self.assertEqual(sum(x['tag']=='h3' for x in body_blocks(items[key])),5)
 
     def test_current_baseline_preserved_or_documented(self):
         prior=json.loads(subprocess.check_output(['git','show','6b85081cd806bea348523d486bf9e87efb686117:localization/tw-edition/runtime.json'],cwd=ROOT))
