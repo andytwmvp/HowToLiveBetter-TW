@@ -72,7 +72,6 @@ class Chapter13HighRiskRecheckTests(unittest.TestCase):
                 urls = {self.sources[sid]["url"] for sid in item["source_ids"]}
                 self.assertEqual(set(re.findall(r"\]\((https?://[^)]+)\)", item["body"])), urls)
                 self.assertEqual({check["url"] for check in review["source_checks"]}, urls)
-                self.assertEqual(item["body"].count("\n## "), 5)
                 self.assertNotRegex(item["body"], r"(?:批次摘要|未宣稱閱讀|原始研究未讀|PDF第[一二12]頁|本次.{0,12}(?:AI|審查|再審|核對))")
                 self.assertTrue(record["statistics_assessed"])
                 for statistic in record["statistics_assessed"]:

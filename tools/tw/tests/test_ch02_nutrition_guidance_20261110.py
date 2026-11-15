@@ -90,7 +90,11 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             batch_base = later_batch.get("baseline_main_sha")
             if batch_base not in cls.completed_or_later_main_shas:
                 continue
-            for row in later_batch.get("items", []):
+            later_items = list(later_batch.get("items", []))
+            single_item = later_batch.get("item")
+            if isinstance(single_item, dict):
+                later_items.append(single_item)
+            for row in later_items:
                 if isinstance(row, dict) and row.get("before_sha256") is None:
                     cls.later_first_publication_ids.add(row["id"])
             cls.later_first_publication_source_ids.update(later_batch.get("new_source_ids", []))

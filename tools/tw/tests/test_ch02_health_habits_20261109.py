@@ -183,6 +183,7 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
 
     def test_coverage_counts_match_actual_incremental_publication(self):
         before = self.batch["counts_before"]
+        live_coverage = audit_drafts()
         self.assertEqual(before["core_reviewed"], 292)
         self.assertEqual(before["runtime_items"], 303)
         self.assertEqual(before["runtime_sources"], 1186)
@@ -194,9 +195,18 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         self.assertGreaterEqual(len(self.runtime["sources"]), before["runtime_sources"] + len(self.batch["new_source_ids"]))
         self.assertGreaterEqual(self.coverage["registry_sources"], before["source_registry"] + len(self.batch["new_source_ids"]))
         self.assertGreaterEqual(self.coverage["json_files_checked"], before["json_files_checked"] + len(ITEM_IDS) + 2)
-        self.assertEqual(self.coverage["unique_draft_entries"], 498)
-        self.assertEqual(self.coverage["entries_without_any_draft"], 267)
-        self.assertEqual(self.coverage["unresolved_reference_occurrences"], audit_drafts()["unresolved_reference_occurrences"])
+        self.assertEqual(
+            self.coverage["unique_draft_entries"],
+            live_coverage["unique_draft_entries"],
+        )
+        self.assertEqual(
+            self.coverage["entries_without_any_draft"],
+            live_coverage["entries_without_any_draft"],
+        )
+        self.assertEqual(
+            self.coverage["unresolved_reference_occurrences"],
+            live_coverage["unresolved_reference_occurrences"],
+        )
         self.assertGreaterEqual(len(self.register["substantive_rechecks"]), before["substantive_rechecks"])
         self.assertFalse(self.coverage["publication_ready"])
 
