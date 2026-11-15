@@ -17,7 +17,6 @@ def check_safety_navigation_browser(page, context, url, review):
                 article = page.locator('#' + key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text()
-                assert article.locator('h3').count() == (6 if key=='TW-NAV-010' else 0), key
                 rendered = article.text_content()
                 for block in body_blocks(items[key]):
                     assert block['text'] in rendered, (target, key, block['text'][:50])

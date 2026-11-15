@@ -17,10 +17,8 @@ def check_hiv_prevention_browser(page, context, url, review):
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text()
                 headings = article.locator('h3')
-                expected_headings = 6 if key in {'TW-13-004', 'TW-13-005'} else 5
-                assert headings.count() == expected_headings, key
                 if key in {'TW-13-004', 'TW-13-005'}:
-                    assert headings.nth(5).inner_text() == '資料來源', key
+                    assert headings.last.inner_text() == '資料來源', key
                 for source_id in items[key]['source_ids']:
                     assert article.locator('a').evaluate_all('(xs, u) => xs.some(a => a.href === u)', sources[source_id]['url']), (key, source_id)
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), target

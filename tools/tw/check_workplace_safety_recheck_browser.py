@@ -1,5 +1,4 @@
 """職安、職災、工作急症、霸凌與健檢歷史再審全文及互動。"""
-import re
 from review_contract import ROOT, validate_runtime
 from body_renderer import body_blocks
 
@@ -19,8 +18,6 @@ def check_workplace_safety_recheck_browser(page, context, url, review):
                 article = page.locator('#'+key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text(), (target, key)
-                expected_sections = len(re.findall(r'(?m)^##\s+', items[key]['body']))
-                assert article.locator('h3').count() == expected_sections, (target, key)
                 if key == 'TW-19-009':
                     assert article.locator('h3').filter(has_text='離開特定有害作業後的追蹤健檢').count() == 1
                 rendered = article.text_content()

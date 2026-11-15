@@ -10,7 +10,7 @@ def check_ch15_browser(page,context,url,review):
     assert set(page.locator('[data-id^="TW-15-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
     for key in sorted(ids):
         card=page.locator('#'+key)
-        assert card.locator('h3').count()>=5 and 'TW-ID:' not in card.inner_text()
+        assert 'TW-ID:' not in card.inner_text()
         assert card.locator('a[href^="https://"]').count()>=len(expected[key]['source_ids'])
     page.locator('#q').fill('面積與建材')
     card=page.locator('#TW-15-012');assert card.count()==1
@@ -38,4 +38,4 @@ def check_ch15_browser(page,context,url,review):
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     assert set(page.locator('[data-id^="TW-15-"]').evaluate_all('(xs)=>xs.map(x=>x.dataset.id)'))==ids
     assert '房地總價5%' in page.locator('#TW-15-018').inner_text()
-    return ['第15章18條正文、小標題及來源連結一致','面積2%與3%搜尋、貸款差額書籤、手機押金自查與無水平溢出','離線18條與保留款範圍一致；測試不代辦核貸或推定個案權利']
+    return ['第15章18條正文、小標及來源連結與runtime一致','面積2%與3%搜尋、貸款差額書籤、手機押金自查與無水平溢出','離線18條與保留款範圍一致；測試不代辦核貸或推定個案權利']

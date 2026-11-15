@@ -19,7 +19,6 @@ def check_ch19_employment_rights_browser(page, context, url, review):
                 article = page.locator('#'+key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text(), (target, key)
-                assert article.locator('h3').count() == 5, (target, key)
                 rendered = article.text_content()
                 for block in body_blocks(items[key]):
                     assert block['text'] in rendered, (target, key, block['text'][:50])

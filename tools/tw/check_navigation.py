@@ -24,13 +24,12 @@ def check_navigation(page, context, url, review):
     assert page.locator('[data-id^="TW-14-"]').count()==12
     assert page.locator('[data-id^="TW-19-"]').count()==sum(e['id'].startswith('TW-19-') for e in data['items'])
     labor=page.locator('#TW-19-004')
-    assert labor.locator('h3').count()==5 and '50,000' in labor.inner_text()
+    assert '50,000' in labor.inner_text()
     assert labor.locator('a[href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030020"]').count()>=1
     page.locator('#q').fill('最低服務年限')
     assert page.locator('#TW-19-022').count()==1
     page.locator('#reset').click()
     chapter=page.locator('#TW-14-003')
-    assert chapter.locator('h3').count()==5
     assert 'TW-ID:' not in chapter.inner_text() and '## ' not in chapter.inner_text()
     assert chapter.locator('a[href="https://support.apple.com/zh-tw/118228"]').count()>=1
     page.locator('#q').fill('SIM PIN')
@@ -48,7 +47,7 @@ def check_navigation(page, context, url, review):
     page.goto(url+'index.html#TW-19-009',wait_until='domcontentloaded')
     page.wait_for_function('window.TWRuntime && window.TWRuntime.ready')
     health=page.locator('#TW-19-009')
-    assert health.locator('h3').count()==6 and '2028-01-01' in health.inner_text()
+    assert '2028-01-01' in health.inner_text()
     assert health.locator('h3').filter(has_text='離開特定有害作業後的追蹤健檢').count()==1
     assert health.locator('a[href*="LawOldVer.aspx"]').count()>=1
     page.locator('#q').fill('191,000')

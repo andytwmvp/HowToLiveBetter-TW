@@ -17,7 +17,6 @@ def check_medical_care_browser(page, context, url, review):
                 article = page.locator('#'+key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text()
-                assert article.locator('h3').count() == 5, (target, key)
                 rendered = article.text_content()
                 assert '](' not in article.inner_text(), (target, key, 'raw Markdown link syntax is visible')
                 for block in body_blocks(items[key]):

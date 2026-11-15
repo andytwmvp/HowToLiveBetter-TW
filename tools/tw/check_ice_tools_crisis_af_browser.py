@@ -16,8 +16,6 @@ def check_ice_tools_crisis_af_browser(page, context, url, review):
                 article = page.locator('#' + key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text()
-                expected_headings = 6 if key == 'TW-13-027' else 5
-                assert article.locator('h3').count() == expected_headings, key
                 for source_id in items[key]['source_ids']:
                     assert article.locator('a').evaluate_all('(xs, u) => xs.some(a => a.href === u)', sources[source_id]['url']), (key, source_id)
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), target

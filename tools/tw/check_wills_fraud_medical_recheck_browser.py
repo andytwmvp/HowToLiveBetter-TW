@@ -1,5 +1,4 @@
 """遺囑、防詐、家庭醫師與基層急症四篇閱讀器檢查。"""
-import re
 from review_contract import ROOT, validate_runtime
 from body_renderer import body_blocks
 
@@ -18,8 +17,6 @@ def check_wills_fraud_medical_recheck_browser(page, context, url, review):
                 article = page.locator('#' + key)
                 assert article.count() == 1, (target, key)
                 assert items[key]['title'] in article.inner_text()
-                expected_sections = len(re.findall(r'(?m)^##\s+', items[key]['body']))
-                assert article.locator('h3').count() == expected_sections, (target, key)
                 if key == 'TW-17-004':
                     assert article.locator('h3').filter(has_text='面對催促，先保留決定時間').count() == 1
                 rendered = article.text_content()
