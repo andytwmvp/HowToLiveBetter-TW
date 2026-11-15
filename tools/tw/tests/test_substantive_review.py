@@ -6,6 +6,7 @@ import unittest
 from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from audit_report_test_support import current_audit_report
 import retroactive_audit as audit
 
 class SubstantiveReviewTests(unittest.TestCase):
@@ -96,7 +97,7 @@ class SubstantiveReviewTests(unittest.TestCase):
         self.assertFalse(audit.documented_revision(old, dict(new, body='tampered'), record))
 
     def test_audit_exposes_ai_rechecks_without_professional_completion(self):
-        report = audit.audit()
+        report = current_audit_report()
         records = report.get('ai_source_rechecks', [])
         self.assertGreaterEqual(len(records), 4)
         self.assertTrue(all(r['status'] == 'ai_source_rechecked_professional_pending' for r in records))

@@ -10,6 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from audit_report_test_support import current_audit_report
 import retroactive_audit as audit
 
 
@@ -556,12 +557,12 @@ class RetroactiveAuditTests(unittest.TestCase):
             self.assertEqual(page, f"# 第{number}章：{title}\n\n本章文章依主題整理，請從[第{number}章文章目錄]({link})開始閱讀。\n")
 
     def test_audit_validates_registered_reader_copy_cleanup_edges(self):
-        result = audit.audit()
+        result = current_audit_report()
         self.assertGreater(result["summary"].get("reader_copy_cleanups", 0), 0)
         self.assertFalse(result["summary"]["publication_ready"])
 
     def test_all_existing_and_future_core_and_navigation_are_included(self):
-        result = audit.audit()
+        result = current_audit_report()
         root = audit.ROOT
         manifest = json.loads((root / "localization/manifest.json").read_text(encoding="utf-8"))
         runtime = json.loads((root / "localization/tw-edition/runtime.json").read_text(encoding="utf-8"))
@@ -580,7 +581,7 @@ class RetroactiveAuditTests(unittest.TestCase):
         self.assertFalse(result["summary"]["publication_ready"])
 
     def test_prior_verified_status_never_automatically_certifies_new_standard(self):
-        result = audit.audit()
+        result = current_audit_report()
         for page in result["core"]:
             if page["prior_status"] == "verified":
                 self.assertEqual(
