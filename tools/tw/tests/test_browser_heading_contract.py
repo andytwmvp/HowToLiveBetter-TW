@@ -5,7 +5,11 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from browser_heading_contract import heading_map_issues, runtime_heading_map
+from browser_heading_contract import (
+    heading_map_issues,
+    heading_rows_issues,
+    runtime_heading_map,
+)
 
 
 class BrowserHeadingContractTests(unittest.TestCase):
@@ -57,6 +61,17 @@ class BrowserHeadingContractTests(unittest.TestCase):
                 "TW-99-004: 閱讀出口出現非runtime文章",
             ],
         )
+
+    def test_duplicate_rendered_article_id_fails(self):
+        issues = heading_rows_issues(
+            {"TW-99-005": ["參考資料"]},
+            [
+                ("TW-99-005", ["參考資料"]),
+                ("TW-99-005", ["參考資料"]),
+            ],
+        )
+
+        self.assertEqual(issues, ["TW-99-005: 閱讀出口重複文章ID"])
 
 
 if __name__ == "__main__":

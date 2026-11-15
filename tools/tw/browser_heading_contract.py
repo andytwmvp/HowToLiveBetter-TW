@@ -1,5 +1,7 @@
 """Compare headings rendered by each reader surface with the official runtime."""
 
+from collections import Counter
+
 from body_renderer import body_blocks
 
 
@@ -33,6 +35,18 @@ def heading_map_issues(
     return issues
 
 
+def heading_rows_issues(
+    expected: dict[str, list[str]], rows: list[tuple[str, list[str]]]
+) -> list[str]:
+    """Also detect duplicate article IDs before converting rendered rows to a map."""
+    counts = Counter(item_id for item_id, _ in rows)
+    issues = [
+        f"{item_id}: 閱讀出口重複文章ID"
+        for item_id in sorted(item_id for item_id, count in counts.items() if count > 1)
+    ]
+    return issues + heading_map_issues(expected, dict(rows))
+
+
 def assert_reader_headings_match_runtime(page, items: list[dict], surface: str) -> None:
     """Fail with article-level detail when a reader surface changes headings."""
     expected = runtime_heading_map(items)
@@ -42,7 +56,6 @@ def assert_reader_headings_match_runtime(page, items: list[dict], surface: str) 
           [...card.querySelectorAll('h3')].map(heading => heading.textContent.trim())
         ])"""
     )
-    actual = dict(rows)
-    issues = heading_map_issues(expected, actual)
+    issues = heading_rows_issues(expected, rows)
     if issues:
         raise AssertionError(f"{surface}的文章小標未與正式runtime一致：" + "；".join(issues[:12]))
