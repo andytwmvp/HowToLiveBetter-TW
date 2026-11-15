@@ -88,9 +88,13 @@ class NightshiftTopicFidelityTests(unittest.TestCase):
         self.assertEqual(question_change["previous_question"], old_item["question"])
         self.assertEqual(question_change["current_question"], self.item["question"])
         baseline_register = json.loads(git_bytes(BASE, REGISTER_PATH))
+        baseline_rows = baseline_register["substantive_rechecks"]
+        current_rows = self.register["substantive_rechecks"]
+        self.assertEqual(current_rows[:len(baseline_rows)], baseline_rows)
         self.assertEqual(
-            len(self.register["substantive_rechecks"]),
-            len(baseline_register["substantive_rechecks"]) + 1,
+            [row for row in current_rows[len(baseline_rows):]
+             if row["id"] == ITEM_ID and row["reviewed_at"] == DATE],
+            [self.record],
         )
 
     def test_core_topic_is_restored_without_overstating_transfer_or_interventions(self):

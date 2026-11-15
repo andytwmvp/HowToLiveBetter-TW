@@ -149,7 +149,11 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
                     self.assertEqual(current_review["reviewed_at"], later_rechecks[-1]["reviewed_at"])
                     self.assertEqual(current_item["reviewed_at"], later_rechecks[-1]["reviewed_at"])
                     self.assertEqual(current_entry["verified_at"], later_rechecks[-1]["reviewed_at"])
-                    self.assertIn("日本研究", current_body)
+                    if item_id == "TW-02-025":
+                        self.assertIn("日本八個世代研究的合併分析", current_body)
+                    elif item_id == "TW-02-026":
+                        self.assertIn("日本八個人口世代研究合併分析", current_body)
+                        self.assertIn("另一個日本12個社區的世代研究", current_body)
                 else:
                     body_path = ROOT / entry["target_path"]
                     body_bytes = body_path.read_bytes()
@@ -307,9 +311,13 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             self.batch["counts_before"]["substantive_rechecks"],
         )
         reviewed_ids = {row["id"] for row in self.register["substantive_rechecks"]}
-        self.assertEqual(set(ITEM_IDS) & reviewed_ids, {"TW-02-025"})
+        self.assertEqual(set(ITEM_IDS) & reviewed_ids, {"TW-02-025", "TW-02-026"})
         self.assertTrue(any(
             row["id"] == "TW-02-025" and row["reviewed_at"] == "2026-11-12"
+            for row in self.later_rechecks
+        ))
+        self.assertTrue(any(
+            row["id"] == "TW-02-026" and row["reviewed_at"] == "2026-11-15"
             for row in self.later_rechecks
         ))
 
