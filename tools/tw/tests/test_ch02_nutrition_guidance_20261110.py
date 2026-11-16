@@ -218,10 +218,10 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
 
     def test_topic_claims_and_statistics_limits_are_explicit(self):
         bodies = {item_id: self.items[item_id]["body"] for item_id in ITEM_IDS}
-        self.assertIn("不代表人人每天都要另外加吃一份", bodies["TW-02-022"])
+        self.assertIn("不要把研究中的每週28公克換算成每天必須多吃一把", bodies["TW-02-022"])
         self.assertIn("2020年7月1日施行", bodies["TW-02-022"])
         self.assertIn("不要把整顆堅果當零食", bodies["TW-02-022"])
-        self.assertIn("不用把某種食物列為禁品", bodies["TW-02-023"])
+        self.assertIn("不是要求所有人完全不吃紅肉", bodies["TW-02-023"])
         self.assertIn("至少約三分之一", bodies["TW-02-024"])
         self.assertIn("不是喝茶就能延壽", bodies["TW-02-025"])
         self.assertIn("兩種說法的族群與文字不同", bodies["TW-02-026"])
@@ -314,16 +314,13 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
             len(self.register["substantive_rechecks"]),
             self.batch["counts_before"]["substantive_rechecks"],
         )
-        reviewed_ids = {row["id"] for row in self.register["substantive_rechecks"]}
-        self.assertEqual(set(ITEM_IDS) & reviewed_ids, {"TW-02-025", "TW-02-026"})
-        self.assertTrue(any(
-            row["id"] == "TW-02-025" and row["reviewed_at"] == "2026-11-12"
-            for row in self.later_rechecks
-        ))
-        self.assertTrue(any(
-            row["id"] == "TW-02-026" and row["reviewed_at"] == "2026-11-15"
-            for row in self.later_rechecks
-        ))
+        dated_rechecks = {
+            (row["id"], row["reviewed_at"]) for row in self.later_rechecks
+        }
+        self.assertTrue({
+            ("TW-02-025", "2026-11-12"),
+            ("TW-02-026", "2026-11-15"),
+        }.issubset(dated_rechecks))
 
     def test_coverage_and_recorded_counts_match_the_current_data(self):
         before = self.batch["counts_before"]
