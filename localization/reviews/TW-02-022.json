@@ -1,11 +1,11 @@
 {
   "id": "TW-02-022",
-  "reviewer": "ChatGPT（AI協助核對台灣官方資料；未取得獨立相關專業審閱）",
+  "reviewer": "ChatGPT（AI協助研究與來源核對；未取得獨立相關專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-11-10",
-  "review_due_at": "2027-02-10",
+  "reviewed_at": "2026-11-16",
+  "review_due_at": "2027-02-16",
   "target_path": "locales/zh-TW/book/ch02/TW-02-022.md",
-  "target_sha256": "e88584eabc6e87217610b631c2d14409e68ed9121e0a67d83442ced55e295cad",
+  "target_sha256": "1cdb0779f0d4348749332653cc7d7148f2d70392d0577e286a10ff947e176e60",
   "source_checks": [
     {
       "source_id": "tw02_hpa_food_exchange_portions_2024",
@@ -15,6 +15,33 @@
       "supporting_passage": "頁面於2018-03-13發布、2024-12-04更新；表格列杏仁與核桃仁7公克、開心果／腰果／部分種子10公克、花生仁13公克；蔬菜一份可食生重約100公克，水果約80至120公克。",
       "accessed_at": "2026-11-10",
       "retrieval_method": "直接查閱國健署健康飲食標準頁與食物代換表附件，核對堅果種類別重量、蔬菜及水果份量和頁面更新日期。"
+    },
+    {
+      "source_id": "tw02_hpa_cvd_prevention_guideline_nuts_2020",
+      "title": "國健署、考科藍臺灣研究中心與中華民國心臟學會：《心血管疾病預防照護指引》（2020）",
+      "url": "https://health99.hpa.gov.tw/media/public/pdf/22113.pdf",
+      "claim": "台灣官方心血管預防指引保留堅果攝取與心血管及總死亡率研究的關聯性，同時明確表示現有研究不足以指定堅果種類或預防疾病所需的攝取量。",
+      "supporting_passage": "第10章「飲食與心血管疾病」第160頁表示，研究與系統性文獻分析支持堅果攝取與較低心血管疾病及總死亡率的關聯；因特定堅果種類研究有限，只建議日常適量攝取，未進一步指定種類或數量。指引列出的統合估計來自其引用研究，這裡僅採用指引的證據界線，不將其當成台灣全國數據或本批個人效果估計。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "直接查閱國健署官方PDF搜尋索引所擷取的封面出版資訊及第10章全文頁面文字，並核對國健署健康九九官方PDF網址；官方PDF直連本輪回應逾時，因此未聲稱本次成功下載PDF。另以考科藍臺灣研究中心的指引索引交叉確認出版月份及共同編撰單位。"
+    },
+    {
+      "source_id": "tw02_bao_nut_mortality_2013",
+      "title": "Bao等：堅果攝取與全因及特定死因死亡的關聯（2013）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24256379/",
+      "claim": "兩個美國醫療專業人員前瞻性世代觀察堅果攝取頻率與死亡；提供各頻率組相較從未攝取的校正HR。",
+      "supporting_passage": "女性76,464人、男性42,498人，研究期間分別為1980至2010年、1986至2010年；累積3,038,853人年，記錄27,429人死亡。每週7次以上相較從未吃堅果者，全因死亡校正HR為0.80（95% CI 0.73至0.86）。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "查閱PubMed摘要及NEJM原始論文頁，核對分析人數、研究期間、人年、全因死亡數及頻率分組HR；將HR保留為相對關聯，不改寫成絕對機率。"
+    },
+    {
+      "source_id": "tw02_liu_nut_mortality_meta_2026",
+      "title": "Liu等：堅果攝取與心血管事件及全因死亡的統合分析（2026）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41350177/",
+      "claim": "系統性回顧統合前瞻性世代研究的堅果攝取與死亡關聯，報告高低攝取比較及每週28公克增量的全因死亡RR，並檢驗非線性。",
+      "supporting_passage": "33篇論文、63個研究；檢索至2023-10-24。高攝取與低攝取組比較的全因死亡RR為0.77（95% CI 0.73至0.81）；每週攝取量增加28公克的模型估計RR為0.92（0.90至0.94），全因死亡劑量反應非線性p<0.001。PubMed摘要未列統合後總人數或死亡數。",
+      "accessed_at": "2026-11-16",
+      "retrieval_method": "直接查閱PubMed索引的研究摘要，核對檢索截止日、納入研究數、全因死亡效應量、劑量反應和非線性；摘要未提供的合併分母不自行補算。"
     },
     {
       "source_id": "tw02_tfda_allergen_rule_2018_2020",
@@ -53,40 +80,148 @@
       "retrieval_method": "直接查閱內政部消防署119、112官方報案說明，核對台灣緊急救護入口。"
     }
   ],
-  "localization_changes": "把原作固定每日一小把的說法改為依食物份量與個人情況選擇；補上台灣包裝食品過敏原規定的公告日與施行日、未包裝餐點的限制、幼兒整顆堅果哽塞風險及嚴重過敏求援。",
-  "review_method": "重讀原作固定ID與主題、最新manifest資料及未核對結構化草稿；逐項查核台灣官方飲食、食品標示或救護來源，核對主張、適用族群、台灣生活情境、可執行步驟、費用、風險及統計口徑。沒有可信台灣個人頻率資料時明示資料不足，不以國外研究或通報數推算個人機率。AI協助來源查核不等於正式專業審閱。",
+  "localization_changes": "保留台灣份量換算、包裝過敏原範圍、幼兒哽塞與求援指引；限縮恢復2013美國世代和2026統合分析中可核實的死亡研究結果，明確區分HR、RR、相對關聯及台灣個人絕對風險；刪除把每日28公克或「一把」寫成個人延壽處方的含意。 增列國健署等單位2020年心血管疾病預防照護指引，呈現台灣官方指引如何保留研究問題並限制份量推論。",
+  "review_method": "重讀原作固定ID與主題、最新正式正文、2026-11-10來源審查、結構化草稿及文章歷史；逐項核對本批研究原始摘要、研究範圍、分母、事件定義、估計量和台灣官方飲食資料。保留可回答讀者問題的境外研究，但不將觀察性群體關聯寫成台灣個人機率或因果建議。之前已核對且本次未改寫的急救、過敏、幼兒安全主張沿用原來源證據及審閱日期，不宣稱本次重新下載未讀取的文件。 另查核國健署2020年心血管疾病預防照護指引第10章，確認其支持的是群體關聯與適量攝取，並明確不指定種類或預防用量；官方PDF直連本輪逾時，記錄使用官方搜尋索引全文文字及交叉索引，不宣稱本輪完成PDF下載。",
   "limits": [
-    "食物代換重量是估算參考，不是每個人的固定每日目標。",
-    "未找到足以估算台灣個人堅果過敏或幼兒堅果哽塞機率的全國統計。",
-    "過敏原強制標示規定針對市售包裝食品，不等於未包裝餐點或餐飲現場有相同標示。"
+    "2013年美國醫療專業人員世代的HR是相對關聯；全體研究人數及人年不等於每個攝取組的分母，研究不能證明吃堅果使個人延壽。",
+    "2026年統合分析每週28公克是模型估計單位，且全因死亡劑量反應呈非線性；PubMed摘要未列合併後共同樣本數與死亡數。",
+    "台灣沒有可靠資料可將這些研究換算成個人延壽幅度；過敏原強制標示適用範圍及幼兒哽塞風險沿用先前台灣官方資料核對。"
   ],
-  "source_reviewed_sha256": "e88584eabc6e87217610b631c2d14409e68ed9121e0a67d83442ced55e295cad",
+  "source_reviewed_sha256": "1cdb0779f0d4348749332653cc7d7148f2d70392d0577e286a10ff947e176e60",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "4861816ac4bccf7de683b1dfb1da37c6ed49cebb6befd8346f08d3f1944beb4c",
   "source_ids": [
     "tw02_hpa_food_exchange_portions_2024",
+    "tw02_hpa_cvd_prevention_guideline_nuts_2020",
+    "tw02_bao_nut_mortality_2013",
+    "tw02_liu_nut_mortality_meta_2026",
     "tw02_tfda_allergen_rule_2018_2020",
     "tw02_hpa_infant_choking_handbook_2025",
     "tw02_nfa_anaphylaxis_2026",
     "tw02_nfa_emergency_119"
   ],
-  "frequency_assessment": "未找到可用一致定義和分母計算台灣一般居民堅果過敏或幼兒堅果哽塞發生率的全國統計。不能由單一急救案例、通報數或國外研究推估個人機率；正文先提供已知過敏者避食、包裝標示範圍及幼兒避免整顆堅果的行動。",
-  "statistics_assessed": [],
+  "frequency_assessment": "美國及跨國世代提供全因死亡相對關聯；2020年台灣官方指引亦整理相關證據，但這些都不是堅果攝取者在台灣的發生率或個人絕對死亡機率。沒有可靠資料可把群體結果換算成台灣個人的延壽幅度；統合分析未列共同樣本及死亡總數，且劑量反應非線性。",
+  "statistics_assessed": [
+    {
+      "topic": "美國NHS及HPFS世代的堅果攝取頻率與全因死亡",
+      "value": {
+        "participants": 118962,
+        "women_nurses": 76464,
+        "men_health_professionals": 42498,
+        "person_years": 3038853,
+        "all_cause_deaths": 27429,
+        "hazard_ratio_7_or_more_times_week_vs_never": 0.8,
+        "95_confidence_interval": [
+          0.73,
+          0.86
+        ]
+      },
+      "unit": "分析人數、人年、死亡事件及相較從未吃堅果組的校正HR；不是絕對死亡機率",
+      "period": "NHS 1980至2010年；HPFS 1986至2010年；論文於2013-11-21發表",
+      "geographic_scope": "美國",
+      "population": "76,464名女性護理師及42,498名男性健康專業人員；排除基線曾有癌症、心臟病或中風者",
+      "numerator": "27,429人死亡（女性16,200人、男性11,229人）",
+      "denominator": "全體分析樣本118,962人、累積3,038,853人年；每週7次以上及從未攝取組的各自分母／死亡數未在摘要提供",
+      "denominator_definition": "NHS女性及HPFS男性的最終分析世代；HR比較頻率組，不將全體樣本當作各攝取組分母",
+      "event_definition": "追蹤期間全因死亡；不是堅果造成的死亡或個人終生死亡機率",
+      "data_type": "前瞻性觀察世代，採重複飲食問卷及多變項校正的HR",
+      "source_ids": [
+        "tw02_bao_nut_mortality_2013"
+      ],
+      "accessed_at": "2026-11-16",
+      "limitations": "美國護士與健康專業人員不是台灣或美國一般人口的代表性機率樣本；排除入組時既有癌症、心臟病或中風者；飲食問卷和混雜仍可能影響結果；頻率組分母與死亡數未在摘要提供；HR不是絕對風險或因果延壽。"
+    },
+    {
+      "topic": "跨國堅果攝取與全因死亡前瞻世代劑量反應統合分析",
+      "value": {
+        "publications": 33,
+        "prospective_cohort_studies": 63,
+        "high_vs_low_relative_risk": 0.77,
+        "high_vs_low_95_confidence_interval": [
+          0.73,
+          0.81
+        ],
+        "relative_risk_per_28g_weekly_increase": 0.92,
+        "per_28g_weekly_95_confidence_interval": [
+          0.9,
+          0.94
+        ],
+        "all_cause_nonlinearity_p": "<0.001"
+      },
+      "unit": "納入出版物、世代研究數及統合RR；不是共同人口計數或個人機率",
+      "period": "資料庫搜尋至2023-10-24；線上發表2025-09-19，期刊2026年3月刊出",
+      "geographic_scope": "多國前瞻性世代統合分析，非台灣全國估計",
+      "population": "33篇出版物、63個前瞻性世代研究；PubMed摘要未列全體唯一參與者及死亡總數",
+      "numerator": "高低攝取組比較及每週28公克增量的全因死亡彙整RR；不是共同死亡分子",
+      "denominator": "各研究比較組和權重各異，沒有摘要可核對的單一共同分母；總人數／死亡數未列，世代間可能重疊",
+      "denominator_definition": "各納入研究中的高低堅果攝取分類或劑量模型；每週28公克是統計增量",
+      "event_definition": "全因死亡；不是台灣個人死亡機率或食用堅果造成的壽命變化",
+      "data_type": "系統性回顧及前瞻性世代隨機效應統合與劑量反應模型；全因死亡關係呈非線性",
+      "source_ids": [
+        "tw02_liu_nut_mortality_meta_2026"
+      ],
+      "accessed_at": "2026-11-16",
+      "limitations": "摘要不提供統合唯一樣本數或死亡數；研究間定義及人口不同且可能重疊；觀察性設計不能證明因果；全因死亡劑量反應非線性，不能將平均RR套用到任一固定個人份量或台灣居民。"
+    }
+  ],
   "unresolved_questions": [
-    "國健署兒童衛教手冊PDF本輪連線逾時；已依先前讀取的手冊內容與官方目錄交叉核對，須在後續來源複查時重開原PDF。",
-    "未取得過敏免疫、兒科及營養專業人員獨立審閱。"
+    "未取得營養學、流行病學、兒科及過敏免疫專業人員獨立審閱。",
+    "2026年統合分析PubMed摘要未提供合併後獨立總樣本數與死亡數，未以外部推算補足。",
+    "國健署官方指引PDF直連於本輪逾時；引用文字以官方PDF可搜尋索引及考科藍臺灣研究中心出版索引核對，待後續能直接取得PDF時再次核對版面及參考文獻。"
   ],
   "professional_review": {
     "required": true,
     "obtained": false,
     "scope": [
       "營養學",
+      "營養流行病學",
       "兒科與兒童進食安全",
-      "過敏免疫",
-      "食品標示法規"
+      "過敏免疫及食品標示法規",
+      "心血管預防指引與營養流行病學"
     ]
   },
   "prior_chapter_draft_sha256": null,
   "prior_structured_draft_sha256": "86ab16285a993a038bdc57297fa8d9b131bc28542d6619c8aba85808f279e231",
-  "prior_structured_draft_review": null
+  "prior_structured_draft_review": null,
+  "source_bundle_path": "localization/tw-edition/sources/ch02-nut-meat-topic-fidelity-recheck-20261116.json",
+  "topic_fidelity_assessment": "保留台灣份量、過敏與幼兒安全內容，補回堅果長期死亡研究問題，並納入台灣2020年心血管預防指引對研究關聯與適量攝取的結論；清楚區分官方指引、境外群體研究及台灣個人可推論範圍。",
+  "topic_fidelity_review": {
+    "original_topic": "原作第22條以每日約28公克堅果及長期死亡研究為主題，引用美國Nurses’ Health Study與Health Professionals Follow-up Study，依每週攝取頻率比較全因死亡。",
+    "taiwan_relevance": "堅果是台灣常見點心及烹調食材，讀者會想知道長期研究、份量與過敏安全。台灣份量換算與包裝食品標示可作本地行動資訊；美國及跨國前瞻世代可提供有界線的研究脈絡，但不能代表台灣個人結果。",
+    "reader_content_decision": "保留台灣份量、過敏及幼兒安全內容，補回兩項可直接查核的堅果死亡研究；把觀察性群體關聯與台灣份量指引分開，並說明非線性和研究分母限制。",
+    "decision": "retain_taiwan_safety_guidance_with_bounded_nut_mortality_research",
+    "question_change": {
+      "previous_question": "堅果適合當點心時，如何看份量、過敏標示與幼兒哽塞風險？",
+      "current_question": "堅果的台灣份量參考與過敏、幼兒安全資訊是什麼，長期死亡研究又能否證明延壽？",
+      "reason": "原文正確處理台灣份量與安全，但未保留原題所問的堅果攝取與長期死亡研究。本次補回可查核的群體證據並明確說明不能推成個人延壽劑量。",
+      "decision": "realign_with_restored_core_topic"
+    },
+    "historical_claim_decisions": [
+      {
+        "claim": "每日吃28公克或一小把堅果可使死亡機率降低約兩成。",
+        "decision": "restore_as_bounded_observational_relative_hazard_only",
+        "reason": "Bao等的研究顯示每週7次以上攝取組相較從未攝取者HR 0.80，但這是經調整的相對危險，不是個人死亡機率或隨機介入的延壽效果；攝取組分母未在摘要列出。"
+      },
+      {
+        "claim": "每週吃一次即可降低個人死亡風險，或研究證明每天一把是必要目標。",
+        "decision": "do_not_restore_as_individual_probability_or_dietary_prescription",
+        "reason": "頻率組比較屬觀察性關聯；國健署份量以種類換算，且研究攝取單位不能代替台灣個人飲食處方。"
+      },
+      {
+        "claim": "堅果攝取與長期死亡的研究問題沒有台灣讀者價值，應從台灣版刪除。",
+        "decision": "restore_bounded_research_context",
+        "reason": "主題涉及常見食材和讀者對健康老化的合理疑問，研究可在清楚標明來源地、分母和非因果限制後提供參考。"
+      }
+    ],
+    "frequency_evidence": "Bao等研究全體118,962人、3,038,853人年及27,429人死亡；每週攝取頻率組的獨立分母與死亡數未由摘要逐組提供。2026統合分析納入63個研究，但摘要未列各研究合併後唯一樣本與死亡總數，且全因死亡劑量反應非線性。兩者均非台灣全國發生率，不能換算為台灣個人死亡機率或延壽幅度。",
+    "excluded_aspects": [
+      "不把每週28公克研究模型單位轉成每天吃28公克或額外加吃一把的建議。",
+      "不把HR或RR改稱個人死亡機率下降百分比或因果延壽。",
+      "不將跨國統合研究的63個研究人數視為互不重疊後相加的單一母數。",
+      "不以低頻率推論台灣居民堅果過敏或幼兒哽塞的個人機率。"
+    ]
+  },
+  "source_bundle_sha256": "6aa10cb0b95fba210be541a42252c849ff15870e62996866746789b8e0146a4f",
+  "previously_reviewed_at": "2026-11-10",
+  "previous_review_sha256": "331a822329bd1e48ad321a7c9bb85aad115da5d9d5eac7c284f8f717868a735a"
 }
