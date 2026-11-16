@@ -1,0 +1,541 @@
+{
+  "schema_version": 1,
+  "phase": "topic_fidelity_substantive_recheck",
+  "baseline_main_sha": "96b871f6f87b3c15fd673bcf7ec9e47a63bc2a65",
+  "reviewed_at": "2026-11-16",
+  "review_due_at": "2027-02-16",
+  "scope": "逐題重審TW-02-022堅果份量／長期死亡研究及過敏安全、TW-02-023紅肉替換魚禽與全因死亡研究；保留台灣飲食與安全資訊，補回並限縮解讀有讀者價值的研究。",
+  "content_policy": "不因研究來源國而自動保留或刪除主題；分開處理台灣實際飲食建議與境外研究問題，逐項核對研究設計、分母、估計量、統計期間及不能外推之處。不將觀察性群體關聯改成台灣個人機率、因果或飲食處方。",
+  "items": [
+    {
+      "id": "TW-02-022",
+      "title": "堅果怎麼吃：份量、過敏安全與長期研究",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "a5482a74c68ef521a3f306bd758398053436b8b9",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "4861816ac4bccf7de683b1dfb1da37c6ed49cebb6befd8346f08d3f1944beb4c",
+      "prior_content_status": "verified_official_article_not_previously_substantively_rechecked",
+      "prior_structured_draft_sha256": "86ab16285a993a038bdc57297fa8d9b131bc28542d6619c8aba85808f279e231",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": "e88584eabc6e87217610b631c2d14409e68ed9121e0a67d83442ced55e295cad",
+      "after_sha256": "1cdb0779f0d4348749332653cc7d7148f2d70392d0577e286a10ff947e176e60",
+      "prior_review_sha256": "331a822329bd1e48ad321a7c9bb85aad115da5d9d5eac7c284f8f717868a735a",
+      "review_sha256": "caf0ff1291743141824c15445550d2faef17fe86271fc3555661c86c66a36f10",
+      "review_path": "localization/reviews/TW-02-022.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-022.md",
+      "source_ids": [
+        "tw02_hpa_food_exchange_portions_2024",
+        "tw02_hpa_cvd_prevention_guideline_nuts_2020",
+        "tw02_bao_nut_mortality_2013",
+        "tw02_liu_nut_mortality_meta_2026",
+        "tw02_tfda_allergen_rule_2018_2020",
+        "tw02_hpa_infant_choking_handbook_2025",
+        "tw02_nfa_anaphylaxis_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "previous_source_ids": [
+        "tw02_hpa_food_exchange_portions_2024",
+        "tw02_tfda_allergen_rule_2018_2020",
+        "tw02_hpa_infant_choking_handbook_2025",
+        "tw02_nfa_anaphylaxis_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "new_source_ids": [
+        "tw02_hpa_cvd_prevention_guideline_nuts_2020",
+        "tw02_bao_nut_mortality_2013",
+        "tw02_liu_nut_mortality_meta_2026"
+      ],
+      "source_records_reused": [
+        "tw02_hpa_food_exchange_portions_2024",
+        "tw02_tfda_allergen_rule_2018_2020",
+        "tw02_hpa_infant_choking_handbook_2025",
+        "tw02_nfa_anaphylaxis_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_food_exchange_portions_2024",
+          "title": "國健署：健康飲食標準與食物代換份量",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=987",
+          "claim": "食物代換表列出的堅果與種子每份重量會依種類不同；蔬菜與水果份量也有不同重量範圍。",
+          "supporting_passage": "頁面於2018-03-13發布、2024-12-04更新；表格列杏仁與核桃仁7公克、開心果／腰果／部分種子10公克、花生仁13公克；蔬菜一份可食生重約100公克，水果約80至120公克。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署健康飲食標準頁與食物代換表附件，核對堅果種類別重量、蔬菜及水果份量和頁面更新日期。"
+        },
+        {
+          "source_id": "tw02_hpa_cvd_prevention_guideline_nuts_2020",
+          "title": "國健署、考科藍臺灣研究中心與中華民國心臟學會：《心血管疾病預防照護指引》（2020）",
+          "url": "https://health99.hpa.gov.tw/media/public/pdf/22113.pdf",
+          "claim": "台灣官方心血管預防指引保留堅果攝取與心血管及總死亡率研究的關聯性，同時明確表示現有研究不足以指定堅果種類或預防疾病所需的攝取量。",
+          "supporting_passage": "第10章「飲食與心血管疾病」第160頁表示，研究與系統性文獻分析支持堅果攝取與較低心血管疾病及總死亡率的關聯；因特定堅果種類研究有限，只建議日常適量攝取，未進一步指定種類或數量。指引列出的統合估計來自其引用研究，這裡僅採用指引的證據界線，不將其當成台灣全國數據或本批個人效果估計。",
+          "accessed_at": "2026-11-16",
+          "retrieval_method": "直接查閱國健署官方PDF搜尋索引所擷取的封面出版資訊及第10章全文頁面文字，並核對國健署健康九九官方PDF網址；官方PDF直連本輪回應逾時，因此未聲稱本次成功下載PDF。另以考科藍臺灣研究中心的指引索引交叉確認出版月份及共同編撰單位。"
+        },
+        {
+          "source_id": "tw02_bao_nut_mortality_2013",
+          "title": "Bao等：堅果攝取與全因及特定死因死亡的關聯（2013）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24256379/",
+          "claim": "兩個美國醫療專業人員前瞻性世代觀察堅果攝取頻率與死亡；提供各頻率組相較從未攝取的校正HR。",
+          "supporting_passage": "女性76,464人、男性42,498人，研究期間分別為1980至2010年、1986至2010年；累積3,038,853人年，記錄27,429人死亡。每週7次以上相較從未吃堅果者，全因死亡校正HR為0.80（95% CI 0.73至0.86）。",
+          "accessed_at": "2026-11-16",
+          "retrieval_method": "查閱PubMed摘要及NEJM原始論文頁，核對分析人數、研究期間、人年、全因死亡數及頻率分組HR；將HR保留為相對關聯，不改寫成絕對機率。"
+        },
+        {
+          "source_id": "tw02_liu_nut_mortality_meta_2026",
+          "title": "Liu等：堅果攝取與心血管事件及全因死亡的統合分析（2026）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41350177/",
+          "claim": "系統性回顧統合前瞻性世代研究的堅果攝取與死亡關聯，報告高低攝取比較及每週28公克增量的全因死亡RR，並檢驗非線性。",
+          "supporting_passage": "33篇論文、63個研究；檢索至2023-10-24。高攝取與低攝取組比較的全因死亡RR為0.77（95% CI 0.73至0.81）；每週攝取量增加28公克的模型估計RR為0.92（0.90至0.94），全因死亡劑量反應非線性p<0.001。PubMed摘要未列統合後總人數或死亡數。",
+          "accessed_at": "2026-11-16",
+          "retrieval_method": "直接查閱PubMed索引的研究摘要，核對檢索截止日、納入研究數、全因死亡效應量、劑量反應和非線性；摘要未提供的合併分母不自行補算。"
+        },
+        {
+          "source_id": "tw02_tfda_allergen_rule_2018_2020",
+          "title": "食藥署：食品過敏原標示規定（107年公告、109年施行）",
+          "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?cid=42303&id=f639057140744869584&type=2",
+          "claim": "台灣規定市售包裝食品含公告堅果類或花生等過敏原時須依規定標示；本規定有明確公告與施行日期。",
+          "supporting_passage": "規定發文日期為2018-08-21，法定適用範圍為市售有容器或包裝食品的11項過敏原，包含花生及堅果類；自2020-07-01施行，以產品產製日期為準。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱食藥署公告的現行「食品過敏原標示規定」原文，核對公告日、適用產品範圍、過敏原項目及施行日。"
+        },
+        {
+          "source_id": "tw02_hpa_infant_choking_handbook_2025",
+          "title": "國健署：兒童衛教手冊（幼兒進食與哽塞預防）",
+          "url": "https://health99.hpa.gov.tw/media/public/pdf/22075.pdf",
+          "claim": "國健署兒童衛教手冊提醒堅果等堅硬、圓形食物可能造成幼兒哽塞。",
+          "supporting_passage": "兒童衛教手冊預防事故傷害段落將堅果列入堅硬、圓形且可能造成哽塞的食物例子；本輪PDF連線逾時，使用先前已讀取的官方PDF文字並以國健署兒童衛教手冊目錄確認文件來源。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "先前直接查閱國健署兒童衛教手冊相關PDF文字；本輪再次確認國健署兒童衛教手冊官方下載頁與PDF網址，但PDF服務逾時，未把失敗下載描述為重新讀取成功。"
+        },
+        {
+          "source_id": "tw02_nfa_anaphylaxis_2026",
+          "title": "消防署：過敏性休克的到院前救護案例與辨識",
+          "url": "https://mag.nfa.gov.tw/article.php?id=4073",
+          "claim": "食物等過敏原可引發嚴重全身過敏；呼吸道水腫、呼吸困難或血壓下降屬急症，不能當成普通食物不耐受觀察。",
+          "supporting_passage": "消防署2026-04-30刊登的到院前救護案例說明嚴重過敏可由食物、藥物或蜂螫引起，可能造成呼吸道水腫、血壓驟降及呼吸困難。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱消防署2026-04-30救護天地文章，僅採用過敏性休克的急症性質與食物可能為致敏原，不移用其專業人員藥物劑量或山區個案細節。"
+        },
+        {
+          "source_id": "tw02_nfa_emergency_119",
+          "title": "消防署：119與112緊急報案資訊",
+          "url": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=66",
+          "claim": "台灣發生呼吸困難等危急狀況可撥119啟動緊急救護。",
+          "supporting_passage": "消防署119與112專頁說明119為消防與緊急救護報案管道，另列手機無一般訊號時可用的112資訊。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱內政部消防署119、112官方報案說明，核對台灣緊急救護入口。"
+        }
+      ],
+      "taiwan_context": "堅果、花生與種子常見於台灣家庭點心及早餐；國健署份量換算可供依種類選擇。長期健康問題可參照美國及跨國研究，但過敏標示、幼兒哽塞與飲食調整仍依台灣現行情境處理，不能把外國觀察結果當成台灣個人機率。",
+      "frequency_assessment": "美國及跨國世代提供全因死亡相對關聯；2020年台灣官方指引亦整理相關證據，但這些都不是堅果攝取者在台灣的發生率或個人絕對死亡機率。沒有可靠資料可把群體結果換算成台灣個人的延壽幅度；統合分析未列共同樣本及死亡總數，且劑量反應非線性。",
+      "statistics_assessed": [
+        {
+          "topic": "美國NHS及HPFS世代的堅果攝取頻率與全因死亡",
+          "value": {
+            "participants": 118962,
+            "women_nurses": 76464,
+            "men_health_professionals": 42498,
+            "person_years": 3038853,
+            "all_cause_deaths": 27429,
+            "hazard_ratio_7_or_more_times_week_vs_never": 0.8,
+            "95_confidence_interval": [
+              0.73,
+              0.86
+            ]
+          },
+          "unit": "分析人數、人年、死亡事件及相較從未吃堅果組的校正HR；不是絕對死亡機率",
+          "period": "NHS 1980至2010年；HPFS 1986至2010年；論文於2013-11-21發表",
+          "geographic_scope": "美國",
+          "population": "76,464名女性護理師及42,498名男性健康專業人員；排除基線曾有癌症、心臟病或中風者",
+          "numerator": "27,429人死亡（女性16,200人、男性11,229人）",
+          "denominator": "全體分析樣本118,962人、累積3,038,853人年；每週7次以上及從未攝取組的各自分母／死亡數未在摘要提供",
+          "denominator_definition": "NHS女性及HPFS男性的最終分析世代；HR比較頻率組，不將全體樣本當作各攝取組分母",
+          "event_definition": "追蹤期間全因死亡；不是堅果造成的死亡或個人終生死亡機率",
+          "data_type": "前瞻性觀察世代，採重複飲食問卷及多變項校正的HR",
+          "source_ids": [
+            "tw02_bao_nut_mortality_2013"
+          ],
+          "accessed_at": "2026-11-16",
+          "limitations": "美國護士與健康專業人員不是台灣或美國一般人口的代表性機率樣本；排除入組時既有癌症、心臟病或中風者；飲食問卷和混雜仍可能影響結果；頻率組分母與死亡數未在摘要提供；HR不是絕對風險或因果延壽。"
+        },
+        {
+          "topic": "跨國堅果攝取與全因死亡前瞻世代劑量反應統合分析",
+          "value": {
+            "publications": 33,
+            "prospective_cohort_studies": 63,
+            "high_vs_low_relative_risk": 0.77,
+            "high_vs_low_95_confidence_interval": [
+              0.73,
+              0.81
+            ],
+            "relative_risk_per_28g_weekly_increase": 0.92,
+            "per_28g_weekly_95_confidence_interval": [
+              0.9,
+              0.94
+            ],
+            "all_cause_nonlinearity_p": "<0.001"
+          },
+          "unit": "納入出版物、世代研究數及統合RR；不是共同人口計數或個人機率",
+          "period": "資料庫搜尋至2023-10-24；線上發表2025-09-19，期刊2026年3月刊出",
+          "geographic_scope": "多國前瞻性世代統合分析，非台灣全國估計",
+          "population": "33篇出版物、63個前瞻性世代研究；PubMed摘要未列全體唯一參與者及死亡總數",
+          "numerator": "高低攝取組比較及每週28公克增量的全因死亡彙整RR；不是共同死亡分子",
+          "denominator": "各研究比較組和權重各異，沒有摘要可核對的單一共同分母；總人數／死亡數未列，世代間可能重疊",
+          "denominator_definition": "各納入研究中的高低堅果攝取分類或劑量模型；每週28公克是統計增量",
+          "event_definition": "全因死亡；不是台灣個人死亡機率或食用堅果造成的壽命變化",
+          "data_type": "系統性回顧及前瞻性世代隨機效應統合與劑量反應模型；全因死亡關係呈非線性",
+          "source_ids": [
+            "tw02_liu_nut_mortality_meta_2026"
+          ],
+          "accessed_at": "2026-11-16",
+          "limitations": "摘要不提供統合唯一樣本數或死亡數；研究間定義及人口不同且可能重疊；觀察性設計不能證明因果；全因死亡劑量反應非線性，不能將平均RR套用到任一固定個人份量或台灣居民。"
+        }
+      ],
+      "changes": "保留台灣份量換算、包裝過敏原範圍、幼兒哽塞與求援指引；限縮恢復2013美國世代和2026統合分析中可核實的死亡研究結果，明確區分HR、RR、相對關聯及台灣個人絕對風險；刪除把每日28公克或「一把」寫成個人延壽處方的含意。",
+      "limits": [
+        "2013年美國醫療專業人員世代的HR是相對關聯；全體研究人數及人年不等於每個攝取組的分母，研究不能證明吃堅果使個人延壽。",
+        "2026年統合分析每週28公克是模型估計單位，且全因死亡劑量反應呈非線性；PubMed摘要未列合併後共同樣本數與死亡數。",
+        "台灣沒有可靠資料可將這些研究換算成個人延壽幅度；過敏原強制標示適用範圍及幼兒哽塞風險沿用先前台灣官方資料核對。"
+      ],
+      "unresolved_questions": [
+        "未取得營養學、流行病學、兒科及過敏免疫專業人員獨立審閱。",
+        "2026年統合分析PubMed摘要未提供合併後獨立總樣本數與死亡數，未以外部推算補足。",
+        "國健署官方指引PDF直連於本輪逾時；引用文字以官方PDF可搜尋索引及考科藍臺灣研究中心出版索引核對，待後續能直接取得PDF時再次核對版面及參考文獻。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "營養流行病學",
+          "兒科與兒童進食安全",
+          "過敏免疫及食品標示法規",
+          "心血管預防指引與營養流行病學"
+        ]
+      },
+      "previous_question": "堅果適合當點心時，如何看份量、過敏標示與幼兒哽塞風險？",
+      "current_question": "堅果的台灣份量參考與過敏、幼兒安全資訊是什麼，長期死亡研究又能否證明延壽？",
+      "topic_fidelity_assessment": "保留台灣份量、過敏與幼兒安全內容，補回堅果長期死亡研究問題，並納入台灣2020年心血管預防指引對研究關聯與適量攝取的結論；清楚區分官方指引、境外群體研究及台灣個人可推論範圍。",
+      "topic_fidelity_review": {
+        "original_topic": "原作第22條以每日約28公克堅果及長期死亡研究為主題，引用美國Nurses’ Health Study與Health Professionals Follow-up Study，依每週攝取頻率比較全因死亡。",
+        "taiwan_relevance": "堅果是台灣常見點心及烹調食材，讀者會想知道長期研究、份量與過敏安全。台灣份量換算與包裝食品標示可作本地行動資訊；美國及跨國前瞻世代可提供有界線的研究脈絡，但不能代表台灣個人結果。",
+        "reader_content_decision": "保留台灣份量、過敏及幼兒安全內容，補回兩項可直接查核的堅果死亡研究；把觀察性群體關聯與台灣份量指引分開，並說明非線性和研究分母限制。",
+        "decision": "retain_taiwan_safety_guidance_with_bounded_nut_mortality_research",
+        "question_change": {
+          "previous_question": "堅果適合當點心時，如何看份量、過敏標示與幼兒哽塞風險？",
+          "current_question": "堅果的台灣份量參考與過敏、幼兒安全資訊是什麼，長期死亡研究又能否證明延壽？",
+          "reason": "原文正確處理台灣份量與安全，但未保留原題所問的堅果攝取與長期死亡研究。本次補回可查核的群體證據並明確說明不能推成個人延壽劑量。",
+          "decision": "realign_with_restored_core_topic"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "每日吃28公克或一小把堅果可使死亡機率降低約兩成。",
+            "decision": "restore_as_bounded_observational_relative_hazard_only",
+            "reason": "Bao等的研究顯示每週7次以上攝取組相較從未攝取者HR 0.80，但這是經調整的相對危險，不是個人死亡機率或隨機介入的延壽效果；攝取組分母未在摘要列出。"
+          },
+          {
+            "claim": "每週吃一次即可降低個人死亡風險，或研究證明每天一把是必要目標。",
+            "decision": "do_not_restore_as_individual_probability_or_dietary_prescription",
+            "reason": "頻率組比較屬觀察性關聯；國健署份量以種類換算，且研究攝取單位不能代替台灣個人飲食處方。"
+          },
+          {
+            "claim": "堅果攝取與長期死亡的研究問題沒有台灣讀者價值，應從台灣版刪除。",
+            "decision": "restore_bounded_research_context",
+            "reason": "主題涉及常見食材和讀者對健康老化的合理疑問，研究可在清楚標明來源地、分母和非因果限制後提供參考。"
+          }
+        ],
+        "frequency_evidence": "Bao等研究全體118,962人、3,038,853人年及27,429人死亡；每週攝取頻率組的獨立分母與死亡數未由摘要逐組提供。2026統合分析納入63個研究，但摘要未列各研究合併後唯一樣本與死亡總數，且全因死亡劑量反應非線性。兩者均非台灣全國發生率，不能換算為台灣個人死亡機率或延壽幅度。",
+        "excluded_aspects": [
+          "不把每週28公克研究模型單位轉成每天吃28公克或額外加吃一把的建議。",
+          "不把HR或RR改稱個人死亡機率下降百分比或因果延壽。",
+          "不將跨國統合研究的63個研究人數視為互不重疊後相加的單一母數。",
+          "不以低頻率推論台灣居民堅果過敏或幼兒哽塞的個人機率。"
+        ]
+      },
+      "source_bundle_sha256": "6aa10cb0b95fba210be541a42252c849ff15870e62996866746789b8e0146a4f"
+    },
+    {
+      "id": "TW-02-023",
+      "title": "紅肉換魚或禽肉：研究結果與台灣飲食選擇",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "a5482a74c68ef521a3f306bd758398053436b8b9",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "df3993e8d03d82086b36e45c9a1ddf5a375c4fec0d0d9eb43b2f6e246f514f13",
+      "prior_content_status": "verified_official_article_not_previously_substantively_rechecked",
+      "prior_structured_draft_sha256": "ad83f8f5be915d67af7dc6666022cd931cdd970afc551ef96b0f71b2319478ce",
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": "ebbee476208b5eb6046a54046bc9ec2f843f37ccf297b00a39e0b5722124472f",
+      "after_sha256": "49774061f45a6037a07323c5fb3a989d0f6e5e67ab5a0f82db34c163a800a9db",
+      "prior_review_sha256": "5649d8ea46fafb709fb56e74d374f643f5c3cb0e08a11913857cba970aadd2f2",
+      "review_sha256": "a63ab99490d640cc0c7bbb3cad930871d4bead53e606483336016132865c087d",
+      "review_path": "localization/reviews/TW-02-023.json",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-023.md",
+      "source_ids": [
+        "tw02_hpa_protein_food_guide_2026",
+        "tw02_zhong_meat_mortality_2020",
+        "tw02_nielsen_meat_substitution_2022"
+      ],
+      "previous_source_ids": [
+        "tw02_hpa_protein_food_guide_2026"
+      ],
+      "new_source_ids": [
+        "tw02_zhong_meat_mortality_2020",
+        "tw02_nielsen_meat_substitution_2022"
+      ],
+      "source_records_reused": [
+        "tw02_hpa_protein_food_guide_2026"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_protein_food_guide_2026",
+          "title": "國健署：到底怎麼吃才均衡？（均衡飲食與蛋白質選擇）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4687&pid=11677",
+          "claim": "國健署「我的餐盤」建議豆魚蛋肉的食物選擇方向，特別提醒少吃紅肉並避免加工肉品。",
+          "supporting_passage": "頁面發布日期2019-10-23、更新日期2024-11-21；豆魚蛋肉選擇順序列黃豆製品、海鮮、魚、蛋、肉，並提醒紅肉應少吃及避免加工肉品。",
+          "accessed_at": "2026-11-16",
+          "retrieval_method": "直接查閱國健署現行「我的餐盤」官方頁，核對發布／更新日期、食物選擇文字及避免加工肉提醒；只採用飲食指引，不將頁面的研究概述當成本批死亡效應證據。"
+        },
+        {
+          "source_id": "tw02_zhong_meat_mortality_2020",
+          "title": "Zhong等：加工肉、未加工紅肉、禽肉或魚攝取與心血管事件及全因死亡（2020）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32011623/",
+          "claim": "美國六個前瞻性世代分析每週多攝取兩份食物與全因死亡的關聯，報告加工肉、未加工紅肉、禽肉和魚的HR及30年絕對風險差；該分析沒有直接估計紅肉替換魚禽的效果。",
+          "supporting_passage": "29,682名成人、中位追蹤19.0年（IQR 14.1至23.7），全因死亡8,875人。每週多攝取兩份加工肉的全因死亡HR為1.03（95% CI 1.02至1.05）、30年ARD增加0.90%（0.43至1.38）；未加工紅肉HR為1.03（1.01至1.05）、ARD增加0.76%（0.19至1.33）。禽肉HR 0.99（0.97至1.02）、魚HR 0.99（0.97至1.01），未達顯著。",
+          "accessed_at": "2026-11-16",
+          "retrieval_method": "直接查閱PubMed所列JAMA Internal Medicine摘要，核對研究設計、基線飲食期間、樣本、死亡數、比較單位、校正HR和30年ARD；分開全因死亡與心血管疾病事件。"
+        },
+        {
+          "source_id": "tw02_nielsen_meat_substitution_2022",
+          "title": "Nielsen等：以禽肉或魚取代未加工及加工紅肉與死亡結果（2022）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33829978/",
+          "claim": "丹麥世代研究以模型估算每週150公克紅肉由禽肉或魚替代時，與全因、癌症及心血管疾病死亡的關聯。",
+          "supporting_passage": "57,053名50至64歲成人；以經驗證的192題食物頻率問卷測量飲食，平均追蹤16.1年，8,840人死亡（癌症4,567人、心血管疾病1,816人）。每週以150公克禽肉替代總紅肉的全因死亡HR為0.96（95% CI 0.95至1.00），以魚替代為0.99（0.97至1.01）；以禽肉替代加工紅肉為0.95（0.92至0.98）。",
+          "accessed_at": "2026-11-16",
+          "retrieval_method": "直接查閱PubMed所列British Journal of Nutrition摘要，核對丹麥樣本、年齡、飲食問卷、追蹤期間、死亡數及替代模型的估計量；明確保留觀察性設計限制。"
+        }
+      ],
+      "taiwan_context": "台灣居民日常會在早餐、便當及家常餐食選擇豆製品、蛋、魚、禽肉、紅肉及加工肉。國健署「我的餐盤」提供本地選擇方向；若要調整，以原本餐點內可取得且符合預算的食物替換，不宣稱某一食材可保證延壽，也不自行減少有疾病或營養風險者的蛋白質。",
+      "frequency_assessment": "美國及丹麥世代研究提供的是研究族群的攝取關聯或統計模型替代估計，並非台灣居民食用某類肉的發生率。沒有可靠台灣統計可將每週一餐替換換算成個人長期死亡風險下降；美國研究未直接測試替換，丹麥研究為觀察性替代模型。",
+      "statistics_assessed": [
+        {
+          "topic": "美國六個前瞻性世代的肉類攝取量與全因死亡",
+          "value": {
+            "participants": 29682,
+            "median_followup_years": 19.0,
+            "all_cause_deaths": 8875,
+            "incident_cvd_events": 6963,
+            "processed_meat_hr_per_2_servings_week": 1.03,
+            "processed_meat_hr_95_ci": [
+              1.02,
+              1.05
+            ],
+            "processed_meat_30y_ard_percentage_points": 0.9,
+            "processed_meat_ard_95_ci": [
+              0.43,
+              1.38
+            ],
+            "unprocessed_red_meat_hr_per_2_servings_week": 1.03,
+            "unprocessed_red_meat_hr_95_ci": [
+              1.01,
+              1.05
+            ],
+            "unprocessed_red_meat_30y_ard_percentage_points": 0.76,
+            "unprocessed_red_meat_ard_95_ci": [
+              0.19,
+              1.33
+            ],
+            "poultry_hr": 0.99,
+            "poultry_hr_95_ci": [
+              0.97,
+              1.02
+            ],
+            "fish_hr": 0.99,
+            "fish_hr_95_ci": [
+              0.97,
+              1.01
+            ]
+          },
+          "unit": "參與者、全因死亡與心血管事件數；每週多兩份食物的校正HR和模型估計30年ARD",
+          "period": "基線飲食資料1985至2002年；追蹤至2016-08-31；中位追蹤19.0年（IQR 14.1至23.7）；論文2020-04-01刊出",
+          "geographic_scope": "美國六個前瞻性世代",
+          "population": "29,682名成人，基線平均年齡53.7歲，男性13,168人（44.4%）；不是台灣人口",
+          "numerator": "追蹤期間8,875人死亡；另有6,963件新發心血管事件，後者不是死亡數",
+          "denominator": "全體29,682名分析參與者；摘要未列每種食物攝取分類的分組分母",
+          "denominator_definition": "以各食物每週攝取份數作連續暴露變項；全因死亡HR估計按每週增加兩份食物，分析不是同份量替代",
+          "event_definition": "全因死亡；另分析冠心病、中風、心衰竭及心血管死亡合成之新發CVD事件",
+          "data_type": "六個美國前瞻性世代個體資料合併分析，飲食基線自陳；HR及30年絕對風險差由模型估計",
+          "source_ids": [
+            "tw02_zhong_meat_mortality_2020"
+          ],
+          "accessed_at": "2026-11-16",
+          "limitations": "美國觀察世代的食物攝取量關聯不是紅肉替代分析；模型ARD為30年估計，不是觀察到每個人的增量；攝取與混雜因素可能有測量誤差；族群、時代及食物定義不能代表台灣。"
+        },
+        {
+          "topic": "丹麥世代中每週150公克紅肉由魚或禽肉取代的全因死亡模型估計",
+          "value": {
+            "participants": 57053,
+            "baseline_age_years": [
+              50,
+              64
+            ],
+            "mean_followup_years": 16.1,
+            "all_cause_deaths": 8840,
+            "cancer_deaths": 4567,
+            "cvd_deaths": 1816,
+            "total_red_meat_replaced_with_poultry_hr": 0.96,
+            "poultry_95_ci": [
+              0.95,
+              1.0
+            ],
+            "total_red_meat_replaced_with_fish_hr": 0.99,
+            "fish_95_ci": [
+              0.97,
+              1.01
+            ],
+            "processed_red_meat_replaced_with_poultry_hr": 0.95,
+            "processed_poultry_95_ci": [
+              0.92,
+              0.98
+            ]
+          },
+          "unit": "參與者、死亡事件及每週150公克替代模型的校正HR",
+          "period": "基線飲食由驗證過的192題FFQ評量；平均追蹤16.1年；期刊2022-02-28刊出（2021-04-08線上發表）",
+          "geographic_scope": "丹麥Diet, Cancer and Health世代",
+          "population": "基線50至64歲共57,053人",
+          "numerator": "8,840人死亡，其中癌症死亡4,567人、心血管疾病死亡1,816人",
+          "denominator": "57,053名世代參與者；各替代模型暴露分佈的組別分母未在摘要列出",
+          "denominator_definition": "以基線飲食FFQ建立每週150公克紅肉由禽肉或魚替換的統計模型；非隨機分派餐食",
+          "event_definition": "全因死亡及死因登記的癌症死亡、心血管疾病死亡",
+          "data_type": "前瞻性觀察世代、驗證過的192題食物頻率問卷、死因登記連結及Cox比例風險替代模型",
+          "source_ids": [
+            "tw02_nielsen_meat_substitution_2022"
+          ],
+          "accessed_at": "2026-11-16",
+          "limitations": "丹麥50至64歲成人與台灣族群不同；模型替代不是實際隨機換餐；大部分總紅肉替代的信賴區間包含或觸及1.00；自陳基線飲食及殘餘混雜限制因果判讀；研究未見心血管死亡替代關聯。"
+        }
+      ],
+      "changes": "保留台灣豆魚蛋肉飲食指引及蛋白質需求個別評估；重新補回原題紅肉替代魚或禽肉的研究問題。分開呈現美國六世代研究的攝取量關聯與丹麥世代的150公克／週替代模型，明示效應估計、信賴區間、觀察設計及無台灣個人機率資料。",
+      "limits": [
+        "2020年美國研究每週增加兩份食物的結果是攝取量關聯，不是紅肉以魚或禽肉直接替代的效果。",
+        "2022年丹麥研究以觀察資料統計建模每週150公克替代，並非隨機換餐試驗；總紅肉換魚的信賴區間包含1，且未見心血管死亡關聯。",
+        "台灣沒有可靠資料可換算一餐替換的個人長期死亡風險；蛋白質需求須依疾病、透析、營養與治療狀況個別評估。"
+      ],
+      "unresolved_questions": [
+        "未取得營養學、營養流行病學及腎臟營養專業人員獨立審閱。",
+        "兩項研究族群和飲食測量方式不同，不能合併為台灣居民個人效益估計。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "營養流行病學",
+          "腎臟營養及高齡營養照護"
+        ]
+      },
+      "previous_question": "如何用台灣日常餐點安排多樣蛋白質，而不把單一肉類一律禁掉？",
+      "current_question": "紅肉攝取與替換魚或禽肉的研究各自回答什麼問題，台灣日常飲食可以怎麼選？",
+      "topic_fidelity_assessment": "保留台灣飲食指引、實際餐食選擇及疾病飲食提醒；補回可查核的美國攝取量關聯和丹麥替代模型，並修正兩種研究估計問題不同的描述。",
+      "topic_fidelity_review": {
+        "original_topic": "原作第23條主張把部分紅肉換成魚或禽肉，引用美國六個世代研究的食物攝取與全因死亡關聯，將每週增加兩份食物的估計近似描述成換肉效果。",
+        "taiwan_relevance": "台灣讀者在早餐、便當及家常餐食中會安排豆魚蛋肉；紅肉與加工肉的選擇以及是否以魚或禽肉替換是實際飲食問題。國健署提供在地選擇方向，美國和丹麥研究可提供有限比較，但不能外推成台灣個人風險。",
+        "reader_content_decision": "保留台灣飲食指引、實際餐食選擇及疾病飲食提醒；補回可查核的美國攝取量關聯和丹麥替代模型，並修正兩種研究估計問題不同的描述。",
+        "decision": "retain_taiwan_diet_guidance_with_corrected_bounded_meat_substitution_research",
+        "question_change": {
+          "previous_question": "如何用台灣日常餐點安排多樣蛋白質，而不把單一肉類一律禁掉？",
+          "current_question": "紅肉攝取與替換魚或禽肉的研究各自回答什麼問題，台灣日常飲食可以怎麼選？",
+          "reason": "原文保留台灣蛋白質多樣化建議，卻移除了讀者對紅肉、魚和禽肉替代研究的合理疑問；本次補回有界線的研究，並修正美國研究不是直接替代分析。",
+          "decision": "realign_with_restored_core_topic"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "每週多吃兩份加工肉或未加工紅肉的關聯，可直接解讀成把相同份量換成魚或禽肉的效果。",
+            "decision": "correct_estimand_and_restore_separate_substitution_evidence",
+            "reason": "Zhong等美國研究測量各食物攝取量與結果的關聯，不是直接替代分析；Nielsen等丹麥研究才使用每週150公克替代模型，兩者須分開呈現。"
+          },
+          {
+            "claim": "每週兩份紅肉換魚或禽肉會使死亡機率低約3%，或可據此保證多活幾年。",
+            "decision": "do_not_restore_as_individual_probability_or_causal_benefit",
+            "reason": "美國研究HR 1.03對應攝取量關聯，不能變成替代效應；丹麥替代模型多數估計幅度小或信賴區間包含1，且均為觀察性資料。"
+          },
+          {
+            "claim": "以魚禽取代紅肉應完全改為一般豆魚蛋肉多樣化，而無須再說明替代研究。",
+            "decision": "restore_bounded_research_question_while_retaining_taiwan_guidance",
+            "reason": "台灣一般飲食指引與個人疾病需求需保留，同時可用丹麥替代模型回應讀者問題，不必恢復外國飲食處方或把紅肉列為禁品。"
+          }
+        ],
+        "frequency_evidence": "美國研究全體29,682人、中位追蹤19年及8,875人死亡，估計每週多兩份食物的HR及30年ARD；沒有直接替代設計。丹麥研究57,053人、平均追蹤16.1年及8,840人死亡，以每週150公克替代模型估計HR。兩者為外國世代資料，不是台灣飲食發生率或個人絕對風險。",
+        "excluded_aspects": [
+          "不把美國攝取量HR改寫成直接換餐效應。",
+          "不把丹麥替代模型描述成隨機試驗或台灣因果效果。",
+          "不把未達顯著或信賴區間包含1的估計寫成確定的零風險。",
+          "不把禽肉或魚說成不限量，也不要求所有人完全戒除紅肉。"
+        ]
+      },
+      "source_bundle_sha256": "6aa10cb0b95fba210be541a42252c849ff15870e62996866746789b8e0146a4f"
+    }
+  ],
+  "new_source_ids": [
+    "tw02_hpa_cvd_prevention_guideline_nuts_2020",
+    "tw02_bao_nut_mortality_2013",
+    "tw02_liu_nut_mortality_meta_2026",
+    "tw02_zhong_meat_mortality_2020",
+    "tw02_nielsen_meat_substitution_2022"
+  ],
+  "updated_source_ids": [],
+  "source_records_reused": [
+    "tw02_hpa_food_exchange_portions_2024",
+    "tw02_hpa_infant_choking_handbook_2025",
+    "tw02_hpa_protein_food_guide_2026",
+    "tw02_nfa_anaphylaxis_2026",
+    "tw02_nfa_emergency_119",
+    "tw02_tfda_allergen_rule_2018_2020"
+  ],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 316,
+    "publication_completed_entries": 316,
+    "runtime_items": 327,
+    "runtime_sources": 1304,
+    "source_registry": 1387,
+    "coverage_json_files": 644,
+    "review_rechecks": 395,
+    "unresolved_source_id_types": 103,
+    "unresolved_reference_occurrences": 256,
+    "unique_draft_entries": 499,
+    "entries_without_any_draft": 266,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 316,
+    "publication_completed_entries": 316,
+    "runtime_items": 327,
+    "runtime_sources": 1309,
+    "source_registry": 1392,
+    "coverage_json_files": 646,
+    "review_rechecks": 397,
+    "unresolved_source_id_types": 103,
+    "unresolved_reference_occurrences": 256,
+    "unique_draft_entries": 499,
+    "entries_without_any_draft": 266,
+    "publication_ready": false
+  },
+  "professional_review_status": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科與兒童進食安全",
+      "心血管預防指引與營養流行病學",
+      "營養學",
+      "營養流行病學",
+      "腎臟營養及高齡營養照護",
+      "過敏免疫及食品標示法規"
+    ]
+  },
+  "reader_copy_cleanup": {
+    "internal_review_or_batch_language_added_to_reader_copy": false,
+    "reader_facing_changes": "正文新增可讀的飲食研究結果、研究族群與外推限制；批次摘要、AI與專業審閱狀態僅記於機器可追溯審閱紀錄。"
+  }
+}
