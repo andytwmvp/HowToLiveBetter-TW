@@ -2,10 +2,10 @@
   "id": "TW-02-018",
   "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-11-09",
-  "review_due_at": "2027-02-09",
+  "reviewed_at": "2026-11-17",
+  "review_due_at": "2027-02-17",
   "target_path": "locales/zh-TW/book/ch02/TW-02-018.md",
-  "target_sha256": "dbec10aafc53d93727b71a1dbfc16bec019d8d29e6ad190398d26b7acb159f30",
+  "target_sha256": "923d8d3a88eda4ba981616d5b26e0fda552cfded48ccb1535b91ef3a9dedb5db",
   "source_checks": [
     {
       "source_id": "tw02_hpa_protein_food_guide_2026",
@@ -22,8 +22,8 @@
       "url": "https://www.iarc.who.int/wp-content/uploads/2018/11/Monographs-QA_Vol114.pdf",
       "claim": "IARC加工肉定義、Group 1分類表示證據強度、10項研究估計每日50克與大腸直腸癌相對風險約增加18%；未提供台灣絕對風險，亦無法由摘要判定安全門檻。",
       "supporting_passage": "問答定義加工肉包含鹽漬、醃製、發酵、煙燻等處理；Group 1指人體致癌證據充分，不代表風險大小等同菸品；每天50克的統合分析估計相對風險約高18%。",
-      "accessed_at": "2026-11-09",
-      "retrieval_method": "直接閱讀IARC第114卷紅肉與加工肉問答PDF；核對加工肉定義、Group 1分類意義、10項研究的50克／18%相對風險估計及無法判定安全門檻的限制。"
+      "accessed_at": "2026-11-17",
+      "retrieval_method": "2026-11-17直接查閱IARC官方問答PDF，核對加工肉定義及10項研究估計每日50克與大腸直腸癌相對風險約增加18%。"
     },
     {
       "source_id": "tw02_who_processed_meat_2026",
@@ -31,47 +31,89 @@
       "url": "https://www.who.int/news-room/questions-and-answers/item/cancer-carcinogenicity-of-the-consumption-of-red-meat-and-processed-meat",
       "claim": "WHO 2026更新問答延續原始評估無法確定安全攝取量的說明，並指出動物性食物攝取指引仍在研擬；危害分類不等同特定暴露下的風險大小。",
       "supporting_passage": "WHO頁面日期2026-09-23；答覆指出原評估資料不足以判定是否存在安全攝取量，WHO正研擬包含紅肉與加工肉建議的動物性食物指引。",
-      "accessed_at": "2026-11-09",
-      "retrieval_method": "直接查閱WHO於2026-09-23更新的官方問答；核對加工肉定義、Group 1危害分類與風險的區別、原始評估無安全量結論及新指引研擬狀態。"
+      "accessed_at": "2026-11-17",
+      "retrieval_method": "2026-11-17直接查閱WHO 2026-09-23更新的官方問答，核對危害分類不等於特定暴露風險，以及現有資料無法判定安全攝取量。"
+    },
+    {
+      "source_id": "tw02_nutrirecs_meat_guideline_2019",
+      "title": "NutriRECS：未加工紅肉與加工肉消費的飲食指南建議（2019）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31569235/",
+      "claim": "2019年NutriRECS指南依五篇新系統性回顧及GRADE評估，考量效益／危害證據確定性和民眾價值偏好；14人專家小組（含3位社區成員、來自7國）對成年人維持當時未加工紅肉及加工肉攝取量均提出弱建議、低確定性證據。",
+      "supporting_passage": "2019年NutriRECS指南依五篇新系統性回顧及GRADE評估，考量效益／危害證據確定性和民眾價值偏好；14人專家小組（含3位社區成員、來自7國）對成年人維持當時未加工紅肉及加工肉攝取量均提出弱建議、低確定性證據。這是該指南的證據與偏好取捨，不是證明加工肉安全，也不是台灣主管機關建議。",
+      "accessed_at": "2026-11-17",
+      "retrieval_method": "2026-11-17直接查閱PubMed書目與摘要，核對指南方法、專家小組、建議語句及證據確定性。"
     }
   ],
-  "localization_changes": "以台灣常見早餐、便當、泡麵與火鍋情境說明減少加工肉及替換蛋白質；從原作全因死亡觀察關聯改採IARC加工肉與大腸直腸癌證據，區分相對風險、台灣絕對風險及偶爾食用。",
-  "review_method": "重讀原作固定ID與原作來源、台灣結構化草稿及本篇來源，逐項核對主張、研究族群、期間、統計口徑、台灣生活情境、可執行步驟、成本與安全界線。只採用可直接支持本篇主張的官方頁面或研究；沒有可信台灣頻率分母時明示資料不足，不自行推估。AI查核不等於正式專業審閱。",
+  "localization_changes": "恢復原題對加工肉致癌證據及不同指南取捨的討論，保留台灣食品例子、國健署飲食方向及可負擔替換方式。新增NutriRECS 2019弱建議與低確定性，並說明它不證明安全，也不取代IARC危害分類或台灣飲食建議。",
+  "review_method": "依固定ID重讀原作主題、最新正文、前次review、引用來源、manifest/runtime及歷史改寫；逐項判斷原題在台灣讀者是否仍有價值，核對台灣情境、來源支持主張、研究族群、期間、統計口徑、分子分母、效應量、限制和可採取行動。本次重新查閱的官方頁面、原始研究摘要或全文已更新各自查閱日期；無法取得的官方附件或統計原始表沿用原查閱日期並明列限制。境外研究只作群體證據，不換算台灣個人機率。AI輔助查核不等於正式專業審閱。",
   "limits": [
-    "IARC每天習慣性攝取50克加工肉與大腸直腸癌相對風險增加約18%的估計，並非台灣絕對風險、18個百分點或單次食用的個人機率。",
-    "WHO 2026年更新問答仍說明原始評估資料無法判定安全攝取量，並正在研擬動物性食物指引；不能由此推論偶爾食用必然致癌。"
+    "IARC每天50克加工肉與大腸直腸癌約18%相對風險增加的估計來自10項國際研究；問答沒有提供共同人數、病例數或台灣絕對風險。",
+    "IARC Group 1表示人體致癌證據充分，不表示不同Group 1物質有相同風險大小；WHO資料不能換算出台灣個人風險或人人適用的安全份量。",
+    "NutriRECS於2019年提出的弱建議、低確定性是其研究、GRADE與民眾價值偏好評估，不等於加工肉已證明安全，也不是台灣主管機關飲食建議。",
+    "有慢性腎臟病或其他蛋白質限制者，應依醫療團隊或營養師個別安排，不自行減少必要營養。"
   ],
-  "source_reviewed_sha256": "dbec10aafc53d93727b71a1dbfc16bec019d8d29e6ad190398d26b7acb159f30",
+  "source_reviewed_sha256": "923d8d3a88eda4ba981616d5b26e0fda552cfded48ccb1535b91ef3a9dedb5db",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "bc99503085345dad5f7153ef29d6200d30819e1b36d6a7dc24147275fa1fca60",
   "source_ids": [
     "tw02_hpa_protein_food_guide_2026",
     "tw02_iarc_processed_meat_qa_2015",
-    "tw02_who_processed_meat_2026"
+    "tw02_who_processed_meat_2026",
+    "tw02_nutrirecs_meat_guideline_2019"
   ],
-  "frequency_assessment": "IARC納入的國際10項研究統合估計，習慣性每天攝取50克加工肉與大腸直腸癌相對風險增加約18%相關；問答未列合併人數、病例分子分母或台灣絕對風險。WHO 2026-09-23問答仍說明原評估無法判定安全攝取量。不得將此換算成台灣發生率或個人機率。",
+  "frequency_assessment": "IARC的每日50克與約18%相對風險估計是國際研究的長期暴露關聯，並無同口徑台灣絕對風險；不能把相對增加直接換成個人罹癌機率。NutriRECS的弱建議評估的是成年人的現有飲食，不是加工肉攝取率或疾病發生率。",
   "statistics_assessed": [
     {
-      "topic": "加工肉每日攝取與大腸直腸癌相對風險",
-      "value": "約增加18%",
-      "unit": "每天習慣性攝取每50克加工肉的相對風險增加估計，不是18個百分點",
-      "period": "IARC第114卷評估及問答，2015年；WHO更新問答2026-09-23",
-      "geographic_scope": "國際10項流行病學研究的統合估計；非台灣全國估計",
-      "population": "IARC評估納入的10項研究對象；問答摘要未列合併研究的精確人數及族群明細",
-      "numerator": "問答摘要未提供原始病例數；這是研究間估計的相對風險變化",
-      "denominator": "問答摘要未列原始分子／分母，也未提供台灣基準風險",
-      "event_definition": "習慣性每天攝取加工肉每增加50克與大腸直腸癌風險的關聯",
-      "data_type": "IARC對國際流行病學研究的危害評估及10項研究劑量關聯摘要",
-      "limitations": "約18%是每天習慣性50克加工肉暴露與大腸直腸癌的國際相對風險估計，不是18個百分點、台灣絕對風險或偶爾吃一份的個人機率；摘要未提供合併研究人數及病例分子分母。WHO 2026問答稱原始評估資料無法判定安全攝取量，動物性食物指引仍在研擬。",
+      "topic": "習慣性每日加工肉攝取與大腸直腸癌相對風險",
+      "value": {
+        "daily_processed_meat_g": 50,
+        "relative_risk_increase": "約18%",
+        "evidence_studies": 10
+      },
+      "unit": "國際研究統合之相對風險變化估計；不是百分點或發生率",
+      "period": "IARC第114卷評估於2015年公布；WHO問答更新2026-09-23",
+      "geographic_scope": "IARC評估納入的10項國際研究，不是台灣全國樣本",
+      "population": "10項研究各自研究族群；IARC問答未列合併人數",
+      "numerator": "問答未列合併病例數；18%為相對風險變化估計",
+      "denominator": "問答未提供共同分母、基準風險或台灣分母",
+      "denominator_definition": "長期習慣性每日50克加工肉與較低攝取比較的相對關聯；不是單次攝取",
+      "event_definition": "大腸直腸癌發生風險的相對變化",
+      "data_type": "IARC對10項流行病學研究之危害評估和劑量暴露關聯摘要",
+      "limitations": "沒有台灣絕對風險或合併分子分母，不能換算個人罹癌機率或安全門檻；Group 1表示證據強度，不是風險大小與菸品相同。",
       "source_ids": [
         "tw02_iarc_processed_meat_qa_2015"
-      ]
+      ],
+      "accessed_at": "2026-11-17"
+    },
+    {
+      "topic": "NutriRECS對成年人加工肉攝取的飲食指南建議",
+      "value": {
+        "recommendation": "弱建議維持目前攝取",
+        "certainty": "低確定性證據",
+        "panel_members": 14,
+        "community_members": 3,
+        "countries": 7
+      },
+      "unit": "指南建議強度、GRADE證據確定性及專家小組規模；非疾病發生率",
+      "period": "2019-10-01電子出版；2019-11刊期",
+      "geographic_scope": "多國NutriRECS指南小組；不是台灣官方政策",
+      "population": "成年人；指南綜整多篇系統性回顧並評估飲食價值偏好",
+      "numerator": "不適用；此為指南建議而非事件計數",
+      "denominator": "不適用；非暴露率或人口風險估計",
+      "denominator_definition": "面向成年人的建議，根據證據確定性、潛在效益與傷害、價值偏好作成",
+      "event_definition": "指南建議及證據確定性，不是癌症發生事件",
+      "data_type": "依GRADE與系統性回顧制定的臨床／飲食指南",
+      "limitations": "弱建議和低確定性不代表已證明加工肉安全，也不是台灣主管機關建議；與IARC的危害分類評估問題不同。",
+      "source_ids": [
+        "tw02_nutrirecs_meat_guideline_2019"
+      ],
+      "accessed_at": "2026-11-17"
     }
   ],
   "unresolved_questions": [
-    "未找到可用一致暴露及事件定義計算台灣加工肉相關大腸直腸癌絕對風險的全國估計。",
-    "追蹤WHO動物性食物攝取指引是否發布；2026-09-23問答仍標示指引研擬中。",
-    "未取得營養或腫瘤流行病學專業人員獨立審閱。"
+    "WHO是否發布新的動物性食物攝取指引仍需後續追蹤；2026-09-23頁面為本批所見現況。",
+    "未找到具相同加工肉暴露定義與癌症追蹤分母的台灣全國個人絕對風險估計。",
+    "未取得營養學、腫瘤流行病學或公共衛生專業人員獨立審閱。"
   ],
   "professional_review": {
     "required": true,
@@ -84,5 +126,35 @@
   },
   "prior_chapter_draft_sha256": "1efa6e9482c661100b04326eb18b7a607c416157ba1a1ad1b5d154ebe39a8f0d",
   "prior_structured_draft_sha256": null,
-  "prior_structured_draft_review": null
+  "prior_structured_draft_review": null,
+  "topic_fidelity_review": {
+    "original_topic": "原作討論加工肉與長期健康；既有改寫著重台灣餐食替換，未保留不同國際研究評估和指南間的分歧。",
+    "taiwan_relevance": "此主題可回應台灣讀者對活動量／飲食與長期健康、研究如何解讀的需求。台灣行動建議使用本地生活、營養標示與安全情境；海外研究只保留為有明確地區、族群、研究設計和外推限制的證據。",
+    "reader_content_decision": "保留台灣飲食行動並有限恢復國際證據評估差異，明示危害分類、群體相對風險及飲食指南取捨各自回答的問題不同。",
+    "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+    "question_change": {
+      "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+      "previous_question": "如何減少加工肉的日常攝取，又避免把相對風險誤解成單次進食的個人機率？",
+      "current_question": "加工肉的致癌證據、風險大小與不同飲食指南建議，應如何解讀並依台灣飲食調整？",
+      "rationale": "保留台灣飲食行動並有限恢復國際證據評估差異，明示危害分類、群體相對風險及飲食指南取捨各自回答的問題不同。"
+    },
+    "historical_claim_decisions": [
+      {
+        "claim": "加工肉和大腸直腸癌相關",
+        "decision": "retain_with_relative_risk_and_denominator_limits",
+        "reason": "IARC的10研究估計支持長期群體關聯，但不是台灣絕對風險或偶爾食用的個人機率。"
+      },
+      {
+        "claim": "所有指南都要求同一飲食做法",
+        "decision": "restore_documented_guideline_disagreement",
+        "reason": "NutriRECS對成年人維持現有加工肉攝取提出弱建議、低確定性；需交代方法與價值偏好取捨，不能當成安全證明或台灣官方建議。"
+      }
+    ],
+    "frequency_evidence": "IARC的每日50克與約18%相對風險估計是國際研究的長期暴露關聯，並無同口徑台灣絕對風險；不能把相對增加直接換成個人罹癌機率。NutriRECS的弱建議評估的是成年人的現有飲食，不是加工肉攝取率或疾病發生率。",
+    "excluded_aspects": [
+      "未把國外研究的HR當成台灣個人機率或因果效果。",
+      "未把其他國家指南當作台灣官方規範。",
+      "未因台灣缺少研究或分類制度而刪除仍有讀者價值的研究問題。"
+    ]
+  }
 }

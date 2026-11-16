@@ -925,6 +925,21 @@ def normalize_reader_item_v4(item: dict) -> tuple[dict, list[str]]:
 def normalize_reader_item_v5(item: dict) -> tuple[dict, list[str]]:
     """Apply current reader-copy rules without exposing professional-review workflow."""
     cleaned, removed = normalize_reader_item_v4(item)
+    medical_limit = "本文不取代醫療評估。"
+    for field in ("body", "limits", "question"):
+        original = item.get(field)
+        value = cleaned.get(field)
+        if (isinstance(original, str) and medical_limit in original
+                and isinstance(value, str) and medical_limit not in value):
+            original_position = original.index(medical_limit)
+            separator = original[original_position - 1:original_position]
+            value = value.rstrip()
+            if separator in {"；", ";", "，", ","} and value.endswith(("。", "！", "？", "!", "?")):
+                value = value[:-1] + separator
+            elif value:
+                value += " "
+            cleaned[field] = value + medical_limit
+            removed = [entry for entry in removed if medical_limit not in entry]
     if cleaned.get("id") == "TW-13-042":
         notice = READER_PROFESSIONAL_LIMITS["TW-13-042"]
         followup = "若要處理個人安全、醫療或保護需求，可請醫療人員、社工或113協助轉介。"
@@ -1181,11 +1196,19 @@ def documented_revision(old: dict, new: dict, record: dict) -> bool:
         )
         documented_topic_fidelity_change = (
             isinstance(topic_question_change, dict)
-            and topic_question_change.get("decision") == "realign_with_restored_core_topic"
+            and topic_question_change.get("decision") in {
+                "realign_with_restored_core_topic",
+                "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+            }
             and topic_question_change.get("previous_question") == question
             and topic_question_change.get("current_question") == new.get("question")
-            and isinstance(topic_question_change.get("reason"), str)
-            and bool(topic_question_change["reason"].strip())
+            and isinstance(
+                topic_question_change.get("reason", topic_question_change.get("rationale")),
+                str,
+            )
+            and bool(
+                topic_question_change.get("reason", topic_question_change.get("rationale", "")).strip()
+            )
         )
         documented_safety_change = (
             old.get("id") == "TW-13-021"

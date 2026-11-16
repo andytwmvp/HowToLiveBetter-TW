@@ -51,6 +51,22 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         cls.bundle = read_json(SOURCE_PATH)
         cls.coverage = read_json("localization/tw-edition/coverage.json")
         cls.register = read_json("localization/retroactive-review-register-20261019.json")
+        cls.rechecks_by_id = {
+            item_id: [row for row in cls.register["substantive_rechecks"]
+                      if row["id"] == item_id and row["reviewed_at"] > DATE]
+            for item_id in ITEM_IDS
+        }
+        cls.recheck_sources = {}
+        cls.recheck_source_dates = {}
+        for rows in cls.rechecks_by_id.values():
+            for row in rows:
+                for source_id in row.get("new_source_ids", []):
+                    cls.recheck_source_dates[source_id] = row["reviewed_at"]
+                bundle_path = row.get("source_bundle_path")
+                if bundle_path:
+                    bundle = read_json(bundle_path)
+                    for source_row in bundle["sources"]:
+                        cls.recheck_sources.setdefault(source_row[0], source_row)
         cls.readme = (ROOT / "locales/zh-TW/book/ch02/README.md").read_text(encoding="utf-8")
 
     def test_publication_hashes_sources_and_manifest_are_consistent(self):
@@ -76,9 +92,10 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
                 raw = (ROOT / item["target_path"]).read_bytes()
                 body = raw.decode("utf-8")
                 digest = hashlib.sha256(raw).hexdigest()
-                was_rechecked = item_id == "TW-02-010"
-                expected_review_date = oral_recheck["reviewed_at"] if was_rechecked else DATE
-                expected_due_date = oral_recheck["review_due_at"] if was_rechecked else DUE
+                later_rechecks = self.rechecks_by_id[item_id]
+                latest_recheck = later_rechecks[-1] if later_rechecks else None
+                expected_review_date = latest_recheck["reviewed_at"] if latest_recheck else DATE
+                expected_due_date = latest_recheck["review_due_at"] if latest_recheck else DUE
                 self.assertEqual(manifest["status"], "verified")
                 self.assertEqual(manifest["treatment"], "taiwan_independent_rewrite")
                 self.assertEqual(manifest["verified_at"], expected_review_date)
@@ -90,11 +107,16 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
                 self.assertEqual(review["target_sha256"], digest)
                 self.assertEqual(review["source_reviewed_sha256"], digest)
                 self.assertIsNone(batch["before_sha256"])
-                if was_rechecked:
-                    self.assertEqual(batch["after_sha256"], oral_item["before_sha256"])
-                    self.assertEqual(oral_item["after_sha256"], digest)
-                    self.assertTrue(set(batch["source_ids"]).issubset(item["source_ids"]))
-                    self.assertEqual(set(item["source_ids"]) - set(batch["source_ids"]), set(oral_recheck["new_source_ids"]))
+                if later_rechecks:
+                    self.assertEqual(batch["after_sha256"], later_rechecks[0]["before_sha256"])
+                    self.assertEqual(batch["source_ids"], later_rechecks[0]["previous_source_ids"])
+                    for previous, following in zip(later_rechecks, later_rechecks[1:]):
+                        self.assertEqual(following["before_sha256"], previous["after_sha256"])
+                        self.assertEqual(following["previous_source_ids"], previous["source_ids"])
+                    self.assertEqual(later_rechecks[-1]["after_sha256"], digest)
+                    self.assertEqual(item["source_ids"][:len(batch["source_ids"])], batch["source_ids"])
+                    self.assertEqual(review["source_checks"], latest_recheck["source_checks"])
+                    self.assertEqual(review["statistics_assessed"], latest_recheck["statistics_assessed"])
                 else:
                     self.assertEqual(batch["after_sha256"], digest)
                     self.assertEqual(batch["source_ids"], item["source_ids"])
@@ -115,13 +137,23 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
                 self.assertEqual(review_urls, source_urls)
                 self.assertEqual({row["source_id"] for row in review["source_checks"]}, set(item["source_ids"]))
                 for sid in item["source_ids"]:
-                    source_bundle_row = bundled_sources.get(sid, oral_sources.get(sid))
-                    self.assertIsNotNone(source_bundle_row, sid)
-                    _, title, url, supports = source_bundle_row
                     source = self.sources[sid]
-                    self.assertEqual((source["title"], source["url"], source["supports"]), (title, url, supports))
-                    expected_access_date = oral_recheck["reviewed_at"] if sid in oral_recheck["new_source_ids"] else DATE
-                    self.assertEqual(source["accessed_at"], expected_access_date)
+                    source_bundle_row = (
+                        bundled_sources.get(sid)
+                        or oral_sources.get(sid)
+                        or self.recheck_sources.get(sid)
+                    )
+                    if source_bundle_row:
+                        _, title, url, supports = source_bundle_row
+                        self.assertEqual((source["title"], source["url"], source["supports"]), (title, url, supports))
+                    expected_access_date = self.recheck_source_dates.get(sid)
+                    if sid in bundled_sources:
+                        expected_access_date = DATE
+                    if sid in oral_sources:
+                        if sid in oral_recheck["new_source_ids"]:
+                            expected_access_date = oral_recheck["reviewed_at"]
+                    if expected_access_date:
+                        self.assertEqual(source["accessed_at"], expected_access_date)
                 self.assertNotRegex(
                     body,
                     r"(批次摘要|AI協助|本次.{0,12}(?:審查|再審|核對)|CI\s*(?:成功|通過)|PR\s*#\d+|專業審閱仍待|待專業審閱|fork管理)",
@@ -169,12 +201,17 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         base_ids = [row["id"] for row in base_register["substantive_rechecks"]]
         current_ids = [row["id"] for row in self.register["substantive_rechecks"]]
         self.assertEqual(current_ids[: len(base_ids)], base_ids)
-        self.assertEqual(set(ITEM_IDS) & set(current_ids), {"TW-02-010"})
+        self.assertEqual(set(ITEM_IDS) & set(current_ids), {"TW-02-010", "TW-02-011"})
         oral_rechecks = [
             row for row in self.register["substantive_rechecks"]
             if row["reviewed_at"] == "2026-11-15" and row["id"] in ITEM_IDS
         ]
         self.assertEqual([row["id"] for row in oral_rechecks], ["TW-02-010"])
+        activity_rechecks = [
+            row for row in self.register["substantive_rechecks"]
+            if row["reviewed_at"] == "2026-11-17" and row["id"] in ITEM_IDS
+        ]
+        self.assertEqual([row["id"] for row in activity_rechecks], ["TW-02-011"])
         topic_rechecks = [
             row for row in self.register["substantive_rechecks"]
             if row["reviewed_at"] == "2026-11-12" and row["id"] in {"TW-02-025", "TW-02-047"}

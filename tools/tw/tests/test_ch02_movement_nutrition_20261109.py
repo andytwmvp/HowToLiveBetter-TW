@@ -61,6 +61,11 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         cls.later_rechecks = cls.register["substantive_rechecks"][
             len(base_register["substantive_rechecks"]):
         ]
+        cls.rechecks_by_id = {
+            item_id: [row for row in cls.later_rechecks
+                      if row["id"] == item_id and row["reviewed_at"] > "2026-11-09"]
+            for item_id in ITEM_IDS
+        }
         cls.base_runtime = json.loads(
             subprocess.check_output(
                 ["git", "show", f"{BASE}:localization/tw-edition/runtime.json"],
@@ -82,6 +87,11 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
                 record = self.batch_items[item_id]
                 review = self.reviews[item_id]
                 entry = self.manifest[item_id]
+                later_rechecks = self.rechecks_by_id[item_id]
+                latest_recheck = later_rechecks[-1] if later_rechecks else None
+                effective_review = latest_recheck or record
+                effective_review_date = latest_recheck["reviewed_at"] if latest_recheck else self.batch["reviewed_at"]
+                effective_review_due_date = latest_recheck["review_due_at"] if latest_recheck else self.batch["review_due_at"]
                 body_path = ROOT / entry["target_path"]
                 body_bytes = body_path.read_bytes()
                 body = body_bytes.decode("utf-8")
@@ -90,18 +100,32 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
                 self.assertEqual(item["body"], body)
                 self.assertEqual(item["target_path"], entry["target_path"])
                 self.assertEqual(item["review_status"], "source_checked")
-                self.assertEqual(item["reviewed_at"], "2026-11-09")
-                self.assertEqual(item["review_due_at"], "2027-02-09")
+                self.assertEqual(item["reviewed_at"], effective_review_date)
+                self.assertEqual(item["review_due_at"], effective_review_due_date)
                 self.assertEqual(entry["status"], "verified")
-                self.assertEqual(entry["verified_at"], "2026-11-09")
+                self.assertEqual(entry["verified_at"], effective_review_date)
                 self.assertEqual(entry["sources"], item["source_ids"])
-                self.assertEqual(record["source_ids"], item["source_ids"])
                 self.assertEqual(review["source_ids"], item["source_ids"])
-                self.assertEqual(record["after_sha256"], digest)
                 self.assertEqual(review["target_sha256"], digest)
                 self.assertEqual(review["source_reviewed_sha256"], digest)
-                self.assertEqual(record["source_checks"], review["source_checks"])
-                self.assertEqual(record["statistics_assessed"], review["statistics_assessed"])
+                if later_rechecks:
+                    self.assertEqual(record["after_sha256"], later_rechecks[0]["before_sha256"])
+                    self.assertEqual(record["source_ids"], later_rechecks[0]["previous_source_ids"])
+                    for previous, following in zip(later_rechecks, later_rechecks[1:]):
+                        self.assertEqual(following["before_sha256"], previous["after_sha256"])
+                        self.assertEqual(following["previous_source_ids"], previous["source_ids"])
+                    self.assertEqual(later_rechecks[-1]["after_sha256"], digest)
+                    self.assertEqual(item["source_ids"][:len(record["source_ids"])], record["source_ids"])
+                    self.assertEqual(effective_review["source_checks"], review["source_checks"])
+                    self.assertEqual(effective_review["statistics_assessed"], review["statistics_assessed"])
+                else:
+                    self.assertEqual(item["reviewed_at"], "2026-11-09")
+                    self.assertEqual(record["source_ids"], item["source_ids"])
+                    self.assertEqual(record["after_sha256"], digest)
+                    self.assertEqual(record["source_checks"], review["source_checks"])
+                    self.assertEqual(record["statistics_assessed"], review["statistics_assessed"])
+                for source_id in record["source_ids"]:
+                    self.assertIn(source_id, review["source_ids"])
                 self.assertTrue(review["professional_review"]["required"])
                 self.assertFalse(review["professional_review"]["obtained"])
 
@@ -125,7 +149,7 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
     def test_statistics_and_taiwan_safety_context_are_not_overgeneralized(self):
         articles = {item_id: self.items[item_id]["body"] for item_id in ITEM_IDS}
         self.assertIn("蘇格蘭與英格蘭", articles["TW-02-014"])
-        self.assertIn("不能證明是球拍運動造成差異", articles["TW-02-014"])
+        self.assertIn("不能證明球拍運動造成差異", articles["TW-02-014"])
         self.assertIn("沒有要求每次活動必須至少10分鐘", articles["TW-02-015"])
         self.assertIn("不要為了運動追公車", articles["TW-02-015"])
         self.assertIn("不建議把趕車或猛爬樓梯當成處方", articles["TW-02-015"])
@@ -138,7 +162,7 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         self.assertIn("相對風險約增加18%", articles["TW-02-018"])
         self.assertIn("不是偶爾吃一份就有18%的罹癌機率", articles["TW-02-018"])
         self.assertIn("IARC第1類代表人體致癌證據充分", articles["TW-02-018"])
-        self.assertIn("WHO於2026年9月23日更新", articles["TW-02-018"])
+        self.assertIn("WHO於2026年更新", articles["TW-02-018"])
 
     def test_sources_are_additive_and_unrelated_structured_drafts_are_preserved(self):
         base_sources = {row["id"]: row for row in self.base_runtime["sources"]}
