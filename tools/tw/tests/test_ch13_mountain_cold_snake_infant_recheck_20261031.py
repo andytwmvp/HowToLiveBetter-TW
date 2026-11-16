@@ -12,11 +12,13 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
 
 from ci_language_policy import audit_drafts
-from retroactive_audit import validate_recheck_history
+from recheck_history_assertions import assert_historical_recheck_edge
 from review_contract import publication_report, validate_runtime
 
 
 BASELINE = "79c0c7c51004763cb9f08ad867681cb8604b4499"
+HISTORICAL_HEAD = "171783959adfc988ad6cd2cff04cfcdf21a745f6"
+MOUNTAIN_FREQUENCY_HEAD = "c46443b55942139d0067e2011d2f004fad1e44eb"
 ITEM_IDS = ("TW-13-027", "TW-13-028", "TW-13-029", "TW-13-043", "TW-13-044")
 
 
@@ -37,16 +39,50 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.runtime = validate_runtime()
-        cls.items = {item["id"]: item for item in cls.runtime["items"]}
-        cls.sources = {source["id"]: source for source in cls.runtime["sources"]}
-        cls.manifest = {item["id"]: item for item in read("localization/manifest.json")["entries"]}
-        cls.reviews = {key: read(f"localization/reviews/{key}.json") for key in ITEM_IDS}
-        register = read("localization/retroactive-review-register-20261019.json")
-        cls.recheck_history = register["substantive_rechecks"]
-        cls.records = {}
-        for row in sorted(cls.recheck_history,
-                           key=lambda entry: (entry.get("reviewed_at", ""), entry.get("after_sha256", ""))):
-            cls.records[row["id"]] = row
+        cls.current_register = read("localization/retroactive-review-register-20261019.json")
+
+        # This batch test is a contract for its immutable 10/31 snapshot. Later
+        # reviews are checked by the audit chain and must not replace this row.
+        snapshot_runtime = read_at(HISTORICAL_HEAD, "localization/tw-edition/runtime.json")
+        snapshot_manifest = read_at(HISTORICAL_HEAD, "localization/manifest.json")
+        snapshot_reviews = {
+            key: read_at(HISTORICAL_HEAD, f"localization/reviews/{key}.json")
+            for key in ITEM_IDS
+        }
+        snapshot_register = read_at(
+            HISTORICAL_HEAD, "localization/retroactive-review-register-20261019.json"
+        )
+        cls.historical_items = {item["id"]: item for item in snapshot_runtime["items"]}
+        cls.historical_sources = {source["id"]: source for source in snapshot_runtime["sources"]}
+        cls.historical_manifest = {item["id"]: item for item in snapshot_manifest["entries"]}
+        cls.historical_reviews = snapshot_reviews
+        cls.historical_records = {
+            item_id: next(
+                row for row in snapshot_register["substantive_rechecks"]
+                if row["id"] == item_id and row["reviewed_at"] == "2026-10-31"
+            )
+            for item_id in ITEM_IDS
+        }
+        frequency_runtime = read_at(
+            MOUNTAIN_FREQUENCY_HEAD, "localization/tw-edition/runtime.json"
+        )
+        frequency_register = read_at(
+            MOUNTAIN_FREQUENCY_HEAD, "localization/retroactive-review-register-20261019.json"
+        )
+        cls.frequency_items = {
+            item["id"]: item for item in snapshot_runtime["items"]
+            if item["id"] in ITEM_IDS and item["id"] != "TW-13-027"
+        }
+        cls.frequency_items["TW-13-027"] = next(
+            item for item in frequency_runtime["items"] if item["id"] == "TW-13-027"
+        )
+        cls.frequency_records = {
+            "TW-13-027": next(
+                row for row in frequency_register["substantive_rechecks"]
+                if row["id"] == "TW-13-027" and row["reviewed_at"] == "2026-11-14"
+            ),
+            "TW-13-029": cls.historical_records["TW-13-029"],
+        }
 
     def test_progress_and_source_inventories_reconcile_to_branch_baseline(self):
         previous_runtime = read_at(BASELINE, "localization/tw-edition/runtime.json")
@@ -80,45 +116,21 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
     def test_five_rechecks_preserve_history_and_sync_reader_contracts(self):
         for item_id in ITEM_IDS:
             with self.subTest(item=item_id):
-                item = self.items[item_id]
-                record = self.records[item_id]
-                review = self.reviews[item_id]
-                manifest = self.manifest[item_id]
-                later_record = None
-                if item_id == "TW-13-027":
-                    # Keep this historical batch bound to its 10/31 snapshot; a
-                    # later 11/14 recheck now advances the live article and review.
-                    record = next(
-                        row for row in self.recheck_history
-                        if row["id"] == item_id and row["reviewed_at"] == "2026-10-31"
-                    )
-                    later_record = next(
-                        row for row in self.recheck_history
-                        if row["id"] == item_id and row["reviewed_at"] == "2026-11-14"
-                    )
-                    prior = read_at(later_record["prior_revision"], "localization/tw-edition/runtime.json")
-                    item = next(row for row in prior["items"] if row["id"] == item_id)
-                    prior_review = read_at(later_record["prior_revision"], f"localization/reviews/{item_id}.json")
-                    prior_manifest = read_at(later_record["prior_revision"], "localization/manifest.json")
-                    review = prior_review
-                    manifest = next(row for row in prior_manifest["entries"] if row["id"] == item_id)
-                raw = (ROOT / manifest["target_path"]).read_bytes()
+                record = self.historical_records[item_id]
+                item = self.historical_items[item_id]
+                review = self.historical_reviews[item_id]
+                manifest = self.historical_manifest[item_id]
+                raw = subprocess.check_output(
+                    ["git", "show", f"{HISTORICAL_HEAD}:{manifest['target_path']}"], cwd=ROOT
+                )
                 body = item["body"]
                 digest = sha256(body.encode("utf-8"))
 
-                if item_id == "TW-13-027":
-                    self.assertEqual(record["after_sha256"], digest)
-                    self.assertEqual(later_record["before_sha256"], digest)
-                    self.assertEqual(later_record["previous_body"], body)
-                    self.assertEqual(
-                        later_record["prior_review_sha256"],
-                        sha256(subprocess.check_output(
-                            ["git", "show", f"{later_record['prior_revision']}:localization/reviews/{item_id}.json"],
-                            cwd=ROOT,
-                        )),
-                    )
-                    validate_recheck_history(ROOT, later_record, self.items[item_id])
-
+                self.assertEqual(raw.decode("utf-8"), body)
+                self.assertIn(record, self.current_register["substantive_rechecks"])
+                assert_historical_recheck_edge(
+                    self, ROOT, record, merged_revision=HISTORICAL_HEAD
+                )
                 self.assertEqual(record["prior_revision"], BASELINE)
                 self.assertEqual(record["after_sha256"], digest)
                 self.assertEqual(record["before_sha256"], sha256(record["previous_body"].encode("utf-8")))
@@ -130,16 +142,17 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
                 self.assertEqual(review["source_reviewed_sha256"], digest)
                 self.assertEqual(manifest["verified_at"], review["reviewed_at"])
                 self.assertEqual(item["reviewed_at"], review["reviewed_at"])
-                expected_urls = {self.sources[source_id]["url"] for source_id in item["source_ids"]}
+                expected_urls = {
+                    self.historical_sources[source_id]["url"]
+                    for source_id in item["source_ids"]
+                }
                 self.assertEqual({check["url"] for check in review["source_checks"]}, expected_urls)
                 self.assertEqual(set(re.findall(r"\]\((https://[^)]+)\)", body)), expected_urls)
                 self.assertNotRegex(body, r"本批|本次再審|來源實質再核對|\bPR\s*#|CI\s*(?:通過|成功)|AI輔助")
                 self.assertNotRegex(item["limits"], r"本次|本批|\bPR\s*#|AI輔助")
-                if later_record is None:
-                    validate_recheck_history(ROOT, record, item)
 
     def test_frequency_claims_keep_population_and_denominator_limits(self):
-        mountain = self.records["TW-13-027"]["statistics_assessed"]
+        mountain = self.frequency_records["TW-13-027"]["statistics_assessed"]
         accidents = next(row for row in mountain if row["topic"].startswith("臺灣山域事故件數"))
         self.assertEqual(accidents["value"], {
             "2015_incident_cases": 179,
@@ -150,18 +163,18 @@ class Ch13MountainColdSnakeInfantRecheckTests(unittest.TestCase):
         self.assertIsNone(accidents["denominator"])
         self.assertIn("登山人次", accidents["denominator_definition"])
 
-        snake = self.records["TW-13-029"]["statistics_assessed"]
+        snake = self.frequency_records["TW-13-029"]["statistics_assessed"]
         fatality = next(row for row in snake if "0.18%" in row["value"])
         self.assertEqual(fatality["numerator"], "9名死亡者")
         self.assertEqual(fatality["denominator"], "4,893名抗蛇毒血清使用者")
         self.assertIn("全部蛇咬死亡率", fatality["limitations"])
 
         for item_id in ("TW-13-028", "TW-13-043", "TW-13-044"):
-            self.assertEqual(self.records[item_id]["statistics_assessed"], [])
-            self.assertRegex(self.items[item_id]["body"], r"沒有找到|沒有.*資料|未查得")
+            self.assertEqual(self.historical_records[item_id]["statistics_assessed"], [])
+            self.assertRegex(self.frequency_items[item_id]["body"], r"沒有找到|沒有.*資料|未查得")
 
     def test_emergency_actions_precede_background_statistics(self):
-        bodies = {key: self.items[key]["body"] for key in ITEM_IDS}
+        bodies = {key: self.frequency_items[key]["body"] for key in ITEM_IDS}
         for key, marker in {
             "TW-13-027": "502件",
             "TW-13-029": "4,893名",

@@ -68,9 +68,45 @@ REQUIRED_HEADINGS.update(dict.fromkeys(
         "TW-13-041",
         "TW-13-042",
         "TW-13-047",
+        "TW-13-027",
+        "TW-13-028",
+        "TW-13-029",
+        "TW-13-043",
+        "TW-13-044",
     ),
     _CH13_SAFETY_SECTIONS,
 ))
+
+REQUIRED_HEADINGS.update({
+    "TW-13-022": (
+        "先做什麼",
+        "處理步驟",
+        "熱傷害統計與平時準備",
+        "常見錯誤",
+        "參考資料",
+    ),
+    "TW-13-024": (
+        "先做什麼",
+        "台灣住家與公共場所的做法",
+        "住宅火災統計與平時準備",
+        "常見錯誤",
+        "參考資料",
+    ),
+    "TW-13-025": (
+        "先求援並確保現場安全",
+        "人救上岸後的處理",
+        "溺水事件統計與平時準備",
+        "常見錯誤",
+        "參考資料",
+    ),
+    "TW-13-026": (
+        "先分辨輕重並求援",
+        "成人、兒童及嬰兒的處理方式",
+        "死因統計與平時準備",
+        "常見錯誤",
+        "參考資料",
+    ),
+})
 
 _MEDICAL_HIGH_RISK_SECTIONS = (
     "適用情境與優先做法",
@@ -203,26 +239,58 @@ class BodyStructureContractTests(unittest.TestCase):
             [],
         )
 
-    def test_existing_required_sections_allow_a_new_reader_section(self):
+    def test_declared_safety_sections_allow_growth_and_reject_missing_required(self):
         runtime = validate_runtime()
         known_source_ids = {source["id"] for source in runtime["sources"]}
-        item = next(row.copy() for row in runtime["items"] if row["id"] == "TW-13-013")
-        reference_heading = "## 參考資料"
-        self.assertIn(reference_heading, item["body"])
-        item["body"] = item["body"].replace(
-            reference_heading,
-            "## 新增的台灣情境\n\n補充適用情況。\n\n" + reference_heading,
-            1,
+        runtime_items = {row["id"]: row for row in runtime["items"]}
+        item_ids = (
+            "TW-13-013",
+            "TW-13-027",
+            "TW-13-028",
+            "TW-13-029",
+            "TW-13-043",
+            "TW-13-044",
+            "TW-13-022",
+            "TW-13-024",
+            "TW-13-025",
+            "TW-13-026",
         )
 
-        self.assertEqual(
-            body_structure_issues(
-                item,
-                known_source_ids=known_source_ids,
-                required_headings=REQUIRED_HEADINGS[item["id"]],
-            ),
-            [],
-        )
+        for item_id in item_ids:
+            with self.subTest(id=item_id):
+                item = runtime_items[item_id].copy()
+                required = REQUIRED_HEADINGS[item_id]
+                reference_heading = "## 參考資料"
+                self.assertIn(reference_heading, item["body"])
+
+                expanded = item.copy()
+                expanded["body"] = expanded["body"].replace(
+                    reference_heading,
+                    "## 新增的台灣情境\n\n補充適用情況。\n\n" + reference_heading,
+                    1,
+                )
+                self.assertEqual(
+                    body_structure_issues(
+                        expanded,
+                        known_source_ids=known_source_ids,
+                        required_headings=required,
+                    ),
+                    [],
+                )
+
+                missing = item.copy()
+                missing["body"] = missing["body"].replace(
+                    "## " + required[0], "## 替代段落", 1
+                )
+                errors = body_structure_issues(
+                    missing,
+                    known_source_ids=known_source_ids,
+                    required_headings=required,
+                )
+                self.assertTrue(
+                    any("缺少必要段落標題" in error for error in errors),
+                    item_id,
+                )
 
     def test_ch14_required_sections_allow_growth_and_reject_missing_section(self):
         runtime = validate_runtime()
