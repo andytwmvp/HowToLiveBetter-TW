@@ -208,7 +208,14 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         self.assertEqual(night_stats[3]["value"]["mortality_RR_per_5_years"], 1.05)
         self.assertIn("不是2026年每位成人的個別測量結果", bmi)
         self.assertIn("不是夜班造成心血管疾病或事故的發生率", night_work)
-        self.assertEqual(self.reviews["TW-02-028"]["statistics_assessed"], [])
+        # The 2026-11-11 batch had no topic-specific statistics for this item.
+        # A later, hash-linked recheck restored the original research question.
+        self.assertEqual(self.batch_items["TW-02-028"]["statistics_assessed"], [])
+        self.assertEqual(
+            self.reviews["TW-02-028"]["statistics_assessed"],
+            next(row for row in self.register["substantive_rechecks"]
+                 if row["id"] == "TW-02-028" and row["reviewed_at"] > DATE)["statistics_assessed"],
+        )
         self.assertEqual(self.reviews["TW-02-030"]["statistics_assessed"], [])
         self.assertEqual(self.reviews["TW-02-042"]["statistics_assessed"], [])
 

@@ -298,6 +298,19 @@ class RetroactiveAuditTests(unittest.TestCase):
         self.assertNotIn("本文查閱日為", emergency_clean)
         self.assertNotIn("本輪專業審查", workplace_clean)
 
+    def test_reader_medical_limit_saying_text_does_not_replace_assessment_is_preserved(self):
+        disclaimer = "本文不取代醫療評估。"
+        item = {
+            "id": "TW-02-011",
+            "title": "步數與活動量",
+            "body": "依體能逐步增加活動。",
+            "limits": "個人疾病、孕期、年齡與用藥會影響活動安全；" + disclaimer,
+            "question": "我是否已了解適用限制？",
+        }
+        cleaned, removed = audit.normalize_reader_item_v5(item)
+        self.assertEqual(cleaned, item)
+        self.assertEqual(removed, [])
+
     def test_chapter_menus_use_reader_facing_article_titles_without_internal_ids(self):
         root = audit.ROOT / "locales/zh-TW/book"
         for path in sorted(root.glob("ch*/README.md")):

@@ -1,0 +1,550 @@
+{
+  "schema_version": 1,
+  "phase": "topic_fidelity_substantive_recheck",
+  "baseline_main_sha": "4c458e0ef48db03bfa05b50af212b245b5e673a6",
+  "reviewed_at": "2026-11-17",
+  "review_due_at": "2027-02-17",
+  "scope": "逐題重審第2章活動量、球拍運動、加工肉及超加工食品研究主題；保留仍回答台灣讀者需求的原題及境外研究，補充台灣日常實作、事件與統計限制。",
+  "content_policy": "不因研究或文化來源地而機械刪除，也不把其他國家或地區的規範或群體效應直接套用台灣；依主題目的、台灣讀者價值、來源品質、實際可行行動及傷害風險，恢復必要研究脈絡並獨立撰寫台灣生活指引。",
+  "items": [
+    {
+      "id": "TW-02-011",
+      "title": "每天步數與每週活動量：找到適合自己的起點",
+      "change_kind": "topic_fidelity_research_restoration_and_taiwan_context",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-011.md",
+      "before_sha256": "f540a85c69fcc32ea32a64739d92594c6001b3cc2e7529ef933a6463cda5a8cd",
+      "after_sha256": "668b8a4e954c3cfb8aedf2dff12b8bf2793ed55b2ea0197d6c325b9419f65a98",
+      "prior_review_sha256": "78ddc044452ec4dab33dba55069f1c327d3cbd6633e420111d86fb3d2602808e",
+      "review_sha256": "46dc4a13628ae3b82974cc62c6e8d4651bda4e2ed5da9ed30b99e34f4c9270e9",
+      "previous_question": "我是否找到安全、做得到而且能逐步累積的活動方式？",
+      "current_question": "每天走多少步、每週安排多少活動，如何依生活和健康狀況找到起點？",
+      "topic_fidelity_assessment": "保留步數研究問題，補回跨國群體證據並維持台灣可行的週活動、通勤與安全做法。",
+      "topic_fidelity_review": {
+        "original_topic": "原作主題將每日步數和每週活動時間作為可替代的活動量參照；既有改寫保留週活動建議但移除了步數與研究證據的討論。",
+        "taiwan_relevance": "此主題可回應台灣讀者對活動量／飲食與長期健康、研究如何解讀的需求。台灣行動建議使用本地生活、營養標示與安全情境；海外研究只保留為有明確地區、族群、研究設計和外推限制的證據。",
+        "reader_content_decision": "保留步數研究問題，補回跨國群體證據並維持台灣可行的週活動、通勤與安全做法。",
+        "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+        "question_change": {
+          "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+          "previous_question": "我是否找到安全、做得到而且能逐步累積的活動方式？",
+          "current_question": "每天走多少步、每週安排多少活動，如何依生活和健康狀況找到起點？",
+          "rationale": "保留步數研究問題，補回跨國群體證據並維持台灣可行的週活動、通勤與安全做法。"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "每日步數可作為成人活動量的追蹤參照",
+            "decision": "restore_with_population_and_measurement_limits",
+            "reason": "研究以裝置量測步數；對台灣讀者有助理解追蹤指標，但不得等同活動指南或個人預測。"
+          },
+          {
+            "claim": "7,000步與較低全因死亡危險相關",
+            "decision": "retain_as_observational_relative_association",
+            "reason": "摘要提供14項研究的HR及信賴區間，需保留研究數、比較值、非因果及非個人風險界線。"
+          }
+        ],
+        "frequency_evidence": "體育署2025年全國電話調查中，25,472名13歲以上有效樣本約35.6%符合該調查的規律運動定義；這不是每週150分鐘指南達標率。步數研究是多國成人裝置測量世代的群體關聯，沒有可換算為台灣個人風險的發生率。",
+        "excluded_aspects": [
+          "未把國外研究的HR當成台灣個人機率或因果效果。",
+          "未把其他國家指南當作台灣官方規範。",
+          "未因台灣缺少研究或分類制度而刪除仍有讀者價值的研究問題。"
+        ]
+      },
+      "topic_fidelity_question_change": {
+        "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+        "previous_question": "我是否找到安全、做得到而且能逐步累積的活動方式？",
+        "current_question": "每天走多少步、每週安排多少活動，如何依生活和健康狀況找到起點？",
+        "rationale": "保留步數研究問題，補回跨國群體證據並維持台灣可行的週活動、通勤與安全做法。"
+      },
+      "source_ids": [
+        "tw02_hpa_activity_guideline_20261109",
+        "tw02_hpa_commute_activity_20261109",
+        "tw02_sports_survey_2025_20261109",
+        "tw02_ding_daily_steps_meta_2025"
+      ],
+      "previous_source_ids": [
+        "tw02_hpa_activity_guideline_20261109",
+        "tw02_hpa_commute_activity_20261109",
+        "tw02_sports_survey_2025_20261109"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "台灣規律運動電話調查",
+          "value": "約35.6%",
+          "unit": "符合調查規律運動定義的加權群體比例",
+          "period": "2025年6月至8月",
+          "geographic_scope": "台灣全國電話抽樣調查",
+          "population": "13歲以上民眾；有效樣本25,472人",
+          "numerator": "官方摘要未列未加權規律運動人數",
+          "denominator": "有效樣本25,472人；各題未加權有效分母及加權方法摘要未完整列明",
+          "denominator_definition": "每週至少3次、每次至少30分鐘且流汗及呼吸加快的自陳調查定義",
+          "event_definition": "符合運動頻率、單次時間與自陳強度條件；非疾病事件",
+          "data_type": "電話抽樣、自陳問卷與官方加權估計",
+          "limitations": "不是每週150分鐘中等強度活動達標率；摘要未列原始分子與題目有效分母，也不能估算個人疾病機率。",
+          "source_ids": [
+            "tw02_sports_survey_2025_20261109"
+          ],
+          "accessed_at": "2026-11-09"
+        },
+        {
+          "topic": "裝置測量每日步數與全因死亡的統合關聯",
+          "value": {
+            "steps_per_day_comparison": "7,000 vs 2,000",
+            "hazard_ratio": 0.53,
+            "confidence_interval_95": [
+              0.46,
+              0.6
+            ],
+            "studies_for_all_cause_mortality_estimate": 14,
+            "review_studies": 57,
+            "review_cohorts": 35,
+            "meta_analysis_studies": 31,
+            "meta_analysis_cohorts": 24
+          },
+          "unit": "前瞻性世代統合危險比及納入研究數；不是發生率或絕對風險",
+          "period": "檢索2014-01-01至2025-02-14；2025年發表",
+          "geographic_scope": "多國成人研究；非台灣代表性估計",
+          "population": "成人；研究以裝置測量日步數，納入57研究／35世代，統合31研究／24世代",
+          "numerator": "摘要未提供此步數比較的合併死亡事件數",
+          "denominator": "摘要未提供此比較的共同人數或人年；14項研究納入該全因死亡估計",
+          "denominator_definition": "與每日2,000步相比的模型統合HR；步數是裝置測量的平均日值",
+          "event_definition": "研究追蹤全因死亡；不同世代的個別事件定義和追蹤期間不完全相同",
+          "data_type": "系統性回顧與隨機效應劑量反應統合分析；觀察性研究",
+          "limitations": "群體相對危險估計不能表示個人機率下降47%或因果效果；研究數有限且有殘餘混雜，非台灣個人風險。PubMed列有補充資料更正，本次不使用該更正涉及的補充表數字。",
+          "source_ids": [
+            "tw02_ding_daily_steps_meta_2025"
+          ],
+          "accessed_at": "2026-11-17"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "運動醫學",
+          "復健醫學",
+          "公共衛生"
+        ]
+      },
+      "source_bundle_sha256": "3292e006ef487bf7254492559f662310fc2ced8d07e00f66f14e4802ca193a3a"
+    },
+    {
+      "id": "TW-02-014",
+      "title": "球拍運動與長期健康：如何解讀英國研究",
+      "change_kind": "topic_fidelity_research_restoration_and_taiwan_context",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-014.md",
+      "before_sha256": "ba2ffb2661110d3a4f19151f3b7b11f12560170d4f7a5da50bdaa318b0ac2015",
+      "after_sha256": "59a8dffbc827e7ba9f6d183d7f57aa1d67d0c550cb2b27ffbdf2b8be798c01fa",
+      "prior_review_sha256": "f27df8659cd9c7d4fc401a81b1cb745af1240af5a1c4aa5df22516a1fc428db8",
+      "review_sha256": "2e03fa2696fb9a5205e78f86bcbb64ddeb0e80f4d26f286a9549b4355b7ca88d",
+      "previous_question": "怎麼選擇能持續的運動，而不把球拍運動研究誤當成延壽保證？",
+      "current_question": "英國球拍運動與死亡率研究實際發現什麼，台灣居民如何安全選擇活動？",
+      "topic_fidelity_assessment": "有限恢復英國研究作為群體證據，將實際運動選擇、場地與安全處理留在台灣情境。",
+      "topic_fidelity_review": {
+        "original_topic": "原作以球拍運動和長期健康關聯為主題；既有台灣稿保留了運動選擇和安全建議，但刪除具體研究脈絡。",
+        "taiwan_relevance": "此主題可回應台灣讀者對活動量／飲食與長期健康、研究如何解讀的需求。台灣行動建議使用本地生活、營養標示與安全情境；海外研究只保留為有明確地區、族群、研究設計和外推限制的證據。",
+        "reader_content_decision": "有限恢復英國研究作為群體證據，將實際運動選擇、場地與安全處理留在台灣情境。",
+        "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+        "question_change": {
+          "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+          "previous_question": "怎麼選擇能持續的運動，而不把球拍運動研究誤當成延壽保證？",
+          "current_question": "英國球拍運動與死亡率研究實際發現什麼，台灣居民如何安全選擇活動？",
+          "rationale": "有限恢復英國研究作為群體證據，將實際運動選擇、場地與安全處理留在台灣情境。"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "球拍運動與全因及心血管死亡關聯",
+            "decision": "restore_as_bounded_uk_cohort_evidence",
+            "reason": "研究具體回答原題，對讀者理解運動證據有價值；須標示英國成人、研究球種、事件數、比較組與觀察性設計。"
+          },
+          {
+            "claim": "桌球的效果可由球拍運動研究代表",
+            "decision": "do_not_generalize",
+            "reason": "原研究的球拍組只含羽球、網球、壁球，未納入桌球，也未分別估計三種球的效果。"
+          }
+        ],
+        "frequency_evidence": "英國世代研究統計的是其受訪成人在前4週自陳的運動參與及後續死亡，不是台灣球拍運動受傷或死亡發生率。台灣沒有以相同球種分類、暴露時間和追蹤方法估計死亡風險的全國資料；不換算個人機率。",
+        "excluded_aspects": [
+          "未把國外研究的HR當成台灣個人機率或因果效果。",
+          "未把其他國家指南當作台灣官方規範。",
+          "未因台灣缺少研究或分類制度而刪除仍有讀者價值的研究問題。"
+        ]
+      },
+      "topic_fidelity_question_change": {
+        "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+        "previous_question": "怎麼選擇能持續的運動，而不把球拍運動研究誤當成延壽保證？",
+        "current_question": "英國球拍運動與死亡率研究實際發現什麼，台灣居民如何安全選擇活動？",
+        "rationale": "有限恢復英國研究作為群體證據，將實際運動選擇、場地與安全處理留在台灣情境。"
+      },
+      "source_ids": [
+        "tw02_hpa_activity_guideline_20261109",
+        "tw02_who_activity_guideline_2020",
+        "tw02_bjsm_racquet_cohort_2016"
+      ],
+      "previous_source_ids": [
+        "tw02_hpa_activity_guideline_20261109",
+        "tw02_who_activity_guideline_2020",
+        "tw02_bjsm_racquet_cohort_2016"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "英格蘭與蘇格蘭球拍運動參與及全因／心血管死亡",
+          "value": {
+            "overall_participants": 80306,
+            "overall_all_cause_deaths": 8790,
+            "racquet_participants": 2917,
+            "racquet_all_cause_deaths": 54,
+            "all_cause_hr": 0.53,
+            "all_cause_ci_95": [
+              0.4,
+              0.69
+            ],
+            "baseline_cvd_excluded_participants": 75014,
+            "cvd_analysis_deaths": 1909,
+            "racquet_cvd_analysis_participants": 2883,
+            "racquet_cvd_deaths": 9,
+            "cvd_hr": 0.44,
+            "cvd_ci_95": [
+              0.24,
+              0.83
+            ]
+          },
+          "unit": "研究人數、死亡事件數、校正後危險比與95%信賴區間",
+          "period": "Health Survey for England 1994、1997–1999、2003–2004、2006、2008；Scottish Health Survey 1995、1998、2003；追蹤至2009年12月（蘇格蘭）或2011年2月（英格蘭）",
+          "geographic_scope": "英格蘭與蘇格蘭人口調查樣本",
+          "population": "30至98歲成人；總樣本80,306人；平均年齡約52歲、54%女性；運動暴露為訪問前4週自陳",
+          "numerator": "全體8,790件全因死亡；球拍參與者54件全因死亡；基線無CVD之75,014人中1,909件CVD死亡，球拍參與者9件",
+          "denominator": "全因球拍組2,917人；CVD分析球拍組2,883人；整體全因樣本80,306人；CVD分析分母排除基線已有CVD者",
+          "denominator_definition": "球拍運動指羽球、網球及壁球合併；比較組為未回報該類活動，不代表完全沒有其他運動",
+          "event_definition": "追蹤期間全因死亡及依ICD定義的心血管死亡；非事故發生率",
+          "data_type": "10個一般人口健康調查世代合併之觀察性世代研究，Cox比例風險模型",
+          "limitations": "自陳前4週運動不代表長期參與；殘餘混雜與暴露誤分類可能存在。CVD球拍組僅9例死亡；HR不是個人絕對風險，不能證明運動造成差異。PubMed摘要支持整體樣本及HR，事件分層與暴露分類依作者機構典藏全文核對。",
+          "source_ids": [
+            "tw02_bjsm_racquet_cohort_2016"
+          ],
+          "accessed_at": "2026-11-17"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "運動醫學",
+          "公共衛生與流行病學"
+        ]
+      },
+      "source_bundle_sha256": "3292e006ef487bf7254492559f662310fc2ced8d07e00f66f14e4802ca193a3a"
+    },
+    {
+      "id": "TW-02-018",
+      "title": "加工肉與健康：風險證據和飲食建議怎麼看",
+      "change_kind": "topic_fidelity_research_restoration_and_taiwan_context",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-018.md",
+      "before_sha256": "dbec10aafc53d93727b71a1dbfc16bec019d8d29e6ad190398d26b7acb159f30",
+      "after_sha256": "923d8d3a88eda4ba981616d5b26e0fda552cfded48ccb1535b91ef3a9dedb5db",
+      "prior_review_sha256": "f1a5c8b75e8ca8b670aab68fd43b4875ec4da11867618b505be509a8e4b25db7",
+      "review_sha256": "4a0fa43d489862290fe2c1b2b93e0f6bb2a517547debb08dc1065ae1381eac75",
+      "previous_question": "如何減少加工肉的日常攝取，又避免把相對風險誤解成單次進食的個人機率？",
+      "current_question": "加工肉的致癌證據、風險大小與不同飲食指南建議，應如何解讀並依台灣飲食調整？",
+      "topic_fidelity_assessment": "保留台灣飲食行動並有限恢復國際證據評估差異，明示危害分類、群體相對風險及飲食指南取捨各自回答的問題不同。",
+      "topic_fidelity_review": {
+        "original_topic": "原作討論加工肉與長期健康；既有改寫著重台灣餐食替換，未保留不同國際研究評估和指南間的分歧。",
+        "taiwan_relevance": "此主題可回應台灣讀者對活動量／飲食與長期健康、研究如何解讀的需求。台灣行動建議使用本地生活、營養標示與安全情境；海外研究只保留為有明確地區、族群、研究設計和外推限制的證據。",
+        "reader_content_decision": "保留台灣飲食行動並有限恢復國際證據評估差異，明示危害分類、群體相對風險及飲食指南取捨各自回答的問題不同。",
+        "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+        "question_change": {
+          "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+          "previous_question": "如何減少加工肉的日常攝取，又避免把相對風險誤解成單次進食的個人機率？",
+          "current_question": "加工肉的致癌證據、風險大小與不同飲食指南建議，應如何解讀並依台灣飲食調整？",
+          "rationale": "保留台灣飲食行動並有限恢復國際證據評估差異，明示危害分類、群體相對風險及飲食指南取捨各自回答的問題不同。"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "加工肉和大腸直腸癌相關",
+            "decision": "retain_with_relative_risk_and_denominator_limits",
+            "reason": "IARC的10研究估計支持長期群體關聯，但不是台灣絕對風險或偶爾食用的個人機率。"
+          },
+          {
+            "claim": "所有指南都要求同一飲食做法",
+            "decision": "restore_documented_guideline_disagreement",
+            "reason": "NutriRECS對成年人維持現有加工肉攝取提出弱建議、低確定性；需交代方法與價值偏好取捨，不能當成安全證明或台灣官方建議。"
+          }
+        ],
+        "frequency_evidence": "IARC的每日50克與約18%相對風險估計是國際研究的長期暴露關聯，並無同口徑台灣絕對風險；不能把相對增加直接換成個人罹癌機率。NutriRECS的弱建議評估的是成年人的現有飲食，不是加工肉攝取率或疾病發生率。",
+        "excluded_aspects": [
+          "未把國外研究的HR當成台灣個人機率或因果效果。",
+          "未把其他國家指南當作台灣官方規範。",
+          "未因台灣缺少研究或分類制度而刪除仍有讀者價值的研究問題。"
+        ]
+      },
+      "topic_fidelity_question_change": {
+        "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+        "previous_question": "如何減少加工肉的日常攝取，又避免把相對風險誤解成單次進食的個人機率？",
+        "current_question": "加工肉的致癌證據、風險大小與不同飲食指南建議，應如何解讀並依台灣飲食調整？",
+        "rationale": "保留台灣飲食行動並有限恢復國際證據評估差異，明示危害分類、群體相對風險及飲食指南取捨各自回答的問題不同。"
+      },
+      "source_ids": [
+        "tw02_hpa_protein_food_guide_2026",
+        "tw02_iarc_processed_meat_qa_2015",
+        "tw02_who_processed_meat_2026",
+        "tw02_nutrirecs_meat_guideline_2019"
+      ],
+      "previous_source_ids": [
+        "tw02_hpa_protein_food_guide_2026",
+        "tw02_iarc_processed_meat_qa_2015",
+        "tw02_who_processed_meat_2026"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "習慣性每日加工肉攝取與大腸直腸癌相對風險",
+          "value": {
+            "daily_processed_meat_g": 50,
+            "relative_risk_increase": "約18%",
+            "evidence_studies": 10
+          },
+          "unit": "國際研究統合之相對風險變化估計；不是百分點或發生率",
+          "period": "IARC第114卷評估於2015年公布；WHO問答更新2026-09-23",
+          "geographic_scope": "IARC評估納入的10項國際研究，不是台灣全國樣本",
+          "population": "10項研究各自研究族群；IARC問答未列合併人數",
+          "numerator": "問答未列合併病例數；18%為相對風險變化估計",
+          "denominator": "問答未提供共同分母、基準風險或台灣分母",
+          "denominator_definition": "長期習慣性每日50克加工肉與較低攝取比較的相對關聯；不是單次攝取",
+          "event_definition": "大腸直腸癌發生風險的相對變化",
+          "data_type": "IARC對10項流行病學研究之危害評估和劑量暴露關聯摘要",
+          "limitations": "沒有台灣絕對風險或合併分子分母，不能換算個人罹癌機率或安全門檻；Group 1表示證據強度，不是風險大小與菸品相同。",
+          "source_ids": [
+            "tw02_iarc_processed_meat_qa_2015"
+          ],
+          "accessed_at": "2026-11-09"
+        },
+        {
+          "topic": "NutriRECS對成年人加工肉攝取的飲食指南建議",
+          "value": {
+            "recommendation": "弱建議維持目前攝取",
+            "certainty": "低確定性證據",
+            "panel_members": 14,
+            "community_members": 3,
+            "countries": 7
+          },
+          "unit": "指南建議強度、GRADE證據確定性及專家小組規模；非疾病發生率",
+          "period": "2019-10-01電子出版；2019-11刊期",
+          "geographic_scope": "多國NutriRECS指南小組；不是台灣官方政策",
+          "population": "成年人；指南綜整多篇系統性回顧並評估飲食價值偏好",
+          "numerator": "不適用；此為指南建議而非事件計數",
+          "denominator": "不適用；非暴露率或人口風險估計",
+          "denominator_definition": "面向成年人的建議，根據證據確定性、潛在效益與傷害、價值偏好作成",
+          "event_definition": "指南建議及證據確定性，不是癌症發生事件",
+          "data_type": "依GRADE與系統性回顧制定的臨床／飲食指南",
+          "limitations": "弱建議和低確定性不代表已證明加工肉安全，也不是台灣主管機關建議；與IARC的危害分類評估問題不同。",
+          "source_ids": [
+            "tw02_nutrirecs_meat_guideline_2019"
+          ],
+          "accessed_at": "2026-11-17"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "腫瘤流行病學",
+          "公共衛生"
+        ]
+      },
+      "source_bundle_sha256": "3292e006ef487bf7254492559f662310fc2ced8d07e00f66f14e4802ca193a3a"
+    },
+    {
+      "id": "TW-02-028",
+      "title": "超加工食品：研究證據與台灣日常選擇",
+      "change_kind": "topic_fidelity_research_restoration_and_taiwan_context",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-028.md",
+      "before_sha256": "60b0d7264e4ba06710c3c6325b27783a6c2a27e774464439f96ebb6b252e357b",
+      "after_sha256": "db2627ae221199691b4e2e41459d374361d741a64d09f91427bd97c3466c9c78",
+      "prior_review_sha256": "ca9225b95cf5f9512111e6ec1be70680f1a0cf1903c18833af6f468d33c727a9",
+      "review_sha256": "7fb68f6e24b4fa886ddfbf1bd2849f7bded322f8a948f9464820b257114a4050",
+      "previous_question": "在台灣日常採買時，如何看待超加工食品分類、安排餐點並讀懂營養標示？",
+      "current_question": "超加工食品的研究證據代表什麼，台灣居民如何看待分類、營養標示與日常飲食？",
+      "topic_fidelity_assessment": "在台灣營養標示與實用選擇之外，恢復研究和分類脈絡；外國群體結果僅作證據背景，不作為台灣禁食規則。",
+      "topic_fidelity_review": {
+        "original_topic": "原作將加工食品分類與健康研究作為生活問題；既有改寫強調台灣日常營養標示與飲食多樣性，移除了超加工食品分類爭議、研究結果和本土資料缺口。",
+        "taiwan_relevance": "此主題可回應台灣讀者對活動量／飲食與長期健康、研究如何解讀的需求。台灣行動建議使用本地生活、營養標示與安全情境；海外研究只保留為有明確地區、族群、研究設計和外推限制的證據。",
+        "reader_content_decision": "在台灣營養標示與實用選擇之外，恢復研究和分類脈絡；外國群體結果僅作證據背景，不作為台灣禁食規則。",
+        "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+        "question_change": {
+          "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+          "previous_question": "在台灣日常採買時，如何看待超加工食品分類、安排餐點並讀懂營養標示？",
+          "current_question": "超加工食品的研究證據代表什麼，台灣居民如何看待分類、營養標示與日常飲食？",
+          "rationale": "在台灣營養標示與實用選擇之外，恢復研究和分類脈絡；外國群體結果僅作證據背景，不作為台灣禁食規則。"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "超加工食品分類可直接決定單項食品是否健康",
+            "decision": "retain_with_classification_and_nutrition_label_distinction",
+            "reason": "NOVA加工程度分類不是台灣營養標示，不能替代產品營養素及整體餐點判讀。"
+          },
+          {
+            "claim": "國際研究已證明超加工食品對台灣個人造成特定風險",
+            "decision": "restore_research_as_population_evidence_only",
+            "reason": "世代研究HR與小型短期日本試驗有地區及設計限制；沒有台灣個人分母或長期效果可供推算。"
+          },
+          {
+            "claim": "台灣沒有任何相關飲食資料",
+            "decision": "narrow_to_documented_investigation_cutoff",
+            "reason": "監察院調查指出截至2025年11月未建立按加工程度的資料與本土健康研究；不能概括成完全沒有飲食調查。"
+          }
+        ],
+        "frequency_evidence": "監察院2026-01-04新聞稿引用的調查截至2025年11月，指出當時沒有按加工程度分群的國家攝食資料庫資料和國人健康影響本土研究。沒有可信、可查核的台灣超加工食品全國攝取率或個人健康發生率；外國世代及9人短期試驗均不換算成台灣個人機率。",
+        "excluded_aspects": [
+          "未把國外研究的HR當成台灣個人機率或因果效果。",
+          "未把其他國家指南當作台灣官方規範。",
+          "未因台灣缺少研究或分類制度而刪除仍有讀者價值的研究問題。"
+        ]
+      },
+      "topic_fidelity_question_change": {
+        "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+        "previous_question": "在台灣日常採買時，如何看待超加工食品分類、安排餐點並讀懂營養標示？",
+        "current_question": "超加工食品的研究證據代表什麼，台灣居民如何看待分類、營養標示與日常飲食？",
+        "rationale": "在台灣營養標示與實用選擇之外，恢復研究和分類脈絡；外國群體結果僅作證據背景，不作為台灣禁食規則。"
+      },
+      "source_ids": [
+        "tw02_cy_ultra_processed_report_2025",
+        "tw02_tfda_nutrition_labeling_rule",
+        "tw02_hpa_myplate_2024",
+        "tw02_cy_upf_research_status_2026",
+        "tw02_liu_upf_health_meta_2026",
+        "tw02_hamano_upf_trial_2024"
+      ],
+      "previous_source_ids": [
+        "tw02_cy_ultra_processed_report_2025",
+        "tw02_tfda_nutrition_labeling_rule",
+        "tw02_hpa_myplate_2024"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "超加工食品攝取與多種健康結果之統合分析",
+          "value": {
+            "studies": 51,
+            "total_participants_across_outcomes": 8819894,
+            "all_cause_mortality_hr": 1.18,
+            "all_cause_mortality_ci_95": [
+              1.1,
+              1.26
+            ]
+          },
+          "unit": "世代研究及跨結果總參與者數、全因死亡統合危險比",
+          "period": "系統性搜尋截至2026年4月；2026-09-22發表",
+          "geographic_scope": "51項成人世代研究之統合；非台灣全國樣本",
+          "population": "18歲以上成人，各研究涵蓋不同地區與健康結果；暴露以FFQ、24小時回憶或飲食史測量",
+          "numerator": "PubMed摘要未列全因死亡分析共同事件數",
+          "denominator": "8,819,894為51研究涵蓋多種健康結果的總參與者數，不是全因死亡分析單一共同分母；摘要未列死亡分析共同人數",
+          "denominator_definition": "研究摘要列出跨健康結果的全體研究樣本及全因死亡HR；不可將總樣本當死亡分析分母",
+          "event_definition": "各世代全因死亡及多種疾病結果；摘要報告全因死亡HR",
+          "data_type": "成人前瞻性世代研究系統性回顧與統合分析；觀察性資料",
+          "limitations": "摘要未列全因死亡事件數與共同分母，也未提供可推算台灣個人絕對風險的基準率；不同國家、食品分類和飲食測量方法有異，整體證據為低或中等確定性。",
+          "source_ids": [
+            "tw02_liu_upf_health_meta_2026"
+          ],
+          "accessed_at": "2026-11-17"
+        },
+        {
+          "topic": "日本超加工食品與非超加工飲食短期交叉試驗",
+          "value": {
+            "participants": 9,
+            "population": "日本過重或肥胖男性",
+            "difference_energy_kcal_per_day": 813.5,
+            "energy_ci_95": [
+              342.4,
+              1284.7
+            ],
+            "difference_weight_kg": 1.1,
+            "weight_ci_95": [
+              0.2,
+              2.0
+            ]
+          },
+          "unit": "參與者人數、每日攝取能量平均差及一週體重變化平均差",
+          "period": "各飲食期1週，中間洗脫2週；2024年發表",
+          "geographic_scope": "日本東京大學醫院單一研究場域",
+          "population": "9名日本過重或肥胖男性，受試者依隨機順序交叉接受兩種飲食",
+          "numerator": "不適用於連續結果；分析樣本9人，所有參與者完成試驗",
+          "denominator": "9名男性；受試者作交叉比較，不是全國人口或獨立長期樣本",
+          "denominator_definition": "每位參與者各接受兩種飲食期，期間各一週，非平行大量人群比較",
+          "event_definition": "每日能量攝取及一週體重變化差；不是疾病發生或死亡事件",
+          "data_type": "單院開放標籤隨機交叉飲食試驗",
+          "limitations": "樣本極小且為男性，期間極短；菜單按總熱量與主要營養素設計相近但纖維、鹽、能量密度等仍不同，不能把差異單獨歸因加工程度，亦不能換算台灣長期效果。",
+          "source_ids": [
+            "tw02_hamano_upf_trial_2024"
+          ],
+          "accessed_at": "2026-11-17"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "食品科學",
+          "公共衛生與流行病學"
+        ]
+      },
+      "source_bundle_sha256": "3292e006ef487bf7254492559f662310fc2ced8d07e00f66f14e4802ca193a3a"
+    }
+  ],
+  "new_source_ids": [
+    "tw02_ding_daily_steps_meta_2025",
+    "tw02_nutrirecs_meat_guideline_2019",
+    "tw02_cy_upf_research_status_2026",
+    "tw02_liu_upf_health_meta_2026",
+    "tw02_hamano_upf_trial_2024"
+  ],
+  "updated_source_ids": [],
+  "source_records_reused": [
+    "tw02_bjsm_racquet_cohort_2016",
+    "tw02_cy_ultra_processed_report_2025",
+    "tw02_hpa_activity_guideline_20261109",
+    "tw02_hpa_commute_activity_20261109",
+    "tw02_hpa_myplate_2024",
+    "tw02_hpa_protein_food_guide_2026",
+    "tw02_iarc_processed_meat_qa_2015",
+    "tw02_sports_survey_2025_20261109",
+    "tw02_tfda_nutrition_labeling_rule",
+    "tw02_who_activity_guideline_2020",
+    "tw02_who_processed_meat_2026"
+  ],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 316,
+    "publication_completed_entries": 316,
+    "runtime_items": 327,
+    "runtime_sources": 1309,
+    "source_registry": 1392,
+    "coverage_json_files": 646,
+    "review_rechecks": 397,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 316,
+    "publication_completed_entries": 316,
+    "runtime_items": 327,
+    "runtime_sources": 1314,
+    "source_registry": 1397,
+    "coverage_json_files": 648,
+    "review_rechecks": 401,
+    "publication_ready": false
+  },
+  "professional_review_status": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "公共衛生",
+      "公共衛生與流行病學",
+      "復健醫學",
+      "營養學",
+      "腫瘤流行病學",
+      "運動醫學",
+      "食品科學"
+    ]
+  },
+  "reader_copy_cleanup": "正文與目錄僅保留讀者理解研究、限制和採取行動需要的內容；批次資訊、AI核對狀態與專業審閱管理狀態只存於review及結構化證據。"
+}

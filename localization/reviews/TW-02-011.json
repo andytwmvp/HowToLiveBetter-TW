@@ -1,11 +1,11 @@
 {
   "id": "TW-02-011",
-  "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
+  "reviewer": "ChatGPT（AI協助核對台灣官方資料與原始研究；未取得獨立相關專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-11-09",
-  "review_due_at": "2027-02-09",
+  "reviewed_at": "2026-11-17",
+  "review_due_at": "2027-02-17",
   "target_path": "locales/zh-TW/book/ch02/TW-02-011.md",
-  "target_sha256": "f540a85c69fcc32ea32a64739d92594c6001b3cc2e7529ef933a6463cda5a8cd",
+  "target_sha256": "668b8a4e954c3cfb8aedf2dff12b8bf2793ed55b2ea0197d6c325b9419f65a98",
   "source_checks": [
     {
       "source_id": "tw02_hpa_activity_guideline_20261109",
@@ -22,8 +22,8 @@
       "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19968",
       "claim": "通勤步行量及強度不同，需以活動時間與中等強度判斷；步數多不等於已達身體活動建議。",
       "supporting_passage": "通勤步行量及強度不同，需以活動時間與中等強度判斷；步數多不等於已達身體活動建議。",
-      "accessed_at": "2026-11-09",
-      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+      "accessed_at": "2026-11-17",
+      "retrieval_method": "2026-11-17直接查閱國健署「每天通勤走很多路，還需要額外運動嗎？」頁面（頁面更新2026-05-01），核對一般通勤步行強度及每週活動建議。該頁另列每次至少10分鐘；正文未把這項頁面說法擴寫成活動處方。"
     },
     {
       "source_id": "tw02_sports_survey_2025_20261109",
@@ -33,43 +33,88 @@
       "supporting_passage": "2025年6至8月電話抽樣調查13歲以上民眾，有效樣本25,472名；約35.6%符合每週至少3次、每次至少30分鐘且流汗與呼吸加快的規律運動定義。此定義不等於每週150分鐘中等強度指南達標率。",
       "accessed_at": "2026-11-09",
       "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+    },
+    {
+      "source_id": "tw02_ding_daily_steps_meta_2025",
+      "title": "Ding等：每日步數與成人健康結果系統性回顧及劑量反應統合分析（2025）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40713949/",
+      "claim": "成人裝置測量步數的前瞻性研究系統性回顧與劑量反應統合分析：57項研究／35個世代納入回顧，31項研究／24個世代納入統合；與每日2,000步相比，7,000步之全因死亡HR為0.53（95% CI 0.46–0.60；14項研究）。",
+      "supporting_passage": "成人裝置測量步數的前瞻性研究系統性回顧與劑量反應統合分析：57項研究／35個世代納入回顧，31項研究／24個世代納入統合；與每日2,000步相比，7,000步之全因死亡HR為0.53（95% CI 0.46–0.60；14項研究）。多個結果的非線性曲線轉折約在每日5,000–7,000步；摘要指出多數結果證據確定性中等，但研究數有限、仍有個別研究偏差與殘餘混雜。不是台灣個人風險或步數處方。",
+      "accessed_at": "2026-11-17",
+      "retrieval_method": "2026-11-17直接查閱PubMed論文摘要及其更正紀錄；使用摘要中的主文估計和研究數，不使用更正涉及的補充表數字。"
     }
   ],
-  "localization_changes": "移除固定步數作為及格線的暗示，改用漸進累積中等強度活動、肌力活動、通勤及天候／道路安全；明確區分體育署「規律運動」調查和活動指南。",
-  "review_method": "重讀原作固定ID、台灣結構化草稿和引用主張，查核台灣情境、行動步驟、費用及服務入口；對統計核對期間、範圍、對象、事件定義、分子分母、資料型態與限制。未找到可信、同口徑台灣資料時明確保留資料不足，不自行推估。AI查核不等同正式專業審閱。",
+  "localization_changes": "保留台灣每週活動建議、日常通勤與天候／空氣／交通安全；補回每日步數作為追蹤方式的研究問題及跨國統合分析。明確交代研究數、成人裝置測量、HR與分母限制，不把7,000步變成人人門檻。",
+  "review_method": "依固定ID重讀原作主題、最新正文、前次review、引用來源、manifest/runtime及歷史改寫；逐項判斷原題在台灣讀者是否仍有價值，核對台灣情境、來源支持主張、研究族群、期間、統計口徑、分子分母、效應量、限制和可採取行動。本次重新查閱的官方頁面、原始研究摘要或全文已更新各自查閱日期；無法取得的官方附件或統計原始表沿用原查閱日期並明列限制。境外研究只作群體證據，不換算台灣個人機率。AI輔助查核不等於正式專業審閱。",
   "limits": [
-    "體育署35.6%是2025年13歲以上調查中符合其每週3次、每次30分鐘且流汗呼吸加快定義的估計，不是150分鐘活動指南達標率；公告未列原始人數。"
+    "國健署每週活動建議與裝置計步研究是不同測量方式；通勤步數不一定達中等強度，其他活動也不一定能用步數完整代表。",
+    "2025年步數統合分析納入多個國家的成人研究，非台灣居民個人研究；HR是群體相對危險估計，不是個人死亡機率或增加步數的因果效果。",
+    "體育署2025年規律運動調查是13歲以上電話抽樣自陳與加權比例，有效樣本25,472人；該定義不等於每週150分鐘活動建議達標率。",
+    "個人疾病、孕期、年齡、行動能力與藥物會影響活動安全；本文不取代醫療評估。"
   ],
-  "source_reviewed_sha256": "f540a85c69fcc32ea32a64739d92594c6001b3cc2e7529ef933a6463cda5a8cd",
+  "source_reviewed_sha256": "668b8a4e954c3cfb8aedf2dff12b8bf2793ed55b2ea0197d6c325b9419f65a98",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "3a8bf0937ee5c8eed79865481240316569d1291a990615113060c944613ae527",
   "source_ids": [
     "tw02_hpa_activity_guideline_20261109",
     "tw02_hpa_commute_activity_20261109",
-    "tw02_sports_survey_2025_20261109"
+    "tw02_sports_survey_2025_20261109",
+    "tw02_ding_daily_steps_meta_2025"
   ],
   "statistics_assessed": [
     {
-      "topic": "2025年規律運動調查",
-      "value": "35.6%",
-      "unit": "符合調查「規律運動」定義的加權比例",
+      "topic": "台灣規律運動電話調查",
+      "value": "約35.6%",
+      "unit": "符合調查規律運動定義的加權群體比例",
       "period": "2025年6月至8月",
       "geographic_scope": "台灣全國電話抽樣調查",
       "population": "13歲以上民眾；有效樣本25,472人",
-      "numerator": "官方摘要未列原始規律運動人數",
-      "denominator": "有效樣本25,472人；摘要未列各題未加權有效分母",
-      "event_definition": "每週至少3次、每次至少30分鐘，且流汗與呼吸加快",
-      "data_type": "電話抽樣、自陳調查與加權估計",
-      "limitations": "不等同每週150分鐘中等強度指南達標率；自陳和未接通偏差可能存在，不能估算個人疾病機率。",
+      "numerator": "官方摘要未列未加權規律運動人數",
+      "denominator": "有效樣本25,472人；各題未加權有效分母及加權方法摘要未完整列明",
+      "denominator_definition": "每週至少3次、每次至少30分鐘且流汗及呼吸加快的自陳調查定義",
+      "event_definition": "符合運動頻率、單次時間與自陳強度條件；非疾病事件",
+      "data_type": "電話抽樣、自陳問卷與官方加權估計",
+      "limitations": "不是每週150分鐘中等強度活動達標率；摘要未列原始分子與題目有效分母，也不能估算個人疾病機率。",
       "source_ids": [
         "tw02_sports_survey_2025_20261109"
-      ]
+      ],
+      "accessed_at": "2026-11-09"
+    },
+    {
+      "topic": "裝置測量每日步數與全因死亡的統合關聯",
+      "value": {
+        "steps_per_day_comparison": "7,000 vs 2,000",
+        "hazard_ratio": 0.53,
+        "confidence_interval_95": [
+          0.46,
+          0.6
+        ],
+        "studies_for_all_cause_mortality_estimate": 14,
+        "review_studies": 57,
+        "review_cohorts": 35,
+        "meta_analysis_studies": 31,
+        "meta_analysis_cohorts": 24
+      },
+      "unit": "前瞻性世代統合危險比及納入研究數；不是發生率或絕對風險",
+      "period": "檢索2014-01-01至2025-02-14；2025年發表",
+      "geographic_scope": "多國成人研究；非台灣代表性估計",
+      "population": "成人；研究以裝置測量日步數，納入57研究／35世代，統合31研究／24世代",
+      "numerator": "摘要未提供此步數比較的合併死亡事件數",
+      "denominator": "摘要未提供此比較的共同人數或人年；14項研究納入該全因死亡估計",
+      "denominator_definition": "與每日2,000步相比的模型統合HR；步數是裝置測量的平均日值",
+      "event_definition": "研究追蹤全因死亡；不同世代的個別事件定義和追蹤期間不完全相同",
+      "data_type": "系統性回顧與隨機效應劑量反應統合分析；觀察性研究",
+      "limitations": "群體相對危險估計不能表示個人機率下降47%或因果效果；研究數有限且有殘餘混雜，非台灣個人風險。PubMed列有補充資料更正，本次不使用該更正涉及的補充表數字。",
+      "source_ids": [
+        "tw02_ding_daily_steps_meta_2025"
+      ],
+      "accessed_at": "2026-11-17"
     }
   ],
-  "frequency_assessment": "體育署2025調查約35.6%的13歲以上受訪者符合其規律運動定義（每週至少3次、每次30分鐘以上並流汗且呼吸加快），有效樣本25,472人。這一自陳群體指標不等同每週150分鐘中等強度活動達標率，也不能換算為個人健康事件風險。",
+  "frequency_assessment": "體育署2025年全國電話調查中，25,472名13歲以上有效樣本約35.6%符合該調查的規律運動定義；這不是每週150分鐘指南達標率。步數研究是多國成人裝置測量世代的群體關聯，沒有可換算為台灣個人風險的發生率。",
   "unresolved_questions": [
-    "需由運動醫學、復健或公共衛生專業人員複核活動強度和個別警訊。",
-    "體育署原始調查PDF擷取服務本次回應付款錯誤；統計依該官方文件此前可讀取資料及摘要核對，需再人工確認原始表格及權重說明。"
+    "體育署調查原始PDF曾遇擷取服務錯誤；該筆35.6%及調查定義沿用2026-11-09已查閱紀錄，本次沒有宣稱重新讀取該PDF。",
+    "未取得運動醫學、復健醫學或公共衛生專業人員獨立審閱。"
   ],
   "professional_review": {
     "required": true,
@@ -82,5 +127,35 @@
   },
   "prior_chapter_draft_sha256": "4b8d12e575954d086a2f207648589ec6663e25a07ed41b44c0ba8ea3963182da",
   "prior_structured_draft_sha256": null,
-  "prior_structured_draft_review": null
+  "prior_structured_draft_review": null,
+  "topic_fidelity_review": {
+    "original_topic": "原作主題將每日步數和每週活動時間作為可替代的活動量參照；既有改寫保留週活動建議但移除了步數與研究證據的討論。",
+    "taiwan_relevance": "此主題可回應台灣讀者對活動量／飲食與長期健康、研究如何解讀的需求。台灣行動建議使用本地生活、營養標示與安全情境；海外研究只保留為有明確地區、族群、研究設計和外推限制的證據。",
+    "reader_content_decision": "保留步數研究問題，補回跨國群體證據並維持台灣可行的週活動、通勤與安全做法。",
+    "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+    "question_change": {
+      "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+      "previous_question": "我是否找到安全、做得到而且能逐步累積的活動方式？",
+      "current_question": "每天走多少步、每週安排多少活動，如何依生活和健康狀況找到起點？",
+      "rationale": "保留步數研究問題，補回跨國群體證據並維持台灣可行的週活動、通勤與安全做法。"
+    },
+    "historical_claim_decisions": [
+      {
+        "claim": "每日步數可作為成人活動量的追蹤參照",
+        "decision": "restore_with_population_and_measurement_limits",
+        "reason": "研究以裝置量測步數；對台灣讀者有助理解追蹤指標，但不得等同活動指南或個人預測。"
+      },
+      {
+        "claim": "7,000步與較低全因死亡危險相關",
+        "decision": "retain_as_observational_relative_association",
+        "reason": "摘要提供14項研究的HR及信賴區間，需保留研究數、比較值、非因果及非個人風險界線。"
+      }
+    ],
+    "frequency_evidence": "體育署2025年全國電話調查中，25,472名13歲以上有效樣本約35.6%符合該調查的規律運動定義；這不是每週150分鐘指南達標率。步數研究是多國成人裝置測量世代的群體關聯，沒有可換算為台灣個人風險的發生率。",
+    "excluded_aspects": [
+      "未把國外研究的HR當成台灣個人機率或因果效果。",
+      "未把其他國家指南當作台灣官方規範。",
+      "未因台灣缺少研究或分類制度而刪除仍有讀者價值的研究問題。"
+    ]
+  }
 }
