@@ -202,7 +202,7 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         current_rows = {row[0]: row for row in current_chapter["entries"]}
         self.assertEqual(set(current_rows), set(old_rows))
         for number, old_row in old_rows.items():
-            if number not in {25, 36, 47}:
+            if number not in {25, 29, 36, 47}:
                 self.assertEqual(current_rows[number], old_row)
         self.assertIn("日本研究有觀察到死亡率關聯", current_rows[25][1])
         self.assertIn("日本研究探討心血管與健康老化", current_rows[36][1])

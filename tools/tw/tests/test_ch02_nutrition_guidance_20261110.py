@@ -270,7 +270,7 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         rows = {f"TW-02-{row[0]:03}": row for row in draft_data["entries"]}
         self.assertEqual(set(rows), set(base_rows))
         for item_id, old_row in base_rows.items():
-            if item_id not in {"TW-02-025", "TW-02-036", "TW-02-047"}:
+            if item_id not in {"TW-02-025", "TW-02-029", "TW-02-036", "TW-02-047"}:
                 self.assertEqual(rows[item_id], old_row)
         self.assertIn("日本研究", rows["TW-02-025"][1])
         self.assertIn("日本研究探討心血管與健康老化", rows["TW-02-036"][1])

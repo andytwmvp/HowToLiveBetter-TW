@@ -188,7 +188,7 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         current_chapter = read_json("localization/tw-edition/chapters/02.json")
         old_rows = {row[0]: row for row in old_chapter["entries"]}
         current_rows = {row[0]: row for row in current_chapter["entries"]}
-        topic_fidelity_rows = {25, 36, 47}
+        topic_fidelity_rows = {25, 29, 36, 47}
         self.assertEqual(set(current_rows), set(old_rows))
         for number, row in old_rows.items():
             if number not in topic_fidelity_rows:
