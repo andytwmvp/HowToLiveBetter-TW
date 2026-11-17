@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-11-17",
+  "sources": [
+    [
+      "tw02_hpa_menopause_health_2026",
+      "國民健康署：更年期保健與就醫管道",
+      "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=218",
+      "國健署說明45歲以上婦女身體不適可先洽家庭醫學科或婦科醫師；頁面以約三成概述更年期不適，但未列該比例所據調查、樣本分母與症狀定義。"
+    ],
+    [
+      "tw02_tms_mht_consensus_2025",
+      "台灣更年期醫學會：更年期女性荷爾蒙治療臨床聲明（2025年）",
+      "https://www.menopause.org.tw/newsdetail.php?key=xL2cTZ",
+      "2025年台灣臨床聲明列中度至重度血管舒縮症狀為更年期荷爾蒙治療適應情況，說明治療時機、子宮內膜保護、禁忌、非荷爾蒙選項及每6至12個月再評估。"
+    ],
+    [
+      "tw02_shyu_menopause_symptoms_taiwan_2005",
+      "Shyu等：台灣女性更年期症狀與醫療利用全國調查（2012年）",
+      "https://pubmed.ncbi.nlm.nih.gov/22902980/",
+      "分析台灣2005年國民健康訪問調查的橫斷面研究，納入4,437名35至64歲女性，其中846人（19.1%）自述有更年期症狀；不是熱潮紅專屬盛行率。"
+    ],
+    [
+      "tw02_fang_hotflash_taiwan_meta_2024",
+      "Fang等：更年期症狀全球統合分析中的台灣熱潮紅子群（2024）",
+      "https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-024-19280-5",
+      "納入2000年至2023年研究的系統性回顧與統合分析，在台灣子群列7項研究、11,293個事件／23,754人，隨機效應合併熱潮紅盛行率37.23%（95% CI 21.4至54.59）；單純合併事件／樣本比與模型估計不同。整體熱潮紅分析異質性I²=99.51%，不能當作目前台灣全國代表性盛行率。"
+    ],
+    [
+      "tw02_ims_menopause_recommendations_2026",
+      "International Menopause Society：女性中年健康與更年期建議（2026年）",
+      "https://www.imsociety.org/wp-content/uploads/2026/03/IMS-Recommendations-Full-Document.pdf",
+      "2026年建議指出，健康且未滿60歲或停經未滿10年的女性開始MHT時，醫療人員可將可能的全因死亡及冠心病效益納入決策；單為冠心病初級預防使用屬仿單外用途。除卵巢早衰或提早停經外，不建議以MHT預防或治療認知退化。"
+    ],
+    [
+      "tw02_uspstf_mht_primary_prevention_2022",
+      "美國預防服務工作小組：以荷爾蒙治療預防慢性病的建議（2022年）",
+      "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/menopausal-hormone-therapy-preventive-medication",
+      "建議不以雌激素加黃體素或單用雌激素，對無症狀停經後族群作慢性病初級預防；明確指出不適用於處理熱潮紅等更年期症狀、卵巢早衰或手術停經者。"
+    ],
+    [
+      "tw02_whi_mortality_mht_2017",
+      "Manson等：女性健康倡議荷爾蒙試驗與長期全因及死因別死亡率（2017年）",
+      "https://jamanetwork.com/journals/jama/fullarticle/2653735",
+      "WHI兩項隨機試驗納入27,347名50至79歲美國停經後女性，介入中位數5.6及7.2年，累計追蹤18年有7,489人死亡；整體全因死亡HR 0.99（95% CI 0.94至1.03）。50至59歲組介入期間HR 0.69（95% CI 0.51至0.94），18年累計HR 0.89（95% CI 0.79至1.01）。"
+    ]
+  ]
+}
