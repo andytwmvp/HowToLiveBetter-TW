@@ -1,5 +1,6 @@
 """Generic rendered-body integrity, distinct from per-topic content requirements."""
 import json
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -119,6 +120,13 @@ REQUIRED_HEADINGS.update(dict.fromkeys(
     ("TW-16-008", "TW-16-011", "TW-16-007"),
     _MEDICAL_HIGH_RISK_SECTIONS,
 ))
+REQUIRED_HEADINGS["TW-02-043"] = (
+    "先整理症狀，再安排就醫評估",
+    "荷爾蒙治療須依症狀和個人風險決定",
+    "心血管預防與延壽研究不能當成自行用藥理由",
+    "台灣症狀資料、追蹤與費用",
+    "參考資料",
+)
 REQUIRED_HEADINGS["TW-24-013"] = (
     "適用情境與優先做法",
     "臺灣實際流程與下一步",
@@ -239,35 +247,21 @@ class BodyStructureContractTests(unittest.TestCase):
             [],
         )
 
-    def test_declared_safety_sections_allow_growth_and_reject_missing_required(self):
+    def test_all_declared_sections_allow_growth_and_reject_missing_required(self):
         runtime = validate_runtime()
         known_source_ids = {source["id"] for source in runtime["sources"]}
         runtime_items = {row["id"]: row for row in runtime["items"]}
-        item_ids = (
-            "TW-13-013",
-            "TW-13-027",
-            "TW-13-028",
-            "TW-13-029",
-            "TW-13-043",
-            "TW-13-044",
-            "TW-13-022",
-            "TW-13-024",
-            "TW-13-025",
-            "TW-13-026",
-        )
-
-        for item_id in item_ids:
+        for item_id, required in REQUIRED_HEADINGS.items():
             with self.subTest(id=item_id):
                 item = runtime_items[item_id].copy()
-                required = REQUIRED_HEADINGS[item_id]
-                reference_heading = "## 參考資料"
-                self.assertIn(reference_heading, item["body"])
+                first_heading = re.search(r"(?m)^## ", item["body"])
+                self.assertIsNotNone(first_heading, item_id)
 
                 expanded = item.copy()
-                expanded["body"] = expanded["body"].replace(
-                    reference_heading,
-                    "## 新增的台灣情境\n\n補充適用情況。\n\n" + reference_heading,
-                    1,
+                expanded["body"] = (
+                    item["body"][:first_heading.start()]
+                    + "## 測試用新增情境\n\n補充適用情況。\n\n"
+                    + item["body"][first_heading.start():]
                 )
                 self.assertEqual(
                     body_structure_issues(
@@ -279,50 +273,10 @@ class BodyStructureContractTests(unittest.TestCase):
                 )
 
                 missing = item.copy()
-                missing["body"] = missing["body"].replace(
-                    "## " + required[0], "## 替代段落", 1
-                )
-                errors = body_structure_issues(
-                    missing,
-                    known_source_ids=known_source_ids,
-                    required_headings=required,
-                )
-                self.assertTrue(
-                    any("缺少必要段落標題" in error for error in errors),
-                    item_id,
-                )
-
-    def test_ch14_required_sections_allow_growth_and_reject_missing_section(self):
-        runtime = validate_runtime()
-        known_source_ids = {source["id"] for source in runtime["sources"]}
-        items = {item["id"]: item for item in runtime["items"]}
-        ch14_ids = ("TW-14-004", "TW-14-005", "TW-14-011", "TW-14-012")
-
-        for item_id in ch14_ids:
-            with self.subTest(id=item_id):
-                item = items[item_id].copy()
-                required = REQUIRED_HEADINGS[item_id]
-                reference_heading = "## 參考資料"
-                self.assertIn(reference_heading, item["body"])
-
-                expanded = item.copy()
-                expanded["body"] = expanded["body"].replace(
-                    reference_heading,
-                    "## 新增的台灣情境\n\n補充適用情況。\n\n" + reference_heading,
-                    1,
-                )
-                self.assertEqual(
-                    body_structure_issues(
-                        expanded,
-                        known_source_ids=known_source_ids,
-                        required_headings=required,
-                    ),
-                    [],
-                )
-
-                missing = item.copy()
-                missing["body"] = missing["body"].replace(
-                    "## " + required[0], "## 替代段落", 1
+                missing_heading = "## " + required[0]
+                self.assertIn(missing_heading, item["body"], item_id)
+                missing["body"] = item["body"].replace(
+                    missing_heading, "## 測試用取代段落", 1
                 )
                 errors = body_structure_issues(
                     missing,

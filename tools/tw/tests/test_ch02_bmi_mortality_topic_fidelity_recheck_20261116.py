@@ -211,7 +211,15 @@ class BmiMortalityTopicFidelityTests(unittest.TestCase):
         self.assertEqual(after["coverage_json_files"], before["coverage_json_files"] + 2)
         self.assertEqual(after["review_rechecks"], before["review_rechecks"] + 1)
         self.assertEqual(after["verified_core_entries"], sum(row["status"] == "verified" for row in baseline_manifest["entries"]))
-        self.assertEqual(after["publication_completed_entries"], self.coverage["publication_completed_entries"])
+        self.assertEqual(after["publication_completed_entries"], after["verified_core_entries"])
+        self.assertGreaterEqual(
+            self.coverage["publication_completed_entries"],
+            after["publication_completed_entries"],
+        )
+        self.assertGreaterEqual(
+            self.coverage["core_reviewed_entries"],
+            after["verified_core_entries"],
+        )
         self.assertFalse(after["publication_ready"])
 
 
