@@ -1868,8 +1868,9 @@ def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
         old_digest = hashlib.sha256(old.get("body", "").encode("utf-8")).hexdigest()
         if _pre_cleanup_reviewed_item(ROOT, new, cleanup, old_digest) == old:
             return
-    before_copy_cleanups = (_pre_cleanup_reviewed_item(ROOT, new, cleanup)
-                            if cleanup else new)
+    before_copy_cleanups = (_pre_cleanup_reviewed_item(
+        ROOT, new, cleanup, cleanup.get("before_sha256")
+    ) if cleanup else new)
     if old == before_copy_cleanups:
         return
     register = load(ROOT, "localization/retroactive-review-register-20261019.json")

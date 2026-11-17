@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
 
 from ci_language_policy import audit_drafts
+import retroactive_audit as audit
 from retroactive_audit import documented_revision
 from review_contract import validate_runtime
 
@@ -64,8 +65,9 @@ class CoFuelTopicFidelityTests(unittest.TestCase):
 
         cls.article_bytes = (ROOT / ARTICLE).read_bytes()
         cls.article = cls.article_bytes.decode("utf-8")
-        cls.review_bytes = (ROOT / REVIEW).read_bytes()
+        cls.review_bytes = at_batch(REVIEW)
         cls.review = json.loads(cls.review_bytes)
+        cls.current_review = read_json(REVIEW)
         cls.batch_bytes = at_batch(BATCH)
         cls.batch = json.loads(cls.batch_bytes)
         cls.bundle_bytes = at_batch(BUNDLE)
@@ -127,6 +129,28 @@ class CoFuelTopicFidelityTests(unittest.TestCase):
         self.assertEqual(self.review["source_checks"], self.history["source_checks"])
         self.assertEqual(self.review["statistics_assessed"], self.history["statistics_assessed"])
         self.assertEqual(self.review["topic_fidelity_review"], self.history["topic_fidelity_review"])
+
+    def test_reader_copy_cleanup_keeps_workflow_status_in_review_history(self):
+        cleanup = next(
+            row for row in self.current_register["reader_copy_cleanups"]
+            if row["id"] == ITEM_ID
+        )
+        self.assertEqual(cleanup["prior_revision"], self.batch_revision)
+        self.assertEqual(cleanup["before_sha256"], cleanup["after_sha256"])
+        previous = audit.validate_reader_copy_cleanup_history(
+            ROOT, cleanup, self.current_item
+        )
+        self.assertEqual(previous, self.snapshot_item)
+        expected_review = dict(self.review)
+        expected_review["reader_copy_cleanup"] = {
+            "transform": cleanup["transform"],
+            "before_sha256": cleanup["before_sha256"],
+            "after_sha256": cleanup["after_sha256"],
+            "before_reader_sha256": cleanup["before_reader_sha256"],
+            "after_reader_sha256": cleanup["after_reader_sha256"],
+        }
+        self.assertEqual(self.current_review, expected_review)
+        self.assertNotIn("本次為AI輔助逐項查核", self.current_item["limits"])
 
     def test_original_research_question_and_taiwan_case_context_are_preserved(self):
         required = (

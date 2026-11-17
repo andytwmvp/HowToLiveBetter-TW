@@ -48000,6 +48000,16 @@
       "before_reader_sha256": "87134d8e883ed5caf509d3c4ce5158348e4a77d8cc002e244dc07a47449f843f",
       "after_reader_sha256": "46e482fd12efd9620bc78e838c65d35c089d023c729e8e40b595caac224c07ce",
       "prior_review_sha256": "a5cba7f46f531ba67c5a261207c35382f5e7d1914765921943d8f5e95b7688c1"
+    },
+    {
+      "id": "TW-02-029",
+      "prior_revision": "fcfaf6ea8d0a0022b816047c1f91910fe335eaa1",
+      "transform": "reader_copy_cleanup_v4",
+      "before_sha256": "8b1dfb42a28fe6b8d30c98b4a195017c18d15cf63ca163697a05e19778ee0746",
+      "after_sha256": "8b1dfb42a28fe6b8d30c98b4a195017c18d15cf63ca163697a05e19778ee0746",
+      "before_reader_sha256": "81b9d210e63e6cc76692365536a6198967cafe697b0e04c721b47f71bdf399ec",
+      "after_reader_sha256": "1811d8876b2940793fe2428420decb8ea0bd6b567f30122cfd936022bbf21543",
+      "prior_review_sha256": "19ce8fbfea51633a0cbcfb8fc1f841e4185b6c779e57f264ae669647bbe95967"
     }
   ],
   "draft_substantive_rechecks": [

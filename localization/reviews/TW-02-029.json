@@ -132,7 +132,13 @@
     "tw02_taiwan_pm_exposure_cooking_2021",
     "tw02_moeaea_energy_consumption_2026"
   ],
-  "reader_copy_cleanup": null,
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v4",
+    "before_sha256": "8b1dfb42a28fe6b8d30c98b4a195017c18d15cf63ca163697a05e19778ee0746",
+    "after_sha256": "8b1dfb42a28fe6b8d30c98b4a195017c18d15cf63ca163697a05e19778ee0746",
+    "before_reader_sha256": "81b9d210e63e6cc76692365536a6198967cafe697b0e04c721b47f71bdf399ec",
+    "after_reader_sha256": "1811d8876b2940793fe2428420decb8ea0bd6b567f30122cfd936022bbf21543"
+  },
   "frequency_assessment": "消防署民國114年一氧化碳數字是全國行政通報，涵蓋不同來源且無使用器具或個人暴露分母。中國農村世代提供HR及每10萬人年調整後絕對死亡率差，但僅適用該研究地區與樣本。臺灣PM2.5研究是新北市單一社區26人、7日面板監測中的少數高暴露案例。查核截至2026-11-17，未找到可代表全臺家戶主要煮食／取暖固體燃料比例的分子分母；能源署民國114年總量資料不能替代家戶調查。",
   "statistics_assessed": [
     {
