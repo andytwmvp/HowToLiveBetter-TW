@@ -1860,7 +1860,7 @@ def assert_preserved_or_rechecked(case, old: dict, new: dict) -> None:
         return
     current_digest = hashlib.sha256(new.get("body", "").encode("utf-8")).hexdigest()
     cleanup = _reader_copy_cleanup_for(ROOT, old.get("id", ""), current_digest)
-    if cleanup:
+    if cleanup and cleanup.get("before_sha256") != cleanup.get("after_sha256"):
         # The historical snapshot may already be an intermediate reader-copy
         # revision (for example, after an earlier cleanup but before a later
         # one). Prove that exact object is an ancestor of today's copy-only

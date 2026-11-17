@@ -259,6 +259,30 @@ class RetroactiveAuditTests(unittest.TestCase):
         altered = dict(new, limits="changed")
         self.assertFalse(validate(old, altered, record))
 
+    def test_history_check_does_not_walk_body_hash_for_limits_only_cleanup(self):
+        previous = {"id": "TW-02-029", "body": "原始版本"}
+        reviewed = {"id": "TW-02-029", "body": "完成實質再審的正文"}
+        reviewed_sha = hashlib.sha256(reviewed["body"].encode("utf-8")).hexdigest()
+        old_sha = hashlib.sha256(previous["body"].encode("utf-8")).hexdigest()
+        cleanup = {"before_sha256": reviewed_sha, "after_sha256": reviewed_sha}
+        record = {"id": "TW-02-029", "after_sha256": reviewed_sha}
+        case = unittest.TestCase()
+
+        def cleanup_prior(_root, _item, _cleanup, target_sha256=None):
+            self.assertEqual(target_sha256, reviewed_sha)
+            return reviewed
+
+        with patch.object(audit, "_reader_copy_cleanup_for", return_value=cleanup), \
+             patch.object(audit, "_pre_cleanup_reviewed_item", side_effect=cleanup_prior) as prior, \
+             patch.object(audit, "load", return_value={"substantive_rechecks": [record]}), \
+             patch.object(audit, "documented_revision", return_value=True), \
+             patch.object(audit, "validate_recheck_history"):
+            audit.assert_preserved_or_rechecked(case, previous, reviewed)
+
+        self.assertEqual([call.args[3] for call in prior.call_args_list],
+                         [reviewed_sha, reviewed_sha])
+        self.assertNotEqual(old_sha, reviewed_sha)
+
     def test_reader_copy_cleanup_record_allows_only_the_declared_transform(self):
         validate = getattr(audit, "documented_reader_cleanup", None)
         self.assertTrue(callable(validate), "稽核器需驗證非實質性正文整理紀錄")
