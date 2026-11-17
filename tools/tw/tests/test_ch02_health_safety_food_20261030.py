@@ -30,6 +30,21 @@ class ChapterTwoHealthSafetyFoodTests(unittest.TestCase):
         batch_sources = {row[0]: row for row in batch["sources"]}
         recheck_sources = load("localization/tw-edition/sources/ch02-health-safety-recheck-20261106.json")
         batch_sources.update({row[0]: row for row in recheck_sources["sources"]})
+        co_recheck_sources = load(
+            "localization/tw-edition/sources/ch02-co-fuel-topic-fidelity-recheck-20261117.json"
+        )
+        batch_sources.update({row[0]: row for row in co_recheck_sources["sources"]})
+        baseline_runtime = json.loads(subprocess.check_output(
+            ["git", "show", f"{BASE}:localization/tw-edition/runtime.json"],
+            cwd=ROOT,
+            text=True,
+        ))
+        baseline_sources = {row["id"]: row for row in baseline_runtime["sources"]}
+        bundled_source_versions = {}
+        for path in (ROOT / "localization/tw-edition/sources").glob("*.json"):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            for row in data.get("sources", []):
+                bundled_source_versions.setdefault(row[0], []).append(row)
         for key in NEW_IDS:
             with self.subTest(id=key):
                 entry = manifest[key]
@@ -52,8 +67,19 @@ class ChapterTwoHealthSafetyFoodTests(unittest.TestCase):
                 else:
                     self.assertTrue(any("未取得獨立" in limit for limit in review["limits"]))
                 for source_id in item["source_ids"]:
-                    self.assertIn(source_id, batch_sources)
-                    self.assertEqual(batch_sources[source_id][2], sources[source_id]["url"])
+                    if source_id in batch_sources:
+                        self.assertEqual(batch_sources[source_id][2], sources[source_id]["url"])
+                    elif source_id in baseline_sources:
+                        self.assertEqual(sources[source_id]["url"], baseline_sources[source_id]["url"])
+                    else:
+                        # A later recheck may add sources to the same article.
+                        # Require a registered evidence bundle for that source,
+                        # without treating this older batch as its provenance.
+                        self.assertTrue(any(
+                            row[1] == sources[source_id]["title"]
+                            and row[2] == sources[source_id]["url"]
+                            for row in bundled_source_versions.get(source_id, [])
+                        ), source_id)
 
     def test_taiwan_risk_and_frequency_claims_keep_correct_units_and_limits(self):
         items = {item["id"]: item for item in validate_runtime()["items"]}

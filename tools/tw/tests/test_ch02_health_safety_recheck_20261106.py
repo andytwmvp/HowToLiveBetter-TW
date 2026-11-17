@@ -9,7 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from review_contract import ROOT, validate_runtime
-from retroactive_audit import validate_recheck_history
+from retroactive_audit import assert_preserved_or_rechecked, validate_recheck_history
 
 
 BASE = "f888451b95165a4bd6369b020eaa35ac531e3bc7"
@@ -64,14 +64,13 @@ class Chapter2HealthSafetyRecheckTests(unittest.TestCase):
         for item_id in ITEM_IDS:
             with self.subTest(item_id=item_id):
                 record = self.batch_items[item_id]
-                followup = next((row for row in self.register["substantive_rechecks"]
-                                 if row["id"] == item_id and row["reviewed_at"] == "2026-11-12"), None)
-                if followup is not None:
-                    # TW-02-047 was substantively re-reviewed after this batch.
-                    # Validate the 11/06 object against the exact prior snapshot,
-                    # then validate the append-only edge to the current object.
-                    self.assertEqual(item_id, "TW-02-047")
-                    revision = followup["prior_revision"]
+                followups = [row for row in self.register["substantive_rechecks"]
+                             if row["id"] == item_id and row["reviewed_at"] > "2026-11-06"]
+                first_followup = followups[0] if followups else None
+                if first_followup is not None:
+                    # Validate the 11/06 object against the exact snapshot before
+                    # its first later recheck; verify every append-only edge below.
+                    revision = first_followup["prior_revision"]
                     snapshot_runtime = json.loads(subprocess.check_output(
                         ["git", "show", f"{revision}:localization/tw-edition/runtime.json"],
                         cwd=ROOT,
@@ -89,7 +88,7 @@ class Chapter2HealthSafetyRecheckTests(unittest.TestCase):
                         text=True,
                     ))
                     manifest_entry = next(row for row in snapshot_manifest["entries"] if row["id"] == item_id)
-                    body = followup["previous_body"]
+                    body = first_followup["previous_body"]
                     body_bytes = body.encode("utf-8")
                 else:
                     item = self.items[item_id]
@@ -139,17 +138,19 @@ class Chapter2HealthSafetyRecheckTests(unittest.TestCase):
                         "denominator", "event_definition", "data_type", "limitations",
                     ):
                         self.assertTrue(statistic[key], (item_id, statistic["topic"], key))
-                if followup is None:
+                if first_followup is None:
                     self.assertEqual(record["after_sha256"], body_sha)
                     validate_recheck_history(ROOT, record, item)
                 else:
-                    self.assertEqual(followup["before_sha256"], record["after_sha256"])
+                    self.assertEqual(first_followup["before_sha256"], record["after_sha256"])
                     self.assertEqual(hashlib.sha256(body_bytes).hexdigest(), record["after_sha256"])
-                    self.assertEqual(hashlib.sha256(prior_review_bytes).hexdigest(), followup["prior_review_sha256"])
+                    self.assertEqual(hashlib.sha256(prior_review_bytes).hexdigest(), first_followup["prior_review_sha256"])
+                    for previous, following in zip(followups, followups[1:]):
+                        self.assertEqual(following["before_sha256"], previous["after_sha256"])
                     self.assertEqual(review["target_sha256"], record["after_sha256"])
                     current_item = self.items[item_id]
-                    self.assertEqual(followup["after_sha256"], hashlib.sha256(current_item["body"].encode("utf-8")).hexdigest())
-                    validate_recheck_history(ROOT, followup, current_item)
+                    self.assertEqual(followups[-1]["after_sha256"], hashlib.sha256(current_item["body"].encode("utf-8")).hexdigest())
+                    assert_preserved_or_rechecked(self, item, current_item)
 
     def test_source_history_is_preserved_and_replaced_sources_are_explicit(self):
         base_sources = {source["id"]: source for source in self.base_runtime["sources"]}

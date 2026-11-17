@@ -44556,6 +44556,528 @@
       "review_sha256": "7fb68f6e24b4fa886ddfbf1bd2849f7bded322f8a948f9464820b257114a4050",
       "source_bundle_path": "localization/tw-edition/sources/ch02-activity-food-topic-fidelity-recheck-20261117.json",
       "source_bundle_sha256": "3292e006ef487bf7254492559f662310fc2ced8d07e00f66f14e4802ca193a3a"
+    },
+    {
+      "id": "TW-02-029",
+      "before_sha256": "8f80997ab5a50778c7013ff2aa5e0f13f4875d31b37a2f1c11488b6ca721b846",
+      "after_sha256": "8b1dfb42a28fe6b8d30c98b4a195017c18d15cf63ca163697a05e19778ee0746",
+      "prior_revision": "7f9cc6e4f7b4346a669fe14a2ca9181399cd7bfc",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "0b65c4af609ab5d24ace635611c72a5a4a2a207e2a8a4d832a12e991a9faccca",
+      "prior_reviewed_at": "2026-11-06",
+      "prior_review_due_at": "2027-02-06",
+      "reviewed_at": "2026-11-17",
+      "review_due_at": "2027-02-17",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "臺灣仍有瓦斯爐具及戶外、特殊家戶燃燒情境；住家烹調亦有本地PM2.5短期監測。中國農村固體燃料死亡研究只作外地觀察性證據，沒有臺灣家戶主要固體燃料使用率分母。",
+      "frequency_assessment": "消防署民國114年一氧化碳數字是全國行政通報，涵蓋不同來源且無使用器具或個人暴露分母。中國農村世代提供HR及每10萬人年調整後絕對死亡率差，但僅適用該研究地區與樣本。臺灣PM2.5研究是新北市單一社區26人、7日面板監測中的少數高暴露案例。查核截至2026-11-17，未找到可代表全臺家戶主要煮食／取暖固體燃料比例的分子分母；能源署民國114年總量資料不能替代家戶調查。",
+      "changes": "保留原有臺灣一氧化碳急救、卡式爐、發電機及封閉陽臺實作；補回中國農村固體燃料長期死亡研究及臺灣住家PM2.5短期監測，明示研究族群、暴露定義、事件數、分母與外推限制。新增臺灣家戶主要固體燃料使用率資料不足說明；區分固體燃料長期暴露、瓦斯燃燒的一氧化碳風險及烹調油煙／微粒，沒有宣稱燃料切換的因果或延壽效果。",
+      "source_ids": [
+        "tw02_ntpc_co_cassette_2026",
+        "tw02_ntpc_camping_2024",
+        "tw02_taoyuan_co_fuel_devices",
+        "tw02_bsmi_cassette_stove_2026",
+        "tw_co_nfa_statistics_2025",
+        "tw02_twhch_co_enclosed_balcony_2026",
+        "tw02_moenv_indoor_air_sources_2026",
+        "tw02_nfa_gas_stove_safety_2023",
+        "tw02_jama_solid_fuel_china_mortality_2018",
+        "tw02_taiwan_pm_exposure_cooking_2021",
+        "tw02_moeaea_energy_consumption_2026"
+      ],
+      "previous_source_ids": [
+        "ch19_lsa",
+        "ch19_service",
+        "unemployment",
+        "ch19_service_false_info_2026",
+        "ch19_service_separation_2026"
+      ],
+      "retired_sources": [],
+      "source_checks": [
+        {
+          "source_id": "tw02_ntpc_co_cassette_2026",
+          "url": "https://www.fire.ntpc.gov.tw/PageDoc/Detail?fid=110&id=4715",
+          "title": "新北市政府消防局：寒流期間卡式爐、炭火與一氧化碳風險",
+          "claim": "新北市消防局說明寒流關窗時室內使用燃氣熱水器、卡式爐或炭火可能造成一氧化碳累積，並列疑似症狀。",
+          "supporting_passage": "2026-01-22公告列出頭暈、噁心、嘔吐或嗜睡等警訊，提醒撤離、保持空氣流通並求援。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取新北市消防局2026-01-22公告正文，核對寒流關窗、卡式爐／炭火／燃氣熱水器情境、症狀及撤離求援提醒。"
+        },
+        {
+          "source_id": "tw02_ntpc_camping_2024",
+          "url": "https://www.fire.ntpc.gov.tw/PageDoc/Detail?fid=108&id=3443",
+          "title": "新北市政府消防局：露營帳篷與車內不使用燃燒器具取暖",
+          "claim": "新北市消防局提醒燃燒取暖器具不可在帳篷或車內使用。",
+          "supporting_passage": "2024-01-25公告指出木炭、生火、煤油爐、氣化爐、汽化燈及瓦斯燈等火源不適合在帳棚或車內取暖。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取新北市消防局2024-01-25公告正文，核對帳篷及車內不可使用燃燒器具取暖的警示；不推論開窗即可消除風險。"
+        },
+        {
+          "source_id": "tw02_taoyuan_co_fuel_devices",
+          "url": "https://www.tyfd.gov.tw/cht/index.php?act=article&article_id=1080&code=detail&ids=152",
+          "title": "桃園市政府消防局：一氧化碳常見情境與防範方式",
+          "claim": "桃園市消防局列出密閉空間使用燃油發電機、瓦斯罐與炭火等一氧化碳暴露情境。",
+          "supporting_passage": "頁面更新日期2024-12-13；列停電時於密閉空間使用燃油發電機、車庫引擎廢氣、瓦斯罐及炭火等情境。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取桃園市消防局頁面與2024-12-13更新資訊，核對密閉空間發電機、車庫引擎、瓦斯及炭火等一氧化碳情境。"
+        },
+        {
+          "source_id": "tw02_bsmi_cassette_stove_2026",
+          "url": "https://www.bsmi.gov.tw/wSite/fp?ctNode=8155&mp=1&xItem=129617",
+          "title": "經濟部標準檢驗局：卡式爐安全使用提醒",
+          "claim": "標準檢驗局提醒卡式爐檢驗標識、瓦斯罐安裝、鍋具大小、多爐併用及通風。",
+          "supporting_passage": "頁面編修日期2026-10-01、更新日期2026-11-13；建議確認商品檢驗標識與中文說明、正確安裝瓦斯罐、避免大鍋或多爐併用，並保持良好通風。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取經濟部標準檢驗局頁面，核對編修日2026-10-01、更新日2026-11-13，以及商品檢驗、瓦斯罐、鍋具尺寸、多爐併用及通風提醒。"
+        },
+        {
+          "source_id": "tw_co_nfa_statistics_2025",
+          "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
+          "title": "基隆市政府消防局：轉引消防署114年一氧化碳事故統計",
+          "claim": "基隆市消防局轉引消防署114年全國一氧化碳事故行政數字。",
+          "supporting_passage": "公告轉引民國114年全國22件事故、5人死亡、59人送醫；沒有器具家戶、使用時數或暴露分母。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取基隆市消防局轉載頁，核對其轉引的消防署民國114年全國22件事故、5人死亡及59人送醫數字，並確認未列器具使用或暴露分母。"
+        },
+        {
+          "source_id": "tw02_twhch_co_enclosed_balcony_2026",
+          "url": "https://www.hch.gov.tw/?aid=503&iid=493&page_name=detail&pid=0",
+          "title": "國立臺灣大學醫學院附設醫院新竹臺大分院：陽臺不通風與一氧化碳中毒風險",
+          "claim": "新竹臺大分院說明加窗或封閉陽臺可能阻礙燃氣熱水器排氣並使廢氣迴流。",
+          "supporting_passage": "2026-05-21新聞稿記載陽臺加窗或採光罩可能使戶外熱水器排氣迴流；以一家庭個案說明情境，不代表全國發生率。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取新竹臺大分院2026-05-21新聞稿，核對陽臺加窗或採光罩可能造成排氣迴流及個案求援描述；只作情境例，不作全國發生率。"
+        },
+        {
+          "source_id": "tw02_moenv_indoor_air_sources_2026",
+          "url": "https://iaq.moenv.gov.tw/indoorair/introduction_mainSource.aspx",
+          "title": "環境部：室內空氣汙染物的主要來源",
+          "claim": "環境部列出室內烹飪與取暖的燃燒汙染來源，提醒瓦斯燃燒不代表室內沒有汙染物。",
+          "supporting_passage": "環境部頁面2026-11-13更新，列室內燃燒源包括烹飪與取暖；燃燒木材、煤、油或瓦斯可能產生一氧化碳、一氧化氮及二氧化氮。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取環境部室內空氣品質資訊網頁，核對2026-11-13更新日期及室內燃燒源段落；該頁支持汙染來源說明，不提供家戶使用率或疾病效應量。"
+        },
+        {
+          "source_id": "tw02_nfa_gas_stove_safety_2023",
+          "url": "https://mag.nfa.gov.tw/article.php?id=3714",
+          "title": "消防署：淺談瓦斯爐使用安全",
+          "claim": "消防署建議使用瓦斯爐時保持室內通風，必要時用排油煙機將燃燒廢氣排至屋外。",
+          "supporting_passage": "消防署2023-12-29文章建議炊煮時保持室內通風，亦可使用排油煙機適時將燃燒廢氣排至屋外，設備依說明由合格技術人員安裝維護。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取消防署消防月刊2023-12-29文章防範對策段落，核對瓦斯爐炊煮時保持通風、適時排煙及由合格人員安裝維護之建議。"
+        },
+        {
+          "source_id": "tw02_jama_solid_fuel_china_mortality_2018",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5933384/",
+          "title": "Yu等：中國農村固體燃料使用與全因及心血管死亡的世代研究（2018）",
+          "claim": "中國農村前瞻世代研究比較自述固體燃料與瓦斯、電力或集中供暖，報告全因及心血管死亡關聯。",
+          "supporting_passage": "PMC全文列招募期間、五個農村地區、271,217名基線成人、平均追蹤7.2年、15,468人死亡及5,519例心血管死亡；烹調與取暖固體燃料各自的HR和燃料改用比較均屬觀察性估計。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取JAMA全文及表2、表3，核對五個中國農村地區、收案及追蹤期間、主要燃料自陳定義、分析分母、死亡件數、調整後HR與每10萬人年絕對死亡率差。"
+        },
+        {
+          "source_id": "tw02_taiwan_pm_exposure_cooking_2021",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8247015/",
+          "title": "Lung等：臺灣家戶與個人烹調PM2.5暴露監測研究（2021）",
+          "claim": "臺灣小型面板研究描述一個木柴／木炭烤鴨店及一個麵包店烹調暴露案例；兩者不是燃料相同條件比較，也不是疾病結果。",
+          "supporting_passage": "論文記錄新北市單一社區26名成人7日監測；一家住家式烤鴨店兩名店主在木柴、木炭且無排煙情境的最大增量為73.3與76.5微克／立方公尺；另一名參與者在麵包店約145分鐘烹調暴露的最大增量為183.8。麵包店沒有室內外同步監測；案例用於說明暴露情境，不可作同條件燃料比較或家戶使用率。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取Lung等原始論文全文的方法及案例結果，核對新北市26名非吸菸成人7日監測、單一住家式烤鴨店兩名店主之73.3／76.5增量，以及麵包店個案183.8增量；確認這些是個案事件，不是燃料匹配比較或疾病結局。"
+        },
+        {
+          "source_id": "tw02_moeaea_energy_consumption_2026",
+          "url": "https://www.moeaea.gov.tw/ECW/populace/content/Content.aspx?menu_id=14436",
+          "title": "經濟部能源署：能源消費概況（民國114年）",
+          "claim": "能源署按部門與能源別統計年度能源消費總量，頁面沒有提供家戶主要煮食或取暖燃料戶數比例。",
+          "supporting_passage": "頁面列民國114年國內能源消費總量6,987萬公噸油當量，其中住宅部門604萬公噸油當量；另按能源別列總量，沒有家戶主要烹調／取暖燃料使用戶數與分母。內容更新日期2026-07-01。",
+          "accessed_at": "2026-11-17",
+          "retrieval_method": "直接讀取經濟部能源署「能源消費概況（民國114年）」頁面及更新日期2026-07-01；核對頁面提供部門／能源總量但未列家戶主要煮食或取暖燃料戶數，僅用來界定統計資料的範圍。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "中國五個農村地區固體燃料烹調／取暖與全因及心血管死亡",
+          "value": {
+            "participants": 271217,
+            "regular_cooking_participants": 179952,
+            "winter_heating_participants": 163882,
+            "all_cause_deaths": 15468,
+            "cardiovascular_deaths": 5519,
+            "cooking_analysis": {
+              "solid_fuel_n": 150992,
+              "solid_fuel_person_years": 1097985,
+              "comparison_fuel_n": 26559,
+              "comparison_fuel_person_years": 195392,
+              "excluded_unspecified_fuel_n": 2401
+            },
+            "heating_analysis": {
+              "solid_fuel_n": 147272,
+              "solid_fuel_person_years": 1060159,
+              "comparison_fuel_n": 14817,
+              "comparison_fuel_person_years": 103860,
+              "excluded_rare_heating_area_n": 56813,
+              "excluded_no_heating_n": 50522,
+              "excluded_unspecified_fuel_n": 1793
+            },
+            "solid_vs_comparison_fuel": {
+              "cooking_all_cause_HR_95_CI": [
+                1.11,
+                [
+                  1.03,
+                  1.2
+                ]
+              ],
+              "cooking_all_cause_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                338,
+                [
+                  249,
+                  427
+                ]
+              ],
+              "cooking_cardiovascular_HR_95_CI": [
+                1.2,
+                [
+                  1.02,
+                  1.41
+                ]
+              ],
+              "cooking_cardiovascular_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                135,
+                [
+                  77,
+                  193
+                ]
+              ],
+              "heating_all_cause_HR_95_CI": [
+                1.14,
+                [
+                  1.03,
+                  1.26
+                ]
+              ],
+              "heating_all_cause_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                392,
+                [
+                  297,
+                  487
+                ]
+              ],
+              "heating_cardiovascular_HR_95_CI": [
+                1.29,
+                [
+                  1.06,
+                  1.55
+                ]
+              ],
+              "heating_cardiovascular_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                175,
+                [
+                  118,
+                  231
+                ]
+              ]
+            },
+            "prior_switch_vs_persistent_solid_fuel": {
+              "cooking_all_cause_HR_95_CI": [
+                0.87,
+                [
+                  0.79,
+                  0.95
+                ]
+              ],
+              "cooking_cardiovascular_HR_95_CI": [
+                0.83,
+                [
+                  0.69,
+                  0.99
+                ]
+              ],
+              "heating_all_cause_HR_95_CI": [
+                0.67,
+                [
+                  0.57,
+                  0.79
+                ]
+              ],
+              "heating_cardiovascular_HR_95_CI": [
+                0.57,
+                [
+                  0.42,
+                  0.77
+                ]
+              ],
+              "cooking_all_cause_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                407,
+                [
+                  317,
+                  497
+                ]
+              ],
+              "cooking_cardiovascular_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                138,
+                [
+                  71,
+                  205
+                ]
+              ],
+              "heating_all_cause_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                492,
+                [
+                  383,
+                  601
+                ]
+              ],
+              "heating_cardiovascular_adjusted_rate_difference_per_100000_person_years_95_CI": [
+                193,
+                [
+                  128,
+                  258
+                ]
+              ]
+            }
+          },
+          "unit": "樣本人數、死亡事件數、調整後危險比（HR）及每10萬人年調整後絕對死亡率差（ARD）；不是個人發生率",
+          "period": "2004年6月至2008年7月招募；追蹤至2014年1月1日；平均追蹤7.2年",
+          "geographic_scope": "中國五個農村地區；非臺灣樣本",
+          "population": "271,217名基線沒有自述醫師診斷心血管疾病的成人；平均年齡51歲、59%為女性。烹調及取暖的暴露題目與模型分析分母不同。",
+          "numerator": "共15,468人死亡，其中5,519人為心血管死亡；烹調模型的固體／比較燃料組分別有7,955／855人全因死亡及2,957／180人心血管死亡；取暖模型分別有8,780／628人全因死亡及3,809／148人心血管死亡。",
+          "denominator": "烹調模型177,551人：固體燃料150,992人（1,097,985人年）、比較組26,559人（195,392人年）；取暖模型162,089人：固體燃料147,272人（1,060,159人年）、比較組14,817人（103,860人年）。",
+          "denominator_definition": "固體燃料為煤、木柴或木炭；比較組為瓦斯、電力或集中供暖。烹調模型排除不明燃料及非規律烹調者；取暖模型排除浙江（該樣本僅0.6%回報取暖）、不取暖及燃料不明者。HR是相對估計；ARD為調整後群體死亡率差。",
+          "event_definition": "死亡登記之全因死亡及心血管死亡；不是燃料事故件數。",
+          "data_type": "前瞻性觀察世代研究；主要燃料及既往切換由參與者自述；模型調整年齡、性別、地區及多項混雜因素。",
+          "limitations": "研究地區為中國農村；暴露為自述燃料，可能誤分類。能源使用與社經狀況相關，仍可能有殘餘混雜。HR與ARD只描述該研究樣本的調整後關聯，不能當成臺灣發生率、個人機率或改用燃料的因果效果。",
+          "source_ids": [
+            "tw02_jama_solid_fuel_china_mortality_2018"
+          ],
+          "accessed_at": "2026-11-17"
+        },
+        {
+          "topic": "新北市小型家戶PM2.5短期烹調暴露監測",
+          "value": {
+            "wood_charcoal_duck_roasting_shop_two_subject_max_increments_1_min_ug_m3": [
+              73.3,
+              76.5
+            ],
+            "bakery_work_cooking_without_solid_fuels_max_increment_1_min_ug_m3": 183.8
+          },
+          "unit": "特定烹調案例之最大1分鐘PM2.5增量（微克／立方公尺）；不是平均濃度、燃料對照估計、疾病發生率或死亡率",
+          "period": "2018年9月至10月連續監測7日；論文2020-12-31線上發表、2021年刊載",
+          "geographic_scope": "新北市單一社區的26人面板研究；一個住家式烤鴨店案例與一個麵包店工作暴露案例",
+          "population": "26名40至75歲健康非吸菸成人，無既有心血管疾病；連續7日監測個人、住家室內與室外PM2.5／PM1。兩個高暴露案例僅涉及部分參與者。",
+          "numerator": "烤鴨店兩名店主參與者的最大增量為73.3及76.5；另有一名參與者在麵包店工作約145分鐘，其最大增量為183.8。",
+          "denominator": "整體面板26人、7日；上述數值各是單一烤鴨店內兩名參與者的個人案例，以及一個麵包店工作暴露案例，不是各燃料組的群體估計。",
+          "denominator_definition": "烤鴨店使用木柴及木炭，且無排油煙設備；麵包店案例為工作場所烹調暴露，研究指出屬無固體燃料的現代烹調情境。兩案例不是相同場所、燃料、作業或排煙條件。",
+          "event_definition": "每個案例以事件前一小時平均濃度作背景，計算事件期間最大1分鐘PM2.5觀測值的增量；麵包店未同步量室內外濃度。",
+          "data_type": "單一新北社區26人的短期個人／住家空氣監測面板研究；文中另呈現特殊高暴露事件案例。",
+          "limitations": "小樣本、單一社區、僅7日且受試者健康非吸菸；烤鴨店及麵包店為不同場域的特定個案，非隨機或配對比較；沒有疾病或死亡結局，不能推估全臺家戶使用率或長期健康風險。",
+          "source_ids": [
+            "tw02_taiwan_pm_exposure_cooking_2021"
+          ],
+          "accessed_at": "2026-11-17"
+        },
+        {
+          "topic": "臺灣家戶以固體燃料作為主要煮食或取暖能源的全國比例",
+          "value": {
+            "domestic_energy_consumption_million_tonne_oil_equivalent": 69.87,
+            "residential_sector_consumption_million_tonne_oil_equivalent": 6.04,
+            "residential_sector_share_percent": 8.4,
+            "household_primary_solid_fuel_cooking_or_heating_share": "not reported"
+          },
+          "unit": "百萬公噸油當量與部門占比；不是家戶燃料使用比例",
+          "period": "民國114年（2025）能源消費；能源署頁面更新日2026-07-01；本次查閱2026-11-17",
+          "geographic_scope": "臺灣全國能源消費統計",
+          "population": "國內各部門能源消費；未以家戶為抽樣或列出個別家庭主要煮食／取暖燃料。",
+          "numerator": "住宅部門604萬公噸油當量，占全國能源消費總量8.4%；沒有家戶固體燃料使用戶數分子。",
+          "denominator": "全國能源消費總量6,987萬公噸油當量；沒有家戶數或使用固體燃料家庭數分母。",
+          "denominator_definition": "能源署以部門及能源別彙總能源總量；住宅部門能源消費不是家戶主要燃料使用比例。",
+          "event_definition": "年度能源消費總量，不是疾病、事故或家戶燃料使用事件。",
+          "data_type": "官方年度能源供需統計頁面之部門與能源別總量。",
+          "limitations": "官方頁列出能源部門總量及住宅部門占比，沒有區分家戶煮食／取暖的主要燃料、設備或戶數；不能由總量推估固體燃料家戶率。",
+          "source_ids": [
+            "tw02_moeaea_energy_consumption_2026"
+          ],
+          "accessed_at": "2026-11-17"
+        },
+        {
+          "topic": "消防署114年全國一氧化碳事故行政統計",
+          "value": "22件事故、5人死亡、59人送醫",
+          "unit": "事故件數、死亡人數及送醫人數分列",
+          "period": "民國114年（2025）",
+          "geographic_scope": "臺灣全國；由基隆市消防局轉引消防署統計",
+          "population": "114年行政登錄的一氧化碳事故與相關傷亡者，涵蓋多種來源。",
+          "numerator": "22件事故、5名死亡者及59名送醫者。",
+          "denominator": "未提供燃燒器具家戶、使用時數或暴露人口分母。",
+          "denominator_definition": "行政事故數不是燃燒器具使用人口或暴露人時。",
+          "event_definition": "消防署一氧化碳中毒事故行政統計；非單一器具專項。",
+          "data_type": "行政通報／消防年度統計轉引。",
+          "limitations": "事故、死亡與送醫單位不同；沒有個人暴露分母，不能計算發生率、器具風險率或事故致死率。",
+          "source_ids": [
+            "tw_co_nfa_statistics_2025"
+          ],
+          "accessed_at": "2026-11-17"
+        }
+      ],
+      "limits": [
+        "中國農村世代為觀察性研究，主要燃料由參與者自述；社經及其他暴露可能造成殘餘混雜。校正後HR與絕對死亡率差是該研究樣本的群體估計，不是臺灣發生率、個人機率或改用燃料的因果效果。",
+        "臺灣短期PM2.5監測只有新北市單一社區26名健康非吸菸成人、7日監測。烤鴨店及麵包店數字是少數案例最大增量，場所、燃料、作業與排煙條件不同，不是比較試驗，也沒有疾病或死亡結局。",
+        "目前未找到具全國代表性的臺灣家戶主要煮食／取暖固體燃料使用率調查。能源署年度總量依部門和能源別統計，不能換算家戶主要燃料比例；單一社區PM監測亦不能代替全國調查。",
+        "民國114年（2025）全國22件一氧化碳事故、5人死亡及59人送醫是行政事故和傷亡數，沒有器具家戶、使用時數或個人暴露分母。新竹臺大分院病例僅說明情境，不能推估全國發生率。",
+        "本次為AI輔助逐項查核，尚未取得獨立環境醫學、胸腔醫學、流行病學或消防安全專業審閱。"
+      ],
+      "unresolved_questions": [
+        "仍需具代表性且能區分主要煮食、取暖燃料及使用頻率的臺灣家戶調查，才能估算全國暴露分佈。",
+        "尚未取得環境醫學／室內空氣品質、胸腔、流行病學及消防安全獨立專業審閱。",
+        "各家庭改用電器的配電、設備、施工與費用須依個別住宅評估；本篇不提供通用費用。"
+      ],
+      "previous_body": "<!-- TW-ID: TW-02-029 -->\n\n# 卡式爐、炭火和發電機不在密閉空間使用，預防一氧化碳中毒\n\n## 適用情境與第一步\n\n在臺灣住家，陽臺加裝窗戶或採光罩、堆放物品擋住排氣，可能讓原本設在戶外的燃氣熱水器變成通風不良的空間，廢氣也可能迴流室內。寒流時緊閉門窗、在室內圍爐或用卡式爐取暖，颱風停電時把燃油發電機搬進室內，露營時在帳篷或車內使用燃燒器具，也可能讓一氧化碳累積。一氧化碳無色無味；若同一空間的人接連頭痛、頭暈、噁心、嘔吐、無力或嗜睡，先離開到戶外安全處，再撥119。不要為了關設備或救人折返危險空間。\n\n## 臺灣實作與下一步\n\n1. 卡式爐依產品說明在通風良好的場所使用，不在門窗緊閉的房間、帳篷、車內或封閉車庫使用，也不把它當作取暖器。炭火、烤肉爐與其他燃燒器具同樣不可在室內、帳篷或車庫使用。燃氣熱水器的安裝與通風，依[熱水器與管線安全指引](../ch01/TW-01-004.md)處理；封閉陽臺不能當作安全的戶外位置。\n2. 可攜式燃油發電機只在屋外開闊處操作，讓排氣遠離門窗及建築物進氣口；不要因下雨、噪音或怕失竊而搬進家中、封閉陽臺、地下室、車庫、帳篷或車內。停電時優先使用電池照明與合適的電器，並依設備說明處理燃油與接線。\n3. 選購卡式爐及瓦斯罐時，確認商品檢驗標識與中文說明；依說明安裝瓦斯罐，不用過大的鍋具遮住瓦斯罐，也不將多臺卡式爐併排。安全裝置因瓦斯罐過熱而熄火時，停止使用並排除原因，不要硬壓或反覆點火。\n4. 若有人出現疑似中毒症狀，能自行移動者先離開至戶外安全處，再撥119說明地址、人數和症狀。不要進入疑似有毒氣體的空間救人、關設備或取物；讓消防與救護人員處理。可參考[疑似一氧化碳中毒的求援方式](../ch13/TW-13-019.md)。\n\n## 成本與可期待的效益\n\n卡式爐和發電機依說明在合適場所使用，不需另外購買昂貴設備。若燃氣熱水器所在位置、排氣或通風有疑慮，請管理單位或合格技術人員檢查；安裝或改善費用依設備和施工情況而異。不能只靠開窗、抽油煙機或一氧化碳警報器取代正確安裝與使用方式。\n\n## 限制與常見誤解\n\n消防署114年（2025）統計經基隆市消防局轉引，全年全國有22件一氧化碳中毒事故、5人死亡、59人送醫。這是涵蓋各種來源的行政事故件數與傷亡人數，沒有使用燃燒器具的家戶數、使用時數或個人暴露分母；不能換算成個人發生率，也不能用死亡人數除以事故件數推算致死率。這些數字不是卡式爐、露營或發電機的單獨統計。\n\n燃氣熱水器即使裝在陽臺，若陽臺加窗、封閉或排氣受阻，也可能讓廢氣迴流；新竹臺大分院的臨床案例說明瞭這種住家情境，但不是全臺發生率。不同器具的風險來源和安裝方式不同，依產品說明及合格人員檢查，不要只因有開窗就判定安全。\n\n## 參考資料\n\n[新竹臺大分院：陽臺不通風與一氧化碳中毒風險](https://www.hch.gov.tw/?aid=503&iid=493&page_name=detail&pid=0)\n\n[新北市政府消防局：寒流期間卡式爐、炭火與一氧化碳風險](https://www.fire.ntpc.gov.tw/PageDoc/Detail?fid=110&id=4715)\n\n[新北市政府消防局：露營帳篷與車內不使用燃燒器具取暖](https://www.fire.ntpc.gov.tw/PageDoc/Detail?fid=108&id=3443)\n\n[桃園市政府消防局：一氧化碳常見情境與防範方式](https://www.tyfd.gov.tw/cht/index.php?act=article&article_id=1080&code=detail&ids=152)\n\n[經濟部標準檢驗局：卡式爐安全使用提醒](https://www.bsmi.gov.tw/wSite/fp?ctNode=8155&mp=1&xItem=129617)\n\n[基隆市政府消防局：消防署114年一氧化碳事故統計](https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html)\n",
+      "previous_review_snapshot": {
+        "id": "TW-02-029",
+        "reviewer": "ChatGPT（AI輔助逐項核對臺灣官方與公立醫療資料；未取得獨立相關專業審閱）",
+        "jurisdiction": "TW",
+        "reviewed_at": "2026-11-06",
+        "review_due_at": "2027-02-06",
+        "target_path": "locales/zh-TW/book/ch02/TW-02-029.md",
+        "target_sha256": "8f80997ab5a50778c7013ff2aa5e0f13f4875d31b37a2f1c11488b6ca721b846",
+        "source_checks": [
+          {
+            "url": "https://www.fire.ntpc.gov.tw/PageDoc/Detail?fid=110&id=4715",
+            "claim": "新北市消防局說明寒流關窗時燃氣熱水器、卡式爐或炭火可能造成一氧化碳累積，並說明疑似症狀求援。",
+            "supporting_passage": "2026-01-22公告列頭暈、噁心、嘔吐或嗜睡等警訊，建議將人員移至空氣流通處並撥119。",
+            "accessed_at": "2026-11-06",
+            "retrieval_method": "直接讀取新北市政府消防局2026-01-22公告正文。"
+          },
+          {
+            "url": "https://www.fire.ntpc.gov.tw/PageDoc/Detail?fid=108&id=3443",
+            "claim": "新北市消防局提醒燃燒器具不應在露營帳篷或車內取暖使用。",
+            "supporting_passage": "2024-01-25公告指出木炭、生火、煤油爐、氣化爐、汽化燈及瓦斯燈等耗氧取暖設備不適合在帳篷或車內使用。",
+            "accessed_at": "2026-11-06",
+            "retrieval_method": "直接讀取新北市政府消防局公告正文，引用不得在帳篷或車內使用的警示，不採用單靠開窗可消除風險的推論。"
+          },
+          {
+            "url": "https://www.tyfd.gov.tw/cht/index.php?act=article&article_id=1080&code=detail&ids=152",
+            "claim": "桃園市消防局列出停電時密閉空間使用燃油發電機、車庫引擎廢氣與其他燃燒情境。",
+            "supporting_passage": "桃園市消防局頁面更新日期2024-12-13，列停電時在密閉空間使用燃油發電機、車庫引擎、瓦斯罐或炭火等情境。",
+            "accessed_at": "2026-11-06",
+            "retrieval_method": "直接讀取桃園市消防局一氧化碳防範頁與頁面更新日期。"
+          },
+          {
+            "url": "https://www.bsmi.gov.tw/wSite/fp?ctNode=8155&mp=1&xItem=129617",
+            "claim": "標準檢驗局說明卡式爐認證、瓦斯罐安裝、鍋具大小及安全裝置。",
+            "supporting_passage": "選購具商品檢驗標識產品，正確對接瓦斯罐；避免鍋具過大或多爐併排，安全裝置因過熱熄火時停止使用。",
+            "accessed_at": "2026-11-06",
+            "retrieval_method": "直接讀取經濟部標準檢驗局卡式爐安全使用頁；依頁面內容核對產品操作提醒。"
+          },
+          {
+            "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
+            "claim": "基隆市消防局轉引消防署114年全國一氧化碳事故行政數字。",
+            "supporting_passage": "公告於2025-12-31發布，轉引民國114年全國22件事故、5人死亡、59人送醫；沒有器具使用戶數或暴露分母。",
+            "accessed_at": "2026-11-06",
+            "retrieval_method": "直接讀取基隆市消防局公告與發布日期，區分全國行政事故數、死亡人數及送醫人數。"
+          },
+          {
+            "url": "https://www.hch.gov.tw/?aid=503&iid=493&page_name=detail&pid=0",
+            "claim": "新竹臺大分院說明加窗或封閉陽臺可能阻礙燃氣熱水器排氣並使廢氣迴流。",
+            "supporting_passage": "2026-05-21急診醫師新聞稿記載陽臺加窗、加採光罩或堆物阻礙排氣的臨床情境，並提醒疑似中毒應離開現場、撥119；頁面標示最近更新2024-07-30，本文使用該頁病例作情境，不作發生率。",
+            "accessed_at": "2026-11-06",
+            "retrieval_method": "直接讀取新竹臺大分院急診醫師新聞稿、張貼日期、病例敘述與頁面更新資訊。"
+          }
+        ],
+        "localization_changes": "補入臺灣公寓陽臺加窗或封閉後燃氣熱水器排氣迴流的本地臨床情境，並明確區分室外開闊處、封閉陽臺及其他密閉空間；重新核對114年全國事故、死亡與送醫三種不同單位，不推算個人率或事故致死率。",
+        "review_method": "逐篇重讀原作主題、現行正文、先前審閱與來源；直接核對臺灣情境、可執行步驟、來源日期與具體支持主張。對統計逐項記錄期間、地區、對象、分子、分母、事件定義與限制；沒有可信全國頻率時標示資料不足。AI輔助來源核對不等於醫療、消防、食品安全或統計專業審閱。",
+        "limits": [
+          "民國114年（2025）全國22件一氧化碳事故、5人死亡及59人送醫是行政事故和傷亡數，沒有器具家戶、使用時數或個人暴露分母；Hsinchu醫療院所病例僅說明情境，不能用來推估全國發生率。",
+          "本次為AI輔助逐項來源核對，未取得獨立消防、急診或統計專業審閱；疑似中毒依119派遣與現場救災人員判斷。"
+        ],
+        "source_reviewed_sha256": "8f80997ab5a50778c7013ff2aa5e0f13f4875d31b37a2f1c11488b6ca721b846",
+        "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+        "upstream_text_sha256": "8c44f7e784cf21618235d178664495b155bc3d25c56af7d6c350e79f34598eaa",
+        "source_ids": [
+          "tw02_ntpc_co_cassette_2026",
+          "tw02_ntpc_camping_2024",
+          "tw02_taoyuan_co_fuel_devices",
+          "tw02_bsmi_cassette_stove_2026",
+          "tw_co_nfa_statistics_2025",
+          "tw02_twhch_co_enclosed_balcony_2026"
+        ],
+        "reader_copy_cleanup": null
+      },
+      "review_path": "localization/reviews/TW-02-029.json",
+      "topic_fidelity_review": {
+        "original_topic": "原作主題建議避免以煤或柴煮食、取暖，改用電力或瓦斯，並以中國農村固體燃料與死亡的世代研究作為理由。既有臺灣正文改為卡式爐、炭火、發電機及熱水器的一氧化碳急性風險，遺失長期固體燃料／家戶空氣汙染研究問題。",
+        "taiwan_relevance": "臺灣家用瓦斯爐、烹調排煙及一氧化碳安全具直接生活關聯；固體燃料長期死亡證據可作範圍清楚的國外觀察研究，不能代表台灣燃料使用率或個人風險。新北市短期面板包含木柴／木炭家戶式商業烤鴨與麵包店等具體本地暴露案例，不能把不同個案寫成燃料對照。",
+        "reader_content_decision": "保留在地一氧化碳急救與器具安全內容，補回有範圍的固體燃料長期健康研究及臺灣短期家戶PM2.5監測；補上臺灣家戶燃料使用率資料缺口，不把中國燃料轉換結果當成臺灣家庭的因果效果。",
+        "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+        "question_change": {
+          "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+          "previous_question": "我知道卡式爐、炭火與發電機的安全使用場所，以及疑似一氧化碳中毒時的撤離求援方式嗎？",
+          "current_question": "我知道如何預防一氧化碳中毒，也能辨認固體燃料和烹調汙染研究的適用範圍嗎？",
+          "rationale": "原稿只剩急性一氧化碳安全，沒有交代固體燃料長期健康研究。補回研究可回答原題；急救流程則維持臺灣版本，不以不同主題取代。"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "中國農村固體燃料烹調與取暖與全因及心血管死亡危險較高相關。",
+            "decision": "restore_as_bounded_observational_china_cohort_evidence",
+            "reason": "保留271,217人農村世代研究的對象、燃料定義、死亡件數、HR與非因果限制，不改成臺灣發生率或個人機率。"
+          },
+          {
+            "claim": "曾改用瓦斯、電力或集中供暖者的死亡HR較低。",
+            "decision": "retain_as_observational_association_only",
+            "reason": "不能證明燃料改用造成死亡下降；瓦斯仍是室內燃燒來源，不能稱為無汙染。"
+          },
+          {
+            "claim": "臺灣PM2.5短期面板中的木柴／木炭烤鴨店與麵包店烹調暴露案例，可補充本地燃燒和烹調暴露情境。",
+            "decision": "retain_as_small_local_case_exposure_evidence_not_fuel_comparison",
+            "reason": "烤鴨店兩位參與者與麵包店工作暴露的最大增量來自不同場所和作業，不能組成有／無固體燃料的相同條件比較，也不是疾病結局。"
+          },
+          {
+            "claim": "臺灣家戶主要使用固體燃料的全國比例。",
+            "decision": "do_not_estimate_without_representative_data",
+            "reason": "官方能源總量和小型監測研究都沒有家戶主要燃料比例的分子分母。"
+          }
+        ],
+        "frequency_evidence": "中國農村研究的燃料組比例只描述其研究地區與自陳暴露，不能外推臺灣。臺灣PM2.5研究是新北市26人、7日面板，其中73.3／76.5與183.8微克／立方公尺為不同場所的少數案例最大增量，不是家戶率或燃料比較。經濟部能源署民國114年總量資料沒有家戶主要煮食／取暖燃料分母；查核至2026-11-17未找到可代表全臺的比例。消防署2025年CO行政件數也沒有器具使用或個人暴露分母。",
+        "excluded_aspects": [
+          "未把中國農村死亡HR換算為臺灣發生率、個人機率或因果效果。",
+          "未將瓦斯描述為零汙染燃料，也未宣稱切換燃料必然延壽。",
+          "未把新北市26人PM2.5短期監測當成全臺家戶使用率或疾病風險。",
+          "未以空氣清淨機、抽油煙機或開窗作為密閉空間燃燒器具的安全替代。"
+        ]
+      },
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "環境醫學與室內空氣品質",
+          "胸腔醫學",
+          "流行病學與統計",
+          "消防安全"
+        ]
+      },
+      "source_bundle_sha256": "18e52d0949b8902cdd67cc0bf3c438792436246659b0e5f781145f02fb28a616",
+      "review_sha256": "19ce8fbfea51633a0cbcfb8fc1f841e4185b6c779e57f264ae669647bbe95967",
+      "previous_title": "卡式爐、炭火和發電機不在密閉空間使用，預防一氧化碳中毒",
+      "previous_question": "我知道卡式爐、炭火與發電機的安全使用場所，以及疑似一氧化碳中毒時的撤離求援方式嗎？",
+      "topic_fidelity_question_change": {
+        "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+        "previous_question": "我知道卡式爐、炭火與發電機的安全使用場所，以及疑似一氧化碳中毒時的撤離求援方式嗎？",
+        "current_question": "我知道如何預防一氧化碳中毒，也能辨認固體燃料和烹調汙染研究的適用範圍嗎？",
+        "rationale": "原稿只剩急性一氧化碳安全，沒有交代固體燃料長期健康研究。補回研究可回答原題；急救流程則維持臺灣版本，不以不同主題取代。"
+      },
+      "new_source_ids": [
+        "tw02_jama_solid_fuel_china_mortality_2018",
+        "tw02_taiwan_pm_exposure_cooking_2021",
+        "tw02_moeaea_energy_consumption_2026"
+      ],
+      "source_records_reused": [
+        "tw02_ntpc_co_cassette_2026",
+        "tw02_ntpc_camping_2024",
+        "tw02_taoyuan_co_fuel_devices",
+        "tw02_bsmi_cassette_stove_2026",
+        "tw_co_nfa_statistics_2025",
+        "tw02_twhch_co_enclosed_balcony_2026",
+        "tw02_moenv_indoor_air_sources_2026",
+        "tw02_nfa_gas_stove_safety_2023"
+      ]
     }
   ],
   "reader_copy_cleanups": [

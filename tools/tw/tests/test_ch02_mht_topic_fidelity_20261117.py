@@ -85,7 +85,17 @@ class MenopauseTopicFidelityTests(unittest.TestCase):
         self.assertIsNone(self.review["prior_structured_draft_sha256"])
         self.assertEqual(self.batch_item["prior_structured_source_refs"], ["menopause", "tfda"])
         base_register = json.loads(git_show(BASE, REGISTER_PATH))
-        self.assertEqual(self.register, base_register)
+        base_rechecks = base_register["substantive_rechecks"]
+        current_rechecks = self.register["substantive_rechecks"]
+        self.assertEqual(current_rechecks[:len(base_rechecks)], base_rechecks)
+        co_recheck = next(
+            row for row in current_rechecks[len(base_rechecks):]
+            if row["id"] == "TW-02-029" and row["reviewed_at"] == "2026-11-17"
+        )
+        self.assertEqual(
+            co_recheck["after_sha256"],
+            hashlib.sha256(self.items["TW-02-029"]["body"].encode("utf-8")).hexdigest(),
+        )
         self.assertFalse(any(
             row["id"] == ITEM_ID and row["reviewed_at"] == DATE
             for row in self.register["substantive_rechecks"]
@@ -215,7 +225,16 @@ class MenopauseTopicFidelityTests(unittest.TestCase):
         self.assertEqual(after["review_rechecks"], before["review_rechecks"])
         self.assertEqual(after["coverage_json_files"], before["coverage_json_files"] + 3)
         self.assertEqual(self.coverage["core_reviewed_entries"], after["verified_core_entries"])
-        self.assertEqual(self.coverage["registry_sources"], after["source_registry"])
+        base_rechecks = base_register["substantive_rechecks"]
+        later_source_ids = {
+            source_id
+            for row in self.register["substantive_rechecks"][len(base_rechecks):]
+            for source_id in row.get("new_source_ids", [])
+        }
+        self.assertEqual(
+            self.coverage["registry_sources"],
+            after["source_registry"] + len(later_source_ids),
+        )
         self.assertFalse(self.review["professional_review"]["obtained"])
 
 

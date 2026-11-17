@@ -2024,9 +2024,14 @@
         "tw02_taoyuan_co_fuel_devices",
         "tw02_bsmi_cassette_stove_2026",
         "tw_co_nfa_statistics_2025",
-        "tw02_twhch_co_enclosed_balcony_2026"
+        "tw02_twhch_co_enclosed_balcony_2026",
+        "tw02_moenv_indoor_air_sources_2026",
+        "tw02_nfa_gas_stove_safety_2023",
+        "tw02_jama_solid_fuel_china_mortality_2018",
+        "tw02_taiwan_pm_exposure_cooking_2021",
+        "tw02_moeaea_energy_consumption_2026"
       ],
-      "verified_at": "2026-11-06",
+      "verified_at": "2026-11-17",
       "upstream_path_uri": "book/02-%E4%B8%8D%E8%A6%81%E6%85%A2%E6%85%A2%E6%AD%BB.md",
       "display_path": "book/02-不要慢慢死.md",
       "source_title_zh_tw": "做飯、取暖不燒煤和柴，換成電或燃氣",
