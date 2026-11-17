@@ -1136,6 +1136,11 @@ def _pre_cleanup_reviewed_item(
         current = matching[0]
     if target_sha256 and hashlib.sha256(current.get("body", "").encode("utf-8")).hexdigest() == target_sha256:
         return current
+    if cleanup.get("before_sha256") == cleanup.get("after_sha256"):
+        # This cleanup changed only reader metadata. It cannot connect the
+        # current substantive body to any older body hash, and walking the
+        # copy history would revisit the same body digest indefinitely.
+        return current
     edges = _historical_reader_copy_edges(root, item["id"])
     seen = set()
     while True:
@@ -1647,32 +1652,50 @@ def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, di
         after_sha = record.get("after_sha256", "")
         if not re.fullmatch(r"[0-9a-f]{64}", after_sha):
             continue
-        revision = register_index.get(_register_record_signature("substantive_rechecks", record))
-        if revision is None:
-            continue
-        try:
-            commit_register = _git_json(root, revision, register_path)
-            committed = next((item for item in commit_register.get("substantive_rechecks", [])
-                              if item == record), None)
-            if committed is None:
+        indexed_revision = register_index.get(_register_record_signature("substantive_rechecks", record))
+        # A squash can make the latest main snapshot appear to be the first
+        # commit containing a review row, even when the original reviewed
+        # snapshot remains reachable through a merged PR side history. A linked
+        # reader-copy edge names that exact pre-cleanup revision by the same
+        # body SHA; prefer it when it also contains this immutable review row.
+        cleanup_revisions = [
+            cleanup.get("prior_revision", "")
+            for cleanup in reader_copy_cleanup_rows(root)
+            if (cleanup.get("id") == key and cleanup.get("before_sha256") == after_sha
+                and re.fullmatch(r"[0-9a-f]{40}", cleanup.get("prior_revision", "")))
+        ]
+        candidates = list(dict.fromkeys(cleanup_revisions + ([indexed_revision] if indexed_revision else [])))
+        for revision in candidates:
+            if revision in cleanup_revisions and revision != indexed_revision:
+                if subprocess.run(
+                    ["git", "merge-base", "--is-ancestor", revision, head],
+                    cwd=root, capture_output=True,
+                ).returncode != 0:
+                    continue
+            try:
+                commit_register = _git_json(root, revision, register_path)
+                committed = next((item for item in commit_register.get("substantive_rechecks", [])
+                                  if item == record), None)
+                if committed is None:
+                    continue
+                pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
+                if pair in seen:
+                    break
+                if revision not in runtime_cache:
+                    runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
+                prior_revision = committed.get("prior_revision", "")
+                if prior_revision not in runtime_cache:
+                    runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
+                old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
+                new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
+                old, new = old_items.get(key), new_items.get(key)
+                if old is None or new is None or not _historical_edge_is_valid(root, revision, committed, old, new):
+                    continue
+                seen.add(pair)
+                ranked_edges.append((order.get(revision, -1), (old, new, committed)))
+                break
+            except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
                 continue
-            pair = (committed.get("before_sha256", ""), committed.get("after_sha256", ""))
-            if pair in seen:
-                continue
-            if revision not in runtime_cache:
-                runtime_cache[revision] = _git_json(root, revision, "localization/tw-edition/runtime.json")
-            prior_revision = committed.get("prior_revision", "")
-            if prior_revision not in runtime_cache:
-                runtime_cache[prior_revision] = _git_json(root, prior_revision, "localization/tw-edition/runtime.json")
-            old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
-            new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
-            old, new = old_items.get(key), new_items.get(key)
-            if old is None or new is None or not _historical_edge_is_valid(root, revision, committed, old, new):
-                continue
-            seen.add(pair)
-            ranked_edges.append((order.get(revision, -1), (old, new, committed)))
-        except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
-            continue
     edges = [edge for _, edge in sorted(ranked_edges, key=lambda entry: entry[0])]
     _HISTORY_EDGE_CACHE[cache_key] = edges
     return edges

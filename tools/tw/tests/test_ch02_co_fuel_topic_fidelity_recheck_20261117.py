@@ -42,21 +42,20 @@ def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def added_revision(path):
-    revisions = subprocess.run(
-        ["git", "log", "--diff-filter=A", "--format=%H", "--", path],
-        cwd=ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
-    ).stdout.splitlines()
-    return revisions[0] if revisions else None
-
-
 class CoFuelTopicFidelityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.batch_revision = added_revision(BATCH)
+        cls.current_register = read_json(REGISTER)
+        cleanup = next(
+            row for row in cls.current_register["reader_copy_cleanups"]
+            if row["id"] == ITEM_ID
+        )
+        cls.batch_revision = cleanup["prior_revision"]
+        subprocess.run(
+            ["git", "merge-base", "--is-ancestor", cls.batch_revision, "HEAD"],
+            cwd=ROOT,
+            check=True,
+        )
 
         def at_batch(path):
             if cls.batch_revision:
@@ -79,7 +78,6 @@ class CoFuelTopicFidelityTests(unittest.TestCase):
         cls.snapshot_manifest = json.loads(at_batch("localization/manifest.json"))
         cls.snapshot_coverage = json.loads(at_batch("localization/tw-edition/coverage.json"))
         cls.snapshot_register = json.loads(at_batch(REGISTER))
-        cls.current_register = read_json(REGISTER)
         cls.snapshot_item = next(x for x in cls.snapshot_runtime["items"] if x["id"] == ITEM_ID)
         cls.snapshot_manifest_item = next(
             x for x in cls.snapshot_manifest["entries"] if x["id"] == ITEM_ID

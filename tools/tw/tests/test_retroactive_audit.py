@@ -283,6 +283,47 @@ class RetroactiveAuditTests(unittest.TestCase):
                          [reviewed_sha, reviewed_sha])
         self.assertNotEqual(old_sha, reviewed_sha)
 
+    def test_body_neutral_cleanup_cannot_bridge_to_an_older_body_hash(self):
+        current = {
+            "id": "TW-02-029",
+            "title": "在地指引",
+            "body": "完成實質再審的正文",
+            "limits": "已整理的讀者限制。",
+            "question": "讀者自我檢視問題？",
+        }
+        previous = dict(current, limits="原審閱限制；內部流程文字。")
+        current_body_sha = hashlib.sha256(current["body"].encode("utf-8")).hexdigest()
+        older_body_sha = hashlib.sha256("更早的正文".encode("utf-8")).hexdigest()
+        cleanup = {
+            "id": current["id"],
+            "transform": "reader_copy_cleanup_v4",
+            "before_sha256": current_body_sha,
+            "after_sha256": current_body_sha,
+            "before_reader_sha256": audit._reader_fields_sha256(previous),
+            "after_reader_sha256": audit._reader_fields_sha256(current),
+        }
+        review_marker = {
+            key: cleanup[key]
+            for key in (
+                "transform", "before_sha256", "after_sha256",
+                "before_reader_sha256", "after_reader_sha256",
+            )
+        }
+
+        with patch.object(
+            audit, "load", return_value={"reader_copy_cleanup": review_marker}
+        ), patch.object(
+            audit, "validate_reader_copy_cleanup_history", return_value=previous
+        ), patch.object(
+            audit, "_historical_reader_copy_edges",
+            side_effect=AssertionError("同一正文雜湊的整理邊不可連到更舊正文"),
+        ):
+            result = audit._pre_cleanup_reviewed_item(
+                audit.ROOT, current, cleanup, older_body_sha
+            )
+
+        self.assertEqual(result, previous)
+
     def test_reader_copy_cleanup_record_allows_only_the_declared_transform(self):
         validate = getattr(audit, "documented_reader_cleanup", None)
         self.assertTrue(callable(validate), "稽核器需驗證非實質性正文整理紀錄")
