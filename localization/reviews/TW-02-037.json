@@ -1,0 +1,96 @@
+{
+  "id": "TW-02-037",
+  "reviewer": "ChatGPT（AI協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-18",
+  "review_due_at": "2027-02-18",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-037.md",
+  "target_sha256": "46bb26f8a10a845e969cb2664ecf29cae8e9347a83e48e55c65e17756780455f",
+  "source_reviewed_sha256": "46bb26f8a10a845e969cb2664ecf29cae8e9347a83e48e55c65e17756780455f",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-sleep-food-20261118.json",
+  "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+  "source_checks": [
+    {
+      "source_id": "tw02_jama_daytime_napping_mortality_2026",
+      "title": "Gao等：客觀測量午睡型態與高齡者全因死亡（2026）",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2847953",
+      "claim": "午睡定義、北伊利諾州高齡社區族群、活動紀錄方式、追蹤、死亡數和每多一小時午睡調整後HR。",
+      "supporting_passage": "JAMA Network Open摘要／全文：1338名56歲以上者；午睡定義為9am至7pm；平均追蹤8.30年、926人死亡；每多1小時午睡調整後HR 1.13（95% CI 1.04–1.23）；93.3%自陳為白人。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱JAMA Network Open論文全文與摘要，核對研究地區、納入對象、午睡定義、裝置期間、追蹤時間、死亡數、族群構成及調整後HR。"
+    }
+  ],
+  "localization_changes": "保留午睡與健康風險研究問題；補入美國研究的午睡定義、族群、追蹤、死亡數與HR，明確拒絕把觀察關聯升格成所有人的30分鐘／1小時上限，維持持續嗜睡時的台灣就醫和駕駛安全指引。",
+  "review_method": "重讀原作固定ID、目前章節結構化草稿與原作文字雜湊，檢查最新manifest、目標正文與既有同主題閱讀內容；逐項查核官方指引或原始研究，核對來源對應主張、研究族群、期間、暴露／結局定義、分子分母、資料型態及限制。用台灣情境撰寫實際行動；沒有同口徑台灣統計時明示資料不足，不把觀察研究換算成個人機率。AI查核不是獨立營養、醫療或流行病學專家審閱。",
+  "limits": [
+    "午睡與死亡結果來自美國北伊利諾州高齡社區隊列，且多數受試者為白人；觀察性危險比不是午睡造成的個人死亡機率，也不能套用為台灣所有年齡的午睡上限。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+  "source_ids": [
+    "tw02_jama_daytime_napping_mortality_2026"
+  ],
+  "frequency_assessment": "沒有找到以一致午睡定義、代表台灣全體成人並連結追蹤死亡的全國統計。JAMA研究為1,338名北伊利諾州社區成人，平均81.4歲，平均追蹤8.30年；926人死亡。研究中的每小時調整後HR 1.13是群體相對估計，不能換算台灣個人發生機率。",
+  "statistics_assessed": [
+    {
+      "topic": "每日午睡時間每多一小時與高齡者全因死亡關聯",
+      "value": {
+        "adjusted_HR_per_hour": 1.13,
+        "95_CI": [
+          1.04,
+          1.23
+        ],
+        "deaths": 926,
+        "cohort": 1338
+      },
+      "unit": "前瞻性觀察隊列調整後危險比；全隊列追蹤死亡事件數",
+      "period": "分析基線始於2005年8月；資料收集至2025年4月；平均追蹤8.30年（SD 4.78）",
+      "geographic_scope": "美國北伊利諾州Rush Memory and Aging Project社區研究",
+      "population": "1,338名56歲以上社區成人；平均81.4歲，女性1,018人（76.0%），自陳白人1,249人（93.3%）",
+      "numerator": "全因死亡926人（69.2%）",
+      "denominator": "追蹤分析隊列1,338人；HR為調整後Cox模型估計，不是死亡率的分子／分母比值",
+      "denominator_definition": "完成活動紀錄且有追蹤／死亡資料的合格社區成人；最多14天活動紀錄、平均9.58天",
+      "event_definition": "基線午睡特徵之後的全因死亡；午睡定義為上午9時至晚上7時的睡眠事件",
+      "data_type": "前瞻性觀察世代研究；活動紀錄儀最多14天；Cox比例風險模型",
+      "limitations": "不是隨機午睡試驗；午睡較長可能反映未測量疾病或夜間睡眠問題；隊列多為高齡、白人及美國單一研究群體，不能轉換為台灣個人死亡機率或固定午睡上限。",
+      "source_ids": [
+        "tw02_jama_daytime_napping_mortality_2026"
+      ],
+      "accessed_at": "2026-11-18"
+    }
+  ],
+  "unresolved_questions": [
+    "未取得睡眠醫學／老年醫學及流行病學專業人員獨立審閱。",
+    "缺乏台灣高齡者客觀午睡與死亡追蹤的同口徑全國研究。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "睡眠醫學",
+      "老年醫學",
+      "睡眠流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "c797f6191b18184bbfa2e4b361dc2917b9fa1870ded340fd9f11fbfabb698b39",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留午睡型態與健康研究；明示單一高齡美國觀察隊列不能建立人人固定的午睡上限，並保留持續嗜睡時評估原因與避免疲勞駕駛的指引。",
+  "topic_fidelity_review": {
+    "decision": "retain_nap_health_question_reject_fixed_30_minute_cutoff",
+    "original_question": "午睡時間是否應限制為半小時或一小時；長睡是否需要查原因？",
+    "reader_content_decision": "保留午睡型態與健康研究；明示單一高齡美國觀察隊列不能建立人人固定的午睡上限，並保留持續嗜睡時評估原因與避免疲勞駕駛的指引。",
+    "historical_claim_decisions": [
+      {
+        "claim": "所有人午睡一律不超過30分鐘或1小時",
+        "decision": "not_supported_as_universal_cutoff",
+        "reason": "研究顯示高齡特定隊列中的觀察關聯，並非隨機試驗或午睡時長處方。"
+      },
+      {
+        "claim": "長午睡可能是健康或夜間睡眠問題訊號",
+        "decision": "retain_as_bounded_association",
+        "reason": "只建議留意持續或新出現的變化並評估原因，不以午睡時間自行診斷疾病。"
+      }
+    ]
+  }
+}

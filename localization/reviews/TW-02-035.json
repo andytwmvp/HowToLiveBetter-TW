@@ -1,0 +1,113 @@
+{
+  "id": "TW-02-035",
+  "reviewer": "ChatGPT（AI協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-18",
+  "review_due_at": "2027-02-18",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-035.md",
+  "target_sha256": "6f62b59f29588f3a44e2be6f79f21b01751afcb036bd24bdbded2deae2ecfc98",
+  "source_reviewed_sha256": "6f62b59f29588f3a44e2be6f79f21b01751afcb036bd24bdbded2deae2ecfc98",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-sleep-food-20261118.json",
+  "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_food_standards_20261118",
+      "title": "國健署：健康飲食標準與食物代換份量",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=718",
+      "claim": "國健署食物份量換算：240毫升乳品及一顆蛋各列為相應食物類別的一份；不是每日強制份量或上限。",
+      "supporting_passage": "健康飲食標準頁的食物份量換算表列240毫升乳品為一份乳品、一顆蛋為一份豆魚蛋肉類。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "查閱國健署健康飲食標準及份量換算頁，核對240毫升乳品和一顆蛋的食物份量分類，並確認頁面當時標示的修訂狀態及更新日期。"
+    },
+    {
+      "source_id": "tw02_egg_health_umbrella_2025",
+      "title": "Duan等：雞蛋攝取與健康結果的傘狀回顧（2025）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39934049/",
+      "claim": "2025年雞蛋攝取傘狀回顧納入14項統合分析，其中10項觀察研究、4項介入研究；整體品質極低，未見高低攝取組全因死亡與整體心血管結果有明確關聯。",
+      "supporting_passage": "PubMed摘要與全文結果：納入14項統合分析（10項觀察、4項介入）；研究異質性高、品質 critically low；沒有證據支持高低雞蛋攝取組全因死亡或整體心血管結果有關聯，不足以建議避免雞蛋。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "查閱PubMed摘要與論文公開全文，核對納入的統合分析類型與篇數、研究品質、異質性及高低攝取比較的結論。"
+    },
+    {
+      "source_id": "tw02_tfda_egg_safety_2026",
+      "title": "澎湖縣衛生局：雞蛋保存與充分加熱（食藥署國內衛生局新聞刊載）",
+      "url": "https://www.fda.gov.tw/Tc/csmnewsContent.aspx?id=t634369&mid=267",
+      "claim": "雞蛋保存、避免生／未熟蛋、洗手與避免生熟食交叉汙染的衛教。",
+      "supporting_passage": "食藥署國內衛生局新聞頁刊載澎湖縣衛生局2026-06-24文章，提醒注意保存、充分加熱、處理前後洗手並分開生熟食器具。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "查閱食藥署國內衛生局新聞頁及刊載文章，核對發布機關、發布日期與雞蛋保存、加熱、手部清潔及交叉汙染建議。"
+    }
+  ],
+  "localization_changes": "保留原作「一天一顆上限是否成立」的問題；納入2025傘狀回顧和研究品質限制，將國健署一顆蛋定位為份量換算而非每日上限，並補充台灣雞蛋保存、充分加熱與交叉汙染預防。",
+  "review_method": "重讀原作固定ID、目前章節結構化草稿與原作文字雜湊，檢查最新manifest、目標正文與既有同主題閱讀內容；逐項查核官方指引或原始研究，核對來源對應主張、研究族群、期間、暴露／結局定義、分子分母、資料型態及限制。用台灣情境撰寫實際行動；沒有同口徑台灣統計時明示資料不足，不把觀察研究換算成個人機率。AI查核不是獨立營養、醫療或流行病學專家審閱。",
+  "limits": [
+    "台灣沒有按雞蛋攝取量分層並可估算心血管事件或死亡個人風險的全國資料；2025傘狀回顧整體品質極低，缺乏關聯不等於不限量安全。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+  "source_ids": [
+    "tw02_hpa_food_standards_20261118",
+    "tw02_egg_health_umbrella_2025",
+    "tw02_tfda_egg_safety_2026"
+  ],
+  "frequency_assessment": "未找到可代表台灣居民並依雞蛋攝取量分組、同時提供死亡或心血管事件母數的全國統計。2025年傘狀回顧納入14項統合分析，但整體品質極低且異質性高；研究結論不是個人每日安全上限，也不支持換算台灣個人機率。",
+  "statistics_assessed": [
+    {
+      "topic": "雞蛋攝取高低組與全因死亡、心血管結果",
+      "value": {
+        "included_meta_analyses": 14,
+        "observational": 10,
+        "interventional": 4,
+        "quality": "critically low"
+      },
+      "unit": "系統性回顧傘狀回顧之研究數、類型與整體品質判定",
+      "period": "2025年出版；納入的原始統合分析涵蓋期間不一",
+      "geographic_scope": "多國系統性回顧，非台灣全國調查",
+      "population": "14篇統合分析所彙整的多個研究族群；傘狀回顧未提供可視為一個樣本的總參與者數",
+      "numerator": "不適用：多個統合分析彙整不同疾病及死亡研究，沒有單一合併病例數可代表全部結果",
+      "denominator": "各結局依所納入統合分析而異，不能合併成單一人數分母",
+      "denominator_definition": "比較較高與較低雞蛋攝取的不同觀察性及介入分析；研究暴露和結局定義不一",
+      "event_definition": "全因死亡及多種心血管結果；非台灣每人每日攝取量對應的個人事件機率",
+      "data_type": "系統性回顧的傘狀回顧，納入10項觀察性及4項介入研究統合分析；高異質性、整體品質極低",
+      "limitations": "缺乏高品質證據不能等同已證明零風險或無限量安全；研究族群、攝取分類與結局差異大；無台灣依雞蛋攝取量分層之死亡或心血管絕對風險資料。",
+      "source_ids": [
+        "tw02_egg_health_umbrella_2025"
+      ],
+      "accessed_at": "2026-11-18"
+    }
+  ],
+  "unresolved_questions": [
+    "未取得營養學／心血管流行病學及食品衛生專業人員獨立審閱。",
+    "傘狀回顧整體證據品質極低，仍需較高品質研究釐清個別族群適用性。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學",
+      "心血管流行病學",
+      "食品衛生"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "4d0725e27b4629cb7c1aaa91e1ee58870fd269775eda40697af6ff0e3ef2c299",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留雞蛋攝取與心血管／死亡證據，釐清食物份量換算不是每日上限，並加入台灣常見食安處理方式。",
+  "topic_fidelity_review": {
+    "decision": "retain_egg_intake_question_without_universal_cap_or_unlimited_safety_claim",
+    "original_question": "雞蛋是否必須限制在一天一顆以內？",
+    "reader_content_decision": "保留雞蛋攝取與心血管／死亡證據，釐清食物份量換算不是每日上限，並加入台灣常見食安處理方式。",
+    "historical_claim_decisions": [
+      {
+        "claim": "所有人每日最多一顆蛋",
+        "decision": "not_supported_as_universal_rule",
+        "reason": "國健署一顆蛋是食物份量換算；2025傘狀回顧未提供可支持人人一顆上限的高品質證據。"
+      },
+      {
+        "claim": "研究未見高低攝取差異即可無限量吃蛋",
+        "decision": "explicitly_rejected",
+        "reason": "傘狀回顧整體證據品質極低且研究異質，未顯示關聯不等於證明不限量安全。"
+      }
+    ]
+  }
+}

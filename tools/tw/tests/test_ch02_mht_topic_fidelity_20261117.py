@@ -224,16 +224,22 @@ class MenopauseTopicFidelityTests(unittest.TestCase):
         self.assertEqual(after["source_registry"], before["source_registry"] + len(SOURCE_IDS))
         self.assertEqual(after["review_rechecks"], before["review_rechecks"])
         self.assertEqual(after["coverage_json_files"], before["coverage_json_files"] + 3)
-        self.assertEqual(self.coverage["core_reviewed_entries"], after["verified_core_entries"])
+        current_verified_core = sum(row["status"] == "verified" for row in self.manifest.values())
+        self.assertEqual(self.coverage["core_reviewed_entries"], current_verified_core)
+        self.assertGreaterEqual(current_verified_core, after["verified_core_entries"])
         base_rechecks = base_register["substantive_rechecks"]
         later_source_ids = {
             source_id
             for row in self.register["substantive_rechecks"][len(base_rechecks):]
             for source_id in row.get("new_source_ids", [])
         }
-        self.assertEqual(
+        self.assertGreaterEqual(
             self.coverage["registry_sources"],
             after["source_registry"] + len(later_source_ids),
+        )
+        self.assertEqual(
+            self.coverage["registry_sources"],
+            audit_drafts()["registry_sources"],
         )
         self.assertFalse(self.review["professional_review"]["obtained"])
 

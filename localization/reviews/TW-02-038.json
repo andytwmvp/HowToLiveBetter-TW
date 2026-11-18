@@ -1,0 +1,195 @@
+{
+  "id": "TW-02-038",
+  "reviewer": "ChatGPT（AI協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-18",
+  "review_due_at": "2027-02-18",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-038.md",
+  "target_sha256": "151faeba232ab4ffc77683d493df7a38470247a9bb54d2ea9598bb61933105b5",
+  "source_reviewed_sha256": "151faeba232ab4ffc77683d493df7a38470247a9bb54d2ea9598bb61933105b5",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-sleep-food-20261118.json",
+  "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+  "source_checks": [
+    {
+      "source_id": "tw02_acute_sleep_rebound_mortality_2026",
+      "title": "Li等：急性睡眠限制後回補睡眠與死亡關聯（2026）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13121452/",
+      "claim": "UK Biobank 85,618人、至少3日有效活動紀錄；2013-06-01至2015-12-23蒐集574,230個人夜；中位追蹤8年、3,549人死亡。核對個人睡眠需求估算、限制期與限制後夜定義、五組人數、全因死亡調整HR及NHANES複現。",
+      "supporting_passage": "全文結果與圖1、圖3：85,618人，至少3日有效加速度計資料，2013-06-01至2015-12-23蒐集574,230個人夜；中位追蹤8年共3,549人死亡。個人睡眠需求取本人平均睡眠與年齡／性別組平均值較高者；各次限制期後第一晚為限制後夜，跨限制後夜平均超額睡眠大於0才歸有回補。未回補一般／嚴重限制組 HR 1.15（1.01–1.31）／1.42（1.24–1.63）；有回補組1.12（0.98–1.28）／1.13（0.95–1.36），後兩組信賴區間含1。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱PMC全文結果、方法、圖1與圖3，核對加速度計資料期間、有效觀察日門檻、個人需求演算法、限制與回補定義、各組人數、死亡分子、調整後HR及NHANES獨立複現。"
+    },
+    {
+      "source_id": "tw02_weekend_catchup_sleep_2024",
+      "title": "Chaput等：裝置測量週末補眠、死亡與心血管疾病發生（2024）",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10193855/",
+      "claim": "核對UK Biobank週末補眠定義、加速度計資料期間、研究追蹤、死亡與心血管疾病分析母數及事件數；另記論文表1描述性樣本中的心血管事件數，避免混用不同分析分母。",
+      "supporting_passage": "UCL典藏作者接受稿的方法、Figure 1至3、Table 1與Table 2：加速度計資料蒐集2013-06-01至2015-12-23；死亡分析73,513人、2,776例死亡，心血管分析70,518人、Figure 1與Figure 3列9,092件事件，平均追蹤8.0年（SD 0.9）。Table 1的描述性樣本為73,513人，另列心血管事件12,108件，分組計數為6,182、3,514、1,756、656；此表格計數與主要心血管分析母數不同，不可互換。≥2小時組死亡HR 1.17（0.97–1.41），心血管HR 1.05（0.94–1.18）。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱UCL典藏作者接受稿方法、流程圖、Figure 1至3及Table 1至2，核對研究地區、睡眠暴露定義、資料蒐集期、各結局分析樣本和事件計數；注意Table 1描述性樣本與主要心血管分析的母數不同。"
+    }
+  ],
+  "localization_changes": "保留少睡後恢復及隔夜／週末補眠的核心問題；分列2026年急性睡眠回補和2024年週末補眠兩項英國研究的族群、定義與結局，避免將不同設計合併、推導因果或宣稱週末補眠已證實有害。 移除未由本篇研究來源支持、且超出本文研究主題的酒精及助眠藥提醒。",
+  "review_method": "重讀原作固定ID、目前章節結構化草稿與原作文字雜湊，檢查最新manifest、目標正文與既有同主題閱讀內容；逐項查核官方指引或原始研究，核對來源對應主張、研究族群、期間、暴露／結局定義、分子分母、資料型態及限制。用台灣情境撰寫實際行動；沒有同口徑台灣統計時明示資料不足，不把觀察研究換算成個人機率。AI查核不是獨立營養、醫療或流行病學專家審閱。",
+  "limits": [
+    "急性回補與週末補眠研究來自英國不同世代，睡眠定義和比較組不同；未顯著不代表證實無害或有效，也沒有台灣個人機率或固定補眠時程。",
+    "英國週末補眠研究不同章節的心血管事件數屬不同分析樣本：主要分析70,518人／9,092件，Table 1描述性樣本73,513人／12,108件；不可混用或將計數解讀為個人發生率。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+  "source_ids": [
+    "tw02_acute_sleep_rebound_mortality_2026",
+    "tw02_weekend_catchup_sleep_2024"
+  ],
+  "frequency_assessment": "未找到台灣成人週末補眠與全因死亡或新發心血管疾病的同口徑全國統計。英國研究分別報告死亡分析73,513人、2,776例死亡，以及主要心血管分析70,518人、9,092件事件；Table 1另以73,513人的描述性樣本列12,108件心血管事件，不能混用分析母數或轉成台灣個人機率。",
+  "statistics_assessed": [
+    {
+      "topic": "英國UK Biobank睡眠限制、限制後回補與全因死亡",
+      "value": {
+        "participants": 85618,
+        "mean_age_years": 61.8,
+        "valid_accelerometer_days_min": 3,
+        "person_nights": 574230,
+        "data_collection_start": "2013-06-01",
+        "data_collection_end": "2015-12-23",
+        "median_followup_years": 8.0,
+        "deaths": 3549,
+        "deaths_by_group": {
+          "regular_sleep": 2240,
+          "SR_without_rebound": 415,
+          "SR_with_rebound": 360,
+          "severe_SR_without_rebound": 341,
+          "severe_SR_with_rebound": 193
+        },
+        "groups": {
+          "SR_without_rebound": {
+            "n": 7734,
+            "adjusted_HR": 1.15,
+            "95_CI": [
+              1.01,
+              1.31
+            ]
+          },
+          "SR_with_rebound": {
+            "n": 7241,
+            "adjusted_HR": 1.12,
+            "95_CI": [
+              0.98,
+              1.28
+            ],
+            "significant_vs_regular_sleep": false
+          },
+          "severe_SR_without_rebound": {
+            "n": 5110,
+            "adjusted_HR": 1.42,
+            "95_CI": [
+              1.24,
+              1.63
+            ]
+          },
+          "severe_SR_with_rebound": {
+            "n": 3811,
+            "adjusted_HR": 1.13,
+            "95_CI": [
+              0.95,
+              1.36
+            ],
+            "significant_vs_regular_sleep": false
+          }
+        },
+        "independent_NHANES_replication_n": 4586
+      },
+      "unit": "前瞻性觀察世代樣本、個人夜、死亡事件數及多變項調整危險比",
+      "period": "加速度計資料蒐集2013-06-01至2015-12-23；2026年發表；UK Biobank中位追蹤8.0年",
+      "geographic_scope": "英國UK Biobank；以美國NHANES 4,586人獨立複現",
+      "population": "UK Biobank 85,618名平均61.8歲、至少3日有效加速度計睡眠資料參與者；分析574,230個人夜",
+      "numerator": "UK Biobank中位8年追蹤共3,549例全因死亡：規律睡眠2,240、一般限制無回補415、一般限制有回補360、嚴重限制無回補341、嚴重限制有回補193",
+      "denominator": "UK Biobank分析樣本85,618人；個人夜資料574,230夜；五組人數分別61,722、7,734、7,241、5,110、3,811",
+      "denominator_definition": "符合至少3日有效腕部加速度計睡眠資料並可按個人需求、各次限制期和其後限制後夜分類的英國生物資料庫參與者；每人夜不是獨立個人或獨立事件",
+      "event_definition": "中位8年期間全因死亡。研究以本人與年齡／性別組平均睡眠時數較高者估計需求；每段限制期後第一晚是限制後夜；一般限制為各限制期平均累積少睡2.5–3.5小時，嚴重限制超過3.5小時；跨限制後夜平均睡眠超過需求才定義為有回補",
+      "data_type": "前瞻性觀察世代研究；UK Biobank腕部加速度計；多變項Cox模型；以NHANES獨立樣本複現",
+      "limitations": "觀察性分組、無隨機睡眠安排；有回補組HR點估計仍大於1且信賴區間含1，未達統計顯著不代表等同或證實因果；選樣為有至少3日有效裝置資料者，不能換算台灣個人死亡機率。",
+      "source_ids": [
+        "tw02_acute_sleep_rebound_mortality_2026"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "英國週末補眠研究的死亡與心血管疾病分析",
+      "value": {
+        "mortality_analysis_n": 73513,
+        "mortality_events": 2776,
+        "incident_CVD_analysis_n": 70518,
+        "incident_CVD_primary_analysis_events": 9092,
+        "table_1_descriptive_sample_n": 73513,
+        "table_1_descriptive_CVD_events": 12108,
+        "table_1_CVD_events_by_weekend_sleep_group": {
+          "no_catch_up_sleep": 6182,
+          "greater_than_0_to_less_than_1_hour": 3514,
+          "at_least_1_to_less_than_2_hours": 1756,
+          "at_least_2_hours": 656
+        },
+        "mean_followup_years": 8.0,
+        "followup_SD_years": 0.9,
+        "mortality_HR_at_least_2h": 1.17,
+        "mortality_95_CI": [
+          0.97,
+          1.41
+        ],
+        "incident_CVD_HR_at_least_2h": 1.05,
+        "incident_CVD_95_CI": [
+          0.94,
+          1.18
+        ]
+      },
+      "unit": "前瞻性觀察世代參與者、死亡與心血管事件數及調整後危險比",
+      "period": "2024年發表；腕部加速度計資料蒐集2013-06-01至2015-12-23；平均追蹤8.0年（SD 0.9）",
+      "geographic_scope": "英國UK Biobank成人世代",
+      "population": "死亡分析73,513人；主要新發心血管疾病分析70,518人；Table 1描述性資料按73,513名死亡分析樣本分組",
+      "numerator": "死亡分析2,776例死亡；主要心血管分析流程圖與Figure 3列9,092件新發事件。Table 1於73,513人描述性樣本另列12,108件心血管事件，四組計數6,182、3,514、1,756、656",
+      "denominator": "死亡分析n=73,513；主要心血管分析n=70,518；Table 1描述性樣本n=73,513，各組37,234、21,788、10,440、4,051",
+      "denominator_definition": "睡眠以腕部加速度計測量並有完整共變項資料的英國參與者；主要結局分析排除追蹤首兩年發生事件者，心血管分析另排除既有心血管疾病樣本。Table 1描述性事件列使用73,513人分組，非主要心血管分析母數",
+      "event_definition": "全因死亡；主要心血管分析為新發心血管疾病（論文列ICD-10代碼I0、I11、I13、I20-I51及I60-I69，競爭風險採Fine–Gray方法）。表1另列其描述性樣本中的心血管事件數",
+      "data_type": "英國UK Biobank前瞻性觀察世代；一週腕部加速度計睡眠測量；多變項調整模型",
+      "limitations": "未隨機指派補眠，不能證明因果；95%信賴區間跨1，不能證明有益或有害。UCL作者接受稿Figure 1與Figure 3列主要心血管樣本70,518人、9,092件事件；Table 1在73,513名死亡分析描述性樣本另列12,108件，母數與用途不同，不能混用。UK Biobank回覆率低且不是台灣代表性樣本；無台灣個人絕對風險估計。",
+      "source_ids": [
+        "tw02_weekend_catchup_sleep_2024"
+      ],
+      "accessed_at": "2026-11-18"
+    }
+  ],
+  "unresolved_questions": [
+    "未取得睡眠醫學／職業醫學及流行病學專業人員獨立審閱。",
+    "研究無法回答台灣輪班或照顧情境下各種補眠安排的因果效果。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "睡眠醫學",
+      "職業醫學",
+      "睡眠流行病學"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "b7cf3879953957ab706cf05a453059dae9088313802af90a9b794ca0193dcf4e",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留睡眠不足後如何恢復的問題；分開呈現隔夜急性回補與平日／週末平均睡眠的不同研究，不把任何一項觀察研究寫成固定時程或完全抵銷保證。",
+  "topic_fidelity_review": {
+    "decision": "retain_recovery_sleep_question_distinguish_acute_rebound_from_weekend_catchup",
+    "original_question": "熬夜後是否應翌日補眠，或等到週末才補？",
+    "reader_content_decision": "保留睡眠不足後如何恢復的問題；分開呈現隔夜急性回補與平日／週末平均睡眠的不同研究，不把任何一項觀察研究寫成固定時程或完全抵銷保證。",
+    "historical_claim_decisions": [
+      {
+        "claim": "少睡後必須第二晚立即補足，週末補眠有害",
+        "decision": "not_supported_as_categorical_claim",
+        "reason": "一項2026英國觀察研究中回補組未見顯著死亡關聯，2024英國研究也未見週末補眠至少2小時與死亡或新發CVD的顯著關聯。"
+      },
+      {
+        "claim": "回補可消除長期睡眠不足全部影響",
+        "decision": "not_supported",
+        "reason": "兩研究都不是隨機干預，且比較對象、睡眠定義和樣本不同，未直接證明因果或完全抵銷。"
+      }
+    ]
+  }
+}

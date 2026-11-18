@@ -211,9 +211,16 @@ class EcigTopicFidelityRecheckTests(unittest.TestCase):
         self.assertEqual(counts_after["source_registry"], counts_before["source_registry"] + len(self.batch["new_source_ids"]))
         self.assertEqual(counts_after["coverage_json_files"], counts_before["coverage_json_files"] + 2)
         self.assertEqual(counts_after["review_rechecks"], counts_before["review_rechecks"] + 1)
-        self.assertEqual(coverage["registry_sources"], counts_after["source_registry"])
-        self.assertEqual(coverage["json_files_checked"], counts_after["coverage_json_files"])
-        self.assertEqual(coverage["publication_completed_entries"], counts_after["publication_completed_entries"])
+        # counts_after is the snapshot at this batch. Later batches may add
+        # sources; the current coverage/report pair remains the live contract.
+        self.assertGreaterEqual(coverage["registry_sources"], counts_after["source_registry"])
+        self.assertGreaterEqual(coverage["json_files_checked"], counts_after["coverage_json_files"])
+        current_verified_entries = sum(row["status"] == "verified" for row in self.manifest["entries"])
+        self.assertEqual(coverage["publication_completed_entries"], current_verified_entries)
+        self.assertGreaterEqual(
+            coverage["publication_completed_entries"],
+            counts_after["publication_completed_entries"],
+        )
         self.assertEqual(coverage["publication_ready"], False)
         self.assertEqual(publication_report()["publication_ready"], False)
 
