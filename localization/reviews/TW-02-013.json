@@ -2,70 +2,370 @@
   "id": "TW-02-013",
   "reviewer": "ChatGPT（AI協助逐項核對台灣官方資料及原始研究；未取得獨立相關專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-11-09",
-  "review_due_at": "2027-02-09",
+  "reviewed_at": "2026-11-19",
+  "review_due_at": "2027-02-19",
   "target_path": "locales/zh-TW/book/ch02/TW-02-013.md",
-  "target_sha256": "7d727368d6ebe8e5e0ba78fa9b90bb25b39d6ece7f07c4a3dbb067062f08b2ff",
+  "target_sha256": "7f8aa09d842227a6f604c44fde9bbd65d4e40a58246fefd8e64b7bb1d0c65e5e",
+  "source_reviewed_sha256": "7f8aa09d842227a6f604c44fde9bbd65d4e40a58246fefd8e64b7bb1d0c65e5e",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-sleep-duration-topic-fidelity-recheck-20261118.json",
+  "source_bundle_sha256": "1d060f4a8ccd92eac609ce1f4697889da2aaa065c8a34e2f6ad9df5b944bd979",
   "source_checks": [
     {
       "source_id": "tw02_nhi_sleep_advice_20261109",
       "title": "健保署：成人睡眠與生活型態衛教",
       "url": "https://www.nhi.gov.tw/ch/lp-4009-1.html?cat=4",
-      "claim": "健保署衛教提供成人睡眠時數一般參考；睡眠需求會因年齡及個人狀況不同。",
-      "supporting_passage": "健保署衛教提供成人睡眠時數一般參考；睡眠需求會因年齡及個人狀況不同。",
-      "accessed_at": "2026-11-09",
-      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+      "claim": "健保署生活型態衛教建議成人每日7至9小時作為一般參考，並說明睡眠需求有個別差異及可記錄睡眠時數、觀察白天狀態。",
+      "supporting_passage": "健保署生活型態評估量表第17題建議成人每日7至9小時，並建議先記錄一週睡眠時間、觀察早晨精神；頁面說明睡眠需求會因年齡和個人狀況變化。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "2026-11-18直接查閱健保署生活型態評估量表第17題初階及進階建議，核對一般成人時數、個別差異與一週睡眠紀錄。"
     },
     {
       "source_id": "tw02_ntuh_sleep_apnea_20261109",
       "title": "臺大醫院：打鼾及阻塞型睡眠呼吸中止症",
       "url": "https://hmc.ntuh.gov.tw/disease-symptoms/0m209407642724907379",
-      "claim": "打鼾不等於睡眠呼吸中止症；觀察到呼吸中止、白天嗜睡或注意力下降時可就醫評估，診斷需由醫師判讀檢查。",
-      "supporting_passage": "打鼾不等於睡眠呼吸中止症；觀察到呼吸中止、白天嗜睡或注意力下降時可就醫評估，診斷需由醫師判讀檢查。",
-      "accessed_at": "2026-11-09",
-      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+      "claim": "打鼾不等於睡眠呼吸中止症；反覆呼吸中止、嗆醒、白天疲倦或注意力下降可安排醫療評估，診斷依醫師檢查判讀。",
+      "supporting_passage": "臺大醫院衛教說明打鼾與阻塞型睡眠呼吸中止症須區分，並列出睡眠期間呼吸中止和白天功能受影響等評估線索；睡眠檢查需由醫師判讀。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "2026-11-18直接查閱臺大醫院健康管理中心衛教頁，核對打鼾、疑似呼吸中止與睡眠檢查評估界線。"
     },
     {
       "source_id": "tw02_vghtpe_sleep_safety_20261109",
-      "title": "臺北榮總：阻塞性睡眠呼吸中止症照護",
+      "title": "臺北榮總：阻塞性睡眠呼吸中止症照護與睡眠檢查",
       "url": "https://ihealth.vghtpe.gov.tw/media/494",
-      "claim": "睡眠檢查可協助診斷睡眠呼吸中止症；白天嗜睡可能影響駕駛和操作危險機械安全。",
-      "supporting_passage": "睡眠檢查可協助診斷睡眠呼吸中止症；白天嗜睡可能影響駕駛和操作危險機械安全。",
-      "accessed_at": "2026-11-09",
-      "retrieval_method": "直接查閱來源頁面或原始文件，核對其適用範圍和本篇使用的具體主張；未公開的分子、分母或施行狀態不自行推定。"
+      "claim": "睡眠檢查需由技術人員收集資料並由醫師判讀；白天嗜睡時應避免駕駛或操作危險機械。",
+      "supporting_passage": "臺北榮總健康e點通說明睡眠檢查和醫師判讀流程，並提醒白天嗜睡會影響日常安全，應避免自行駕駛或操作危險機具。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "2026-11-18直接查閱臺北榮總護理部健康e點通，核對睡眠檢查流程和嗜睡安全提醒。"
+    },
+    {
+      "source_id": "tw02_cappuccio_sleep_mortality_meta_2010",
+      "title": "Cappuccio等：睡眠時長與全因死亡之系統性回顧及統合分析（2010）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20469800/",
+      "claim": "2010年前瞻世代系統性回顧：16篇研究、27個獨立世代樣本；短睡分析15篇／25世代、1,381,324人及112,163例死亡，合併RR 1.12（95% CI 1.06–1.18）；長睡分析16篇／27世代、1,382,999人及112,566例死亡，合併RR 1.30（95% CI 1.22–1.38）。各研究睡眠分類和參照組不完全一致，存在異質性；不能作為台灣發生率或個人機率。",
+      "supporting_passage": "2010年前瞻世代系統性回顧：16篇研究、27個獨立世代樣本；短睡分析15篇／25世代、1,381,324人及112,163例死亡，合併RR 1.12（95% CI 1.06–1.18）；長睡分析16篇／27世代、1,382,999人及112,566例死亡，合併RR 1.30（95% CI 1.22–1.38）。各研究睡眠分類和參照組不完全一致，存在異質性；不能作為台灣發生率或個人機率。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱PubMed摘要與其圖說，逐項核對檢索期、研究與世代數、短睡和長睡各自的樣本／死亡數、RR、信賴區間及異質性。"
+    },
+    {
+      "source_id": "tw02_yin_sleep_mortality_dose_response_2017",
+      "title": "Yin等：睡眠時數與死亡及心血管事件的劑量反應統合分析（2017）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28889101/",
+      "claim": "2017系統性回顧與劑量反應統合分析搜尋截至2016-12-01發表的前瞻世代研究；全因死亡曲線約在每日7小時最低。低於7小時每少1小時合併RR 1.06（95% CI 1.04–1.07）；高於7小時每多1小時RR 1.13（95% CI 1.11–1.15）。PubMed摘要未列合併總人數或死亡事件數；為群體相對關聯，非個人機率或因果效果。",
+      "supporting_passage": "2017系統性回顧與劑量反應統合分析搜尋截至2016-12-01發表的前瞻世代研究；全因死亡曲線約在每日7小時最低。低於7小時每少1小時合併RR 1.06（95% CI 1.04–1.07）；高於7小時每多1小時RR 1.13（95% CI 1.11–1.15）。PubMed摘要未列合併總人數或死亡事件數；為群體相對關聯，非個人機率或因果效果。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱PubMed摘要，核對資料庫檢索截止日、曲線最低點及每少／多一小時相對危險；摘要未列的合併母數不自行推算。"
+    },
+    {
+      "source_id": "tw02_taiwan_sleep_mortality_cohort_2026",
+      "title": "Lin等：台灣社區世代的睡眠時數與全因及心血管死亡（2026）",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jsr.70458",
+      "claim": "台灣Chin-Shan Community Cardiovascular Cohort前瞻性研究；排除資料不完整及基線心血管疾病後納入3,305人，結構式問卷分為≤6、7–8、≥9小時，追蹤中位數30.8年。≥9小時相較7–8小時全因死亡調整HR 1.17（95% CI 1.01–1.35）；心血管死亡HR 1.18（0.89–1.56，未達顯著）；短睡兩種結局均未見顯著差異。摘要未列各組人數與死亡事件數；單一社區世代、觀察性關聯，不是全國發生率或因果效果。",
+      "supporting_passage": "台灣Chin-Shan Community Cardiovascular Cohort前瞻性研究；排除資料不完整及基線心血管疾病後納入3,305人，結構式問卷分為≤6、7–8、≥9小時，追蹤中位數30.8年。≥9小時相較7–8小時全因死亡調整HR 1.17（95% CI 1.01–1.35）；心血管死亡HR 1.18（0.89–1.56，未達顯著）；短睡兩種結局均未見顯著差異。摘要未列各組人數與死亡事件數；單一社區世代、觀察性關聯，不是全國發生率或因果效果。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱Journal of Sleep Research出版頁摘要，核對台灣世代、納入排除條件、睡眠時數分類、追蹤中位數、各結局HR及未達顯著結果；不自行補出未列的分組事件數。"
+    },
+    {
+      "source_id": "tw02_windred_sleep_regularity_mortality_2024",
+      "title": "Windred等：睡眠規律性與死亡風險的英國世代研究（2024）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10782501/",
+      "claim": "英國UK Biobank以約一週腕式加速度計資料計算睡眠規律指數；平均追蹤6.30年（標準差0.83），期間有1,859人死亡。樣本數摘要列60,977人、Results列60,997人；全調整模型分析樣本為46,721人。最高規律五分位組相較最低組，全因死亡HR為0.70（95% CI 0.59–0.83）。此為中高齡、以白人為主的英國觀察世代資料，不是台灣個人機率或因果效果。",
+      "supporting_passage": "論文摘要及Results分別列總樣本60,977與60,997人；Results的全調整模型樣本N=46,721。最高睡眠規律指數五分位（80%–100%）相較最低五分位（0%–20%）的全因死亡HR=0.70（95% CI 0.59–0.83）。整體追蹤期間1,859人死亡，平均追蹤6.30年（SD 0.83）；研究為英國中高齡、以白人為主的觀察世代。",
+      "accessed_at": "2026-11-19",
+      "retrieval_method": "2026-11-19直接查閱PubMed Central全文的摘要、Methods、Results與Table 2；核對摘要與Results樣本數差異、平均追蹤、死亡數、全調整模型分析樣本及最高／最低睡眠規律組HR與95% CI。原先20%–48%混用不同模型，改以全調整模型中明確列出的最高組比較。"
+    },
+    {
+      "source_id": "tw02_kumar_social_jetlag_cvd_2026",
+      "title": "Kumar與Krishnamurthy：社會時差與新發心血管疾病的英國世代研究（2026）",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/joim.70133",
+      "claim": "UK Biobank腕式加速度計分析51,562名基線無心血管疾病者，將社會時差定義為工作日與週末睡眠中點的絕對差；前瞻追蹤記錄3,853件新發心血管事件（心肌梗塞、缺血性心臟病、心衰竭、中風、心房顫動）。≥2小時組相較<1小時組HR 1.30（95% CI 1.11–1.54）；期刊摘要未列中位追蹤期間。工作日／週末只是該研究的時間代理，不等於輪班者的工作日／休息日；觀察性關聯，非台灣個人機率或因果效果。",
+      "supporting_passage": "UK Biobank腕式加速度計分析51,562名基線無心血管疾病者，將社會時差定義為工作日與週末睡眠中點的絕對差；前瞻追蹤記錄3,853件新發心血管事件（心肌梗塞、缺血性心臟病、心衰竭、中風、心房顫動）。≥2小時組相較<1小時組HR 1.30（95% CI 1.11–1.54）；期刊摘要未列中位追蹤期間。工作日／週末只是該研究的時間代理，不等於輪班者的工作日／休息日；觀察性關聯，非台灣個人機率或因果效果。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱Journal of Internal Medicine摘要及PMC方法，核對社會時差定義、參照組、基線排除條件、CVD事件定義及HR；摘要未列的追蹤期間不推定。"
     }
   ],
-  "localization_changes": "移除每晚固定七小時的單一要求，改為成人一般7至9小時參考、白天功能、睡眠呼吸中止評估線索、輪班照顧者與疲勞駕駛安全；不以打鼾或單晚時數診斷。",
-  "review_method": "重讀原作固定ID、台灣結構化草稿和引用主張，查核台灣情境、行動步驟、費用及服務入口；對統計核對期間、範圍、對象、事件定義、分子分母、資料型態與限制。未找到可信、同口徑台灣資料時明確保留資料不足，不自行推估。AI查核不等同正式專業審閱。",
+  "localization_changes": "保留台灣成人一般睡眠衛教、睡眠呼吸中止評估與疲勞駕駛安全；補回原作已刪除的睡眠長短、死亡率、作息規律與社會時差研究問題。新增台灣社區世代證據，精確區分各研究母數、事件定義、RR／HR和統計限制；不將觀察關聯寫成因果、個人機率或人人固定睡7小時的處方。",
+  "review_method": "重讀原作TW-02-013、現行正文、先前review與source claims，逐一對照被移除的睡眠時數、規律作息及社會時差研究。直接查閱健保署、臺大醫院、臺北榮總及原始研究／PubMed摘要，核對研究地區、樣本、分母、事件定義、追蹤期、暴露分組、RR／HR、信賴區間與限制。另核對輪班、通勤及照顧者情境；台灣無同口徑全國睡眠時數／規律作息統計時明示資料不足。AI來源核對不是獨立睡眠醫學、流行病學或職業醫學專業審查。",
   "limits": [
-    "7至9小時是成人一般參考，不是診斷或每個人的必要睡眠處方；未找到可比較的台灣全國發生率。",
-    "症狀和用藥需個別評估。"
+    "成人7至9小時為一般參考，不是每個人的睡眠處方；年齡、疾病、用藥、夜班與照顧責任都會影響睡眠安排。",
+    "死亡統合分析和世代研究屬觀察性群體關聯；RR／HR不是個人死亡機率，也不能證明改變睡眠時數或規律性會延長壽命；各研究的睡眠分類、樣本和追蹤方法不同。",
+    "台灣2026年資料來自單一社區世代，3,305名基線無心血管疾病參與者；公開摘要未列各睡眠組人數及死亡事件數，不能作為全台睡眠型態或死亡發生率。",
+    "Windred UK Biobank摘要列60,977人、結果段落列60,997人，全調整模型分析46,721人；最高與最低規律五分位組全因死亡HR為0.70（95% CI 0.59–0.83）。該觀察世代為中高齡、以白人為主，不能當成台灣或個人的發生機率或因果效果。",
+    "社會時差研究以工作日／週末睡眠中點差作為作息差，不能直接套用至輪班者的工作日／休息日；持續嗜睡、睡眠時間明顯改變或打鼾合併目擊呼吸中止，應由醫療人員評估；本文不是診斷或用藥指示。"
   ],
-  "source_reviewed_sha256": "7d727368d6ebe8e5e0ba78fa9b90bb25b39d6ece7f07c4a3dbb067062f08b2ff",
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "c84070b25852be8fcd58de7cae87e5be4967bbbddba41bacd3f1461dac7c62a4",
   "source_ids": [
     "tw02_nhi_sleep_advice_20261109",
     "tw02_ntuh_sleep_apnea_20261109",
-    "tw02_vghtpe_sleep_safety_20261109"
+    "tw02_vghtpe_sleep_safety_20261109",
+    "tw02_cappuccio_sleep_mortality_meta_2010",
+    "tw02_yin_sleep_mortality_dose_response_2017",
+    "tw02_taiwan_sleep_mortality_cohort_2026",
+    "tw02_windred_sleep_regularity_mortality_2024",
+    "tw02_kumar_social_jetlag_cvd_2026"
   ],
-  "statistics_assessed": [],
-  "frequency_assessment": "未找到使用一致定義、能核對全國分子分母且可代表台灣成人睡眠不足或失眠現況的近期統計。睡眠不足、失眠症狀及睡眠呼吸中止是不同指標；不從外國研究或單院檢查數推算台灣個人發生機率。",
+  "frequency_assessment": "台灣健保署提供成人睡眠時數一般參考，但未找到能代表台灣全體成人、使用一致睡眠時數或規律作息定義並列出相應分母的全國統計。台灣2026年社區世代可提供本地觀察性關聯，但不是全國發生率；海外研究的死亡或心血管事件數也不能換算成台灣個人機率。睡眠呼吸中止、失眠症狀、睡眠時數與作息不規律是不同指標，不互相代替。",
+  "statistics_assessed": [
+    {
+      "topic": "睡眠時長與全因死亡之2010年系統性回顧統合分析",
+      "value": {
+        "short_sleep": {
+          "RR": 1.12,
+          "95_CI": [
+            1.06,
+            1.18
+          ],
+          "studies": 15,
+          "cohort_samples": 25,
+          "participants": 1381324,
+          "deaths": 112163
+        },
+        "long_sleep": {
+          "RR": 1.3,
+          "95_CI": [
+            1.22,
+            1.38
+          ],
+          "studies": 16,
+          "cohort_samples": 27,
+          "participants": 1382999,
+          "deaths": 112566
+        }
+      },
+      "unit": "觀察性前瞻世代統合相對危險RR、研究數、參與者與全因死亡事件數",
+      "period": "論文於2010年發表；MEDLINE檢索1966至2009年，EMBASE自1980年起；各世代追蹤4至25年",
+      "geographic_scope": "多個國家／地區的成人前瞻性人口世代；非台灣代表性估計",
+      "population": "16篇前瞻研究提供27個獨立成人世代樣本；短睡分析15篇／25世代，長睡分析16篇／27世代",
+      "numerator": "短睡分析112,163例全因死亡；長睡分析112,566例全因死亡",
+      "denominator": "短睡分析1,381,324人；長睡分析1,382,999人。各研究以問卷量測睡眠，短／長睡和參照組切點不完全相同",
+      "denominator_definition": "每項合併分析中各研究樣本與死亡登記；短睡和長睡分析使用的研究集合及分母略有不同",
+      "event_definition": "追蹤期間全因死亡；相對於各研究定義之參照睡眠組",
+      "data_type": "前瞻世代系統性回顧與隨機效應統合分析；睡眠時長為問卷自陳",
+      "limitations": "研究間有異質性（長睡分析I²約71%）；觀察研究不能確定因果；不同研究的短睡／長睡分類和參照組不同；不是台灣發生率或個人絕對機率。",
+      "source_ids": [
+        "tw02_cappuccio_sleep_mortality_meta_2010"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "睡眠時數與全因死亡的2017年劑量反應統合分析",
+      "value": {
+        "curve_nadir_approx_hours_per_day": 7,
+        "per_hour_less_below_7h_RR": 1.06,
+        "per_hour_less_below_7h_95_CI": [
+          1.04,
+          1.07
+        ],
+        "per_hour_more_above_7h_RR": 1.13,
+        "per_hour_more_above_7h_95_CI": [
+          1.11,
+          1.15
+        ]
+      },
+      "unit": "觀察性世代統合相對危險RR及95%信賴區間；非發生率或個人絕對風險",
+      "period": "PubMed與Embase檢索截至2016-12-01已發表的前瞻世代研究；論文2017年發表",
+      "geographic_scope": "納入研究的地區各異；非台灣代表性估計",
+      "population": "一般健康族群的前瞻世代研究；PubMed摘要沒有列統合總人數、死亡總數或各結局合併分母",
+      "numerator": "PubMed摘要未列此統合分析的合併死亡事件數",
+      "denominator": "PubMed摘要未列合併參與者總數；RR依不同納入研究模型統合，沒有單一共同分母",
+      "denominator_definition": "每增加／減少一小時與研究內比較睡眠時數的劑量反應關聯；曲線約在每日7小時附近最低",
+      "event_definition": "納入研究的全因死亡；各世代死亡追蹤和睡眠測量定義不同",
+      "data_type": "系統性回顧與前瞻世代劑量反應統合分析；觀察資料",
+      "limitations": "摘要未列合併人數和事件數；RR是研究群體模型相對估計而不是個人機率或因果效果，不能推導人人應固定睡7小時。",
+      "source_ids": [
+        "tw02_yin_sleep_mortality_dose_response_2017"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "台灣Chin-Shan社區世代的睡眠時長與全因／心血管死亡",
+      "value": {
+        "total_participants": 3305,
+        "sleep_categories_hours": {
+          "short": "≤6",
+          "normal": "7–8",
+          "long": "≥9"
+        },
+        "median_followup_years": 30.8,
+        "long_vs_normal_all_cause_adjusted_HR": 1.17,
+        "all_cause_95_CI": [
+          1.01,
+          1.35
+        ],
+        "long_vs_normal_CVD_adjusted_HR": 1.18,
+        "CVD_95_CI": [
+          0.89,
+          1.56
+        ],
+        "short_sleep_significant": false
+      },
+      "unit": "前瞻性世代調整後危險比HR、參與者總數及追蹤年數；非全國發生率",
+      "period": "出版頁摘要報告中位追蹤30.8年；摘要未列該分析起訖日",
+      "geographic_scope": "台灣Chin-Shan Community Cardiovascular Cohort單一社區世代",
+      "population": "排除資料不完整及基線心血管疾病後的3,305名參與者；基線以結構式問卷分類",
+      "numerator": "出版頁摘要未列各睡眠組死亡人數或事件分子；心血管死亡結果信賴區間跨過1",
+      "denominator": "全分析樣本3,305人；三個睡眠組各自人數未於摘要列明",
+      "denominator_definition": "符合完整資料且基線無心血管疾病者；HR比較長睡（≥9小時）與正常組（7–8小時）",
+      "event_definition": "中位30.8年追蹤的全因死亡及心血管死亡；睡眠時長為基線自陳",
+      "data_type": "單一台灣社區的前瞻性觀察世代，結構式問卷、Cox模型及限制立方樣條",
+      "limitations": "摘要沒有各組人數和死亡事件數；單一世代不代表全台；調整後關聯不證明睡眠時長造成死亡差異；短睡不顯著不代表已證明沒有風險。",
+      "source_ids": [
+        "tw02_taiwan_sleep_mortality_cohort_2026"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "UK Biobank睡眠規律性與全因死亡的2024年觀察世代研究",
+      "value": {
+        "sample_size_reported_in_abstract": 60977,
+        "sample_size_reported_in_results": 60997,
+        "full_adjusted_model_participants": 46721,
+        "all_cause_deaths": 1859,
+        "mean_followup_years": 6.3,
+        "followup_sd_years": 0.83,
+        "highest_regularity_vs_lowest_full_adjusted_HR": 0.7,
+        "highest_regularity_vs_lowest_full_adjusted_95_CI": [
+          0.59,
+          0.83
+        ],
+        "model_estimated_relative_hazard_reduction_percent": 30
+      },
+      "unit": "摘要／Results總參與人數、全調整模型分析人數、全因死亡事件數、平均追蹤年數及模型估計HR與95%信賴區間；非發生率估算",
+      "period": "腕式加速度計約一週；死亡追蹤最長7.8年、平均6.30年（標準差0.83）；論文2024年第1期刊出",
+      "geographic_scope": "英國UK Biobank；非台灣族群",
+      "population": "英國UK Biobank中高齡參與者，平均年齡約62.8歲且樣本多為白人；摘要列60,977人、Results列60,997人；Table 2全調整模型分析樣本46,721人",
+      "numerator": "整體研究追蹤期間1,859例全因死亡；全調整模型估計比較最高睡眠規律五分位與最低五分位",
+      "denominator": "摘要與Results列總樣本分別為60,977和60,997人；Table 2全調整模型N=46,721。最高睡眠規律五分位（80%–100%）相較最低五分位（0%–20%），HR=0.70（95% CI 0.59–0.83）",
+      "denominator_definition": "全調整Cox模型的完整分析樣本46,721人；比較睡眠規律指數第80–100百分位組與第0–20百分位參照組。模型另調整身體活動、就業、收入、剝奪程度、社交活動、探訪、吸菸、都市化、輪班及降膽固醇／降血壓藥物使用等變項",
+      "event_definition": "全因死亡；另分析心代謝及癌症死亡，但本篇只呈現全因死亡關聯",
+      "data_type": "前瞻性觀察世代，腕式加速度計睡眠測量約一週，Cox比例風險模型",
+      "limitations": "摘要與Results總樣本數相差20人；全調整模型分析樣本為46,721人；腕式裝置僅測量約一週，樣本年齡較高且多為白人、非台灣人口。HR 0.70為相對危險率的模型估計，不是個人絕對機率；觀察性關聯不能證明提高作息規律性會延長壽命。",
+      "source_ids": [
+        "tw02_windred_sleep_regularity_mortality_2024"
+      ],
+      "accessed_at": "2026-11-18",
+      "follow_up_correction": {
+        "checked_at": "2026-11-19",
+        "previously_reported_range_percent": [
+          20,
+          48
+        ],
+        "correction": "原先將不同調整模型的比較範圍合併表述；更正為全調整模型最高規律五分位相較最低組的HR及信賴區間。",
+        "verified_estimate": "全調整模型N=46,721；HR 0.70（95% CI 0.59–0.83），即模型估計相對危險率約低30%。"
+      }
+    },
+    {
+      "topic": "UK Biobank工作日／週末睡眠中點差與新發心血管事件",
+      "value": {
+        "participants_without_baseline_CVD": 51562,
+        "incident_CVD_events": 3853,
+        "social_jetlag_definition": "工作日與週末睡眠中點的絕對差",
+        "comparison_hours": {
+          "reference": "<1",
+          "exposure": "≥2"
+        },
+        "adjusted_HR": 1.3,
+        "95_CI": [
+          1.11,
+          1.54
+        ]
+      },
+      "unit": "前瞻世代新發心血管事件數及多變項調整危險比HR；不是台灣發生率",
+      "period": "腕式加速度計子研究基線測量；2026年7月首次發表；可取得摘要未列中位追蹤期間及日曆起訖",
+      "geographic_scope": "英國UK Biobank；非台灣族群",
+      "population": "51,562名基線沒有心血管疾病且有有效腕式加速度計資料者",
+      "numerator": "3,853件新發複合心血管事件，包含心肌梗塞、缺血性心臟病、心衰竭、中風及心房顫動",
+      "denominator": "51,562人總分析樣本；各社會時差組分母未在摘要列出",
+      "denominator_definition": "以<1小時為參照組、≥2小時為暴露組；weekday/weekend只是社會作息的代理，不限於有工作的受試者",
+      "event_definition": "基線後首次心肌梗塞、缺血性心臟病、心衰竭、中風或心房顫動；行政資料與死亡登記追蹤",
+      "data_type": "前瞻性UK Biobank觀察世代；腕部三軸加速度計及多變項Cox比例風險模型",
+      "limitations": "摘要未列中位追蹤時間和各暴露組人數；參與者非台灣且非只限在職者；對輪班者的工作／休息日未直接量測；觀察關聯不證明調整時差能預防CVD。",
+      "source_ids": [
+        "tw02_kumar_social_jetlag_cvd_2026"
+      ],
+      "accessed_at": "2026-11-18"
+    }
+  ],
   "unresolved_questions": [
-    "需由睡眠醫學或職業醫學專業人員複核症狀、睡眠檢查和日間駕駛安全文字。",
-    "全國睡眠統計的定義和調查期間不一致，需持續監看。"
+    "Windred等論文摘要與Results樣本數相差20人；已分別記錄60,977與60,997，並另列全調整模型N=46,721。",
+    "睡眠醫學與流行病學專業人員尚未獨立複核統合分析和台灣世代的臨床解讀。",
+    "台灣目前缺少能以同一睡眠時數、規律作息定義和明確分母代表全體成人的最新全國統計。",
+    "社會時差研究公開摘要未列中位追蹤期間，正文及資料紀錄未自行推算。"
   ],
   "professional_review": {
     "required": true,
     "obtained": false,
     "scope": [
       "睡眠醫學",
-      "家庭醫學",
+      "流行病學與統計",
       "職業醫學",
       "交通安全"
     ]
   },
   "prior_chapter_draft_sha256": "43f9c3ca11d5762d8cf2c3ba0d3e61809ea7c55db71defd79428edb0f5455373",
   "prior_structured_draft_sha256": null,
-  "prior_structured_draft_review": null
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "恢復睡眠時數、規律作息與長期健康研究；補入台灣社區世代資料，保留輪班、就醫和疲勞駕駛安全，清楚區分觀察關聯與台灣個人風險。",
+  "topic_fidelity_review": {
+    "original_topic": "原作第2章第13條同時討論每晚睡眠時數、作息規律及長期健康研究，引用2010年短／長睡死亡統合分析、2017年劑量反應統合分析、2024年英國睡眠規律與死亡世代研究、2026年英國社會時差與心血管研究。既有台灣改寫留下成人7至9小時、睡眠呼吸中止評估、輪班與疲勞駕駛安全，卻移除了上述研究問題與研究證據。",
+    "taiwan_relevance": "睡眠時數、規律作息、輪班、通勤和照顧責任皆與台灣居民生活相關。健保署有成人一般睡眠衛教；一項台灣社區世代提供本地資料，但不是全國代表性統計。英國研究只作有族群與定義界線的群體證據，不替代台灣制度或推估個人機率。",
+    "reader_content_decision": "恢復睡眠時數、長期健康、作息規律和工作日／週末睡眠差距的研究討論；以台灣成人睡眠參考、輪班可行安排、就醫評估及疲勞駕駛安全作為實際行動。",
+    "decision": "restore_research_context_with_taiwan_actions_and_explicit_limits",
+    "question_change": {
+      "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+      "previous_question": "我的睡眠是否影響白天功能，或有需要評估的打鼾憋氣及嗜睡情形？",
+      "current_question": "睡眠時數與作息規律可能和健康有何關聯，我如何依自己的生活調整並辨認何時就醫評估？",
+      "rationale": "原作核心包含睡眠長短與規律作息的健康研究，既有改寫只留下疑似睡眠疾病與安全指引，未回答原有研究問題；本次補回有範圍的研究證據並保留台灣就醫和交通安全行動。"
+    },
+    "historical_claim_decisions": [
+      {
+        "claim": "短睡和長睡都與較高全因死亡風險相關。",
+        "decision": "restore_as_observational_meta_analysis_with_population_and_heterogeneity_limits",
+        "reason": "補回Cappuccio與Yin統合分析的研究樣本、統計估計和不同研究切點限制；不將RR解讀成台灣個人機率或睡眠調整的因果效果。"
+      },
+      {
+        "claim": "每天約7小時附近為全因死亡曲線最低點。",
+        "decision": "retain_as_population_level_dose_response_not_universal_sleep_prescription",
+        "reason": "統合曲線是前瞻世代群體估計；台灣健保署成人一般參考為7至9小時，並考量個別差異，不把7小時寫成固定目標或上限。"
+      },
+      {
+        "claim": "睡眠規律性可能比單一睡眠時數更能預測死亡。",
+        "decision": "restore_as_bounded_UK_cohort_comparison",
+        "reason": "保留英國裝置測量世代的族群、追蹤、死亡分子及樣本數差異；本次更正混用不同模型造成的20%–48%範圍，改列全調整模型樣本N=46,721及最高規律組相較最低組HR 0.70（95% CI 0.59–0.83）。「較強預測」僅限該研究模型，不能推廣為所有人或因果效果。"
+      },
+      {
+        "claim": "工作日和週末睡眠中點差至少2小時與新發心血管病相關。",
+        "decision": "restore_as_observational_UK_Biobank_association_only",
+        "reason": "補上社會時差定義、參照組、基線分析母數和複合事件數；weekday/weekend不是輪班工作者實際工作／休息日，也不是台灣發生率。"
+      },
+      {
+        "claim": "凡睡得久都應減少睡眠，或所有人都應按相同鐘點作息。",
+        "decision": "reject_as_universal_or_causal_recommendation",
+        "reason": "現有統合與世代研究不證明減少睡眠可改善健康；長睡可能與健康狀態等因素相關。輪班和照顧情境需保護睡眠時段，不硬套日班時鐘。"
+      }
+    ],
+    "frequency_evidence": "台灣健保署提供成人睡眠時數一般參考，但未找到能代表台灣全體成人、使用一致睡眠時數或規律作息定義並列出相應分母的全國統計。台灣2026年社區世代可提供本地觀察性關聯，但不是全國發生率；海外研究的死亡或心血管事件數也不能換算成台灣個人機率。睡眠呼吸中止、失眠症狀、睡眠時數與作息不規律是不同指標，不互相代替。",
+    "excluded_aspects": [
+      "未把英國樣本的死亡／心血管事件件數當成台灣發生率或個人機率。",
+      "未將觀察性RR／HR解讀成減睡、固定時數或調整作息的因果效果。",
+      "未把工作日／週末中點差定義直接套用輪班工作者的工作日／休息日。",
+      "未因台灣缺少全國統計而刪除仍能回答睡眠健康問題的台灣及海外研究。",
+      "不以打鼾自行診斷睡眠呼吸中止，不將疑似疾病評估和長期死亡研究混成單一主題。"
+    ]
+  },
+  "topic_fidelity_question_change": {
+    "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+    "previous_question": "我的睡眠是否影響白天功能，或有需要評估的打鼾憋氣及嗜睡情形？",
+    "current_question": "睡眠時數與作息規律可能和健康有何關聯，我如何依自己的生活調整並辨認何時就醫評估？",
+    "rationale": "原作核心包含睡眠長短與規律作息的健康研究，既有改寫只留下疑似睡眠疾病與安全指引，未回答原有研究問題；本次補回有範圍的研究證據並保留台灣就醫和交通安全行動。"
+  },
+  "follow_up_verification": {
+    "checked_at": "2026-11-19",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10782501/",
+    "previous_body_sha256": "8f02e4b5b310f42d65148ef829ffd2b3e156fc737a849b5c00cb1be424f31281",
+    "corrected_body_sha256": "7f8aa09d842227a6f604c44fde9bbd65d4e40a58246fefd8e64b7bb1d0c65e5e",
+    "correction_summary": "更正睡眠規律與死亡統計，將混用不同模型的20%–48%範圍改為全調整模型的HR及分析母數；同步來源改為可直接查閱的PMC全文。",
+    "professional_review_status": "仍待睡眠醫學與流行病學專業人員獨立複核。",
+    "reason": "原範圍混合不同調整模型；改用全文 Table 2 明確列出的全調整模型估計，並保留 HR 作群體相對比較，不把它換算成個人死亡機率降幅。"
+  }
 }

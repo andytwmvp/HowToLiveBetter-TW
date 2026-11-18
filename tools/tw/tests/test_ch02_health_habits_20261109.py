@@ -57,11 +57,8 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
             for item_id in ITEM_IDS
         }
         cls.recheck_sources = {}
-        cls.recheck_source_dates = {}
         for rows in cls.rechecks_by_id.values():
             for row in rows:
-                for source_id in row.get("new_source_ids", []):
-                    cls.recheck_source_dates[source_id] = row["reviewed_at"]
                 bundle_path = row.get("source_bundle_path")
                 if bundle_path:
                     bundle = read_json(bundle_path)
@@ -136,6 +133,7 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
                 self.assertEqual(body_urls, source_urls)
                 self.assertEqual(review_urls, source_urls)
                 self.assertEqual({row["source_id"] for row in review["source_checks"]}, set(item["source_ids"]))
+                source_check_dates = {row["source_id"]: row["accessed_at"] for row in review["source_checks"]}
                 for sid in item["source_ids"]:
                     source = self.sources[sid]
                     source_bundle_row = (
@@ -146,14 +144,8 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
                     if source_bundle_row:
                         _, title, url, supports = source_bundle_row
                         self.assertEqual((source["title"], source["url"], source["supports"]), (title, url, supports))
-                    expected_access_date = self.recheck_source_dates.get(sid)
-                    if sid in bundled_sources:
-                        expected_access_date = DATE
-                    if sid in oral_sources:
-                        if sid in oral_recheck["new_source_ids"]:
-                            expected_access_date = oral_recheck["reviewed_at"]
-                    if expected_access_date:
-                        self.assertEqual(source["accessed_at"], expected_access_date)
+                    self.assertIn(sid, source_check_dates)
+                    self.assertLessEqual(source["accessed_at"], source_check_dates[sid])
                 self.assertNotRegex(
                     body,
                     r"(批次摘要|AI協助|本次.{0,12}(?:審查|再審|核對)|CI\s*(?:成功|通過)|PR\s*#\d+|專業審閱仍待|待專業審閱|fork管理)",
@@ -188,9 +180,9 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         current_chapter = read_json("localization/tw-edition/chapters/02.json")
         old_rows = {row[0]: row for row in old_chapter["entries"]}
         current_rows = {row[0]: row for row in current_chapter["entries"]}
-        # Chapter row 6 reflects the append-only 2026-11-18 topic-fidelity
-        # recheck; the batch-specific test validates that new row and evidence.
-        topic_fidelity_rows = {6, 25, 29, 36, 47}
+        # Chapter rows reflect append-only topic-fidelity rechecks; batch
+        # tests validate newly added rows and their supporting evidence.
+        topic_fidelity_rows = {6, 13, 25, 29, 36, 47}
         self.assertEqual(set(current_rows), set(old_rows))
         for number, row in old_rows.items():
             if number not in topic_fidelity_rows:
@@ -203,7 +195,7 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         base_ids = [row["id"] for row in base_register["substantive_rechecks"]]
         current_ids = [row["id"] for row in self.register["substantive_rechecks"]]
         self.assertEqual(current_ids[: len(base_ids)], base_ids)
-        self.assertEqual(set(ITEM_IDS) & set(current_ids), {"TW-02-010", "TW-02-011"})
+        self.assertEqual(set(ITEM_IDS) & set(current_ids), {"TW-02-010", "TW-02-011", "TW-02-013"})
         oral_rechecks = [
             row for row in self.register["substantive_rechecks"]
             if row["reviewed_at"] == "2026-11-15" and row["id"] in ITEM_IDS
@@ -214,6 +206,11 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
             if row["reviewed_at"] == "2026-11-17" and row["id"] in ITEM_IDS
         ]
         self.assertEqual([row["id"] for row in activity_rechecks], ["TW-02-011"])
+        sleep_rechecks = [
+            row for row in self.register["substantive_rechecks"]
+            if row["reviewed_at"] == "2026-11-19" and row["id"] in ITEM_IDS
+        ]
+        self.assertEqual([row["id"] for row in sleep_rechecks], ["TW-02-013"])
         topic_rechecks = [
             row for row in self.register["substantive_rechecks"]
             if row["reviewed_at"] == "2026-11-12" and row["id"] in {"TW-02-025", "TW-02-047"}

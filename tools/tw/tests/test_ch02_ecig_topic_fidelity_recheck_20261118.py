@@ -9,6 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
 from review_contract import ROOT, publication_report, validate_runtime
+from recheck_history_assertions import assert_append_only_rechecks
 
 BASE = "463559ba83a4212480e793780ec669b11f4468dc"
 DATE = "2026-11-18"
@@ -155,8 +156,12 @@ class EcigTopicFidelityRecheckTests(unittest.TestCase):
         base_register = git_json(BASE, REGISTER_PATH)
         current_rows = self.register["substantive_rechecks"]
         base_rows = base_register["substantive_rechecks"]
-        self.assertEqual(current_rows[:len(base_rows)], base_rows)
-        self.assertEqual(len(current_rows) - len(base_rows), 1)
+        assert_append_only_rechecks(
+            self,
+            base_rows,
+            current_rows,
+            expected_rows=(self.latest_recheck,),
+        )
         self.assertEqual(self.review["professional_review"]["required"], True)
         self.assertEqual(self.review["professional_review"]["obtained"], False)
         self.assertEqual(self.latest_recheck["status"], "ai_source_rechecked_professional_pending")
