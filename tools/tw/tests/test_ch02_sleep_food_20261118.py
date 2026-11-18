@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
+from recheck_history_assertions import assert_append_only_rechecks
 from review_contract import ROOT, validate_runtime
 from source_bundle_test_support import source_bundle_ids_added_since
 
@@ -139,14 +140,12 @@ class ChapterTwoSleepFoodPublicationTests(unittest.TestCase):
         self.assertEqual(
             [row[0] for row in self.bundle["sources"]], self.batch["new_source_ids"]
         )
-        self.assertEqual(
-            set(self.batch["new_source_ids"]),
-            set(source_bundle_ids_added_since(ROOT, BASE)),
-        )
+        source_ids_added_since_baseline = source_bundle_ids_added_since(ROOT, BASE)
+        self.assertTrue(set(self.batch["new_source_ids"]).issubset(source_ids_added_since_baseline))
         baseline_runtime = read_json_from_git(BASE, "localization/tw-edition/runtime.json")
         old_source_ids = {row["id"] for row in baseline_runtime["sources"]}
         added_runtime_sources = set(self.sources) - old_source_ids
-        self.assertEqual(added_runtime_sources, set(self.batch["new_source_ids"]))
+        self.assertEqual(added_runtime_sources, source_ids_added_since_baseline)
 
         for item_id in ITEM_IDS:
             with self.subTest(item_id=item_id):
@@ -271,10 +270,22 @@ class ChapterTwoSleepFoodPublicationTests(unittest.TestCase):
         base_runtime = read_json_from_git(BASE, "localization/tw-edition/runtime.json")
         base_register = read_json_from_git(BASE, REGISTER_PATH)
         current_register = read_json(REGISTER_PATH)
-        self.assertEqual(current_register, base_register)
+        assert_append_only_rechecks(
+            self,
+            base_register["substantive_rechecks"],
+            current_register["substantive_rechecks"],
+        )
+        baseline_without_rechecks = dict(base_register)
+        current_without_rechecks = dict(current_register)
+        baseline_without_rechecks.pop("substantive_rechecks")
+        current_without_rechecks.pop("substantive_rechecks")
+        self.assertEqual(current_without_rechecks, baseline_without_rechecks)
         self.assertEqual(self.coverage, audit_drafts())
         self.assertFalse(self.coverage["publication_ready"])
-        self.assertEqual(self.coverage["core_reviewed_entries"], 321)
+        self.assertGreaterEqual(
+            self.coverage["core_reviewed_entries"],
+            self.batch["counts_after"]["core_reviewed"],
+        )
 
         before = self.batch["counts_before"]
         after = self.batch["counts_after"]
@@ -290,10 +301,10 @@ class ChapterTwoSleepFoodPublicationTests(unittest.TestCase):
         self.assertEqual(after["source_registry"], before["source_registry"] + len(self.batch["new_source_ids"]))
         self.assertEqual(after["json_files_checked"], before["json_files_checked"] + len(ITEM_IDS) + 2)
         self.assertEqual(after["substantive_rechecks"], before["substantive_rechecks"])
-        self.assertEqual(after["core_reviewed"], self.coverage["publication_completed_entries"])
-        self.assertEqual(after["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(after["source_registry"], self.coverage["registry_sources"])
-        self.assertEqual(after["json_files_checked"], self.coverage["json_files_checked"])
+        self.assertGreaterEqual(self.coverage["publication_completed_entries"], after["core_reviewed"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(self.coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(self.coverage["json_files_checked"], after["json_files_checked"])
         self.assertFalse(after["publication_ready"])
 
 

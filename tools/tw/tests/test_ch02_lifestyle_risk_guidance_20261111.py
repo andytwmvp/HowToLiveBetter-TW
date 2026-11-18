@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
 from retroactive_audit import assert_preserved_or_rechecked
+from recheck_history_assertions import assert_chapter_entries_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime
 from source_bundle_test_support import source_bundle_ids_added_since
 
@@ -245,10 +246,16 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         current_chapter = json.loads(structured.read_bytes())
         old_rows = {row[0]: row for row in base_chapter["entries"]}
         rows = {row[0]: row for row in current_chapter["entries"]}
-        self.assertEqual(set(rows), set(old_rows))
-        for number, old_row in old_rows.items():
-            if number not in {6, 25, 29, 36, 47}:
-                self.assertEqual(rows[number], old_row)
+        assert_chapter_entries_preserved_or_rechecked(
+            self,
+            chapter_number=2,
+            baseline_entries=base_chapter["entries"],
+            current_entries=current_chapter["entries"],
+            baseline_items={row["id"]: row for row in self.base_runtime["items"]},
+            current_items={row["id"]: row for row in self.runtime["items"]},
+            baseline_rechecks=self.base_register["substantive_rechecks"],
+            current_rechecks=self.register["substantive_rechecks"],
+        )
         self.assertIn("日本研究有觀察到死亡率關聯", rows[25][1])
         self.assertIn("日本研究探討心血管與健康老化", rows[36][1])
         self.assertIn("生淡水魚的中華肝吸蟲風險", rows[47][1])

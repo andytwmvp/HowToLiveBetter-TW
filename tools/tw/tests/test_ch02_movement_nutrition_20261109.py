@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
+from recheck_history_assertions import assert_chapter_entries_preserved_or_rechecked
 from review_contract import ROOT, publication_report, validate_runtime
 
 
@@ -51,7 +52,7 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         cls.batch = read_json(BATCH_PATH)
         cls.batch_items = {row["id"]: row for row in cls.batch["items"]}
         cls.register = read_json("localization/retroactive-review-register-20261019.json")
-        base_register = json.loads(
+        cls.base_register = json.loads(
             subprocess.check_output(
                 ["git", "show", f"{BASE}:localization/retroactive-review-register-20261019.json"],
                 cwd=ROOT,
@@ -59,7 +60,7 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
             )
         )
         cls.later_rechecks = cls.register["substantive_rechecks"][
-            len(base_register["substantive_rechecks"]):
+            len(cls.base_register["substantive_rechecks"]):
         ]
         cls.rechecks_by_id = {
             item_id: [row for row in cls.later_rechecks
@@ -200,10 +201,16 @@ class Chapter2MovementNutritionTests(unittest.TestCase):
         )
         old_rows = {row[0]: row for row in old_chapter["entries"]}
         current_rows = {row[0]: row for row in current_chapter["entries"]}
-        self.assertEqual(set(current_rows), set(old_rows))
-        for number, old_row in old_rows.items():
-            if number not in {6, 25, 29, 36, 47}:
-                self.assertEqual(current_rows[number], old_row)
+        assert_chapter_entries_preserved_or_rechecked(
+            self,
+            chapter_number=2,
+            baseline_entries=old_chapter["entries"],
+            current_entries=current_chapter["entries"],
+            baseline_items={row["id"]: row for row in self.base_runtime["items"]},
+            current_items={row["id"]: row for row in self.runtime["items"]},
+            baseline_rechecks=self.base_register["substantive_rechecks"],
+            current_rechecks=self.register["substantive_rechecks"],
+        )
         self.assertIn("日本研究有觀察到死亡率關聯", current_rows[25][1])
         self.assertIn("日本研究探討心血管與健康老化", current_rows[36][1])
         self.assertIn("生淡水魚的中華肝吸蟲風險", current_rows[47][1])

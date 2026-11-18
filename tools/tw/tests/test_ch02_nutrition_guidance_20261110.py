@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
+from recheck_history_assertions import assert_chapter_entries_preserved_or_rechecked
 from review_contract import ROOT, validate_runtime
 from source_bundle_test_support import source_bundle_ids_added_since
 
@@ -73,9 +74,9 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         cls.completed_register = json_at(
             COMPLETED_HEAD, "localization/retroactive-review-register-20261019.json"
         )
-        base_register = base_json("localization/retroactive-review-register-20261019.json")
+        cls.base_register = base_json("localization/retroactive-review-register-20261019.json")
         cls.later_rechecks = cls.register["substantive_rechecks"][
-            len(base_register["substantive_rechecks"]):
+            len(cls.base_register["substantive_rechecks"]):
         ]
         cls.later_first_publication_ids = set()
         cls.later_first_publication_source_ids = set()
@@ -268,10 +269,16 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         draft_data = json.loads(current_drafts)
         base_rows = {f"TW-02-{row[0]:03}": row for row in base_draft_data["entries"]}
         rows = {f"TW-02-{row[0]:03}": row for row in draft_data["entries"]}
-        self.assertEqual(set(rows), set(base_rows))
-        for item_id, old_row in base_rows.items():
-            if item_id not in {"TW-02-006", "TW-02-025", "TW-02-029", "TW-02-036", "TW-02-047"}:
-                self.assertEqual(rows[item_id], old_row)
+        assert_chapter_entries_preserved_or_rechecked(
+            self,
+            chapter_number=2,
+            baseline_entries=base_draft_data["entries"],
+            current_entries=draft_data["entries"],
+            baseline_items={row["id"]: row for row in self.base_runtime["items"]},
+            current_items={row["id"]: row for row in self.runtime["items"]},
+            baseline_rechecks=self.base_register["substantive_rechecks"],
+            current_rechecks=self.register["substantive_rechecks"],
+        )
         self.assertIn("日本研究", rows["TW-02-025"][1])
         self.assertIn("日本研究探討心血管與健康老化", rows["TW-02-036"][1])
         self.assertIn("生淡水魚的中華肝吸蟲風險", rows["TW-02-047"][1])
