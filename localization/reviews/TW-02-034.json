@@ -1,0 +1,249 @@
+{
+  "id": "TW-02-034",
+  "reviewer": "ChatGPT（AI協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-18",
+  "review_due_at": "2027-02-18",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-034.md",
+  "target_sha256": "3967305d84a7e7dbc4b7750bbfdb5dc951e75773cb265a6ae1c699ccf07a727c",
+  "source_reviewed_sha256": "3967305d84a7e7dbc4b7750bbfdb5dc951e75773cb265a6ae1c699ccf07a727c",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-sleep-food-20261118.json",
+  "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_dairy_survey_2017_2020",
+      "title": "國健署委託研究：2017至2020年國民營養調查乳品攝取資料",
+      "url": "https://crc.sfaa.gov.tw/Uploadfile/StatiscsKnowledge/34_20220629145208_2497642.pdf",
+      "claim": "2017至2020年19至64歲乳品份數調查分類，以及各性別年齡組的加權比例、未加權樣本數和抽樣方法。",
+      "supporting_passage": "表3.3.3列出每日乳品攝取不足一份之各性別年齡分組比例；比例以複雜抽樣權重估計，表列未加權樣本數，攝取量以飲食頻率問卷搭配24小時飲食回憶估算。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "查閱國健署2017至2020年國民營養健康狀況變遷調查成果報告PDF，核對表3.3.3的性別、年齡、每日乳品份數門檻、未加權樣本數與加權方法。"
+    },
+    {
+      "source_id": "tw02_dairy_mortality_meta_2026",
+      "title": "Hu等：乳品攝取與全因及心血管死亡的劑量反應統合分析（2026）",
+      "url": "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1731841/full",
+      "claim": "乳品劑量反應統合分析29項世代研究與牛奶、總乳品每200公克／日的全因死亡估計及證據確定性。",
+      "supporting_passage": "全文結果段落：牛奶200g/day HR 0.98（95% CI 0.93–1.02），very low certainty；總乳品200g/day HR 0.97（95% CI 0.94–<1.00），very low certainty，並檢出非線性；29 cohorts總計1,680,651人。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱Frontiers論文全文與統計表，核對搜尋截止日、研究數、全體參與者、牛奶與總乳品分項估計、信賴區間、劑量反應及GRADE證據確定性。"
+    },
+    {
+      "source_id": "tw02_hpa_food_standards_20261118",
+      "title": "國健署：健康飲食標準與食物代換份量",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=718",
+      "claim": "國健署食物份量換算：240毫升乳品及一顆蛋各列為相應食物類別的一份；不是每日強制份量或上限。",
+      "supporting_passage": "健康飲食標準頁的食物份量換算表列240毫升乳品為一份乳品、一顆蛋為一份豆魚蛋肉類。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "查閱國健署健康飲食標準及份量換算頁，核對240毫升乳品和一顆蛋的食物份量分類，並確認頁面當時標示的修訂狀態及更新日期。"
+    },
+    {
+      "source_id": "tw02_hpa_soy_calcium_2019",
+      "title": "國健署：豆漿有豐富的鈣質？是真的嗎？",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1425&pid=11502&sid=13244",
+      "claim": "豆漿強化與豆腐製程會造成鈣含量差異。",
+      "supporting_passage": "國健署說明未強化豆漿及不同凝固方式豆腐的鈣含量可能不同，應查看產品標示。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱國健署豆漿鈣質衛教頁，核對豆漿是否強化及豆腐製程對鈣含量的差異。"
+    },
+    {
+      "source_id": "tw02_niddk_lactose_nutrition",
+      "title": "NIDDK：乳糖不耐者的飲食選擇",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/lactose-intolerance/eating-diet-nutrition",
+      "claim": "乳糖不耐者可試少量、隨餐或選優格和硬起司等較能耐受的食物；耐受份量因人而異。",
+      "supporting_passage": "NIDDK建議一次少量並隨餐、逐步加入乳製品觀察反應，並可試優格及硬起司。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱美國國家糖尿病、消化及腎臟疾病研究院（NIDDK）乳糖不耐飲食頁，核對少量、隨餐及優格／硬起司選項。"
+    },
+    {
+      "source_id": "tw02_niddk_lactose_definition_facts",
+      "title": "NIDDK：乳糖不耐與牛奶過敏的差異",
+      "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/lactose-intolerance/definition-facts",
+      "claim": "乳糖不耐與牛奶過敏不是同一種狀況。",
+      "supporting_passage": "NIDDK說明乳糖不耐是乳糖消化不良造成的消化症狀，牛奶過敏是免疫系統疾病。頁面標示最近審閱日期2018年2月。",
+      "accessed_at": "2026-11-18",
+      "retrieval_method": "直接查閱NIDDK定義頁，核對乳糖不耐與牛奶過敏的差異及頁面最近審閱日期；不將美國乳糖吸收盛行率外推至台灣。"
+    },
+    {
+      "source_id": "tw02_tfda_nutrition_labeling_rule",
+      "title": "食藥署：包裝食品營養標示應遵行事項",
+      "url": "https://foodlabel.fda.gov.tw/FdaFrontEndApp/Law/Edit?SystemId=f27b8c5e-35c2-4a86-9b8b-d7cbbef409ab&clPublishStatus=1&key=%E5%8C%85%E8%A3%9D%E9%A3%9F%E5%93%81%E7%87%9F%E9%A4%8A%E6%A8%99%E7%A4%BA%E6%87%89%E9%81%B5%E8%A1%8C%E4%BA%8B%E9%A0%85",
+      "claim": "包裝食品營養標示依每份及每100公克或100毫升標示營養資訊，供選購時比較。",
+      "supporting_passage": "沿用已登錄食藥署包裝食品營養標示規定來源（原來源紀錄於2026-11-11查閱）；其中規定每份與每100公克／毫升及包裝份數標示，本次確認既有source ID與正文連結一致。",
+      "accessed_at": "2026-11-11",
+      "retrieval_method": "查閱食藥署食品標示諮詢服務平台的現行法規項目及官方規定文字，核對每份、每100公克／毫升及包裝份數。"
+    }
+  ],
+  "localization_changes": "保留原作乳品與健康、死亡研究問題；使用台灣2017至2020年乳品份數調查和目前國健署份量換算，加入乳糖耐受、非乳品鈣蛋白質來源與包裝營養標示實作；不把「每天一至兩份」寫成人人必須攝取或延壽處方。",
+  "review_method": "重讀原作固定ID、目前章節結構化草稿與原作文字雜湊，檢查最新manifest、目標正文與既有同主題閱讀內容；逐項查核官方指引或原始研究，核對來源對應主張、研究族群、期間、暴露／結局定義、分子分母、資料型態及限制。用台灣情境撰寫實際行動；沒有同口徑台灣統計時明示資料不足，不把觀察研究換算成個人機率。AI查核不是獨立營養、醫療或流行病學專家審閱。",
+  "limits": [
+    "台灣調查為2017至2020年且報告未列加權分子與母群分母；每日不足一份不是營養缺乏診斷。海外乳品與死亡研究為觀察性、分項證據確定性低，無法推估個人壽命效益。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+  "source_ids": [
+    "tw02_hpa_dairy_survey_2017_2020",
+    "tw02_dairy_mortality_meta_2026",
+    "tw02_hpa_food_standards_20261118",
+    "tw02_hpa_soy_calcium_2019",
+    "tw02_niddk_lactose_nutrition",
+    "tw02_niddk_lactose_definition_facts",
+    "tw02_tfda_nutrition_labeling_rule"
+  ],
+  "frequency_assessment": "台灣可查到2017至2020年國民營養調查中乳品份數分組，但數據年代較早，且表列樣本數未加權、未公布原始加權分子與母群分母；未找到可用相同定義代表2026現況的公開全國資料。乳品攝取少於一份不是個人缺鈣診斷。海外統合分析是死亡的觀察性相對估計，不能當成台灣居民發生率或個人延壽機率。",
+  "statistics_assessed": [
+    {
+      "topic": "台灣19至44歲男性每日乳品不足一份的調查比例",
+      "value": "92.1%",
+      "unit": "複雜抽樣加權後比例",
+      "period": "2017至2020年國民營養調查",
+      "geographic_scope": "台灣全國調查",
+      "population": "19至44歲男性；未加權樣本945人",
+      "numerator": "報告未列原始不足一份人數或加權分子",
+      "denominator": "表列未加權樣本945人；加權估計母群分母未列原始人數",
+      "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+      "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+      "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+      "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+      "source_ids": [
+        "tw02_hpa_dairy_survey_2017_2020"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "台灣45至64歲男性每日乳品不足一份的調查比例",
+      "value": "95.3%",
+      "unit": "複雜抽樣加權後比例",
+      "period": "2017至2020年國民營養調查",
+      "geographic_scope": "台灣全國調查",
+      "population": "45至64歲男性；未加權樣本959人",
+      "numerator": "報告未列原始不足一份人數或加權分子",
+      "denominator": "表列未加權樣本959人；加權估計母群分母未列原始人數",
+      "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+      "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+      "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+      "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+      "source_ids": [
+        "tw02_hpa_dairy_survey_2017_2020"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "台灣19至44歲女性每日乳品不足一份的調查比例",
+      "value": "91.8%",
+      "unit": "複雜抽樣加權後比例",
+      "period": "2017至2020年國民營養調查",
+      "geographic_scope": "台灣全國調查",
+      "population": "19至44歲女性；未加權樣本969人",
+      "numerator": "報告未列原始不足一份人數或加權分子",
+      "denominator": "表列未加權樣本969人；加權估計母群分母未列原始人數",
+      "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+      "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+      "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+      "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+      "source_ids": [
+        "tw02_hpa_dairy_survey_2017_2020"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "台灣45至64歲女性每日乳品不足一份的調查比例",
+      "value": "93.1%",
+      "unit": "複雜抽樣加權後比例",
+      "period": "2017至2020年國民營養調查",
+      "geographic_scope": "台灣全國調查",
+      "population": "45至64歲女性；未加權樣本985人",
+      "numerator": "報告未列原始不足一份人數或加權分子",
+      "denominator": "表列未加權樣本985人；加權估計母群分母未列原始人數",
+      "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+      "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+      "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+      "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+      "source_ids": [
+        "tw02_hpa_dairy_survey_2017_2020"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "每日牛奶攝取200公克與全因死亡",
+      "value": {
+        "HR": 0.98,
+        "95_CI": [
+          0.93,
+          1.02
+        ]
+      },
+      "unit": "每日200公克牛奶之劑量反應調整後危險比；證據確定性極低",
+      "period": "回顧搜尋截至2025-06-19；納入研究追蹤期間各異",
+      "geographic_scope": "多國前瞻世代研究統合分析",
+      "population": "牛奶與全因死亡劑量反應分析納入11項研究；整體回顧29項世代研究共1,680,651人，非此分項模型的明確樣本數",
+      "numerator": "此劑量反應統合估計未提供可對應200公克／日比較組的合併死亡人數",
+      "denominator": "11項牛奶與全因死亡研究；此分項估計參與者總數及死亡數未在統合結果中另列",
+      "denominator_definition": "前瞻性世代研究中可供劑量反應估計的研究；200公克／日是模型估計暴露，不是病例發生率分母",
+      "event_definition": "追蹤中的全因死亡；不是乳品缺乏症或台灣個人壽命改變",
+      "data_type": "系統性回顧及前瞻世代研究劑量反應統合分析",
+      "limitations": "觀察性研究不能證明因果；證據確定性極低；總回顧人數不可代替此分項模型樣本數，沒有台灣個人絕對風險估計。",
+      "source_ids": [
+        "tw02_dairy_mortality_meta_2026"
+      ],
+      "accessed_at": "2026-11-18"
+    },
+    {
+      "topic": "每日總乳品攝取200公克與全因死亡",
+      "value": {
+        "HR": 0.97,
+        "95_CI": [
+          0.94,
+          "<1.00"
+        ]
+      },
+      "unit": "每日200公克總乳品之劑量反應調整後危險比；證據確定性極低",
+      "period": "回顧搜尋截至2025-06-19；納入研究追蹤期間各異",
+      "geographic_scope": "多國前瞻世代研究統合分析",
+      "population": "總乳品與全因死亡劑量反應分析納入12項研究；整體回顧29項世代研究共1,680,651人，非此分項模型的明確樣本數",
+      "numerator": "此劑量反應統合估計未提供可對應200公克／日比較組的合併死亡人數",
+      "denominator": "12項總乳品與全因死亡研究；此分項估計參與者總數及死亡數未在統合結果中另列",
+      "denominator_definition": "前瞻性世代研究中可供劑量反應估計的研究；200公克／日是模型估計暴露，不是病例發生率分母",
+      "event_definition": "追蹤中的全因死亡；不是乳品缺乏症或台灣個人壽命改變",
+      "data_type": "系統性回顧及前瞻世代研究劑量反應統合分析",
+      "limitations": "觀察性研究不能證明因果；證據確定性極低且呈非線性；總回顧人數不可代替此分項模型樣本數，沒有台灣個人絕對風險估計。",
+      "source_ids": [
+        "tw02_dairy_mortality_meta_2026"
+      ],
+      "accessed_at": "2026-11-18"
+    }
+  ],
+  "unresolved_questions": [
+    "未取得營養學／營養流行病學專業人員獨立審閱。",
+    "國健署是否會發布同口徑更新乳品攝取資料，需後續確認。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "臨床營養與營養流行病學",
+      "腸胃科（乳糖不耐與過敏鑑別）"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "8e3742168a7873d4b58a297083bd5e03f62d3c6e487742f95d7fc182bd877202",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留乳品與健康／全因死亡研究問題；加入台灣調查和飲食替代做法，不將份量觀察或關聯改寫為強制喝奶或延壽建議。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_research_question_with_taiwan_dietary_context",
+    "original_question": "每日喝一至兩份牛奶或優酪乳與死亡風險有何關係？",
+    "reader_content_decision": "保留乳品與健康／全因死亡研究問題；加入台灣調查和飲食替代做法，不將份量觀察或關聯改寫為強制喝奶或延壽建議。",
+    "historical_claim_decisions": [
+      {
+        "claim": "每日一至兩份乳品可能與健康或壽命有關",
+        "decision": "retain_with_observational_limits",
+        "reason": "仍有研究價值；2026統合分析顯示牛奶估計無明確關聯、總乳品估計小且確定性極低，不能推論因果或個人延壽。"
+      },
+      {
+        "claim": "台灣乳品攝取應依原作份量直接判斷不足",
+        "decision": "replace_with_taiwan_survey_and_individual_choice",
+        "reason": "以本地舊年度調查描述攝取分類差異，說明資料年代與加權分母限制，不把未滿一份當作臨床缺乏。"
+      }
+    ]
+  }
+}

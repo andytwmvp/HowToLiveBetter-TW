@@ -1,0 +1,711 @@
+{
+  "schema_version": 1,
+  "batch": "第2章乳品、雞蛋、午睡與睡眠回補四篇台灣版首次正式發布",
+  "baseline_main_sha": "c396867f415b8de6448992476e8f0abccc5e0084",
+  "reviewed_at": "2026-11-18",
+  "review_due_at": "2027-02-18",
+  "counts_before": {
+    "core_reviewed": 317,
+    "runtime_items": 328,
+    "runtime_sources": 1329,
+    "source_registry": 1412,
+    "json_files_checked": 655,
+    "substantive_rechecks": 403
+  },
+  "new_source_ids": [
+    "tw02_hpa_dairy_survey_2017_2020",
+    "tw02_hpa_food_standards_20261118",
+    "tw02_hpa_soy_calcium_2019",
+    "tw02_niddk_lactose_nutrition",
+    "tw02_niddk_lactose_definition_facts",
+    "tw02_dairy_mortality_meta_2026",
+    "tw02_egg_health_umbrella_2025",
+    "tw02_tfda_egg_safety_2026",
+    "tw02_jama_daytime_napping_mortality_2026",
+    "tw02_acute_sleep_rebound_mortality_2026",
+    "tw02_weekend_catchup_sleep_2024"
+  ],
+  "new_source_bundle": "localization/tw-edition/sources/ch02-sleep-food-20261118.json",
+  "items": [
+    {
+      "id": "TW-02-034",
+      "title": "乳品與健康、壽命：不必為了延壽硬喝",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c396867f415b8de6448992476e8f0abccc5e0084",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "8e3742168a7873d4b58a297083bd5e03f62d3c6e487742f95d7fc182bd877202",
+      "prior_structured_source_refs": [
+        "nutrition"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "3967305d84a7e7dbc4b7750bbfdb5dc951e75773cb265a6ae1c699ccf07a727c",
+      "review_path": "localization/reviews/TW-02-034.json",
+      "review_sha256": "30a8ae7e35d8ac76f3ae72867d2df6f045f146a6cf2717d2c89673da87dd5cc5",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-034.md",
+      "source_ids": [
+        "tw02_hpa_dairy_survey_2017_2020",
+        "tw02_dairy_mortality_meta_2026",
+        "tw02_hpa_food_standards_20261118",
+        "tw02_hpa_soy_calcium_2019",
+        "tw02_niddk_lactose_nutrition",
+        "tw02_niddk_lactose_definition_facts",
+        "tw02_tfda_nutrition_labeling_rule"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_dairy_survey_2017_2020",
+          "title": "國健署委託研究：2017至2020年國民營養調查乳品攝取資料",
+          "url": "https://crc.sfaa.gov.tw/Uploadfile/StatiscsKnowledge/34_20220629145208_2497642.pdf",
+          "claim": "2017至2020年19至64歲乳品份數調查分類，以及各性別年齡組的加權比例、未加權樣本數和抽樣方法。",
+          "supporting_passage": "表3.3.3列出每日乳品攝取不足一份之各性別年齡分組比例；比例以複雜抽樣權重估計，表列未加權樣本數，攝取量以飲食頻率問卷搭配24小時飲食回憶估算。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "查閱國健署2017至2020年國民營養健康狀況變遷調查成果報告PDF，核對表3.3.3的性別、年齡、每日乳品份數門檻、未加權樣本數與加權方法。"
+        },
+        {
+          "source_id": "tw02_dairy_mortality_meta_2026",
+          "title": "Hu等：乳品攝取與全因及心血管死亡的劑量反應統合分析（2026）",
+          "url": "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1731841/full",
+          "claim": "乳品劑量反應統合分析29項世代研究與牛奶、總乳品每200公克／日的全因死亡估計及證據確定性。",
+          "supporting_passage": "全文結果段落：牛奶200g/day HR 0.98（95% CI 0.93–1.02），very low certainty；總乳品200g/day HR 0.97（95% CI 0.94–<1.00），very low certainty，並檢出非線性；29 cohorts總計1,680,651人。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "直接查閱Frontiers論文全文與統計表，核對搜尋截止日、研究數、全體參與者、牛奶與總乳品分項估計、信賴區間、劑量反應及GRADE證據確定性。"
+        },
+        {
+          "source_id": "tw02_hpa_food_standards_20261118",
+          "title": "國健署：健康飲食標準與食物代換份量",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=718",
+          "claim": "國健署食物份量換算：240毫升乳品及一顆蛋各列為相應食物類別的一份；不是每日強制份量或上限。",
+          "supporting_passage": "健康飲食標準頁的食物份量換算表列240毫升乳品為一份乳品、一顆蛋為一份豆魚蛋肉類。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "查閱國健署健康飲食標準及份量換算頁，核對240毫升乳品和一顆蛋的食物份量分類，並確認頁面當時標示的修訂狀態及更新日期。"
+        },
+        {
+          "source_id": "tw02_hpa_soy_calcium_2019",
+          "title": "國健署：豆漿有豐富的鈣質？是真的嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1425&pid=11502&sid=13244",
+          "claim": "豆漿強化與豆腐製程會造成鈣含量差異。",
+          "supporting_passage": "國健署說明未強化豆漿及不同凝固方式豆腐的鈣含量可能不同，應查看產品標示。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "直接查閱國健署豆漿鈣質衛教頁，核對豆漿是否強化及豆腐製程對鈣含量的差異。"
+        },
+        {
+          "source_id": "tw02_niddk_lactose_nutrition",
+          "title": "NIDDK：乳糖不耐者的飲食選擇",
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/lactose-intolerance/eating-diet-nutrition",
+          "claim": "乳糖不耐者可試少量、隨餐或選優格和硬起司等較能耐受的食物；耐受份量因人而異。",
+          "supporting_passage": "NIDDK建議一次少量並隨餐、逐步加入乳製品觀察反應，並可試優格及硬起司。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "直接查閱美國國家糖尿病、消化及腎臟疾病研究院（NIDDK）乳糖不耐飲食頁，核對少量、隨餐及優格／硬起司選項。"
+        },
+        {
+          "source_id": "tw02_niddk_lactose_definition_facts",
+          "title": "NIDDK：乳糖不耐與牛奶過敏的差異",
+          "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/lactose-intolerance/definition-facts",
+          "claim": "乳糖不耐與牛奶過敏不是同一種狀況。",
+          "supporting_passage": "NIDDK說明乳糖不耐是乳糖消化不良造成的消化症狀，牛奶過敏是免疫系統疾病。頁面標示最近審閱日期2018年2月。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "直接查閱NIDDK定義頁，核對乳糖不耐與牛奶過敏的差異及頁面最近審閱日期；不將美國乳糖吸收盛行率外推至台灣。"
+        },
+        {
+          "source_id": "tw02_tfda_nutrition_labeling_rule",
+          "title": "食藥署：包裝食品營養標示應遵行事項",
+          "url": "https://foodlabel.fda.gov.tw/FdaFrontEndApp/Law/Edit?SystemId=f27b8c5e-35c2-4a86-9b8b-d7cbbef409ab&clPublishStatus=1&key=%E5%8C%85%E8%A3%9D%E9%A3%9F%E5%93%81%E7%87%9F%E9%A4%8A%E6%A8%99%E7%A4%BA%E6%87%89%E9%81%B5%E8%A1%8C%E4%BA%8B%E9%A0%85",
+          "claim": "包裝食品營養標示依每份及每100公克或100毫升標示營養資訊，供選購時比較。",
+          "supporting_passage": "沿用已登錄食藥署包裝食品營養標示規定來源（原來源紀錄於2026-11-11查閱）；其中規定每份與每100公克／毫升及包裝份數標示，本次確認既有source ID與正文連結一致。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "查閱食藥署食品標示諮詢服務平台的現行法規項目及官方規定文字，核對每份、每100公克／毫升及包裝份數。"
+        }
+      ],
+      "taiwan_context": "台灣可查到2017至2020年國民營養調查中乳品份數分組，但數據年代較早，且表列樣本數未加權、未公布原始加權分子與母群分母；未找到可用相同定義代表2026現況的公開全國資料。乳品攝取少於一份不是個人缺鈣診斷。海外統合分析是死亡的觀察性相對估計，不能當成台灣居民發生率或個人延壽機率。",
+      "frequency_assessment": "台灣可查到2017至2020年國民營養調查中乳品份數分組，但數據年代較早，且表列樣本數未加權、未公布原始加權分子與母群分母；未找到可用相同定義代表2026現況的公開全國資料。乳品攝取少於一份不是個人缺鈣診斷。海外統合分析是死亡的觀察性相對估計，不能當成台灣居民發生率或個人延壽機率。",
+      "statistics_assessed": [
+        {
+          "topic": "台灣19至44歲男性每日乳品不足一份的調查比例",
+          "value": "92.1%",
+          "unit": "複雜抽樣加權後比例",
+          "period": "2017至2020年國民營養調查",
+          "geographic_scope": "台灣全國調查",
+          "population": "19至44歲男性；未加權樣本945人",
+          "numerator": "報告未列原始不足一份人數或加權分子",
+          "denominator": "表列未加權樣本945人；加權估計母群分母未列原始人數",
+          "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+          "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+          "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+          "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+          "source_ids": [
+            "tw02_hpa_dairy_survey_2017_2020"
+          ],
+          "accessed_at": "2026-11-18"
+        },
+        {
+          "topic": "台灣45至64歲男性每日乳品不足一份的調查比例",
+          "value": "95.3%",
+          "unit": "複雜抽樣加權後比例",
+          "period": "2017至2020年國民營養調查",
+          "geographic_scope": "台灣全國調查",
+          "population": "45至64歲男性；未加權樣本959人",
+          "numerator": "報告未列原始不足一份人數或加權分子",
+          "denominator": "表列未加權樣本959人；加權估計母群分母未列原始人數",
+          "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+          "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+          "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+          "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+          "source_ids": [
+            "tw02_hpa_dairy_survey_2017_2020"
+          ],
+          "accessed_at": "2026-11-18"
+        },
+        {
+          "topic": "台灣19至44歲女性每日乳品不足一份的調查比例",
+          "value": "91.8%",
+          "unit": "複雜抽樣加權後比例",
+          "period": "2017至2020年國民營養調查",
+          "geographic_scope": "台灣全國調查",
+          "population": "19至44歲女性；未加權樣本969人",
+          "numerator": "報告未列原始不足一份人數或加權分子",
+          "denominator": "表列未加權樣本969人；加權估計母群分母未列原始人數",
+          "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+          "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+          "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+          "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+          "source_ids": [
+            "tw02_hpa_dairy_survey_2017_2020"
+          ],
+          "accessed_at": "2026-11-18"
+        },
+        {
+          "topic": "台灣45至64歲女性每日乳品不足一份的調查比例",
+          "value": "93.1%",
+          "unit": "複雜抽樣加權後比例",
+          "period": "2017至2020年國民營養調查",
+          "geographic_scope": "台灣全國調查",
+          "population": "45至64歲女性；未加權樣本985人",
+          "numerator": "報告未列原始不足一份人數或加權分子",
+          "denominator": "表列未加權樣本985人；加權估計母群分母未列原始人數",
+          "denominator_definition": "依調查設計納入該性別及年齡組且有可估算飲食資料的受訪者；樣本數為未加權值",
+          "event_definition": "依飲食頻率問卷與24小時飲食回憶估算，每日乳品攝取少於一份；不是營養缺乏或疾病",
+          "data_type": "全國複雜抽樣橫斷式飲食調查；表列百分比經SUDAAN加權",
+          "limitations": "調查為2017至2020年，非2026年現況；表列樣本數未加權，原始加權分子／母群分母未提供；不足一份是調查分類門檻，不能診斷個人缺鈣或蛋白質。",
+          "source_ids": [
+            "tw02_hpa_dairy_survey_2017_2020"
+          ],
+          "accessed_at": "2026-11-18"
+        },
+        {
+          "topic": "每日牛奶攝取200公克與全因死亡",
+          "value": {
+            "HR": 0.98,
+            "95_CI": [
+              0.93,
+              1.02
+            ]
+          },
+          "unit": "每日200公克牛奶之劑量反應調整後危險比；證據確定性極低",
+          "period": "回顧搜尋截至2025-06-19；納入研究追蹤期間各異",
+          "geographic_scope": "多國前瞻世代研究統合分析",
+          "population": "牛奶與全因死亡劑量反應分析納入11項研究；整體回顧29項世代研究共1,680,651人，非此分項模型的明確樣本數",
+          "numerator": "此劑量反應統合估計未提供可對應200公克／日比較組的合併死亡人數",
+          "denominator": "11項牛奶與全因死亡研究；此分項估計參與者總數及死亡數未在統合結果中另列",
+          "denominator_definition": "前瞻性世代研究中可供劑量反應估計的研究；200公克／日是模型估計暴露，不是病例發生率分母",
+          "event_definition": "追蹤中的全因死亡；不是乳品缺乏症或台灣個人壽命改變",
+          "data_type": "系統性回顧及前瞻世代研究劑量反應統合分析",
+          "limitations": "觀察性研究不能證明因果；證據確定性極低；總回顧人數不可代替此分項模型樣本數，沒有台灣個人絕對風險估計。",
+          "source_ids": [
+            "tw02_dairy_mortality_meta_2026"
+          ],
+          "accessed_at": "2026-11-18"
+        },
+        {
+          "topic": "每日總乳品攝取200公克與全因死亡",
+          "value": {
+            "HR": 0.97,
+            "95_CI": [
+              0.94,
+              "<1.00"
+            ]
+          },
+          "unit": "每日200公克總乳品之劑量反應調整後危險比；證據確定性極低",
+          "period": "回顧搜尋截至2025-06-19；納入研究追蹤期間各異",
+          "geographic_scope": "多國前瞻世代研究統合分析",
+          "population": "總乳品與全因死亡劑量反應分析納入12項研究；整體回顧29項世代研究共1,680,651人，非此分項模型的明確樣本數",
+          "numerator": "此劑量反應統合估計未提供可對應200公克／日比較組的合併死亡人數",
+          "denominator": "12項總乳品與全因死亡研究；此分項估計參與者總數及死亡數未在統合結果中另列",
+          "denominator_definition": "前瞻性世代研究中可供劑量反應估計的研究；200公克／日是模型估計暴露，不是病例發生率分母",
+          "event_definition": "追蹤中的全因死亡；不是乳品缺乏症或台灣個人壽命改變",
+          "data_type": "系統性回顧及前瞻世代研究劑量反應統合分析",
+          "limitations": "觀察性研究不能證明因果；證據確定性極低且呈非線性；總回顧人數不可代替此分項模型樣本數，沒有台灣個人絕對風險估計。",
+          "source_ids": [
+            "tw02_dairy_mortality_meta_2026"
+          ],
+          "accessed_at": "2026-11-18"
+        }
+      ],
+      "topic_fidelity_assessment": "保留乳品與健康／全因死亡研究問題；加入台灣調查和飲食替代做法，不將份量觀察或關聯改寫為強制喝奶或延壽建議。",
+      "topic_fidelity_review": {
+        "decision": "retain_original_research_question_with_taiwan_dietary_context",
+        "original_question": "每日喝一至兩份牛奶或優酪乳與死亡風險有何關係？",
+        "reader_content_decision": "保留乳品與健康／全因死亡研究問題；加入台灣調查和飲食替代做法，不將份量觀察或關聯改寫為強制喝奶或延壽建議。",
+        "historical_claim_decisions": [
+          {
+            "claim": "每日一至兩份乳品可能與健康或壽命有關",
+            "decision": "retain_with_observational_limits",
+            "reason": "仍有研究價值；2026統合分析顯示牛奶估計無明確關聯、總乳品估計小且確定性極低，不能推論因果或個人延壽。"
+          },
+          {
+            "claim": "台灣乳品攝取應依原作份量直接判斷不足",
+            "decision": "replace_with_taiwan_survey_and_individual_choice",
+            "reason": "以本地舊年度調查描述攝取分類差異，說明資料年代與加權分母限制，不把未滿一份當作臨床缺乏。"
+          }
+        ]
+      },
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "臨床營養與營養流行病學",
+          "腸胃科（乳糖不耐與過敏鑑別）"
+        ]
+      },
+      "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+      "new_source_ids": [
+        "tw02_hpa_dairy_survey_2017_2020",
+        "tw02_dairy_mortality_meta_2026",
+        "tw02_hpa_food_standards_20261118",
+        "tw02_hpa_soy_calcium_2019",
+        "tw02_niddk_lactose_nutrition",
+        "tw02_niddk_lactose_definition_facts"
+      ]
+    },
+    {
+      "id": "TW-02-035",
+      "title": "雞蛋可以納入日常飲食，沒有通用的一天一顆上限",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c396867f415b8de6448992476e8f0abccc5e0084",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "4d0725e27b4629cb7c1aaa91e1ee58870fd269775eda40697af6ff0e3ef2c299",
+      "prior_structured_source_refs": [
+        "nutrition",
+        "foodsafety"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "6f62b59f29588f3a44e2be6f79f21b01751afcb036bd24bdbded2deae2ecfc98",
+      "review_path": "localization/reviews/TW-02-035.json",
+      "review_sha256": "e0aebc9cd6058383cf788af20ea51f950e5ef0b5b80e42bf6ebe55f268178d25",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-035.md",
+      "source_ids": [
+        "tw02_hpa_food_standards_20261118",
+        "tw02_egg_health_umbrella_2025",
+        "tw02_tfda_egg_safety_2026"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_food_standards_20261118",
+          "title": "國健署：健康飲食標準與食物代換份量",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=543&pid=8382&sid=718",
+          "claim": "國健署食物份量換算：240毫升乳品及一顆蛋各列為相應食物類別的一份；不是每日強制份量或上限。",
+          "supporting_passage": "健康飲食標準頁的食物份量換算表列240毫升乳品為一份乳品、一顆蛋為一份豆魚蛋肉類。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "查閱國健署健康飲食標準及份量換算頁，核對240毫升乳品和一顆蛋的食物份量分類，並確認頁面當時標示的修訂狀態及更新日期。"
+        },
+        {
+          "source_id": "tw02_egg_health_umbrella_2025",
+          "title": "Duan等：雞蛋攝取與健康結果的傘狀回顧（2025）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39934049/",
+          "claim": "2025年雞蛋攝取傘狀回顧納入14項統合分析，其中10項觀察研究、4項介入研究；整體品質極低，未見高低攝取組全因死亡與整體心血管結果有明確關聯。",
+          "supporting_passage": "PubMed摘要與全文結果：納入14項統合分析（10項觀察、4項介入）；研究異質性高、品質 critically low；沒有證據支持高低雞蛋攝取組全因死亡或整體心血管結果有關聯，不足以建議避免雞蛋。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "查閱PubMed摘要與論文公開全文，核對納入的統合分析類型與篇數、研究品質、異質性及高低攝取比較的結論。"
+        },
+        {
+          "source_id": "tw02_tfda_egg_safety_2026",
+          "title": "澎湖縣衛生局：雞蛋保存與充分加熱（食藥署國內衛生局新聞刊載）",
+          "url": "https://www.fda.gov.tw/Tc/csmnewsContent.aspx?id=t634369&mid=267",
+          "claim": "雞蛋保存、避免生／未熟蛋、洗手與避免生熟食交叉汙染的衛教。",
+          "supporting_passage": "食藥署國內衛生局新聞頁刊載澎湖縣衛生局2026-06-24文章，提醒注意保存、充分加熱、處理前後洗手並分開生熟食器具。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "查閱食藥署國內衛生局新聞頁及刊載文章，核對發布機關、發布日期與雞蛋保存、加熱、手部清潔及交叉汙染建議。"
+        }
+      ],
+      "taiwan_context": "未找到可代表台灣居民並依雞蛋攝取量分組、同時提供死亡或心血管事件母數的全國統計。2025年傘狀回顧納入14項統合分析，但整體品質極低且異質性高；研究結論不是個人每日安全上限，也不支持換算台灣個人機率。",
+      "frequency_assessment": "未找到可代表台灣居民並依雞蛋攝取量分組、同時提供死亡或心血管事件母數的全國統計。2025年傘狀回顧納入14項統合分析，但整體品質極低且異質性高；研究結論不是個人每日安全上限，也不支持換算台灣個人機率。",
+      "statistics_assessed": [
+        {
+          "topic": "雞蛋攝取高低組與全因死亡、心血管結果",
+          "value": {
+            "included_meta_analyses": 14,
+            "observational": 10,
+            "interventional": 4,
+            "quality": "critically low"
+          },
+          "unit": "系統性回顧傘狀回顧之研究數、類型與整體品質判定",
+          "period": "2025年出版；納入的原始統合分析涵蓋期間不一",
+          "geographic_scope": "多國系統性回顧，非台灣全國調查",
+          "population": "14篇統合分析所彙整的多個研究族群；傘狀回顧未提供可視為一個樣本的總參與者數",
+          "numerator": "不適用：多個統合分析彙整不同疾病及死亡研究，沒有單一合併病例數可代表全部結果",
+          "denominator": "各結局依所納入統合分析而異，不能合併成單一人數分母",
+          "denominator_definition": "比較較高與較低雞蛋攝取的不同觀察性及介入分析；研究暴露和結局定義不一",
+          "event_definition": "全因死亡及多種心血管結果；非台灣每人每日攝取量對應的個人事件機率",
+          "data_type": "系統性回顧的傘狀回顧，納入10項觀察性及4項介入研究統合分析；高異質性、整體品質極低",
+          "limitations": "缺乏高品質證據不能等同已證明零風險或無限量安全；研究族群、攝取分類與結局差異大；無台灣依雞蛋攝取量分層之死亡或心血管絕對風險資料。",
+          "source_ids": [
+            "tw02_egg_health_umbrella_2025"
+          ],
+          "accessed_at": "2026-11-18"
+        }
+      ],
+      "topic_fidelity_assessment": "保留雞蛋攝取與心血管／死亡證據，釐清食物份量換算不是每日上限，並加入台灣常見食安處理方式。",
+      "topic_fidelity_review": {
+        "decision": "retain_egg_intake_question_without_universal_cap_or_unlimited_safety_claim",
+        "original_question": "雞蛋是否必須限制在一天一顆以內？",
+        "reader_content_decision": "保留雞蛋攝取與心血管／死亡證據，釐清食物份量換算不是每日上限，並加入台灣常見食安處理方式。",
+        "historical_claim_decisions": [
+          {
+            "claim": "所有人每日最多一顆蛋",
+            "decision": "not_supported_as_universal_rule",
+            "reason": "國健署一顆蛋是食物份量換算；2025傘狀回顧未提供可支持人人一顆上限的高品質證據。"
+          },
+          {
+            "claim": "研究未見高低攝取差異即可無限量吃蛋",
+            "decision": "explicitly_rejected",
+            "reason": "傘狀回顧整體證據品質極低且研究異質，未顯示關聯不等於證明不限量安全。"
+          }
+        ]
+      },
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "心血管流行病學",
+          "食品衛生"
+        ]
+      },
+      "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+      "new_source_ids": [
+        "tw02_hpa_food_standards_20261118",
+        "tw02_egg_health_umbrella_2025",
+        "tw02_tfda_egg_safety_2026"
+      ]
+    },
+    {
+      "id": "TW-02-037",
+      "title": "午睡不用硬套三十分鐘規則；留意持續嗜睡",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c396867f415b8de6448992476e8f0abccc5e0084",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "c797f6191b18184bbfa2e4b361dc2917b9fa1870ded340fd9f11fbfabb698b39",
+      "prior_structured_source_refs": [
+        "sleep",
+        "insomnia"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "46bb26f8a10a845e969cb2664ecf29cae8e9347a83e48e55c65e17756780455f",
+      "review_path": "localization/reviews/TW-02-037.json",
+      "review_sha256": "608d14355942a9b2755876bef36fca20d02eecc62c4b3485ed02d98a401df44d",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-037.md",
+      "source_ids": [
+        "tw02_jama_daytime_napping_mortality_2026"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_jama_daytime_napping_mortality_2026",
+          "title": "Gao等：客觀測量午睡型態與高齡者全因死亡（2026）",
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2847953",
+          "claim": "午睡定義、北伊利諾州高齡社區族群、活動紀錄方式、追蹤、死亡數和每多一小時午睡調整後HR。",
+          "supporting_passage": "JAMA Network Open摘要／全文：1338名56歲以上者；午睡定義為9am至7pm；平均追蹤8.30年、926人死亡；每多1小時午睡調整後HR 1.13（95% CI 1.04–1.23）；93.3%自陳為白人。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "直接查閱JAMA Network Open論文全文與摘要，核對研究地區、納入對象、午睡定義、裝置期間、追蹤時間、死亡數、族群構成及調整後HR。"
+        }
+      ],
+      "taiwan_context": "沒有找到以一致午睡定義、代表台灣全體成人並連結追蹤死亡的全國統計。JAMA研究為1,338名北伊利諾州社區成人，平均81.4歲，平均追蹤8.30年；926人死亡。研究中的每小時調整後HR 1.13是群體相對估計，不能換算台灣個人發生機率。",
+      "frequency_assessment": "沒有找到以一致午睡定義、代表台灣全體成人並連結追蹤死亡的全國統計。JAMA研究為1,338名北伊利諾州社區成人，平均81.4歲，平均追蹤8.30年；926人死亡。研究中的每小時調整後HR 1.13是群體相對估計，不能換算台灣個人發生機率。",
+      "statistics_assessed": [
+        {
+          "topic": "每日午睡時間每多一小時與高齡者全因死亡關聯",
+          "value": {
+            "adjusted_HR_per_hour": 1.13,
+            "95_CI": [
+              1.04,
+              1.23
+            ],
+            "deaths": 926,
+            "cohort": 1338
+          },
+          "unit": "前瞻性觀察隊列調整後危險比；全隊列追蹤死亡事件數",
+          "period": "分析基線始於2005年8月；資料收集至2025年4月；平均追蹤8.30年（SD 4.78）",
+          "geographic_scope": "美國北伊利諾州Rush Memory and Aging Project社區研究",
+          "population": "1,338名56歲以上社區成人；平均81.4歲，女性1,018人（76.0%），自陳白人1,249人（93.3%）",
+          "numerator": "全因死亡926人（69.2%）",
+          "denominator": "追蹤分析隊列1,338人；HR為調整後Cox模型估計，不是死亡率的分子／分母比值",
+          "denominator_definition": "完成活動紀錄且有追蹤／死亡資料的合格社區成人；最多14天活動紀錄、平均9.58天",
+          "event_definition": "基線午睡特徵之後的全因死亡；午睡定義為上午9時至晚上7時的睡眠事件",
+          "data_type": "前瞻性觀察世代研究；活動紀錄儀最多14天；Cox比例風險模型",
+          "limitations": "不是隨機午睡試驗；午睡較長可能反映未測量疾病或夜間睡眠問題；隊列多為高齡、白人及美國單一研究群體，不能轉換為台灣個人死亡機率或固定午睡上限。",
+          "source_ids": [
+            "tw02_jama_daytime_napping_mortality_2026"
+          ],
+          "accessed_at": "2026-11-18"
+        }
+      ],
+      "topic_fidelity_assessment": "保留午睡型態與健康研究；明示單一高齡美國觀察隊列不能建立人人固定的午睡上限，並保留持續嗜睡時評估原因與避免疲勞駕駛的指引。",
+      "topic_fidelity_review": {
+        "decision": "retain_nap_health_question_reject_fixed_30_minute_cutoff",
+        "original_question": "午睡時間是否應限制為半小時或一小時；長睡是否需要查原因？",
+        "reader_content_decision": "保留午睡型態與健康研究；明示單一高齡美國觀察隊列不能建立人人固定的午睡上限，並保留持續嗜睡時評估原因與避免疲勞駕駛的指引。",
+        "historical_claim_decisions": [
+          {
+            "claim": "所有人午睡一律不超過30分鐘或1小時",
+            "decision": "not_supported_as_universal_cutoff",
+            "reason": "研究顯示高齡特定隊列中的觀察關聯，並非隨機試驗或午睡時長處方。"
+          },
+          {
+            "claim": "長午睡可能是健康或夜間睡眠問題訊號",
+            "decision": "retain_as_bounded_association",
+            "reason": "只建議留意持續或新出現的變化並評估原因，不以午睡時間自行診斷疾病。"
+          }
+        ]
+      },
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "睡眠醫學",
+          "老年醫學",
+          "睡眠流行病學"
+        ]
+      },
+      "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+      "new_source_ids": [
+        "tw02_jama_daytime_napping_mortality_2026"
+      ]
+    },
+    {
+      "id": "TW-02-038",
+      "title": "睡眠不足後安排恢復；週末補眠未證實有害",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c396867f415b8de6448992476e8f0abccc5e0084",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "ebe07013fb7c25a4cdcd543b4261b7c3da54454f271fe0e88aadf0e0729afda4",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "b7cf3879953957ab706cf05a453059dae9088313802af90a9b794ca0193dcf4e",
+      "prior_structured_source_refs": [
+        "sleep",
+        "roadfatigue"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "151faeba232ab4ffc77683d493df7a38470247a9bb54d2ea9598bb61933105b5",
+      "review_path": "localization/reviews/TW-02-038.json",
+      "review_sha256": "14185ff9cef234a4ba4a07c2bb8fcf2ed3490451476542eb84ddbfe28f0e1901",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-038.md",
+      "source_ids": [
+        "tw02_acute_sleep_rebound_mortality_2026",
+        "tw02_weekend_catchup_sleep_2024"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_acute_sleep_rebound_mortality_2026",
+          "title": "Li等：急性睡眠限制後回補睡眠與死亡關聯（2026）",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13121452/",
+          "claim": "UK Biobank 85,618人、至少3日有效活動紀錄；2013-06-01至2015-12-23蒐集574,230個人夜；中位追蹤8年、3,549人死亡。核對個人睡眠需求估算、限制期與限制後夜定義、五組人數、全因死亡調整HR及NHANES複現。",
+          "supporting_passage": "全文結果與圖1、圖3：85,618人，至少3日有效加速度計資料，2013-06-01至2015-12-23蒐集574,230個人夜；中位追蹤8年共3,549人死亡。個人睡眠需求取本人平均睡眠與年齡／性別組平均值較高者；各次限制期後第一晚為限制後夜，跨限制後夜平均超額睡眠大於0才歸有回補。未回補一般／嚴重限制組 HR 1.15（1.01–1.31）／1.42（1.24–1.63）；有回補組1.12（0.98–1.28）／1.13（0.95–1.36），後兩組信賴區間含1。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "直接查閱PMC全文結果、方法、圖1與圖3，核對加速度計資料期間、有效觀察日門檻、個人需求演算法、限制與回補定義、各組人數、死亡分子、調整後HR及NHANES獨立複現。"
+        },
+        {
+          "source_id": "tw02_weekend_catchup_sleep_2024",
+          "title": "Chaput等：裝置測量週末補眠、死亡與心血管疾病發生（2024）",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10193855/",
+          "claim": "核對UK Biobank週末補眠定義、加速度計資料期間、研究追蹤、死亡與心血管疾病分析母數及事件數；另記論文表1描述性樣本中的心血管事件數，避免混用不同分析分母。",
+          "supporting_passage": "UCL典藏作者接受稿的方法、Figure 1至3、Table 1與Table 2：加速度計資料蒐集2013-06-01至2015-12-23；死亡分析73,513人、2,776例死亡，心血管分析70,518人、Figure 1與Figure 3列9,092件事件，平均追蹤8.0年（SD 0.9）。Table 1的描述性樣本為73,513人，另列心血管事件12,108件，分組計數為6,182、3,514、1,756、656；此表格計數與主要心血管分析母數不同，不可互換。≥2小時組死亡HR 1.17（0.97–1.41），心血管HR 1.05（0.94–1.18）。",
+          "accessed_at": "2026-11-18",
+          "retrieval_method": "直接查閱UCL典藏作者接受稿方法、流程圖、Figure 1至3及Table 1至2，核對研究地區、睡眠暴露定義、資料蒐集期、各結局分析樣本和事件計數；注意Table 1描述性樣本與主要心血管分析的母數不同。"
+        }
+      ],
+      "taiwan_context": "未找到台灣成人週末補眠與全因死亡或新發心血管疾病的同口徑全國統計。英國研究分別報告死亡分析73,513人、2,776例死亡，以及主要心血管分析70,518人、9,092件事件；Table 1另以73,513人的描述性樣本列12,108件心血管事件，不能混用分析母數或轉成台灣個人機率。",
+      "frequency_assessment": "未找到台灣成人週末補眠與全因死亡或新發心血管疾病的同口徑全國統計。英國研究分別報告死亡分析73,513人、2,776例死亡，以及主要心血管分析70,518人、9,092件事件；Table 1另以73,513人的描述性樣本列12,108件心血管事件，不能混用分析母數或轉成台灣個人機率。",
+      "statistics_assessed": [
+        {
+          "topic": "英國UK Biobank睡眠限制、限制後回補與全因死亡",
+          "value": {
+            "participants": 85618,
+            "mean_age_years": 61.8,
+            "valid_accelerometer_days_min": 3,
+            "person_nights": 574230,
+            "data_collection_start": "2013-06-01",
+            "data_collection_end": "2015-12-23",
+            "median_followup_years": 8.0,
+            "deaths": 3549,
+            "deaths_by_group": {
+              "regular_sleep": 2240,
+              "SR_without_rebound": 415,
+              "SR_with_rebound": 360,
+              "severe_SR_without_rebound": 341,
+              "severe_SR_with_rebound": 193
+            },
+            "groups": {
+              "SR_without_rebound": {
+                "n": 7734,
+                "adjusted_HR": 1.15,
+                "95_CI": [
+                  1.01,
+                  1.31
+                ]
+              },
+              "SR_with_rebound": {
+                "n": 7241,
+                "adjusted_HR": 1.12,
+                "95_CI": [
+                  0.98,
+                  1.28
+                ],
+                "significant_vs_regular_sleep": false
+              },
+              "severe_SR_without_rebound": {
+                "n": 5110,
+                "adjusted_HR": 1.42,
+                "95_CI": [
+                  1.24,
+                  1.63
+                ]
+              },
+              "severe_SR_with_rebound": {
+                "n": 3811,
+                "adjusted_HR": 1.13,
+                "95_CI": [
+                  0.95,
+                  1.36
+                ],
+                "significant_vs_regular_sleep": false
+              }
+            },
+            "independent_NHANES_replication_n": 4586
+          },
+          "unit": "前瞻性觀察世代樣本、個人夜、死亡事件數及多變項調整危險比",
+          "period": "加速度計資料蒐集2013-06-01至2015-12-23；2026年發表；UK Biobank中位追蹤8.0年",
+          "geographic_scope": "英國UK Biobank；以美國NHANES 4,586人獨立複現",
+          "population": "UK Biobank 85,618名平均61.8歲、至少3日有效加速度計睡眠資料參與者；分析574,230個人夜",
+          "numerator": "UK Biobank中位8年追蹤共3,549例全因死亡：規律睡眠2,240、一般限制無回補415、一般限制有回補360、嚴重限制無回補341、嚴重限制有回補193",
+          "denominator": "UK Biobank分析樣本85,618人；個人夜資料574,230夜；五組人數分別61,722、7,734、7,241、5,110、3,811",
+          "denominator_definition": "符合至少3日有效腕部加速度計睡眠資料並可按個人需求、各次限制期和其後限制後夜分類的英國生物資料庫參與者；每人夜不是獨立個人或獨立事件",
+          "event_definition": "中位8年期間全因死亡。研究以本人與年齡／性別組平均睡眠時數較高者估計需求；每段限制期後第一晚是限制後夜；一般限制為各限制期平均累積少睡2.5–3.5小時，嚴重限制超過3.5小時；跨限制後夜平均睡眠超過需求才定義為有回補",
+          "data_type": "前瞻性觀察世代研究；UK Biobank腕部加速度計；多變項Cox模型；以NHANES獨立樣本複現",
+          "limitations": "觀察性分組、無隨機睡眠安排；有回補組HR點估計仍大於1且信賴區間含1，未達統計顯著不代表等同或證實因果；選樣為有至少3日有效裝置資料者，不能換算台灣個人死亡機率。",
+          "source_ids": [
+            "tw02_acute_sleep_rebound_mortality_2026"
+          ],
+          "accessed_at": "2026-11-18"
+        },
+        {
+          "topic": "英國週末補眠研究的死亡與心血管疾病分析",
+          "value": {
+            "mortality_analysis_n": 73513,
+            "mortality_events": 2776,
+            "incident_CVD_analysis_n": 70518,
+            "incident_CVD_primary_analysis_events": 9092,
+            "table_1_descriptive_sample_n": 73513,
+            "table_1_descriptive_CVD_events": 12108,
+            "table_1_CVD_events_by_weekend_sleep_group": {
+              "no_catch_up_sleep": 6182,
+              "greater_than_0_to_less_than_1_hour": 3514,
+              "at_least_1_to_less_than_2_hours": 1756,
+              "at_least_2_hours": 656
+            },
+            "mean_followup_years": 8.0,
+            "followup_SD_years": 0.9,
+            "mortality_HR_at_least_2h": 1.17,
+            "mortality_95_CI": [
+              0.97,
+              1.41
+            ],
+            "incident_CVD_HR_at_least_2h": 1.05,
+            "incident_CVD_95_CI": [
+              0.94,
+              1.18
+            ]
+          },
+          "unit": "前瞻性觀察世代參與者、死亡與心血管事件數及調整後危險比",
+          "period": "2024年發表；腕部加速度計資料蒐集2013-06-01至2015-12-23；平均追蹤8.0年（SD 0.9）",
+          "geographic_scope": "英國UK Biobank成人世代",
+          "population": "死亡分析73,513人；主要新發心血管疾病分析70,518人；Table 1描述性資料按73,513名死亡分析樣本分組",
+          "numerator": "死亡分析2,776例死亡；主要心血管分析流程圖與Figure 3列9,092件新發事件。Table 1於73,513人描述性樣本另列12,108件心血管事件，四組計數6,182、3,514、1,756、656",
+          "denominator": "死亡分析n=73,513；主要心血管分析n=70,518；Table 1描述性樣本n=73,513，各組37,234、21,788、10,440、4,051",
+          "denominator_definition": "睡眠以腕部加速度計測量並有完整共變項資料的英國參與者；主要結局分析排除追蹤首兩年發生事件者，心血管分析另排除既有心血管疾病樣本。Table 1描述性事件列使用73,513人分組，非主要心血管分析母數",
+          "event_definition": "全因死亡；主要心血管分析為新發心血管疾病（論文列ICD-10代碼I0、I11、I13、I20-I51及I60-I69，競爭風險採Fine–Gray方法）。表1另列其描述性樣本中的心血管事件數",
+          "data_type": "英國UK Biobank前瞻性觀察世代；一週腕部加速度計睡眠測量；多變項調整模型",
+          "limitations": "未隨機指派補眠，不能證明因果；95%信賴區間跨1，不能證明有益或有害。UCL作者接受稿Figure 1與Figure 3列主要心血管樣本70,518人、9,092件事件；Table 1在73,513名死亡分析描述性樣本另列12,108件，母數與用途不同，不能混用。UK Biobank回覆率低且不是台灣代表性樣本；無台灣個人絕對風險估計。",
+          "source_ids": [
+            "tw02_weekend_catchup_sleep_2024"
+          ],
+          "accessed_at": "2026-11-18"
+        }
+      ],
+      "topic_fidelity_assessment": "保留睡眠不足後如何恢復的問題；分開呈現隔夜急性回補與平日／週末平均睡眠的不同研究，不把任何一項觀察研究寫成固定時程或完全抵銷保證。",
+      "topic_fidelity_review": {
+        "decision": "retain_recovery_sleep_question_distinguish_acute_rebound_from_weekend_catchup",
+        "original_question": "熬夜後是否應翌日補眠，或等到週末才補？",
+        "reader_content_decision": "保留睡眠不足後如何恢復的問題；分開呈現隔夜急性回補與平日／週末平均睡眠的不同研究，不把任何一項觀察研究寫成固定時程或完全抵銷保證。",
+        "historical_claim_decisions": [
+          {
+            "claim": "少睡後必須第二晚立即補足，週末補眠有害",
+            "decision": "not_supported_as_categorical_claim",
+            "reason": "一項2026英國觀察研究中回補組未見顯著死亡關聯，2024英國研究也未見週末補眠至少2小時與死亡或新發CVD的顯著關聯。"
+          },
+          {
+            "claim": "回補可消除長期睡眠不足全部影響",
+            "decision": "not_supported",
+            "reason": "兩研究都不是隨機干預，且比較對象、睡眠定義和樣本不同，未直接證明因果或完全抵銷。"
+          }
+        ]
+      },
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "睡眠醫學",
+          "職業醫學",
+          "睡眠流行病學"
+        ]
+      },
+      "source_bundle_sha256": "de409c20b196be0f34f9c2f5391644891ec7a4ec19d396b7e3b7b713be0a467d",
+      "new_source_ids": [
+        "tw02_acute_sleep_rebound_mortality_2026",
+        "tw02_weekend_catchup_sleep_2024"
+      ]
+    }
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學與營養流行病學",
+      "腸胃／睡眠醫學",
+      "老年及職業醫學",
+      "食品衛生及流行病學"
+    ]
+  },
+  "note": "本批正式發布四篇核心正文；既有章節結構化草稿列作為歷史與覆蓋追蹤予以保留。回溯再審登錄未增加，因本批為首次正式發布。",
+  "counts_after": {
+    "core_reviewed": 321,
+    "runtime_items": 332,
+    "runtime_sources": 1340,
+    "source_registry": 1423,
+    "json_files_checked": 661,
+    "substantive_rechecks": 403,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "topics_with_any_content": 499,
+    "topics_with_unreviewed_content": 178,
+    "topics_without_content": 266,
+    "publication_ready": false
+  }
+}
