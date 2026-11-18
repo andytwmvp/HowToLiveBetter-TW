@@ -55,6 +55,31 @@ class ChapterTwoSmokingServicesTests(unittest.TestCase):
             item_id: read_json(f"localization/reviews/{item_id}.json")
             for item_id in ITEM_IDS
         }
+        cls.first_publication_revision = subprocess.check_output(
+            ["git", "log", "-1", "--format=%H", "HEAD", "--", BATCH_PATH],
+            cwd=ROOT, text=True,
+        ).strip()
+        cls.first_publication_runtime = json.loads(subprocess.check_output(
+            ["git", "show", f"{cls.first_publication_revision}:localization/tw-edition/runtime.json"],
+            cwd=ROOT, text=True,
+        ))
+        cls.first_publication_manifest = json.loads(subprocess.check_output(
+            ["git", "show", f"{cls.first_publication_revision}:localization/manifest.json"],
+            cwd=ROOT, text=True,
+        ))
+        cls.first_publication_items = {
+            item["id"]: item for item in cls.first_publication_runtime["items"]
+        }
+        cls.first_publication_manifest_items = {
+            item["id"]: item for item in cls.first_publication_manifest["entries"]
+        }
+        cls.first_publication_reviews = {
+            item_id: json.loads(subprocess.check_output(
+                ["git", "show", f"{cls.first_publication_revision}:localization/reviews/{item_id}.json"],
+                cwd=ROOT, text=True,
+            ))
+            for item_id in ITEM_IDS
+        }
         cls.batch = read_json(BATCH_PATH)
         cls.batch_items = {item["id"]: item for item in cls.batch["items"]}
         cls.coverage = read_json("localization/tw-edition/coverage.json")
@@ -75,11 +100,17 @@ class ChapterTwoSmokingServicesTests(unittest.TestCase):
 
         for item_id in ITEM_IDS:
             with self.subTest(item_id=item_id):
-                item = self.items[item_id]
-                manifest = self.manifest[item_id]
+                # Validate this immutable first-publication batch at its original
+                # snapshot. TW-02-006 has since received an append-only substantive
+                # recheck, so its current body and review intentionally differ.
+                item = self.first_publication_items[item_id]
+                manifest = self.first_publication_manifest_items[item_id]
                 batch = self.batch_items[item_id]
-                review = self.reviews[item_id]
-                raw = (ROOT / item["target_path"]).read_bytes()
+                review = self.first_publication_reviews[item_id]
+                raw = subprocess.check_output(
+                    ["git", "show", f"{self.first_publication_revision}:{item['target_path']}"],
+                    cwd=ROOT,
+                )
                 body = raw.decode("utf-8")
                 digest = hashlib.sha256(raw).hexdigest()
                 self.assertEqual(manifest["status"], "verified")
@@ -124,7 +155,13 @@ class ChapterTwoSmokingServicesTests(unittest.TestCase):
             self.assertTrue(supports)
         for item_id in ITEM_IDS:
             self.assertIn(f"{item_id}.md)", self.chapter_readme)
-        self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in self.register["substantive_rechecks"]}))
+        baseline_register = json.loads(subprocess.check_output(
+            ["git", "show", f"{BASE}:localization/retroactive-review-register-20261019.json"],
+            cwd=ROOT, text=True,
+        ))
+        baseline_rows = baseline_register["substantive_rechecks"]
+        self.assertEqual(self.register["substantive_rechecks"][:len(baseline_rows)], baseline_rows)
+        self.assertTrue(set(ITEM_IDS).isdisjoint({row["id"] for row in baseline_rows}))
         self.assertFalse(self.coverage["publication_ready"])
 
     def test_claims_and_frequency_limits_are_visible_and_not_confused(self):

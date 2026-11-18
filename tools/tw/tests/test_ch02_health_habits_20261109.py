@@ -188,7 +188,9 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         current_chapter = read_json("localization/tw-edition/chapters/02.json")
         old_rows = {row[0]: row for row in old_chapter["entries"]}
         current_rows = {row[0]: row for row in current_chapter["entries"]}
-        topic_fidelity_rows = {25, 29, 36, 47}
+        # Chapter row 6 reflects the append-only 2026-11-18 topic-fidelity
+        # recheck; the batch-specific test validates that new row and evidence.
+        topic_fidelity_rows = {6, 25, 29, 36, 47}
         self.assertEqual(set(current_rows), set(old_rows))
         for number, row in old_rows.items():
             if number not in topic_fidelity_rows:

@@ -12,6 +12,7 @@ import retroactive_audit as audit
 
 ROOT = audit.ROOT
 BASE = "171783959adfc988ad6cd2cff04cfcdf21a745f6"
+DRAFT_RECHECK_SNAPSHOT = "349bbc8957a9ceff7d75dcec2327c6544af764ec"
 IDS = {"TW-02-006", "TW-02-008", "TW-02-021", "TW-02-045"}
 PUBLISHED_FROM_REVIEWED_DRAFT = {"TW-02-006", "TW-02-008", "TW-02-021", "TW-02-045"}
 
@@ -46,8 +47,8 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
 
     def test_drafts_use_taiwan_current_law_and_frequency_limits(self):
         rows = {f"TW-02-{row[0]:03}": row for row in self.chapter["entries"]}
-        self.assertIn("在學國中生為2.1%", rows["TW-02-006"][2])
-        self.assertIn("不得單獨處罰持有", rows["TW-02-006"][4])
+        self.assertIn("在學國中及高中職過去30天使用率分別為2.1%與5.1%", rows["TW-02-006"][2])
+        self.assertIn("現行法第15條未列單純持有為獨立禁止行為", rows["TW-02-006"][4])
         self.assertIn("8,522", rows["TW-02-008"][2])
         self.assertIn("不等於嚼檳榔造成的個人機率", rows["TW-02-008"][4])
         self.assertIn("0800-255959", rows["TW-02-021"][3])
@@ -75,7 +76,10 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
                 review = read(record["review_path"])
                 self.assertEqual(review["id"], key)
                 self.assertEqual(review["original_draft"], self._row_at(BASE, key))
-                self.assertEqual(review["current_draft"], rows[key])
+                # This draft recheck is an immutable historical snapshot. The
+                # item was later published and substantively re-reviewed, so
+                # the current chapter row is expected to differ for TW-02-006.
+                self.assertEqual(review["current_draft"], self._row_at(DRAFT_RECHECK_SNAPSHOT, key))
                 self.assertEqual(record["before_sha256"], review["before_sha256"])
                 self.assertEqual(record["after_sha256"], review["after_sha256"])
                 for field in ("taiwan_context", "frequency_assessment", "changes", "unresolved_questions"):
@@ -95,7 +99,14 @@ class ChapterTwoHealthDraftRecheckTests(unittest.TestCase):
         records = audit.validate_draft_recheck_records(ROOT, self.register, self.manifest, self.runtime)
         self.assertEqual(len(records), len(self.register["draft_substantive_rechecks"]))
         self.assertTrue(IDS.issubset({item["id"] for item in records}))
-        self.assertTrue(IDS.isdisjoint({item["id"] for item in self.register["substantive_rechecks"]}))
+        draft_records = {item["id"]: item for item in records}
+        published_rechecks = [
+            item for item in self.register["substantive_rechecks"] if item["id"] in IDS
+        ]
+        self.assertEqual([item["id"] for item in published_rechecks], ["TW-02-006"])
+        self.assertEqual(draft_records["TW-02-006"]["status"], "ai_source_rechecked_draft_unpublished")
+        self.assertEqual(published_rechecks[0]["reviewed_at"], "2026-11-18")
+        self.assertNotEqual(draft_records["TW-02-006"]["review_path"], published_rechecks[0]["review_path"])
         self.assertTrue(PUBLISHED_FROM_REVIEWED_DRAFT.issubset({item["id"] for item in records}))
         self.assertFalse(audit.load(ROOT, "localization/tw-edition/coverage.json")["publication_ready"])
 
