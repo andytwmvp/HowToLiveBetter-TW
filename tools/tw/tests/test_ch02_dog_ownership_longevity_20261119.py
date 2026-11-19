@@ -11,7 +11,9 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
 
 from ci_language_policy import audit_drafts
+from recheck_history_assertions import assert_chapter_entries_preserved_or_rechecked
 from review_contract import publication_report, validate_runtime
+from source_bundle_test_support import source_bundle_ids_added_since
 
 BASE = "0206632bb4c691238d663224c970bbb58754e4f7"
 DATE = "2026-11-19"
@@ -82,8 +84,28 @@ class DogOwnershipLongevityPublicationTests(unittest.TestCase):
         self.assertEqual(baseline_entry["sources"], [])
 
         baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
+        baseline_register = json.loads(
+            git_bytes(BASE, REGISTER_PATH)
+        )
+        baseline_chapter = json.loads(
+            git_bytes(BASE, "localization/tw-edition/chapters/02.json")
+        )
+        current_chapter = read("localization/tw-edition/chapters/02.json")
+        baseline_items = {row["id"]: row for row in baseline_runtime["items"]}
+        current_items = {row["id"]: row for row in self.runtime["items"]}
+        assert_chapter_entries_preserved_or_rechecked(
+            self,
+            chapter_number=2,
+            baseline_entries=baseline_chapter["entries"],
+            current_entries=current_chapter["entries"],
+            baseline_items=baseline_items,
+            current_items=current_items,
+            baseline_rechecks=baseline_register["substantive_rechecks"],
+            current_rechecks=self.register["substantive_rechecks"],
+        )
         self.assertEqual(
-            self.runtime["items"][:len(baseline_runtime["items"])], baseline_runtime["items"]
+            [row["id"] for row in self.runtime["items"][:len(baseline_runtime["items"])]],
+            [row["id"] for row in baseline_runtime["items"]],
         )
         self.assertEqual(
             [row["id"] for row in self.runtime["sources"][:len(baseline_runtime["sources"])]],
@@ -141,8 +163,12 @@ class DogOwnershipLongevityPublicationTests(unittest.TestCase):
 
         baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
         baseline_source_ids = {row["id"] for row in baseline_runtime["sources"]}
+        for old_source in baseline_runtime["sources"]:
+            self.assertEqual(self.sources[old_source["id"]], old_source)
         self.assertTrue(SOURCE_IDS.isdisjoint(baseline_source_ids))
-        self.assertEqual(SOURCE_IDS, set(self.sources) - baseline_source_ids)
+        added_source_ids = set(self.sources) - baseline_source_ids
+        self.assertTrue(SOURCE_IDS.issubset(added_source_ids))
+        self.assertEqual(added_source_ids, source_bundle_ids_added_since(ROOT, BASE))
         for source_id in SOURCE_IDS:
             with self.subTest(source_id=source_id):
                 source = self.sources[source_id]

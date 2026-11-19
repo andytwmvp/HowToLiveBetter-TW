@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ci_language_policy import audit_drafts
 from review_contract import ROOT, validate_runtime
+from recheck_history_assertions import assert_chapter_entries_preserved_or_rechecked
 
 BASE = "5571669a51ac5d3999b0249c584a905cb631ee07"
 DATE = "2026-11-09"
@@ -51,6 +52,7 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         cls.bundle = read_json(SOURCE_PATH)
         cls.coverage = read_json("localization/tw-edition/coverage.json")
         cls.register = read_json("localization/retroactive-review-register-20261019.json")
+        cls.base_runtime = base_json("localization/tw-edition/runtime.json")
         cls.rechecks_by_id = {
             item_id: [row for row in cls.register["substantive_rechecks"]
                       if row["id"] == item_id and row["reviewed_at"] > DATE]
@@ -178,17 +180,20 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         )
         old_chapter = json.loads(base_chapter)
         current_chapter = read_json("localization/tw-edition/chapters/02.json")
-        old_rows = {row[0]: row for row in old_chapter["entries"]}
         current_rows = {row[0]: row for row in current_chapter["entries"]}
-        # Chapter rows reflect append-only topic-fidelity rechecks. Row 44 was
-        # also promoted from a structured draft; its exact prior-row hash and
-        # publication provenance are checked by the dedicated batch test.
-        topic_fidelity_rows = {6, 13, 25, 29, 36, 47}
-        first_publication_rows = {44}
-        self.assertEqual(set(current_rows), set(old_rows))
-        for number, row in old_rows.items():
-            if number not in topic_fidelity_rows | first_publication_rows:
-                self.assertEqual(current_rows[number], row)
+        old_items = {row["id"]: row for row in self.base_runtime["items"]}
+        current_items = {row["id"]: row for row in self.runtime["items"]}
+        base_register = base_json("localization/retroactive-review-register-20261019.json")
+        assert_chapter_entries_preserved_or_rechecked(
+            self,
+            chapter_number=2,
+            baseline_entries=old_chapter["entries"],
+            current_entries=current_chapter["entries"],
+            baseline_items=old_items,
+            current_items=current_items,
+            baseline_rechecks=base_register["substantive_rechecks"],
+            current_rechecks=self.register["substantive_rechecks"],
+        )
         self.assertIn("日本研究有觀察到死亡率關聯", current_rows[25][1])
         self.assertIn("日本研究探討心血管與健康老化", current_rows[36][1])
         self.assertIn("生淡水魚的中華肝吸蟲風險", current_rows[47][1])
