@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "phase": "第2章含糖飲料與代糖研究主題保真度歷史再審",
+  "baseline_main_sha": "f1c1579dbab76b12fc72a4243f9bbf3f40b2ad3f",
+  "reviewed_at": "2026-11-20",
+  "review_due_at": "2027-02-20",
+  "scope": [
+    "TW-02-007"
+  ],
+  "content_policy": "恢復原題仍能回答台灣讀者的死亡率研究問題；分開處理觀察性關聯、模型化飲料替換與隨機試驗；以台灣官方指引、飲用調查限制及包裝標示規範支援本地行動，不把海外數字當台灣個人機率。",
+  "items": [
+    {
+      "id": "TW-02-007",
+      "change_kind": "historical topic-fidelity recheck",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-007.md",
+      "before_sha256": "e528e6c9e727bc8d5c8779c354168f8a921fb4f47104582ae2510abc3eba2be8",
+      "after_sha256": "9fa6cc3cd364b7576b9d023775b7518d1c3e386a5c029ef4ff1dde296183b527",
+      "prior_review_sha256": "c869f4d3904a4dae9d1a7e12a7b5652d6365147d02175edbd5ace18f22550597",
+      "review_sha256": "64461c4740c518e1533f627435507445d4f487ae1b1e5331045dad492d35d525",
+      "source_bundle_sha256": "05308d0c8743f1a5e4d485a35b026aa05e69e8053635ea67d2fdba782aad43b3",
+      "source_bundle_path": "localization/tw-edition/sources/ch02-sugar-drink-topic-fidelity-recheck-20261120.json",
+      "topic_fidelity_assessment": "恢復原題對含糖飲料、人工甜味飲料與死亡率研究的提問，不以台灣減糖建議取代原研究問題；分開記錄美國、歐洲研究及台灣營養調查，並說明外推限制；2024年統合分析全篇11項研究，最高／最低攝取組比較實際納入10項研究且未另列子分析分母；以台灣生活情境、官方體重管理指引及包裝標示規範提供本地操作。",
+      "taiwan_frequency_limits": "含糖飲料和代糖研究主要提供美國、歐洲觀察性死亡率關聯，不能當台灣發生率或個人機率。台灣較新可讀的頻率證據為2017–2020 NAHSIT二級分析：4,475名16–64歲分析樣本中3,965人自陳飲用、1,437人歸入每日至少一次組；作者未使用抽樣權重且未處理分層和群聚，故僅代表該樣本。另有國健署引述2013–2016年19–44歲83.6%舊資料，但公開摘要缺分子與未加權分母。沒有找到定義及設計足以代表2026年全台飲用頻率的同口徑估計。",
+      "source_ids": [
+        "tw02_hpa_nutrition_survey_20261109",
+        "tw02_hpa_sugar_drink_guidance_20261109",
+        "tw02_hpa_sugar_prevalence_2013_2016_20261109",
+        "tw02_malik_us_mortality_2019",
+        "tw02_mullee_epic_mortality_2019",
+        "tw02_chen_asb_mortality_meta_2024",
+        "tw02_mcglynn_lncsb_replacement_rct_2022",
+        "tw02_who_nss_guideline_2023",
+        "tw02_nahsit_ssb_analysis_2017_2020_2026",
+        "tw02_tfda_nutrition_label_rules_2024"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "美國HPFS與NHS含糖飲料攝取及全因死亡",
+          "value": "每天1至未滿2份HR 1.14（95% CI 1.09–1.19）；每天至少2份HR 1.21（1.13–1.28）",
+          "unit": "含糖飲料份數／日；調整後全因死亡危險率比（HR）",
+          "period": "女性NHS 1980–2014；男性HPFS 1986–2014；合計3,415,564人年",
+          "geographic_scope": "美國兩個專業人員世代，不代表台灣族群",
+          "population": "37,716名男性醫療專業人員與80,647名女性護理人員；研究開始時排除部分重大慢性病者",
+          "numerator": "追蹤期間36,436人死亡（其中7,896例心血管死亡、12,380例癌症死亡）",
+          "denominator": "118,363名參與者；3,415,564人年。各飲用頻率組的獨立分母未以摘要列出。",
+          "event_definition": "各世代追蹤期間記錄的全因死亡；HR比較含糖飲料攝取組別，參照為每月少於1份",
+          "data_type": "前瞻性觀察世代研究；沒有隨機分派飲料",
+          "limitations": "美國醫療專業人員樣本不代表台灣居民；HR是模型中的群體相對危險率，不是個人死亡機率或因果效果；殘餘混雜仍可能存在。",
+          "source_ids": [
+            "tw02_malik_us_mortality_2019"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "EPIC歐洲十國軟性飲料攝取及全因死亡",
+          "value": "每天至少2杯相較每月少於1杯：含糖HR 1.08（95% CI 1.01–1.16）；人工甜味HR 1.26（1.16–1.35）；全部軟性飲料HR 1.17（1.11–1.22）",
+          "unit": "飲料杯數／日；調整後全因死亡危險率比（HR）",
+          "period": "參與者於1992–2000年招募；平均追蹤16.4年（國別範圍11.1–19.2年）",
+          "geographic_scope": "丹麥、法國、德國、希臘、義大利、荷蘭、挪威、西班牙、瑞典及英國，共10國",
+          "population": "451,743名納入分析的EPIC參與者；排除基線癌症、心臟病、中風或糖尿病者，以及資料不完整者",
+          "numerator": "追蹤期間41,693人死亡",
+          "denominator": "451,743名參與者；飲料種類的高低組人數不相同，勿把全體分母當作每個對照組分母",
+          "event_definition": "平均16.4年追蹤的全因死亡；飲料種類分別分析",
+          "data_type": "多國前瞻性觀察世代研究；以多變項Cox模型估計HR",
+          "limitations": "研究涵蓋歐洲族群與研究期，不能直接估算台灣個人死亡風險；觀察關聯不能證明飲料造成死亡；不同飲料比較不可混為一個效應。",
+          "source_ids": [
+            "tw02_mullee_epic_mortality_2019"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "人工甜味飲料最高與最低攝取組的死亡統合分析",
+          "value": "全因死亡RR 1.13（95% CI 1.06–1.21；I²=66.3%）；心血管死亡RR 1.26（1.10–1.44；I²=52.0%）",
+          "unit": "最高／最低攝取組；死亡相對風險（RR）及研究間異質性I²",
+          "period": "檢索至2023-08；納入研究的中位數／平均追蹤介於7.0–28.9年",
+          "geographic_scope": "美國及歐洲前瞻性世代統合分析，不是台灣發生率",
+          "population": "系統性回顧共11項世代研究、2,196,503人；最高／最低組分析實際納入10項研究",
+          "numerator": "整體納入研究共235,609人死亡；最高／最低組子分析未在摘要另列分組死亡數",
+          "denominator": "整體系統性回顧為2,196,503人；最高／最低組子分析未在摘要另列精確合併分母，不把整體人數冒充比較組分母",
+          "event_definition": "全因死亡及心血管死亡；人工甜味飲料最高與最低攝取類別比較",
+          "data_type": "前瞻世代觀察研究的隨機效應統合分析",
+          "limitations": "I²顯示研究間異質性；自陳飲食測量可能錯分，飲料及甜味劑種類未能完全區分；關聯不能證明因果，可能有反向因果及殘餘混雜。",
+          "source_ids": [
+            "tw02_chen_asb_mortality_meta_2024"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "以代糖飲料替換含糖飲料的死亡率次級模型",
+          "value": "每天以1份代糖飲料取代1份含糖飲料：全因死亡RR 0.96（95% CI 0.94–0.98）；心血管死亡RR 0.94（0.90–0.99）",
+          "unit": "每日1份的模型化飲料替換；死亡相對風險（RR）",
+          "period": "2024統合分析所納研究；各世代期間不同，檢索截至2023-08",
+          "geographic_scope": "前瞻世代研究的次級替換統合分析，不是台灣資料",
+          "population": "納入11項世代研究的系統性回顧中的一部分研究；作者稱為次級分析，已查閱的摘要與方法結果段未另列替換分析的精確研究數或總人數",
+          "numerator": "替換子分析未另列合併死亡事件分子",
+          "denominator": "替換子分析未另列總樣本分母；不得沿用全篇2,196,503人作為此模型分母",
+          "event_definition": "比較模型中每日替換1份飲料與觀察到的全因及心血管死亡關聯",
+          "data_type": "觀察性世代研究的模型化替換統合分析，非隨機替換試驗",
+          "limitations": "不能證明實際換飲料會降低死亡；殘餘混雜、反向因果和族群差異仍可能影響結果；與最高／最低攝取比較不是同一估計。",
+          "source_ids": [
+            "tw02_chen_asb_mortality_meta_2024"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "低／無熱量甜味飲料替代含糖飲料的體重試驗",
+          "value": "17項RCT、1,733名成人；12項替代含糖飲料試驗n=601，平均體重差−1.06公斤（95% CI −1.71至−0.41）",
+          "unit": "成人體重平均差（公斤）；試驗數及參與者人數",
+          "period": "納入隨機試驗介入至少2週；搜尋至2021-12-26；作者稱結果為中期／短中期可行替代效果",
+          "geographic_scope": "多國隨機試驗統合分析，不是台灣居民死亡資料",
+          "population": "過重或肥胖成人、具有糖尿病風險或已罹患糖尿病者；其中12項替代含糖飲料試驗601人",
+          "numerator": "不適用：此項主要結果是連續體重平均差，沒有死亡事件分子",
+          "denominator": "全部17項試驗1,733人；與含糖飲料替代的體重比較納入12項試驗601人",
+          "event_definition": "以低／無熱量甜味飲料取代含糖飲料後的體重變化，不是死亡或疾病發生事件",
+          "data_type": "隨機試驗網絡統合分析；替代方案體重證據確定性中等",
+          "limitations": "特定過重／肥胖成人且追蹤有限；不是全體居民的長期結果，不評估死亡率，也不能作個人減重保證。",
+          "source_ids": [
+            "tw02_mcglynn_lncsb_replacement_rct_2022"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "台灣NAHSIT 2017至2020含糖飲料分析樣本比例",
+          "value": "飲用含糖飲料3,965/4,475（88.6%）；每日至少一次1,437/4,475（32.1%）",
+          "unit": "次級分析樣本中自陳飲用者比例及每日至少一次組別比例",
+          "period": "2017–2020調查資料；2026年發表次級橫斷分析；頻率問卷詢問過去一月並換算每週頻率",
+          "geographic_scope": "台灣NAHSIT資料的次級分析；未加權分析樣本，不是全國估計",
+          "population": "4,475名16至64歲分析參與者；原調查採多階段、分層、群聚機率抽樣",
+          "numerator": "3,965名自陳有飲用含糖飲料；1,437名每日至少一次",
+          "denominator": "4,475名分析樣本；排除7,417名16歲以下或65歲以上者及228筆資料缺漏，未使用抽樣權重且未處理分層／群聚",
+          "event_definition": "非酒精且添加糖的飲料；包括茶咖啡、汽水、果汁飲料、運動／能量飲料及非咖啡因飲料；頻率彙總為每週飲用次數",
+          "data_type": "全國營養調查資料的次級橫斷分析；自陳頻率，不是發生率或死亡率",
+          "limitations": "分析未使用抽樣權重並未處理複雜抽樣設計，推廣至全國之能力受限；自陳可能有回憶偏差；年齡範圍與排除規則限制比較。不可當作台灣當前代表率或個人機率。",
+          "source_ids": [
+            "tw02_nahsit_ssb_analysis_2017_2020_2026"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "國健署引述2013至2016年19至44歲含糖飲料頻率",
+          "value": "83.6%",
+          "unit": "自陳每週至少喝一次含糖飲料的比例",
+          "period": "2013–2016年國民營養健康狀況變遷調查",
+          "geographic_scope": "台灣全國調查，限該波次及年齡指標",
+          "population": "19至44歲成人",
+          "numerator": "公開指引摘要未列原始人數",
+          "denominator": "公開指引摘要未列原始未加權分母或該指標信賴區間",
+          "event_definition": "自陳每週至少一次飲用含糖飲料",
+          "data_type": "國健署引述之全國營養調查頻率統計",
+          "limitations": "調查年代早於2026年；公開摘要未提供該比例的原始分子、未加權分母或信賴區間；不可當成目前飲用率或罹病機率。",
+          "source_ids": [
+            "tw02_hpa_sugar_prevalence_2013_2016_20261109"
+          ],
+          "accessed_at": "2026-11-20"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "營養流行病學",
+          "成人肥胖醫療"
+        ]
+      },
+      "previous_body_sha256": "e528e6c9e727bc8d5c8779c354168f8a921fb4f47104582ae2510abc3eba2be8",
+      "prior_structured_draft_sha256": null
+    }
+  ],
+  "new_source_ids": [
+    "tw02_malik_us_mortality_2019",
+    "tw02_mullee_epic_mortality_2019",
+    "tw02_chen_asb_mortality_meta_2024",
+    "tw02_mcglynn_lncsb_replacement_rct_2022",
+    "tw02_who_nss_guideline_2023",
+    "tw02_nahsit_ssb_analysis_2017_2020_2026",
+    "tw02_tfda_nutrition_label_rules_2024"
+  ],
+  "source_records_reused": [
+    "tw02_hpa_nutrition_survey_20261109",
+    "tw02_hpa_sugar_drink_guidance_20261109",
+    "tw02_hpa_sugar_prevalence_2013_2016_20261109"
+  ],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 322,
+    "runtime_items": 333,
+    "runtime_sources": 1358,
+    "source_registry": 1441,
+    "review_rechecks": 405,
+    "coverage_json_files": 668,
+    "unresolved_source_id_kinds": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 322,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 322,
+    "runtime_items": 333,
+    "runtime_sources": 1365,
+    "source_registry": 1448,
+    "review_rechecks": 406,
+    "coverage_json_files": 670,
+    "unresolved_source_id_kinds": 103,
+    "unresolved_reference_occurrences": 254,
+    "publication_completed_entries": 322,
+    "publication_ready": false
+  },
+  "professional_review_status": "AI輔助來源核對完成；營養學、營養流行病學及成人肥胖醫療正式專業審閱仍待取得。",
+  "reader_copy_cleanup": "正文保留原題研究、適用限制、台灣資料與可執行選擇；批次、AI狀態、管理進度及專業審閱狀態僅記於review與結構化證據。"
+}

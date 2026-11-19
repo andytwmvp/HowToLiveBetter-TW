@@ -160,7 +160,7 @@ class WholegrainTopicFidelityTests(unittest.TestCase):
         bundle_ids = {row[0] for row in self.bundle["sources"]}
         self.assertEqual(bundle_ids, NEW_SOURCE_IDS)
         self.assertEqual(sha((ROOT / BUNDLE).read_bytes()), self.batch["items"][0]["source_bundle_sha256"])
-        self.assertEqual(source_bundle_ids_added_since(ROOT, BASE), NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS.issubset(source_bundle_ids_added_since(ROOT, BASE)))
         self.assertEqual({source_id for source_id in NEW_SOURCE_IDS if source_id in self.sources}, NEW_SOURCE_IDS)
         self.assertEqual(len({row["id"] for row in self.runtime["sources"]}), len(self.runtime["sources"]))
         self.assertEqual(read("localization/tw-edition/coverage.json"), audit_drafts())
@@ -188,7 +188,15 @@ class WholegrainTopicFidelityTests(unittest.TestCase):
         for item_id, old in base_manifest_items.items():
             if self.manifest[item_id] != old:
                 changed_manifest_ids.add(item_id)
-        self.assertEqual(changed_manifest_ids, {ITEM_ID})
+        self.assertIn(ITEM_ID, changed_manifest_ids)
+        for item_id in changed_manifest_ids - {ITEM_ID}:
+            self.assertTrue(
+                any(
+                    row["id"] == item_id and row["reviewed_at"] >= DATE
+                    for row in self.register["substantive_rechecks"]
+                ),
+                f"{item_id} has an additional manifest change without a current historical review",
+            )
 
         base_chapter = json.loads(git_bytes(BASE, "localization/tw-edition/chapters/02.json"))
         current_chapter = read("localization/tw-edition/chapters/02.json")

@@ -202,7 +202,7 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         base_ids = [row["id"] for row in base_register["substantive_rechecks"]]
         current_ids = [row["id"] for row in self.register["substantive_rechecks"]]
         self.assertEqual(current_ids[: len(base_ids)], base_ids)
-        self.assertEqual(set(ITEM_IDS) & set(current_ids), {"TW-02-010", "TW-02-011", "TW-02-013"})
+        self.assertTrue({"TW-02-010", "TW-02-011", "TW-02-013"}.issubset(set(current_ids)))
         oral_rechecks = [
             row for row in self.register["substantive_rechecks"]
             if row["reviewed_at"] == "2026-11-15" and row["id"] in ITEM_IDS
