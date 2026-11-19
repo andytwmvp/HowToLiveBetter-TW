@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "batch": "第2章養狗、遛狗活動量與長壽研究主題首次正式發布",
+  "baseline_main_sha": "0206632bb4c691238d663224c970bbb58754e4f7",
+  "reviewed_at": "2026-11-19",
+  "review_due_at": "2027-02-19",
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 321,
+    "runtime_items": 332,
+    "runtime_sources": 1345,
+    "source_registry": 1428,
+    "review_rechecks": 404,
+    "coverage_json_files": 663,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 321,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "tw02_dog_mortality_meta_2019",
+    "tw02_dog_mortality_reanalysis_2020",
+    "tw02_dog_mortality_england_cohort_2018",
+    "tw02_dog_mortality_sweden_cohort_2017",
+    "tw02_dog_mortality_australia_hilda_2024",
+    "tw02_dog_disability_japan_2022",
+    "tw02_dog_disability_japan_correction_2024",
+    "tw02_hpa_activity_2025",
+    "tw02_moa_dog_care",
+    "tw02_moa_shelter_adoption_manual"
+  ],
+  "new_source_bundle": "localization/tw-edition/sources/ch02-dog-walking-longevity-20261119.json",
+  "items": [
+    {
+      "id": "TW-02-044",
+      "title": "本來就想養狗，再把符合強度的遛狗算進活動量；別為了長壽才養",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "0206632bb4c691238d663224c970bbb58754e4f7",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "8ed790d9f5557deab6cc48b18273c0f666cbf038623d7593d0e1dbfcb81c1c94",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "857c101ea7373563a96887f24075e042995a6f73d6e7268a30a48a7b679a6542",
+      "prior_structured_source_refs": [
+        "animal",
+        "physicalactivity"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "99538ef47b711662f4a0781140aef079a8851893ffe7cc3899c053d7d5388ea6",
+      "review_path": "localization/reviews/TW-02-044.json",
+      "review_sha256": "439e5ac07eae2ac2b02e7da15e1006d07b125a9a74aff8976c9cecba4b8b4dac",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-044.md",
+      "source_ids": [
+        "tw02_dog_mortality_meta_2019",
+        "tw02_dog_mortality_reanalysis_2020",
+        "tw02_dog_mortality_england_cohort_2018",
+        "tw02_dog_mortality_sweden_cohort_2017",
+        "tw02_dog_mortality_australia_hilda_2024",
+        "tw02_dog_disability_japan_2022",
+        "tw02_dog_disability_japan_correction_2024",
+        "tw02_hpa_activity_2025",
+        "tw02_moa_dog_care",
+        "tw02_moa_shelter_adoption_manual"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_dog_mortality_meta_2019",
+          "title": "Kramer等：犬隻飼養與存活的系統性回顧與統合分析（2019）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31592726/",
+          "claim": "統合分析納入10項觀察研究，共3,837,005人、530,515項事件，平均追蹤10.1年；未調整混雜因素的全因死亡RR為0.76（95%信賴區間0.67至0.86）。不同研究的族群與結局定義不一，不能解讀為台灣個人死亡機率或養狗造成的延壽效果。",
+          "supporting_passage": "統合分析納入10項觀察研究，共3,837,005人、530,515項事件，平均追蹤10.1年；未調整混雜因素的全因死亡RR為0.76（95%信賴區間0.67至0.86）。不同研究的族群與結局定義不一，不能解讀為台灣個人死亡機率或養狗造成的延壽效果。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "查閱PubMed論文摘要與期刊全文索引，核對研究設計、搜尋期間、研究數、總參與者、事件數、平均追蹤及未調整RR。"
+        },
+        {
+          "source_id": "tw02_dog_mortality_reanalysis_2020",
+          "title": "Bauman等：犬隻飼養與存活的調整後統合分析再評估（2020）",
+          "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIRCOUTCOMES.120.006907",
+          "claim": "重新分析六項一般人口研究的調整後估計，合併效果值0.95（95%信賴區間0.85至1.05），未達統計顯著；與原始未調整合併估計不同。此為既有觀察研究的再分析，不是隨機試驗或台灣估計。",
+          "supporting_passage": "重新分析六項一般人口研究的調整後估計，合併效果值0.95（95%信賴區間0.85至1.05），未達統計顯著；與原始未調整合併估計不同。此為既有觀察研究的再分析，不是隨機試驗或台灣估計。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "直接查閱美國心臟協會期刊PDF，核對調整估計、六項一般人口研究的隨機效應合併值、信賴區間及顯著性。"
+        },
+        {
+          "source_id": "tw02_dog_mortality_england_cohort_2018",
+          "title": "Ding等：英格蘭六個人口世代的犬隻飼養與死亡（2018）",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0749379717305317",
+          "claim": "英格蘭健康調查六個世代納入59,352名成年人，679,441人年、平均追蹤11.5年；全因死亡8,169人、心血管死亡2,451人。調整後全因死亡HR 1.03（0.98至1.09）、心血管死亡HR 1.07（0.96至1.18），均無統計顯著關聯。",
+          "supporting_passage": "英格蘭健康調查六個世代納入59,352名成年人，679,441人年、平均追蹤11.5年；全因死亡8,169人、心血管死亡2,451人。調整後全因死亡HR 1.03（0.98至1.09）、心血管死亡HR 1.07（0.96至1.18），均無統計顯著關聯。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "查閱期刊論文摘要及方法／結果，核對英格蘭六個健康調查世代、全因及心血管死亡定義、人年、事件數、調整變項與HR。"
+        },
+        {
+          "source_id": "tw02_dog_mortality_sweden_cohort_2017",
+          "title": "Mubanga等：瑞典全國世代的犬隻飼養、心血管疾病與死亡（2017）",
+          "url": "https://www.nature.com/articles/s41598-017-16118-6",
+          "claim": "瑞典全國登錄世代納入3,432,153名40至80歲居民、追蹤最多12年；犬隻飼養與全因死亡的調整後HR在單人戶為0.67（0.65至0.69）、多人戶為0.89（0.87至0.91）。34,202人的雙胞胎子研究未重現明確差異；研究無法證明因果。",
+          "supporting_passage": "瑞典全國登錄世代納入3,432,153名40至80歲居民、追蹤最多12年；犬隻飼養與全因死亡的調整後HR在單人戶為0.67（0.65至0.69）、多人戶為0.89（0.87至0.91）。34,202人的雙胞胎子研究未重現明確差異；研究無法證明因果。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "直接查閱Scientific Reports全文，核對全國登錄樣本、年齡範圍、追蹤期間、分戶型調整HR、雙胞胎子研究及作者列出的觀察性限制。"
+        },
+        {
+          "source_id": "tw02_dog_mortality_australia_hilda_2024",
+          "title": "Taniguchi等：澳洲HILDA世代的寵物飼養與死亡（2024）",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0305546",
+          "claim": "澳洲HILDA全國性世代以2018年完成寵物問卷的15,735名15至99歲參與者為基線，與死亡登錄連結追蹤4年，共377人死亡；6,898名犬飼主中106人死亡。犬飼主相較未養寵物者的全因死亡調整後OR為0.77（95%信賴區間0.59至0.99）；參照組為未養寵物者，研究未取得死因資料，屬觀察性關聯。",
+          "supporting_passage": "澳洲HILDA全國性世代以2018年完成寵物問卷的15,735名15至99歲參與者為基線，與死亡登錄連結追蹤4年，共377人死亡；6,898名犬飼主中106人死亡。犬飼主相較未養寵物者的全因死亡調整後OR為0.77（95%信賴區間0.59至0.99）；參照組為未養寵物者，研究未取得死因資料，屬觀察性關聯。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "直接查閱PLOS ONE全文，核對HILDA基線問卷年份、年齡範圍、犬飼主與未養寵物參照組人數、死亡事件、追蹤期間、模型2樣本數、調整後OR、缺失值及死因資料限制。"
+        },
+        {
+          "source_id": "tw02_dog_disability_japan_2022",
+          "title": "Taniguchi等：東京高齡社區犬隻飼養與失能發生研究（2022）",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263791",
+          "claim": "日本東京大田區高齡社區世代約追蹤3.5年；失能分析納入11,015人。新失能認定為目前犬飼主124/947（13.1%）、從未養狗者1,339/7,575（17.7%）；調整後OR為0.54（95%信賴區間0.38至0.79）。結局是失能，不是死亡；單一城市觀察研究不能當成台灣或因果效果。",
+          "supporting_passage": "日本東京大田區高齡社區世代約追蹤3.5年；失能分析納入11,015人。新失能認定為目前犬飼主124/947（13.1%）、從未養狗者1,339/7,575（17.7%）；調整後OR為0.54（95%信賴區間0.38至0.79）。結局是失能，不是死亡；單一城市觀察研究不能當成台灣或因果效果。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "直接查閱PLOS ONE原始研究與補充表，核對東京大田區抽樣、失能登錄定義、犬飼主與從未飼養組分子分母、調整模型及追蹤期間。"
+        },
+        {
+          "source_id": "tw02_dog_disability_japan_correction_2024",
+          "title": "PLOS ONE：東京高齡者犬隻飼養與失能研究更正（2024）",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0314379",
+          "claim": "期刊更正說明原研究方法中失能判定句有誤，並補上貓飼養模型中遺漏的勝算比；犬隻飼養與失能的數值未改。引用日本研究時應一併核對此更正。",
+          "supporting_passage": "期刊更正說明原研究方法中失能判定句有誤，並補上貓飼養模型中遺漏的勝算比；犬隻飼養與失能的數值未改。引用日本研究時應一併核對此更正。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "查閱PLOS ONE 2024年期刊更正，確認修正方法文字及貓飼養模型遺漏值，並核對犬隻失能估計未被更動。"
+        },
+        {
+          "source_id": "tw02_hpa_activity_2025",
+          "title": "國民健康署：上班走路是否足夠，身體活動強度與每週時間（2025）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=19179",
+          "claim": "國民健康署2025-10-14更新的說明建議中度以上身體活動每週累積150分鐘、每次至少10分鐘，並提醒慢走或走走停停未必達到中度強度。此為一般活動建議，不是每位讀者的個別運動處方。",
+          "supporting_passage": "國民健康署2025-10-14更新的說明建議中度以上身體活動每週累積150分鐘、每次至少10分鐘，並提醒慢走或走走停停未必達到中度強度。此為一般活動建議，不是每位讀者的個別運動處方。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "查閱國民健康署更新日期2025-10-14的官方說明及其活動強度內容，核對中度以上活動、150分鐘每週、每次10分鐘及走走停停的限制。"
+        },
+        {
+          "source_id": "tw02_moa_dog_care",
+          "title": "農業部動物保護資訊網：犬隻飼養與照顧指南",
+          "url": "https://animal.moa.gov.tw/Frontend/Know/Detail/LT00000825?parentID=Tab0000126",
+          "claim": "農業部犬隻照顧指南提到犬隻外出活動、牽繩、安全與炎熱天氣照護；其20至30分鐘為犬隻一般照護建議，不能直接折算成飼主的中等強度運動分鐘數。",
+          "supporting_passage": "農業部犬隻照顧指南提到犬隻外出活動、牽繩、安全與炎熱天氣照護；其20至30分鐘為犬隻一般照護建議，不能直接折算成飼主的中等強度運動分鐘數。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "查閱農業部動物保護資訊網犬隻飼養與照顧指南，核對日常外出、牽繩與高溫情境；將犬隻建議與人的運動劑量分開。"
+        },
+        {
+          "source_id": "tw02_moa_shelter_adoption_manual",
+          "title": "農業部：公立收容所認養會談評估與技巧工作手冊",
+          "url": "https://animal.moa.gov.tw/download/0117-4.pdf",
+          "claim": "農業部收容所認養工作手冊描述認養會談會瞭解生活作息、經濟與環境，各收容所認養流程及費用不盡相同；費用可能涵蓋已提供的疫苗、登記、晶片、絕育或醫療照護。不能由手冊推定全台有統一認養費或每月飼養成本。",
+          "supporting_passage": "農業部收容所認養工作手冊描述認養會談會瞭解生活作息、經濟與環境，各收容所認養流程及費用不盡相同；費用可能涵蓋已提供的疫苗、登記、晶片、絕育或醫療照護。不能由手冊推定全台有統一認養費或每月飼養成本。",
+          "accessed_at": "2026-11-19",
+          "retrieval_method": "直接查閱農業部認養會談工作手冊PDF，核對會談涵蓋作息、經濟和生活環境，以及各收容所費用和程序存在差異。"
+        }
+      ],
+      "taiwan_context": "適用於正在考慮養狗或已養狗的台灣居民，特別是希望把散步融入日常活動的人。把人的中度活動量、台灣炎熱天候與道路環境，和犬隻日常照護分開說明；並納入租屋／社區規範、收容所認養流程、費用變異及替代照顧。",
+      "frequency_assessment": "本題討論犬隻飼養與死亡／高齡失能研究關聯，沒有可用來計算台灣個人發生率的事件基線。2019年統合分析是未調整的多國觀察資料；調整後再分析和英格蘭、瑞典、澳洲等世代結果不一致。日本研究觀察的是單一城市高齡者的新失能認定，不是死亡。此次檢索未找到可代表台灣全國、以犬隻飼養作暴露並追蹤飼主全因死亡的同口徑估計；這是本次檢索範圍的限制，不代表相關研究絕對不存在。",
+      "statistics_assessed": [
+        {
+          "topic": "犬隻飼養與全因死亡的2019年未調整統合估計",
+          "value": {
+            "RR": 0.76,
+            "95_CI": [
+              0.67,
+              0.86
+            ]
+          },
+          "unit": "隨機效應統合的未調整相對風險",
+          "period": "系統性搜尋1950年至2019-05-24；納入世代追蹤期間各異，平均10.1年",
+          "geographic_scope": "多國觀察性研究，不含台灣個人風險估計",
+          "population": "10項研究合計3,837,005名參與者",
+          "numerator": "報告530,515項事件；各研究事件與死亡結局定義並不相同，不是單一同質分子",
+          "denominator": "合併研究3,837,005名參與者；比較犬飼主與非犬飼主，各研究有效分母不同",
+          "denominator_definition": "各研究依犬隻飼養暴露與追蹤資料構成的研究群體，不是台灣人口母群",
+          "event_definition": "各研究報告的全因死亡或心血管死亡；統合分析另有既往冠心病族群分析",
+          "data_type": "觀察性研究系統性回顧與隨機效應統合分析；估計未調整混雜因素",
+          "limitations": "未調整混雜因素；研究族群、結局及研究設計異質；RR是群體相對估計，不能解讀為個人死亡機率、因果效果或台灣風險。",
+          "source_ids": [
+            "tw02_dog_mortality_meta_2019"
+          ],
+          "accessed_at": "2026-11-19"
+        },
+        {
+          "topic": "犬隻飼養與全因死亡的2020年調整後再分析",
+          "value": {
+            "effect_size": 0.95,
+            "95_CI": [
+              0.85,
+              1.05
+            ]
+          },
+          "unit": "六項一般人口研究調整後估計的隨機效應合併值",
+          "period": "2020年再分析既有世代研究；原各世代追蹤期間不同",
+          "geographic_scope": "多國一般人口研究",
+          "population": "六項一般人口研究；各研究樣本、暴露測量與模型調整變項不同",
+          "numerator": "未報告一組可跨研究相加的統一死亡事件分子",
+          "denominator": "沒有單一共同分母；合併各研究已調整效應估計",
+          "denominator_definition": "以原始研究的犬飼主與非犬飼主比較估計值進行再分析，不是個人機率",
+          "event_definition": "全因死亡；按各來源研究的定義與登錄方式",
+          "data_type": "既有觀察性人口世代研究的調整後效應再分析",
+          "limitations": "95%信賴區間包含1，未達統計顯著；調整項目、族群與犬隻飼養測量不同；不是隨機試驗或台灣估計。",
+          "source_ids": [
+            "tw02_dog_mortality_reanalysis_2020"
+          ],
+          "accessed_at": "2026-11-19"
+        },
+        {
+          "topic": "英格蘭世代的犬隻飼養與全因／心血管死亡",
+          "value": {
+            "all_cause_HR": 1.03,
+            "all_cause_95_CI": [
+              0.98,
+              1.09
+            ],
+            "cardiovascular_HR": 1.07,
+            "cardiovascular_95_CI": [
+              0.96,
+              1.18
+            ]
+          },
+          "unit": "調整後危險比",
+          "period": "英格蘭健康調查1995–1997、2001–2002及2004等六個世代；平均追蹤11.5年",
+          "geographic_scope": "英格蘭",
+          "population": "59,352名16歲以上參與者；679,441人年",
+          "numerator": "8,169人全因死亡，其中按研究定義2,451人死於心血管疾病",
+          "denominator": "59,352人；隨訪時間合計679,441人年",
+          "denominator_definition": "同意與國家死亡登錄連結的六個人口調查世代參與者",
+          "event_definition": "全因死亡；心血管死亡依ICD-9 390–459及ICD-10 I01–I99",
+          "data_type": "人口調查連結死亡登錄的觀察性世代研究，使用多層Weibull存活分析並調整人口、社經及生活型態因素",
+          "limitations": "在家有狗的測量未完全捕捉照護責任和飼養變化；HR不是因果或台灣個人死亡機率；兩個95%信賴區間均跨1。",
+          "source_ids": [
+            "tw02_dog_mortality_england_cohort_2018"
+          ],
+          "accessed_at": "2026-11-19"
+        },
+        {
+          "topic": "瑞典全國登錄研究的犬隻飼養與全因死亡",
+          "value": {
+            "single_person_household_HR": 0.67,
+            "single_person_household_95_CI": [
+              0.65,
+              0.69
+            ],
+            "multiple_person_household_HR": 0.89,
+            "multiple_person_household_95_CI": [
+              0.87,
+              0.91
+            ]
+          },
+          "unit": "按家庭型態分層的調整後危險比",
+          "period": "以2001年為基線，追蹤最多12年",
+          "geographic_scope": "瑞典全國登錄世代",
+          "population": "3,432,153名40至80歲居民；另有34,202人雙胞胎子研究",
+          "numerator": "論文摘要未提供全國世代單一總死亡分子；報告依家庭型態分層的HR",
+          "denominator": "全國隊列3,432,153人；家庭型態分層分母不同且摘要未逐一列出",
+          "denominator_definition": "排除基線前已有心血管疾病者後，依寵物登記和全國登錄連結建立的觀察世代",
+          "event_definition": "全因死亡；研究另分析心血管事件與心血管死亡",
+          "data_type": "全國登錄連結前瞻性觀察世代；另以雙胞胎子研究檢查結果",
+          "limitations": "研究作者指出不能證明因果，仍可能有未測量混雜及反向因果；34,202人雙胞胎子研究未重現全國世代的明確差異；瑞典制度和飼養背景不同於台灣。",
+          "source_ids": [
+            "tw02_dog_mortality_sweden_cohort_2017"
+          ],
+          "accessed_at": "2026-11-19"
+        },
+        {
+          "topic": "澳洲HILDA世代的犬隻飼養與全因死亡",
+          "value": {
+            "dog_owner_OR": 0.77,
+            "95_CI": [
+              0.59,
+              0.99
+            ]
+          },
+          "unit": "傾向分數加權及多變項調整後勝算比",
+          "period": "2018年寵物問卷，連結死亡登錄至2022年；追蹤4年",
+          "geographic_scope": "澳洲全國性家庭、收入與勞動動態調查世代",
+          "population": "15,735名15至99歲參與者；6,898名犬飼主；6,210名未養寵物者作參照組",
+          "numerator": "基線樣本四年內共377人死亡；犬飼主中106人死亡；未養寵物者中229人死亡",
+          "denominator": "全樣本15,735人；犬飼主6,898人；未養寵物者6,210人；調整模型2為15,172人，因缺值較全樣本少3.5%",
+          "denominator_definition": "2018年完成寵物飼養問卷且可與國家死亡指數連結者；OR比較犬飼主與未養任何寵物者，模型2樣本數15,172人；屬加權後相對勝算估計，非個人機率",
+          "event_definition": "四年內全因死亡；研究未取得死因",
+          "data_type": "全國代表性前瞻家庭調查連結國家死亡登錄的觀察研究，使用逆機率加權模型",
+          "limitations": "僅四年追蹤，且非隨機介入；OR不是絕對發生率、個人風險或因果效果；缺少死因資料，不能外推台灣。",
+          "source_ids": [
+            "tw02_dog_mortality_australia_hilda_2024"
+          ],
+          "accessed_at": "2026-11-19"
+        },
+        {
+          "topic": "日本東京高齡者犬隻飼養與新失能認定",
+          "value": {
+            "current_dog_owner_events": "124/947 (13.1%)",
+            "never_dog_owner_events": "1339/7575 (17.7%)",
+            "adjusted_OR": 0.54,
+            "95_CI": [
+              0.38,
+              0.79
+            ]
+          },
+          "unit": "約3.5年追蹤之失能人數比例與調整後勝算比",
+          "period": "2016年基線；約3.5年追蹤至2020-01",
+          "geographic_scope": "日本東京都大田區單一城市社區",
+          "population": "失能分析11,015名65歲以上社區成人；全問卷犬貓飼養有效回覆11,233人",
+          "numerator": "犬飼主組新失能124人；從未養狗組1,339人",
+          "denominator": "目前犬飼主947人；從未養狗7,575人；失能總分析11,015人",
+          "denominator_definition": "65至84歲社區住民中完成寵物飼養問卷且有失能資料者；分組依目前／過去／從未養狗",
+          "event_definition": "日本長期照護保險系統新取得失能認定；不是死亡或台灣長照資格",
+          "data_type": "單一城市的社區觀察性世代研究，使用調整後邏輯斯迴歸",
+          "limitations": "結局是研究結局採日本長照保險中的失能認定，不是死亡；研究對象為大田區可獨立生活高齡者，飼主組可能在健康、活動及社交上先有差異；不能證明養狗造成失能下降，也不能當台灣盛行率或因果效果。研究於2024年更正方法文字及貓模型資料，犬隻估計未更動。",
+          "source_ids": [
+            "tw02_dog_disability_japan_2022",
+            "tw02_dog_disability_japan_correction_2024"
+          ],
+          "accessed_at": "2026-11-19"
+        }
+      ],
+      "topic_fidelity_assessment": "首次正式發布，保留原作犬隻飼養、飼主走路活動量與壽命研究問題；依台灣生活與活動建議補上可執行的認養及散步界線。這不是歷史條目實質再審。",
+      "topic_fidelity_review": {
+        "decision": "retain_original_research_question_with_taiwan_action_context",
+        "original_question": "本來就想養狗的人，能否把日常遛狗納入自己的走路／活動量；養狗與長壽或健康老化是否有關？",
+        "reader_content_decision": "首次正式發布時保留養狗與飼主活動量、壽命及高齡失能研究問題；以台灣散步強度、炎熱天候、租屋／社區與收容所認養決策補足，不把觀察關聯寫成延壽承諾，也不鼓勵不適合者領養。",
+        "historical_claim_decisions": [
+          {
+            "claim": "養狗的人可能比較長壽",
+            "decision": "retain_with_mixed_observational_evidence",
+            "reason": "正向與無顯著關聯結果並存；未調整統合值與調整後再分析不同，世代的居住型態、族群、結局和測量方法各異，不能作因果或個人風險承諾。"
+          },
+          {
+            "claim": "日常遛狗可以計入飼主活動量",
+            "decision": "retain_with_intensity_and_pause_qualification",
+            "reason": "台灣國健署以中度強度活動量作一般建議；應按飼主實際步調與持續走動時間計算，停等和犬隻嗅聞時間不會自動成為中度運動。"
+          },
+          {
+            "claim": "飼養犬隻須納入台灣日常照顧和成本",
+            "decision": "localize_to_taiwan_care_context",
+            "reason": "以農業部犬隻照顧和公立收容所認養資料說明本地高溫、牽繩、日常時間、費用變異與替代照顧，不套用外地制度或價格。"
+          }
+        ]
+      },
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "公共衛生與流行病學（觀察性研究解讀）",
+          "高齡醫學或老年流行病學",
+          "獸醫／動物福利（認養與犬隻照護）"
+        ]
+      },
+      "source_bundle_sha256": "a72235c0c910f2cbace3b5b9320cdec4148d0f7974e5f6964f37530fca7a78ae",
+      "new_source_ids": [
+        "tw02_dog_mortality_meta_2019",
+        "tw02_dog_mortality_reanalysis_2020",
+        "tw02_dog_mortality_england_cohort_2018",
+        "tw02_dog_mortality_sweden_cohort_2017",
+        "tw02_dog_mortality_australia_hilda_2024",
+        "tw02_dog_disability_japan_2022",
+        "tw02_dog_disability_japan_correction_2024",
+        "tw02_hpa_activity_2025",
+        "tw02_moa_dog_care",
+        "tw02_moa_shelter_adoption_manual"
+      ]
+    }
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "公共衛生與流行病學（觀察性研究解讀）",
+      "高齡醫學或老年流行病學",
+      "獸醫／動物福利（認養與犬隻照護）"
+    ]
+  },
+  "note": "本批為首次正式發布一篇核心正文；既有章節結構化草稿的修改前雜湊保留於review及本批證據。回溯再審登錄未增加，因本批不是歷史正式內容再審。",
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 322,
+    "runtime_items": 333,
+    "runtime_sources": 1355,
+    "source_registry": 1438,
+    "review_rechecks": 404,
+    "coverage_json_files": 666,
+    "unresolved_source_ids": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 322,
+    "publication_ready": false
+  }
+}
