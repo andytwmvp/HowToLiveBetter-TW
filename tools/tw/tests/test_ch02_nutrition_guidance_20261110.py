@@ -223,7 +223,7 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         self.assertIn("2020年7月1日施行", bodies["TW-02-022"])
         self.assertIn("不要把整顆堅果當零食", bodies["TW-02-022"])
         self.assertIn("不是要求所有人完全不吃紅肉", bodies["TW-02-023"])
-        self.assertIn("至少約三分之一", bodies["TW-02-024"])
+        self.assertIn("至少三分之一", bodies["TW-02-024"])
         self.assertIn("不是喝茶就能延壽", bodies["TW-02-025"])
         self.assertIn("兩種說法的族群與文字不同", bodies["TW-02-026"])
         self.assertIn("不能用成人每日300毫克建議取代孕期評估", bodies["TW-02-026"])
@@ -283,10 +283,11 @@ class Chapter2NutritionGuidanceTests(unittest.TestCase):
         self.assertIn("日本研究探討心血管與健康老化", rows["TW-02-036"][1])
         self.assertIn("生淡水魚的中華肝吸蟲風險", rows["TW-02-047"][1])
         self.assertIn("喝茶、泡澡等健康研究", draft_data["intro"])
+        later_rechecked_ids = {row["id"] for row in self.later_rechecks}
         for item_id, expected_sha in DRAFT_ROW_SHA256.items():
-            if item_id == "TW-02-025":
-                # The former draft hash remains in the immutable 11/10 batch record;
-                # the current row reflects the later source-backed re-review.
+            if item_id in later_rechecked_ids:
+                # The former draft hash remains immutable; a later source-backed
+                # review may update the current row and is verified by its own batch.
                 original = base_rows[item_id]
                 value = json.dumps(original, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
                 self.assertEqual(hashlib.sha256(value).hexdigest(), expected_sha)

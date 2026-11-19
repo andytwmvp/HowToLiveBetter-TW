@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "phase": "第2章全穀與壽命研究主題保真度歷史再審",
+  "baseline_main_sha": "ccee167567b76b6c217894d6cbc19cf467b39543",
+  "reviewed_at": "2026-11-20",
+  "review_due_at": "2027-02-20",
+  "scope": [
+    "TW-02-024"
+  ],
+  "content_policy": "保留原題仍能回答台灣讀者的研究問題；以台灣官方來源支援本地行動；不把海外觀察性研究寫成台灣發生率或個人延壽效果。",
+  "items": [
+    {
+      "id": "TW-02-024",
+      "change_kind": "historical topic-fidelity recheck",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-024.md",
+      "before_sha256": "3bdcc8a357ce71336f14e58118d8d9d688b085a96caf9ba308aba68cb9bdd117",
+      "after_sha256": "fc083bf42ea2422378dd25ab72ac2b2faec8be12257293c14b6899399bdb622e",
+      "prior_review_sha256": "64ef4367bb1db93880a5d1cd1f46cd5ee64ec503116c39aaa3fedad99e4fbb1c",
+      "review_sha256": "99393cc819deb1ef4d7aa3002aa96c033ce781725bf04a76426df78db3ebd617",
+      "source_bundle_sha256": "a5d5479842362625de045fb7cb268f743ad25b50f4493d1db1877bbd4c1ac9e8",
+      "topic_fidelity_assessment": "保留並補回原題全穀攝取與全因死亡研究，不以單純台灣化飲食建議取代研究問題；對照海外研究適用限制後，保留國健署的台灣主食替換做法。",
+      "taiwan_frequency_limits": "Aune、Schwingshackl及Hu統合分析呈現多國前瞻世代的全因死亡相對風險，不是台灣發生率或個人死亡機率；I²約80%至90%顯示研究間高度異質。不同統合分析可能使用部分重疊的原始世代，不能當作互相獨立的重複試驗。本次未找到可直接估算台灣個人全穀攝取與全因死亡關係的可比研究。",
+      "source_ids": [
+        "tw02_aune_wholegrain_mortality_meta_2016",
+        "tw02_schwingshackl_wholegrain_mortality_meta_2017",
+        "tw02_hu_wholegrain_mortality_meta_2023",
+        "tw02_hpa_external_dining_guidance_2024"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "Aune 2016全穀攝取與全因死亡劑量反應",
+          "value": "每增加90公克／日RR 0.83（95% CI 0.77–0.90；I²=83%）",
+          "unit": "全穀攝取公克／日；全因死亡相對風險（RR）",
+          "period": "文獻搜尋至2016-04-03；論文2016-06-14刊出；各原始世代追蹤期間不同",
+          "geographic_scope": "多國前瞻性世代研究統合分析，不是台灣估計",
+          "population": "11個世代研究（10篇報告），合計705,253名參與者",
+          "numerator": "原始研究合計100,726人死亡",
+          "denominator": "合計705,253名參與者；各比較暴露組分組樣本數不在摘要中逐一列出",
+          "event_definition": "原始世代於各自追蹤期間記錄的全因死亡；非發病率或個人終生機率",
+          "data_type": "前瞻性世代觀察研究的劑量反應統合分析",
+          "source_ids": [
+            "tw02_aune_wholegrain_mortality_meta_2016"
+          ],
+          "accessed_at": "2026-11-20",
+          "limitations": "I²=83%，研究間異質性高；暴露定義、食物種類和量測方式不同。90公克／日是研究模型中的劑量差，不等同三碗台灣熟飯，也不能將RR解讀為個人死亡機率降低17%或因果效果。"
+        },
+        {
+          "topic": "Schwingshackl 2017全穀攝取與全因死亡",
+          "value": "最高／最低攝取組RR 0.88（95% CI 0.84–0.92；I²=91%）；每增加30公克／日RR 0.92（0.89–0.95；I²=80%）",
+          "unit": "攝取組比較、全穀公克／日及全因死亡相對風險（RR）",
+          "period": "論文2017年刊出；各原始世代追蹤期間不同",
+          "geographic_scope": "多國前瞻性研究統合分析，不是台灣估計",
+          "population": "最高／最低組分析19項全穀研究；劑量反應分析為其中或相關的11項研究，兩者分析集不同",
+          "numerator": "最高／最低組比較共記錄121,141起死亡；劑量反應模型未在已核對摘要中另列合計事件數",
+          "denominator": "最高／最低組分析19項研究；30公克劑量反應為11項研究，未在已核對摘要中另列該模型的參與者總數。不可把19項研究的事件數直接當成11項研究模型的分母。",
+          "event_definition": "各世代研究追蹤期間的全因死亡",
+          "data_type": "前瞻性觀察研究的最高／最低攝取組合併及劑量反應統合分析",
+          "source_ids": [
+            "tw02_schwingshackl_wholegrain_mortality_meta_2017"
+          ],
+          "accessed_at": "2026-11-20",
+          "limitations": "最高／最低與劑量反應分析的研究數不同。I²分別為91%及80%，表示研究間結果高度不一致；RR不證明因果，也不能直接估算台灣居民個人風險。"
+        },
+        {
+          "topic": "Hu 2023全穀攝取與全因死亡劑量反應",
+          "value": "每增加30公克／日RR 0.94（95% CI 0.92–0.97；I²=89.8%）；全因死亡曲線非線性",
+          "unit": "全穀攝取公克／日；全因死亡相對風險（RR）",
+          "period": "文獻搜尋至2022-03-15；論文2023-01刊出；各原始世代追蹤期間不同",
+          "geographic_scope": "多國前瞻性世代研究統合分析，不是台灣估計",
+          "population": "全穀／全因死亡分析13項研究（11篇報告）、912,293名參與者",
+          "numerator": "該全因死亡分析納入106,112人死亡",
+          "denominator": "912,293名參與者；每30公克劑量反應為模型估計，原論文摘要未按暴露組提供分組人數",
+          "event_definition": "全因死亡；非特定疾病發生率或個人終生機率",
+          "data_type": "前瞻性世代研究的劑量反應統合分析；作者以限制性三次樣條檢查非線性",
+          "source_ids": [
+            "tw02_hu_wholegrain_mortality_meta_2023"
+          ],
+          "accessed_at": "2026-11-20",
+          "limitations": "I²=89.8%，異質性高；全因死亡關聯為非線性，且研究中的食物定義、來源與族群不同。這不是可直接套用台灣居民的目標份量或個人效益。"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學",
+          "營養流行病學"
+        ]
+      },
+      "prior_structured_draft_sha256": "be0cd68c1f2f009ff0a1abff859e5e8c73deb310521d834c1ba95c9e8cb02d2c"
+    }
+  ],
+  "new_source_ids": [
+    "tw02_aune_wholegrain_mortality_meta_2016",
+    "tw02_schwingshackl_wholegrain_mortality_meta_2017",
+    "tw02_hu_wholegrain_mortality_meta_2023"
+  ],
+  "source_records_reused": [
+    "tw02_hpa_external_dining_guidance_2024"
+  ],
+  "source_records_retired": [],
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 322,
+    "runtime_items": 333,
+    "runtime_sources": 1355,
+    "source_registry": 1438,
+    "review_rechecks": 404,
+    "coverage_json_files": 666,
+    "unresolved_source_id_kinds": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 322,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 322,
+    "runtime_items": 333,
+    "runtime_sources": 1358,
+    "source_registry": 1441,
+    "review_rechecks": 405,
+    "coverage_json_files": 668,
+    "unresolved_source_id_kinds": 103,
+    "unresolved_reference_occurrences": 256,
+    "publication_completed_entries": 322,
+    "publication_ready": false
+  },
+  "professional_review_status": "AI輔助核對完成；營養學與營養流行病學正式專業審閱仍待取得。",
+  "reader_copy_cleanup": "正式正文只保留研究解讀限制及讀者行動所需資訊；批次、AI狀態與審查流程留在本證據、review與回溯登錄。"
+}

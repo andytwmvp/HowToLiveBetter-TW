@@ -46016,6 +46016,170 @@
       "source_bundle_path": "localization/tw-edition/sources/ch02-sleep-duration-topic-fidelity-recheck-20261118.json",
       "source_bundle_sha256": "1d060f4a8ccd92eac609ce1f4697889da2aaa065c8a34e2f6ad9df5b944bd979",
       "review_sha256": "fcb158084faf0c173e94286bec83f650558216e240f3288b7676dd3cde120876"
+    },
+    {
+      "id": "TW-02-024",
+      "before_sha256": "3bdcc8a357ce71336f14e58118d8d9d688b085a96caf9ba308aba68cb9bdd117",
+      "after_sha256": "fc083bf42ea2422378dd25ab72ac2b2faec8be12257293c14b6899399bdb622e",
+      "prior_revision": "a5482a74c68ef521a3f306bd758398053436b8b9",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "64ef4367bb1db93880a5d1cd1f46cd5ee64ec503116c39aaa3fedad99e4fbb1c",
+      "prior_reviewed_at": "2026-11-10",
+      "prior_review_due_at": "2027-02-10",
+      "reviewed_at": "2026-11-20",
+      "review_due_at": "2027-02-20",
+      "status": "ai_source_rechecked_professional_pending",
+      "taiwan_context": "台灣白飯、麵食與外食仍是日常主食情境。將全穀與壽命研究恢復為明確主題，再以國健署對台灣飲食的部分替換建議提供可行行動；不把國外克數當作台灣個人處方。",
+      "taiwan_context_assessment": {
+        "actual_scenario": "在家煮飯、便當店、自助餐與早餐選擇中，依供應、口味和預算替換部分主食。",
+        "topic_fidelity_assessment": "原題詢問全穀與壽命／死亡率研究；原台灣稿只保留主食建議而未回答研究問題，本次補回研究結果及非因果限制。"
+      },
+      "frequency_assessment": "Aune、Schwingshackl及Hu統合分析呈現多國前瞻世代的全因死亡相對風險，不是台灣發生率或個人死亡機率；I²約80%至90%顯示研究間高度異質。不同統合分析可能使用部分重疊的原始世代，不能當作互相獨立的重複試驗。本次未找到可直接估算台灣個人全穀攝取與全因死亡關係的可比研究。",
+      "legal_status_assessment": "無特定法律或政策資格主張；台灣飲食建議來源為國健署官方衛教頁。",
+      "changes": "修正前正文只說明國健署主食替換與台灣飲食行動，未回答原作關於全穀攝取和壽命／死亡率的問題。修正後補入Aune 2016、Schwingshackl 2017及Hu 2023三篇統合分析的研究數、死亡分子／參與者分母、相對風險與異質性；刪除固定延壽劑量暗示，並將海外研究限制、台灣官方飲食建議與可行替換方法分開說明。",
+      "topic_fidelity_assessment": "保留並補回原題全穀攝取與全因死亡研究，不以單純台灣化飲食建議取代研究問題；對照海外研究適用限制後，保留國健署的台灣主食替換做法。",
+      "source_status": "新增3篇原始統合分析來源，並於本次重新讀取既有國健署來源；未退休既有來源。",
+      "source_ids": [
+        "tw02_aune_wholegrain_mortality_meta_2016",
+        "tw02_schwingshackl_wholegrain_mortality_meta_2017",
+        "tw02_hu_wholegrain_mortality_meta_2023",
+        "tw02_hpa_external_dining_guidance_2024"
+      ],
+      "previous_source_ids": [
+        "tw02_hpa_external_dining_guidance_2024"
+      ],
+      "retired_sources": [],
+      "source_checks": [
+        {
+          "source_id": "tw02_aune_wholegrain_mortality_meta_2016",
+          "title": "Aune 等：全穀攝取與心血管疾病、癌症及全因與特定死因死亡（2016）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27301975/",
+          "claim": "全穀攝取與全因死亡的劑量反應關聯及其研究間異質性。",
+          "supporting_passage": "PubMed摘要及BMJ全文：檢索至2016-04-03；11個世代研究（10篇報告）、705,253人、100,726人死亡；每增加90公克／日全穀，RR 0.83（95% CI 0.77–0.90；I²=83%）。論文說90公克約相當於三份，份量例子依其研究食物定義。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱PubMed原始論文摘要及BMJ全文，核對研究設計、搜尋截止日、樣本、死亡數、每90公克估計與異質性；不將觀察性相對風險換算為個人機率。"
+        },
+        {
+          "source_id": "tw02_schwingshackl_wholegrain_mortality_meta_2017",
+          "title": "Schwingshackl 等：食物類別與全因死亡風險的統合分析（2017）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28446499/",
+          "claim": "全穀攝取最高與最低組以及每增加30公克／日的全因死亡觀察性關聯。",
+          "supporting_passage": "AJCN原始論文摘要與全文：最高／最低組分析19項全穀研究、121,141起死亡，RR 0.88（95% CI 0.84–0.92；I²=91%）；劑量反應另有11項研究，每日增加30公克的RR 0.92（95% CI 0.89–0.95；I²=80%）。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱PubMed書目摘要與American Journal of Clinical Nutrition原始論文全文檢索結果，分開記錄分類比較和劑量反應的研究數與分母，避免混用。"
+        },
+        {
+          "source_id": "tw02_hu_wholegrain_mortality_meta_2023",
+          "title": "Hu 等：全穀與精製穀物攝取及心血管事件和全因死亡（2023）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36789934/",
+          "claim": "較新的全穀攝取與全因死亡劑量反應估計，並呈現非線性和高研究間異質性。",
+          "supporting_passage": "PubMed摘要及AJCN全文：文獻檢索至2022-03-15。全穀／全因死亡分析13項研究（11篇報告）、912,293人、106,112人死亡；每增加30公克／日RR 0.94（95% CI 0.92–0.97）。原文呈現全因死亡非線性（P=0.001）；全文檢索結果列I²=89.8%，並描述約0至220公克／日範圍內曲線逐漸趨緩。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱PubMed摘要及American Journal of Clinical Nutrition原始論文頁面的索引全文，核對搜尋截止日、全因死亡研究數、參與者、死亡數、RR、異質性及非線性；研究分析不是台灣樣本。"
+        },
+        {
+          "source_id": "tw02_hpa_external_dining_guidance_2024",
+          "title": "國健署：常吃外食真的容易發胖嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=18127",
+          "claim": "台灣外食情境中以未精製主食替換部分白飯的官方飲食建議。",
+          "supporting_passage": "國健署頁面內容更新日期2024-11-18；建議至少1/3主食以糙米、五穀米、玉米、地瓜、南瓜或馬鈴薯等取代白米飯。這是飲食建議，並非全穀攝取可延長壽命的台灣研究。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "本次重新直接查閱國健署原始頁面，核對頁面更新日期、替換比例與食物例子；未將官方建議當成死亡率證據。"
+        }
+      ],
+      "previous_review_claims": [
+        "把原作直接替換精米白麵的指令改成逐步增加全穀的台灣可行做法；明列國健署約三分之一主食建議及台灣常見替換選項，避免把地瓜等另算成不受限制的配菜。",
+        "本篇是飲食選擇指引，沒有可代表台灣個人疾病機率的統計；國健署的全穀替換比例屬飲食建議，不是發生率或保證效果，故不以海外研究推估個人收益。",
+        "先前正文提供國健署至少三分之一主食替換建議，但沒有呈現原題的全穀與死亡率研究。"
+      ],
+      "prior_source_checks": [
+        {
+          "source_id": "tw02_hpa_external_dining_guidance_2024",
+          "title": "國健署：常吃外食真的容易發胖嗎？",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=18127",
+          "claim": "國健署外食建議支持逐步增加全穀及未精製雜糧，並以無糖茶取代含糖飲料。",
+          "supporting_passage": "頁面於2024-06-25發布、2024-11-18更新；第4點建議至少1/3主食以糙米、五穀米、玉米、地瓜、南瓜或馬鈴薯取代白飯，第5點建議多喝白開水、以無糖茶取代含糖飲料。",
+          "accessed_at": "2026-11-10",
+          "retrieval_method": "直接查閱國健署2024-11-18更新的外食建議頁，核對全穀替換比例、無糖茶建議及正式頁面日期。"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "Aune 2016全穀攝取與全因死亡劑量反應",
+          "value": "每增加90公克／日RR 0.83（95% CI 0.77–0.90；I²=83%）",
+          "unit": "全穀攝取公克／日；全因死亡相對風險（RR）",
+          "period": "文獻搜尋至2016-04-03；論文2016-06-14刊出；各原始世代追蹤期間不同",
+          "geographic_scope": "多國前瞻性世代研究統合分析，不是台灣估計",
+          "population": "11個世代研究（10篇報告），合計705,253名參與者",
+          "numerator": "原始研究合計100,726人死亡",
+          "denominator": "合計705,253名參與者；各比較暴露組分組樣本數不在摘要中逐一列出",
+          "event_definition": "原始世代於各自追蹤期間記錄的全因死亡；非發病率或個人終生機率",
+          "data_type": "前瞻性世代觀察研究的劑量反應統合分析",
+          "source_ids": [
+            "tw02_aune_wholegrain_mortality_meta_2016"
+          ],
+          "accessed_at": "2026-11-20",
+          "limitations": "I²=83%，研究間異質性高；暴露定義、食物種類和量測方式不同。90公克／日是研究模型中的劑量差，不等同三碗台灣熟飯，也不能將RR解讀為個人死亡機率降低17%或因果效果。"
+        },
+        {
+          "topic": "Schwingshackl 2017全穀攝取與全因死亡",
+          "value": "最高／最低攝取組RR 0.88（95% CI 0.84–0.92；I²=91%）；每增加30公克／日RR 0.92（0.89–0.95；I²=80%）",
+          "unit": "攝取組比較、全穀公克／日及全因死亡相對風險（RR）",
+          "period": "論文2017年刊出；各原始世代追蹤期間不同",
+          "geographic_scope": "多國前瞻性研究統合分析，不是台灣估計",
+          "population": "最高／最低組分析19項全穀研究；劑量反應分析為其中或相關的11項研究，兩者分析集不同",
+          "numerator": "最高／最低組比較共記錄121,141起死亡；劑量反應模型未在已核對摘要中另列合計事件數",
+          "denominator": "最高／最低組分析19項研究；30公克劑量反應為11項研究，未在已核對摘要中另列該模型的參與者總數。不可把19項研究的事件數直接當成11項研究模型的分母。",
+          "event_definition": "各世代研究追蹤期間的全因死亡",
+          "data_type": "前瞻性觀察研究的最高／最低攝取組合併及劑量反應統合分析",
+          "source_ids": [
+            "tw02_schwingshackl_wholegrain_mortality_meta_2017"
+          ],
+          "accessed_at": "2026-11-20",
+          "limitations": "最高／最低與劑量反應分析的研究數不同。I²分別為91%及80%，表示研究間結果高度不一致；RR不證明因果，也不能直接估算台灣居民個人風險。"
+        },
+        {
+          "topic": "Hu 2023全穀攝取與全因死亡劑量反應",
+          "value": "每增加30公克／日RR 0.94（95% CI 0.92–0.97；I²=89.8%）；全因死亡曲線非線性",
+          "unit": "全穀攝取公克／日；全因死亡相對風險（RR）",
+          "period": "文獻搜尋至2022-03-15；論文2023-01刊出；各原始世代追蹤期間不同",
+          "geographic_scope": "多國前瞻性世代研究統合分析，不是台灣估計",
+          "population": "全穀／全因死亡分析13項研究（11篇報告）、912,293名參與者",
+          "numerator": "該全因死亡分析納入106,112人死亡",
+          "denominator": "912,293名參與者；每30公克劑量反應為模型估計，原論文摘要未按暴露組提供分組人數",
+          "event_definition": "全因死亡；非特定疾病發生率或個人終生機率",
+          "data_type": "前瞻性世代研究的劑量反應統合分析；作者以限制性三次樣條檢查非線性",
+          "source_ids": [
+            "tw02_hu_wholegrain_mortality_meta_2023"
+          ],
+          "accessed_at": "2026-11-20",
+          "limitations": "I²=89.8%，異質性高；全因死亡關聯為非線性，且研究中的食物定義、來源與族群不同。這不是可直接套用台灣居民的目標份量或個人效益。"
+        }
+      ],
+      "limits": [
+        "相關統合分析來自前瞻性觀察研究；研究間有高異質性，且不同統合分析可能納入重疊世代，不能推論全穀攝取會造成個人壽命延長。",
+        "海外研究的相對風險與克數不是台灣發生率、個人死亡機率或固定飲食處方；研究份量及食物定義不能直接換算為台灣熟飯碗數。",
+        "國健署至少三分之一的主食替換建議是飲食指引，不是已證明的延壽劑量。",
+        "糖尿病、腎臟病、特定腸胃疾病及咀嚼吞嚥困難者需要個別安排主食。"
+      ],
+      "unresolved_questions": [
+        "尚未取得營養學及營養流行病學專業人員獨立審閱。",
+        "台灣現有公開飲食建議及調查資料未提供可與上述研究直接比較的全穀攝取—全因死亡估計；日後若有台灣連結世代研究，應重新評估本地適用性。",
+        "不同統合分析所納入的原始世代可能重疊，且全穀食物定義與攝取測量不一，不能把其RR視為可互換或獨立的重複結果。"
+      ],
+      "previous_body": "<!-- TW-ID: TW-02-024 -->\n\n# 主食逐步增加全穀：白飯白麵不必一次全換\n\n## 先替換一部分，找得到又吃得慣的選項\n\n白飯、白麵、饅頭和吐司是台灣常見主食，不必突然把家中所有白米或麵食丟掉。國健署建議逐步以糙米、五穀米、玉米、地瓜、南瓜或馬鈴薯取代一部分主食，方向是讓每日主食至少約三分之一來自全穀及未精製雜糧。這是飲食參考，可以依口感、預算和身體狀況慢慢調整。\n\n可先在家煮飯時混入少量糙米或五穀米，再按家人接受度增加；買便當時若有地瓜飯、糙米飯就輪替選，早餐則可選全麥吐司或燕麥。超商或小吃店不一定每次都有合適選項，當餐沒有也不必勉強；其他餐次再補上即可。地瓜、南瓜等也算主食的一部分，不要只當蔬菜加上去而忽略整餐份量。\n\n## 全穀仍有熱量，特殊飲食要個別安排\n\n全穀和根莖類仍含碳水化合物與熱量，不會因為名稱含「全穀」就可以不限量。糖尿病、腎臟病、腸胃疾病、咀嚼吞嚥困難或醫師開立特殊飲食者，請依營養師或醫療團隊調整種類、份量和質地。若一開始增加纖維後腸胃不舒服，可放慢增加速度並確認水分及餐點搭配。\n\n## 費用與可行性\n\n一般糙米、燕麥或地瓜就能開始，不需要買昂貴的機能穀粉。價格和供應依超市、傳統市場、季節及品牌而異；以家中原本會買的主食逐步替換，較容易長期維持。\n\n## 參考資料\n\n[國健署：常吃外食真的容易發胖嗎？](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=127&pid=18127)\n",
+      "review_path": "localization/reviews/TW-02-024.json",
+      "excluded_sources": [],
+      "prior_structured_draft_sha256": "be0cd68c1f2f009ff0a1abff859e5e8c73deb310521d834c1ba95c9e8cb02d2c",
+      "topic_fidelity_review": {
+        "question_change": {
+          "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic",
+          "previous_question": "如何在台灣常見的白飯、麵食與外食中，循序增加全穀及未精製雜糧？",
+          "current_question": "全穀與死亡率研究能說明什麼，台灣讀者如何在白飯、麵食與外食中做可行替換？",
+          "reason": "原作條目以全穀攝取與全因死亡研究為核心；先前正文只提供台灣主食替換做法，沒有回答研究問題。本次補回多篇觀察性統合分析並說明限制，同時保留台灣可執行的飲食建議。"
+        }
+      },
+      "review_sha256": "99393cc819deb1ef4d7aa3002aa96c033ce781725bf04a76426df78db3ebd617"
     }
   ],
   "reader_copy_cleanups": [
