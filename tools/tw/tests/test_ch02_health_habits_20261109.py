@@ -180,12 +180,14 @@ class ChapterTwoHealthHabitsTests(unittest.TestCase):
         current_chapter = read_json("localization/tw-edition/chapters/02.json")
         old_rows = {row[0]: row for row in old_chapter["entries"]}
         current_rows = {row[0]: row for row in current_chapter["entries"]}
-        # Chapter rows reflect append-only topic-fidelity rechecks; batch
-        # tests validate newly added rows and their supporting evidence.
+        # Chapter rows reflect append-only topic-fidelity rechecks. Row 44 was
+        # also promoted from a structured draft; its exact prior-row hash and
+        # publication provenance are checked by the dedicated batch test.
         topic_fidelity_rows = {6, 13, 25, 29, 36, 47}
+        first_publication_rows = {44}
         self.assertEqual(set(current_rows), set(old_rows))
         for number, row in old_rows.items():
-            if number not in topic_fidelity_rows:
+            if number not in topic_fidelity_rows | first_publication_rows:
                 self.assertEqual(current_rows[number], row)
         self.assertIn("日本研究有觀察到死亡率關聯", current_rows[25][1])
         self.assertIn("日本研究探討心血管與健康老化", current_rows[36][1])
