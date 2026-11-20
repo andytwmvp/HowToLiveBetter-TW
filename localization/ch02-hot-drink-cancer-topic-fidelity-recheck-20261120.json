@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "phase": "第2章熱飲與食道癌研究主題保真度歷史再審",
+  "baseline_main_sha": "d105a46a83f3eb16e0c6bae321571c5a6f1c83dc",
+  "reviewed_at": "2026-11-20",
+  "review_due_at": "2027-02-20",
+  "scope": [
+    "TW-02-030"
+  ],
+  "selection_rationale": "原台灣正文保留燙傷與避免燙口飲料的安全提醒，但移除了原題所討論的伊朗病例對照、IARC分類與中國聯合暴露研究；前次review也記錄國健署燒燙傷來源直連無法查閱，需實際補查。台灣仍有大量日常熱飲情境，因此恢復研究問題並以台灣官方／公立醫療資料更新安全做法。",
+  "content_policy": "保留可供台灣讀者理解的熱飲與食道癌研究問題；逐項標明研究地區、設計、分母和限制，不將海外結果當台灣頻率或個人風險；以台灣官方及公立醫療來源支持讀者操作。",
+  "items": [
+    {
+      "id": "TW-02-030",
+      "change_kind": "historical topic-fidelity recheck",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-030.md",
+      "before_sha256": "ac12b0c443e2981d0d0d530abad658127c09a36ebca449cc3c2e2a5f6e4b5ba9",
+      "after_sha256": "c985046b14c89300e36cf894b888baabf89ae2b2d7336d1d09e12ace9610a955",
+      "prior_review_sha256": "42eb8322dc10903dc240e09e9c6768eedd87e0cd7659b3be9cdbb2ec78424732",
+      "review_sha256": "35eed70665620022fa5f671276d1cbd5cf16cfdad856ccc7dbadfb4b888c3d2b",
+      "source_bundle_sha256": "6fc88966e1eca9364549ad038d9731185df4567c68498b02d04ee376f9d1551f",
+      "source_bundle_path": "localization/tw-edition/sources/ch02-hot-drink-cancer-topic-fidelity-recheck-20261120.json",
+      "topic_fidelity_assessment": "保留並恢復原題熱飲溫度與食道癌研究，不用表面相似的台灣安全提醒取代研究問題；境外文化與研究因仍能協助理解相同暴露問題而限縮保留，另以台灣官方和公立醫療資料提供可行安全行動。",
+      "taiwan_frequency_limits": "目前未找到具全台代表性且定義清楚的熱飲溫度、飲用高於攝氏65度飲料比例，或食道癌可歸因於此暴露比例統計。台灣2009年病例對照研究限於男性且詢問吃熱食不適，不能作為全國熱飲盛行率。伊朗病例對照、英國世代與中國聯合暴露世代結果只描述其研究族群；不將OR、RR或HR換算為台灣發生率或個人機率。少見或分母不足不影響明顯燙口飲料造成即時燙傷的處置；先放涼、燙傷先沖冷水，再依傷勢求醫。",
+      "source_ids": [
+        "tw02_iarc_hot_drinks_2016",
+        "tw02_islami_golestan_hot_tea_2009",
+        "tw02_papier_uk_hot_drinks_2026",
+        "tw02_yu_ckb_hot_tea_interactions_2018",
+        "tw02_chen_taiwan_hot_food_escc_2009",
+        "tw02_hpa_esophageal_prevention_2022",
+        "tw02_mohw_child_burn_prevention_firstaid_2026",
+        "tw02_vghtpe_burn_care_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "previous_source_ids": [
+        "tw02_iarc_hot_drinks_2016",
+        "tw02_hpa_child_burn_first_aid_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "retired_sources": [
+        {
+          "id": "tw02_hpa_child_burn_first_aid_2026",
+          "disposition": "replaced",
+          "reason": "前次引用的國健署兒童防燙頁在該次查核時無法直接讀取，且兒童專頁不能單獨支持本篇一般燙傷處置。本次改用可直接查閱的衛福部／國健署兒童衛教及臺北榮總一般燒燙傷指引；舊來源物件與舊review保留作歷史追溯。",
+          "replacement_ids": [
+            "tw02_mohw_child_burn_prevention_firstaid_2026",
+            "tw02_vghtpe_burn_care_2026"
+          ],
+          "prior_source_sha256": "ff4a81d7d4614ed9a0083f48548c0e36c8604418335aa8d249b3effde442c05f"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "伊朗Golestan茶飲溫度與食道鱗狀細胞癌病例對照",
+          "value": "熱茶OR 2.07（95% CI 1.28–3.35）；非常熱茶OR 8.16（3.93–16.91）；倒茶後<2分鐘相較≥4分鐘OR 5.41（2.63–11.14）",
+          "unit": "病例對照調整勝算比（OR），不是發生率或個人機率",
+          "period": "2003–2007年收案；論文2009年發表",
+          "geographic_scope": "伊朗北部Golestan省食道癌高發生率地區",
+          "population": "300名病理確認食道鱗狀細胞癌病例與571名配對鄰近對照",
+          "numerator": "病例組300人；各暴露分析因缺失值可能略少",
+          "denominator": "配對對照571人；各暴露組分母不是全地區人口，病例對照設計不能直接估計絕對發生率",
+          "event_definition": "病理確認的新診斷食道鱗狀細胞癌病例；以配對病例對照估計勝算比",
+          "data_type": "人口基礎病例對照研究；茶溫與等待時間以受訪者自述分類",
+          "limitations": "特定高發生率地區、觀察性病例對照；自述暴露可能有回憶與分類偏差。OR不是台灣發生率或個人風險；倒茶至飲用時間不能推成通用安全計時。",
+          "source_ids": [
+            "tw02_islami_golestan_hot_tea_2009"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "英國兩世代熱飲偏好與食道癌亞型",
+          "value": "非常熱相較溫飲料：食道SCC RR 3.17（95% CI 2.49–4.03）；食道AC RR 0.92（0.76–1.12）",
+          "unit": "Cox模型估計的群體相對危險（論文稱RR）",
+          "period": "平均追蹤14.2年（MWS）及11.1年（UK Biobank）；論文2026-09-08刊出",
+          "geographic_scope": "英國兩個前瞻世代，不代表台灣族群",
+          "population": "977,282人：Million Women Study 510,112人、UK Biobank 467,170人",
+          "numerator": "追蹤期間2,348例新發食道癌；SCC 1,045例、AC 1,303例",
+          "denominator": "兩世代合計977,282名參與者；各自述溫度組的樣本分母未在摘要中列出",
+          "event_definition": "追蹤中登錄的新發食道鱗狀細胞癌（SCC）及腺癌（AC）",
+          "data_type": "兩個前瞻性觀察世代的Cox模型及合併分析；飲用溫度為自述偏好而非實測",
+          "limitations": "英國觀察研究且暴露為偏好溫度；相對估計不是絕對發生率、因果效果或台灣個人風險。不同組別分母未在摘要提供。",
+          "source_ids": [
+            "tw02_papier_uk_hot_drinks_2026"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "中國茶溫、吸菸與飲酒聯合暴露及食道癌",
+          "value": "每日熱／燙口茶、目前吸菸且酒精≥15克／日組對照低暴露參照組HR 5.01（95% CI 4.00–6.28）；兩組發生率1.55與0.31/1,000人年",
+          "unit": "前瞻世代調整危險比（HR）及每1,000人年事件率",
+          "period": "招募2004–2008年；中位追蹤9.2年，合計約4.1百萬人年；論文2018年發表",
+          "geographic_scope": "中國十個地區",
+          "population": "456,155名基線年齡30–79歲成人",
+          "numerator": "全隊列1,731例新發食道癌；聯合暴露格166例，參照格775例",
+          "denominator": "全隊列約4.1百萬人年；兩個聯合暴露格各自人年未在表中另列，表列事件率為1.55及0.31/1,000人年",
+          "event_definition": "前瞻追蹤記錄的新發食道癌；主要為食道鱗狀細胞癌",
+          "data_type": "多地區前瞻性世代研究；基線茶飲頻率、偏好溫度、吸菸與飲酒自陳",
+          "limitations": "HR 5.01為茶飲、吸菸和飲酒的聯合暴露比較，不可歸因於茶溫單一因素；中國成人隊列結果不等於台灣風險，且仍可能有殘餘混雜。",
+          "source_ids": [
+            "tw02_yu_ckb_hot_tea_interactions_2018"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "台灣男性熱食不適與食道鱗狀細胞癌病例對照",
+          "value": "研究納入343例病例與755名對照；未估計全國熱飲溫度暴露比例或食道癌發生率",
+          "unit": "病例與對照人數；病例對照研究，不是人口盛行率",
+          "period": "1996–2005年收案；論文2009年發表",
+          "geographic_scope": "台灣研究對象；限男性及研究收案醫療／社區樣本",
+          "population": "台灣男性食道鱗狀細胞癌病例及無癌對照",
+          "numerator": "343名食道鱗狀細胞癌病例",
+          "denominator": "755名無癌對照；兩組為病例對照抽樣，非全國人口分母",
+          "event_definition": "食道鱗狀細胞癌病例；暴露問及飲食及吃熱食時的不適，未直接測量熱飲溫度",
+          "data_type": "台灣男性病例對照研究",
+          "limitations": "不是具全國代表性的熱飲溫度調查；未直接測量飲料溫度，不能推算台灣飲用非常燙飲料的盛行率或個人風險。",
+          "source_ids": [
+            "tw02_chen_taiwan_hot_food_escc_2009"
+          ],
+          "accessed_at": "2026-11-20"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "腫瘤流行病學",
+          "食道癌臨床照護",
+          "急診醫學與燒燙傷照護"
+        ]
+      },
+      "prior_chapter_draft_sha256": "50b52af5f08e460feda157c3b2703b85587bf7e2a42d08cde5ead06dd18f20be",
+      "prior_structured_draft_sha256": "15a7a0ad1d53e3fbea5d4513773e104f9d957b4012b389a1e015cbd84d7163aa"
+    }
+  ],
+  "new_source_ids": [
+    "tw02_islami_golestan_hot_tea_2009",
+    "tw02_papier_uk_hot_drinks_2026",
+    "tw02_yu_ckb_hot_tea_interactions_2018",
+    "tw02_chen_taiwan_hot_food_escc_2009",
+    "tw02_hpa_esophageal_prevention_2022",
+    "tw02_mohw_child_burn_prevention_firstaid_2026",
+    "tw02_vghtpe_burn_care_2026"
+  ],
+  "source_records_reused": [
+    "tw02_iarc_hot_drinks_2016",
+    "tw02_nfa_emergency_119"
+  ],
+  "source_records_retired": [
+    "tw02_hpa_child_burn_first_aid_2026"
+  ],
+  "professional_review_status": "AI輔助來源核對已完成；腫瘤流行病學、食道癌臨床及急診／燒燙傷照護正式專業審閱尚待取得。",
+  "reader_copy_cleanup": "讀者正文僅保留研究限制、台灣資料不足及實際安全行動；AI狀態、審閱流程、批次摘要與內部管理說明只記於review及本批證據。",
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 322,
+    "runtime_items": 333,
+    "runtime_sources": 1365,
+    "source_registry": 1448,
+    "review_rechecks": 406,
+    "coverage_json_files": 670,
+    "unresolved_source_id_kinds": 103,
+    "unresolved_reference_occurrences": 254,
+    "publication_completed_entries": 322,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 322,
+    "runtime_items": 333,
+    "runtime_sources": 1372,
+    "source_registry": 1455,
+    "review_rechecks": 407,
+    "coverage_json_files": 672,
+    "unresolved_source_id_kinds": 102,
+    "unresolved_reference_occurrences": 252,
+    "publication_completed_entries": 322,
+    "publication_ready": false
+  }
+}
