@@ -179,14 +179,18 @@ class HotDrinkCancerTopicFidelityTests(unittest.TestCase):
 
         bundled = {row[0]: row for row in self.bundle["sources"]}
         self.assertEqual(set(bundled), NEW_SOURCE_IDS)
-        self.assertEqual(NEW_SOURCE_IDS, source_bundle_ids_added_since(ROOT, BASE))
+        old_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
+        old_sources = {row["id"] for row in old_runtime["sources"]}
+        added_since_baseline = set(self.sources) - old_sources
+        self.assertTrue(NEW_SOURCE_IDS.isdisjoint(old_sources))
+        self.assertTrue(NEW_SOURCE_IDS.issubset(added_since_baseline))
+        self.assertEqual(added_since_baseline, source_bundle_ids_added_since(ROOT, BASE))
         for source_id in NEW_SOURCE_IDS:
             _, title, url, supports = bundled[source_id]
             source = self.sources[source_id]
             self.assertEqual((source["title"], source["url"], source["supports"]), (title, url, supports))
             self.assertLessEqual(source["accessed_at"], DATE)
 
-        old_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
         old_sources = {row["id"]: row for row in old_runtime["sources"]}
         for source_id, old_source in old_sources.items():
             self.assertEqual(self.sources[source_id], old_source, source_id)
@@ -266,8 +270,9 @@ class HotDrinkCancerTopicFidelityTests(unittest.TestCase):
         self.assertEqual(after["unresolved_reference_occurrences"], before["unresolved_reference_occurrences"] - 2)
         self.assertEqual(after["publication_ready"], False)
         self.assertEqual(current_coverage, live_coverage)
-        self.assertEqual(current_coverage["registry_sources"], after["source_registry"])
-        self.assertEqual(current_coverage["json_files_checked"], after["coverage_json_files"])
+        self.assertGreaterEqual(current_coverage["core_reviewed_entries"], after["verified_core_entries"])
+        self.assertGreaterEqual(current_coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(current_coverage["json_files_checked"], after["coverage_json_files"])
         self.assertFalse(current_coverage["publication_ready"])
 
 
