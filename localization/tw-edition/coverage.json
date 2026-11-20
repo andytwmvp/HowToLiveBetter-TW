@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "scope": "草稿結構盤點，不代表內容查核完成",
-  "json_files_checked": 675,
+  "json_files_checked": 680,
   "original_entries": 765,
   "structured_draft_chapters": 14,
   "structured_draft_entries": 373,
-  "legacy_markdown_draft_entries": 323,
+  "legacy_markdown_draft_entries": 326,
   "unique_draft_entries": 499,
   "entries_without_any_draft": 266,
-  "registry_sources": 1464,
+  "registry_sources": 1475,
   "unresolved_source_ids": {
     "adultcheck": 5,
     "afib": 1,
@@ -41,7 +41,7 @@
     "fishsafety": 1,
     "fitnesscontract": 2,
     "foi": 2,
-    "foodsafety": 6,
+    "foodsafety": 5,
     "forex": 1,
     "fscinvest": 10,
     "gambling": 3,
@@ -76,7 +76,7 @@
     "nationalpension": 1,
     "nhimedical": 8,
     "nistauth": 1,
-    "nutrition": 13,
+    "nutrition": 11,
     "oralcare": 1,
     "oshconfined": 1,
     "osteoporosis": 3,
@@ -108,11 +108,11 @@
     "usedcar": 1,
     "virtualassets": 1,
     "vouchers": 1,
-    "whodiet": 2,
+    "whodiet": 1,
     "whosalt": 1,
     "zoster": 1
   },
-  "unresolved_reference_occurrences": 250,
+  "unresolved_reference_occurrences": 246,
   "chapters": [
     {
       "chapter": 1,
@@ -214,12 +214,9 @@
     }
   ],
   "publication_ready": false,
-  "publication_completed_entries": 323,
+  "publication_completed_entries": 326,
   "publication_total_entries": 765,
   "publication_blockers": [
-    "TW-02-033:尚未完成來源審閱",
-    "TW-02-040:尚未完成來源審閱",
-    "TW-02-041:尚未完成來源審閱",
     "TW-03-001:尚未完成來源審閱",
     "TW-03-002:尚未完成來源審閱",
     "TW-03-003:尚未完成來源審閱",
@@ -662,7 +659,7 @@
   ],
   "publication_scope": "驗證資料結構、審閱紀錄與閱讀一致性；不代表獨立事實查核或醫療法律專業簽證。",
   "topics_with_any_content": 499,
-  "topics_with_unreviewed_content": 176,
+  "topics_with_unreviewed_content": 173,
   "topics_without_content": 266,
-  "core_reviewed_entries": 323
+  "core_reviewed_entries": 326
 }

@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "batch": "第二章辣椒、食用油安全與脂肪研究主題首次正式發布",
+  "baseline_main_sha": "6fc906b54a9f41d83fe44facaacb3c70219b485b",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 323,
+    "runtime_items": 334,
+    "runtime_sources": 1381,
+    "source_registry": 1464,
+    "review_rechecks": 407,
+    "coverage_json_files": 675,
+    "unresolved_source_ids": 101,
+    "unresolved_reference_occurrences": 250,
+    "publication_completed_entries": 323,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "tw02_chili_molisani_2019",
+    "tw02_chili_meta_2021",
+    "tw02_chili_meta_2022",
+    "tw02_tfda_food_act_labeling",
+    "tw02_tfda_oil_guide_2026",
+    "tw02_tfda_oil_sampling_2026",
+    "tw02_tfda_oil_incident_portal",
+    "tw02_hpa_dietary_guideline_2018",
+    "tw02_sfa_cochrane_2020",
+    "tw02_sfa_risk_stratified_2026",
+    "tw02_ala_cochrane_2020"
+  ],
+  "new_source_bundle": "localization/tw-edition/sources/ch02-diet-oil-chili-topic-fidelity-20261121.json",
+  "items": [
+    {
+      "id": "TW-02-033",
+      "title": "辣椒與健康研究：喜歡就吃，不用為延壽增加頻率",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "6fc906b54a9f41d83fe44facaacb3c70219b485b",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "bc67d587082cd7601b3b1d5993a32fd6c25dd28c75868ebf6503f2e090d78f13",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "b86e70983f7aa2756931db6185a5958f5cab34c1f81b7818a05f306b20b13a72",
+      "prior_structured_source_refs": [
+        "nutrition"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "89d888e8d3c17b14a708b142ef7f122fdec39e26dc3588d4467e2b9c6574fcd9",
+      "review_path": "localization/reviews/TW-02-033.json",
+      "review_sha256": "82ca5f39feaf344f5e581761dfc3afde92485e0f721bc9c3a49d826cc7860917",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-033.md",
+      "source_ids": [
+        "tw02_chili_molisani_2019",
+        "tw02_chili_meta_2021",
+        "tw02_chili_meta_2022"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_chili_molisani_2019",
+          "title": "Bonaccio 等：義大利成人辣椒攝取與死亡率研究（2019）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31856971/",
+          "claim": "Moli-sani 前瞻世代於 2005 至 2010 年招募 22,811 名義大利成年男女，以 EPIC 飲食頻率問卷記錄辣椒攝取類別；中位追蹤 8.2 年，記錄 1,236 例全因死亡。每週吃辣超過 4 次相較不吃或很少吃者，全因死亡調整後 HR 0.77（95% CI 0.66–0.90），心血管死亡 HR 0.66（0.50–0.86）。觀察性關聯，不證明因果或台灣個人風險。",
+          "supporting_passage": "Moli-sani 前瞻世代於 2005 至 2010 年招募 22,811 名義大利成年男女，以 EPIC 飲食頻率問卷記錄辣椒攝取類別；中位追蹤 8.2 年，記錄 1,236 例全因死亡。每週吃辣超過 4 次相較不吃或很少吃者，全因死亡調整後 HR 0.77（95% CI 0.66–0.90），心血管死亡 HR 0.66（0.50–0.86）。觀察性關聯，不證明因果或台灣個人風險。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "閱讀 PubMed 摘要與研究結果，核對隊列招募地區、年份、飲食問卷分類、追蹤中位數、死亡件數及調整後 HR。"
+        },
+        {
+          "source_id": "tw02_chili_meta_2021",
+          "title": "Ofori-Asenso 等：辣食攝取與心血管及全因死亡率統合分析（2021）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33657876/",
+          "claim": "資料庫檢索至 2020 年 2 月，納入美國、中國、義大利及伊朗 4 項前瞻世代研究，共 564,748 名成人，中位追蹤 9.7 年。規律食用辣椒、辣椒醬或辣油相較不規律者，全因死亡合併 HR/RR 0.88（95% CI 0.86–0.90），心臟疾病死亡 0.82（0.73–0.91）；腦血管死亡 0.79（0.53–1.17）未見明確差異。統合觀察性研究。",
+          "supporting_passage": "資料庫檢索至 2020 年 2 月，納入美國、中國、義大利及伊朗 4 項前瞻世代研究，共 564,748 名成人，中位追蹤 9.7 年。規律食用辣椒、辣椒醬或辣油相較不規律者，全因死亡合併 HR/RR 0.88（95% CI 0.86–0.90），心臟疾病死亡 0.82（0.73–0.91）；腦血管死亡 0.79（0.53–1.17）未見明確差異。統合觀察性研究。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "閱讀 PubMed 原始系統性回顧摘要，核對檢索截止日、國別、納入研究數、參與者及追蹤期間、全因與死因別估計及信賴區間。"
+        },
+        {
+          "source_id": "tw02_chili_meta_2022",
+          "title": "Yang 等：辣椒攝取與全因及特定死因死亡率統合分析（2022 線上發表）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35038885/",
+          "claim": "檢索至 2020-12-20，納入 4 項世代研究、564,748 人；報告全因死亡 31,527 人、心血管死亡 10,184 人及癌症死亡 9,868 人。辣椒攝取相較不吃或很少吃者的全因死亡調整 HR 0.87（95% CI 0.85–0.90）、心血管死亡 0.89（0.85–0.93）、癌症死亡 0.92（0.88–0.97）。其原始世代與其他辣食統合分析有重疊，不應視為獨立樣本重複相加。",
+          "supporting_passage": "檢索至 2020-12-20，納入 4 項世代研究、564,748 人；報告全因死亡 31,527 人、心血管死亡 10,184 人及癌症死亡 9,868 人。辣椒攝取相較不吃或很少吃者的全因死亡調整 HR 0.87（95% CI 0.85–0.90）、心血管死亡 0.89（0.85–0.93）、癌症死亡 0.92（0.88–0.97）。其原始世代與其他辣食統合分析有重疊，不應視為獨立樣本重複相加。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "閱讀 PubMed 原始統合分析摘要，核對檢索日期、納入隊列數、總參與者與死因別事件數、估計值，並與 2021 回顧的母數辨識重疊。"
+        }
+      ],
+      "source_bundle_sha256": "247df53d3c80139e160e2d904213b98e94f68fe5e7aed708d8ad0e8b671c6b80",
+      "taiwan_context": "首次正式發布。保留原題每週多次吃辣與死亡率研究問題；以義大利前瞻世代及兩篇可能重疊的多國統合分析整理相對估計，明確區分觀察性關聯、群體 HR/RR 與個人風險；在台灣日常用辣椒調味，不提供延壽頻率或保健品處方。",
+      "frequency_assessment": "未找到可代表台灣人口、以同一暴露定義追蹤辣椒攝取與死亡結果的全國資料。義大利及多國觀察研究提供群體關聯，但不能換算台灣人個人機率；因此不設定每週次數目標。",
+      "statistics_assessed": [
+        {
+          "topic": "Moli-sani 義大利成人辣椒攝取與全因／心血管死亡",
+          "value": {
+            "all_cause_HR": 0.77,
+            "all_cause_95_CI": [
+              0.66,
+              0.9
+            ],
+            "cardiovascular_HR": 0.66,
+            "cardiovascular_95_CI": [
+              0.5,
+              0.86
+            ]
+          },
+          "unit": "每週 >4 次相較不吃／很少吃之調整後危險比；非絕對死亡風險",
+          "period": "2005–2010 年招募；中位追蹤 8.2 年",
+          "geographic_scope": "義大利 Moli-sani 研究地區",
+          "population": "22,811 名成年男女",
+          "numerator": "全因死亡 1,236 人；摘要未列各辣椒組及心血管死因的分子",
+          "denominator": "22,811 名研究參與者",
+          "denominator_definition": "Moli-sani 世代納入者，不是義大利全國隨機抽樣或台灣人口",
+          "event_definition": "全因與心血管疾病死亡；辣椒攝取依 EPIC 飲食頻率問卷分組",
+          "data_type": "前瞻性觀察世代研究與多變項 Cox 模型",
+          "limitations": "研究暴露為入組時飲食問卷；殘餘混雜不能排除，HR 不是個人死亡機率或因果效果；不能外推為台灣通用頻率。",
+          "source_ids": [
+            "tw02_chili_molisani_2019"
+          ],
+          "accessed_at": "2026-11-21"
+        },
+        {
+          "topic": "多國辣食攝取與死亡率統合分析（Ofori-Asenso 等，2021）",
+          "value": {
+            "all_cause_HR_RR": 0.88,
+            "all_cause_95_CI": [
+              0.86,
+              0.9
+            ],
+            "cardiac_death_HR_RR": 0.82,
+            "cardiac_death_95_CI": [
+              0.73,
+              0.91
+            ],
+            "cerebrovascular_death_HR_RR": 0.79,
+            "cerebrovascular_death_95_CI": [
+              0.53,
+              1.17
+            ]
+          },
+          "unit": "規律食用相較不規律食用之合併相對危險比／危險比；非個人機率",
+          "period": "檢索至 2020-02；中位追蹤 9.7 年",
+          "geographic_scope": "美國、中國、義大利及伊朗之四個前瞻性世代",
+          "population": "564,748 名成人（原始四世代合計）",
+          "numerator": "統合摘要未提供全因或死因別總事件分子",
+          "denominator": "564,748 名世代參與者",
+          "denominator_definition": "四個觀察性世代的合併參與人數；與其他統合分析可能重疊",
+          "event_definition": "全因、心臟疾病及腦血管疾病死亡；辣食包含辣椒、辣椒醬或辣油，分類依各原始研究",
+          "data_type": "前瞻世代系統性回顧與隨機效應統合分析",
+          "limitations": "不同研究的辣食定義及攝取頻率不一；腦血管死亡 CI 含無差異；不是隨機試驗。",
+          "source_ids": [
+            "tw02_chili_meta_2021"
+          ],
+          "accessed_at": "2026-11-21"
+        },
+        {
+          "topic": "辣椒攝取與全因及特定死因死亡率統合分析（Yang 等，2022 線上發表）",
+          "value": {
+            "all_cause_adjusted_HR": 0.87,
+            "all_cause_95_CI": [
+              0.85,
+              0.9
+            ],
+            "cardiovascular_HR": 0.89,
+            "cardiovascular_95_CI": [
+              0.85,
+              0.93
+            ],
+            "cancer_HR": 0.92,
+            "cancer_95_CI": [
+              0.88,
+              0.97
+            ]
+          },
+          "unit": "辣椒攝取相較不吃／很少吃之合併調整危險比；非個人機率",
+          "period": "資料庫檢索至 2020-12-20；原世代追蹤期間不一，摘要未報一個共同追蹤年數",
+          "geographic_scope": "四個前瞻性世代研究的合併；與同類回顧有原始世代重疊",
+          "population": "564,748 名世代參與者",
+          "numerator": "全因死亡 31,527 人、心血管死亡 10,184 人、癌症死亡 9,868 人",
+          "denominator": "564,748 名研究參與者",
+          "denominator_definition": "四個原始世代合併母數；並非獨立於 2021 年統合分析的新增樣本",
+          "event_definition": "全因、心血管及癌症死亡；原研究暴露定義各異",
+          "data_type": "前瞻世代研究系統性回顧與統合分析",
+          "limitations": "納入研究與前一篇統合分析重疊，不能相加計算樣本或視為獨立重複；仍為觀察性證據。",
+          "source_ids": [
+            "tw02_chili_meta_2022"
+          ],
+          "accessed_at": "2026-11-21"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養流行病學（觀察研究、統合分析及母數重疊解讀）",
+          "營養學（實際飲食應用與特殊腸胃狀況界線）"
+        ]
+      },
+      "topic_fidelity_review": {
+        "decision": "retain_original_chili_mortality_research_with_taiwan_context",
+        "original_question": "每週吃四次以上辣椒是否與死亡率有關？",
+        "reader_content_decision": "保留原作辣椒頻率與壽命研究問題，呈現原始義大利世代和兩篇統合分析的研究設計、數值、重疊與外推限制；台灣生活建議只作一般調味，不把研究組別改成每週目標。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "每週吃辣超過四次可降低死亡機率",
+            "decision": "retain_as_observational_association_not_prescription",
+            "reason": "義大利研究以飲食問卷的攝取分類比較研究群體，未證明因果；沒有台灣個人絕對風險或通用劑量。"
+          },
+          {
+            "original_claim": "辣椒可能降低心血管死亡",
+            "decision": "retain_with_meta_analysis_overlap_and_uncertainty",
+            "reason": "多國世代統合分析有相似關聯，但原始研究重疊，研究異質與殘餘混雜仍限制因果解讀。"
+          },
+          {
+            "original_claim": "台灣讀者應增加辣椒攝取",
+            "decision": "not_supported",
+            "reason": "來源未測試台灣人的處方性增加；依口味調味即可，不需為研究頻率忍受不適或購買萃取產品。"
+          }
+        ]
+      },
+      "cost_time_benefit_assessment": "日常調味無須新增支出或改變習慣；不需要購買辣椒萃取物、燃脂或延壽保健品。"
+    },
+    {
+      "id": "TW-02-040",
+      "title": "食用油怎麼挑：看標示、來源與保存",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "6fc906b54a9f41d83fe44facaacb3c70219b485b",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "abac2dbfc3fa49d7926ee35ac56c66a56fb3c8162909c9cd38c4eb4b90a8f333",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "4b8559a91a40d1b66dbda3ed8e070f39a4cf7e91424c6bf4fbfe17f21cc69672",
+      "prior_structured_source_refs": [
+        "foodlabel",
+        "foodsafety"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "05c2267ea718a6ec55eec9b793bbf467633d1ad100771b43dbc1f51871a0adb3",
+      "review_path": "localization/reviews/TW-02-040.json",
+      "review_sha256": "8b72482da89701608abc3f9cbd7be80cd35cf8939fb0b5915260e71533ea2d12",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-040.md",
+      "source_ids": [
+        "tw02_tfda_food_act_labeling",
+        "tw02_tfda_oil_guide_2026",
+        "tw02_tfda_oil_sampling_2026",
+        "tw02_tfda_oil_incident_portal"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_tfda_food_act_labeling",
+          "title": "全國法規資料庫：《食品安全衛生管理法》第 22、23、25 條",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040001",
+          "claim": "現行第 22 條規範包裝食品依品類應標示的品名、成分、業者資訊、原產地、有效日期、營養標示等；第 23 條容許主管機關就特殊包裝公告部分免標或採替代標示；第 25 條只對公告特定散裝食品及直接供應飲食場所訂定中文標示或販售限制，不是所有散裝食品一律違法。頁首列最新修正日 2019-06-12。查閱日 2026-11-21。",
+          "supporting_passage": "現行第 22 條規範包裝食品依品類應標示的品名、成分、業者資訊、原產地、有效日期、營養標示等；第 23 條容許主管機關就特殊包裝公告部分免標或採替代標示；第 25 條只對公告特定散裝食品及直接供應飲食場所訂定中文標示或販售限制，不是所有散裝食品一律違法。頁首列最新修正日 2019-06-12。查閱日 2026-11-21。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "查閱全國法規資料庫現行條文與沿革，逐條核對第 22、23、25 條適用對象、例外及公告授權，並記錄修正與施行時間。"
+        },
+        {
+          "source_id": "tw02_tfda_oil_guide_2026",
+          "title": "食藥署：烹調用油如何選？掌握溫度與特性（藥物食品安全週報第 1077 期，2026-05-08）",
+          "url": "https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1618&r=1369454523&tid=5620",
+          "claim": "食藥署建議依油品特性、烹調溫度與加熱時間選油；依產品標示保存於陰涼乾燥、避光處，保持密封並於標示保存／有效期限前使用。該期稱近 3 年檢驗結果符合規定，但未提供抽驗分母、抽樣設計與各油種分佈，不可推成市場全體零風險。",
+          "supporting_passage": "食藥署建議依油品特性、烹調溫度與加熱時間選油；依產品標示保存於陰涼乾燥、避光處，保持密封並於標示保存／有效期限前使用。該期稱近 3 年檢驗結果符合規定，但未提供抽驗分母、抽樣設計與各油種分佈，不可推成市場全體零風險。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接查閱食藥署第 1077 期內容，核對油品選擇、烹調條件、保存方法與抽驗描述及其母數限制。"
+        },
+        {
+          "source_id": "tw02_tfda_oil_sampling_2026",
+          "title": "食藥署：食用油脂全國抽驗結果（2026-08-26）",
+          "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=t634636",
+          "claim": "地方衛生局因應油品事件，自 2026-07-01 至 2026-08-26 擴大抽驗市售食用油共 658 件，品項含大豆沙拉油、麻油／香油、苦茶油、葵花油及芥花油；其中含先前公告的 11 件中聯事件產品，另有 14 件苦茶油苯(a)駢芘不合格。屬事件後擴大行政抽驗，不是市場機率抽樣或家庭購油暴露母數，不能換算市場違規率或個人機率。",
+          "supporting_passage": "地方衛生局因應油品事件，自 2026-07-01 至 2026-08-26 擴大抽驗市售食用油共 658 件，品項含大豆沙拉油、麻油／香油、苦茶油、葵花油及芥花油；其中含先前公告的 11 件中聯事件產品，另有 14 件苦茶油苯(a)駢芘不合格。屬事件後擴大行政抽驗，不是市場機率抽樣或家庭購油暴露母數，不能換算市場違規率或個人機率。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接查閱食藥署 2026-08-26 新聞稿，核對抽驗期間、658 件母數、油品類別、11 件既公告產品及 14 件不合格苦茶油。"
+        },
+        {
+          "source_id": "tw02_tfda_oil_incident_portal",
+          "title": "食藥署：115 年油脂案專區",
+          "url": "https://www.fda.gov.tw/TC/site13712.aspx",
+          "claim": "動態專區提供 2026 年油脂事件的受影響品項、產品批號、查核與回收處置入口；使用者須按品名、批號、規格及有效日期核對，查到舊文章時重新確認最新公告。此頁是最新公告入口，不代表市場汙染率。",
+          "supporting_passage": "動態專區提供 2026 年油脂事件的受影響品項、產品批號、查核與回收處置入口；使用者須按品名、批號、規格及有效日期核對，查到舊文章時重新確認最新公告。此頁是最新公告入口，不代表市場汙染率。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接查閱食藥署 115 年油脂案專區，確認為持續更新的產品公告、查核及處置入口。"
+        }
+      ],
+      "source_bundle_sha256": "247df53d3c80139e160e2d904213b98e94f68fe5e7aed708d8ad0e8b671c6b80",
+      "taiwan_context": "首次正式發布。保留原題的油品安全、來源與保存需求，移除不適用台灣的中國 SC 編號條件及對小型／散裝業者的概括汙名；改依台灣包裝食品標示規範、公告特定散裝食品要求、食藥署批次公告及油品保存建議撰寫。",
+      "frequency_assessment": "目前沒有可從本批事件後擴大行政抽驗推算全市場油品不合格率或消費者個人購買機率的母數。658件是抽驗件數，不是全台家庭購油量或隨機市場樣本。",
+      "statistics_assessed": [
+        {
+          "topic": "2026 年油品事件後全國行政擴大抽驗",
+          "value": {
+            "items_sampled": 658,
+            "previously_announced_zhonglian_items_included": 11,
+            "additional_camellia_oil_baP_failures": 14
+          },
+          "unit": "食用油抽驗件數；非市場發生率或消費者個人機率",
+          "period": "2026-07-01 至 2026-08-26",
+          "geographic_scope": "台灣中央與地方衛生局市售油品行政抽驗",
+          "population": "658 件不同油種的市售油品樣本",
+          "numerator": "14 件苦茶油苯(a)駢芘不合格；另 11 件為先前公布之中聯事件問題品項，包含在總抽驗件數中",
+          "denominator": "658 件抽驗樣本",
+          "denominator_definition": "因油品事件擴大的行政抽驗，不是隨機市場樣本、所有上市商品或家庭購油分母",
+          "event_definition": "官方公告的抽驗不符合規定件數；抽驗產品包括不同油種",
+          "data_type": "事件後行政監測與檢驗",
+          "limitations": "抽樣由事件觸發且品種不同；分母不是市場所有油品，不可算出個人購買風險或市場違規率；單一不合格事件不代表同類油品全體不安全。",
+          "source_ids": [
+            "tw02_tfda_oil_sampling_2026"
+          ],
+          "accessed_at": "2026-11-21"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "食品科學／食用油氧化及保存",
+          "食品衛生安全與抽驗資料解讀",
+          "食品標示法規適用範圍"
+        ]
+      },
+      "topic_fidelity_review": {
+        "decision": "retain_original_oil_safety_question_with_taiwan_label_and_batch_guidance",
+        "original_question": "買油如何兼顧品質、安全、來源及保存，避免不明來源或標示不清的產品？",
+        "reader_content_decision": "保留油品安全與可追溯需求，按台灣包裝食品標示、特定散裝食品規則、食藥署公告與批號核對說明。原作的中國 SC 編號不作台灣購買條件；小作坊／散裝油不一概視為違法或有毒，讀者以可查來源、公告及產品批次處理。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "必須看中國 SC 編號",
+            "decision": "remove_as_non_taiwan_regulatory_identifier",
+            "reason": "SC 編號為原作法域的標示／管理條件，不能代替台灣食品標示規定。"
+          },
+          {
+            "original_claim": "小作坊散裝自榨油一概不安全",
+            "decision": "replace_with_source_and_batch_traceability",
+            "reason": "沒有支持此概括風險的台灣市場比較資料；台灣第25條只涵蓋主管機關公告之特定散裝食品，應按適用公告和業者資訊核對。"
+          },
+          {
+            "original_claim": "包裝及保存可降低不確定性",
+            "decision": "retain_with_taiwan_law_and_current_guidance",
+            "reason": "台灣法律及食藥署現行指引支持按產品標示、保存條件與官方批次公告處理。"
+          }
+        ]
+      },
+      "cost_time_benefit_assessment": "查閱官方公告與產品標示不需另付費；包裝容量及不同油品價格不一，按家庭用量選擇，不需買最高價產品。"
+    },
+    {
+      "id": "TW-02-041",
+      "title": "用油與心血管研究：看替代什麼，不必追逐特定油品",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "6fc906b54a9f41d83fe44facaacb3c70219b485b",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "ef88944f9f7ed35a82db60a31e7335fb8f69e036205fdb0488de03321b0516e2",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "0b6d362eb195df2917786848144841268c450378d1ee9e86a5148c8cc6836430",
+      "prior_structured_source_refs": [
+        "nutrition",
+        "whodiet"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "aff5cc369209ae4d667d05559a28de6e07006b36da49e64cf41ecc90febb9e0e",
+      "review_path": "localization/reviews/TW-02-041.json",
+      "review_sha256": "d24f067b215654592ea22fac9f2493e5aa43d6de5bd1a57cf1f275ace5a68045",
+      "target_path": "locales/zh-TW/book/ch02/TW-02-041.md",
+      "source_ids": [
+        "tw02_hpa_dietary_guideline_2018",
+        "tw02_sfa_cochrane_2020",
+        "tw02_sfa_risk_stratified_2026",
+        "tw02_ala_cochrane_2020"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_hpa_dietary_guideline_2018",
+          "title": "國健署：《每日飲食指南手冊》（2018 年版）",
+          "url": "https://health.hpa.gov.tw/common/Download.ashx?f=cfd97d0b-f0e7-49b0-9014-e421655c4f4b.pdf&o=%E6%AF%8F%E6%97%A5%E9%A3%B2%E9%A3%9F%E6%8C%87%E5%8D%97%E6%89%8B%E5%86%8A.pdf",
+          "claim": "國健署 2018 年版飲食指南列出橄欖油、苦茶油、芥花油、油菜籽油、高油酸葵花油、花生油等含較多單元不飽和脂肪的選項；提醒椰子油與棕櫚油雖為植物油但飽和脂肪較高，堅果種子應取代部分精製油脂而非額外增加。油脂份量依個人熱量需求安排。",
+          "supporting_passage": "國健署 2018 年版飲食指南列出橄欖油、苦茶油、芥花油、油菜籽油、高油酸葵花油、花生油等含較多單元不飽和脂肪的選項；提醒椰子油與棕櫚油雖為植物油但飽和脂肪較高，堅果種子應取代部分精製油脂而非額外增加。油脂份量依個人熱量需求安排。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "閱讀國健署《每日飲食指南手冊》油脂與堅果種子章節，核對油品例示、飽和脂肪分類及份量替代原則。"
+        },
+        {
+          "source_id": "tw02_sfa_cochrane_2020",
+          "title": "Hooper 等：減少飽和脂肪攝取與心血管疾病 Cochrane 系統性回顧（2020 年第 8 期修正版）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32827219/",
+          "claim": "資料庫檢索更新至 2019-10，納入 15 項隨機試驗、16 組比較、56,675 名成人，介入至少 24 個月。合併心血管事件分析涵蓋 12 項試驗、53,758 人與 4,538 起事件，RR 0.83（95% CI 0.70–0.98；I²=67%，中等確定性）；全因死亡 11 項試驗、55,858 人 RR 0.96（0.90–1.03），心血管死亡 10 項、53,421 人 RR 0.95（0.80–1.12）。效果是試驗群體合併比較，不是個人絕對風險下降 17%。採用修正版 Pub3 數值。",
+          "supporting_passage": "資料庫檢索更新至 2019-10，納入 15 項隨機試驗、16 組比較、56,675 名成人，介入至少 24 個月。合併心血管事件分析涵蓋 12 項試驗、53,758 人與 4,538 起事件，RR 0.83（95% CI 0.70–0.98；I²=67%，中等確定性）；全因死亡 11 項試驗、55,858 人 RR 0.96（0.90–1.03），心血管死亡 10 項、53,421 人 RR 0.95（0.80–1.12）。效果是試驗群體合併比較，不是個人絕對風險下降 17%。採用修正版 Pub3 數值。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "核對 PubMed 修正版 PMID 32827219 及 Cochrane 第 8 期摘要，避免沿用修正前 PMID 32428300 的舊估計值。"
+        },
+        {
+          "source_id": "tw02_sfa_risk_stratified_2026",
+          "title": "Steen 等：減少或改變飽和脂肪攝取的風險分層隨機試驗系統性回顧（2026）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41397264/",
+          "claim": "MEDLINE、Embase、Cochrane Central 檢索至 2025-07，納入 17 項隨機試驗、66,337 名成人。低至中等確定性合併估計為全因死亡 RR 0.96（95% CI 0.88–1.06）、心血管死亡 0.93（0.77–1.11）、非致命心肌梗塞 0.86（0.70–1.06）、致命與非致命腦中風 0.83（0.58–1.19）。低基線風險者 5 年絕對差異低於作者重要性門檻；高風險者可能有較大效益。以多元不飽和脂肪替代飽和脂肪的非致命 MI 子群 RR 0.75（0.58–0.99）；替代營養素資料有限。",
+          "supporting_passage": "MEDLINE、Embase、Cochrane Central 檢索至 2025-07，納入 17 項隨機試驗、66,337 名成人。低至中等確定性合併估計為全因死亡 RR 0.96（95% CI 0.88–1.06）、心血管死亡 0.93（0.77–1.11）、非致命心肌梗塞 0.86（0.70–1.06）、致命與非致命腦中風 0.83（0.58–1.19）。低基線風險者 5 年絕對差異低於作者重要性門檻；高風險者可能有較大效益。以多元不飽和脂肪替代飽和脂肪的非致命 MI 子群 RR 0.75（0.58–0.99）；替代營養素資料有限。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "閱讀 PubMed 原始系統性回顧摘要，核對搜尋日期、RCT 數與參與者、風險分層、主要結局、替代營養素子群及證據確定性。"
+        },
+        {
+          "source_id": "tw02_ala_cochrane_2020",
+          "title": "Abdelhamid 等：Omega-3 脂肪酸與心血管疾病一級及二級預防 Cochrane 系統性回顧（2020）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32114706/",
+          "claim": "ALA 分析含 5 項隨機試驗、19,327 人：全因死亡 459 人，RR 1.01（95% CI 0.84–1.20）；心血管死亡 219／18,619，RR 0.96（0.74–1.25）；冠心病事件 397／19,061，RR 1.00（0.82–1.22）；心血管事件 884／19,327，RR 0.95（0.83–1.07），證據確定性低至中等。ALA 來自不同飲食或補充介入，並非特定亞麻籽油品牌的臨床效果。",
+          "supporting_passage": "ALA 分析含 5 項隨機試驗、19,327 人：全因死亡 459 人，RR 1.01（95% CI 0.84–1.20）；心血管死亡 219／18,619，RR 0.96（0.74–1.25）；冠心病事件 397／19,061，RR 1.00（0.82–1.22）；心血管事件 884／19,327，RR 0.95（0.83–1.07），證據確定性低至中等。ALA 來自不同飲食或補充介入，並非特定亞麻籽油品牌的臨床效果。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "閱讀 PubMed 及 Cochrane 系統性回顧摘要，核對 ALA 專屬試驗數、不同結局分母及事件數，區分一般 ALA 介入與特定亞麻籽油商品。"
+        }
+      ],
+      "source_bundle_sha256": "247df53d3c80139e160e2d904213b98e94f68fe5e7aed708d8ad0e8b671c6b80",
+      "taiwan_context": "首次正式發布。保留原題飽和脂肪替代及亞麻籽油心血管效果問題；使用國健署飲食指引、修正版2020 Cochrane回顧、2026風險分層RCT回顧及ALA Cochrane結果，避免把植物油視為同質或特定油品視為治療。",
+      "frequency_assessment": "沒有可由本批國際RCT統合結果換算出的台灣個人心血管事件發生率；試驗RR是介入與比較組的群體效果估計，不是台灣居民個人機率或保證效果。",
+      "statistics_assessed": [
+        {
+          "topic": "減少飽和脂肪之 2020 Cochrane 隨機試驗回顧",
+          "value": {
+            "all_randomized_trials": 15,
+            "total_comparisons": 16,
+            "all_trial_participants": 56675,
+            "combined_CV_events_RR": 0.83,
+            "combined_CV_events_95_CI": [
+              0.7,
+              0.98
+            ],
+            "combined_CV_events_I2_percent": 67,
+            "all_cause_mortality_RR": 0.96,
+            "all_cause_mortality_95_CI": [
+              0.9,
+              1.03
+            ],
+            "cardiovascular_mortality_RR": 0.95,
+            "cardiovascular_mortality_95_CI": [
+              0.8,
+              1.12
+            ]
+          },
+          "unit": "心血管事件及死亡之合併相對風險；不是個人絕對風險",
+          "period": "檢索更新至 2019-10；試驗介入至少 24 個月；心血管事件平均追蹤約 52 個月",
+          "geographic_scope": "多國隨機試驗；回顧涵蓋工業化國家，非台灣專屬試驗",
+          "population": "15 項 RCT 的 56,675 名成人（包含有／無心血管疾病者）",
+          "numerator": "心血管事件分析為 12 項試驗、53,758 人中 4,538 起事件；全因與心血管死亡的 outcome-specific 分子未在摘要中提供",
+          "denominator": "總體 56,675 人；心血管事件 53,758 人；全因死亡 55,858 人；心血管死亡 53,421 人",
+          "denominator_definition": "各結局納入試驗數與可用參與者不同，不能以總參與者數替代各 outcome 分母",
+          "event_definition": "合併心血管事件、全因死亡及心血管死亡；介入為降低或改變飽和脂肪攝取",
+          "data_type": "隨機對照飲食介入試驗之系統性回顧與統合分析",
+          "limitations": "各試驗介入方式與替代營養素不同；事件結果有異質性；RR 0.83 不等於每個人絕對風險降低 17%。",
+          "source_ids": [
+            "tw02_sfa_cochrane_2020"
+          ],
+          "accessed_at": "2026-11-21"
+        },
+        {
+          "topic": "飽和脂肪介入效果之 2026 風險分層系統性回顧",
+          "value": {
+            "trials": 17,
+            "participants": 66337,
+            "all_cause_RR": 0.96,
+            "all_cause_95_CI": [
+              0.88,
+              1.06
+            ],
+            "cardiovascular_death_RR": 0.93,
+            "cardiovascular_death_95_CI": [
+              0.77,
+              1.11
+            ],
+            "nonfatal_MI_RR": 0.86,
+            "nonfatal_MI_95_CI": [
+              0.7,
+              1.06
+            ],
+            "fatal_nonfatal_stroke_RR": 0.83,
+            "fatal_nonfatal_stroke_95_CI": [
+              0.58,
+              1.19
+            ],
+            "PUFA_replacement_nonfatal_MI_RR": 0.75,
+            "PUFA_replacement_nonfatal_MI_95_CI": [
+              0.58,
+              0.99
+            ]
+          },
+          "unit": "依心血管基線風險及替代脂肪分層之合併相對風險；非個人機率",
+          "period": "資料庫搜尋至 2025-07；作者另估算五年絕對風險差",
+          "geographic_scope": "17 項成人 RCT 的系統性回顧；不代表台灣居民或單一國家樣本",
+          "population": "66,337 名成年試驗參與者，可有或沒有既有心血管疾病",
+          "numerator": "PubMed 摘要未提供各結局合併事件數；報告試驗群體相對效果與依基線風險估算之五年絕對差",
+          "denominator": "17 項試驗合計 66,337 人；個別結局可用母數隨試驗不同",
+          "denominator_definition": "隨機試驗合併參與人數，不是台灣人口分母或個人基線風險",
+          "event_definition": "全因死亡、心血管死亡、非致命心肌梗塞及致命／非致命腦中風；PUFA 子群為非致命心肌梗塞",
+          "data_type": "成人隨機試驗系統性回顧與風險分層統合分析",
+          "limitations": "多數結局低至中等確定性；替代營養素及試驗介入效果差異大；低風險者五年絕對差異低於作者重要性門檻，高風險者可能受益較多；仍非個人保證。",
+          "source_ids": [
+            "tw02_sfa_risk_stratified_2026"
+          ],
+          "accessed_at": "2026-11-21"
+        },
+        {
+          "topic": "ALA 介入與死亡及心血管事件之 2020 Cochrane 回顧",
+          "value": {
+            "trials": 5,
+            "all_cause_deaths": 459,
+            "all_cause_RR": 1.01,
+            "all_cause_95_CI": [
+              0.84,
+              1.2
+            ],
+            "cardiovascular_deaths": 219,
+            "cardiovascular_participants": 18619,
+            "cardiovascular_RR": 0.96,
+            "cardiovascular_95_CI": [
+              0.74,
+              1.25
+            ],
+            "CHD_events": 397,
+            "CHD_participants": 19061,
+            "CHD_RR": 1.0,
+            "CHD_95_CI": [
+              0.82,
+              1.22
+            ],
+            "CVD_events": 884,
+            "CVD_participants": 19327,
+            "CVD_RR": 0.95,
+            "CVD_95_CI": [
+              0.83,
+              1.07
+            ]
+          },
+          "unit": "不同ALA飲食或補充介入的相對風險；不是特定亞麻籽油商品效果",
+          "period": "2020 年 Cochrane 回顧；納入試驗介入期間至少 12 個月但各研究不一",
+          "geographic_scope": "多國隨機試驗，回顧未提供可代表台灣的分層估計",
+          "population": "ALA 分析最多涵蓋 19,327 名成人；不同結局可用試驗數與分母不同",
+          "numerator": "全因死亡 459；心血管死亡 219；冠心病死亡 193；冠心病事件 397；心血管事件 884",
+          "denominator": "全因死亡 19,327；心血管死亡 18,619；冠心病死亡 18,353；冠心病事件 19,061；心血管事件 19,327",
+          "denominator_definition": "各結局依不同 ALA 試驗可用資料合併，須按結局使用相應分母",
+          "event_definition": "全因死亡、心血管死亡、冠心病死亡／事件及心血管事件",
+          "data_type": "隨機試驗系統性回顧與統合分析",
+          "limitations": "ALA 來源包含不同飲食與補充介入，並非特定亞麻籽油品牌；多個結局信賴區間含無差異，部分為低確定性；不支持護心產品宣稱。",
+          "source_ids": [
+            "tw02_ala_cochrane_2020"
+          ],
+          "accessed_at": "2026-11-21"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "營養學與台灣膳食指南適用性",
+          "心臟科／血脂照護（高風險者的個別飲食調整）",
+          "營養流行病學與系統性回顧方法"
+        ]
+      },
+      "topic_fidelity_review": {
+        "decision": "retain_original_fat_replacement_and_flaxseed_oil_question_with_taiwan_guidance",
+        "original_question": "以植物油取代動物脂肪是否有健康效益？不必輪換油品；亞麻籽油能否護心？",
+        "reader_content_decision": "保留脂肪種類、替代營養素與亞麻籽油證據問題；以國健署現行可取得飲食指南和更近期風險分層RCT回顧補足研究背景，清楚區分油種、總量與替代對象。將海外群體效果限制在研究範圍，不推為台灣個人處方。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "植物油可以一概替代動物油",
+            "decision": "retain_with_fat_type_and_replacement_context",
+            "reason": "植物油含有不同脂肪酸組成；部分如椰子油及棕櫚油飽和脂肪比例較高，應說明替代對象與總量。"
+          },
+          {
+            "original_claim": "無須為健康頻繁輪換油品",
+            "decision": "retain",
+            "reason": "本次檢視的台灣飲食指南和試驗回顧沒有要求輪換多種高價油品；選擇合用、可負擔的油並控制總量。"
+          },
+          {
+            "original_claim": "亞麻籽油可護心",
+            "decision": "not_supported_as_product_claim",
+            "reason": "ALA試驗不等於特定亞麻籽油產品；系統性回顧顯示相關結局多為無明確差異或低確定性，不能當作護心藥。"
+          }
+        ]
+      },
+      "cost_time_benefit_assessment": "不必為健康另買昂貴油品、強制輪替油種或增加總用油量；日常按料理方式和家庭預算挑選即可，已使用降血脂藥物者不自行停藥。"
+    }
+  ],
+  "source_records_reused": [],
+  "source_records_retired": [],
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 326,
+    "runtime_items": 337,
+    "runtime_sources": 1392,
+    "source_registry": 1475,
+    "review_rechecks": 407,
+    "coverage_json_files": 680,
+    "unresolved_source_ids": 101,
+    "unresolved_reference_occurrences": 246,
+    "publication_completed_entries": 326,
+    "publication_ready": false
+  },
+  "professional_review_status": "AI 輔助來源核對已完成；營養流行病學、食品衛生／標示及相關臨床營養專業審閱仍待取得。",
+  "reader_copy_cleanup": "讀者正文保留原始研究問題與可執行的台灣建議；批次、AI 查核狀態和專業審閱流程僅記錄於本證據檔與各篇 review。"
+}
