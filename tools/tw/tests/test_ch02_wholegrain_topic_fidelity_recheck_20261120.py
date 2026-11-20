@@ -190,6 +190,22 @@ class WholegrainTopicFidelityTests(unittest.TestCase):
                 changed_manifest_ids.add(item_id)
         self.assertIn(ITEM_ID, changed_manifest_ids)
         for item_id in changed_manifest_ids - {ITEM_ID}:
+            old_entry = base_manifest_items[item_id]
+            current_entry = self.manifest[item_id]
+            if old_entry["status"] == "pending" and current_entry["status"] == "verified":
+                self.assertIsNone(old_entry["target_path"], item_id)
+                self.assertEqual(old_entry["sources"], [], item_id)
+                self.assertEqual(current_entry["treatment"], "taiwan_independent_rewrite", item_id)
+                item = self.items[item_id]
+                target = ROOT / item["target_path"]
+                review = read(f"localization/reviews/{item_id}.json")
+                self.assertTrue(target.is_file(), item_id)
+                self.assertEqual(current_entry["target_path"], item["target_path"], item_id)
+                self.assertEqual(current_entry["sources"], item["source_ids"], item_id)
+                self.assertEqual(review["target_sha256"], sha(target.read_bytes()), item_id)
+                self.assertEqual(review["source_ids"], item["source_ids"], item_id)
+                self.assertEqual(review["reviewed_at"], item["reviewed_at"], item_id)
+                continue
             self.assertTrue(
                 any(
                     row["id"] == item_id and row["reviewed_at"] >= DATE

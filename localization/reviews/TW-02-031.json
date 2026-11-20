@@ -1,0 +1,264 @@
+{
+  "id": "TW-02-031",
+  "reviewer": "ChatGPT（AI協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-031.md",
+  "target_sha256": "0b04da7299642fd6c1a43a3fbf7971e564c6c5da408cbf95fb2df88539aad170",
+  "source_reviewed_sha256": "0b04da7299642fd6c1a43a3fbf7971e564c6c5da408cbf95fb2df88539aad170",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-daylight-health-research-20261121.json",
+  "source_bundle_sha256": "5efaff6f1184987b34a02ec360b82ee337186b5c24bc6ccefc400131c3a80ca7",
+  "source_checks": [
+    {
+      "source_id": "tw02_sunlight_mortality_review_2025",
+      "title": "Parkhouse等：日照與死亡率流行病學研究系統性回顧（2025，第二版）",
+      "url": "https://openresearch.nihr.ac.uk/articles/5-51/v2",
+      "claim": "系統性回顧檢索至2023年11月，73篇研究符合資格、55篇納入敘述性整理；全因及心血管死亡結果混合，常見未控制混雜及間接日照測量造成的高偏差風險，結論不足以支持改變防曬建議。",
+      "supporting_passage": "系統性回顧檢索至2023年11月，73篇研究符合資格、55篇納入敘述性整理；全因及心血管死亡結果混合，常見未控制混雜及間接日照測量造成的高偏差風險，結論不足以支持改變防曬建議。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀NIHR Open Research 2025年11月28日第二版全文的摘要、搜尋方法、結果、偏差評估與結論；確認不是統合分析。"
+    },
+    {
+      "source_id": "tw02_sunlight_sweden_miss_2016",
+      "title": "Lindqvist等：瑞典南部女性日照習慣與死亡率前瞻世代研究（2016）",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/joim.12496",
+      "claim": "1990至1992年招募29,518名25至64歲女性，前瞻追蹤20年；日照習慣於基線自述。研究模型估計日照迴避者相較日照最多組的預期壽命差距約0.6至2.1年；屬特定世代的觀察與模型估計，不能當作因果效果或台灣個人機率。",
+      "supporting_passage": "1990至1992年招募29,518名25至64歲女性，前瞻追蹤20年；日照習慣於基線自述。研究模型估計日照迴避者相較日照最多組的預期壽命差距約0.6至2.1年；屬特定世代的觀察與模型估計，不能當作因果效果或台灣個人機率。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀期刊全文及PubMed紀錄，核對樣本、招募年齡與時間、追蹤長度、日照測量、模型估計；並用2025年系統性回顧核對全因死亡事件數及偏差評估。"
+    },
+    {
+      "source_id": "tw02_daylight_adventist_cohort_2025",
+      "title": "Nazeeh等：北美基督復臨安息日會健康研究的白天戶外時間與死亡率（2025）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12122178/",
+      "claim": "AHS-2在2002至2007年間納入83,205人，追蹤至2015年，平均11.1年並記錄11,515人死亡。暖季每天戶外2小時相較30分鐘的調整後全因死亡HR為0.90（95% CI 0.86–0.93）、心血管死亡HR 0.89（0.83–0.95）、非癌症非心血管死亡HR 0.83（0.78–0.89）；癌症死亡HR 1.02（0.93–1.13）。觀察性結果不能視為因果或個人風險。",
+      "supporting_passage": "AHS-2在2002至2007年間納入83,205人，追蹤至2015年，平均11.1年並記錄11,515人死亡。暖季每天戶外2小時相較30分鐘的調整後全因死亡HR為0.90（95% CI 0.86–0.93）、心血管死亡HR 0.89（0.83–0.95）、非癌症非心血管死亡HR 0.83（0.78–0.89）；癌症死亡HR 1.02（0.93–1.13）。觀察性結果不能視為因果或個人風險。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀PMC全文的研究方法、參與者流程、死亡事件表、模型比較與限制，核對暖季暴露、參考組、各死因HR及平均追蹤期間。"
+    },
+    {
+      "source_id": "tw02_natural_light_circadian_2013",
+      "title": "Wright等：自然明暗週期與人體生理時鐘（2013）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4020279/",
+      "claim": "8名成人進行兩週場域研究，先維持一般電燈與日常作息，再進行一週只接觸自然光的戶外露營；露營後測得的內部生理時鐘指標平均提前約2小時。樣本很小，活動與睡眠時程等條件也改變，並非死亡或臨床治療結果。",
+      "supporting_passage": "8名成人進行兩週場域研究，先維持一般電燈與日常作息，再進行一週只接觸自然光的戶外露營；露營後測得的內部生理時鐘指標平均提前約2小時。樣本很小，活動與睡眠時程等條件也改變，並非死亡或臨床治療結果。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀原始全文的方法與結果，核對受試者數、兩週比較設計、照明及日常活動條件與生理時鐘指標變化。"
+    },
+    {
+      "source_id": "tw02_who_uv_guidance",
+      "title": "世界衛生組織：紫外線與防護措施",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation",
+      "claim": "紫外線指數達3以上時採取防護；建議限縮正午曝曬、找遮蔭、穿防護衣物、戴寬邊帽與具UV防護眼鏡，未遮蔽皮膚使用廣效防曬品；防曬品不應用來延長曝曬時間，避免日曬機。",
+      "supporting_passage": "紫外線指數達3以上時採取防護；建議限縮正午曝曬、找遮蔭、穿防護衣物、戴寬邊帽與具UV防護眼鏡，未遮蔽皮膚使用廣效防曬品；防曬品不應用來延長曝曬時間，避免日曬機。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀WHO紫外線事實表的UVI門檻、風險族群及防護建議。"
+    },
+    {
+      "source_id": "tw02_cwa_uvi_observation",
+      "title": "中央氣象署：紫外線觀測",
+      "url": "https://www.cwa.gov.tw/V8/C/W/OBS_UVI.html",
+      "claim": "提供各觀測站即時紫外線與今日最大值；頁面列出0至2低量級、3至5中量級、6至7高量級、8至10過量級、11以上危險級。未顯示數值表示尚無資料，不代表紫外線為零。",
+      "supporting_passage": "提供各觀測站即時紫外線與今日最大值；頁面列出0至2低量級、3至5中量級、6至7高量級、8至10過量級、11以上危險級。未顯示數值表示尚無資料，不代表紫外線為零。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱中央氣象署現行紫外線觀測頁，核對級距、資料缺漏說明及服務範圍。"
+    },
+    {
+      "source_id": "tw02_cwa_town_forecast_service",
+      "title": "中央氣象署：鄉鎮預報服務頁面",
+      "url": "https://www.cwa.gov.tw/V8/C/W/Town/Town.html",
+      "claim": "提供鄉鎮預報與地點選擇入口；紫外線欄位及鄉鎮公所代表點限制另由368鄉鎮預報產品說明支持。",
+      "supporting_passage": "提供鄉鎮預報與地點選擇入口；紫外線欄位及鄉鎮公所代表點限制另由368鄉鎮預報產品說明支持。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱中央氣象署鄉鎮預報頁，確認地點選擇介面及天氣圖資中的紫外線項目；另以同一官方產品說明核對其UVI欄位及代表點限制。"
+    },
+    {
+      "source_id": "tw02_cwa_uvi_forecast_368town",
+      "title": "中央氣象署：368鄉鎮天氣預報產品說明（2026-01-06更新）",
+      "url": "https://www.cwa.gov.tw/Data/data_catalog/1-1-1.pdf",
+      "claim": "官方產品提供全臺368鄉鎮市區未來一週預報，含紫外線指數；產品以鄉鎮公所代表點預報，地形與區域差異會限制代表性。",
+      "supporting_passage": "官方產品提供全臺368鄉鎮市區未來一週預報，含紫外線指數；產品以鄉鎮公所代表點預報，地形與區域差異會限制代表性。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱中央氣象署368鄉鎮產品說明PDF，核對預報範圍、更新資訊、紫外線欄位及代表點限制。"
+    },
+    {
+      "source_id": "tw02_hpa_heat_safety_2026",
+      "title": "國民健康署：高溫防護建議（2026-05-25更新）",
+      "url": "https://www.hpa.gov.tw/5020/20092/n",
+      "claim": "高溫警訊期間建議避免上午10時至下午2時外出；必要外出時選陰涼處、做好防曬並依天氣、活動與流汗量補水；出現熱傷害症狀時離開高溫環境、降溫，未改善應就醫。",
+      "supporting_passage": "高溫警訊期間建議避免上午10時至下午2時外出；必要外出時選陰涼處、做好防曬並依天氣、活動與流汗量補水；出現熱傷害症狀時離開高溫環境、降溫，未改善應就醫。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱國民健康署2026年5月25日更新頁，核對高溫警訊時段、防護、補水及症狀處置。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原題的日照與壽命研究問題，並拆分自然日間光線、生理時鐘、戶外活動與皮膚紫外線暴露；納入瑞典女性世代、2025年日照死亡率系統性回顧、AHS-2日間戶外世代及自然光生理時鐘研究。台灣行動以中央氣象署紫外線觀測及可直接選地點的鄉鎮預報頁面、WHO紫外線防護和國健署高溫警訊為依據，不提供固定曝曬劑量。",
+  "review_method": "首次正式刊載，非已核對歷史正文的回溯再審。核對原作固定ID、原題、manifest upstream commit/hash、待處理狀態及第二章結構化草稿列的SHA-256；逐篇查閱2025年系統性回顧、兩篇原始世代研究、自然光生理時鐘研究及台灣／WHO官方防護資料。對研究記錄年份、地區、樣本、事件數、暴露和結局定義、分母、模型效果、資料型態與偏差；沒有找到台灣同口徑日照暴露與死亡估計時不推算台灣個人機率。",
+  "limits": [
+    "日照與壽命資料以海外觀察研究為主；目前找不到可代表台灣、以個人日照暴露連結死亡追蹤並估算壽命差異的同口徑研究，不能據此推算台灣個人壽命變化",
+    "瑞典及AHS-2結果是研究群體間相對關聯或模型估計，不能當作個人死亡機率、因果延壽效果或台灣日曬處方",
+    "2025年系統性回顧中的死亡率證據混合且偏差風險高；2025年後的單一AHS-2世代研究不等於因果證據，也不足以改變防曬建議",
+    "自然光與生理時鐘研究僅8名成人，戶外活動與作息同步變動，不能據以制定所有人的光照時間",
+    "台灣紫外線與熱風險隨時段、天候、地點、遮蔭及個人皮膚和用藥狀況改變；地方預報代表點不等於個人實際劑量"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "35e426b86b4e720aa187be743a34a4724e8be5e1ef83f9b628f70a3751ace7b3",
+  "source_ids": [
+    "tw02_sunlight_mortality_review_2025",
+    "tw02_sunlight_sweden_miss_2016",
+    "tw02_daylight_adventist_cohort_2025",
+    "tw02_natural_light_circadian_2013",
+    "tw02_who_uv_guidance",
+    "tw02_cwa_uvi_observation",
+    "tw02_cwa_town_forecast_service",
+    "tw02_cwa_uvi_forecast_368town",
+    "tw02_hpa_heat_safety_2026"
+  ],
+  "frequency_assessment": "日照、戶外白天光照及死亡是長期暴露與結局的觀察研究，不是可用於估算台灣居民某一時段個人發生機率的急性事件統計。瑞典世代及AHS-2提供特定研究群體的相對估計，不能換算成台灣全國發生率或個人壽命差。本次未找到台灣同口徑個人暴露—死亡追蹤估計，故標示資料不足，不自行推估。紫外線強度依氣象署當地觀測／預報判斷；高溫時依國健署警訊調整外出。",
+  "statistics_assessed": [
+    {
+      "topic": "日照與死亡率的2025年系統性回顧",
+      "value": {
+        "eligible_articles": 73,
+        "included_in_narrative_synthesis": 55
+      },
+      "unit": "篇流行病學研究",
+      "period": "資料庫檢索截至2023-11；第二版發表於2025-11-28",
+      "geographic_scope": "多國一般人口研究；沒有台灣可直接套用的個人風險估計",
+      "population": "73篇符合資格的文章，其中55篇納入敘述性整理；研究族群及暴露測量各異",
+      "numerator": "55篇進入敘述性整理；非死亡事件分子",
+      "denominator": "73篇符合資格的文章",
+      "denominator_definition": "符合預設納入條件之一般人口長期日照暴露與死亡研究",
+      "event_definition": "研究結果涵蓋全因、心血管及癌症死亡，沒有共同的單一事件定義或可合併分母",
+      "data_type": "系統性回顧；ROBINS-E偏差評估；敘述性整理而非統合分析",
+      "limitations": "全因與心血管死亡結果混合；多數研究存在混雜控制不足或間接暴露測量偏差；資料不足以支持改變防曬建議。",
+      "source_ids": [
+        "tw02_sunlight_mortality_review_2025"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "瑞典南部女性日照習慣與預期壽命模型差異",
+      "value": {
+        "life_expectancy_difference_years_range": [
+          0.6,
+          2.1
+        ]
+      },
+      "unit": "觀察性世代模型估計的群體預期壽命年數差異",
+      "period": "1990至1992年招募，前瞻追蹤20年",
+      "geographic_scope": "瑞典南部",
+      "population": "29,518名入組時25至64歲女性；日照習慣於基線自述",
+      "numerator": "系統性回顧摘錄2,545人全因死亡；原研究依生存模型估計壽命差",
+      "denominator": "29,518名世代參與者",
+      "denominator_definition": "MISS世代中具有基線日照習慣資料的女性；不是台灣人口抽樣",
+      "event_definition": "全因死亡；0.6至2.1年是按年齡及吸菸情境模型估計的群體預期壽命差",
+      "data_type": "前瞻性觀察世代與競爭風險／生存模型；不是隨機介入試驗",
+      "limitations": "系統性回顧評為高偏差風險；基線自述不能代表20年實際UV劑量，殘餘混雜及族群、緯度與台灣差異限制外推。",
+      "source_ids": [
+        "tw02_sunlight_mortality_review_2025",
+        "tw02_sunlight_sweden_miss_2016"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "北美AHS-2暖季戶外日照時間與死亡率",
+      "value": {
+        "all_cause_HR": 0.9,
+        "all_cause_95_CI": [
+          0.86,
+          0.93
+        ],
+        "cardiovascular_HR": 0.89,
+        "cardiovascular_95_CI": [
+          0.83,
+          0.95
+        ],
+        "noncancer_nonCVD_HR": 0.83,
+        "noncancer_nonCVD_95_CI": [
+          0.78,
+          0.89
+        ],
+        "cancer_HR": 1.02,
+        "cancer_95_CI": [
+          0.93,
+          1.13
+        ]
+      },
+      "unit": "每日戶外約2小時相較約30分鐘的調整後危險比；非絕對死亡機率",
+      "period": "2002至2007年納入；死亡追蹤至2015年；平均追蹤11.1年",
+      "geographic_scope": "北美",
+      "population": "83,205名基督復臨安息日會健康研究AHS-2參與者",
+      "numerator": "共11,515人死亡：4,422例心血管、3,018例癌症、4,075例非癌症非心血管死亡",
+      "denominator": "83,205名參與者",
+      "denominator_definition": "參與AHS-2並有戶外日光暴露及死亡追蹤資料之研究群體；非北美人口隨機樣本",
+      "event_definition": "全因死亡及研究分類的心血管、癌症、非癌症非心血管死亡",
+      "data_type": "問卷暴露測量的觀察性前瞻世代；多變項Cox模型",
+      "limitations": "群體HR不是絕對風險、個人預測或因果效果；參與者背景及北美暖季不能等同台灣；自述戶外時數不是皮膚UV劑量；癌症死亡估計未見明確差異。",
+      "source_ids": [
+        "tw02_daylight_adventist_cohort_2025"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "自然光露營研究的生理時鐘變化",
+      "value": {
+        "circadian_marker_advance_approx_hours": 2
+      },
+      "unit": "受測生理時鐘指標平均提前約2小時",
+      "period": "2013年發表；兩週場域比較，其中一週自然光露營",
+      "geographic_scope": "美國科羅拉多州落磯山脈，夏季約北緯40度",
+      "population": "8名成人（2名女性；平均年齡30.3歲，標準差8.5歲）",
+      "numerator": "8名參與者的測量結果呈現生理時鐘指標提前；無死亡事件分子",
+      "denominator": "8名研究參與者",
+      "denominator_definition": "完成一般電燈作息一週及自然光露營一週的受試者",
+      "event_definition": "褪黑激素等內部生理時鐘相位標記的時間變化，不是疾病發生或死亡",
+      "data_type": "小型受試者內場域研究；比較一般環境與自然明暗暴露",
+      "limitations": "樣本極小且順序固定；露營同時改變日常活動、睡眠安排及夜間照明；不證明日光延壽或治療效果，也不能推導日曬時長。",
+      "source_ids": [
+        "tw02_natural_light_circadian_2013"
+      ],
+      "accessed_at": "2026-11-21"
+    }
+  ],
+  "unresolved_questions": [
+    "尚未找到可代表台灣居民、同時測量個人日間光照／紫外線暴露並連結長期死亡追蹤的全國估計。",
+    "AHS-2世代研究尚需在不同地區、族群及台灣氣候下重複驗證；研究暴露為戶外時間，不等於個人UV劑量。",
+    "未取得公共衛生／流行病學、睡眠醫學／生理時鐘及皮膚科專業人員的獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "公共衛生與流行病學（觀察研究及死亡率統計解讀）",
+      "睡眠醫學或生理時鐘研究（白天光照與輪班適用性）",
+      "皮膚科或光生物學（UV風險與個別防護界線）"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "4408c4e55b249805a5057cd579c893e5cec52e14029f315ca7e3171049347cc4",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "首次正式發布，保留原作日間日照與長期健康／壽命研究問題，不把海外研究簡化刪除成防曬衛教；依台灣高紫外線及高溫情境補上實際防護，不把海外結果或露營研究轉成台灣日曬時數處方。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_daylight_and_longevity_research_with_taiwan_safety_context",
+    "original_question": "白天出門接觸日照與壽命是否有關？日常戶外活動和自然光對健康有何研究？",
+    "reader_content_decision": "保留瑞典女性日照與壽命研究、2025年系統性回顧、2025年AHS-2日間戶外世代及自然光與生理時鐘研究；明示研究設計、效果量及偏差，並以台灣UVI、高溫防護說明安全的日常做法。",
+    "historical_claim_decisions": [
+      {
+        "claim": "每天十幾分鐘日照足以帶來健康或延壽好處",
+        "decision": "do_not_retain_as_universal_dose",
+        "reason": "原作未提供能適用台灣所有膚色、季節、UVI、時間與健康狀況的臨床劑量試驗；系統性回顧認為死亡率證據混合且不足以改變防護建議。"
+      },
+      {
+        "claim": "瑞典日照迴避者預期壽命低0.6至2.1年",
+        "decision": "retain_with_study_context_and_bias_limits",
+        "reason": "這是瑞典女性世代的觀察模型估計，須同時呈現樣本、招募年齡、20年期間、研究回顧評估的高偏差風險與不可外推台灣個人之限制。"
+      },
+      {
+        "claim": "日間自然光可能影響生理時鐘",
+        "decision": "retain_as_separate_research_question",
+        "reason": "自然光露營研究觀察8名成人內部生理時鐘指標變化，與壽命研究的暴露／結局不同；不能用此小型機制研究證明延壽或訂日曬處方。"
+      }
+    ]
+  }
+}

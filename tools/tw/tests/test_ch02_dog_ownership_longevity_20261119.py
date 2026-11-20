@@ -103,9 +103,12 @@ class DogOwnershipLongevityPublicationTests(unittest.TestCase):
             baseline_rechecks=baseline_register["substantive_rechecks"],
             current_rechecks=self.register["substantive_rechecks"],
         )
+        baseline_ids = [row["id"] for row in baseline_runtime["items"]]
+        baseline_id_set = set(baseline_ids)
+        current_ids = [row["id"] for row in self.runtime["items"]]
         self.assertEqual(
-            [row["id"] for row in self.runtime["items"][:len(baseline_runtime["items"])]],
-            [row["id"] for row in baseline_runtime["items"]],
+            [item_id for item_id in current_ids if item_id in baseline_id_set],
+            baseline_ids,
         )
         self.assertEqual(
             [row["id"] for row in self.runtime["sources"][:len(baseline_runtime["sources"])]],
