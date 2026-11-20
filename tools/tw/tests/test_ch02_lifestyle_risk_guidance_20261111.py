@@ -184,7 +184,7 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         kitchen = self.items["TW-02-042"]["body"]
         self.assertIn("高於攝氏65度", hot_drinks)
         self.assertIn("第2A類", hot_drinks)
-        self.assertIn("冷水沖洗燙傷處15至30分鐘", hot_drinks)
+        self.assertIn("流動冷水沖洗15至30分鐘", hot_drinks)
         self.assertIn("51.3%", bmi)
         self.assertIn("55歲以上原住民及35歲以上罹患小兒麻痺者", bmi)
         self.assertIn("每案補助880元", bmi)
@@ -217,7 +217,15 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
             next(row for row in self.register["substantive_rechecks"]
                  if row["id"] == "TW-02-028" and row["reviewed_at"] > DATE)["statistics_assessed"],
         )
-        self.assertEqual(self.reviews["TW-02-030"]["statistics_assessed"], [])
+        self.assertEqual(self.batch_items["TW-02-030"]["statistics_assessed"], [])
+        latest_hot_drink_recheck = next(
+            row for row in self.register["substantive_rechecks"]
+            if row["id"] == "TW-02-030" and row["reviewed_at"] > DATE
+        )
+        self.assertEqual(
+            self.reviews["TW-02-030"]["statistics_assessed"],
+            latest_hot_drink_recheck["statistics_assessed"],
+        )
         self.assertEqual(self.reviews["TW-02-042"]["statistics_assessed"], [])
 
     def test_existing_content_drafts_sources_and_review_history_are_preserved(self):
@@ -261,6 +269,16 @@ class Chapter2LifestyleRiskGuidanceTests(unittest.TestCase):
         self.assertIn("生淡水魚的中華肝吸蟲風險", rows[47][1])
         for item_id, expected in PRIOR_STRUCTURED_HASHES.items():
             number = int(item_id[-3:])
+            if item_id == "TW-02-030":
+                # Preserve the 2026-11-11 draft snapshot while validating the
+                # later, hash-linked topic-fidelity revision separately.
+                baseline_compact = json.dumps(
+                    old_rows[number], ensure_ascii=False, separators=(",", ":")
+                ).encode("utf-8")
+                self.assertEqual(hashlib.sha256(baseline_compact).hexdigest(), expected)
+                self.assertEqual(rows[number][1], self.items[item_id]["title"])
+                self.assertEqual(rows[number][5].split(), self.items[item_id]["source_ids"])
+                continue
             compact = json.dumps(
                 rows[number], ensure_ascii=False, separators=(",", ":")
             ).encode("utf-8")

@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "scope": "草稿結構盤點，不代表內容查核完成",
-  "json_files_checked": 670,
+  "json_files_checked": 672,
   "original_entries": 765,
   "structured_draft_chapters": 14,
   "structured_draft_entries": 373,
   "legacy_markdown_draft_entries": 322,
   "unique_draft_entries": 499,
   "entries_without_any_draft": 266,
-  "registry_sources": 1448,
+  "registry_sources": 1455,
   "unresolved_source_ids": {
     "adultcheck": 5,
     "afib": 1,
@@ -37,7 +37,7 @@
     "expressivewriting": 1,
     "falls": 3,
     "firesafe": 5,
-    "firstaid": 6,
+    "firstaid": 5,
     "fishsafety": 1,
     "fitnesscontract": 2,
     "foi": 2,
@@ -56,7 +56,6 @@
     "hivpep": 2,
     "hivprep": 2,
     "hivtest": 2,
-    "hotdrinks": 1,
     "hpv": 3,
     "hpylori": 2,
     "iarcmeat": 1,
@@ -114,7 +113,7 @@
     "whosalt": 1,
     "zoster": 1
   },
-  "unresolved_reference_occurrences": 254,
+  "unresolved_reference_occurrences": 252,
   "chapters": [
     {
       "chapter": 1,

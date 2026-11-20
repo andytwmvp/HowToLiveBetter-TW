@@ -201,7 +201,7 @@ class ReverseMortgageTopicFidelityTests(unittest.TestCase):
             "publication_completed_entries": live["publication_completed_entries"],
         }
         for key, value in live_counts.items():
-            if key == "unresolved_reference_occurrences":
+            if key in {"unresolved_source_ids", "unresolved_reference_occurrences"}:
                 self.assertLessEqual(value, after[key], key)
             else:
                 self.assertGreaterEqual(value, after[key], key)

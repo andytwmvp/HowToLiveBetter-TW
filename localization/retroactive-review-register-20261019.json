@@ -46501,6 +46501,334 @@
         "一般飲食指引不取代糖尿病、腎臟病或其他疾病的個別飲食評估。"
       ],
       "source_reviewed_sha256": "9fa6cc3cd364b7576b9d023775b7518d1c3e386a5c029ef4ff1dde296183b527"
+    },
+    {
+      "id": "TW-02-030",
+      "title": "熱飲放涼再喝：食道癌研究與燙傷處理",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "fa47b5ad2a8c05a04d40c5e51b401f18baaeddfb",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "42eb8322dc10903dc240e09e9c6768eedd87e0cd7659b3be9cdbb2ec78424732",
+      "prior_reviewed_at": "2026-11-11",
+      "prior_review_due_at": "2027-02-11",
+      "before_sha256": "ac12b0c443e2981d0d0d530abad658127c09a36ebca449cc3c2e2a5f6e4b5ba9",
+      "after_sha256": "c985046b14c89300e36cf894b888baabf89ae2b2d7336d1d09e12ace9610a955",
+      "reviewed_at": "2026-11-20",
+      "review_due_at": "2027-02-20",
+      "taiwan_context": "台灣日常有茶、咖啡、湯、豆漿及外帶熱飲；讀者可能關心過燙飲料和食道癌研究，也會遇到幼兒熱飲燙傷。以台灣公衛衛教、兒童防燙及公立醫療院所急救指引提供本地行動，將海外研究限制與本地頻率資料不足分開說明。",
+      "taiwan_context_assessment": {
+        "actual_scenario": "家中、茶飲店、超商、早餐店與外帶餐飲的茶、咖啡、湯和豆漿；家中幼兒可能拉扯桌巾或碰倒熱飲。",
+        "topic_fidelity_assessment": "原題不只問如何避免燙傷，也引用茶溫與食道癌研究；前次正文主要保留實用安全提醒而未回答研究問題。本次補回研究問題與限制，不以一般台灣防燙提醒取代原題。"
+      },
+      "frequency_assessment": "目前未找到具全台代表性且定義清楚的熱飲溫度、飲用高於攝氏65度飲料比例，或食道癌可歸因於此暴露比例統計。台灣2009年病例對照研究限於男性且詢問吃熱食不適，不能作為全國熱飲盛行率。伊朗病例對照、英國世代與中國聯合暴露世代結果只描述其研究族群；不將OR、RR或HR換算為台灣發生率或個人機率。少見或分母不足不影響明顯燙口飲料造成即時燙傷的處置；先放涼、燙傷先沖冷水，再依傷勢求醫。",
+      "legal_status_assessment": "本題沒有特定法律資格或違法行為主張。國健署食道癌預防頁為2022-10-14發布／更新衛教資料，兒童燙傷衛教頁建檔2025-11-05、更新2026-01-05；未把衛教發布日誤稱法規施行日。",
+      "changes": "恢復原題熱飲溫度與食道癌研究問題，增加伊朗2003–2007年病例對照、英國2026年兩世代分析、中國茶溫／吸菸／飲酒聯合暴露世代及台灣男性熱食病例對照的研究對象、時間、事件與限制。修正固定等待兩三分鐘和OR等同個人機率的暗示；保留台灣茶咖啡湯與幼兒防燙情境，更新成人燙傷冷水處理和緊急求援來源。",
+      "topic_fidelity_assessment": "保留並恢復原題熱飲溫度與食道癌研究，不用表面相似的台灣安全提醒取代研究問題；境外文化與研究因仍能協助理解相同暴露問題而限縮保留，另以台灣官方和公立醫療資料提供可行安全行動。",
+      "source_status": "重核並保留IARC與消防署來源；新增7筆原始研究、國健署、衛福部及臺北榮總來源；將舊兒童國健署來源從本篇有效引用中退役，保留其歷史來源物件與舊審閱。",
+      "source_ids": [
+        "tw02_iarc_hot_drinks_2016",
+        "tw02_islami_golestan_hot_tea_2009",
+        "tw02_papier_uk_hot_drinks_2026",
+        "tw02_yu_ckb_hot_tea_interactions_2018",
+        "tw02_chen_taiwan_hot_food_escc_2009",
+        "tw02_hpa_esophageal_prevention_2022",
+        "tw02_mohw_child_burn_prevention_firstaid_2026",
+        "tw02_vghtpe_burn_care_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "previous_source_ids": [
+        "tw02_iarc_hot_drinks_2016",
+        "tw02_hpa_child_burn_first_aid_2026",
+        "tw02_nfa_emergency_119"
+      ],
+      "source_records_reused": [
+        "tw02_iarc_hot_drinks_2016",
+        "tw02_nfa_emergency_119"
+      ],
+      "retired_sources": [
+        {
+          "id": "tw02_hpa_child_burn_first_aid_2026",
+          "disposition": "replaced",
+          "reason": "前次引用的國健署兒童防燙頁在該次查核時無法直接讀取，且兒童專頁不能單獨支持本篇一般燙傷處置。本次改用可直接查閱的衛福部／國健署兒童衛教及臺北榮總一般燒燙傷指引；舊來源物件與舊review保留作歷史追溯。",
+          "replacement_ids": [
+            "tw02_mohw_child_burn_prevention_firstaid_2026",
+            "tw02_vghtpe_burn_care_2026"
+          ],
+          "prior_source_sha256": "ff4a81d7d4614ed9a0083f48548c0e36c8604418335aa8d249b3effde442c05f"
+        }
+      ],
+      "new_source_ids": [
+        "tw02_islami_golestan_hot_tea_2009",
+        "tw02_papier_uk_hot_drinks_2026",
+        "tw02_yu_ckb_hot_tea_interactions_2018",
+        "tw02_chen_taiwan_hot_food_escc_2009",
+        "tw02_hpa_esophageal_prevention_2022",
+        "tw02_mohw_child_burn_prevention_firstaid_2026",
+        "tw02_vghtpe_burn_care_2026"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw02_iarc_hot_drinks_2016",
+          "title": "國際癌症研究機構：非常燙飲料與食道癌",
+          "url": "https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/",
+          "claim": "IARC將飲用溫度高於攝氏65度定義為「非常燙」並列為第2A類；歸因病例比例未知，且所審查研究多來自有飲用極燙飲料習慣的地區。",
+          "supporting_passage": "IARC 2016-06-15事實說明列出第2A類、攝氏65度以上定義，並說明分類代表關聯可能成立，但可歸因病例比例尚未知；不是個人安全切線。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱IARC官方事實說明，核對發布日期、溫度界線、分類意義與病例歸因限制。"
+        },
+        {
+          "source_id": "tw02_islami_golestan_hot_tea_2009",
+          "title": "Islami等：伊朗北部茶飲習慣與食道癌病例對照研究（2009）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19325180/",
+          "claim": "伊朗高發生率地區病例對照研究中，自述熱／非常熱茶及倒茶至飲用間隔與食道鱗癌勝算相關；OR不是發生率或個人機率。",
+          "supporting_passage": "BMJ原始論文表2：2003至2007年Golestan收案；300例病理確認病例、571名配對鄰近對照；熱茶OR 2.07（1.28–3.35）、非常熱茶OR 8.16（3.93–16.91）；倒茶後<2分鐘相較≥4分鐘OR 5.41（2.63–11.14）。溫度為自述分類。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱BMJ原始論文全文及PubMed書目摘要，核對研究期間、配對設計、病例／對照數、OR與信賴區間；不把計時比較改成通用冷卻規則。"
+        },
+        {
+          "source_id": "tw02_papier_uk_hot_drinks_2026",
+          "title": "Papier等：英國近百萬成人熱飲偏好與食道癌前瞻分析（2026）",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1002/ijc.70654",
+          "claim": "英國兩世代中偏好飲用非常熱相較溫飲料與食道鱗癌相對估計相關，腺癌未見明確關聯；偏好溫度為自述而非實測。",
+          "supporting_passage": "2026年原始論文摘要與結果：977,282人（MWS 510,112；UKB 467,170），平均追蹤14.2與11.1年，2,348例食道癌（SCC 1,045、AC 1,303）；非常熱相較溫的SCC RR 3.17（2.49–4.03），AC 0.92（0.76–1.12）。論文以Cox模型估計並稱RR。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱Wiley開放取用原始研究，核對樣本、追蹤時間、事件數、暴露量測與Cox模型估計；不換算台灣個人絕對風險。"
+        },
+        {
+          "source_id": "tw02_yu_ckb_hot_tea_interactions_2018",
+          "title": "Yu等：中國熱茶、飲酒、吸菸及食道癌前瞻世代研究（2018）",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6675598/",
+          "claim": "中國隊列中，熱／燙口茶與吸菸及較高酒精攝取同時出現的組別相較低暴露參照組有較高食道癌HR；不能將聯合暴露估計歸因茶溫。",
+          "supporting_passage": "原始論文表4及方法：456,155名30–79歲中國參與者；中位追蹤9.2年，約4.1百萬人年，1,731例新發食道癌。每日熱／燙口茶、目前吸菸且酒精≥15克／日組166例、1.55/1,000人年、HR 5.01（4.00–6.28）；參照組不吸菸、茶未達每日且酒精<15克／日，775例、0.31/1,000人年。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱PMC全文、表4及研究設計段落，核對總隊列、事件、聯合暴露格、參照組和相對危險；分開呈現茶溫、吸菸及飲酒，避免單因子歸因。"
+        },
+        {
+          "source_id": "tw02_chen_taiwan_hot_food_escc_2009",
+          "title": "Chen等：台灣男性飲食與食道鱗狀細胞癌病例對照研究（2009）",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19394796/",
+          "claim": "台灣男性病例對照研究可提供本地熱食相關研究線索，但不直接測量飲料溫度，也不能估算全國飲用暴露比例。",
+          "supporting_passage": "PubMed原始研究摘要：1996至2005年收案，共343名食道鱗狀細胞癌患者與755名無癌對照；研究詢問飲食及吃熱食時的不適。研究對象為男性，非全國熱飲盛行率調查。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱PubMed論文摘要，核對收案期間、病例／對照數、男性研究對象及熱食不適的暴露定義；不將本地病例對照樣本外推為全國頻率。"
+        },
+        {
+          "source_id": "tw02_hpa_esophageal_prevention_2022",
+          "title": "國健署：食道癌預防、避免過燙食物及症狀就醫資訊",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4576&pid=16184",
+          "claim": "國健署建議避免過燙食物，並提醒吞嚥困難、吞嚥時異物感或疼痛應及時就醫。",
+          "supporting_passage": "國健署頁面2022-10-14發布及更新；列出避免過燙食物，以及吞嚥困難、異物感、吞嚥疼痛等就醫警訊。本篇使用其台灣衛教內容，不採用其對IARC／WHO分類的轉述作為原始分類證據。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱國健署官方頁面，核對更新日期、過燙食物建議及症狀就醫提醒；分類主張另以IARC原始資料支持。"
+        },
+        {
+          "source_id": "tw02_mohw_child_burn_prevention_firstaid_2026",
+          "title": "衛福部／國健署：從廚房到浴室守護兒童遠離燒燙傷危機",
+          "url": "https://www.mohw.gov.tw/cp-7172-84404-1.html",
+          "claim": "國健署兒童居家衛教提醒將熱飲置於幼兒碰不到處，並提供兒童燙傷急救與儘速送醫原則。",
+          "supporting_passage": "衛福部頁面建檔114-11-05、更新115-01-05；餐桌建議熱飲遠離幼兒伸手範圍；兒童燙傷依沖、脫、泡、蓋、送並儘速送醫。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱衛福部／國健署官方全文，確認建檔及更新日期、幼兒熱飲預防、兒童限定的燙傷處置與送醫提醒。"
+        },
+        {
+          "source_id": "tw02_vghtpe_burn_care_2026",
+          "title": "臺北榮總：燒燙傷後之照護",
+          "url": "https://ihealth.vghtpe.gov.tw/media/345?sectioninfo=5095495",
+          "claim": "一般燒燙傷先用流動冷水降溫15至30分鐘並保暖；避免冰水，不拉扯黏住的衣物，對特定部位或症狀儘速就醫。",
+          "supporting_passage": "臺北榮總護理部照護頁（列印日2026-11-20）明列冷水約10–25°C、流動沖洗至少15–30分鐘、避免冰水及注意保暖；衣物黏住不可自行移除；持續疼痛、水泡、臉部、關節活動面、會陰等情況盡速送醫。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "直接查閱臺北榮總護理部照護頁及可見更新／列印資訊，逐項核對水溫、沖洗時間、避免冰水、衣物與就醫條件。"
+        },
+        {
+          "source_id": "tw02_nfa_emergency_119",
+          "title": "消防署：119與112緊急報案資訊",
+          "url": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=66",
+          "claim": "呼吸困難、意識改變或無法安全移動就醫等緊急狀況，可撥台灣119求援。",
+          "supporting_passage": "消防署119、112報案資訊頁說明火災及緊急救護可撥119；本文只在緊急狀況提供119入口。",
+          "accessed_at": "2026-11-20",
+          "retrieval_method": "重新查閱消防署官方119／112報案資訊，確認台灣緊急救護電話入口。"
+        }
+      ],
+      "previous_review_claims": [
+        {
+          "source_id": "tw02_iarc_hot_drinks_2016",
+          "claim": "IARC的攝氏65度界線和第2A類是證據分類，不是個人罹癌機率或安全切線；現有資料未估算可歸因病例比例。",
+          "supporting_passage": "IARC 2016-06-15事實說明列出第2A類、攝氏65度以上定義，並明言非常燙飲料可歸因的食道癌病例比例尚未知；多數研究在有此飲用習慣的地區進行。"
+        },
+        {
+          "source_id": "tw02_hpa_child_burn_first_aid_2026",
+          "claim": "熱飲造成燙傷時，以流動冷水沖洗15至30分鐘，不硬扯黏住皮膚的衣物，覆蓋並就醫。",
+          "supporting_passage": "國健署2026-11-04兒童防燙官方衛教列燙傷急救「沖、脫、泡、蓋、送」，其中「沖」為持續沖冷水15至30分鐘。"
+        },
+        {
+          "source_id": "tw02_nfa_emergency_119",
+          "claim": "燙傷嚴重或患者出現呼吸、意識急症時，可撥119求助。",
+          "supporting_passage": "消防署119緊急報案頁說明119為消防及緊急救護報案電話。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "source_id": "tw02_iarc_hot_drinks_2016",
+          "title": "國際癌症研究機構：非常燙飲料與食道癌",
+          "url": "https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/",
+          "claim": "IARC的攝氏65度界線和第2A類是證據分類，不是個人罹癌機率或安全切線；現有資料未估算可歸因病例比例。",
+          "supporting_passage": "IARC 2016-06-15事實說明列出第2A類、攝氏65度以上定義，並明言非常燙飲料可歸因的食道癌病例比例尚未知；多數研究在有此飲用習慣的地區進行。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱IARC官方事實說明，核對發布日期、溫度定義、分類含義及病例歸因限制。"
+        },
+        {
+          "source_id": "tw02_hpa_child_burn_first_aid_2026",
+          "title": "國健署：兒童防燙與燒燙傷急救原則",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20457",
+          "claim": "熱飲造成燙傷時，以流動冷水沖洗15至30分鐘，不硬扯黏住皮膚的衣物，覆蓋並就醫。",
+          "supporting_passage": "國健署2026-11-04兒童防燙官方衛教列燙傷急救「沖、脫、泡、蓋、送」，其中「沖」為持續沖冷水15至30分鐘。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "查閱國健署2026-11-04官方頁面及該頁索引摘要；頁面直連於本次檢索工具逾時，但官方摘要明列沖冷水15至30分鐘及兒童防燙原則。"
+        },
+        {
+          "source_id": "tw02_nfa_emergency_119",
+          "title": "消防署：119與112緊急報案資訊",
+          "url": "https://www.nfa.gov.tw/cht/index.php?code=list&ids=66",
+          "claim": "燙傷嚴重或患者出現呼吸、意識急症時，可撥119求助。",
+          "supporting_passage": "消防署119緊急報案頁說明119為消防及緊急救護報案電話。",
+          "accessed_at": "2026-11-11",
+          "retrieval_method": "直接查閱消防署官方119緊急報案資訊。"
+        }
+      ],
+      "prior_review_limits": [
+        "IARC事實說明發布於2016年，所列研究地區和暴露型態不能直接當成台灣風險率。",
+        "國健署2026-11-04燒燙傷頁的直接讀取在本次檢索工具逾時；可見官方索引摘要明列冷水沖洗15至30分鐘，後續複查應確認官方頁仍可讀且建議未變。"
+      ],
+      "prior_review_frequency_assessment": "本次未找到能代表台灣飲用非常燙飲料暴露或相關食道癌可歸因比例的全國統計。IARC資料指出可歸因病例比例尚未知且研究多來自不同飲食地區；不把第2A類、攝氏65度或海外癌症率解讀為台灣個人發生機率。燙傷出現時先安全沖洗與求援，不等待統計。",
+      "prior_source_reviewed_sha256": "ac12b0c443e2981d0d0d530abad658127c09a36ebca449cc3c2e2a5f6e4b5ba9",
+      "source_reviewed_sha256": "c985046b14c89300e36cf894b888baabf89ae2b2d7336d1d09e12ace9610a955",
+      "statistics_assessed": [
+        {
+          "topic": "伊朗Golestan茶飲溫度與食道鱗狀細胞癌病例對照",
+          "value": "熱茶OR 2.07（95% CI 1.28–3.35）；非常熱茶OR 8.16（3.93–16.91）；倒茶後<2分鐘相較≥4分鐘OR 5.41（2.63–11.14）",
+          "unit": "病例對照調整勝算比（OR），不是發生率或個人機率",
+          "period": "2003–2007年收案；論文2009年發表",
+          "geographic_scope": "伊朗北部Golestan省食道癌高發生率地區",
+          "population": "300名病理確認食道鱗狀細胞癌病例與571名配對鄰近對照",
+          "numerator": "病例組300人；各暴露分析因缺失值可能略少",
+          "denominator": "配對對照571人；各暴露組分母不是全地區人口，病例對照設計不能直接估計絕對發生率",
+          "event_definition": "病理確認的新診斷食道鱗狀細胞癌病例；以配對病例對照估計勝算比",
+          "data_type": "人口基礎病例對照研究；茶溫與等待時間以受訪者自述分類",
+          "limitations": "特定高發生率地區、觀察性病例對照；自述暴露可能有回憶與分類偏差。OR不是台灣發生率或個人風險；倒茶至飲用時間不能推成通用安全計時。",
+          "source_ids": [
+            "tw02_islami_golestan_hot_tea_2009"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "英國兩世代熱飲偏好與食道癌亞型",
+          "value": "非常熱相較溫飲料：食道SCC RR 3.17（95% CI 2.49–4.03）；食道AC RR 0.92（0.76–1.12）",
+          "unit": "Cox模型估計的群體相對危險（論文稱RR）",
+          "period": "平均追蹤14.2年（MWS）及11.1年（UK Biobank）；論文2026-09-08刊出",
+          "geographic_scope": "英國兩個前瞻世代，不代表台灣族群",
+          "population": "977,282人：Million Women Study 510,112人、UK Biobank 467,170人",
+          "numerator": "追蹤期間2,348例新發食道癌；SCC 1,045例、AC 1,303例",
+          "denominator": "兩世代合計977,282名參與者；各自述溫度組的樣本分母未在摘要中列出",
+          "event_definition": "追蹤中登錄的新發食道鱗狀細胞癌（SCC）及腺癌（AC）",
+          "data_type": "兩個前瞻性觀察世代的Cox模型及合併分析；飲用溫度為自述偏好而非實測",
+          "limitations": "英國觀察研究且暴露為偏好溫度；相對估計不是絕對發生率、因果效果或台灣個人風險。不同組別分母未在摘要提供。",
+          "source_ids": [
+            "tw02_papier_uk_hot_drinks_2026"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "中國茶溫、吸菸與飲酒聯合暴露及食道癌",
+          "value": "每日熱／燙口茶、目前吸菸且酒精≥15克／日組對照低暴露參照組HR 5.01（95% CI 4.00–6.28）；兩組發生率1.55與0.31/1,000人年",
+          "unit": "前瞻世代調整危險比（HR）及每1,000人年事件率",
+          "period": "招募2004–2008年；中位追蹤9.2年，合計約4.1百萬人年；論文2018年發表",
+          "geographic_scope": "中國十個地區",
+          "population": "456,155名基線年齡30–79歲成人",
+          "numerator": "全隊列1,731例新發食道癌；聯合暴露格166例，參照格775例",
+          "denominator": "全隊列約4.1百萬人年；兩個聯合暴露格各自人年未在表中另列，表列事件率為1.55及0.31/1,000人年",
+          "event_definition": "前瞻追蹤記錄的新發食道癌；主要為食道鱗狀細胞癌",
+          "data_type": "多地區前瞻性世代研究；基線茶飲頻率、偏好溫度、吸菸與飲酒自陳",
+          "limitations": "HR 5.01為茶飲、吸菸和飲酒的聯合暴露比較，不可歸因於茶溫單一因素；中國成人隊列結果不等於台灣風險，且仍可能有殘餘混雜。",
+          "source_ids": [
+            "tw02_yu_ckb_hot_tea_interactions_2018"
+          ],
+          "accessed_at": "2026-11-20"
+        },
+        {
+          "topic": "台灣男性熱食不適與食道鱗狀細胞癌病例對照",
+          "value": "研究納入343例病例與755名對照；未估計全國熱飲溫度暴露比例或食道癌發生率",
+          "unit": "病例與對照人數；病例對照研究，不是人口盛行率",
+          "period": "1996–2005年收案；論文2009年發表",
+          "geographic_scope": "台灣研究對象；限男性及研究收案醫療／社區樣本",
+          "population": "台灣男性食道鱗狀細胞癌病例及無癌對照",
+          "numerator": "343名食道鱗狀細胞癌病例",
+          "denominator": "755名無癌對照；兩組為病例對照抽樣，非全國人口分母",
+          "event_definition": "食道鱗狀細胞癌病例；暴露問及飲食及吃熱食時的不適，未直接測量熱飲溫度",
+          "data_type": "台灣男性病例對照研究",
+          "limitations": "不是具全國代表性的熱飲溫度調查；未直接測量飲料溫度，不能推算台灣飲用非常燙飲料的盛行率或個人風險。",
+          "source_ids": [
+            "tw02_chen_taiwan_hot_food_escc_2009"
+          ],
+          "accessed_at": "2026-11-20"
+        }
+      ],
+      "limits": [
+        "IARC的攝氏65度是非常燙飲料研究分類界線，不是個人安全切線；IARC尚不能估算可歸因食道癌病例比例。",
+        "伊朗、英國及中國研究的研究地區、族群、暴露量測和設計各異；勝算比、相對估計及聯合暴露HR不能當作台灣發生率、個人機率或因果效果。",
+        "台灣男性病例對照研究詢問熱食不適，沒有直接測量飲料溫度；目前缺乏全台具代表性、可呈現熱飲溫度暴露或食道癌可歸因病例比例的統計。",
+        "燒燙傷降溫與送醫條件依臺北榮總及衛福部／國健署衛教；此處不能判斷個別傷勢深度或取代醫療評估。"
+      ],
+      "unresolved_questions": [
+        "目前未找到全台具代表性的飲用熱飲溫度、超過攝氏65度飲用比例或相關食道癌可歸因病例統計。",
+        "仍待腫瘤流行病學、食道癌臨床及急診／燒燙傷照護專業人員獨立審閱；下次複查需確認官方處置頁與來源版本仍有效。"
+      ],
+      "previous_body": "<!-- TW-ID: TW-02-030 -->\n\n# 熱飲先試溫度：避免燙傷，也減少反覆吞下過燙飲料\n\n## 茶、咖啡、湯和外帶飲料都先放涼\n\n剛煮好的茶、咖啡、湯品、豆漿或保溫杯裡的飲料，不必趁燙喝。先把杯子放在穩固、不易被碰倒的位置，等到蒸氣和燙口感減退，再小口試喝；外帶熱湯或飲料也要留意杯蓋和行走時的碰撞。家中有幼兒時，把熱水壺、保溫瓶和剛盛好的熱飲放在孩子碰不到、拉不到的位置，避免放在桌緣或使用容易被拉下來的桌巾。感覺遲鈍、吞嚥困難或需要協助的長者，飲用前先由本人或照顧者確認溫度。\n\n國際癌症研究機構（IARC）把飲用溫度高於攝氏65度的飲料稱為「非常燙」，並依人體及動物研究將此暴露列為「可能對人類致癌」（第2A類）。這是對證據的分類，不代表喝一口就會罹癌，也不是用來判定個人安全與否的溫度切線。IARC指出，現有研究無法估算有多少食道癌病例可歸因於非常燙飲料；相關研究多來自習慣飲用極燙飲料的地區，不能直接換成台灣個人的發生機率。重點是避免長期反覆吞下明顯燙口的飲料，不必為了測到某個數字而買溫度計。\n\n## 不慎燙傷時\n\n熱飲潑到皮膚後，先離開熱源，以流動冷水沖洗燙傷處15至30分鐘；衣物若黏在皮膚上不要硬扯，可用乾淨、不黏傷口的覆蓋物保護並儘速就醫。不要用冰塊、牙膏、油或偏方處理。若傷勢嚴重、範圍大，或患者呼吸、意識異常，立即撥打119求助；其他燙傷也可先諮詢醫療人員。\n\n## 參考資料\n\n[國際癌症研究機構（IARC）：非常燙飲料與食道癌](https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/)\n\n[國健署：兒童防燙與燒燙傷急救原則](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20457)\n\n[消防署：119與112緊急報案資訊](https://www.nfa.gov.tw/cht/index.php?code=list&ids=66)\n",
+      "review_path": "localization/reviews/TW-02-030.json",
+      "review_sha256": "35eed70665620022fa5f671276d1cbd5cf16cfdad856ccc7dbadfb4b888c3d2b",
+      "source_bundle_path": "localization/tw-edition/sources/ch02-hot-drink-cancer-topic-fidelity-recheck-20261120.json",
+      "source_bundle_sha256": "6fc88966e1eca9364549ad038d9731185df4567c68498b02d04ee376f9d1551f",
+      "topic_fidelity_review": {
+        "original_topic": "原作第30條以茶、湯、咖啡等熱飲為題，引用伊朗茶溫及食道癌病例對照、IARC非常燙飲料分類，並以中國世代研究討論熱茶與吸菸、飲酒的交互情境。",
+        "taiwan_relevance": "台灣日常有茶、咖啡、湯、豆漿及外帶熱飲，讀者可能關心飲用溫度與食道癌研究，也會遇到幼兒熱飲燙傷。研究地區不同不會自動使問題失去價值，但海外結果不能冒充台灣發生率。",
+        "reader_content_decision": "保留並恢復熱飲溫度與食道癌研究問題；用台灣官方資訊解釋就醫警訊、幼兒防燙及公立醫療機構燙傷處理。把伊朗、英國和中國結果限於各自研究族群，不將聯合暴露歸因茶溫單因子；明示台灣缺乏具代表性的熱飲溫度資料。",
+        "decision": "retain_taiwan_core_with_bounded_research_and_taiwan_safety_guidance",
+        "question_change": {
+          "previous_question": "在台灣常見的茶、咖啡、湯和外帶熱飲情境，如何降低燙傷和反覆飲用過燙飲料的風險？",
+          "current_question": "台灣日常熱飲的溫度與食道癌研究怎麼解讀？如何避免喝下明顯燙口的飲料並處理熱飲燙傷？",
+          "reason": "原自查問題只留下避免燙傷和反覆飲用過燙飲料的安全做法，沒有呈現原題引用的伊朗病例對照、IARC分類及中國茶溫／吸菸／飲酒研究。修訂保留台灣日常飲用與燙傷處理，同時恢復熱飲溫度和食道癌研究的讀者問題，並清楚區分各地研究與台灣資料不足。",
+          "decision": "restore_or_expand_original_research_question_without_replacing_it_with_a_superficially_similar_local_safety_topic"
+        },
+        "historical_claim_decisions": [
+          {
+            "claim": "熱飲放兩三分鐘就安全，或伊朗研究的等待時間可作人人適用的計時規則",
+            "decision": "remove_fixed_waiting_time_rule_and_restore_bounded_study_result",
+            "reason": "伊朗病例對照的倒茶至飲用間隔是自述觀察性暴露，不能證明固定等待時間對所有容器、飲料量及環境都安全；正文改為等到入口不燙口，並明示研究不是通用計時法。"
+          },
+          {
+            "claim": "喝非常熱茶會使個人食道癌發生機率增加八倍",
+            "decision": "restore_as_case_control_odds_ratio_with_population_and_design_limits",
+            "reason": "保留原始研究OR 8.16及信賴區間，說明病例對照設計、伊朗高發生率地區和自述溫度；不改稱個人發生機率。"
+          },
+          {
+            "claim": "IARC第2A類與攝氏65度可作個人安全／危險切線",
+            "decision": "retain_classification_but_explain_scope_and_attributable_fraction_unknown",
+            "reason": "第2A類為危害證據分類，溫度界線用於研究中的非常燙定義；IARC指出可歸因病例比例尚未知，不能作個人診斷或安全門檻。"
+          },
+          {
+            "claim": "中國隊列HR 5.01證明非常燙茶單獨造成五倍食道癌風險",
+            "decision": "restore_joint_exposure_estimate_without_single_factor_attribution",
+            "reason": "5.01比較同時包含每日熱／燙口茶、吸菸與較高酒精攝取組及低暴露參照組；不把聯合暴露估計拆解成茶溫單一效果。"
+          },
+          {
+            "claim": "台灣熱飲過燙暴露比例或其可歸因食道癌比例可由現有研究推得",
+            "decision": "mark_national_frequency_data_insufficient",
+            "reason": "台灣病例對照研究限男性且詢問熱食不適，不是全國溫度暴露調查；無可靠的全國熱飲溫度或可歸因病例統計，不能自行推估。"
+          }
+        ],
+        "frequency_evidence": "目前未找到具全台代表性且定義清楚的熱飲溫度、飲用高於攝氏65度飲料比例，或食道癌可歸因於此暴露比例統計。台灣2009年病例對照研究限於男性且詢問吃熱食不適，不能作為全國熱飲盛行率。伊朗病例對照、英國世代與中國聯合暴露世代結果只描述其研究族群；不將OR、RR或HR換算為台灣發生率或個人機率。少見或分母不足不影響明顯燙口飲料造成即時燙傷的處置；先放涼、燙傷先沖冷水，再依傷勢求醫。"
+      },
+      "prior_chapter_draft_sha256": "50b52af5f08e460feda157c3b2703b85587bf7e2a42d08cde5ead06dd18f20be",
+      "prior_structured_draft_sha256": "15a7a0ad1d53e3fbea5d4513773e104f9d957b4012b389a1e015cbd84d7163aa"
     }
   ],
   "reader_copy_cleanups": [
