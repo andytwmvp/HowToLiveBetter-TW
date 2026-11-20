@@ -1,0 +1,149 @@
+{
+  "id": "TW-02-040",
+  "reviewer": "ChatGPT（AI 協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-040.md",
+  "target_sha256": "05c2267ea718a6ec55eec9b793bbf467633d1ad100771b43dbc1f51871a0adb3",
+  "source_reviewed_sha256": "05c2267ea718a6ec55eec9b793bbf467633d1ad100771b43dbc1f51871a0adb3",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-diet-oil-chili-topic-fidelity-20261121.json",
+  "source_bundle_sha256": "247df53d3c80139e160e2d904213b98e94f68fe5e7aed708d8ad0e8b671c6b80",
+  "source_checks": [
+    {
+      "source_id": "tw02_tfda_food_act_labeling",
+      "title": "全國法規資料庫：《食品安全衛生管理法》第 22、23、25 條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040001",
+      "claim": "現行第 22 條規範包裝食品依品類應標示的品名、成分、業者資訊、原產地、有效日期、營養標示等；第 23 條容許主管機關就特殊包裝公告部分免標或採替代標示；第 25 條只對公告特定散裝食品及直接供應飲食場所訂定中文標示或販售限制，不是所有散裝食品一律違法。頁首列最新修正日 2019-06-12。查閱日 2026-11-21。",
+      "supporting_passage": "現行第 22 條規範包裝食品依品類應標示的品名、成分、業者資訊、原產地、有效日期、營養標示等；第 23 條容許主管機關就特殊包裝公告部分免標或採替代標示；第 25 條只對公告特定散裝食品及直接供應飲食場所訂定中文標示或販售限制，不是所有散裝食品一律違法。頁首列最新修正日 2019-06-12。查閱日 2026-11-21。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "查閱全國法規資料庫現行條文與沿革，逐條核對第 22、23、25 條適用對象、例外及公告授權，並記錄修正與施行時間。"
+    },
+    {
+      "source_id": "tw02_tfda_oil_guide_2026",
+      "title": "食藥署：烹調用油如何選？掌握溫度與特性（藥物食品安全週報第 1077 期，2026-05-08）",
+      "url": "https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1618&r=1369454523&tid=5620",
+      "claim": "食藥署建議依油品特性、烹調溫度與加熱時間選油；依產品標示保存於陰涼乾燥、避光處，保持密封並於標示保存／有效期限前使用。該期稱近 3 年檢驗結果符合規定，但未提供抽驗分母、抽樣設計與各油種分佈，不可推成市場全體零風險。",
+      "supporting_passage": "食藥署建議依油品特性、烹調溫度與加熱時間選油；依產品標示保存於陰涼乾燥、避光處，保持密封並於標示保存／有效期限前使用。該期稱近 3 年檢驗結果符合規定，但未提供抽驗分母、抽樣設計與各油種分佈，不可推成市場全體零風險。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱食藥署第 1077 期內容，核對油品選擇、烹調條件、保存方法與抽驗描述及其母數限制。"
+    },
+    {
+      "source_id": "tw02_tfda_oil_sampling_2026",
+      "title": "食藥署：食用油脂全國抽驗結果（2026-08-26）",
+      "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=t634636",
+      "claim": "地方衛生局因應油品事件，自 2026-07-01 至 2026-08-26 擴大抽驗市售食用油共 658 件，品項含大豆沙拉油、麻油／香油、苦茶油、葵花油及芥花油；其中含先前公告的 11 件中聯事件產品，另有 14 件苦茶油苯(a)駢芘不合格。屬事件後擴大行政抽驗，不是市場機率抽樣或家庭購油暴露母數，不能換算市場違規率或個人機率。",
+      "supporting_passage": "地方衛生局因應油品事件，自 2026-07-01 至 2026-08-26 擴大抽驗市售食用油共 658 件，品項含大豆沙拉油、麻油／香油、苦茶油、葵花油及芥花油；其中含先前公告的 11 件中聯事件產品，另有 14 件苦茶油苯(a)駢芘不合格。屬事件後擴大行政抽驗，不是市場機率抽樣或家庭購油暴露母數，不能換算市場違規率或個人機率。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱食藥署 2026-08-26 新聞稿，核對抽驗期間、658 件母數、油品類別、11 件既公告產品及 14 件不合格苦茶油。"
+    },
+    {
+      "source_id": "tw02_tfda_oil_incident_portal",
+      "title": "食藥署：115 年油脂案專區",
+      "url": "https://www.fda.gov.tw/TC/site13712.aspx",
+      "claim": "動態專區提供 2026 年油脂事件的受影響品項、產品批號、查核與回收處置入口；使用者須按品名、批號、規格及有效日期核對，查到舊文章時重新確認最新公告。此頁是最新公告入口，不代表市場汙染率。",
+      "supporting_passage": "動態專區提供 2026 年油脂事件的受影響品項、產品批號、查核與回收處置入口；使用者須按品名、批號、規格及有效日期核對，查到舊文章時重新確認最新公告。此頁是最新公告入口，不代表市場汙染率。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱食藥署 115 年油脂案專區，確認為持續更新的產品公告、查核及處置入口。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原題的油品安全、來源與保存需求，移除不適用台灣的中國 SC 編號條件及對小型／散裝業者的概括汙名；改依台灣包裝食品標示規範、公告特定散裝食品要求、食藥署批次公告及油品保存建議撰寫。",
+  "review_method": "首次正式刊載，不是已核對歷史正文的回溯再審。核對固定 ID、manifest 上游版本及第二章結構化草稿 SHA；查閱現行食品安全衛生管理法第22、23、25條及法規沿革，辨別包裝食品標示、例外公告和特定散裝食品規範；直接查閱食藥署2026年油品選購保存指引、8月26日擴大行政抽驗新聞稿及動態事件專區。對658件行政抽驗清楚標出期間、產品母數、事件背景及非機率抽樣限制，不換算市場率或家庭購買機率。",
+  "limits": [
+    "食安法要求須依食品類別、相關公告及包裝條件判讀；第25條不是所有散裝油一律違法。",
+    "2026年658件抽驗是油品事件後擴大行政抽驗，含不同油種，並非涵蓋市場所有產品的隨機樣本；不適合作為個人買到問題油的機率或全市場違規率。",
+    "動態事件專區只供查核公告品項與批號，會更新，不能用單一批次事件推定某油種、冷壓或小量製作普遍不安全。",
+    "油品外觀或氣味正常不能證明沒有汙染；標示查核亦不能取代主管機關公告與產品批號確認。",
+    "未取得食品科學／食安專業人員獨立審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "abac2dbfc3fa49d7926ee35ac56c66a56fb3c8162909c9cd38c4eb4b90a8f333",
+  "source_ids": [
+    "tw02_tfda_food_act_labeling",
+    "tw02_tfda_oil_guide_2026",
+    "tw02_tfda_oil_sampling_2026",
+    "tw02_tfda_oil_incident_portal"
+  ],
+  "frequency_assessment": "目前沒有可從本批事件後擴大行政抽驗推算全市場油品不合格率或消費者個人購買機率的母數。658件是抽驗件數，不是全台家庭購油量或隨機市場樣本。",
+  "statistics_assessed": [
+    {
+      "topic": "2026 年油品事件後全國行政擴大抽驗",
+      "value": {
+        "items_sampled": 658,
+        "previously_announced_zhonglian_items_included": 11,
+        "additional_camellia_oil_baP_failures": 14
+      },
+      "unit": "食用油抽驗件數；非市場發生率或消費者個人機率",
+      "period": "2026-07-01 至 2026-08-26",
+      "geographic_scope": "台灣中央與地方衛生局市售油品行政抽驗",
+      "population": "658 件不同油種的市售油品樣本",
+      "numerator": "14 件苦茶油苯(a)駢芘不合格；另 11 件為先前公布之中聯事件問題品項，包含在總抽驗件數中",
+      "denominator": "658 件抽驗樣本",
+      "denominator_definition": "因油品事件擴大的行政抽驗，不是隨機市場樣本、所有上市商品或家庭購油分母",
+      "event_definition": "官方公告的抽驗不符合規定件數；抽驗產品包括不同油種",
+      "data_type": "事件後行政監測與檢驗",
+      "limitations": "抽樣由事件觸發且品種不同；分母不是市場所有油品，不可算出個人購買風險或市場違規率；單一不合格事件不代表同類油品全體不安全。",
+      "source_ids": [
+        "tw02_tfda_oil_sampling_2026"
+      ],
+      "accessed_at": "2026-11-21"
+    }
+  ],
+  "unresolved_questions": [
+    "食藥署動態事件專區可能持續更新；正式內容複查時需再核對當期品項與批號。",
+    "658件行政抽驗無市場機率抽樣分母，不能估算個人暴露機率。",
+    "未取得食品科學、食品衛生或食品標示法律專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "食品科學／食用油氧化及保存",
+      "食品衛生安全與抽驗資料解讀",
+      "食品標示法規適用範圍"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "4b8559a91a40d1b66dbda3ed8e070f39a4cf7e91424c6bf4fbfe17f21cc69672",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "首次正式發布。保留原題的油品安全、來源與保存需求，移除不適用台灣的中國 SC 編號條件及對小型／散裝業者的概括汙名；改依台灣包裝食品標示規範、公告特定散裝食品要求、食藥署批次公告及油品保存建議撰寫。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_oil_safety_question_with_taiwan_label_and_batch_guidance",
+    "original_question": "買油如何兼顧品質、安全、來源及保存，避免不明來源或標示不清的產品？",
+    "reader_content_decision": "保留油品安全與可追溯需求，按台灣包裝食品標示、特定散裝食品規則、食藥署公告與批號核對說明。原作的中國 SC 編號不作台灣購買條件；小作坊／散裝油不一概視為違法或有毒，讀者以可查來源、公告及產品批次處理。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "必須看中國 SC 編號",
+        "decision": "remove_as_non_taiwan_regulatory_identifier",
+        "reason": "SC 編號為原作法域的標示／管理條件，不能代替台灣食品標示規定。"
+      },
+      {
+        "original_claim": "小作坊散裝自榨油一概不安全",
+        "decision": "replace_with_source_and_batch_traceability",
+        "reason": "沒有支持此概括風險的台灣市場比較資料；台灣第25條只涵蓋主管機關公告之特定散裝食品，應按適用公告和業者資訊核對。"
+      },
+      {
+        "original_claim": "包裝及保存可降低不確定性",
+        "decision": "retain_with_taiwan_law_and_current_guidance",
+        "reason": "台灣法律及食藥署現行指引支持按產品標示、保存條件與官方批次公告處理。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "查閱官方公告與產品標示不需另付費；包裝容量及不同油品價格不一，按家庭用量選擇，不需買最高價產品。",
+  "legal_date_assessment": {
+    "law": "食品安全衛生管理法",
+    "provisions": [
+      "第22條",
+      "第23條",
+      "第25條"
+    ],
+    "checked_at": "2026-11-21",
+    "current_consolidated_revision_date": "2019-06-12",
+    "date_review": [
+      "2014-02-05 修正公布的部分標示規定，法律沿革所列第22條第1項第4、5款自2014-06-19施行；其他相關條文依該次公布日施行。",
+      "2014-12-10 修正公布第22條，新增可追溯來源／生產系統標示規定自公布後六個月、即2015-06-10施行；其他本次修正依法律沿革的個別施行條件判讀。",
+      "2015-02-04 修正第25條；現行整編條文已納入。2019-06-12 最新修法增訂第46-1條，未改本篇引用的第22、23、25條。"
+    ],
+    "effective_status": "本篇按2026-11-21查得現行有效條文敘述；不引用已公告未施行規定。特定散裝食品公告須另按產品類別核對。"
+  }
+}

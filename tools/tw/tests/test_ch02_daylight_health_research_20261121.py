@@ -98,10 +98,15 @@ class DaylightHealthResearchPublicationTests(unittest.TestCase):
             baseline_rechecks=baseline_register["substantive_rechecks"],
             current_rechecks=self.register["substantive_rechecks"],
         )
-        self.assertEqual(changed, {ITEM_ID})
-        current_ids_without_new_item = [row["id"] for row in self.runtime["items"] if row["id"] != ITEM_ID]
+        new_runtime_ids = set(current_items) - set(baseline_items)
+        self.assertIn(ITEM_ID, changed)
+        self.assertTrue(new_runtime_ids <= changed)
+        current_existing_ids = [
+            row["id"] for row in self.runtime["items"]
+            if row["id"] in baseline_items
+        ]
         self.assertEqual(
-            current_ids_without_new_item,
+            current_existing_ids,
             [row["id"] for row in baseline_runtime["items"]],
         )
         old_chapter = next(row for row in baseline_chapter["entries"] if row[0] == 31)

@@ -1,0 +1,196 @@
+{
+  "id": "TW-02-033",
+  "reviewer": "ChatGPT（AI 協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-033.md",
+  "target_sha256": "89d888e8d3c17b14a708b142ef7f122fdec39e26dc3588d4467e2b9c6574fcd9",
+  "source_reviewed_sha256": "89d888e8d3c17b14a708b142ef7f122fdec39e26dc3588d4467e2b9c6574fcd9",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-diet-oil-chili-topic-fidelity-20261121.json",
+  "source_bundle_sha256": "247df53d3c80139e160e2d904213b98e94f68fe5e7aed708d8ad0e8b671c6b80",
+  "source_checks": [
+    {
+      "source_id": "tw02_chili_molisani_2019",
+      "title": "Bonaccio 等：義大利成人辣椒攝取與死亡率研究（2019）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31856971/",
+      "claim": "Moli-sani 前瞻世代於 2005 至 2010 年招募 22,811 名義大利成年男女，以 EPIC 飲食頻率問卷記錄辣椒攝取類別；中位追蹤 8.2 年，記錄 1,236 例全因死亡。每週吃辣超過 4 次相較不吃或很少吃者，全因死亡調整後 HR 0.77（95% CI 0.66–0.90），心血管死亡 HR 0.66（0.50–0.86）。觀察性關聯，不證明因果或台灣個人風險。",
+      "supporting_passage": "Moli-sani 前瞻世代於 2005 至 2010 年招募 22,811 名義大利成年男女，以 EPIC 飲食頻率問卷記錄辣椒攝取類別；中位追蹤 8.2 年，記錄 1,236 例全因死亡。每週吃辣超過 4 次相較不吃或很少吃者，全因死亡調整後 HR 0.77（95% CI 0.66–0.90），心血管死亡 HR 0.66（0.50–0.86）。觀察性關聯，不證明因果或台灣個人風險。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀 PubMed 摘要與研究結果，核對隊列招募地區、年份、飲食問卷分類、追蹤中位數、死亡件數及調整後 HR。"
+    },
+    {
+      "source_id": "tw02_chili_meta_2021",
+      "title": "Ofori-Asenso 等：辣食攝取與心血管及全因死亡率統合分析（2021）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33657876/",
+      "claim": "資料庫檢索至 2020 年 2 月，納入美國、中國、義大利及伊朗 4 項前瞻世代研究，共 564,748 名成人，中位追蹤 9.7 年。規律食用辣椒、辣椒醬或辣油相較不規律者，全因死亡合併 HR/RR 0.88（95% CI 0.86–0.90），心臟疾病死亡 0.82（0.73–0.91）；腦血管死亡 0.79（0.53–1.17）未見明確差異。統合觀察性研究。",
+      "supporting_passage": "資料庫檢索至 2020 年 2 月，納入美國、中國、義大利及伊朗 4 項前瞻世代研究，共 564,748 名成人，中位追蹤 9.7 年。規律食用辣椒、辣椒醬或辣油相較不規律者，全因死亡合併 HR/RR 0.88（95% CI 0.86–0.90），心臟疾病死亡 0.82（0.73–0.91）；腦血管死亡 0.79（0.53–1.17）未見明確差異。統合觀察性研究。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀 PubMed 原始系統性回顧摘要，核對檢索截止日、國別、納入研究數、參與者及追蹤期間、全因與死因別估計及信賴區間。"
+    },
+    {
+      "source_id": "tw02_chili_meta_2022",
+      "title": "Yang 等：辣椒攝取與全因及特定死因死亡率統合分析（2022 線上發表）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35038885/",
+      "claim": "檢索至 2020-12-20，納入 4 項世代研究、564,748 人；報告全因死亡 31,527 人、心血管死亡 10,184 人及癌症死亡 9,868 人。辣椒攝取相較不吃或很少吃者的全因死亡調整 HR 0.87（95% CI 0.85–0.90）、心血管死亡 0.89（0.85–0.93）、癌症死亡 0.92（0.88–0.97）。其原始世代與其他辣食統合分析有重疊，不應視為獨立樣本重複相加。",
+      "supporting_passage": "檢索至 2020-12-20，納入 4 項世代研究、564,748 人；報告全因死亡 31,527 人、心血管死亡 10,184 人及癌症死亡 9,868 人。辣椒攝取相較不吃或很少吃者的全因死亡調整 HR 0.87（95% CI 0.85–0.90）、心血管死亡 0.89（0.85–0.93）、癌症死亡 0.92（0.88–0.97）。其原始世代與其他辣食統合分析有重疊，不應視為獨立樣本重複相加。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀 PubMed 原始統合分析摘要，核對檢索日期、納入隊列數、總參與者與死因別事件數、估計值，並與 2021 回顧的母數辨識重疊。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原題每週多次吃辣與死亡率研究問題；以義大利前瞻世代及兩篇可能重疊的多國統合分析整理相對估計，明確區分觀察性關聯、群體 HR/RR 與個人風險；在台灣日常用辣椒調味，不提供延壽頻率或保健品處方。",
+  "review_method": "首次正式刊載，不是已核對歷史正文的回溯再審。核對原作固定 ID、原題、manifest upstream commit/hash、待處理狀態與第二章結構化草稿 SHA；逐項查閱義大利原始世代研究及兩篇辣椒死亡率統合分析摘要，記錄招募期、研究地區、問卷暴露、追蹤期間、全因與死因別事件及估計。比較兩篇統合分析的納入研究數與總母數並標記重疊；未找到能代表台灣成人且採可比較暴露定義的長期死亡資料，不推算台灣個人機率。",
+  "limits": [
+    "辣椒死亡率研究為義大利及多國觀察世代／統合分析，並非台灣代表性資料或隨機飲食介入。",
+    "相對 HR/RR 是群體模型比較，不是個人死亡機率下降百分比或因果效果；辣椒種類、攝取頻率、飲食背景及混雜控制不同。",
+    "兩篇統合分析納入的世代有重疊，不能將參與者數或事件數相加並稱為獨立重複驗證。",
+    "目前未找到台灣同口徑、可代表一般成人且連結辣椒攝取與長期死亡的全國研究；不能據此訂台灣通用攝取頻率。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "bc67d587082cd7601b3b1d5993a32fd6c25dd28c75868ebf6503f2e090d78f13",
+  "source_ids": [
+    "tw02_chili_molisani_2019",
+    "tw02_chili_meta_2021",
+    "tw02_chili_meta_2022"
+  ],
+  "frequency_assessment": "未找到可代表台灣人口、以同一暴露定義追蹤辣椒攝取與死亡結果的全國資料。義大利及多國觀察研究提供群體關聯，但不能換算台灣人個人機率；因此不設定每週次數目標。",
+  "statistics_assessed": [
+    {
+      "topic": "Moli-sani 義大利成人辣椒攝取與全因／心血管死亡",
+      "value": {
+        "all_cause_HR": 0.77,
+        "all_cause_95_CI": [
+          0.66,
+          0.9
+        ],
+        "cardiovascular_HR": 0.66,
+        "cardiovascular_95_CI": [
+          0.5,
+          0.86
+        ]
+      },
+      "unit": "每週 >4 次相較不吃／很少吃之調整後危險比；非絕對死亡風險",
+      "period": "2005–2010 年招募；中位追蹤 8.2 年",
+      "geographic_scope": "義大利 Moli-sani 研究地區",
+      "population": "22,811 名成年男女",
+      "numerator": "全因死亡 1,236 人；摘要未列各辣椒組及心血管死因的分子",
+      "denominator": "22,811 名研究參與者",
+      "denominator_definition": "Moli-sani 世代納入者，不是義大利全國隨機抽樣或台灣人口",
+      "event_definition": "全因與心血管疾病死亡；辣椒攝取依 EPIC 飲食頻率問卷分組",
+      "data_type": "前瞻性觀察世代研究與多變項 Cox 模型",
+      "limitations": "研究暴露為入組時飲食問卷；殘餘混雜不能排除，HR 不是個人死亡機率或因果效果；不能外推為台灣通用頻率。",
+      "source_ids": [
+        "tw02_chili_molisani_2019"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "多國辣食攝取與死亡率統合分析（Ofori-Asenso 等，2021）",
+      "value": {
+        "all_cause_HR_RR": 0.88,
+        "all_cause_95_CI": [
+          0.86,
+          0.9
+        ],
+        "cardiac_death_HR_RR": 0.82,
+        "cardiac_death_95_CI": [
+          0.73,
+          0.91
+        ],
+        "cerebrovascular_death_HR_RR": 0.79,
+        "cerebrovascular_death_95_CI": [
+          0.53,
+          1.17
+        ]
+      },
+      "unit": "規律食用相較不規律食用之合併相對危險比／危險比；非個人機率",
+      "period": "檢索至 2020-02；中位追蹤 9.7 年",
+      "geographic_scope": "美國、中國、義大利及伊朗之四個前瞻性世代",
+      "population": "564,748 名成人（原始四世代合計）",
+      "numerator": "統合摘要未提供全因或死因別總事件分子",
+      "denominator": "564,748 名世代參與者",
+      "denominator_definition": "四個觀察性世代的合併參與人數；與其他統合分析可能重疊",
+      "event_definition": "全因、心臟疾病及腦血管疾病死亡；辣食包含辣椒、辣椒醬或辣油，分類依各原始研究",
+      "data_type": "前瞻世代系統性回顧與隨機效應統合分析",
+      "limitations": "不同研究的辣食定義及攝取頻率不一；腦血管死亡 CI 含無差異；不是隨機試驗。",
+      "source_ids": [
+        "tw02_chili_meta_2021"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "辣椒攝取與全因及特定死因死亡率統合分析（Yang 等，2022 線上發表）",
+      "value": {
+        "all_cause_adjusted_HR": 0.87,
+        "all_cause_95_CI": [
+          0.85,
+          0.9
+        ],
+        "cardiovascular_HR": 0.89,
+        "cardiovascular_95_CI": [
+          0.85,
+          0.93
+        ],
+        "cancer_HR": 0.92,
+        "cancer_95_CI": [
+          0.88,
+          0.97
+        ]
+      },
+      "unit": "辣椒攝取相較不吃／很少吃之合併調整危險比；非個人機率",
+      "period": "資料庫檢索至 2020-12-20；原世代追蹤期間不一，摘要未報一個共同追蹤年數",
+      "geographic_scope": "四個前瞻性世代研究的合併；與同類回顧有原始世代重疊",
+      "population": "564,748 名世代參與者",
+      "numerator": "全因死亡 31,527 人、心血管死亡 10,184 人、癌症死亡 9,868 人",
+      "denominator": "564,748 名研究參與者",
+      "denominator_definition": "四個原始世代合併母數；並非獨立於 2021 年統合分析的新增樣本",
+      "event_definition": "全因、心血管及癌症死亡；原研究暴露定義各異",
+      "data_type": "前瞻世代研究系統性回顧與統合分析",
+      "limitations": "納入研究與前一篇統合分析重疊，不能相加計算樣本或視為獨立重複；仍為觀察性證據。",
+      "source_ids": [
+        "tw02_chili_meta_2022"
+      ],
+      "accessed_at": "2026-11-21"
+    }
+  ],
+  "unresolved_questions": [
+    "尚無台灣成人辣椒攝取頻率與長期死亡的可比較代表性資料。",
+    "沒有隨機試驗證明為延壽而增加辣椒攝取有效；因症狀不耐受者仍應依自身狀況調整。",
+    "未取得營養流行病學或營養專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養流行病學（觀察研究、統合分析及母數重疊解讀）",
+      "營養學（實際飲食應用與特殊腸胃狀況界線）"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "b86e70983f7aa2756931db6185a5958f5cab34c1f81b7818a05f306b20b13a72",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "首次正式發布。保留原題每週多次吃辣與死亡率研究問題；以義大利前瞻世代及兩篇可能重疊的多國統合分析整理相對估計，明確區分觀察性關聯、群體 HR/RR 與個人風險；在台灣日常用辣椒調味，不提供延壽頻率或保健品處方。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_chili_mortality_research_with_taiwan_context",
+    "original_question": "每週吃四次以上辣椒是否與死亡率有關？",
+    "reader_content_decision": "保留原作辣椒頻率與壽命研究問題，呈現原始義大利世代和兩篇統合分析的研究設計、數值、重疊與外推限制；台灣生活建議只作一般調味，不把研究組別改成每週目標。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "每週吃辣超過四次可降低死亡機率",
+        "decision": "retain_as_observational_association_not_prescription",
+        "reason": "義大利研究以飲食問卷的攝取分類比較研究群體，未證明因果；沒有台灣個人絕對風險或通用劑量。"
+      },
+      {
+        "original_claim": "辣椒可能降低心血管死亡",
+        "decision": "retain_with_meta_analysis_overlap_and_uncertainty",
+        "reason": "多國世代統合分析有相似關聯，但原始研究重疊，研究異質與殘餘混雜仍限制因果解讀。"
+      },
+      {
+        "original_claim": "台灣讀者應增加辣椒攝取",
+        "decision": "not_supported",
+        "reason": "來源未測試台灣人的處方性增加；依口味調味即可，不需為研究頻率忍受不適或購買萃取產品。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "日常調味無須新增支出或改變習慣；不需要購買辣椒萃取物、燃脂或延壽保健品。"
+}

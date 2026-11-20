@@ -1,0 +1,242 @@
+{
+  "id": "TW-02-041",
+  "reviewer": "ChatGPT（AI 協助查核台灣官方資料與原始研究；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch02/TW-02-041.md",
+  "target_sha256": "aff5cc369209ae4d667d05559a28de6e07006b36da49e64cf41ecc90febb9e0e",
+  "source_reviewed_sha256": "aff5cc369209ae4d667d05559a28de6e07006b36da49e64cf41ecc90febb9e0e",
+  "source_bundle_path": "localization/tw-edition/sources/ch02-diet-oil-chili-topic-fidelity-20261121.json",
+  "source_bundle_sha256": "247df53d3c80139e160e2d904213b98e94f68fe5e7aed708d8ad0e8b671c6b80",
+  "source_checks": [
+    {
+      "source_id": "tw02_hpa_dietary_guideline_2018",
+      "title": "國健署：《每日飲食指南手冊》（2018 年版）",
+      "url": "https://health.hpa.gov.tw/common/Download.ashx?f=cfd97d0b-f0e7-49b0-9014-e421655c4f4b.pdf&o=%E6%AF%8F%E6%97%A5%E9%A3%B2%E9%A3%9F%E6%8C%87%E5%8D%97%E6%89%8B%E5%86%8A.pdf",
+      "claim": "國健署 2018 年版飲食指南列出橄欖油、苦茶油、芥花油、油菜籽油、高油酸葵花油、花生油等含較多單元不飽和脂肪的選項；提醒椰子油與棕櫚油雖為植物油但飽和脂肪較高，堅果種子應取代部分精製油脂而非額外增加。油脂份量依個人熱量需求安排。",
+      "supporting_passage": "國健署 2018 年版飲食指南列出橄欖油、苦茶油、芥花油、油菜籽油、高油酸葵花油、花生油等含較多單元不飽和脂肪的選項；提醒椰子油與棕櫚油雖為植物油但飽和脂肪較高，堅果種子應取代部分精製油脂而非額外增加。油脂份量依個人熱量需求安排。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀國健署《每日飲食指南手冊》油脂與堅果種子章節，核對油品例示、飽和脂肪分類及份量替代原則。"
+    },
+    {
+      "source_id": "tw02_sfa_cochrane_2020",
+      "title": "Hooper 等：減少飽和脂肪攝取與心血管疾病 Cochrane 系統性回顧（2020 年第 8 期修正版）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32827219/",
+      "claim": "資料庫檢索更新至 2019-10，納入 15 項隨機試驗、16 組比較、56,675 名成人，介入至少 24 個月。合併心血管事件分析涵蓋 12 項試驗、53,758 人與 4,538 起事件，RR 0.83（95% CI 0.70–0.98；I²=67%，中等確定性）；全因死亡 11 項試驗、55,858 人 RR 0.96（0.90–1.03），心血管死亡 10 項、53,421 人 RR 0.95（0.80–1.12）。效果是試驗群體合併比較，不是個人絕對風險下降 17%。採用修正版 Pub3 數值。",
+      "supporting_passage": "資料庫檢索更新至 2019-10，納入 15 項隨機試驗、16 組比較、56,675 名成人，介入至少 24 個月。合併心血管事件分析涵蓋 12 項試驗、53,758 人與 4,538 起事件，RR 0.83（95% CI 0.70–0.98；I²=67%，中等確定性）；全因死亡 11 項試驗、55,858 人 RR 0.96（0.90–1.03），心血管死亡 10 項、53,421 人 RR 0.95（0.80–1.12）。效果是試驗群體合併比較，不是個人絕對風險下降 17%。採用修正版 Pub3 數值。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "核對 PubMed 修正版 PMID 32827219 及 Cochrane 第 8 期摘要，避免沿用修正前 PMID 32428300 的舊估計值。"
+    },
+    {
+      "source_id": "tw02_sfa_risk_stratified_2026",
+      "title": "Steen 等：減少或改變飽和脂肪攝取的風險分層隨機試驗系統性回顧（2026）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41397264/",
+      "claim": "MEDLINE、Embase、Cochrane Central 檢索至 2025-07，納入 17 項隨機試驗、66,337 名成人。低至中等確定性合併估計為全因死亡 RR 0.96（95% CI 0.88–1.06）、心血管死亡 0.93（0.77–1.11）、非致命心肌梗塞 0.86（0.70–1.06）、致命與非致命腦中風 0.83（0.58–1.19）。低基線風險者 5 年絕對差異低於作者重要性門檻；高風險者可能有較大效益。以多元不飽和脂肪替代飽和脂肪的非致命 MI 子群 RR 0.75（0.58–0.99）；替代營養素資料有限。",
+      "supporting_passage": "MEDLINE、Embase、Cochrane Central 檢索至 2025-07，納入 17 項隨機試驗、66,337 名成人。低至中等確定性合併估計為全因死亡 RR 0.96（95% CI 0.88–1.06）、心血管死亡 0.93（0.77–1.11）、非致命心肌梗塞 0.86（0.70–1.06）、致命與非致命腦中風 0.83（0.58–1.19）。低基線風險者 5 年絕對差異低於作者重要性門檻；高風險者可能有較大效益。以多元不飽和脂肪替代飽和脂肪的非致命 MI 子群 RR 0.75（0.58–0.99）；替代營養素資料有限。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀 PubMed 原始系統性回顧摘要，核對搜尋日期、RCT 數與參與者、風險分層、主要結局、替代營養素子群及證據確定性。"
+    },
+    {
+      "source_id": "tw02_ala_cochrane_2020",
+      "title": "Abdelhamid 等：Omega-3 脂肪酸與心血管疾病一級及二級預防 Cochrane 系統性回顧（2020）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32114706/",
+      "claim": "ALA 分析含 5 項隨機試驗、19,327 人：全因死亡 459 人，RR 1.01（95% CI 0.84–1.20）；心血管死亡 219／18,619，RR 0.96（0.74–1.25）；冠心病事件 397／19,061，RR 1.00（0.82–1.22）；心血管事件 884／19,327，RR 0.95（0.83–1.07），證據確定性低至中等。ALA 來自不同飲食或補充介入，並非特定亞麻籽油品牌的臨床效果。",
+      "supporting_passage": "ALA 分析含 5 項隨機試驗、19,327 人：全因死亡 459 人，RR 1.01（95% CI 0.84–1.20）；心血管死亡 219／18,619，RR 0.96（0.74–1.25）；冠心病事件 397／19,061，RR 1.00（0.82–1.22）；心血管事件 884／19,327，RR 0.95（0.83–1.07），證據確定性低至中等。ALA 來自不同飲食或補充介入，並非特定亞麻籽油品牌的臨床效果。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "閱讀 PubMed 及 Cochrane 系統性回顧摘要，核對 ALA 專屬試驗數、不同結局分母及事件數，區分一般 ALA 介入與特定亞麻籽油商品。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原題飽和脂肪替代及亞麻籽油心血管效果問題；使用國健署飲食指引、修正版2020 Cochrane回顧、2026風險分層RCT回顧及ALA Cochrane結果，避免把植物油視為同質或特定油品視為治療。",
+  "review_method": "首次正式刊載，不是既有正文的回溯再審。核對上游原題及結構化草稿 SHA；閱讀國健署每日飲食指南油脂章節、Cochrane 2020飽和脂肪修正版 Pub3、2026風險分層隨機試驗系統性回顧與ALA專屬隨機試驗統合結果。逐項區分納入試驗總人數和不同結局分析分母、全因死亡與心血管事件、相對效果與絕對風險門檻；沒有將國際研究推為台灣個人風險或特定品牌亞麻籽油效果。",
+  "limits": [
+    "2020及2026回顧所納入試驗、替代營養素和基線風險不同；RR不得當成個人絕對風險變化。",
+    "2026回顧對低基線風險者的5年絕對差異未達作者重要性門檻；高風險者可能較有益，但研究的替代營養素與情境仍有限。",
+    "ALA試驗研究的是多種飲食或補充介入，不等同單獨飲用特定亞麻籽油或品牌。",
+    "未找到可以直接換算台灣個人、特定油種替代效果的同口徑隨機試驗或可信絕對風險估計。",
+    "未取得營養學、心臟科或營養流行病學專業人員獨立審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "ef88944f9f7ed35a82db60a31e7335fb8f69e036205fdb0488de03321b0516e2",
+  "source_ids": [
+    "tw02_hpa_dietary_guideline_2018",
+    "tw02_sfa_cochrane_2020",
+    "tw02_sfa_risk_stratified_2026",
+    "tw02_ala_cochrane_2020"
+  ],
+  "frequency_assessment": "沒有可由本批國際RCT統合結果換算出的台灣個人心血管事件發生率；試驗RR是介入與比較組的群體效果估計，不是台灣居民個人機率或保證效果。",
+  "statistics_assessed": [
+    {
+      "topic": "減少飽和脂肪之 2020 Cochrane 隨機試驗回顧",
+      "value": {
+        "all_randomized_trials": 15,
+        "total_comparisons": 16,
+        "all_trial_participants": 56675,
+        "combined_CV_events_RR": 0.83,
+        "combined_CV_events_95_CI": [
+          0.7,
+          0.98
+        ],
+        "combined_CV_events_I2_percent": 67,
+        "all_cause_mortality_RR": 0.96,
+        "all_cause_mortality_95_CI": [
+          0.9,
+          1.03
+        ],
+        "cardiovascular_mortality_RR": 0.95,
+        "cardiovascular_mortality_95_CI": [
+          0.8,
+          1.12
+        ]
+      },
+      "unit": "心血管事件及死亡之合併相對風險；不是個人絕對風險",
+      "period": "檢索更新至 2019-10；試驗介入至少 24 個月；心血管事件平均追蹤約 52 個月",
+      "geographic_scope": "多國隨機試驗；回顧涵蓋工業化國家，非台灣專屬試驗",
+      "population": "15 項 RCT 的 56,675 名成人（包含有／無心血管疾病者）",
+      "numerator": "心血管事件分析為 12 項試驗、53,758 人中 4,538 起事件；全因與心血管死亡的 outcome-specific 分子未在摘要中提供",
+      "denominator": "總體 56,675 人；心血管事件 53,758 人；全因死亡 55,858 人；心血管死亡 53,421 人",
+      "denominator_definition": "各結局納入試驗數與可用參與者不同，不能以總參與者數替代各 outcome 分母",
+      "event_definition": "合併心血管事件、全因死亡及心血管死亡；介入為降低或改變飽和脂肪攝取",
+      "data_type": "隨機對照飲食介入試驗之系統性回顧與統合分析",
+      "limitations": "各試驗介入方式與替代營養素不同；事件結果有異質性；RR 0.83 不等於每個人絕對風險降低 17%。",
+      "source_ids": [
+        "tw02_sfa_cochrane_2020"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "飽和脂肪介入效果之 2026 風險分層系統性回顧",
+      "value": {
+        "trials": 17,
+        "participants": 66337,
+        "all_cause_RR": 0.96,
+        "all_cause_95_CI": [
+          0.88,
+          1.06
+        ],
+        "cardiovascular_death_RR": 0.93,
+        "cardiovascular_death_95_CI": [
+          0.77,
+          1.11
+        ],
+        "nonfatal_MI_RR": 0.86,
+        "nonfatal_MI_95_CI": [
+          0.7,
+          1.06
+        ],
+        "fatal_nonfatal_stroke_RR": 0.83,
+        "fatal_nonfatal_stroke_95_CI": [
+          0.58,
+          1.19
+        ],
+        "PUFA_replacement_nonfatal_MI_RR": 0.75,
+        "PUFA_replacement_nonfatal_MI_95_CI": [
+          0.58,
+          0.99
+        ]
+      },
+      "unit": "依心血管基線風險及替代脂肪分層之合併相對風險；非個人機率",
+      "period": "資料庫搜尋至 2025-07；作者另估算五年絕對風險差",
+      "geographic_scope": "17 項成人 RCT 的系統性回顧；不代表台灣居民或單一國家樣本",
+      "population": "66,337 名成年試驗參與者，可有或沒有既有心血管疾病",
+      "numerator": "PubMed 摘要未提供各結局合併事件數；報告試驗群體相對效果與依基線風險估算之五年絕對差",
+      "denominator": "17 項試驗合計 66,337 人；個別結局可用母數隨試驗不同",
+      "denominator_definition": "隨機試驗合併參與人數，不是台灣人口分母或個人基線風險",
+      "event_definition": "全因死亡、心血管死亡、非致命心肌梗塞及致命／非致命腦中風；PUFA 子群為非致命心肌梗塞",
+      "data_type": "成人隨機試驗系統性回顧與風險分層統合分析",
+      "limitations": "多數結局低至中等確定性；替代營養素及試驗介入效果差異大；低風險者五年絕對差異低於作者重要性門檻，高風險者可能受益較多；仍非個人保證。",
+      "source_ids": [
+        "tw02_sfa_risk_stratified_2026"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "ALA 介入與死亡及心血管事件之 2020 Cochrane 回顧",
+      "value": {
+        "trials": 5,
+        "all_cause_deaths": 459,
+        "all_cause_RR": 1.01,
+        "all_cause_95_CI": [
+          0.84,
+          1.2
+        ],
+        "cardiovascular_deaths": 219,
+        "cardiovascular_participants": 18619,
+        "cardiovascular_RR": 0.96,
+        "cardiovascular_95_CI": [
+          0.74,
+          1.25
+        ],
+        "CHD_events": 397,
+        "CHD_participants": 19061,
+        "CHD_RR": 1.0,
+        "CHD_95_CI": [
+          0.82,
+          1.22
+        ],
+        "CVD_events": 884,
+        "CVD_participants": 19327,
+        "CVD_RR": 0.95,
+        "CVD_95_CI": [
+          0.83,
+          1.07
+        ]
+      },
+      "unit": "不同ALA飲食或補充介入的相對風險；不是特定亞麻籽油商品效果",
+      "period": "2020 年 Cochrane 回顧；納入試驗介入期間至少 12 個月但各研究不一",
+      "geographic_scope": "多國隨機試驗，回顧未提供可代表台灣的分層估計",
+      "population": "ALA 分析最多涵蓋 19,327 名成人；不同結局可用試驗數與分母不同",
+      "numerator": "全因死亡 459；心血管死亡 219；冠心病死亡 193；冠心病事件 397；心血管事件 884",
+      "denominator": "全因死亡 19,327；心血管死亡 18,619；冠心病死亡 18,353；冠心病事件 19,061；心血管事件 19,327",
+      "denominator_definition": "各結局依不同 ALA 試驗可用資料合併，須按結局使用相應分母",
+      "event_definition": "全因死亡、心血管死亡、冠心病死亡／事件及心血管事件",
+      "data_type": "隨機試驗系統性回顧與統合分析",
+      "limitations": "ALA 來源包含不同飲食與補充介入，並非特定亞麻籽油品牌；多個結局信賴區間含無差異，部分為低確定性；不支持護心產品宣稱。",
+      "source_ids": [
+        "tw02_ala_cochrane_2020"
+      ],
+      "accessed_at": "2026-11-21"
+    }
+  ],
+  "unresolved_questions": [
+    "尚無可直接估算台灣居民以特定油脂替代方案長期心血管結果的在地隨機證據。",
+    "需持續核對最新營養指引及2026年後的RCT統合證據。",
+    "未取得營養學、心臟科／血脂照護或營養流行病學獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "營養學與台灣膳食指南適用性",
+      "心臟科／血脂照護（高風險者的個別飲食調整）",
+      "營養流行病學與系統性回顧方法"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "0b6d362eb195df2917786848144841268c450378d1ee9e86a5148c8cc6836430",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "首次正式發布。保留原題飽和脂肪替代及亞麻籽油心血管效果問題；使用國健署飲食指引、修正版2020 Cochrane回顧、2026風險分層RCT回顧及ALA Cochrane結果，避免把植物油視為同質或特定油品視為治療。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_fat_replacement_and_flaxseed_oil_question_with_taiwan_guidance",
+    "original_question": "以植物油取代動物脂肪是否有健康效益？不必輪換油品；亞麻籽油能否護心？",
+    "reader_content_decision": "保留脂肪種類、替代營養素與亞麻籽油證據問題；以國健署現行可取得飲食指南和更近期風險分層RCT回顧補足研究背景，清楚區分油種、總量與替代對象。將海外群體效果限制在研究範圍，不推為台灣個人處方。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "植物油可以一概替代動物油",
+        "decision": "retain_with_fat_type_and_replacement_context",
+        "reason": "植物油含有不同脂肪酸組成；部分如椰子油及棕櫚油飽和脂肪比例較高，應說明替代對象與總量。"
+      },
+      {
+        "original_claim": "無須為健康頻繁輪換油品",
+        "decision": "retain",
+        "reason": "本次檢視的台灣飲食指南和試驗回顧沒有要求輪換多種高價油品；選擇合用、可負擔的油並控制總量。"
+      },
+      {
+        "original_claim": "亞麻籽油可護心",
+        "decision": "not_supported_as_product_claim",
+        "reason": "ALA試驗不等於特定亞麻籽油產品；系統性回顧顯示相關結局多為無明確差異或低確定性，不能當作護心藥。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "不必為健康另買昂貴油品、強制輪替油種或增加總用油量；日常按料理方式和家庭預算挑選即可，已使用降血脂藥物者不自行停藥。"
+}
