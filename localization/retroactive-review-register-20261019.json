@@ -47717,6 +47717,993 @@
           "兒童傷害預防"
         ]
       }
+    },
+    {
+      "id": "TW-24-006",
+      "title": "對診療有疑問就當場要求封存病歷，雙方在場、開清單、各執一份",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "2361fbb34b59ae769b56655a931ee9f26ac5a201b87eac8c926c819e0f8810c6",
+      "before_sha256": "f210f393c595950a585a350ff7a5560441c848317c9105a83f0d21427c142a0a",
+      "after_sha256": "c98078774332dcaa08e707daf5025a58a34079069a55e33d6cad427db6c17b85",
+      "reviewed_at": "2026-11-21",
+      "review_due_at": "2027-02-21",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_review_due_at": "2026-12-31",
+      "prior_source_reviewed_sha256": "6088535f89aad0ee45abcfbddbf76c17c36479df6f291518bc478548b9627814",
+      "previous_body": "# 遇到醫療爭議，先保全資料，再選擇關懷、申訴與調解\n\n<!-- TW-ID: TW-24-006 -->\n\n## 適用情境與先做的事\n\n若治療後持續惡化、嚴重出血、呼吸困難或意識改變，先119或立即告知醫護，不等申訴、拿齊病歷或和解才治療。先請原院安排必要照護；需要第二意見或轉院時，帶可取得的摘要與用藥，避免因爭議自行斷藥或中斷治療。\n\n本篇適用在臺灣就醫後對醫療責任有疑問的病人與依法代理者；不以不滿療效就認定過失。先記錄時間、院所、處置、症狀與訴求，保存原始收據、同意書、病歷及合法取得的訊息，不修改原檔或公開他人個資。\n\n## 臺灣流程與適用條件\n\n醫療爭議發生時，醫預法第10條規定醫事機構自病人或其代理人、法定代理人、繼承人申請病歷複製本之翌日起七個工作日內，提供病歷及併同保存的同意書複製本；複製費由申請人負擔。保留申請與收件日期；這不是一切一般病歷申請都適用的七日承諾。\n\n先向院方關懷或申訴窗口要求說明病程與後續照護；談話、道歉或衛生局收件都不自動證明過失或賠償。再循醫事司醫預法專區，向院所所在地縣市衛生局查調解表單；病人與院所在不同縣市原則由院所所在地調解會管轄，另經各方及受理機關同意有例外。\n\n## 成本、時間、效益與容易出錯的地方\n\n依醫預法第30條，調解程序不收費；病歷複製、另請律師及第9條醫事專業諮詢等可能另有費用，先問各項計價，不把專業諮詢費當調解費。調解自受理文件資料齊備起四十五日內開會、三個月內完成；必要可延長三個月一次，當事人合意可再延一次。這不是事故日起三個月必拿賠償。\n\n民事起訴前有調解先行規則，直接起訴由法院移付；刑事由檢察官／法院依法移付並有例外，不能概稱都要自己先調解才能報案。調解失敗證明送達翌日起六個月內起訴等規定涉及申請時點的法律效果，不是所有求償、告訴期限都延長六個月。及早請律師核對個案期限，不只等院方回覆。\n\n調解未得調解委員及他方當事人同意，不得錄音、錄影或傳播；先問合法紀錄方式。簽名前讀清賠償、後續照護、權利拋棄及履行期限；法院核定調解可有確定判決等效力，不簽空白或不理解的和解。\n\n## 事件頻率與證據限制\n\n事件頻率：目前沒有可代表全臺所有就醫事件、具有一致事件定義及分母的醫療過失發生率。調解或鑑定行政案件數僅是進入該程序的案件，不能當已證實過失、全部受害人數或個人獲賠機率；不採其數字。按持續治療與不可逆和解風險處理，而非推估個人勝率。\n\n## 參考資料與限制\n\n醫預法2022-06-22公布，依2023-12-12行政院令於2024-01-01施行。法律過渡案件、請求權與告訴期限、證據能力及和解效力仍需個案法律專業確認；也不保證調解、退費或勝訴。\n\n- [醫療法（第21、22、60、61、63、64、71至74條）](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021)\n- [衛福部醫事司：醫療事故預防及爭議處理法專區](https://dep.mohw.gov.tw/DOMA/cp-2712-78087-106.html)\n- [醫療事故預防及爭議處理法：調解、病歷與效力](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227)\n- [行政院令：醫預法施行日期](https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029235/ch01/type1/gov01/num3/Eg.htm)\n",
+      "previous_source_ids": [
+        "ch24_medlaw",
+        "ch24_dispute",
+        "access_dispute_law",
+        "access_dispute_effect"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+          "claim": "TW-24-006：費用標準與收據、危急病人處置、醫療告知同意、病歷複製及轉診原則依不同條文判斷。",
+          "supporting_passage": "編者核對摘要，非逐字引文：費用標準與收據、危急病人處置、醫療告知同意、病歷複製及轉診原則依不同條文判斷。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOMA/cp-2712-78087-106.html",
+          "claim": "TW-24-006：醫療事故關懷、爭議調解、專業諮詢及地方衛生局流程；資料保全與調解不保證賠償。",
+          "supporting_passage": "編者核對摘要，非逐字引文：醫療事故關懷、爭議調解、專業諮詢及地方衛生局流程；資料保全與調解不保證賠償。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+          "claim": "TW-24-006：實讀現行第9、10、13至18、27至30條：調解不收費、病歷七工作日、齊備起算時程、民刑程序及法院核定效力，非保證賠償。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀現行第9、10、13至18、27至30條：調解不收費、病歷七工作日、齊備起算時程、民刑程序及法院核定效力，非保證賠償。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        },
+        {
+          "url": "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029235/ch01/type1/gov01/num3/Eg.htm",
+          "claim": "TW-24-006：實讀2023-12-12行政院令，2022-06-22制定公布之醫預法定2024-01-01施行；不是公布即生效。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀2023-12-12行政院令，2022-06-22制定公布之醫預法定2024-01-01施行；不是公布即生效。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+          "claim": "TW-24-006：費用標準與收據、危急病人處置、醫療告知同意、病歷複製及轉診原則依不同條文判斷。",
+          "supporting_passage": "編者核對摘要，非逐字引文：費用標準與收據、危急病人處置、醫療告知同意、病歷複製及轉診原則依不同條文判斷。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOMA/cp-2712-78087-106.html",
+          "claim": "TW-24-006：醫療事故關懷、爭議調解、專業諮詢及地方衛生局流程；資料保全與調解不保證賠償。",
+          "supporting_passage": "編者核對摘要，非逐字引文：醫療事故關懷、爭議調解、專業諮詢及地方衛生局流程；資料保全與調解不保證賠償。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+          "claim": "TW-24-006：實讀現行第9、10、13至18、27至30條：調解不收費、病歷七工作日、齊備起算時程、民刑程序及法院核定效力，非保證賠償。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀現行第9、10、13至18、27至30條：調解不收費、病歷七工作日、齊備起算時程、民刑程序及法院核定效力，非保證賠償。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        },
+        {
+          "url": "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029235/ch01/type1/gov01/num3/Eg.htm",
+          "claim": "TW-24-006：實讀2023-12-12行政院令，2022-06-22制定公布之醫預法定2024-01-01施行；不是公布即生效。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀2023-12-12行政院令，2022-06-22制定公布之醫預法定2024-01-01施行；不是公布即生效。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
+        }
+      ],
+      "source_ids": [
+        "ch24_medlaw",
+        "ch24_dispute",
+        "access_dispute_law",
+        "access_dispute_effect",
+        "ch24_medical_accident_care_5day_20261121"
+      ],
+      "new_source_ids": [
+        "ch24_medical_accident_care_5day_20261121"
+      ],
+      "source_records_reused": [
+        "ch24_medlaw",
+        "ch24_dispute",
+        "access_dispute_law",
+        "access_dispute_effect"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch24_medlaw",
+          "title": "醫療法（第21、22、60、61、63、64、71至74條）",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+          "claim": "TW-24-006：醫療法現行病歷取得、費用、急救與轉診原則。",
+          "supporting_passage": "非逐字引文：醫療法沿革顯示第71、73條屬2004-04-28全文修正公布條文，當時明定自公布日施行，依中央法規標準法第13條於2004-04-30生效；2026-09-23最新整體修正有改第72條但未改第71、73條。第71條病歷複製本及第73條危急病人先急救再轉診，與醫預法義務分開。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接核對全國法規資料庫醫療法現行條文及沿革、2026-09-23總統公布令和中央法規標準法第13條，確認第71、73條未被最新修正；不把整體法規最近修正日誤作此兩條修正日。"
+        },
+        {
+          "source_id": "ch24_dispute",
+          "title": "衛福部醫事司：醫療事故預防及爭議處理法專區",
+          "url": "https://dep.mohw.gov.tw/DOMA/cp-2712-78087-106.html",
+          "claim": "TW-24-006：官方醫預法專區、地方調解入口、專業諮詢資源與現行表單。",
+          "supporting_passage": "非逐字引文：衛福部醫事司專區最近更新顯示115-11-10，提供法規與子法、專業諮詢、縣市調解窗口及表單，並提醒地方衛生局可調整表單。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟衛福部醫事司官方專區，核對更新資訊、調解及諮詢入口。"
+        },
+        {
+          "source_id": "access_dispute_law",
+          "title": "醫療事故預防及爭議處理法：調解、病歷與效力",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+          "claim": "TW-24-006：醫預法第9、10、13至18、27至30條的專業諮詢、病歷、調解與程序界線。",
+          "supporting_passage": "非逐字引文：醫預法於2022-06-22制定公布；第3條界定重大傷害或死亡且非疾病本身或不可避免結果的醫療事故，第6條規定事故翌日起五個工作日內說明、溝通、提供協助與關懷；施行日依行政院命令另定。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接讀取法務部全國法規資料庫現行法第3、6、45條及行政院施行令；分開記錄公布日與法定施行日。"
+        },
+        {
+          "source_id": "access_dispute_effect",
+          "title": "行政院令：醫預法施行日期",
+          "url": "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029235/ch01/type1/gov01/num3/Eg.htm",
+          "claim": "TW-24-006：醫預法公告日與2024-01-01施行日分開記錄。",
+          "supporting_passage": "非逐字引文：行政院112年12月12日院臺衛字第1121043912號令明定2022-06-22制定公布的醫預法自2024-01-01施行。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "本輪直接開啟行政院公報命令原文並與全國法規資料庫第45條交叉核對，確認命令發布日期及法律實際施行日。"
+        },
+        {
+          "source_id": "ch24_medical_accident_care_5day_20261121",
+          "title": "全國法規資料庫：醫療事故預防及爭議處理法第3、6條",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+          "claim": "TW-24-006：法定醫療事故的院方說明、溝通、關懷協助及五工作日期限。",
+          "supporting_passage": "非逐字引文：醫預法第3條將重大傷害或死亡且非疾病本身或不可避免結果界定為醫療事故；第6條要求翌日起五個工作日內說明溝通並提供關懷協助，對小型醫療機構及溝通障礙另有規定。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接讀取法務部全國法規資料庫現行醫預法第3、6條；另用衛福部醫事司專區核對現行執行入口。"
+        }
+      ],
+      "taiwan_context": "臺灣就醫後的事故關懷、病歷申請及縣市調解流程；區分醫療事故與一般醫療爭議，延續治療優先。",
+      "frequency_assessment": "沒有可代表全臺所有就醫服務、採一致醫療事故定義並具有暴露分母的醫療過失發生率；行政調解件數不能換算個人機率。",
+      "statistics_assessed": [
+        {
+          "applicability": "relevant_but_no_national_incidence_denominator",
+          "indicator": "醫療事故及醫療過失發生頻率",
+          "period": "本次檢索截至2026-11-21；不以調解行政件數替代發生率",
+          "scope": "臺灣全國資料需求",
+          "population": "所有接受醫療服務者及全部醫療服務暴露",
+          "numerator": null,
+          "denominator": null,
+          "unit": null,
+          "data_type": "未找到具一致事故定義與醫療服務暴露分母的全國發生率；調解案件屬程序收案數",
+          "event_definition": "醫預法醫療事故限重大傷害或死亡且非疾病本身或不可避免結果；醫療爭議另指病人方認為不良結果應由機構或人員負責。",
+          "limitations": "調解、鑑定或通報件數不等同已證實醫療過失、全部受害者或個人勝訴機率；本篇不推估個人風險。",
+          "sources": [
+            "access_dispute_law",
+            "ch24_dispute"
+          ]
+        }
+      ],
+      "changes": "逐條核對臺灣醫預法現行事故定義及關懷義務，新增符合法定醫療事故時院方翌日起五工作日內說明、溝通及協助的步驟，並限定小型醫院／診所替代安排和溝通障礙協助；明示關懷不代表承認過失。其餘既有醫療持續照護、病歷與調解流程維持。",
+      "limits": [
+        "AI協助查核法規和服務資訊，未取得醫師、醫療法律或律師正式審閱。",
+        "未調閱病歷、申請關懷或實際提出調解；程序結果及個案期限須由專業人員確認。",
+        "本次以法務部現行法條為主要法律依據；未重新下載行政院公報命令附件，該來源日期承接2026-10-21已讀紀錄。"
+      ],
+      "unresolved_questions": [
+        "仍須由醫療法律專業確認個案是否構成醫療事故或醫療爭議，以及證據、時效與和解效力。",
+        "地方調解表單與受理窗口以事故當時院所所在地衛生局為準。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": "醫療／醫療法律專業",
+        "status": "pending",
+        "reason": "本輪為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-24-006.json",
+      "review_sha256": "29773596b9eab149f194695b4e26e46027b8bccb805fcdcd4a67722ff501f348",
+      "source_bundle_path": "localization/tw-edition/sources/ch17-ch24-highrisk-recheck-20261121.json",
+      "source_bundle_sha256": "80ffb66c1653c7c0379afa1e9624ef6a84cfb566bf2ed5f9a196645a62ba5f9c",
+      "legal_temporal_checks": [
+        {
+          "law": "醫療法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第71條",
+                "第73條"
+              ],
+              "promulgated_at": "2004-04-28",
+              "effective_at": "2004-04-30",
+              "basis": "2004-04-28全文修正公布明定自公布日施行；依中央法規標準法第13條公布日計為第1日，第3日生效。2026-09-23修正第72條及其他列明條文，未修正第71、73條。"
+            }
+          ],
+          "latest_law_version_context": "全國法規資料庫沿革截至2026-11-21顯示最新整體修正為2026-09-23；該次修正包含第72條，但不含本篇使用的第71條病歷複製本及第73條急救後轉診規定。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0020021",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020021",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133",
+            "https://www.president.gov.tw/Page/294/50409"
+          ]
+        },
+        {
+          "law": "醫療事故預防及爭議處理法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第3條",
+            "第6條"
+          ],
+          "promulgated_at": "2022-06-22",
+          "effective_at": "2024-01-01",
+          "basis": "法律第45條授權行政院定施行日；行政院112年12月12日院臺衛字第1121043912號令定自113年1月1日施行。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+            "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029235/ch01/type1/gov01/num3/Eg.htm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-17-003",
+      "title": "老人的錢單獨放一個賬戶，大額支出定一個雙人確認的規矩",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a5e72dadeb636840ed21c33e23936e672b1cbe14d123bdaadbe13b7d5a4d0bc8",
+      "before_sha256": "fe964ef1224e251fb73814285a00058636f7a511c36cc5bd383031192d6cd441",
+      "after_sha256": "fbc937ffc3b12d91a704afb431f03403d5a86e3124063b549e3db564e84b14b7",
+      "reviewed_at": "2026-11-21",
+      "review_due_at": "2027-02-21",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_review_due_at": "2026-12-31",
+      "prior_source_reviewed_sha256": "f80b3e1318f02e14b2cbbc18a9428bd55f873c9cab88b348950afdafe7a0e1a9",
+      "previous_body": "# 長輩財務仍由本人作主，重要支出建立可核對紀錄\n\n<!-- TW-ID: TW-17-003 -->\n\n## 適用情境與先做的事\n\n正在遭威脅、限制外出或暴力逼簽，先離開危險並撥110；有重傷、呼吸困難或意識改變先119。若疑似遭家人經濟控制或老人虐待，可撥113求保護與諮詢，不必先和施壓者對質或等對帳完成。疑似詐騙匯款則立即聯絡自己的銀行與警方，165可查證，不把補交資料當追回款項保證。\n\n長輩的收入、存款、退休金及房產原則仍由本人決定；年齡、診斷或子女身分不自動使家屬取得處分權。協助整理帳務前先取得本人意願，用容易理解的金額、用途與替代方案討論，避免把不同意當成沒有能力。\n\n## 臺灣流程與適用條件\n\n在本人同意下列每月生活費、醫療照顧費及大額支出，收據註明付款人、用途與日期；代墊和贈與分開，不直接把全部財產轉進子女帳戶。每月由本人或依法有權者核對銀行明細；家屬雙人複核是自願防錯約定，沒有因此取得法定代理權，也不是全臺銀行都有強制家屬雙簽。\n\n正式代理須讓銀行查驗授權範圍、期限、本人及代理身分；勿冒簽、借用網銀、取得一次性驗證碼後代作所有交易。若意思能力有疑慮，請醫療與法律專業評估適當支持、輔助或監護，不因方便而先拿走全部提款工具或限制生活費。\n\n## 成本、時間、效益與常見錯誤\n\n照顧者受託付款，保留本人指示、交易與收據，將自身費用和本人費用分開；免費記帳可協助辨識異常，但不是銀行凍結、監護或信託的替代品。請銀行說明合法提醒、限額或其他保護服務是否適用，不能承諾所有異常交易一定被攔截。\n\n發現不明轉出，保留原始明細及訊息，聯絡銀行詢問保全／止付與報案所需資料，避免再付解凍金或追回服務費；各項措施是否可行、期限及款項去向由銀行與司法確認。家庭暴力防治法第2條包含家庭成員間經濟上的騷擾、控制、脅迫或其他不法侵害，不以家務事為由忽視，也不將所有家庭金錢意見不同都自動判為犯罪。\n\n已受監護宣告也不是監護人可自由挪用；財產管理須為本人利益，法定監護的特定不動產行為有法院許可規則。意定監護契約可能依法約定排除部分限制，須核民法第1113-9條及個案文件，不能一律說有監護就任意賣房或任何情況都一樣。\n\n## 事件頻率與證據限制\n\n事件頻率：目前查不到具備統一定義、統計期間與分母的全臺老人財產侵害發生率。通報件數、通報人次、扶助人次及確認受害人不同，不能直接當全體長者的個人受害機率；即使尚未確認犯罪，可能失去生活與照護資源仍應及早求助。\n\n## 參考資料與限制\n\n165全民防騙網可用來查證防詐資訊，但首頁內容不能用來推算特定案件數或追回率。法規會修正，個案的醫療能力、代理權、保護與求償問題，應依現行規定及個別資料向主管機關或專業人員確認。\n\n- [法務部：民法意定監護與遺囑規範](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)\n- [中華郵政：常見詐騙手法與核實辦法](https://subservices.post.gov.tw/post/internet/Anti-Fraud/common_practices.jsp)\n- [內政部警政署：165全民防騙網](https://165.npa.gov.tw/)\n- [家庭暴力防治法：經濟控制與侵害](https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=2)\n- [衛生福利部保護服務司：113保護專線介紹](https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html)\n",
+      "previous_source_ids": [
+        "ch17_civil",
+        "ch17_postfraud",
+        "ch17_165",
+        "property_domestic",
+        "assault_113_dops"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+          "claim": "TW-17-003：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://subservices.post.gov.tw/post/internet/Anti-Fraud/common_practices.jsp",
+          "claim": "TW-17-003：實讀郵政常見防詐核實與帳號密碼保護建議；不是全臺風險統計或追回承諾。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀郵政常見防詐核實與帳號密碼保護建議；不是全臺風險統計或追回承諾。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://165.npa.gov.tw/",
+          "claim": "TW-17-003：實際首頁只取得動態應用外殼，保留查證入口用途；電話與查證動作由已讀郵政防詐及既有審閱支持，不宣稱實讀其動態案例或新統計。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實際首頁只取得動態應用外殼，保留查證入口用途；電話與查證動作由已讀郵政防詐及既有審閱支持，不宣稱實讀其動態案例或新統計。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接HTML200但僅動態外殼，未讀動態案例與統計；保留原2026-10-17入口審閱，核實建議以郵政資料補證。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=2",
+          "claim": "TW-17-003：實讀第2條家庭成員間經濟騷擾、控制、脅迫或其他不法侵害；不把每件家庭金錢爭議自動判為犯罪。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀第2條家庭成員間經濟騷擾、控制、脅迫或其他不法侵害；不把每件家庭金錢爭議自動判為犯罪。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
+          "claim": "TW-17-003：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21 web實讀113保護專線官方服務主文，非自殺或自傷專線。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+          "claim": "TW-17-003：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://subservices.post.gov.tw/post/internet/Anti-Fraud/common_practices.jsp",
+          "claim": "TW-17-003：實讀郵政常見防詐核實與帳號密碼保護建議；不是全臺風險統計或追回承諾。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀郵政常見防詐核實與帳號密碼保護建議；不是全臺風險統計或追回承諾。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://165.npa.gov.tw/",
+          "claim": "TW-17-003：實際首頁只取得動態應用外殼，保留查證入口用途；電話與查證動作由已讀郵政防詐及既有審閱支持，不宣稱實讀其動態案例或新統計。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實際首頁只取得動態應用外殼，保留查證入口用途；電話與查證動作由已讀郵政防詐及既有審閱支持，不宣稱實讀其動態案例或新統計。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接HTML200但僅動態外殼，未讀動態案例與統計；保留原2026-10-17入口審閱，核實建議以郵政資料補證。"
+        },
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=2",
+          "claim": "TW-17-003：實讀第2條家庭成員間經濟騷擾、控制、脅迫或其他不法侵害；不把每件家庭金錢爭議自動判為犯罪。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀第2條家庭成員間經濟騷擾、控制、脅迫或其他不法侵害；不把每件家庭金錢爭議自動判為犯罪。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
+          "claim": "TW-17-003：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21 web實讀113保護專線官方服務主文，非自殺或自傷專線。"
+        }
+      ],
+      "source_ids": [
+        "ch17_civil",
+        "ch17_postfraud",
+        "ch17_165",
+        "property_domestic",
+        "assault_113_dops",
+        "ch17_elder_protection_stats_2025_20261121",
+        "ch17_elder_protection_stats_method_20261121"
+      ],
+      "new_source_ids": [
+        "ch17_elder_protection_stats_2025_20261121",
+        "ch17_elder_protection_stats_method_20261121"
+      ],
+      "source_records_reused": [
+        "ch17_civil",
+        "ch17_postfraud",
+        "ch17_165",
+        "property_domestic",
+        "assault_113_dops"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch17_civil",
+          "title": "法務部：民法意定監護與遺囑規範",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+          "claim": "TW-17意定監護：成立、公證、生效、撤回、報酬及法院審查依現行條文。",
+          "supporting_passage": "非逐字引文：法務部現行民法第1101、1113及1113-2至1113-10條分別規範監護財產與意定監護；前二條相關修正於2008-05-23公布、2009-11-23施行，意定監護條文於2019-06-19公布、2019-06-21施行。2026-08-17修正第1223條不影響本篇所用條文。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接讀取全國法規資料庫民法現行條文、沿革與法務部所屬機關施行日期說明；以條號逐項對照公告和施行日期。"
+        },
+        {
+          "source_id": "ch17_postfraud",
+          "title": "中華郵政：常見詐騙手法與核實辦法",
+          "url": "https://subservices.post.gov.tw/post/internet/Anti-Fraud/common_practices.jsp",
+          "claim": "TW-17長者財務：可疑金流先由銀行及警察正式管道查證，不交出驗證資料。",
+          "supporting_passage": "非逐字引文：中華郵政現行防詐頁提供透過原平台／官方管道查證、不點不明連結及撥165諮詢等做法；只用來支持一般查證動作，不作案件數或追回率依據。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟中華郵政官方常見詐騙頁，讀取現行案例及對應查證方式。"
+        },
+        {
+          "source_id": "ch17_165",
+          "title": "內政部警政署：165全民防騙網",
+          "url": "https://165.npa.gov.tw/",
+          "claim": "TW-17長者財務：165是查證入口，不以首頁內容推算案件頻率。",
+          "supporting_passage": "非逐字引文：警政署165網站可作防詐查證入口；本輪取得的首頁僅為JavaScript外殼，沒有讀到具體案件統計，因此不引用其動態資料或推算風險。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟警政署165官方網站，僅確認服務入口；由中華郵政官方防詐頁補充查證建議。"
+        },
+        {
+          "source_id": "property_domestic",
+          "title": "家庭暴力防治法：經濟控制與侵害",
+          "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=2",
+          "claim": "TW-17長者財務：辨識經濟控制的法定概念，避免將所有家人意見不同判定為犯罪。",
+          "supporting_passage": "非逐字引文：家庭暴力防治法第2條區分經濟上家庭暴力與須成立其他法律犯罪的家庭暴力罪；第2條於2015-02-04修正公布，後續2023-12-06修法未修改本條。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接核對法務部全國法規資料庫第2條現行文字與沿革，再比對2015-02-04總統公布令及法規施行一般規則；沒有把家庭暴力定義等同刑事定罪。"
+        },
+        {
+          "source_id": "assault_113_dops",
+          "title": "衛生福利部保護服務司：113保護專線介紹",
+          "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
+          "claim": "TW-17保護求助：113的老人保護服務、服務時間及立即危險分流。",
+          "supporting_passage": "非逐字引文：衛福部保護服務司頁面說明113全年24小時受理老人保護、家暴等通報與諮詢，市話、公共電話及手機可免費撥打，立即人身危險先110。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟衛福部保護服務司官方頁面，核對服務對象、時間、方式及110分流提醒。"
+        },
+        {
+          "source_id": "ch17_elder_protection_stats_2025_20261121",
+          "title": "衛福部統計處：老人保護通報案件統計（2025年）",
+          "url": "https://www.mohw.gov.tw/dl-85681-abaa8faa-caa0-4377-8c6f-afea7c48be58.html",
+          "claim": "TW-17-003：使用2025全國老人保護通報統計的件次、去重件數及經濟暴力類人次。",
+          "supporting_passage": "非逐字引文：統計處原始工作簿2025工作表全國列：C欄30,576通報件次、O欄26,684通報件數、AE欄362經濟暴力（含財務剝奪）通報人次；資料期間為2025全年。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接HTTP 200下載官方XLSX（76,419 bytes），解析工作表標題與欄位座標後核對全國總計列；檔案核心屬性最後修改為2026-09-24，官方統計目錄本輪顯示115-11-20更新。"
+        },
+        {
+          "source_id": "ch17_elder_protection_stats_method_20261121",
+          "title": "衛福部：老人保護通報案件統計編製說明",
+          "url": "https://www.mohw.gov.tw/dl-86580-8ff24476-9bab-4238-9193-95e8401ea03a.html",
+          "claim": "TW-17-003：解讀老人保護通報件數去重方式及案件類型人次的重複計列限制。",
+          "supporting_passage": "非逐字引文：統計編製說明界定受理老人福利法第41、42條、身心障礙者權益保障法第75條及家暴法所列通報；同一被害人及案發年月日相同視為重複，案件類型中同一人涉及不同類型會分別計列。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀衛福部官方PDF文字，逐項核對法定範圍、通報件數去重定義及通報人次的計列方式。"
+        }
+      ],
+      "taiwan_context": "長者於家中、銀行及網路交易的家庭財務支持與經濟控制；本人保有決定權，疑似侵害可用110、113、銀行及165等臺灣入口。",
+      "frequency_assessment": "有2025全國老人保護行政通報數及經濟暴力類通報人次，但沒有全體長者或財務暴露分母；沒有可信的個人發生率，不推估個人機率。",
+      "statistics_assessed": [
+        {
+          "applicability": "administrative_reporting_context_only_no_individual_denominator",
+          "indicator": "老人保護通報件次、去重通報件數及經濟暴力通報人次",
+          "period": "2025-01-01至2025-12-31",
+          "scope": "臺灣全國；衛福部保護資料系統，由各地方政府受理的老人保護通報",
+          "population": "老人福利法第41、42條、身心障礙者權益保障法第75條及家庭暴力防治法等統計範圍內的老人保護通報",
+          "numerator": {
+            "report_forms": 30576,
+            "deduplicated_report_cases": 26684,
+            "economic_violence_person_times": 362
+          },
+          "denominator": null,
+          "unit": {
+            "report_forms": "通報件次",
+            "deduplicated_report_cases": "通報件數",
+            "economic_violence_person_times": "通報人次"
+          },
+          "data_type": "行政通報紀錄，不是抽樣調查、普查或經司法確認的犯罪件數。",
+          "event_definition": "通報件數依同一被害人、同一案發年月日扣除重複通報；經濟暴力（含財務剝奪）按案件類型列通報人次，同一人涉及不同類型可分別列計。",
+          "limitations": "未通報事件不在資料中；沒有全體長者或財務接觸暴露分母；362是案件類型通報人次而非個人數、發生率或個人受害機率。不得與全體老人保護通報件數直接相加。來源頁更新115-11-20；工作簿核心屬性修改2026-09-24。",
+          "accessed_at": "2026-11-21",
+          "sources": [
+            "ch17_elder_protection_stats_2025_20261121",
+            "ch17_elder_protection_stats_method_20261121"
+          ]
+        }
+      ],
+      "changes": "重新核實本人財務自主、家庭暴力經濟控制與防詐求助流程，新增2025全國老人保護通報三種單位及去重方法，並明確說明行政通報不等於實際事件或犯罪、無分母不能估個人發生率。",
+      "limits": [
+        "通報資料受未通報、分類與行政受理範圍影響，沒有長者或財務暴露母數，也不代表司法認定。",
+        "165官網本輪僅取得JavaScript首頁外殼；防詐操作依中華郵政可讀官方頁支持，165僅作查證入口。",
+        "AI協助統計與來源查核，未取得社工、法律或金融專業正式審閱；未核對個人帳戶或追回款項。"
+      ],
+      "unresolved_questions": [
+        "全國沒有可用於個人財務受害機率的適當分母；此資料缺口無法由行政通報數補足。",
+        "疑似虐待或帳戶異常的個案需由銀行、警方與社政依具體情況處理。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": "老人保護社工、金融及法律專業",
+        "status": "pending",
+        "reason": "本輪為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-17-003.json",
+      "review_sha256": "32878c20d4eb68578b6b28001482ea12efdcbe478d8b4d469fc424c8db43efa9",
+      "source_bundle_path": "localization/tw-edition/sources/ch17-ch24-highrisk-recheck-20261121.json",
+      "source_bundle_sha256": "80ffb66c1653c7c0379afa1e9624ef6a84cfb566bf2ed5f9a196645a62ba5f9c",
+      "legal_temporal_checks": [
+        {
+          "law": "民法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第1101條",
+                "第1113條"
+              ],
+              "promulgated_at": "2008-05-23",
+              "effective_at": "2009-11-23",
+              "basis": "法規沿革記載民法親屬編第1092至1113條部分規定修正公布，並自公布後一年六個月施行；第1101、1113條位於本次修正範圍。"
+            },
+            {
+              "provisions": [
+                "第1113-2條至第1113-10條"
+              ],
+              "promulgated_at": "2019-06-19",
+              "effective_at": "2019-06-21",
+              "basis": "法務部所屬機關說明意定監護於108年6月19日公布、同月21日施行；公證成立與契約於本人受監護宣告時生效，仍是不同時點。"
+            }
+          ],
+          "latest_law_version_context": "法務部沿革頁列2026-08-17最新修正第1223條，公布六個月後施行；該修正與本篇引用的第1101、1113及1113-2至1113-10條無關。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+            "https://www.ksc.moj.gov.tw/296454/296651/296652/716713/post"
+          ]
+        },
+        {
+          "law": "家庭暴力防治法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第2條第1款及第2款"
+              ],
+              "promulgated_at": "2015-02-04",
+              "effective_at": "2015-02-06",
+              "basis": "2015-02-04修法修改第2條；當次修法除第63-1條外自公布日施行，依中央法規標準法第13條將公布日計為第1日，第三日生效。2023-12-06最新一輪修法未修改第2條。"
+            }
+          ],
+          "current_scope": "第2條將家庭暴力（含經濟上騷擾、控制、脅迫或其他不法侵害）與家庭暴力罪（另須成立其他法律所定犯罪）分別定義；不得把一般帳務意見不同自動稱為犯罪。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050071",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050071",
+            "https://www.president.gov.tw/Page/294/43895?DTitle=%E4%BF%AE%E6%AD%A3%E5%AE%B6%E5%BA%AD%E6%9A%B4%E5%8A%9B%E9%98%B2%E6%B2%BB%E6%B3%95",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-24-009",
+      "title": "傷殘鑑定要等治療終結或者臨床治療效果穩定之後再做",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "4b493693a2af248b297baa2bcc1b91bbd3cdcd25f8f04692702ad8b6b0b3d140",
+      "before_sha256": "97d40a1f14255ead72397067e499bdbd0504f650f5e998bb2a409a377ab97982",
+      "after_sha256": "c314600959689c5cf41155a6f6a30008c279150e8159ee64ea1ee14d781b6a21",
+      "reviewed_at": "2026-11-21",
+      "review_due_at": "2027-02-21",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_review_due_at": "2026-12-31",
+      "prior_source_reviewed_sha256": "dfa87d2ba7617e864ecbc93eb296f137a7ce89ca871aa46049f0e5dbaa02aab5",
+      "previous_body": "<!-- TW-ID: TW-24-009 -->\n\n# 重大傷病、身心障礙與職災失能認定是不同制度\n\n## 適用情境與優先做法\n\n突然呼吸困難、意識改變、疑似中風或嚴重出血先119；不要等重大傷病證明、身心障礙鑑定或職災認定才治療。穩定後再與醫療團隊和社工確認要申請哪一種制度，不因病歷寫有「失能」就以為全部自動核准。\n\n健保重大傷病、身心障礙證明、勞保／職災保險失能及商業保險是不同制度；申請目的、承辦機關、事故原因、文件、有效期限及認定標準均需分開。\n\n## 臺灣風險與證據限制\n\n事件頻率：本篇是制度分流，沒有適合直接套用的單一疾病發生率；目前沒有同期間、互不重複且可代表全臺各制度申請者的核准率。有效證明張數、人數、失能給付件數可能重疊，不能相加或當個人申請成功機率。法定時程是程序，不是疾病風險。\n\n## 實際流程與下一步\n\n重大傷病：先由特約院所確認是否屬公告項目，備申請書、三十日內診斷證明、身分與病歷摘要／報告，由本人或代理人向健保署分區業務組等規定管道申請；特定傷病有醫師逕認免申請例外，不是所有嚴重疾病都直接發證。確認核定起訖與換發安排。\n\n身心障礙證明：洽戶籍地公所或符合條件的線上入口，依指定醫療機構鑑定、衛政審查及需求評估等流程辦理，由地方政府核發；需要的福利仍另核資格。重大傷病在法定範圍免部分負擔，也包括符合規定的同次同醫師併行治療及住院併行等情形，不能簡化成所有其他診療都絕對不免，更不是所有自費都免。\n\n## 費用、例外與適用限制\n\n職災保險失能：洽勞保局核對職業傷病、投保／受僱與事故事實、治療後症狀固定及永久失能等條件；不要為申請就中斷治療，也不以住院多久或身障等級自行換算失能給付。強制納保單位受僱者即使雇主未辦加保，仍可依規定申請並由勞保局查證；雇主不協助可自行送件，保留出勤、薪資、事故經過及醫療資料。此規則不擴張為任何未加保者都必然獲賠。\n\n普通勞保失能與職災保險各核適用規定；商保另對契約與事故定義，不因有任何一張證明就保證理賠。申請診斷、鑑定及病歷的時間／費用先問院所與承辦機關，未核個人年金、失能等級、給付數額或商保條款。\n\n## 參考資料\n\n- 健保署：重大傷病與身心障礙證明的差異：https://www.nhi.gov.tw/ch/cp-13698-9d097-2957-1.html\n- 健保署：重大傷病證明申請須知：https://www.nhi.gov.tw/ch/cp-6091-08ad9-2957-1.html\n- 我的E政府：身心障礙證明鑑定與需求評估：https://www.gov.tw/News_Content_26_677435\n- 勞保局：職災保險失能請領資格：https://www.bli.gov.tw/0105976.html\n- 勞保局：強制納保單位未加保勞工的職災給付：https://events.bli.gov.tw/Activities/202608_02/\n- 健保署：重大傷病免自行負擔費用範圍：https://www.nhi.gov.tw/ch/cp-6089-0c619-2957-1.html\n",
+      "previous_source_ids": [
+        "ch24_diff",
+        "ch24_majorapply",
+        "ch24_disability",
+        "rights_bli_disability",
+        "rights_bli_uninsured",
+        "rights_major_scope"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-13698-9d097-2957-1.html",
+          "claim": "TW-24-009：不同承辦、申請及福利，不能自動互換；職災另讀勞保局。",
+          "supporting_passage": "編者核對摘要，非逐字引文：不同承辦、申請及福利，不能自動互換；職災另讀勞保局。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "直接403，web實讀健保署重大傷病／身障差異表；未將其視為職災法依據。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-6091-08ad9-2957-1.html",
+          "claim": "TW-24-009：申請文件、三十日內診斷證明、代理與特定傷病醫師逕認例外。",
+          "supporting_passage": "編者核對摘要，非逐字引文：申請文件、三十日內診斷證明、代理與特定傷病醫師逕認例外。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "直接403，web實讀HTML申請須知與文件；未稱逐一讀所有病名附件。"
+        },
+        {
+          "url": "https://www.gov.tw/News_Content_26_677435",
+          "claim": "TW-24-009：公所或符合條件線上申請、指定機構鑑定及需求評估後核發，地方文件差異。",
+          "supporting_passage": "編者核對摘要，非逐字引文：公所或符合條件線上申請、指定機構鑑定及需求評估後核發，地方文件差異。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "直接403，web實讀E政府2025-05-27主文的申請、鑑定與評估流程；未逐一核22縣市附件。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0105976.html",
+          "claim": "TW-24-009：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。",
+          "supporting_passage": "編者核對摘要，非逐字引文：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "本輪取得範圍：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。"
+        },
+        {
+          "url": "https://events.bli.gov.tw/Activities/202608_02/",
+          "claim": "TW-24-009：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。",
+          "supporting_passage": "編者核對摘要，非逐字引文：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "本輪取得範圍：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-6089-0c619-2957-1.html",
+          "claim": "TW-24-009：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。",
+          "supporting_passage": "編者核對摘要，非逐字引文：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "本輪取得範圍：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-13698-9d097-2957-1.html",
+          "claim": "TW-24-009：不同承辦、申請及福利，不能自動互換；職災另讀勞保局。",
+          "supporting_passage": "編者核對摘要，非逐字引文：不同承辦、申請及福利，不能自動互換；職災另讀勞保局。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "直接403，web實讀健保署重大傷病／身障差異表；未將其視為職災法依據。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-6091-08ad9-2957-1.html",
+          "claim": "TW-24-009：申請文件、三十日內診斷證明、代理與特定傷病醫師逕認例外。",
+          "supporting_passage": "編者核對摘要，非逐字引文：申請文件、三十日內診斷證明、代理與特定傷病醫師逕認例外。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "直接403，web實讀HTML申請須知與文件；未稱逐一讀所有病名附件。"
+        },
+        {
+          "url": "https://www.gov.tw/News_Content_26_677435",
+          "claim": "TW-24-009：公所或符合條件線上申請、指定機構鑑定及需求評估後核發，地方文件差異。",
+          "supporting_passage": "編者核對摘要，非逐字引文：公所或符合條件線上申請、指定機構鑑定及需求評估後核發，地方文件差異。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "直接403，web實讀E政府2025-05-27主文的申請、鑑定與評估流程；未逐一核22縣市附件。"
+        },
+        {
+          "url": "https://www.bli.gov.tw/0105976.html",
+          "claim": "TW-24-009：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。",
+          "supporting_passage": "編者核對摘要，非逐字引文：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "本輪取得範圍：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。"
+        },
+        {
+          "url": "https://events.bli.gov.tw/Activities/202608_02/",
+          "claim": "TW-24-009：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。",
+          "supporting_passage": "編者核對摘要，非逐字引文：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "本輪取得範圍：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/cp-6089-0c619-2957-1.html",
+          "claim": "TW-24-009：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。",
+          "supporting_passage": "編者核對摘要，非逐字引文：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "本輪取得範圍：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。"
+        }
+      ],
+      "source_ids": [
+        "ch24_diff",
+        "ch24_majorapply",
+        "ch24_disability",
+        "rights_bli_disability",
+        "rights_bli_uninsured",
+        "rights_major_scope",
+        "ch24_major_illness_effective_dates_20261121",
+        "ch24_disability_process_law_20261121"
+      ],
+      "new_source_ids": [
+        "ch24_major_illness_effective_dates_20261121",
+        "ch24_disability_process_law_20261121"
+      ],
+      "source_records_reused": [
+        "ch24_diff",
+        "ch24_majorapply",
+        "ch24_disability",
+        "rights_bli_disability",
+        "rights_bli_uninsured",
+        "rights_major_scope"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch24_diff",
+          "title": "健保署：重大傷病與身心障礙證明的差異",
+          "url": "https://www.nhi.gov.tw/ch/cp-13698-9d097-2957-1.html",
+          "claim": "TW-24-009：重大傷病、身心障礙與勞保失能由不同制度分別認定。",
+          "supporting_passage": "非逐字引文：健保署差異說明分開呈現重大傷病免部分負擔與身心障礙證明；本篇另依各制度的法律、承辦機關及申請條件分流，沒有把證明相互換算。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接取得健保署現行HTML頁面，核對制度分類；不將該差異頁當職災失能條件的唯一依據。"
+        },
+        {
+          "source_id": "ch24_majorapply",
+          "title": "健保署：重大傷病證明申請須知",
+          "url": "https://www.nhi.gov.tw/ch/cp-6091-08ad9-2957-1.html",
+          "claim": "TW-24-009：重大傷病申請書、診斷證明有效日數、代理及醫師逕行認定例外。",
+          "supporting_passage": "非逐字引文：健保署申請須知指出診斷證明需於開立日起30日內提出，得由本人或代理人等依規定申請，並有附表所列醫師逕認免另申請的例外。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟健保署官方申請頁，與現行法規第2、3條交叉核對申請文件及核定期限。"
+        },
+        {
+          "source_id": "ch24_disability",
+          "title": "我的E政府：身心障礙證明鑑定與需求評估",
+          "url": "https://www.gov.tw/News_Content_26_677435",
+          "claim": "TW-24-009：社家署線上申辦與身心障礙證明申請資訊入口；地方條件須再確認。",
+          "supporting_passage": "非逐字引文：我的E政府身心障礙專頁標示2025-05-27更新，說明戶籍地公所與部分案件線上申辦；直接頁面本輪回403，僅採其官方索引摘要作入口提示，法定流程另以全國法規資料庫核實。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "本輪使用政府入口頁官方索引摘要，直接開啟回403；不以未能讀取的地方附件補充各縣市資格差異。"
+        },
+        {
+          "source_id": "rights_bli_disability",
+          "title": "勞保局：職災保險失能請領資格",
+          "url": "https://www.bli.gov.tw/0105976.html",
+          "claim": "TW-24-009：職災保險失能給付需核對職業傷病、症狀固定、永久失能及法定標準。",
+          "supporting_passage": "非逐字引文：勞保局現行常見問答說明職災失能給付須經治療後症狀固定並符合永久失能與等級標準；身心障礙證明本身不會自動取代職保審定。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟勞保局官方常見問答頁，核對請領資格與給付標準說明；未用個人薪資推算給付。"
+        },
+        {
+          "source_id": "rights_bli_uninsured",
+          "title": "勞保局：強制納保單位未加保勞工的職災給付",
+          "url": "https://events.bli.gov.tw/Activities/202608_02/",
+          "claim": "TW-24-009：強制納保單位受僱者未被雇主加保時仍有職災給付申請管道。",
+          "supporting_passage": "非逐字引文：勞保局專頁說明強制納保單位受僱者保險效力自到職日生效，雇主不協助時可自行送件並附出勤、薪資及事故資料，由勞保局查證。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟勞保局官方專頁，核對適用對象與自行申請文件；未把規則擴大到所有未加保者。"
+        },
+        {
+          "source_id": "rights_major_scope",
+          "title": "健保署：重大傷病免自行負擔費用範圍",
+          "url": "https://www.nhi.gov.tw/ch/cp-6089-0c619-2957-1.html",
+          "claim": "TW-24-009：重大傷病免部分負擔僅限法定證明及相關治療範圍。",
+          "supporting_passage": "非逐字引文：健保署頁面最近更新為2026-10-14，說明證明所載重大傷病、相關治療及符合法定條件之併行治療，不等同所有自費項目或所有診療均免費。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟健保署現行費用範圍頁，核對更新日期、法令依據及適用範圍；未展開所有罕病附件。"
+        },
+        {
+          "source_id": "ch24_major_illness_effective_dates_20261121",
+          "title": "全國法規資料庫：全民健康保險保險對象免自行負擔費用辦法第5條",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060015",
+          "claim": "TW-24-009：重大傷病證明申請生效日、罕病例外及依效期分級的續申請期限。",
+          "supporting_passage": "非逐字引文：現行辦法第5條列重大傷病證明生效日、罕病例外及續申請期限；法規沿革顯示第5條於2022-12-19修正發布、依第9條及中央法規標準法第13條於2022-12-21生效。2024-09-16的整體最新修正只改第2條附表一，未改第5條。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接讀取全國法規資料庫現行辦法第5、9條與沿革，並核對健保署2022-12-19修正令；使用中央法規標準法第13條區分發布日與第三日生效。"
+        },
+        {
+          "source_id": "ch24_disability_process_law_20261121",
+          "title": "全國法規資料庫：身心障礙者福利與服務需求評估及證明核發辦法",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050050",
+          "claim": "TW-24-009：身心障礙證明申請由戶籍地公所、醫療鑑定及地方需求評估銜接。",
+          "supporting_passage": "非逐字引文：現行辦法第2條規範戶籍地任一鄉鎮市區公所受理、鑑定及地方需求評估核發流程；該條於2023-05-26修正發布，依第12條及中央法規標準法第13條於2023-05-28生效。同次修正的第7條附表一之一及一之二另自2023-07-01施行，與本篇第2條流程分開。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀全國法規資料庫現行辦法第2、12條及沿革，核對2023-05-26衛福部令和行政院公報，並按中央法規標準法第13條區分發布日與第三日生效。"
+        }
+      ],
+      "taiwan_context": "健保重大傷病、地方身心障礙鑑定及勞保職災失能是三種不同臺灣制度；依證明效期與承辦機關辦理。",
+      "frequency_assessment": "沒有適用於不同疾病、健保重大傷病、身障鑑定與職災失能的單一風險率；這些是不同制度的程序與資格。",
+      "statistics_assessed": [
+        {
+          "applicability": "not_a_disease_incidence_topic; procedural_entitlements_have_no_common_rate",
+          "indicator": "重大傷病證明、身心障礙證明及職災失能認定的適用／核准率",
+          "period": "本次核對截至2026-11-21",
+          "scope": "臺灣各制度與不同申請人群",
+          "population": "各制度之申請人、合資格參保人與不同法定疾病／傷病對象",
+          "numerator": null,
+          "denominator": null,
+          "unit": null,
+          "data_type": "未找到能合併比較且有共同母數的制度核准率；不同制度法定標準和申請群不同。",
+          "event_definition": "本篇說明行政資格、申請生效與續件期限，不估疾病發生率。",
+          "limitations": "證明張數、給付人次或個別制度核定件數不得互相相加，也不能換算個人申請成功率。",
+          "sources": [
+            "ch24_major_illness_effective_dates_20261121",
+            "ch24_disability_process_law_20261121"
+          ]
+        }
+      ],
+      "changes": "依現行健保法規補上重大傷病證明申請日生效、罕病例外及三組效期續申請期限與逾期效果；用現行身障核發法規釐清公所、醫療鑑定及地方政府需求評估流程，保留職災失能各自核定。",
+      "limits": [
+        "健保重大傷病、身障證明與職災失能不可互相套用；未個別核對每項疾病附件、費用、縣市線上申請或到宅鑑定資格。",
+        "我的E政府頁面本輪直接開啟回403，僅使用官方索引所示入口資訊；身障法定步驟以全國法規資料庫現行辦法核實。",
+        "AI協助法規與服務資料核對，未取得醫師、社工、勞動保險或法律專業正式審閱；個案資格由承辦機關核定。"
+      ],
+      "unresolved_questions": [
+        "健保證明所列各疾病效期及更新文件須依核定通知、特約院所與健保署確認。",
+        "身障線上申請限制及地方受理方式會因案件和縣市不同；本批未逐縣市核對。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": "健保／身心障礙與職災專業",
+        "status": "pending",
+        "reason": "本輪為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-24-009.json",
+      "review_sha256": "e8d27bd21ef351b4e713d98ce0e6913c055ba9ad481bb7487675e7323bf9e755",
+      "source_bundle_path": "localization/tw-edition/sources/ch17-ch24-highrisk-recheck-20261121.json",
+      "source_bundle_sha256": "80ffb66c1653c7c0379afa1e9624ef6a84cfb566bf2ed5f9a196645a62ba5f9c",
+      "legal_temporal_checks": [
+        {
+          "law": "全民健康保險保險對象免自行負擔費用辦法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第5條",
+            "第9條"
+          ],
+          "relevant_provision_amendment": {
+            "provisions": [
+              "第5條"
+            ],
+            "promulgated_at": "2022-12-19",
+            "effective_at": "2022-12-21",
+            "basis": "衛福部111年12月19日修正發布第5條；第9條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第三日生效。"
+          },
+          "latest_law_version_context": "全國法規資料庫沿革列整體最新修正2024-09-16，該次僅修正第2條附表一；第5條最近修正仍為2022-12-19。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0060015",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060015",
+            "https://media.nhi.gov.tw/md/dl-51939-22c20553daad430ea05c073d00b44b53-3.pdf",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        },
+        {
+          "law": "身心障礙者福利與服務需求評估及證明核發辦法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第2條",
+            "第12條"
+          ],
+          "relevant_provision_amendment": {
+            "provisions": [
+              "第2條"
+            ],
+            "promulgated_at": "2023-05-26",
+            "effective_at": "2023-05-28",
+            "basis": "衛福部112年5月26日修正發布第2、7、8、12條；第12條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第3日生效。另第7條附表一之一及附表一之二明定自2023-07-01施行，非本篇第2條流程。"
+          },
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050050",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050050",
+            "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029097/ch08/type1/gov70/num30/Eg.htm",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TW-17-001",
+      "title": "趁老人清醒，書面指定將來的監護人",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "967e2d271499559a4b94f50a74deb0981c972c8e55c890ee532dbb437bc7acec",
+      "before_sha256": "a1d4272d5e4c9c0b8c77e462e4faa59c4532de89a3a07f6932d133437ba8b1fc",
+      "after_sha256": "f7b573d6c18965c1ae85c1e382607437459d4f5133a5f62043bb6b808cebab03",
+      "reviewed_at": "2026-11-21",
+      "review_due_at": "2027-02-21",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_review_due_at": "2026-12-31",
+      "prior_source_reviewed_sha256": "545840d1f2ffbfee3eae989d0c8decbcebb1c13f31422de693179a67b36c75ab",
+      "previous_body": "# 意定監護須公證，為長輩保留將來的照顧決定\n\n<!-- TW-ID: TW-17-001 -->\n\n## 適用情境與先做的事\n\n若長輩正遭強迫簽約、暴力或限制自由，先110或113求保護；急重症先119，不為辦公證或等監護裁定延誤。平時在本人仍可理解並表達意願時討論：將來若無法自行處理生活與財務，信任誰、希望怎麼照護。不能因年紀、失智診斷或子女意見，就直接認定本人喪失決定能力。\n\n意定監護是未來受法院監護宣告時由受任人擔任監護人的安排，不是簽完立刻把全部財產與醫療決定交給家人；現階段代理、信託、預立醫療決定與遺囑各有不同程序，不能互相取代。\n\n## 臺灣流程與適用條件\n\n先到司法院查法院公證處或民間公證人，詢問預約、本人及受任人須帶證件、具體照護事項及必要評估文件。依民法第1113-3條，訂立或變更要本人與受任人在場表明合意、由公證人作成公證書才成立；單純簽私約或家人代本人到場不足。\n\n具體談生活照顧、護養療治、財產管理、支出紀錄、報酬與會同開具財產清冊之人；受任人可一人或數人，未約定分別執行時應共同執行，不把共同受任人當任何人都能單獨處分。請公證人說明受任人不能履職及意願改變如何處理，不只套用空白範本。\n\n## 成本、時間、效益與常見錯誤\n\n公證後七日內由公證人書面通知本人住所地法院，是通知義務，不是法院七日內一定作監護宣告。契約成立與生效不同，須待法院監護宣告；法院原則依契約選任，受任人不利本人或顯不適任時可依法另選，不能保證永遠不換人。\n\n宣告前要撤回，先以書面向他方表示，再由公證人作成公證書才生撤回效力，撤回一部視為全部；不能只傳訊息或撕掉契約就當完成。宣告後本人有正當理由須向法院聲請許可終止，受任人辭任亦有法院程序，不能以宣告前規則代替。\n\n公證、診斷或交通、日後法院程序及受任人報酬可能分別計費，先索取說明，不把所有意定監護都稱一律千元或免費。已約報酬或無報酬依約；未約時可依法請法院酌定。財產限制可依第1113-9條有特定約定，不為方便就任意排除保護，先讓獨立法律專業解釋權限與風險。\n\n## 事件頻率與證據限制\n\n事件頻率：本篇是預作照護安排的法律工具，目前沒有同期間且可代表全臺需求者的監護申請、適任選任或濫用機率。公證件數、受監護人數與失智盛行率不是同一母數，不能直接當個人將被監護、契約被採用或財產安全機率。即使沒統計，也應尊重本人決策與權益。\n\n## 參考資料與限制\n\n意定監護的成立程序與生效時點依民法規定辦理；部分條文尚未施行，應依現行有效條文判斷。意思能力、代辦公證或監護適用情形，請向公證人、律師或醫療人員依個案確認。\n\n- [法務部：民法意定監護與遺囑規範](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001)\n- [司法院：意定監護與病人自主法說明](https://www.judicial.gov.tw/tw/cp-1454-115304-ed6fc-1.html)\n- [衛生福利部保護服務司：113保護專線介紹](https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html)\n",
+      "previous_source_ids": [
+        "ch17_civil",
+        "ch17_judicial",
+        "assault_113_dops"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+          "claim": "TW-17-001：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1454-115304-ed6fc-1.html",
+          "claim": "TW-17-001：實讀2019-12-09司法院研習新聞，僅輔助介紹意定監護與病人自主；精確成立、生效、撤回以現行民法對讀，不將七日通知當生效期限。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀2019-12-09司法院研習新聞，僅輔助介紹意定監護與病人自主；精確成立、生效、撤回以現行民法對讀，不將七日通知當生效期限。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
+          "claim": "TW-17-001：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21 web實讀113保護專線官方服務主文，非自殺或自傷專線。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+          "claim": "TW-17-001：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://www.judicial.gov.tw/tw/cp-1454-115304-ed6fc-1.html",
+          "claim": "TW-17-001：實讀2019-12-09司法院研習新聞，僅輔助介紹意定監護與病人自主；精確成立、生效、撤回以現行民法對讀，不將七日通知當生效期限。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀2019-12-09司法院研習新聞，僅輔助介紹意定監護與病人自主；精確成立、生效、撤回以現行民法對讀，不將七日通知當生效期限。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
+          "claim": "TW-17-001：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "supporting_passage": "編者核對摘要，非逐字引文：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
+          "accessed_at": "2026-10-21",
+          "retrieval_method": "2026-10-21 web實讀113保護專線官方服務主文，非自殺或自傷專線。"
+        }
+      ],
+      "source_ids": [
+        "ch17_civil",
+        "ch17_judicial",
+        "assault_113_dops"
+      ],
+      "new_source_ids": [],
+      "source_records_reused": [
+        "ch17_civil",
+        "ch17_judicial",
+        "assault_113_dops"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch17_civil",
+          "title": "法務部：民法意定監護與遺囑規範",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+          "claim": "TW-17意定監護：成立、公證、生效、撤回、報酬及法院審查依現行條文。",
+          "supporting_passage": "非逐字引文：法務部現行民法頁列明第1113-2至1113-10條成立、生效、撤回及法院審查規則；沿革記載新增條文於2019-06-19公布，法務部所屬機關確認2019-06-21施行。第1101、1113條另於2008-05-23修正並自2009-11-23施行；2026-08-17第1223條修正與本篇無關。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接讀取全國法規資料庫民法現行條文與沿革，另讀法務部所屬機關意定監護說明以確認2019-06-21實際施行日；逐條區分2008年延後施行規定與2019年意定監護條文。"
+        },
+        {
+          "source_id": "ch17_judicial",
+          "title": "司法院：意定監護與病人自主法說明",
+          "url": "https://www.judicial.gov.tw/tw/cp-1454-115304-ed6fc-1.html",
+          "claim": "TW-17意定監護：司法院說明僅作一般制度導讀，精確程序以民法為準。",
+          "supporting_passage": "非逐字引文：司法院司法週刊頁為意定監護與病人自主的制度導讀；本篇公證成立、生效與撤回細節逐項回到民法核實，沒有用較早的介紹取代現行法。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接取得司法院官方頁面；以頁面制度導讀作補充，未把該篇當現行法條或個案法律意見。"
+        },
+        {
+          "source_id": "assault_113_dops",
+          "title": "衛生福利部保護服務司：113保護專線介紹",
+          "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
+          "claim": "TW-17保護求助：113的老人保護服務、服務時間及立即危險分流。",
+          "supporting_passage": "非逐字引文：衛福部保護服務司頁面說明113全年24小時受理老人保護、家暴等通報與諮詢，市話、公共電話及手機可免費撥打，立即人身危險先110。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接開啟衛福部保護服務司官方頁面，核對服務對象、時間、方式及110分流提醒。"
+        }
+      ],
+      "taiwan_context": "意定監護依臺灣民法以公證成立、法院監護宣告時生效，尊重本人意願並說明家屬不因親屬身分自動取得代理權。",
+      "frequency_assessment": "沒有同一母數的全國意定監護使用率或濫用率；公證或監護案件數不能換算個人風險。",
+      "statistics_assessed": [
+        {
+          "applicability": "relevant_but_no_comparable_use_or_misuse_rate",
+          "indicator": "意定監護契約採用、受任人失職或財產濫用頻率",
+          "period": "本次檢索截至2026-11-21",
+          "scope": "臺灣全國",
+          "population": "可能需要成年監護安排之本人與受任人",
+          "numerator": null,
+          "denominator": null,
+          "unit": null,
+          "data_type": "本次未找到同時區分意定監護契約、監護宣告、實際受任與損害事件且具有可比母數的官方統計。",
+          "event_definition": "公證件數、監護宣告件數、失智盛行率及財產損害各屬不同事件定義。",
+          "limitations": "不能由公證件數或監護宣告人數推算個人採用、失職或濫用機率；不以資料不足淡化本人自主及財產保障。",
+          "sources": [
+            "ch17_civil",
+            "ch17_judicial"
+          ]
+        }
+      ],
+      "changes": "重讀現行民法第1113-2至1113-10條、法院制度導讀及保護服務入口；將「部分條文未施行」的泛稱限縮成法規資料庫另有未生效條文，明確指出本篇意定監護須依現行條文且在監護宣告時生效。",
+      "limits": [
+        "司法院說明頁只作制度導讀；法律結論依現行民法條文，不代表特定人的意思能力或契約效力。",
+        "未進行公證、法院聲請或個案能力評估；實際規費及文件依公證人、法院與個案確認。",
+        "AI協助法規與服務查核，未取得公證人、律師、醫師或社工正式專業審閱。"
+      ],
+      "unresolved_questions": [
+        "沒有可比的臺灣意定監護使用率或財產濫用率；民法修正或個案爭議仍需公證人及法律專業確認。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": "公證、法律、醫療及長照專業",
+        "status": "pending",
+        "reason": "本輪為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-17-001.json",
+      "review_sha256": "c7afe2469af0af800b5f83baa184bce599893c48a1119e6e2774dd9ddd0d6d71",
+      "source_bundle_path": "localization/tw-edition/sources/ch17-ch24-highrisk-recheck-20261121.json",
+      "source_bundle_sha256": "80ffb66c1653c7c0379afa1e9624ef6a84cfb566bf2ed5f9a196645a62ba5f9c",
+      "legal_temporal_checks": [
+        {
+          "law": "民法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第1101條",
+                "第1113條"
+              ],
+              "promulgated_at": "2008-05-23",
+              "effective_at": "2009-11-23",
+              "basis": "法規沿革記載民法親屬編第1092至1113條部分規定修正公布，並自公布後一年六個月施行；第1101、1113條位於本次修正範圍。"
+            },
+            {
+              "provisions": [
+                "第1113-2條至第1113-10條"
+              ],
+              "promulgated_at": "2019-06-19",
+              "effective_at": "2019-06-21",
+              "basis": "法務部所屬機關說明意定監護於108年6月19日公布、同月21日施行；公證成立與契約於本人受監護宣告時生效，仍是不同時點。"
+            }
+          ],
+          "latest_law_version_context": "法務部沿革頁列2026-08-17最新修正第1223條，公布六個月後施行；該修正與本篇引用的第1101、1113及1113-2至1113-10條無關。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+            "https://www.ksc.moj.gov.tw/296454/296651/296652/716713/post"
+          ]
+        }
+      ]
     }
   ],
   "reader_copy_cleanups": [

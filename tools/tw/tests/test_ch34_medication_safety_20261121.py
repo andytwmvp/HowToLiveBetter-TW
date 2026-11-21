@@ -113,7 +113,11 @@ class Chapter34MedicationSafetyPublicationTests(unittest.TestCase):
         )
         inventory = {row["id"] for row in self.register["unpublished_core_inventory"]}
         self.assertTrue(set(ARTICLES).issubset(inventory))
-        self.assertEqual(self.register["substantive_rechecks"], baseline_register["substantive_rechecks"])
+        baseline_rechecks = baseline_register["substantive_rechecks"]
+        current_rechecks = self.register["substantive_rechecks"]
+        self.assertEqual(current_rechecks[:len(baseline_rechecks)], baseline_rechecks)
+        self.assertFalse(any(row["id"] in ARTICLES
+                            for row in current_rechecks[len(baseline_rechecks):]))
         self.assertEqual(self.stage["counts_before"]["review_rechecks"], len(baseline_register["substantive_rechecks"]))
         self.assertEqual(self.stage["counts_after"]["review_rechecks"], len(baseline_register["substantive_rechecks"]))
         self.assertEqual(len(self.runtime["items"]), len(baseline_runtime["items"]) + len(ARTICLES))
@@ -193,11 +197,12 @@ class Chapter34MedicationSafetyPublicationTests(unittest.TestCase):
         baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
         baseline_ids = {row["id"] for row in baseline_runtime["sources"]}
         baseline_sources = {row["id"]: row for row in baseline_runtime["sources"]}
-        self.assertEqual(set(self.sources) - baseline_ids, NEW_SOURCE_IDS)
+        added_since_baseline = set(self.sources) - baseline_ids
+        self.assertTrue(NEW_SOURCE_IDS.issubset(added_since_baseline))
         self.assertTrue(REUSED_SOURCE_IDS.issubset(baseline_ids))
         for sid in REUSED_SOURCE_IDS:
             self.assertEqual(self.sources[sid], baseline_sources[sid])
-        self.assertEqual(source_bundle_ids_added_since(ROOT, BASE), NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS.issubset(source_bundle_ids_added_since(ROOT, BASE)))
         bundled = {row[0]: row for row in self.bundle["sources"]}
         for sid in NEW_SOURCE_IDS:
             source = self.sources[sid]

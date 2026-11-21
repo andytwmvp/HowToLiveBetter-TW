@@ -1,63 +1,195 @@
 {
   "id": "TW-17-003",
-  "reviewer": "ChatGPT（AI輔助臺灣官方法規與服務資料核對，非獨立醫師、律師、社工或金融專業簽證）",
+  "reviewer": "ChatGPT（AI輔助臺灣法規、行政資料與官方服務核對；非獨立醫師、律師、社工或金融專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-21",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
   "target_path": "locales/zh-TW/book/ch17/TW-17-003.md",
-  "target_sha256": "fe964ef1224e251fb73814285a00058636f7a511c36cc5bd383031192d6cd441",
+  "target_sha256": "fbc937ffc3b12d91a704afb431f03403d5a86e3124063b549e3db564e84b14b7",
   "source_checks": [
     {
+      "source_id": "ch17_civil",
+      "title": "法務部：民法意定監護與遺囑規範",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
-      "claim": "TW-17-003：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
-      "supporting_passage": "編者核對摘要，非逐字引文：實讀民法第1101、1113、1113-2至10條：本人利益、法院許可及意定監護約定例外，成立生效撤回、報酬和分工分開；不套不相關未生效條文。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+      "claim": "TW-17意定監護：成立、公證、生效、撤回、報酬及法院審查依現行條文。",
+      "supporting_passage": "非逐字引文：法務部現行民法第1101、1113及1113-2至1113-10條分別規範監護財產與意定監護；前二條相關修正於2008-05-23公布、2009-11-23施行，意定監護條文於2019-06-19公布、2019-06-21施行。2026-08-17修正第1223條不影響本篇所用條文。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接讀取全國法規資料庫民法現行條文、沿革與法務部所屬機關施行日期說明；以條號逐項對照公告和施行日期。"
     },
     {
+      "source_id": "ch17_postfraud",
+      "title": "中華郵政：常見詐騙手法與核實辦法",
       "url": "https://subservices.post.gov.tw/post/internet/Anti-Fraud/common_practices.jsp",
-      "claim": "TW-17-003：實讀郵政常見防詐核實與帳號密碼保護建議；不是全臺風險統計或追回承諾。",
-      "supporting_passage": "編者核對摘要，非逐字引文：實讀郵政常見防詐核實與帳號密碼保護建議；不是全臺風險統計或追回承諾。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+      "claim": "TW-17長者財務：可疑金流先由銀行及警察正式管道查證，不交出驗證資料。",
+      "supporting_passage": "非逐字引文：中華郵政現行防詐頁提供透過原平台／官方管道查證、不點不明連結及撥165諮詢等做法；只用來支持一般查證動作，不作案件數或追回率依據。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接開啟中華郵政官方常見詐騙頁，讀取現行案例及對應查證方式。"
     },
     {
+      "source_id": "ch17_165",
+      "title": "內政部警政署：165全民防騙網",
       "url": "https://165.npa.gov.tw/",
-      "claim": "TW-17-003：實際首頁只取得動態應用外殼，保留查證入口用途；電話與查證動作由已讀郵政防詐及既有審閱支持，不宣稱實讀其動態案例或新統計。",
-      "supporting_passage": "編者核對摘要，非逐字引文：實際首頁只取得動態應用外殼，保留查證入口用途；電話與查證動作由已讀郵政防詐及既有審閱支持，不宣稱實讀其動態案例或新統計。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "2026-10-21直接HTML200但僅動態外殼，未讀動態案例與統計；保留原2026-10-17入口審閱，核實建議以郵政資料補證。"
+      "claim": "TW-17長者財務：165是查證入口，不以首頁內容推算案件頻率。",
+      "supporting_passage": "非逐字引文：警政署165網站可作防詐查證入口；本輪取得的首頁僅為JavaScript外殼，沒有讀到具體案件統計，因此不引用其動態資料或推算風險。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接開啟警政署165官方網站，僅確認服務入口；由中華郵政官方防詐頁補充查證建議。"
     },
     {
+      "source_id": "property_domestic",
+      "title": "家庭暴力防治法：經濟控制與侵害",
       "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0050071&flno=2",
-      "claim": "TW-17-003：實讀第2條家庭成員間經濟騷擾、控制、脅迫或其他不法侵害；不把每件家庭金錢爭議自動判為犯罪。",
-      "supporting_passage": "編者核對摘要，非逐字引文：實讀第2條家庭成員間經濟騷擾、控制、脅迫或其他不法侵害；不把每件家庭金錢爭議自動判為犯罪。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "2026-10-21直接取得並實讀官方HTML主文／現行條文；未讀全部附件不作全文證據。"
+      "claim": "TW-17長者財務：辨識經濟控制的法定概念，避免將所有家人意見不同判定為犯罪。",
+      "supporting_passage": "非逐字引文：家庭暴力防治法第2條區分經濟上家庭暴力與須成立其他法律犯罪的家庭暴力罪；第2條於2015-02-04修正公布，後續2023-12-06修法未修改本條。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接核對法務部全國法規資料庫第2條現行文字與沿革，再比對2015-02-04總統公布令及法規施行一般規則；沒有把家庭暴力定義等同刑事定罪。"
     },
     {
+      "source_id": "assault_113_dops",
+      "title": "衛生福利部保護服務司：113保護專線介紹",
       "url": "https://dep.mohw.gov.tw/DOPs/cp-1183-6499-105.html",
-      "claim": "TW-17-003：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
-      "supporting_passage": "編者核對摘要，非逐字引文：實讀113服務主文：免費24小時老人保護／家暴諮詢，立即人身危險先110；不保證個案處置結果。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "2026-10-21 web實讀113保護專線官方服務主文，非自殺或自傷專線。"
+      "claim": "TW-17保護求助：113的老人保護服務、服務時間及立即危險分流。",
+      "supporting_passage": "非逐字引文：衛福部保護服務司頁面說明113全年24小時受理老人保護、家暴等通報與諮詢，市話、公共電話及手機可免費撥打，立即人身危險先110。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接開啟衛福部保護服務司官方頁面，核對服務對象、時間、方式及110分流提醒。"
+    },
+    {
+      "source_id": "ch17_elder_protection_stats_2025_20261121",
+      "title": "衛福部統計處：老人保護通報案件統計（2025年）",
+      "url": "https://www.mohw.gov.tw/dl-85681-abaa8faa-caa0-4377-8c6f-afea7c48be58.html",
+      "claim": "TW-17-003：使用2025全國老人保護通報統計的件次、去重件數及經濟暴力類人次。",
+      "supporting_passage": "非逐字引文：統計處原始工作簿2025工作表全國列：C欄30,576通報件次、O欄26,684通報件數、AE欄362經濟暴力（含財務剝奪）通報人次；資料期間為2025全年。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接HTTP 200下載官方XLSX（76,419 bytes），解析工作表標題與欄位座標後核對全國總計列；檔案核心屬性最後修改為2026-09-24，官方統計目錄本輪顯示115-11-20更新。"
+    },
+    {
+      "source_id": "ch17_elder_protection_stats_method_20261121",
+      "title": "衛福部：老人保護通報案件統計編製說明",
+      "url": "https://www.mohw.gov.tw/dl-86580-8ff24476-9bab-4238-9193-95e8401ea03a.html",
+      "claim": "TW-17-003：解讀老人保護通報件數去重方式及案件類型人次的重複計列限制。",
+      "supporting_passage": "非逐字引文：統計編製說明界定受理老人福利法第41、42條、身心障礙者權益保障法第75條及家暴法所列通報；同一被害人及案發年月日相同視為重複，案件類型中同一人涉及不同類型會分別計列。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀衛福部官方PDF文字，逐項核對法定範圍、通報件數去重定義及通報人次的計列方式。"
     }
   ],
-  "localization_changes": "照顧者受託付款，保留本人指示、交易與收據，將自身費用和本人費用分開；免費記帳可協助辨識異常，但不是銀行凍結、監護或信託的替代品。請銀行說明合法提醒、限額或其他保護服務是否適用，不能承諾所有異常交易一定被攔截。\n\n發現不明轉出，保留原始明細及訊息，聯絡銀行詢問保全／止付與報案所需資料，避免再付解凍金或追回服務費；各項措施是否可行、期限及款項去向由銀行與司法確認。家庭暴力防治法第2條包含家庭成員間經濟上的騷擾、控制、脅迫或其他不法侵害，不以家務事為由忽視，也不將所有家庭金錢意見不同都自動判為犯罪。\n\n已受監護宣告也不是監護人可自由挪用；財產管理須為本人利益，法定監護的特定不動產行為有法院許可規則。意定監護契約可能依法約定排除部分限制，須核民法第1113-9條及個案文件，不能一律說有監護就任意賣房或任何情況都一樣。",
-  "review_method": "逐條實讀法規與官方服務／銀行主文，對讀具體例外、統計單位與期間；非專業簽證。",
+  "localization_changes": "重新核實本人財務自主、家庭暴力經濟控制與防詐求助流程，新增2025全國老人保護通報三種單位及去重方法，並明確說明行政通報不等於實際事件或犯罪、無分母不能估個人發生率。",
+  "review_method": "逐條重讀原作固定ID、現行臺灣正文、2026-10-21前次review與來源；直接核對現行法規、主管機關頁面及原始統計。統計依表格欄位與編製說明核算，不以搜尋摘要代替法規或分母。非專業簽證。",
   "limits": [
-    "不要擅自保管提款卡密碼或收取一次性驗證碼，尤其本人未同意時；也不要以家屬口頭約定代替銀行法定授權、監護或專業信託。認知或意思能力有變化時，應另行取得法律與醫療評估。",
-    "與公部門、金融及醫療機構實際辦理時須再確認最新資格、費用及地方法規；不因取得工程CI綠燈就視為專業簽證。",
-    "AI逐條官方來源核對，非律師、公證人、醫師、社工或金融專業簽證；個案意思能力、契約、代理權及申請仍待確認。",
-    "法規庫整編截止2026-10-08，其後全部公報與地方規定未全核，未逐條追溯民法本批首次施行日期。",
-    "未實際申請、公證、交易、調閱個資、核貸或代辦退款；工程通過不保證財產、居住與個案權益結果。"
+    "通報資料受未通報、分類與行政受理範圍影響，沒有長者或財務暴露母數，也不代表司法認定。",
+    "165官網本輪僅取得JavaScript首頁外殼；防詐操作依中華郵政可讀官方頁支持，165僅作查證入口。",
+    "AI協助統計與來源查核，未取得社工、法律或金融專業正式審閱；未核對個人帳戶或追回款項。"
   ],
-  "source_reviewed_sha256": "f80b3e1318f02e14b2cbbc18a9428bd55f873c9cab88b348950afdafe7a0e1a9",
+  "source_reviewed_sha256": "fbc937ffc3b12d91a704afb431f03403d5a86e3124063b549e3db564e84b14b7",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "f80b3e1318f02e14b2cbbc18a9428bd55f873c9cab88b348950afdafe7a0e1a9",
     "after_sha256": "fe964ef1224e251fb73814285a00058636f7a511c36cc5bd383031192d6cd441",
     "before_reader_sha256": "ed4bf78862bf23866b5cfc3401a0e5d82694d65659e11775fbc8de715876850d",
     "after_reader_sha256": "987dd96c8f2e534d7b415082b44cf4d5fd6e983480717a10d770a482969ae0f9"
-  }
+  },
+  "source_ids": [
+    "ch17_civil",
+    "ch17_postfraud",
+    "ch17_165",
+    "property_domestic",
+    "assault_113_dops",
+    "ch17_elder_protection_stats_2025_20261121",
+    "ch17_elder_protection_stats_method_20261121"
+  ],
+  "statistics_assessed": [
+    {
+      "applicability": "administrative_reporting_context_only_no_individual_denominator",
+      "indicator": "老人保護通報件次、去重通報件數及經濟暴力通報人次",
+      "period": "2025-01-01至2025-12-31",
+      "scope": "臺灣全國；衛福部保護資料系統，由各地方政府受理的老人保護通報",
+      "population": "老人福利法第41、42條、身心障礙者權益保障法第75條及家庭暴力防治法等統計範圍內的老人保護通報",
+      "numerator": {
+        "report_forms": 30576,
+        "deduplicated_report_cases": 26684,
+        "economic_violence_person_times": 362
+      },
+      "denominator": null,
+      "unit": {
+        "report_forms": "通報件次",
+        "deduplicated_report_cases": "通報件數",
+        "economic_violence_person_times": "通報人次"
+      },
+      "data_type": "行政通報紀錄，不是抽樣調查、普查或經司法確認的犯罪件數。",
+      "event_definition": "通報件數依同一被害人、同一案發年月日扣除重複通報；經濟暴力（含財務剝奪）按案件類型列通報人次，同一人涉及不同類型可分別列計。",
+      "limitations": "未通報事件不在資料中；沒有全體長者或財務接觸暴露分母；362是案件類型通報人次而非個人數、發生率或個人受害機率。不得與全體老人保護通報件數直接相加。來源頁更新115-11-20；工作簿核心屬性修改2026-09-24。",
+      "accessed_at": "2026-11-21",
+      "sources": [
+        "ch17_elder_protection_stats_2025_20261121",
+        "ch17_elder_protection_stats_method_20261121"
+      ]
+    }
+  ],
+  "frequency_assessment": "有2025全國老人保護行政通報數及經濟暴力類通報人次，但沒有全體長者或財務暴露分母；沒有可信的個人發生率，不推估個人機率。",
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": "老人保護社工、金融及法律專業",
+    "status": "pending",
+    "reason": "本輪為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+  },
+  "unresolved_questions": [
+    "全國沒有可用於個人財務受害機率的適當分母；此資料缺口無法由行政通報數補足。",
+    "疑似虐待或帳戶異常的個案需由銀行、警方與社政依具體情況處理。"
+  ],
+  "prior_revision": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+  "before_sha256": "fe964ef1224e251fb73814285a00058636f7a511c36cc5bd383031192d6cd441",
+  "after_sha256": "fbc937ffc3b12d91a704afb431f03403d5a86e3124063b549e3db564e84b14b7",
+  "prior_review_sha256": "a5e72dadeb636840ed21c33e23936e672b1cbe14d123bdaadbe13b7d5a4d0bc8",
+  "source_bundle_path": "localization/tw-edition/sources/ch17-ch24-highrisk-recheck-20261121.json",
+  "legal_temporal_checks": [
+    {
+      "law": "民法",
+      "checked_at": "2026-11-21",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第1101條",
+            "第1113條"
+          ],
+          "promulgated_at": "2008-05-23",
+          "effective_at": "2009-11-23",
+          "basis": "法規沿革記載民法親屬編第1092至1113條部分規定修正公布，並自公布後一年六個月施行；第1101、1113條位於本次修正範圍。"
+        },
+        {
+          "provisions": [
+            "第1113-2條至第1113-10條"
+          ],
+          "promulgated_at": "2019-06-19",
+          "effective_at": "2019-06-21",
+          "basis": "法務部所屬機關說明意定監護於108年6月19日公布、同月21日施行；公證成立與契約於本人受監護宣告時生效，仍是不同時點。"
+        }
+      ],
+      "latest_law_version_context": "法務部沿革頁列2026-08-17最新修正第1223條，公布六個月後施行；該修正與本篇引用的第1101、1113及1113-2至1113-10條無關。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+        "https://www.ksc.moj.gov.tw/296454/296651/296652/716713/post"
+      ]
+    },
+    {
+      "law": "家庭暴力防治法",
+      "checked_at": "2026-11-21",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第2條第1款及第2款"
+          ],
+          "promulgated_at": "2015-02-04",
+          "effective_at": "2015-02-06",
+          "basis": "2015-02-04修法修改第2條；當次修法除第63-1條外自公布日施行，依中央法規標準法第13條將公布日計為第1日，第三日生效。2023-12-06最新一輪修法未修改第2條。"
+        }
+      ],
+      "current_scope": "第2條將家庭暴力（含經濟上騷擾、控制、脅迫或其他不法侵害）與家庭暴力罪（另須成立其他法律所定犯罪）分別定義；不得把一般帳務意見不同自動稱為犯罪。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050071",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050071",
+        "https://www.president.gov.tw/Page/294/43895?DTitle=%E4%BF%AE%E6%AD%A3%E5%AE%B6%E5%BA%AD%E6%9A%B4%E5%8A%9B%E9%98%B2%E6%B2%BB%E6%B3%95",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+      ]
+    }
+  ]
 }

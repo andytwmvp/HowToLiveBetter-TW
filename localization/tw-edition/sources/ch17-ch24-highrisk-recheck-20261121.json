@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-21",
+  "baseline_main_sha": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+  "sources": [
+    [
+      "ch17_elder_protection_stats_2025_20261121",
+      "衛福部統計處：老人保護通報案件統計（2025年）",
+      "https://www.mohw.gov.tw/dl-85681-abaa8faa-caa0-4377-8c6f-afea7c48be58.html",
+      "衛福部2025年全國老人保護資料：通報件次、去重後通報件數及經濟暴力（含財務剝奪）通報人次；行政通報不等同全體事件或個人發生率。"
+    ],
+    [
+      "ch17_elder_protection_stats_method_20261121",
+      "衛福部：老人保護通報案件統計編製說明",
+      "https://www.mohw.gov.tw/dl-86580-8ff24476-9bab-4238-9193-95e8401ea03a.html",
+      "老人保護通報的法定範圍與統計單位；同被害人、同案發日期重複通報去重，案件類型之通報人次可對同一人分別計列。"
+    ],
+    [
+      "ch24_medical_accident_care_5day_20261121",
+      "全國法規資料庫：醫療事故預防及爭議處理法第3、6條",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+      "醫預法第3條醫療事故定義，以及第6條醫療機構於事故翌日起五個工作日內說明、溝通、提供協助與關懷，含小型醫療機構及溝通協助規定。"
+    ],
+    [
+      "ch24_major_illness_effective_dates_20261121",
+      "全國法規資料庫：全民健康保險保險對象免自行負擔費用辦法第5條",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060015",
+      "重大傷病證明原則上以提出申請日生效；依效期分列重新申請期限，期內續核可銜接、逾期核定則從新申請日生效，並規定罕病例外。"
+    ],
+    [
+      "ch24_disability_process_law_20261121",
+      "全國法規資料庫：身心障礙者福利與服務需求評估及證明核發辦法",
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050050",
+      "身心障礙證明申請、戶籍地公所受理、醫療鑑定、地方政府福利需求評估與核發的法定流程。"
+    ]
+  ],
+  "legal_temporal_checks": [
+    {
+      "article_id": "TW-17-001",
+      "checks": [
+        {
+          "law": "民法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第1101條",
+                "第1113條"
+              ],
+              "promulgated_at": "2008-05-23",
+              "effective_at": "2009-11-23",
+              "basis": "法規沿革記載民法親屬編第1092至1113條部分規定修正公布，並自公布後一年六個月施行；第1101、1113條位於本次修正範圍。"
+            },
+            {
+              "provisions": [
+                "第1113-2條至第1113-10條"
+              ],
+              "promulgated_at": "2019-06-19",
+              "effective_at": "2019-06-21",
+              "basis": "法務部所屬機關說明意定監護於108年6月19日公布、同月21日施行；公證成立與契約於本人受監護宣告時生效，仍是不同時點。"
+            }
+          ],
+          "latest_law_version_context": "法務部沿革頁列2026-08-17最新修正第1223條，公布六個月後施行；該修正與本篇引用的第1101、1113及1113-2至1113-10條無關。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+            "https://www.ksc.moj.gov.tw/296454/296651/296652/716713/post"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-17-003",
+      "checks": [
+        {
+          "law": "民法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第1101條",
+                "第1113條"
+              ],
+              "promulgated_at": "2008-05-23",
+              "effective_at": "2009-11-23",
+              "basis": "法規沿革記載民法親屬編第1092至1113條部分規定修正公布，並自公布後一年六個月施行；第1101、1113條位於本次修正範圍。"
+            },
+            {
+              "provisions": [
+                "第1113-2條至第1113-10條"
+              ],
+              "promulgated_at": "2019-06-19",
+              "effective_at": "2019-06-21",
+              "basis": "法務部所屬機關說明意定監護於108年6月19日公布、同月21日施行；公證成立與契約於本人受監護宣告時生效，仍是不同時點。"
+            }
+          ],
+          "latest_law_version_context": "法務部沿革頁列2026-08-17最新修正第1223條，公布六個月後施行；該修正與本篇引用的第1101、1113及1113-2至1113-10條無關。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+            "https://www.ksc.moj.gov.tw/296454/296651/296652/716713/post"
+          ]
+        },
+        {
+          "law": "家庭暴力防治法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第2條第1款及第2款"
+              ],
+              "promulgated_at": "2015-02-04",
+              "effective_at": "2015-02-06",
+              "basis": "2015-02-04修法修改第2條；當次修法除第63-1條外自公布日施行，依中央法規標準法第13條將公布日計為第1日，第三日生效。2023-12-06最新一輪修法未修改第2條。"
+            }
+          ],
+          "current_scope": "第2條將家庭暴力（含經濟上騷擾、控制、脅迫或其他不法侵害）與家庭暴力罪（另須成立其他法律所定犯罪）分別定義；不得把一般帳務意見不同自動稱為犯罪。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050071",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050071",
+            "https://www.president.gov.tw/Page/294/43895?DTitle=%E4%BF%AE%E6%AD%A3%E5%AE%B6%E5%BA%AD%E6%9A%B4%E5%8A%9B%E9%98%B2%E6%B2%BB%E6%B3%95",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-24-006",
+      "checks": [
+        {
+          "law": "醫療法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第71條",
+                "第73條"
+              ],
+              "promulgated_at": "2004-04-28",
+              "effective_at": "2004-04-30",
+              "basis": "2004-04-28全文修正公布明定自公布日施行；依中央法規標準法第13條公布日計為第1日，第3日生效。2026-09-23修正第72條及其他列明條文，未修正第71、73條。"
+            }
+          ],
+          "latest_law_version_context": "全國法規資料庫沿革截至2026-11-21顯示最新整體修正為2026-09-23；該次修正包含第72條，但不含本篇使用的第71條病歷複製本及第73條急救後轉診規定。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0020021",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020021",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133",
+            "https://www.president.gov.tw/Page/294/50409"
+          ]
+        },
+        {
+          "law": "醫療事故預防及爭議處理法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第3條",
+            "第6條"
+          ],
+          "promulgated_at": "2022-06-22",
+          "effective_at": "2024-01-01",
+          "basis": "法律第45條授權行政院定施行日；行政院112年12月12日院臺衛字第1121043912號令定自113年1月1日施行。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+            "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029235/ch01/type1/gov01/num3/Eg.htm"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-24-009",
+      "checks": [
+        {
+          "law": "全民健康保險保險對象免自行負擔費用辦法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第5條",
+            "第9條"
+          ],
+          "relevant_provision_amendment": {
+            "provisions": [
+              "第5條"
+            ],
+            "promulgated_at": "2022-12-19",
+            "effective_at": "2022-12-21",
+            "basis": "衛福部111年12月19日修正發布第5條；第9條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第三日生效。"
+          },
+          "latest_law_version_context": "全國法規資料庫沿革列整體最新修正2024-09-16，該次僅修正第2條附表一；第5條最近修正仍為2022-12-19。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0060015",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060015",
+            "https://media.nhi.gov.tw/md/dl-51939-22c20553daad430ea05c073d00b44b53-3.pdf",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        },
+        {
+          "law": "身心障礙者福利與服務需求評估及證明核發辦法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第2條",
+            "第12條"
+          ],
+          "relevant_provision_amendment": {
+            "provisions": [
+              "第2條"
+            ],
+            "promulgated_at": "2023-05-26",
+            "effective_at": "2023-05-28",
+            "basis": "衛福部112年5月26日修正發布第2、7、8、12條；第12條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第3日生效。另第7條附表一之一及附表一之二明定自2023-07-01施行，非本篇第2條流程。"
+          },
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050050",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050050",
+            "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029097/ch08/type1/gov70/num30/Eg.htm",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        }
+      ]
+    }
+  ]
+}

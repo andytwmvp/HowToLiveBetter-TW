@@ -103,10 +103,14 @@ class DietOilChiliTopicFidelityTests(unittest.TestCase):
         expected_new_rows = [
             (item["id"], item["reviewed_at"]) for item in batch["items"]
         ]
-        self.assertCountEqual(
-            [(row["id"], row["reviewed_at"]) for row in current_rows[len(previous_rows) :]],
-            expected_new_rows,
-        )
+        batch_ids = {item["id"] for item in batch["items"]}
+        appended_batch_rows = [
+            (row["id"], row["reviewed_at"])
+            for row in current_rows[len(previous_rows) :]
+            if row["id"] in batch_ids
+        ]
+        self.assertCountEqual(appended_batch_rows, expected_new_rows)
+        self.assertFalse(any(row["id"] in ARTICLES for row in current_rows[len(previous_rows) :]))
 
     def test_manifest_runtime_review_body_and_navigation_are_hash_bound(self):
         runtime_order = [row["id"] for row in self.runtime["items"]]
