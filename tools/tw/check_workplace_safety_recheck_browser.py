@@ -1,6 +1,6 @@
 """職安、職災、工作急症、霸凌與健檢歷史再審全文及互動。"""
 from review_contract import ROOT, validate_runtime
-from body_renderer import body_blocks
+from body_renderer import body_blocks, reader_visible_text
 
 
 def check_workplace_safety_recheck_browser(page, context, url, review):
@@ -22,7 +22,7 @@ def check_workplace_safety_recheck_browser(page, context, url, review):
                     assert article.locator('h3').filter(has_text='離開特定有害作業後的追蹤健檢').count() == 1
                 rendered = article.text_content()
                 for block in body_blocks(items[key]):
-                    assert block['text'] in rendered, (target, key, block['text'][:50])
+                    assert reader_visible_text(block['text']) in rendered, (target, key, block['text'][:50])
                 for source_id in items[key]['source_ids']:
                     assert article.locator('a').evaluate_all(
                         '(xs,u)=>xs.some(a=>a.href===u)', sources[source_id]['url']

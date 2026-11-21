@@ -1,62 +1,156 @@
 {
   "id": "TW-01-025",
-  "reviewer": "ChatGPT（AI輔助臺灣官方HTML與指定PDF表圖核對，非醫師、心理師、消防或藥師簽證）",
+  "reviewer": "AI輔助官方與原始資料逐主張核對；尚未取得所列專業領域獨立審閱",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-25",
-  "review_due_at": "2027-01-31",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
   "target_path": "locales/zh-TW/book/ch01/TW-01-025.md",
-  "target_sha256": "aa4c50f7ef8b31e094d59a37067e44ee5c15f43fbf331f982c01318eaf23141f",
+  "target_sha256": "93deab4e32bdf7059b7a50c3aab372b7fce1f9d8614c8ee18cb6e55c09bf9f17",
   "source_checks": [
     {
       "url": "https://beipu.hcshb.gov.tw/News_Content.aspx?n=363&s=109351&sms=9314",
       "claim": "臺灣守門人以主動關懷、傾聽、回應及轉介支持；一般陪伴者不取代心理治療。",
       "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀鄉衛生所衛教，確認主動關懷傾聽、適當回應及轉介原則；不採其過時電話資訊取代衛福部現行頁。",
-      "accessed_at": "2026-10-25",
-      "retrieval_method": "實讀官方守門人HTML及服務表；專線服務資訊另由本次hotline連接工具交叉核對，工具附網站404不作來源網址。"
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21重新查核指定官方來源及支持主張；實讀官方守門人HTML及服務表；專線服務資訊另由本次hotline連接工具交叉核對，工具附網站404不作來源網址。",
+      "source_id": "ch01_crisis_gatekeeper_2026",
+      "title": "北埔鄉衛生所：自殺防治守門人"
     },
     {
       "url": "https://ihealth.vghtpe.gov.tw/media/782",
       "claim": "高風險時安全陪伴、協助就醫及持續追蹤；藥物及環境安全需與專業者討論。",
       "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀臺北榮總相關衛教段落；保留安全與追蹤主張，不採含汙名或傷害方法細節的句子，也不建議自行停處方。",
-      "accessed_at": "2026-10-25",
-      "retrieval_method": "2026-10-19實際讀取官方HTML相關正文，獨立語意摘要；未閱附件、圖片手法或影片不稱已驗證。"
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21重新查核指定官方來源及支持主張；2026-10-19實際讀取官方HTML相關正文，獨立語意摘要；未閱附件、圖片手法或影片不稱已驗證。",
+      "source_id": "ch01_crisis_vgh_safety",
+      "title": "臺北榮總：危機陪伴及安全環境"
     },
     {
       "url": "https://www.mohw.gov.tw/dl-100916-73f4ce53-0d62-4d3e-86bf-0f0af23e9349.html",
       "claim": "2025年自殺死亡3,951人，粗死亡率每十萬人口16.9、年齡標準化率12.9；標準化分母使用2000年WHO世界標準人口。",
       "supporting_passage": "實讀死因簡報第17至18頁及標準人口／公式說明：2025自殺死亡3,951人、粗率16.9、標準化率12.9／十萬；標準化率依2000年WHO世界標準人口調整（非逐字引文）。",
-      "accessed_at": "2026-10-25",
-      "retrieval_method": "實際讀取衛福部2025死因統計簡報第17至18頁文字與表圖；不重新計算官方死亡率。"
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21重新查核指定官方來源及支持主張；實際讀取衛福部2025死因統計簡報第17至18頁文字與表圖；不重新計算官方死亡率。",
+      "source_id": "ch01_death_2025_brief",
+      "title": "衛福部統計處：2025死因統計簡報"
     },
     {
       "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-4906-54077-107.html",
       "claim": "1925提供24小時免付費心理諮詢；立即生命危險須走緊急救援。",
       "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀衛福部心理健康司正文：情緒困擾可撥1925使用24小時免付費心理諮詢；頁面索引更新與正文更新日期分開記錄。",
-      "accessed_at": "2026-10-25",
-      "retrieval_method": "2026-10-25實讀頁面；區分頁面最後更新日期2026-10-22與正文更新時間2025-08-28，不將心理諮詢當緊急救護。"
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21重新查核指定官方來源及支持主張；2026-10-25實讀頁面；區分頁面最後更新日期2026-10-22與正文更新時間2025-08-28，不將心理諮詢當緊急救護。",
+      "source_id": "ch01_crisis_mohw_1925_2026",
+      "title": "衛福部心理健康司：1925安心專線（頁面更新至2026-10-22）"
     },
     {
       "url": "https://www.mohw.gov.tw/dl-99692-90bfc131-849a-4f80-861d-78197872aa2d.html",
       "claim": "2025年1至9月全國自殺通報系統有34,612人次，較2024年同期少8%。",
       "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀委託成果報告第10頁，確認期間、通報系統、人次單位與同期比較；不改寫為不同個案數、全部企圖數或盛行率。",
-      "accessed_at": "2026-10-25",
-      "retrieval_method": "實際取得官方PDF並讀取第10頁；不以摘要搜尋片段或附表以外資料作分母。"
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21重新查核指定官方來源及支持主張；實際取得官方PDF並讀取第10頁；不以摘要搜尋片段或附表以外資料作分母。",
+      "source_id": "ch01_suicide_reports_2026",
+      "title": "衛福部委託：114年全國自殺防治中心成果報告第10頁"
+    },
+    {
+      "source_id": "ch01_mohw_community_mental_health_centres_20261121",
+      "title": "衛福部心理健康司：全國社區心理衛生中心及通訊錄入口",
+      "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-7412-70356-107.html",
+      "claim": "讀者可依所在地從衛福部入口查找社區心理衛生中心聯絡資訊；服務項目、預約及費用須問地方單位。",
+      "supporting_passage": "非逐字引文：衛福部心理健康司頁面提供全國社區心理衛生中心通訊錄附件及布建地圖連結，可用來找地方服務窗口；該入口本身不保證各地服務、名額或費用相同。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接讀取衛福部心理健康司頁面；確認頁面連至115年11月16日通訊錄及115年10月30日更新布建地圖，只作服務入口定位，未把附件未讀資料推作服務資格或費用。"
     }
   ],
-  "localization_changes": "更新1925資訊至心理健康司現行頁；補入2025年1至9月通報人次與2025自殺死亡統計，逐一區分通報人次、死亡數、粗率與標準化率，避免換算個人危機機率。",
-  "review_method": "逐條比對臺灣正文、最新可讀官方原始來源及原作固定ID；衛福部委託成果報告第10頁：2025年1至9月通報系統34,612人次，較2024年同期少8%；為行政通報人次而非不同個案或人口分母。2025死因統計：自殺死亡3,951人，粗死亡率16.9/10萬人口、年齡標準化死亡率12.9/10萬標準人口；不可推論個人風險。 保留適用範圍與分母限制。 AI輔助核對官方與公立醫院公開來源，未取得精神醫療、心理、急救或危機介入專業獨立審閱；本文不是個案診療、危機評估或安全保證。",
+  "localization_changes": [
+    "保留立即求援、1925和既有通報／死亡統計；新增衛福部社區心理衛生中心官方名冊入口，說明讀者可依居住地找窗口並向地方確認服務、預約及費用。"
+  ],
+  "review_method": "重讀固定ID原題、現行正文、既有review與歷史；逐項核對臺灣生活情境、現行官方來源、統計定義、分母、法規適用範圍及讀者可執行步驟。",
   "limits": [
-    "照顧者不是心理治療師，陪伴不能保證風險解除；即使表面突然平靜，仍需要持續關懷與專業判斷。不將某種身分、性別或疾病視為必然危險，也不把求救看作操弄。本文不提供傷害方法、劑量或一個可自行排除危險的分數。專線資訊為臺灣適用，尚未取得精神醫療、心理與危機介入專業獨立審閱。",
-    "AI輔助核對官方與公立醫院公開來源，未取得精神醫療、心理、急救或危機介入專業獨立審閱；本文不是個案診療、危機評估或安全保證。"
+    "照顧者不是心理治療師，陪伴不能保證風險解除；即使表面突然平靜，仍需要持續關懷與專業判斷。不將某種身分、性別或疾病視為必然危險，也不把求救看作操弄。本文不提供傷害方法、劑量或一個可自行排除危險的分數。專線資訊為臺灣適用。",
+    "AI輔助來源查核不等於專業審閱；正式專業審閱尚未取得。",
+    "尚未取得精神醫療、心理危機介入及自殺防治專業人員獨立審閱。",
+    "通報人次和死亡率都不能衡量所有自傷意念或個別危機；社區中心各地服務及名額須另行確認。"
   ],
   "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
   "upstream_text_sha256": "c350f43684141e88b5887c61a2af23ef9706a9269477cfb51dc4566785c26b66",
-  "source_reviewed_sha256": "dbcff70932577104d2c4498692d33cf3ee98bacea1722f899686483bb1f09976",
+  "source_reviewed_sha256": "93deab4e32bdf7059b7a50c3aab372b7fce1f9d8614c8ee18cb6e55c09bf9f17",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "dbcff70932577104d2c4498692d33cf3ee98bacea1722f899686483bb1f09976",
     "after_sha256": "aa4c50f7ef8b31e094d59a37067e44ee5c15f43fbf331f982c01318eaf23141f",
     "before_reader_sha256": "20b4afd1c48ace3b38869361d48ee1f8923885849f9d8b9ea7d0c330d9dc95f3",
     "after_reader_sha256": "a8bee1664139cab45c55ea0af7ae850485a333ac49058a76bb574bfd2aac2cbe"
-  }
+  },
+  "source_ids": [
+    "ch01_crisis_gatekeeper_2026",
+    "ch01_crisis_vgh_safety",
+    "ch01_death_2025_brief",
+    "ch01_crisis_mohw_1925_2026",
+    "ch01_suicide_reports_2026",
+    "ch01_mohw_community_mental_health_centres_20261121"
+  ],
+  "frequency_assessment": "2025年1至9月全國自殺防治通報34,612人次，較上年同期少8%，但非去重個案數或人口盛行率；2025年自殺死亡3,951人，粗率16.9、標準化率12.9／十萬人口，死亡登記不能換算個人危機機率。",
+  "statistics_assessed": [
+    {
+      "topic": "全國自殺防治通報系統通報人次",
+      "value": 34612,
+      "unit": "通報人次",
+      "period": "2025年1月至9月",
+      "geographic_scope": "臺灣全國行政通報系統",
+      "population": "進入自殺防治通報系統的通報紀錄",
+      "numerator": "34,612通報人次",
+      "denominator": "沒有全體有自傷意念或未遂者的分母；人次不等於去重個案數",
+      "event_definition": "自殺防治通報系統受理之通報人次",
+      "data_type": "行政通報數",
+      "limitations": "通報人次可能包含重複通報，並非意念盛行率、所有未遂事件或個人發生率。",
+      "source_ids": [
+        "ch01_suicide_reports_2026"
+      ],
+      "accessed_at": "2026-11-21"
+    },
+    {
+      "topic": "全國自殺死亡數與死亡率",
+      "value": {
+        "deaths": 3951,
+        "crude_rate_per_100000": 16.9,
+        "age_standardized_rate_per_100000": 12.9
+      },
+      "unit": "死亡人數；每十萬人口粗率／年齡標準化率",
+      "period": "2025年",
+      "geographic_scope": "臺灣全國",
+      "population": "全體人口死因統計；標準化採WHO 2000年世界標準人口",
+      "numerator": "3,951名自殺死亡",
+      "denominator": "粗率以人口為分母；標準化率以WHO 2000年標準人口調整",
+      "event_definition": "死因統計登記之自殺死亡",
+      "data_type": "行政死亡登記統計",
+      "limitations": "死亡登記不含自傷意念或全部未遂事件，人口率不是個案危機機率，也不能代替個別風險評估。",
+      "source_ids": [
+        "ch01_death_2025_brief"
+      ],
+      "accessed_at": "2026-11-21"
+    }
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "精神醫療",
+      "心理危機介入",
+      "自殺防治"
+    ]
+  },
+  "unresolved_questions": [
+    "尚未取得精神醫療、心理危機介入及自殺防治專業人員獨立審閱。",
+    "通報人次和死亡率都不能衡量所有自傷意念或個別危機；社區中心各地服務及名額須另行確認。"
+  ],
+  "topic_fidelity_assessment": "保留固定ID所代表的原始生活安全／求助問題；以臺灣現行情境和本地服務補強，不以不相干情境取代原題。",
+  "topic_fidelity_review": {
+    "decision": "retain_current_topic_with_taiwan_evidence_and_actions",
+    "original_topic": "抑鬱或有自殺念頭時打 12356，家裡不囤安眠藥和農藥",
+    "taiwan_relevance": "適用臺灣有自傷念頭者及支持親友；立即生命危險先119，非緊急心理支持可用1925或依所在地尋找社區心理衛生中心。",
+    "reader_content_decision": "保留立即求援、1925和既有通報／死亡統計；新增衛福部社區心理衛生中心官方名冊入口，說明讀者可依居住地找窗口並向地方確認服務、預約及費用。",
+    "question_change": null
+  },
+  "source_bundle_sha256": "960a0e124eb267effba09756b8d6c0239b52cb59265a368441e5528597ea3640"
 }

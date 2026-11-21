@@ -96,7 +96,17 @@ class DietOilChiliTopicFidelityTests(unittest.TestCase):
                 self.assertEqual(batch_item["prior_structured_source_refs"], before_rows[number][5].split())
 
         baseline_register = json.loads(git_bytes(BASE, REGISTER))
-        self.assertEqual(self.register, baseline_register)
+        previous_rows = baseline_register["substantive_rechecks"]
+        current_rows = self.register["substantive_rechecks"]
+        self.assertEqual(current_rows[: len(previous_rows)], previous_rows)
+        batch = read("localization/ch01-highrisk-recheck-20261121.json")
+        expected_new_rows = [
+            (item["id"], item["reviewed_at"]) for item in batch["items"]
+        ]
+        self.assertCountEqual(
+            [(row["id"], row["reviewed_at"]) for row in current_rows[len(previous_rows) :]],
+            expected_new_rows,
+        )
 
     def test_manifest_runtime_review_body_and_navigation_are_hash_bound(self):
         runtime_order = [row["id"] for row in self.runtime["items"]]
