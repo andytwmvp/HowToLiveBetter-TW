@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "batch": "第五章防詐、兒少驗證碼、預付消費與銀行商品首次正式發布",
+  "baseline_main_sha": "c5c4a8f48cae4040a69edc3b7d9caa6ceac5d112",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 326,
+    "runtime_items": 337,
+    "runtime_sources": 1392,
+    "source_registry": 1475,
+    "review_rechecks": 407,
+    "coverage_json_files": 680,
+    "unresolved_source_ids": 101,
+    "unresolved_reference_occurrences": 246,
+    "publication_completed_entries": 326,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "tw05_npa_fraud_stats_2025",
+    "tw05_cib_fake_investment",
+    "tw05_anti_fraud_article28",
+    "tw05_npa_recovery_scam_2026",
+    "tw05_cib_child_otp_2026",
+    "tw05_npa_165_reporting_faq",
+    "tw05_consumer_protection_act",
+    "tw05_cpc_prepaid_transactions",
+    "tw05_cpc_dispute_process",
+    "tw05_cpc_1950",
+    "tw05_cdic_deposit_faq",
+    "tw05_insurance_agent_rule",
+    "tw05_finconsumer_act",
+    "tw05_foi_appeal_process"
+  ],
+  "new_source_bundle": "localization/tw-edition/sources/ch05-fraud-prepaid-deposit-20261121.json",
+  "items": [
+    {
+      "id": "TW-05-006",
+      "title": "高報酬與保本承諾先查誰負責、是否合法",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c5c4a8f48cae4040a69edc3b7d9caa6ceac5d112",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "757608c9200b2545c987781efcb03018dba13d7b1279616ad8cbdd9fe6d835ca",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "fc78901912cb30f7b085c304825d6d39a1e61f3d1d93e686cb3ca7485a5d4f55",
+      "prior_structured_source_refs": [
+        "fraud165",
+        "fscinvest"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "bf063a832ea40a12f45bd3b1952cbee9c4ab34cc471682b8d434cd889bc356ca",
+      "review_path": "localization/reviews/TW-05-006.json",
+      "review_sha256": "d7b8815e7af84d69beeeab80dee03e61b2de393c1232d16c0d217450423566e9",
+      "target_path": "locales/zh-TW/book/ch05/TW-05-006.md",
+      "source_ids": [
+        "tw05_npa_fraud_stats_2025",
+        "tw05_cib_fake_investment",
+        "tw05_anti_fraud_article28",
+        "tw05_npa_recovery_scam_2026"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw05_npa_fraud_stats_2025",
+          "title": "警政署：114 年詐欺犯罪統計通報（2026-04-01）",
+          "url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=1496332666214027264&module=wg063&type=s",
+          "claim": "警政署2026-04-01統計通報列2025年詐欺案件197,595件、投資詐欺58,675件及占比29.69%，並說明自2024年9月案件數認定原則改變、因此不與2024全年直接比較。",
+          "supporting_passage": "2025年警方記錄詐欺案件197,595件，其中投資詐欺58,675件（29.69%）。這是依犯罪方法分類的警政行政案件數與案件占比，不是投資人或廣告接觸者的發生率；官方說明自2024年9月改變案件數認定原則，該通報未直接比較114年全年和113年全年。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀警政署五頁統計通報，核對全國年份、案件定義、分類占比與案件認定變更註記。"
+        },
+        {
+          "source_id": "tw05_cib_fake_investment",
+          "title": "刑事警察局：常見詐騙手法話術解析與因應之道—假投資",
+          "url": "https://www.cib.npa.gov.tw/ch/app/data/view?module=wg116&id=1909&serno=a4f8d5ab-3d53-4d22-9411-031fddde7a4e",
+          "claim": "刑事警察局說明假投資可能由社群或交友軟體接觸、拉入LINE群組、先讓民眾小額獲利後誘使加碼，再以洗碼量、保證金或IP異常阻擋出金；提供165及投信投顧公會查核入口。",
+          "supporting_passage": "刑事警察局描述假投資會透過社群或交友軟體接觸、加入LINE群組、先以小額獲利建立信任，再要求加碼；出金時以洗碼量、保證金或IP異常阻擋。頁面也指向165全民防騙網及投信投顧公會查詢合法投資管道。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀刑事警察局假投資手法及防範頁，核對常見接觸方式、出金話術與官方查詢入口。"
+        },
+        {
+          "source_id": "tw05_anti_fraud_article28",
+          "title": "銀行局：《金融機構及提供虛擬資產服務之事業或人員防制詐欺犯罪危害應遵循事項辦法》第28條",
+          "url": "https://law.banking.gov.tw/Chi/FLAW/FLAWDOC01.aspx?lno=28&lsid=FL104315",
+          "claim": "現行辦法第28條：受詐民眾於存款業務機構營業時間親自至任一家存款業務機構，配合身分及匯款／轉帳核對、填寫切結書並撥165後，警方應於二小時內到場受理報案；辦法不保證款項已追回。",
+          "supporting_passage": "2026-07-20修正的現行法規第28條規定，受詐民眾於存款業務機構營業時間親自至任一家存款業務機構告知受詐，經確認身分及匯款／轉帳資訊、填寫切結書並撥打165後，警方應於二小時內派員到該機構受理報案；依法受理不保證款項已攔阻或追回。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接查閱銀行局現行法規第28條及沿革，核對適用機構、辦理條件、警方到場時限及法規版本。"
+        },
+        {
+          "source_id": "tw05_npa_recovery_scam_2026",
+          "title": "警光雜誌：慎防假冒警方、銀行或律師協助追回款項的二次詐騙",
+          "url": "https://police.npa.gov.tw/ch/app/data/view?id=1835&module=wg081&serno=aa838cd6-0932-4ee5-9323-a9a17360a4be",
+          "claim": "警政署提醒假冒警方、銀行、律師或聲稱能追回款項者可能再騙費用或個資；民眾應停付並使用110或165官方管道。",
+          "supporting_passage": "警政署提醒假冒警方、銀行、律師或聲稱能追回款項者可能再要求費用或個資；遭遇疑似二次詐騙應停止付款並利用110或165官方管道求助。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀警政署防詐提醒，核對二次詐騙情境和官方求助管道。"
+        }
+      ],
+      "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+      "taiwan_context": "保留投資詐騙辨識與資金安全核心；加入台灣投資服務查核、銀行與165／警察通報流程，並避免把高報酬邀約一概定罪或把登記當成政府保證。",
+      "frequency_assessment": "警政署2025年詐欺案件數及投資詐欺占比可描述案件組成；目前沒有可將警方投資詐欺案件配對到台灣投資人數、廣告接觸人數或投資人年分母的資料，不能換算個人受害機率。案件數認定自2024年9月改變，官方通報不直接比較2025全年與2024全年。",
+      "statistics_assessed": [
+        {
+          "topic": "2025年警政署詐欺案件與投資詐欺案件占比",
+          "value": {
+            "all_fraud_cases": 197595,
+            "investment_fraud_cases": 58675,
+            "investment_fraud_share_percent": 29.69
+          },
+          "unit": "警察機關記錄案件件數及投資詐欺占全部詐欺案件的百分比；不是人口率、投資人受害率或個人機率",
+          "period": "2025年（民國114年）；通報發布於2026-04-01",
+          "geographic_scope": "台灣全國警政統計",
+          "population": "警察機關記錄的詐欺案件，按犯罪方法分類；不等於所有實際發生案件、投資人或接觸廣告者",
+          "numerator": "投資詐欺58,675件（占全部詐欺案件29.69%）",
+          "denominator": "全部詐欺案件197,595件",
+          "denominator_definition": "警政署114年記錄的全國詐欺案件件數；案件占比的分母，不是台灣人口或投資人數",
+          "event_definition": "警政行政統計中依犯罪方法歸類為詐欺及投資詐欺的案件發生數；官方說明自2024年9月案件數認定原則改變",
+          "data_type": "政府行政案件統計與案件類型占比",
+          "limitations": "無投資人、廣告接觸者或暴露人年分母；案件數不等於受害人數或個人風險。案件認定方式自2024年9月改變，該通報不將114年全年與113年全年直接比較。",
+          "source_ids": [
+            "tw05_npa_fraud_stats_2025"
+          ],
+          "accessed_at": "2026-11-21"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "金融消費者保護／證券投資服務（商品與業務資格辨識）",
+          "警政反詐與金融機構通報流程"
+        ]
+      },
+      "topic_fidelity_review": {
+        "decision": "retain_original_high_return_and_guaranteed_principal_scam_question_with_taiwan_reporting_steps",
+        "original_question": "遇到高報酬、保本或穩賺承諾時，如何判斷風險並處理？",
+        "reader_content_decision": "保留投資詐騙辨識與資金安全核心；加入台灣投資服務查核、銀行與165／警察通報流程，並避免把高報酬邀約一概定罪或把登記當成政府保證。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "保本高收益或保證獲利承諾代表政府或銀行保證",
+            "decision": "reject_as_government_guarantee_and_explain_product_risk",
+            "reason": "金融機構銷售、公司登記或廣告均不等於存款保險或本金保證；需核對契約相對人、商品性質、風險與退出條件。"
+          },
+          {
+            "original_claim": "受騙後可立刻報案並追回款項",
+            "decision": "retain_reporting_steps_without_recovery_guarantee",
+            "reason": "現行銀行防詐辦法設有存款業務機構受理流程與警方到場時限，但法定受理不等於款項一定攔阻或追回。"
+          }
+        ]
+      },
+      "cost_time_benefit_assessment": "暫停付款、閱讀契約及自行核對官方登記不需購買代辦服務；應避免追回款、解凍費或保證金等二次付款。"
+    },
+    {
+      "id": "TW-05-010",
+      "title": "教孩子遇付款、帳號與驗證碼要求先停下找大人",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c5c4a8f48cae4040a69edc3b7d9caa6ceac5d112",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "96b9132dee7eb2c55d250f65b35ef400baf3a8bf8618934e2ea3c7c9db2b3efe",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "e9d3575f3b6585a485209c75c0a8b4f802b7fc1a2bc0c4d82e04738a2d547201",
+      "prior_structured_source_refs": [
+        "fraud165",
+        "childsafety"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "be8b00cb6a9ef2152fd118f3483c11f9d4949b7bad1eb3f0bc59302636663212",
+      "review_path": "localization/reviews/TW-05-010.json",
+      "review_sha256": "c6f6d60ea0e42e69b66f3256d49b8dc10aa3851849959009c283c6fc8aa6c26a",
+      "target_path": "locales/zh-TW/book/ch05/TW-05-010.md",
+      "source_ids": [
+        "tw05_cib_child_otp_2026",
+        "tw05_npa_165_reporting_faq"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw05_cib_child_otp_2026",
+          "title": "刑事警察局：免費遊戲幣竟是陷阱！兒少傳驗證碼與 One Number 案例",
+          "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=b6055f8b-ee3d-42ec-a808-e59b1548f25f",
+          "claim": "刑事警察局2026-06-29公布彰化縣一名國中生因免費遊戲幣話術回傳OTP，家長門號遭利用開通One Number後異常使用停話的個案；官方未提供兒少暴露母數。",
+          "supporting_passage": "刑事警察局公布一名國中生因免費遊戲幣訊息回傳驗證碼，家長門號遭利用申辦One Number服務並停話的案例；這是個案，沒有全國兒少暴露母數，不能推作發生率。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀刑事警察局2026-06-29公告個案，核對發布日、個案地點、年齡情境和OTP／門號操作鏈。"
+        },
+        {
+          "source_id": "tw05_npa_165_reporting_faq",
+          "title": "警政署：165反詐騙諮詢專線費用及報案方式常見問答",
+          "url": "https://www.npa.gov.tw/ch/app/faq/view?module=faq&id=2144&serno=A1078837",
+          "claim": "警政署常見問答提供165諮詢／報案與官方網路報案資訊；頁面更新日期為2022-11-01，電話費依市話及行動門號有所不同。",
+          "supporting_passage": "警政署說明可撥165諮詢，受騙後也可向鄰近警察機關報案，並提供網路報案或相關處理入口及費用說明；查閱官方常見問答並以當前頁面為準。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀警政署165 FAQ，核對官方諮詢及報案入口、頁面日期與通話費差異；未將2022年的費率細節泛化到個別門號方案。"
+        }
+      ],
+      "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+      "taiwan_context": "保留孩子不受網友誘導操作手機或交付驗證碼的核心，納入台灣遊戲、LINE、直播、門號加值與官方客服處理情境；明確區分聊天交碼與本人在官方登入頁輸入驗證碼。",
+      "frequency_assessment": "官方警察宣導提及近期多起案件並公布一名彰化縣國中生案例，但未提供全國兒少接觸相關訊息、收到OTP或回傳OTP的分母及系統性案件總數；僅用個案解釋手法，不換算個人機率。",
+      "statistics_assessed": [
+        {
+          "topic": "兒少提供OTP後遭利用申辦電信服務的官方個案示例",
+          "value": {
+            "described_cases": 1
+          },
+          "unit": "一則具體警政個案；不是發生率、通報率或兒少風險估計",
+          "period": "個案發生於2026年3月至5月；警方公告於2026-06-29",
+          "geographic_scope": "彰化縣一名國中生的個案",
+          "population": "一名國中八年級學生及其家長門號；非抽樣研究",
+          "numerator": "公開報導描述1名學生回傳OTP後，家長門號遭申辦One Number並停話",
+          "denominator": "未提供兒少或OTP暴露人數分母",
+          "denominator_definition": "個案新聞未提供母群體、接觸人數或風險期間，因此沒有可計算的率",
+          "event_definition": "提供簡訊OTP後被用於開通未申請的電信服務及門號遭異常使用",
+          "data_type": "警政機關個案宣導，不是調查或行政統計",
+          "limitations": "單一個案只示範風險路徑；不能推作常見程度或所有孩子的個人機率。",
+          "source_ids": [
+            "tw05_cib_child_otp_2026"
+          ],
+          "accessed_at": "2026-11-21"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒少網路安全／數位素養",
+          "電信帳號安全與家庭照護"
+        ]
+      },
+      "topic_fidelity_review": {
+        "decision": "retain_child_otp_safety_question_with_taiwan_game_and_telecom_context",
+        "original_question": "如何讓孩子避免因網路誘導而交出家長手機或驗證碼？",
+        "reader_content_decision": "保留孩子不受網友誘導操作手機或交付驗證碼的核心，納入台灣遊戲、LINE、直播、門號加值與官方客服處理情境；明確區分聊天交碼與本人在官方登入頁輸入驗證碼。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "只要網路上有人要求孩子操作家長手機或回傳驗證碼就應視為安全風險",
+            "decision": "retain_as_stop_and_verify_rule_with_context",
+            "reason": "官方兒少個案顯示免費遊戲幣話術可誘導回傳OTP並被用於電信服務；同時需避免把本人發起的官方登入誤說成詐騙。"
+          },
+          {
+            "original_claim": "收到OTP即代表帳號已被盜用",
+            "decision": "reject_as_overbroad_and_add_verification_steps",
+            "reason": "收到未主動申請的驗證碼不等於帳號已遭控制，應從官方管道查核服務、交易和裝置。"
+          }
+        ]
+      },
+      "cost_time_benefit_assessment": "家庭情境演練與查看手機安全設定不需另購服務；實際帳號復原或電信申訴依業者流程辦理。"
+    },
+    {
+      "id": "TW-05-022",
+      "title": "預付服務先查契約、履約保障與退款條件",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c5c4a8f48cae4040a69edc3b7d9caa6ceac5d112",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "21eb81120e4c952f6c56f71fc1ea9aff7af8e7b91aefab080f8d5215e1194ad9",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "06c536778dee1a3be5b10c53a3b8820e515d7e6676dd3471c072fdcbd870339e",
+      "prior_structured_source_refs": [
+        "consumer",
+        "vouchers",
+        "fitnesscontract"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "2eeaeef8c66b9d23a9f3b299fcc16042bebb5c18cffe04bdb35806be81f239d8",
+      "review_path": "localization/reviews/TW-05-022.json",
+      "review_sha256": "84f9e133df7e9a79ba576fcccd9e7697a02659b6bcd5b32c36787c52e47c5534",
+      "target_path": "locales/zh-TW/book/ch05/TW-05-022.md",
+      "source_ids": [
+        "tw05_consumer_protection_act",
+        "tw05_cpc_prepaid_transactions",
+        "tw05_cpc_dispute_process",
+        "tw05_cpc_1950"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw05_consumer_protection_act",
+          "title": "全國法規資料庫：《消費者保護法》第13、17、64條及法規沿革",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+          "claim": "現行消保法第17條允許中央主管機關選擇特定行業公告定型化契約事項，內容可包括預付交易履約擔保、解除或終止契約及其法律效果；不是所有預付款一律適用同一保障。",
+          "supporting_passage": "現行第13條規範定型化契約內容揭示及交付；第17條授權中央主管機關選擇特定行業公告定型化契約事項，其內容可包括預付交易履約擔保及終止／解除條件；第64條列明法律施行日期原則及例外。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀全國法規資料庫現行消保法第17、64條與沿革，核對特定行業授權、預付擔保與施行日期條款。"
+        },
+        {
+          "source_id": "tw05_cpc_prepaid_transactions",
+          "title": "行政院消費者保護會：預付型交易問答",
+          "url": "https://cpc.ey.gov.tw/Page/8A04F6D87D628151",
+          "claim": "消保會將預付型交易說明為先付款、分次或分期享受商品／服務；履約保障要看公告的特定商品／服務禮券規範，並提供個別行業的注意事項。",
+          "supporting_passage": "消保會將預付型交易說明為先付款、後分次或分期享受商品／服務；禮券履約保障依主管機關公告之商品（服務）禮券定型化契約規範，不能推成每種預付款都適用同一保障。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀行政院消保會預付型交易專區及相應問答，核對預付定義與禮券履約保障適用範圍。"
+        },
+        {
+          "source_id": "tw05_cpc_dispute_process",
+          "title": "行政院消費者保護會：消費爭議處理程序及線上申訴入口",
+          "url": "https://cpc.ey.gov.tw/Page/71E988F034956960",
+          "claim": "消保會說明先向業者申訴、可於上班時間撥1950向地方消費者服務中心諮詢，也可用官方線上申訴與調解系統；業者應於收到申訴起15日內妥適處理。",
+          "supporting_passage": "官方消保會提供消費爭議申訴、調解處理流程與線上申訴入口，供消費者向業者申訴後依程序尋求所在地消費者服務管道。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀消保會消費爭議程序頁，核對1950、線上申訴入口、上班時間與申訴程序。"
+        },
+        {
+          "source_id": "tw05_cpc_1950",
+          "title": "行政院消費者保護會：全國消費者服務專線1950",
+          "url": "https://cpc.ey.gov.tw/Page/A1D31DAB12817E9",
+          "claim": "行政院消費者保護會提供全國消費者服務專線1950的官方入口，可詢問所在地消費者服務管道。",
+          "supporting_passage": "消保會提供1950全國消費者服務專線入口，民眾可詢問所在地消費者服務管道。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接查閱行政院消保會1950服務入口，確認主管機關與服務用途。"
+        }
+      ],
+      "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+      "taiwan_context": "保留預付款、契約、保障與未消費餘額的原始決策問題；以台灣消保法、各業別定型化契約、1950與線上申訴流程說明，不把某一行業規定擴大成全民通則。",
+      "frequency_assessment": "預付交易跨健身、補習、美容、禮券及其他服務，不同業別的契約規範和事件分類不一致。未找到能配對全國預付交易總量與停業或未履約事件數的共同資料，不能推估所有預付消費者的個人風險。",
+      "statistics_assessed": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "消費者保護與定型化契約法制",
+          "預付型交易各業別主管機關規範與履約擔保"
+        ]
+      },
+      "topic_fidelity_review": {
+        "decision": "retain_prepaid_contract_and_refund_question_with_sector_specific_taiwan_consumer_protection",
+        "original_question": "預先付款購買長期服務時，如何保護已付但尚未消費的金額？",
+        "reader_content_decision": "保留預付款、契約、保障與未消費餘額的原始決策問題；以台灣消保法、各業別定型化契約、1950與線上申訴流程說明，不把某一行業規定擴大成全民通則。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "所有預付型服務都有同一種履約保證或未消費餘額全額退還權",
+            "decision": "reject_as_universal_rule_and_scope_by_industry",
+            "reason": "消保法第17條授權對特定行業公告契約事項；主管機關官方預付交易說明亦將履約保障連結到特定商品服務禮券規範。"
+          },
+          {
+            "original_claim": "店家倒閉後向銀行申訴即可停止任何相關貸款",
+            "decision": "retain_contract_check_and_warn_that_separate_credit_contract_may_continue",
+            "reason": "預付服務契約及銀行貸款可能為不同契約，消保會官方問答要求分開核對。"
+          }
+        ]
+      },
+      "cost_time_benefit_assessment": "閱讀契約、保留電子紀錄與查詢官方定型化契約規範不需另購服務；退款可能受解約條件、已使用金額、手續費與履約保障範圍影響。"
+    },
+    {
+      "id": "TW-05-042",
+      "title": "銀行銷售的商品不一定是存款",
+      "status": "ai_source_checked_professional_pending",
+      "prior_revision": "c5c4a8f48cae4040a69edc3b7d9caa6ceac5d112",
+      "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+      "upstream_text_sha256": "c7d85c07a609f953c0b86a1830b0b11cef81b10eb052bb5274d80f8eafac1b44",
+      "prior_content_status": "structured_chapter_draft_pending_first_official_publication",
+      "prior_structured_draft_sha256": "06e229c2d9230b8f3afaa8323e861df83a69fefe760d02bdec9d94ec60c0a5f3",
+      "prior_structured_source_refs": [
+        "cdic",
+        "insurance",
+        "fscinvest"
+      ],
+      "prior_chapter_draft_sha256": null,
+      "before_sha256": null,
+      "after_sha256": "1e213ea8b56f1aab6a8491bb08b943c2790846a9136b7ceae62dcd6d250b3fef",
+      "review_path": "localization/reviews/TW-05-042.json",
+      "review_sha256": "07638e15cae62af1198912ede7b3449a27945e5ab0720a2dec75b8a361d978bf",
+      "target_path": "locales/zh-TW/book/ch05/TW-05-042.md",
+      "source_ids": [
+        "tw05_cdic_deposit_faq",
+        "tw05_insurance_agent_rule",
+        "tw05_finconsumer_act",
+        "tw05_foi_appeal_process"
+      ],
+      "source_checks": [
+        {
+          "source_id": "tw05_cdic_deposit_faq",
+          "title": "中央存款保險公司：存款保險常見問答",
+          "url": "https://www.cdic.gov.tw/main_deposit/faq.aspx?pid=59&uid=59",
+          "claim": "中央存保說明同一要保機構每位存款人的要保存款本金與利息合計最高保障新臺幣300萬元；保單、基金、股票、ETF、債券等非存款商品即使標示保本，也不受存款保險保障。",
+          "supporting_passage": "中央存保說明每位存款人在同一要保機構受保障的要保存款本金與利息合計最高新臺幣300萬元；保單、基金、股票、債券等非存款商品，即使標示保本，也不受存款保險保障。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接查閱中央存保公司存款人FAQ，核對同一要保機構額度計算與Q20非存款商品例示。"
+        },
+        {
+          "source_id": "tw05_insurance_agent_rule",
+          "title": "金管會：保險代理人管理規則第35條",
+          "url": "https://law.fsc.gov.tw/LawContent.aspx?id=FL006749",
+          "claim": "現行保險代理人管理規則第35條要求兼營保險代理業務的銀行標明並區分銀行與保險代理業務、揭露保險商品性質及風險，並禁止利用客戶存款資料誤導推介與風險屬性不符商品或只比報酬忽略風險。",
+          "supporting_passage": "現行第35條要求兼營保險代理業務的銀行表明銀行業務與保險代理業務的區別、揭露商品性質與風險，並禁止利用客戶存款資料誤導推介風險不相符商品或只比較報酬而忽略風險。現行法規頁標示2026-09-30修正。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀金管會現行規則第35、61條及沿革，核對銀行區分、風險揭露、禁止行為和修正日期。"
+        },
+        {
+          "source_id": "tw05_finconsumer_act",
+          "title": "全國法規資料庫：《金融消費者保護法》第9、10、13條及法規沿革",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
+          "claim": "現行金融消費者保護法第9、10條涉及商品／服務適合度及風險揭露；第13條要求金融服務業30日內適當處理申訴並回覆，對結果不服或逾期未處理者可於收到結果或期限屆滿日起60日內申請評議。",
+          "supporting_passage": "現行條文規範金融商品／服務適合度及風險說明；第13條要求金融服務業收受申訴後30日內處理，不接受結果或逾期未處理者，可於法定60日期限內申請評議。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀金融消費者保護法現行第9、10、13條及法規沿革，核對申訴處理及申請評議期限。"
+        },
+        {
+          "source_id": "tw05_foi_appeal_process",
+          "title": "財團法人金融消費評議中心：評議流程圖與申請方式",
+          "url": "https://www.foi.org.tw/article.aspx?arti=358&lang=1&role=2",
+          "claim": "金融消費評議中心提供正式評議流程；先向金融服務業申訴，不接受處理結果或業者逾30日未處理，於法定60日期限內申請評議。",
+          "supporting_passage": "評議中心公開金融消費爭議的申請流程；金融消費者先向業者申訴，對結果不服或業者逾30日未處理，可在法定60日內申請評議。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀金融消費評議中心評議流程圖及申請方式，與現行法第13條期限逐項核對。"
+        }
+      ],
+      "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+      "taiwan_context": "保留「銀行通路不等於存款」的決策問題，依台灣存款保險範圍、銀行兼營保險代理義務及金融消費爭議時限撰寫；不把非存款商品一概說成完全沒有其他保障。",
+      "frequency_assessment": "目前沒有可代表台灣民眾、量測銀行通路金融商品誤認為存款或不理解存款保險範圍的全國調查分母；以法規義務與個別文件查核指引呈現，不推估發生率。",
+      "statistics_assessed": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "銀行與保險代理法規",
+          "金融商品適合度、風險揭露及金融消費爭議程序"
+        ]
+      },
+      "topic_fidelity_review": {
+        "decision": "retain_bank_sold_product_vs_deposit_distinction_with_taiwan_deposit_insurance_and_complaint_rights",
+        "original_question": "在銀行櫃檯購買的金融商品是否就是存款？如何辨認保障差異？",
+        "reader_content_decision": "保留「銀行通路不等於存款」的決策問題，依台灣存款保險範圍、銀行兼營保險代理義務及金融消費爭議時限撰寫；不把非存款商品一概說成完全沒有其他保障。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "只要在銀行辦理或標示保本，就受存款保險保障",
+            "decision": "reject_and_distinguish_product_and_counterparty",
+            "reason": "存保公司列明保單、基金、股票、債券等非存款商品不受存款保險保障；銀行通路不會改變商品契約性質。"
+          },
+          {
+            "original_claim": "存款保險額度可套用到每個商品或每個帳戶",
+            "decision": "correct_to_per_depositor_per_insured_institution_aggregate",
+            "reason": "現行存保問答說明同一要保機構之要保存款本金與利息合計最高新臺幣300萬元。"
+          },
+          {
+            "original_claim": "遭遇不當銷售時可提出申訴並申請評議",
+            "decision": "retain_with_current_30_and_60_day_deadlines",
+            "reason": "金融消費者保護法第13條規定業者30日內處理回覆；消費者於收到結果或期限屆滿日起60日內申請評議。"
+          }
+        ]
+      },
+      "cost_time_benefit_assessment": "詢問商品種類、索取文件及自行查閱法規不需另購代辦服務；應比較保費、管理費、交易費用、匯率、資金鎖定與提前解約成本。"
+    }
+  ],
+  "source_records_reused": [],
+  "source_records_retired": [],
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 330,
+    "runtime_items": 341,
+    "runtime_sources": 1406,
+    "source_registry": 1489,
+    "review_rechecks": 407,
+    "coverage_json_files": 686,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_completed_entries": 330,
+    "publication_ready": false
+  },
+  "professional_review_status": "AI輔助來源核對已完成；金融消費者保護／證券服務、兒少數位安全／電信、消費契約及銀行保險專業審閱仍待取得。",
+  "reader_copy_cleanup": "讀者正文保留台灣消費與金融風險、可執行步驟及必要資料限制；批次摘要、AI核對狀態、內部管理限制與專業審閱流程只記錄於本證據檔和逐篇review。"
+}

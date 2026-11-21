@@ -1,0 +1,114 @@
+{
+  "id": "TW-05-022",
+  "reviewer": "ChatGPT（AI 協助查核台灣官方資料與現行法規；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch05/TW-05-022.md",
+  "target_sha256": "2eeaeef8c66b9d23a9f3b299fcc16042bebb5c18cffe04bdb35806be81f239d8",
+  "source_reviewed_sha256": "2eeaeef8c66b9d23a9f3b299fcc16042bebb5c18cffe04bdb35806be81f239d8",
+  "source_bundle_path": "localization/tw-edition/sources/ch05-fraud-prepaid-deposit-20261121.json",
+  "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+  "source_checks": [
+    {
+      "source_id": "tw05_consumer_protection_act",
+      "title": "全國法規資料庫：《消費者保護法》第13、17、64條及法規沿革",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+      "claim": "現行消保法第17條允許中央主管機關選擇特定行業公告定型化契約事項，內容可包括預付交易履約擔保、解除或終止契約及其法律效果；不是所有預付款一律適用同一保障。",
+      "supporting_passage": "現行第13條規範定型化契約內容揭示及交付；第17條授權中央主管機關選擇特定行業公告定型化契約事項，其內容可包括預付交易履約擔保及終止／解除條件；第64條列明法律施行日期原則及例外。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀全國法規資料庫現行消保法第17、64條與沿革，核對特定行業授權、預付擔保與施行日期條款。"
+    },
+    {
+      "source_id": "tw05_cpc_prepaid_transactions",
+      "title": "行政院消費者保護會：預付型交易問答",
+      "url": "https://cpc.ey.gov.tw/Page/8A04F6D87D628151",
+      "claim": "消保會將預付型交易說明為先付款、分次或分期享受商品／服務；履約保障要看公告的特定商品／服務禮券規範，並提供個別行業的注意事項。",
+      "supporting_passage": "消保會將預付型交易說明為先付款、後分次或分期享受商品／服務；禮券履約保障依主管機關公告之商品（服務）禮券定型化契約規範，不能推成每種預付款都適用同一保障。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀行政院消保會預付型交易專區及相應問答，核對預付定義與禮券履約保障適用範圍。"
+    },
+    {
+      "source_id": "tw05_cpc_dispute_process",
+      "title": "行政院消費者保護會：消費爭議處理程序及線上申訴入口",
+      "url": "https://cpc.ey.gov.tw/Page/71E988F034956960",
+      "claim": "消保會說明先向業者申訴、可於上班時間撥1950向地方消費者服務中心諮詢，也可用官方線上申訴與調解系統；業者應於收到申訴起15日內妥適處理。",
+      "supporting_passage": "官方消保會提供消費爭議申訴、調解處理流程與線上申訴入口，供消費者向業者申訴後依程序尋求所在地消費者服務管道。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀消保會消費爭議程序頁，核對1950、線上申訴入口、上班時間與申訴程序。"
+    },
+    {
+      "source_id": "tw05_cpc_1950",
+      "title": "行政院消費者保護會：全國消費者服務專線1950",
+      "url": "https://cpc.ey.gov.tw/Page/A1D31DAB12817E9",
+      "claim": "行政院消費者保護會提供全國消費者服務專線1950的官方入口，可詢問所在地消費者服務管道。",
+      "supporting_passage": "消保會提供1950全國消費者服務專線入口，民眾可詢問所在地消費者服務管道。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱行政院消保會1950服務入口，確認主管機關與服務用途。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原作固定ID所承載的讀者問題，依台灣真實消費／金融情境、現行制度和官方求助入口獨立撰寫；把批次及AI查核流程留在本紀錄，不放入讀者正文。",
+  "review_method": "首次正式刊載，不是歷史正文的回溯再審。重讀原作固定ID、上游來源版本、manifest及本章既有結構化草稿；逐項查閱台灣警政統計、主管機關現行法規、消保與存保服務及金融評議程序。逐主張比對正文與來源支持範圍，記錄年份、地區、對象、分子／分母、事件定義、行政統計或個案性質及限制。沒有可信全國暴露分母時不推估個人機率；未取得專業審閱不冒稱完成。",
+  "limits": [
+    "消費者保護法第17條的契約事項由中央主管機關選擇特定行業公告，並非所有預付款、會員卡或禮券適用相同履約保障。",
+    "履約擔保不一定涵蓋所有服務、期間或全部未用餘額；停止付款或申訴也不保證全額退款。",
+    "目前未找到可將不同產業預付交易總量與停業／未履約事件配對的共同全國分母，不能估算個人發生機率。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "21eb81120e4c952f6c56f71fc1ea9aff7af8e7b91aefab080f8d5215e1194ad9",
+  "source_ids": [
+    "tw05_consumer_protection_act",
+    "tw05_cpc_prepaid_transactions",
+    "tw05_cpc_dispute_process",
+    "tw05_cpc_1950"
+  ],
+  "frequency_assessment": "預付交易跨健身、補習、美容、禮券及其他服務，不同業別的契約規範和事件分類不一致。未找到能配對全國預付交易總量與停業或未履約事件數的共同資料，不能推估所有預付消費者的個人風險。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "遇到具體契約時須先辨識服務業別、企業經營者及交易方式，再核對該業別現行公告條文。",
+    "履約擔保是否適用以及退費計算須依商品／服務、付款方式、契約與保障機構個案判斷。",
+    "未取得消費者保護或相關業別法律專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "消費者保護與定型化契約法制",
+      "預付型交易各業別主管機關規範與履約擔保"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "06c536778dee1a3be5b10c53a3b8820e515d7e6676dd3471c072fdcbd870339e",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留預付款、契約、保障與未消費餘額的原始決策問題；以台灣消保法、各業別定型化契約、1950與線上申訴流程說明，不把某一行業規定擴大成全民通則。",
+  "topic_fidelity_review": {
+    "decision": "retain_prepaid_contract_and_refund_question_with_sector_specific_taiwan_consumer_protection",
+    "original_question": "預先付款購買長期服務時，如何保護已付但尚未消費的金額？",
+    "reader_content_decision": "保留預付款、契約、保障與未消費餘額的原始決策問題；以台灣消保法、各業別定型化契約、1950與線上申訴流程說明，不把某一行業規定擴大成全民通則。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "所有預付型服務都有同一種履約保證或未消費餘額全額退還權",
+        "decision": "reject_as_universal_rule_and_scope_by_industry",
+        "reason": "消保法第17條授權對特定行業公告契約事項；主管機關官方預付交易說明亦將履約保障連結到特定商品服務禮券規範。"
+      },
+      {
+        "original_claim": "店家倒閉後向銀行申訴即可停止任何相關貸款",
+        "decision": "retain_contract_check_and_warn_that_separate_credit_contract_may_continue",
+        "reason": "預付服務契約及銀行貸款可能為不同契約，消保會官方問答要求分開核對。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "閱讀契約、保留電子紀錄與查詢官方定型化契約規範不需另購服務；退款可能受解約條件、已使用金額、手續費與履約保障範圍影響。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "rules": [
+      {
+        "title": "消費者保護法第17條與第64條",
+        "latest_amendment_at": "2015-06-17",
+        "effective_at": "第64條規定本法原則自公布日施行；2015年修正另指定的第2條第10、11款及第18條至第19-2條不含本篇所用第17條。",
+        "current_text_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0170001",
+        "application": "僅依現行第17條特定行業授權及預付履約擔保／契約解除終止條文寫作；不將個別行業退費條件擴大。"
+      }
+    ]
+  }
+}

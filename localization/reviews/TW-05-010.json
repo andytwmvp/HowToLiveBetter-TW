@@ -1,0 +1,126 @@
+{
+  "id": "TW-05-010",
+  "reviewer": "ChatGPT（AI 協助查核台灣官方資料與現行法規；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch05/TW-05-010.md",
+  "target_sha256": "be8b00cb6a9ef2152fd118f3483c11f9d4949b7bad1eb3f0bc59302636663212",
+  "source_reviewed_sha256": "be8b00cb6a9ef2152fd118f3483c11f9d4949b7bad1eb3f0bc59302636663212",
+  "source_bundle_path": "localization/tw-edition/sources/ch05-fraud-prepaid-deposit-20261121.json",
+  "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+  "source_checks": [
+    {
+      "source_id": "tw05_cib_child_otp_2026",
+      "title": "刑事警察局：免費遊戲幣竟是陷阱！兒少傳驗證碼與 One Number 案例",
+      "url": "https://www.cib.npa.gov.tw/ch/app/news/view?id=1887&module=news&serno=b6055f8b-ee3d-42ec-a808-e59b1548f25f",
+      "claim": "刑事警察局2026-06-29公布彰化縣一名國中生因免費遊戲幣話術回傳OTP，家長門號遭利用開通One Number後異常使用停話的個案；官方未提供兒少暴露母數。",
+      "supporting_passage": "刑事警察局公布一名國中生因免費遊戲幣訊息回傳驗證碼，家長門號遭利用申辦One Number服務並停話的案例；這是個案，沒有全國兒少暴露母數，不能推作發生率。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀刑事警察局2026-06-29公告個案，核對發布日、個案地點、年齡情境和OTP／門號操作鏈。"
+    },
+    {
+      "source_id": "tw05_npa_165_reporting_faq",
+      "title": "警政署：165反詐騙諮詢專線費用及報案方式常見問答",
+      "url": "https://www.npa.gov.tw/ch/app/faq/view?module=faq&id=2144&serno=A1078837",
+      "claim": "警政署常見問答提供165諮詢／報案與官方網路報案資訊；頁面更新日期為2022-11-01，電話費依市話及行動門號有所不同。",
+      "supporting_passage": "警政署說明可撥165諮詢，受騙後也可向鄰近警察機關報案，並提供網路報案或相關處理入口及費用說明；查閱官方常見問答並以當前頁面為準。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀警政署165 FAQ，核對官方諮詢及報案入口、頁面日期與通話費差異；未將2022年的費率細節泛化到個別門號方案。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原作固定ID所承載的讀者問題，依台灣真實消費／金融情境、現行制度和官方求助入口獨立撰寫；把批次及AI查核流程留在本紀錄，不放入讀者正文。",
+  "review_method": "首次正式刊載，不是歷史正文的回溯再審。重讀原作固定ID、上游來源版本、manifest及本章既有結構化草稿；逐項查閱台灣警政統計、主管機關現行法規、消保與存保服務及金融評議程序。逐主張比對正文與來源支持範圍，記錄年份、地區、對象、分子／分母、事件定義、行政統計或個案性質及限制。沒有可信全國暴露分母時不推估個人機率；未取得專業審閱不冒稱完成。",
+  "limits": [
+    "刑事警察局公布的彰化縣單一個案可說明OTP被利用的途徑，但沒有全國兒少暴露人數或通報分母，不能推算發生率。",
+    "收到未主動申請的驗證碼本身不證明帳號已遭控制；應由官方帳戶或客服確認。",
+    "家長應先協助保存證據及處理帳號與門號，不責罵孩子或公開其個資。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "96b9132dee7eb2c55d250f65b35ef400baf3a8bf8618934e2ea3c7c9db2b3efe",
+  "source_ids": [
+    "tw05_cib_child_otp_2026",
+    "tw05_npa_165_reporting_faq"
+  ],
+  "frequency_assessment": "官方警察宣導提及近期多起案件並公布一名彰化縣國中生案例，但未提供全國兒少接觸相關訊息、收到OTP或回傳OTP的分母及系統性案件總數；僅用個案解釋手法，不換算個人機率。",
+  "statistics_assessed": [
+    {
+      "topic": "兒少提供OTP後遭利用申辦電信服務的官方個案示例",
+      "value": {
+        "described_cases": 1
+      },
+      "unit": "一則具體警政個案；不是發生率、通報率或兒少風險估計",
+      "period": "個案發生於2026年3月至5月；警方公告於2026-06-29",
+      "geographic_scope": "彰化縣一名國中生的個案",
+      "population": "一名國中八年級學生及其家長門號；非抽樣研究",
+      "numerator": "公開報導描述1名學生回傳OTP後，家長門號遭申辦One Number並停話",
+      "denominator": "未提供兒少或OTP暴露人數分母",
+      "denominator_definition": "個案新聞未提供母群體、接觸人數或風險期間，因此沒有可計算的率",
+      "event_definition": "提供簡訊OTP後被用於開通未申請的電信服務及門號遭異常使用",
+      "data_type": "警政機關個案宣導，不是調查或行政統計",
+      "limitations": "單一個案只示範風險路徑；不能推作常見程度或所有孩子的個人機率。",
+      "source_ids": [
+        "tw05_cib_child_otp_2026"
+      ],
+      "accessed_at": "2026-11-21"
+    }
+  ],
+  "unresolved_questions": [
+    "兒少OTP詐騙缺乏全國一致的暴露分母與可比年度統計。",
+    "各電信業者、平台及銀行的帳號復原和未授權交易處理時限不同，需依服務官方規定。",
+    "未取得兒少網路安全、電信資安或教育專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒少網路安全／數位素養",
+      "電信帳號安全與家庭照護"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "e9d3575f3b6585a485209c75c0a8b4f802b7fc1a2bc0c4d82e04738a2d547201",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留孩子不受網友誘導操作手機或交付驗證碼的核心，納入台灣遊戲、LINE、直播、門號加值與官方客服處理情境；明確區分聊天交碼與本人在官方登入頁輸入驗證碼。",
+  "topic_fidelity_review": {
+    "decision": "retain_child_otp_safety_question_with_taiwan_game_and_telecom_context",
+    "original_question": "如何讓孩子避免因網路誘導而交出家長手機或驗證碼？",
+    "reader_content_decision": "保留孩子不受網友誘導操作手機或交付驗證碼的核心，納入台灣遊戲、LINE、直播、門號加值與官方客服處理情境；明確區分聊天交碼與本人在官方登入頁輸入驗證碼。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "只要網路上有人要求孩子操作家長手機或回傳驗證碼就應視為安全風險",
+        "decision": "retain_as_stop_and_verify_rule_with_context",
+        "reason": "官方兒少個案顯示免費遊戲幣話術可誘導回傳OTP並被用於電信服務；同時需避免把本人發起的官方登入誤說成詐騙。"
+      },
+      {
+        "original_claim": "收到OTP即代表帳號已被盜用",
+        "decision": "reject_as_overbroad_and_add_verification_steps",
+        "reason": "收到未主動申請的驗證碼不等於帳號已遭控制，應從官方管道查核服務、交易和裝置。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "家庭情境演練與查看手機安全設定不需另購服務；實際帳號復原或電信申訴依業者流程辦理。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "rules": [
+      {
+        "title": "保險代理人管理規則第35、61條",
+        "latest_amendment_at": "2026-09-30",
+        "effective_at": "現行第61條規定除明列條文及部分老人保障條款另定施行日外，本規則自發布日施行；2026-09-30修正未修改第35條，本文依查閱日現行第35條。",
+        "current_text_url": "https://law.fsc.gov.tw/LawContent.aspx?id=FL006749",
+        "history_url": "https://law.fsc.gov.tw/LawContentSource.aspx?id=FL006749"
+      },
+      {
+        "title": "金融消費者保護法第9、10、13條",
+        "original_promulgation_at": "2011-06-29",
+        "initial_effective_at": "2011-12-30",
+        "latest_amendment_at": "2023-12-06",
+        "article_13_effective_date": "第13條不在2023-12-06修正條文清單；該次修正僅列第3、11-1、19條，三條依2023-12-21行政院令自2024-02-01施行；不得把此日期套用至第13條。",
+        "current_text_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
+        "history_url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0380226",
+        "effective_order_url": "https://gazette.nat.gov.tw/egFront/e_detail.do?metaid=145997",
+        "application": "引用現行第13條30日適當處理及60日申請評議期限；2024-02-01只適用該施行令列明的第3、11-1、19條。"
+      }
+    ]
+  }
+}

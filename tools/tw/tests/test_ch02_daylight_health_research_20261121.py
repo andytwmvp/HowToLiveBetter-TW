@@ -98,7 +98,10 @@ class DaylightHealthResearchPublicationTests(unittest.TestCase):
             baseline_rechecks=baseline_register["substantive_rechecks"],
             current_rechecks=self.register["substantive_rechecks"],
         )
-        new_runtime_ids = set(current_items) - set(baseline_items)
+        chapter_runtime_ids = {
+            f"TW-02-{row[0]:03d}" for row in current_chapter["entries"]
+        }
+        new_runtime_ids = (set(current_items) - set(baseline_items)) & chapter_runtime_ids
         self.assertIn(ITEM_ID, changed)
         self.assertTrue(new_runtime_ids <= changed)
         current_existing_ids = [

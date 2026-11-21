@@ -1,0 +1,129 @@
+{
+  "id": "TW-05-042",
+  "reviewer": "ChatGPT（AI 協助查核台灣官方資料與現行法規；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch05/TW-05-042.md",
+  "target_sha256": "1e213ea8b56f1aab6a8491bb08b943c2790846a9136b7ceae62dcd6d250b3fef",
+  "source_reviewed_sha256": "1e213ea8b56f1aab6a8491bb08b943c2790846a9136b7ceae62dcd6d250b3fef",
+  "source_bundle_path": "localization/tw-edition/sources/ch05-fraud-prepaid-deposit-20261121.json",
+  "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+  "source_checks": [
+    {
+      "source_id": "tw05_cdic_deposit_faq",
+      "title": "中央存款保險公司：存款保險常見問答",
+      "url": "https://www.cdic.gov.tw/main_deposit/faq.aspx?pid=59&uid=59",
+      "claim": "中央存保說明同一要保機構每位存款人的要保存款本金與利息合計最高保障新臺幣300萬元；保單、基金、股票、ETF、債券等非存款商品即使標示保本，也不受存款保險保障。",
+      "supporting_passage": "中央存保說明每位存款人在同一要保機構受保障的要保存款本金與利息合計最高新臺幣300萬元；保單、基金、股票、債券等非存款商品，即使標示保本，也不受存款保險保障。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱中央存保公司存款人FAQ，核對同一要保機構額度計算與Q20非存款商品例示。"
+    },
+    {
+      "source_id": "tw05_insurance_agent_rule",
+      "title": "金管會：保險代理人管理規則第35條",
+      "url": "https://law.fsc.gov.tw/LawContent.aspx?id=FL006749",
+      "claim": "現行保險代理人管理規則第35條要求兼營保險代理業務的銀行標明並區分銀行與保險代理業務、揭露保險商品性質及風險，並禁止利用客戶存款資料誤導推介與風險屬性不符商品或只比報酬忽略風險。",
+      "supporting_passage": "現行第35條要求兼營保險代理業務的銀行表明銀行業務與保險代理業務的區別、揭露商品性質與風險，並禁止利用客戶存款資料誤導推介風險不相符商品或只比較報酬而忽略風險。現行法規頁標示2026-09-30修正。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀金管會現行規則第35、61條及沿革，核對銀行區分、風險揭露、禁止行為和修正日期。"
+    },
+    {
+      "source_id": "tw05_finconsumer_act",
+      "title": "全國法規資料庫：《金融消費者保護法》第9、10、13條及法規沿革",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
+      "claim": "現行金融消費者保護法第9、10條涉及商品／服務適合度及風險揭露；第13條要求金融服務業30日內適當處理申訴並回覆，對結果不服或逾期未處理者可於收到結果或期限屆滿日起60日內申請評議。",
+      "supporting_passage": "現行條文規範金融商品／服務適合度及風險說明；第13條要求金融服務業收受申訴後30日內處理，不接受結果或逾期未處理者，可於法定60日期限內申請評議。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀金融消費者保護法現行第9、10、13條及法規沿革，核對申訴處理及申請評議期限。"
+    },
+    {
+      "source_id": "tw05_foi_appeal_process",
+      "title": "財團法人金融消費評議中心：評議流程圖與申請方式",
+      "url": "https://www.foi.org.tw/article.aspx?arti=358&lang=1&role=2",
+      "claim": "金融消費評議中心提供正式評議流程；先向金融服務業申訴，不接受處理結果或業者逾30日未處理，於法定60日期限內申請評議。",
+      "supporting_passage": "評議中心公開金融消費爭議的申請流程；金融消費者先向業者申訴，對結果不服或業者逾30日未處理，可在法定60日內申請評議。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀金融消費評議中心評議流程圖及申請方式，與現行法第13條期限逐項核對。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原作固定ID所承載的讀者問題，依台灣真實消費／金融情境、現行制度和官方求助入口獨立撰寫；把批次及AI查核流程留在本紀錄，不放入讀者正文。",
+  "review_method": "首次正式刊載，不是歷史正文的回溯再審。重讀原作固定ID、上游來源版本、manifest及本章既有結構化草稿；逐項查閱台灣警政統計、主管機關現行法規、消保與存保服務及金融評議程序。逐主張比對正文與來源支持範圍，記錄年份、地區、對象、分子／分母、事件定義、行政統計或個案性質及限制。沒有可信全國暴露分母時不推估個人機率；未取得專業審閱不冒稱完成。",
+  "limits": [
+    "新臺幣300萬元存款保險上限是每位存款人在同一要保機構的要保存款本金與利息合計，不是每一帳戶或每一金融商品各有300萬元保障。",
+    "存款保險不保障保單、基金、股票、債券等非存款商品；其他商品的保障、解約及理賠適用各自契約與制度。",
+    "未找到能估計台灣民眾在銀行通路把金融商品誤認為存款之全國代表性統計或個人發生率。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "c7d85c07a609f953c0b86a1830b0b11cef81b10eb052bb5274d80f8eafac1b44",
+  "source_ids": [
+    "tw05_cdic_deposit_faq",
+    "tw05_insurance_agent_rule",
+    "tw05_finconsumer_act",
+    "tw05_foi_appeal_process"
+  ],
+  "frequency_assessment": "目前沒有可代表台灣民眾、量測銀行通路金融商品誤認為存款或不理解存款保險範圍的全國調查分母；以法規義務與個別文件查核指引呈現，不推估發生率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "存款是否屬存款保險要保存款須依要保機構及款項性質確認；金融商品的契約相對人、費用和解約金須以個別文件核對。",
+    "未取得銀行、保險或金融消費者保護專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "銀行與保險代理法規",
+      "金融商品適合度、風險揭露及金融消費爭議程序"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "06e229c2d9230b8f3afaa8323e861df83a69fefe760d02bdec9d94ec60c0a5f3",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留「銀行通路不等於存款」的決策問題，依台灣存款保險範圍、銀行兼營保險代理義務及金融消費爭議時限撰寫；不把非存款商品一概說成完全沒有其他保障。",
+  "topic_fidelity_review": {
+    "decision": "retain_bank_sold_product_vs_deposit_distinction_with_taiwan_deposit_insurance_and_complaint_rights",
+    "original_question": "在銀行櫃檯購買的金融商品是否就是存款？如何辨認保障差異？",
+    "reader_content_decision": "保留「銀行通路不等於存款」的決策問題，依台灣存款保險範圍、銀行兼營保險代理義務及金融消費爭議時限撰寫；不把非存款商品一概說成完全沒有其他保障。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "只要在銀行辦理或標示保本，就受存款保險保障",
+        "decision": "reject_and_distinguish_product_and_counterparty",
+        "reason": "存保公司列明保單、基金、股票、債券等非存款商品不受存款保險保障；銀行通路不會改變商品契約性質。"
+      },
+      {
+        "original_claim": "存款保險額度可套用到每個商品或每個帳戶",
+        "decision": "correct_to_per_depositor_per_insured_institution_aggregate",
+        "reason": "現行存保問答說明同一要保機構之要保存款本金與利息合計最高新臺幣300萬元。"
+      },
+      {
+        "original_claim": "遭遇不當銷售時可提出申訴並申請評議",
+        "decision": "retain_with_current_30_and_60_day_deadlines",
+        "reason": "金融消費者保護法第13條規定業者30日內處理回覆；消費者於收到結果或期限屆滿日起60日內申請評議。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "詢問商品種類、索取文件及自行查閱法規不需另購代辦服務；應比較保費、管理費、交易費用、匯率、資金鎖定與提前解約成本。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "rules": [
+      {
+        "title": "保險代理人管理規則第35、61條",
+        "latest_amendment_at": "2026-09-30",
+        "effective_at": "現行第61條規定除明列條文及部分老人保障條款另定施行日外，本規則自發布日施行；2026-09-30修正未修改第35條，本文依查閱日現行第35條。",
+        "current_text_url": "https://law.fsc.gov.tw/LawContent.aspx?id=FL006749",
+        "history_url": "https://law.fsc.gov.tw/LawContentSource.aspx?id=FL006749"
+      },
+      {
+        "title": "金融消費者保護法第9、10、13條",
+        "original_promulgation_at": "2011-06-29",
+        "initial_effective_at": "2011-12-30",
+        "latest_amendment_at": "2023-12-06",
+        "article_13_effective_date": "第13條不在2023-12-06修正條文清單；該次修正僅列第3、11-1、19條，三條依2023-12-21行政院令自2024-02-01施行；不得把此日期套用至第13條。",
+        "current_text_url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380226",
+        "history_url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=G0380226",
+        "effective_order_url": "https://gazette.nat.gov.tw/egFront/e_detail.do?metaid=145997",
+        "application": "引用現行第13條30日適當處理及60日申請評議期限；2024-02-01只適用該施行令列明的第3、11-1、19條。"
+      }
+    ]
+  }
+}
