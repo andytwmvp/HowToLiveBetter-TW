@@ -1,0 +1,96 @@
+{
+  "id": "TW-20-005",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-005.md",
+  "target_sha256": "13280ad1803a5f6da31dd716c4a208124b86c517e089d6425b8537fb053091bd",
+  "source_reviewed_sha256": "13280ad1803a5f6da31dd716c4a208124b86c517e089d6425b8537fb053091bd",
+  "before_sha256": null,
+  "after_sha256": "13280ad1803a5f6da31dd716c4a208124b86c517e089d6425b8537fb053091bd",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+  "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_formula_preparation",
+      "title": "國民健康署孕產兒關懷網站：如何沖調嬰兒配方奶粉",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=1867&type=01",
+      "claim": "粉狀配方奶非無菌；清潔雙手和器具、依產品比例沖泡，以不低於70°C水沖調；室溫兩小時未餵完丟棄，提前沖泡快速冷卻冷藏不高於5°C、24小時內使用。",
+      "supporting_passage": "粉狀配方奶非無菌；清潔雙手和器具、依產品比例沖泡，以不低於70°C水沖調；室溫兩小時未餵完丟棄，提前沖泡快速冷卻冷藏不高於5°C、24小時內使用。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_hpa_newborn_feeding",
+      "title": "國民健康署孕產兒關懷網站：新生兒哺育計畫",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2529&type=01",
+      "claim": "國健署新生兒哺育與餵食背景資料；特殊配方仍以產品和醫療團隊指示為準。",
+      "supporting_passage": "國健署新生兒哺育與餵食背景資料；特殊配方仍以產品和醫療團隊指示為準。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_vghtc_formula_guide_2026",
+      "title": "臺中榮民總醫院：配方奶泡製指導手冊（2026-05-21修訂）",
+      "url": "https://ihealth.vghtc.gov.tw/media/897",
+      "claim": "台灣醫療院所配方奶泡製、降溫和餵食後剩餘奶液處理步驟。",
+      "supporting_passage": "台灣醫療院所配方奶泡製、降溫和餵食後剩餘奶液處理步驟。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留固定ID及原題照護需求，依台灣主管機關、台灣專業資料及在地服務入口獨立撰寫；不把原作中的境外規範、流程、發生率或風險機率套用為臺灣現況。",
+  "review_method": "逐篇核對原作固定ID、原始標題、manifest中的原作版本與來源雜湊、既有稿件狀態；直接查閱source_checks所列來源，逐項核對台灣情境、適用對象、行動步驟、警訊、費用／時間與制度日期。沒有台灣暴露分母時明示資料不足，不以通報數、單院病例或境外數據換算個人機率。此為首次正式發布，不列入歷史正文實質再審數。",
+  "limits": [
+    "早產兒、免疫功能較弱或使用醫療特殊配方者應詢問醫療團隊；不自行改變濃度、水溫或保存方式。沒有台灣嬰兒配方奶暴露及一致感染病例分母估計個人機率。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "3c20ce230729c342ff736e746d4865c048bd025a8e6630689edf2902960085af",
+  "source_ids": [
+    "tw20_hpa_formula_preparation",
+    "tw20_hpa_newborn_feeding",
+    "tw20_vghtc_formula_guide_2026"
+  ],
+  "frequency_assessment": "未找到具全國嬰兒暴露分母及一致病例定義、可估計台灣粉狀配方奶相關感染機率的資料；不把國外事件或產品召回數當家庭風險。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有找到可用台灣母群與暴露分母估算個人機率：早產兒、免疫功能較弱或使用醫療特殊配方者應詢問醫療團隊；不自行改變濃度、水溫或保存方式。沒有台灣嬰兒配方奶暴露及一致感染病例分母估計個人機率。",
+    "尚未取得獨立專業審閱（範圍：兒科營養、新生兒醫學、感染管制）。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科營養",
+      "新生兒醫學",
+      "感染管制"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "粉狀配方奶不是無菌產品；依罐身比例使用不低於70°C的水，注意清潔、餵食溫度及保存時間。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "衝奶粉用 70 ℃ 以上的水，衝好放涼再喂，喝剩的倒掉",
+    "reader_content_decision": "粉狀配方奶不是無菌產品；依罐身比例使用不低於70°C的水，注意清潔、餵食溫度及保存時間。 洗手並清潔消毒器具，按產品標示沖泡，快速降溫後餵食；室溫放置兩小時未餵完即丟棄，提前沖泡須冷藏於5°C以下且24小時內使用。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "原作中的境外規範、程序、風險機率或醫療操作可直接套用在臺灣家庭。",
+        "decision": "exclude_unverified_foreign_jurisdiction_or_population_claims",
+        "reason": "來源不代表台灣制度或台灣母群證據；保留讀者仍需要的照護問題並依台灣可查核資料撰寫。"
+      },
+      {
+        "original_claim": "衝奶粉用 70 ℃ 以上的水，衝好放涼再喂，喝剩的倒掉",
+        "decision": "retain_core_question_with_taiwan_specific_actions",
+        "reason": "保留安全沖泡粉狀嬰兒配方奶的需求，依國健署及台灣醫療院所資料說明。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "清潔器具及按標示沖泡不需額外付費；配方奶價格依品牌和規格而異，本篇不推薦品牌。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇不依賴境外法規或資格；費用和就醫流程按台灣院所與當下個別狀況確認。"
+  }
+}

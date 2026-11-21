@@ -56,9 +56,17 @@ class ReaderCatalogNavigationTests(unittest.TestCase):
 
     def test_additive_chapter_links_are_the_only_changes_to_historical_catalog_copy(self):
         catalog = (ROOT / "locales/zh-TW/README.md").read_bytes()
+        expected = "ae98f6e876ffd0c72c61bf8bcb59fb44a61c219c578dc7181dd5ca9a7329580c"
         self.assertEqual(
             historical_reader_copy_sha256("locales/zh-TW/README.md", catalog),
-            "ae98f6e876ffd0c72c61bf8bcb59fb44a61c219c578dc7181dd5ca9a7329580c",
+            expected,
+        )
+        self.assertNotEqual(
+            historical_reader_copy_sha256(
+                "locales/zh-TW/README.md",
+                catalog.replace("## 章節".encode(), "## 目錄".encode(), 1),
+            ),
+            expected,
         )
 
     def test_each_chapter_catalog_links_every_published_core_article_once(self):

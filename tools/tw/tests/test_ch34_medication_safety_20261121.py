@@ -120,7 +120,21 @@ class Chapter34MedicationSafetyPublicationTests(unittest.TestCase):
                             for row in current_rechecks[len(baseline_rechecks):]))
         self.assertEqual(self.stage["counts_before"]["review_rechecks"], len(baseline_register["substantive_rechecks"]))
         self.assertEqual(self.stage["counts_after"]["review_rechecks"], len(baseline_register["substantive_rechecks"]))
-        self.assertEqual(len(self.runtime["items"]), len(baseline_runtime["items"]) + len(ARTICLES))
+        baseline_ids = [row["id"] for row in baseline_runtime["items"]]
+        baseline_id_set = set(baseline_ids)
+        current_ids = [row["id"] for row in self.runtime["items"]]
+        self.assertEqual(
+            [item_id for item_id in current_ids if item_id in baseline_id_set],
+            baseline_ids,
+        )
+        self.assertTrue(set(ARTICLES).issubset(set(current_ids) - baseline_id_set))
+        self.assertEqual(
+            self.stage["counts_before"]["runtime_items"], len(baseline_ids)
+        )
+        self.assertEqual(
+            self.stage["counts_after"]["runtime_items"],
+            len(baseline_ids) + len(ARTICLES),
+        )
 
     def test_body_runtime_review_manifest_sources_and_sha_are_bound(self):
         baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
