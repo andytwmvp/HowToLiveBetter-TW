@@ -1,0 +1,110 @@
+{
+  "id": "TW-20-003",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-003.md",
+  "target_sha256": "07a735b048adfdd14a13f4527b338724719fa5985fea1fc7b588bfb0da5d36da",
+  "source_reviewed_sha256": "07a735b048adfdd14a13f4527b338724719fa5985fea1fc7b588bfb0da5d36da",
+  "before_sha256": null,
+  "after_sha256": "07a735b048adfdd14a13f4527b338724719fa5985fea1fc7b588bfb0da5d36da",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+  "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+  "source_checks": [
+    {
+      "source_id": "tw20_cdc_schedule_11509",
+      "title": "疾管署：現行兒童預防接種時程表（115年9月版；2026-07-15更新）",
+      "url": "https://www.cdc.gov.tw/Category/Page/TxRW-x3WzvPhvEtxM628GA",
+      "claim": "現行兒童常規疫苗時程與當年度接種項目。",
+      "supporting_passage": "疾管署現行兒童預防接種時程頁列出115年9月版，頁面最後更新2026-07-15。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    },
+    {
+      "source_id": "tw20_cdc_vaccine_catchup_guide",
+      "title": "疾管署：接種指引（含學齡前漏打、延遲及狀況不明補種指引；2025-10-01更新）",
+      "url": "https://www.cdc.gov.tw/Category/Page/SFVU5tngwkSvL8OBJOxhsw",
+      "claim": "疫苗補種依疫苗種類、最小年齡和最短間隔核對；疾管署提供漏打、延遲或狀況不明的補種指引。",
+      "supporting_passage": "接種指引頁列出「各項常規疫苗最小接種年齡與最短接種間隔」及「學齡前幼童疫苗漏打、延遲或接種狀況不明的補種方式」。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    },
+    {
+      "source_id": "tw20_cdc_vaccine_record_query",
+      "title": "疾管署：個人預防接種資料查詢（2025-04-23更新）",
+      "url": "https://www.cdc.gov.tw/Category/Page/9dz7czW1IrLl-Ce5i0XDFQ",
+      "claim": "NIIS資料可能不完整，家長可透過健康存摺、衛生所、兒童健康手冊或原接種院所查找。",
+      "supporting_passage": "疾管署說明NIIS於民國92年建立，因資訊化推動與院所上傳落差並非所有紀錄都能查到，並列健康存摺、衛生所與原接種醫院等查詢方式。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    },
+    {
+      "source_id": "tw20_cdc_selfpaid_vaccines_2025",
+      "title": "疾管署：自費疫苗種類（2025-03-14更新）",
+      "url": "https://www.cdc.gov.tw/Category/ListContent/gBkY59nmbUpY39iDzJging?uaid=M1mo3FhXx-sf5sp9CzqcXA",
+      "claim": "公費兒童常規疫苗與家長可評估自費的疫苗項目應分開確認。",
+      "supporting_passage": "疾管署自費疫苗頁將公費兒童常規疫苗與自費疫苗分列，並說明自費接種由醫師評估。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及主題需要，依台灣主管機關與專業來源獨立撰寫；不套用中國制度、費用、發生率或操作規則。",
+  "review_method": "逐篇核對manifest中的原作固定ID、來源版本與SHA，閱讀原題和現有公開來源；直接檢視source_checks所列資料，逐項核對台灣適用情境、實際行動、警訊、費用／時間、頻率和制度日期。統計只按來源明確提供的事件定義、期間、地區、對象、分子與分母記錄；沒有適當台灣分母時明示資料不足。首次正式發布不計為歷史正文再審。",
+  "limits": [
+    "查不到NIIS紀錄不代表一定沒有接種；現行疾管署接種指引頁列有補種文件，但其連結文件的細部規則仍須由接種人員依當期公告核對。",
+    "沒有以同一病例定義、期間及兒童人口分母計算的台灣全國漏打／延遲率；不以接種涵蓋率換算個人機率。",
+    "掛號或耗材等費用可能因縣市、院所與接種項目而異，預約前確認。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "c7820744eeae094f40a5e5166927010a741ddbfb26f7348d7c093c69d5ec49ca",
+  "source_ids": [
+    "tw20_cdc_schedule_11509",
+    "tw20_cdc_vaccine_catchup_guide",
+    "tw20_cdc_vaccine_record_query",
+    "tw20_cdc_selfpaid_vaccines_2025"
+  ],
+  "frequency_assessment": "未找到以同一定義、期間和適當兒童人口分母計算的台灣全國漏打、延遲或接種狀況不明比率；疫苗涵蓋率不等於個人漏種機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "台灣未找到可直接比較的全國兒童疫苗漏打／延遲率及個人風險分母。",
+    "疾管署目前的接種指引頁最後更新為2025-10-01，但其補種附件的內容版本及各疫苗細節須持續依最新公告確認；本文不抄錄固定劑次方案。",
+    "掛號、耗材及自費項目費用依現行縣市與院所規則確認。",
+    "尚未取得獨立專業審閱（範圍：兒童感染科、疫苗接種實務、兒科護理）。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒童感染科",
+      "疫苗接種實務",
+      "兒科護理"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原題「漏打後如何補齊」的實際照護問題；將中國免疫規劃、全程免費及固定補種規則改為台灣疾管署現行時程、NIIS紀錄限制、當年度公費資格和由接種單位安排的個別補種。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "按國家免疫規劃把該打的疫苗打齊，全程免費，錯過了只補沒打完的劑次。",
+    "reader_content_decision": "保留查漏與補種需求；依台灣兒童健康手冊、NIIS/健康存摺、現行疾管署時程和衛生所／合約院所安排，並明確說明公費資格、不同疫苗間隔及資料缺漏須個別確認。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "台灣嬰幼兒依中國國家免疫規劃且全部免費。",
+        "decision": "replace_foreign_policy_with_taiwan_current_program",
+        "reason": "中國法律、疫苗項目和費用規則不適用台灣；台灣公費項目與資格依疾管署當年度公告。"
+      },
+      {
+        "original_claim": "錯過後的補種方式對所有兒童和疫苗都相同。",
+        "decision": "retain_catch_up_need_with_vaccine_specific_clinical_review",
+        "reason": "疾管署分疫苗列最小年齡和間隔，紀錄不明、年齡或既往劑次不同時應由接種人員依個案安排。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "查閱既有紀錄不需額外支出；符合當年度條件的公費疫苗由公費提供，非公費疫苗自費，掛號或耗材費用依縣市和院所規定，先詢問可避免臨時費用及重複往返。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "本篇依疾管署115年9月版（2026-07-15更新）兒童時程及目前公費項目資料說明；沒有援用中國法規。疾管署補種指引頁標示2025-10-01更新，因連結文件的細部版本日期未能確認，本文不固定列出各疫苗補種劑次或間隔，建議由接種單位依當期公告辦理。"
+  }
+}

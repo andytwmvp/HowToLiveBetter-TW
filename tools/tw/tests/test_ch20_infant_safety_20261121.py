@@ -74,8 +74,14 @@ class Chapter20InfantSafetyPublicationTests(unittest.TestCase):
             self.assertEqual((current["target_path"], current["sources"]), (spec["path"], spec["sources"]))
         self.assertEqual(self.register["unpublished_core_inventory"], baseline_register["unpublished_core_inventory"])
         self.assertEqual(self.register["substantive_rechecks"], baseline_register["substantive_rechecks"])
-        self.assertEqual(len(self.runtime["items"]), len(baseline_runtime["items"]) + len(ARTICLES))
-        self.assertEqual(len(self.runtime["sources"]), len(baseline_runtime["sources"]) + len(NEW_SOURCE_IDS))
+        current_items = {row["id"]: row for row in self.runtime["items"]}
+        self.assertEqual([current_items[row["id"]] for row in baseline_runtime["items"]], baseline_runtime["items"])
+        self.assertTrue(set(ARTICLES).issubset(current_items))
+        self.assertGreaterEqual(len(self.runtime["items"]), len(baseline_runtime["items"]) + len(ARTICLES))
+        baseline_source_ids = [row["id"] for row in baseline_runtime["sources"]]
+        self.assertEqual([self.sources[source_id] for source_id in baseline_source_ids], baseline_runtime["sources"])
+        self.assertTrue(NEW_SOURCE_IDS.issubset(set(self.sources) - set(baseline_source_ids)))
+        self.assertGreaterEqual(len(self.runtime["sources"]), len(baseline_runtime["sources"]) + len(NEW_SOURCE_IDS))
         self.assertEqual(self.stage["counts_before"]["review_rechecks"], len(baseline_register["substantive_rechecks"]))
         self.assertEqual(self.stage["counts_after"]["review_rechecks"], self.stage["counts_before"]["review_rechecks"])
 
@@ -86,7 +92,10 @@ class Chapter20InfantSafetyPublicationTests(unittest.TestCase):
         self.assertEqual([key for key in current_ids if key in set(base_ids)], base_ids)
         chapter = (ROOT / "locales/zh-TW/book/ch20/README.md").read_text(encoding="utf-8")
         index = (ROOT / "locales/zh-TW/README.md").read_text(encoding="utf-8")
-        self.assertEqual([int(n) for n in re.findall(r"TW-20-(\d{3})\.md", chapter)], [1, 2, 5, 8, 9, 13])
+        chapter_ids = [int(n) for n in re.findall(r"TW-20-(\d{3})\.md", chapter)]
+        earlier_batch_ids = [1, 2, 5, 8, 9, 13]
+        self.assertTrue(set(earlier_batch_ids).issubset(chapter_ids))
+        self.assertEqual([number for number in chapter_ids if number in set(earlier_batch_ids)], earlier_batch_ids)
         self.assertEqual(index.count("[第20章：新生兒與嬰兒照護](book/ch20/README.md)"), 1)
         for key, spec in ARTICLES.items():
             with self.subTest(id=key):
@@ -145,8 +154,8 @@ class Chapter20InfantSafetyPublicationTests(unittest.TestCase):
         base_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
         base_source_ids = {row["id"] for row in base_runtime["sources"]}
         self.assertIn("tw34_pids_fever_2019", base_source_ids)
-        self.assertEqual(set(self.sources) - base_source_ids, NEW_SOURCE_IDS)
-        self.assertEqual(source_bundle_ids_added_since(ROOT, BASE), NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS.issubset(set(self.sources) - base_source_ids))
+        self.assertTrue(NEW_SOURCE_IDS.issubset(source_bundle_ids_added_since(ROOT, BASE)))
         bundled = {row[0]: row for row in self.bundle["sources"]}
         for sid in NEW_SOURCE_IDS:
             source = self.sources[sid]

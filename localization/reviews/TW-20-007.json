@@ -1,0 +1,100 @@
+{
+  "id": "TW-20-007",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-007.md",
+  "target_sha256": "4beb3562e1bfac489d19006512288f23c692888edf420cadf6bd3ee0f18da37b",
+  "source_reviewed_sha256": "4beb3562e1bfac489d19006512288f23c692888edf420cadf6bd3ee0f18da37b",
+  "before_sha256": null,
+  "after_sha256": "4beb3562e1bfac489d19006512288f23c692888edf420cadf6bd3ee0f18da37b",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+  "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+  "source_checks": [
+    {
+      "source_id": "tw20_tsn_vitamin_k_2025",
+      "title": "台灣新生兒科醫學會：母乳中可能不足的營養素及其影響，第六節（2025）",
+      "url": "https://www.tsn-neonatology.com/retrieve/20251031142739.pdf",
+      "claim": "新生兒維生素K儲備低，缺乏可能引起維生素K缺乏性出血；醫學會章節建議新生兒接受預防性補充。",
+      "supporting_passage": "台灣新生兒科醫學會專章說明新生兒維生素K不足與VKDB，並寫明所有新生兒皆應接受維生素K預防性補充；其中治療方案引用歐洲專業指引。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    },
+    {
+      "source_id": "tw20_tfda_phytomenadione_label",
+      "title": "食藥署：含phytomenadione單方注射劑中文仿單修訂內容",
+      "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f637873468920621470",
+      "claim": "台灣藥品仿單列新生兒VKDB適應症，並警告肌肉或靜脈注射曾發生嚴重及致命過敏反應；未提供可轉成個人機率的分母。",
+      "supporting_passage": "仿單修訂內容列「預防或治療新生兒維生素K缺乏性出血」適應症，並載明曾有靜脈與肌肉注射期間或注射後發生嚴重且致命過敏反應，包括過敏性休克。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    },
+    {
+      "source_id": "tw20_mohw_phytomenadione_notice_2022",
+      "title": "衛福部：phytomenadione注射劑臨床效益與風險再評估公告（2022-05-09）",
+      "url": "https://www.mohw.gov.tw/cp-5268-69458-1.html",
+      "claim": "確認藥品風險再評估公告日和仿單變更期限。",
+      "supporting_passage": "衛福部公告於2022-05-09，要求相關許可證持有商於2022-12-31前完成中文仿單變更。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及主題需要，依台灣主管機關與專業來源獨立撰寫；不套用中國制度、費用、發生率或操作規則。",
+  "review_method": "逐篇核對manifest中的原作固定ID、來源版本與SHA，閱讀原題和現有公開來源；直接檢視source_checks所列資料，逐項核對台灣適用情境、實際行動、警訊、費用／時間、頻率和制度日期。統計只按來源明確提供的事件定義、期間、地區、對象、分子與分母記錄；沒有適當台灣分母時明示資料不足。首次正式發布不計為歷史正文再審。",
+  "limits": [
+    "台灣新生兒科醫學會章節提供預防建議並引述國際指引；不等於台灣全國事件率或個案醫療指示。",
+    "食藥署仿單提到注射嚴重、致命過敏案例，但沒有足以估算新生兒預防性注射個人機率的發生率；警語不代表反應常見。",
+    "未取得獨立專業審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "10d44c3371f61c578f5c84fd187f23e385857b836f13aa226a44e094db07c195",
+  "source_ids": [
+    "tw20_tsn_vitamin_k_2025",
+    "tw20_tfda_phytomenadione_label",
+    "tw20_mohw_phytomenadione_notice_2022"
+  ],
+  "frequency_assessment": "未找到具明確病例定義及新生兒人口分母、可代表台灣現行預防措施下維生素K缺乏性出血的全國發生率；官方仿單的過敏警語亦未提供新生兒預防性給藥發生率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有台灣現行新生兒母群與明確病例定義的全國VKDB發生率。",
+    "仿單沒有提供新生兒預防性肌肉注射嚴重過敏反應的可用發生率，不能量化個人風險。",
+    "新生兒維生素K預防方案及個別途徑須由醫療團隊評估；尚未取得新生兒醫學、臨床藥學或藥物安全正式審閱。",
+    "各院所費用安排未能核實為統一標準，家長須向出生院所確認。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "新生兒醫學",
+      "臨床藥學",
+      "藥物安全與藥事監測"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原題要求家長確認新生兒維生素K預防的健康問題，不把「一定要打」寫成忽略風險的命令；納入台灣新生兒科醫學會預防建議及台灣藥品仿單風險警語，讓給藥決策由臨床團隊個別說明。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "出生時的維生素 K 針一定要打。",
+    "reader_content_decision": "保留新生兒維生素K缺乏性出血的預防議題，呈現專業建議、官方仿單嚴重過敏警示及詢問醫療團隊的行動；不指示家長自行拒絕、給藥或換成口服方案。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "家長必須不問個別情況、無條件要求注射。",
+        "decision": "retain_prevention_need_with_balanced_risk_discussion",
+        "reason": "新生兒科醫學會建議預防性補充，台灣官方仿單也要求說明嚴重過敏風險；給藥決策應由醫療人員根據嬰兒及產品情況評估。"
+      },
+      {
+        "original_claim": "警語可換算成每位新生兒的過敏機率，或支持家長自行改用其他途徑。",
+        "decision": "exclude_unquantified_risk_and_unsupervised_substitution",
+        "reason": "官方仿單未提供新生兒預防性注射發生率；途徑與個別風險需臨床評估。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "沒有查到可適用所有出生院所的新生兒維生素K預防統一價格；生產前向院所詢問是否包含於照護費用及是否另計，不憑其他院所或境外金額估算。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "衛福部於2022-05-09公告phytomenadione注射劑效益風險再評估，要求許可證持有商於2022-12-31前完成中文仿單變更。本文記錄公告日與完成期限，不延伸宣稱超出公告內容的法規義務或實際個案給藥決定。"
+  }
+}
