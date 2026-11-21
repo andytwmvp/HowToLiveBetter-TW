@@ -84,16 +84,47 @@ class Chapter20InfantPreventionPublicationTests(unittest.TestCase):
             self.assertEqual((current["status"], current["treatment"], current["verified_at"]), ("verified", "taiwan_independent_rewrite", DATE))
             self.assertEqual((current["upstream_commit"], current["upstream_text_sha256"]), (old["upstream_commit"], old["upstream_text_sha256"]))
             self.assertEqual((current["target_path"], current["sources"]), (spec["path"], spec["sources"]))
-        self.assertEqual(self.register, self.base_register, "首次發布不應改寫歷史再審登錄")
-        self.assertEqual(len(self.runtime["items"]), len(self.base_runtime["items"]) + len(ARTICLES))
-        self.assertEqual(len(self.runtime["sources"]), len(self.base_runtime["sources"]) + len(NEW_SOURCES))
+        baseline_rows = self.base_register["substantive_rechecks"]
+        self.assertEqual(
+            self.register["substantive_rechecks"][:len(baseline_rows)],
+            baseline_rows,
+            "較新的歷史再審只能追加，不能改寫本批之前的紀錄",
+        )
+        self.assertEqual(
+            len(self.register["substantive_rechecks"]),
+            len(baseline_rows) + 1,
+        )
+        self.assertEqual(
+            {key: value for key, value in self.register.items() if key != "substantive_rechecks"},
+            {key: value for key, value in self.base_register.items() if key != "substantive_rechecks"},
+        )
+        base_item_ids = [row["id"] for row in self.base_runtime["items"]]
+        current_item_ids = [row["id"] for row in self.runtime["items"]]
+        self.assertEqual([key for key in current_item_ids if key in set(base_item_ids)], base_item_ids)
+        self.assertTrue(set(ARTICLES).issubset(set(current_item_ids)))
+        self.assertGreaterEqual(len(self.runtime["items"]), len(self.base_runtime["items"]) + len(ARTICLES))
+        base_sources = {row["id"]: row for row in self.base_runtime["sources"]}
+        self.assertEqual(
+            [self.sources[key] for key in base_sources],
+            list(base_sources.values()),
+            "既有來源必須保留原順序和內容",
+        )
+        self.assertTrue(NEW_SOURCES.issubset(set(self.sources) - set(base_sources)))
+        self.assertGreaterEqual(len(self.runtime["sources"]), len(self.base_runtime["sources"]) + len(NEW_SOURCES))
 
     def test_reader_body_runtime_review_sources_and_sha_are_consistent(self):
         base_ids = [row["id"] for row in self.base_runtime["items"]]
         current_ids = [row["id"] for row in self.runtime["items"]]
         self.assertEqual([key for key in current_ids if key in set(base_ids)], base_ids)
         chapter = (ROOT / "locales/zh-TW/book/ch20/README.md").read_text(encoding="utf-8")
-        self.assertEqual([int(n) for n in re.findall(r"TW-20-(\d{3})\.md", chapter)], [1, 2, 3, 5, 6, 7, 8, 9, 13, 17])
+        chapter_ids = [int(n) for n in re.findall(r"TW-20-(\d{3})\.md", chapter)]
+        runtime_chapter_ids = sorted(
+            int(item["id"].rsplit("-", 1)[1])
+            for item in self.runtime["items"]
+            if item["id"].startswith("TW-20-")
+            and item.get("target_path", "").startswith("locales/zh-TW/book/ch20/")
+        )
+        self.assertEqual(chapter_ids, runtime_chapter_ids)
         for key, spec in ARTICLES.items():
             with self.subTest(id=key):
                 body = self.bodies[key]
@@ -156,8 +187,8 @@ class Chapter20InfantPreventionPublicationTests(unittest.TestCase):
         self.assertEqual(len([row[0] for row in self.bundle["sources"]]), len(NEW_SOURCES), "來源 bundle 不得重複登錄相同 ID")
         current_source_ids = set(self.sources)
         base_source_ids = {row["id"] for row in self.base_runtime["sources"]}
-        self.assertEqual(current_source_ids - base_source_ids, NEW_SOURCES)
-        self.assertEqual(source_bundle_ids_added_since(ROOT, BASE), NEW_SOURCES)
+        self.assertTrue(NEW_SOURCES.issubset(current_source_ids - base_source_ids))
+        self.assertTrue(NEW_SOURCES.issubset(source_bundle_ids_added_since(ROOT, BASE)))
         bundled = {row[0]: row for row in self.bundle["sources"]}
         for sid in NEW_SOURCES:
             source = self.sources[sid]
@@ -167,7 +198,7 @@ class Chapter20InfantPreventionPublicationTests(unittest.TestCase):
         self.assertEqual(coverage, audit_drafts())
         self.assertFalse(coverage["publication_ready"])
         publication = publication_report(ROOT)
-        self.assertEqual(publication["publication_completed_entries"], 344)
+        self.assertEqual(publication["publication_completed_entries"], coverage["publication_completed_entries"])
         self.assertFalse(publication["publication_ready"])
         self.assertEqual(self.stage["counts_before"]["publication_completed_entries"], self.base_coverage["publication_completed_entries"])
         self.assertEqual(self.stage["counts_after"]["publication_completed_entries"], 344)

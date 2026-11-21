@@ -1,0 +1,136 @@
+{
+  "id": "TW-20-012",
+  "reviewer": "ChatGPT（AI協助來源核對；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-012.md",
+  "target_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+  "source_reviewed_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+  "before_sha256": null,
+  "after_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-feeding-nutrition-tw24-prescription-recheck-20261122.json",
+  "source_bundle_sha256": "40e333a4ce1d986dd767ea01578693146b7fcc797410ab453ca0099ab7d0a928",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_complementary_food_20261122",
+      "title": "國民健康署孕產兒關懷網站：副食品添加原則",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=3628&type=01",
+      "claim": "不建議未滿四個月（早產兒採矯正年齡）添加；多數約六個月開始，符合準備度且經專業評估者可考慮滿四個月後提早；高致敏食物諮詢條件與噎食風險。",
+      "supporting_passage": "不建議未滿四個月（早產兒採矯正年齡）添加；多數約六個月開始，符合準備度且經專業評估者可考慮滿四個月後提早；高致敏食物諮詢條件與噎食風險。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取國健署孕產兒關懷網站副食品頁面指定段落，核對年齡、進食準備度、高致敏食物諮詢及噎食警語。"
+    },
+    {
+      "source_id": "tw20_leap_rct_2015",
+      "title": "Du Toit 等：LEAP 隨機試驗，New England Journal of Medicine（2015）",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1414850",
+      "claim": "英國試驗納入640名四至未滿十一個月、具嚴重濕疹及／或雞蛋過敏的嬰兒；542名基線花生皮膚點刺陰性者中530名納入意向治療分析，60月齡兩組花生過敏比例13.7%與1.9%。",
+      "supporting_passage": "英國試驗納入640名四至未滿十一個月、具嚴重濕疹及／或雞蛋過敏的嬰兒；542名基線花生皮膚點刺陰性者中530名納入意向治療分析，60月齡兩組花生過敏比例13.7%與1.9%。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "核對NEJM原始隨機試驗摘要及全文可見研究設計、分組、皮膚測試亞組及60月齡主要結果；不反推未列組別計數。"
+    },
+    {
+      "source_id": "tw20_niaid_peanut_texture_2017",
+      "title": "美國國家過敏及傳染病研究院：花生過敏預防指引增補（美國）",
+      "url": "https://www.niaid.nih.gov/sites/default/files/addendum-peanut-allergy-prevention-guidelines.pdf",
+      "claim": "僅支持花生須調成平滑、稀釋且適合嬰兒吞嚥的質地，避免整粒花生與噎食；不採用其美國引入時程作為台灣規則。",
+      "supporting_passage": "僅支持花生須調成平滑、稀釋且適合嬰兒吞嚥的質地，避免整粒花生與噎食；不採用其美國引入時程作為台灣規則。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "以NIAID官方文件文字核對平滑稀釋質地與噎食風險；該來源僅作質地安全依據，不用其美國時程。"
+    },
+    {
+      "source_id": "ch13_ana_taaaci_2024",
+      "title": "台灣過敏氣喘暨臨床免疫醫學會：2024年食物過敏診療指引",
+      "url": "https://www.taaaci.org.tw/upfile/down/249231349372024%20%E9%A3%9F%E7%89%A9%E9%81%8E%E6%95%8F%E8%A8%BA%E7%99%82%E6%8C%87%E5%BC%95.pdf",
+      "claim": "2024年台灣食物過敏診療指引說明嚴重食物過敏及全身性反應可能危及生命，腎上腺素為第一線治療，高風險患者應由醫療人員評估自動注射器，使用後仍須儘速至急診。",
+      "supporting_passage": "2024年台灣食物過敏診療指引說明嚴重食物過敏及全身性反應可能危及生命，腎上腺素為第一線治療，高風險患者應由醫療人員評估自動注射器，使用後仍須儘速至急診。",
+      "accessed_at": "2026-11-03",
+      "retrieval_method": "本批前次來源查核於2026-11-21完成，沿用既有正式source ID及紀錄。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及讀者需要，依台灣官方或原始研究來源獨立撰寫；不套用中國制度、費用、補充劑量或風險判斷。",
+  "review_method": "逐篇核對manifest原作固定ID、原題、上游版本及雜湊，重讀現有草稿並直接核對source_checks所列原始資料。依台灣情境核實實際行動、適用對象、費用與限制；統計明列期間、範圍、對象、事件定義、分子分母、資料型態與偏差，沒有適當台灣資料時不推估。AI來源查核不等於專業審閱；首次正式發布不計入歷史正文再審。",
+  "limits": [
+    "LEAP論文摘要列出總體意向治療樣本與組別百分比，但本次可直接核對的摘要沒有列出兩組分母及事件計數；不反推人數。",
+    "台灣缺少具全國代表性、明確嬰兒年齡與診斷定義的花生過敏率。",
+    "仍待兒童過敏免疫專業人員審閱台灣高風險引介流程。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "dfc8c8a5d1b38a39f8b07ce707e4034295f721daeb2ffb29746bddc2e1e515d4",
+  "source_ids": [
+    "tw20_hpa_complementary_food_20261122",
+    "tw20_leap_rct_2015",
+    "tw20_niaid_peanut_texture_2017",
+    "ch13_ana_taaaci_2024"
+  ],
+  "frequency_assessment": "LEAP為英國具嚴重濕疹及／或雞蛋過敏的高風險試驗族群，不能當作台灣嬰兒花生過敏盛行率；本次未找到全國代表性、按嬰兒年齡和診斷標準分層的台灣花生過敏資料。",
+  "statistics_assessed": [
+    {
+      "applicability": "relevant_but_non_Taiwan_trial_not_population_estimate",
+      "indicator": "60月齡花生過敏比例（LEAP高風險試驗）",
+      "period": "2015年發表；研究介入期自4至未滿11個月起至60月齡",
+      "scope": "英國單一隨機試驗",
+      "population": "具嚴重濕疹及／或雞蛋過敏的嬰兒；基線花生皮膚點刺陰性亞組",
+      "numerator": null,
+      "denominator": 530,
+      "reported_values": {
+        "花生迴避組": 13.7,
+        "花生攝取組": 1.9
+      },
+      "unit": "各試驗組60月齡花生過敏比例（百分比）",
+      "data_type": "隨機對照試驗意向治療結果；不是行政通報或台灣盛行率",
+      "event_definition": "試驗程序判定60月齡時是否有花生過敏；摘要未提供各組事件計數和分母",
+      "limitations": [
+        "640名受試者中，542名基線皮膚點刺陰性，530名納入該亞組意向治療分析。",
+        "本次核對的原始論文摘要列出組別百分比但未列每組分母及事件計數，不反推人數。",
+        "英國特定高風險族群及研究介入流程不能換算台灣一般嬰兒的個人風險或通用引入時程。"
+      ],
+      "sources": [
+        "tw20_leap_rct_2015"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "LEAP論文摘要列出總體意向治療樣本與組別百分比，但本次可直接核對的摘要沒有列出兩組分母及事件計數；不反推人數。",
+    "台灣缺少具全國代表性、明確嬰兒年齡與診斷定義的花生過敏率。",
+    "仍待兒童過敏免疫專業人員審閱台灣高風險引介流程。",
+    "尚未取得獨立專業審閱：兒童過敏免疫、兒科、嬰幼兒餵食與噎食安全。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒童過敏免疫",
+      "兒科",
+      "嬰幼兒餵食與噎食安全"
+    ]
+  },
+  "prior_chapter_draft_sha256": "2235f8f492419d0e5d159039154b3ec64b2c2ee9d4696cd466ddd433774e0b71",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原作探討嬰兒花生引入與過敏預防的研究問題；台灣讀者流程依國健署和台灣專科資料安排，對美國指引只採安全質地，不把美國4至6個月時程套用台灣。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "孩子有嚴重溼疹或雞蛋過敏，別躲著花生，按醫生指導早點加上，但絕不能喂整粒",
+    "reader_content_decision": "保留花生引入及過敏風險問題；按台灣國健署規定先辨識高風險諮詢條件、其他副食品耐受與噎食安全，並說明英國LEAP研究不能作為台灣通用餵食時程。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "嚴重濕疹或雞蛋過敏嬰兒應依美國預防指引提早吃花生。",
+        "decision": "retain_research_question_but_localize_clinical_pathway",
+        "reason": "LEAP是英國選定高風險嬰兒的隨機試驗；台灣本文依國健署諮詢條件與台灣專科評估，不採美國預防時程作台灣規則。"
+      },
+      {
+        "original_claim": "整粒花生會造成嬰兒噎食。",
+        "decision": "retain_and_expand_safe_texture_guidance",
+        "reason": "國健署與NIAID質地指引支持避免整粒及不合適質地；只採NIAID的質地安全內容，不移植其引入時程。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "一般家庭在家試食成本依食材而異；高風險嬰兒先諮詢可能增加門診安排和等候時間。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "本篇未提供會變動的法律資格或給付額度；服務與衛教資料按來源標示的適用日期查核。法規或服務內容改版時，依最新主管機關資料重新確認。"
+  },
+  "prior_manifest_entry_sha256": "300b888d686adb8b8c059f74049454e4849aed320b94f452725adbd21285c5b1"
+}

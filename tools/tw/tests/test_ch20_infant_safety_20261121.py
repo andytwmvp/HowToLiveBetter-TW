@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "tools/tw"))
+import retroactive_audit as audit
 from ci_language_policy import audit_drafts
 from review_contract import publication_report, validate_runtime
 from source_bundle_test_support import source_bundle_ids_added_since
@@ -73,9 +74,30 @@ class Chapter20InfantSafetyPublicationTests(unittest.TestCase):
             self.assertEqual((current["upstream_commit"], current["upstream_text_sha256"]), (old["upstream_commit"], old["upstream_text_sha256"]))
             self.assertEqual((current["target_path"], current["sources"]), (spec["path"], spec["sources"]))
         self.assertEqual(self.register["unpublished_core_inventory"], baseline_register["unpublished_core_inventory"])
-        self.assertEqual(self.register["substantive_rechecks"], baseline_register["substantive_rechecks"])
+        baseline_rechecks = baseline_register["substantive_rechecks"]
+        current_rechecks = self.register["substantive_rechecks"]
+        self.assertEqual(current_rechecks[:len(baseline_rechecks)], baseline_rechecks)
+        self.assertEqual(self.stage["counts_before"]["review_rechecks"], len(baseline_rechecks))
+        self.assertEqual(
+            self.stage["counts_after"]["review_rechecks"],
+            self.stage["counts_before"]["review_rechecks"],
+        )
+        self.assertGreaterEqual(len(current_rechecks), self.stage["counts_after"]["review_rechecks"])
         current_items = {row["id"]: row for row in self.runtime["items"]}
-        self.assertEqual([current_items[row["id"]] for row in baseline_runtime["items"]], baseline_runtime["items"])
+        baseline_items = {row["id"]: row for row in baseline_runtime["items"]}
+        later_rechecks = current_rechecks[len(baseline_rechecks):]
+        changed_ids = {
+            key for key, old in baseline_items.items()
+            if current_items[key] != old
+        }
+        authorized_rechecks = {row["id"] for row in later_rechecks if row["id"] in baseline_items}
+        self.assertEqual(changed_ids, authorized_rechecks)
+        for key in changed_ids:
+            current_sha = hashlib.sha256(current_items[key]["body"].encode("utf-8")).hexdigest()
+            matching = [row for row in later_rechecks
+                        if row["id"] == key and row["after_sha256"] == current_sha]
+            self.assertEqual(len(matching), 1, key)
+            audit.validate_recheck_history(ROOT, matching[0], current_items[key])
         self.assertTrue(set(ARTICLES).issubset(current_items))
         self.assertGreaterEqual(len(self.runtime["items"]), len(baseline_runtime["items"]) + len(ARTICLES))
         baseline_source_ids = [row["id"] for row in baseline_runtime["sources"]]

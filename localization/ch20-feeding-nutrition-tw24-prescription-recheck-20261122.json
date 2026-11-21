@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "stage": "Chapter 20 feeding/nutrition first publication and TW-24-014 historical recheck",
+  "reviewed_at": "2026-11-22",
+  "baseline_main_sha": "968afd839664c869bd7c5834717ab8a0c6a5dbdd",
+  "scope": {
+    "new_core_ids": [
+      "TW-20-004",
+      "TW-20-012",
+      "TW-20-014",
+      "TW-20-016"
+    ],
+    "historical_core_ids": [
+      "TW-24-014"
+    ],
+    "priority_order": [
+      "TW-20-012",
+      "TW-20-004",
+      "TW-20-014",
+      "TW-20-016",
+      "TW-24-014"
+    ]
+  },
+  "counts_before": {
+    "core_reviewed_entries": 344,
+    "runtime_items": 355,
+    "runtime_sources": 1451,
+    "source_registry": 1534,
+    "json_files_checked": 710,
+    "substantive_rechecks": 415,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_reviewed_entries": 348,
+    "runtime_items": 359,
+    "runtime_sources": 1467,
+    "source_registry": 1550,
+    "json_files_checked": 716,
+    "substantive_rechecks": 416,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "tw20_hpa_complementary_food_20261122",
+    "tw20_hpa_dri_vitd8_20261122",
+    "tw20_hpa_feeding_position_20250828",
+    "tw20_hpa_formula_feeding_20261122",
+    "tw20_hpa_infant_b12_20261122",
+    "tw20_hpa_infant_nutrition_20261122",
+    "tw20_hpa_maternal_b12_20261122",
+    "tw20_leap_rct_2015",
+    "tw20_niaid_peanut_texture_2017",
+    "tw20_ods_b12_consumer_20261122",
+    "tw20_taiwan_infant_vitd_2020",
+    "tw20_tpa_vitd_education_20250924",
+    "tw24_nhi_app_locator_20261122",
+    "tw24_nhi_chronic_rx_20261122",
+    "tw24_nhi_medical_rules_20261122",
+    "tw24_telemedicine_rules_20261122"
+  ],
+  "source_bundle_path": "localization/tw-edition/sources/ch20-feeding-nutrition-tw24-prescription-recheck-20261122.json",
+  "source_bundle_sha256": "40e333a4ce1d986dd767ea01578693146b7fcc797410ab453ca0099ab7d0a928",
+  "items": [
+    {
+      "id": "TW-20-012",
+      "review_path": "localization/reviews/TW-20-012.json",
+      "article_path": "locales/zh-TW/book/ch20/TW-20-012.md",
+      "prior_chapter_draft_sha256": "2235f8f492419d0e5d159039154b3ec64b2c2ee9d4696cd466ddd433774e0b71",
+      "before_sha256": null,
+      "after_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+      "target_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+      "source_ids": [
+        "tw20_hpa_complementary_food_20261122",
+        "tw20_leap_rct_2015",
+        "tw20_niaid_peanut_texture_2017",
+        "ch13_ana_taaaci_2024"
+      ],
+      "statistics_assessed": [
+        {
+          "applicability": "relevant_but_non_Taiwan_trial_not_population_estimate",
+          "indicator": "60月齡花生過敏比例（LEAP高風險試驗）",
+          "period": "2015年發表；研究介入期自4至未滿11個月起至60月齡",
+          "scope": "英國單一隨機試驗",
+          "population": "具嚴重濕疹及／或雞蛋過敏的嬰兒；基線花生皮膚點刺陰性亞組",
+          "numerator": null,
+          "denominator": 530,
+          "reported_values": {
+            "花生迴避組": 13.7,
+            "花生攝取組": 1.9
+          },
+          "unit": "各試驗組60月齡花生過敏比例（百分比）",
+          "data_type": "隨機對照試驗意向治療結果；不是行政通報或台灣盛行率",
+          "event_definition": "試驗程序判定60月齡時是否有花生過敏；摘要未提供各組事件計數和分母",
+          "limitations": [
+            "640名受試者中，542名基線皮膚點刺陰性，530名納入該亞組意向治療分析。",
+            "本次核對的原始論文摘要列出組別百分比但未列每組分母及事件計數，不反推人數。",
+            "英國特定高風險族群及研究介入流程不能換算台灣一般嬰兒的個人風險或通用引入時程。"
+          ],
+          "sources": [
+            "tw20_leap_rct_2015"
+          ]
+        }
+      ],
+      "frequency_assessment": "LEAP為英國具嚴重濕疹及／或雞蛋過敏的高風險試驗族群，不能當作台灣嬰兒花生過敏盛行率；本次未找到全國代表性、按嬰兒年齡和診斷標準分層的台灣花生過敏資料。",
+      "topic_fidelity_decision": "retain_original_reader_need_with_taiwan_context",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒童過敏免疫",
+          "兒科",
+          "嬰幼兒餵食與噎食安全"
+        ]
+      },
+      "status": "first_publication_professional_pending"
+    },
+    {
+      "id": "TW-20-004",
+      "review_path": "localization/reviews/TW-20-004.json",
+      "article_path": "locales/zh-TW/book/ch20/TW-20-004.md",
+      "prior_chapter_draft_sha256": "3bb2d18ca86cc4aba3e934e89221469a92f1a7c416f246335be0ca7f663b2b31",
+      "before_sha256": null,
+      "after_sha256": "3bb2d18ca86cc4aba3e934e89221469a92f1a7c416f246335be0ca7f663b2b31",
+      "target_sha256": "3bb2d18ca86cc4aba3e934e89221469a92f1a7c416f246335be0ca7f663b2b31",
+      "source_ids": [
+        "tw20_hpa_feeding_position_20250828",
+        "tw20_hpa_newborn_feeding",
+        "tw20_hpa_complementary_food_20261122",
+        "tw20_hpa_formula_feeding_20261122",
+        "tw20_hpa_formula_preparation"
+      ],
+      "statistics_assessed": [],
+      "frequency_assessment": "本篇是餵養安排指引，不是單一疾病事件；本次未找到有一致定義、適當母群分母且能將餵養方式與健康結果配對的全國統計，不推算個人機率。",
+      "topic_fidelity_decision": "retain_original_reader_need_with_taiwan_context",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科",
+          "新生兒照護",
+          "母乳哺育與配方奶衛教",
+          "嬰幼兒營養"
+        ]
+      },
+      "status": "first_publication_professional_pending"
+    },
+    {
+      "id": "TW-20-014",
+      "review_path": "localization/reviews/TW-20-014.json",
+      "article_path": "locales/zh-TW/book/ch20/TW-20-014.md",
+      "prior_chapter_draft_sha256": "6cfffd505ff5394fa42621c980423cc74603e7716761efb7c45738bcf5d9cada",
+      "before_sha256": null,
+      "after_sha256": "6cfffd505ff5394fa42621c980423cc74603e7716761efb7c45738bcf5d9cada",
+      "target_sha256": "6cfffd505ff5394fa42621c980423cc74603e7716761efb7c45738bcf5d9cada",
+      "source_ids": [
+        "tw20_hpa_infant_b12_20261122",
+        "tw20_hpa_maternal_b12_20261122",
+        "tw20_ods_b12_consumer_20261122",
+        "tw20_hpa_formula_feeding_20261122"
+      ],
+      "statistics_assessed": [],
+      "frequency_assessment": "本次未找到可代表台灣全國、依孕哺飲食型態與嬰兒診斷方式分層的維生素B12缺乏率；海外病例或個案不能換算台灣家庭個人機率。",
+      "topic_fidelity_decision": "retain_original_reader_need_with_taiwan_context",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "婦產科",
+          "兒科",
+          "嬰幼兒營養",
+          "營養師"
+        ]
+      },
+      "status": "first_publication_professional_pending"
+    },
+    {
+      "id": "TW-20-016",
+      "review_path": "localization/reviews/TW-20-016.json",
+      "article_path": "locales/zh-TW/book/ch20/TW-20-016.md",
+      "prior_chapter_draft_sha256": "d3215b63b89a2c328b06a033f485929095fa089d5e9885651cb483afc52df448",
+      "before_sha256": null,
+      "after_sha256": "ccaf7a3e895722c342a88c963c531e681897e2f9a6134383be21df90f02c10be",
+      "target_sha256": "ccaf7a3e895722c342a88c963c531e681897e2f9a6134383be21df90f02c10be",
+      "source_ids": [
+        "tw20_hpa_dri_vitd8_20261122",
+        "tw20_tpa_vitd_education_20250924",
+        "tw20_hpa_infant_nutrition_20261122",
+        "tw20_taiwan_infant_vitd_2020"
+      ],
+      "statistics_assessed": [
+        {
+          "applicability": "Taiwan_regional_clinical_sample_not_national_prevalence",
+          "indicator": "依研究門檻分類的嬰兒維生素D缺乏比例",
+          "period": "2012-10至2014-01",
+          "scope": "北台灣三家醫院健兒門診",
+          "population": "回診的未滿一歲嬰兒；納入分析481人",
+          "numerator": 212,
+          "denominator": 481,
+          "unit": "人；44.1%",
+          "data_type": "醫院門診橫斷面研究樣本，不是全國行政通報",
+          "event_definition": "血清25(OH)D不高於20 ng/mL，依研究採用的內分泌學會標準分類為缺乏",
+          "limitations": [
+            "樣本來自北台灣三家醫院特定期間的健康嬰兒健兒門診，不能當作全台代表性盛行率。",
+            "台灣DRI所列嬰兒缺乏參考值低於11 ng/mL；與研究採用的≤20 ng/mL門檻不同，不能混用。",
+            "研究年份較早，不能據此推估2026年全台現況或任何個別嬰兒診斷。"
+          ],
+          "sources": [
+            "tw20_taiwan_infant_vitd_2020",
+            "tw20_hpa_dri_vitd8_20261122"
+          ]
+        }
+      ],
+      "frequency_assessment": "北台灣三家醫院2012至2014年的樣本以研究採用的≤20 ng/mL門檻分類，不代表全台現行缺乏率；台灣DRI列的缺乏參考值為<11 ng/mL，兩個門檻不得混用。",
+      "topic_fidelity_decision": "retain_original_reader_need_with_taiwan_context",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科",
+          "新生兒照護",
+          "嬰幼兒營養",
+          "營養師"
+        ]
+      },
+      "status": "first_publication_professional_pending"
+    },
+    {
+      "id": "TW-24-014",
+      "review_path": "localization/reviews/TW-24-014.json",
+      "article_path": "locales/zh-TW/book/ch24/TW-24-014.md",
+      "prior_review_sha256": "a2a0aef060c6b8a52b7a020c9ad6cc489d15ccbddc372964ec0193fb77f5321d",
+      "before_sha256": "e094db2119d15d8016d3340a766e5ef421002f0b6a4db50cbd46aac95d396618",
+      "after_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
+      "source_ids": [
+        "tw24_nhi_chronic_rx_20261122",
+        "tw24_nhi_medical_rules_20261122",
+        "tw24_nhi_app_locator_20261122",
+        "tw24_telemedicine_rules_20261122"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch24_chronic",
+          "prior_source_sha256": "e469bd305b3e8dd89427330c6c572efdecefe7f5959cf7c7560e5a855470a078",
+          "replacement_ids": [
+            "tw24_nhi_chronic_rx_20261122",
+            "tw24_nhi_medical_rules_20261122",
+            "tw24_nhi_app_locator_20261122"
+          ],
+          "reason": "舊健保入口只留概括摘要；本次改用健保署病人慢箋說明、現行法條及APP位置查詢頁，分別支持領藥、例外與找藥局主張。"
+        },
+        {
+          "id": "ch24_tele",
+          "prior_source_sha256": "d1ef579cb7ba3dc2add1a10ca5c295cca37487f7a691ceee2b071d929fef5823",
+          "replacement_ids": [
+            "tw24_telemedicine_rules_20261122"
+          ],
+          "reason": "改用現行通訊診療法規來源，逐項支持適用情況、開方限制、機構計畫、身分、同意、隱私及健保給付。"
+        },
+        {
+          "id": "follow_nhi_rules",
+          "prior_source_sha256": "5dbbce45bad12f4a19f21e092ec303b2720a6eb2f81364db0240cc594c4757d1",
+          "replacement_ids": [
+            "tw24_nhi_medical_rules_20261122"
+          ],
+          "reason": "舊法規引用含不屬本篇主題的藥品替代主張；本次重讀現行條文，聚焦第7、14、15、22至25及28條。"
+        }
+      ],
+      "statistics_assessed": [],
+      "frequency_assessment": "慢箋領藥、委託續方及通訊診療是服務流程，不是疾病事件；本次未找到可代表全台、按同一服務失敗定義及使用者母數計算的調劑失敗、遠距誤診或等候時間發生率，不以服務量推估個人機率。",
+      "legal_temporal_checks": [
+        {
+          "law": "全民健康保險醫療辦法",
+          "checked_at": "2026-11-22",
+          "relevant_provisions": [
+            "第7條",
+            "第14條",
+            "第15條",
+            "第22條",
+            "第24條",
+            "第25條",
+            "第28條"
+          ],
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第22條"
+              ],
+              "promulgated_at": "2024-06-20",
+              "effective_at": "2024-08-01",
+              "basis": "現行法規第28條明載2024-06-20修正發布之第22條自2024-08-01施行；其餘本篇使用條文依2026-11-13法規資料庫現行版本查核。"
+            }
+          ],
+          "latest_law_version_context": "法務部全國法規資料庫現行頁標示修正日期2024-06-20，並標示法規整編資料截止2026-11-13；本次直接核對所列條文。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009"
+          ]
+        },
+        {
+          "law": "通訊診察治療辦法",
+          "checked_at": "2026-11-22",
+          "relevant_provisions": [
+            "第3條",
+            "第16條",
+            "第18條",
+            "第20條",
+            "第21條",
+            "第22條"
+          ],
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "本辦法及第16條適用範圍"
+              ],
+              "promulgated_at": "2024-01-22",
+              "effective_at": "2024-07-01",
+              "basis": "現行法規頁標示2024-01-22修正；第22條明定本辦法自2024-07-01施行。"
+            }
+          ],
+          "latest_law_version_context": "法規資料庫本次標示整編截止2026-11-13；直接核對適用類別、開方、機構計畫、身分、同意、隱私及健保給付條文。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020197"
+          ]
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "家庭醫學／慢性病照護",
+          "藥事調劑",
+          "醫療法律",
+          "健保給付實務"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "status": "ai_source_rechecked_professional_pending"
+    }
+  ],
+  "limits": [
+    "本次未找到可代表全台的嬰兒花生過敏、全素孕哺／嬰兒B12缺乏或維生素D缺乏統計，不以海外研究、門診樣本或行政件數推算個人機率。",
+    "LEAP為英國高風險試驗；北台灣維生素D研究為2012至2014年三家醫院樣本且採用不同於台灣DRI的分類門檻。",
+    "慢箋個別資格、庫存與院所通訊診療服務須依當期規定及個案確認。",
+    "尚未取得兒科、過敏免疫、營養、藥事及醫療法律等獨立專業審閱。"
+  ],
+  "publication_ready": false
+}

@@ -1,0 +1,132 @@
+{
+  "id": "TW-20-016",
+  "reviewer": "ChatGPT（AI協助來源核對；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-016.md",
+  "target_sha256": "2bdc2b4c655044fefa1a5ed07ac64b55640dcfc1ed243085c00e6f44f395a692",
+  "source_reviewed_sha256": "2bdc2b4c655044fefa1a5ed07ac64b55640dcfc1ed243085c00e6f44f395a692",
+  "before_sha256": null,
+  "after_sha256": "2bdc2b4c655044fefa1a5ed07ac64b55640dcfc1ed243085c00e6f44f395a692",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-feeding-nutrition-tw24-prescription-recheck-20261122.json",
+  "source_bundle_sha256": "40e333a4ce1d986dd767ea01578693146b7fcc797410ab453ca0099ab7d0a928",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_dri_vitd8_20261122",
+      "title": "國民健康署：國人膳食營養素參考攝取量第八版",
+      "url": "https://health99.hpa.gov.tw/storage/files/materials/22384.pdf",
+      "claim": "出生至12個月維生素D足夠攝取量AI為每日10微克（400 IU）；此為總攝取參考值，不等於每位嬰兒均須額外服用400 IU滴劑；文件另列血中缺乏參考值低於11 ng/mL。",
+      "supporting_passage": "出生至12個月維生素D足夠攝取量AI為每日10微克（400 IU）；此為總攝取參考值，不等於每位嬰兒均須額外服用400 IU滴劑；文件另列血中缺乏參考值低於11 ng/mL。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "核對國健署第八版DRI嬰兒AI與血中參考值頁段；AI作總攝取參考，不當成個人滴劑處方。"
+    },
+    {
+      "source_id": "tw20_tpa_vitd_education_20250924",
+      "title": "臺灣兒科醫學會：新生兒的營養干預（2025教育資料）",
+      "url": "https://www.tpfce.org.tw/storage/files/shares/2025%E6%8C%81%E7%BA%8C%E6%95%99%E8%82%B2/0928-%E4%B8%8B%E5%8D%881600-%E6%B1%9F%E6%A4%BF%E5%BD%AC%20%E4%B8%BB%E4%BB%BB%E9%86%AB%E5%B8%AB-%E6%96%B0%E7%94%9F%E5%85%92%E7%9A%84%E7%87%9F%E9%A4%8A%E4%B9%BE%E9%A0%90%EF%BC%9A%E5%BE%9E%E5%9F%BA%E7%A4%8E%E7%87%9F%E9%A4%8A%E8%A3%9C%E5%85%85%E5%88%B0%E8%85%B8%E8%83%83%E9%81%93%E7%97%87%E7%8B%80%E6%B2%BB%E7%99%82.pdf",
+      "claim": "教育投影片引用臺灣兒科醫學會2016年嬰兒維生素D建議：純母乳或部分母乳嬰兒每日口服400 IU；強化配方奶量低於每日1000 mL者也每日400 IU。投影片是教育資料，非2025年新臨床指引或政府強制規定。",
+      "supporting_passage": "教育投影片引用臺灣兒科醫學會2016年嬰兒維生素D建議：純母乳或部分母乳嬰兒每日口服400 IU；強化配方奶量低於每日1000 mL者也每日400 IU。投影片是教育資料，非2025年新臨床指引或政府強制規定。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "核對臺灣兒科醫學會2025教育投影片引用的2016年嬰兒補充建議，區分學會建議與政府規範。"
+    },
+    {
+      "source_id": "tw20_hpa_infant_nutrition_20261122",
+      "title": "國民健康署孕產兒關懷網站：嬰幼兒每日膳食營養素",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=3629&type=01",
+      "claim": "嬰幼兒營養素與飲食參考資料；個別補充需求應由醫師評估。",
+      "supporting_passage": "嬰幼兒營養素與飲食參考資料；個別補充需求應由醫師評估。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "核對國健署嬰幼兒營養頁面所列營養素與個別補充評估資訊。"
+    },
+    {
+      "source_id": "tw20_taiwan_infant_vitd_2020",
+      "title": "Chen 等：北臺灣嬰兒第一年維生素D營養狀態研究，Nutrients（2020）",
+      "url": "https://www.mdpi.com/2072-6643/12/2/404",
+      "claim": "2012-10至2014-01於北臺灣三家醫院健兒門診的橫斷研究；分析481名未滿一歲嬰兒，其中212名（44.1%）依研究採用的血中25(OH)D不高於20 ng/mL標準分類。不是全國代表性樣本，且門檻不同於臺灣DRI低於11 ng/mL。",
+      "supporting_passage": "2012-10至2014-01於北臺灣三家醫院健兒門診的橫斷研究；分析481名未滿一歲嬰兒，其中212名（44.1%）依研究採用的血中25(OH)D不高於20 ng/mL標準分類。不是全國代表性樣本，且門檻不同於臺灣DRI低於11 ng/mL。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取原始研究全文頁的研究期間、三家北部醫院樣本數、年齡、分類門檻與限制。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及讀者需要，依臺灣官方或原始研究來源獨立撰寫；不套用中國制度、費用、補充劑量或風險判斷。",
+  "review_method": "逐篇核對manifest原作固定ID、原題、上游版本及雜湊，重讀現有草稿並直接核對source_checks所列原始資料。依臺灣情境核實實際行動、適用對象、費用與限制；統計明列期間、範圍、對象、事件定義、分子分母、資料型態與偏差，沒有適當臺灣資料時不推估。AI來源查核不等於專業審閱；首次正式發布不計入歷史正文再審。",
+  "limits": [
+    "北臺灣研究採≤20 ng/mL、臺灣DRI資料列<11 ng/mL，不能據其44.1%直接推估臺灣目前缺乏率。",
+    "學會投影片引用2016年建議，需由兒科專業人員評估是否有更新且適用特定嬰兒的最新指引。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "35a39e80c165c895c2390c73efd2f0bdd4de627b963a4bb9d715bfbd1085f4de",
+  "source_ids": [
+    "tw20_hpa_dri_vitd8_20261122",
+    "tw20_tpa_vitd_education_20250924",
+    "tw20_hpa_infant_nutrition_20261122",
+    "tw20_taiwan_infant_vitd_2020"
+  ],
+  "frequency_assessment": "北臺灣三家醫院2012至2014年的樣本以研究採用的≤20 ng/mL門檻分類，不代表全台現行缺乏率；臺灣DRI列的缺乏參考值為<11 ng/mL，兩個門檻不得混用。",
+  "statistics_assessed": [
+    {
+      "applicability": "Taiwan_regional_clinical_sample_not_national_prevalence",
+      "indicator": "依研究門檻分類的嬰兒維生素D缺乏比例",
+      "period": "2012-10至2014-01",
+      "scope": "北臺灣三家醫院健兒門診",
+      "population": "回診的未滿一歲嬰兒；納入分析481人",
+      "numerator": 212,
+      "denominator": 481,
+      "unit": "人；44.1%",
+      "data_type": "醫院門診橫斷面研究樣本，不是全國行政通報",
+      "event_definition": "血清25(OH)D不高於20 ng/mL，依研究採用的內分泌學會標準分類為缺乏",
+      "limitations": [
+        "樣本來自北臺灣三家醫院特定期間的健康嬰兒健兒門診，不能當作全台代表性盛行率。",
+        "臺灣DRI所列嬰兒缺乏參考值低於11 ng/mL；與研究採用的≤20 ng/mL門檻不同，不能混用。",
+        "研究年份較早，不能據此推估2026年全台現況或任何個別嬰兒診斷。"
+      ],
+      "sources": [
+        "tw20_taiwan_infant_vitd_2020",
+        "tw20_hpa_dri_vitd8_20261122"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "北臺灣研究採≤20 ng/mL、臺灣DRI資料列<11 ng/mL，不能據其44.1%直接推估臺灣目前缺乏率。",
+    "學會投影片引用2016年建議，需由兒科專業人員評估是否有更新且適用特定嬰兒的最新指引。",
+    "尚未取得獨立專業審閱：兒科、新生兒照護、嬰幼兒營養、營養師。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科",
+      "新生兒照護",
+      "嬰幼兒營養",
+      "營養師"
+    ]
+  },
+  "prior_chapter_draft_sha256": "d3215b63b89a2c328b06a033f485929095fa089d5e9885651cb483afc52df448",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留嬰兒維生素D攝取與補充研究問題；分清臺灣DRI總攝取AI與兒科學會補充建議，依餵養方式、產品含量與個別疾病情況評估，不把原作每日劑量當成所有嬰兒的單一處方。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "孩子出生後就每天喂 400 國際單位維生素 D，吃母乳的尤其別漏，足月的 6 個月內一般不用另補鈣",
+    "reader_content_decision": "保留嬰兒維生素D需要與補充方式的討論；使用臺灣第八版DRI和臺灣兒科醫學會建議，分開說明AI、總攝取和口服補充，不將來源國家或餵養方式簡化成一律處方。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "每日400 IU是所有嬰兒都必須自行服用的劑量。",
+        "decision": "separate_nutrient_reference_from_supplement_recommendation",
+        "reason": "臺灣DRI的AI是總攝取參考量；臺灣兒科醫學會建議按母乳或配方奶攝取條件評估補充。"
+      },
+      {
+        "original_claim": "足月嬰兒不需另補鈣。",
+        "decision": "retain_distinction_between_vitamin_d_and_calcium",
+        "reason": "維生素D與鈣是不同營養素，是否檢查或補充須依個別飲食、病況及醫療評估。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "滴劑與強化配方奶價格、單位含量依產品而異；先核對標示並於兒童健康檢查時詢問，可減少滴數誤讀與重複補充。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "本篇未提供會變動的法律資格或給付額度；服務與衛教資料按來源標示的適用日期查核。法規或服務內容改版時，依最新主管機關資料重新確認。"
+  },
+  "prior_manifest_entry_sha256": "8c5c1aadf5033aac8ce62bc602bfa828bd5500803f81dec4eb52ae0df20043c1"
+}

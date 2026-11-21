@@ -1,0 +1,120 @@
+{
+  "id": "TW-20-004",
+  "reviewer": "ChatGPT（AI協助來源核對；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-004.md",
+  "target_sha256": "3bb2d18ca86cc4aba3e934e89221469a92f1a7c416f246335be0ca7f663b2b31",
+  "source_reviewed_sha256": "3bb2d18ca86cc4aba3e934e89221469a92f1a7c416f246335be0ca7f663b2b31",
+  "before_sha256": null,
+  "after_sha256": "3bb2d18ca86cc4aba3e934e89221469a92f1a7c416f246335be0ca7f663b2b31",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-feeding-nutrition-tw24-prescription-recheck-20261122.json",
+  "source_bundle_sha256": "40e333a4ce1d986dd767ea01578693146b7fcc797410ab453ca0099ab7d0a928",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_feeding_position_20250828",
+      "title": "國民健康署：對嬰兒哺育立場說明",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19368",
+      "claim": "在母嬰健康允許時鼓勵哺餵母乳、提供母乳支持；母乳或配方奶只要符合母嬰狀況，都是好的選擇。",
+      "supporting_passage": "在母嬰健康允許時鼓勵哺餵母乳、提供母乳支持；母乳或配方奶只要符合母嬰狀況，都是好的選擇。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取國健署2025-08-28立場說明與2025-08-29更新資訊，核對母乳支持及配方奶選擇文字。"
+    },
+    {
+      "source_id": "tw20_hpa_newborn_feeding",
+      "title": "國民健康署孕產兒關懷網站：新生兒哺育計畫",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2529&type=01",
+      "claim": "國健署新生兒哺育與餵食背景資料；特殊配方仍以產品和醫療團隊指示為準。",
+      "supporting_passage": "國健署新生兒哺育與餵食背景資料；特殊配方仍以產品和醫療團隊指示為準。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "本批前次來源查核於2026-11-21完成，沿用既有正式source ID及紀錄。"
+    },
+    {
+      "source_id": "tw20_hpa_complementary_food_20261122",
+      "title": "國民健康署孕產兒關懷網站：副食品添加原則",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=3628&type=01",
+      "claim": "不建議未滿四個月（早產兒採矯正年齡）添加；多數約六個月開始，符合準備度且經專業評估者可考慮滿四個月後提早；高致敏食物諮詢條件與噎食風險。",
+      "supporting_passage": "不建議未滿四個月（早產兒採矯正年齡）添加；多數約六個月開始，符合準備度且經專業評估者可考慮滿四個月後提早；高致敏食物諮詢條件與噎食風險。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取國健署孕產兒關懷網站副食品頁面指定段落，核對年齡、進食準備度、高致敏食物諮詢及噎食警語。"
+    },
+    {
+      "source_id": "tw20_hpa_formula_feeding_20261122",
+      "title": "國民健康署：嬰兒配方食品及奶瓶餵食指導",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=505&pid=17298&sid=18677",
+      "claim": "無法完全以母乳餵養時，可依母嬰狀況選擇合適嬰兒配方食品；該頁更新日期為2025-12-12。",
+      "supporting_passage": "無法完全以母乳餵養時，可依母嬰狀況選擇合適嬰兒配方食品；該頁更新日期為2025-12-12。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取國健署嬰兒配方食品頁面，核對適用情境與頁面更新日期。"
+    },
+    {
+      "source_id": "tw20_hpa_formula_preparation",
+      "title": "國民健康署孕產兒關懷網站：如何沖調嬰兒配方奶粉",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=1867&type=01",
+      "claim": "粉狀配方奶非無菌；清潔雙手和器具、依產品比例沖泡，以不低於70°C水沖調；室溫兩小時未餵完丟棄，提前沖泡快速冷卻冷藏不高於5°C、24小時內使用。",
+      "supporting_passage": "粉狀配方奶非無菌；清潔雙手和器具、依產品比例沖泡，以不低於70°C水沖調；室溫兩小時未餵完丟棄，提前沖泡快速冷卻冷藏不高於5°C、24小時內使用。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "本批前次來源查核於2026-11-21完成，沿用既有正式source ID及紀錄。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及讀者需要，依台灣官方或原始研究來源獨立撰寫；不套用中國制度、費用、補充劑量或風險判斷。",
+  "review_method": "逐篇核對manifest原作固定ID、原題、上游版本及雜湊，重讀現有草稿並直接核對source_checks所列原始資料。依台灣情境核實實際行動、適用對象、費用與限制；統計明列期間、範圍、對象、事件定義、分子分母、資料型態與偏差，沒有適當台灣資料時不推估。AI來源查核不等於專業審閱；首次正式發布不計入歷史正文再審。",
+  "limits": [
+    "未找到具代表性且可按嬰兒餵養方式、健康結果與適當分母交叉比較的台灣全國資料。",
+    "特殊疾病、早產或生長疑慮需由兒科團隊按個別狀況調整。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "7e37e7eb42fe821f47325eeb841c6463a716a4952a418e0221a2dc8c4234d03b",
+  "source_ids": [
+    "tw20_hpa_feeding_position_20250828",
+    "tw20_hpa_newborn_feeding",
+    "tw20_hpa_complementary_food_20261122",
+    "tw20_hpa_formula_feeding_20261122",
+    "tw20_hpa_formula_preparation"
+  ],
+  "frequency_assessment": "本篇是餵養安排指引，不是單一疾病事件；本次未找到有一致定義、適當母群分母且能將餵養方式與健康結果配對的全國統計，不推算個人機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "未找到具代表性且可按嬰兒餵養方式、健康結果與適當分母交叉比較的台灣全國資料。",
+    "特殊疾病、早產或生長疑慮需由兒科團隊按個別狀況調整。",
+    "尚未取得獨立專業審閱：兒科、新生兒照護、母乳哺育與配方奶衛教、嬰幼兒營養。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科",
+      "新生兒照護",
+      "母乳哺育與配方奶衛教",
+      "嬰幼兒營養"
+    ]
+  },
+  "prior_chapter_draft_sha256": "3bb2d18ca86cc4aba3e934e89221469a92f1a7c416f246335be0ca7f663b2b31",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原題對前六個月餵養及開始副食品的問題；依國健署立場同時尊重母乳支持與符合母嬰狀況的配方奶選擇，說明副食品時機和早產兒矯正年齡。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "前6個月只餵母乳，連水都不用喂，6個月起加輔食並繼續母乳",
+    "reader_content_decision": "保留前六個月餵養、副食品銜接及持續哺乳的問題；依台灣國健署立場兼顧母乳支持與母嬰狀況合適的配方奶，避免把無法純母乳化為家庭過失。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "所有家庭都必須純母乳，否則不符合健康餵養。",
+        "decision": "retain_breastfeeding_support_without_coercion",
+        "reason": "國健署鼓勵母乳哺育並提供支持，同時明確表示母乳或配方奶符合母嬰狀況均是好的選擇。"
+      },
+      {
+        "original_claim": "副食品應在六個月左右開始並持續母乳。",
+        "decision": "retain_with_taiwan_readiness_and_preterm_context",
+        "reason": "國健署說明多數約六個月開始、未滿四個月矯正年齡不宜添加，部分準備好的嬰兒可由專業人員評估提早。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "母乳哺餵的時間、休息及支持成本與家庭狀況有關；配方奶有持續購買、清潔和沖泡時間成本，依產品和使用量而異，本文不虛列價格。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "本篇未提供會變動的法律資格或給付額度；服務與衛教資料按來源標示的適用日期查核。法規或服務內容改版時，依最新主管機關資料重新確認。"
+  },
+  "prior_manifest_entry_sha256": "4a21ff1bd6de5728f1aaca8dc59dedc15e8949d6971c330856a32c35d17b9668"
+}
