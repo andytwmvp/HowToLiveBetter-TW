@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-11-22",
+  "sources": [
+    [
+      "tw20_cdc_vaccine_catchup_guide",
+      "疾管署：接種指引（含學齡前漏打、延遲及狀況不明補種指引；2025-10-01更新）",
+      "https://www.cdc.gov.tw/Category/Page/SFVU5tngwkSvL8OBJOxhsw",
+      "疾管署指引頁列出各常規疫苗最小接種年齡、最短間隔及學齡前漏打、延遲或接種狀況不明的補種指引；個別劑次須依現行規範核對。"
+    ],
+    [
+      "tw20_cdc_vaccine_record_query",
+      "疾管署：個人預防接種資料查詢（2025-04-23更新）",
+      "https://www.cdc.gov.tw/Category/Page/9dz7czW1IrLl-Ce5i0XDFQ",
+      "NIIS於民國92年建立，但因建檔與醫療院所上傳落差並非所有紀錄都能查到；可用健康存摺、衛生所（臺北市健康服務中心）、手冊或原接種院所查找。"
+    ],
+    [
+      "tw20_cdc_selfpaid_vaccines_2025",
+      "疾管署：自費疫苗種類（2025-03-14更新）",
+      "https://www.cdc.gov.tw/Category/ListContent/gBkY59nmbUpY39iDzJging?uaid=M1mo3FhXx-sf5sp9CzqcXA",
+      "疾管署區分公費兒童常規疫苗及可由家長評估的自費疫苗；實際公費項目與資格應按當年度公告確認。"
+    ],
+    [
+      "tw20_cdc_botulism_guidance_2026",
+      "疾管署：肉毒桿菌中毒重要指引及教材（2026-07-24更新）",
+      "https://www.cdc.gov.tw/Category/MPage/eUrAiE0iD8mpmTZ44VRr8w",
+      "建議未滿1歲嬰兒避免餵蜂蜜；列出嬰兒腸道型肉毒桿菌中毒症狀及可能的呼吸衰竭等重症。"
+    ],
+    [
+      "tw20_cdc_infant_botulism_case_2024",
+      "疾管署：2024年嬰兒型肉毒桿菌中毒個案調查報告（2026年第42卷第19期）",
+      "https://www.cdc.gov.tw/EpidemicTheme/Detail/wRe2wQO2JCW83hbs2HNztA?archiveId=KiUlKvx3Nb4u4lc3k1_bbA",
+      "報告指出一名7個月嬰兒為2015年以來台灣第3例確診嬰兒型肉毒桿菌中毒，並列症狀及偶然食入食材或環境塵土等可能途徑；病例數沒有暴露分母。"
+    ],
+    [
+      "tw20_tsn_vitamin_k_2025",
+      "台灣新生兒科醫學會：母乳中可能不足的營養素及其影響，第六節（2025）",
+      "https://www.tsn-neonatology.com/retrieve/20251031142739.pdf",
+      "說明新生兒維生素K不足及維生素K缺乏性出血，建議所有新生兒接受預防性補充；專章部分方案引述歐洲專業指引。"
+    ],
+    [
+      "tw20_tfda_phytomenadione_label",
+      "食藥署：含phytomenadione單方注射劑中文仿單修訂內容",
+      "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f637873468920621470",
+      "核准適應症包括預防或治療新生兒維生素K缺乏性出血；仿單警示曾有肌肉或靜脈注射期間或注射後發生嚴重、致命過敏反應，未提供新生兒預防性給藥可換算的發生率。"
+    ],
+    [
+      "tw20_mohw_phytomenadione_notice_2022",
+      "衛福部：phytomenadione注射劑臨床效益與風險再評估公告（2022-05-09）",
+      "https://www.mohw.gov.tw/cp-5268-69458-1.html",
+      "公告藥品風險再評估及仿單變更，要求許可證持有商於2022-12-31前完成中文仿單變更。"
+    ],
+    [
+      "tw20_hpa_child_burn_prevention_2026",
+      "國健署孕產兒關懷網站：掌握兒童防燙5大原則（2026-11-04）",
+      "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=4701&type=00",
+      "建議洗澡先放冷水再加入熱水，入水前以手背確認水溫不得超過40°C，沐浴時照顧者全程看護且不可讓兒童獨留浴室。"
+    ],
+    [
+      "tw20_hpa_infant_bath_preparation",
+      "國健署孕產兒關懷網站：新手爸媽看這邊!! 如何幫寶寶洗澡?（網頁未標示發布日期）",
+      "https://mammy.hpa.gov.tw/Home/NewsKBContent/2372?type=01",
+      "洗澡前先準備澡盆、毛巾、衣物及尿布，放在順手可及處；本篇只採用備物建議，水溫與全程看護依國健署2026年較新防燙指引。"
+    ]
+  ]
+}

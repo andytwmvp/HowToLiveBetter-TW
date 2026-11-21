@@ -1,0 +1,395 @@
+{
+  "stage": "chapter20_infant_prevention_first_publication",
+  "baseline_main_sha": "40f82aac2e0b0b88f11fa3b1edae119df2a3f8ec",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "article_ids": [
+    "TW-20-003",
+    "TW-20-006",
+    "TW-20-007",
+    "TW-20-017"
+  ],
+  "new_source_ids": [
+    "tw20_cdc_vaccine_catchup_guide",
+    "tw20_cdc_vaccine_record_query",
+    "tw20_cdc_selfpaid_vaccines_2025",
+    "tw20_cdc_botulism_guidance_2026",
+    "tw20_cdc_infant_botulism_case_2024",
+    "tw20_tsn_vitamin_k_2025",
+    "tw20_tfda_phytomenadione_label",
+    "tw20_mohw_phytomenadione_notice_2022",
+    "tw20_hpa_child_burn_prevention_2026",
+    "tw20_hpa_infant_bath_preparation"
+  ],
+  "reused_source_ids": [
+    "tw20_cdc_schedule_11509"
+  ],
+  "items": [
+    {
+      "id": "TW-20-003",
+      "title": "嬰幼兒疫苗漏打或延遲，帶著紀錄請接種院所安排補種",
+      "source_ids": [
+        "tw20_cdc_schedule_11509",
+        "tw20_cdc_vaccine_catchup_guide",
+        "tw20_cdc_vaccine_record_query",
+        "tw20_cdc_selfpaid_vaccines_2025"
+      ],
+      "summary": "整理健康手冊和可查詢紀錄，請衛生所或合約院所依孩子年齡、既往劑次及現行公告排定補種。",
+      "action": "查手冊及健康存摺；帶紀錄就近詢問衛生所（臺北市健康服務中心）或接種合約院所；逐劑核對現行公費資格和補種間隔。",
+      "limits": "查不到NIIS紀錄不代表一定沒有接種；現行疾管署接種指引頁列有補種文件，但其連結文件的細部規則仍須由接種人員依當期公告核對。 沒有以同一病例定義、期間及兒童人口分母計算的台灣全國漏打／延遲率；不以接種涵蓋率換算個人機率。 掛號或耗材等費用可能因縣市、院所與接種項目而異，預約前確認。",
+      "question": "若孩子疫苗漏打或紀錄不清，我是否已帶健康手冊和既有接種資料，請衛生所或合約院所安排補種？",
+      "body": "<!-- TW-ID: TW-20-003 -->\n\n# 嬰幼兒疫苗漏打或延遲，帶著紀錄請接種院所安排補種\n\n## 適用情況與第一步\n\n寶寶的兒童健康手冊有漏填、已超過預定接種月份，或家長不確定某一劑是否打過時，先找出兒童健康手冊和手邊的接種證明。也可查疾病管制署的預防接種紀錄或健保署「健康存摺」；查不到紀錄不一定代表沒有接種，因為全國性預防接種資訊管理系統的資料會受建檔與院所上傳情況影響。\n\n## 在台灣怎麼安排補種\n\n1. 記下孩子的出生日期、已知疫苗名稱、每劑接種日期及曾有的嚴重過敏或醫療狀況，帶兒童健康手冊和健保卡到住家附近衛生所或預防接種合約院所。\n2. 請醫療人員依孩子年齡、疫苗種類、已接種劑次和目前公告的公費資格，核對疾管署現行接種時程與補種間隔。不同疫苗的最小接種年齡、劑次和間隔可能不同；不要自行照網路表格排日期，也不要因延遲就自行重打整套。\n3. 多數延遲接種的情況，是由接種人員評估後接續完成尚缺劑次；如果紀錄不明、曾在國外接種、使用不同廠牌，或孩子有特殊健康狀況，讓接種單位依個案資料決定是否補種及時程。\n4. 把院所安排的下次日期寫回健康手冊或行事曆；接種前若孩子正發燒或有新病況，先告知醫療人員評估。\n\n## 費用、時間與效益\n\n符合當年度公費項目與接種條件的疫苗由公費提供；非公費疫苗需自費。掛號或其他醫療相關費用可能依縣市和院所規定不同，預約時先詢問是否需掛號、要帶哪些資料，以及該劑是否符合公費資格。補種可能要分次回診，具體間隔依疫苗及孩子的接種紀錄決定。\n\n把紀錄帶給衛生所或合約院所評估，可減少漏種和不必要重複接種；沒有適用於所有疫苗的單一補種時程。\n\n## 發生頻率與限制\n\n目前沒有找到以一致定義、同一期間和適當兒童人口分母計算的台灣全國「漏打、延遲或接種狀況不明」比率。整體接種涵蓋率不能直接換算成某個孩子漏種的機率；接種資料查不到也不能單獨證明孩子從未接種。\n\n## 參考資料\n\n- [疾管署：現行兒童預防接種時程表（115年9月版）](https://www.cdc.gov.tw/Category/Page/TxRW-x3WzvPhvEtxM628GA)：核對台灣目前兒童常規疫苗時程及公費接種資訊。\n- [疾管署：接種指引](https://www.cdc.gov.tw/Category/Page/SFVU5tngwkSvL8OBJOxhsw)：列出疫苗最小接種年齡、最短間隔及學齡前漏打、延遲或狀況不明的補種指引；實際方案須依最新規範及個案核對。\n- [疾管署：個人預防接種資料查詢](https://www.cdc.gov.tw/Category/Page/9dz7czW1IrLl-Ce5i0XDFQ)：說明NIIS資料可能不完整，以及透過健康存摺、衛生所、兒童健康手冊或原接種院所查找紀錄的方式。\n- [疾管署：自費疫苗種類](https://www.cdc.gov.tw/Category/ListContent/gBkY59nmbUpY39iDzJging?uaid=M1mo3FhXx-sf5sp9CzqcXA)：區分公費疫苗與家長可評估自費接種的疫苗項目。\n",
+      "after_sha256": "07a735b048adfdd14a13f4527b338724719fa5985fea1fc7b588bfb0da5d36da",
+      "target_sha256": "07a735b048adfdd14a13f4527b338724719fa5985fea1fc7b588bfb0da5d36da",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+      "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+      "source_checks": [
+        {
+          "source_id": "tw20_cdc_schedule_11509",
+          "title": "疾管署：現行兒童預防接種時程表（115年9月版；2026-07-15更新）",
+          "url": "https://www.cdc.gov.tw/Category/Page/TxRW-x3WzvPhvEtxM628GA",
+          "claim": "現行兒童常規疫苗時程與當年度接種項目。",
+          "supporting_passage": "疾管署現行兒童預防接種時程頁列出115年9月版，頁面最後更新2026-07-15。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        },
+        {
+          "source_id": "tw20_cdc_vaccine_catchup_guide",
+          "title": "疾管署：接種指引（含學齡前漏打、延遲及狀況不明補種指引；2025-10-01更新）",
+          "url": "https://www.cdc.gov.tw/Category/Page/SFVU5tngwkSvL8OBJOxhsw",
+          "claim": "疫苗補種依疫苗種類、最小年齡和最短間隔核對；疾管署提供漏打、延遲或狀況不明的補種指引。",
+          "supporting_passage": "接種指引頁列出「各項常規疫苗最小接種年齡與最短接種間隔」及「學齡前幼童疫苗漏打、延遲或接種狀況不明的補種方式」。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        },
+        {
+          "source_id": "tw20_cdc_vaccine_record_query",
+          "title": "疾管署：個人預防接種資料查詢（2025-04-23更新）",
+          "url": "https://www.cdc.gov.tw/Category/Page/9dz7czW1IrLl-Ce5i0XDFQ",
+          "claim": "NIIS資料可能不完整，家長可透過健康存摺、衛生所、兒童健康手冊或原接種院所查找。",
+          "supporting_passage": "疾管署說明NIIS於民國92年建立，因資訊化推動與院所上傳落差並非所有紀錄都能查到，並列健康存摺、衛生所與原接種醫院等查詢方式。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        },
+        {
+          "source_id": "tw20_cdc_selfpaid_vaccines_2025",
+          "title": "疾管署：自費疫苗種類（2025-03-14更新）",
+          "url": "https://www.cdc.gov.tw/Category/ListContent/gBkY59nmbUpY39iDzJging?uaid=M1mo3FhXx-sf5sp9CzqcXA",
+          "claim": "公費兒童常規疫苗與家長可評估自費的疫苗項目應分開確認。",
+          "supporting_passage": "疾管署自費疫苗頁將公費兒童常規疫苗與自費疫苗分列，並說明自費接種由醫師評估。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-003.md",
+      "review_due_at": "2027-02-22",
+      "reviewed_at": "2026-11-22",
+      "unresolved_questions": [
+        "台灣未找到可直接比較的全國兒童疫苗漏打／延遲率及個人風險分母。",
+        "疾管署目前的接種指引頁最後更新為2025-10-01，但其補種附件的內容版本及各疫苗細節須持續依最新公告確認；本文不抄錄固定劑次方案。",
+        "掛號、耗材及自費項目費用依現行縣市與院所規則確認。",
+        "尚未取得獨立專業審閱（範圍：兒童感染科、疫苗接種實務、兒科護理）。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒童感染科",
+          "疫苗接種實務",
+          "兒科護理"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到以同一定義、期間和適當兒童人口分母計算的台灣全國漏打、延遲或接種狀況不明比率；疫苗涵蓋率不等於個人漏種機率。"
+    },
+    {
+      "id": "TW-20-006",
+      "title": "未滿1歲的嬰兒不要餵蜂蜜",
+      "source_ids": [
+        "tw20_cdc_botulism_guidance_2026",
+        "tw20_cdc_infant_botulism_case_2024"
+      ],
+      "summary": "未滿1歲避免餵食蜂蜜；若出現便秘合併吸吮、活動力、眼瞼或肌力異常，儘速就醫。",
+      "action": "確認食品成分；未滿1歲不提供蜂蜜；出現便秘並伴隨吸吮差、精神或肌力異常時儘速就醫，呼吸困難撥119。",
+      "limits": "疾管署2015年以來第3例是確診病例數，不含嬰兒人口或蜂蜜暴露分母；不等於個人發生率，也不能證明病例由蜂蜜造成。 肉毒桿菌孢子可能來自環境或其他食材；沒有蜂蜜暴露不代表排除疾病。 未取得兒科、感染科或毒物專業獨立審閱。",
+      "question": "嬰兒未滿1歲時，我是否避免直接餵蜂蜜或將蜂蜜加入食物與飲品？",
+      "body": "<!-- TW-ID: TW-20-006 -->\n\n# 未滿1歲的嬰兒不要餵蜂蜜\n\n## 適用情況與第一步\n\n嬰兒未滿1歲時，不要餵蜂蜜，也不要把蜂蜜拌進副食品、飲品或塗在奶嘴上。蜂蜜可能含有肉毒桿菌孢子；未滿1歲嬰兒的腸道尚未成熟，孢子可能在腸道增殖並產生毒素。\n\n## 日常照護與意外食用\n\n- 購買或準備嬰兒食品時，查看成分標示；未滿1歲不要提供含蜂蜜的食物。\n- 若不確定食物是否含蜂蜜，先不要餵，向製造商或照顧者確認成分。\n- 如果嬰兒已吃到蜂蜜，記下食用時間和大約份量；若家長擔心，可詢問兒科或醫療人員。若出現便秘並伴隨食慾或吸吮變差、活動力下降、眼皮下垂、吞嚥困難、頭部控制變差或四肢無力，儘速就醫並告訴醫療人員可能接觸蜂蜜；呼吸困難或反應變差時立即撥119。\n\n肉毒桿菌孢子也可能來自環境或其他食物，所以沒有吃蜂蜜不能排除疾病；也不要只因一次接觸就自行判斷嬰兒已感染。\n\n## 發生頻率與限制\n\n疾管署2026年刊出的疫情調查指出，報告中的個案是2015年以來國內第3例確診嬰兒型肉毒桿菌中毒。這是特定期間的確診病例數，沒有嬰兒人口、蜂蜜暴露量或漏診母數，不能換算個人發生機率；該報告也指出感染可能由偶然食入食材或沾有孢子的環境塵土造成，不能把病例直接歸因於蜂蜜。病例少不影響未滿1歲避免餵蜂蜜的預防建議。\n\n## 參考資料\n\n- [疾管署：肉毒桿菌中毒重要指引及教材](https://www.cdc.gov.tw/Category/MPage/eUrAiE0iD8mpmTZ44VRr8w)：建議未滿1歲嬰兒避免餵蜂蜜，並列出嬰兒腸道型肉毒桿菌中毒的症狀及醫療處置。\n- [疾管署：2024年嬰兒型肉毒桿菌中毒個案調查報告](https://www.cdc.gov.tw/EpidemicTheme/Detail/wRe2wQO2JCW83hbs2HNztA?archiveId=KiUlKvx3Nb4u4lc3k1_bbA)：2026年刊出，報告2015年以來國內第3例確診嬰兒型病例，並說明病例症狀及可能暴露途徑。\n",
+      "after_sha256": "261c1d311c74936edf50347ab8884bc120bf80d23b847f11e96d2845cb4942dd",
+      "target_sha256": "261c1d311c74936edf50347ab8884bc120bf80d23b847f11e96d2845cb4942dd",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+      "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+      "source_checks": [
+        {
+          "source_id": "tw20_cdc_botulism_guidance_2026",
+          "title": "疾管署：肉毒桿菌中毒重要指引及教材（2026-07-24更新）",
+          "url": "https://www.cdc.gov.tw/Category/MPage/eUrAiE0iD8mpmTZ44VRr8w",
+          "claim": "未滿1歲嬰兒避免餵蜂蜜；嬰兒肉毒桿菌中毒可由便秘開始並出現神經、吞嚥或呼吸症狀。",
+          "supporting_passage": "疾管署建議未滿1歲嬰兒避免餵蜂蜜；嬰兒腸道型病例可便秘、倦怠、食慾不振、眼瞼下垂、吞嚥困難、失去頭部控制及全身無力，可能發展至呼吸衰竭。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        },
+        {
+          "source_id": "tw20_cdc_infant_botulism_case_2024",
+          "title": "疾管署：2024年嬰兒型肉毒桿菌中毒個案調查報告（2026年第42卷第19期）",
+          "url": "https://www.cdc.gov.tw/EpidemicTheme/Detail/wRe2wQO2JCW83hbs2HNztA?archiveId=KiUlKvx3Nb4u4lc3k1_bbA",
+          "claim": "台灣2015年以來第三例確診嬰兒型病例及可能感染途徑、警訊。",
+          "supporting_passage": "疾管署2026年第42卷第19期報告記載一名7個月嬰兒確診，稱為2015年以來國內第3例；報告提到偶然食入食材或沾有孢子的環境塵土等可能途徑。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-006.md",
+      "review_due_at": "2027-02-22",
+      "reviewed_at": "2026-11-22",
+      "unresolved_questions": [
+        "沒有嬰兒人口與蜂蜜暴露分母，無法估計嬰兒個人風險或台灣發生率。",
+        "疾管署病例調查列出多種可能暴露，個案不能直接歸因於蜂蜜。",
+        "尚未取得獨立專業審閱（範圍：兒科、感染科、兒童毒物或公共衛生）。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科",
+          "感染科",
+          "兒童毒物或公共衛生"
+        ]
+      },
+      "statistics_assessed": [
+        {
+          "topic": "2015年以來台灣嬰兒型肉毒桿菌中毒確診病例數",
+          "value": 3,
+          "unit": "確診病例數",
+          "period": "2015年至疾管署2026年第42卷第19期報告所述2024年個案",
+          "geographic_scope": "台灣；報告中的國內病例",
+          "population": "疾管署報告之嬰兒型肉毒桿菌中毒確診嬰兒",
+          "numerator": 3,
+          "denominator": null,
+          "denominator_definition": "未提供同期嬰兒人口、蜂蜜暴露量或漏診個案母數。",
+          "event_definition": "疾管署報告將2024年確診病例稱為2015年以來國內第3例嬰兒型肉毒桿菌中毒。",
+          "data_type": "官方個案調查報告之確診病例累計數，不是發生率或蜂蜜暴露風險。",
+          "limitations": [
+            "病例累計數不含適當人口或暴露分母，不能計算發生率或個人機率。",
+            "個案報告提到食材或環境塵土等可能途徑，不能推論病例是由蜂蜜造成。"
+          ],
+          "source_ids": [
+            "tw20_cdc_infant_botulism_case_2024"
+          ],
+          "accessed_at": "2026-11-22"
+        }
+      ],
+      "frequency_assessment": "疾管署2026年刊出的調查報告將一例列為2015年以來台灣第3例確診嬰兒型肉毒桿菌中毒；這是病例數，無嬰兒母群或蜂蜜暴露分母，不能換算個人機率或直接歸因於蜂蜜。"
+    },
+    {
+      "id": "TW-20-007",
+      "title": "新生兒維生素K預防，和醫療團隊確認適合的給藥安排",
+      "source_ids": [
+        "tw20_tsn_vitamin_k_2025",
+        "tw20_tfda_phytomenadione_label",
+        "tw20_mohw_phytomenadione_notice_2022"
+      ],
+      "summary": "新生兒有維生素K缺乏性出血風險；家長在出院前確認預防安排，並詢問醫療團隊給藥方式及官方仿單警語。",
+      "action": "出院前核對照護紀錄；有疑問時詢問新生兒科或出生院所，勿自行補充或改換給藥途徑。",
+      "limits": "台灣新生兒科醫學會章節提供預防建議並引述國際指引；不等於台灣全國事件率或個案醫療指示。 食藥署仿單提到注射嚴重、致命過敏案例，但沒有足以估算新生兒預防性注射個人機率的發生率；警語不代表反應常見。 未取得獨立專業審閱。",
+      "question": "出院前，我是否已向出生院所確認新生兒維生素K缺乏性出血的預防安排及給藥風險？",
+      "body": "<!-- TW-ID: TW-20-007 -->\n\n# 新生兒維生素K預防，和醫療團隊確認適合的給藥安排\n\n## 適用情況與重要性\n\n這篇供準備迎接新生兒或正在住院照顧新生兒的家長，確認維生素K缺乏性出血的預防安排。新生兒出生時維生素K儲備較低；缺乏可能造成嚴重出血。台灣新生兒科醫學會的專業章節建議所有新生兒接受預防性補充。\n\n## 和出生院所確認\n\n- 生產前可把維生素K預防列入待詢問事項；寶寶出生後、出院前，確認照護紀錄是否已記下預防安排。\n- 若紀錄不清楚、尚未接受或你對藥品過敏警語有疑問，直接詢問新生兒科或出生院所：寶寶適用的方式、選擇該途徑的考量、給藥後如何觀察，以及若有早產、肝膽問題或其他特殊狀況如何處理。\n- 不要自行購買、餵食維生素K或改用網路文章提到的口服方式；不同製劑、給藥途徑和補充療程不能自行互換。\n- 若嬰兒出現不明原因出血、精神或反應突然變差，立即就醫；嚴重或危及生命時撥119。\n\n## 預防效益與藥品風險\n\n衛福部食藥署核准的含 phytomenadione 注射劑仿單列有預防或治療新生兒維生素K缺乏性出血的適應症，同時也警示曾有靜脈或肌肉注射期間、注射後發生嚴重甚至致命過敏反應的案例。公開仿單沒有提供可用來估算新生兒預防性給藥個人機率的發生率；有警語不等於該反應常見，也不能拿來自行決定拒絕或改變給藥方式。給藥途徑、個別風險評估及觀察由醫療人員負責。\n\n衛福部於2022年5月9日公告相關風險再評估，並要求許可證持有商於2022年12月31日前完成中文仿單變更；這是仿單修訂公告與期限，不代表每位嬰兒有相同風險或相同照護安排。\n\n## 發生頻率、費用與限制\n\n目前沒有找到能代表台灣現行新生兒、並以明確病例定義和出生人口分母計算維生素K缺乏性出血的全國發生率；也沒有從官方仿單取得新生兒預防性注射嚴重過敏反應的可用頻率。不要把外國研究、舊年代病例或整體注射不良反應通報數當成台灣新生兒個人機率。\n\n各院所的費用處理可能不同；生產前可詢問出生院所是否包含在照護費用內、是否另計，以及健保或其他給付如何適用。\n\n## 參考資料\n\n- [台灣新生兒科醫學會：母乳中可能不足的營養素及其影響，第六節（2025）](https://www.tsn-neonatology.com/retrieve/20251031142739.pdf)：說明新生兒維生素K不足、缺乏性出血及預防性補充建議；部分策略引述歐洲專業指引，不能視為台灣個人風險數據。\n- [食藥署：含 phytomenadione 單方注射劑中文仿單修訂內容](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f637873468920621470)：載明新生兒缺乏性出血適應症及注射途徑相關嚴重過敏警語。\n- [衛福部：phytomenadione 注射劑臨床效益與風險再評估公告](https://www.mohw.gov.tw/cp-5268-69458-1.html)：2022年5月9日公告再評估結果和仿單變更期限。\n",
+      "after_sha256": "4beb3562e1bfac489d19006512288f23c692888edf420cadf6bd3ee0f18da37b",
+      "target_sha256": "4beb3562e1bfac489d19006512288f23c692888edf420cadf6bd3ee0f18da37b",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+      "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+      "source_checks": [
+        {
+          "source_id": "tw20_tsn_vitamin_k_2025",
+          "title": "台灣新生兒科醫學會：母乳中可能不足的營養素及其影響，第六節（2025）",
+          "url": "https://www.tsn-neonatology.com/retrieve/20251031142739.pdf",
+          "claim": "新生兒維生素K儲備低，缺乏可能引起維生素K缺乏性出血；醫學會章節建議新生兒接受預防性補充。",
+          "supporting_passage": "台灣新生兒科醫學會專章說明新生兒維生素K不足與VKDB，並寫明所有新生兒皆應接受維生素K預防性補充；其中治療方案引用歐洲專業指引。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        },
+        {
+          "source_id": "tw20_tfda_phytomenadione_label",
+          "title": "食藥署：含phytomenadione單方注射劑中文仿單修訂內容",
+          "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f637873468920621470",
+          "claim": "台灣藥品仿單列新生兒VKDB適應症，並警告肌肉或靜脈注射曾發生嚴重及致命過敏反應；未提供可轉成個人機率的分母。",
+          "supporting_passage": "仿單修訂內容列「預防或治療新生兒維生素K缺乏性出血」適應症，並載明曾有靜脈與肌肉注射期間或注射後發生嚴重且致命過敏反應，包括過敏性休克。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        },
+        {
+          "source_id": "tw20_mohw_phytomenadione_notice_2022",
+          "title": "衛福部：phytomenadione注射劑臨床效益與風險再評估公告（2022-05-09）",
+          "url": "https://www.mohw.gov.tw/cp-5268-69458-1.html",
+          "claim": "確認藥品風險再評估公告日和仿單變更期限。",
+          "supporting_passage": "衛福部公告於2022-05-09，要求相關許可證持有商於2022-12-31前完成中文仿單變更。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-007.md",
+      "review_due_at": "2027-02-22",
+      "reviewed_at": "2026-11-22",
+      "unresolved_questions": [
+        "沒有台灣現行新生兒母群與明確病例定義的全國VKDB發生率。",
+        "仿單沒有提供新生兒預防性肌肉注射嚴重過敏反應的可用發生率，不能量化個人風險。",
+        "新生兒維生素K預防方案及個別途徑須由醫療團隊評估；尚未取得新生兒醫學、臨床藥學或藥物安全正式審閱。",
+        "各院所費用安排未能核實為統一標準，家長須向出生院所確認。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "新生兒醫學",
+          "臨床藥學",
+          "藥物安全與藥事監測"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到具明確病例定義及新生兒人口分母、可代表台灣現行預防措施下維生素K缺乏性出血的全國發生率；官方仿單的過敏警語亦未提供新生兒預防性給藥發生率。"
+    },
+    {
+      "id": "TW-20-017",
+      "title": "幫嬰兒洗澡先放冷水再加熱水，水溫不超過40°C並全程看護",
+      "source_ids": [
+        "tw20_hpa_child_burn_prevention_2026",
+        "tw20_hpa_infant_bath_preparation"
+      ],
+      "summary": "嬰兒入水前把冷熱水混合並以手背確認不超過40°C，照顧者全程留在旁邊看護。",
+      "action": "先備妥用品，冷水先放、再加熱水，混合後關水並以手背確認水溫不超過40°C；全程不離開嬰兒。",
+      "limits": "國健署2026年防燙建議以兒童為對象，涵蓋洗澡水溫和照顧者監督；未找到全國嬰兒洗澡燙傷的暴露分母。 研究或行政資料中的一般兒童燙傷件數不能直接代表嬰兒洗澡燙傷個人機率。 尚未取得兒科護理、兒童傷害預防或燒燙傷專業獨立審閱。",
+      "question": "幫嬰兒洗澡時，我是否先放冷水再加熱水、確認水溫不超過40°C，並全程看護？",
+      "body": "<!-- TW-ID: TW-20-017 -->\n\n# 幫嬰兒洗澡先放冷水再加熱水，水溫不超過40°C並全程看護\n\n## 適用情況與第一步\n\n嬰兒在家中澡盆或浴室洗澡時，熱水可能造成燙傷，也可能因照顧者短暫離開而溺水。先把毛巾、尿布、換洗衣物和洗澡用品放在伸手可及處；洗澡期間由成人全程看護，任何時候都不要把嬰兒單獨留在澡盆或浴室，即使只是去拿東西或接電話。\n\n## 台灣家庭可採取的做法\n\n1. 先放冷水，再加入熱水；混合均勻後關掉水龍頭，才讓嬰兒入水。不要在嬰兒已在澡盆內時繼續放熱水。\n2. 入水前用手背確認水溫，水溫不得超過攝氏40度。熱水器設定值不等於澡盆中的實際水溫，仍要先混合並確認。\n3. 全程保持一隻手能照顧嬰兒、視線不離開；若必須離開浴室，先抱起嬰兒並一起離開。浴巾和換洗用品先準備好，避免中途轉身尋找。\n4. 天冷時可讓浴室或房間保持舒適，不要把洗澡水調得更熱來保暖；水溫不確定就先不要讓嬰兒下水。\n\n若仍發生燙傷，先離開熱源並儘速處理；燙傷的急救步驟與送醫警訊請看[燒燙傷急救指引](../ch13/TW-13-014.md)。\n\n## 費用、時間與效益\n\n準備用品、先放冷水再加熱水及全程看護不需特別購買器材；可用家中已有用品備妥更衣和擦乾所需物品。這些措施可減少熱水意外及無人看護的風險，但不能保證完全不會發生事故。\n\n## 發生頻率與限制\n\n目前沒有找到台灣全國、以嬰兒洗澡燙傷為一致事件定義並有嬰兒洗澡暴露分母的資料。一般兒童燒燙傷件數不等於嬰兒洗澡燙傷頻率，因此不推估個人發生機率。\n\n## 參考資料\n\n- [國健署孕產兒關懷網站：掌握兒童防燙原則](https://mammy.hpa.gov.tw/Home/NewsKBContent?id=4701&type=00)：2026年11月4日發布，建議洗澡先放冷水再加熱水、入水前用手背確認且水溫不超過40度，並由照顧者全程看護。\n- [國健署孕產兒關懷網站：如何幫寶寶洗澡](https://mammy.hpa.gov.tw/Home/NewsKBContent/2372?type=01)：提供嬰兒沐浴前備妥用品及水溫建議；本篇採用較新的國健署不超過40度和全程看護指引。\n- [燒燙傷急救指引](../ch13/TW-13-014.md)：台灣熱水燙傷降溫與求援方式。\n",
+      "after_sha256": "ee72e77066970b03166305688503846a64de487d18077ad3490cd9060bc9dfd7",
+      "target_sha256": "ee72e77066970b03166305688503846a64de487d18077ad3490cd9060bc9dfd7",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+      "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+      "source_checks": [
+        {
+          "source_id": "tw20_hpa_child_burn_prevention_2026",
+          "title": "國健署孕產兒關懷網站：掌握兒童防燙5大原則（2026-11-04）",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=4701&type=00",
+          "claim": "洗澡先放冷水再加入熱水、孩子入水前以手背確認水溫不得超過40°C，照顧者全程在旁看護。",
+          "supporting_passage": "國健署2026-11-04發布的兒童防燙指引明列先放冷水再加熱水、入水前以手背確認且洗澡水不得超過攝氏40度，沐浴全程在旁看護，不可讓兒童獨留浴室。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+        },
+        {
+          "source_id": "tw20_hpa_infant_bath_preparation",
+          "title": "國健署孕產兒關懷網站：新手爸媽看這邊!! 如何幫寶寶洗澡?（網頁未標示發布日期）",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent/2372?type=01",
+          "claim": "洗澡前先將毛巾、衣物、尿布和其他用品放在照顧者伸手可及處。",
+          "supporting_passage": "國健署孕產兒關懷網站的嬰兒沐浴頁列出澡盆、毛巾、換洗衣物及尿布等用品，建議洗澡前先準備並放在順手可及處。本文水溫與看護要求改採國健署2026年更新的兒童防燙指引。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接讀取國健署孕產兒關懷頁面；只使用備妥用品的內容，水溫和監督依較新的國健署2026防燙指引。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-017.md",
+      "review_due_at": "2027-02-22",
+      "reviewed_at": "2026-11-22",
+      "unresolved_questions": [
+        "沒有台灣全國嬰兒洗澡燙傷同定義統計與洗澡暴露分母。",
+        "國健署2026年通則涵蓋兒童洗澡；嬰兒個別醫療狀況或特殊沐浴需求仍需詢問照護團隊。",
+        "尚未取得兒科護理、兒童傷害預防或燒燙傷正式專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科護理",
+          "兒童傷害預防",
+          "燒燙傷照護"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到以嬰兒洗澡燙傷為一致事件定義並有嬰兒洗澡暴露分母的台灣全國資料；不以一般兒童燒燙傷件數推算該情境發生率。"
+    }
+  ],
+  "frequency_and_statistics": {
+    "TW-20-003": {
+      "assessment": "未找到以同一定義、期間和適當兒童人口分母計算的台灣全國漏打、延遲或接種狀況不明比率；疫苗涵蓋率不等於個人漏種機率。",
+      "statistics": []
+    },
+    "TW-20-006": {
+      "assessment": "疾管署2026年刊出的調查報告將一例列為2015年以來台灣第3例確診嬰兒型肉毒桿菌中毒；這是病例數，無嬰兒母群或蜂蜜暴露分母，不能換算個人機率或直接歸因於蜂蜜。",
+      "statistics": [
+        {
+          "topic": "2015年以來台灣嬰兒型肉毒桿菌中毒確診病例數",
+          "value": 3,
+          "unit": "確診病例數",
+          "period": "2015年至疾管署2026年第42卷第19期報告所述2024年個案",
+          "geographic_scope": "台灣；報告中的國內病例",
+          "population": "疾管署報告之嬰兒型肉毒桿菌中毒確診嬰兒",
+          "numerator": 3,
+          "denominator": null,
+          "denominator_definition": "未提供同期嬰兒人口、蜂蜜暴露量或漏診個案母數。",
+          "event_definition": "疾管署報告將2024年確診病例稱為2015年以來國內第3例嬰兒型肉毒桿菌中毒。",
+          "data_type": "官方個案調查報告之確診病例累計數，不是發生率或蜂蜜暴露風險。",
+          "limitations": [
+            "病例累計數不含適當人口或暴露分母，不能計算發生率或個人機率。",
+            "個案報告提到食材或環境塵土等可能途徑，不能推論病例是由蜂蜜造成。"
+          ],
+          "source_ids": [
+            "tw20_cdc_infant_botulism_case_2024"
+          ],
+          "accessed_at": "2026-11-22"
+        }
+      ]
+    },
+    "TW-20-007": {
+      "assessment": "未找到具明確病例定義及新生兒人口分母、可代表台灣現行預防措施下維生素K缺乏性出血的全國發生率；官方仿單的過敏警語亦未提供新生兒預防性給藥發生率。",
+      "statistics": []
+    },
+    "TW-20-017": {
+      "assessment": "未找到以嬰兒洗澡燙傷為一致事件定義並有嬰兒洗澡暴露分母的台灣全國資料；不以一般兒童燒燙傷件數推算該情境發生率。",
+      "statistics": []
+    }
+  },
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 340,
+    "runtime_items": 351,
+    "runtime_sources": 1441,
+    "source_registry": 1524,
+    "coverage_json_files": 704,
+    "core_reviewed_entries": 340,
+    "publication_completed_entries": 340,
+    "review_rechecks": 415,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 344,
+    "runtime_items": 355,
+    "runtime_sources": 1451,
+    "source_registry": 1534,
+    "coverage_json_files": 710,
+    "core_reviewed_entries": 344,
+    "publication_completed_entries": 344,
+    "review_rechecks": 415,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_ready": false
+  },
+  "source_corrections": {
+    "added": [
+      "tw20_cdc_vaccine_catchup_guide",
+      "tw20_cdc_vaccine_record_query",
+      "tw20_cdc_selfpaid_vaccines_2025",
+      "tw20_cdc_botulism_guidance_2026",
+      "tw20_cdc_infant_botulism_case_2024",
+      "tw20_tsn_vitamin_k_2025",
+      "tw20_tfda_phytomenadione_label",
+      "tw20_mohw_phytomenadione_notice_2022",
+      "tw20_hpa_child_burn_prevention_2026",
+      "tw20_hpa_infant_bath_preparation"
+    ],
+    "retired": [],
+    "updated": []
+  }
+}

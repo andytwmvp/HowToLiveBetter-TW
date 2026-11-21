@@ -1,0 +1,89 @@
+{
+  "id": "TW-20-017",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-017.md",
+  "target_sha256": "ee72e77066970b03166305688503846a64de487d18077ad3490cd9060bc9dfd7",
+  "source_reviewed_sha256": "ee72e77066970b03166305688503846a64de487d18077ad3490cd9060bc9dfd7",
+  "before_sha256": null,
+  "after_sha256": "ee72e77066970b03166305688503846a64de487d18077ad3490cd9060bc9dfd7",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+  "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_child_burn_prevention_2026",
+      "title": "國健署孕產兒關懷網站：掌握兒童防燙5大原則（2026-11-04）",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=4701&type=00",
+      "claim": "洗澡先放冷水再加入熱水、孩子入水前以手背確認水溫不得超過40°C，照顧者全程在旁看護。",
+      "supporting_passage": "國健署2026-11-04發布的兒童防燙指引明列先放冷水再加熱水、入水前以手背確認且洗澡水不得超過攝氏40度，沐浴全程在旁看護，不可讓兒童獨留浴室。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    },
+    {
+      "source_id": "tw20_hpa_infant_bath_preparation",
+      "title": "國健署孕產兒關懷網站：新手爸媽看這邊!! 如何幫寶寶洗澡?（網頁未標示發布日期）",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent/2372?type=01",
+      "claim": "洗澡前先將毛巾、衣物、尿布和其他用品放在照顧者伸手可及處。",
+      "supporting_passage": "國健署孕產兒關懷網站的嬰兒沐浴頁列出澡盆、毛巾、換洗衣物及尿布等用品，建議洗澡前先準備並放在順手可及處。本文水溫與看護要求改採國健署2026年更新的兒童防燙指引。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接讀取國健署孕產兒關懷頁面；只使用備妥用品的內容，水溫和監督依較新的國健署2026防燙指引。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及主題需要，依台灣主管機關與專業來源獨立撰寫；不套用中國制度、費用、發生率或操作規則。",
+  "review_method": "逐篇核對manifest中的原作固定ID、來源版本與SHA，閱讀原題和現有公開來源；直接檢視source_checks所列資料，逐項核對台灣適用情境、實際行動、警訊、費用／時間、頻率和制度日期。統計只按來源明確提供的事件定義、期間、地區、對象、分子與分母記錄；沒有適當台灣分母時明示資料不足。首次正式發布不計為歷史正文再審。",
+  "limits": [
+    "國健署2026年防燙建議以兒童為對象，涵蓋洗澡水溫和照顧者監督；未找到全國嬰兒洗澡燙傷的暴露分母。",
+    "研究或行政資料中的一般兒童燙傷件數不能直接代表嬰兒洗澡燙傷個人機率。",
+    "尚未取得兒科護理、兒童傷害預防或燒燙傷專業獨立審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "68e088724c5031d2de944c6b1dadd630a3af9774537d544478a6acd4db0385aa",
+  "source_ids": [
+    "tw20_hpa_child_burn_prevention_2026",
+    "tw20_hpa_infant_bath_preparation"
+  ],
+  "frequency_assessment": "未找到以嬰兒洗澡燙傷為一致事件定義並有嬰兒洗澡暴露分母的台灣全國資料；不以一般兒童燒燙傷件數推算該情境發生率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有台灣全國嬰兒洗澡燙傷同定義統計與洗澡暴露分母。",
+    "國健署2026年通則涵蓋兒童洗澡；嬰兒個別醫療狀況或特殊沐浴需求仍需詢問照護團隊。",
+    "尚未取得兒科護理、兒童傷害預防或燒燙傷正式專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科護理",
+      "兒童傷害預防",
+      "燒燙傷照護"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留「替嬰兒洗澡時避免燙傷」的原題讀者需要；把熱水器50°C以下的設定改成台灣國健署實際沐浴水溫不得超過40°C、先冷後熱和全程看護，並交叉連到既有台灣燒燙傷急救指引。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "給嬰兒洗澡先放冷水再兌熱水，用手腕內側或手肘試過再放孩子；能設出水溫度的熱水器調到50°C以下。",
+    "reader_content_decision": "保留嬰兒浴室防燙與照顧者看護需求；依台灣國健署2026年建議實際確認洗澡水不超過40°C，混合後才讓嬰兒入水，並全程看護。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "以熱水器設定不高於50°C作為嬰兒洗澡水安全標準。",
+        "decision": "replace_with_current_taiwan_water_temperature_guidance",
+        "reason": "熱水器設定值不等於嬰兒接觸水溫；國健署現行建議為先放冷水再加熱、入水前手背確認且水溫不得超過40°C。"
+      },
+      {
+        "original_claim": "嬰兒洗澡時照顧者可短暫離開。",
+        "decision": "retain_supervision_safety_with_taiwan_guidance",
+        "reason": "國健署要求沐浴全程在旁看護，不可讓兒童獨留浴室；本篇說明離開時先抱起嬰兒並一起離開。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "先準備毛巾、尿布與換洗衣物，使用家中已有用品即可；無須為遵循此項防燙步驟特別購買器材。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "國健署孕產兒關懷網站兒童防燙資訊發布於2026-11-04；本篇依該日現行安全指引撰寫，不涉及法規資格或地方行政程序。"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "TW-20-006",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-006.md",
+  "target_sha256": "261c1d311c74936edf50347ab8884bc120bf80d23b847f11e96d2845cb4942dd",
+  "source_reviewed_sha256": "261c1d311c74936edf50347ab8884bc120bf80d23b847f11e96d2845cb4942dd",
+  "before_sha256": null,
+  "after_sha256": "261c1d311c74936edf50347ab8884bc120bf80d23b847f11e96d2845cb4942dd",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-prevention-20261122.json",
+  "source_bundle_sha256": "526328b1c19d7da7b511ff21b26597ad572ac8a13bf396b0f96894b52e608ea9",
+  "source_checks": [
+    {
+      "source_id": "tw20_cdc_botulism_guidance_2026",
+      "title": "疾管署：肉毒桿菌中毒重要指引及教材（2026-07-24更新）",
+      "url": "https://www.cdc.gov.tw/Category/MPage/eUrAiE0iD8mpmTZ44VRr8w",
+      "claim": "未滿1歲嬰兒避免餵蜂蜜；嬰兒肉毒桿菌中毒可由便秘開始並出現神經、吞嚥或呼吸症狀。",
+      "supporting_passage": "疾管署建議未滿1歲嬰兒避免餵蜂蜜；嬰兒腸道型病例可便秘、倦怠、食慾不振、眼瞼下垂、吞嚥困難、失去頭部控制及全身無力，可能發展至呼吸衰竭。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    },
+    {
+      "source_id": "tw20_cdc_infant_botulism_case_2024",
+      "title": "疾管署：2024年嬰兒型肉毒桿菌中毒個案調查報告（2026年第42卷第19期）",
+      "url": "https://www.cdc.gov.tw/EpidemicTheme/Detail/wRe2wQO2JCW83hbs2HNztA?archiveId=KiUlKvx3Nb4u4lc3k1_bbA",
+      "claim": "台灣2015年以來第三例確診嬰兒型病例及可能感染途徑、警訊。",
+      "supporting_passage": "疾管署2026年第42卷第19期報告記載一名7個月嬰兒確診，稱為2015年以來國內第3例；報告提到偶然食入食材或沾有孢子的環境塵土等可能途徑。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀疾管署、食藥署、衛福部、國健署或台灣新生兒科醫學會公開頁面／文件文字，核對標題、適用日期、對應主張及限制；不以首頁代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及主題需要，依台灣主管機關與專業來源獨立撰寫；不套用中國制度、費用、發生率或操作規則。",
+  "review_method": "逐篇核對manifest中的原作固定ID、來源版本與SHA，閱讀原題和現有公開來源；直接檢視source_checks所列資料，逐項核對台灣適用情境、實際行動、警訊、費用／時間、頻率和制度日期。統計只按來源明確提供的事件定義、期間、地區、對象、分子與分母記錄；沒有適當台灣分母時明示資料不足。首次正式發布不計為歷史正文再審。",
+  "limits": [
+    "疾管署2015年以來第3例是確診病例數，不含嬰兒人口或蜂蜜暴露分母；不等於個人發生率，也不能證明病例由蜂蜜造成。",
+    "肉毒桿菌孢子可能來自環境或其他食材；沒有蜂蜜暴露不代表排除疾病。",
+    "未取得兒科、感染科或毒物專業獨立審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "bd71659dc579138c60b22b9d7ce190b9527109360101c99b34c304fa92500a8c",
+  "source_ids": [
+    "tw20_cdc_botulism_guidance_2026",
+    "tw20_cdc_infant_botulism_case_2024"
+  ],
+  "frequency_assessment": "疾管署2026年刊出的調查報告將一例列為2015年以來台灣第3例確診嬰兒型肉毒桿菌中毒；這是病例數，無嬰兒母群或蜂蜜暴露分母，不能換算個人機率或直接歸因於蜂蜜。",
+  "statistics_assessed": [
+    {
+      "topic": "2015年以來台灣嬰兒型肉毒桿菌中毒確診病例數",
+      "value": 3,
+      "unit": "確診病例數",
+      "period": "2015年至疾管署2026年第42卷第19期報告所述2024年個案",
+      "geographic_scope": "台灣；報告中的國內病例",
+      "population": "疾管署報告之嬰兒型肉毒桿菌中毒確診嬰兒",
+      "numerator": 3,
+      "denominator": null,
+      "denominator_definition": "未提供同期嬰兒人口、蜂蜜暴露量或漏診個案母數。",
+      "event_definition": "疾管署報告將2024年確診病例稱為2015年以來國內第3例嬰兒型肉毒桿菌中毒。",
+      "data_type": "官方個案調查報告之確診病例累計數，不是發生率或蜂蜜暴露風險。",
+      "limitations": [
+        "病例累計數不含適當人口或暴露分母，不能計算發生率或個人機率。",
+        "個案報告提到食材或環境塵土等可能途徑，不能推論病例是由蜂蜜造成。"
+      ],
+      "source_ids": [
+        "tw20_cdc_infant_botulism_case_2024"
+      ],
+      "accessed_at": "2026-11-22"
+    }
+  ],
+  "unresolved_questions": [
+    "沒有嬰兒人口與蜂蜜暴露分母，無法估計嬰兒個人風險或台灣發生率。",
+    "疾管署病例調查列出多種可能暴露，個案不能直接歸因於蜂蜜。",
+    "尚未取得獨立專業審閱（範圍：兒科、感染科、兒童毒物或公共衛生）。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科",
+      "感染科",
+      "兒童毒物或公共衛生"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原題「未滿1歲不要餵蜂蜜」的直接預防需求，採疾管署台灣建議；補上嬰兒肉毒桿菌中毒警訊和台灣確診病例數的正確限制，不把病例歸因於蜂蜜或把低頻寫成無風險。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "不滿 1 歲不喂蜂蜜。",
+    "reader_content_decision": "未滿1歲避免餵蜂蜜；把疑似嬰兒肉毒桿菌中毒症狀與就醫方式列出，並說明台灣官方病例數無人口／暴露分母。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "未滿1歲嬰兒不應餵蜂蜜。",
+        "decision": "retain_with_current_taiwan_authority",
+        "reason": "疾管署現行指引直接支持此預防建議。"
+      },
+      {
+        "original_claim": "病例少即可把暴露視為無害，或病例可直接歸因於蜂蜜。",
+        "decision": "exclude_unsupported_frequency_or_causation",
+        "reason": "病例數沒有暴露分母，個案報告說明尚有食材及環境孢子等可能途徑。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "避免餵蜂蜜不需要額外費用；若需就醫，掛號及照護費用依個別醫療處置和健保身分而異。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "本篇依疾管署2026-07-24更新的肉毒桿菌中毒指引及2026年刊出的病例調查說明；未涉及不同法域規則。"
+  }
+}
