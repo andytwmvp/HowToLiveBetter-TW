@@ -1,0 +1,407 @@
+{
+  "stage": "首次正式發布家庭用藥安全四篇；不是歷史正文實質再審",
+  "baseline_main_sha": "0d27d112740dd9c237387a04f202ff7b4e8fa5d2",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "article_ids": [
+    "TW-34-001",
+    "TW-34-002",
+    "TW-34-003",
+    "TW-34-004"
+  ],
+  "new_source_ids": [
+    "tw34_tfda_acetaminophen_2024",
+    "tw34_mohw_acetaminophen_label",
+    "tw34_hpa_child_health_handbook_2025",
+    "tw34_pids_fever_2019",
+    "tw34_tfda_child_med_2026",
+    "tw34_tfda_combo_cold_2024",
+    "tw34_tfda_nsaid_2024",
+    "tw34_tfda_diclofenac_label"
+  ],
+  "reused_source_ids": [
+    "ch01_vghtpe_poison_hotline_20261108",
+    "ch13_pcc_poison_20261103"
+  ],
+  "items": [
+    {
+      "id": "TW-34-001",
+      "title": "感冒藥、止痛藥併用前，先確認乙醯胺酚沒有重複",
+      "source_ids": [
+        "tw34_tfda_acetaminophen_2024",
+        "tw34_mohw_acetaminophen_label",
+        "ch01_vghtpe_poison_hotline_20261108",
+        "ch13_pcc_poison_20261103"
+      ],
+      "summary": "不同品牌的感冒、止痛或退燒藥可能含相同的乙醯胺酚。併用前逐一核對藥袋、外盒與成分標示；若意外重複或不確定是否超量，立即聯絡毒藥物防治諮詢中心，不等症狀出現。",
+      "action": "核對所有藥品有效成分與每次用量；意外重複服用時準備藥品包裝、服用量和時間，立即聯絡24小時毒藥物防治諮詢中心02-2871-7121；意識或呼吸異常、抽搐時撥119。",
+      "limits": "臺灣沒有可計算乙醯胺酚重複服用或過量的全國暴露分母；國外急性肝衰竭病例比例不能換算為臺灣個人發生機率，也不能用來訂個人用量。",
+      "question": "我併用不同品牌的感冒、止痛或退燒藥前，是否確認乙醯胺酚成分沒有重複？",
+      "body": "<!-- TW-ID: TW-34-001 -->\n\n# 感冒藥、止痛藥併用前，先確認乙醯胺酚沒有重複\n\n## 適用情境與第一步\n\n家中同時有感冒藥、止痛藥或退燒藥時，先看每一種藥的有效成分。不同品牌或不同用途的複方藥，都可能含有乙醯胺酚（acetaminophen；有些資料也稱 paracetamol）。只看品牌名、藥丸顏色或「感冒藥」「止痛藥」分類，無法判斷成分是否重複。\n\n服用前把藥袋、外盒或說明書放在一起，核對成分、每錠或每毫升含量、每次用量和間隔。除非醫師已明確安排，別自行同時服用兩種含乙醯胺酚的藥，也不要超過各藥袋或產品標示的用法用量。若有肝臟疾病、常飲酒或同時使用多種藥品，先把完整藥單交給醫師或藥師確認；服用乙醯胺酚時也依產品警語避免飲酒。\n\n## 不確定或意外重複服用時\n\n若已在未經醫師安排下同時服用兩種含乙醯胺酚的藥、超過藥袋或產品標示用量，或不清楚實際吃下哪些成分與多少量，不要等到噁心、腹痛或其他不舒服才求助。立即聯絡臺北榮總毒藥物防治諮詢中心：**02-2871-7121**，全年無休、24小時提供免費諮詢。準備好藥品名稱或包裝、可能服用的數量與時間、年齡、體重和既有疾病，依諮詢指示接受醫療處置。\n\n若出現昏厥、意識不清、抽搐或呼吸異常，立即撥 **119**。保留藥袋和外盒供醫療人員確認；不要自行催吐，也不要用偏方或其他藥品「解毒」。\n\n## 時間、費用與容易忽略的地方\n\n平時核對成分不需購買額外工具；遇到不確定的複方藥，把所有包裝一起交給藥師看。毒藥物防治諮詢中心的電話諮詢免費；後續診療、交通及藥品處置依實際醫療需要與健保規定而異。乙醯胺酚過量初期可能還沒有明顯症狀，因此不應自行觀察到隔天。\n\n## 資料限制與參考資料\n\n目前沒有可用來計算臺灣民眾乙醯胺酚重複用藥或意外過量個人機率的全國暴露分母。國外急性肝衰竭病例數、醫院收案比例或中毒諮詢電話量，都不能直接換算成臺灣個人風險或安全劑量。用量以醫師指示、藥袋及該產品現行標示為準。\n\n[食藥署：聽說吃退燒藥會傷肝，這是真的嗎？](https://www.fda.gov.tw/tc/newsContent.aspx?cid=5049&id=22396)\n\n[衛福部：乙醯胺酚藥品用藥安全資訊](https://mohw.gov.tw/cp-2652-22349-1.html)\n\n[臺北榮總毒藥物防治諮詢中心：一般問題與諮詢方式](https://www.pcc-vghtpe.tw/active-detail1259.htm)\n\n[臺北榮總毒藥物防治諮詢中心：中毒處置](https://www.pcc-vghtpe.tw/active-detail1260.htm)\n",
+      "after_sha256": "caf5b021c03c50f8a21984e524f4604fee49ed4d4053b6a6fe0ecb1b56bdbb9c",
+      "source_bundle_path": "localization/tw-edition/sources/ch34-medication-safety-20261121.json",
+      "source_bundle_sha256": "1e7b40e29fd5ea00d1ccca76ff679321406b582aff297489a5b21b03cc3eb62c",
+      "source_checks": [
+        {
+          "source_id": "tw34_tfda_acetaminophen_2024",
+          "title": "衛生福利部食品藥物管理署：聽說吃退燒藥會傷肝，這是真的嗎？（維護至2024-12-31）",
+          "url": "https://www.fda.gov.tw/tc/newsContent.aspx?cid=5049&id=22396",
+          "claim": "複方感冒、止痛和退燒藥可能含乙醯胺酚；不同品牌併用前須核對成分，過量可能造成肝損傷。",
+          "supporting_passage": "食藥署說明複方感冒、止痛及退燒藥可能含乙醯胺酚，提醒核對成分並避免自行併用；肝病或飲酒者應先詢問醫療專業人員。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀食藥署闢謠頁，核對頁面發布及維護日期、乙醯胺酚成分重複與肝損傷警示。"
+        },
+        {
+          "source_id": "tw34_mohw_acetaminophen_label",
+          "title": "衛生福利部：乙醯胺酚藥品用藥安全資訊（2014年官方說明）",
+          "url": "https://mohw.gov.tw/cp-2652-22349-1.html",
+          "claim": "衛福部官方說明轉述核准仿單警語：勿同時服用其他含乙醯胺酚藥品或超量；意外過量即使無症狀也要立即聯絡醫師或毒物中心並接受醫療照護。",
+          "supporting_passage": "頁面明列不得同時服用其他含乙醯胺酚藥品、不要超過建議劑量，若意外過量即使尚未觀察到症狀仍應立即接受醫療照護。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接查閱衛福部官方用藥安全說明；頁面位於2014年新聞典藏，將其用於確認官方轉述的仿單警語，不以頁面年代推論個別產品現行劑量。"
+        },
+        {
+          "source_id": "ch01_vghtpe_poison_hotline_20261108",
+          "title": "臺北榮總毒藥物防治諮詢中心：24小時聯絡方式",
+          "url": "https://www.pcc-vghtpe.tw/active-detail1259.htm",
+          "claim": "毒藥物防治諮詢中心提供全年無休免費諮詢，電話02-2871-7121；諮詢時準備暴露物、用量、時間、年齡、體重及健康狀況。",
+          "supporting_passage": "官方常見問答列出全天候全年無休免費諮詢02-28717121，並建議提供物質、攝入量及時間、年齡、體重和平常健康情況。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "重新直接查閱臺北榮總毒藥物防治諮詢中心現行頁面，核對聯絡電話、服務時間及中毒處置。"
+        },
+        {
+          "source_id": "ch13_pcc_poison_20261103",
+          "title": "臺北榮總毒藥物防治諮詢中心：中毒處置",
+          "url": "https://www.pcc-vghtpe.tw/active-detail1260.htm",
+          "claim": "昏迷、呼吸異常或抽搐等情況應立即撥119；口服中毒勿催吐，保存暴露物資訊與時間。",
+          "supporting_passage": "毒藥物防治諮詢中心中毒處置頁說明昏迷或抽搐撥119、口服暴露切勿催吐，並攜帶暴露物資訊就醫。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "重新直接查閱臺北榮總毒藥物防治諮詢中心現行頁面，核對聯絡電話、服務時間及中毒處置。"
+        }
+      ],
+      "topic_fidelity_review": {
+        "decision": "retain_duplicate_ingredient_and_asymptomatic_overdose_safety",
+        "original_question": "同時吃兩種感冒藥或止痛藥之前，先看成分表，對乙酰氨基酚只能佔一種，吃多了沒不舒服也當天去醫院",
+        "reader_content_decision": "不同品牌的感冒、止痛或退燒藥可能含相同的乙醯胺酚。併用前逐一核對藥袋、外盒與成分標示；若意外重複或不確定是否超量，立即聯絡毒藥物防治諮詢中心，不等症狀出現。 核對所有藥品有效成分與每次用量；意外重複服用時準備藥品包裝、服用量和時間，立即聯絡24小時毒藥物防治諮詢中心02-2871-7121；意識或呼吸異常、抽搐時撥119。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "美國急性肝衰竭病例比例、藥品最大量與美國飲酒門檻可套用於臺灣讀者",
+            "decision": "exclude_foreign_case_rate_and_regulatory_limits",
+            "reason": "原數值來自美國收案或法規，非臺灣現行產品標示及個人發生率；臺灣讀者可執行的核心是核對成分、按標示使用及意外超量立即求助。"
+          },
+          {
+            "original_claim": "不同感冒、止痛藥可能重複乙醯胺酚；過量早期可無症狀",
+            "decision": "retain_with_Taiwan_label_and_poison_center_actions",
+            "reason": "衛福部與食藥署資料支持成分重複及意外過量警示，臺北榮總提供全日免費諮詢與適用的在地求助入口。"
+          }
+        ]
+      },
+      "prior_structured_draft_sha256": null,
+      "before_sha256": null,
+      "review_path": "localization/reviews/TW-34-001.json",
+      "target_path": "locales/zh-TW/book/ch34/TW-34-001.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "尚無可用來計算本條所述用藥行為或不良事件之臺灣全國暴露分母；各類資料口徑不同，不能跨來源合併。",
+        "個別產品濃度、核准年齡、仿單警語及患者用藥計畫可能更新；後續應按產品現行標示和主管機關公告再查。",
+        "尚未取得兒科、臨床藥學、急診毒物或腎胃照護等適當領域之獨立專業人員審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "臨床毒物",
+          "臨床藥學",
+          "肝膽醫學"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到可用於估算臺灣民眾對應用藥錯誤或特定NSAID副作用之全國性暴露分母與一致事件定義。沒有把毒物中心諮詢量、單院病例、境外試驗或仿單不良反應清單當作臺灣發生率或個人機率；數據不足不代表事件不存在。",
+      "target_sha256": "caf5b021c03c50f8a21984e524f4604fee49ed4d4053b6a6fe0ecb1b56bdbb9c"
+    },
+    {
+      "id": "TW-34-002",
+      "title": "孩子發燒用藥依藥袋與標示給，液體使用專用量具",
+      "source_ids": [
+        "tw34_hpa_child_health_handbook_2025",
+        "tw34_pids_fever_2019",
+        "tw34_tfda_child_med_2026"
+      ],
+      "summary": "兒童退燒藥須依該產品濃度、藥袋指示及孩子的年齡與體重使用。液體藥用藥品附的餵藥器、滴管或量杯，不用家中湯匙；未滿三個月嬰兒發燒及出現危險徵象時儘速就醫。",
+      "action": "確認孩子目前體重與藥品濃度，按藥袋或產品標示量取；不自行換算其他濃度、不共用量具、不自行交替退燒藥。未滿三個月嬰兒發燒或有意識、呼吸、抽搐等警訊，儘速就醫或撥119。",
+      "limits": "臺灣沒有可計算家長兒童給藥量錯誤或兒童退燒藥意外過量個人機率的全國暴露分母；本篇不提供藥品劑量表，產品濃度、年齡、體重和病況須由藥袋、現行標示及醫療專業人員確認。",
+      "question": "孩子發燒時，我是否依藥袋和該產品標示，以正確量具給藥並留意就醫警訊？",
+      "body": "<!-- TW-ID: TW-34-002 -->\n\n# 孩子發燒用藥依藥袋與標示給，液體使用專用量具\n\n## 適用情境與第一步\n\n孩子發燒時，退燒藥的目的是依醫囑或產品標示減輕不適，不是為了把體溫一定降到正常。先確認孩子現在的體重、藥品名稱、有效成分和每錠或每毫升的濃度，再依藥袋或該產品現行標示給藥。不同品牌、劑型及濃度的毫升數可能不同；更換藥品後不要沿用上一瓶的毫升數。\n\n液體藥請用包裝附的餵藥器、滴管或量杯，或由藥師確認適合的刻度量具；不要用家中茶匙、湯匙目測，也不要把一種藥的量具拿來量另一種不同濃度的藥。若藥袋、標籤、孩子體重或給藥時間看不懂，先打電話問開藥院所或藥師，不要猜劑量。\n\n## 避免自行加藥或延誤就醫\n\n- 不要把成人藥、兄姊剩藥或上次看診留下的藥直接給孩子；也不要自行加量、縮短間隔，或同時／輪流使用不同退燒成分，除非醫師已為這個孩子安排明確做法。\n- 阿斯匹靈及其他水楊酸製劑不可作為18歲以下兒童的退燒藥。若孩子因其他疾病已由醫師處方阿斯匹靈，先聯絡原醫療團隊，不要自行停藥或改量。\n- 未滿三個月嬰兒發燒，或孩子出現意識不清、持續昏睡、抽搐、呼吸困難、頸部僵硬、尿量大幅減少或皮膚紫斑等情形，應儘速由兒科醫師評估；呼吸或意識危急時撥119。\n\n若不小心重複給藥、量錯、孩子誤喝整瓶藥，先留住藥瓶、記下可能的劑量和時間，立即聯絡毒藥物防治諮詢中心02-2871-7121；有昏迷、抽搐或呼吸異常時直接撥119，不要自行催吐。\n\n## 時間、費用與容易忽略的地方\n\n使用產品附的量具即可，不需另外購買廚房量匙。換藥或換濃度時，向藥師確認劑量和量具通常比事後處理誤服更省事。就診費用依院所、健保身分和醫療處置而異；不確定如何給藥時，先詢問開藥院所或藥師。\n\n## 資料限制與參考資料\n\n目前沒有可計算臺灣兒童居家給藥量錯誤、退燒藥重複使用或意外過量個人機率的全國一致暴露分母。本篇不把國外量匙研究或中毒個案比例當成臺灣家長的個人風險，也不代替依產品濃度、體重及病況開立的劑量指示。\n\n[國民健康署：《兒童衛教手冊》（民國114年7月版）](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1460&pid=18742)\n\n[台灣兒童感染症醫學會、國家衛生研究院兒童醫學及健康研究中心：兒童發燒衛教](https://www.pids.org.tw/image/files/health/%E5%85%92%E7%AB%A5%E7%99%BC%E7%87%92%E8%A1%9B%E6%95%99-%E7%AC%AC%E4%B8%80%E7%89%8820190216.pdf)\n\n[食藥署：幼兒用藥指南：守護幼兒的用藥安全](https://www.fda.gov.tw/TC/siteListContent.aspx?id=51581&sid=13694)\n",
+      "after_sha256": "94c8e57d2944ba8f532649ad5abc8e42dd2452cd66d677de9155349a4c426ed5",
+      "source_bundle_path": "localization/tw-edition/sources/ch34-medication-safety-20261121.json",
+      "source_bundle_sha256": "1e7b40e29fd5ea00d1ccca76ff679321406b582aff297489a5b21b03cc3eb62c",
+      "source_checks": [
+        {
+          "source_id": "tw34_hpa_child_health_handbook_2025",
+          "title": "國民健康署：《兒童衛教手冊》（民國114年7月版）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1460&pid=18742",
+          "claim": "國民健康署民國114年7月版兒童衛教手冊列出未滿3個月嬰兒發燒與多項重症警訊須儘速就醫，並說明18歲以下不以阿斯匹靈退燒；疑似兒童中毒時保留容器、聯絡毒藥物防治諮詢中心，嚴重症狀撥119且不要自行催吐。",
+          "supporting_passage": "國民健康署《兒童衛教手冊》民國114年7月版 PDF 第68頁列未滿3個月嬰兒發燒、尿量減少、呼吸困難、意識不清、抽搐等危險病徵；第69頁說明阿斯匹靈不可用於18歲以下兒童退燒；第92頁說明保留藥品容器、撥打24小時毒藥物防治諮詢中心02-2871-7121，呼吸窘迫或昏睡失去意識撥119，未經醫師建議不要催吐。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "由國民健康署官方出版頁直接取得94頁《兒童衛教手冊》（民國114年7月版）PDF；檢視PDF第68、69、92頁的發燒警訊、阿斯匹靈及中毒處置段落，並核對官方頁標示的出版年月。"
+        },
+        {
+          "source_id": "tw34_pids_fever_2019",
+          "title": "台灣兒童感染症醫學會、國家衛生研究院兒童醫學及健康研究中心：兒童發燒衛教（2019）",
+          "url": "https://www.pids.org.tw/image/files/health/%E5%85%92%E7%AB%A5%E7%99%BC%E7%87%92%E8%A1%9B%E6%95%99-%E7%AC%AC%E4%B8%80%E7%89%8820190216.pdf",
+          "claim": "台灣兒童發燒指引要求未滿3個月嬰兒發燒及列出的意識、呼吸、抽搐、脫水等警訊儘速由兒科醫師診治；18歲以下不可用阿斯匹靈退燒。",
+          "supporting_passage": "PDF第2頁明列未滿三個月發燒及尿量大減、意識改變、痙攣、呼吸困難、頸僵等須儘速兒科診治，也指出18歲以下不用阿斯匹靈或其他水楊酸製劑作退燒藥。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀臺灣兒童感染症醫學會與國衛院兒童醫學及健康研究中心 PDF，核對制訂日期與就醫分流段落。"
+        },
+        {
+          "source_id": "tw34_tfda_child_med_2026",
+          "title": "衛生福利部食品藥物管理署：幼兒用藥指南：守護幼兒的用藥安全（維護2026-06-25）",
+          "url": "https://www.fda.gov.tw/TC/siteListContent.aspx?id=51581&sid=13694",
+          "claim": "食藥署要求兒童用藥考量年齡、體重與製劑，使用兒童專用製劑與附帶量具，不自行給成人或他人剩餘藥品。",
+          "supporting_passage": "頁面標示發布2023-12-05、維護2026-06-25；說明兒童專用液劑附量具或餵藥器，應遵循醫師或藥師建議，不在未有處方時給成人或他人剩藥。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀食藥署頁面並核對發布日期、2026-06-25維護日期及幼兒製劑與量具段落。"
+        }
+      ],
+      "topic_fidelity_review": {
+        "decision": "retain_child_fever_and_measurement_safety_rewrite_foreign_drug_rules",
+        "original_question": "孩子發燒不用阿司匹林、尼美舒利和安乃近，含安乃近的感冒藥也不給未成年人吃，液體退燒藥用藥盒裡配的量具量",
+        "reader_content_decision": "兒童退燒藥須依該產品濃度、藥袋指示及孩子的年齡與體重使用。液體藥用藥品附的餵藥器、滴管或量杯，不用家中湯匙；未滿三個月嬰兒發燒及出現危險徵象時儘速就醫。 確認孩子目前體重與藥品濃度，按藥袋或產品標示量取；不自行換算其他濃度、不共用量具、不自行交替退燒藥。未滿三個月嬰兒發燒或有意識、呼吸、抽搐等警訊，儘速就醫或撥119。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "兒童退燒須避開阿斯匹靈，液體藥須用合適量具",
+            "decision": "retain_and_rewrite_for_Taiwan_pediatric_guidance",
+            "reason": "臺灣兒科及食藥署資料支持18歲以下不用阿斯匹靈退燒、以藥袋／產品濃度和兒童專用量具正確給藥。"
+          },
+          {
+            "original_claim": "尼美舒利、安乃近及相關複方藥的境外禁用年齡可以當作臺灣規則",
+            "decision": "exclude_foreign_specific_drug_bans",
+            "reason": "原文使用中國藥名、行政決定及境外年齡限制，不能取代臺灣產品核准狀態與本地醫療建議；正文改為依台灣兒科指引與現行標示處理。"
+          },
+          {
+            "original_claim": "美國量匙錯誤比例可當作臺灣家長風險率",
+            "decision": "exclude_foreign_estimate_and_state_denominator_gap",
+            "reason": "研究地區、量具與母體非臺灣，且無臺灣兒童暴露分母可作轉換。"
+          }
+        ]
+      },
+      "prior_structured_draft_sha256": null,
+      "before_sha256": null,
+      "review_path": "localization/reviews/TW-34-002.json",
+      "target_path": "locales/zh-TW/book/ch34/TW-34-002.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "尚無可用來計算本條所述用藥行為或不良事件之臺灣全國暴露分母；各類資料口徑不同，不能跨來源合併。",
+        "個別產品濃度、核准年齡、仿單警語及患者用藥計畫可能更新；後續應按產品現行標示和主管機關公告再查。",
+        "尚未取得兒科、臨床藥學、急診毒物或腎胃照護等適當領域之獨立專業人員審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科",
+          "臨床藥學",
+          "急診毒物"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到可用於估算臺灣民眾對應用藥錯誤或特定NSAID副作用之全國性暴露分母與一致事件定義。沒有把毒物中心諮詢量、單院病例、境外試驗或仿單不良反應清單當作臺灣發生率或個人機率；數據不足不代表事件不存在。",
+      "target_sha256": "94c8e57d2944ba8f532649ad5abc8e42dd2452cd66d677de9155349a4c426ed5"
+    },
+    {
+      "id": "TW-34-003",
+      "title": "使用布洛芬等非類固醇止痛藥前，先核對胃腎風險與其他用藥",
+      "source_ids": [
+        "tw34_tfda_nsaid_2024",
+        "tw34_tfda_diclofenac_label"
+      ],
+      "summary": "非類固醇抗發炎止痛藥可能造成胃腸潰瘍、出血及腎臟傷害。曾有胃潰瘍或出血、腎臟或心臟疾病、年長或身體較虛弱，或正在使用抗凝血、抗血小板及類固醇藥物者，使用前先詢問醫師或藥師。",
+      "action": "核對成分並告知醫師或藥師既往胃腸、腎臟及心臟病史與所有處方藥、成藥和貼布；不要自行疊加同類止痛藥，也不要擅自停用原處方抗凝血藥或低劑量阿斯匹靈。",
+      "limits": "臺灣缺乏能把不同NSAID、劑量、使用天數及特定病史連結到同一個全國個人發生率的公開資料；diclofenac仿單列出的類別警語不能換算成每位使用者的絕對風險，也不能取代個別評估。",
+      "question": "使用布洛芬等非類固醇止痛藥前，我是否確認胃腸、腎臟病史和其他藥物的交互作用？",
+      "body": "<!-- TW-ID: TW-34-003 -->\n\n# 使用布洛芬等非類固醇止痛藥前，先核對胃腎風險與其他用藥\n\n## 適用情境與第一步\n\n布洛芬等非類固醇抗發炎藥（NSAID）可用於疼痛或發炎，但不同成分、劑量、劑型和使用天數的風險不一樣。開始使用前先看藥袋或外盒的有效成分，並整理目前所有處方藥、成藥、退燒藥及外用止痛貼布或凝膠。\n\n曾有胃潰瘍或胃腸出血、腎功能不佳、心臟衰竭，年長或整體健康狀況較差，或正使用抗凝血劑、抗血小板藥、口服類固醇、利尿劑等藥品，先向醫師或藥師確認是否適合使用。藥局購買的非處方止痛藥也可能不適合某些病況；購買時要告知正在服用的藥品與病史，並確認用法。\n\n## 使用時要避免的情況\n\n1. 不要把兩種不同品牌或複方藥當成不同成分；逐一核對有效成分，避免自行併用兩種NSAID，或把口服藥和含同類成分的外用止痛產品疊加。\n2. 若醫師已開立抗凝血藥、抗血小板藥或低劑量阿斯匹靈，不要因為想吃止痛藥就自行停掉原處方；先問開藥醫師或藥師如何處理。\n3. 若出現吐血、黑便、明顯少尿、昏厥或呼吸困難，立即就醫；呼吸困難、昏厥等危急狀況撥119。不要用再吃一顆止痛藥的方式壓住持續或變嚴重的疼痛。\n\n## 時間、費用與容易忽略的地方\n\n用藥前向藥師出示藥袋和其他止痛產品，能協助確認重複成分及交互作用；若症狀嚴重、持續或有警訊，應安排醫療評估。處方、檢查及就醫費用依病況、院所與健保規定而異。不要自行加量或延長療程，也不要以「飯後吃」當成可以消除胃腸出血風險的保證。\n\n## 資料限制與參考資料\n\n臺灣沒有能同時比較各種NSAID成分、劑量、療程和患者病史的統一全國分母，因此不提供個人發生機率。食藥署的diclofenac仿單附件列有NSAID類別的嚴重胃腸警語與特定交互作用；該藥品標示不能直接當作其他成分、不同劑量或短期使用者的風險百分比。服用前仍須依該產品標示和個人病況諮詢。\n\n[食藥署：肌肉痠痛怎麼辦？食藥署教您緩解之道！（2024-09-20）](https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1527&r=251919800&tid=4891)\n\n[食藥署：含diclofenac成分口服劑型藥品中文仿單修訂附件](https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f636694231200509957)\n",
+      "after_sha256": "46b647cd8cd88f03465aa044991808376538e876c6753fa42725bd041ed4f948",
+      "source_bundle_path": "localization/tw-edition/sources/ch34-medication-safety-20261121.json",
+      "source_bundle_sha256": "1e7b40e29fd5ea00d1ccca76ff679321406b582aff297489a5b21b03cc3eb62c",
+      "source_checks": [
+        {
+          "source_id": "tw34_tfda_nsaid_2024",
+          "title": "衛生福利部食品藥物管理署：肌肉痠痛怎麼辦？食藥署教您緩解之道！（2024-09-20）",
+          "url": "https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1527&r=251919800&tid=4891",
+          "claim": "食藥署指出NSAID可能造成胃腸潰瘍或出血；有潰瘍、使用抗凝血劑或併用胃部不適藥品者先由醫師評估，非處方止痛藥應告知藥師正在使用的藥品。",
+          "supporting_passage": "第992期日期2024-09-20說明NSAID胃腸潰瘍或出血副作用與消化性潰瘍、抗凝血劑及交互作用警示，並提醒購藥時向藥師說明其他藥物。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀食藥署第992期藥物食品安全週報及其NSAID用藥提醒，核對發布日期與族群警語。"
+        },
+        {
+          "source_id": "tw34_tfda_diclofenac_label",
+          "title": "衛生福利部食品藥物管理署：含diclofenac成分口服劑型藥品中文仿單修訂附件（公開標示資料）",
+          "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f636694231200509957",
+          "claim": "食藥署diclofenac仿單附件列出NSAID可能引起嚴重胃腸潰瘍、出血或穿孔，風險因子包括潰瘍或出血史、口服類固醇、抗凝血劑、年長及長期使用；另列黑便、吐血與少尿等訊號。",
+          "supporting_passage": "仿單第3頁說明NSAID可能引起嚴重胃腸道不良反應及相關風險因素；第5頁列出吐血、黑便、少尿等通報不良反應與交互作用警語。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀食藥署公開之diclofenac中文仿單修訂附件，逐段核對胃腸警語、腎臟風險、交互作用及不良反應；不把單一成分風險數值外推到所有NSAID或個人。"
+        }
+      ],
+      "topic_fidelity_review": {
+        "decision": "retain_NSAID_risk_check_remove_foreign_age_cutoff",
+        "original_question": "60 歲以上、胃出過血、在吃抗凝藥或激素的人，吃布洛芬這類止痛藥之前先問醫生",
+        "reader_content_decision": "非類固醇抗發炎止痛藥可能造成胃腸潰瘍、出血及腎臟傷害。曾有胃潰瘍或出血、腎臟或心臟疾病、年長或身體較虛弱，或正在使用抗凝血、抗血小板及類固醇藥物者，使用前先詢問醫師或藥師。 核對成分並告知醫師或藥師既往胃腸、腎臟及心臟病史與所有處方藥、成藥和貼布；不要自行疊加同類止痛藥，也不要擅自停用原處方抗凝血藥或低劑量阿斯匹靈。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "一律以60歲為固定門檻，並把高劑量試驗的風險倍數套給所有用藥者",
+            "decision": "replace_fixed_foreign_cutoff_and_unqualified_relative_risk",
+            "reason": "臺灣官方資料以病史、合併用藥、劑量和療程作個別評估；境外高劑量試驗不能轉作台灣短期使用者的絕對風險。"
+          },
+          {
+            "original_claim": "胃腸潰瘍或出血、抗凝血劑和類固醇是需先評估的風險",
+            "decision": "retain_with_Taiwan_regulator_warning_and_product_label",
+            "reason": "食藥署警示與官方diclofenac仿單均支持相關風險及諮詢行動；不設定來源不支持的年齡硬線。"
+          }
+        ]
+      },
+      "prior_structured_draft_sha256": null,
+      "before_sha256": null,
+      "review_path": "localization/reviews/TW-34-003.json",
+      "target_path": "locales/zh-TW/book/ch34/TW-34-003.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "尚無可用來計算本條所述用藥行為或不良事件之臺灣全國暴露分母；各類資料口徑不同，不能跨來源合併。",
+        "個別產品濃度、核准年齡、仿單警語及患者用藥計畫可能更新；後續應按產品現行標示和主管機關公告再查。",
+        "尚未取得兒科、臨床藥學、急診毒物或腎胃照護等適當領域之獨立專業人員審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "臨床藥學",
+          "腸胃醫學",
+          "腎臟醫學"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到可用於估算臺灣民眾對應用藥錯誤或特定NSAID副作用之全國性暴露分母與一致事件定義。沒有把毒物中心諮詢量、單院病例、境外試驗或仿單不良反應清單當作臺灣發生率或個人機率；數據不足不代表事件不存在。",
+      "target_sha256": "46b647cd8cd88f03465aa044991808376538e876c6753fa42725bd041ed4f948"
+    },
+    {
+      "id": "TW-34-004",
+      "title": "幼兒感冒先由醫師評估，不自行選用綜合感冒藥",
+      "source_ids": [
+        "tw34_tfda_combo_cold_2024",
+        "tw34_tfda_child_med_2026"
+      ],
+      "summary": "幼兒感冒不自行挑選成人藥、剩藥或多成分綜合感冒藥。食藥署建議六歲以下幼童就醫；症狀藥只能緩解部分不適，並非治癒感染。",
+      "action": "未滿六歲先就醫評估；未滿兩歲尤其不要自行選藥或套用成人劑量。帶上現用藥袋與產品包裝，請醫師評估並依藥袋指示使用，避免重複相同或相近成分。",
+      "limits": "年齡指引是食藥署的就醫與用藥建議，不表示所有綜合感冒藥在臺灣一律違法或完全禁止；個別藥品的適用年齡、成分與用法以現行核准標示及醫師處方為準。",
+      "question": "幼兒感冒時，照顧者是否先安排就醫評估，而不自行選用綜合感冒藥？",
+      "body": "<!-- TW-ID: TW-34-004 -->\n\n# 幼兒感冒先由醫師評估，不自行選用綜合感冒藥\n\n## 適用情境與第一步\n\n幼兒鼻水、咳嗽或發燒時，不要直接拿成人感冒藥、兄姊剩藥或上次看診的藥來給孩子。食藥署建議六歲以下幼童就醫治療；讓醫師依症狀、年齡、體重和需要處理的原因評估是否用藥。\n\n綜合感冒藥只能緩解部分症狀，不能治癒造成感冒的病毒或細菌。若醫師評估後有開藥，照藥袋的藥名、用量、間隔和天數給藥；不要因為鼻水或咳嗽還在就自行加量，也不要把不同品牌當成不同成分。成藥、退燒藥和複方感冒藥都要一起核對，避免重複含有乙醯胺酚或其他相同、相近成分。\n\n## 家長可以怎麼做\n\n1. 就醫時帶上孩子正在使用的藥袋、藥盒或清楚照片，告訴醫師孩子體重、症狀開始時間、已用過的藥與過敏史。\n2. 領藥時確認藥袋姓名、藥名、濃度、每次用量和間隔；液體藥用隨藥附的餵藥器、滴管或量杯。劑量或成分不清楚時，先問開藥院所或藥師。\n3. 孩子未滿三個月而發燒，或出現呼吸困難、意識不清、持續昏睡、抽搐、尿量大幅減少等警訊，儘速由醫師評估；危急時撥119。症狀持續三天仍沒有改善，也應儘速就醫。\n\n## 時間、費用與容易忽略的地方\n\n就醫和詢問藥品適用方式會花時間；掛號、檢查及處方費用依院所、健保身分和醫療需要而異。先核對家中藥品可避免重複購買或把剩藥給錯人，但不代表每種舊藥都適合孩子。\n\n## 資料限制與參考資料\n\n臺灣目前沒有可計算幼兒自行使用綜合感冒藥或止咳藥之全國暴露分母；國外臨床試驗或藥物不良反應通報不能直接換算成本地幼兒個人風險。食藥署的年齡提醒是就醫與用藥建議，不代表所有產品在臺灣一律禁止；是否使用及如何給藥仍須依個別產品現行標示和醫師評估。\n\n[食藥署：綜合感冒藥百百種！如何正確挑選安全使用？（2024-10-04）](https://www.fda.gov.tw/TC/PublishOtherEpaperContent.aspx?id=1529&r=274217129&tid=4909)\n\n[食藥署：幼兒用藥指南：守護幼兒的用藥安全](https://www.fda.gov.tw/TC/siteListContent.aspx?id=51581&sid=13694)\n",
+      "after_sha256": "39b30f421c36f21d2cdc14275305a658e1ff1266c67ab6008252912c1ac74ede",
+      "source_bundle_path": "localization/tw-edition/sources/ch34-medication-safety-20261121.json",
+      "source_bundle_sha256": "1e7b40e29fd5ea00d1ccca76ff679321406b582aff297489a5b21b03cc3eb62c",
+      "source_checks": [
+        {
+          "source_id": "tw34_tfda_combo_cold_2024",
+          "title": "衛生福利部食品藥物管理署：綜合感冒藥百百種！如何正確挑選安全使用？（2024-10-04）",
+          "url": "https://www.fda.gov.tw/TC/PublishOtherEpaperContent.aspx?id=1529&r=274217129&tid=4909",
+          "claim": "食藥署說明綜合感冒藥只緩解症狀、不同產品劑量頻率不同，六歲以下幼童應就醫，持續服用三天仍未改善應儘速就醫。",
+          "supporting_passage": "第994期日期2024-10-04列出六歲以下幼童就醫、核對外盒及仿單用法用量、症狀三天仍未改善就醫。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀食藥署第994期藥物食品安全週報，核對期刊日期、兒童年齡建議、藥品標示及症狀處理說明。"
+        },
+        {
+          "source_id": "tw34_tfda_child_med_2026",
+          "title": "衛生福利部食品藥物管理署：幼兒用藥指南：守護幼兒的用藥安全（維護2026-06-25）",
+          "url": "https://www.fda.gov.tw/TC/siteListContent.aspx?id=51581&sid=13694",
+          "claim": "食藥署要求兒童用藥考量年齡、體重與製劑，使用兒童專用製劑與附帶量具，不自行給成人或他人剩餘藥品。",
+          "supporting_passage": "頁面標示發布2023-12-05、維護2026-06-25；說明兒童專用液劑附量具或餵藥器，應遵循醫師或藥師建議，不在未有處方時給成人或他人剩藥。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "直接閱讀食藥署頁面並核對發布日期、2026-06-25維護日期及幼兒製劑與量具段落。"
+        }
+      ],
+      "topic_fidelity_review": {
+        "decision": "retain_infant_combination_medicine_question_apply_Taiwan_under6_guidance",
+        "original_question": "2 歲以下的孩子感冒，別自己喂複方感冒藥和止咳藥",
+        "reader_content_decision": "幼兒感冒不自行挑選成人藥、剩藥或多成分綜合感冒藥。食藥署建議六歲以下幼童就醫；症狀藥只能緩解部分不適，並非治癒感染。 未滿六歲先就醫評估；未滿兩歲尤其不要自行選藥或套用成人劑量。帶上現用藥袋與產品包裝，請醫師評估並依藥袋指示使用，避免重複相同或相近成分。",
+        "historical_claim_decisions": [
+          {
+            "original_claim": "未滿2歲家長不要自行餵複方感冒藥與止咳藥",
+            "decision": "retain_core_question_and_apply_Taiwan_under6_guidance",
+            "reason": "食藥署現行建議六歲以下幼童就醫；保留幼兒不自行挑選多成分藥的安全問題，不把原作境外規則當成台灣法定禁令。"
+          },
+          {
+            "original_claim": "中國14種產品的仿單變更及特定海外試驗可直接界定台灣全部兒童產品",
+            "decision": "exclude_foreign_product_list_and_overgeneralized_efficacy_claim",
+            "reason": "產品核准成分、年齡及標示依各地與個別藥品而異；正文使用台灣現行建議、個別標示及醫師評估，不泛稱所有產品均無效或違法。"
+          }
+        ]
+      },
+      "prior_structured_draft_sha256": null,
+      "before_sha256": null,
+      "review_path": "localization/reviews/TW-34-004.json",
+      "target_path": "locales/zh-TW/book/ch34/TW-34-004.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "尚無可用來計算本條所述用藥行為或不良事件之臺灣全國暴露分母；各類資料口徑不同，不能跨來源合併。",
+        "個別產品濃度、核准年齡、仿單警語及患者用藥計畫可能更新；後續應按產品現行標示和主管機關公告再查。",
+        "尚未取得兒科、臨床藥學、急診毒物或腎胃照護等適當領域之獨立專業人員審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科",
+          "臨床藥學"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到可用於估算臺灣民眾對應用藥錯誤或特定NSAID副作用之全國性暴露分母與一致事件定義。沒有把毒物中心諮詢量、單院病例、境外試驗或仿單不良反應清單當作臺灣發生率或個人機率；數據不足不代表事件不存在。",
+      "target_sha256": "39b30f421c36f21d2cdc14275305a658e1ff1266c67ab6008252912c1ac74ede"
+    }
+  ],
+  "frequency_and_statistics": "未找到相關用藥錯誤或副作用的臺灣全國暴露分母；不以毒物諮詢電話量、病例、國外研究或仿單通報換算個人機率。",
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 330,
+    "runtime_items": 341,
+    "runtime_sources": 1411,
+    "source_registry": 1494,
+    "review_rechecks": 411,
+    "coverage_json_files": 688,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_completed_entries": 330,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 334,
+    "runtime_items": 345,
+    "runtime_sources": 1419,
+    "source_registry": 1502,
+    "review_rechecks": 411,
+    "coverage_json_files": 694,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_completed_entries": 334,
+    "publication_ready": false
+  },
+  "source_corrections": [
+    {
+      "previous_source_id": "tw34_pediatric_handbook_2024",
+      "finding": "原列2024年兒童衛教手冊PDF網址於2026-11-21直接查詢回應404，未作為正式來源。",
+      "resolution": "改用國民健康署目前提供的民國114年7月版兒童衛教手冊官方PDF。",
+      "replacement_source_id": "tw34_hpa_child_health_handbook_2025",
+      "replacement_url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1460&pid=18742",
+      "supporting_pages": [
+        68,
+        69,
+        92
+      ]
+    }
+  ]
+}

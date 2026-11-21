@@ -1,0 +1,103 @@
+{
+  "id": "TW-34-002",
+  "reviewer": "ChatGPT（AI協助查核臺灣主管機關、兒科專業資料及現行產品安全資訊；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch34/TW-34-002.md",
+  "target_sha256": "94c8e57d2944ba8f532649ad5abc8e42dd2452cd66d677de9155349a4c426ed5",
+  "source_reviewed_sha256": "94c8e57d2944ba8f532649ad5abc8e42dd2452cd66d677de9155349a4c426ed5",
+  "before_sha256": null,
+  "after_sha256": "94c8e57d2944ba8f532649ad5abc8e42dd2452cd66d677de9155349a4c426ed5",
+  "source_bundle_path": "localization/tw-edition/sources/ch34-medication-safety-20261121.json",
+  "source_bundle_sha256": "1e7b40e29fd5ea00d1ccca76ff679321406b582aff297489a5b21b03cc3eb62c",
+  "source_checks": [
+    {
+      "source_id": "tw34_hpa_child_health_handbook_2025",
+      "title": "國民健康署：《兒童衛教手冊》（民國114年7月版）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1460&pid=18742",
+      "claim": "國民健康署民國114年7月版兒童衛教手冊列出未滿3個月嬰兒發燒與多項重症警訊須儘速就醫，並說明18歲以下不以阿斯匹靈退燒；疑似兒童中毒時保留容器、聯絡毒藥物防治諮詢中心，嚴重症狀撥119且不要自行催吐。",
+      "supporting_passage": "國民健康署《兒童衛教手冊》民國114年7月版 PDF 第68頁列未滿3個月嬰兒發燒、尿量減少、呼吸困難、意識不清、抽搐等危險病徵；第69頁說明阿斯匹靈不可用於18歲以下兒童退燒；第92頁說明保留藥品容器、撥打24小時毒藥物防治諮詢中心02-2871-7121，呼吸窘迫或昏睡失去意識撥119，未經醫師建議不要催吐。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "由國民健康署官方出版頁直接取得94頁《兒童衛教手冊》（民國114年7月版）PDF；檢視PDF第68、69、92頁的發燒警訊、阿斯匹靈及中毒處置段落，並核對官方頁標示的出版年月。"
+    },
+    {
+      "source_id": "tw34_pids_fever_2019",
+      "title": "台灣兒童感染症醫學會、國家衛生研究院兒童醫學及健康研究中心：兒童發燒衛教（2019）",
+      "url": "https://www.pids.org.tw/image/files/health/%E5%85%92%E7%AB%A5%E7%99%BC%E7%87%92%E8%A1%9B%E6%95%99-%E7%AC%AC%E4%B8%80%E7%89%8820190216.pdf",
+      "claim": "台灣兒童發燒指引要求未滿3個月嬰兒發燒及列出的意識、呼吸、抽搐、脫水等警訊儘速由兒科醫師診治；18歲以下不可用阿斯匹靈退燒。",
+      "supporting_passage": "PDF第2頁明列未滿三個月發燒及尿量大減、意識改變、痙攣、呼吸困難、頸僵等須儘速兒科診治，也指出18歲以下不用阿斯匹靈或其他水楊酸製劑作退燒藥。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀臺灣兒童感染症醫學會與國衛院兒童醫學及健康研究中心 PDF，核對制訂日期與就醫分流段落。"
+    },
+    {
+      "source_id": "tw34_tfda_child_med_2026",
+      "title": "衛生福利部食品藥物管理署：幼兒用藥指南：守護幼兒的用藥安全（維護2026-06-25）",
+      "url": "https://www.fda.gov.tw/TC/siteListContent.aspx?id=51581&sid=13694",
+      "claim": "食藥署要求兒童用藥考量年齡、體重與製劑，使用兒童專用製劑與附帶量具，不自行給成人或他人剩餘藥品。",
+      "supporting_passage": "頁面標示發布2023-12-05、維護2026-06-25；說明兒童專用液劑附量具或餵藥器，應遵循醫師或藥師建議，不在未有處方時給成人或他人剩藥。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀食藥署頁面並核對發布日期、2026-06-25維護日期及幼兒製劑與量具段落。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原固定ID及其核心用藥安全問題，依臺灣主管機關、臺灣兒科專業資料及本地毒物諮詢入口獨立撰寫；不把中國或美國藥品禁令、年齡門檻、收案比例及劑量上限移作臺灣規則。",
+  "review_method": "逐條比對原作固定ID、原始標題與正文、manifest原作來源版本及此前未完成狀態；查閱臺灣食藥署與衛福部用藥資料、臺灣兒科發燒衛教與國民健康署兒童衛教手冊與國民健康署兒童衛教手冊、臺北榮總毒藥物諮詢中心。逐項核對每個正文主張與來源支持段落、台灣可採取的給藥／求助流程、年齡適用界線及用藥風險。未找到可對應相關用藥行為的全國暴露分母時明確標示資料不足，不引用境外收案率換算臺灣個人機率；本批為首次正式發布，不計入歷史正文實質再審數。",
+  "limits": [
+    "臺灣沒有可計算家長兒童給藥量錯誤或兒童退燒藥意外過量個人機率的全國暴露分母",
+    "本篇不提供藥品劑量表，產品濃度、年齡、體重和病況須由藥袋、現行標示及醫療專業人員確認。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "7f585fcf4cb3d2c5c36f35de9661533ec816b78992ada2b7da4b80635e639737",
+  "source_ids": [
+    "tw34_hpa_child_health_handbook_2025",
+    "tw34_pids_fever_2019",
+    "tw34_tfda_child_med_2026"
+  ],
+  "frequency_assessment": "未找到可用於估算臺灣民眾對應用藥錯誤或特定NSAID副作用之全國性暴露分母與一致事件定義。沒有把毒物中心諮詢量、單院病例、境外試驗或仿單不良反應清單當作臺灣發生率或個人機率；數據不足不代表事件不存在。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "尚無可用來計算本條所述用藥行為或不良事件之臺灣全國暴露分母；各類資料口徑不同，不能跨來源合併。",
+    "個別產品濃度、核准年齡、仿單警語及患者用藥計畫可能更新；後續應按產品現行標示和主管機關公告再查。",
+    "尚未取得兒科、臨床藥學、急診毒物或腎胃照護等適當領域之獨立專業人員審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科",
+      "臨床藥學",
+      "急診毒物"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "兒童退燒藥須依該產品濃度、藥袋指示及孩子的年齡與體重使用。液體藥用藥品附的餵藥器、滴管或量杯，不用家中湯匙；未滿三個月嬰兒發燒及出現危險徵象時儘速就醫。",
+  "topic_fidelity_review": {
+    "decision": "retain_child_fever_and_measurement_safety_rewrite_foreign_drug_rules",
+    "original_question": "孩子發燒不用阿司匹林、尼美舒利和安乃近，含安乃近的感冒藥也不給未成年人吃，液體退燒藥用藥盒裡配的量具量",
+    "reader_content_decision": "兒童退燒藥須依該產品濃度、藥袋指示及孩子的年齡與體重使用。液體藥用藥品附的餵藥器、滴管或量杯，不用家中湯匙；未滿三個月嬰兒發燒及出現危險徵象時儘速就醫。 確認孩子目前體重與藥品濃度，按藥袋或產品標示量取；不自行換算其他濃度、不共用量具、不自行交替退燒藥。未滿三個月嬰兒發燒或有意識、呼吸、抽搐等警訊，儘速就醫或撥119。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "兒童退燒須避開阿斯匹靈，液體藥須用合適量具",
+        "decision": "retain_and_rewrite_for_Taiwan_pediatric_guidance",
+        "reason": "臺灣兒科及食藥署資料支持18歲以下不用阿斯匹靈退燒、以藥袋／產品濃度和兒童專用量具正確給藥。"
+      },
+      {
+        "original_claim": "尼美舒利、安乃近及相關複方藥的境外禁用年齡可以當作臺灣規則",
+        "decision": "exclude_foreign_specific_drug_bans",
+        "reason": "原文使用中國藥名、行政決定及境外年齡限制，不能取代臺灣產品核准狀態與本地醫療建議；正文改為依台灣兒科指引與現行標示處理。"
+      },
+      {
+        "original_claim": "美國量匙錯誤比例可當作臺灣家長風險率",
+        "decision": "exclude_foreign_estimate_and_state_denominator_gap",
+        "reason": "研究地區、量具與母體非臺灣，且無臺灣兒童暴露分母可作轉換。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "使用產品附的量具不增加費用；詢問開藥院所或藥師可降低猜量或換濃度造成的錯誤，實際就醫費用依個人資格與處置。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇沒有把境外藥品禁令或境外年齡限制描述為臺灣法規；用藥建議依查閱日主管機關資料、個別產品現行核准標示及醫師指示。"
+  }
+}
