@@ -1,0 +1,138 @@
+{
+  "id": "TW-05-006",
+  "reviewer": "ChatGPT（AI 協助查核台灣官方資料與現行法規；未取得獨立相關專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch05/TW-05-006.md",
+  "target_sha256": "bf063a832ea40a12f45bd3b1952cbee9c4ab34cc471682b8d434cd889bc356ca",
+  "source_reviewed_sha256": "bf063a832ea40a12f45bd3b1952cbee9c4ab34cc471682b8d434cd889bc356ca",
+  "source_bundle_path": "localization/tw-edition/sources/ch05-fraud-prepaid-deposit-20261121.json",
+  "source_bundle_sha256": "0660b958a88d09d239e388873b805b5156578ca512d80bf9bb3aa9d3f224c01b",
+  "source_checks": [
+    {
+      "source_id": "tw05_npa_fraud_stats_2025",
+      "title": "警政署：114 年詐欺犯罪統計通報（2026-04-01）",
+      "url": "https://www.npa.gov.tw/ch/app/data/doc?detailNo=1496332666214027264&module=wg063&type=s",
+      "claim": "警政署2026-04-01統計通報列2025年詐欺案件197,595件、投資詐欺58,675件及占比29.69%，並說明自2024年9月案件數認定原則改變、因此不與2024全年直接比較。",
+      "supporting_passage": "2025年警方記錄詐欺案件197,595件，其中投資詐欺58,675件（29.69%）。這是依犯罪方法分類的警政行政案件數與案件占比，不是投資人或廣告接觸者的發生率；官方說明自2024年9月改變案件數認定原則，該通報未直接比較114年全年和113年全年。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀警政署五頁統計通報，核對全國年份、案件定義、分類占比與案件認定變更註記。"
+    },
+    {
+      "source_id": "tw05_cib_fake_investment",
+      "title": "刑事警察局：常見詐騙手法話術解析與因應之道—假投資",
+      "url": "https://www.cib.npa.gov.tw/ch/app/data/view?module=wg116&id=1909&serno=a4f8d5ab-3d53-4d22-9411-031fddde7a4e",
+      "claim": "刑事警察局說明假投資可能由社群或交友軟體接觸、拉入LINE群組、先讓民眾小額獲利後誘使加碼，再以洗碼量、保證金或IP異常阻擋出金；提供165及投信投顧公會查核入口。",
+      "supporting_passage": "刑事警察局描述假投資會透過社群或交友軟體接觸、加入LINE群組、先以小額獲利建立信任，再要求加碼；出金時以洗碼量、保證金或IP異常阻擋。頁面也指向165全民防騙網及投信投顧公會查詢合法投資管道。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀刑事警察局假投資手法及防範頁，核對常見接觸方式、出金話術與官方查詢入口。"
+    },
+    {
+      "source_id": "tw05_anti_fraud_article28",
+      "title": "銀行局：《金融機構及提供虛擬資產服務之事業或人員防制詐欺犯罪危害應遵循事項辦法》第28條",
+      "url": "https://law.banking.gov.tw/Chi/FLAW/FLAWDOC01.aspx?lno=28&lsid=FL104315",
+      "claim": "現行辦法第28條：受詐民眾於存款業務機構營業時間親自至任一家存款業務機構，配合身分及匯款／轉帳核對、填寫切結書並撥165後，警方應於二小時內到場受理報案；辦法不保證款項已追回。",
+      "supporting_passage": "2026-07-20修正的現行法規第28條規定，受詐民眾於存款業務機構營業時間親自至任一家存款業務機構告知受詐，經確認身分及匯款／轉帳資訊、填寫切結書並撥打165後，警方應於二小時內派員到該機構受理報案；依法受理不保證款項已攔阻或追回。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱銀行局現行法規第28條及沿革，核對適用機構、辦理條件、警方到場時限及法規版本。"
+    },
+    {
+      "source_id": "tw05_npa_recovery_scam_2026",
+      "title": "警光雜誌：慎防假冒警方、銀行或律師協助追回款項的二次詐騙",
+      "url": "https://police.npa.gov.tw/ch/app/data/view?id=1835&module=wg081&serno=aa838cd6-0932-4ee5-9323-a9a17360a4be",
+      "claim": "警政署提醒假冒警方、銀行、律師或聲稱能追回款項者可能再騙費用或個資；民眾應停付並使用110或165官方管道。",
+      "supporting_passage": "警政署提醒假冒警方、銀行、律師或聲稱能追回款項者可能再要求費用或個資；遭遇疑似二次詐騙應停止付款並利用110或165官方管道求助。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀警政署防詐提醒，核對二次詐騙情境和官方求助管道。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原作固定ID所承載的讀者問題，依台灣真實消費／金融情境、現行制度和官方求助入口獨立撰寫；把批次及AI查核流程留在本紀錄，不放入讀者正文。另移除未由本篇來源清單支持的165通話費敘述，避免沿用未逐項核實的費率資訊。",
+  "review_method": "首次正式刊載，不是歷史正文的回溯再審。重讀原作固定ID、上游來源版本、manifest及本章既有結構化草稿；逐項查閱台灣警政統計、主管機關現行法規、消保與存保服務及金融評議程序。逐主張比對正文與來源支持範圍，記錄年份、地區、對象、分子／分母、事件定義、行政統計或個案性質及限制。沒有可信全國暴露分母時不推估個人機率；未取得專業審閱不冒稱完成。",
+  "limits": [
+    "2025年警政統計是行政案件件數及案件占比，不含投資人或廣告接觸母數，不能推算個人風險；官方指出2024年9月案件數認定原則改變。",
+    "警方依法到金融機構受理報案不代表款項已圈存、攔阻或追回；任何人都不能保證追回。",
+    "高報酬與保本字眼是風險警訊，文章沒有把所有投資邀約概括認定為詐騙，也沒有把金融機構登記視為商品或報酬保證。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "757608c9200b2545c987781efcb03018dba13d7b1279616ad8cbdd9fe6d835ca",
+  "source_ids": [
+    "tw05_npa_fraud_stats_2025",
+    "tw05_cib_fake_investment",
+    "tw05_anti_fraud_article28",
+    "tw05_npa_recovery_scam_2026"
+  ],
+  "frequency_assessment": "警政署2025年詐欺案件數及投資詐欺占比可描述案件組成；目前沒有可將警方投資詐欺案件配對到台灣投資人數、廣告接觸人數或投資人年分母的資料，不能換算個人受害機率。案件數認定自2024年9月改變，官方通報不直接比較2025全年與2024全年。",
+  "statistics_assessed": [
+    {
+      "topic": "2025年警政署詐欺案件與投資詐欺案件占比",
+      "value": {
+        "all_fraud_cases": 197595,
+        "investment_fraud_cases": 58675,
+        "investment_fraud_share_percent": 29.69
+      },
+      "unit": "警察機關記錄案件件數及投資詐欺占全部詐欺案件的百分比；不是人口率、投資人受害率或個人機率",
+      "period": "2025年（民國114年）；通報發布於2026-04-01",
+      "geographic_scope": "台灣全國警政統計",
+      "population": "警察機關記錄的詐欺案件，按犯罪方法分類；不等於所有實際發生案件、投資人或接觸廣告者",
+      "numerator": "投資詐欺58,675件（占全部詐欺案件29.69%）",
+      "denominator": "全部詐欺案件197,595件",
+      "denominator_definition": "警政署114年記錄的全國詐欺案件件數；案件占比的分母，不是台灣人口或投資人數",
+      "event_definition": "警政行政統計中依犯罪方法歸類為詐欺及投資詐欺的案件發生數；官方說明自2024年9月案件數認定原則改變",
+      "data_type": "政府行政案件統計與案件類型占比",
+      "limitations": "無投資人、廣告接觸者或暴露人年分母；案件數不等於受害人數或個人風險。案件認定方式自2024年9月改變，該通報不將114年全年與113年全年直接比較。",
+      "source_ids": [
+        "tw05_npa_fraud_stats_2025"
+      ],
+      "accessed_at": "2026-11-21"
+    }
+  ],
+  "unresolved_questions": [
+    "不同投資商品與機構資格仍須由主管機關及個別契約核實；本文不判斷個別交易是否合法或是否能追回。",
+    "未找到可換算台灣投資人個人遭詐機率的共同暴露分母。",
+    "未取得金融消費者保護、證券投資服務或警政實務專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "金融消費者保護／證券投資服務（商品與業務資格辨識）",
+      "警政反詐與金融機構通報流程"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": "fc78901912cb30f7b085c304825d6d39a1e61f3d1d93e686cb3ca7485a5d4f55",
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留投資詐騙辨識與資金安全核心；加入台灣投資服務查核、銀行與165／警察通報流程，並避免把高報酬邀約一概定罪或把登記當成政府保證。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_high_return_and_guaranteed_principal_scam_question_with_taiwan_reporting_steps",
+    "original_question": "遇到高報酬、保本或穩賺承諾時，如何判斷風險並處理？",
+    "reader_content_decision": "保留投資詐騙辨識與資金安全核心；加入台灣投資服務查核、銀行與165／警察通報流程，並避免把高報酬邀約一概定罪或把登記當成政府保證。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "保本高收益或保證獲利承諾代表政府或銀行保證",
+        "decision": "reject_as_government_guarantee_and_explain_product_risk",
+        "reason": "金融機構銷售、公司登記或廣告均不等於存款保險或本金保證；需核對契約相對人、商品性質、風險與退出條件。"
+      },
+      {
+        "original_claim": "受騙後可立刻報案並追回款項",
+        "decision": "retain_reporting_steps_without_recovery_guarantee",
+        "reason": "現行銀行防詐辦法設有存款業務機構受理流程與警方到場時限，但法定受理不等於款項一定攔阻或追回。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "暫停付款、閱讀契約及自行核對官方登記不需購買代辦服務；應避免追回款、解凍費或保證金等二次付款。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "rules": [
+      {
+        "title": "金融機構及提供虛擬資產服務之事業或人員防制詐欺犯罪危害應遵循事項辦法第28條",
+        "promulgated_or_revised_at": "2026-07-20",
+        "effective_at": "2026-07-20（沿革載明全文修正發布並自發布日施行）",
+        "current_text_url": "https://law.banking.gov.tw/Chi/FLAW/FLAWDOC01.aspx?lno=28&lsid=FL104315",
+        "history_url": "https://law.banking.gov.tw/Chi/FLAW/FLAWDAT07.aspx?lsid=FL104315",
+        "application": "依2026-07-20現行全文及第28條辦理；營業時間、親自到存款業務機構、身分與交易核對、切結書及165為適用流程條件。"
+      }
+    ]
+  }
+}

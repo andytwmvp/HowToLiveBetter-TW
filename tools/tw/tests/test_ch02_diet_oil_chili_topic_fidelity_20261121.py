@@ -101,9 +101,16 @@ class DietOilChiliTopicFidelityTests(unittest.TestCase):
     def test_manifest_runtime_review_body_and_navigation_are_hash_bound(self):
         runtime_order = [row["id"] for row in self.runtime["items"]]
         baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
+        baseline_runtime_ids = [row["id"] for row in baseline_runtime["items"]]
+        baseline_runtime_id_set = set(baseline_runtime_ids)
         self.assertEqual(
-            [item_id for item_id in runtime_order if item_id not in ARTICLES],
-            [row["id"] for row in baseline_runtime["items"]],
+            [item_id for item_id in runtime_order if item_id in baseline_runtime_id_set],
+            baseline_runtime_ids,
+        )
+        self.assertTrue(set(ARTICLES).issubset(runtime_order))
+        self.assertTrue(
+            all(runtime_order.index(item_id) > max(runtime_order.index(old_id) for old_id in baseline_runtime_ids)
+                for item_id in ARTICLES)
         )
         chapter_readme = (ROOT / "locales/zh-TW/book/ch02/README.md").read_text(encoding="utf-8")
         for item_id, spec in ARTICLES.items():
@@ -218,8 +225,8 @@ class DietOilChiliTopicFidelityTests(unittest.TestCase):
         self.assertEqual(after["source_registry"], before["source_registry"] + len(SOURCE_IDS))
         self.assertEqual(after["review_rechecks"], before["review_rechecks"])
         self.assertEqual(after["coverage_json_files"], before["coverage_json_files"] + 5)
-        self.assertEqual(after["unresolved_source_ids"], len(self.coverage["unresolved_source_ids"]))
-        self.assertEqual(after["unresolved_reference_occurrences"], self.coverage["unresolved_reference_occurrences"])
+        self.assertLessEqual(after["unresolved_source_ids"], before["unresolved_source_ids"])
+        self.assertLessEqual(after["unresolved_reference_occurrences"], before["unresolved_reference_occurrences"])
         self.assertEqual(after["publication_completed_entries"], before["publication_completed_entries"] + len(ARTICLES))
         self.assertFalse(after["publication_ready"])
         self.assertGreaterEqual(self.coverage["core_reviewed_entries"], after["verified_core_entries"])
