@@ -132,5 +132,12 @@
     "checked_at": "2026-11-22",
     "assessment": "本篇未提供會變動的法律資格或給付額度；服務與衛教資料按來源標示的適用日期查核。法規或服務內容改版時，依最新主管機關資料重新確認。"
   },
-  "prior_manifest_entry_sha256": "300b888d686adb8b8c059f74049454e4849aed320b94f452725adbd21285c5b1"
+  "prior_manifest_entry_sha256": "300b888d686adb8b8c059f74049454e4849aed320b94f452725adbd21285c5b1",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v4",
+    "before_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+    "after_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+    "before_reader_sha256": "e31fb7655a01761e81dfacfc18187f6988eefc742ef234898fbfe4b75afcb80c",
+    "after_reader_sha256": "1ec47b56af51d9bd569d5078cf1680ea2527c2e0f9833a3c4048028672f2b0fa"
+  }
 }

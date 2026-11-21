@@ -175,6 +175,8 @@ class Chapter20FeedingNutritionAndCh24RecheckTests(unittest.TestCase):
         self.assertEqual(stat["reported_values"], {"花生迴避組": 13.7, "花生攝取組": 1.9})
         self.assertIn("不反推人數", stat["limitations"][1])
         self.assertIn("英國", stat["limitations"][2])
+        self.assertIn("不反推人數", self.items["TW-20-012"]["limits"])
+        self.assertNotIn("專業人員審閱", self.items["TW-20-012"]["limits"])
 
         b12 = self.bodies["TW-20-014"]
         self.assertIn("一般植物性食品除非經營養強化", b12)
@@ -197,6 +199,9 @@ class Chapter20FeedingNutritionAndCh24RecheckTests(unittest.TestCase):
         prefix = baseline["substantive_rechecks"]
         self.assertEqual(self.rows[:len(prefix)], prefix)
         self.assertEqual(len(self.rows), len(prefix) + 1)
+        baseline_cleanups = baseline.get("reader_copy_cleanups", [])
+        current_cleanups = self.register.get("reader_copy_cleanups", [])
+        self.assertEqual(current_cleanups[:len(baseline_cleanups)], baseline_cleanups)
         row = self.batch_recheck
         review = self.reviews[RECHECK_ID]
         item = self.items[RECHECK_ID]
@@ -206,13 +211,44 @@ class Chapter20FeedingNutritionAndCh24RecheckTests(unittest.TestCase):
         self.assertEqual(row["before_sha256"], digest(old_item["body"].encode()))
         self.assertEqual(row["prior_review_sha256"], digest(old_review))
         self.assertEqual(row["after_sha256"], digest(item["body"].encode()))
-        self.assertEqual(row["review_sha256"], digest((ROOT / f"localization/reviews/{RECHECK_ID}.json").read_bytes()))
+        cleanup = audit._reader_copy_cleanup_for(ROOT, RECHECK_ID, row["after_sha256"])
+        if cleanup:
+            appended_cleanups = current_cleanups[len(baseline_cleanups):]
+            self.assertEqual(
+                {entry["id"] for entry in appended_cleanups},
+                {"TW-20-012", RECHECK_ID},
+            )
+            self.assertEqual(len(appended_cleanups), 2)
+            self.assertIn(cleanup, appended_cleanups)
+            cleanup_prior_review = git_bytes(
+                cleanup["prior_revision"], f"localization/reviews/{RECHECK_ID}.json"
+            )
+            self.assertEqual(row["review_sha256"], cleanup["prior_review_sha256"])
+            self.assertEqual(row["review_sha256"], digest(cleanup_prior_review))
+            audit.validate_reader_copy_cleanup_history(ROOT, cleanup, item)
+            self.assertEqual(
+                review["reader_copy_cleanup"],
+                {key: cleanup[key] for key in (
+                    "transform", "before_sha256", "after_sha256",
+                    "before_reader_sha256", "after_reader_sha256",
+                )},
+            )
+        else:
+            self.assertEqual(
+                row["review_sha256"],
+                digest((ROOT / f"localization/reviews/{RECHECK_ID}.json").read_bytes()),
+            )
         self.assertEqual(row["source_checks"], review["source_checks"])
         self.assertEqual(row["legal_temporal_checks"], review["legal_temporal_checks"])
         self.assertEqual(row["limits"], review["limits"])
         self.assertEqual(item["source_ids"], review["source_ids"])
         self.assertEqual(review["prior_review_sha256"], digest(old_review))
-        self.assertEqual(review["reader_copy_cleanup"], json.loads(old_review)["reader_copy_cleanup"])
+        prior_review_after_recheck = (json.loads(cleanup_prior_review)
+                                      if cleanup else review)
+        self.assertEqual(
+            prior_review_after_recheck["reader_copy_cleanup"],
+            json.loads(old_review)["reader_copy_cleanup"],
+        )
         self.assertEqual(review["source_reviewed_sha256"], digest(item["body"].encode()))
         self.assertEqual(review["review_due_at"], DUE)
         current_runtime = validate_runtime()

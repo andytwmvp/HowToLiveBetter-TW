@@ -51898,6 +51898,26 @@
       "before_reader_sha256": "81b9d210e63e6cc76692365536a6198967cafe697b0e04c721b47f71bdf399ec",
       "after_reader_sha256": "1811d8876b2940793fe2428420decb8ea0bd6b567f30122cfd936022bbf21543",
       "prior_review_sha256": "19ce8fbfea51633a0cbcfb8fc1f841e4185b6c779e57f264ae669647bbe95967"
+    },
+    {
+      "id": "TW-20-012",
+      "prior_revision": "6ff27c5ff74870e9fbdd06b874ff87c05048732e",
+      "transform": "reader_copy_cleanup_v4",
+      "before_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+      "after_sha256": "af90023dc05f538641697119ac950dceac8ab40db4df1168525b3012ef2f7917",
+      "before_reader_sha256": "e31fb7655a01761e81dfacfc18187f6988eefc742ef234898fbfe4b75afcb80c",
+      "after_reader_sha256": "1ec47b56af51d9bd569d5078cf1680ea2527c2e0f9833a3c4048028672f2b0fa",
+      "prior_review_sha256": "cbd1364107eecd855b77a33671cb079eda5cb01057ebbf6a92ba18763385ae64"
+    },
+    {
+      "id": "TW-24-014",
+      "prior_revision": "6ff27c5ff74870e9fbdd06b874ff87c05048732e",
+      "transform": "reader_copy_cleanup_v4",
+      "before_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
+      "after_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
+      "before_reader_sha256": "a9a9873ad9a5ead4c54cafc3c30d16bb6a78e366ed65b50485e2404d4e51651e",
+      "after_reader_sha256": "51c62e697b667806b60bab1e07914501a7cd74badb96ad5f03cdb3036369cc2e",
+      "prior_review_sha256": "72f68e073a9930164b98c3098fcb8facea8ca47d1e3db5f7e1afc6d566a0e7a3"
     }
   ],
   "draft_substantive_rechecks": [
