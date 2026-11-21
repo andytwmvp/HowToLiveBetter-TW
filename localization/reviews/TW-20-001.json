@@ -1,0 +1,131 @@
+{
+  "id": "TW-20-001",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-001.md",
+  "target_sha256": "a5f28436b8014a4a2f2a85644c79e6dcd02ae256bd49cfdac4178a7d4224af42",
+  "source_reviewed_sha256": "a5f28436b8014a4a2f2a85644c79e6dcd02ae256bd49cfdac4178a7d4224af42",
+  "before_sha256": null,
+  "after_sha256": "a5f28436b8014a4a2f2a85644c79e6dcd02ae256bd49cfdac4178a7d4224af42",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+  "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_safe_sleep_5steps",
+      "title": "國民健康署：嬰兒睡姿及睡眠環境5招安心睡",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4576&pid=15161",
+      "claim": "1歲以下每次睡眠仰睡、同室不同床、平坦堅實淨空床面；仰睡不增加一般嬰兒嗆奶風險。",
+      "supporting_passage": "1歲以下每次睡眠仰睡、同室不同床、平坦堅實淨空床面；仰睡不增加一般嬰兒嗆奶風險。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_hpa_safe_sleep_5ng",
+      "title": "國民健康署：仰睡最安全，避免5大NG睡眠行為（2025-04-17更新）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19020",
+      "claim": "安全睡眠五項措施及111至112年回溯個案分類：高度可預防猝死43位（睡姿8、環境35）；中度可預防猝死41位（睡姿4、環境37）。",
+      "supporting_passage": "安全睡眠五項措施及111至112年回溯個案分類：高度可預防猝死43位（睡姿8、環境35）；中度可預防猝死41位（睡姿4、環境37）。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_mohw_child_death_review",
+      "title": "衛生福利部：六歲以下兒童死亡原因回溯分析結果報告（111至112年個案）",
+      "url": "https://www.mohw.gov.tw/dl-89036-51344e54-f898-4e68-a14d-10b3ce5c2e43.html",
+      "claim": "111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中122位高度、56位中度可預防，並列猝死相關分類。",
+      "supporting_passage": "111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中122位高度、56位中度可預防，並列猝死相關分類。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留固定ID及原題照護需求，依台灣主管機關、台灣專業資料及在地服務入口獨立撰寫；不把原作中的境外規範、流程、發生率或風險機率套用為臺灣現況。",
+  "review_method": "逐篇核對原作固定ID、原始標題、manifest中的原作版本與來源雜湊、既有稿件狀態；直接查閱source_checks所列來源，逐項核對台灣情境、適用對象、行動步驟、警訊、費用／時間與制度日期。沒有台灣暴露分母時明示資料不足，不以通報數、單院病例或境外數據換算個人機率。此為首次正式發布，不列入歷史正文實質再審數。",
+  "limits": [
+    "111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中猝死相關分類是已選取死亡個案回溯結果，不是嬰兒出生世代、睡眠暴露或全國發生率；沒有各睡眠條件的使用母數，不能換算家庭個人機率。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "290c3fe0b41b37eff444c9238fdbe7ca110ee3bee5c81a5dc7fa0fe36e223622",
+  "source_ids": [
+    "tw20_hpa_safe_sleep_5steps",
+    "tw20_hpa_safe_sleep_5ng",
+    "tw20_mohw_child_death_review"
+  ],
+  "frequency_assessment": "衛福部回溯報告可描述特定縣市選取死亡個案中的分類，但欠缺嬰兒出生或睡眠暴露分母，不能推估全國發生率或個人機率。",
+  "statistics_assessed": [
+    {
+      "value": 43,
+      "unit": "選取死亡個案數",
+      "period": "2022至2023年（民國111至112年）",
+      "geographic_scope": "19個召開個案討論會議的縣市；非全台代表性抽樣",
+      "population": "依選案機制選取討論的六歲以下兒童死亡個案",
+      "numerator": 43,
+      "denominator": 344,
+      "event_definition": "高度可預防性個案中的猝死相關分類；其中8位與睡姿、35位與睡眠環境相關",
+      "data_type": "行政／專家個案回溯分類，不是世代發生率或睡眠暴露調查",
+      "accessed_at": "2026-11-21",
+      "source_ids": [
+        "tw20_mohw_child_death_review",
+        "tw20_hpa_safe_sleep_5ng"
+      ],
+      "limitations": "344是被討論死亡案例選案數，不是所有嬰兒或睡眠暴露人數；無睡姿與環境使用分母，有選案與分類限制，不可計算嬰兒猝死發生率或個人機率。"
+    },
+    {
+      "value": 41,
+      "unit": "選取死亡個案數",
+      "period": "2022至2023年（民國111至112年）",
+      "geographic_scope": "19個召開個案討論會議的縣市；非全台代表性抽樣",
+      "population": "依選案機制選取討論的六歲以下兒童死亡個案",
+      "numerator": 41,
+      "denominator": 344,
+      "event_definition": "中度可預防性個案中的猝死相關分類；其中4位與睡姿、37位與睡眠環境相關",
+      "data_type": "行政／專家個案回溯分類，不是世代發生率或睡眠暴露調查",
+      "accessed_at": "2026-11-21",
+      "source_ids": [
+        "tw20_mohw_child_death_review",
+        "tw20_hpa_safe_sleep_5ng"
+      ],
+      "limitations": "344是被討論死亡案例選案數，不是所有嬰兒或睡眠暴露人數；無睡姿與環境使用分母，有選案與分類限制，不可計算嬰兒猝死發生率或個人機率。"
+    }
+  ],
+  "unresolved_questions": [
+    "沒有找到可用台灣母群與暴露分母估算個人機率：111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中猝死相關分類是已選取死亡個案回溯結果，不是嬰兒出生世代、睡眠暴露或全國發生率；沒有各睡眠條件的使用母數，不能換算家庭個人機率。",
+    "尚未取得獨立專業審閱（範圍：兒科、新生兒照護、兒童睡眠安全）。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科",
+      "新生兒照護",
+      "兒童睡眠安全"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "未滿1歲嬰兒每次睡眠都仰睡，使用平坦堅實、沒有鬆軟物的獨立睡眠空間，和照顧者同室不同床。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "讓嬰兒期的孩子仰著睡，睡硬的平面，同房不同床，床上不放任何軟東西",
+    "reader_content_decision": "未滿1歲嬰兒每次睡眠都仰睡，使用平坦堅實、沒有鬆軟物的獨立睡眠空間，和照顧者同室不同床。 每次小睡或夜間睡眠都讓嬰兒仰躺在自己的嬰兒床；移除枕頭、棉被、填充玩具、床圍及定位用品，照顧者房內同室不同床。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "原作中的境外規範、程序、風險機率或醫療操作可直接套用在臺灣家庭。",
+        "decision": "exclude_unverified_foreign_jurisdiction_or_population_claims",
+        "reason": "來源不代表台灣制度或台灣母群證據；保留讀者仍需要的照護問題並依台灣可查核資料撰寫。"
+      },
+      {
+        "original_claim": "讓嬰兒期的孩子仰著睡，睡硬的平面，同房不同床，床上不放任何軟東西",
+        "decision": "retain_core_question_with_taiwan_specific_actions",
+        "reason": "保留原題嬰兒安全睡眠核心，採國健署在地建議呈現仰睡、同室不同床及淨空床面。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "主要措施不需特殊器材；嬰兒床費用依產品與家庭安排而異。不要為防翻或塑形購買可能形成鬆軟睡眠面的用品。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇不依賴境外法規或資格；費用和就醫流程按台灣院所與當下個別狀況確認。"
+  }
+}

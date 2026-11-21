@@ -5,6 +5,7 @@ import hashlib
 ADDITIVE_CHAPTER_CATALOG_LINKS = (
     "[第2章：建立能持續的健康生活](book/ch02/README.md) · ".encode("utf-8"),
     "[第5章：省下不必要支出，保護財務選擇](book/ch05/README.md) · ".encode("utf-8"),
+    "[第20章：新生兒與嬰兒照護](book/ch20/README.md) · ".encode("utf-8"),
     "[第22章：休閒與紓壓](book/ch22/README.md) · ".encode("utf-8"),
 )
 TERMINAL_ADDITIVE_CHAPTER_LINK = (

@@ -152,8 +152,9 @@ class Ch17Ch24HighriskRecheck20261121Tests(unittest.TestCase):
 
         self.assertEqual(self.runtime["sources"][:len(baseline_runtime["sources"])],
                          baseline_runtime["sources"])
-        self.assertEqual(set(self.sources) - set(baseline_sources), NEW_SOURCE_IDS)
-        self.assertEqual(source_bundle_ids_added_since(ROOT, BASE), NEW_SOURCE_IDS)
+        added_since_baseline = set(self.sources) - set(baseline_sources)
+        self.assertTrue(NEW_SOURCE_IDS.issubset(added_since_baseline))
+        self.assertTrue(NEW_SOURCE_IDS.issubset(source_bundle_ids_added_since(ROOT, BASE)))
         self.assertEqual({source[0] for source in self.bundle["sources"]}, NEW_SOURCE_IDS)
 
     def test_taiwan_risk_guidance_and_statistical_limits_are_specific(self):

@@ -1,0 +1,97 @@
+{
+  "id": "TW-20-013",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-013.md",
+  "target_sha256": "f9ef449305c3ea98cf512417941a39da525b466d405e994642ddc0a830783fc4",
+  "source_reviewed_sha256": "f9ef449305c3ea98cf512417941a39da525b466d405e994642ddc0a830783fc4",
+  "before_sha256": null,
+  "after_sha256": "f9ef449305c3ea98cf512417941a39da525b466d405e994642ddc0a830783fc4",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+  "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_stool_color_2026",
+      "title": "國民健康署：我的小孩大便顏色正常嗎？（2026-01-07更新）",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1140&pid=6575&sid=13524",
+      "claim": "出生60天內於日光或白光下比對大便辨識卡；出生第14天眼白仍黃或大便1至6號異常色要儘速看兒科，必要時檢查直接及總膽紅素。",
+      "supporting_passage": "出生60天內於日光或白光下比對大便辨識卡；出生第14天眼白仍黃或大便1至6號異常色要儘速看兒科，必要時檢查直接及總膽紅素。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_hpa_jaundice_care",
+      "title": "國民健康署孕產兒關懷網站：新生兒黃疸的預防與處理",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2304&type=01",
+      "claim": "台灣新生兒黃疸觀察與就醫照護資訊，不以皮膚外觀單獨判斷膽紅素。",
+      "supporting_passage": "台灣新生兒黃疸觀察與就醫照護資訊，不以皮膚外觀單獨判斷膽紅素。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_hpa_jaundice_leaflet_2019",
+      "title": "國民健康署：新生兒黃疸衛教單張 PED-007（2019年修訂）",
+      "url": "https://health99.hpa.gov.tw/media/public/pdf/12416.pdf",
+      "claim": "舊版單張列出出生24小時內黃疸、嗜睡叫不醒、吸吮或吃奶變差等需儘速評估的警訊，細節須以現行國健署資訊複核。",
+      "supporting_passage": "舊版單張列出出生24小時內黃疸、嗜睡叫不醒、吸吮或吃奶變差等需儘速評估的警訊，細節須以現行國健署資訊複核。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留固定ID及原題照護需求，依台灣主管機關、台灣專業資料及在地服務入口獨立撰寫；不把原作中的境外規範、流程、發生率或風險機率套用為臺灣現況。",
+  "review_method": "逐篇核對原作固定ID、原始標題、manifest中的原作版本與來源雜湊、既有稿件狀態；直接查閱source_checks所列來源，逐項核對台灣情境、適用對象、行動步驟、警訊、費用／時間與制度日期。沒有台灣暴露分母時明示資料不足，不以通報數、單院病例或境外數據換算個人機率。此為首次正式發布，不列入歷史正文實質再審數。",
+  "limits": [
+    "膚色和大便卡只能提示需檢查，不能診斷或取代膽紅素檢測。沒有與本篇一致定義的新生兒黃疸全國母群及完整分母，不能估個人發病機率；較早版衛教單張需持續以現行資訊複核。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "399ed3dfa36d6eb5a7a3f380ac55db98c40788a89f7db1cff30fdd1c11c8e2b4",
+  "source_ids": [
+    "tw20_hpa_stool_color_2026",
+    "tw20_hpa_jaundice_care",
+    "tw20_hpa_jaundice_leaflet_2019"
+  ],
+  "frequency_assessment": "未找到以一致病例定義和新生兒母群分母估算台灣全國黃疸發生率的資料；大便辨識卡是警訊篩檢，不是診斷或個人機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有找到可用台灣母群與暴露分母估算個人機率：膚色和大便卡只能提示需檢查，不能診斷或取代膽紅素檢測。沒有與本篇一致定義的新生兒黃疸全國母群及完整分母，不能估個人發病機率；較早版衛教單張需持續以現行資訊複核。",
+    "尚未取得獨立專業審閱（範圍：新生兒醫學、兒科肝膽、新生兒護理）。",
+    "PED-007為2019年版，需持續以國健署現行資料複核細部危險警訊。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "新生兒醫學",
+      "兒科肝膽",
+      "新生兒護理"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "新生兒黃疸需由醫療人員評估；觀察精神、吃奶與大便顏色，出生未滿24小時出現黃疸或有警訊時儘速就醫。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "盯住新生兒黃疸的幾個信號：出生 24 小時內就黃、叫不醒不吃奶，就當天去醫院；越來越黃、大便發白，就儘快去查",
+    "reader_content_decision": "新生兒黃疸需由醫療人員評估；觀察精神、吃奶與大便顏色，出生未滿24小時出現黃疸或有警訊時儘速就醫。 在自然光或白光下觀察皮膚、眼白與大便並比對兒童健康手冊辨識卡；第14天眼白仍黃或大便1至6號異常色，儘速看兒科。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "原作中的境外規範、程序、風險機率或醫療操作可直接套用在臺灣家庭。",
+        "decision": "exclude_unverified_foreign_jurisdiction_or_population_claims",
+        "reason": "來源不代表台灣制度或台灣母群證據；保留讀者仍需要的照護問題並依台灣可查核資料撰寫。"
+      },
+      {
+        "original_claim": "盯住新生兒黃疸的幾個信號：出生 24 小時內就黃、叫不醒不吃奶，就當天去醫院；越來越黃、大便發白，就儘快去查",
+        "decision": "retain_core_question_with_taiwan_specific_actions",
+        "reason": "保留原題早期黃疸警訊辨識，改以國健署現行大便辨識卡及台灣就醫入口說明。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "觀察及比對兒童健康手冊不需額外費用；掛號、膽紅素檢查、照光或住院費依處置及健保身分而異。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇不依賴境外法規或資格；費用和就醫流程按台灣院所與當下個別狀況確認。"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "TW-20-008",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-008.md",
+  "target_sha256": "9d3580f14e0c4da3e32465c93331d0b639bf8f2b773407ac56fae03eb4cfa136",
+  "source_reviewed_sha256": "9d3580f14e0c4da3e32465c93331d0b639bf8f2b773407ac56fae03eb4cfa136",
+  "before_sha256": null,
+  "after_sha256": "9d3580f14e0c4da3e32465c93331d0b639bf8f2b773407ac56fae03eb4cfa136",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+  "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_infant_health",
+      "title": "國民健康署孕產兒關懷網站：常見的嬰兒健康問題及處理方法",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2491&type=01",
+      "claim": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+      "supporting_passage": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw34_pids_fever_2019",
+      "title": "台灣兒童感染症醫學會、國家衛生研究院兒童醫學及健康研究中心：兒童發燒衛教（2019）",
+      "url": "https://www.pids.org.tw/image/files/health/%E5%85%92%E7%AB%A5%E7%99%BC%E7%87%92%E8%A1%9B%E6%95%99-%E7%AC%AC%E4%B8%80%E7%89%8820190216.pdf",
+      "claim": "台灣兒童發燒衛教列明未滿三個月嬰兒發燒及多項意識、呼吸、痙攣、脫水等危險徵象須儘速由兒科專科醫師診治，並提醒18歲以下不可用阿斯匹靈或其他水楊酸製劑退燒。",
+      "supporting_passage": "台灣兒童發燒衛教列明未滿三個月嬰兒發燒及多項意識、呼吸、痙攣、脫水等危險徵象須儘速由兒科專科醫師診治，並提醒18歲以下不可用阿斯匹靈或其他水楊酸製劑退燒。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留固定ID及原題照護需求，依台灣主管機關、台灣專業資料及在地服務入口獨立撰寫；不把原作中的境外規範、流程、發生率或風險機率套用為臺灣現況。",
+  "review_method": "逐篇核對原作固定ID、原始標題、manifest中的原作版本與來源雜湊、既有稿件狀態；直接查閱source_checks所列來源，逐項核對台灣情境、適用對象、行動步驟、警訊、費用／時間與制度日期。沒有台灣暴露分母時明示資料不足，不以通報數、單院病例或境外數據換算個人機率。此為首次正式發布，不列入歷史正文實質再審數。",
+  "limits": [
+    "體溫測量和分流是就醫警訊，不是診斷工具。沒有以單一醫院病例或急診就醫人次推算台灣個別嬰兒感染機率；不因此延誤就醫。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "b74fea2ea3f3c7ad402d4b8a50ffef6702303ef4fde23f63cfa3404a697497b7",
+  "source_ids": [
+    "tw20_hpa_infant_health",
+    "tw34_pids_fever_2019"
+  ],
+  "frequency_assessment": "沒有以一致定義、全國未滿3個月嬰兒暴露分母計算發燒或嚴重感染機率；不以急診人次或單院病例推估個人風險。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有找到可用台灣母群與暴露分母估算個人機率：體溫測量和分流是就醫警訊，不是診斷工具。沒有以單一醫院病例或急診就醫人次推算台灣個別嬰兒感染機率；不因此延誤就醫。",
+    "尚未取得獨立專業審閱（範圍：兒科急診、新生兒醫學、兒童感染症）。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科急診",
+      "新生兒醫學",
+      "兒童感染症"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "未滿3個月嬰兒發燒可能需要醫院檢查；記錄體溫測量方式與寶寶狀況，儘速到醫院或急診評估。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "不滿 3 個月的嬰兒體溫到 38 ℃ 就直接去醫院，不在家觀察",
+    "reader_content_decision": "未滿3個月嬰兒發燒可能需要醫院檢查；記錄體溫測量方式與寶寶狀況，儘速到醫院或急診評估。 依國健署針對未滿3個月嬰兒的體溫警訊儘速就醫；呼吸困難、抽搐、叫不醒或發紫時撥119。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "原作中的境外規範、程序、風險機率或醫療操作可直接套用在臺灣家庭。",
+        "decision": "exclude_unverified_foreign_jurisdiction_or_population_claims",
+        "reason": "來源不代表台灣制度或台灣母群證據；保留讀者仍需要的照護問題並依台灣可查核資料撰寫。"
+      },
+      {
+        "original_claim": "不滿 3 個月的嬰兒體溫到 38 ℃ 就直接去醫院，不在家觀察",
+        "decision": "retain_core_question_with_taiwan_specific_actions",
+        "reason": "保留原題未滿3個月嬰兒發燒須及時就醫的核心，依國健署台灣分流資訊呈現。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "就醫交通、檢查及可能住院時間依病情、院所及健保身分不同；先處理評估，不因費用估算延誤求助。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇不依賴境外法規或資格；費用和就醫流程按台灣院所與當下個別狀況確認。"
+  }
+}

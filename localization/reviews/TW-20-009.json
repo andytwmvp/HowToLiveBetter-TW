@@ -1,0 +1,107 @@
+{
+  "id": "TW-20-009",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-009.md",
+  "target_sha256": "ba52da207672e25acdfcf4816f6a96fa1c24dcc26ae57ea77548d483ec61d9a4",
+  "source_reviewed_sha256": "ba52da207672e25acdfcf4816f6a96fa1c24dcc26ae57ea77548d483ec61d9a4",
+  "before_sha256": null,
+  "after_sha256": "ba52da207672e25acdfcf4816f6a96fa1c24dcc26ae57ea77548d483ec61d9a4",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+  "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_infant_health",
+      "title": "國民健康署孕產兒關懷網站：常見的嬰兒健康問題及處理方法",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2491&type=01",
+      "claim": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+      "supporting_passage": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_hpa_no_shake",
+      "title": "國民健康署：不要劇烈搖晃、拋接或旋轉寶寶",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4576&pid=15712",
+      "claim": "不可劇烈搖晃、拋接、旋轉或甩動嬰兒，以避免受虐性頭部外傷。",
+      "supporting_passage": "不可劇烈搖晃、拋接、旋轉或甩動嬰兒，以避免受虐性頭部外傷。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_mohw_3hearts",
+      "title": "衛生福利部：安撫哭鬧寶寶的「3心」妙招",
+      "url": "https://www.mohw.gov.tw/cp-5269-69963-1.html",
+      "claim": "衛福部嬰兒哭鬧安撫方法與照顧者支持原則。",
+      "supporting_passage": "衛福部嬰兒哭鬧安撫方法與照顧者支持原則。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_hpa_calm_baby",
+      "title": "國民健康署孕產兒關懷網站：新生兒哭鬧如何安撫",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2295&type=01",
+      "claim": "嬰兒哭鬧照護、安撫及照顧者求助資訊。",
+      "supporting_passage": "嬰兒哭鬧照護、安撫及照顧者求助資訊。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留固定ID及原題照護需求，依台灣主管機關、台灣專業資料及在地服務入口獨立撰寫；不把原作中的境外規範、流程、發生率或風險機率套用為臺灣現況。",
+  "review_method": "逐篇核對原作固定ID、原始標題、manifest中的原作版本與來源雜湊、既有稿件狀態；直接查閱source_checks所列來源，逐項核對台灣情境、適用對象、行動步驟、警訊、費用／時間與制度日期。沒有台灣暴露分母時明示資料不足，不以通報數、單院病例或境外數據換算個人機率。此為首次正式發布，不列入歷史正文實質再審數。",
+  "limits": [
+    "台灣沒有可用一致事件定義與嬰兒照顧暴露分母估算受虐性頭部外傷個人風險的全國資料；不以境外病例或通報數換算發生率。「放回安全床並短暫離開」是結合國健署安全睡眠及安撫資訊的操作建議，待兒童保護或親職專業確認措辭。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "38e238eddb9d809139ab6be27c81f5f58c9d73792f21c28775a9633c0f5158b2",
+  "source_ids": [
+    "tw20_hpa_infant_health",
+    "tw20_hpa_no_shake",
+    "tw20_mohw_3hearts",
+    "tw20_hpa_calm_baby"
+  ],
+  "frequency_assessment": "未找到可估算台灣嬰兒受虐性頭部外傷發生率的全國照顧暴露分母和一致病例定義；不引用境外病例數當台灣個人機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有找到可用台灣母群與暴露分母估算個人機率：台灣沒有可用一致事件定義與嬰兒照顧暴露分母估算受虐性頭部外傷個人風險的全國資料；不以境外病例或通報數換算發生率。「放回安全床並短暫離開」是結合國健署安全睡眠及安撫資訊的操作建議，待兒童保護或親職專業確認措辭。",
+    "尚未取得獨立專業審閱（範圍：兒科急診、兒童保護、嬰兒照護與親職支持）。",
+    "照顧者將寶寶放回安全床並短暫離開的整合指引，尚待兒童保護或親職專業人員確認措辭。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科急診",
+      "兒童保護",
+      "嬰兒照護與親職支持"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "嬰兒哭鬧時可輪流安撫與求援；不可劇烈搖晃、拋接或旋轉，疑似受傷應及時就醫。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "無論多累多氣都不要搖晃嬰兒",
+    "reader_content_decision": "嬰兒哭鬧時可輪流安撫與求援；不可劇烈搖晃、拋接或旋轉，疑似受傷應及時就醫。 若快失控，將寶寶仰躺放在安全、淨空的嬰兒床並請可信任成人接手；曾劇烈搖晃、拋接或撞擊時儘速到急診評估；嚴重症狀撥119。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "原作中的境外規範、程序、風險機率或醫療操作可直接套用在臺灣家庭。",
+        "decision": "exclude_unverified_foreign_jurisdiction_or_population_claims",
+        "reason": "來源不代表台灣制度或台灣母群證據；保留讀者仍需要的照護問題並依台灣可查核資料撰寫。"
+      },
+      {
+        "original_claim": "無論多累多氣都不要搖晃嬰兒",
+        "decision": "retain_core_question_with_taiwan_specific_actions",
+        "reason": "原題禁止搖晃的安全核心完整保留，補充台灣家庭照顧者可採取的暫停、換手、就醫和119求援方式。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "輪流照顧或打電話求助不需額外費用；急診及後續服務依病況和健保身分。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇不依賴境外法規或資格；費用和就醫流程按台灣院所與當下個別狀況確認。"
+  }
+}

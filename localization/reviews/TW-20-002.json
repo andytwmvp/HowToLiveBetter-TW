@@ -1,0 +1,107 @@
+{
+  "id": "TW-20-002",
+  "reviewer": "ChatGPT（AI協助查核；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-002.md",
+  "target_sha256": "0aba5daeba6b3b771f6ae479034f05f39c8297a80cebd1834eb1dc489cf40418",
+  "source_reviewed_sha256": "0aba5daeba6b3b771f6ae479034f05f39c8297a80cebd1834eb1dc489cf40418",
+  "before_sha256": null,
+  "after_sha256": "0aba5daeba6b3b771f6ae479034f05f39c8297a80cebd1834eb1dc489cf40418",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+  "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+  "source_checks": [
+    {
+      "source_id": "tw20_cdc_schedule_11509",
+      "title": "疾管署：現行兒童預防接種時程表（115年9月版；2026-07-15更新）",
+      "url": "https://www.cdc.gov.tw/Category/Page/TxRW-x3WzvPhvEtxM628GA",
+      "claim": "疾管署目前兒童常規疫苗時程頁，列出115年9月版時程表，頁面更新日2026-07-15。",
+      "supporting_passage": "疾管署目前兒童常規疫苗時程頁，列出115年9月版時程表，頁面更新日2026-07-15。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_cdc_hepb_vaccine",
+      "title": "疾管署：B型肝炎疫苗",
+      "url": "https://www.cdc.gov.tw/Category/Page/E8uaEwWTLCW_axUVTbDn1g",
+      "claim": "台灣B型肝炎疫苗常規接種資訊；劑次日期依現行兒童時程表。",
+      "supporting_passage": "台灣B型肝炎疫苗常規接種資訊；劑次日期依現行兒童時程表。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_cdc_hbig_eligibility",
+      "title": "疾管署：B型肝炎免疫球蛋白接種對象",
+      "url": "https://www.cdc.gov.tw/Category/Page/AkwlA8rAOvUznSpyy46rvQ",
+      "claim": "母親HBsAg陽性新生兒為公費HBIG對象，不論e抗原陰陽，出生24小時內儘速接種HBIG及第1劑B肝疫苗。",
+      "supporting_passage": "母親HBsAg陽性新生兒為公費HBIG對象，不論e抗原陰陽，出生24小時內儘速接種HBIG及第1劑B肝疫苗。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    },
+    {
+      "source_id": "tw20_cdc_hbig_qna",
+      "title": "疾管署：B型肝炎免疫球蛋白Q&A（2019-08-08更新）",
+      "url": "https://www.cdc.gov.tw/Category/QAPage/WhgGPa8ifNOZ7i6iFakM3A",
+      "claim": "HBsAg陽性母親之早產或低體重嬰兒臨床穩定時儘速接種；出生體重低於2000公克者出生劑次不列入後續3劑；低於600公克者待臨床穩定接種疫苗。",
+      "supporting_passage": "HBsAg陽性母親之早產或低體重嬰兒臨床穩定時儘速接種；出生體重低於2000公克者出生劑次不列入後續3劑；低於600公克者待臨床穩定接種疫苗。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留固定ID及原題照護需求，依台灣主管機關、台灣專業資料及在地服務入口獨立撰寫；不把原作中的境外規範、流程、發生率或風險機率套用為臺灣現況。",
+  "review_method": "逐篇核對原作固定ID、原始標題、manifest中的原作版本與來源雜湊、既有稿件狀態；直接查閱source_checks所列來源，逐項核對台灣情境、適用對象、行動步驟、警訊、費用／時間與制度日期。沒有台灣暴露分母時明示資料不足，不以通報數、單院病例或境外數據換算個人機率。此為首次正式發布，不列入歷史正文實質再審數。",
+  "limits": [
+    "公費時程依疾管署現行公告；低出生體重、極低出生體重及母親檢驗狀態會改變劑次安排。沒有以疫苗接種率或帶原盛行率估算個別新生兒感染機率。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "0fe817f4eda57dd5ad2e20afd5c59792d7ee3c1487f9a13c87844b1cf771e5e1",
+  "source_ids": [
+    "tw20_cdc_schedule_11509",
+    "tw20_cdc_hepb_vaccine",
+    "tw20_cdc_hbig_eligibility",
+    "tw20_cdc_hbig_qna"
+  ],
+  "frequency_assessment": "本篇說明預防接種時程，不以全國帶原盛行率、境外母嬰感染比例或未接種數推算個別寶寶感染機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有找到可用台灣母群與暴露分母估算個人機率：公費時程依疾管署現行公告；低出生體重、極低出生體重及母親檢驗狀態會改變劑次安排。沒有以疫苗接種率或帶原盛行率估算個別新生兒感染機率。",
+    "尚未取得獨立專業審閱（範圍：兒科感染症、新生兒醫學、預防接種政策）。",
+    "疾管署HBIG Q&A最後更新2019-08-08；雖與11509時程頁（2026-07-15更新）交叉核對，低出生體重個案仍應由出生院所依最新公告與臨床狀況確認。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科感染症",
+      "新生兒醫學",
+      "預防接種政策"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "依台灣公費時程完成出生後B型肝炎疫苗系列；母親HBsAg陽性時，寶寶須於出生24小時內儘速接種HBIG及疫苗，低出生體重另有安排。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "出生後 24 小時內打上乙肝疫苗第一針",
+    "reader_content_decision": "依台灣公費時程完成出生後B型肝炎疫苗系列；母親HBsAg陽性時，寶寶須於出生24小時內儘速接種HBIG及疫苗，低出生體重另有安排。 出院前確認出生劑次與後續時程；母親HBsAg陽性、結果不明、早產、低出生體重或住院時，請出生院所安排個別接種和HBIG。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "原作中的境外規範、程序、風險機率或醫療操作可直接套用在臺灣家庭。",
+        "decision": "exclude_unverified_foreign_jurisdiction_or_population_claims",
+        "reason": "來源不代表台灣制度或台灣母群證據；保留讀者仍需要的照護問題並依台灣可查核資料撰寫。"
+      },
+      {
+        "original_claim": "出生後 24 小時內打上乙肝疫苗第一針",
+        "decision": "retain_core_question_with_taiwan_specific_actions",
+        "reason": "保留原題出生後及時接種核心，採用疾管署現行公費時程及HBIG對象，補上早產、低出生體重例外。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "常規疫苗及符合條件的HBIG依公費計畫提供；其他掛號或院所費用依所在地和接種安排，向衛生所或院所確認。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "疫苗時程以疾管署11509版（2026-07-15更新）並列2019年HBIG問答及低出生體重個別規則；其他篇無境外法律或費用可套用，依台灣醫療院所、健保身分及個別情形確認。"
+  }
+}

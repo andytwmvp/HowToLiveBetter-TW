@@ -1,0 +1,512 @@
+{
+  "stage": "chapter20_infant_safety_first_publication",
+  "baseline_main_sha": "b2c31fe1eb414e7f9bf869d2044022823bce1ceb",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "article_ids": [
+    "TW-20-001",
+    "TW-20-002",
+    "TW-20-005",
+    "TW-20-008",
+    "TW-20-009",
+    "TW-20-013"
+  ],
+  "new_source_ids": [
+    "tw20_hpa_safe_sleep_5steps",
+    "tw20_hpa_safe_sleep_5ng",
+    "tw20_mohw_child_death_review",
+    "tw20_cdc_schedule_11509",
+    "tw20_cdc_hepb_vaccine",
+    "tw20_cdc_hbig_eligibility",
+    "tw20_cdc_hbig_qna",
+    "tw20_hpa_formula_preparation",
+    "tw20_hpa_newborn_feeding",
+    "tw20_vghtc_formula_guide_2026",
+    "tw20_hpa_infant_health",
+    "tw20_hpa_no_shake",
+    "tw20_mohw_3hearts",
+    "tw20_hpa_calm_baby",
+    "tw20_hpa_stool_color_2026",
+    "tw20_hpa_jaundice_care",
+    "tw20_hpa_jaundice_leaflet_2019"
+  ],
+  "reused_source_ids": [
+    "tw34_pids_fever_2019"
+  ],
+  "items": [
+    {
+      "id": "TW-20-001",
+      "title": "嬰兒每次睡覺都仰睡，使用平坦堅實且淨空的睡眠空間",
+      "source_ids": [
+        "tw20_hpa_safe_sleep_5steps",
+        "tw20_hpa_safe_sleep_5ng",
+        "tw20_mohw_child_death_review"
+      ],
+      "summary": "未滿1歲嬰兒每次睡眠都仰睡，使用平坦堅實、沒有鬆軟物的獨立睡眠空間，和照顧者同室不同床。",
+      "action": "每次小睡或夜間睡眠都讓嬰兒仰躺在自己的嬰兒床；移除枕頭、棉被、填充玩具、床圍及定位用品，照顧者房內同室不同床。",
+      "limits": "111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中猝死相關分類是已選取死亡個案回溯結果，不是嬰兒出生世代、睡眠暴露或全國發生率；沒有各睡眠條件的使用母數，不能換算家庭個人機率。",
+      "question": "我是否每次都讓未滿1歲的寶寶仰睡，並保持自己的睡眠空間平坦、堅實且淨空？",
+      "body": "<!-- TW-ID: TW-20-001 -->\n\n# 嬰兒每次睡覺都仰睡，使用平坦堅實且淨空的睡眠空間\n\n## 適用情境與第一步\n\n適用於未滿1歲嬰兒每一次小睡和夜間睡眠。把寶寶放下睡覺時，先讓他仰躺在自己的嬰兒床或其他合適的嬰兒睡眠空間；床墊要平坦、堅實，床面只留合身床單。嬰兒床可放在照顧者房間，方便夜間照料，採取「同室不同床」。\n\n不要讓寶寶趴睡或側睡，也不要在床上放枕頭、棉被、毯子、填充玩具、床圍、防撞墊或定位用品。不要讓嬰兒睡在成人床、沙發或照顧者懷中；大人可能不知不覺睡著。餵奶或安撫後，清醒時抱著沒有問題，準備睡覺就把寶寶放回自己的睡眠空間。\n\n仰睡不會增加一般嬰兒嗆奶的風險。若寶寶有特殊疾病、醫療器材或醫師交代的睡姿限制，請依醫療團隊針對該名嬰兒的指示，不自行用枕頭墊高或固定姿勢。\n\n## 台灣家庭可以怎麼做\n\n- 白天小睡、晚上入睡及每次重新放回床上，都先仰躺；不要因為長輩擔心頭型、吐奶或覺得趴睡較安穩而改成趴睡。\n- 嬰兒床放在照顧者伸手可及的位置，但與大人床分開。夜間餵奶後，將寶寶放回嬰兒床；照顧者疲累、飲酒或服用會使人嗜睡的藥物時，尤其不要抱著寶寶在床上或沙發上睡著。\n- 維持室內舒適、不過熱；可用適合室溫的睡衣或穿著式睡袋保暖，不以鬆軟棉被覆蓋口鼻。\n- 不需購買防翻枕、睡眠巢或床圍來「保護」寶寶。已有的用品若會形成鬆軟或遮住口鼻的表面，移出睡眠空間。\n\n## 風險與資料限制\n\n衛生福利部111至112年六歲以下兒童死亡原因回溯分析，在19個縣市依選案機制討論344位死亡個案；122位被評為高度可預防，其中43位與猝死相關，報告並列出8位與睡姿、35位與睡眠環境相關。另有56位被評為中度可預防，其中41位與猝死相關。這是經篩選的死亡個案回溯，不是所有嬰兒的出生世代或睡眠暴露調查；沒有各種睡姿與環境的使用母數，不能換算成嬰兒猝死發生率或家庭個人機率。\n\n安全睡眠的主要做法不需特殊器材；購置嬰兒床的費用依產品而異。選購前先確認床體、床墊及使用方式符合製造商說明，避免把額外墊物放進睡眠空間。\n\n## 參考資料\n\n- [國民健康署：嬰兒睡姿及睡眠環境5招安心睡](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4576&pid=15161)\n- [國民健康署：仰睡最安全，避免5大NG睡眠行為](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19020)\n- [衛生福利部：六歲以下兒童死亡原因回溯分析結果報告（111至112年個案）](https://www.mohw.gov.tw/dl-89036-51344e54-f898-4e68-a14d-10b3ce5c2e43.html)\n",
+      "after_sha256": "a5f28436b8014a4a2f2a85644c79e6dcd02ae256bd49cfdac4178a7d4224af42",
+      "target_sha256": "a5f28436b8014a4a2f2a85644c79e6dcd02ae256bd49cfdac4178a7d4224af42",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+      "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+      "source_checks": [
+        {
+          "source_id": "tw20_hpa_safe_sleep_5steps",
+          "title": "國民健康署：嬰兒睡姿及睡眠環境5招安心睡",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4576&pid=15161",
+          "claim": "1歲以下每次睡眠仰睡、同室不同床、平坦堅實淨空床面；仰睡不增加一般嬰兒嗆奶風險。",
+          "supporting_passage": "1歲以下每次睡眠仰睡、同室不同床、平坦堅實淨空床面；仰睡不增加一般嬰兒嗆奶風險。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_hpa_safe_sleep_5ng",
+          "title": "國民健康署：仰睡最安全，避免5大NG睡眠行為（2025-04-17更新）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4878&pid=19020",
+          "claim": "安全睡眠五項措施及111至112年回溯個案分類：高度可預防猝死43位（睡姿8、環境35）；中度可預防猝死41位（睡姿4、環境37）。",
+          "supporting_passage": "安全睡眠五項措施及111至112年回溯個案分類：高度可預防猝死43位（睡姿8、環境35）；中度可預防猝死41位（睡姿4、環境37）。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_mohw_child_death_review",
+          "title": "衛生福利部：六歲以下兒童死亡原因回溯分析結果報告（111至112年個案）",
+          "url": "https://www.mohw.gov.tw/dl-89036-51344e54-f898-4e68-a14d-10b3ce5c2e43.html",
+          "claim": "111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中122位高度、56位中度可預防，並列猝死相關分類。",
+          "supporting_passage": "111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中122位高度、56位中度可預防，並列猝死相關分類。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-001.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "沒有找到可用台灣母群與暴露分母估算個人機率：111至112年19縣市依選案機制討論344位六歲以下死亡個案，其中猝死相關分類是已選取死亡個案回溯結果，不是嬰兒出生世代、睡眠暴露或全國發生率；沒有各睡眠條件的使用母數，不能換算家庭個人機率。",
+        "尚未取得獨立專業審閱（範圍：兒科、新生兒照護、兒童睡眠安全）。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科",
+          "新生兒照護",
+          "兒童睡眠安全"
+        ]
+      },
+      "statistics_assessed": [
+        {
+          "value": 43,
+          "unit": "選取死亡個案數",
+          "period": "2022至2023年（民國111至112年）",
+          "geographic_scope": "19個召開個案討論會議的縣市；非全台代表性抽樣",
+          "population": "依選案機制選取討論的六歲以下兒童死亡個案",
+          "numerator": 43,
+          "denominator": 344,
+          "event_definition": "高度可預防性個案中的猝死相關分類；其中8位與睡姿、35位與睡眠環境相關",
+          "data_type": "行政／專家個案回溯分類，不是世代發生率或睡眠暴露調查",
+          "accessed_at": "2026-11-21",
+          "source_ids": [
+            "tw20_mohw_child_death_review",
+            "tw20_hpa_safe_sleep_5ng"
+          ],
+          "limitations": "344是被討論死亡案例選案數，不是所有嬰兒或睡眠暴露人數；無睡姿與環境使用分母，有選案與分類限制，不可計算嬰兒猝死發生率或個人機率。"
+        },
+        {
+          "value": 41,
+          "unit": "選取死亡個案數",
+          "period": "2022至2023年（民國111至112年）",
+          "geographic_scope": "19個召開個案討論會議的縣市；非全台代表性抽樣",
+          "population": "依選案機制選取討論的六歲以下兒童死亡個案",
+          "numerator": 41,
+          "denominator": 344,
+          "event_definition": "中度可預防性個案中的猝死相關分類；其中4位與睡姿、37位與睡眠環境相關",
+          "data_type": "行政／專家個案回溯分類，不是世代發生率或睡眠暴露調查",
+          "accessed_at": "2026-11-21",
+          "source_ids": [
+            "tw20_mohw_child_death_review",
+            "tw20_hpa_safe_sleep_5ng"
+          ],
+          "limitations": "344是被討論死亡案例選案數，不是所有嬰兒或睡眠暴露人數；無睡姿與環境使用分母，有選案與分類限制，不可計算嬰兒猝死發生率或個人機率。"
+        }
+      ],
+      "frequency_assessment": "衛福部回溯報告可描述特定縣市選取死亡個案中的分類，但欠缺嬰兒出生或睡眠暴露分母，不能推估全國發生率或個人機率。"
+    },
+    {
+      "id": "TW-20-002",
+      "title": "新生兒B型肝炎疫苗，依台灣時程在出生後儘速接種",
+      "source_ids": [
+        "tw20_cdc_schedule_11509",
+        "tw20_cdc_hepb_vaccine",
+        "tw20_cdc_hbig_eligibility",
+        "tw20_cdc_hbig_qna"
+      ],
+      "summary": "依台灣公費時程完成出生後B型肝炎疫苗系列；母親HBsAg陽性時，寶寶須於出生24小時內儘速接種HBIG及疫苗，低出生體重另有安排。",
+      "action": "出院前確認出生劑次與後續時程；母親HBsAg陽性、結果不明、早產、低出生體重或住院時，請出生院所安排個別接種和HBIG。",
+      "limits": "公費時程依疾管署現行公告；低出生體重、極低出生體重及母親檢驗狀態會改變劑次安排。沒有以疫苗接種率或帶原盛行率估算個別新生兒感染機率。",
+      "question": "我是否在出院前確認寶寶的B型肝炎疫苗接種紀錄和後續日期？",
+      "body": "<!-- TW-ID: TW-20-002 -->\n\n# 新生兒B型肝炎疫苗，依台灣時程在出生後儘速接種\n\n## 適用情境與第一步\n\n這是台灣新生兒公費常規接種安排。依疾管署現行兒童預防接種時程，B型肝炎疫苗共3劑：第1劑在出生24小時內儘速接種，第2劑出生滿1個月，第3劑出生滿6個月。出院前查看兒童健康手冊或預防接種紀錄，確認出生院所已安排第1劑和後續日期。\n\n如果媽媽的B型肝炎表面抗原（HBsAg）檢驗陽性，請在生產前告知產科及接生院所。寶寶除第1劑疫苗外，還需儘速接種1劑B型肝炎免疫球蛋白（HBIG）；一般情況下兩者都應在出生24小時內完成。出生體重未滿600公克或臨床狀況不穩時，疫苗時間依醫療團隊安排（詳見下節）。疾管署現行公費HBIG對象包含媽媽HBsAg陽性、e抗原陽性或陰性的嬰兒。\n\n## 早產或低出生體重時\n\n低出生體重會影響部分接種安排，不能只照一般時程自行推算。媽媽HBsAg陰性、寶寶出生體重未滿2,000公克時，第1劑通常安排在體重達2,000公克或出生滿1個月後；之後仍須完成完整劑次。若媽媽HBsAg陽性，HBIG應在出生後儘速接種，最遲不超過24小時；疫苗也須由醫療團隊儘速安排。疾管署另指出，出生體重未滿600公克的嬰兒，疫苗建議等臨床狀況穩定且生命安全無疑慮後再接種；出生體重未滿2,000公克者，出生劑次不列入後續完整3劑的計算。早產、低體重或住院中的寶寶，請在出生院所確認個別時程及補種安排。\n\n媽媽檢驗結果不明、接種紀錄缺漏或已錯過日期時，出院前告知醫療人員；返家後可帶兒童健康手冊詢問衛生所或預防接種合約院所，不要自行重打或把出生劑次當成已完成全程。\n\n## 費用、效益與限制\n\n新生兒常規B型肝炎疫苗及符合條件的HBIG依疾管署公費計畫提供。出生時通常由生產院所安排；後續接種地點、預約及院所可能收取的其他費用，應向當地衛生所或接種院所確認。\n\n本篇說明的是公費時程和接種對象，不以舊有全國帶原率或其他國家的母嬰感染比例推估個別家庭風險。沒有找到可將「未按時接種」轉換為台灣個人感染機率的同口徑資料；這不影響依時程接種及母親陽性時及時處置的必要性。\n\n## 參考資料\n\n- [疾管署：現行兒童預防接種時程表（115年9月版，2026-07-15更新）](https://www.cdc.gov.tw/Category/Page/TxRW-x3WzvPhvEtxM628GA)\n- [疾管署：B型肝炎疫苗](https://www.cdc.gov.tw/Category/Page/E8uaEwWTLCW_axUVTbDn1g)\n- [疾管署：B型肝炎免疫球蛋白接種對象](https://www.cdc.gov.tw/Category/Page/AkwlA8rAOvUznSpyy46rvQ)\n- [疾管署：B型肝炎免疫球蛋白Q&A](https://www.cdc.gov.tw/Category/QAPage/WhgGPa8ifNOZ7i6iFakM3A)\n",
+      "after_sha256": "0aba5daeba6b3b771f6ae479034f05f39c8297a80cebd1834eb1dc489cf40418",
+      "target_sha256": "0aba5daeba6b3b771f6ae479034f05f39c8297a80cebd1834eb1dc489cf40418",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+      "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+      "source_checks": [
+        {
+          "source_id": "tw20_cdc_schedule_11509",
+          "title": "疾管署：現行兒童預防接種時程表（115年9月版；2026-07-15更新）",
+          "url": "https://www.cdc.gov.tw/Category/Page/TxRW-x3WzvPhvEtxM628GA",
+          "claim": "疾管署目前兒童常規疫苗時程頁，列出115年9月版時程表，頁面更新日2026-07-15。",
+          "supporting_passage": "疾管署目前兒童常規疫苗時程頁，列出115年9月版時程表，頁面更新日2026-07-15。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_cdc_hepb_vaccine",
+          "title": "疾管署：B型肝炎疫苗",
+          "url": "https://www.cdc.gov.tw/Category/Page/E8uaEwWTLCW_axUVTbDn1g",
+          "claim": "台灣B型肝炎疫苗常規接種資訊；劑次日期依現行兒童時程表。",
+          "supporting_passage": "台灣B型肝炎疫苗常規接種資訊；劑次日期依現行兒童時程表。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_cdc_hbig_eligibility",
+          "title": "疾管署：B型肝炎免疫球蛋白接種對象",
+          "url": "https://www.cdc.gov.tw/Category/Page/AkwlA8rAOvUznSpyy46rvQ",
+          "claim": "母親HBsAg陽性新生兒為公費HBIG對象，不論e抗原陰陽，出生24小時內儘速接種HBIG及第1劑B肝疫苗。",
+          "supporting_passage": "母親HBsAg陽性新生兒為公費HBIG對象，不論e抗原陰陽，出生24小時內儘速接種HBIG及第1劑B肝疫苗。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_cdc_hbig_qna",
+          "title": "疾管署：B型肝炎免疫球蛋白Q&A（2019-08-08更新）",
+          "url": "https://www.cdc.gov.tw/Category/QAPage/WhgGPa8ifNOZ7i6iFakM3A",
+          "claim": "HBsAg陽性母親之早產或低體重嬰兒臨床穩定時儘速接種；出生體重低於2000公克者出生劑次不列入後續3劑；低於600公克者待臨床穩定接種疫苗。",
+          "supporting_passage": "HBsAg陽性母親之早產或低體重嬰兒臨床穩定時儘速接種；出生體重低於2000公克者出生劑次不列入後續3劑；低於600公克者待臨床穩定接種疫苗。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-002.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "沒有找到可用台灣母群與暴露分母估算個人機率：公費時程依疾管署現行公告；低出生體重、極低出生體重及母親檢驗狀態會改變劑次安排。沒有以疫苗接種率或帶原盛行率估算個別新生兒感染機率。",
+        "尚未取得獨立專業審閱（範圍：兒科感染症、新生兒醫學、預防接種政策）。",
+        "疾管署HBIG Q&A最後更新2019-08-08；雖與11509時程頁（2026-07-15更新）交叉核對，低出生體重個案仍應由出生院所依最新公告與臨床狀況確認。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科感染症",
+          "新生兒醫學",
+          "預防接種政策"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "本篇說明預防接種時程，不以全國帶原盛行率、境外母嬰感染比例或未接種數推算個別寶寶感染機率。"
+    },
+    {
+      "id": "TW-20-005",
+      "title": "沖泡嬰兒配方奶粉，遵照標示並注意70°C與保存時間",
+      "source_ids": [
+        "tw20_hpa_formula_preparation",
+        "tw20_hpa_newborn_feeding",
+        "tw20_vghtc_formula_guide_2026"
+      ],
+      "summary": "粉狀配方奶不是無菌產品；依罐身比例使用不低於70°C的水，注意清潔、餵食溫度及保存時間。",
+      "action": "洗手並清潔消毒器具，按產品標示沖泡，快速降溫後餵食；室溫放置兩小時未餵完即丟棄，提前沖泡須冷藏於5°C以下且24小時內使用。",
+      "limits": "早產兒、免疫功能較弱或使用醫療特殊配方者應詢問醫療團隊；不自行改變濃度、水溫或保存方式。沒有台灣嬰兒配方奶暴露及一致感染病例分母估計個人機率。",
+      "question": "沖泡配方奶前，我是否先洗手、依標示配比並確認水溫與保存時間？",
+      "body": "<!-- TW-ID: TW-20-005 -->\n\n# 沖泡嬰兒配方奶粉，遵照標示並注意70°C與保存時間\n\n## 適用情境與第一步\n\n本篇適用於使用粉狀嬰兒配方奶的家庭。粉狀配方奶不是無菌產品，沖泡時要同時注意水溫、奶粉和水的比例、器具清潔及保存。早產兒、免疫功能較弱或使用醫療特殊配方的寶寶，先向兒科醫師或營養師確認個別餵食和沖泡方式。\n\n沖泡前洗手，清潔並依器具說明消毒奶瓶、奶嘴和量匙。使用煮沸過的乾淨飲用水；國民健康署建議沖調時水溫至少70°C。先依奶粉罐標示量好水，再加入標示份量的奶粉，不自行多加粉、少加水或稀釋。沖好後以冷水快速降溫，餵食前在手腕內側確認不燙，再餵寶寶；不要用微波爐加熱。\n\n## 餵食和保存\n\n每餐盡量現泡現餵。室溫下沖泡後兩小時內未餵完的奶要丟棄，不留到下一餐；不確定沖泡時間或保存條件時，也不要餵給寶寶。若需提前沖泡，依國民健康署說明快速冷卻後冷藏於5°C以下，並在24小時內使用；沒有適當冰箱時不要先泡好放著備用。\n\n使用特定益生菌或特殊醫療配方、產品標示與70°C指引看似不同時，不要自行把水溫調低或改變配方濃度。先聯絡開立配方的醫療團隊，確認該產品的沖泡及保存方式；有需要時請醫療院所協助安排可安全使用的替代方式。\n\n## 成本、效益與資料限制\n\n洗手、清潔器具及按比例沖泡不需額外付費；粉奶價格依品牌與規格而異，本篇不推薦品牌。正確沖泡可降低粉狀產品可能帶有細菌所造成的感染風險，也能避免濃度錯誤及燙傷。台灣沒有找到可用來計算家庭沖泡暴露與嬰兒感染之全國分母；不以境外病例、單院資料或產品事件數推估台灣嬰兒的個人感染機率。\n\n## 參考資料\n\n- [國民健康署：如何沖調嬰兒配方奶粉，讓您在家用奶瓶哺餵](https://mammy.hpa.gov.tw/Home/NewsKBContent?id=1867&type=01)\n- [國民健康署：新生兒哺育計畫](https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2529&type=01)\n- [臺中榮民總醫院：配方奶泡製指導手冊（2026-05-21修訂）](https://ihealth.vghtc.gov.tw/media/897)\n",
+      "after_sha256": "13280ad1803a5f6da31dd716c4a208124b86c517e089d6425b8537fb053091bd",
+      "target_sha256": "13280ad1803a5f6da31dd716c4a208124b86c517e089d6425b8537fb053091bd",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+      "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+      "source_checks": [
+        {
+          "source_id": "tw20_hpa_formula_preparation",
+          "title": "國民健康署孕產兒關懷網站：如何沖調嬰兒配方奶粉",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=1867&type=01",
+          "claim": "粉狀配方奶非無菌；清潔雙手和器具、依產品比例沖泡，以不低於70°C水沖調；室溫兩小時未餵完丟棄，提前沖泡快速冷卻冷藏不高於5°C、24小時內使用。",
+          "supporting_passage": "粉狀配方奶非無菌；清潔雙手和器具、依產品比例沖泡，以不低於70°C水沖調；室溫兩小時未餵完丟棄，提前沖泡快速冷卻冷藏不高於5°C、24小時內使用。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_hpa_newborn_feeding",
+          "title": "國民健康署孕產兒關懷網站：新生兒哺育計畫",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2529&type=01",
+          "claim": "國健署新生兒哺育與餵食背景資料；特殊配方仍以產品和醫療團隊指示為準。",
+          "supporting_passage": "國健署新生兒哺育與餵食背景資料；特殊配方仍以產品和醫療團隊指示為準。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_vghtc_formula_guide_2026",
+          "title": "臺中榮民總醫院：配方奶泡製指導手冊（2026-05-21修訂）",
+          "url": "https://ihealth.vghtc.gov.tw/media/897",
+          "claim": "台灣醫療院所配方奶泡製、降溫和餵食後剩餘奶液處理步驟。",
+          "supporting_passage": "台灣醫療院所配方奶泡製、降溫和餵食後剩餘奶液處理步驟。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-005.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "沒有找到可用台灣母群與暴露分母估算個人機率：早產兒、免疫功能較弱或使用醫療特殊配方者應詢問醫療團隊；不自行改變濃度、水溫或保存方式。沒有台灣嬰兒配方奶暴露及一致感染病例分母估計個人機率。",
+        "尚未取得獨立專業審閱（範圍：兒科營養、新生兒醫學、感染管制）。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科營養",
+          "新生兒醫學",
+          "感染管制"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到具全國嬰兒暴露分母及一致病例定義、可估計台灣粉狀配方奶相關感染機率的資料；不把國外事件或產品召回數當家庭風險。"
+    },
+    {
+      "id": "TW-20-008",
+      "title": "未滿3個月嬰兒發燒，儘速到醫院接受評估",
+      "source_ids": [
+        "tw20_hpa_infant_health",
+        "tw34_pids_fever_2019"
+      ],
+      "summary": "未滿3個月嬰兒發燒可能需要醫院檢查；記錄體溫測量方式與寶寶狀況，儘速到醫院或急診評估。",
+      "action": "依國健署針對未滿3個月嬰兒的體溫警訊儘速就醫；呼吸困難、抽搐、叫不醒或發紫時撥119。",
+      "limits": "體溫測量和分流是就醫警訊，不是診斷工具。沒有以單一醫院病例或急診就醫人次推算台灣個別嬰兒感染機率；不因此延誤就醫。",
+      "question": "未滿3個月的寶寶出現發燒警訊時，我是否會儘速帶他到醫院評估？",
+      "body": "<!-- TW-ID: TW-20-008 -->\n\n# 未滿3個月嬰兒發燒，儘速到醫院接受評估\n\n## 適用情境與第一步\n\n未滿3個月的寶寶發燒，應儘速由醫療人員評估；即使看起來還有精神，也不要先在家觀察幾天或只等待退燒。國民健康署指出，未滿3個月嬰兒耳溫可能不準；依其衛教，腋溫高於37.2°C屬發燒警訊，中心體溫超過38°C也屬發燒。測量時記下數值、時間和測量部位，告訴醫療人員，不要為了反覆量溫而延後就醫。\n\n請直接聯絡出生院所、兒科醫療院所或醫院急診，依院所指示儘速前往。若寶寶呼吸困難、嘴唇發紫、抽搐、叫不醒、反應明顯變差或臉色灰白，立即撥119。不要為了先退燒、洗澡或尋找診所而延誤評估；未經醫師指示，不自行給嬰兒退燒藥或使用成人藥品。\n\n## 就醫時準備\n\n帶上兒童健康手冊、體溫紀錄及正在使用的藥品。告訴醫師寶寶出生日期、出生週數、發燒開始時間、測量方式、吃奶與尿布情形，以及有無嘔吐、呼吸異常或接觸感染者。未滿3個月嬰兒可能需要醫院進一步檢查；是否抽血、驗尿、住院或治療由醫療團隊依狀況決定。\n\n急診候診時間、檢查和費用會依病情、醫院與健保身分而異。先讓寶寶接受適當評估，不要因為擔心候診或費用而在家等待。\n\n## 發生頻率與限制\n\n本篇依嬰兒年齡與發燒警訊提供就醫分流，並非診斷工具。沒有找到能以台灣未滿3個月嬰兒總數及一致病例定義計算的全國發燒感染機率；急診就醫人次或單院感染病例都不能換算成個別寶寶的機率。資料不足不應成為延誤就醫的理由。\n\n## 參考資料\n\n- [國民健康署：常見的嬰兒健康問題及處理方法](https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2491&type=01)\n- [台灣兒童感染症醫學會、國家衛生研究院兒童醫學及健康研究中心：兒童發燒衛教](https://www.pids.org.tw/image/files/health/%E5%85%92%E7%AB%A5%E7%99%BC%E7%87%92%E8%A1%9B%E6%95%99-%E7%AC%AC%E4%B8%80%E7%89%8820190216.pdf)\n",
+      "after_sha256": "9d3580f14e0c4da3e32465c93331d0b639bf8f2b773407ac56fae03eb4cfa136",
+      "target_sha256": "9d3580f14e0c4da3e32465c93331d0b639bf8f2b773407ac56fae03eb4cfa136",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+      "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+      "source_checks": [
+        {
+          "source_id": "tw20_hpa_infant_health",
+          "title": "國民健康署孕產兒關懷網站：常見的嬰兒健康問題及處理方法",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2491&type=01",
+          "claim": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+          "supporting_passage": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw34_pids_fever_2019",
+          "title": "台灣兒童感染症醫學會、國家衛生研究院兒童醫學及健康研究中心：兒童發燒衛教（2019）",
+          "url": "https://www.pids.org.tw/image/files/health/%E5%85%92%E7%AB%A5%E7%99%BC%E7%87%92%E8%A1%9B%E6%95%99-%E7%AC%AC%E4%B8%80%E7%89%8820190216.pdf",
+          "claim": "台灣兒童發燒衛教列明未滿三個月嬰兒發燒及多項意識、呼吸、痙攣、脫水等危險徵象須儘速由兒科專科醫師診治，並提醒18歲以下不可用阿斯匹靈或其他水楊酸製劑退燒。",
+          "supporting_passage": "台灣兒童發燒衛教列明未滿三個月嬰兒發燒及多項意識、呼吸、痙攣、脫水等危險徵象須儘速由兒科專科醫師診治，並提醒18歲以下不可用阿斯匹靈或其他水楊酸製劑退燒。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-008.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "沒有找到可用台灣母群與暴露分母估算個人機率：體溫測量和分流是就醫警訊，不是診斷工具。沒有以單一醫院病例或急診就醫人次推算台灣個別嬰兒感染機率；不因此延誤就醫。",
+        "尚未取得獨立專業審閱（範圍：兒科急診、新生兒醫學、兒童感染症）。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科急診",
+          "新生兒醫學",
+          "兒童感染症"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "沒有以一致定義、全國未滿3個月嬰兒暴露分母計算發燒或嚴重感染機率；不以急診人次或單院病例推估個人風險。"
+    },
+    {
+      "id": "TW-20-009",
+      "title": "寶寶哭鬧時先求援，絕不劇烈搖晃或拋接",
+      "source_ids": [
+        "tw20_hpa_infant_health",
+        "tw20_hpa_no_shake",
+        "tw20_mohw_3hearts",
+        "tw20_hpa_calm_baby"
+      ],
+      "summary": "嬰兒哭鬧時可輪流安撫與求援；不可劇烈搖晃、拋接或旋轉，疑似受傷應及時就醫。",
+      "action": "若快失控，將寶寶仰躺放在安全、淨空的嬰兒床並請可信任成人接手；曾劇烈搖晃、拋接或撞擊時儘速到急診評估；嚴重症狀撥119。",
+      "limits": "台灣沒有可用一致事件定義與嬰兒照顧暴露分母估算受虐性頭部外傷個人風險的全國資料；不以境外病例或通報數換算發生率。「放回安全床並短暫離開」是結合國健署安全睡眠及安撫資訊的操作建議，待兒童保護或親職專業確認措辭。",
+      "question": "寶寶哭鬧使我快失控時，我是否能先將他放在安全嬰兒床並請人接手？",
+      "body": "<!-- TW-ID: TW-20-009 -->\n\n# 寶寶哭鬧時先求援，絕不劇烈搖晃或拋接\n\n## 寶寶哭鬧時怎麼做\n\n先確認寶寶是否餓了、尿布濕了、太熱或太冷、身體不舒服；抱著安撫、輕聲說話或請另一位照顧者接手。嬰兒哭鬧可能很難立即停止，照顧者輪流休息、向親友求援，比勉強自己撐下去安全。\n\n絕不可劇烈搖晃、拋接、旋轉或用力甩動寶寶。若感到快要失控，先把寶寶仰躺放在[平坦堅實、沒有枕頭棉被玩具的安全睡眠空間](TW-20-001.md)，再打電話請可信任的人來接手；不要把寶寶留在沙發、成人床或高處。短暫放在安全的嬰兒床哭泣，也比抱著寶寶在憤怒或極度疲倦時搖晃安全。\n\n## 如果曾經劇烈搖晃或撞擊\n\n劇烈搖晃可能造成受虐性頭部外傷，外表不一定看得出傷勢。若曾發生劇烈搖晃、拋接或撞擊，不要等到有明顯瘀青才處理，儘速帶寶寶到醫院急診評估。若寶寶嗜睡叫不醒、反覆嘔吐、抽搐、呼吸異常、意識改變或反應變差，立即撥119，並告知醫護實際發生的動作與時間。\n\n若哭鬧伴隨發燒、呼吸急促、吃奶明顯變少、嘔吐或精神活動力變差，也要聯絡醫療人員；未滿3個月嬰兒發燒時，依[發燒就醫指引](TW-20-008.md)儘速接受醫院評估。\n\n## 支持與限制\n\n嬰兒照護可以由家人、伴侶或其他可信任成人輪流分擔。照顧者若持續睡眠不足、情緒無法控制或擔心會傷害自己或寶寶，先讓另一位成人接手並聯絡醫師或社區支持資源。台灣沒有找到可用一致病例定義及嬰兒暴露分母估算受虐性頭部外傷個人風險的全國資料；不引用美國病例數當作台灣發生率。\n\n## 參考資料\n\n- [國民健康署：常見的嬰兒健康問題及處理方法](https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2491&type=01)\n- [國民健康署：不要劇烈搖晃、拋接或旋轉寶寶](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4576&pid=15712)\n- [衛生福利部：安撫哭鬧寶寶的「3心」妙招](https://www.mohw.gov.tw/cp-5269-69963-1.html)\n- [國民健康署：新生兒哭鬧如何安撫](https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2295&type=01)\n",
+      "after_sha256": "ba52da207672e25acdfcf4816f6a96fa1c24dcc26ae57ea77548d483ec61d9a4",
+      "target_sha256": "ba52da207672e25acdfcf4816f6a96fa1c24dcc26ae57ea77548d483ec61d9a4",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+      "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+      "source_checks": [
+        {
+          "source_id": "tw20_hpa_infant_health",
+          "title": "國民健康署孕產兒關懷網站：常見的嬰兒健康問題及處理方法",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2491&type=01",
+          "claim": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+          "supporting_passage": "未滿3個月耳溫不準，可量腋溫或肛溫；腋溫大於37.2°C或中心體溫大於38°C屬發燒，應到醫院或急診評估；並提供嬰兒哭鬧和照顧者支持資訊。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_hpa_no_shake",
+          "title": "國民健康署：不要劇烈搖晃、拋接或旋轉寶寶",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4576&pid=15712",
+          "claim": "不可劇烈搖晃、拋接、旋轉或甩動嬰兒，以避免受虐性頭部外傷。",
+          "supporting_passage": "不可劇烈搖晃、拋接、旋轉或甩動嬰兒，以避免受虐性頭部外傷。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_mohw_3hearts",
+          "title": "衛生福利部：安撫哭鬧寶寶的「3心」妙招",
+          "url": "https://www.mohw.gov.tw/cp-5269-69963-1.html",
+          "claim": "衛福部嬰兒哭鬧安撫方法與照顧者支持原則。",
+          "supporting_passage": "衛福部嬰兒哭鬧安撫方法與照顧者支持原則。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_hpa_calm_baby",
+          "title": "國民健康署孕產兒關懷網站：新生兒哭鬧如何安撫",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2295&type=01",
+          "claim": "嬰兒哭鬧照護、安撫及照顧者求助資訊。",
+          "supporting_passage": "嬰兒哭鬧照護、安撫及照顧者求助資訊。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-009.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "沒有找到可用台灣母群與暴露分母估算個人機率：台灣沒有可用一致事件定義與嬰兒照顧暴露分母估算受虐性頭部外傷個人風險的全國資料；不以境外病例或通報數換算發生率。「放回安全床並短暫離開」是結合國健署安全睡眠及安撫資訊的操作建議，待兒童保護或親職專業確認措辭。",
+        "尚未取得獨立專業審閱（範圍：兒科急診、兒童保護、嬰兒照護與親職支持）。",
+        "照顧者將寶寶放回安全床並短暫離開的整合指引，尚待兒童保護或親職專業人員確認措辭。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "兒科急診",
+          "兒童保護",
+          "嬰兒照護與親職支持"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到可估算台灣嬰兒受虐性頭部外傷發生率的全國照顧暴露分母和一致病例定義；不引用境外病例數當台灣個人機率。"
+    },
+    {
+      "id": "TW-20-013",
+      "title": "新生兒黃疸要看精神、吃奶與大便顏色，異常時儘速就醫",
+      "source_ids": [
+        "tw20_hpa_stool_color_2026",
+        "tw20_hpa_jaundice_care",
+        "tw20_hpa_jaundice_leaflet_2019"
+      ],
+      "summary": "新生兒黃疸需由醫療人員評估；觀察精神、吃奶與大便顏色，出生未滿24小時出現黃疸或有警訊時儘速就醫。",
+      "action": "在自然光或白光下觀察皮膚、眼白與大便並比對兒童健康手冊辨識卡；第14天眼白仍黃或大便1至6號異常色，儘速看兒科。",
+      "limits": "膚色和大便卡只能提示需檢查，不能診斷或取代膽紅素檢測。沒有與本篇一致定義的新生兒黃疸全國母群及完整分母，不能估個人發病機率；較早版衛教單張需持續以現行資訊複核。",
+      "question": "我是否會留意寶寶精神、吃奶和大便顏色，並在黃疸警訊出現時儘速就醫？",
+      "body": "<!-- TW-ID: TW-20-013 -->\n\n# 新生兒黃疸要看精神、吃奶與大便顏色，異常時儘速就醫\n\n## 先看寶寶狀況\n\n新生兒黃疸要由醫療人員評估，不能只靠家長看皮膚顏色判斷膽紅素高低。若寶寶出生未滿24小時就出現黃疸，或黃疸同時嗜睡叫不醒、吸吮變弱、不吃奶、軟弱無力、四肢僵硬、哭聲尖銳或抽搐，立即聯絡出生院所或前往醫院；反應變差、抽搐或呼吸異常時撥119。\n\n在自然光或白色燈光下觀察皮膚、眼白和大便顏色，並與兒童健康手冊內的嬰兒大便辨識卡比對。國民健康署建議特別留意出生後60天內的糞便顏色。若出生第14天眼白仍泛黃，或大便呈辨識卡1至6號的異常顏色，儘速請兒科醫師評估；醫師可能安排直接及總膽紅素檢查或轉介兒童消化專科。\n\n## 不要自行治療\n\n不要以曬太陽、葡萄糖水、偏方或停止母乳取代醫療評估。是否需要抽血、照光、住院或調整餵食，依膽紅素數值、出生週數、餵食狀況及其他風險由醫療團隊決定。若已安排出院後追蹤，依預約時間回診；黃疸加重、寶寶不易叫醒或大便顏色變淡時，不要等到原定回診日。\n\n## 時間、費用與資料限制\n\n早期評估可確認是否需要治療或追蹤；掛號、檢查和治療費用依醫療院所、健保身分及實際處置而異。台灣現行公開資料未提供可用一致定義計算全國新生兒黃疸發生率的母群與完整分母；嬰兒大便顏色卡用來辨識需進一步檢查的警訊，不等同疾病診斷或個人發病機率。\n\n## 參考資料\n\n- [國民健康署：我的小孩大便顏色正常嗎？（2026-01-07更新）](https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1140&pid=6575&sid=13524)\n- [國民健康署：新生兒黃疸的預防與處理](https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2304&type=01)\n- [國民健康署：新生兒黃疸衛教單張 PED-007](https://health99.hpa.gov.tw/media/public/pdf/12416.pdf)\n",
+      "after_sha256": "f9ef449305c3ea98cf512417941a39da525b466d405e994642ddc0a830783fc4",
+      "target_sha256": "f9ef449305c3ea98cf512417941a39da525b466d405e994642ddc0a830783fc4",
+      "source_bundle_path": "localization/tw-edition/sources/ch20-infant-safety-20261121.json",
+      "source_bundle_sha256": "0a8f1e033997f761d358909fceee44eb3e269747052946cc4a43e8720accdfbb",
+      "source_checks": [
+        {
+          "source_id": "tw20_hpa_stool_color_2026",
+          "title": "國民健康署：我的小孩大便顏色正常嗎？（2026-01-07更新）",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=1140&pid=6575&sid=13524",
+          "claim": "出生60天內於日光或白光下比對大便辨識卡；出生第14天眼白仍黃或大便1至6號異常色要儘速看兒科，必要時檢查直接及總膽紅素。",
+          "supporting_passage": "出生60天內於日光或白光下比對大便辨識卡；出生第14天眼白仍黃或大便1至6號異常色要儘速看兒科，必要時檢查直接及總膽紅素。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_hpa_jaundice_care",
+          "title": "國民健康署孕產兒關懷網站：新生兒黃疸的預防與處理",
+          "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=2304&type=01",
+          "claim": "台灣新生兒黃疸觀察與就醫照護資訊，不以皮膚外觀單獨判斷膽紅素。",
+          "supporting_passage": "台灣新生兒黃疸觀察與就醫照護資訊，不以皮膚外觀單獨判斷膽紅素。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        },
+        {
+          "source_id": "tw20_hpa_jaundice_leaflet_2019",
+          "title": "國民健康署：新生兒黃疸衛教單張 PED-007（2019年修訂）",
+          "url": "https://health99.hpa.gov.tw/media/public/pdf/12416.pdf",
+          "claim": "舊版單張列出出生24小時內黃疸、嗜睡叫不醒、吸吮或吃奶變差等需儘速評估的警訊，細節須以現行國健署資訊複核。",
+          "supporting_passage": "舊版單張列出出生24小時內黃疸、嗜睡叫不醒、吸吮或吃奶變差等需儘速評估的警訊，細節須以現行國健署資訊複核。",
+          "accessed_at": "2026-11-21",
+          "retrieval_method": "2026-11-21直接查閱官方公開頁面或文件文字，核對標題、內容與本篇對應主張；未以首頁資訊代替具體內容。"
+        }
+      ],
+      "before_sha256": null,
+      "target_path": "locales/zh-TW/book/ch20/TW-20-013.md",
+      "review_due_at": "2027-02-21",
+      "reviewed_at": "2026-11-21",
+      "unresolved_questions": [
+        "沒有找到可用台灣母群與暴露分母估算個人機率：膚色和大便卡只能提示需檢查，不能診斷或取代膽紅素檢測。沒有與本篇一致定義的新生兒黃疸全國母群及完整分母，不能估個人發病機率；較早版衛教單張需持續以現行資訊複核。",
+        "尚未取得獨立專業審閱（範圍：新生兒醫學、兒科肝膽、新生兒護理）。",
+        "PED-007為2019年版，需持續以國健署現行資料複核細部危險警訊。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "新生兒醫學",
+          "兒科肝膽",
+          "新生兒護理"
+        ]
+      },
+      "statistics_assessed": [],
+      "frequency_assessment": "未找到以一致病例定義和新生兒母群分母估算台灣全國黃疸發生率的資料；大便辨識卡是警訊篩檢，不是診斷或個人機率。"
+    }
+  ],
+  "frequency_and_statistics": "僅TW-20-001使用台灣官方個案回溯數據：344是19縣市依選案機制討論之六歲以下死亡個案，43位高度可預防猝死相關（睡姿8、環境35），41位中度可預防猝死相關（睡姿4、環境37）。這不是出生或睡眠暴露分母，不能換算發生率或個人機率。其餘主題未找到可用且同口徑的台灣全國發生率，均明示資料不足，不自行推估；急症內容先提供安全行動與求援。",
+  "counts_before": {
+    "manifest_entries": 765,
+    "verified_core_entries": 334,
+    "runtime_items": 345,
+    "runtime_sources": 1424,
+    "source_registry": 1507,
+    "coverage_json_files": 696,
+    "core_reviewed_entries": 334,
+    "publication_completed_entries": 334,
+    "review_rechecks": 415,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "manifest_entries": 765,
+    "verified_core_entries": 340,
+    "runtime_items": 351,
+    "runtime_sources": 1441,
+    "source_registry": 1524,
+    "coverage_json_files": 704,
+    "core_reviewed_entries": 340,
+    "publication_completed_entries": 340,
+    "review_rechecks": 415,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_ready": false
+  },
+  "source_corrections": []
+}
