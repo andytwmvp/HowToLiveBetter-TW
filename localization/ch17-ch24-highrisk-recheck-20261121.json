@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "stage": "TW-17/TW-24 high-risk historical substantive recheck",
+  "reviewed_at": "2026-11-21",
+  "baseline_main_sha": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+  "scope": {
+    "new_core_ids": [],
+    "historical_core_ids": [
+      "TW-24-006",
+      "TW-17-003",
+      "TW-24-009",
+      "TW-17-001"
+    ],
+    "priority_order": [
+      "TW-24-006",
+      "TW-17-003",
+      "TW-24-009",
+      "TW-17-001"
+    ]
+  },
+  "counts_before": {
+    "core_reviewed_entries": 334,
+    "runtime_items": 345,
+    "runtime_sources": 1419,
+    "source_registry": 1502,
+    "json_files_checked": 694,
+    "substantive_rechecks": 411,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_reviewed_entries": 334,
+    "runtime_items": 345,
+    "runtime_sources": 1424,
+    "source_registry": 1507,
+    "json_files_checked": 696,
+    "substantive_rechecks": 415,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "ch17_elder_protection_stats_2025_20261121",
+    "ch17_elder_protection_stats_method_20261121",
+    "ch24_disability_process_law_20261121",
+    "ch24_major_illness_effective_dates_20261121",
+    "ch24_medical_accident_care_5day_20261121"
+  ],
+  "source_bundle_path": "localization/tw-edition/sources/ch17-ch24-highrisk-recheck-20261121.json",
+  "source_bundle_sha256": "80ffb66c1653c7c0379afa1e9624ef6a84cfb566bf2ed5f9a196645a62ba5f9c",
+  "items": [
+    {
+      "id": "TW-24-006",
+      "review_path": "localization/reviews/TW-24-006.json",
+      "article_path": "locales/zh-TW/book/ch24/TW-24-006.md",
+      "before_sha256": "f210f393c595950a585a350ff7a5560441c848317c9105a83f0d21427c142a0a",
+      "after_sha256": "c98078774332dcaa08e707daf5025a58a34079069a55e33d6cad427db6c17b85",
+      "new_source_ids": [
+        "ch24_medical_accident_care_5day_20261121"
+      ],
+      "statistics_assessed": "醫療事故及醫療過失發生頻率",
+      "frequency_assessment": "沒有可代表全臺所有就醫服務、採一致醫療事故定義並具有暴露分母的醫療過失發生率；行政調解件數不能換算個人機率。",
+      "status": "ai_source_rechecked_professional_pending"
+    },
+    {
+      "id": "TW-17-003",
+      "review_path": "localization/reviews/TW-17-003.json",
+      "article_path": "locales/zh-TW/book/ch17/TW-17-003.md",
+      "before_sha256": "fe964ef1224e251fb73814285a00058636f7a511c36cc5bd383031192d6cd441",
+      "after_sha256": "fbc937ffc3b12d91a704afb431f03403d5a86e3124063b549e3db564e84b14b7",
+      "new_source_ids": [
+        "ch17_elder_protection_stats_2025_20261121",
+        "ch17_elder_protection_stats_method_20261121"
+      ],
+      "statistics_assessed": "老人保護通報件次、去重通報件數及經濟暴力通報人次",
+      "frequency_assessment": "有2025全國老人保護行政通報數及經濟暴力類通報人次，但沒有全體長者或財務暴露分母；沒有可信的個人發生率，不推估個人機率。",
+      "status": "ai_source_rechecked_professional_pending"
+    },
+    {
+      "id": "TW-24-009",
+      "review_path": "localization/reviews/TW-24-009.json",
+      "article_path": "locales/zh-TW/book/ch24/TW-24-009.md",
+      "before_sha256": "97d40a1f14255ead72397067e499bdbd0504f650f5e998bb2a409a377ab97982",
+      "after_sha256": "c314600959689c5cf41155a6f6a30008c279150e8159ee64ea1ee14d781b6a21",
+      "new_source_ids": [
+        "ch24_major_illness_effective_dates_20261121",
+        "ch24_disability_process_law_20261121"
+      ],
+      "statistics_assessed": "重大傷病證明、身心障礙證明及職災失能認定的適用／核准率",
+      "frequency_assessment": "沒有適用於不同疾病、健保重大傷病、身障鑑定與職災失能的單一風險率；這些是不同制度的程序與資格。",
+      "status": "ai_source_rechecked_professional_pending"
+    },
+    {
+      "id": "TW-17-001",
+      "review_path": "localization/reviews/TW-17-001.json",
+      "article_path": "locales/zh-TW/book/ch17/TW-17-001.md",
+      "before_sha256": "a1d4272d5e4c9c0b8c77e462e4faa59c4532de89a3a07f6932d133437ba8b1fc",
+      "after_sha256": "f7b573d6c18965c1ae85c1e382607437459d4f5133a5f62043bb6b808cebab03",
+      "new_source_ids": [],
+      "statistics_assessed": "意定監護契約採用、受任人失職或財產濫用頻率",
+      "frequency_assessment": "沒有同一母數的全國意定監護使用率或濫用率；公證或監護案件數不能換算個人風險。",
+      "status": "ai_source_rechecked_professional_pending"
+    }
+  ],
+  "statistics_summary": {
+    "elder_protection_2025": {
+      "report_forms": 30576,
+      "deduplicated_report_cases": 26684,
+      "economic_violence_person_times": 362
+    },
+    "elder_protection_denominator": null,
+    "medical_accident_rate": "not_estimated; no consistent national exposure denominator found",
+    "procedural_items": "no individual incidence rate applicable or inferred"
+  },
+  "publication_ready": false,
+  "professional_review_pending": true,
+  "unresolved_questions": {
+    "TW-24-006": [
+      "仍須由醫療法律專業確認個案是否構成醫療事故或醫療爭議，以及證據、時效與和解效力。",
+      "地方調解表單與受理窗口以事故當時院所所在地衛生局為準。"
+    ],
+    "TW-17-003": [
+      "全國沒有可用於個人財務受害機率的適當分母；此資料缺口無法由行政通報數補足。",
+      "疑似虐待或帳戶異常的個案需由銀行、警方與社政依具體情況處理。"
+    ],
+    "TW-24-009": [
+      "健保證明所列各疾病效期及更新文件須依核定通知、特約院所與健保署確認。",
+      "身障線上申請限制及地方受理方式會因案件和縣市不同；本批未逐縣市核對。"
+    ],
+    "TW-17-001": [
+      "沒有可比的臺灣意定監護使用率或財產濫用率；民法修正或個案爭議仍需公證人及法律專業確認。"
+    ]
+  },
+  "legal_temporal_checks": [
+    {
+      "article_id": "TW-17-001",
+      "checks": [
+        {
+          "law": "民法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第1101條",
+                "第1113條"
+              ],
+              "promulgated_at": "2008-05-23",
+              "effective_at": "2009-11-23",
+              "basis": "法規沿革記載民法親屬編第1092至1113條部分規定修正公布，並自公布後一年六個月施行；第1101、1113條位於本次修正範圍。"
+            },
+            {
+              "provisions": [
+                "第1113-2條至第1113-10條"
+              ],
+              "promulgated_at": "2019-06-19",
+              "effective_at": "2019-06-21",
+              "basis": "法務部所屬機關說明意定監護於108年6月19日公布、同月21日施行；公證成立與契約於本人受監護宣告時生效，仍是不同時點。"
+            }
+          ],
+          "latest_law_version_context": "法務部沿革頁列2026-08-17最新修正第1223條，公布六個月後施行；該修正與本篇引用的第1101、1113及1113-2至1113-10條無關。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+            "https://www.ksc.moj.gov.tw/296454/296651/296652/716713/post"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-17-003",
+      "checks": [
+        {
+          "law": "民法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第1101條",
+                "第1113條"
+              ],
+              "promulgated_at": "2008-05-23",
+              "effective_at": "2009-11-23",
+              "basis": "法規沿革記載民法親屬編第1092至1113條部分規定修正公布，並自公布後一年六個月施行；第1101、1113條位於本次修正範圍。"
+            },
+            {
+              "provisions": [
+                "第1113-2條至第1113-10條"
+              ],
+              "promulgated_at": "2019-06-19",
+              "effective_at": "2019-06-21",
+              "basis": "法務部所屬機關說明意定監護於108年6月19日公布、同月21日施行；公證成立與契約於本人受監護宣告時生效，仍是不同時點。"
+            }
+          ],
+          "latest_law_version_context": "法務部沿革頁列2026-08-17最新修正第1223條，公布六個月後施行；該修正與本篇引用的第1101、1113及1113-2至1113-10條無關。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=B0000001",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+            "https://www.ksc.moj.gov.tw/296454/296651/296652/716713/post"
+          ]
+        },
+        {
+          "law": "家庭暴力防治法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第2條第1款及第2款"
+              ],
+              "promulgated_at": "2015-02-04",
+              "effective_at": "2015-02-06",
+              "basis": "2015-02-04修法修改第2條；當次修法除第63-1條外自公布日施行，依中央法規標準法第13條將公布日計為第1日，第三日生效。2023-12-06最新一輪修法未修改第2條。"
+            }
+          ],
+          "current_scope": "第2條將家庭暴力（含經濟上騷擾、控制、脅迫或其他不法侵害）與家庭暴力罪（另須成立其他法律所定犯罪）分別定義；不得把一般帳務意見不同自動稱為犯罪。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050071",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050071",
+            "https://www.president.gov.tw/Page/294/43895?DTitle=%E4%BF%AE%E6%AD%A3%E5%AE%B6%E5%BA%AD%E6%9A%B4%E5%8A%9B%E9%98%B2%E6%B2%BB%E6%B3%95",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-24-006",
+      "checks": [
+        {
+          "law": "醫療法",
+          "checked_at": "2026-11-21",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第71條",
+                "第73條"
+              ],
+              "promulgated_at": "2004-04-28",
+              "effective_at": "2004-04-30",
+              "basis": "2004-04-28全文修正公布明定自公布日施行；依中央法規標準法第13條公布日計為第1日，第3日生效。2026-09-23修正第72條及其他列明條文，未修正第71、73條。"
+            }
+          ],
+          "latest_law_version_context": "全國法規資料庫沿革截至2026-11-21顯示最新整體修正為2026-09-23；該次修正包含第72條，但不含本篇使用的第71條病歷複製本及第73條急救後轉診規定。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0020021",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020021",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133",
+            "https://www.president.gov.tw/Page/294/50409"
+          ]
+        },
+        {
+          "law": "醫療事故預防及爭議處理法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第3條",
+            "第6條"
+          ],
+          "promulgated_at": "2022-06-22",
+          "effective_at": "2024-01-01",
+          "basis": "法律第45條授權行政院定施行日；行政院112年12月12日院臺衛字第1121043912號令定自113年1月1日施行。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020227",
+            "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029235/ch01/type1/gov01/num3/Eg.htm"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-24-009",
+      "checks": [
+        {
+          "law": "全民健康保險保險對象免自行負擔費用辦法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第5條",
+            "第9條"
+          ],
+          "relevant_provision_amendment": {
+            "provisions": [
+              "第5條"
+            ],
+            "promulgated_at": "2022-12-19",
+            "effective_at": "2022-12-21",
+            "basis": "衛福部111年12月19日修正發布第5條；第9條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第三日生效。"
+          },
+          "latest_law_version_context": "全國法規資料庫沿革列整體最新修正2024-09-16，該次僅修正第2條附表一；第5條最近修正仍為2022-12-19。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0060015",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060015",
+            "https://media.nhi.gov.tw/md/dl-51939-22c20553daad430ea05c073d00b44b53-3.pdf",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        },
+        {
+          "law": "身心障礙者福利與服務需求評估及證明核發辦法",
+          "checked_at": "2026-11-21",
+          "relevant_provisions": [
+            "第2條",
+            "第12條"
+          ],
+          "relevant_provision_amendment": {
+            "provisions": [
+              "第2條"
+            ],
+            "promulgated_at": "2023-05-26",
+            "effective_at": "2023-05-28",
+            "basis": "衛福部112年5月26日修正發布第2、7、8、12條；第12條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第3日生效。另第7條附表一之一及附表一之二明定自2023-07-01施行，非本篇第2條流程。"
+          },
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050050",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050050",
+            "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029097/ch08/type1/gov70/num30/Eg.htm",
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+          ]
+        }
+      ]
+    }
+  ]
+}

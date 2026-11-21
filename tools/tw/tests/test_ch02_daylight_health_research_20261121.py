@@ -244,10 +244,13 @@ class DaylightHealthResearchPublicationTests(unittest.TestCase):
         expected_new_rows = [
             (item["id"], item["reviewed_at"]) for item in batch["items"]
         ]
-        self.assertCountEqual(
-            [(row["id"], row["reviewed_at"]) for row in current_rows[len(previous_rows) :]],
-            expected_new_rows,
-        )
+        batch_ids = {item["id"] for item in batch["items"]}
+        appended_batch_rows = [
+            (row["id"], row["reviewed_at"])
+            for row in current_rows[len(previous_rows) :]
+            if row["id"] in batch_ids
+        ]
+        self.assertCountEqual(appended_batch_rows, expected_new_rows)
         self.assertFalse(any(
             row["id"] == ITEM_ID and row["reviewed_at"] == DATE
             for row in current_rows

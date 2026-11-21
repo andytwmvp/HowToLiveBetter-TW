@@ -1,70 +1,191 @@
 {
   "id": "TW-24-009",
-  "reviewer": "ChatGPT（AI輔助官方資料核對；非獨立醫師、藥師、法律或醫療專業簽證）",
+  "reviewer": "ChatGPT（AI輔助臺灣法規、行政資料與官方服務核對；非獨立醫師、律師、社工或金融專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-21",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
   "target_path": "locales/zh-TW/book/ch24/TW-24-009.md",
-  "target_sha256": "97d40a1f14255ead72397067e499bdbd0504f650f5e998bb2a409a377ab97982",
+  "target_sha256": "c314600959689c5cf41155a6f6a30008c279150e8159ee64ea1ee14d781b6a21",
   "source_checks": [
     {
+      "source_id": "ch24_diff",
+      "title": "健保署：重大傷病與身心障礙證明的差異",
       "url": "https://www.nhi.gov.tw/ch/cp-13698-9d097-2957-1.html",
-      "claim": "TW-24-009：不同承辦、申請及福利，不能自動互換；職災另讀勞保局。",
-      "supporting_passage": "編者核對摘要，非逐字引文：不同承辦、申請及福利，不能自動互換；職災另讀勞保局。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "直接403，web實讀健保署重大傷病／身障差異表；未將其視為職災法依據。"
+      "claim": "TW-24-009：重大傷病、身心障礙與勞保失能由不同制度分別認定。",
+      "supporting_passage": "非逐字引文：健保署差異說明分開呈現重大傷病免部分負擔與身心障礙證明；本篇另依各制度的法律、承辦機關及申請條件分流，沒有把證明相互換算。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接取得健保署現行HTML頁面，核對制度分類；不將該差異頁當職災失能條件的唯一依據。"
     },
     {
+      "source_id": "ch24_majorapply",
+      "title": "健保署：重大傷病證明申請須知",
       "url": "https://www.nhi.gov.tw/ch/cp-6091-08ad9-2957-1.html",
-      "claim": "TW-24-009：申請文件、三十日內診斷證明、代理與特定傷病醫師逕認例外。",
-      "supporting_passage": "編者核對摘要，非逐字引文：申請文件、三十日內診斷證明、代理與特定傷病醫師逕認例外。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "直接403，web實讀HTML申請須知與文件；未稱逐一讀所有病名附件。"
+      "claim": "TW-24-009：重大傷病申請書、診斷證明有效日數、代理及醫師逕行認定例外。",
+      "supporting_passage": "非逐字引文：健保署申請須知指出診斷證明需於開立日起30日內提出，得由本人或代理人等依規定申請，並有附表所列醫師逕認免另申請的例外。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接開啟健保署官方申請頁，與現行法規第2、3條交叉核對申請文件及核定期限。"
     },
     {
+      "source_id": "ch24_disability",
+      "title": "我的E政府：身心障礙證明鑑定與需求評估",
       "url": "https://www.gov.tw/News_Content_26_677435",
-      "claim": "TW-24-009：公所或符合條件線上申請、指定機構鑑定及需求評估後核發，地方文件差異。",
-      "supporting_passage": "編者核對摘要，非逐字引文：公所或符合條件線上申請、指定機構鑑定及需求評估後核發，地方文件差異。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "直接403，web實讀E政府2025-05-27主文的申請、鑑定與評估流程；未逐一核22縣市附件。"
+      "claim": "TW-24-009：社家署線上申辦與身心障礙證明申請資訊入口；地方條件須再確認。",
+      "supporting_passage": "非逐字引文：我的E政府身心障礙專頁標示2025-05-27更新，說明戶籍地公所與部分案件線上申辦；直接頁面本輪回403，僅採其官方索引摘要作入口提示，法定流程另以全國法規資料庫核實。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "本輪使用政府入口頁官方索引摘要，直接開啟回403；不以未能讀取的地方附件補充各縣市資格差異。"
     },
     {
+      "source_id": "rights_bli_disability",
+      "title": "勞保局：職災保險失能請領資格",
       "url": "https://www.bli.gov.tw/0105976.html",
-      "claim": "TW-24-009：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。",
-      "supporting_passage": "編者核對摘要，非逐字引文：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "本輪取得範圍：直接HTML200實讀請領資格：職業傷病、治療後症狀固定且永久失能及符合標準；非身障證明自動核付，未逐項核付薪資／失能等級。"
+      "claim": "TW-24-009：職災保險失能給付需核對職業傷病、症狀固定、永久失能及法定標準。",
+      "supporting_passage": "非逐字引文：勞保局現行常見問答說明職災失能給付須經治療後症狀固定並符合永久失能與等級標準；身心障礙證明本身不會自動取代職保審定。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接開啟勞保局官方常見問答頁，核對請領資格與給付標準說明；未用個人薪資推算給付。"
     },
     {
+      "source_id": "rights_bli_uninsured",
+      "title": "勞保局：強制納保單位未加保勞工的職災給付",
       "url": "https://events.bli.gov.tw/Activities/202608_02/",
-      "claim": "TW-24-009：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。",
-      "supporting_passage": "編者核對摘要，非逐字引文：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "本輪取得範圍：直接HTML200實讀：強制納保單位受僱勞工保險效力自到職生效；雇主不願協助可自行送件及敘明，仍需查證受僱與職災事實，不套用所有未加保者。"
+      "claim": "TW-24-009：強制納保單位受僱者未被雇主加保時仍有職災給付申請管道。",
+      "supporting_passage": "非逐字引文：勞保局專頁說明強制納保單位受僱者保險效力自到職日生效，雇主不協助時可自行送件並附出勤、薪資及事故資料，由勞保局查證。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接開啟勞保局官方專頁，核對適用對象與自行申請文件；未把規則擴大到所有未加保者。"
     },
     {
+      "source_id": "rights_major_scope",
+      "title": "健保署：重大傷病免自行負擔費用範圍",
       "url": "https://www.nhi.gov.tw/ch/cp-6089-0c619-2957-1.html",
-      "claim": "TW-24-009：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。",
-      "supporting_passage": "編者核對摘要，非逐字引文：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。",
-      "accessed_at": "2026-10-21",
-      "retrieval_method": "本輪取得範圍：2026-10-14更新頁實讀正文；證明及相關治療、同次同醫師併行治療、住院併行等法定範圍，非所有自費／所有其他診次免費；未讀9-30罕病附件。"
+      "claim": "TW-24-009：重大傷病免部分負擔僅限法定證明及相關治療範圍。",
+      "supporting_passage": "非逐字引文：健保署頁面最近更新為2026-10-14，說明證明所載重大傷病、相關治療及符合法定條件之併行治療，不等同所有自費項目或所有診療均免費。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接開啟健保署現行費用範圍頁，核對更新日期、法令依據及適用範圍；未展開所有罕病附件。"
+    },
+    {
+      "source_id": "ch24_major_illness_effective_dates_20261121",
+      "title": "全國法規資料庫：全民健康保險保險對象免自行負擔費用辦法第5條",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060015",
+      "claim": "TW-24-009：重大傷病證明申請生效日、罕病例外及依效期分級的續申請期限。",
+      "supporting_passage": "非逐字引文：現行辦法第5條列重大傷病證明生效日、罕病例外及續申請期限；法規沿革顯示第5條於2022-12-19修正發布、依第9條及中央法規標準法第13條於2022-12-21生效。2024-09-16的整體最新修正只改第2條附表一，未改第5條。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接讀取全國法規資料庫現行辦法第5、9條與沿革，並核對健保署2022-12-19修正令；使用中央法規標準法第13條區分發布日與第三日生效。"
+    },
+    {
+      "source_id": "ch24_disability_process_law_20261121",
+      "title": "全國法規資料庫：身心障礙者福利與服務需求評估及證明核發辦法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050050",
+      "claim": "TW-24-009：身心障礙證明申請由戶籍地公所、醫療鑑定及地方需求評估銜接。",
+      "supporting_passage": "非逐字引文：現行辦法第2條規範戶籍地任一鄉鎮市區公所受理、鑑定及地方需求評估核發流程；該條於2023-05-26修正發布，依第12條及中央法規標準法第13條於2023-05-28生效。同次修正的第7條附表一之一及一之二另自2023-07-01施行，與本篇第2條流程分開。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀全國法規資料庫現行辦法第2、12條及沿革，核對2023-05-26衛福部令和行政院公報，並按中央法規標準法第13條區分發布日與第三日生效。"
     }
   ],
-  "localization_changes": "突然呼吸困難、意識改變、疑似中風或嚴重出血先119；不要等重大傷病證明、身心障礙鑑定或職災認定才治療。穩定後再與醫療團隊和社工確認要申請哪一種制度，不因病歷寫有「失能」就以為全部自動核准。\n\n健保重大傷病、身心障礙證明、勞保／職災保險失能及商業保險是不同制度；申請目的、承辦機關、事故原因、文件、有效期限及認定標準均需分開。\n\n重大傷病：先由特約院所確認是否屬公告項目，備申請書、三十日內診斷證明、身分與病歷摘要／報告，由本人或代理人向健保署分區業務組等規定管道申請；特定傷病有醫師逕認免申請例外，不是所有嚴重疾病都直接發證。確認核定起訖與換發安排。\n\n身心障礙證明：洽戶籍地公所或符合條件的線上入口，依指定醫療機構鑑定、衛政審查及需求評估等流程辦理，由地方政府核發；需要的福利仍另核資格。重大傷病在法定範圍免部分負擔，也包括符合規定的同次同醫師併行治療及住院併行等情形，不能簡化成所有其他診療都絕對不免，更不是所有自費都免。",
-  "review_method": "AI實讀現行法規HTML、官方服務主文及作業原則PDF文字，按具體主張核對；非個案或專業簽證。",
+  "localization_changes": "依現行健保法規補上重大傷病證明申請日生效、罕病例外及三組效期續申請期限與逾期效果；用現行身障核發法規釐清公所、醫療鑑定及地方政府需求評估流程，保留職災失能各自核定。",
+  "review_method": "逐條重讀原作固定ID、現行臺灣正文、2026-10-21前次review與來源；直接核對現行法規、主管機關頁面及原始統計。統計依表格欄位與編製說明核算，不以搜尋摘要代替法規或分母。非專業簽證。",
   "limits": [
-    "重大傷病免部分負擔限該證明相關傷病，不等於有身障福利或失能年金；取得身障證明也不代表立即符合任何商保理賠。",
-    "研究、醫療與保險個案依主治醫師、健保署或地方主管機關當期規則核定；2026年後新規需重新確認。",
-    "AI輔助逐條官方來源實質核對，非醫師、社工、勞保／健保審查機關或律師專業簽證；個案仍待專業與主管機關判定。",
-    "本輪未取得全臺同定義延誤、爭議、資料缺漏或申請核准機率；行政件數不能代替個人發生率。",
-    "法規整編截止2026-10-08，之後公報與地方細則未逐一全核；沒有實際救治、調閱病歷、申請或核付。"
+    "健保重大傷病、身障證明與職災失能不可互相套用；未個別核對每項疾病附件、費用、縣市線上申請或到宅鑑定資格。",
+    "我的E政府頁面本輪直接開啟回403，僅使用官方索引所示入口資訊；身障法定步驟以全國法規資料庫現行辦法核實。",
+    "AI協助法規與服務資料核對，未取得醫師、社工、勞動保險或法律專業正式審閱；個案資格由承辦機關核定。"
   ],
-  "source_reviewed_sha256": "dfa87d2ba7617e864ecbc93eb296f137a7ce89ca871aa46049f0e5dbaa02aab5",
+  "source_reviewed_sha256": "c314600959689c5cf41155a6f6a30008c279150e8159ee64ea1ee14d781b6a21",
   "reader_copy_cleanup": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "dfa87d2ba7617e864ecbc93eb296f137a7ce89ca871aa46049f0e5dbaa02aab5",
     "after_sha256": "97d40a1f14255ead72397067e499bdbd0504f650f5e998bb2a409a377ab97982",
     "before_reader_sha256": "5dfe5989e58845504dc7280af6139adee1fc9802e58eb5100b8fe929bebaa362",
     "after_reader_sha256": "238fa42b7f0ea2c731c32f63f546f8e208c3c8708a404b246934ee761b4862b8"
-  }
+  },
+  "source_ids": [
+    "ch24_diff",
+    "ch24_majorapply",
+    "ch24_disability",
+    "rights_bli_disability",
+    "rights_bli_uninsured",
+    "rights_major_scope",
+    "ch24_major_illness_effective_dates_20261121",
+    "ch24_disability_process_law_20261121"
+  ],
+  "statistics_assessed": [
+    {
+      "applicability": "not_a_disease_incidence_topic; procedural_entitlements_have_no_common_rate",
+      "indicator": "重大傷病證明、身心障礙證明及職災失能認定的適用／核准率",
+      "period": "本次核對截至2026-11-21",
+      "scope": "臺灣各制度與不同申請人群",
+      "population": "各制度之申請人、合資格參保人與不同法定疾病／傷病對象",
+      "numerator": null,
+      "denominator": null,
+      "unit": null,
+      "data_type": "未找到能合併比較且有共同母數的制度核准率；不同制度法定標準和申請群不同。",
+      "event_definition": "本篇說明行政資格、申請生效與續件期限，不估疾病發生率。",
+      "limitations": "證明張數、給付人次或個別制度核定件數不得互相相加，也不能換算個人申請成功率。",
+      "sources": [
+        "ch24_major_illness_effective_dates_20261121",
+        "ch24_disability_process_law_20261121"
+      ]
+    }
+  ],
+  "frequency_assessment": "沒有適用於不同疾病、健保重大傷病、身障鑑定與職災失能的單一風險率；這些是不同制度的程序與資格。",
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": "健保／身心障礙與職災專業",
+    "status": "pending",
+    "reason": "本輪為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+  },
+  "unresolved_questions": [
+    "健保證明所列各疾病效期及更新文件須依核定通知、特約院所與健保署確認。",
+    "身障線上申請限制及地方受理方式會因案件和縣市不同；本批未逐縣市核對。"
+  ],
+  "prior_revision": "ce06f4b2f2493e8f6becb02cc2834e599d6f4303",
+  "before_sha256": "97d40a1f14255ead72397067e499bdbd0504f650f5e998bb2a409a377ab97982",
+  "after_sha256": "c314600959689c5cf41155a6f6a30008c279150e8159ee64ea1ee14d781b6a21",
+  "prior_review_sha256": "4b493693a2af248b297baa2bcc1b91bbd3cdcd25f8f04692702ad8b6b0b3d140",
+  "source_bundle_path": "localization/tw-edition/sources/ch17-ch24-highrisk-recheck-20261121.json",
+  "legal_temporal_checks": [
+    {
+      "law": "全民健康保險保險對象免自行負擔費用辦法",
+      "checked_at": "2026-11-21",
+      "relevant_provisions": [
+        "第5條",
+        "第9條"
+      ],
+      "relevant_provision_amendment": {
+        "provisions": [
+          "第5條"
+        ],
+        "promulgated_at": "2022-12-19",
+        "effective_at": "2022-12-21",
+        "basis": "衛福部111年12月19日修正發布第5條；第9條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第三日生效。"
+      },
+      "latest_law_version_context": "全國法規資料庫沿革列整體最新修正2024-09-16，該次僅修正第2條附表一；第5條最近修正仍為2022-12-19。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=L0060015",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0060015",
+        "https://media.nhi.gov.tw/md/dl-51939-22c20553daad430ea05c073d00b44b53-3.pdf",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+      ]
+    },
+    {
+      "law": "身心障礙者福利與服務需求評估及證明核發辦法",
+      "checked_at": "2026-11-21",
+      "relevant_provisions": [
+        "第2條",
+        "第12條"
+      ],
+      "relevant_provision_amendment": {
+        "provisions": [
+          "第2條"
+        ],
+        "promulgated_at": "2023-05-26",
+        "effective_at": "2023-05-28",
+        "basis": "衛福部112年5月26日修正發布第2、7、8、12條；第12條規定修正條文自發布日施行，依中央法規標準法第13條將發布日計為第1日，第3日生效。另第7條附表一之一及附表一之二明定自2023-07-01施行，非本篇第2條流程。"
+      },
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=D0050050",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050050",
+        "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg029097/ch08/type1/gov70/num30/Eg.htm",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030133"
+      ]
+    }
+  ]
 }

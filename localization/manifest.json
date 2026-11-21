@@ -9793,7 +9793,7 @@
         "ch17_judicial",
         "assault_113_dops"
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-21",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "趁老人清醒，書面指定將來的監護人",
@@ -9837,9 +9837,11 @@
         "ch17_postfraud",
         "ch17_165",
         "property_domestic",
-        "assault_113_dops"
+        "assault_113_dops",
+        "ch17_elder_protection_stats_2025_20261121",
+        "ch17_elder_protection_stats_method_20261121"
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-21",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "老人的錢單獨放一個賬戶，大額支出定一個雙人確認的規矩",
@@ -12200,9 +12202,10 @@
         "ch24_medlaw",
         "ch24_dispute",
         "access_dispute_law",
-        "access_dispute_effect"
+        "access_dispute_effect",
+        "ch24_medical_accident_care_5day_20261121"
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-21",
       "upstream_path_uri": "book/24-%E7%9C%8B%E7%97%85.md",
       "display_path": "book/24-看病.md",
       "source_title_zh_tw": "對診療有疑問就當場要求封存病歷，雙方在場、開清單、各執一份",
@@ -12271,9 +12274,11 @@
         "ch24_disability",
         "rights_bli_disability",
         "rights_bli_uninsured",
-        "rights_major_scope"
+        "rights_major_scope",
+        "ch24_major_illness_effective_dates_20261121",
+        "ch24_disability_process_law_20261121"
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-21",
       "upstream_path_uri": "book/24-%E7%9C%8B%E7%97%85.md",
       "display_path": "book/24-看病.md",
       "source_title_zh_tw": "傷殘鑑定要等治療終結或者臨床治療效果穩定之後再做",
