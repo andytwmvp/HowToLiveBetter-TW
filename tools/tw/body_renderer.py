@@ -3,6 +3,11 @@ import html
 import re
 
 
+def reader_visible_text(value):
+    """Return the plain text produced by the reader's supported inline emphasis."""
+    return re.sub(r'\*\*([^*\n]+)\*\*', r'\1', value)
+
+
 def _markdown_segments(value, strip_bullet=False):
     value = value.strip()
     if strip_bullet:

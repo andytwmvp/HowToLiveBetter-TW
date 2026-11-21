@@ -237,10 +237,20 @@ class DaylightHealthResearchPublicationTests(unittest.TestCase):
 
     def test_first_publication_does_not_create_a_historical_recheck(self):
         baseline_register = json.loads(git_bytes(BASE, REGISTER_PATH))
-        self.assertEqual(self.register, baseline_register)
+        previous_rows = baseline_register["substantive_rechecks"]
+        current_rows = self.register["substantive_rechecks"]
+        self.assertEqual(current_rows[: len(previous_rows)], previous_rows)
+        batch = read("localization/ch01-highrisk-recheck-20261121.json")
+        expected_new_rows = [
+            (item["id"], item["reviewed_at"]) for item in batch["items"]
+        ]
+        self.assertCountEqual(
+            [(row["id"], row["reviewed_at"]) for row in current_rows[len(previous_rows) :]],
+            expected_new_rows,
+        )
         self.assertFalse(any(
             row["id"] == ITEM_ID and row["reviewed_at"] == DATE
-            for row in self.register["substantive_rechecks"]
+            for row in current_rows
         ))
 
     def test_batch_counts_reflect_only_one_core_publication_and_nine_sources(self):

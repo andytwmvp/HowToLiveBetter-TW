@@ -1,6 +1,6 @@
 """五篇用藥糖尿病長照再審正文、來源與實際搜尋互動。"""
 from review_contract import ROOT, validate_runtime
-from body_renderer import body_blocks
+from body_renderer import body_blocks, reader_visible_text
 
 
 def check_medication_diabetes_ltc_browser(page, context, url, review):
@@ -19,7 +19,7 @@ def check_medication_diabetes_ltc_browser(page, context, url, review):
                 assert items[key]['title'] in article.inner_text()
                 rendered = article.text_content()
                 for block in body_blocks(items[key]):
-                    assert block['text'] in rendered, (target, key, block['text'][:50])
+                    assert reader_visible_text(block['text']) in rendered, (target, key, block['text'][:50])
                 for source_id in items[key]['source_ids']:
                     assert article.locator('a').evaluate_all('(xs,u)=>xs.some(a=>a.href===u)', sources[source_id]['url']), (key, source_id)
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), target

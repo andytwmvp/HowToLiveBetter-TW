@@ -217,6 +217,17 @@
     if (cls) element.className = cls;
     return element;
   }
+  function appendInline(parent, text) {
+    const value = String(text ?? '');
+    const emphasis = /\*\*([^*\n]+)\*\*/g;
+    let cursor = 0, match;
+    while ((match = emphasis.exec(value)) !== null) {
+      if (match.index > cursor) parent.append(document.createTextNode(value.slice(cursor, match.index)));
+      parent.append(node('strong', match[1]));
+      cursor = emphasis.lastIndex;
+    }
+    if (cursor < value.length) parent.append(document.createTextNode(value.slice(cursor)));
+  }
   function render() {
     if (!catalog) return;
     try { validate(catalog); } catch (error) { showFailure(error); return; }
@@ -242,18 +253,18 @@
         if (block.segments) {
           for (const segment of block.segments) {
             if (segment.url || segment.href) {
-              const link = node('a', segment.text); link.href = segment.url || segment.href;
+              const link = node('a'); link.href = segment.url || segment.href;
               if (segment.url) link.rel = 'noopener noreferrer';
-              part.append(link);
-            } else part.append(document.createTextNode(segment.text));
+              appendInline(link, segment.text); part.append(link);
+            } else appendInline(part, segment.text);
           }
         } else if (block.url || block.href) {
-          const link = node('a', block.text); link.href = block.url || block.href; if (block.url) link.rel = 'noopener noreferrer'; part.append(link);
-          if (block.suffix) part.append(document.createTextNode(block.suffix));
-        } else part.textContent = block.text;
+          const link = node('a'); link.href = block.url || block.href; if (block.url) link.rel = 'noopener noreferrer'; appendInline(link, block.text); part.append(link);
+          if (block.suffix) appendInline(part, block.suffix);
+        } else appendInline(part, block.text);
         article.append(part);
       }
-      article.append(node('p', e.limits));
+      const limits = node('p'); appendInline(limits, e.limits); article.append(limits);
       const due = today >= e.review_due_at;
       article.append(node('p', `內容最後確認日期：${e.reviewed_at}；建議再次確認日期：${e.review_due_at}${due ? '。已到再次確認日期，採取行動前請向主管機關或服務單位確認最新資訊。' : '。'}`, 'meta'));
       const refs = node('p', '依據：');

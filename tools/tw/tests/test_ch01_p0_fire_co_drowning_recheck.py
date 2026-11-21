@@ -47,10 +47,18 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
                 self.assertEqual(entry["sources"], item["source_ids"])
                 self.assertEqual(raw.decode("utf-8"), item["body"])
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review["target_sha256"])
-                expected_date = "2026-10-28" if key in CURRENT_RECHECK_IDS else "2026-10-25"
-                expected_revision = BASE if key in CURRENT_RECHECK_IDS else PREVIOUS_BATCH_BASE
+                if key == "TW-01-012":
+                    latest_batch = load("localization/ch01-highrisk-recheck-20261121.json")
+                    latest_item = next(item for item in latest_batch["items"] if item["id"] == key)
+                    expected_date = latest_item["reviewed_at"]
+                    expected_due = latest_item["review_due_at"]
+                    expected_revision = latest_batch["base_main_sha"]
+                else:
+                    expected_date = "2026-10-28" if key in CURRENT_RECHECK_IDS else "2026-10-25"
+                    expected_due = "2027-01-31"
+                    expected_revision = BASE if key in CURRENT_RECHECK_IDS else PREVIOUS_BATCH_BASE
                 self.assertEqual(review["reviewed_at"], expected_date)
-                self.assertEqual(review["review_due_at"], "2027-01-31")
+                self.assertEqual(review["review_due_at"], expected_due)
                 self.assertEqual(row["status"], "ai_source_rechecked_professional_pending")
                 self.assertEqual(row["prior_revision"], expected_revision)
                 self.assertEqual(row["source_ids"], item["source_ids"])

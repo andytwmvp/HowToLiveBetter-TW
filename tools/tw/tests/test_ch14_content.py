@@ -14,13 +14,19 @@ import sqlite3
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked
 from review_contract import ROOT, publication_report, validate_entry, validate_runtime
-from body_renderer import body_blocks, body_html
+from body_renderer import body_blocks, body_html, reader_visible_text
 from edition import build_anki
 
 BASE='37d33f484ee85736170694754528f4392e8ee94d'
 IDS={f'TW-14-{n:03}' for n in range(1,13)}
 
 class ChapterContentTests(unittest.TestCase):
+    def test_reader_visible_text_removes_only_emphasis_delimiters(self):
+        self.assertEqual(
+            reader_visible_text('先撥**119**；**不要催吐**，保留其他文字。'),
+            '先撥119；不要催吐，保留其他文字。',
+        )
+
     def test_complete_core_chapter_with_evidence(self):
         data=validate_runtime();items={e['id']:e for e in data['items']}
         manifest=json.loads((ROOT/'localization/manifest.json').read_text())

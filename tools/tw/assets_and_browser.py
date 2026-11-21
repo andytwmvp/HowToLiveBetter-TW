@@ -122,12 +122,16 @@ def run(render: bool,browser_test: bool) -> None:
                 page.locator('#q').fill('')
                 rendered_copy=page.locator('[data-id]').evaluate_all('''cards => ({
                   rawMarkdown: cards.some(card => card.innerText.includes('](')),
+                  rawEmphasis: cards.some(card => /\\*\\*[^*\\n]+\\*\\*/.test(card.innerText)),
                   brokenInternal: [...document.querySelectorAll('[data-id] a[href^="#TW-"]')]
                     .filter(link => !document.getElementById(decodeURIComponent(link.hash.slice(1))))
                     .map(link => link.href)
                 })''')
                 assert not rendered_copy['rawMarkdown'],'臺灣閱讀頁仍顯示Markdown連結語法：'+path
+                assert not rendered_copy['rawEmphasis'],'臺灣閱讀頁仍顯示Markdown粗體語法：'+path
                 assert not rendered_copy['brokenInternal'],(path,rendered_copy['brokenInternal'])
+                for item_id in ('TW-01-012','TW-01-025','TW-01-033','TW-01-046'):
+                    assert page.locator(f'[data-id="{item_id}"] strong').count()>0,(path,item_id,'正文強調未轉成語意化strong元素')
                 for source_id,target_id in (
                     ('TW-24-004','TW-16-002'),
                     ('TW-13-038','TW-13-042'),

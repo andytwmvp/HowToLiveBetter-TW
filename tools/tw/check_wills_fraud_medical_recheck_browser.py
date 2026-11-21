@@ -1,6 +1,6 @@
 """遺囑、防詐、家庭醫師與基層急症四篇閱讀器檢查。"""
 from review_contract import ROOT, validate_runtime
-from body_renderer import body_blocks
+from body_renderer import body_blocks, reader_visible_text
 
 
 def check_wills_fraud_medical_recheck_browser(page, context, url, review):
@@ -21,7 +21,7 @@ def check_wills_fraud_medical_recheck_browser(page, context, url, review):
                     assert article.locator('h3').filter(has_text='面對催促，先保留決定時間').count() == 1
                 rendered = article.text_content()
                 for block in body_blocks(items[key]):
-                    assert block['text'] in rendered, (target, key, block['text'][:60])
+                    assert reader_visible_text(block['text']) in rendered, (target, key, block['text'][:60])
                 for source_id in items[key]['source_ids']:
                     assert article.locator('a').evaluate_all('(xs,u)=>xs.some(a=>a.href===u)', sources[source_id]['url']), (key, source_id)
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), target
