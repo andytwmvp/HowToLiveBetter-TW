@@ -1,0 +1,108 @@
+{
+  "id": "TW-34-001",
+  "reviewer": "ChatGPT（AI協助查核臺灣主管機關、兒科專業資料及現行產品安全資訊；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch34/TW-34-001.md",
+  "target_sha256": "caf5b021c03c50f8a21984e524f4604fee49ed4d4053b6a6fe0ecb1b56bdbb9c",
+  "source_reviewed_sha256": "caf5b021c03c50f8a21984e524f4604fee49ed4d4053b6a6fe0ecb1b56bdbb9c",
+  "before_sha256": null,
+  "after_sha256": "caf5b021c03c50f8a21984e524f4604fee49ed4d4053b6a6fe0ecb1b56bdbb9c",
+  "source_bundle_path": "localization/tw-edition/sources/ch34-medication-safety-20261121.json",
+  "source_bundle_sha256": "1e7b40e29fd5ea00d1ccca76ff679321406b582aff297489a5b21b03cc3eb62c",
+  "source_checks": [
+    {
+      "source_id": "tw34_tfda_acetaminophen_2024",
+      "title": "衛生福利部食品藥物管理署：聽說吃退燒藥會傷肝，這是真的嗎？（維護至2024-12-31）",
+      "url": "https://www.fda.gov.tw/tc/newsContent.aspx?cid=5049&id=22396",
+      "claim": "複方感冒、止痛和退燒藥可能含乙醯胺酚；不同品牌併用前須核對成分，過量可能造成肝損傷。",
+      "supporting_passage": "食藥署說明複方感冒、止痛及退燒藥可能含乙醯胺酚，提醒核對成分並避免自行併用；肝病或飲酒者應先詢問醫療專業人員。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀食藥署闢謠頁，核對頁面發布及維護日期、乙醯胺酚成分重複與肝損傷警示。"
+    },
+    {
+      "source_id": "tw34_mohw_acetaminophen_label",
+      "title": "衛生福利部：乙醯胺酚藥品用藥安全資訊（2014年官方說明）",
+      "url": "https://mohw.gov.tw/cp-2652-22349-1.html",
+      "claim": "衛福部官方說明轉述核准仿單警語：勿同時服用其他含乙醯胺酚藥品或超量；意外過量即使無症狀也要立即聯絡醫師或毒物中心並接受醫療照護。",
+      "supporting_passage": "頁面明列不得同時服用其他含乙醯胺酚藥品、不要超過建議劑量，若意外過量即使尚未觀察到症狀仍應立即接受醫療照護。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接查閱衛福部官方用藥安全說明；頁面位於2014年新聞典藏，將其用於確認官方轉述的仿單警語，不以頁面年代推論個別產品現行劑量。"
+    },
+    {
+      "source_id": "ch01_vghtpe_poison_hotline_20261108",
+      "title": "臺北榮總毒藥物防治諮詢中心：24小時聯絡方式",
+      "url": "https://www.pcc-vghtpe.tw/active-detail1259.htm",
+      "claim": "毒藥物防治諮詢中心提供全年無休免費諮詢，電話02-2871-7121；諮詢時準備暴露物、用量、時間、年齡、體重及健康狀況。",
+      "supporting_passage": "官方常見問答列出全天候全年無休免費諮詢02-28717121，並建議提供物質、攝入量及時間、年齡、體重和平常健康情況。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "重新直接查閱臺北榮總毒藥物防治諮詢中心現行頁面，核對聯絡電話、服務時間及中毒處置。"
+    },
+    {
+      "source_id": "ch13_pcc_poison_20261103",
+      "title": "臺北榮總毒藥物防治諮詢中心：中毒處置",
+      "url": "https://www.pcc-vghtpe.tw/active-detail1260.htm",
+      "claim": "昏迷、呼吸異常或抽搐等情況應立即撥119；口服中毒勿催吐，保存暴露物資訊與時間。",
+      "supporting_passage": "毒藥物防治諮詢中心中毒處置頁說明昏迷或抽搐撥119、口服暴露切勿催吐，並攜帶暴露物資訊就醫。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "重新直接查閱臺北榮總毒藥物防治諮詢中心現行頁面，核對聯絡電話、服務時間及中毒處置。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原固定ID及其核心用藥安全問題，依臺灣主管機關、臺灣兒科專業資料及本地毒物諮詢入口獨立撰寫；不把中國或美國藥品禁令、年齡門檻、收案比例及劑量上限移作臺灣規則。",
+  "review_method": "逐條比對原作固定ID、原始標題與正文、manifest原作來源版本及此前未完成狀態；查閱臺灣食藥署與衛福部用藥資料、臺灣兒科發燒衛教、臺北榮總毒藥物諮詢中心。逐項核對每個正文主張與來源支持段落、台灣可採取的給藥／求助流程、年齡適用界線及用藥風險。未找到可對應相關用藥行為的全國暴露分母時明確標示資料不足，不引用境外收案率換算臺灣個人機率；本批為首次正式發布，不計入歷史正文實質再審數。",
+  "limits": [
+    "臺灣沒有可計算乙醯胺酚重複服用或過量的全國暴露分母",
+    "國外急性肝衰竭病例比例不能換算為臺灣個人發生機率，也不能用來訂個人用量。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "19680eef7c1d3b701c4b8b3987283a3bb795154d96e954c8ea2370d2437a81fa",
+  "source_ids": [
+    "tw34_tfda_acetaminophen_2024",
+    "tw34_mohw_acetaminophen_label",
+    "ch01_vghtpe_poison_hotline_20261108",
+    "ch13_pcc_poison_20261103"
+  ],
+  "frequency_assessment": "未找到可用於估算臺灣民眾對應用藥錯誤或特定NSAID副作用之全國性暴露分母與一致事件定義。沒有把毒物中心諮詢量、單院病例、境外試驗或仿單不良反應清單當作臺灣發生率或個人機率；數據不足不代表事件不存在。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "尚無可用來計算本條所述用藥行為或不良事件之臺灣全國暴露分母；各類資料口徑不同，不能跨來源合併。",
+    "個別產品濃度、核准年齡、仿單警語及患者用藥計畫可能更新；後續應按產品現行標示和主管機關公告再查。",
+    "尚未取得兒科、臨床藥學、急診毒物或腎胃照護等適當領域之獨立專業人員審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "臨床毒物",
+      "臨床藥學",
+      "肝膽醫學"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "不同品牌的感冒、止痛或退燒藥可能含相同的乙醯胺酚。併用前逐一核對藥袋、外盒與成分標示；若意外重複或不確定是否超量，立即聯絡毒藥物防治諮詢中心，不等症狀出現。",
+  "topic_fidelity_review": {
+    "decision": "retain_duplicate_ingredient_and_asymptomatic_overdose_safety",
+    "original_question": "同時吃兩種感冒藥或止痛藥之前，先看成分表，對乙酰氨基酚只能佔一種，吃多了沒不舒服也當天去醫院",
+    "reader_content_decision": "不同品牌的感冒、止痛或退燒藥可能含相同的乙醯胺酚。併用前逐一核對藥袋、外盒與成分標示；若意外重複或不確定是否超量，立即聯絡毒藥物防治諮詢中心，不等症狀出現。 核對所有藥品有效成分與每次用量；意外重複服用時準備藥品包裝、服用量和時間，立即聯絡24小時毒藥物防治諮詢中心02-2871-7121；意識或呼吸異常、抽搐時撥119。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "美國急性肝衰竭病例比例、藥品最大量與美國飲酒門檻可套用於臺灣讀者",
+        "decision": "exclude_foreign_case_rate_and_regulatory_limits",
+        "reason": "原數值來自美國收案或法規，非臺灣現行產品標示及個人發生率；臺灣讀者可執行的核心是核對成分、按標示使用及意外超量立即求助。"
+      },
+      {
+        "original_claim": "不同感冒、止痛藥可能重複乙醯胺酚；過量早期可無症狀",
+        "decision": "retain_with_Taiwan_label_and_poison_center_actions",
+        "reason": "衛福部與食藥署資料支持成分重複及意外過量警示，臺北榮總提供全日免費諮詢與適用的在地求助入口。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "成分核對不需額外工具；若意外超量，24小時免費毒藥物諮詢可協助分流；任何額外診療與交通成本依實際需要。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇沒有把境外藥品禁令或境外年齡限制描述為臺灣法規；用藥建議依查閱日主管機關資料、個別產品現行核准標示及醫師指示。"
+  }
+}

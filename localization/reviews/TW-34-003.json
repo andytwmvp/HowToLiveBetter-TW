@@ -1,0 +1,88 @@
+{
+  "id": "TW-34-003",
+  "reviewer": "ChatGPT（AI協助查核臺灣主管機關、兒科專業資料及現行產品安全資訊；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-21",
+  "review_due_at": "2027-02-21",
+  "target_path": "locales/zh-TW/book/ch34/TW-34-003.md",
+  "target_sha256": "46b647cd8cd88f03465aa044991808376538e876c6753fa42725bd041ed4f948",
+  "source_reviewed_sha256": "46b647cd8cd88f03465aa044991808376538e876c6753fa42725bd041ed4f948",
+  "before_sha256": null,
+  "after_sha256": "46b647cd8cd88f03465aa044991808376538e876c6753fa42725bd041ed4f948",
+  "source_bundle_path": "localization/tw-edition/sources/ch34-medication-safety-20261121.json",
+  "source_bundle_sha256": "1e7b40e29fd5ea00d1ccca76ff679321406b582aff297489a5b21b03cc3eb62c",
+  "source_checks": [
+    {
+      "source_id": "tw34_tfda_nsaid_2024",
+      "title": "衛生福利部食品藥物管理署：肌肉痠痛怎麼辦？食藥署教您緩解之道！（2024-09-20）",
+      "url": "https://www.fda.gov.tw/tc/PublishOtherEpaperContent.aspx?id=1527&r=251919800&tid=4891",
+      "claim": "食藥署指出NSAID可能造成胃腸潰瘍或出血；有潰瘍、使用抗凝血劑或併用胃部不適藥品者先由醫師評估，非處方止痛藥應告知藥師正在使用的藥品。",
+      "supporting_passage": "第992期日期2024-09-20說明NSAID胃腸潰瘍或出血副作用與消化性潰瘍、抗凝血劑及交互作用警示，並提醒購藥時向藥師說明其他藥物。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀食藥署第992期藥物食品安全週報及其NSAID用藥提醒，核對發布日期與族群警語。"
+    },
+    {
+      "source_id": "tw34_tfda_diclofenac_label",
+      "title": "衛生福利部食品藥物管理署：含diclofenac成分口服劑型藥品中文仿單修訂附件（公開標示資料）",
+      "url": "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f636694231200509957",
+      "claim": "食藥署diclofenac仿單附件列出NSAID可能引起嚴重胃腸潰瘍、出血或穿孔，風險因子包括潰瘍或出血史、口服類固醇、抗凝血劑、年長及長期使用；另列黑便、吐血與少尿等訊號。",
+      "supporting_passage": "仿單第3頁說明NSAID可能引起嚴重胃腸道不良反應及相關風險因素；第5頁列出吐血、黑便、少尿等通報不良反應與交互作用警語。",
+      "accessed_at": "2026-11-21",
+      "retrieval_method": "直接閱讀食藥署公開之diclofenac中文仿單修訂附件，逐段核對胃腸警語、腎臟風險、交互作用及不良反應；不把單一成分風險數值外推到所有NSAID或個人。"
+    }
+  ],
+  "localization_changes": "首次正式發布。保留原固定ID及其核心用藥安全問題，依臺灣主管機關、臺灣兒科專業資料及本地毒物諮詢入口獨立撰寫；不把中國或美國藥品禁令、年齡門檻、收案比例及劑量上限移作臺灣規則。",
+  "review_method": "逐條比對原作固定ID、原始標題與正文、manifest原作來源版本及此前未完成狀態；查閱臺灣食藥署與衛福部用藥資料、臺灣兒科發燒衛教、臺北榮總毒藥物諮詢中心。逐項核對每個正文主張與來源支持段落、台灣可採取的給藥／求助流程、年齡適用界線及用藥風險。未找到可對應相關用藥行為的全國暴露分母時明確標示資料不足，不引用境外收案率換算臺灣個人機率；本批為首次正式發布，不計入歷史正文實質再審數。",
+  "limits": [
+    "臺灣缺乏能把不同NSAID、劑量、使用天數及特定病史連結到同一個全國個人發生率的公開資料",
+    "diclofenac仿單列出的類別警語不能換算成每位使用者的絕對風險，也不能取代個別評估。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "a95cda6a368f1596e223cb26f2cd3f188073efe8bd9a50d7e8439813b5d2c2c5",
+  "source_ids": [
+    "tw34_tfda_nsaid_2024",
+    "tw34_tfda_diclofenac_label"
+  ],
+  "frequency_assessment": "未找到可用於估算臺灣民眾對應用藥錯誤或特定NSAID副作用之全國性暴露分母與一致事件定義。沒有把毒物中心諮詢量、單院病例、境外試驗或仿單不良反應清單當作臺灣發生率或個人機率；數據不足不代表事件不存在。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "尚無可用來計算本條所述用藥行為或不良事件之臺灣全國暴露分母；各類資料口徑不同，不能跨來源合併。",
+    "個別產品濃度、核准年齡、仿單警語及患者用藥計畫可能更新；後續應按產品現行標示和主管機關公告再查。",
+    "尚未取得兒科、臨床藥學、急診毒物或腎胃照護等適當領域之獨立專業人員審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "臨床藥學",
+      "腸胃醫學",
+      "腎臟醫學"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "非類固醇抗發炎止痛藥可能造成胃腸潰瘍、出血及腎臟傷害。曾有胃潰瘍或出血、腎臟或心臟疾病、年長或身體較虛弱，或正在使用抗凝血、抗血小板及類固醇藥物者，使用前先詢問醫師或藥師。",
+  "topic_fidelity_review": {
+    "decision": "retain_NSAID_risk_check_remove_foreign_age_cutoff",
+    "original_question": "60 歲以上、胃出過血、在吃抗凝藥或激素的人，吃布洛芬這類止痛藥之前先問醫生",
+    "reader_content_decision": "非類固醇抗發炎止痛藥可能造成胃腸潰瘍、出血及腎臟傷害。曾有胃潰瘍或出血、腎臟或心臟疾病、年長或身體較虛弱，或正在使用抗凝血、抗血小板及類固醇藥物者，使用前先詢問醫師或藥師。 核對成分並告知醫師或藥師既往胃腸、腎臟及心臟病史與所有處方藥、成藥和貼布；不要自行疊加同類止痛藥，也不要擅自停用原處方抗凝血藥或低劑量阿斯匹靈。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "一律以60歲為固定門檻，並把高劑量試驗的風險倍數套給所有用藥者",
+        "decision": "replace_fixed_foreign_cutoff_and_unqualified_relative_risk",
+        "reason": "臺灣官方資料以病史、合併用藥、劑量和療程作個別評估；境外高劑量試驗不能轉作台灣短期使用者的絕對風險。"
+      },
+      {
+        "original_claim": "胃腸潰瘍或出血、抗凝血劑和類固醇是需先評估的風險",
+        "decision": "retain_with_Taiwan_regulator_warning_and_product_label",
+        "reason": "食藥署警示與官方diclofenac仿單均支持相關風險及諮詢行動；不設定來源不支持的年齡硬線。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "先核對藥袋、病史和共用藥物成本低；高風險情況先詢問醫療專業人員可避免自行加藥，實際替代治療成本需個別評估。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-21",
+    "assessment": "本篇沒有把境外藥品禁令或境外年齡限制描述為臺灣法規；用藥建議依查閱日主管機關資料、個別產品現行核准標示及醫師指示。"
+  }
+}
