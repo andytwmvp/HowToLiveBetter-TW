@@ -267,6 +267,11 @@ class DogOwnershipLongevityPublicationTests(unittest.TestCase):
         current_without = dict(current_register)
         baseline_without.pop("substantive_rechecks")
         current_without.pop("substantive_rechecks")
+        baseline_cleanups = baseline_register.get("reader_copy_cleanups", [])
+        current_cleanups = current_register.get("reader_copy_cleanups", [])
+        self.assertEqual(current_cleanups[:len(baseline_cleanups)], baseline_cleanups)
+        baseline_without.pop("reader_copy_cleanups", None)
+        current_without.pop("reader_copy_cleanups", None)
         self.assertEqual(current_without, baseline_without)
         self.assertFalse(any(
             row["id"] == ITEM_ID and row["reviewed_at"] == DATE

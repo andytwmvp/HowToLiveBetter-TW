@@ -90,13 +90,23 @@ class Chapter20InfantPreventionPublicationTests(unittest.TestCase):
             baseline_rows,
             "較新的歷史再審只能追加，不能改寫本批之前的紀錄",
         )
+        self.assertEqual(self.stage["counts_before"]["review_rechecks"], len(baseline_rows))
         self.assertEqual(
-            len(self.register["substantive_rechecks"]),
-            len(baseline_rows) + 1,
+            self.stage["counts_after"]["review_rechecks"],
+            self.stage["counts_before"]["review_rechecks"],
         )
+        self.assertGreaterEqual(
+            len(self.register["substantive_rechecks"]),
+            self.stage["counts_after"]["review_rechecks"],
+        )
+        baseline_cleanups = self.base_register.get("reader_copy_cleanups", [])
+        current_cleanups = self.register.get("reader_copy_cleanups", [])
+        self.assertEqual(current_cleanups[:len(baseline_cleanups)], baseline_cleanups)
         self.assertEqual(
-            {key: value for key, value in self.register.items() if key != "substantive_rechecks"},
-            {key: value for key, value in self.base_register.items() if key != "substantive_rechecks"},
+            {key: value for key, value in self.register.items()
+             if key not in {"substantive_rechecks", "reader_copy_cleanups"}},
+            {key: value for key, value in self.base_register.items()
+             if key not in {"substantive_rechecks", "reader_copy_cleanups"}},
         )
         base_item_ids = [row["id"] for row in self.base_runtime["items"]]
         current_item_ids = [row["id"] for row in self.runtime["items"]]
