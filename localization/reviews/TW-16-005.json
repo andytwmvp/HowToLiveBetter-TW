@@ -1,12 +1,94 @@
 {
   "id": "TW-16-005",
-  "reviewer": "ChatGPT（AI輔助原始來源與臺灣制度核對，非執業醫師、藥師或獨立醫療專業簽證）",
+  "reviewer": "ChatGPT（AI協助核對官方法規與服務來源；非具名醫療、藥事、社政或法律專業審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-23",
+  "review_due_at": "2027-02-23",
   "target_path": "locales/zh-TW/book/ch16/TW-16-005.md",
-  "target_sha256": "2f700498ddd89d95d3f367eab095f7bea552c231717cf8fdb069ec2b22c09272",
+  "target_sha256": "fff277c91680fd74ed0c1ac378b2cd364c25768562f96768400dbc34ffd30952",
   "source_checks": [
+    {
+      "source_id": "ch16_nhi_rx",
+      "url": "https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html",
+      "claim": "健保署說明慢箋由醫師依病情開立；一般總給藥量最長90日並分次調劑，每次不超過30日。",
+      "supporting_passage": "官方處方用藥說明列慢箋最長90日、分次調劑及每次30日內；頁面更新日2023-11-29，法定日期及領藥窗口另以本次實讀現行法規第22至25條核定。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "官方健保署處方用藥說明頁已讀取可見內容；本輪具體法定流程以同日實讀全國法規資料庫為主要支持。"
+    },
+    {
+      "source_id": "ch16_fda_meds",
+      "url": "https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t624124",
+      "claim": "食藥署2026春節提醒慢性病用藥按時服用、勿自行停藥，有疑問諮詢醫藥人員；屬一般衛教，不替代個別用藥指示。",
+      "supporting_passage": "食藥署2026-02-16發布的春節用藥提醒建議按時服藥、避免自行停藥，並就藥物與飲食及行車安全諮詢醫師或藥師。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "2026-11-23檢索並讀取官方頁面索引所呈文章全文及發布／維護日期；以一般衛教範圍引用，不由此推論個人治療。"
+    },
+    {
+      "source_id": "tw24_nhi_medical_rules_20261122",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009",
+      "claim": "健保醫療辦法第22至25條規定慢箋總量、效期、提前再調劑與特定一次領足例外；第22條自2024-08-01施行。",
+      "supporting_passage": "現行條文：慢箋總用藥量至多90日；末次調劑日以末次給藥末日為限；上次給藥期間屆滿前10日內始得再次調劑；預定出國／返回離島、特定船員、罕病或保險人認定特殊病人得出具切結一次領總量。第28條列第22條2024-08-01施行。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "2026-11-23實讀全國法規資料庫現行第22至25及28條；條文明示2024-06-20修正、2024-08-01施行。"
+    }
+  ],
+  "localization_changes": "逐主張核對慢箋適用與效期、每次處方總量、分次調劑、提前再次調劑與一次領取總量的法定例外；把原引用第22、26、28條修正為直接支持本篇領藥日期及例外的第22至25條，並更新條文施行日期說明。",
+  "review_method": "重讀原作固定ID所指主題、最新正文、前次review、來源及支持主張；逐項查核臺灣官方法規／服務頁、適用對象、流程、費用、法規發布與施行日期及資料限制。來源擷取器無法讀取的動態頁或直接逾時，明確降低其支持範圍並以可讀取的官方法規／說明交叉確認；未進行個案申請或醫療服務。",
+  "limits": [
+    "2024-06-20修正的健保醫療辦法第22條自2024-08-01施行；第23至25條分別規定效期、提前調劑與例外。各藥品、管制藥及特殊療程仍可能有個別限制。",
+    "本輪未取得全臺同定義斷藥事件的分子、分母與追蹤期間；AI來源核對不等於醫師或藥師的獨立專業審閱。"
+  ],
+  "source_reviewed_sha256": "fff277c91680fd74ed0c1ac378b2cd364c25768562f96768400dbc34ffd30952",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v3",
+    "before_sha256": "33336a86bd0f878673d18da9e3c4fb54c8d28a2bd548822fb99eed092d251bfe",
+    "after_sha256": "2f700498ddd89d95d3f367eab095f7bea552c231717cf8fdb069ec2b22c09272",
+    "before_reader_sha256": "c3f2bd4ec2d459dde6db89a079f65668c238e7185c29bbf4a907c01d98febb92",
+    "after_reader_sha256": "a8f0d4b4f49c94aa22a8a0a435fda9d6c0d5736cd0f52fb87ef3e2597dc2be78"
+  },
+  "before_sha256": "2f700498ddd89d95d3f367eab095f7bea552c231717cf8fdb069ec2b22c09272",
+  "after_sha256": "fff277c91680fd74ed0c1ac378b2cd364c25768562f96768400dbc34ffd30952",
+  "source_bundle_path": "localization/tw-edition/sources/ch16-24-medical-rights-recheck-20261123.json",
+  "source_bundle_sha256": "91e87c9c6a4e6ea8130a60bce7453d8e445bc2dd81a77973c2eabb18d67de9b4",
+  "source_ids": [
+    "ch16_nhi_rx",
+    "ch16_fda_meds",
+    "tw24_nhi_medical_rules_20261122"
+  ],
+  "frequency_assessment": "慢箋續領與用藥銜接屬服務流程；本次未找到以同一定義及全臺病人母數計算的斷藥發生率。處方件數、調劑人次及院所品質指標不能換算個人斷藥機率；風險以慢性病持續治療需要及連假、交通安排處理，不自行推估。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "個別處方及藥品是否符合慢箋、一次領足或其他例外，仍須由開方醫師、藥師及健保署按當期規則確認。",
+    "尚待家庭醫學／慢性病照護與藥事專業人員獨立審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "家庭醫學／慢性病照護",
+      "藥事調劑"
+    ],
+    "status": "pending",
+    "reason": "本次為AI輔助來源核對與讀者正文修正，尚未取得具名且具資格的獨立專業審閱。"
+  },
+  "prior_revision": "1ca0a13d2988210d930afab9444e8589d36d4709",
+  "prior_review_sha256": "a847cbef89e994845546492294cc3f32c8e6183748e8e80f79190fb2f159c326",
+  "prior_reviewed_at": "2026-10-20",
+  "prior_review_due_at": "2026-12-31",
+  "prior_source_reviewed_sha256": "33336a86bd0f878673d18da9e3c4fb54c8d28a2bd548822fb99eed092d251bfe",
+  "prior_manifest_entry_sha256": "36b06a55694493888e6be1e052a2cadf98fae0e6c382a137d4032e4e19c1ef29",
+  "previous_body": "<!-- TW-ID: TW-16-005 -->\n\n# 慢性病連續處方箋最長90日，通常分次領藥每次30日內\n\n## 適用情境與優先做法\n\n服藥後有呼吸困難、快速臉喉腫脹、昏厥或意識異常，先119，不等補藥或慢箋回診。病況改變、疑似嚴重副作用或快斷藥時，聯絡原院所與藥師，不為省一次門診沿用舊劑量硬撐。\n\n病況穩定、符合慢性病範圍者可與醫師討論慢箋；不是所有慢性病每次都適合。一般慢箋總量至多90日，通常分次調劑、每次30日內，並非一般社區院所一律一次交付三個月。\n\n## 臺灣實作與下一步\n\n把每次領藥日、給藥天數、下次可調劑日及末次用藥末日記在日曆，領藥前核對處方效期、剩藥與藥袋，帶健保卡及有效處方詢問特約藥局是否備齊。一般再次調劑須在上次給藥期間屆滿前10日內，仍按該次藥袋服用，不因提早拿到就提早加吃。\n\n法規另有例外：有效慢箋遇預定出國、返回離島、遠洋／國際航線船員、罕病或保險人認定特殊情形，可依規定出具切結文件一次領總量；先問院所藥局所需文件，不自行把任何旅遊當成保證核准。腹膜透析液等另有用量規定；例外不能改成所有藥都可囤。\n\n## 成本與可能效益\n\n事件頻率：慢箋是用藥與調劑制度，目前沒有同定義全臺「因領藥銜接失敗而斷藥」的追蹤分母；開箋件數、調劑人次或品質指標不能直接當病人斷藥機率。颱風、連假、離島交通與跨縣市就醫可能影響領藥安排，但不據此捏造發生率。\n\n可減少往返，仍須先問掛號、藥品部分負擔、交通、自費差額及供貨時間；免收某項費用不等於所有費用免費。\n\n## 限制、例外與安全界線\n\n第22條2024-06-20修正、08-01施行，分次、效期、提前調劑與一次領足例外須合看第23至25條。一般提前10日規則與春節等特別公告不同，不把往年措施延用為全年通則。換院或換藥時請團隊確認哪張舊方停用，避免新舊同時領、重複服藥；管制藥與特殊療程再核對個別規定，不網購不明替代品。\n\n## 參考資料\n\n- [健保署：慢性病連續處方箋與調劑](https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html)\n\n- [食藥署：慢性病春節用藥提醒（2026）](https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t624124)\n\n- [全民健康保險醫療辦法第22、26、28條](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009)\n",
+  "previous_source_ids": [
+    "ch16_nhi_rx",
+    "ch16_fda_meds",
+    "follow_nhi_rules"
+  ],
+  "prior_review_claims": [
+    "TW-16-005：醫師按病況開慢箋，最長90日、分次調劑，每次不超過30日；不是全數一次交付。",
+    "TW-16-005：慢性病藥物按處方持續，遇不適或交互作用疑慮向醫藥人員確認，不因作息改變自行停藥。",
+    "TW-16-005：本批限健保醫療辦法7條委託續方、22至25條用量／效期／分次及例外、28條施行；與原source物件支持26條替代的範圍分開。"
+  ],
+  "prior_source_checks": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html",
       "claim": "TW-16-005：醫師按病況開慢箋，最長90日、分次調劑，每次不超過30日；不是全數一次交付。",
@@ -29,20 +111,44 @@
       "retrieval_method": "實讀健保醫療辦法7、22至25及28條；法規整編截止2026-10-08，未逐筆追核之後公報與當期例外公告。"
     }
   ],
-  "localization_changes": "本批獨立補寫急症分流、臺灣領藥／肝炎／契約流程與統計界線，未更動原作保全。",
-  "review_method": "逐條AI輔助實讀臺灣官方HTML、指定法條與PDF文字，區分未取原頁／部分索引與完整附件範圍；本批具體修改、統計定義與施行日期另記批次證據。",
-  "limits": [
-    "管制藥、特殊療程、個別專科藥物或病情不穩可能不適用一般慢箋；自行分藥、囤藥或按原劑量在明顯副作用下硬撐均有風險。若用藥中斷或療效變差，及早聯絡醫師或藥師，不用自行網購不明替代品。",
-    "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。",
-    "獨立醫師、藥師、肝臟專科、法律與照護專業審查尚待；AI來源核對不是臨床、核付、院所核准或契約個案判定。",
-    "法規整編截止2026-10-08，未逐筆核之後公報、全部當期支付附件及各院所/機構個案；未做實際申請、諮詢或即時庫存查詢。"
+  "new_source_ids": [],
+  "source_records_reused": [
+    "ch16_nhi_rx",
+    "ch16_fda_meds",
+    "tw24_nhi_medical_rules_20261122"
   ],
-  "source_reviewed_sha256": "33336a86bd0f878673d18da9e3c4fb54c8d28a2bd548822fb99eed092d251bfe",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v3",
-    "before_sha256": "33336a86bd0f878673d18da9e3c4fb54c8d28a2bd548822fb99eed092d251bfe",
-    "after_sha256": "2f700498ddd89d95d3f367eab095f7bea552c231717cf8fdb069ec2b22c09272",
-    "before_reader_sha256": "c3f2bd4ec2d459dde6db89a079f65668c238e7185c29bbf4a907c01d98febb92",
-    "after_reader_sha256": "a8f0d4b4f49c94aa22a8a0a435fda9d6c0d5736cd0f52fb87ef3e2597dc2be78"
-  }
+  "retired_sources": [
+    {
+      "id": "follow_nhi_rules",
+      "reason": "TW-16-005此處需要支持慢性病連續處方箋分次調劑的具體法條，改用已逐條核對全民健康保險醫療辦法第22至25條的來源；舊來源仍保留以供其他歷史內容追溯。",
+      "replacement_ids": [
+        "tw24_nhi_medical_rules_20261122"
+      ],
+      "disposition": "replaced",
+      "prior_source_sha256": "5dbbce45bad12f4a19f21e092ec303b2720a6eb2f81364db0240cc594c4757d1"
+    }
+  ],
+  "legal_temporal_checks": [
+    {
+      "law": "全民健康保險醫療辦法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第22條"
+          ],
+          "promulgated_at": "2024-06-20",
+          "effective_at": "2024-08-01",
+          "basis": "現行法規第28條明列第22條另定2024-08-01施行；修正發布日不是實際施行日。"
+        }
+      ],
+      "latest_law_version_context": "法規資料庫標示修正日期2024-06-20；本次以現行第22至25及28條為準，未把公告日誤寫成生效日。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009"
+      ]
+    }
+  ],
+  "taiwan_context": "慢箋調劑依臺灣健保醫療辦法；以健保特約院所、社區藥局、處方效期及臺灣連假／離島領藥安排為操作情境，不把一般規定套用管制藥或個案不穩病情。",
+  "changes": "逐主張核對慢箋適用與效期、每次處方總量、分次調劑、提前再次調劑與一次領取總量的法定例外；把原引用第22、26、28條修正為直接支持本篇領藥日期及例外的第22至25條，並更新條文施行日期說明。",
+  "review_path": "localization/reviews/TW-16-005.json"
 }
