@@ -28,7 +28,7 @@ def check_medication_diabetes_ltc_browser(page, context, url, review):
         button = page.locator('#TW-16-001 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        for key, text in (('TW-16-001','硬吞下一劑'), ('TW-24-013','不可替代'), ('TW-16-007','傷口不痛也可能需要處理'), ('TW-16-013','15%'), ('TW-17-007','先等滿六個月')):
+        for key, text in (('TW-16-001','硬吞下一劑'), ('TW-24-013','不可替代'), ('TW-16-007','傷口不痛也可能需要處理'), ('TW-16-013','約每5人有1人'), ('TW-17-007','先等滿六個月')):
             page.locator('#q').fill(text)
             article = page.locator('#'+key)
             assert article.count() == 1, (key, text)
@@ -36,4 +36,4 @@ def check_medication_diabetes_ltc_browser(page, context, url, review):
             page.screenshot(path=str(review/f'followup-{key}-{width}.png'), animations='disabled')
         page.locator('#reset').click()
     page.set_viewport_size({'width':1440, 'height':1000})
-    return ['五篇用藥糖尿病長照於1440／390、閱讀／自查／離線逐段全文與來源一致；嚴重用藥反應、替代條件、足傷、15%及長照等待期搜尋、自查按鈕與無水平溢出通過；非專業醫療驗收。']
+    return ['五篇用藥糖尿病長照於1440／390、閱讀／自查／離線逐段全文與來源一致；嚴重用藥反應、替代條件、足傷、篩檢比例及長照等待期搜尋、自查按鈕與無水平溢出通過；非專業醫療驗收。']

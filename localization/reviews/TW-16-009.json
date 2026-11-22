@@ -2,11 +2,133 @@
   "id": "TW-16-009",
   "reviewer": "ChatGPT（AI輔助原始來源與臺灣制度核對，非執業醫師、藥師或獨立醫療專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
   "target_path": "locales/zh-TW/book/ch16/TW-16-009.md",
-  "target_sha256": "98e9d3fca2974ae8ad589ba131eb046cb193cabc801613c0e2fe4da37d777fcb",
+  "target_sha256": "1976cfca98c45961a96c924011768d6c71695e751bc0ac0e16df420bef798ec9",
   "source_checks": [
+    {
+      "source_id": "ch16_cdc_gout",
+      "title": "美國CDC：痛風生活型態與高普林食物",
+      "url": "https://www.cdc.gov/arthritis/gout/",
+      "claim": "生活調整可配合治療，不能取代必要藥物；飲食與酒精等可能影響發作或尿酸。",
+      "supporting_passage": "CDC於2024-01-26更新的痛風頁指出，痛風治療可包括生活型態調整與藥物；列出酒精、含糖飲料、紅肉及貝類等高普林或相關飲食。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀CDC官方HTML日期、要點及飲食風險段；美國頁面只支持生活型態背景，不套用美國族群發生率或臺灣制度。"
+    },
+    {
+      "source_id": "risk_allo_safety",
+      "title": "食藥署／衛福部：Allopurinol嚴重皮膚反應警訊",
+      "url": "https://www.mohw.gov.tw/cp-2638-22541-1.html",
+      "claim": "疑似別嘌醇嚴重皮膚／黏膜反應時立即停藥並回診，不自行重試。",
+      "supporting_passage": "衛福部轉載食藥署103-01-09用藥安全資訊明示，使用期間出現喉嚨痛、嘴巴破、眼睛癢或皮膚紅疹等嚴重皮膚徵兆，應立即停藥並回診原處方醫師。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "本輪直接重讀衛福部官方頁並核對建檔日期與警訊；這是舊但仍有效的安全提醒，不拿來支持2026健保給付規則。"
+    },
+    {
+      "source_id": "ch16_acr_gout_wiley_20261122",
+      "title": "美國風濕病學會：2020年痛風治療指引（Wiley全文）",
+      "url": "https://acrjournals.onlinelibrary.wiley.com/doi/full/10.1002/acr.24180",
+      "claim": "痛風石、痛風造成的影像損傷或每年至少兩次發作可考慮降尿酸治療；目標低於6 mg/dL；HLA-B*58:01檢測為特定族群的條件式建議。",
+      "supporting_passage": "ACR 2020指引網頁列降尿酸治療適應症、治療達標及低於6 mg/dL目標；HLA檢測建議為條件式，且該指引依美國臨床環境形成。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀Wiley出版者全文中建議及HLA段落；不把美國建議當成臺灣健保給付或個別治療命令。"
+    },
+    {
+      "source_id": "ch16_acr_gout_erratum_20261122",
+      "title": "美國風濕病學會：2020年痛風指引勘誤",
+      "url": "https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/acr.24401",
+      "claim": "ACR 2020 HLA-B*58:01族群文字須採勘誤後的「certain populations of Asian descent」，不將漢人誤稱東南亞族群。",
+      "supporting_passage": "出版者2020年勘誤明列原文錯誤並修正為certain populations of Asian descent，例含Han Chinese、Korean、Thai。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀Wiley出版者勘誤全文並與指引原文對照。"
+    },
+    {
+      "source_id": "risk_fda_allo_2023_20261122",
+      "title": "食品藥物管理署：秋季痛風易發作，正確治療才有解",
+      "url": "https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t622145",
+      "claim": "別嘌醇可能引發嚴重過敏；皮疹、口腔潰瘍、喉嚨痛、眼睛紅腫灼熱、嘴唇腫或發燒應立即回診評估。",
+      "supporting_passage": "食藥署2023-09-27公告列出上述別嘌醇藥品過敏症狀，並提醒民眾立即回診就醫；公告亦區分急性止痛與長期降尿酸治療。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀食藥署官方HTML及發布日期；該公告對症狀與回診有支持，立即停藥指示另由衛福部較早的別嘌醇專項安全公告支持。"
+    },
+    {
+      "source_id": "risk_allo_cohort_pmc_2015_20261122",
+      "title": "臺灣15家醫學中心：別嘌醇與HLA-B*58:01前瞻性研究（2015）",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4579807/",
+      "claim": "臺灣15家醫學中心2009-07至2014-08收案，2910名基因檢測者中571人帶HLA-B*58:01（19.6%）；此為研究樣本基因比例，不是藥害事件率。",
+      "supporting_passage": "BMJ研究摘要與結果文字列15家臺灣醫學中心、研究期間、2926人收案及2910人納入基因分析，其中571人陽性（19.6%）；研究對象需有別嘌醇適應症且未曾使用，並排除特定族群、骨髓移植及既往別嘌醇過敏者。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接開啟PMC頁遇reCAPTCHA；本輪核對PubMed書目、BMJ摘要及檢索可讀的PMC結果文字，並與2026-10-20曾下載閱讀原始BMJ PDF的歷史紀錄交叉核對。本輪未重新取得或通讀完整PDF及補充資料，不宣稱全文重讀。"
+    },
+    {
+      "source_id": "risk_nhi_hla_12213b_20261122",
+      "title": "健保署：醫療服務給付項目及支付標準現行資料（每日更新，代碼12213B）",
+      "url": "https://info.nhi.gov.tw/api/iode0000s01/Dataset?rId=A21030000I-D20020-002",
+      "claim": "健保支付代碼12213B的五類適應症（含促尿酸排洩藥物最大耐受劑量後仍未達標）、使用別嘌醇前檢測、核准LDT實驗室要求、使用期間排除、終身一次及一個月內開藥／結果上傳規定。",
+      "supporting_passage": "健保署現行資料列明新使用別嘌醇前的五類適應症，其中促尿酸排洩藥物須用至最大耐受劑量仍無法達到血尿酸6 mg/dL以下；另要求具衛福部核准實驗室開發檢測施行計畫的LDT實驗室，連續用藥一個月／累計三個月排除，終身一次；陰性後一個月未開藥或檢測後一個月未上傳結果，該項不予支付。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接讀取健保署資料開放平台之現行支付項目TXT API並在記憶體中搜尋代碼12213B；同時核對健保署支付標準頁所列115-09-01生效最新版。未保存原始下載檔。"
+    }
+  ],
+  "localization_changes": "逐主張重核痛風長期治療、HLA族群建議及藥物嚴重反應。補上臺灣健保12213B的現行適應症、別嘌醇使用時點、累計使用排除、終身一次與一個月期限；說明支付點數不是自付額。修正ACR指引經勘誤後的族群措辭，保留2015臺灣研究但明確限定其為基因比例而非藥害率。",
+  "review_method": "重讀原作固定ID、2026-10-20現行正文與逐篇review、來源及支持主張；逐項核對台灣情境、官方制度、統計定義與來源限制。來源可讀性限制、推論與未取得的專業審閱均明列；本紀錄為AI輔助來源再核對，不是專業簽證。",
+  "limits": [
+    "ACR 2020為美國臨床指引，HLA檢測建議證據等級很低且具條件性；不能取代臺灣健保支付標準或個別風險評估。ACR原文另有族群措辭勘誤，本篇採勘誤後表述。",
+    "健保代碼12213B的支付資格、檢驗品質與結果上傳由醫師和院所依現行規定核對；本篇未取得各院所自費報價，也不把健保支付點數當病人自付額。",
+    "臺灣2015研究直接PMC頁本輪遇reCAPTCHA；本輪以PubMed書目、BMJ摘要與可讀全文索引交叉核對，並參照前次已取得原始PDF的歷史紀錄；本輪未重讀完整論文與補充資料。",
+    "尚無足以由本研究推算目前臺灣個人嚴重皮膚反應機率的資料；風濕免疫科／過敏免疫科與藥事專業獨立審閱尚未取得。",
+    "疑似別嘌醇嚴重皮膚或黏膜反應時依官方安全資訊停藥並就醫；健保代碼12213B有適應症、用藥期間排除、終身一次及一個月申報期限；支付點數不是自付額。研究基因比例不是藥害率或個人風險。"
+  ],
+  "source_reviewed_sha256": "1976cfca98c45961a96c924011768d6c71695e751bc0ac0e16df420bef798ec9",
+  "source_ids": [
+    "ch16_cdc_gout",
+    "risk_allo_safety",
+    "ch16_acr_gout_wiley_20261122",
+    "ch16_acr_gout_erratum_20261122",
+    "risk_fda_allo_2023_20261122",
+    "risk_allo_cohort_pmc_2015_20261122",
+    "risk_nhi_hla_12213b_20261122"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "HLA-B*58:01基因帶有比例（研究樣本）",
+      "value": 19.6,
+      "unit": "% of genotyped participants",
+      "period": "2009-07至2014-08",
+      "scope": "臺灣15家醫學中心",
+      "population": "有別嘌醇治療需求、過去未曾使用者；研究排除骨髓移植、非漢人及既往別嘌醇過敏者。",
+      "numerator": 571,
+      "denominator": 2910,
+      "denominator_definition": "接受基因分型並納入兩個月追蹤的參與者。",
+      "event_definition": "檢出HLA-B*58:01基因，不是服藥後嚴重皮膚不良反應。",
+      "data_type": "臺灣多中心前瞻性基因篩檢研究；描述特定樣本的基因帶有比例。",
+      "source_id": "risk_allo_cohort_pmc_2015_20261122",
+      "accessed_at": "2026-11-22",
+      "checked_at": "2026-11-22",
+      "limitations": "研究收案時間早且對象為治療需求樣本，排除特定族群及既往過敏者；19.6%不是SCAR發生率、目前全國人口盛行率或個人藥害機率。直接PMC頁本輪遇reCAPTCHA，部分全文結果以可讀索引與既有完整PDF審查紀錄交叉核對，未宣稱本輪完整重讀全文。"
+    }
+  ],
+  "frequency_assessment": "2009-07至2014-08臺灣15家醫學中心的特定治療需求樣本中571/2910（19.6%）帶有HLA-B*58:01。此為基因檢出比例，不是嚴重過敏或SCAR事件發生率；未找到由該資料可推算目前全臺個人藥害機率的有效分母。",
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": [
+      "風濕免疫科或腎臟科專科醫師",
+      "藥師或相應臨床照護專業人員"
+    ],
+    "reason": "AI輔助來源核對不能代替醫療與藥事專業審閱。"
+  },
+  "unresolved_questions": [
+    "尚未取得風濕免疫科、過敏免疫科或藥師的正式獨立審閱。",
+    "健保支付資格及院所自費價須在個案就醫時確認。",
+    "目前缺乏可計算個人或全臺現行別嘌醇嚴重皮膚反應風險的適用母數。"
+  ],
+  "prior_revision": "bf2400573a1f679a7bdc029454b9910731cc5926",
+  "before_sha256": "98e9d3fca2974ae8ad589ba131eb046cb193cabc801613c0e2fe4da37d777fcb",
+  "after_sha256": "1976cfca98c45961a96c924011768d6c71695e751bc0ac0e16df420bef798ec9",
+  "prior_review_sha256": "20de46e06135b985c5ecf1937e6b2600acfa98ce6bdcb45eed80623104ac2a9c",
+  "prior_source_checks": [
     {
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/",
       "claim": "TW-16-009：痛風石、影像損傷或一年至少兩次發作時強烈建議考慮降尿酸治療；持續監測血尿酸目標低於6 mg/dL。",
@@ -36,20 +158,53 @@
       "retrieval_method": "直接取得BMJ原始PDF（323210bytes）並轉文字，實讀摘要、方法及結果；2009至2014樣本571/2910是基因帶有比例，未採短期零病例為零風險，未重讀補充附錄。"
     }
   ],
-  "localization_changes": "補臺灣急症分流、用藥與量測/補水安全例外、可操作回診紀錄及統計界線，保全原作來源。",
-  "review_method": "逐條實讀指定官方HTML、專業指引段落、檢索回傳與BMJ原始PDF文字；取材受限與樣本/統計定義分列，AI核對不代表專業簽證。",
-  "limits": [
-    "有肝腎功能問題、心血管病史、既往嚴重藥物過敏者須特別討論風險；出現皮疹伴發燒、口腔潰瘍或呼吸困難應緊急就醫。不自行增減降尿酸藥，也不把特定血尿酸數字當成單次檢驗就能確診痛風。",
-    "病患個案仍須由臺灣實際主治醫師與健保署核對，複查來源及生效日期後才能採用。",
-    "AI輔助來源實質核對，不是心臟科、腎臟科、泌尿科、風濕科或藥師專業簽證；個案治療與檢驗/檢測給付尚待實際團隊判定。",
-    "未取得者不冒稱全文、未以自發通報/特定樣本/海外指引數字推臺灣個人風險；未實際諮詢、申請、測量或核定產品安全。"
+  "source_bundle_path": "localization/tw-edition/sources/ch16-gout-kidney-recheck-20261122.json",
+  "source_bundle_sha256": "c8103c84691087361aa4c2c8a9c0fdff3ccd1dbad30d1f355a6191f6bdc84a86",
+  "legal_temporal_checks": [
+    {
+      "law": "全民健康保險醫療服務給付項目及支付標準（HLA-B*5801檢測代碼12213B）",
+      "checked_at": "2026-11-22",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "12213B HLA-B*5801基因檢測"
+          ],
+          "promulgated_at": null,
+          "effective_at": "2022-06-01",
+          "basis": "健保署現行支付項目每日更新資料仍列此代碼、適應症及支付規範；資料列的生效起日為2022-06-01，最新支付標準壓縮檔標示自2026-09-01生效。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-22，健保署每日更新的現行支付項目資料仍列12213B；點數為支付點數，不據此推算病人自付額。",
+      "sources": [
+        "https://info.nhi.gov.tw/api/iode0000s01/Dataset?rId=A21030000I-D20020-002",
+        "https://www.nhi.gov.tw/ch/lp-3778-1.html"
+      ]
+    }
   ],
-  "source_reviewed_sha256": "d4724667ca1d78a64cb52107eec32e3be35699bde0affba5e160f8fa1a5ce3b7",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "d4724667ca1d78a64cb52107eec32e3be35699bde0affba5e160f8fa1a5ce3b7",
-    "after_sha256": "98e9d3fca2974ae8ad589ba131eb046cb193cabc801613c0e2fe4da37d777fcb",
-    "before_reader_sha256": "f8e789e7ee63d2dd4fa5985976252264d9df2c347999e665e61d4dbc2f08ef8a",
-    "after_reader_sha256": "f050ca3290ab6b720b889e297063b9552c171cf91c8e32d6cb342164f2a16f49"
-  }
+  "reader_copy_cleanup_preserved": true,
+  "retired_sources": [
+    {
+      "id": "ch16_acr_gout",
+      "reason": "Replace the inaccessible/less direct PMC reference with publisher-hosted guideline and its official erratum; preserve the original global source object.",
+      "prior_source_sha256": "de7758293def98bb0e93ec5e3e8ee706ae09e26f87674f82c36821e384f3343c",
+      "replacement_ids": [
+        "ch16_acr_gout_wiley_20261122",
+        "ch16_acr_gout_erratum_20261122"
+      ],
+      "disposition": "replaced"
+    },
+    {
+      "id": "risk_allo_cohort",
+      "reason": "Replace the BMJ PDF URL with the primary article HTML/PubMed Central record so readers can inspect the study text; preserve the original global source object.",
+      "prior_source_sha256": "70c86aa346b7416e8926bc595c4b79e1ed905a92ecb64060e5e09e9e575a17bb",
+      "replacement_ids": [
+        "risk_allo_cohort_pmc_2015_20261122"
+      ],
+      "disposition": "replaced"
+    }
+  ],
+  "source_records_reused": [
+    "ch16_cdc_gout",
+    "risk_allo_safety"
+  ]
 }

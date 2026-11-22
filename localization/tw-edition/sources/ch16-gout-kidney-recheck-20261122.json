@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-22",
+  "baseline_main_sha": "bf2400573a1f679a7bdc029454b9910731cc5926",
+  "sources": [
+    [
+      "ch16_acr_gout_wiley_20261122",
+      "美國風濕病學會：2020年痛風治療指引（Wiley全文）",
+      "https://acrjournals.onlinelibrary.wiley.com/doi/full/10.1002/acr.24180",
+      "痛風石、影像損傷或一年至少兩次發作可啟動降尿酸治療；使用治療達標策略並將血尿酸維持低於6 mg/dL；特定族群開始別嘌醇前可條件式討論HLA-B*58:01檢測。此為美國臨床指引，不是臺灣健保規則。"
+    ],
+    [
+      "ch16_acr_gout_erratum_20261122",
+      "美國風濕病學會：2020年痛風指引勘誤",
+      "https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/acr.24401",
+      "更正HLA-B*58:01檢測建議族群為某些亞洲族群（如漢人、韓國人、泰國人）及非裔美國人，避免將舊文誤讀為所有東南亞族群或臺灣健保適用規則。"
+    ],
+    [
+      "risk_fda_allo_2023_20261122",
+      "食品藥物管理署：秋季痛風易發作，正確治療才有解",
+      "https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t622145",
+      "說明急性痛風處置與長期降尿酸治療不同，並列出別嘌醇嚴重藥物過敏警訊及就醫提醒。"
+    ],
+    [
+      "risk_allo_cohort_pmc_2015_20261122",
+      "臺灣15家醫學中心：別嘌醇與HLA-B*58:01前瞻性研究（2015）",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4579807/",
+      "2009年7月至2014年8月在臺灣15家醫學中心收案；2910名基因檢測者中571人帶有HLA-B*58:01（19.6%）。研究樣本為有別嘌醇治療需求且未曾用藥者，排除特定族群與既往嚴重過敏等；基因比例不是嚴重藥害率或個人風險。"
+    ],
+    [
+      "risk_nhi_hla_12213b_20261122",
+      "健保署：醫療服務給付項目及支付標準現行資料（每日更新，代碼12213B）",
+      "https://info.nhi.gov.tw/api/iode0000s01/Dataset?rId=A21030000I-D20020-002",
+      "健保署每日更新的現行資料列HLA-B*5801檢測代碼12213B及支付規範：新使用別嘌醇前的五類適應症（包括促尿酸排洩藥物最大耐受劑量後仍未達標）、須具衛福部核准計畫的LDT實驗室、累計使用排除條件、終身一次及陰性後開藥／結果上傳期限。支付點數不等於病人自付額。"
+    ],
+    [
+      "ch16_tsn_ckd_2025_20261122",
+      "台灣腎臟醫學會：臺灣慢性腎臟病臨床診療指引2025更新版（下載需登入）",
+      "https://www.tsn.org.tw/guide.html",
+      "台灣腎臟醫學會官方指引專區列有2025年12月更新版；糖尿病腎病篩檢與追蹤章節建議依第1／2型糖尿病病程安排年度eGFR與尿液ACR／常規檢查、異常每3至6個月追蹤、首次ACR異常以清晨第一泡尿確認。學會目前標示下載指引須登入；本輪讀取其官方PDF索引文字，讀者需登入才能取得全文。"
+    ],
+    [
+      "follow_hpa_egfr_order_2026_20261122",
+      "國民健康署：成人預防保健eGFR公式修正發布日期與施行日",
+      "https://www.hpa.gov.tw/838/19840/n",
+      "衛福部於2026-02-06發布修正，並溯及自2026-01-01生效；適用成人預防保健服務eGFR計算公式的相關附表。"
+    ],
+    [
+      "follow_hpa_egfr_form_2026_20261122",
+      "國民健康署：成人預防保健服務檢查表中的eGFR公式",
+      "https://www.hpa.gov.tw/Pages/ashx/GetFile.ashx?lang=c&sid=b4edd73b91684e1598a42e68d3f43ed6&type=1",
+      "成人預防保健服務檢查表明列自2026年採用2021 CKD-EPI公式計算eGFR；不能泛化為同日所有院所檢驗均更換公式。"
+    ],
+    [
+      "follow_hpa_kidney_stats_2026_20261122",
+      "國民健康署：2021至2023年成人預防保健腎功能異常比例",
+      "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=19913",
+      "國健署110至112年成人預防保健資料：40歲以上受檢者中，有高血糖或合併三高者約每5人有1人篩檢發現腎功能異常；未公布此比例的原始分子、分母與門檻。"
+    ]
+  ],
+  "legal_temporal_checks": [
+    {
+      "article_id": "TW-16-009",
+      "checks": [
+        {
+          "law": "全民健康保險醫療服務給付項目及支付標準（HLA-B*5801檢測代碼12213B）",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "12213B HLA-B*5801基因檢測"
+              ],
+              "promulgated_at": null,
+              "effective_at": "2022-06-01",
+              "basis": "健保署現行支付項目每日更新資料仍列此代碼、適應症及支付規範；資料列的生效起日為2022-06-01，最新支付標準壓縮檔標示自2026-09-01生效。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22，健保署每日更新的現行支付項目資料仍列12213B；點數為支付點數，不據此推算病人自付額。",
+          "sources": [
+            "https://info.nhi.gov.tw/api/iode0000s01/Dataset?rId=A21030000I-D20020-002",
+            "https://www.nhi.gov.tw/ch/lp-3778-1.html"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-16-013",
+      "checks": [
+        {
+          "law": "醫事服務機構辦理預防保健服務注意事項（成人預防保健服務eGFR計算公式附表）",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "附表六之二、附表六之四、附表六之六（成人預防保健服務eGFR）"
+              ],
+              "promulgated_at": "2026-02-06",
+              "effective_at": "2026-01-01",
+              "basis": "衛生福利部於2026-02-06修正發布相關附表，國民健康署公告明示溯及自2026-01-01生效；表單列明自2026年採2021 CKD-EPI公式。"
+            }
+          ],
+          "latest_law_version_context": "此公式要求限定成人預防保健服務報告；不推論所有醫療檢驗同時改用該公式。",
+          "sources": [
+            "https://www.hpa.gov.tw/838/19840/n",
+            "https://www.hpa.gov.tw/Pages/ashx/GetFile.ashx?lang=c&sid=b4edd73b91684e1598a42e68d3f43ed6&type=1"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "stage": "Chapter 16 gout and diabetic kidney high-risk historical substantive recheck",
+  "reviewed_at": "2026-11-22",
+  "baseline_main_sha": "bf2400573a1f679a7bdc029454b9910731cc5926",
+  "scope": {
+    "new_core_ids": [],
+    "historical_core_ids": [
+      "TW-16-009",
+      "TW-16-013"
+    ],
+    "priority_order": [
+      "TW-16-009",
+      "TW-16-013"
+    ]
+  },
+  "counts_before": {
+    "core_reviewed_entries": 348,
+    "runtime_items": 359,
+    "runtime_sources": 1485,
+    "source_registry": 1568,
+    "json_files_checked": 722,
+    "substantive_rechecks": 425,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_reviewed_entries": 348,
+    "runtime_items": 359,
+    "runtime_sources": 1494,
+    "source_registry": 1577,
+    "json_files_checked": 724,
+    "substantive_rechecks": 427,
+    "publication_ready": false,
+    "unresolved_source_ids": 100,
+    "unresolved_reference_occurrences": 239
+  },
+  "new_source_ids": [
+    "ch16_acr_gout_erratum_20261122",
+    "ch16_acr_gout_wiley_20261122",
+    "ch16_tsn_ckd_2025_20261122",
+    "follow_hpa_egfr_form_2026_20261122",
+    "follow_hpa_egfr_order_2026_20261122",
+    "follow_hpa_kidney_stats_2026_20261122",
+    "risk_allo_cohort_pmc_2015_20261122",
+    "risk_fda_allo_2023_20261122",
+    "risk_nhi_hla_12213b_20261122"
+  ],
+  "retired_from_items": {
+    "TW-16-009": [
+      "ch16_acr_gout",
+      "risk_allo_cohort"
+    ],
+    "TW-16-013": [
+      "ch16_ada_kidney",
+      "ch16_kdigo_2024",
+      "follow_kidney_stats"
+    ]
+  },
+  "source_bundle_path": "localization/tw-edition/sources/ch16-gout-kidney-recheck-20261122.json",
+  "source_bundle_sha256": "c8103c84691087361aa4c2c8a9c0fdff3ccd1dbad30d1f355a6191f6bdc84a86",
+  "items": [
+    {
+      "id": "TW-16-009",
+      "review_path": "localization/reviews/TW-16-009.json",
+      "review_sha256": "ed12ffe1ed740d23d1bb7972ab6de4cb9c9f9a173d6b9df05ce0100773865e5f",
+      "article_path": "locales/zh-TW/book/ch16/TW-16-009.md",
+      "before_sha256": "98e9d3fca2974ae8ad589ba131eb046cb193cabc801613c0e2fe4da37d777fcb",
+      "after_sha256": "1976cfca98c45961a96c924011768d6c71695e751bc0ac0e16df420bef798ec9",
+      "new_source_ids": [
+        "ch16_acr_gout_wiley_20261122",
+        "ch16_acr_gout_erratum_20261122",
+        "risk_fda_allo_2023_20261122",
+        "risk_allo_cohort_pmc_2015_20261122",
+        "risk_nhi_hla_12213b_20261122"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "HLA-B*58:01基因帶有比例（研究樣本）",
+          "value": 19.6,
+          "unit": "% of genotyped participants",
+          "period": "2009-07至2014-08",
+          "scope": "臺灣15家醫學中心",
+          "population": "有別嘌醇治療需求、過去未曾使用者；研究排除骨髓移植、非漢人及既往別嘌醇過敏者。",
+          "numerator": 571,
+          "denominator": 2910,
+          "denominator_definition": "接受基因分型並納入兩個月追蹤的參與者。",
+          "event_definition": "檢出HLA-B*58:01基因，不是服藥後嚴重皮膚不良反應。",
+          "data_type": "臺灣多中心前瞻性基因篩檢研究；描述特定樣本的基因帶有比例。",
+          "source_id": "risk_allo_cohort_pmc_2015_20261122",
+          "accessed_at": "2026-11-22",
+          "checked_at": "2026-11-22",
+          "limitations": "研究收案時間早且對象為治療需求樣本，排除特定族群及既往過敏者；19.6%不是SCAR發生率、目前全國人口盛行率或個人藥害機率。直接PMC頁本輪遇reCAPTCHA，部分全文結果以可讀索引與既有完整PDF審查紀錄交叉核對，未宣稱本輪完整重讀全文。"
+        }
+      ],
+      "frequency_assessment": "2009-07至2014-08臺灣15家醫學中心的特定治療需求樣本中571/2910（19.6%）帶有HLA-B*58:01。此為基因檢出比例，不是嚴重過敏或SCAR事件發生率；未找到由該資料可推算目前全臺個人藥害機率的有效分母。",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "風濕免疫科或腎臟科專科醫師",
+          "藥師或相應臨床照護專業人員"
+        ],
+        "reason": "AI輔助來源核對不能代替醫療與藥事專業審閱。"
+      },
+      "status": "ai_source_rechecked_professional_pending"
+    },
+    {
+      "id": "TW-16-013",
+      "review_path": "localization/reviews/TW-16-013.json",
+      "review_sha256": "387b984617ed109f51afb67a129ca49dde42411293608f974a16cd789a90d782",
+      "article_path": "locales/zh-TW/book/ch16/TW-16-013.md",
+      "before_sha256": "c93e4bf51202631b7a40a70c6b752a45ef8a21734334febfeede6992bfe7684d",
+      "after_sha256": "422cc5597321fb170bd0fc66684c30b28b8d4cdce092b4008ba9d4c0597d8a01",
+      "new_source_ids": [
+        "ch16_tsn_ckd_2025_20261122",
+        "follow_hpa_egfr_order_2026_20261122",
+        "follow_hpa_egfr_form_2026_20261122",
+        "follow_hpa_kidney_stats_2026_20261122"
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "成人預防保健受檢者的腎功能篩檢異常比例",
+          "value": 20,
+          "unit": "約每5名受檢者1名（約20%）",
+          "period": "2021至2023（民國110至112年）",
+          "scope": "臺灣成人預防保健服務；40歲以上受檢者中的指定風險群",
+          "population": "40歲以上成人預防保健受檢者中，國健署公告所稱有高血糖或合併三高者。",
+          "numerator": null,
+          "denominator": null,
+          "denominator_definition": "國健署公告未提供此子群的實際分子、分母、唯一受檢人數或重複受檢處理方式。",
+          "event_definition": "國健署以成人預防保健服務資料所稱「腎功能異常」篩檢結果；公告未列本比例的異常界值或持續性確認定義。",
+          "data_type": "行政服務受檢資料的彙整篩檢比例，非縱向追蹤的發生率。",
+          "source_id": "follow_hpa_kidney_stats_2026_20261122",
+          "accessed_at": "2026-11-22",
+          "checked_at": "2026-11-22",
+          "limitations": "不能代表全臺人口、全體糖尿病患者或CKD盛行率；不是新發率、腎病確診比例或個人機率。公告未提供分子、分母、異常門檻、去重／重複受檢方式及異常持續性，無法自行推估。"
+        }
+      ],
+      "frequency_assessment": "國健署公布2021-2023成人預防保健服務中，40歲以上有高血糖或合併三高受檢者約每5人1人篩檢發現腎功能異常。公告未列該子群的分子、分母、異常門檻與去重／持續性定義；屬受檢資料比例，不能推算全臺人口或個人機率。",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "風濕免疫科或腎臟科專科醫師",
+          "藥師或相應臨床照護專業人員"
+        ],
+        "reason": "AI輔助來源核對不能代替醫療與藥事專業審閱。"
+      },
+      "status": "ai_source_rechecked_professional_pending"
+    }
+  ],
+  "statistics_summary": [
+    {
+      "topic": "HLA-B*58:01基因帶有比例（研究樣本）",
+      "value": 19.6,
+      "unit": "% of genotyped participants",
+      "period": "2009-07至2014-08",
+      "scope": "臺灣15家醫學中心",
+      "population": "有別嘌醇治療需求、過去未曾使用者；研究排除骨髓移植、非漢人及既往別嘌醇過敏者。",
+      "numerator": 571,
+      "denominator": 2910,
+      "denominator_definition": "接受基因分型並納入兩個月追蹤的參與者。",
+      "event_definition": "檢出HLA-B*58:01基因，不是服藥後嚴重皮膚不良反應。",
+      "data_type": "臺灣多中心前瞻性基因篩檢研究；描述特定樣本的基因帶有比例。",
+      "source_id": "risk_allo_cohort_pmc_2015_20261122",
+      "accessed_at": "2026-11-22",
+      "checked_at": "2026-11-22",
+      "limitations": "研究收案時間早且對象為治療需求樣本，排除特定族群及既往過敏者；19.6%不是SCAR發生率、目前全國人口盛行率或個人藥害機率。直接PMC頁本輪遇reCAPTCHA，部分全文結果以可讀索引與既有完整PDF審查紀錄交叉核對，未宣稱本輪完整重讀全文。"
+    },
+    {
+      "topic": "成人預防保健受檢者的腎功能篩檢異常比例",
+      "value": 20,
+      "unit": "約每5名受檢者1名（約20%）",
+      "period": "2021至2023（民國110至112年）",
+      "scope": "臺灣成人預防保健服務；40歲以上受檢者中的指定風險群",
+      "population": "40歲以上成人預防保健受檢者中，國健署公告所稱有高血糖或合併三高者。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "國健署公告未提供此子群的實際分子、分母、唯一受檢人數或重複受檢處理方式。",
+      "event_definition": "國健署以成人預防保健服務資料所稱「腎功能異常」篩檢結果；公告未列本比例的異常界值或持續性確認定義。",
+      "data_type": "行政服務受檢資料的彙整篩檢比例，非縱向追蹤的發生率。",
+      "source_id": "follow_hpa_kidney_stats_2026_20261122",
+      "accessed_at": "2026-11-22",
+      "checked_at": "2026-11-22",
+      "limitations": "不能代表全臺人口、全體糖尿病患者或CKD盛行率；不是新發率、腎病確診比例或個人機率。公告未提供分子、分母、異常門檻、去重／重複受檢方式及異常持續性，無法自行推估。"
+    }
+  ],
+  "publication_ready": false,
+  "professional_review_pending": true,
+  "unresolved_questions": [
+    {
+      "id": "TW-16-009",
+      "questions": [
+        "尚未取得風濕免疫科、過敏免疫科或藥師的正式獨立審閱。",
+        "健保支付資格及院所自費價須在個案就醫時確認。",
+        "目前缺乏可計算個人或全臺現行別嘌醇嚴重皮膚反應風險的適用母數。"
+      ]
+    },
+    {
+      "id": "TW-16-013",
+      "questions": [
+        "尚未取得腎臟科及基層糖尿病照護專業人員的正式獨立審閱。",
+        "國健署受檢資料未公開該風險子群原始分子、分母、異常門檻及去重方法。",
+        "跨院所檢驗公式是否已採用2021 CKD-EPI須以實際報告及院所資訊確認。"
+      ]
+    }
+  ],
+  "legal_temporal_checks": [
+    {
+      "article_id": "TW-16-009",
+      "checks": [
+        {
+          "law": "全民健康保險醫療服務給付項目及支付標準（HLA-B*5801檢測代碼12213B）",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "12213B HLA-B*5801基因檢測"
+              ],
+              "promulgated_at": null,
+              "effective_at": "2022-06-01",
+              "basis": "健保署現行支付項目每日更新資料仍列此代碼、適應症及支付規範；資料列的生效起日為2022-06-01，最新支付標準壓縮檔標示自2026-09-01生效。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22，健保署每日更新的現行支付項目資料仍列12213B；點數為支付點數，不據此推算病人自付額。",
+          "sources": [
+            "https://info.nhi.gov.tw/api/iode0000s01/Dataset?rId=A21030000I-D20020-002",
+            "https://www.nhi.gov.tw/ch/lp-3778-1.html"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-16-013",
+      "checks": [
+        {
+          "law": "醫事服務機構辦理預防保健服務注意事項（成人預防保健服務eGFR計算公式附表）",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "附表六之二、附表六之四、附表六之六（成人預防保健服務eGFR）"
+              ],
+              "promulgated_at": "2026-02-06",
+              "effective_at": "2026-01-01",
+              "basis": "衛生福利部於2026-02-06修正發布相關附表，國民健康署公告明示溯及自2026-01-01生效；表單列明自2026年採2021 CKD-EPI公式。"
+            }
+          ],
+          "latest_law_version_context": "此公式要求限定成人預防保健服務報告；不推論所有醫療檢驗同時改用該公式。",
+          "sources": [
+            "https://www.hpa.gov.tw/838/19840/n",
+            "https://www.hpa.gov.tw/Pages/ashx/GetFile.ashx?lang=c&sid=b4edd73b91684e1598a42e68d3f43ed6&type=1"
+          ]
+        }
+      ]
+    }
+  ]
+}
