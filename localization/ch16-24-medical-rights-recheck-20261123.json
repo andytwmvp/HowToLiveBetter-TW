@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "stage": "Chapter 16 and 24 medical access and patient rights historical substantive recheck",
+  "reviewed_at": "2026-11-23",
+  "baseline_main_sha": "1ca0a13d2988210d930afab9444e8589d36d4709",
+  "scope": {
+    "new_core_ids": [],
+    "historical_core_ids": [
+      "TW-16-005",
+      "TW-24-002",
+      "TW-24-010",
+      "TW-24-015"
+    ],
+    "priority_order": [
+      "TW-16-005",
+      "TW-24-002",
+      "TW-24-010",
+      "TW-24-015"
+    ],
+    "reason": "依法律引用錯置、申請條件不精確、讀者正文混入編輯流程文字及缺少官方比價服務入口等可確認風險選題；不新增核心或增加正式完成數。"
+  },
+  "counts_before": {
+    "verified_core_entries": 348,
+    "publication_completed_entries": 348,
+    "runtime_items": 359,
+    "runtime_sources": 1494,
+    "source_registry": 1577,
+    "coverage_json_files": 724,
+    "unresolved_source_id_categories": 100,
+    "unresolved_reference_occurrences": 239,
+    "substantive_rechecks": 427,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "verified_core_entries": 348,
+    "publication_completed_entries": 348,
+    "runtime_items": 359,
+    "runtime_sources": 1498,
+    "source_registry": 1581,
+    "coverage_json_files": 726,
+    "unresolved_source_id_categories": 100,
+    "unresolved_reference_occurrences": 239,
+    "substantive_rechecks": 431,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "access_disability_process_20261123",
+    "access_disability_online_20261123",
+    "ch24_selfpay_compare_tool_20261123",
+    "ch24_selfpay_compare_guide_20261123"
+  ],
+  "updated_source_ids": [],
+  "source_bundle_path": "localization/tw-edition/sources/ch16-24-medical-rights-recheck-20261123.json",
+  "source_bundle_sha256": "91e87c9c6a4e6ea8130a60bce7453d8e445bc2dd81a77973c2eabb18d67de9b4",
+  "updated_existing_sources": [],
+  "source_in_item_changes": {
+    "TW-16-005": {
+      "removed_from_item": [
+        "follow_nhi_rules"
+      ],
+      "added_to_item": [
+        "tw24_nhi_medical_rules_20261122"
+      ],
+      "reason": "沿用已登錄、逐條對應健保醫療辦法第22至25條的法規來源；原來源未能支持該處正文所列條文範圍。",
+      "source_retired_record": {
+        "id": "follow_nhi_rules",
+        "reason": "TW-16-005此處需要支持慢性病連續處方箋分次調劑的具體法條，改用已逐條核對全民健康保險醫療辦法第22至25條的來源；舊來源仍保留以供其他歷史內容追溯。",
+        "replacement_ids": [
+          "tw24_nhi_medical_rules_20261122"
+        ],
+        "disposition": "replaced",
+        "prior_source_sha256": "5dbbce45bad12f4a19f21e092ec303b2720a6eb2f81364db0240cc594c4757d1"
+      }
+    },
+    "TW-24-010": {
+      "removed_from_item": [
+        "ch24_disability"
+      ],
+      "added_to_item": [
+        "access_disability_process_20261123",
+        "access_disability_online_20261123"
+      ],
+      "reason": "將本次核對的官方頁版本與線上申請入口以新來源ID記錄，保留舊來源查閱日期供其他歷史條目使用。"
+    }
+  },
+  "items": [
+    {
+      "id": "TW-16-005",
+      "review_path": "localization/reviews/TW-16-005.json",
+      "review_sha256": "d76b947fd5513bf23d05de9fcf75fb0f1d97401cb4275c2e98a5a50b0cc8f8ac",
+      "article_path": "locales/zh-TW/book/ch16/TW-16-005.md",
+      "before_sha256": "2f700498ddd89d95d3f367eab095f7bea552c231717cf8fdb069ec2b22c09272",
+      "after_sha256": "fff277c91680fd74ed0c1ac378b2cd364c25768562f96768400dbc34ffd30952",
+      "prior_review_sha256": "a847cbef89e994845546492294cc3f32c8e6183748e8e80f79190fb2f159c326",
+      "prior_reviewed_at": "2026-10-20",
+      "prior_source_ids": [
+        "ch16_nhi_rx",
+        "ch16_fda_meds",
+        "follow_nhi_rules"
+      ],
+      "source_ids": [
+        "ch16_nhi_rx",
+        "ch16_fda_meds",
+        "tw24_nhi_medical_rules_20261122"
+      ],
+      "source_ids_added": [
+        "tw24_nhi_medical_rules_20261122"
+      ],
+      "source_ids_removed": [
+        "follow_nhi_rules"
+      ],
+      "frequency_assessment": "慢箋續領與用藥銜接屬服務流程；本次未找到以同一定義及全臺病人母數計算的斷藥發生率。處方件數、調劑人次及院所品質指標不能換算個人斷藥機率；風險以慢性病持續治療需要及連假、交通安排處理，不自行推估。",
+      "statistics_assessed": [],
+      "review_due_at": "2027-02-23",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "家庭醫學／慢性病照護",
+          "藥事調劑"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源核對與讀者正文修正，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "register_status": "ai_source_rechecked_professional_pending",
+      "retired_sources": [
+        {
+          "id": "follow_nhi_rules",
+          "reason": "TW-16-005此處需要支持慢性病連續處方箋分次調劑的具體法條，改用已逐條核對全民健康保險醫療辦法第22至25條的來源；舊來源仍保留以供其他歷史內容追溯。",
+          "replacement_ids": [
+            "tw24_nhi_medical_rules_20261122"
+          ],
+          "disposition": "replaced",
+          "prior_source_sha256": "5dbbce45bad12f4a19f21e092ec303b2720a6eb2f81364db0240cc594c4757d1"
+        }
+      ]
+    },
+    {
+      "id": "TW-24-002",
+      "review_path": "localization/reviews/TW-24-002.json",
+      "review_sha256": "737892e10c611d2bdac427f90fa7f737ec3dae1ac4c3e18a7fa5cf3e5bbb5289",
+      "article_path": "locales/zh-TW/book/ch24/TW-24-002.md",
+      "before_sha256": "67be5f5d4e5fab1a1a3b7e4d642a9853f9136a328d5dbbd30c803281f97a1537",
+      "after_sha256": "6882a4d7d6d858779c986364789c8534cafe7e0fcc4dd9c2970df8008875ff6f",
+      "prior_review_sha256": "82b158b4de2c6ba4de9f34524201f4e77fe39dd697804be9d15abe0e00ce5404",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_source_ids": [
+        "ch24_copay",
+        "ch24_major",
+        "ch24_medlaw",
+        "access_registration",
+        "rights_major_scope"
+      ],
+      "source_ids": [
+        "ch24_copay",
+        "ch24_major",
+        "ch24_medlaw",
+        "access_registration",
+        "rights_major_scope"
+      ],
+      "source_ids_added": [],
+      "source_ids_removed": [],
+      "frequency_assessment": "本篇提供的是制度費率及收費權益流程，不是事件發生率。本次未找到具一致錯收／因費用延誤就醫定義、全臺範圍及對應就醫母數的官方統計；申訴數與就醫人次不能推算個人遭錯收機率。",
+      "statistics_assessed": [],
+      "review_due_at": "2027-02-23",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "健保給付實務",
+          "醫療管理",
+          "醫療法律"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源核對與讀者正文修正，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "register_status": "ai_source_rechecked_professional_pending",
+      "retired_sources": []
+    },
+    {
+      "id": "TW-24-010",
+      "review_path": "localization/reviews/TW-24-010.json",
+      "review_sha256": "91ebc32359566579681e5d9746b56303c9702b971209ea729746d626696452e6",
+      "article_path": "locales/zh-TW/book/ch24/TW-24-010.md",
+      "before_sha256": "811c178c5ad870dd8a7fb8277f24c22112502f306da2d2744503bc9939496992",
+      "after_sha256": "1e56f81969cc31fc84ef4160c1d445ce830e321fa204e54aad55ae5c779f123b",
+      "prior_review_sha256": "16b90c8f402bc01469f24df5d1499958c1336bf7fac2c13ae7f6580ccb4eaeb8",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_source_ids": [
+        "ch24_disability",
+        "ch24_diff",
+        "access_disability_law",
+        "access_disability_rules",
+        "ch01_law_effective_day"
+      ],
+      "source_ids": [
+        "access_disability_process_20261123",
+        "ch24_diff",
+        "access_disability_law",
+        "access_disability_rules",
+        "ch01_law_effective_day",
+        "access_disability_online_20261123"
+      ],
+      "source_ids_added": [
+        "access_disability_process_20261123",
+        "access_disability_online_20261123"
+      ],
+      "source_ids_removed": [
+        "ch24_disability"
+      ],
+      "frequency_assessment": "本篇是資格與支持服務程序；本次未找到相同定義、全臺母數的鑑定核准率或到宅鑑定率。行政上已核發證明的存量不等於功能障礙發生率，也不代表個人申請會核准。",
+      "statistics_assessed": [],
+      "review_due_at": "2027-02-23",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "身心障礙鑑定醫療",
+          "社政服務",
+          "社會工作",
+          "行政／法律"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源核對與讀者正文修正，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "register_status": "ai_source_rechecked_professional_pending",
+      "retired_sources": [
+        {
+          "id": "ch24_disability",
+          "reason": "TW-24-010改以本次查核日期建立版本化來源ID，避免更新共用來源查閱日而使較早審閱的其他條目產生未來日期；舊來源物件仍保留供既有條目追溯。",
+          "replacement_ids": [
+            "access_disability_process_20261123"
+          ],
+          "disposition": "replaced",
+          "prior_source_sha256": "3287962ef9640225934a2c8525535abf8586f7c19d393b56887747e29145490c"
+        }
+      ]
+    },
+    {
+      "id": "TW-24-015",
+      "review_path": "localization/reviews/TW-24-015.json",
+      "review_sha256": "8b5b92eb2a4f8fec5959012e22bd5629b19d2df362d35823d00ccee4ec549bbc",
+      "article_path": "locales/zh-TW/book/ch24/TW-24-015.md",
+      "before_sha256": "79fcabfaae928c8ad5ac52ebbaf8b639bb6d64aa3d71bde710324461275eb33e",
+      "after_sha256": "4d8ad970a23f7480f470c8acadcc06f6f47f21d1f0dd84630f6a5743257b6c67",
+      "prior_review_sha256": "6710322d7ac4246400203b7ddddb64266933a049dad6ec2160cb3f7dfa3bd4b2",
+      "prior_reviewed_at": "2026-10-21",
+      "prior_source_ids": [
+        "ch24_medlaw",
+        "ch24_selfpay",
+        "ch24_copay",
+        "ch24_major",
+        "rights_consent",
+        "rights_major_scope"
+      ],
+      "source_ids": [
+        "ch24_medlaw",
+        "ch24_selfpay",
+        "ch24_copay",
+        "ch24_major",
+        "rights_consent",
+        "rights_major_scope",
+        "ch24_selfpay_compare_tool_20261123",
+        "ch24_selfpay_compare_guide_20261123"
+      ],
+      "source_ids_added": [
+        "ch24_selfpay_compare_tool_20261123",
+        "ch24_selfpay_compare_guide_20261123"
+      ],
+      "source_ids_removed": [],
+      "frequency_assessment": "目前沒有全臺同一定義、可配合醫療處置數或病人數作分母的自費醫材資訊不足、價格爭議或延誤就醫發生率。申訴數不是確認違規數；比價網價格資料也不是醫療必要性、療效或安全結果。",
+      "statistics_assessed": [],
+      "review_due_at": "2027-02-23",
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "醫療服務與醫材",
+          "病人權益",
+          "健保給付",
+          "醫療法律"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源核對與讀者正文修正，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "register_status": "ai_source_rechecked_professional_pending",
+      "retired_sources": []
+    }
+  ],
+  "reader_body_changes": {
+    "TW-16-005": "將慢箋調劑法律引用修正為全民健康保險醫療辦法第22至25條；不再引用與正文主張不符的第26、28條。",
+    "TW-24-002": "移除正文中的內部實讀時間戳，改保留讀者需要的現行費率生效日、掛號費與部分負擔區別。",
+    "TW-24-010": "依現行鑑定辦法校正申請照片與身分文件說法，補明三家以上鑑定醫院及同類別不同向度須赴不同醫院時不適用線上申請；記錄縣市程序差異與入口限制。",
+    "TW-24-015": "新增健保署自付差額醫材比價查詢入口，說明價格由院所上傳且只供比較參考，須再向院所確認實際品項、數量與總額並和醫師討論。"
+  },
+  "statistics_summary": [],
+  "statistics_limit": "本批主題為健保程序、費用及資格，不適用以案件數推估個人發生率；未找到同一定義、全臺且具適當分母的斷藥、錯收、身障鑑定或自費醫材爭議機率。各篇分別明示資料不足，不自行推估。",
+  "unresolved_limits": [
+    "尚未取得醫療、藥事、社政、醫療管理及法律專業人員具名獨立審閱。",
+    "我的E政府身障申請說明直接開頁回403；本次核對官方搜尋索引中的頁面日期及排除條件，未宣稱完整下載頁面。",
+    "社家署身障線上申請入口本次逾時，未登入、填表或送件。",
+    "健保自付差額醫材比價查詢頁本次未查詢個別品項或院所價格；價格由院所上傳且僅供參考。",
+    "各院所掛號費、身障個案程序與資格須依所在地或個案再確認。"
+  ],
+  "publication_status": "publication_ready remains false; engineering and source checks do not constitute professional content review.",
+  "retired_source_records": [
+    {
+      "id": "follow_nhi_rules",
+      "reason": "TW-16-005此處需要支持慢性病連續處方箋分次調劑的具體法條，改用已逐條核對全民健康保險醫療辦法第22至25條的來源；舊來源仍保留以供其他歷史內容追溯。",
+      "replacement_ids": [
+        "tw24_nhi_medical_rules_20261122"
+      ],
+      "disposition": "replaced",
+      "prior_source_sha256": "5dbbce45bad12f4a19f21e092ec303b2720a6eb2f81364db0240cc594c4757d1"
+    },
+    {
+      "id": "ch24_disability",
+      "reason": "TW-24-010改以本次查核日期建立版本化來源ID，避免更新共用來源查閱日而使較早審閱的其他條目產生未來日期；舊來源物件仍保留供既有條目追溯。",
+      "replacement_ids": [
+        "access_disability_process_20261123"
+      ],
+      "disposition": "replaced",
+      "prior_source_sha256": "3287962ef9640225934a2c8525535abf8586f7c19d393b56887747e29145490c"
+    }
+  ]
+}

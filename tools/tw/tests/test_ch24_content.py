@@ -29,7 +29,7 @@ class MedicalCareTaiwanTests(unittest.TestCase):
   self.assertIn('不等於所有費用全面免費',items['TW-24-008'])
   self.assertIn('不同制度',items['TW-24-009']);self.assertIn('身心障礙',items['TW-24-010'])
   self.assertIn('不將所有',items['TW-24-011'])
-  self.assertIn('書面',items['TW-24-012']);self.assertIn('斷藥',items['TW-24-013']);self.assertIn('90日',items['TW-24-014']);self.assertIn('收據',items['TW-24-015'])
+  self.assertIn('書面',items['TW-24-012']);self.assertIn('斷藥',items['TW-24-013']);self.assertIn('90日',items['TW-24-014']);self.assertIn('收據',items['TW-24-015']);self.assertIn('一吋半身照片三張',items['TW-24-010']);self.assertIn('須至三家以上鑑定醫院',items['TW-24-010']);self.assertIn('院所上傳的價格',items['TW-24-015']);self.assertIn('自付差額醫材比價查詢',items['TW-24-015'])
  def test_all_new_sources_are_official_and_registered(self):
   added=data('localization/tw-edition/sources/ch24-care-20261017.json')['sources']
   self.assertEqual(len(added),15);self.assertEqual(len({s[0] for s in added}),15)

@@ -32,6 +32,7 @@ class Chapter16Tests(unittest.TestCase):
   self.assertIn('722',items['TW-16-003'])
   self.assertIn('交互作用',items['TW-16-004'])
   self.assertIn('分次調劑',items['TW-16-005'])
+  self.assertIn('全民健康保險醫療辦法第22至25條',items['TW-16-005'])
   self.assertIn('家庭醫師',items['TW-16-006'])
   self.assertIn('眼底',items['TW-16-007'])
   self.assertIn('尿量',items['TW-16-008'])
