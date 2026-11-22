@@ -2,11 +2,114 @@
   "id": "TW-16-013",
   "reviewer": "ChatGPT（AI輔助原始來源與臺灣制度核對，非執業醫師、藥師或獨立醫療專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
   "target_path": "locales/zh-TW/book/ch16/TW-16-013.md",
-  "target_sha256": "c93e4bf51202631b7a40a70c6b752a45ef8a21734334febfeede6992bfe7684d",
+  "target_sha256": "422cc5597321fb170bd0fc66684c30b28b8d4cdce092b4008ba9d4c0597d8a01",
   "source_checks": [
+    {
+      "source_id": "follow_kdigo_pcp",
+      "title": "KDIGO2024：基層醫師腎病評估重點一頁版",
+      "url": "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline-Top-10-Takeaways-for-PCPs-Evaluation.pdf",
+      "claim": "腎臟風險評估須結合病史、尿白蛋白／尿檢與eGFR，按個人風險追蹤。",
+      "supporting_passage": "KDIGO 2024基層一頁版列病史、體檢、尿液白蛋白／肌酸酐比、尿液常規及eGFR等腎病評估項目；風險圖表不拿來推算臺灣個人發生率。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀KDIGO官方一頁PDF文字及評估圖；完整2024指引未在本輪重讀，未採圖表風險比作臺灣統計。"
+    },
+    {
+      "source_id": "ch16_tsn_ckd_2025_20261122",
+      "title": "台灣腎臟醫學會：臺灣慢性腎臟病臨床診療指引2025更新版（下載需登入）",
+      "url": "https://www.tsn.org.tw/guide.html",
+      "claim": "糖尿病者年度肌酸酐／eGFR與尿液常規和／或ACR檢查；異常每3至6個月追蹤；初次ACR異常以清晨第一泡尿確認。",
+      "supporting_passage": "學會官方指引專區列有2025年12月更新版；官方PDF索引文字第4章建議年度肌酸酐/eGFR及尿液常規和/或ACR檢查、異常每3至6個月追蹤、首次ACR異常以清晨第一泡尿確認，並列第2型確診時與第1型五年後開始篩檢。學會目前註明下載需登入。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "核對學會目前公開指引目錄及下載登入提示；直接閱讀官方2025 PDF索引文字的第4章。本輪匿名瀏覽未能從舊直連網址取得PDF，全文下載需登入；不將海外引用指引當成臺灣操作規則。"
+    },
+    {
+      "source_id": "follow_hpa_egfr_order_2026_20261122",
+      "title": "國民健康署：成人預防保健eGFR公式修正發布日期與施行日",
+      "url": "https://www.hpa.gov.tw/838/19840/n",
+      "claim": "成人預防保健eGFR附表於2026-02-06修正，溯及自2026-01-01生效。",
+      "supporting_passage": "國健署公告標題及內文載明衛福部115-02-06以衛授國字第1151460021號令修訂附表六之二、六之四、六之六，並溯及自115-01-01生效。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀國健署公告、公告／更新日期與附件連結；以中華民國日期換算西元日期。"
+    },
+    {
+      "source_id": "follow_hpa_egfr_form_2026_20261122",
+      "title": "國民健康署：成人預防保健服務檢查表中的eGFR公式",
+      "url": "https://www.hpa.gov.tw/Pages/ashx/GetFile.ashx?lang=c&sid=b4edd73b91684e1598a42e68d3f43ed6&type=1",
+      "claim": "成人預防保健服務報告自2026年採用2021 CKD-EPI公式計算eGFR。",
+      "supporting_passage": "成人預防保健服務檢查紀錄表第6頁明列「自115年採用2021 CKD-EPI公式」；附表限定成人預防保健服務項目。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀國健署附件PDF第6頁公式及附表服務範圍；未推論其他院所常規檢驗同步採用。"
+    },
+    {
+      "source_id": "follow_hpa_kidney_stats_2026_20261122",
+      "title": "國民健康署：2021至2023年成人預防保健腎功能異常比例",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=19913",
+      "claim": "國健署110至112年成人預防保健資料中，40歲以上有高血糖或合併三高受檢者約每五人一人篩檢發現腎功能異常。",
+      "supporting_passage": "國健署公告原文列110至112年成人預防保健資料、40歲以上受檢者，以及高血糖或合併三高者約每5人1人腎功能異常。公告未提供該子群實際分子、分母、異常門檻與重複受檢處理。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接閱讀國健署官方HTML第459段，確認統計期間、服務範圍、年齡與群組措辭；不將約20%改稱發生率或盛行率。"
+    }
+  ],
+  "localization_changes": "逐主張重核慢性腎臟病追蹤、糖尿病篩檢與急症分流。以2025台灣腎臟醫學會指引取代舊ADA年度篩檢操作主張；更新國健署2021-2023特定受檢風險群資料及分母限制；新增成人預防保健eGFR公式於2026-01-01生效、2026-02-06公布的日期區別及適用範圍。移除讀者正文中的內部草案狀態文字。",
+  "review_method": "重讀原作固定ID、2026-10-20現行正文與逐篇review、來源及支持主張；逐項核對台灣情境、官方制度、統計定義與來源限制。來源可讀性限制、推論與未取得的專業審閱均明列；本紀錄為AI輔助來源再核對，不是專業簽證。",
+  "limits": [
+    "國健署「約每5人1人」是特定成人預防保健受檢族群的腎功能異常篩檢比例；公告未提供原始分子、分母、異常門檻、重複受檢處理或持續性確認，不能用於個人機率或全臺CKD盛行率。",
+    "2021 CKD-EPI公式規定適用於成人預防保健服務表單；其他院所檢驗報告需看各自採用的公式與報告日期。公式差異對數值的可能影響是依公式變更作出的判讀提醒，不是單獨診斷。",
+    "2025台灣腎臟醫學會指引引用部分國際證據；本篇只採其明確的台灣指引建議，不將海外數字當成台灣發生率。尚待腎臟科及基層糖尿病照護專業人員獨立審閱。",
+    "台灣腎臟醫學會官方目錄顯示2025更新版指引下載需登入；本篇所引指定建議核對自官方PDF索引文字，讀者需登入才能取得全文。",
+    "台灣腎臟醫學會官方目錄顯示2025更新版指引下載需登入；本篇指定建議核對自官方PDF索引文字，讀者需登入才能取得全文。",
+    "糖尿病腎病篩檢依第1／2型病程安排，異常按醫療團隊建議追蹤；成人預防保健eGFR公式更新限定於該服務報告，其他院所依各自公式判讀；國健署篩檢比例未公布分子、分母及異常持續性。台灣腎臟醫學會2025更新版指引下載需登入。"
+  ],
+  "source_reviewed_sha256": "422cc5597321fb170bd0fc66684c30b28b8d4cdce092b4008ba9d4c0597d8a01",
+  "source_ids": [
+    "follow_kdigo_pcp",
+    "ch16_tsn_ckd_2025_20261122",
+    "follow_hpa_egfr_order_2026_20261122",
+    "follow_hpa_egfr_form_2026_20261122",
+    "follow_hpa_kidney_stats_2026_20261122"
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "成人預防保健受檢者的腎功能篩檢異常比例",
+      "value": 20,
+      "unit": "約每5名受檢者1名（約20%）",
+      "period": "2021至2023（民國110至112年）",
+      "scope": "臺灣成人預防保健服務；40歲以上受檢者中的指定風險群",
+      "population": "40歲以上成人預防保健受檢者中，國健署公告所稱有高血糖或合併三高者。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "國健署公告未提供此子群的實際分子、分母、唯一受檢人數或重複受檢處理方式。",
+      "event_definition": "國健署以成人預防保健服務資料所稱「腎功能異常」篩檢結果；公告未列本比例的異常界值或持續性確認定義。",
+      "data_type": "行政服務受檢資料的彙整篩檢比例，非縱向追蹤的發生率。",
+      "source_id": "follow_hpa_kidney_stats_2026_20261122",
+      "accessed_at": "2026-11-22",
+      "checked_at": "2026-11-22",
+      "limitations": "不能代表全臺人口、全體糖尿病患者或CKD盛行率；不是新發率、腎病確診比例或個人機率。公告未提供分子、分母、異常門檻、去重／重複受檢方式及異常持續性，無法自行推估。"
+    }
+  ],
+  "frequency_assessment": "國健署公布2021-2023成人預防保健服務中，40歲以上有高血糖或合併三高受檢者約每5人1人篩檢發現腎功能異常。公告未列該子群的分子、分母、異常門檻與去重／持續性定義；屬受檢資料比例，不能推算全臺人口或個人機率。",
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": [
+      "風濕免疫科或腎臟科專科醫師",
+      "藥師或相應臨床照護專業人員"
+    ],
+    "reason": "AI輔助來源核對不能代替醫療與藥事專業審閱。"
+  },
+  "unresolved_questions": [
+    "尚未取得腎臟科及基層糖尿病照護專業人員的正式獨立審閱。",
+    "國健署受檢資料未公開該風險子群原始分子、分母、異常門檻及去重方法。",
+    "跨院所檢驗公式是否已採用2021 CKD-EPI須以實際報告及院所資訊確認。"
+  ],
+  "prior_revision": "bf2400573a1f679a7bdc029454b9910731cc5926",
+  "before_sha256": "c93e4bf51202631b7a40a70c6b752a45ef8a21734334febfeede6992bfe7684d",
+  "after_sha256": "422cc5597321fb170bd0fc66684c30b28b8d4cdce092b4008ba9d4c0597d8a01",
+  "prior_review_sha256": "b79a3cd86f30c94d16e6c19cecc8b946334eb2400d56d7808f5f921b44a3722c",
+  "prior_source_checks": [
     {
       "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management",
       "claim": "TW-16-013：第2型糖尿病及第1型病程至少5年者每年檢查UACR與eGFR；確診腎病者按分期增加監測。",
@@ -36,19 +139,60 @@
       "retrieval_method": "官方一頁PDF由web完整文字讀取；不採圖中風險比。2024完整版未重讀；新入口HTML明示2027草案徵詢，未採草案改藥。"
     }
   ],
-  "localization_changes": "明顯無尿或尿量急減、突然很不舒服應立即就醫；有呼吸困難或意識異常先119。確認慢性腎病的持續性，不表示急性變化可先等三個月。 回診帶不同日期的血液與尿液報告、所有用藥及近期感染、劇烈運動等資訊，請醫師把UACR與eGFR趨勢、血壓、血糖一起看。一次異常先安排確認，不能因肌酸酐在參考範圍就排除問題，也不能自己判定一定是糖尿病造成；必要時轉腎臟科。不要為尿蛋白或泡泡尿自行灌水、用偏方或大量補蛋白，藥物與營養須個別評估。",
-  "review_method": "AI逐條核對臺灣實際照護、頻率口徑、指定來源與取得限制；專業審閱待取得。",
-  "limits": [
-    "感染、運動、發燒及短期血糖異常可能影響UACR；需依專業指示重複驗證，腎病通常要求持續性證據，不能看一次升高就確診。慢性腎病用藥劑量、含鉀藥物及顯影劑安排都須醫師核對；出現無尿或急性不適立刻就醫。",
-    "KDIGO官方基層重點頁支持ACR與GFR及慢性判定；本輪未重讀完整2024指引，2027用藥更新尚屬公開草案，不據以自行換藥。原ADA出版頁受限，保留前次查閱與本輪指定檢索段落範圍，不宣稱全文重審；臺灣檢驗給付仍看個案及院所規範。",
-    "原始研究及個案醫療、藥事、法律與核付判斷仍待獨立專業審查。"
+  "source_bundle_path": "localization/tw-edition/sources/ch16-gout-kidney-recheck-20261122.json",
+  "source_bundle_sha256": "c8103c84691087361aa4c2c8a9c0fdff3ccd1dbad30d1f355a6191f6bdc84a86",
+  "legal_temporal_checks": [
+    {
+      "law": "醫事服務機構辦理預防保健服務注意事項（成人預防保健服務eGFR計算公式附表）",
+      "checked_at": "2026-11-22",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "附表六之二、附表六之四、附表六之六（成人預防保健服務eGFR）"
+          ],
+          "promulgated_at": "2026-02-06",
+          "effective_at": "2026-01-01",
+          "basis": "衛生福利部於2026-02-06修正發布相關附表，國民健康署公告明示溯及自2026-01-01生效；表單列明自2026年採2021 CKD-EPI公式。"
+        }
+      ],
+      "latest_law_version_context": "此公式要求限定成人預防保健服務報告；不推論所有醫療檢驗同時改用該公式。",
+      "sources": [
+        "https://www.hpa.gov.tw/838/19840/n",
+        "https://www.hpa.gov.tw/Pages/ashx/GetFile.ashx?lang=c&sid=b4edd73b91684e1598a42e68d3f43ed6&type=1"
+      ]
+    }
   ],
-  "source_reviewed_sha256": "bbdbe861471051a527cf07a756635a51d17fdbff813112c6d09a1facaeedbffc",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "bbdbe861471051a527cf07a756635a51d17fdbff813112c6d09a1facaeedbffc",
-    "after_sha256": "c93e4bf51202631b7a40a70c6b752a45ef8a21734334febfeede6992bfe7684d",
-    "before_reader_sha256": "fda77f051af8af794c3c872a3b122a00295b54cefaa8c8bbd1ae332e842898ad",
-    "after_reader_sha256": "4253dc89ac4d860e1f6d1ec9388edf33d735a8fa67df749f43640d9cb9a024bb"
-  }
+  "reader_copy_cleanup_preserved": true,
+  "retired_sources": [
+    {
+      "id": "ch16_ada_kidney",
+      "reason": "Use the current Taiwan nephrology society guideline for local diabetes screening and follow-up rather than the US ADA recommendation.",
+      "prior_source_sha256": "bd2829b4907ce4918ca61045d99bf16595109f3c76697319bc527b2965d8cdd0",
+      "replacement_ids": [
+        "ch16_tsn_ckd_2025_20261122"
+      ],
+      "disposition": "replaced"
+    },
+    {
+      "id": "ch16_kdigo_2024",
+      "reason": "The older broad landing page was not as direct for the current specific claim; retain the direct KDIGO 2024 primary-care summary already used by this article.",
+      "prior_source_sha256": "f107dafe619c7260517f20728c8120378fc81f62e5bf54695d5b535089a8a412",
+      "replacement_ids": [
+        "follow_kdigo_pcp"
+      ],
+      "disposition": "replaced"
+    },
+    {
+      "id": "follow_kidney_stats",
+      "reason": "Replace the older overall 2023 screening proportion with the HPA 2021–2023 risk-group result and its clearly stated denominator limitations.",
+      "prior_source_sha256": "db34a5202db0ef3272b43a74782cf4c609f41392f844d4cd2268e01b71dd0065",
+      "replacement_ids": [
+        "follow_hpa_kidney_stats_2026_20261122"
+      ],
+      "disposition": "replaced"
+    }
+  ],
+  "source_records_reused": [
+    "follow_kdigo_pcp"
+  ]
 }

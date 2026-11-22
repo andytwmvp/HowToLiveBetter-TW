@@ -18,9 +18,12 @@ class BPSupplementsStonesGoutTests(unittest.TestCase):
  def test_emergency_actions_and_specific_exceptions(self):
   b={i['id']:i['body'] for i in validate_runtime()['items']}
   for k in IDS:
-   marker='事件頻率' if '事件頻率' in b[k] else '## 臺灣資料'
+   if k=='TW-16-009': marker='## 基因比例與資料限制'
+   elif '事件頻率' in b[k]: marker='事件頻率'
+   elif '## 臺灣資料' in b[k]: marker='## 臺灣資料'
+   else: marker='## 參考資料'
    self.assertLess(b[k].index('119'),b[k].index(marker))
-  terms={'TW-16-009':['立即停用allopurinol','不要再服可疑藥來試','條件性建議','6 mg/dL'],'TW-16-004':['非必要補充品','隔兩小時吃','濃縮紅麴','一般紅麴加工食品'],'TW-16-008':['尿路阻塞若合併感染徵象或無尿','不要硬灌水','飲水量不等於尿量','限水醫囑'],'TW-16-003':['不為補齊722','坐休5分鐘','沒量滿7天','不反推人數']}
+  terms={'TW-16-009':['先停用別嘌醇並儘速就醫','不要為了確認是否過敏而自行再吃一次','條件式檢測建議','6 mg/dL'],'TW-16-004':['非必要補充品','隔兩小時吃','濃縮紅麴','一般紅麴加工食品'],'TW-16-008':['尿路阻塞若合併感染徵象或無尿','不要硬灌水','飲水量不等於尿量','限水醫囑'],'TW-16-003':['不為補齊722','坐休5分鐘','沒量滿7天','不反推人數']}
   for k,ts in terms.items():
    for t in ts:self.assertIn(t,b[k])
  def test_statistics_retain_actual_populations_and_denominators(self):
