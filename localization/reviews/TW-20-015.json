@@ -1,0 +1,89 @@
+{
+  "id": "TW-20-015",
+  "reviewer": "ChatGPT（AI協助來源核對；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-23",
+  "review_due_at": "2027-02-23",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-015.md",
+  "target_sha256": "3efd0581473e64a9f7a1577218e153af81d065f55e2b603b04a914a10583cb09",
+  "source_reviewed_sha256": "3efd0581473e64a9f7a1577218e153af81d065f55e2b603b04a914a10583cb09",
+  "before_sha256": null,
+  "after_sha256": "3efd0581473e64a9f7a1577218e153af81d065f55e2b603b04a914a10583cb09",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-products-20261123.json",
+  "source_bundle_sha256": "198ac54a001c6183cee0e92dd12cbbf37b407cbfa622b8ab54b4718f4f45cedf",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_infant_home_safety",
+      "title": "國民健康署孕產兒關懷網站：嬰幼兒意外事故防制與居家安全（頁面未標示發布日期）",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=1830&type=01",
+      "claim": "國健署提到國外有學步車造成傷亡案例並建議寶寶自行學走；另建議樓梯柵欄、浴室防滑、固定傢俱及避免兒童接近熱水。未提供台灣學步車事故率。",
+      "supporting_passage": "國健署提到國外有學步車造成傷亡案例並建議寶寶自行學走；另建議樓梯柵欄、浴室防滑、固定傢俱及避免兒童接近熱水。未提供台灣學步車事故率。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取國健署居家安全頁面；確認學步車部分明指國外事故，另核對樓梯、熱水等防護建議；頁面未標示發布日期。"
+    },
+    {
+      "source_id": "tw20_bsmi_walker_rules_2025",
+      "title": "經濟部標準檢驗局：嬰幼兒學步車商品檢驗作業規定（2025-01-17修正發布並即日生效）",
+      "url": "https://www.bsmi.gov.tw/bsmiGIP/wSite/laws/review.jsp?lawId=40288082616f84a8016188956432021f",
+      "claim": "規定嬰幼兒學步車為應施檢驗商品，檢驗範圍含化學及可燃性、機械危害、穩定性、防止落下台階、中文標示及商品檢驗標識；2025-01-17修正並即日生效。",
+      "supporting_passage": "規定嬰幼兒學步車為應施檢驗商品，檢驗範圍含化學及可燃性、機械危害、穩定性、防止落下台階、中文標示及商品檢驗標識；2025-01-17修正並即日生效。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取標檢局現行法規頁，核對2025-01-17修正、生效日期、檢驗要求及穩定性／防跌階項目。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID並依台灣官方資料與實際家庭情境獨立撰寫。未沿用中國制度、境外事故頻率或未支持的費用估算。",
+  "review_method": "逐篇核對manifest固定ID、原作版本與雜湊、原題需求、台灣正文及官方來源。逐主張檢查適用對象、居家／購物情境、可操作步驟、費用與限制、來源日期及支持內容。統計記錄期間、範圍、對象、事件定義、分子分母、資料型態和偏差；沒有合適台灣分母時不推估。AI來源核對不等同正式專業審閱；首次正式發布不計為歷史正文再審。",
+  "limits": [
+    "國健署頁面提及的學步車傷亡案例是國外案例，不能當作台灣發生率。",
+    "台灣未找到以學步車使用人數或使用時數為分母的全國事故資料。",
+    "尚未取得兒科、兒童傷害預防或兒童用品安全專業人員獨立審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "2e5bafe3c51e0de89a005e0b45abdb6e144befe80f14f8a883c3e5b5e6c5dd53",
+  "source_ids": [
+    "tw20_hpa_infant_home_safety",
+    "tw20_bsmi_walker_rules_2025"
+  ],
+  "frequency_assessment": "國健署頁面提到國外曾有學步車相關傷亡案例，但未提供台灣事件頻率；台灣沒有全國學步車事故資料及使用暴露分母，不推估個人機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有台灣全國學步車事故定義、使用人數或使用時數分母。",
+    "商品檢驗規範說明產品管理要求，不代表無事故風險或事故頻率。",
+    "尚未取得兒科、兒童傷害預防及兒童用品安全專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科",
+      "兒童傷害預防",
+      "兒童用品安全"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原題對坐入式帶輪學步車傷害的安全疑慮，將原作固定替代用品改成台灣家庭可實際採取的地面活動、樓梯隔離、熱源整理與看顧；保留商品檢驗法律邊界，不宣稱全面禁用。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "給嬰兒添置東西時別買帶輪子的學步車，想讓他坐著玩就換成沒輪子的遊戲站臺或遊戲圍欄",
+    "reader_content_decision": "國健署建議嬰兒自行學走並提及國外事故；台灣設有嬰幼兒學步車商品檢驗規定。正文提供安全地面、樓梯及熱源的台灣居家措施，不把境外病例數移植為台灣風險數字，也不把安全建議誤稱法律禁令。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "不購買或使用帶輪嬰幼兒學步車，以無輪遊戲站或圍欄等替代。",
+        "decision": "retain_safety_question_adapt_alternative_to_taiwan_home_context",
+        "reason": "國健署建議讓嬰兒自行學走，但事故敘述是國外案例；本篇改用台灣住家常見樓梯、浴室和熱水防護與安全地面活動，不機械移植特定商品。"
+      },
+      {
+        "original_claim": "帶輪學步車本身在台灣違法或可由商品檢驗保證無風險。",
+        "decision": "separate_product_inspection_from_safety_advice",
+        "reason": "標檢局現行規定將嬰幼兒學步車列為應施檢驗商品，含穩定性及防止落下台階等檢驗；這不是全面禁用或零風險保證。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "在平坦且安全地面陪孩子活動通常不需購買新的學步用品；樓梯柵欄等費用依住宅格局和已有設備不同，不提供固定估價。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-23",
+    "assessment": "《嬰幼兒學步車商品檢驗作業規定》於2025-01-17修正發布並自即日生效，涵蓋應施檢驗商品及安全要求；本文是風險降低建議，不將其描述為法律全面禁用。"
+  }
+}

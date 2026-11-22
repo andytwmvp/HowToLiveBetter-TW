@@ -1,0 +1,109 @@
+{
+  "id": "TW-20-011",
+  "reviewer": "ChatGPT（AI協助來源核對；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-23",
+  "review_due_at": "2027-02-23",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-011.md",
+  "target_sha256": "4c1915cc14139e54f6ba5e3b363b6e3afeefcf2a54c743e6bf6f127b41ab4ba4",
+  "source_reviewed_sha256": "4c1915cc14139e54f6ba5e3b363b6e3afeefcf2a54c743e6bf6f127b41ab4ba4",
+  "before_sha256": null,
+  "after_sha256": "4c1915cc14139e54f6ba5e3b363b6e3afeefcf2a54c743e6bf6f127b41ab4ba4",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-products-20261123.json",
+  "source_bundle_sha256": "198ac54a001c6183cee0e92dd12cbbf37b407cbfa622b8ab54b4718f4f45cedf",
+  "source_checks": [
+    {
+      "source_id": "tw20_bsmi_infant_crib_selection_2025",
+      "title": "經濟部標準檢驗局：嬰兒床選購及使用注意事項（2025-04-15）",
+      "url": "https://www.bsmi.gov.tw/SafetyGIP/wSite/ct?ctNode=8274&mp=65&xItem=120727",
+      "claim": "建議確認嬰兒床商品檢驗標識、床墊與床架尺寸相配、結構穩定並定期檢查；二手嬰兒床應符合當前安全標準且結構穩固。",
+      "supporting_passage": "建議確認嬰兒床商品檢驗標識、床墊與床架尺寸相配、結構穩定並定期檢查；二手嬰兒床應符合當前安全標準且結構穩固。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取標檢局嬰兒床使用提醒，核對二手用品、床墊配合與檢查建議。"
+    },
+    {
+      "source_id": "tw20_bsmi_infant_crib_rules_2024",
+      "title": "經濟部標準檢驗局：家用嬰兒床及折疊嬰兒床商品檢驗作業規定（2024-02-01修正並即日生效）",
+      "url": "https://www.bsmi.gov.tw/wSite/public/Data/f1707199584768.pdf",
+      "claim": "作業規定以CNS 11676為檢驗標準，涵蓋構造、鎖定系統、床墊尺寸、使用說明及商品檢驗標識等；113年2月1日修正並自即日生效。",
+      "supporting_passage": "作業規定以CNS 11676為檢驗標準，涵蓋構造、鎖定系統、床墊尺寸、使用說明及商品檢驗標識等；113年2月1日修正並自即日生效。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取標檢局公開PDF，核對修正公告日期、生效日期、檢驗範圍與項目。"
+    },
+    {
+      "source_id": "tw20_bsmi_child_seat_safety_2025",
+      "title": "經濟部標準檢驗局新竹分局：汽車用兒童安全座椅選購及使用注意事項（2025-11-14）",
+      "url": "https://www.bsmi.gov.tw/wSite/ct?ctNode=9898&mp=1&xItem=123985",
+      "claim": "應依兒童身高體重、車型和說明書選擇及安裝；嚴重碰撞後即使座椅外觀看似無損仍應更換，並依製造商資訊確認使用期限。",
+      "supporting_passage": "應依兒童身高體重、車型和說明書選擇及安裝；嚴重碰撞後即使座椅外觀看似無損仍應更換，並依製造商資訊確認使用期限。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取標檢局新竹分局頁面，核對製造資訊、碰撞後更換與使用期限提醒。"
+    },
+    {
+      "source_id": "tw20_bsmi_child_product_recalls",
+      "title": "經濟部標準檢驗局：商品召回訊息（含嬰幼兒／兒童用品分類查詢；頁面更新至2026-11-20）",
+      "url": "https://www.bsmi.gov.tw/SafetyGIP/wSite/lp?BaseDSD=7&CtUnit=2583&ctNode=8206&mp=65",
+      "claim": "標檢局召回資訊提供嬰幼兒／兒童用品分類與條件查詢，可用來查看公開召回訊息；不代表頁面列出所有可能的安全問題。",
+      "supporting_passage": "標檢局召回資訊提供嬰幼兒／兒童用品分類與條件查詢，可用來查看公開召回訊息；不代表頁面列出所有可能的安全問題。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取標檢局商品召回資訊頁，核對兒童用品分類、條件查詢及頁面更新日期。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID並依台灣官方資料與實際家庭情境獨立撰寫。未沿用中國制度、境外事故頻率或未支持的費用估算。",
+  "review_method": "逐篇核對manifest固定ID、原作版本與雜湊、原題需求、台灣正文及官方來源。逐主張檢查適用對象、居家／購物情境、可操作步驟、費用與限制、來源日期及支持內容。統計記錄期間、範圍、對象、事件定義、分子分母、資料型態和偏差；沒有合適台灣分母時不推估。AI來源核對不等同正式專業審閱；首次正式發布不計為歷史正文再審。",
+  "limits": [
+    "台灣沒有跨用品、可比較借用／二手／新品事故的全國統計或可用的共同暴露分母。",
+    "嬰兒床與汽車用兒童安全座椅的檢驗／使用要求不同；本文不把單一品項規則套用所有嬰兒用品。",
+    "尚未取得兒童安全座椅、兒童商品安全或兒科專業人員獨立審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "9f3002e3ed437236e9b512ea102dde2af939254b768ee424203164438f2444ab",
+  "source_ids": [
+    "tw20_bsmi_infant_crib_selection_2025",
+    "tw20_bsmi_infant_crib_rules_2024",
+    "tw20_bsmi_child_seat_safety_2025",
+    "tw20_bsmi_child_product_recalls"
+  ],
+  "frequency_assessment": "台灣目前沒有可比較借用、二手與新品嬰兒用品事故發生率的全國資料；用品種類、使用方式及暴露時間不同，不由單項召回或商品抽測推算個人機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "沒有可比較借用、二手、新品之全國事故率或一致分母。",
+    "用品適用標準依品項、型號及製造商而異，購買前須按產品資料確認。",
+    "尚未取得兒童乘車安全、兒童商品安全及兒科專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒童乘車安全",
+      "兒童商品安全",
+      "兒科"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原題的借用、購買二手或新品及避免一次買齊的大型用品決策；移除不適用台灣的境外嬰兒床法律及事故統計，改以台灣嬰兒床和兒童安全座椅的標檢局資料說明逐件核對條件。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "大件按「借、買二手、買新」的順序考慮，別一次性配齊",
+    "reader_content_decision": "先列實際使用需求，再借用、買二手或新品；嬰兒床要核對現行要求、結構與床墊尺寸，兒童安全座椅要確認適用規格、碰撞史與使用期限。安全資料不明就不使用。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "先借、再買二手、最後才買新品，可省固定金額。",
+        "decision": "retain_option_comparison_remove_unsupported_savings_estimate",
+        "reason": "家庭價格、使用頻率、用品狀況及缺件成本差異大，沒有適用所有用品的省錢估算；只建議按總成本比較。"
+      },
+      {
+        "original_claim": "二手用品安全可由境外法律、事故研究及床墊研究判定。",
+        "decision": "replace_with_taiwan_product_specific_checks",
+        "reason": "原作美國、英國規則及蘇格蘭病例不能直接套用台灣商品管理與家庭選擇；改依台灣標檢局嬰兒床規則、二手床提醒及汽車安全座椅碰撞後更換建議。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "借用或二手可能降低購買支出，但要把運送、零件、清潔、維修和可用年限納入比較；沒有可適用不同用品和家庭的固定金額。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-23",
+    "assessment": "家用嬰兒床商品檢驗規定於2024-02-01修正並自即日生效；汽車安全座椅依其適用交通規定另行處理，本文連至既有台灣乘車安全指引，不推定跨品項法律要求。"
+  }
+}

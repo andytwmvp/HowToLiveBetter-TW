@@ -1,0 +1,146 @@
+{
+  "id": "TW-20-010",
+  "reviewer": "ChatGPT（AI協助來源核對；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-23",
+  "review_due_at": "2027-02-23",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-010.md",
+  "target_sha256": "37e3acb7ae3e24bb25910357501eb56d173f1959c02c372b1c18a83fffe4a227",
+  "source_reviewed_sha256": "37e3acb7ae3e24bb25910357501eb56d173f1959c02c372b1c18a83fffe4a227",
+  "before_sha256": null,
+  "after_sha256": "37e3acb7ae3e24bb25910357501eb56d173f1959c02c372b1c18a83fffe4a227",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-infant-products-20261123.json",
+  "source_bundle_sha256": "198ac54a001c6183cee0e92dd12cbbf37b407cbfa622b8ab54b4718f4f45cedf",
+  "source_checks": [
+    {
+      "source_id": "tw20_bsmi_diaper_sample_2026",
+      "title": "經濟部標準檢驗局：公布市售「嬰幼兒紙尿褲」檢測結果（2026-08-17）",
+      "url": "https://www.bsmi.gov.tw/wSite/ct?ctNode=9688&mp=111&xItem=128818",
+      "claim": "標檢局於2026年隨機市購20款嬰幼兒紙尿褲，8項品質檢測全部符合，另有1款中文標示不符合；公告明示嬰幼兒紙尿褲非應施檢驗品目，並提供商品安全資訊查詢入口與諮詢電話。",
+      "supporting_passage": "標檢局於2026年隨機市購20款嬰幼兒紙尿褲，8項品質檢測全部符合，另有1款中文標示不符合；公告明示嬰幼兒紙尿褲非應施檢驗品目，並提供商品安全資訊查詢入口與諮詢電話。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取標檢局公告與抽測結果，核對公告日期、抽樣數、檢驗項目、結果及品目分類。"
+    },
+    {
+      "source_id": "tw20_hpa_diaper_bowel_care",
+      "title": "國民健康署孕產兒關懷網站：母乳寶寶排便狀況（頁面未標示發布日期）",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=1983&type=01",
+      "claim": "國健署指出排便次數較多可能增加尿布疹，建議更勤更換尿布、便後用清水清潔並拭乾；本篇只採用清潔與更換建議，不以此頁推估盛行率。",
+      "supporting_passage": "國健署指出排便次數較多可能增加尿布疹，建議更勤更換尿布、便後用清水清潔並拭乾；本篇只採用清潔與更換建議，不以此頁推估盛行率。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取國健署孕產兒關懷頁面，核對照護建議；頁面未標示發布日期。"
+    },
+    {
+      "source_id": "tw20_vghtpe_diaper_care_2026",
+      "title": "臺北榮民總醫院護理部健康e點通：尿布疹寶寶之照護（頁面列印日期2026-11-20）",
+      "url": "https://ihealth.vghtpe.gov.tw/media/949",
+      "claim": "建議依寶寶體型選擇合身、吸濕及透氣尿布；尿濕或排便後儘快更換，清潔後輕壓拭乾；疹子三天未改善或出現水泡、膿泡等情況應就醫。",
+      "supporting_passage": "建議依寶寶體型選擇合身、吸濕及透氣尿布；尿濕或排便後儘快更換，清潔後輕壓拭乾；疹子三天未改善或出現水泡、膿泡等情況應就醫。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取臺北榮總護理部頁面，核對選購、換尿布、清潔及就醫條件；頁面顯示列印日期2026-11-20。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID並依台灣官方資料與實際家庭情境獨立撰寫。未沿用中國制度、境外事故頻率或未支持的費用估算。",
+  "review_method": "逐篇核對manifest固定ID、原作版本與雜湊、原題需求、台灣正文及官方來源。逐主張檢查適用對象、居家／購物情境、可操作步驟、費用與限制、來源日期及支持內容。統計記錄期間、範圍、對象、事件定義、分子分母、資料型態和偏差；沒有合適台灣分母時不推估。AI來源核對不等同正式專業審閱；首次正式發布不計為歷史正文再審。",
+  "limits": [
+    "台灣目前公開資料未提供以一致診斷定義計算的全國尿布疹盛行率或發生率。",
+    "標檢局2026年市購20款產品的抽測結果僅描述該次樣本；公告未提供可代表所有通路、品牌及批次的市場母體抽樣框。",
+    "尚未取得兒科、皮膚科或新生兒照護專業人員獨立審閱。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "3e86af708f28ffd1b99658a85bcb68ac779b790877ab2361ab13950cc277b37b",
+  "source_ids": [
+    "tw20_bsmi_diaper_sample_2026",
+    "tw20_hpa_diaper_bowel_care",
+    "tw20_vghtpe_diaper_care_2026"
+  ],
+  "frequency_assessment": "台灣目前可取得的公開資料沒有提供以全台嬰幼兒為對象、採一致診斷定義的尿布疹盛行率或發生率。標檢局20款商品抽測是產品檢驗，不是疾病病例統計或個人風險。",
+  "statistics_assessed": [
+    {
+      "topic": "標檢局市購20款嬰幼兒紙尿褲樣品的8項品質檢測符合情形",
+      "value": "20款樣品的8項品質項目均符合",
+      "unit": "款（每款依8項品質項目檢測）",
+      "period": "2026年市購；公告日期2026-08-17",
+      "scope": "標檢局隨機市購之20款嬰幼兒紙尿褲",
+      "population": "20款產品樣品，不是嬰幼兒人口或全市場商品清冊",
+      "numerator": 20,
+      "denominator": 20,
+      "denominator_definition": "該次標檢局市購抽測的20款嬰幼兒紙尿褲樣品；公告未提供全市場抽樣框。",
+      "event_definition": "每款樣品依公告所列8項品質項目檢測，結果均符合。",
+      "data_type": "主管機關市購商品抽樣檢測，不是消費者抽樣或疾病行政通報。",
+      "source_id": "tw20_bsmi_diaper_sample_2026",
+      "sources": [
+        "tw20_bsmi_diaper_sample_2026"
+      ],
+      "accessed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "limitations": [
+        "樣本僅20款，抽樣框、通路及地域代表性資訊有限，不能當成全市場合格率或品牌排名。",
+        "商品品質檢測不測量尿布疹發生率或個人皮膚風險。"
+      ]
+    },
+    {
+      "topic": "標檢局市購20款嬰幼兒紙尿褲中文標示查核",
+      "value": "20款中1款中文標示不符合",
+      "unit": "款（1/20款抽樣產品）",
+      "period": "2026年市購；公告日期2026-08-17",
+      "scope": "標檢局隨機市購之20款嬰幼兒紙尿褲",
+      "population": "20款產品樣品，不是全市場商品清冊",
+      "numerator": 1,
+      "denominator": 20,
+      "denominator_definition": "該次標檢局市購抽測的20款產品。",
+      "event_definition": "依商品標示法查核中文標示，有1款不符合。",
+      "data_type": "主管機關市購商品標示抽查，不是消費者調查或疾病統計。",
+      "source_id": "tw20_bsmi_diaper_sample_2026",
+      "sources": [
+        "tw20_bsmi_diaper_sample_2026"
+      ],
+      "accessed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "limitations": [
+        "20款是該次市購樣本，不能估算全市場或後續其他批次違規比例。",
+        "標示查核不等同皮膚刺激試驗或疾病風險評估。"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    "沒有台灣全國尿布疹同定義盛行率／發生率及人口分母。",
+    "20款商品抽測不能排名品牌或估算全市場比例。",
+    "尚未取得兒科、皮膚科或新生兒照護專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "兒科",
+      "皮膚科",
+      "新生兒照護"
+    ]
+  },
+  "prior_chapter_draft_sha256": null,
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留原題「尿布尺寸、勤換及參考抽測」的照顧者需求，改用台灣標檢局2026年實際抽測資料與台灣醫療照護建議；明示尿布不是公告應施檢驗品目，不把抽樣結果變成品牌排名或個人風險。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "尿布不看牌子看三件事：合不合身、換得勤不勤、有沒有被抽檢通報過",
+    "reader_content_decision": "保留選擇合身尿布、排便後更換及查看商品抽測資料的需求；依台灣標檢局的實際商品抽樣結果與國健署、醫學中心照護指引撰寫，未沿用原作中國事件或其品牌判斷。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "不看品牌，而以產品抽檢通報、合身與換得勤不勤決定購買。",
+        "decision": "retain_reader_need_with_taiwan_product_sampling_and_care_guidance",
+        "reason": "台灣標檢局2026年有具體市購樣本檢測結果；樣本量和檢驗範圍有限，須說明不是品牌排名或全市場比例。"
+      },
+      {
+        "original_claim": "尿布疹的具體發生頻率可按境外資料推估。",
+        "decision": "do_not_extrapolate_foreign_rate",
+        "reason": "沒有台灣一致定義全國分母；不以境外研究、商品抽檢或單一醫療院所比例推算個人風險。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "尿布支出依尺寸、每日用量、品牌與通路而變；使用每片價格比較當下商品，不引用境外價格或估算固定月費。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-23",
+    "assessment": "沒有資格或申請程序。標檢局2026-08-17公告明示嬰幼兒紙尿褲非其公告應施檢驗品目；此為商品管理分類，不是安全保證或品質排名。"
+  }
+}

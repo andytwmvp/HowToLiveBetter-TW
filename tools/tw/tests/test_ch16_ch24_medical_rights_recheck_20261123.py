@@ -16,6 +16,7 @@ from review_contract import validate_runtime
 
 
 BASELINE = "1ca0a13d2988210d930afab9444e8589d36d4709"
+BATCH_REVISION = "f17c744aa6d3474e1f086eab4a2642614522954c"
 DATE = "2026-11-23"
 DUE = "2027-02-23"
 IDS = ("TW-16-005", "TW-24-002", "TW-24-010", "TW-24-015")
@@ -150,10 +151,7 @@ class MedicalRightsRecheckTests(unittest.TestCase):
             if current_sources.get(key) != value
         }
         self.assertEqual(changed_existing, set())
-        self.assertEqual(
-            {key for key in current_sources if key not in old_sources},
-            set(NEW_SOURCE_IDS),
-        )
+        self.assertTrue(set(NEW_SOURCE_IDS).issubset(current_sources))
         self.assertEqual(self.batch["new_source_ids"], list(NEW_SOURCE_IDS))
         self.assertEqual(self.batch["updated_source_ids"], [])
         self.assertEqual([row[0] for row in self.bundle["sources"]], list(NEW_SOURCE_IDS))
@@ -222,6 +220,9 @@ class MedicalRightsRecheckTests(unittest.TestCase):
         old_coverage = json.loads(git_bytes(BASELINE, "localization/tw-edition/coverage.json"))
         old_runtime = json.loads(git_bytes(BASELINE, "localization/tw-edition/runtime.json"))
         old_register = json.loads(git_bytes(BASELINE, REGISTER_PATH))
+        batch_coverage = json.loads(git_bytes(BATCH_REVISION, "localization/tw-edition/coverage.json"))
+        batch_runtime = json.loads(git_bytes(BATCH_REVISION, "localization/tw-edition/runtime.json"))
+        batch_register = json.loads(git_bytes(BATCH_REVISION, REGISTER_PATH))
         before = self.batch["counts_before"]
         after = self.batch["counts_after"]
         self.assertEqual(self.coverage, self.live_coverage)
@@ -233,17 +234,25 @@ class MedicalRightsRecheckTests(unittest.TestCase):
         self.assertEqual(before["coverage_json_files"], old_coverage["json_files_checked"])
         self.assertEqual(before["substantive_rechecks"], len(old_register["substantive_rechecks"]))
 
-        self.assertEqual(after["verified_core_entries"], self.coverage["core_reviewed_entries"])
-        self.assertEqual(after["publication_completed_entries"], self.coverage["publication_completed_entries"])
-        self.assertEqual(after["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(after["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(after["source_registry"], self.coverage["registry_sources"])
-        self.assertEqual(after["coverage_json_files"], self.coverage["json_files_checked"])
-        self.assertEqual(after["unresolved_source_id_categories"], len(self.coverage["unresolved_source_ids"]))
-        self.assertEqual(after["unresolved_reference_occurrences"], self.coverage["unresolved_reference_occurrences"])
-        self.assertEqual(after["substantive_rechecks"], len(self.rows))
-        self.assertEqual(after["publication_ready"], self.coverage["publication_ready"])
+        # A stage's counts_after are immutable historical evidence. Compare them with
+        # the commit that produced the stage, not with today's growing runtime.
+        self.assertEqual(after["verified_core_entries"], batch_coverage["core_reviewed_entries"])
+        self.assertEqual(after["publication_completed_entries"], batch_coverage["publication_completed_entries"])
+        self.assertEqual(after["runtime_items"], len(batch_runtime["items"]))
+        self.assertEqual(after["runtime_sources"], len(batch_runtime["sources"]))
+        self.assertEqual(after["source_registry"], batch_coverage["registry_sources"])
+        self.assertEqual(after["coverage_json_files"], batch_coverage["json_files_checked"])
+        self.assertEqual(after["unresolved_source_id_categories"], len(batch_coverage["unresolved_source_ids"]))
+        self.assertEqual(after["unresolved_reference_occurrences"], batch_coverage["unresolved_reference_occurrences"])
+        self.assertEqual(after["substantive_rechecks"], len(batch_register["substantive_rechecks"]))
+        self.assertEqual(after["publication_ready"], batch_coverage["publication_ready"])
+        self.assertGreaterEqual(self.coverage["core_reviewed_entries"], after["verified_core_entries"])
+        self.assertGreaterEqual(len(self.runtime["items"]), after["runtime_items"])
+        self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
+        self.assertGreaterEqual(self.coverage["registry_sources"], after["source_registry"])
+        self.assertGreaterEqual(len(self.rows), after["substantive_rechecks"])
         self.assertFalse(after["publication_ready"])
+        self.assertFalse(self.coverage["publication_ready"])
         self.assertEqual(after["verified_core_entries"], before["verified_core_entries"])
         self.assertEqual(after["runtime_items"], before["runtime_items"])
         self.assertEqual(after["substantive_rechecks"], before["substantive_rechecks"] + len(IDS))
