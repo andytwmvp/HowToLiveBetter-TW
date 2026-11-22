@@ -128,11 +128,23 @@ class Chapter20FeedingNutritionAndCh24RecheckTests(unittest.TestCase):
             self.assertEqual((entry["sources"], item["source_ids"], review["source_ids"]), (spec["sources"],) * 3)
             self.assertEqual(review["prior_chapter_draft_sha256"], spec["draft_sha256"])
             self.assertEqual(review["prior_manifest_entry_sha256"], digest(json.dumps(old, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()))
+        baseline_register = json.loads(git_bytes(BASE, REGISTER))
+        prior_rows = baseline_register["substantive_rechecks"]
+        self.assertEqual(self.rows[:len(prior_rows)], prior_rows)
+        later_rows = self.rows[len(prior_rows):]
         for key in baseline_item_ids:
-            if key == RECHECK_ID:
-                continue
             baseline = next(row for row in baseline_runtime["items"] if row["id"] == key)
-            self.assertEqual(self.items[key], baseline, f"既有正式條目被非本批改動：{key}")
+            current = self.items[key]
+            if current != baseline:
+                current_sha = digest(current["body"].encode())
+                matching_rechecks = [
+                    row for row in later_rows
+                    if row["id"] == key and row["after_sha256"] == current_sha
+                ]
+                self.assertEqual(
+                    len(matching_rechecks), 1,
+                    f"既有正式條目有差異，但基線後沒有唯一對應的實質再審：{key}",
+                )
 
     def test_markdown_runtime_review_source_urls_and_hashes_match(self):
         for key, spec in SPECS.items():
@@ -198,7 +210,11 @@ class Chapter20FeedingNutritionAndCh24RecheckTests(unittest.TestCase):
         baseline = json.loads(git_bytes(BASE, REGISTER))
         prefix = baseline["substantive_rechecks"]
         self.assertEqual(self.rows[:len(prefix)], prefix)
-        self.assertEqual(len(self.rows), len(prefix) + 1)
+        appended_batch_rows = [
+            row for row in self.rows[len(prefix):]
+            if row["id"] == RECHECK_ID and row["prior_revision"] == BASE
+        ]
+        self.assertEqual(appended_batch_rows, [self.batch_recheck])
         baseline_cleanups = baseline.get("reader_copy_cleanups", [])
         current_cleanups = self.register.get("reader_copy_cleanups", [])
         self.assertEqual(current_cleanups[:len(baseline_cleanups)], baseline_cleanups)
@@ -280,7 +296,7 @@ class Chapter20FeedingNutritionAndCh24RecheckTests(unittest.TestCase):
         )
         self.assertTrue(NEW_SOURCE_IDS.issubset(set(self.sources) - {row["id"] for row in baseline_runtime["sources"]}))
         self.assertEqual({row[0] for row in self.bundle["sources"]}, NEW_SOURCE_IDS)
-        self.assertEqual(source_bundle_ids_added_since(ROOT, BASE), NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS.issubset(source_bundle_ids_added_since(ROOT, BASE)))
         bundled = {row[0]: row for row in self.bundle["sources"]}
         for sid in NEW_SOURCE_IDS:
             source = self.sources[sid]
@@ -299,19 +315,28 @@ class Chapter20FeedingNutritionAndCh24RecheckTests(unittest.TestCase):
         self.assertEqual(coverage, audit_drafts())
         publication = publication_report(ROOT)
         self.assertEqual(coverage["publication_completed_entries"], publication["publication_completed_entries"])
-        self.assertEqual(
-            publication["publication_completed_entries"],
-            self.stage["counts_after"]["core_reviewed_entries"],
-        )
         self.assertFalse(publication["publication_ready"])
         self.assertFalse(coverage["publication_ready"])
         self.assertEqual(self.stage["baseline_main_sha"], BASE)
         self.assertEqual(self.stage["counts_before"]["publication_ready"], False)
-        self.assertEqual(self.stage["counts_before"]["core_reviewed_entries"], 344)
-        self.assertEqual(self.stage["counts_after"]["core_reviewed_entries"], publication["publication_completed_entries"])
-        self.assertEqual(self.stage["counts_after"]["runtime_items"], len(self.runtime["items"]))
-        self.assertEqual(self.stage["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
-        self.assertEqual(self.stage["counts_after"]["substantive_rechecks"], len(self.rows))
+        baseline_runtime = json.loads(git_bytes(BASE, "localization/tw-edition/runtime.json"))
+        baseline_coverage = json.loads(git_bytes(BASE, "localization/tw-edition/coverage.json"))
+        baseline_register = json.loads(git_bytes(BASE, REGISTER))
+        before = self.stage["counts_before"]
+        after = self.stage["counts_after"]
+        self.assertEqual(before["core_reviewed_entries"], baseline_coverage["publication_completed_entries"])
+        self.assertEqual(after["core_reviewed_entries"], before["core_reviewed_entries"] + len(NEW_IDS))
+        self.assertGreaterEqual(publication["publication_completed_entries"], after["core_reviewed_entries"])
+        self.assertEqual(before["runtime_items"], len(baseline_runtime["items"]))
+        self.assertEqual(after["runtime_items"], before["runtime_items"] + len(NEW_IDS))
+        self.assertEqual(before["runtime_sources"], len(baseline_runtime["sources"]))
+        self.assertEqual(after["runtime_sources"], before["runtime_sources"] + len(NEW_SOURCE_IDS))
+        self.assertEqual(
+            after["substantive_rechecks"],
+            len(baseline_register["substantive_rechecks"]) + 1,
+        )
+        self.assertEqual(after["source_registry"], before["source_registry"] + len(NEW_SOURCE_IDS))
+        self.assertEqual(after["json_files_checked"], before["json_files_checked"] + len(NEW_IDS) + 2)
         self.assertEqual(self.stage["new_source_ids"], sorted(NEW_SOURCE_IDS))
         self.assertFalse(self.stage["publication_ready"])
 

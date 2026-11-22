@@ -5,6 +5,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from retroactive_audit import assert_preserved_or_rechecked,validate_recheck_history
 from review_contract import ROOT,validate_entry,validate_runtime,publication_report
 BASE='5437a44b4d640657f5542a7e259e1e6ea294c9ad'
+BATCH_BASE='930acb1bd0bbdd7592e7cfd5b85e80f47767a91e'
 IDS={'TW-13-001','TW-13-003','TW-13-007','TW-13-012','TW-13-030'}
 def read(p):return json.loads((ROOT/p).read_text(encoding='utf8'))
 class EmergencyTests(unittest.TestCase):
@@ -31,7 +32,12 @@ class EmergencyTests(unittest.TestCase):
   self.assertIn('AED',d['TW-13-001'])
   self.assertIn('FAST',d['TW-13-003'])
   self.assertIn('最後一次確認',d['TW-13-003'])
-  self.assertIn('不能等到胸痛超過十五分鐘',d['TW-13-007'])
+  self.assertNotIn('不能等到胸痛超過十五分鐘',d['TW-13-007'])
+  self.assertIn('不要等症狀持續滿十五分鐘',d['TW-13-007'])
+  self.assertIn('極度疲倦',d['TW-13-007'])
+  self.assertIn('不要掛斷',d['TW-13-001'])
+  self.assertIn('治療方式各有條件與時間窗',d['TW-13-003'])
+  self.assertIn('不確定操作時，持續加壓',d['TW-13-012'])
   self.assertIn('6,301人',d['TW-13-001'])
   self.assertIn('48萬名就醫人數',d['TW-13-003'])
   self.assertIn('64.2萬名就醫人數',d['TW-13-007'])
@@ -51,6 +57,19 @@ class EmergencyTests(unittest.TestCase):
   registry=read('localization/tw-edition/sources/ch13-emergency-20261017.json')['sources']
   self.assertEqual(len(registry),8)
   for source in registry:self.assertEqual(sources[source[0]]['url'],source[2])
+ def test_20261122_highrisk_recheck_evidence(self):
+  evidence=read('localization/ch13-highrisk-recheck-20261122.json')
+  base=json.loads(subprocess.check_output(['git','show',BATCH_BASE+':localization/tw-edition/coverage.json'],cwd=ROOT,text=True))
+  coverage=read('localization/tw-edition/coverage.json')
+  self.assertEqual(evidence['baseline_main_sha'],BATCH_BASE)
+  self.assertEqual(evidence['reviewed_ids'],['TW-13-001','TW-13-003','TW-13-007','TW-13-012'])
+  self.assertEqual(evidence['counts_before']['json_files_checked'],base['json_files_checked'])
+  self.assertEqual(evidence['counts_before']['registry_sources'],base['registry_sources'])
+  self.assertEqual(evidence['counts_after']['json_files_checked'],coverage['json_files_checked'])
+  self.assertEqual(evidence['counts_after']['registry_sources'],coverage['registry_sources'])
+  self.assertEqual(coverage['registry_sources'],base['registry_sources']+len(evidence['new_source_ids']))
+  self.assertEqual(coverage['json_files_checked'],base['json_files_checked']+2)
+  self.assertFalse(coverage['publication_ready'])
  def test_counts_and_unfinished_scope(self):
   report=publication_report();coverage=read('localization/tw-edition/coverage.json')
   self.assertGreaterEqual(report['publication_completed_entries'],186)

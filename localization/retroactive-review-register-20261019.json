@@ -48966,6 +48966,602 @@
       "source_bundle_sha256": "40e333a4ce1d986dd767ea01578693146b7fcc797410ab453ca0099ab7d0a928",
       "review_path": "localization/reviews/TW-24-014.json",
       "review_sha256": "72f68e073a9930164b98c3098fcb8facea8ca47d1e3db5f7e1afc6d566a0e7a3"
+    },
+    {
+      "id": "TW-13-001",
+      "title": "成人突然倒地沒有正常呼吸：119、CPR、AED 同時啟動",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "930acb1bd0bbdd7592e7cfd5b85e80f47767a91e",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "8906fb4b53764b9028eed7d478133bd96c606d83435c84ea71dfe2ebaef02c75",
+      "before_sha256": "e3e91b55b3d1e0794d8e7a15f8c3090dcd7dd7ca032c0979d93dcfd55a140ce5",
+      "after_sha256": "1dd7bf3d62e9ffc2b2dd180a0c3d109738ae54a75f1c4036a6163b55bf79b4b1",
+      "reviewed_at": "2026-11-22",
+      "review_due_at": "2027-02-22",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "e3e91b55b3d1e0794d8e7a15f8c3090dcd7dd7ca032c0979d93dcfd55a140ce5",
+      "previous_body": "<!-- TW-ID: TW-13-001 -->\n\n# 成人突然倒地沒有正常呼吸：119、CPR、AED 同時啟動\n\n## 適用情境與第一步\n\n在家中、工作場所或公共空間看見成人突然倒地，先確認周圍沒有車流、火源、漏電等立即危險，再拍肩並大聲呼喚。若叫不醒，且沒有正常呼吸，或只有斷續喘氣、像打鼾或抽氣般的瀕死喘息，先當作疑似心跳停止處理；不要花時間摸脈搏或等症狀自行恢復。\n\n## 臺灣實作與下一步\n\n請旁人立刻打119、開擴音並說明地址、樓層和患者狀況，再請另一人拿AED。若只有你一人，先打119並聽從派遣員指示，隨即開始按壓。將手掌根部放在胸部中央、胸骨下半部（兩乳頭連線附近），成人每分鐘按壓100至120次、深度約5至6公分；每次按壓後讓胸口回彈，盡量不要中斷。未受過人工呼吸訓練或不適合吹氣時，持續胸部按壓；受過訓練者依所學及119派遣員指示施救。\n\nAED到手後立刻開機、依語音貼上貼片並聽從指示。機器分析或電擊時不要碰觸患者；若AED說不建議電擊，也照語音指示接著做CPR。持續急救，直到患者恢復正常呼吸或救護人員接手。\n\n## 費用與可期待的效益\n\n現場打119和使用公共AED不必先購買設備；平時可參加消防局或合格單位的急救課程練習。及早CPR與AED有機會維持循環、爭取急救時間，但不能保證存活或不留下後遺症；後續醫療費用依健保身分、實際處置和醫療院所確認。\n\n消防署113年全國消防機關統計記錄，院外心跳停止患者急救成功6,301人、康復出院1,249人。這些是急救結果人數，不是全年所有成人院外心跳停止事件總數；也不能換算個人發生率、旁觀者CPR的效果或個人存活機率。急救時先打119，不要查數據。\n\n## 限制與常見錯誤\n\n本篇只適用成人的一般情境；嬰幼兒、兒童、溺水、電擊或嚴重外傷的急救方式有差異，應依119派遣員指示處理。若患者有意識或仍有正常呼吸，不要任意按壓胸部，持續觀察並告知119。CPR可能造成肋骨受傷，但疑似心跳停止時，不應因此延誤急救。AED會判斷是否需要電擊，民眾不必自行判斷，照語音指示操作即可。\n\n## 參考資料\n\n- [臺北市政府消防局：心肺停止急救處置](https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF)：說明叫叫壓電、打119、取得AED及依語音操作。\n- [臺北市政府消防局：心肺復甦術施救方法](https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16)：成人按壓速度、深度與持續按壓方式。\n- [內政部消防署：全國消防機關113年緊急救護統計分析](https://mag.nfa.gov.tw/article.php?id=3885)：列出院外心跳停止急救成功人數及康復出院人數。\n",
+      "previous_source_ids": [
+        "ch13_cpr_fire",
+        "ch13_cpr_faq",
+        "retro_nfa_ohca_2024"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
+          "claim": "TW-13-001：成人突然失去反應且沒有正常呼吸時，啟動119、CPR與AED流程。",
+          "supporting_passage": "臺北市消防局民眾版心肺停止處置說明叫叫壓電、撥119、按壓並依AED語音操作。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀臺北市政府消防局官方急救頁面。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
+          "claim": "TW-13-001：成人胸部按壓每分鐘100至120次、深度5至6公分、每次讓胸部回彈並持續到AED或救護人員接手。",
+          "supporting_passage": "消防局問答列出按壓速度、深度、胸部回彈及持續按壓；頁面更新日期為2026-09-29。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接讀取臺北市消防局問答正文及頁面更新資料。"
+        },
+        {
+          "url": "https://mag.nfa.gov.tw/article.php?id=3885",
+          "claim": "TW-13-001：113年全國消防機關OHCA急救成功6,301人、康復出院1,249人。",
+          "supporting_passage": "消防署統計分析於院外心肺功能停止段落列出113年急救成功6,301人、康復出院1,249人；正文另提34.14%急救成功率，本次不以該比例推算個人風險或旁觀者CPR效果。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀消防署2025-02-28發布的113年全國緊急救護統計分析，核對正文、統計年度及表6、表7名稱。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
+          "claim": "TW-13-001：成人突然失去反應且沒有正常呼吸時，啟動119、CPR與AED流程。",
+          "supporting_passage": "臺北市消防局民眾版心肺停止處置說明叫叫壓電、撥119、按壓並依AED語音操作。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀臺北市政府消防局官方急救頁面。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
+          "claim": "TW-13-001：成人胸部按壓每分鐘100至120次、深度5至6公分、每次讓胸部回彈並持續到AED或救護人員接手。",
+          "supporting_passage": "消防局問答列出按壓速度、深度、胸部回彈及持續按壓；頁面更新日期為2026-09-29。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接讀取臺北市消防局問答正文及頁面更新資料。"
+        },
+        {
+          "url": "https://mag.nfa.gov.tw/article.php?id=3885",
+          "claim": "TW-13-001：113年全國消防機關OHCA急救成功6,301人、康復出院1,249人。",
+          "supporting_passage": "消防署統計分析於院外心肺功能停止段落列出113年急救成功6,301人、康復出院1,249人；正文另提34.14%急救成功率，本次不以該比例推算個人風險或旁觀者CPR效果。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀消防署2025-02-28發布的113年全國緊急救護統計分析，核對正文、統計年度及表6、表7名稱。"
+        }
+      ],
+      "source_ids": [
+        "ch13_cpr_fire",
+        "ch13_cpr_faq",
+        "ch13_cpr_nfa_adult_20170501",
+        "retro_nfa_ohca_2024"
+      ],
+      "new_source_ids": [
+        "ch13_cpr_nfa_adult_20170501"
+      ],
+      "source_records_reused": [
+        "ch13_cpr_fire",
+        "ch13_cpr_faq",
+        "retro_nfa_ohca_2024"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_cpr_fire",
+          "title": "臺北市政府消防局：心肺停止急救處置",
+          "url": "https://www.119.gov.taipei/cp.aspx?n=83DD6BE15583BEBF",
+          "claim": "成人倒地無反應時先確認環境安全、呼叫119並依民眾版CPR/AED流程處理。",
+          "supporting_passage": "臺北市消防局民眾說明叫叫壓電與安全確認；支持流程入口，不單獨作為按壓參數依據。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀臺北市消防局官方急救頁面可讀正文；未把舊內容推作新版指引。"
+        },
+        {
+          "source_id": "ch13_cpr_faq",
+          "title": "臺北市政府消防局：心肺復甦術問答",
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
+          "claim": "成人胸外按壓每分鐘100至120次、深度5至6公分，按壓後讓胸部回彈並盡量不中斷。",
+          "supporting_passage": "消防局官方CPR問答列出成人按壓位置、速度、深度、回彈與中斷限制。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀臺北市消防局官方問答相關段落，核對成人操作參數。"
+        },
+        {
+          "source_id": "ch13_cpr_nfa_adult_20170501",
+          "title": "內政部消防署：民眾版成人心肺復甦術",
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=905&code=list&flag=detail&ids=21",
+          "claim": "消防署成人民眾版要求呼救、打119且不要掛斷、取得AED；無正常或幾乎無正常呼吸時開始按壓。",
+          "supporting_passage": "消防署頁面標示發布日2017-05-01，明列119通話不要掛斷、聽從派遣員指示、成人呼吸判斷及按壓參數；頁面未標示近期修訂日。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接讀取消防署官方頁相關段落；將2017-05-01作發布日期，未宣稱為近期更新。"
+        },
+        {
+          "source_id": "retro_nfa_ohca_2024",
+          "title": "內政部消防署：全國消防機關113年緊急救護統計分析",
+          "url": "https://mag.nfa.gov.tw/article.php?id=3885",
+          "claim": "2024年全國消防機關到院前心肺功能停止統計列急救成功6,301人、康復出院1,249人。",
+          "supporting_passage": "消防署2025-02-28統計分析以2024年行政救護資料報告到院前心肺功能停止患者急救成功及康復出院人數；文章未提供成人事件分母。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22重新閱讀消防署統計分析的期間、事件範圍、數字及統計段落；不以其百分比或件數換算成人個人風險。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "1dd7bf3d62e9ffc2b2dd180a0c3d109738ae54a75f1c4036a6163b55bf79b4b1",
+      "taiwan_context": "台灣家中、工作場所與公共場所的成人突然倒地；先保護現場安全，立即啟動119通話、CPR與可取得的AED，將兒童、溺水、電擊和嚴重外傷分流。",
+      "frequency_assessment": "消防署2024年全國急救結果統計可描述到院前心肺功能停止患者的急救成功及康復出院人數，但未提供可在本篇使用的成人事件母數與一般民眾暴露分母；不得把件數或急救成功率換算成成人個人發生率或存活機率。",
+      "statistics_assessed": [
+        {
+          "value": "急救成功6,301人；康復出院1,249人",
+          "unit": "行政救護結果人數",
+          "period": "2024年（民國113年）",
+          "geographic_scope": "全國消防機關",
+          "population": "消防署統計所列到院前心肺功能停止患者，資料段落未分成人與兒童",
+          "numerator": "急救成功6,301人；康復出院1,249人",
+          "denominator": "未取得成人事件數或一般民眾暴露分母；本篇不使用成功率估算個人結果",
+          "event_definition": "消防署年度統計的到院前心肺功能停止患者急救結果",
+          "data_type": "全國消防機關行政救護結果統計",
+          "source_id": "retro_nfa_ohca_2024",
+          "accessed_at": "2026-11-22",
+          "limitations": "未區分成人事件，結果人數不是所有事件總數；不能換算個人發生率、旁觀者CPR效果或個人存活機率。"
+        }
+      ],
+      "changes": "逐條重讀消防署及臺北市消防局成人CPR流程和2024全國急救結果統計；補清楚單人時119開擴音且不要掛斷、多人分工、派遣員指示與AED取得順序。確認按壓深度和頻率仍符合官方公開成人指引，並限定統計為全齡行政救護結果人數。",
+      "limits": [
+        "內政部消防署成人民眾版頁面標示發布日期2017-05-01，未標示近期修訂日期；按2026-11-22可讀公開內容核對，實際急救時仍須依119派遣員及AED語音指示。",
+        "2024年消防署急救成功6,301人與康復出院1,249人是到院前心肺功能停止患者的行政救護結果數；未提供本篇可用的成人事件分母，不能推算成人個人發生率、旁觀者急救成效或個人存活機率。",
+        "尚未取得急診／心臟醫學及合格急救訓練專業人員的獨立審閱。"
+      ],
+      "unresolved_questions": [
+        "消防署民眾版CPR頁沒有標示近期修訂日，應由急救專業審閱人確認急救參數仍符合本批複查時的現行教學。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "急診醫學／心臟醫學",
+          "成人CPR／AED急救訓練",
+          "消防緊急救護"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-001.json",
+      "review_sha256": "c19dff36dc5839711af82bbc79ce0facec655fd005701a8ecf9a902daf1c55a8",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-highrisk-recheck-20261122.json",
+      "source_bundle_sha256": "41525427294665d8fb62b07408916feba1e22094561945687f5494a373e4adf6"
+    },
+    {
+      "id": "TW-13-003",
+      "title": "突然臉歪、手無力或說話不清：記時間立即打119",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "930acb1bd0bbdd7592e7cfd5b85e80f47767a91e",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "2e4a11a2989bb27ed312b88129fea5402e52bef17017fe6384a3f84e8c3aa136",
+      "before_sha256": "ae1fdc68a6f44921658a36088cc739142cefc1ebfc813189ab4cbe51a08edfdd",
+      "after_sha256": "025f128dfa9977c65e4048c7d9e2b198fded2d00ff117994712ff3d183776a9f",
+      "reviewed_at": "2026-11-22",
+      "review_due_at": "2027-02-22",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "ae1fdc68a6f44921658a36088cc739142cefc1ebfc813189ab4cbe51a08edfdd",
+      "previous_body": "<!-- TW-ID: TW-13-003 -->\n\n# 突然臉歪、手無力或說話不清：記時間立即打119\n\n## 適用情境與第一步\n\n任何人突然出現單側嘴角歪斜、手臂或腿無力、說話含糊或聽不懂別人說話，都可能是腦中風；突然看不清楚、複視或站不穩，也要提高警覺。症狀就算很快消失，仍應立即求助，不要等到隔天看門診。\n\n舊衛教提到的「黃金3小時」不能解讀為超時就不必求救；治療選項會依症狀時間、影像結果和醫療團隊評估而不同。\n\n## 臺灣實作與下一步\n\n立即打119，不要自己開車或騎車送醫。用FAST快速辨識：Face看臉是否歪斜、Arm看是否一側手臂無力、Speech聽說話是否異常、Time記下時間並求援。請記下患者最後一次確認狀況正常的時間；如果不知道發作時間，也要把最後正常時間告訴派遣員和醫護人員。說明症狀、地址、目前意識、平常用藥和過往病史，讓患者停止活動並在安全姿勢下等候救護。\n\n## 費用與可期待的效益\n\n打119不需要先購買設備。及時送醫能讓醫療團隊盡快檢查並判斷中風類型和治療方式；藥物、檢查、住院和自付費用依健保給付及個別病況確認。治療是否適用由醫療團隊判斷，不是靠患者自行估算時間。\n\n健保署2025年統計列出腦血管疾病約48萬名就醫人數。資料取自全國門診、交付機構及住院申報，統計群組為ICD-10-CM I60至I69；這是廣義疾病群的就醫人數，不是當年新發腦中風病例數，也沒有可換算個人新發風險的母數或分母。\n\n## 限制與常見錯誤\n\n在醫療人員確認前，不要強迫患者喝水、吃東西或吞藥，也不要自行給阿斯匹靈；腦中風可能是出血或血管阻塞，處置不同。不要針刺放血、按摩患側、等血壓自行恢復，或因症狀減輕就取消求救。FAST可協助辨認警訊，但不能確診；符合其中一項就應打119。\n\n## 參考資料\n\n- [衛福部：搶救腦中風，謹記「臨微不亂」](https://mohw.gov.tw/cp-2704-44431-1.html)：說明腦中風警訊、FAST辨識與儘速求援。\n- [衛福部：放寬腦中風血栓溶解劑施行時間](https://www.mohw.gov.tw/cp-6560-76091-1.html)：說明治療給付時間曾更新，實際治療仍須由醫療團隊評估。\n- [健保署：2025年全民健康保險疾病就醫統計](https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf)：列出就醫人數、申報資料範圍及ICD-10-CM疾病群組。\n",
+      "previous_source_ids": [
+        "ch13_stroke_mohw",
+        "retro_stroke_nhia_2023",
+        "retro_nhi_disease_2025"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://mohw.gov.tw/cp-2704-44431-1.html",
+          "claim": "TW-13-003：突然臉歪、單側手腳無力或說話異常時，FAST協助辨識並立即通知119。",
+          "supporting_passage": "衛福部國健署頁面列出FAST臉、手、說話與時間口訣，並指示出現任一警訊記錄時間、通知119；舊頁面數據不作現況統計。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀衛福部官方頁面症狀辨識與求援段落，未採用其中舊死亡數或3小時作為治療截止。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-6560-76091-1.html",
+          "claim": "TW-13-003：急性缺血性腦中風的健保治療給付時窗曾更新；一般民眾不應將舊3小時宣導當成放棄求救的截止線。",
+          "supporting_passage": "衛福部說明健保署自2023-10-01放寬急性缺血性腦中風血栓溶解劑施行時間；治療適用仍須醫療團隊評估。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀衛福部官方政策說明，核對日期、給付內容和適用條件。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf",
+          "claim": "2025年健保署統計列出腦血管疾病480千人及缺血性心臟病642千人就醫人數。",
+          "supporting_passage": "PDF第一頁全國就醫人數表列腦血管疾病480、缺血性心臟病642，單位為千人；資料取自門診、交付機構及住院明細檔，產製日2026-09-01。疾病群定義頁列I60-I69及I20-I25。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀健保署2025年統計PDF表格、資料來源、產製日期和疾病代碼列表。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://mohw.gov.tw/cp-2704-44431-1.html",
+          "claim": "TW-13-003：突然臉歪、單側手腳無力或說話異常時，FAST協助辨識並立即通知119。",
+          "supporting_passage": "衛福部國健署頁面列出FAST臉、手、說話與時間口訣，並指示出現任一警訊記錄時間、通知119；舊頁面數據不作現況統計。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀衛福部官方頁面症狀辨識與求援段落，未採用其中舊死亡數或3小時作為治療截止。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/cp-6560-76091-1.html",
+          "claim": "TW-13-003：急性缺血性腦中風的健保治療給付時窗曾更新；一般民眾不應將舊3小時宣導當成放棄求救的截止線。",
+          "supporting_passage": "衛福部說明健保署自2023-10-01放寬急性缺血性腦中風血栓溶解劑施行時間；治療適用仍須醫療團隊評估。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀衛福部官方政策說明，核對日期、給付內容和適用條件。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf",
+          "claim": "2025年健保署統計列出腦血管疾病480千人及缺血性心臟病642千人就醫人數。",
+          "supporting_passage": "PDF第一頁全國就醫人數表列腦血管疾病480、缺血性心臟病642，單位為千人；資料取自門診、交付機構及住院明細檔，產製日2026-09-01。疾病群定義頁列I60-I69及I20-I25。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀健保署2025年統計PDF表格、資料來源、產製日期和疾病代碼列表。"
+        }
+      ],
+      "source_ids": [
+        "ch13_hpa_stroke_20261028",
+        "ch13_cerebellar_vghtpe",
+        "retro_stroke_nhia_2023",
+        "retro_nhi_disease_2025"
+      ],
+      "new_source_ids": [
+        "ch13_hpa_stroke_20261028"
+      ],
+      "source_records_reused": [
+        "ch13_cerebellar_vghtpe",
+        "retro_stroke_nhia_2023",
+        "retro_nhi_disease_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_hpa_stroke_20261028",
+          "title": "衛福部國民健康署：預防中風關鍵5招 辨識徵兆分秒必爭",
+          "url": "https://www.mohw.gov.tw/cp-16-88307-1.html",
+          "claim": "臉部不對稱、單側手臂無力或說話不清任一警訊，立即119、記錄發作時間；不可自行餵食或給阿斯匹靈。",
+          "supporting_passage": "國健署官方頁於2026-10-28建檔及更新，逐項列出微笑／舉手／說你好警訊、119、記時與送醫前禁忌。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀官方更新頁面第145至152行相關內容及頁面建檔／更新日期。"
+        },
+        {
+          "source_id": "ch13_cerebellar_vghtpe",
+          "title": "臺北榮總：腦中風之照護",
+          "url": "https://ihealth.vghtpe.gov.tw/media/513",
+          "claim": "突發複視、視力模糊或失衡也可能是腦中風症狀，須由醫師評估。",
+          "supporting_passage": "臺北榮總護理部衛教於2025-04-24修訂，列出突然看不見、複視、視力模糊及失去平衡等症狀；該頁為症狀教育，不作急救時間窗依據。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀臺北榮總衛教文字及最近修訂日期，僅用於支持視覺與平衡警訊。"
+        },
+        {
+          "source_id": "retro_stroke_nhia_2023",
+          "title": "衛生福利部：放寬腦中風血栓溶解劑施行時間",
+          "url": "https://www.mohw.gov.tw/cp-6560-76091-1.html",
+          "claim": "缺血性腦中風治療給付時間條件已變動；公眾不應用舊版「3小時」宣導自行取消求救。",
+          "supporting_passage": "衛福部／健保署政策頁說明2023-10-01起放寬急性缺血性中風溶栓及取栓給付執行時間；實際是否適用由醫療團隊依條件評估。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22重新閱讀衛福部官方政策頁的公布內容與生效日期；正文不承諾個案治療資格。"
+        },
+        {
+          "source_id": "retro_nhi_disease_2025",
+          "title": "衛生福利部中央健康保險署：2025年全民健康保險疾病就醫統計",
+          "url": "https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf",
+          "claim": "2025年全國健保申報統計列腦血管疾病就醫人數480千人。",
+          "supporting_passage": "健保署2026-09-01產製表格列480千人；資料來自全國門診、交付機構及住院明細檔，疾病群為ICD-10-CM I60-I69。此為年度疾病群就醫人數，非新發中風事件或發生率。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接檢視PDF表格、來源註記、產製日期、申報範圍及疾病群定義。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch13_stroke_mohw",
+          "prior_source_sha256": "2de6b746392b5c31429e6a6055b9ac36e89669cafbcfdb8d099e09d6e38e3a8d",
+          "replacement_ids": [
+            "ch13_hpa_stroke_20261028"
+          ],
+          "reason": "舊衛福部腦中風頁有過時的三小時宣導框架；改以國健署2026-10-28急救步驟為主要來源。"
+        }
+      ],
+      "source_reviewed_sha256": "025f128dfa9977c65e4048c7d9e2b198fded2d00ff117994712ff3d183776a9f",
+      "taiwan_context": "腦中風可發生在居家、通勤、職場或公共場所；由旁人記錄發作或最後正常時間、打119並避免自行駕車，治療由台灣急診及醫療團隊依檢查評估。",
+      "frequency_assessment": "健保署2025年腦血管疾病I60-I69約480千人是年度行政申報就醫人數，非新發急性中風事件；未由此取得新發事件分母或個人風險，不自行推估。",
+      "statistics_assessed": [
+        {
+          "value": "480",
+          "unit": "千名年度就醫人數（表列480千人，約480,000人）",
+          "period": "2025年全年",
+          "geographic_scope": "全國健保申報資料",
+          "population": "腦血管疾病ICD-10-CM I60-I69疾病分類群組就醫人數",
+          "numerator": "年度就醫人數約480,000人（表格以千人呈現）",
+          "denominator": "就醫人數統計，不是發生率；沒有新發急性中風事件或人口暴露分母",
+          "event_definition": "年度疾病群就醫人數，並非當年新發中風病例",
+          "data_type": "全民健保門診、交付機構及住院明細檔行政統計",
+          "source_id": "retro_nhi_disease_2025",
+          "accessed_at": "2026-11-22",
+          "limitations": "數值以千人呈現；I60-I69包含多種腦血管疾病，不等同急性新發中風或個人風險。"
+        }
+      ],
+      "changes": "以國健署2026-10-28現行中風警訊、119及送醫前禁忌更新過時FAST引用；以臺北榮總2025衛教支持突發視覺及平衡警訊；將「黃金3小時」改成提醒讀者不可自行判定超時，說明記錄發作／最後正常時間並由醫療團隊依影像與病況評估。重新核對2025健保疾病群就醫人數口徑。",
+      "limits": [
+        "FAST及症狀清單只能提醒警訊，不能確診或排除腦中風；2025年I60-I69健保疾病群就醫人數不是新發中風病例數或個人發生率。",
+        "治療方式與條件依最後正常時間、影像、病況及當期醫療規範由醫療團隊評估；本篇不承諾個案可接受溶栓或取栓。",
+        "尚未取得神經內科、急診醫學或緊急救護專業的獨立審閱。"
+      ],
+      "unresolved_questions": [
+        "最新國健署頁聚焦微笑、舉手、說話警訊；視覺及平衡症狀由臺北榮總2025衛教補充，仍待神經內科／急救專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "神經內科／腦中風照護",
+          "急診醫學",
+          "緊急救護"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-003.json",
+      "review_sha256": "f924a4d3acb5aac9e4d937118863bd8bcc08410180536e2b9412a7e019228f2c",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-highrisk-recheck-20261122.json",
+      "source_bundle_sha256": "41525427294665d8fb62b07408916feba1e22094561945687f5494a373e4adf6"
+    },
+    {
+      "id": "TW-13-007",
+      "title": "突發胸悶胸痛合併喘或冷汗：先停下並撥119",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "930acb1bd0bbdd7592e7cfd5b85e80f47767a91e",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "738d45fb2e319910095f039d39a9cc9a166ddcc0278296d29f044d1a6ce851df",
+      "before_sha256": "13f5cd1ab0661d7bd72dbaf96ef8934ff184bd4d50706f7eb518290d8cff8dfa",
+      "after_sha256": "9bb14fa77423de8d301d6ae4a051c72fd067c768582de3b9666d5e443e06ebf7",
+      "reviewed_at": "2026-11-22",
+      "review_due_at": "2027-02-22",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "13f5cd1ab0661d7bd72dbaf96ef8934ff184bd4d50706f7eb518290d8cff8dfa",
+      "previous_body": "<!-- TW-ID: TW-13-007 -->\n\n# 突發胸悶胸痛合併喘或冷汗：先停下並撥119\n\n## 適用情境與第一步\n\n胸口突然有壓迫感、悶痛或緊縮，尤其合併呼吸困難、冒冷汗、噁心或嘔吐，可能是心肌梗塞或其他危急病況。症狀可能在休息時發生；沒有典型胸痛或年輕、平常健康，都不能自行排除。不能等到胸痛超過十五分鐘才打119。\n\n## 臺灣實作與下一步\n\n先停止工作或運動，坐下或採呼吸比較舒服的姿勢，立即打119，說明地址、症狀、開始時間和意識狀態。請旁人留在患者身邊，準備平常用藥、過敏及心血管病史供救護人員參考。若醫師曾開立心臟急救藥物，依原本醫囑並告知派遣員；不要借用他人藥物、擅自加量或自行服用阿斯匹靈。不自行騎車或開車就醫；若患者失去意識且沒有正常呼吸，依119派遣指示開始CPR並取得AED。\n\n## 費用與可期待的效益\n\n立即打119不需先購買設備。健保署2025年統計列出缺血性心臟病約64.2萬名就醫人數，資料涵蓋全國門診、交付機構及住院申報，疾病群為ICD-10-CM I20至I25。這是廣義疾病群的年度就醫人數，不是急性心肌梗塞的新發病例數或胸痛事件數；沒有可換算新發急性心肌梗塞個人風險的母數或分母，不能據此估算個人機率。減少延誤有助醫療團隊及時評估，但不保證不發生死亡或心臟損傷；檢查、治療和住院費用依健保及實際處置確認。\n\n## 限制與常見錯誤\n\n胸痛也可能來自主動脈剝離、肺栓塞或其他非心臟疾病，無法靠按摩、刮痧或網路測驗在家分辨。不要忍痛繼續運動、喝酒或自行加倍服藥。阿斯匹靈等藥物可能有出血、過敏或其他風險，是否使用應聽從119派遣員或醫療人員判斷。症狀緩解也不代表沒有危險。\n\n## 參考資料\n\n- [衛福部：心肌梗塞救心行動](https://www.mohw.gov.tw/cp-2625-19381-1.html)：說明急性胸悶、呼吸困難、冒冷汗等警訊及儘速打119。\n- [臺北市政府消防局：胸悶痛合併喘、冷汗或噁心時撥119](https://www.119.gov.taipei/News_Content.aspx?n=0EDB9C505FE8B199&s=43B58A0BD64C7620&sms=18AF49168D1E8B97)。\n- [健保署：2025年全民健康保險疾病就醫統計](https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf)：列出就醫人數、申報資料範圍及ICD-10-CM疾病群組。\n",
+      "previous_source_ids": [
+        "ch13_heart_mohw",
+        "ch13_heart_fire",
+        "retro_nhi_disease_2025"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-2625-19381-1.html",
+          "claim": "TW-13-007：急性胸悶、呼吸困難、冷汗等症狀需儘速求援並打119。",
+          "supporting_passage": "衛福部官方衛教頁面將突發胸悶、呼吸困難、冒冷汗等列為疑似心肌梗塞警訊，提醒儘速送醫；不採用舊死亡數作現況。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀衛福部官方衛教頁面相關症狀段落。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=0EDB9C505FE8B199&s=43B58A0BD64C7620&sms=18AF49168D1E8B97",
+          "claim": "TW-13-007：胸悶痛合併喘、冒冷汗或噁心嘔吐時應立即撥119。",
+          "supporting_passage": "臺北市消防局官方救護提醒列出胸悶痛合併呼吸喘、冒冷汗或噁心嘔吐，並要求立即撥119。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀臺北市消防局新聞稿的胸痛警訊段落。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf",
+          "claim": "2025年健保署統計列出腦血管疾病480千人及缺血性心臟病642千人就醫人數。",
+          "supporting_passage": "PDF第一頁全國就醫人數表列腦血管疾病480、缺血性心臟病642，單位為千人；資料取自門診、交付機構及住院明細檔，產製日2026-09-01。疾病群定義頁列I60-I69及I20-I25。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀健保署2025年統計PDF表格、資料來源、產製日期和疾病代碼列表。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-2625-19381-1.html",
+          "claim": "TW-13-007：急性胸悶、呼吸困難、冷汗等症狀需儘速求援並打119。",
+          "supporting_passage": "衛福部官方衛教頁面將突發胸悶、呼吸困難、冒冷汗等列為疑似心肌梗塞警訊，提醒儘速送醫；不採用舊死亡數作現況。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀衛福部官方衛教頁面相關症狀段落。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=0EDB9C505FE8B199&s=43B58A0BD64C7620&sms=18AF49168D1E8B97",
+          "claim": "TW-13-007：胸悶痛合併喘、冒冷汗或噁心嘔吐時應立即撥119。",
+          "supporting_passage": "臺北市消防局官方救護提醒列出胸悶痛合併呼吸喘、冒冷汗或噁心嘔吐，並要求立即撥119。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀臺北市消防局新聞稿的胸痛警訊段落。"
+        },
+        {
+          "url": "https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf",
+          "claim": "2025年健保署統計列出腦血管疾病480千人及缺血性心臟病642千人就醫人數。",
+          "supporting_passage": "PDF第一頁全國就醫人數表列腦血管疾病480、缺血性心臟病642，單位為千人；資料取自門診、交付機構及住院明細檔，產製日2026-09-01。疾病群定義頁列I60-I69及I20-I25。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀健保署2025年統計PDF表格、資料來源、產製日期和疾病代碼列表。"
+        }
+      ],
+      "source_ids": [
+        "ch13_hpa_cardiac_20260311",
+        "ch13_heart_fire",
+        "retro_nhi_disease_2025"
+      ],
+      "new_source_ids": [
+        "ch13_hpa_cardiac_20260311"
+      ],
+      "source_records_reused": [
+        "ch13_heart_fire",
+        "retro_nhi_disease_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_hpa_cardiac_20260311",
+          "title": "衛福部國民健康署：本週2波冷氣團接力 春日護心3招抗溫差",
+          "url": "https://www.mohw.gov.tw/cp-16-85748-1.html",
+          "claim": "胸悶、胸痛、手臂疼痛、呼吸困難、噁心、極度疲倦或頭暈等警訊應立即119、記錄時間且不要自行開車。",
+          "supporting_passage": "國健署2026-03-11官方頁逐項列出心臟警訊，並明確要求立即打119、記下時間、不可自行開車就醫。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀官方頁第133至140行相關段落及頁面日期；季節背景不作個人發生率。"
+        },
+        {
+          "source_id": "ch13_heart_fire",
+          "title": "臺北市政府消防局：胸痛喘冷汗警訊",
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=0EDB9C505FE8B199&s=43B58A0BD64C7620&sms=18AF49168D1E8B97",
+          "claim": "胸悶痛合併喘、冷汗、噁心或嘔吐可能為急症，應立即打119。",
+          "supporting_passage": "臺北市消防局官方新聞頁列出胸悶痛、呼吸喘、冒冷汗、噁心嘔吐與119求援。頁面發布及更新較早，僅作補充症狀支持；主要求援指引採2026國健署頁。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀臺北市消防局官方新聞頁相關正文；不以舊頁面代替最新中央衛教。"
+        },
+        {
+          "source_id": "retro_nhi_disease_2025",
+          "title": "衛生福利部中央健康保險署：2025年全民健康保險疾病就醫統計",
+          "url": "https://www.nhi.gov.tw/ch/dl-102828-a389f81fbae9446e8c71b1877a8ef325-1.pdf",
+          "claim": "2025年全國健保申報統計列缺血性心臟病就醫人數642千人。",
+          "supporting_passage": "健保署2026-09-01產製表格列642千人；資料來自全國門診、交付機構及住院明細檔，疾病群為ICD-10-CM I20-I25。此為年度疾病群就醫人數，非急性心肌梗塞新發病例或發生率。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接檢視PDF表格、來源註記、產製日期、申報範圍及疾病群定義。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch13_heart_mohw",
+          "prior_source_sha256": "0ffdd1c54c8f6da7f2d334b94b7c7daebf9e82ed368587f7c66970e33d0dd844",
+          "replacement_ids": [
+            "ch13_hpa_cardiac_20260311"
+          ],
+          "reason": "原衛福部心肌梗塞衛教頁較舊；改用國健署2026-03-11列明警訊、立即119和勿自行開車的官方頁。"
+        }
+      ],
+      "source_reviewed_sha256": "9bb14fa77423de8d301d6ae4a051c72fd067c768582de3b9666d5e443e06ebf7",
+      "taiwan_context": "台灣居家、工作、騎車或大眾運輸途中均可能遇到突發心臟警訊；停止活動、撥119、記錄時間並避免自行開車或騎車，聽從派遣與醫療人員指示。",
+      "frequency_assessment": "健保署2025年缺血性心臟病I20-I25約642千人是年度行政申報就醫人數，非急性心肌梗塞新發事件；未取得可換算個人新發風險的母數，不自行推估。",
+      "statistics_assessed": [
+        {
+          "value": "642",
+          "unit": "千名年度就醫人數（表列642千人，約642,000人）",
+          "period": "2025年全年",
+          "geographic_scope": "全國健保申報資料",
+          "population": "缺血性心臟病ICD-10-CM I20-I25疾病分類群組就醫人數",
+          "numerator": "年度就醫人數約642,000人（表格以千人呈現）",
+          "denominator": "就醫人數統計，不是發生率；沒有新發急性心肌梗塞事件或人口暴露分母",
+          "event_definition": "年度疾病群就醫人數，並非當年新發心肌梗塞病例",
+          "data_type": "全民健保門診、交付機構及住院明細檔行政統計",
+          "source_id": "retro_nhi_disease_2025",
+          "accessed_at": "2026-11-22",
+          "limitations": "數值以千人呈現；I20-I25包含缺血性心臟病疾病群，不等同急性心肌梗塞新發病例或個人風險。"
+        }
+      ],
+      "changes": "以國健署2026-03-11官方警訊及立即119行動取代2016年衛福部舊頁的主依據；移除等胸痛超過15分鐘和年齡／典型症狀的自行排除語意，補列手臂疼痛、極度疲倦與頭暈並明確不得等待；保留臺北市消防局對冷汗等症狀的補充及2025健保疾病群統計限制。 將阿斯匹靈用藥說明調整為依119派遣員或醫療人員指示，不對一般民眾作概括禁用或自行服用建議。",
+      "limits": [
+        "2025年I20-I25健保疾病群就醫人數不是急性心肌梗塞病例數、胸痛事件數或個人發生率。",
+        "胸悶胸痛與相關警訊可能需要鑑別不同急症；本文不作遠距診斷或個案用藥決定，依119派遣與醫療團隊指示。",
+        "尚未取得心臟科、急診醫學或緊急救護專業的獨立審閱。",
+        "本次核對的國健署心臟警訊頁說明119求援及避免自行開車，未提供一般民眾自行使用阿斯匹靈的通用指示；本文不判斷個案是否適用阿斯匹靈，應聽從119派遣員或醫療人員指示。"
+      ],
+      "unresolved_questions": [
+        "目前來源未提供I20-I25疾病群中急性心肌梗塞的新發病例分母，不據此估算個人風險。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "心臟科",
+          "急診醫學",
+          "緊急救護"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-007.json",
+      "review_sha256": "c45507ffe4ffd3577dfad51a4ba872a4eec673584d49afbc7caad83611dd8c70",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-highrisk-recheck-20261122.json",
+      "source_bundle_sha256": "41525427294665d8fb62b07408916feba1e22094561945687f5494a373e4adf6"
+    },
+    {
+      "id": "TW-13-012",
+      "title": "大量出血先撥119直接加壓，四肢危險出血才評估止血帶",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "930acb1bd0bbdd7592e7cfd5b85e80f47767a91e",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "331cc4bdcd7f2ac38c87e69f9d88db9e3feef51c2ba15cdcae44e45a08d34806",
+      "before_sha256": "945e38794ea1ecc34a5b0cd5f720b65a8e3018019a98a196900b31af3d2c991f",
+      "after_sha256": "819782cf67f025851652f7d3b24dec6eeff9de6f1945dc7c3bb82d8a57f48697",
+      "reviewed_at": "2026-11-22",
+      "review_due_at": "2027-02-22",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "945e38794ea1ecc34a5b0cd5f720b65a8e3018019a98a196900b31af3d2c991f",
+      "previous_body": "<!-- TW-ID: TW-13-012 -->\n\n# 大量出血先打119並持續加壓：手腳嚴重出血才使用止血帶\n\n## 適用情境與第一步\n\n車禍、工作或居家意外若出現大量噴血、血流不止或衣物很快被血浸透，先確認現場安全，立即請旁人打119。不要為了找器材、拍照或查數據而停下有效的止血措施。能取得手套或乾淨布料就使用，但不要因找手套延誤求援和加壓。\n\n## 臺灣實作與下一步\n\n用乾淨布料直接壓住傷口並持續施力，請旁人向119說明地址、出血部位和患者狀況。\n\n- **手腳大量出血：**先持續直接加壓；若仍止不住，依119派遣員指示或受訓方式使用止血帶，綁在傷口上方約5至8公分處並記錄使用時間。不要為了查看傷口反覆掀開敷料。\n- **頭部：**用乾淨布料壓住傷口，但要避開疑似骨折的位置；不要使用止血帶，並留意患者意識變化。\n- **頸部：**用布料輕壓傷口周圍，不能用止血帶、不能把整個脖子包住，也不要用力壓迫；注意呼吸道是否通暢。\n- **胸部或腹部：**不能使用止血帶，也不要用力壓。如果有物品插在傷口，不要拔出；用布料墊在物品周圍固定，再輕壓傷口周圍。沒有異物時，用乾淨布料輕輕壓住傷口。\n\n止血帶只用於危及生命的四肢大量出血，不可用在頭、頸、胸、腹或輕微傷口。等候救護人員時持續聽從119指示，不自行鬆開止血帶。\n\n## 費用與可期待的效益\n\n以乾淨布料直接加壓不需要購買專用設備；合格止血帶可納入急救包，但應先學會使用方式。及時止血可減少持續失血並爭取送醫時間，但不能取代急診評估，預後仍取決於傷勢和醫療處置。\n\n目前未找到全國一致定義的嚴重外部出血病例數及暴露分母，因此無法估算個人發生率；不能用全部交通事故或死亡數推算出血風險。這不影響大量出血需要立即求援和止血。\n\n## 限制與常見錯誤\n\n外觀上的傷口大小不一定能反映失血量。不要拔除刺入身體的物品，不要將止血帶綁在脖子、軀幹或關節上，也不要把繩子、細線或不熟悉的物品當作止血帶。頭頸、胸腹傷勢的處置與手腳不同；不確定怎麼做時，維持直接加壓並聽從119派遣員指示。\n\n## 參考資料\n\n- [國防部全民安全指引：大量出血與傷患處理](https://prepare.mnd.gov.tw/casualty-care-procedures)：按手腳、頭部、頸部、胸腹部列出止血方式及禁忌。\n",
+      "previous_source_ids": [
+        "ch13_bleeding_mnd"
+      ],
+      "previous_review_claims": [
+        {
+          "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+          "claim": "TW-13-012：大量出血先打119，再依手腳、頭部、頸部及胸腹部選擇不同處置。",
+          "supporting_passage": "國防部全民安全指引逐部位說明：手腳先壓迫、止不住時使用止血帶並記錄時間；頭頸及胸腹不使用止血帶，頸部注意呼吸道，胸腹異物不可拔除且不可用力壓迫。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀國防部全民安全指引大量出血的各部位文字說明。"
+        }
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+          "claim": "TW-13-012：大量出血先打119，再依手腳、頭部、頸部及胸腹部選擇不同處置。",
+          "supporting_passage": "國防部全民安全指引逐部位說明：手腳先壓迫、止不住時使用止血帶並記錄時間；頭頸及胸腹不使用止血帶，頸部注意呼吸道，胸腹異物不可拔除且不可用力壓迫。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀國防部全民安全指引大量出血的各部位文字說明。"
+        }
+      ],
+      "source_ids": [
+        "ch13_bleeding_mnd"
+      ],
+      "new_source_ids": [],
+      "source_records_reused": [
+        "ch13_bleeding_mnd"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_bleeding_mnd",
+          "title": "國防部全民安全指引：傷患處理與大量出血",
+          "url": "https://prepare.mnd.gov.tw/casualty-care-procedures",
+          "claim": "大量出血立即119；依傷處位置施救。四肢先壓迫，止不住時可用止血帶並記錄時間；頭頸及胸腹不可使用止血帶。",
+          "supporting_passage": "國防部全民安全指引逐部位說明：手腳直接加壓、仍止不住時止血帶置於傷口上方5至8公分並記錄時間；頸部與胸腹不可用止血帶，胸腹異物不得拔除且不可用力壓迫。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀國防部全民安全指引大量出血各部位文字；頁面未標示單次修訂日期，按當日公開版本核對。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "819782cf67f025851652f7d3b24dec6eeff9de6f1945dc7c3bb82d8a57f48697",
+      "taiwan_context": "車禍、職場及居家事故皆可能出現大量外部出血；先確保安全、打119、按傷口位置持續止血，四肢與頭頸胸腹分開處理。",
+      "frequency_assessment": "截至2026-11-22未找到全國一致定義的嚴重外部出血病例數及相對應暴露分母；不以全部交通事故、外傷急診或死亡數推估個人發生率。頻率資料不足不降低危及生命時立即求援和止血的重要性。",
+      "statistics_assessed": [
+        {
+          "value": "未列數值；資料不足",
+          "unit": "不適用",
+          "period": "截至2026-11-22查核",
+          "geographic_scope": "臺灣全國",
+          "population": "一般民眾危及生命的嚴重外部出血事件",
+          "numerator": null,
+          "denominator": null,
+          "event_definition": "本次未找到可統一辨識嚴重外部出血事件的全國統計定義",
+          "data_type": "官方資料查核缺口；未作數值推估",
+          "source_id": null,
+          "accessed_at": "2026-11-22",
+          "limitations": "不以交通事故、外傷急診或死亡人數代替嚴重出血發生率；也沒有活動暴露分母。"
+        }
+      ],
+      "changes": "重新核對國防部現行公開全民安全指引及四部位分流；使止血帶條件更直接：四肢持續大量出血、直接加壓仍止不住時使用合用止血帶並記錄時間，無器材或不確定時持續加壓並聽從119；不使用細繩替代。再次確認沒有可支持全國個人發生率的統計分母。",
+      "limits": [
+        "國防部頁面未標示單次修訂日期，本輪按2026-11-22公開版本逐項查核；現場有疑問時依119派遣員指示。",
+        "尚無具一致嚴重外部出血定義及暴露分母的全國統計，不能估算個人機率；本文不涵蓋內出血或取代專業救護訓練。",
+        "尚未取得急診、外傷照護、消防救護或急救訓練專業的獨立審閱。"
+      ],
+      "unresolved_questions": [
+        "未找到全國一致口徑之嚴重外部出血統計及暴露分母；止血帶操作需由急救專業審閱確認一般民眾表述。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "急診醫學／外傷照護",
+          "消防緊急救護",
+          "急救訓練"
+        ],
+        "status": "pending",
+        "reason": "本次為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-012.json",
+      "review_sha256": "458577765f0fd474a40ad358bd691b246ae4cff24c62b0a445df5fbe8f3ce871",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-highrisk-recheck-20261122.json",
+      "source_bundle_sha256": "41525427294665d8fb62b07408916feba1e22094561945687f5494a373e4adf6"
     }
   ],
   "reader_copy_cleanups": [

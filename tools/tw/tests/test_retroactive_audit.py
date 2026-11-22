@@ -523,10 +523,10 @@ class RetroactiveAuditTests(unittest.TestCase):
                 recheck = next(item for item in register["substantive_rechecks"]
                                if item["id"] == key and item["before_sha256"] == digest)
                 self.assertEqual(recheck["previous_body"], normalized["body"])
-                if key == "TW-13-027":
-                    # A later substantive review advances the current body and
-                    # review file. Keep the earlier cleanup edge immutable and
-                    # validate the latest edge against the live runtime.
+                if key in {"TW-13-012", "TW-13-027"}:
+                    # Later substantive reviews advance the current body and
+                    # review file. Keep the earlier cleanup edge immutable,
+                    # verify the hash chain joins, and validate the latest edge.
                     current_digest = hashlib.sha256(items[key]["body"].encode("utf-8")).hexdigest()
                     latest = next(item for item in reversed(register["substantive_rechecks"])
                                   if item["id"] == key and item["after_sha256"] == current_digest)
