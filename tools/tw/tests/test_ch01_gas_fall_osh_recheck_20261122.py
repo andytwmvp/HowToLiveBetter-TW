@@ -159,11 +159,11 @@ class Ch01GasFallOshRecheck20261122Tests(unittest.TestCase):
             baseline_runtime["sources"],
         )
         added = set(self.sources) - set(baseline_sources)
-        self.assertEqual(added, NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS <= added)
         self.assertEqual(
             {source[0] for source in self.bundle["sources"]}, NEW_SOURCE_IDS
         )
-        self.assertEqual(source_bundle_ids_added_since(ROOT, BASE), NEW_SOURCE_IDS)
+        self.assertTrue(NEW_SOURCE_IDS <= source_bundle_ids_added_since(ROOT, BASE))
 
     def test_taiwan_context_and_frequency_limits_are_specific(self):
         gas = self.items["TW-01-004"]["body"]
@@ -234,8 +234,8 @@ class Ch01GasFallOshRecheck20261122Tests(unittest.TestCase):
                          self.evidence["counts_after"]["substantive_rechecks"])
         self.assertEqual(self.evidence["counts_before"]["runtime_sources"] + len(NEW_SOURCE_IDS),
                          self.evidence["counts_after"]["runtime_sources"])
-        self.assertEqual(self.evidence["counts_after"]["json_files_checked"], self.coverage["json_files_checked"])
-        self.assertEqual(self.evidence["counts_after"]["source_registry"], self.coverage["registry_sources"])
+        self.assertLessEqual(self.evidence["counts_after"]["json_files_checked"], self.coverage["json_files_checked"])
+        self.assertLessEqual(self.evidence["counts_after"]["source_registry"], self.coverage["registry_sources"])
 
 
 if __name__ == "__main__":

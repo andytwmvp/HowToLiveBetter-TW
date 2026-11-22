@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "phase": "第1章危機求助與第13章溺水急救歷史實質再審",
+  "baseline_main_sha": "df9344795067a3fa3bcf83de205a576c88a5d08f",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "scope": [
+    "TW-13-025",
+    "TW-01-043"
+  ],
+  "risk_order": [
+    "TW-13-025",
+    "TW-01-043"
+  ],
+  "counts_before": {
+    "substantive_rechecks": 423,
+    "runtime_items": 359,
+    "runtime_sources": 1483,
+    "source_registry": 1566,
+    "coverage_json_files": 720,
+    "core_completed": 348,
+    "core_total": 765,
+    "unresolved_source_id_kinds": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "substantive_rechecks": 425,
+    "runtime_items": 359,
+    "runtime_sources": 1485,
+    "source_registry": 1568,
+    "coverage_json_files": 722,
+    "core_completed": 348,
+    "core_total": 765,
+    "unresolved_source_id_kinds": 100,
+    "unresolved_reference_occurrences": 239,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "ch13_sem_drowning_resuscitation_20260430",
+    "ch13_aha_drowning_cpr_2025"
+  ],
+  "source_records_reused": [
+    "ch01_crisis_mlshb",
+    "ch01_crisis_mohw_1925_2026",
+    "ch01_crisis_mohw_online_2026",
+    "ch01_crisis_nimh_ask",
+    "ch01_mohw_suicide_stats_114",
+    "ch01_suicide_reports_2026",
+    "ch13_drown_wda",
+    "retro_drown_nfa_2025",
+    "retro_drown_taipei_care"
+  ],
+  "source_records_retired": [],
+  "items": [
+    {
+      "id": "TW-13-025",
+      "title": "看到有人溺水，先求援並從岸上伸手或拋浮具",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "df9344795067a3fa3bcf83de205a576c88a5d08f",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "2fc0c83e193e453e83fea786fd7d1a15299cde0ca6ed4bc7120aab5a8ea40bc7",
+      "before_sha256": "0d85955c6efa821ae520cb2405bcf876e74f839dab1ee2720156f909f8cdd6c2",
+      "after_sha256": "d047f1652c7ed3f9f9ecb9dd08241704c5a34b3236186b985ef1b9452ab1f46f",
+      "reviewed_at": "2026-11-22",
+      "review_due_at": "2027-02-22",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "0d85955c6efa821ae520cb2405bcf876e74f839dab1ee2720156f909f8cdd6c2",
+      "previous_body": "<!-- TW-ID: TW-13-025 -->\n\n# 看到有人溺水，先求援並從岸上伸手或拋浮具\n\n## 先求援並確保現場安全\n\n在海邊、港區、溪流、河川或泳池看到有人落水，先站在穩固安全的位置大聲呼救，請附近救生員協助，並指定一人打119；海上事故也可撥海巡署118。不要因為會游泳就直接跳下水，慌亂的落水者可能把施救者一起拉進水裡。\n\n依「叫、叫、伸、拋、划」的順序：大聲叫人協助；再指定旁人打電話並回報明確地點；站在安全位置伸出長物讓落水者抓住；或把救生圈、繩袋及其他可漂浮物拋給對方。不要探身過度、站到濕滑或鬆動的岸邊，也不要讓物品或手機比自己的安全重要。\n\n只有具備水域救援訓練、合適裝備和可安全操作的救援工具者，才評估進一步救援；玩具浮具或不熟悉的船艇不能當成安全保障。打119或118時，說出最近地標、入口、落水人數、水流和天候，並留人在岸邊引導救援人員。\n\n## 人救上岸後的處理\n\n人被救上岸後，先看是否有反應、是否正常呼吸。沒有正常呼吸時立即告知119，開擴音並依派遣員指示開始CPR，請另一人拿AED；不要先去找裝備而延誤急救。臺北市消防局提醒，溺水獲救者應送醫評估；在其他縣市也要依119派遣與現場救護人員指示處理，即使人看起來恢復，也不要自行判定已經安全。\n\n## 溺水事件統計與平時準備\n\n內政部消防署彙整各級消防機關110至114年救溺勤務，共記錄溺水者4,597人，其中5月至10月2,888人，占62.8%；2025年單年記錄1,056人，死亡631人。這些是消防勤務記錄，包含戲水以外的成因，也包括自殺及原因未明案件；沒有下水活動人次或暴露時間分母，不能換算成戲水者或一般民眾的個人發生率。\n\n遇到溺水先求援，不必先買器材或自行下水。平常選有救生人員和安全設施的水域，注意溪水暴漲、海岸警示及天候；乘船或從事適用的水域活動時，穿合身救生衣。急救、送醫和後續醫療由救護及醫療人員依患者情況安排。\n\n## 常見錯誤\n\n不要徒手接近落水者、跳進溪流或海浪中，也不要用不穩固的浮具冒險靠近。岸上施救要先求援，再用安全可及的延伸物或漂浮物；若落水者已被水流帶走，持續指出最後看見位置及移動方向，不要沿岸追逐到危險地帶。\n\n## 參考資料\n\n- [勞動部：救溺五步「叫、叫、伸、拋、划」](https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b0f39b7019b118405f00bd5)：先求援及自保，使用延伸物或漂浮物，避免貿然下水。\n- [內政部消防署：114年消防機關執行水域事故救援統計分析](https://mag.nfa.gov.tw/article.php?id=4128)：各級消防機關救溺勤務人數、死亡人數、月份及溺水原因統計。\n- [臺北市消防局：溺水獲救後的處理](https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=3B5D9F8767B3E60C&sms=87415A8B9CE81B16)：檢查反應與呼吸、CPR及送醫評估的地方消防衛教。\n",
+      "previous_source_ids": [
+        "ch13_drown_wda",
+        "retro_drown_nfa_2025",
+        "retro_drown_taipei_care"
+      ],
+      "previous_review_claims": [
+        "臺灣水域救援先求援與自保，採叫、叫、伸、拋、划，不貿然下水。",
+        "消防署2021至2025年記錄溺水4,597人，5至10月2,888人；2025年溺水1,056人、死亡631人，無活動暴露分母。",
+        "上岸後檢查意識與正常呼吸；無正常呼吸依119啟動CPR及AED並評估送醫。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b0f39b7019b118405f00bd5",
+          "claim": "救溺五步叫、叫、伸、拋、划，先自保並通報119或118，不貿然下水。",
+          "supporting_passage": "救溺五步叫、叫、伸、拋、划，先自保並通報119或118，不貿然下水。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31重新讀取勞動部官方救溺宣導內容；檔案為宣導資料，不當作專業水域救援訓練。"
+        },
+        {
+          "url": "https://mag.nfa.gov.tw/article.php?id=4128",
+          "claim": "消防署記錄2021至2025年溺水4,597人、5至10月2,888人；2025年溺水1,056人、死亡631人。",
+          "supporting_passage": "消防署記錄2021至2025年溺水4,597人、5至10月2,888人；2025年溺水1,056人、死亡631人。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接讀取內政部消防署2026-08-31發布的統計分析，核對總數、月份及成因分類說明。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=3B5D9F8767B3E60C&sms=87415A8B9CE81B16",
+          "claim": "溺水獲救後檢查反應與呼吸、沒有正常呼吸開始CPR，並送醫評估。",
+          "supporting_passage": "溺水獲救後檢查反應與呼吸、沒有正常呼吸開始CPR，並送醫評估。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31重新閱讀臺北市消防局公開衛教；僅將送醫主張標示為地方消防衛教，其他縣市依當地119派遣處理。"
+        }
+      ],
+      "source_ids": [
+        "ch13_drown_wda",
+        "retro_drown_nfa_2025",
+        "retro_drown_taipei_care",
+        "ch13_sem_drowning_resuscitation_20260430",
+        "ch13_aha_drowning_cpr_2025"
+      ],
+      "new_source_ids": [
+        "ch13_sem_drowning_resuscitation_20260430",
+        "ch13_aha_drowning_cpr_2025"
+      ],
+      "source_records_reused": [
+        "ch13_drown_wda",
+        "retro_drown_nfa_2025",
+        "retro_drown_taipei_care"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_drown_wda",
+          "title": "勞動部：2026年救溺五步多語宣導",
+          "url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb39b0f39b7019b118405f00bd5",
+          "claim": "臺灣救溺先自保並呼救，使用延伸物或漂浮物，避免未受訓者貿然下水。",
+          "supporting_passage": "勞動力發展署於2026-11-22更新頁面列「叫叫伸拋划，救溺先自保」，依序呼救、打119／118、伸物、拋浮具；明示勿貿然下水。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接讀取勞動力發展署宣導HTML及中文內容；不以多語宣導資料取代救援訓練。"
+        },
+        {
+          "source_id": "retro_drown_nfa_2025",
+          "title": "消防署：2025水域事故救援統計分析",
+          "url": "https://mag.nfa.gov.tw/article.php?id=4128",
+          "claim": "消防署2021至2025年救溺勤務記錄4,597名溺水者；2025年1,056人、死亡631人，資料含非遊憩成因及其他類。",
+          "supporting_passage": "消防署2026-08-31統計分析列110至114年逐年溺水與死亡人數、2025溪河及海邊人數，並說明自殺／其他原因分類調整；此為消防勤務行政統計。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接讀取內政部消防署官方HTML統計分析的逐年數據及分類說明；沒有活動暴露分母，不把件數解讀為個人風險。"
+        },
+        {
+          "source_id": "retro_drown_taipei_care",
+          "title": "臺北市消防局：溺水獲救後送醫",
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=3B5D9F8767B3E60C&sms=87415A8B9CE81B16",
+          "claim": "溺水者獲救後檢查意識與呼吸；開始自行呼吸仍需保持溫暖並送醫。",
+          "supporting_passage": "臺北市消防局FAQ於115-11-12更新：安全移出水面後檢查意識及呼吸；無意識及呼吸時立即CPR；開始自行呼吸後採復甦姿勢、保暖；所有獲救者送醫治療。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接讀取臺北市消防局FAQ及頁面更新日期；此為臺北地方消防衛教，其他縣市依119派遣及現場救護人員指示。"
+        },
+        {
+          "source_id": "ch13_sem_drowning_resuscitation_20260430",
+          "title": "台灣急診醫學會：溺水急救：從院前處置到急診照護（2026）",
+          "url": "https://www.sem.org.tw/EJournal/Detail/770",
+          "claim": "溺水後缺氧是主要機轉；無反應或無正常呼吸時，急救需包含按壓與通氣且不得等AED才開始。",
+          "supporting_passage": "臺灣急診醫學會2026-04-30刊登文章第2頁院前處置段落，說明獲救後無意識或正常呼吸時應盡速壓胸及通氣；不得等待AED而延誤急救。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀臺灣急診醫學會HTML刊文日期、作者與院前處置正文；未把醫院內處置擴大為民眾步驟。"
+        },
+        {
+          "source_id": "ch13_aha_drowning_cpr_2025",
+          "title": "美國心臟協會：2025年CPR與緊急心血管照護指引，第10部分（溺水）",
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-and-pediatric-special-circumstances-of-resuscitation/",
+          "claim": "2025指引支持溺水CPR同時包括吹氣及按壓；無法吹氣時按壓是備援，並先於AED。",
+          "supporting_passage": "AHA第11.5節建議成人及兒童溺水後CPR包括吹氣和胸外按壓；無法、不願或未受訓提供吹氣者可做胸外按壓，兒童建議等級較弱；第11.6節要求含吹氣CPR先於AED。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀AHA 2025官方指引HTML第11.5、11.6節及成人／兒童建議強度；美國指引僅供臨床證據，臺灣電話及派遣仍用119。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "d047f1652c7ed3f9f9ecb9dd08241704c5a34b3236186b985ef1b9452ab1f46f",
+      "taiwan_context": "臺灣海邊、港區、溪流、河川與泳池皆可能遇到落水；先在岸上自保、呼救119，海上事故可聯絡118。水域現場、救援資源與縣市處置不同，上岸後依119派遣與當地救護處理。",
+      "frequency_assessment": "消防署110至114年各級消防機關救溺勤務記錄4,597名溺水者，5至10月2,888人，占62.8%；2025年記錄溺水1,056人、死亡631人。涵蓋非遊憩及自傷等成因，消防署也調整部分原因分類；沒有水域活動人次或暴露時間分母，不能推算戲水者或一般民眾發生率、死亡率或致死率。",
+      "statistics_assessed": [
+        {
+          "value": "4,597；其中5至10月2,888（62.8%）",
+          "unit": "消防救溺勤務記錄溺水人數；月份人數占五年記錄人數比率",
+          "period": "2021至2025年（民國110至114年）",
+          "geographic_scope": "臺灣全國各級消防機關轄內救溺勤務",
+          "population": "消防機關救溺勤務記錄溺水者，涵蓋不同成因",
+          "numerator": "五年記錄4,597人；其中5至10月2,888人",
+          "denominator": "62.8%計算為2,888／4,597名勤務記錄溺水者；沒有全部水域活動者分母。",
+          "denominator_definition": "五至十月占比的分母只是消防勤務記錄人數，不是下水人次、活動者或暴露時數。",
+          "event_definition": "內政部消防署彙整各級消防機關執行救溺勤務所記錄的溺水者及月份",
+          "data_type": "消防行政救援勤務統計",
+          "source_id": "retro_drown_nfa_2025",
+          "accessed_at": "2026-11-22",
+          "limitations": "包含非遊憩成因及自殺、原因未明案件；消防署調整部分原因分類，跨年原因類別不可直接等同；無活動暴露分母，不能估一般民眾或戲水者個人風險。"
+        },
+        {
+          "value": "2025年溺水者1,056人、死亡631人",
+          "unit": "消防救溺勤務記錄之溺水人數及死亡人數",
+          "period": "2025年（民國114年）",
+          "geographic_scope": "臺灣全國各級消防機關轄內救溺勤務",
+          "population": "消防機關勤務記錄溺水者及死亡者，涵蓋不同成因",
+          "numerator": "溺水者1,056人，其中記錄死亡631人",
+          "denominator": null,
+          "denominator_definition": "消防署統計未提供下水人次、活動時數或全人口暴露分母。",
+          "event_definition": "各級消防機關2025年執行救溺勤務記錄之溺水事件人數與死亡人數",
+          "data_type": "消防行政救援勤務統計",
+          "source_id": "retro_drown_nfa_2025",
+          "accessed_at": "2026-11-22",
+          "limitations": "死亡人數不是致死率或特定原因死亡數；統計包含不同成因且無活動暴露分母，不能換算戲水或個人機率。"
+        }
+      ],
+      "changes": "重新讀取臺灣勞動力發展署救溺五步、消防署勤務統計、臺北市消防局獲救後處置、臺灣急診醫學會2026溺水急救文章及AHA 2025溺水指引。把溺水缺氧、CPR通氣、無法吹氣時的胸外按壓備援、AED不得延誤CPR及119派遣順序寫清楚；保留消防勤務數的事件涵蓋與無暴露分母限制。",
+      "limits": [
+        "溺水後沒有正常呼吸時，先求援並依119派遣指示急救；不能安全提供人工呼吸時仍先依指示做胸外按壓，不等AED才開始CPR。臺北市消防局的送醫建議屬地方衛教，其他縣市依現場救護人員評估；一般民眾不要貿然下水。",
+        "消防署4,597、2,888、1,056與631均為行政救溺勤務人數／死亡人數，包含非遊憩成因且無活動暴露分母，不能作遊憩溺水率、個人機率或致死率；消防署調整部分原因分類，跨年類別不宜直接比較。",
+        "AHA 2025對無法吹氣時兒童單獨胸外按壓的建議確定性低於成人；現場仍立即求援並依119派遣指示，不以本文取代實體訓練。",
+        "本輪為AI輔助急救來源核對，未取得急診醫學、消防救護或急救訓練專業獨立審閱。"
+      ],
+      "unresolved_questions": [
+        "消防勤務統計沒有下水活動人次或暴露時間分母，且溺水原因分類曾調整。",
+        "兒童溺水後單獨胸外按壓的直接研究資料不足；現場應以119派遣指引為準。",
+        "仍待急診醫學、消防救護或急救訓練領域獨立專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "急診醫學／溺水急救",
+          "消防緊急救護",
+          "民眾急救訓練"
+        ],
+        "status": "pending",
+        "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-025.json",
+      "review_sha256": "38af4f009ff3681d01e319c697228d053782ba59df7bb01fff6cb5a2709a4dae",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-drowning-suicide-recheck-20261122.json",
+      "source_bundle_sha256": "8991534c7b9c2e043113e6eaf0649c2671c1d7c82675909403074b51dfb15a62"
+    },
+    {
+      "id": "TW-01-043",
+      "title": "擔心親友自殺時平靜直接詢問、陪伴並接上協助，立即危險先119",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "df9344795067a3fa3bcf83de205a576c88a5d08f",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "38907cf286e92b0cd31063bcc4f01134cc056c9993799239a772fde782e2b997",
+      "before_sha256": "1e7d2ca0e0140e367a29427783aef855df2c428881ac2c6edb7067fa01445237",
+      "after_sha256": "162be537b2a939054bdb6720662fe66123076b7b8c5dd1301067d868d391ce6d",
+      "reviewed_at": "2026-11-22",
+      "review_due_at": "2027-02-22",
+      "prior_reviewed_at": "2026-10-25",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "ac5f888db2ca905e8d46693ea57124911b20b00004c467e6b7055e4512a923dc",
+      "previous_body": "<!-- TW-ID: TW-01-043 -->\n\n# 擔心親友自殺時平靜直接詢問、陪伴並接上協助，立即危險先119\n\n## 適用情境與第一步\n\n親友、同事或同學表示不想活、絕望或出現令人擔心的行為改變時，可以找安全安靜的地方，平靜問：「你現在有自殺或傷害自己的念頭嗎？」聽完再回應，不責備或用激將法。若已受傷、疑似服用過量物質、正在立即危險中或無法維持安全，直接撥119並提供確切位置；不要等做完問卷或對方承諾才求救。\n\n## 臺灣實作與下一步\n\n依臺灣衛生機關的守門人原則，表達「我很在意你的安全，願意陪你一起找協助」，瞭解目前是否有立即危險，不追問或傳播傷害方法細節。不要承諾保密；說明為了安全，需要找可信任的人與專業者一起協助。安全可行時留在身旁，請另一人聯絡服務，不冒險爭搶危險物。透過電話或訊息得知危機，先確認對方位置與可到場支持者；若是網路貼文，可保留貼文連結、平台與已知位置等救援所需資訊，私下提供給可信任協助者或救援單位，避免公開轉傳或散佈個資。立即危險協助通報119。非立即危急也可一起撥臺灣安心專線1925，衛福部列為24小時免付費心理諮詢，或陪同精神醫療門診並安排後續聯絡；專線不能取代急救。\n\n## 成本與可期待的效益\n\n關心、傾聽與協助聯絡不需購買課程；1925電話支持免費，門診掛號、部分負擔與心理服務依院所及補助資格而異。持續陪伴可幫忙接上照護，但一位親友無法獨自承擔所有風險；照顧者也可以尋求支持並交接。\n\n## 限制與常見誤解\n\n**臺灣頻率背景（救援後閱讀）：**衛福部委託之114年全國自殺防治中心成果報告記載，2025年1至9月全國自殺通報34,612人次，較2024年同期減少8%；這是通報系統的人次，不等於不同個案數、全部未遂事件或自殺意念，也沒有全體暴露者分母；受通報口徑與資料限制，不能推算個人機率或意念盛行率。另依死因統計，2025年全國自殺死亡3,951人，粗死亡率每十萬人口16.9人；年齡標準化死亡率為每十萬人口12.9人，供不同年齡結構比較。這些數字不能當作個人風險或直接詢問的成效。NIMH指出直接問自殺念頭不會因問話而增加念頭，但這是美國研究綜整，不是臺灣對話成功率；目前沒有臺灣同定義個人介入效果的原始研究。不把「答應不自傷」、暫時平靜或否認念頭當安全保證；重大風險優先轉介與救援。\n\n## 參考資料\n\n- [苗栗縣衛生局：珍愛生命的路上，你我攜手守護](https://www.mlshb.gov.tw/nc/article?id=bb1fc655-fe83-4c9e-a908-37080a98692f)：以一問二應三轉介支持；平靜直接詢問、傾聽，不嘲諷、不責備、不承諾保密。\n- [衛福部心理健康司：網路自殺防治守門員](https://dep.mohw.gov.tw/DOMHAOH/cp-4903-78843-107.html)：在網路危機情境主動詢問意圖或計畫、同理傾聽、記錄必要線索並連結外部支援；不把網路貼文流程擴大成對所有情境蒐集個資。\n- [美國NIMH：自殺防治問答（2023修訂）](https://www.nimh.nih.gov/health/publications/suicide-faq)：直接詢問自殺念頭不會因問話而增加念頭；危機時需陪伴、轉介與後續支持。\n- [衛福部心理健康司：1925安心專線](https://dep.mohw.gov.tw/DOMHAOH/cp-4906-54077-107.html)：心理壓力或情緒困擾可使用24小時免付費心理諮詢；不取代119急救。\n- [衛福部委託：114年全國自殺防治中心成果報告](https://www.mohw.gov.tw/dl-99692-90bfc131-849a-4f80-861d-78197872aa2d.html)：報告第10頁記載2025年1至9月通報34,612人次，較上年同期減少8%；通報人次不是人口盛行率或不同個案數。\n\n不是個案診療或專業認證。\n",
+      "previous_source_ids": [
+        "ch01_crisis_mlshb",
+        "ch01_crisis_nimh_ask",
+        "ch01_crisis_mohw_online_2026",
+        "ch01_crisis_mohw_1925_2026",
+        "ch01_suicide_reports_2026"
+      ],
+      "previous_review_claims": [
+        "危機時直接、平靜詢問並陪伴；立即危險先119，1925非緊急心理諮詢不取代急救。",
+        "網路守門人資訊僅用於網路情境，必要線索私下提供救援者，不公開擴散個資。",
+        "2025年通報34,612人次不等於不同個案或意念盛行率；死亡統計不能代替個人機率或直接詢問成效。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.mlshb.gov.tw/nc/article?id=bb1fc655-fe83-4c9e-a908-37080a98692f",
+          "claim": "以一問二應三轉介支持、平靜詢問與傾聽，不責備或承諾保密。",
+          "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀苗栗縣衛生局守門人衛教相關段落；未以未附母數比例推估全臺發生率。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "web後續逾時，直接HTTPS成功實讀HTML；不採未附母數之服務個案比例，也不把口頭不自傷承諾當安全保證。"
+        },
+        {
+          "url": "https://www.nimh.nih.gov/health/publications/suicide-faq",
+          "claim": "NIMH綜整指出平靜直接詢問不會因問話增加自殺念頭。",
+          "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀美國NIMH 2023修訂問答相關內容；作國外支持證據，不聲稱臺灣介入效果或臺灣個人成功率。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "實讀HTML詢問、警訊與求助段落；為國外研究綜整，不聲稱台灣試驗或移植美國電話。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-4903-78843-107.html",
+          "claim": "網路警訊情境可詢問意圖或計畫、同理傾聽、留存必要線索並連結外部支援。",
+          "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀心理健康司網路情境正文；僅套用於網路危機，頁面最後更新日期和正文建檔／更新時間分開記錄。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "2026-10-25實讀正文；頁面最後更新顯示2026-10-22，正文時間為2024-05-21，僅採網路情境相關建議。"
+        },
+        {
+          "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-4906-54077-107.html",
+          "claim": "1925提供24小時免付費心理諮詢；立即生命危險須走緊急救援。",
+          "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀衛福部心理健康司正文：情緒困擾可撥1925使用24小時免付費心理諮詢；頁面索引更新與正文更新日期分開記錄。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "2026-10-25實讀頁面；區分頁面最後更新日期2026-10-22與正文更新時間2025-08-28，不將心理諮詢當緊急救護。"
+        },
+        {
+          "url": "https://www.mohw.gov.tw/dl-99692-90bfc131-849a-4f80-861d-78197872aa2d.html",
+          "claim": "2025年1至9月全國自殺通報系統有34,612人次，較2024年同期少8%。",
+          "supporting_passage": "實讀來源相關正文後之獨立語意摘要（非逐字引文）：實讀委託成果報告第10頁，確認期間、通報系統、人次單位與同期比較；不改寫為不同個案數、全部企圖數或盛行率。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "實際取得官方PDF並讀取第10頁；不以摘要搜尋片段或附表以外資料作分母。"
+        }
+      ],
+      "source_ids": [
+        "ch01_crisis_mlshb",
+        "ch01_crisis_nimh_ask",
+        "ch01_crisis_mohw_online_2026",
+        "ch01_crisis_mohw_1925_2026",
+        "ch01_suicide_reports_2026",
+        "ch01_mohw_suicide_stats_114"
+      ],
+      "new_source_ids": [
+        "ch01_mohw_suicide_stats_114"
+      ],
+      "source_records_reused": [
+        "ch01_crisis_mlshb",
+        "ch01_crisis_nimh_ask",
+        "ch01_crisis_mohw_online_2026",
+        "ch01_crisis_mohw_1925_2026",
+        "ch01_suicide_reports_2026",
+        "ch01_mohw_suicide_stats_114"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch01_crisis_mlshb",
+          "title": "苗栗縣衛生局：珍愛生命的路上，你我攜手守護",
+          "url": "https://www.mlshb.gov.tw/nc/article?id=bb1fc655-fe83-4c9e-a908-37080a98692f",
+          "claim": "以平靜詢問、聆聽及轉介為主；不責備、不以保密承諾代替救援。",
+          "supporting_passage": "獨立語意摘要（非逐字引文）：先前於2026-10-25直接閱讀苗栗縣衛生局守門人相關正文；本輪網址讀取逾時，保留既有查核，不把服務個案比例外推為全國頻率。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "最後成功直接HTTPS讀取日期2026-10-25；2026-11-22重新開啟時逾時，未將逾時判定為來源失效。"
+        },
+        {
+          "source_id": "ch01_crisis_mohw_online_2026",
+          "title": "衛福部心理健康司：網路自殺防治守門員",
+          "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-4903-78843-107.html",
+          "claim": "網路貼文危機時可詢問意圖或計畫、同理傾聽、留存救援所需資訊並連結外援。",
+          "supporting_passage": "獨立語意摘要（非逐字引文）：衛福部心理健康司頁面可見網路守門人詢問、同理傾聽、必要線索及信任支援步驟；正文建檔更新時間為113-05-21，頁面索引更新日期為115-11-19。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接讀取衛福部心理健康司HTML正文；把資訊留存建議限於網路危機情境，不擴張為普遍蒐集個資。"
+        },
+        {
+          "source_id": "ch01_crisis_nimh_ask",
+          "title": "美國NIMH：自殺防治問答（2023修訂）",
+          "url": "https://www.nimh.nih.gov/health/publications/suicide-faq",
+          "claim": "直接詢問自殺念頭不會因問話增加念頭；危機時應陪伴、轉介與後續支持。",
+          "supporting_passage": "獨立語意摘要（非逐字引文）：美國NIMH問答說明直接詢問不會增加自殺念頭，並列陪伴與連結協助；此為美國資料，不是臺灣個人介入成功率。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22直接閱讀美國NIMH官方HTML問答；不移植美國988或911電話，也不宣稱為臺灣研究。"
+        },
+        {
+          "source_id": "ch01_crisis_mohw_1925_2026",
+          "title": "衛福部心理健康司：1925安心專線（頁面更新至2026-10-22）",
+          "url": "https://dep.mohw.gov.tw/DOMHAOH/cp-4906-54077-107.html",
+          "claim": "臺灣1925提供24小時免付費心理諮詢；立即生命危險仍先119。",
+          "supporting_passage": "獨立語意摘要（非逐字引文）：衛福部心理健康司公開內容列1925為24小時免付費心理諮詢；專線不是緊急救護派遣。",
+          "accessed_at": "2026-11-22",
+          "retrieval_method": "2026-11-22讀取衛福部心理健康司現行專線內容；頁面正文最後更新日期與索引更新日期分開記錄。"
+        },
+        {
+          "source_id": "ch01_suicide_reports_2026",
+          "title": "衛福部委託：114年全國自殺防治中心成果報告第10頁",
+          "url": "https://www.mohw.gov.tw/dl-99692-90bfc131-849a-4f80-861d-78197872aa2d.html",
+          "claim": "114年成果報告第10頁記載2025年1至9月自殺通報34,612人次，較2024年同期少8%。",
+          "supporting_passage": "獨立語意摘要（非逐字引文）：2026-10-25直接讀取衛福部委託成果報告第10頁，核對期間、人次單位及同期比較；此為通報系統行政人次，不是唯一個案、全部未遂事件或意念盛行率。",
+          "accessed_at": "2026-10-25",
+          "retrieval_method": "最後成功下載並讀取官方PDF為2026-10-25；2026-11-22重新讀取時超過工具可取回檔案大小，未把失敗當成數據矛盾。"
+        },
+        {
+          "source_id": "ch01_mohw_suicide_stats_114",
+          "title": "衛福部統計處：114年自殺死亡統計（2026-09-11製表）",
+          "url": "https://www.mohw.gov.tw/dl-102761-e04590c0-1e41-4680-856e-bbfa70bab330.html",
+          "claim": "114年（2025）全國自殺死亡3,951人，粗死亡率16.9／10萬人口，依WHO 2000標準人口調整的年齡標準化死亡率12.9／10萬人口。",
+          "supporting_passage": "獨立語意摘要（非逐字引文）：此直接統計PDF最近一次成功下載及讀取為2026-10-27，核對死亡數、粗率、年齡標準化率及WHO標準人口。2026-11-22核對心理健康司統計索引仍更新至114年並列有此附檔，但本輪直接下載PDF逾時；不重算標準化率。",
+          "accessed_at": "2026-10-27",
+          "retrieval_method": "2026-10-27直接下載衛福部官方PDF；2026-11-22讀取官方統計索引及附件列表，直接PDF再次取回逾時。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "162be537b2a939054bdb6720662fe66123076b7b8c5dd1301067d868d391ce6d",
+      "taiwan_context": "適用臺灣親友、同事或同學在面談、電話、訊息及網路貼文中出現自殺危機的情境；立即危險由119處理，1925只作非緊急心理諮詢，網路貼文線索限必要救援用途且避免公開散佈個資。",
+      "frequency_assessment": "2025年1至9月臺灣全國自殺防治通報34,612人次，較2024同期減8%；這是行政通報人次，非唯一個案或意念盛行率，沒有全體暴露分母。2025死因統計為死亡3,951人，粗率16.9／10萬、依WHO 2000世界標準人口年齡標準化率12.9／10萬。通報與死亡是不同事件定義；沒有臺灣同定義直接詢問介入效果研究，不用這些數字推估個人風險或介入成效。",
+      "statistics_assessed": [
+        {
+          "value": "34,612；同期減少8%",
+          "unit": "全國自殺防治通報人次；同期變化百分比",
+          "period": "2025年1月至9月，與2024年同期比較",
+          "geographic_scope": "臺灣全國",
+          "population": "全國自殺防治通報系統紀錄；人次非唯一個案",
+          "numerator": "2025年1至9月通報系統34,612人次",
+          "denominator": null,
+          "denominator_definition": "同期減少8%以2024年1至9月同一通報系統人次為比較基準；沒有全體暴露者或人口分母。",
+          "event_definition": "衛福部委託全國自殺防治中心成果報告所載之自殺通報紀錄人次",
+          "data_type": "行政通報人次及同期比較",
+          "source_id": "ch01_suicide_reports_2026",
+          "accessed_at": "2026-10-25",
+          "checked_at": "2026-11-22",
+          "limitations": "不是唯一個案、全部未遂事件或自殺意念盛行率；無暴露分母，不可換算個人發生機率。當日官方PDF未能再次取回，數值沿用上次直接閱讀的官方報告。"
+        },
+        {
+          "value": "死亡3,951人；粗率16.9／10萬；年齡標準化率12.9／10萬",
+          "unit": "死亡人數及每十萬人口死亡率",
+          "period": "2025年（民國114年）",
+          "geographic_scope": "臺灣全國",
+          "population": "全國死因統計登記之自殺死亡者；年齡標準化依WHO 2000年世界標準人口",
+          "numerator": "官方列載自殺死亡3,951人",
+          "denominator": "粗率依官方人口分母計為每十萬人口；標準化率使用WHO 2000年世界標準人口加權，本輪未重算分母或權重。",
+          "denominator_definition": "粗死亡率與年齡標準化死亡率是不同統計量；後者按WHO 2000年世界標準人口調整，均非個人機率。",
+          "event_definition": "死因統計登記之蓄意自我傷害（自殺）死亡",
+          "data_type": "官方死因登記統計及人口死亡率",
+          "source_id": "ch01_mohw_suicide_stats_114",
+          "accessed_at": "2026-10-27",
+          "checked_at": "2026-11-22",
+          "limitations": "本輪直接統計PDF逾時；依2026-11-22心理健康司索引確認附件仍更新至114年，數值沿用2026-10-27直接讀取之官方PDF。不代表自殺意念、未遂、個人危機風險或直接詢問成效。"
+        }
+      ],
+      "changes": "逐主張重讀親友危機處置、網路守門人、1925與求援分流；重新核對2025通報人次及死亡統計的定義、期間、來源與分母限制。補上死亡統計直接來源及WHO 2000標準人口說明；保留直接詢問的美國研究外推限制。兩份衛福部統計PDF本輪取回受限，明確保留先前成功讀取日期，不宣稱本次重讀成功。",
+      "limits": [
+        "**臺灣頻率背景（救援後閱讀）：**衛福部委託之114年全國自殺防治中心成果報告記載，2025年1至9月全國自殺通報34,612人次，較2024年同期減少8%；這是通報系統的人次，不等於不同個案數、全部未遂事件或自殺意念，也沒有全體暴露者分母；受通報口徑與資料限制，不能推算個人機率或意念盛行率。另依衛福部統計處死因資料，2025年全國自殺死亡3,951人，粗死亡率每十萬人口16.9人；依WHO 2000年世界標準人口調整的年齡標準化死亡率為每十萬人口12.9人，供不同年齡結構比較。這些死亡統計不能當作個人風險、未遂數或直接詢問的成效。NIMH指出直接問自殺念頭不會因問話而增加念頭，但這是美國研究綜整，不是臺灣對話成功率；目前沒有臺灣同定義個人介入效果的原始研究。不把「答應不自傷」、暫時平靜或否認念頭當安全保證；重大風險優先轉介與救援。",
+        "通報數為2025年1至9月全國行政系統人次，非唯一個案、全部未遂事件或意念盛行率；沒有暴露分母，不能換算個人機率。",
+        "NIMH直接詢問證據來自美國資料，沒有取得臺灣同定義個人介入效果研究。苗栗縣衛生局頁及衛福部兩份統計PDF本輪重新取回逾時；保留前次直接讀取日期，不宣稱本次全文已讀。",
+        "本輪為AI輔助來源再核對，未取得心理健康、自殺防治或精神醫療獨立專業審閱。"
+      ],
+      "unresolved_questions": [
+        "沒有找到臺灣同定義的直接詢問介入成效或個人風險研究；不能把美國NIMH建議轉成臺灣成效比例。",
+        "苗栗縣衛生局頁及兩份衛福部統計PDF本輪取回逾時；既有成功閱讀日期及統計數字已保留，後續複查需重新下載確認。",
+        "仍待心理健康、自殺防治或精神醫療領域獨立專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "心理健康／自殺防治",
+          "精神醫療"
+        ],
+        "status": "pending",
+        "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-01-043.json",
+      "review_sha256": "df16cdec4c49546159df2f55b4e88ed262c5ed595f857df53be508392b813ac8",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-drowning-suicide-recheck-20261122.json",
+      "source_bundle_sha256": "8991534c7b9c2e043113e6eaf0649c2671c1d7c82675909403074b51dfb15a62",
+      "reader_copy_cleanup_preserved": true
+    }
+  ],
+  "topic_fidelity_checks": [
+    {
+      "id": "TW-02-036",
+      "decision": "retain_japanese_bathing_research_and_taiwan_bathroom_safety",
+      "last_substantive_review": "2026-11-12",
+      "evidence": "日本泡澡文化、JAGES長者功能失能世代與JPHC心血管世代仍回答臺灣讀者可用的泡澡／健康問題；觀察性關聯未寫成因果或延壽保證，臺灣浴室防跌另作安全補充。本批未改該文，並以回歸測試保護主題不被替換。"
+    },
+    {
+      "id": "TW-01-041",
+      "decision": "retain_taiwan_mountain_safety_adaptation_for_rare_natural_ice_context",
+      "last_substantive_review": "2026-11-12",
+      "evidence": "臺灣天然結冰水面並非常見生活情境；改以臺灣登山安全與求援指引處理相近的低溫戶外危險，符合原題安全需求，不因日本或其他地區研究本身而刪除。"
+    }
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scopes": [
+      "心理健康／自殺防治",
+      "精神醫療",
+      "急診醫學／溺水急救",
+      "消防緊急救護",
+      "民眾急救訓練"
+    ],
+    "status": "pending"
+  },
+  "reader_copy_cleanup": "讀者正文僅保留行動、安全與統計限制；本批次審閱日期、AI狀態及工作進度僅存本證據與逐篇review。"
+}
