@@ -1163,6 +1163,16 @@ def _pre_cleanup_reviewed_item(
         current = matches[0]
 
 
+def _substantive_recheck_item(root: Path, record: dict, item: dict) -> dict:
+    """Recover the reviewed runtime row when a later copy-only cleanup changed metadata."""
+    key = item.get("id", "")
+    digest = hashlib.sha256(item.get("body", "").encode("utf-8")).hexdigest()
+    cleanup = _reader_copy_cleanup_for(root, key, digest)
+    if cleanup is None:
+        return item
+    return _pre_cleanup_reviewed_item(root, item, cleanup, record.get("after_sha256"))
+
+
 def documented_revision(old: dict, new: dict, record: dict) -> bool:
     # 相同正文或只改日期，不能取得實質再審的修訂資格。
     if not isinstance(record, dict) or old.get("id") != new.get("id") or record.get("id") != old.get("id"):
@@ -1346,11 +1356,8 @@ def validate_recheck_history(
     if record.get("prior_review_sha256") != hashlib.sha256(prior_review).hexdigest():
         raise ValueError("再審原始審閱 SHA 不符：" + key)
     digest = hashlib.sha256(new.get("body", "").encode("utf-8")).hexdigest()
-    cleanup = _reader_copy_cleanup_for(root, key, digest)
     reviewed_new = (rechecked_item if rechecked_item is not None else
-                    _pre_cleanup_reviewed_item(
-                        root, new, cleanup, record.get("after_sha256")
-                    ) if cleanup else new)
+                    _substantive_recheck_item(root, record, new))
     if not documented_revision(old, reviewed_new, record):
         raise ValueError("實質再審證據或前後正文 SHA 不符：" + key)
     if record.get("retired_sources"):
@@ -1557,12 +1564,21 @@ def _git_json(root: Path, revision: str, path: str) -> dict:
     return _GIT_JSON_CACHE[cache_key]
 
 
-def _historical_edge_is_valid(root: Path, revision: str, record: dict, old: dict, new: dict) -> bool:
+def _historical_edge_is_valid(
+    root: Path,
+    revision: str,
+    record: dict,
+    old: dict,
+    new: dict,
+    reviewed_new: dict | None = None,
+) -> bool:
     """Validate one committed review snapshot without depending on today's register row."""
     key = new.get("id")
-    if not documented_revision(old, new, record):
-        return False
     try:
+        if reviewed_new is None:
+            reviewed_new = _substantive_recheck_item(root, record, new)
+        if not documented_revision(old, reviewed_new, record):
+            return False
         prior_revision = record["prior_revision"]
         prior_path = "localization/reviews/" + key + ".json"
         if record.get("prior_review_kind", "review_file") == "review_file":
@@ -1585,7 +1601,7 @@ def _historical_edge_is_valid(root: Path, revision: str, record: dict, old: dict
             manifest = _git_json(root, revision, "localization/manifest.json")
         if hashlib.sha256(prior_review).hexdigest() != record["prior_review_sha256"]:
             return False
-        digest = hashlib.sha256(new["body"].encode("utf-8")).hexdigest()
+        digest = hashlib.sha256(reviewed_new["body"].encode("utf-8")).hexdigest()
         if (review.get("target_sha256") != digest
                 or review.get("reviewed_at") != record.get("reviewed_at")
                 or review.get("review_due_at") != record.get("review_due_at")
@@ -1693,10 +1709,15 @@ def _historical_recheck_edges(root: Path, key: str) -> list[tuple[dict, dict, di
                 old_items = {item["id"]: item for item in runtime_cache[prior_revision]["items"]}
                 new_items = {item["id"]: item for item in runtime_cache[revision]["items"]}
                 old, new = old_items.get(key), new_items.get(key)
-                if old is None or new is None or not _historical_edge_is_valid(root, revision, committed, old, new):
+                if old is None or new is None:
+                    continue
+                reviewed_new = _substantive_recheck_item(root, committed, new)
+                if not _historical_edge_is_valid(
+                    root, revision, committed, old, new, reviewed_new
+                ):
                     continue
                 seen.add(pair)
-                ranked_edges.append((order.get(revision, -1), (old, new, committed)))
+                ranked_edges.append((order.get(revision, -1), (old, reviewed_new, committed)))
                 break
             except (KeyError, ValueError, StopIteration, subprocess.CalledProcessError):
                 continue

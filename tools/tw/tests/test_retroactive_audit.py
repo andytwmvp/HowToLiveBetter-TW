@@ -639,6 +639,36 @@ class RetroactiveAuditTests(unittest.TestCase):
         self.assertGreater(result["summary"].get("reader_copy_cleanups", 0), 0)
         self.assertFalse(result["summary"]["publication_ready"])
 
+    def test_substantive_review_edge_survives_squashed_reader_metadata_cleanup(self):
+        root = audit.ROOT
+        register = audit.load(root, "localization/retroactive-review-register-20261019.json")
+        record = next(
+            row for row in register["substantive_rechecks"]
+            if row.get("id") == "TW-24-014" and row.get("reviewed_at") == "2026-11-22"
+        )
+        current = next(
+            item for item in audit.load(root, "localization/tw-edition/runtime.json")["items"]
+            if item.get("id") == "TW-24-014"
+        )
+        cleanup = audit._reader_copy_cleanup_for(root, "TW-24-014", record["after_sha256"])
+        self.assertIsNotNone(cleanup)
+        self.assertEqual(cleanup["transform"], "reader_copy_cleanup_v4")
+        self.assertEqual(cleanup["before_sha256"], cleanup["after_sha256"])
+
+        edge = next(
+            (old, new, edge_record)
+            for old, new, edge_record in audit._historical_recheck_edges(root, "TW-24-014")
+            if edge_record == record
+        )
+        old, reviewed, edge_record = edge
+        self.assertEqual(edge_record, record)
+        self.assertEqual(
+            hashlib.sha256(reviewed["body"].encode("utf-8")).hexdigest(),
+            record["after_sha256"],
+        )
+        self.assertNotEqual(reviewed["limits"], current["limits"])
+        self.assertTrue(audit.documented_revision(old, reviewed, record))
+
     def test_all_existing_and_future_core_and_navigation_are_included(self):
         result = current_audit_report()
         root = audit.ROOT
