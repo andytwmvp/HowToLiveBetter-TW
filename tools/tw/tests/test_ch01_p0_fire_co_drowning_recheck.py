@@ -13,7 +13,6 @@ from review_contract import ROOT, publication_report, validate_entry, validate_r
 BASE = "37756e57425903c75dfa54dd24ee201bf613b6c5"
 PREVIOUS_BATCH_BASE = "66b24c548bb3b3731579bd2421e37124d437d303"
 IDS = ("TW-01-003", "TW-01-004", "TW-01-006", "TW-01-012")
-CURRENT_RECHECK_IDS = {"TW-01-003", "TW-01-004"}
 NEW_SOURCE_IDS = {
     "ch01_nfa_co_detector_3714", "ch01_wda_co_first_aid_2026",
     "ch01_vghtpe_inhalation_firstaid", "ch01_nfa_co_2024",
@@ -35,7 +34,11 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
         items = {item["id"]: item for item in runtime["items"]}
         sources = {source["id"]: source for source in runtime["sources"]}
         register = load("localization/retroactive-review-register-20261019.json")
-        rows = {row["id"]: row for row in register["substantive_rechecks"]}
+        rows = {
+            row["id"]: row
+            for row in register["substantive_rechecks"]
+            if row["id"] in IDS
+        }
         for key in IDS:
             with self.subTest(key=key):
                 entry = manifest[key]
@@ -47,20 +50,17 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
                 self.assertEqual(entry["sources"], item["source_ids"])
                 self.assertEqual(raw.decode("utf-8"), item["body"])
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), review["target_sha256"])
-                if key == "TW-01-012":
-                    latest_batch = load("localization/ch01-highrisk-recheck-20261121.json")
-                    latest_item = next(item for item in latest_batch["items"] if item["id"] == key)
-                    expected_date = latest_item["reviewed_at"]
-                    expected_due = latest_item["review_due_at"]
-                    expected_revision = latest_batch["base_main_sha"]
-                else:
-                    expected_date = "2026-10-28" if key in CURRENT_RECHECK_IDS else "2026-10-25"
-                    expected_due = "2027-01-31"
-                    expected_revision = BASE if key in CURRENT_RECHECK_IDS else PREVIOUS_BATCH_BASE
-                self.assertEqual(review["reviewed_at"], expected_date)
-                self.assertEqual(review["review_due_at"], expected_due)
+                self.assertEqual(review["reviewed_at"], row["reviewed_at"])
+                self.assertEqual(review["review_due_at"], row["review_due_at"])
                 self.assertEqual(row["status"], "ai_source_rechecked_professional_pending")
-                self.assertEqual(row["prior_revision"], expected_revision)
+                self.assertEqual(
+                    review.get("source_reviewed_sha256", review["target_sha256"]),
+                    row["after_sha256"],
+                )
+                if row.get("review_sha256"):
+                    self.assertEqual(row["review_sha256"], hashlib.sha256(
+                        (ROOT / ("localization/reviews/" + key + ".json")).read_bytes()
+                    ).hexdigest())
                 self.assertEqual(row["source_ids"], item["source_ids"])
                 self.assertEqual(row["source_checks"], review["source_checks"])
                 self.assertEqual({check["url"] for check in review["source_checks"]},
@@ -71,7 +71,7 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
         bodies = {item["id"]: item["body"] for item in validate_runtime()["items"]}
         stats_marker = {
             "TW-01-003": "臺灣發生頻率與統計定義",
-            "TW-01-004": "臺灣事件頻率與統計口徑",
+            "TW-01-004": "臺灣事件頻率與限制",
             "TW-01-006": "臺灣事件頻率與統計口徑",
             "TW-01-012": "臺灣事故頻率與統計界線",
         }
@@ -86,7 +86,7 @@ class Chapter01P0FireCoDrowningRecheckTests(unittest.TestCase):
         self.assertIn("24件", bodies["TW-01-004"])
         self.assertIn("22件", bodies["TW-01-004"])
         self.assertNotIn("118件", bodies["TW-01-004"])
-        self.assertIn("家庭暴露分母", bodies["TW-01-004"])
+        self.assertIn("沒有燃氣設備家戶數或曝露時間分母", bodies["TW-01-004"])
         self.assertIn("71件", bodies["TW-01-006"])
         self.assertIn("29.3%", bodies["TW-01-006"])
         self.assertIn("絕非電動車起火率", bodies["TW-01-006"])

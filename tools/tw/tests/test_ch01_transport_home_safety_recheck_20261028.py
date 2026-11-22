@@ -37,9 +37,15 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
         cls.manifest = read("localization/manifest.json")
         cls.runtime = validate_runtime()
         cls.items = {item["id"]: item for item in cls.runtime["items"]}
+        cls.batch_items = {item["id"]: item for item in cls.batch["items"]}
         cls.sources = {source["id"]: source for source in cls.runtime["sources"]}
         cls.entries = {entry["id"]: entry for entry in cls.manifest["entries"]}
-        cls.records = {
+        cls.historical_records = {
+            record["id"]: record
+            for record in cls.register["substantive_rechecks"]
+            if record["id"] in IDS and record["prior_revision"] == BASE
+        }
+        cls.latest_records = {
             record["id"]: record
             for record in cls.register["substantive_rechecks"]
             if record["id"] in IDS
@@ -56,7 +62,7 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
         self.assertEqual(after["source_registry"], before["source_registry"] + len(SOURCE_IDS))
         self.assertEqual(set(self.batch["scope"]["historical_ids"]), set(IDS))
         self.assertEqual(set(self.batch["sources_added"][i]["id"] for i in range(len(SOURCE_IDS))), SOURCE_IDS)
-        self.assertEqual(len(self.records), len(IDS))
+        self.assertEqual(len(self.historical_records), len(IDS))
         self.assertGreaterEqual(len(self.runtime["sources"]), after["runtime_sources"])
         self.assertEqual(audit_drafts(), read("localization/tw-edition/coverage.json"))
         coverage = read("localization/tw-edition/coverage.json")
@@ -69,26 +75,34 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
     def test_all_four_historical_rechecks_sync_hashes_reviews_and_sources(self):
         for key in IDS:
             with self.subTest(key=key):
-                item = self.items[key]
-                record = self.records[key]
+                item = self.batch_items[key]
+                record = self.historical_records[key]
+                latest = self.latest_records[key]
                 entry = self.entries[key]
                 review = read(f"localization/reviews/{key}.json")
                 raw = (ROOT / entry["target_path"]).read_bytes()
                 digest = hashlib.sha256(raw).hexdigest()
                 self.assertEqual(record["status"], "ai_source_rechecked_professional_pending")
-                self.assertEqual(record["reviewed_at"], "2026-10-28")
-                self.assertEqual(record["review_due_at"], "2027-01-31")
-                assert_body_version_matches_review_or_cleanup(self, key, record["after_sha256"], digest)
+                self.assertEqual(record["reviewed_at"], self.batch["reviewed_at"])
+                self.assertEqual(record["review_due_at"], self.batch["review_due_at"])
+                self.assertEqual(record["after_sha256"], item["after_sha256"])
+                self.assertEqual(record["source_ids"], item["source_ids"])
+                self.assertEqual(record["source_checks"], item["source_checks"])
+                assert_body_version_matches_review_or_cleanup(self, key, latest["after_sha256"], digest)
                 self.assertEqual(review["target_sha256"], digest)
-                self.assertEqual(raw.decode("utf-8"), item["body"])
-                self.assertEqual(entry["sources"], item["source_ids"])
-                self.assertEqual(review["reviewed_at"], record["reviewed_at"])
-                self.assertEqual(review["review_due_at"], record["review_due_at"])
-                self.assertEqual(review["limits"], record["limits"])
-                self.assertEqual(review["source_checks"], record["source_checks"])
+                self.assertEqual(review["reviewed_at"], latest["reviewed_at"])
+                self.assertEqual(review["review_due_at"], latest["review_due_at"])
+                self.assertEqual(
+                    review.get("source_reviewed_sha256", review["target_sha256"]),
+                    latest["after_sha256"],
+                )
+                self.assertEqual(entry["sources"], self.items[key]["source_ids"])
+                self.assertEqual(raw.decode("utf-8"), self.items[key]["body"])
+                self.assertEqual(review["limits"], latest["limits"])
+                self.assertEqual(review["source_checks"], latest["source_checks"])
                 self.assertEqual(
                     {check["url"] for check in review["source_checks"]},
-                    {self.sources[source_id]["url"] for source_id in item["source_ids"]},
+                    {self.sources[source_id]["url"] for source_id in self.items[key]["source_ids"]},
                 )
 
     def test_content_preserves_taiwan_risk_and_denominator_limits(self):
@@ -110,9 +124,9 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
         self.assertIn("不要搭電梯", body["TW-01-003"])
         self.assertIn("不能僅因某人是房東或租客，就一概判定由誰負責", body["TW-01-003"])
         self.assertIn("22件事故", body["TW-01-004"])
-        self.assertIn("沒有使用燃氣熱水器的家戶數", body["TW-01-004"])
+        self.assertIn("沒有燃氣設備家戶數或曝露時間分母", body["TW-01-004"])
         self.assertIn("技術士證", body["TW-01-004"])
-        self.assertIn("不能因此把所有到府檢查都稱為詐騙", body["TW-01-004"])
+        self.assertIn("不能因此把所有到府檢查都說成詐騙", body["TW-01-004"])
         self.assertFalse(self.batch["publication_ready"])
         self.assertTrue(self.batch["professional_review_pending"])
 
@@ -127,7 +141,7 @@ class Chapter01TransportHomeSafetyRecheckTests(unittest.TestCase):
         old_source = next(source for source in old["sources"] if source["id"] == "ch01_motc_moto_rider_deaths_2026july")
         current_source = self.sources[old_source["id"]]
         self.assertEqual(current_source, old_source)
-        retirement = self.records["TW-01-002"]["retired_sources"]
+        retirement = self.historical_records["TW-01-002"]["retired_sources"]
         self.assertEqual([row["id"] for row in retirement], [old_source["id"]])
         self.assertEqual(
             retirement[0]["prior_source_sha256"],

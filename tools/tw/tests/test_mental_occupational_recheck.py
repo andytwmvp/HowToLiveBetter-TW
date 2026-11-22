@@ -23,7 +23,7 @@ class MentalOccupationalTests(unittest.TestCase):
   b={i['id']:i['body'] for i in validate_runtime()['items']};p=b['TW-NAV-003'];self.assertLess(p.index('119'),p.index('1925'));self.assertLess(p.index('119'),p.index('2025年'))
   for t in ['不批判','不是','不保證','持續','3,951','16.9']:self.assertIn(t,p)
   q=b['TW-NAV-011']
-  for t in ['不必先等主管批准','8小時','最高負責人','地方主管機關','不等待','109人','49人','2026-07-01','2027-01-01']:self.assertIn(t,q)
+  for t in ['不必先等主管批准','8小時','最高負責人','地方主管機關','不要等待內部協調','193人','91人','2026-07-01','2027-01-01']:self.assertIn(t,q)
  def test_statistics_have_distinct_periods_and_denominators(self):
   b=load('localization/mental-occupational-20261020.json');stats={x['id']:x for x in b['statistics']};self.assertEqual(stats['self_harm_deaths_2025']['value'],3951);self.assertEqual(stats['self_harm_deaths_2025']['crude_rate_per_100000'],16.9);self.assertEqual(stats['osh_deaths_2026_h1']['value'],109);self.assertEqual(stats['osh_falls_2026_h1']['value'],49)
   self.assertEqual(stats['osh_deaths_2026_h1']['period'],'2026-01-01至2026-06-30');self.assertIsNone(stats['osh_deaths_2026_h1']['denominator']);self.assertTrue(all(x['definition'] and x['limitations'] and x['accessed_at']=='2026-10-20' for x in stats.values()))

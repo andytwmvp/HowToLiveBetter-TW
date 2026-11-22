@@ -1,60 +1,210 @@
 {
   "id": "TW-01-034",
-  "reviewer": "ChatGPT（臺灣官方原始來源逐項AI輔助核對；非獨立專業簽證）",
+  "reviewer": "ChatGPT（臺灣官方及原始研究來源逐項AI輔助核對；非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-26",
-  "review_due_at": "2027-01-31",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
   "target_path": "locales/zh-TW/book/ch01/TW-01-034.md",
-  "target_sha256": "35f2c9ec449d484ec314ab7dd35fc3c79ca39ead10e5e0529c929d138d6ff950",
+  "target_sha256": "a0f22cced581d749fcf7d459ccbbaf997f9e56ce0f6cbd04bebfd7d97ae2c4d4",
+  "source_reviewed_sha256": "a0f22cced581d749fcf7d459ccbbaf997f9e56ce0f6cbd04bebfd7d97ae2c4d4",
+  "prior_review_sha256": "6bccf46c2b9b4b62a8b33b0f0695bd3441ebb6031cf96ce74750f96aebad2c08",
+  "source_ids": [
+    "ch13_fall_fire",
+    "head_2026_vghtc",
+    "ch13_cpr_faq",
+    "ch01_osha_fall_2026q3_pdf",
+    "ch01_fall_icu_south_xinjiang_2025",
+    "ch01_taiwan_trauma_rtw_2025",
+    "ch01_germany_trauma_rtw_2020",
+    "ch01_bli_rtw_service_2025"
+  ],
   "source_checks": [
     {
+      "source_id": "ch13_fall_fire",
+      "title": "臺北市消防局：創傷脊椎疑慮的搬動限制",
       "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=BF739CEA16BBDEA6&sms=87415A8B9CE81B16",
-      "claim": "車禍或疑似脊椎傷勿任意移動，立即119求援。",
-      "supporting_passage": "臺北市消防局FAQ明列疑似脊椎傷勿任意移動並撥119；正文另以現場迫切危險作為退避例外。",
-      "accessed_at": "2026-10-26",
-      "retrieval_method": "2026-10-26直接讀取臺北市消防局交通事故FAQ；未把一般建議當作創傷醫療評估。"
+      "claim": "有脊椎傷疑慮時不隨意搬動傷者，先從安全處撥119並依救護指示。",
+      "supporting_passage": "懷疑脊椎受傷、四肢麻痺、明顯骨折或意識不清時，不可隨意搬動傷者，並撥119。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22重新比對臺北市消防局急救問答與本文高處墜落情境；不將車禍特例擴張成不能移動以避開立即危險。"
     },
     {
+      "source_id": "head_2026_vghtc",
+      "title": "臺中榮總：頭部受傷離院病人注意事項",
       "url": "https://ihealth.vghtc.gov.tw/media/340",
-      "claim": "頭傷警訊及返家後緊急就醫情形。",
-      "supporting_passage": "臺中榮總2026-06-25修訂衛教列意識改變、嚴重持續頭痛、難喚醒、持續嘔吐、視野改變及手腳無力。",
-      "accessed_at": "2026-10-26",
-      "retrieval_method": "2026-10-26直接讀取臺中榮總頭傷衛教全文相關段落；不把出院衛教當急救診斷標準。"
+      "claim": "頭傷返家後仍須注意意識、記憶、步態變化；意識惡化或持續嘔吐等依衛教儘速就醫。",
+      "supporting_passage": "2026年修訂衛教提醒頭傷可能影響意識、記憶與步態，數月後症狀仍須留意，影像由醫師決定。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22重新開啟臺中榮總護理衛教頁並核對重返急診警訊，不代替醫療團隊判斷。"
     },
     {
-      "url": "https://www.osha.gov.tw/media/b54h1fj3/114%E5%B9%B4%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
-      "claim": "2025重大職災死亡259人，墜落、滾落136人（營造75、製造26）；屬勞檢接報後調查，少數待判定案件未列。",
-      "supporting_passage": "職安署2026-02-05更新PDF第1至2頁統計口徑及附表2；災害類型為全年墜落、滾落。",
-      "accessed_at": "2026-10-26",
-      "retrieval_method": "2026-10-26讀取職安署4頁原始PDF方法與災害類型表，未取得工作者或工時分母。"
-    },
-    {
+      "source_id": "ch13_cpr_faq",
+      "title": "臺北市政府消防局：心肺復甦術問答",
       "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=173D1B9BEB12DDBA&sms=87415A8B9CE81B16",
-      "claim": "無反應且無正常呼吸時求援119、取得AED並依緊急派遣指示施救。",
-      "supporting_passage": "臺北市消防局2026-09-29更新CPR FAQ說明打119、請旁人取AED、持續按壓至AED或救護人員接手。",
-      "accessed_at": "2026-10-26",
-      "retrieval_method": "2026-10-26直接讀取臺北市消防局CPR FAQ正文與更新日期；本文依派遣指示，未假裝可由文字取代急救訓練。"
+      "claim": "無反應且無正常呼吸時立即撥119並依派遣指示CPR，請旁人取得AED。",
+      "supporting_passage": "成人胸部按壓每分鐘100至120次、深度5至6公分，盡量持續不中斷。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22重新開啟臺北市消防局CPR問答；正文優先要求依派遣指示施救。"
     },
     {
-      "url": "https://www.osha.gov.tw/media/1mhphhgq/115%E5%B9%B4%E8%BF%84%E7%AC%AC2%E5%AD%A3%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E8%AA%AA%E6%98%8E.pdf",
-      "claim": "2026年1至6月全產業重大職災死亡109人、墜落49人（營造36、製造5）；無工作者或工時分母。",
-      "supporting_passage": "職安署115年第2季報告第1頁說明截至6/30全產業死亡109人，第3頁災害類型表列墜落49、營造36、製造5，註明勞檢通報現場調查與少數待判定排除。",
-      "accessed_at": "2026-10-26",
-      "retrieval_method": "2026-10-26讀取職安署3頁PDF摘要、附表和方法註；與2025全年墜落、滾落分類分開呈現。"
+      "source_id": "ch01_osha_fall_2026q3_pdf",
+      "title": "職安署：2026年前三季重大職災死亡統計說明及附表",
+      "url": "https://www.osha.gov.tw/media/offg4ues/115%E5%B9%B4%E8%BF%84%E7%AC%AC3%E5%AD%A3%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E8%AA%AA%E6%98%8E.pdf",
+      "claim": "截至2026-09-30職安署全產業重大職災死亡193人、其中墜落91人（營造63、製造13）；2025同期213人、墜落105人（58、21）。",
+      "supporting_passage": "統計截至2026-09-30全產業重大職災死亡193人，事故類型「墜落」死亡91人（營造63、製造13）；2025同期全產業死亡213人、「墜落」105人（營造58、製造21）。屬勞檢接報後現場調查報告中的死亡案件，待判定案件未列，無工作者或工時分母；「墜落」與「跌倒」是不同類別。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22讀取職安署5頁原始PDF方法說明及附表2；依同期、災害類別、行業核數，不以工作者或工時未提供的數字推算個人風險。"
+    },
+    {
+      "source_id": "ch01_fall_icu_south_xinjiang_2025",
+      "title": "Chen 等：新疆南部單一創傷加護病房高處墜落病人的回溯研究",
+      "url": "https://link.springer.com/article/10.1186/s12245-025-00959-4",
+      "claim": "該單一創傷ICU回溯研究納入2020-04至2024-07的289名高處墜落患者；多部位傷136/289、呼吸器103/289、院內或30日內死亡16/289。",
+      "supporting_passage": "研究期間2020年4月至2024年7月，納入新疆南部單一創傷加護病房收治的289名高處墜落患者；136/289至少3個部位受傷、103/289使用呼吸器、16/289院內或30日內死亡，中位加護住院8天。只代表此選定臨床族群，非臺灣或所有墜落者。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀開放論文摘要及方法結果；限於新疆南部單一創傷ICU，不外推為台灣或全體墜落者。"
+    },
+    {
+      "source_id": "ch01_taiwan_trauma_rtw_2025",
+      "title": "Kuo 等：臺灣重大創傷後重返工作與收入變化全國回溯世代研究",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12530369/",
+      "claim": "全國健保資料庫重大創傷研究分析2003至2007年的特定存活成年族群，4,741/5,965按投保類別與有薪資登錄定義重返工作。",
+      "supporting_passage": "臺灣全民健保資料庫全國回溯世代研究：2003至2007年重大創傷後存活超過1年的18至70歲成人中，5,965人符合分析條件，4,741人（79.5%）依研究以投保類別及有薪資登錄定義重返工作；非高處墜落專屬研究，亦不代表恢復原工作能力或個人預後。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22核對BMJ Open論文及PubMed Central全文索引頁所列方法、納入條件與結果；若PMC當日反爬蟲，採此前讀取的原始期刊全文，並保留其歷史資料限制。"
+    },
+    {
+      "source_id": "ch01_germany_trauma_rtw_2020",
+      "title": "Simmel 等：德國重度多重創傷病人重返工作研究（PubMed）",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31590201/",
+      "claim": "德國單一中心84名ISS至少25分的工作年齡多重創傷病人中，摘要稱58%於追蹤期間曾重返工作；摘要未列追蹤時長。",
+      "supporting_passage": "德國單一中心研究納入84名工作年齡、ISS至少25分的多重創傷患者；摘要報告58%於研究追蹤期間曾重返工作。研究追蹤時長未由摘要明確列出，不可與臺灣全國隊列直接比較或套用為臺灣比例。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22核對PubMed索引摘要及先前可讀研究紀錄；不把樣本比例視為台灣數據。"
+    },
+    {
+      "source_id": "ch01_bli_rtw_service_2025",
+      "title": "勞保局：職災勞工復工服務",
+      "url": "https://www.bli.gov.tw/0109440.html",
+      "claim": "勞保局自2025-10-01起對領職災傷病給付、醫療穩定但尚未復工者提供轉介復工服務。",
+      "supporting_passage": "勞保局自2025-10-01起針對領取職災傷病給付、醫療已穩定但尚不能復工的被保險人提供轉介，銜接職能復健、工作強化、復工評估及地方職災專業服務；須符合個案資格。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀勞保局2025-10-31公告，核對服務啟動日期、條件及職能復健／復工評估範圍。"
     }
   ],
-  "localization_changes": "重核2025重大職災墜落、滾落136人及2026上半年墜落49人（營造36、製造5）；保留行政調查、未判定案件排除、無暴露分母及類別期間不同等限制。更新急救步驟以119派遣、AED及醫療團隊評估為中心，並連結既有職安單篇指引。",
-  "review_method": "由ChatGPT依臺灣情境、官方統計定義與分母、現行法規及來源主張逐項比對；AI輔助查核，未取得獨立醫療、職安、消防或法律專業審閱，不代表專業簽證。",
-  "limits": [
-    "職安署重大職災死亡統計是勞檢接報後現場調查案件，少數待判定案件未列且沒有工作者或工時分母；2025全年分類為墜落、滾落，2026上半年為墜落，不能直接比較或推估所有工作及非工作墜落風險。",
-    "急救、創傷醫療與職業安全僅做官方來源AI輔助核對，未取得醫療或職安專業獨立審閱；本文不代替119派遣、個案診療或現場職安評估。"
+  "statistics_assessed": [
+    {
+      "indicator": "重大職災死亡及墜落死亡案件",
+      "period": "2026-01-01至2026-09-30；同期比較2025-01-01至2025-09-30",
+      "scope": "臺灣全國勞動檢查調查案件",
+      "population": "勞動檢查機構接獲職災通報後派員現場檢查並作成報告書的死亡職災案件",
+      "numerator": {
+        "2026_all_industry_deaths": 193,
+        "2026_fall_deaths": 91,
+        "2026_construction_fall_deaths": 63,
+        "2026_manufacturing_fall_deaths": 13,
+        "2025_same_period_all_industry_deaths": 213,
+        "2025_same_period_fall_deaths": 105,
+        "2025_same_period_construction_fall_deaths": 58,
+        "2025_same_period_manufacturing_fall_deaths": 21
+      },
+      "denominator": null,
+      "unit": "人死亡；非事件發生率",
+      "event_definition": "重大職災死亡統計之「墜落」類別；與另列「跌倒」不同。",
+      "data_type": "勞檢通報後現場調查行政統計。",
+      "source_ids": [
+        "ch01_osha_fall_2026q3_pdf"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "少數待地檢署解剖鑑定案件未列；沒有工作者或工時分母，不是所有墜落或個人發生率，亦不涵蓋居家、休閒和非致死事件。"
+    },
+    {
+      "indicator": "重大創傷後重返工作",
+      "period": "創傷發生於2003至2007年；最長追蹤10年",
+      "scope": "臺灣全國健保資料庫回溯世代",
+      "population": "ISS至少16分、傷後存活超過1年的18至70歲成人；排除部分既有重大病況及無薪資登錄者",
+      "numerator": {
+        "returned_to_work": 4741,
+        "not_returned_to_work": 1224
+      },
+      "denominator": 5965,
+      "unit": "研究族群人數；4,741/5,965（79.5%）依投保類別與有薪資登錄操作性定義重返工作",
+      "event_definition": "研究依投保類別與登錄薪資判定RTW；非高處墜落專屬，也非完全回復原職。",
+      "data_type": "全民健保資料庫回溯世代研究。",
+      "source_ids": [
+        "ch01_taiwan_trauma_rtw_2025"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "制度與資料期較早；僅納入存活超過1年、特定年齡及有薪資登錄者，不能預測目前個人預後、收入或回到原工作的能力。"
+    },
+    {
+      "indicator": "高處墜落後創傷加護病房臨床結局",
+      "period": "2020-04至2024-07",
+      "scope": "中國新疆南部單一創傷加護病房",
+      "population": "因高處墜落收治該創傷ICU的289名患者",
+      "numerator": {
+        "injury_locations_at_least_3": 136,
+        "mechanical_ventilation": 103,
+        "in_hospital_or_30_day_deaths": 16
+      },
+      "denominator": 289,
+      "unit": "名已收治患者；分別136/289、103/289、16/289",
+      "event_definition": "單一ICU收治患者的傷勢、治療和院內／30日內結局。",
+      "data_type": "單中心回溯臨床研究。",
+      "source_ids": [
+        "ch01_fall_icu_south_xinjiang_2025"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "選定重症住院族群，非所有高處墜落患者、臺灣發生率或一般讀者的個人預後。"
+    },
+    {
+      "indicator": "重度多重創傷患者重返工作",
+      "period": "原始研究追蹤期間；摘要未載明精確長度",
+      "scope": "德國單一醫療中心",
+      "population": "84名工作年齡、ISS至少25分的多重創傷患者",
+      "numerator": {
+        "reported_proportion_percent": 58
+      },
+      "denominator": 84,
+      "unit": "研究摘要報告58%於追蹤期間曾重返工作；分母84名患者，不推算整數人數",
+      "event_definition": "研究摘要定義的曾重返工作，非完全回到原職；此數據為單中心比例。",
+      "data_type": "單一中心病例追蹤研究摘要。",
+      "source_ids": [
+        "ch01_germany_trauma_rtw_2020"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "摘要未列追蹤期，樣本小且制度不同於臺灣；比例不與臺灣全國隊列直接比較。"
+    }
   ],
-  "source_reviewed_sha256": "2e1a05b4ed415d60a4f9e1f04e471a955e40085331ea3ecb712a5ba83d8073c0",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "2e1a05b4ed415d60a4f9e1f04e471a955e40085331ea3ecb712a5ba83d8073c0",
-    "after_sha256": "35f2c9ec449d484ec314ab7dd35fc3c79ca39ead10e5e0529c929d138d6ff950",
-    "before_reader_sha256": "e8dfafcb10874e4e6d4967a68277ed71b761db22796f2851cf21ad39fe302109",
-    "after_reader_sha256": "d80bae1842e99922584b6ad86fa73c93c8efd157a77ae234019d53c867b8662b"
-  }
+  "legal_temporal_checks": [],
+  "taiwan_context": "臺灣住家修繕、工地、屋頂、梯具及其他高處情境均可能發生墜落；先從安全處打119與避免二次傷害，再說明住院傷勢、復健、工作與職災服務。海外研究僅作為特定重症研究或比較背景。",
+  "frequency_assessment": "職安署有2026年前三季重大職災墜落死亡案件數，但沒有工作者或工時分母；住家、休閒及一般民眾高處墜落沒有可直接換算個人機率的統一全國分母。研究結局另依各研究特定病人選取、定義與年代呈現，不合併成單一發生率。",
+  "localization_changes": "更新職安署重大職災統計至2026年前三季並分清墜落、跌倒及同期比較；新增臺灣重大創傷後工作與收入追蹤研究，並明確界定投保類別／薪資登錄的重返工作指標。保留新疆創傷ICU與德國研究作為特定外國研究證據，提供樣本與外推限制；補入勞保局符合條件者復工轉介服務。",
+  "review_method": "重新閱讀原作固定ID主題、現行正文、前次審閱、來源登錄及來源可讀段落；逐項核對台灣情境、可執行步驟、急迫分流、法規適用範圍、公告與施行日期、統計對象及分母。AI輔助來源核對不等於專業審查。",
+  "limits": [
+    "職安署統計只含接報後現場調查並成案的重大死亡職災，少數待判定案件未列，沒有工作者人數或工時分母；墜落與跌倒是不同類別，不能換算個人發生率或涵蓋所有居家、休閒及非致死事故。",
+    "臺灣重返工作研究使用2003至2007年健保資料，且依投保類別及有薪資登錄操作性定義；研究族群、時期和結果均不等同回復原職，不能推估目前個別傷者的復原、收入或工作能力。",
+    "新疆與德國研究為境外選定臨床族群／單中心樣本；不能當成臺灣發生率或個人預後，也不能與臺灣全國隊列直接比較。"
+  ],
+  "unresolved_questions": [
+    "全國沒有涵蓋居家、休閒、通勤與工作情境且具有完整暴露分母的高處墜落個人發生率。",
+    "臺灣重返工作研究與新疆／德國創傷研究的族群、時期、資料定義與追蹤方法不同，不能直接比較或預測個人。",
+    "尚未取得外傷醫療、復健、職業醫學與職災保險專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "急診外傷醫療",
+      "復健醫學",
+      "職業醫學",
+      "職災保險"
+    ],
+    "status": "pending",
+    "reason": "本輪為AI輔助的來源與正文再核對，尚未取得具名且具資格的獨立專業審閱。"
+  },
+  "prior_reviewed_at": "2026-10-26",
+  "prior_review_due_at": "2027-01-31",
+  "source_bundle_path": "localization/tw-edition/sources/ch01-gas-fall-osh-recheck-20261122.json",
+  "source_bundle_sha256": "fa80fae705f4e336d1788bcf286de9449af8676b85b7e7b8df1066c05d144333"
 }
