@@ -1,12 +1,107 @@
 {
   "id": "TW-24-014",
-  "reviewer": "ChatGPT（AI輔助官方資料核對；非獨立醫師、藥師、法律或醫療專業簽證）",
+  "reviewer": "ChatGPT（AI協助核對健保法規與官方服務；非獨立醫師、藥師或律師審閱）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
   "target_path": "locales/zh-TW/book/ch24/TW-24-014.md",
-  "target_sha256": "e094db2119d15d8016d3340a766e5ef421002f0b6a4db50cbd46aac95d396618",
+  "target_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
   "source_checks": [
+    {
+      "source_id": "tw24_nhi_chronic_rx_20261122",
+      "title": "健保署：慢性病連續處方箋開立率與領藥方式說明",
+      "url": "https://med.nhi.gov.tw/ihqe0000/pepH889.html?ind=889&type=2",
+      "claim": "一般慢性病連續處方箋可到原開立院所或任何健保特約藥局調劑；一般最多90日、分次領取且每次最多30日。",
+      "supporting_passage": "說明慢箋可至原開立院所或任何健保特約藥局調劑，一般90日總量與分次領取、每次最多30日。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取健保署病人說明頁慢箋領藥文字，核對跨院所／特約藥局、天數與分次規則。"
+    },
+    {
+      "source_id": "tw24_nhi_medical_rules_20261122",
+      "title": "全國法規資料庫：全民健康保險醫療辦法（修正2024-06-20）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009",
+      "claim": "第7條委託續方、第14至15條慢箋資格與調劑處所、第22條90日總量及每次用量、第24條前次給藥期滿前10日內續領、第25條一次領足例外及第28條施行日。",
+      "supporting_passage": "現行第7、14、15、22至25及28條：委託續方、慢箋適用、調劑處所、90日總量／每次30日、末次給藥期滿前10日內調劑、一次領足例外；第22條自2024-08-01施行。資料庫法規整編截止2026-11-13。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接讀取全國法規資料庫現行第7、14、15、22至25、28條及法規頁沿革；第22條公布日與施行日分開核對。"
+    },
+    {
+      "source_id": "tw24_nhi_app_locator_20261122",
+      "title": "健保署：健保快易通APP藥局位置查詢",
+      "url": "https://www.nhi.gov.tw/ch/cp-2203-b9dae-3110-1.html",
+      "claim": "健保快易通APP「附近院所」地圖顯示周邊1至10公里院所及特約藥局位置；不代表庫存或營業時間。",
+      "supporting_passage": "「附近院所」以地圖顯示周邊1至10公里特約醫院、診所與藥局的位置；未提供藥品庫存或即時營業保證。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取健保署FAQ，核對APP附近院所地圖半徑與位置功能；不推論庫存或營業狀態。"
+    },
+    {
+      "source_id": "tw24_telemedicine_rules_20261122",
+      "title": "全國法規資料庫：通訊診察治療辦法（修正2024-01-22）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020197",
+      "claim": "通訊診療可適用類別、穩定複診／初診處方差異、管制藥例外、機構計畫、身分確認、知情同意、隱私及健保依相關法律給付。",
+      "supporting_passage": "第3、16、18至21條列通訊診療適用情況、處方條件、機構核准、身分確認、知情同意、隱私與健保給付規定；自2024-07-01施行。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "直接讀取全國法規資料庫通訊診療辦法第3、16、18至22條及沿革，分開核對修正、核准、開方和施行規定。"
+    }
+  ],
+  "localization_changes": "實質再審慢箋分次領藥、跨縣市調劑、委託續方與通訊診療：補上跨縣市尋找特約藥局及電話確認庫存／營業時間，依現行法規說明90日總量、每次30日、前次給藥期滿前10日內續領及一次領足法定例外；合併重複法規日期並分列修正日與施行日。",
+  "review_method": "重讀原作主題、2026-10-20正文與review、既有來源及現行正文；逐條讀取全國法規資料庫和健保署官方服務頁，分開核對慢箋、委託續方與通訊診療規則。核對條文修正與施行日期、APP搜尋能提供的功能及不能保證的庫存／營業資訊。未以服務使用量推估個人安全或成功率。AI來源核查不等於法律或醫療專業審閱。",
+  "limits": [
+    "健保醫療辦法第22條修正日為2024-06-20，該條自2024-08-01施行；通訊診療辦法於2024-01-22修正並自2024-07-01施行。法規資料庫本次標示整編截止2026-11-13。",
+    "管制藥、個別疾病、藥品供應、院所服務資格及健保給付可能另有條件；本文未對任何院所、平台或個人作資格認證。",
+    "APP只提供院所及藥局位置，本次未查詢個別藥局庫存或即時營業時間；出發前需自行電話確認。",
+    "尚未取得醫師、藥師及醫療法律專業的獨立審閱；AI法規核對不是個案法律意見、藥事調劑或健保核付。"
+  ],
+  "source_reviewed_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v4",
+    "before_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
+    "after_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
+    "before_reader_sha256": "a9a9873ad9a5ead4c54cafc3c30d16bb6a78e366ed65b50485e2404d4e51651e",
+    "after_reader_sha256": "51c62e697b667806b60bab1e07914501a7cd74badb96ad5f03cdb3036369cc2e"
+  },
+  "before_sha256": "e094db2119d15d8016d3340a766e5ef421002f0b6a4db50cbd46aac95d396618",
+  "after_sha256": "057357a28f941904786b9e14805b89c53744fc133b2780120b9539e6448b6947",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-feeding-nutrition-tw24-prescription-recheck-20261122.json",
+  "source_bundle_sha256": "40e333a4ce1d986dd767ea01578693146b7fcc797410ab453ca0099ab7d0a928",
+  "source_ids": [
+    "tw24_nhi_chronic_rx_20261122",
+    "tw24_nhi_medical_rules_20261122",
+    "tw24_nhi_app_locator_20261122",
+    "tw24_telemedicine_rules_20261122"
+  ],
+  "frequency_assessment": "慢箋領藥、委託續方及通訊診療是服務流程，不是疾病事件；本次未找到可代表全台、按同一服務失敗定義及使用者母數計算的調劑失敗、遠距誤診或等候時間發生率，不以服務量推估個人機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "各縣市、藥局的實際藥品庫存和營業時間須由讀者出發前確認。",
+    "個別病況是否符合委託續方或通訊診療、適用藥品與健保給付，須由醫師、院所及健保署依當期規定判斷。",
+    "尚待獨立醫師、藥師與醫療法律專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "家庭醫學／慢性病照護",
+      "藥事調劑",
+      "醫療法律",
+      "健保給付實務"
+    ],
+    "status": "pending",
+    "reason": "本次為AI輔助來源核對，尚未取得具名且具資格的獨立專業審閱。"
+  },
+  "prior_revision": "968afd839664c869bd7c5834717ab8a0c6a5dbdd",
+  "prior_review_sha256": "a2a0aef060c6b8a52b7a020c9ad6cc489d15ccbddc372964ec0193fb77f5321d",
+  "prior_reviewed_at": "2026-10-20",
+  "prior_review_due_at": "2026-12-31",
+  "prior_source_reviewed_sha256": "daa1ed1769a0db386014dd8d59255a414a465b1759603ace34f9c537143313d6",
+  "prior_manifest_entry_sha256": "fabad40e23ede9b56171115ad63f0ba74fe824f455b199f18eda816603961db9",
+  "previous_body": "<!-- TW-ID: TW-24-014 -->\n\n# 慢箋分次領藥、代領與通訊診療須分別確認資格\n\n## 適用情境與優先做法\n\n呼吸、意識異常或其他急性危險先119或立即就醫，不等視訊連線、代領人回來或線上續方。新症狀、療效變差或用藥反應先告知醫療團隊，不能只說「照上次開」。\n\n先分清三件事：持已開立有效慢箋到藥局調劑、本人不能就醫而委託他人向醫師陳述病情續開相同方劑、由醫師直接通訊診療。三者條件不同，家人有健保卡不等於能代替所有診察。\n\n## 臺灣實際流程與下一步\n\n委託續方須符合健保醫療辦法第7條特殊情形，如醫師認定行動不便、失智，或依法提供所需文件；醫師仍須確信掌握病情，且限繼續相同方劑。先電話問原院所需要何種證明或切結、受託人資訊與處方；病況改變不能靠代述自行加藥換藥。已開好的處方如何代取，另向調劑院所確認。\n\n通訊診療先向原團隊確認適用類別及核准服務。慢病照護計畫、長照與行動不便等特殊類別通常限複診；開方須病況穩定。山地離島、災害等另有法定條件，不因此推論所有初診皆可或皆不可遠距。醫師認為不合適時仍需改採實際診療；不可把一般聊天或私人傳健保卡照片當成合法醫療。\n\n## 成本與預期效益\n\n事件頻率：代領、通訊診療是服務安排，不是疾病事件；目前沒有可代表全臺的代領失敗、遠距誤診或等候時間發生率，不用服務量推算個人安全性。先問可安排時段、費用、健保或自費項目，以及處方交付、調劑地點與送達時間；線上預約成功不保證當日拿藥。\n\n## 限制、例外與常見誤解\n\n通訊診察治療辦法2024-01-22修正、07-01施行。第16條對管制藥原則限制但有法定例外，不寫成一律可開或一律禁止；第18至21條涉及核准、身分確認、同意、隱私及健保另依規定。平台列出的服務不代表個案已符合健保給付；請依健保署規定及院所評估確認資格。\n\n慢箋一般總量至多90日、通常分次30日內，效期與提前10日、一次領足例外請與原藥局核對；不是有家屬代領就能突破效期或任意囤藥。\n\n## 參考資料\n\n- [健保署：處方用藥說明與慢性病連續處方箋](https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html)\n\n- [通訊診察治療辦法（113年7月1日施行）](https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020197)\n\n- [全民健康保險醫療辦法第22、26、28條](https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009)\n",
+  "previous_source_ids": [
+    "ch24_chronic",
+    "ch24_tele",
+    "follow_nhi_rules"
+  ],
+  "prior_review_claims": [
     {
       "url": "https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html",
       "claim": "TW-24-014：慢性病連續處方箋須由醫師評估；一般規定最長90日、分次調劑且每次不逾30日；調劑與替代仍受藥事規範。",
@@ -29,20 +124,124 @@
       "retrieval_method": "實讀健保醫療辦法7、22至25及28條；法規整編截止2026-10-08，未逐筆追核之後公報與當期例外公告。"
     }
   ],
-  "localization_changes": "本批獨立補寫急症分流、臺灣領藥／肝炎／契約流程與統計界線，未更動原作保全。",
-  "review_method": "逐條AI輔助實讀臺灣官方HTML、指定法條與PDF文字，區分未取原頁／部分索引與完整附件範圍；本批具體修改、統計定義與施行日期另記批次證據。",
-  "limits": [
-    "假期提前領藥有特定時段公告，不可把往年特殊措施當永久通則；管制藥品、個別慢病項目及通訊診療適用條件可能另有約束。",
-    "研究、醫療與保險個案依主治醫師、健保署或地方主管機關當期規則核定；2026年後新規需重新確認。",
-    "獨立醫師、藥師、肝臟專科、法律與照護專業審查尚待；AI來源核對不是臨床、核付、院所核准或契約個案判定。",
-    "法規整編截止2026-10-08，未逐筆核之後公報、全部當期支付附件及各院所/機構個案；未做實際申請、諮詢或即時庫存查詢。"
+  "prior_source_checks": [
+    {
+      "url": "https://www.nhi.gov.tw/ch/cp-5798-d1af3-2844-1.html",
+      "claim": "TW-24-014：慢性病連續處方箋須由醫師評估；一般規定最長90日、分次調劑且每次不逾30日；調劑與替代仍受藥事規範。",
+      "supporting_passage": "編者核對摘要，非逐字引文：慢性病連續處方箋須由醫師評估；一般規定最長90日、分次調劑且每次不逾30日；調劑與替代仍受藥事規範。",
+      "accessed_at": "2026-10-17",
+      "retrieval_method": "舊健保入口直接403，未作具體領藥規則依據；改由實讀健保醫療辦法7及22至25條，保留原來源物件與日期。"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020197",
+      "claim": "TW-24-014：遠距診療按病人情形、醫療機構條件、病人身分確認及處方限制進行，非所有疾病可任意視訊初診。",
+      "supporting_passage": "編者核對摘要，非逐字引文：遠距診療按病人情形、醫療機構條件、病人身分確認及處方限制進行，非所有疾病可任意視訊初診。",
+      "accessed_at": "2026-10-20",
+      "retrieval_method": "實讀法規3至20及22條文字；2024-01-22修正、07-01施行；未讀山地離島附表全部名單，未認證平台或院所核准。"
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009",
+      "claim": "TW-24-014：本批限健保醫療辦法7條委託續方、22至25條用量／效期／分次及例外、28條施行；與原source物件支持26條替代的範圍分開。",
+      "supporting_passage": "編者核對摘要，非逐字引文：本批限健保醫療辦法7條委託續方、22至25條用量／效期／分次及例外、28條施行；與原source物件支持26條替代的範圍分開。",
+      "accessed_at": "2026-10-20",
+      "retrieval_method": "實讀健保醫療辦法7、22至25及28條；法規整編截止2026-10-08，未逐筆追核之後公報與當期例外公告。"
+    }
   ],
-  "source_reviewed_sha256": "daa1ed1769a0db386014dd8d59255a414a465b1759603ace34f9c537143313d6",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v3",
-    "before_sha256": "daa1ed1769a0db386014dd8d59255a414a465b1759603ace34f9c537143313d6",
-    "after_sha256": "e094db2119d15d8016d3340a766e5ef421002f0b6a4db50cbd46aac95d396618",
-    "before_reader_sha256": "9213cc5b181514591f103c11e3be04c6f2b6a1ad9f85ca66912a5d7cd7de86c6",
-    "after_reader_sha256": "fa5829cc3b10ae9a8adb96e83149019207ba9feff27fbbd2f54391628fd4d573"
-  }
+  "new_source_ids": [
+    "tw24_nhi_medical_rules_20261122",
+    "tw24_nhi_chronic_rx_20261122",
+    "tw24_nhi_app_locator_20261122",
+    "tw24_telemedicine_rules_20261122"
+  ],
+  "source_records_reused": [],
+  "retired_sources": [
+    {
+      "id": "ch24_chronic",
+      "prior_source_sha256": "e469bd305b3e8dd89427330c6c572efdecefe7f5959cf7c7560e5a855470a078",
+      "replacement_ids": [
+        "tw24_nhi_chronic_rx_20261122",
+        "tw24_nhi_medical_rules_20261122",
+        "tw24_nhi_app_locator_20261122"
+      ],
+      "reason": "舊健保入口只留概括摘要；本次改用健保署病人慢箋說明、現行法條及APP位置查詢頁，分別支持領藥、例外與找藥局主張。"
+    },
+    {
+      "id": "ch24_tele",
+      "prior_source_sha256": "d1ef579cb7ba3dc2add1a10ca5c295cca37487f7a691ceee2b071d929fef5823",
+      "replacement_ids": [
+        "tw24_telemedicine_rules_20261122"
+      ],
+      "reason": "改用現行通訊診療法規來源，逐項支持適用情況、開方限制、機構計畫、身分、同意、隱私及健保給付。"
+    },
+    {
+      "id": "follow_nhi_rules",
+      "prior_source_sha256": "5dbbce45bad12f4a19f21e092ec303b2720a6eb2f81364db0240cc594c4757d1",
+      "replacement_ids": [
+        "tw24_nhi_medical_rules_20261122"
+      ],
+      "reason": "舊法規引用含不屬本篇主題的藥品替代主張；本次重讀現行條文，聚焦第7、14、15、22至25及28條。"
+    }
+  ],
+  "topic_fidelity_assessment": "保留原作就醫與慢性病續方讀者需求，將中國互聯網醫院制度替換為台灣健保慢箋調劑、法定委託續方與台灣通訊診療三種不同流程。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "在醫院確診過、病情穩定的慢性病要續方，可以在這家醫院的互聯網醫院線上複診開藥，第一次看這個病不能在網上看",
+    "reader_content_decision": "保留慢性病延續用藥與遠距就醫的實用問題；分開說明跨縣市慢箋調劑、無法親自就醫時法定委託續方及通訊診療適用條件，不把中國互聯網醫院規則套用台灣。"
+  },
+  "cost_time_benefit_assessment": "找附近特約藥局可使用健保快易通位置地圖；通話確認庫存、受理情形和營業時間可避免白跑。藥品費用按健保規定與個別狀況計算，通訊診療是否給付或自費需先向院所確認；未取得具代表性的全國等候時間資料。",
+  "legal_temporal_checks": [
+    {
+      "law": "全民健康保險醫療辦法",
+      "checked_at": "2026-11-22",
+      "relevant_provisions": [
+        "第7條",
+        "第14條",
+        "第15條",
+        "第22條",
+        "第24條",
+        "第25條",
+        "第28條"
+      ],
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第22條"
+          ],
+          "promulgated_at": "2024-06-20",
+          "effective_at": "2024-08-01",
+          "basis": "現行法規第28條明載2024-06-20修正發布之第22條自2024-08-01施行；其餘本篇使用條文依2026-11-13法規資料庫現行版本查核。"
+        }
+      ],
+      "latest_law_version_context": "法務部全國法規資料庫現行頁標示修正日期2024-06-20，並標示法規整編資料截止2026-11-13；本次直接核對所列條文。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0060009"
+      ]
+    },
+    {
+      "law": "通訊診察治療辦法",
+      "checked_at": "2026-11-22",
+      "relevant_provisions": [
+        "第3條",
+        "第16條",
+        "第18條",
+        "第20條",
+        "第21條",
+        "第22條"
+      ],
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "本辦法及第16條適用範圍"
+          ],
+          "promulgated_at": "2024-01-22",
+          "effective_at": "2024-07-01",
+          "basis": "現行法規頁標示2024-01-22修正；第22條明定本辦法自2024-07-01施行。"
+        }
+      ],
+      "latest_law_version_context": "法規資料庫本次標示整編截止2026-11-13；直接核對適用類別、開方、機構計畫、身分、同意、隱私及健保給付條文。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020197"
+      ]
+    }
+  ]
 }

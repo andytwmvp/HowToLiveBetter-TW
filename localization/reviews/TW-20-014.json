@@ -1,0 +1,110 @@
+{
+  "id": "TW-20-014",
+  "reviewer": "ChatGPT（AI協助來源核對；未取得獨立專業審閱）",
+  "jurisdiction": "TW",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
+  "target_path": "locales/zh-TW/book/ch20/TW-20-014.md",
+  "target_sha256": "7b4ff708844ca0f153a6aecca787dc544fdd74ea2090c0cde1af21cee7b22ebc",
+  "source_reviewed_sha256": "7b4ff708844ca0f153a6aecca787dc544fdd74ea2090c0cde1af21cee7b22ebc",
+  "before_sha256": null,
+  "after_sha256": "7b4ff708844ca0f153a6aecca787dc544fdd74ea2090c0cde1af21cee7b22ebc",
+  "source_bundle_path": "localization/tw-edition/sources/ch20-feeding-nutrition-tw24-prescription-recheck-20261122.json",
+  "source_bundle_sha256": "40e333a4ce1d986dd767ea01578693146b7fcc797410ab453ca0099ab7d0a928",
+  "source_checks": [
+    {
+      "source_id": "tw20_hpa_infant_b12_20261122",
+      "title": "國民健康署孕產兒關懷網站：1歲前寶寶容易缺乏哪些營養素",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent/3560?type=01",
+      "claim": "嬰兒B12主要來自動物性食物；飲食來源單一或父母為素食者時可能攝取不足，純素嬰兒應諮詢醫師。",
+      "supporting_passage": "嬰兒B12主要來自動物性食物；飲食來源單一或父母為素食者時可能攝取不足，純素嬰兒應諮詢醫師。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取國健署嬰兒營養頁面B12段落，核對食物來源及純素嬰兒諮詢建議。"
+    },
+    {
+      "source_id": "tw20_hpa_maternal_b12_20261122",
+      "title": "國民健康署孕產兒關懷網站：孕期飲食與營養",
+      "url": "https://mammy.hpa.gov.tw/Home/NewsKBContent?id=3585&type=01",
+      "claim": "全素孕婦與哺乳者應留意維生素B12，並與醫師討論補充方式。",
+      "supporting_passage": "全素孕婦與哺乳者應留意維生素B12，並與醫師討論補充方式。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "核對國健署全素孕哺營養頁面對B12與補充諮詢的提醒。"
+    },
+    {
+      "source_id": "tw20_ods_b12_consumer_20261122",
+      "title": "美國國家衛生研究院膳食補充品辦公室：維生素B12消費者資料表",
+      "url": "https://ods.od.nih.gov/factsheets/VitaminB12-Consumer/",
+      "claim": "一般植物性食物通常不含B12，除非經維生素B12強化；本篇只用於食物來源說明，不套用美國建議量。",
+      "supporting_passage": "一般植物性食物通常不含B12，除非經維生素B12強化；本篇只用於食物來源說明，不套用美國建議量。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取NIH ODS消費者資料表中B12食物來源段落；只作植物性來源背景，不套用美國建議量。"
+    },
+    {
+      "source_id": "tw20_hpa_formula_feeding_20261122",
+      "title": "國民健康署：嬰兒配方食品及奶瓶餵食指導",
+      "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=505&pid=17298&sid=18677",
+      "claim": "無法完全以母乳餵養時，可依母嬰狀況選擇合適嬰兒配方食品；該頁更新日期為2025-12-12。",
+      "supporting_passage": "無法完全以母乳餵養時，可依母嬰狀況選擇合適嬰兒配方食品；該頁更新日期為2025-12-12。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "讀取國健署嬰兒配方食品頁面，核對適用情境與頁面更新日期。"
+    }
+  ],
+  "localization_changes": "首次正式發布；保留原作固定ID及讀者需要，依台灣官方或原始研究來源獨立撰寫；不套用中國制度、費用、補充劑量或風險判斷。",
+  "review_method": "逐篇核對manifest原作固定ID、原題、上游版本及雜湊，重讀現有草稿並直接核對source_checks所列原始資料。依台灣情境核實實際行動、適用對象、費用與限制；統計明列期間、範圍、對象、事件定義、分子分母、資料型態與偏差，沒有適當台灣資料時不推估。AI來源查核不等於專業審閱；首次正式發布不計入歷史正文再審。",
+  "limits": [
+    "未找到可代表台灣全國、依孕哺飲食和嬰兒診斷方式分層的B12缺乏率。",
+    "全素嬰兒的B12、鐵、能量和其他營養配置仍需由熟悉嬰幼兒營養的專業人員一併評估。"
+  ],
+  "upstream_commit": "3f59f98be11305902681a8f20ed073c4c4588eee",
+  "upstream_text_sha256": "3f7d86638747e388040e0f51158c9994321791967920c65a3369c911c8865a52",
+  "source_ids": [
+    "tw20_hpa_infant_b12_20261122",
+    "tw20_hpa_maternal_b12_20261122",
+    "tw20_ods_b12_consumer_20261122",
+    "tw20_hpa_formula_feeding_20261122"
+  ],
+  "frequency_assessment": "本次未找到可代表台灣全國、依孕哺飲食型態與嬰兒診斷方式分層的維生素B12缺乏率；海外病例或個案不能換算台灣家庭個人機率。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "未找到可代表台灣全國、依孕哺飲食和嬰兒診斷方式分層的B12缺乏率。",
+    "全素嬰兒的B12、鐵、能量和其他營養配置仍需由熟悉嬰幼兒營養的專業人員一併評估。",
+    "尚未取得獨立專業審閱：婦產科、兒科、嬰幼兒營養、營養師。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "婦產科",
+      "兒科",
+      "嬰幼兒營養",
+      "營養師"
+    ]
+  },
+  "prior_chapter_draft_sha256": "6cfffd505ff5394fa42621c980423cc74603e7716761efb7c45738bcf5d9cada",
+  "prior_structured_draft_sha256": null,
+  "prior_structured_draft_review": null,
+  "topic_fidelity_assessment": "保留素食孕哺及嬰兒B12來源的營養問題；不要求改採肉食，改為核實強化食品或補充來源、避免植物飲品取代嬰兒配方食品，並把嬰兒營養評估交由台灣專業人員。",
+  "topic_fidelity_review": {
+    "decision": "retain_original_reader_need_with_taiwan_context",
+    "original_question": "懷孕、餵奶時在吃素，就補維生素 B12 或吃強化食品；孩子的輔食要有動物性食物，非要全素先找醫生",
+    "reader_content_decision": "保留孕哺及嬰兒飲食的B12營養規劃，尊重全素家庭，說明可靠來源、避免一般植物飲品替代配方奶及需由專業人員評估的嬰兒營養。",
+    "historical_claim_decisions": [
+      {
+        "original_claim": "若家庭全素，嬰兒副食品必須包含動物性食物。",
+        "decision": "replace_coercive_food_instruction_with_nutrient_planning",
+        "reason": "B12可由適當強化食品或補充來源規劃；個別嬰兒營養需評估，不以單一飲食型態要求家庭改吃肉。"
+      },
+      {
+        "original_claim": "植物性食品或發酵食品都能自然提供足夠B12。",
+        "decision": "clarify_reliable_sources",
+        "reason": "NIH ODS與台灣國健署資料指出一般未強化植物性食品不是可靠B12來源。"
+      }
+    ]
+  },
+  "cost_time_benefit_assessment": "強化食品與補充品價格和含量依產品而異；營養諮詢費用依院所與健保適用情形而異，本文不虛列金額。",
+  "legal_date_assessment": {
+    "checked_at": "2026-11-22",
+    "assessment": "本篇未提供會變動的法律資格或給付額度；服務與衛教資料按來源標示的適用日期查核。法規或服務內容改版時，依最新主管機關資料重新確認。"
+  },
+  "prior_manifest_entry_sha256": "4cc3164a94a7ae3b66d2e61832158e7854ed64b7c5707f76c8a0df5c3b143a36"
+}
