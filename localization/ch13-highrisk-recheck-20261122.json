@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "batch_date": "2026-11-22",
+  "baseline_main_sha": "930acb1bd0bbdd7592e7cfd5b85e80f47767a91e",
+  "reviewed_ids": [
+    "TW-13-001",
+    "TW-13-003",
+    "TW-13-007",
+    "TW-13-012"
+  ],
+  "new_source_ids": [
+    "ch13_cpr_nfa_adult_20170501",
+    "ch13_hpa_stroke_20261028",
+    "ch13_hpa_cardiac_20260311"
+  ],
+  "counts_before": {
+    "json_files_checked": 716,
+    "registry_sources": 1550,
+    "core_reviewed_entries": 348
+  },
+  "counts_after": {
+    "json_files_checked": 718,
+    "registry_sources": 1553,
+    "core_reviewed_entries": 348
+  },
+  "source_ids_by_item": {
+    "TW-13-001": [
+      "ch13_cpr_fire",
+      "ch13_cpr_faq",
+      "ch13_cpr_nfa_adult_20170501",
+      "retro_nfa_ohca_2024"
+    ],
+    "TW-13-003": [
+      "ch13_hpa_stroke_20261028",
+      "ch13_cerebellar_vghtpe",
+      "retro_stroke_nhia_2023",
+      "retro_nhi_disease_2025"
+    ],
+    "TW-13-007": [
+      "ch13_hpa_cardiac_20260311",
+      "ch13_heart_fire",
+      "retro_nhi_disease_2025"
+    ],
+    "TW-13-012": [
+      "ch13_bleeding_mnd"
+    ]
+  },
+  "professional_review_pending": [
+    "TW-13-001",
+    "TW-13-003",
+    "TW-13-007",
+    "TW-13-012"
+  ],
+  "notes": [
+    "本批為AI輔助逐主張來源與台灣情境再審；不代表取得獨立專業審閱。",
+    "健保疾病就醫人數及消防救護結果數均保留其行政統計口徑，不換算個人發生率。",
+    "沒有可信台灣嚴重外部出血發生率與分母，明確記為資料不足。"
+  ]
+}
