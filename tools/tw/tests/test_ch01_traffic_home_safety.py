@@ -26,7 +26,7 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
   self.assertIn("19件",b["TW-01-001"]);self.assertIn("21人死亡",b["TW-01-001"]);self.assertNotIn("2,858人",b["TW-01-001"])
   self.assertIn("1,055人",b["TW-01-002"]);self.assertNotIn("932人",b["TW-01-002"]);self.assertNotIn("初估",b["TW-01-002"]);self.assertIn("材料",b["TW-01-002"]);self.assertNotIn("衝擊吸收不符",b["TW-01-002"])
   self.assertIn("3,171次",b["TW-01-003"]);self.assertIn("不是全臺房屋戶數",b["TW-01-003"])
-  self.assertIn("24件",b["TW-01-004"]);self.assertIn("22件",b["TW-01-004"]);self.assertNotIn("118件",b["TW-01-004"]);self.assertIn("沒有使用燃氣熱水器的家戶數",b["TW-01-004"])
+  self.assertIn("24件",b["TW-01-004"]);self.assertIn("22件",b["TW-01-004"]);self.assertNotIn("118件",b["TW-01-004"]);self.assertIn("沒有燃氣設備家戶數或曝露時間分母",b["TW-01-004"])
   for key in IDS:
    self.assertIn("119",b[key]);self.assertTrue("頻率" in b[key] or "分母" in b[key])
    self.assertNotIn("撥120",b[key]);self.assertNotIn("打120",b[key])
@@ -47,7 +47,7 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
     assert_body_version_matches_review_or_cleanup(self, key, rows[key]["after_sha256"], hashlib.sha256(raw).hexdigest())
   b={x["id"]:x["body"] for x in rt["items"]}
   self.assertIn("25,895次",b["TW-01-026"]);self.assertIn("71.5%",b["TW-01-026"]);self.assertIn("每三年",b["TW-01-026"])
-  self.assertIn("墜落、滾落136人",b["TW-01-034"]);self.assertIn("墜落49人",b["TW-01-034"]);self.assertIn("TW-19-010.md",b["TW-01-034"])
+  self.assertIn("墜落」91人",b["TW-01-034"]);self.assertIn("2025年同期",b["TW-01-034"]);self.assertIn("TW-19-010.md",b["TW-01-034"])
   self.assertEqual(evidence["counts_after"]["substantive_rechecks"],evidence["counts_before"]["substantive_rechecks"]+len(evidence["scope"]["substantive_recheck_ids"]))
   self.assertEqual(evidence["counts_after"]["runtime_sources"],evidence["counts_before"]["runtime_sources"]+len(evidence["new_source_ids"]))
   self.assertEqual(evidence["counts_after"]["source_registry"],evidence["counts_before"]["source_registry"]+len(evidence["new_source_ids"]))
@@ -63,9 +63,9 @@ class Chapter01TrafficHomeTests(unittest.TestCase):
  def test_fall_death_statistics_are_not_comparable_rates(self):
   b={x["id"]:x["body"] for x in validate_runtime()["items"]}
   self.assertIn("沒有工作者人數或工時分母",b["TW-01-034"])
-  self.assertIn("不是墜落者致死率",b["TW-01-034"])
-  self.assertIn("2025全年「墜落、滾落」與2026上半年「墜落」的分類和期間不同",b["TW-01-034"])
-  self.assertIn("不能用來算個人墜落機率或直接比較趨勢",b["TW-01-034"])
+  self.assertIn("案件數不能換算個人機率或致死率",b["TW-01-034"])
+  self.assertIn("「墜落」也和統計中另列的「跌倒」不同",b["TW-01-034"])
+  self.assertIn("沒有工作者人數或工時分母",b["TW-01-034"])
  def test_recheck_batch_added_no_core_articles(self):
   evidence=load("localization/ch01-p0-transport-fire-fall-recheck-20261026.json")
   self.assertEqual(evidence["scope"]["new_core_ids"],[])

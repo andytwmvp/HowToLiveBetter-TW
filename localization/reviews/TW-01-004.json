@@ -1,81 +1,288 @@
 {
   "id": "TW-01-004",
-  "reviewer": "ChatGPT（臺灣官方法規、統計及原始公開資料逐項AI輔助核對；非獨立專業簽證）",
+  "reviewer": "ChatGPT（臺灣官方及原始研究來源逐項AI輔助核對；非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-28",
-  "review_due_at": "2027-01-31",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
   "target_path": "locales/zh-TW/book/ch01/TW-01-004.md",
-  "target_sha256": "4e5d9086346ea1feb53f025add47a75c493f1ecf51a6037bf49bdfb65291d734",
+  "target_sha256": "43562eda47a2de82ec2de316fe0c1101865c122fe97d2960761d27be85dc4f4a",
+  "source_reviewed_sha256": "43562eda47a2de82ec2de316fe0c1101865c122fe97d2960761d27be85dc4f4a",
+  "prior_review_sha256": "7d774ddb1e2f2a036ad4a05319ad3e62bab6aaa9b2dacc4ffbe14f7d697f6031",
+  "source_ids": [
+    "ch01_nfa_co_2024",
+    "ch01_klfd_co_2025",
+    "ch01_nfa_co_latest_20261120",
+    "ch01_wda_co_first_aid_2026",
+    "ch01_vghtpe_inhalation_firstaid",
+    "ch01_nfa_gas_stove_safety_20261122",
+    "ch01_bsmi_plastic_hose_use_20260309",
+    "ch01_bsmi_plastic_hose_marking_2024",
+    "ch01_tpe_gas_leak_20261112",
+    "ch01_tainan_fire_gas_leak_response_20261122",
+    "ch01_ftc_gas_check_2023",
+    "ch01_gasheater_installer_rule_current",
+    "ch01_fair_trade_act25_current"
+  ],
   "source_checks": [
     {
+      "source_id": "ch01_nfa_co_2024",
+      "title": "內政部消防署：2024年燃氣熱水器一氧化碳中毒統計及預防",
       "url": "https://www.nfa.gov.tw/cht/index.php?article_id=17797&code=list&flag=detail&ids=1468",
-      "claim": "消防署2024年一氧化碳中毒事故24件、4人死亡、59人送醫，其中21件與屋外式熱水器裝在通風不良處有關。",
-      "supporting_passage": "直接重讀消防署年度新聞稿；事故、死亡及送醫是不同單位，21件是事故原因分類，無家戶或設備暴露分母。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接重讀官方來源並核對所列主張。"
+      "claim": "2024年全國24起事故、死亡4人、送醫59人，21起與屋外型熱水器通風不良有關；行政事故與原因分類，無家戶分母。",
+      "supporting_passage": "消防署統計2024年一氧化碳中毒事故24件、4人死亡、59人送醫，其中21件與屋外式熱水器裝在通風不良處相關；事故件數無使用戶數分母。",
+      "accessed_at": "2026-10-25",
+      "retrieval_method": "已保存的官方新聞稿實讀紀錄列明事故數、死亡、送醫和原因分類；本次重新開啟遇redirect loop，保留原實讀日期，不宣稱今日成功重讀。"
     },
     {
+      "source_id": "ch01_klfd_co_2025",
+      "title": "基隆市消防局：依消防署114年統計的2025年全國一氧化碳中毒數字",
       "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
-      "claim": "基隆市消防局2025-12-31公告引述消防署114年統計：2025年全國22件事故、5人死亡、59人送醫。",
-      "supporting_passage": "直接讀取地方消防局公告並明示它是轉引中央年度行政數字；無設備使用戶數或家庭暴露母數，不能推算趨勢或個人風險。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接重讀官方來源並核對所列主張。"
+      "claim": "基隆市消防局轉引消防署114年全國統計：2025年22起事故、死亡5人、送醫59人。",
+      "supporting_passage": "基隆市消防局於2025-12-31公告引述消防署114年統計：2025年全國一氧化碳中毒事故22件、5人死亡、59人送醫；地方公告轉引全國行政數字，無家戶或暴露分母。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22重新開啟地方消防局原文；確認其為中央年度數字的地方轉引。"
     },
     {
+      "source_id": "ch01_nfa_co_latest_20261120",
+      "title": "內政部消防署：2026年截至11月19日一氧化碳中毒事故與預防",
+      "url": "https://www.nfa.gov.tw/cht/index.php?article_id=22367&code=list&flag=detail&ids=1468",
+      "claim": "2026-01-01至11-19全國12起一氧化碳中毒事故、死亡1人、送醫48人，其中10起與屋外型熱水器設於通風不足場所相關。",
+      "supporting_passage": "消防署統計2026年1月1日至11月19日有12起一氧化碳中毒事故、死亡1人、送醫48人，其中10起與屋外型熱水器裝在通風不足場所相關；為未滿全年的行政事故數及原因分類，沒有使用戶數或暴露分母。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀消防署2026-11-20公告及指定統計段落；這是未滿全年的行政事故數。"
+    },
+    {
+      "source_id": "ch01_wda_co_first_aid_2026",
+      "title": "勞動部勞動力發展署：一氧化碳中毒急救3步驟",
       "url": "https://fw.wda.gov.tw/wda-employer/home/file/2c95efb393eded2e0193f23767970e30",
-      "claim": "勞動部官方急救教材建議疑似一氧化碳中毒者移至室外新鮮空氣處並撥119；只能在不延誤撤離且可安全操作時處理設備。",
-      "supporting_passage": "重讀勞動力發展署公開教材；救援者不進入未確認安全的疑似汙染區。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接重讀官方來源並核對所列主張。"
+      "claim": "疑似一氧化碳中毒先移至戶外新鮮空氣處並撥119，救援者須先確保自身安全。",
+      "supporting_passage": "官方急救教材提醒疑似中毒時停止燃氣設備（能安全做到時）、通風、移至室外新鮮空氣處並撥119；不可延誤求援。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "本次重新開啟勞動力發展署宣導頁並對照既有衛教資料；不把它當成進入疑似汙染區的許可。"
     },
     {
+      "source_id": "ch01_vghtpe_inhalation_firstaid",
+      "title": "臺北榮民總醫院護理部：吸入性損傷之緊急照護",
       "url": "https://ihealth.vghtpe.gov.tw/media/728",
-      "claim": "臺北榮總吸入性損傷衛教要求迅速移離汙染現場、119送醫並提醒救援人員須有充分防護。",
-      "supporting_passage": "重讀公立醫院護理衛教；不把衛教當成個案醫囑或無防護救援許可。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接重讀官方來源並核對所列主張。"
+      "claim": "疑似吸入性傷害應迅速離開汙染現場並就醫；未有充分防護者不可進入救人。",
+      "supporting_passage": "臺北榮總護理衛教指出CO暴露者應迅速移離汙染現場並119送醫；救援人員進入前須充分防護，避免無防護者進入疑似汙染區。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22重新開啟臺北榮總護理衛教頁並核對適用於緊急撤離的內容，不作個案醫囑。"
     },
     {
-      "url": "https://www.moeaea.gov.tw/ECW/populace/content/Content.aspx?menu_id=120",
-      "claim": "能源署宣導瓦斯漏氣時避免電器開關火花、能安全時緩慢通風；嚴重或持續洩漏應撤到室外並從安全處通知供氣業者或119。",
-      "supporting_passage": "重讀能源署意外處理指引；區分瓦斯漏氣與無色無味的一氧化碳中毒。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接重讀官方來源並核對所列主張。"
+      "source_id": "ch01_nfa_gas_stove_safety_20261122",
+      "title": "內政部消防署：淺談瓦斯爐使用安全",
+      "url": "https://mag.nfa.gov.tw/article.php?id=3714",
+      "claim": "消防署一般建議家用瓦斯爐使用年限約5年；材質、使用與清潔會影響壽命，並非所有爐具或管材法定期限。",
+      "supporting_passage": "消防署消防月刊說明家用瓦斯爐一般建議使用年限約5年，但實際壽命受材質、使用習慣與清潔保養影響；依瓦斯種類選爐具、使用合格管材、定期檢查，故障由合格或原廠技術人員檢修。不是適用所有管材的法定期限。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀消防署消防月刊相關維護段落、適用管材與安裝指引。"
     },
     {
+      "source_id": "ch01_bsmi_plastic_hose_use_20260309",
+      "title": "經濟部標準檢驗局：燃氣用塑膠軟管選購與使用注意事項",
+      "url": "https://www.bsmi.gov.tw/wSite/ct?ctNode=8155&mp=3&xItem=126235",
+      "claim": "燃氣用塑膠軟管須有商品檢驗標識，依器具說明配對接頭、尺寸及長度，合格人員組裝並按說明檢查更換。",
+      "supporting_passage": "燃氣用塑膠軟管屬應施檢驗商品；應核對商品檢驗標識及產品標示，依燃氣器具說明搭配接頭、尺寸與長度，由合格專業技術人員組裝，定期檢查並依說明書更換，破損時停止使用。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀標檢局2026-03-09頁面，核對選購、安裝與檢查段落。"
+    },
+    {
+      "source_id": "ch01_bsmi_plastic_hose_marking_2024",
+      "title": "經濟部標準檢驗局：燃氣用塑膠軟管標示項目範例",
+      "url": "https://www.bsmi.gov.tw/wSite/public/Data/f1727772370076.pdf",
+      "claim": "CNS 15996燃氣用塑膠軟管標示例列製造年月、管徑、燃氣種類、建議使用期限及適用壓力。",
+      "supporting_passage": "CNS 15996燃氣用塑膠軟管標示範例列商品檢驗標識、製造年月、標稱管徑、燃氣種類、建議使用期限及適用壓力等標示；不表示其他材質燃氣管具有相同標示或期限。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接讀取標檢局兩頁PDF的標示表；正文連結已校正至題名相符的正確PDF。"
+    },
+    {
+      "source_id": "ch01_tpe_gas_leak_20261112",
+      "title": "臺北市政府消防局：瓦斯管線漏氣緊急處理",
+      "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=32FE8245DE341723&sms=87415A8B9CE81B16",
+      "claim": "懷疑瓦斯漏氣時勿操作電器；只有能安全操作才關氣閥、輕推窗戶通風，隨即離開並由戶外撥119。",
+      "supporting_passage": "臺北市消防局2026-11-12更新的瓦斯漏氣FAQ提醒勿操作電器、僅在安全時關氣閥、輕推窗戶通風並離開到戶外撥119；一般民眾不應為了查漏或修管而逗留。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22重讀臺北市消防局2026-11-12更新FAQ；本文避免採用會讓讀者接近漏點的查漏步驟。"
+    },
+    {
+      "source_id": "ch01_tainan_fire_gas_leak_response_20261122",
+      "title": "臺南市政府消防局：瓦斯外洩時的「禁、關、推、離」處理原則",
+      "url": "https://119.tainan.gov.tw/News_Content.aspx?n=25533&s=8693793",
+      "claim": "臺南消防局的桶裝液化石油氣「禁、關、推、離」宣導包含安全可及時關桶閥、輕推窗戶、撤離及大量洩漏撥119。",
+      "supporting_passage": "臺南市消防局液化石油氣宣導：勿開關電器，能安全時關閉瓦斯桶閥並輕推窗戶通風，接著離開現場；大量洩漏時由安全處撥119。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀臺南市消防局液化石油氣頁及上版日期；不外推成天然氣管線維修規範。"
+    },
+    {
+      "source_id": "ch01_ftc_gas_check_2023",
+      "title": "公平交易委員會：瓦斯安檢到府服務？當心詐騙陷阱！",
       "url": "https://www.ftc.gov.tw/internet/main/doc/docDetail.aspx?docid=17418&uid=126",
-      "claim": "公平會2023-02-22公告所述具體個案冒用公用天然氣公司名稱、制服及通知，假檢查推銷器材並被認定違反公平交易法第25條。",
-      "supporting_passage": "直接重讀公平會新聞稿及個案行為；它支持該類已認定欺罔行為，不表示所有到府檢查都違法。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接重讀官方來源並核對所列主張。"
+      "claim": "公平會曾處理冒用公用天然氣公司名義、假借安檢推銷器材的具體案件；該案例不代表所有到府檢查違法。",
+      "supporting_passage": "公平會就冒用公用天然氣公司名義、制服及檢查通知推銷器材的個案作成處分，提醒查證實際事業身分與商品需求；不能推論所有合法檢查都是詐騙。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22重新開啟公平會具體案例頁，核對被指稱行為與個案範圍。"
     },
     {
+      "source_id": "ch01_gasheater_installer_rule_current",
+      "title": "全國法規資料庫：燃氣熱水器及其配管承裝業管理辦法",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0130028",
-      "claim": "第10條規定承裝業不得由未領有技術士證者安裝或維修，技術士執業時應出示承裝業工作證明及技術士證；第13至15條規範安裝標準、施工紀錄及用戶持有登錄卡。",
-      "supporting_passage": "2026-10-28直接閱讀全國法規資料庫現行辦法第10、13至15條，核對安裝、維修資格及用戶可索取、保存的紀錄。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接閱讀全國法規資料庫現行辦法第10、13至15條，核對安裝、維修資格及用戶可索取、保存的紀錄。"
+      "claim": "承裝業不得由未領技術士證者安裝或維修燃氣熱水器及其配管；執業時出示工作證明及技術士證，並依第13至15條保存施工及用戶登錄資料。",
+      "supporting_passage": "第10條規定承裝業不得由未領有技術士證者安裝或維修，技術士執業時應出示承裝業工作證明及技術士證；第13至15條規範安裝標準、施工紀錄及用戶持有登錄卡。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀全國法規資料庫現行條文第2、10、13至15及19條；本規定範圍限熱水器及其配管。"
     },
     {
+      "source_id": "ch01_fair_trade_act25_current",
+      "title": "全國法規資料庫：公平交易法第25條",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0150002",
-      "claim": "第25條禁止足以影響交易秩序的欺罔或顯失公平行為；個案違法判斷依具體事實，不代表所有到府檢查均違法。",
-      "supporting_passage": "2026-10-28直接讀取全國法規資料庫公平交易法第25條現行條文；另以公平會瓦斯安檢處分資料核對適用於冒名安檢推銷的具體事實，不泛化至合法業者檢查。",
-      "accessed_at": "2026-10-28",
-      "retrieval_method": "2026-10-28直接讀取全國法規資料庫公平交易法第25條現行條文；另以公平會瓦斯安檢處分資料核對適用於冒名安檢推銷的具體事實，不泛化至合法業者檢查。"
+      "claim": "公平交易法第25條及其適用須依具體交易事實判斷，不概括認定所有到府檢查違法。",
+      "supporting_passage": "第25條禁止足以影響交易秩序的欺罔或顯失公平行為；個案違法判斷依具體事實，不代表所有到府檢查均違法。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀全國法規資料庫現行公平交易法與第25條；不把單一處分概括成所有業者行為。"
     }
   ],
-  "localization_changes": "明列燃氣熱水器及配管安裝、維修不得由未領技術士證者執行，承裝業技術士應出示工作證明及技術士證；要求保存施工紀錄／登錄卡。將假安檢詐騙從頻率描述獨立為法律判斷：公平交易法第25條與公平會已認定之冒名推銷個案，並保留「不代表所有到府檢查違法」界線。",
-  "review_method": "2026-10-28逐篇重讀臺灣正文及所列官方法規、統計、消防／醫療／交通來源；分別核對本地情境、法律義務與違法條件、資料期間與事件定義、分子分母、緊急行動順序及來源時效。AI輔助來源再核對，不等於獨立法律、消防、醫療、交通、燃氣或統計專業審閱。",
-  "limits": [
-    "2024及2025一氧化碳事故及傷亡數無燃氣設備戶數或家庭暴露分母；事故件數、死亡與送醫人數不是同一量，不能換算個人發生率或致死率。2025數字是基隆市消防局轉引消防署，正文已揭露。",
-    "安裝維修法律資格與公平會具體假安檢個案已核對；未取得消防、燃氣承裝或公平交易法律專業獨立簽證。"
+  "statistics_assessed": [
+    {
+      "indicator": "一氧化碳中毒事故及屋外型熱水器通風不良事故分類",
+      "period": "2024-01-01至2024-12-31",
+      "scope": "臺灣全國",
+      "population": "消防機關統計的一氧化碳中毒事故及相關傷亡",
+      "numerator": {
+        "incidents": 24,
+        "deaths": 4,
+        "hospitalized": 59,
+        "outdoor_type_heater_ventilation_cases": 21
+      },
+      "denominator": null,
+      "unit": {
+        "incidents": "起事故",
+        "deaths": "人",
+        "hospitalized": "人",
+        "outdoor_type_heater_ventilation_cases": "起事故"
+      },
+      "event_definition": "行政通報的一氧化碳中毒事故；21起為事故原因分類，不是暴露戶數。",
+      "data_type": "消防行政事故統計，不是抽樣調查。",
+      "source_ids": [
+        "ch01_nfa_co_2024"
+      ],
+      "accessed_at": "2026-10-25",
+      "limitations": "無燃氣熱水器家戶數或曝露時間分母；事故數、死亡數、送醫數單位不同，不可換算個人發生率或致死率。"
+    },
+    {
+      "indicator": "一氧化碳中毒事故及傷亡",
+      "period": "2025-01-01至2025-12-31",
+      "scope": "臺灣全國；由基隆市消防局轉引消防署年度統計",
+      "population": "消防機關統計的一氧化碳中毒事故及相關傷亡",
+      "numerator": {
+        "incidents": 22,
+        "deaths": 5,
+        "hospitalized": 59
+      },
+      "denominator": null,
+      "unit": {
+        "incidents": "起事故",
+        "deaths": "人",
+        "hospitalized": "人"
+      },
+      "event_definition": "一氧化碳事故行政通報數及傷亡人數。",
+      "data_type": "地方政府引述中央行政統計。",
+      "source_ids": [
+        "ch01_klfd_co_2025"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "無家戶或使用時數分母；不可換算個人機率、致死率或單一器具風險。"
+    },
+    {
+      "indicator": "一氧化碳中毒事故及屋外型熱水器通風不足原因分類",
+      "period": "2026-01-01至2026-11-19",
+      "scope": "臺灣全國；未滿全年",
+      "population": "消防署截至公告日統計的一氧化碳中毒事故及相關傷亡",
+      "numerator": {
+        "incidents": 12,
+        "deaths": 1,
+        "hospitalized": 48,
+        "outdoor_type_heater_ventilation_cases": 10
+      },
+      "denominator": null,
+      "unit": {
+        "incidents": "起事故",
+        "deaths": "人",
+        "hospitalized": "人",
+        "outdoor_type_heater_ventilation_cases": "起事故"
+      },
+      "event_definition": "消防署公告截至2026-11-19的事故數；10起是其中原因分類。",
+      "data_type": "中央機關行政事故統計與原因分類。",
+      "source_ids": [
+        "ch01_nfa_co_latest_20261120"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "期間未滿全年；無燃氣設備家戶數及曝露分母，不可換算個人風險、致死率或跨年趨勢。"
+    }
   ],
-  "source_reviewed_sha256": "2ee1260c876af6f5a9fc51c7025a12ccad6e5cc53928423ededc5cb0c54158bb",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "2ee1260c876af6f5a9fc51c7025a12ccad6e5cc53928423ededc5cb0c54158bb",
-    "after_sha256": "4e5d9086346ea1feb53f025add47a75c493f1ecf51a6037bf49bdfb65291d734",
-    "before_reader_sha256": "c5b4bf181dff06119ad1417860244a740e11d2b90a6168836da1774bfd594336",
-    "after_reader_sha256": "65b0089c936205b7b502112f8dc8f5c6964b919b0692b4215cebd32850ea213f"
+  "legal_temporal_checks": [
+    {
+      "article_id": "TW-01-004",
+      "checks": [
+        {
+          "law": "燃氣熱水器及其配管承裝業管理辦法",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第2條",
+                "第10條",
+                "第13至15條",
+                "第19條"
+              ],
+              "promulgated_at": "2020-11-17",
+              "effective_at": "2020-11-17",
+              "basis": "全國法規資料庫現行整編文字標示修正日期民國109年11月17日；第19條規定自發布日施行。第2條界定範圍為液化石油氣或天然氣熱水器及其配管；第10條資格與第13至15條安裝及紀錄規定不擴及所有爐具或各材質燃氣軟管。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22法規資料庫現行條文仍以熱水器及其配管為適用範圍；本次未把技術士規定泛化至瓦斯爐或其他管材。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0130028"
+          ]
+        }
+      ]
+    }
+  ],
+  "taiwan_context": "臺灣住家、公寓、透天與租屋都可能使用天然氣或桶裝液化石油氣；熱水器、瓦斯爐和多種材質軟管都屬真實日常設備。本次分開處理CO、漏氣、塑膠軟管標示與其他管材、爐具保養、承裝資格及冒名安檢個案。",
+  "frequency_assessment": "消防署統計2024年24起事故、4人死亡、59人送醫；地方消防局轉引2025年22起、5人死亡、59人送醫；2026年截至11月19日為12起、1人死亡、48人送醫，其中10起歸類為屋外型熱水器通風不足。均是行政事故數而無家戶或曝露分母。未找到可信的全國燃氣軟管或爐具故障個人發生率，不能自行推估。",
+  "localization_changes": "將熱水器CO風險、瓦斯漏氣、燃氣用塑膠軟管與其他材質、瓦斯爐保養及冒名安檢分開處理；補入台灣實際的天然氣與桶裝瓦斯、租屋及地方消防求援情境。以正確的標檢局CNS 15996標示PDF替代錯誤連結，明確區分塑膠管特定標示與其他管材；加入2026截至11月19日事故數並說明無家戶分母。",
+  "review_method": "重新閱讀原作固定ID主題、現行正文、前次審閱、來源登錄及來源可讀段落；逐項核對台灣情境、可執行步驟、急迫分流、法規適用範圍、公告與施行日期、統計對象及分母。AI輔助來源核對不等於專業審查。",
+  "limits": [
+    "2024、2025及2026年截至11月19日的一氧化碳事故為行政事故件數；死亡與送醫是不同單位。沒有燃氣設備家戶數、使用時數或個人暴露分母，也不是瓦斯軟管或爐具故障率，不能換算個人機率、致死率或全年趨勢。",
+    "臺北市與臺南市消防指引只能支持其各自公開的緊急處置；臺南資料限桶裝液化石油氣。實際漏氣狀況以安全撤離和119指示優先，不自行查漏或修管。",
+    "承裝業技術士資格規定適用於燃氣熱水器及其配管；塑膠軟管的標示與期限只適用該材質和產品。消防署約5年是瓦斯爐一般使用建議，非其他設備或軟管的法定期限。"
+  ],
+  "unresolved_questions": [
+    "全國沒有燃氣軟管或瓦斯爐故障件數及家戶暴露分母，無法估算個人故障機率。",
+    "消防署2024統計頁本次重新開啟遇redirect loop，因此保留2026-10-25既有直接閱讀記錄，不宣稱本日重讀成功；需於下次複查確認頁面是否恢復。",
+    "各縣市補助、供氣業者檢修服務、設備費用與住家現場安裝條件依地區及個案不同，需直接向所在地消防局、供氣業者及合格人員確認。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "燃氣設備／消防安全",
+      "消費者交易法律"
+    ],
+    "status": "pending",
+    "reason": "本輪為AI輔助的來源與正文再核對，尚未取得具名且具資格的獨立專業審閱。"
+  },
+  "prior_reviewed_at": "2026-10-28",
+  "prior_review_due_at": "2027-01-31",
+  "source_bundle_path": "localization/tw-edition/sources/ch01-gas-fall-osh-recheck-20261122.json",
+  "source_bundle_sha256": "fa80fae705f4e336d1788bcf286de9449af8676b85b7e7b8df1066c05d144333",
+  "topic_fidelity_review": {
+    "core_topic": "原作固定ID涵蓋燃氣軟管、瓦斯爐使用年限、避免自行改管及假冒瓦斯公司推銷；臺灣版保留其生活安全核心，依臺灣天然氣／桶裝瓦斯及現行設備標準重新撰寫。",
+    "question_change": {
+      "decision": "realign_with_restored_core_topic",
+      "previous_question": "我知道臺灣燃氣熱水器不當安裝的冬季風險、CO與漏氣差異，及查證瓦斯安檢業者身分的方法嗎？",
+      "current_question": "我能依家中燃氣種類與設備安全使用熱水器、軟管和瓦斯爐，並在漏氣或疑似一氧化碳中毒時正確求援嗎？",
+      "reason": "前次自查問題只問熱水器冬季CO與業者身分，未涵蓋固定ID原有的軟管、瓦斯爐與燃氣設備使用安全；本次正文已恢復這些相連主題，故同步調整自查問題。"
+    }
   }
 }

@@ -1,0 +1,505 @@
+{
+  "schema_version": 1,
+  "stage": "TW-01-004/TW-01-034/TW-NAV-011 historical substantive re-review",
+  "reviewed_at": "2026-11-22",
+  "baseline_main_sha": "91c74820f6e0230b0b527d4ef11b27b4a180ef59",
+  "scope": {
+    "new_core_ids": [],
+    "historical_core_ids": [
+      "TW-01-004",
+      "TW-01-034"
+    ],
+    "supplemental_navigation_ids": [
+      "TW-NAV-011"
+    ],
+    "priority_order": [
+      "TW-NAV-011",
+      "TW-01-004",
+      "TW-01-034"
+    ]
+  },
+  "counts_before": {
+    "core_reviewed_entries": 348,
+    "runtime_items": 359,
+    "runtime_sources": 1470,
+    "source_registry": 1553,
+    "json_files_checked": 718,
+    "substantive_rechecks": 420,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_reviewed_entries": 348,
+    "runtime_items": 359,
+    "runtime_sources": 1483,
+    "source_registry": 1566,
+    "json_files_checked": 720,
+    "substantive_rechecks": 423,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "ch01_nfa_co_latest_20261120",
+    "ch01_nfa_gas_stove_safety_20261122",
+    "ch01_bsmi_plastic_hose_use_20260309",
+    "ch01_bsmi_plastic_hose_marking_2024",
+    "ch01_tpe_gas_leak_20261112",
+    "ch01_tainan_fire_gas_leak_response_20261122",
+    "ch01_osha_fall_2026q3_pdf",
+    "ch01_fall_icu_south_xinjiang_2025",
+    "ch01_taiwan_trauma_rtw_2025",
+    "ch01_germany_trauma_rtw_2020",
+    "ch01_bli_rtw_service_2025",
+    "nav11_confined_osha_current_20261122",
+    "nav11_osh_bullying_local_complaint_20260623"
+  ],
+  "source_bundle_path": "localization/tw-edition/sources/ch01-gas-fall-osh-recheck-20261122.json",
+  "source_bundle_sha256": "fa80fae705f4e336d1788bcf286de9449af8676b85b7e7b8df1066c05d144333",
+  "items": [],
+  "statistics_summary": {
+    "TW-01-004": "消防署統計2024年24起事故、4人死亡、59人送醫；地方消防局轉引2025年22起、5人死亡、59人送醫；2026年截至11月19日為12起、1人死亡、48人送醫，其中10起歸類為屋外型熱水器通風不足。均是行政事故數而無家戶或曝露分母。未找到可信的全國燃氣軟管或爐具故障個人發生率，不能自行推估。",
+    "TW-01-034": "職安署有2026年前三季重大職災墜落死亡案件數，但沒有工作者或工時分母；住家、休閒及一般民眾高處墜落沒有可直接換算個人機率的統一全國分母。研究結局另依各研究特定病人選取、定義與年代呈現，不合併成單一發生率。",
+    "TW-NAV-011": "職安署前三季重大職災有墜落死亡行政案件數，但沒有工作暴露人時分母；局限空間圖表只到2024年。這些資料支持風險管理優先次序，不能估算個人發生率。"
+  },
+  "topic_fidelity_review": {
+    "TW-01-004": {
+      "core_topic": "原作固定ID涵蓋燃氣軟管、瓦斯爐使用年限、避免自行改管及假冒瓦斯公司推銷；臺灣版保留其生活安全核心，依臺灣天然氣／桶裝瓦斯及現行設備標準重新撰寫。",
+      "question_change": {
+        "decision": "realign_with_restored_core_topic",
+        "previous_question": "我知道臺灣燃氣熱水器不當安裝的冬季風險、CO與漏氣差異，及查證瓦斯安檢業者身分的方法嗎？",
+        "current_question": "我能依家中燃氣種類與設備安全使用熱水器、軟管和瓦斯爐，並在漏氣或疑似一氧化碳中毒時正確求援嗎？",
+        "reason": "前次自查問題只問熱水器冬季CO與業者身分，未涵蓋固定ID原有的軟管、瓦斯爐與燃氣設備使用安全；本次正文已恢復這些相連主題，故同步調整自查問題。"
+      }
+    },
+    "TW-01-034": "保留高處墜落立即救援主軸，同時恢復傷勢、重症治療、長期復原、重返工作和收入研究等與原作研究題目相關的結果；臺灣全國研究與境外單院研究分開呈現，不以安全指引取代主題。",
+    "TW-NAV-011": "職安導航保留跨行業完整風險指引，補上現行台灣法律適用、申訴主體、時效及地方主管機關的具體入口，未把流程管理文字放進讀者正文。"
+  },
+  "items_reference": [
+    {
+      "id": "TW-NAV-011",
+      "review_path": "localization/reviews/TW-NAV-011.json",
+      "article_path": "locales/zh-TW/guides/職業安全與健康.md",
+      "before_sha256": "b4257122ce500ff7a7c9a0865edf194216f9eaefbb6133f0eeedeae896ddb4f1",
+      "after_sha256": "78c1fb267d2aeff64c2f8e8ec82c314b73fa1e5c32aa09d4db6bfa58e170af60",
+      "review_sha256": "3fa103c02f8bfa9c6475df46d893be2180ed9e76ac32105a6bd60ac5e2a29cbe",
+      "new_source_ids": [
+        "nav11_confined_osha_current_20261122",
+        "nav11_osh_bullying_local_complaint_20260623",
+        "ch01_osha_fall_2026q3_pdf"
+      ],
+      "source_ids": [
+        "oshact",
+        "nav11_osh_history",
+        "ch01_grinder_facilities",
+        "nav11_confined_osha_current_20261122",
+        "nav11_osh_bullying_local_complaint_20260623",
+        "nav11_heat_osha",
+        "ch01_osha_fall_2026q3_pdf"
+      ],
+      "frequency_assessment": "職安署前三季重大職災有墜落死亡行政案件數，但沒有工作暴露人時分母；局限空間圖表只到2024年。這些資料支持風險管理優先次序，不能估算個人發生率。",
+      "statistics_assessed": [
+        {
+          "indicator": "重大職災死亡及墜落死亡案件",
+          "period": "2026-01-01至2026-09-30；同期比較2025-01-01至2025-09-30",
+          "scope": "臺灣全國勞動檢查調查案件",
+          "population": "勞動檢查機構接報後現場調查並作成報告書的死亡職災案件",
+          "numerator": {
+            "2026_all_industry_deaths": 193,
+            "2026_fall_deaths": 91,
+            "2026_construction_fall_deaths": 63,
+            "2026_manufacturing_fall_deaths": 13,
+            "2025_same_period_all_industry_deaths": 213,
+            "2025_same_period_fall_deaths": 105,
+            "2025_same_period_construction_fall_deaths": 58,
+            "2025_same_period_manufacturing_fall_deaths": 21
+          },
+          "denominator": null,
+          "unit": "人死亡",
+          "event_definition": "職安署重大職災死亡統計中的墜落類別，不包括另列跌倒。",
+          "data_type": "勞檢通報後現場調查行政統計。",
+          "source_ids": [
+            "ch01_osha_fall_2026q3_pdf"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "待判定案件未列且沒有工作者或工時分母，不能換算個人發生率或致死率。"
+        },
+        {
+          "indicator": "局限空間重大職災事故及死亡",
+          "period": "圖表2011至2024；本文引用2024年",
+          "scope": "臺灣職安署重大職災行政統計",
+          "population": "職安署局限空間重大職災圖表所列事故與死亡案件",
+          "numerator": {
+            "incidents": 2,
+            "deaths": 2
+          },
+          "denominator": null,
+          "unit": {
+            "incidents": "件重大職災",
+            "deaths": "人"
+          },
+          "event_definition": "官方圖表2024年度局限空間重大職災及死亡數。",
+          "data_type": "官方行政統計圖表。",
+          "source_ids": [
+            "nav11_confined_osha_current_20261122"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "沒有進入作業人次、工時或非職業空間暴露分母；圖表未提供2025或2026同口徑資料。"
+        }
+      ],
+      "status": "ai_source_rechecked_professional_pending"
+    },
+    {
+      "id": "TW-01-004",
+      "review_path": "localization/reviews/TW-01-004.json",
+      "article_path": "locales/zh-TW/book/ch01/TW-01-004.md",
+      "before_sha256": "4e5d9086346ea1feb53f025add47a75c493f1ecf51a6037bf49bdfb65291d734",
+      "after_sha256": "43562eda47a2de82ec2de316fe0c1101865c122fe97d2960761d27be85dc4f4a",
+      "review_sha256": "69fa25003f5c868567edbbfe3761adc6c68cfe3e52dd03614bfc3fd967ce713b",
+      "new_source_ids": [
+        "ch01_nfa_co_latest_20261120",
+        "ch01_nfa_gas_stove_safety_20261122",
+        "ch01_bsmi_plastic_hose_use_20260309",
+        "ch01_bsmi_plastic_hose_marking_2024",
+        "ch01_tpe_gas_leak_20261112",
+        "ch01_tainan_fire_gas_leak_response_20261122"
+      ],
+      "source_ids": [
+        "ch01_nfa_co_2024",
+        "ch01_klfd_co_2025",
+        "ch01_nfa_co_latest_20261120",
+        "ch01_wda_co_first_aid_2026",
+        "ch01_vghtpe_inhalation_firstaid",
+        "ch01_nfa_gas_stove_safety_20261122",
+        "ch01_bsmi_plastic_hose_use_20260309",
+        "ch01_bsmi_plastic_hose_marking_2024",
+        "ch01_tpe_gas_leak_20261112",
+        "ch01_tainan_fire_gas_leak_response_20261122",
+        "ch01_ftc_gas_check_2023",
+        "ch01_gasheater_installer_rule_current",
+        "ch01_fair_trade_act25_current"
+      ],
+      "frequency_assessment": "消防署統計2024年24起事故、4人死亡、59人送醫；地方消防局轉引2025年22起、5人死亡、59人送醫；2026年截至11月19日為12起、1人死亡、48人送醫，其中10起歸類為屋外型熱水器通風不足。均是行政事故數而無家戶或曝露分母。未找到可信的全國燃氣軟管或爐具故障個人發生率，不能自行推估。",
+      "statistics_assessed": [
+        {
+          "indicator": "一氧化碳中毒事故及屋外型熱水器通風不良事故分類",
+          "period": "2024-01-01至2024-12-31",
+          "scope": "臺灣全國",
+          "population": "消防機關統計的一氧化碳中毒事故及相關傷亡",
+          "numerator": {
+            "incidents": 24,
+            "deaths": 4,
+            "hospitalized": 59,
+            "outdoor_type_heater_ventilation_cases": 21
+          },
+          "denominator": null,
+          "unit": {
+            "incidents": "起事故",
+            "deaths": "人",
+            "hospitalized": "人",
+            "outdoor_type_heater_ventilation_cases": "起事故"
+          },
+          "event_definition": "行政通報的一氧化碳中毒事故；21起為事故原因分類，不是暴露戶數。",
+          "data_type": "消防行政事故統計，不是抽樣調查。",
+          "source_ids": [
+            "ch01_nfa_co_2024"
+          ],
+          "accessed_at": "2026-10-25",
+          "limitations": "無燃氣熱水器家戶數或曝露時間分母；事故數、死亡數、送醫數單位不同，不可換算個人發生率或致死率。"
+        },
+        {
+          "indicator": "一氧化碳中毒事故及傷亡",
+          "period": "2025-01-01至2025-12-31",
+          "scope": "臺灣全國；由基隆市消防局轉引消防署年度統計",
+          "population": "消防機關統計的一氧化碳中毒事故及相關傷亡",
+          "numerator": {
+            "incidents": 22,
+            "deaths": 5,
+            "hospitalized": 59
+          },
+          "denominator": null,
+          "unit": {
+            "incidents": "起事故",
+            "deaths": "人",
+            "hospitalized": "人"
+          },
+          "event_definition": "一氧化碳事故行政通報數及傷亡人數。",
+          "data_type": "地方政府引述中央行政統計。",
+          "source_ids": [
+            "ch01_klfd_co_2025"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "無家戶或使用時數分母；不可換算個人機率、致死率或單一器具風險。"
+        },
+        {
+          "indicator": "一氧化碳中毒事故及屋外型熱水器通風不足原因分類",
+          "period": "2026-01-01至2026-11-19",
+          "scope": "臺灣全國；未滿全年",
+          "population": "消防署截至公告日統計的一氧化碳中毒事故及相關傷亡",
+          "numerator": {
+            "incidents": 12,
+            "deaths": 1,
+            "hospitalized": 48,
+            "outdoor_type_heater_ventilation_cases": 10
+          },
+          "denominator": null,
+          "unit": {
+            "incidents": "起事故",
+            "deaths": "人",
+            "hospitalized": "人",
+            "outdoor_type_heater_ventilation_cases": "起事故"
+          },
+          "event_definition": "消防署公告截至2026-11-19的事故數；10起是其中原因分類。",
+          "data_type": "中央機關行政事故統計與原因分類。",
+          "source_ids": [
+            "ch01_nfa_co_latest_20261120"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "期間未滿全年；無燃氣設備家戶數及曝露分母，不可換算個人風險、致死率或跨年趨勢。"
+        }
+      ],
+      "status": "ai_source_rechecked_professional_pending"
+    },
+    {
+      "id": "TW-01-034",
+      "review_path": "localization/reviews/TW-01-034.json",
+      "article_path": "locales/zh-TW/book/ch01/TW-01-034.md",
+      "before_sha256": "35f2c9ec449d484ec314ab7dd35fc3c79ca39ead10e5e0529c929d138d6ff950",
+      "after_sha256": "a0f22cced581d749fcf7d459ccbbaf997f9e56ce0f6cbd04bebfd7d97ae2c4d4",
+      "review_sha256": "99df7226c96c5714c213e8833b44e23eeaad7f23a45e6a061a87d4b42a5eaf23",
+      "new_source_ids": [
+        "ch01_osha_fall_2026q3_pdf",
+        "ch01_fall_icu_south_xinjiang_2025",
+        "ch01_taiwan_trauma_rtw_2025",
+        "ch01_germany_trauma_rtw_2020",
+        "ch01_bli_rtw_service_2025"
+      ],
+      "source_ids": [
+        "ch13_fall_fire",
+        "head_2026_vghtc",
+        "ch13_cpr_faq",
+        "ch01_osha_fall_2026q3_pdf",
+        "ch01_fall_icu_south_xinjiang_2025",
+        "ch01_taiwan_trauma_rtw_2025",
+        "ch01_germany_trauma_rtw_2020",
+        "ch01_bli_rtw_service_2025"
+      ],
+      "frequency_assessment": "職安署有2026年前三季重大職災墜落死亡案件數，但沒有工作者或工時分母；住家、休閒及一般民眾高處墜落沒有可直接換算個人機率的統一全國分母。研究結局另依各研究特定病人選取、定義與年代呈現，不合併成單一發生率。",
+      "statistics_assessed": [
+        {
+          "indicator": "重大職災死亡及墜落死亡案件",
+          "period": "2026-01-01至2026-09-30；同期比較2025-01-01至2025-09-30",
+          "scope": "臺灣全國勞動檢查調查案件",
+          "population": "勞動檢查機構接獲職災通報後派員現場檢查並作成報告書的死亡職災案件",
+          "numerator": {
+            "2026_all_industry_deaths": 193,
+            "2026_fall_deaths": 91,
+            "2026_construction_fall_deaths": 63,
+            "2026_manufacturing_fall_deaths": 13,
+            "2025_same_period_all_industry_deaths": 213,
+            "2025_same_period_fall_deaths": 105,
+            "2025_same_period_construction_fall_deaths": 58,
+            "2025_same_period_manufacturing_fall_deaths": 21
+          },
+          "denominator": null,
+          "unit": "人死亡；非事件發生率",
+          "event_definition": "重大職災死亡統計之「墜落」類別；與另列「跌倒」不同。",
+          "data_type": "勞檢通報後現場調查行政統計。",
+          "source_ids": [
+            "ch01_osha_fall_2026q3_pdf"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "少數待地檢署解剖鑑定案件未列；沒有工作者或工時分母，不是所有墜落或個人發生率，亦不涵蓋居家、休閒和非致死事件。"
+        },
+        {
+          "indicator": "重大創傷後重返工作",
+          "period": "創傷發生於2003至2007年；最長追蹤10年",
+          "scope": "臺灣全國健保資料庫回溯世代",
+          "population": "ISS至少16分、傷後存活超過1年的18至70歲成人；排除部分既有重大病況及無薪資登錄者",
+          "numerator": {
+            "returned_to_work": 4741,
+            "not_returned_to_work": 1224
+          },
+          "denominator": 5965,
+          "unit": "研究族群人數；4,741/5,965（79.5%）依投保類別與有薪資登錄操作性定義重返工作",
+          "event_definition": "研究依投保類別與登錄薪資判定RTW；非高處墜落專屬，也非完全回復原職。",
+          "data_type": "全民健保資料庫回溯世代研究。",
+          "source_ids": [
+            "ch01_taiwan_trauma_rtw_2025"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "制度與資料期較早；僅納入存活超過1年、特定年齡及有薪資登錄者，不能預測目前個人預後、收入或回到原工作的能力。"
+        },
+        {
+          "indicator": "高處墜落後創傷加護病房臨床結局",
+          "period": "2020-04至2024-07",
+          "scope": "中國新疆南部單一創傷加護病房",
+          "population": "因高處墜落收治該創傷ICU的289名患者",
+          "numerator": {
+            "injury_locations_at_least_3": 136,
+            "mechanical_ventilation": 103,
+            "in_hospital_or_30_day_deaths": 16
+          },
+          "denominator": 289,
+          "unit": "名已收治患者；分別136/289、103/289、16/289",
+          "event_definition": "單一ICU收治患者的傷勢、治療和院內／30日內結局。",
+          "data_type": "單中心回溯臨床研究。",
+          "source_ids": [
+            "ch01_fall_icu_south_xinjiang_2025"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "選定重症住院族群，非所有高處墜落患者、臺灣發生率或一般讀者的個人預後。"
+        },
+        {
+          "indicator": "重度多重創傷患者重返工作",
+          "period": "原始研究追蹤期間；摘要未載明精確長度",
+          "scope": "德國單一醫療中心",
+          "population": "84名工作年齡、ISS至少25分的多重創傷患者",
+          "numerator": {
+            "reported_proportion_percent": 58
+          },
+          "denominator": 84,
+          "unit": "研究摘要報告58%於追蹤期間曾重返工作；分母84名患者，不推算整數人數",
+          "event_definition": "研究摘要定義的曾重返工作，非完全回到原職；此數據為單中心比例。",
+          "data_type": "單一中心病例追蹤研究摘要。",
+          "source_ids": [
+            "ch01_germany_trauma_rtw_2020"
+          ],
+          "accessed_at": "2026-11-22",
+          "limitations": "摘要未列追蹤期，樣本小且制度不同於臺灣；比例不與臺灣全國隊列直接比較。"
+        }
+      ],
+      "status": "ai_source_rechecked_professional_pending"
+    }
+  ],
+  "legal_temporal_checks": [
+    {
+      "article_id": "TW-01-004",
+      "checks": [
+        {
+          "law": "燃氣熱水器及其配管承裝業管理辦法",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第2條",
+                "第10條",
+                "第13至15條",
+                "第19條"
+              ],
+              "promulgated_at": "2020-11-17",
+              "effective_at": "2020-11-17",
+              "basis": "全國法規資料庫現行整編文字標示修正日期民國109年11月17日；第19條規定自發布日施行。第2條界定範圍為液化石油氣或天然氣熱水器及其配管；第10條資格與第13至15條安裝及紀錄規定不擴及所有爐具或各材質燃氣軟管。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22法規資料庫現行條文仍以熱水器及其配管為適用範圍；本次未把技術士規定泛化至瓦斯爐或其他管材。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0130028"
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "TW-NAV-011",
+      "checks": [
+        {
+          "law": "職業安全衛生法",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第22-1條至第22-3條"
+              ],
+              "promulgated_at": "2025-12-19",
+              "effective_at": "2026-07-01",
+              "basis": "法規沿革記載2025-12-19修正公布，行政院2026-06-09令定2026-07-01施行；第22-3條規範申訴途徑及地方申訴期限。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22本次引用之職場霸凌防治及申訴條文已於2026-07-01施行。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001"
+          ]
+        },
+        {
+          "law": "地方主管機關受理最高負責人職場霸凌事件申訴處理辦法",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第2條",
+                "第3條",
+                "第7條",
+                "第20條"
+              ],
+              "promulgated_at": "2026-06-23",
+              "effective_at": "2026-07-01",
+              "basis": "法規沿革及第20條記載2026-06-23發布、2026-07-01施行；第2至3條界定最高負責人與地方受理，第7條規定書面申訴及證據資料。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22本辦法已施行，書面申訴缺漏得依第7條通知於10個工作日內補正。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060086",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060086"
+          ]
+        }
+      ]
+    }
+  ],
+  "professional_review_pending": [
+    {
+      "id": "TW-NAV-011",
+      "required": true,
+      "obtained": false,
+      "scope": [
+        "職業安全衛生",
+        "勞動法",
+        "職業醫學"
+      ]
+    },
+    {
+      "id": "TW-01-004",
+      "required": true,
+      "obtained": false,
+      "scope": [
+        "燃氣設備／消防安全",
+        "消費者交易法律"
+      ]
+    },
+    {
+      "id": "TW-01-034",
+      "required": true,
+      "obtained": false,
+      "scope": [
+        "急診外傷醫療",
+        "復健醫學",
+        "職業醫學",
+        "職災保險"
+      ]
+    }
+  ],
+  "unresolved_questions": [
+    {
+      "id": "TW-NAV-011",
+      "questions": [
+        "職安署統計沒有工作者／工時分母，局限空間圖表亦未提供2025、2026同口徑資料。",
+        "法定最高負責人是否符合地方主管機關受理範圍依組織身分及具體事證認定；個案可向所在地勞動主管機關確認。",
+        "尚未取得職業安全衛生、勞動法及職業醫學專業審閱。"
+      ]
+    },
+    {
+      "id": "TW-01-004",
+      "questions": [
+        "全國沒有燃氣軟管或瓦斯爐故障件數及家戶暴露分母，無法估算個人故障機率。",
+        "消防署2024統計頁本次重新開啟遇redirect loop，因此保留2026-10-25既有直接閱讀記錄，不宣稱本日重讀成功；需於下次複查確認頁面是否恢復。",
+        "各縣市補助、供氣業者檢修服務、設備費用與住家現場安裝條件依地區及個案不同，需直接向所在地消防局、供氣業者及合格人員確認。"
+      ]
+    },
+    {
+      "id": "TW-01-034",
+      "questions": [
+        "全國沒有涵蓋居家、休閒、通勤與工作情境且具有完整暴露分母的高處墜落個人發生率。",
+        "臺灣重返工作研究與新疆／德國創傷研究的族群、時期、資料定義與追蹤方法不同，不能直接比較或預測個人。",
+        "尚未取得外傷醫療、復健、職業醫學與職災保險專業審閱。"
+      ]
+    }
+  ],
+  "publication_ready": false
+}

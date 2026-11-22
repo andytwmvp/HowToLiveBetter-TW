@@ -1,74 +1,212 @@
 {
   "id": "TW-NAV-011",
-  "reviewer": "ChatGPT（台灣官方公開來源之AI輔助核對，非獨立專業簽證）",
+  "reviewer": "ChatGPT（臺灣官方及原始研究來源逐項AI輔助核對；非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-22",
+  "review_due_at": "2027-02-22",
   "target_path": "locales/zh-TW/guides/職業安全與健康.md",
-  "target_sha256": "b4257122ce500ff7a7c9a0865edf194216f9eaefbb6133f0eeedeae896ddb4f1",
+  "target_sha256": "78c1fb267d2aeff64c2f8e8ec82c314b73fa1e5c32aa09d4db6bfa58e170af60",
+  "source_reviewed_sha256": "78c1fb267d2aeff64c2f8e8ec82c314b73fa1e5c32aa09d4db6bfa58e170af60",
+  "prior_review_sha256": "e5dbce005b628dbdfcda7c4e87b8a17f749488b74fa1152875a3cb6fed349cc2",
+  "source_ids": [
+    "oshact",
+    "nav11_osh_history",
+    "ch01_grinder_facilities",
+    "nav11_confined_osha_current_20261122",
+    "nav11_osh_bullying_local_complaint_20260623",
+    "nav11_heat_osha",
+    "ch01_osha_fall_2026q3_pdf"
+  ],
   "source_checks": [
     {
+      "source_id": "oshact",
+      "title": "職業安全衛生法：退避、健康檢查、職場霸凌與職災通報",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
-      "claim": "第6／18／20／22之1至3／26至27／37／39條指定措施；急迫危險可停止退避並立即報告，最高負責人霸凌申訴與一般雇主申訴不同，8小時通報不延後急救。",
-      "supporting_passage": "編輯摘要（非逐字引文）：第6／18／20／22之1至3／26至27／37／39條指定措施；急迫危險可停止退避並立即報告，最高負責人霸凌申訴與一般雇主申訴不同，8小時通報不延後急救。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪直接HTTPS及web實讀官方HTML的指定相關段落，獨立編輯摘要，非逐字引文。"
+      "claim": "職安法2025-12-19修正公布、2026-07-01施行；第22-3條規定一般向雇主申訴，僅被申訴人為最高負責人時可逕向地方主管機關申訴，並列期限。",
+      "supporting_passage": "第6、18、20、21、22-1至22-3、37、39條；安全措施、停止作業、健康管理、霸凌及通報保護。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀現行職安法第22-1至22-3條及法規沿革；分開記錄公布和實施日期。"
     },
     {
+      "source_id": "nav11_osh_history",
+      "title": "職安法沿革：2025修法與2026施行",
       "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001",
-      "claim": "2025-12-19修正公布，2026-06-09行政院令定2026-07-01施行，與設施規則2027例外不同。",
-      "supporting_passage": "編輯摘要（非逐字引文）：2025-12-19修正公布，2026-06-09行政院令定2026-07-01施行，與設施規則2027例外不同。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "本輪直接HTTPS及web實讀官方HTML的指定相關段落，獨立編輯摘要，非逐字引文。"
+      "claim": "職安法2025-12-19修正公布，行政院2026-06-09令定2026-07-01施行。",
+      "supporting_passage": "2025-12-19修正公布，2026-06-09行政院令定2026-07-01施行，與設施規則2027例外不同。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接讀取全國法規資料庫沿革頁，核對修正公布日及行政院施行命令。"
     },
     {
+      "source_id": "ch01_grinder_facilities",
+      "title": "全國法規資料庫：職業安全衛生設施規則第62條",
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060009",
-      "claim": "實讀設施規則29之1至7、62、324之2至3、328及生效標示，局限空間、防護與指定2027例外分開，不把通用清單當作資格許可。",
-      "supporting_passage": "編輯摘要（非逐字引文）：實讀設施規則29之1至7、62、324之2至3、328及生效標示，局限空間、防護與指定2027例外分開，不把通用清單當作資格許可。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "web讀取失敗，改用直接HTTPS成功取得全文後實讀指定條文，非全篇法律審閱。"
+      "claim": "職安設施規則提供工作場所各項防護要求；依作業和現行施行日期判斷，不把不同設備規定混用。",
+      "supporting_passage": "雇主須防止研磨輪超過最高使用周速度，非側用輪不得側用，並依規定試轉、檢查及使用護罩。",
+      "accessed_at": "2026-10-19",
+      "retrieval_method": "本次按既有官方法規全文與章節來源核對資料，正文保留作業適用界線。"
     },
     {
-      "url": "https://www.osha.gov.tw/48110/48207/48299/48301/50484/?cprint=pt",
-      "claim": "缺氧與有毒氣體不能憑嗅味判斷；2024重大職災圖列2件、死亡2人。",
-      "supporting_passage": "編輯摘要（非逐字引文）：缺氧與有毒氣體不能憑嗅味判斷；2024重大職災圖列2件、死亡2人。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "直接HTTPS實讀危害HTML並下載目視100至113年圖，2024末欄2件／死亡2人；不將其當全體民眾發生率。"
+      "source_id": "nav11_confined_osha_current_20261122",
+      "title": "職安署：局限空間作業危害介紹與2011至2024圖表（現行入口）",
+      "url": "https://www.osha.gov.tw/48110/48207/48299/48301/50484/post",
+      "claim": "職安署局限空間指引指出缺氧與有毒氣體不能靠嗅覺辨認；現有圖示2024年2件重大職災、2人死亡，無工作暴露分母。",
+      "supporting_passage": "職安署現行局限空間危害專頁說明缺氧及有毒氣體不能靠嗅覺辨識，附2011至2024年重大職災圖表；2024年圖示2件重大職災、2人死亡，沒有進入作業人次或工時分母，且未見2025、2026同口徑更新。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀現行職安署專頁並目視下載統計圖；圖表更新至2024年，沒有同口徑更新。"
     },
     {
+      "source_id": "nav11_osh_bullying_local_complaint_20260623",
+      "title": "全國法規資料庫：地方主管機關受理最高負責人職場霸凌事件申訴處理辦法",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060086",
+      "claim": "本辦法2026-06-23發布、2026-07-01施行；僅法定最高負責人涉案可直接向地方主管機關申訴，須書面及附事實證據。",
+      "supporting_passage": "本辦法於2026-06-23發布、2026-07-01施行；第2至3條界定可直接向地方主管機關申訴之最高負責人範圍，第7條要求書面申訴並載明事實和證據，欠缺事項得於通知後10個工作日內補正。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22直接閱讀全國法規資料庫現行辦法第2、3、7、20條與沿革頁，核對最高負責人範圍、書面要件及生效日。"
+    },
+    {
+      "source_id": "nav11_heat_osha",
+      "title": "職安署：熱危害預防第三版與不同作業型態",
       "url": "https://www.osha.gov.tw/48110/48417/48419/189598",
-      "claim": "2025-06-20修正指引包含派遣、自營與臨時移動作業，安排遮陽、降溫休息、供水及健康管理。",
-      "supporting_passage": "編輯摘要（非逐字引文）：2025-06-20修正指引包含派遣、自營與臨時移動作業，安排遮陽、降溫休息、供水及健康管理。",
+      "claim": "2025-06-20修訂之熱危害指引包含派遣、自營與臨時移動作業情境及降溫、休息、供水、健康管理措施。",
+      "supporting_passage": "2025-06-20修正指引包含派遣、自營與臨時移動作業，安排遮陽、降溫休息、供水及健康管理。",
       "accessed_at": "2026-10-20",
-      "retrieval_method": "只實讀2025-06-23公告HTML（修訂日06-20）；完整指引附件未重新取得，不聲稱全文再審。"
+      "retrieval_method": "本次使用既有實讀的職安署公告文字與指引版本紀錄，未宣稱重新逐頁審查附件全文。"
     },
     {
-      "url": "https://www.osha.gov.tw/media/b54h1fj3/114%E5%B9%B4%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E5%A0%B1%E5%91%8A.pdf?mediaDL=true",
-      "claim": "2026-02-05更新：2025經勞檢調查重大職災死亡259人，其中墜落、滾落136人（營造75、製造26）。非全國所有墜落事件或個人致死率。",
-      "supporting_passage": "編輯摘要（非逐字引文）：2026-02-05更新：2025經勞檢調查重大職災死亡259人，其中墜落、滾落136人（營造75、製造26）。非全國所有墜落事件或個人致死率。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "4頁PDF實讀第1至2頁方法及第4頁附表2，目視第4頁，非逐項核縣市表或重算微資料。"
-    },
-    {
-      "url": "https://www.osha.gov.tw/media/1mhphhgq/115%E5%B9%B4%E8%BF%84%E7%AC%AC2%E5%AD%A3%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E8%AA%AA%E6%98%8E.pdf",
-      "claim": "2026上半年全產業重大職災死亡109人、墜落49人；勞檢通報現場調查、待認定案未列，無暴露人時分母，不能與2025全年直接比較。",
-      "supporting_passage": "編輯摘要（非逐字引文）：2026上半年全產業重大職災死亡109人、墜落49人；勞檢通報現場調查、待認定案未列，無暴露人時分母，不能與2025全年直接比較。",
-      "accessed_at": "2026-10-20",
-      "retrieval_method": "3頁原始PDF全文讀取，第2至3頁附表已目視及核統計註，2026-08-04公告／07-20製表／06-30截止分列，不用2025全年比較。"
+      "source_id": "ch01_osha_fall_2026q3_pdf",
+      "title": "職安署：2026年前三季重大職災死亡統計說明及附表",
+      "url": "https://www.osha.gov.tw/media/offg4ues/115%E5%B9%B4%E8%BF%84%E7%AC%AC3%E5%AD%A3%E9%87%8D%E5%A4%A7%E8%81%B7%E7%81%BD%E6%AD%BB%E4%BA%A1%E7%B5%B1%E8%A8%88%E8%AA%AA%E6%98%8E.pdf",
+      "claim": "截至2026-09-30職安署全產業重大職災死亡193人、其中墜落91人（營造63、製造13）；2025同期213人、墜落105人（58、21）。",
+      "supporting_passage": "統計截至2026-09-30全產業重大職災死亡193人，事故類型「墜落」死亡91人（營造63、製造13）；2025同期全產業死亡213人、「墜落」105人（營造58、製造21）。屬勞檢接報後現場調查報告中的死亡案件，待判定案件未列，無工作者或工時分母；「墜落」與「跌倒」是不同類別。",
+      "accessed_at": "2026-11-22",
+      "retrieval_method": "2026-11-22讀取職安署5頁原始PDF方法說明及附表2；依同期、災害類別、行業核數，不以工作者或工時未提供的數字推算個人風險。"
     }
   ],
-  "localization_changes": "18條不等批准先退避；22之3最高負責人涉霸凌可逕地方主管；8小時勞檢通報不延後救護，2026上半年與2025全年分開。",
-  "review_method": "危機先行、台灣情境、指定法條與統計分母的實質來源核對，非臨床／職安／法律驗收。",
-  "limits": [
-    "本文是可執行的獨立職安入門指引，不代替現場風險評估、合格操作訓練、職業醫學或法律意見，也不是職安制度、各行業證照與健康管理的完整百科。各作業須查主管機關及適用子法；醫療、輻射、礦業、水域等特殊作業另有規範，不把通用清單當許可。\n\n時效：職安法2025-12-19修正公布，行政院2026-06-09令定2026-07-01施行；本篇依已施行內容。設施規則2026-06-30修訂主要自7月1日施行，21-3、57、116、185-1至185-4等指定條文為2027-01-01，不能混成全部已施行。熱危害公告只讀可見原文，附件全文未作本輪專業審查；沒有為每個情境估個人發生率或保證防護零風險。",
-    "AI來源實質核對不是心理、精神醫療、職醫、勞檢、救護或法律專業簽證；未實際撥打專線、報案或施作現場評估；不能保證通話、治療或救援結果。"
+  "statistics_assessed": [
+    {
+      "indicator": "重大職災死亡及墜落死亡案件",
+      "period": "2026-01-01至2026-09-30；同期比較2025-01-01至2025-09-30",
+      "scope": "臺灣全國勞動檢查調查案件",
+      "population": "勞動檢查機構接報後現場調查並作成報告書的死亡職災案件",
+      "numerator": {
+        "2026_all_industry_deaths": 193,
+        "2026_fall_deaths": 91,
+        "2026_construction_fall_deaths": 63,
+        "2026_manufacturing_fall_deaths": 13,
+        "2025_same_period_all_industry_deaths": 213,
+        "2025_same_period_fall_deaths": 105,
+        "2025_same_period_construction_fall_deaths": 58,
+        "2025_same_period_manufacturing_fall_deaths": 21
+      },
+      "denominator": null,
+      "unit": "人死亡",
+      "event_definition": "職安署重大職災死亡統計中的墜落類別，不包括另列跌倒。",
+      "data_type": "勞檢通報後現場調查行政統計。",
+      "source_ids": [
+        "ch01_osha_fall_2026q3_pdf"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "待判定案件未列且沒有工作者或工時分母，不能換算個人發生率或致死率。"
+    },
+    {
+      "indicator": "局限空間重大職災事故及死亡",
+      "period": "圖表2011至2024；本文引用2024年",
+      "scope": "臺灣職安署重大職災行政統計",
+      "population": "職安署局限空間重大職災圖表所列事故與死亡案件",
+      "numerator": {
+        "incidents": 2,
+        "deaths": 2
+      },
+      "denominator": null,
+      "unit": {
+        "incidents": "件重大職災",
+        "deaths": "人"
+      },
+      "event_definition": "官方圖表2024年度局限空間重大職災及死亡數。",
+      "data_type": "官方行政統計圖表。",
+      "source_ids": [
+        "nav11_confined_osha_current_20261122"
+      ],
+      "accessed_at": "2026-11-22",
+      "limitations": "沒有進入作業人次、工時或非職業空間暴露分母；圖表未提供2025或2026同口徑資料。"
+    }
   ],
-  "source_reviewed_sha256": "ffe41ccf590ce410e154c3837ff3991a95484c04b4057a14d53b9f00f540b3f8",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "ffe41ccf590ce410e154c3837ff3991a95484c04b4057a14d53b9f00f540b3f8",
-    "after_sha256": "b4257122ce500ff7a7c9a0865edf194216f9eaefbb6133f0eeedeae896ddb4f1",
-    "before_reader_sha256": "ea12ed46e48988d7c2cd6d53d93fcf6ef2ce5d148e2da480159cc81a86e3b83a",
-    "after_reader_sha256": "d8995d4d6d72f38cbcddb882417adea3dff95308470b58f15c0c42ab0bad6a23"
-  }
+  "legal_temporal_checks": [
+    {
+      "article_id": "TW-NAV-011",
+      "checks": [
+        {
+          "law": "職業安全衛生法",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第22-1條至第22-3條"
+              ],
+              "promulgated_at": "2025-12-19",
+              "effective_at": "2026-07-01",
+              "basis": "法規沿革記載2025-12-19修正公布，行政院2026-06-09令定2026-07-01施行；第22-3條規範申訴途徑及地方申訴期限。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22本次引用之職場霸凌防治及申訴條文已於2026-07-01施行。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060001",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060001"
+          ]
+        },
+        {
+          "law": "地方主管機關受理最高負責人職場霸凌事件申訴處理辦法",
+          "checked_at": "2026-11-22",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第2條",
+                "第3條",
+                "第7條",
+                "第20條"
+              ],
+              "promulgated_at": "2026-06-23",
+              "effective_at": "2026-07-01",
+              "basis": "法規沿革及第20條記載2026-06-23發布、2026-07-01施行；第2至3條界定最高負責人與地方受理，第7條規定書面申訴及證據資料。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-22本辦法已施行，書面申訴缺漏得依第7條通知於10個工作日內補正。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0060086",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0060086"
+          ]
+        }
+      ]
+    }
+  ],
+  "taiwan_context": "臺灣職場涵蓋工廠、營造、清潔維修、物流、餐飲、農事與服務工作；本次將現行職安法、2026-07-01生效的霸凌申訴規則與可操作的地方求助方式放在讀者能找到的總指引。",
+  "frequency_assessment": "職安署前三季重大職災有墜落死亡行政案件數，但沒有工作暴露人時分母；局限空間圖表只到2024年。這些資料支持風險管理優先次序，不能估算個人發生率。",
+  "localization_changes": "以職安署現行局限空間頁取代舊列印入口；統計更新至2026年前三季，並新增2026-06-23發布、2026-07-01施行的最高負責人霸凌申訴辦法。清楚區分一般雇主申訴與法定最高負責人案件之地方主管機關書面申訴、證據資料及期限。",
+  "review_method": "重新閱讀原作固定ID主題、現行正文、前次審閱、來源登錄及來源可讀段落；逐項核對台灣情境、可執行步驟、急迫分流、法規適用範圍、公告與施行日期、統計對象及分母。AI輔助來源核對不等於專業審查。",
+  "limits": [
+    "職安署重大職災統計沒有全體工作者或工時分母，且少數待判定案件未列；局限空間重大職災資料只公布至2024年，沒有2025或2026同口徑資料，不能換算個人風險。",
+    "只有符合法定最高負責人範圍的職場霸凌案件，才可依職安法第22條之3逕向地方主管機關申訴；一般案件向雇主申訴。申訴程序與期限可能依個案身分、事件日期和法規更新而異，應向所在地勞動主管機關確認。",
+    "本文是跨行業入門指引，不代替特定作業的現場危害評估、合格訓練、職業醫學或法律意見。"
+  ],
+  "unresolved_questions": [
+    "職安署統計沒有工作者／工時分母，局限空間圖表亦未提供2025、2026同口徑資料。",
+    "法定最高負責人是否符合地方主管機關受理範圍依組織身分及具體事證認定；個案可向所在地勞動主管機關確認。",
+    "尚未取得職業安全衛生、勞動法及職業醫學專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "scope": [
+      "職業安全衛生",
+      "勞動法",
+      "職業醫學"
+    ],
+    "status": "pending",
+    "reason": "本輪為AI輔助的來源與正文再核對，尚未取得具名且具資格的獨立專業審閱。"
+  },
+  "prior_reviewed_at": "2026-10-20",
+  "prior_review_due_at": "2026-12-31",
+  "source_bundle_path": "localization/tw-edition/sources/ch01-gas-fall-osh-recheck-20261122.json",
+  "target_kind": "markdown",
+  "source_bundle_sha256": "fa80fae705f4e336d1788bcf286de9449af8676b85b7e7b8df1066c05d144333"
 }
