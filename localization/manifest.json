@@ -9533,13 +9533,13 @@
       "status": "verified",
       "target_path": "locales/zh-TW/book/ch16/TW-16-003.md",
       "sources": [
-        "ch16_hpa_722",
         "ch16_hpa_bp",
-        "ch16_ada_kidney",
-        "risk_bp_722",
-        "risk_bp_survey"
+        "tw16_hpa_bp_schedule_20261123",
+        "tw16_hpa_home_measurement_20261123",
+        "risk_bp_survey",
+        "tw16_hpa_survey_method_20261123"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-23",
       "upstream_path_uri": "book/16-%E5%BE%97%E4%BA%86%E6%85%A2%E6%80%A7%E7%97%85%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E6%B4%BB.md",
       "display_path": "book/16-得了慢性病之後怎麼活.md",
       "source_title_zh_tw": "複查按醫生給的間隔做，把每次的指標記在同一個本子上",
@@ -10085,9 +10085,10 @@
         "ch17_ltc",
         "next_care_leave_law",
         "next_care_leave_rules",
-        "next_care_leave_order"
+        "next_care_leave_order",
+        "tw17_leave_rule_history_20261123"
       ],
-      "verified_at": "2026-10-20",
+      "verified_at": "2026-11-23",
       "upstream_path_uri": "book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md",
       "display_path": "book/17-家裡有老人.md",
       "source_title_zh_tw": "獨生子女的父母住院，查本省條例有沒有給子女的護理假，有就帶著住院證明向單位書面申請",
@@ -12268,10 +12269,11 @@
       "target_path": "locales/zh-TW/book/ch24/TW-24-005.md",
       "sources": [
         "ch24_medlaw",
+        "tw24_medical_law_gazette_20261123",
         "ch24_records",
         "rights_records_hospital"
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-23",
       "upstream_path_uri": "book/24-%E7%9C%8B%E7%97%85.md",
       "display_path": "book/24-看病.md",
       "source_title_zh_tw": "每次看完病，把病歷、檢查報告和影像自己存一份",
@@ -12430,9 +12432,13 @@
       "sources": [
         "ch24_medlaw",
         "access_dental",
-        "access_implant_care"
+        "tw24_implant_consent_template_20261123",
+        "ch24_selfpay_compare_tool_20261123",
+        "ch24_selfpay_compare_guide_20261123",
+        "access_implant_care",
+        "tw24_taiwan_implant_cohort_20261123"
       ],
-      "verified_at": "2026-10-21",
+      "verified_at": "2026-11-23",
       "upstream_path_uri": "book/24-%E7%9C%8B%E7%97%85.md",
       "display_path": "book/24-看病.md",
       "source_title_zh_tw": "種牙之前先問清包乾價含哪些項目，優先找承諾參與價格治理的機構，別信低價廣告",

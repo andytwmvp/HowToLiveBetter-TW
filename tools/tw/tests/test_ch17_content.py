@@ -30,7 +30,7 @@ class Chapter17Tests(unittest.TestCase):
     self.assertEqual({s['url'] for s in review['source_checks']},{sources[s]['url'] for s in runtime[key]['source_ids']})
  def test_taiwan_law_and_service_clarifications(self):
   items={x['id']:x['body'] for x in validate_runtime()['items']}
-  snippets={'001':['公證','監護宣告'],'002':['牴觸部分','特留分'],'003':['本人','雙人'],'004':['165','銀行'],'005':['服務','投資'],'006':['銀行','逆向抵押'],'007':['1966','長照3.0'],'008':['壓力性損傷','翻身'],'009':['白內障','自付差額'],'010':['牽繩','動物保護法'],'011':['保證金','兩個月'],'012':['小時','七日'],'013':['失智','就醫']}
+  snippets={'001':['公證','監護宣告'],'002':['牴觸部分','特留分'],'003':['本人','雙人'],'004':['165','銀行'],'005':['服務','投資'],'006':['銀行','逆向抵押'],'007':['1966','長照3.0'],'008':['壓力性損傷','翻身'],'009':['白內障','自付差額'],'010':['牽繩','動物保護法'],'011':['保證金','兩個月'],'012':['小時','7日'],'013':['失智','就醫']}
   for suffix,needles in snippets.items():
    content=items['TW-17-'+suffix]
    for needle in needles:self.assertIn(needle,content,'TW-17-'+suffix)

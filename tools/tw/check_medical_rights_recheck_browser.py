@@ -28,7 +28,7 @@ def check_medical_rights_recheck_browser(page, context, url, review):
         button = page.locator('#TW-24-008 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        for key, text in (('TW-24-008','貸款不是免還補助'), ('TW-24-015','同意書兩份'), ('TW-24-009','症狀固定'), ('TW-24-005','影像檔不是同一項')):
+        for key, text in (('TW-24-008','貸款不是免還補助'), ('TW-24-015','同意書兩份'), ('TW-24-009','症狀固定'), ('TW-24-005','檢驗報告文字與可供判讀的原始影像是不同資料')):
             page.locator('#q').fill(text)
             article = page.locator('#'+key)
             assert article.count() == 1, (key, text)

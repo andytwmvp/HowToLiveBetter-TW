@@ -139,7 +139,7 @@ class MedicalRightsRecheckTests(unittest.TestCase):
         old_rows = old_register["substantive_rechecks"]
         self.assertEqual(self.rows[:len(old_rows)], old_rows)
         appended = self.rows[len(old_rows):]
-        this_batch = [row for row in appended if row["reviewed_at"] == DATE]
+        this_batch = [row for row in appended if row["prior_revision"] == BASELINE]
         self.assertEqual([row["id"] for row in this_batch], list(IDS))
         self.assertEqual(len(this_batch), len(IDS))
 

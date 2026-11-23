@@ -17,8 +17,10 @@ class MedicalAccessRecheckTests(unittest.TestCase):
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_urgent_care_before_frequency_and_procedural_boundaries(self):
   b={i['id']:i['body'] for i in validate_runtime()['items']}
-  for k in IDS:self.assertLess(b[k].index('119'),b[k].index('事件頻率'))
-  terms={'TW-24-006':['調解程序不收費','七個工作日','齊備起四十五日','不是所有求償','法院核定'],'TW-24-010':['三十日內','四成作業費','不是所有補助駁回','不等於整個申請二十日','到宅'],'TW-24-012':['不要自行停用','書面全案報價','異常出血','不是全臺療效研究'],'TW-24-002':['不是總帳單','170元、420元','掛號費不是','同次同醫師併行']}
+  for k in IDS:
+   marker='成效數字的適用範圍' if k=='TW-24-012' else '事件頻率'
+   self.assertLess(b[k].index('119'),b[k].index(marker))
+  terms={'TW-24-006':['調解程序不收費','七個工作日','齊備起四十五日','不是所有求償','法院核定'],'TW-24-010':['三十日內','四成作業費','不是所有補助駁回','不等於整個申請二十日','到宅'],'TW-24-012':['不要自行停用','要求書面列出全案費用','異常出血','不能換算成全臺成功率或個人保證'],'TW-24-002':['不是總帳單','170元、420元','掛號費不是','同次同醫師併行']}
   for k,ts in terms.items():
    for t in ts:self.assertIn(t,b[k])
  def test_retired_mismatched_reference_keeps_provenance(self):
