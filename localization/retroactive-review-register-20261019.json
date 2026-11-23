@@ -53154,6 +53154,256 @@
       "source_bundle_path": "localization/tw-edition/sources/ch16-17-24-health-rights-recheck-20261123.json",
       "source_bundle_sha256": "2d005202faa016e4cef211e7be66107ce580378ec245631f2f7b5ffec756c4b5",
       "review_sha256": "392cc79cc5f59ea4f8e36ba9efa3dea18791ca6bd0040e904e8d492ce6647128"
+    },
+    {
+      "id": "TW-16-010",
+      "title": "痛風患者減少酒與高普林暴食，飲食不能代替必要藥物",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "c4100064a8e47818f04ed541996bc7bb68dd6c7d",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "8cb398245815abad8b43b620f16d1ccb9bcb7e1faedd7caa7a23c3576823777d",
+      "before_sha256": "1e4fdd8cc1c8ea127c2887c0330853a13116e98c32574e46fd1bda143cc26adb",
+      "after_sha256": "3efa9cb5953095ac745ce28fa44c1703a97531eae2df7c56ab83b3a78fcc057c",
+      "reviewed_at": "2026-11-23",
+      "review_due_at": "2027-02-23",
+      "prior_reviewed_at": "2026-11-23",
+      "prior_review_due_at": "2027-02-23",
+      "prior_source_reviewed_sha256": "b77daf9144dc97e523a2d7e475fbd367cd19eb3d971062ca3bb80ea991b5bc76",
+      "previous_body": "<!-- TW-ID: TW-16-010 -->\n\n# 痛風患者減少酒與高普林暴食，飲食不能代替必要藥物\n\n## 適用情境與先做的事\n\n關節突然紅腫劇痛、合併發燒畏寒或迅速惡化，儘速就醫排除感染等原因，不只當吃太好造成的痛風；意識異常、嚴重呼吸困難或無法安全送醫先119。急性疼痛的評估與長期降尿酸分開，不以忍痛、節食或偏方代替治療。\n\n痛風與尿酸高不相同；已確診者可調整飲食、酒精與體重，但不能把發作全歸咎於患者意志力。腎功能、遺傳及共用藥物也會影響，不自行停原本處方藥。\n\n## 臺灣風險與證據限制\n\n事件頻率：目前沒有能把臺灣一次火鍋、燒烤、喝酒或特定飲料換成個人發作機率的可信資料；國外飲食研究與指引的關聯或相對效果不能直接當全臺絕對機率。ACR2020將限制酒精、普林列為條件性建議、證據確定性低；限制高果糖糖漿及過重者減重亦為條件性建議、證據確定性很低。飲食造成的尿酸改變通常有限，仍可能是發作誘因，不保證只靠少吃就達標。\n\n## 可執行的步驟\n\n從常吃的餐點調整：聚餐減少大量肉、海鮮、內臟與濃肉湯，酒精及高果糖糖漿飲品優先減量；手搖飲要看糖與總量，不因標示無糖就當降尿酸藥。改成可持續的均衡正餐，蛋白質與份量請營養師依腎功能等條件評估，不永久禁掉所有魚、豆製品及蔬菜。\n\n記錄發作、酒與飲料、飲食及服藥，回診一起檢視。過重者循序減重，避免斷食、快速減肥或極端飲食；一般補水依生活需要與醫囑安排，心腎疾病、低血鈉或限水者不可硬套每日固定公升數。\n\n## 費用、例外與適用限制\n\n若已有反覆發作、痛風石等治療需求，飲食不能取代必要降尿酸藥與追蹤；急性止痛及長期治療由醫師安排，不在本文自行加減藥。不為降低尿酸買不明利尿草藥、排毒療程或高價補充品。\n\n少買酒與含糖飲料可降低支出，但效益及達標時間因人而異，不承諾幾天治好；門診、營養諮詢及藥物費用先確認給付與自費。未重讀全部底層試驗，仍待風濕科／營養師個案審閱。\n\n## 參考資料與時效\n\n- 美國CDC：痛風生活型態與高普林食物：https://www.cdc.gov/arthritis/gout/\n- ACR 2020：痛風藥物治療與血尿酸目標：https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/\n- 食藥署：慢性病長期用藥與保健食品的交互作用：https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=19717\n- 臺北榮總營養部：告別痛風，均衡飲食是王道：https://www.vghtpe.gov.tw/vghtpe/files/PDF/tpvghb/499-1141224.pdf\n- 臺北榮總：痛風之照護：https://ihealth.vghtpe.gov.tw/media/603\n",
+      "previous_source_ids": [
+        "ch16_cdc_gout",
+        "ch16_acr_gout",
+        "ch16_fda_supp",
+        "next_gout_nutrition",
+        "next_gout_care"
+      ],
+      "previous_review_claims": [
+        "TW-16-010：酒、飲食、肥胖及共病等風險；急性與長期管理需分開。",
+        "TW-16-010：酒精／普林低確定性、高果糖糖漿／減重很低確定性之條件建議，飲食尿酸影響有限，避免責怪患者。",
+        "TW-16-010：歷史保健品不能代替藥物依據；本輪不以此新增產品療效或現行價格。",
+        "TW-16-010：2025年12月第499期第28頁；僅檢索實讀官方PDF營養文章文字，直接403；均衡飲食、含糖飲料、適量乳品／黃豆與蔬果，不採未讀底層研究或餐食份量為個人處方。",
+        "TW-16-010：僅檢索實讀官方衛教段落：慢慢減重、不要斷食或快速減肥；頁面開啟未取得完整正文，不採其中固定水量作限水者處方。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.cdc.gov/arthritis/gout/",
+          "claim": "TW-16-010：酒、飲食、肥胖及共病等風險；急性與長期管理需分開。",
+          "supporting_passage": "編者核對摘要，非逐字引文：酒、飲食、肥胖及共病等風險；急性與長期管理需分開。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "實讀CDC官方HTML痛風飲食與風險段落；未以美國資料推臺灣率。"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/",
+          "claim": "TW-16-010：酒精／普林低確定性、高果糖糖漿／減重很低確定性之條件建議，飲食尿酸影響有限，避免責怪患者。",
+          "supporting_passage": "編者核對摘要，非逐字引文：酒精／普林低確定性、高果糖糖漿／減重很低確定性之條件建議，飲食尿酸影響有限，避免責怪患者。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "PMC直接HTTP200取得HTML並實讀Management of lifestyle factors及Table7；web端遇驗證頁。"
+        },
+        {
+          "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=19717",
+          "claim": "TW-16-010：歷史保健品不能代替藥物依據；本輪不以此新增產品療效或現行價格。",
+          "supporting_passage": "編者核對摘要，非逐字引文：歷史保健品不能代替藥物依據；本輪不以此新增產品療效或現行價格。",
+          "accessed_at": "2026-10-17",
+          "retrieval_method": "本輪web失敗，歷史2016食藥署來源保留原日期；不冒重新取得。"
+        },
+        {
+          "url": "https://www.vghtpe.gov.tw/vghtpe/files/PDF/tpvghb/499-1141224.pdf",
+          "claim": "TW-16-010：2025年12月第499期第28頁；僅檢索實讀官方PDF營養文章文字，直接403；均衡飲食、含糖飲料、適量乳品／黃豆與蔬果，不採未讀底層研究或餐食份量為個人處方。",
+          "supporting_passage": "編者核對摘要，非逐字引文：2025年12月第499期第28頁；僅檢索實讀官方PDF營養文章文字，直接403；均衡飲食、含糖飲料、適量乳品／黃豆與蔬果，不採未讀底層研究或餐食份量為個人處方。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪取得範圍：2025年12月第499期第28頁；僅檢索實讀官方PDF營養文章文字，直接403；均衡飲食、含糖飲料、適量乳品／黃豆與蔬果，不採未讀底層研究或餐食份量為個人處方。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/603",
+          "claim": "TW-16-010：僅檢索實讀官方衛教段落：慢慢減重、不要斷食或快速減肥；頁面開啟未取得完整正文，不採其中固定水量作限水者處方。",
+          "supporting_passage": "編者核對摘要，非逐字引文：僅檢索實讀官方衛教段落：慢慢減重、不要斷食或快速減肥；頁面開啟未取得完整正文，不採其中固定水量作限水者處方。",
+          "accessed_at": "2026-10-20",
+          "retrieval_method": "本輪取得範圍：僅檢索實讀官方衛教段落：慢慢減重、不要斷食或快速減肥；頁面開啟未取得完整正文，不採其中固定水量作限水者處方。"
+        }
+      ],
+      "source_ids": [
+        "ch16_cdc_gout",
+        "ch16_acr_gout",
+        "ch16_fda_supp",
+        "next_gout_care",
+        "risk_fda_allo_2023_20261122",
+        "ch16_tw_gout_nhird_2015_20261123",
+        "ch16_mohw_water_advice_20261123"
+      ],
+      "new_source_ids": [
+        "ch16_tw_gout_nhird_2015_20261123",
+        "ch16_mohw_water_advice_20261123"
+      ],
+      "source_records_reused": [
+        "ch16_cdc_gout",
+        "ch16_acr_gout",
+        "ch16_fda_supp",
+        "next_gout_care",
+        "risk_fda_allo_2023_20261122"
+      ],
+      "source_ids_added": [
+        "risk_fda_allo_2023_20261122",
+        "ch16_tw_gout_nhird_2015_20261123",
+        "ch16_mohw_water_advice_20261123"
+      ],
+      "source_ids_removed": [
+        "next_gout_nutrition"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch16_cdc_gout",
+          "title": "美國CDC：痛風生活型態與高普林食物",
+          "url": "https://www.cdc.gov/arthritis/gout/",
+          "claim": "痛風症狀與高尿酸並非一對一；肥胖、特定藥物、酒精、含糖飲料及部分肉類海鮮與風險相關，診斷需由醫療人員判斷。",
+          "supporting_passage": "CDC說明痛風可能突然發作；並列風險因子與建議限制部分高普林食物及飲品；不是臺灣發生率資料。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接閱讀CDC官方HTML的症狀、風險、診斷與生活管理段落；未使用美國資料換算臺灣機率。"
+        },
+        {
+          "source_id": "ch16_acr_gout",
+          "title": "美國風濕病學會（ACR）：2020年痛風管理指引",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563586/",
+          "claim": "限制酒精、普林為條件性建議且證據確定性低；限制高果糖玉米糖漿及過重者減重為條件性建議且證據確定性很低；飲食改變對血尿酸影響通常有限。",
+          "supporting_passage": "ACR 2020年原始指引Table 7列酒精與普林為Low、高果糖玉米糖漿與過重者減重為Very low；本文另核對飲食改變通常僅造成小幅血尿酸變化及食物可能觸發發作。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "PMC頁面本輪遭驗證頁阻擋；改讀ACR官方提供的同一篇2020年原始指引PDF，核對第9至10頁的生活型態建議與Table 7，不將美國指引當成臺灣健保或絕對風險規則。"
+        },
+        {
+          "source_id": "ch16_fda_supp",
+          "title": "食藥署：慢性病長期用藥與保健食品的交互作用",
+          "url": "https://www.fda.gov.tw/TC/newsContent.aspx?cid=4&id=19717",
+          "claim": "長期用藥或慢性病患者使用保健食品前應諮詢專業人員；保健食品不得宣稱療效或取代藥物治療。",
+          "supporting_passage": "食藥署2016公告提醒保健食品可能與藥品交互作用，不能取代正常飲食及藥物治療；僅支持本文提醒，不把舊公告當成痛風產品療效或現行價格資料。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接閱讀食藥署官方公告及其發布／維護日期，核對慢性病、長期服藥與交互作用提醒。"
+        },
+        {
+          "source_id": "next_gout_care",
+          "title": "臺北榮總護理部：痛風之照護",
+          "url": "https://ihealth.vghtpe.gov.tw/media/603",
+          "claim": "體重管理採漸進方式，避免快速減重及斷食；本篇不採用該頁固定每日飲水量、舊用藥門檻或其他未核對處方。",
+          "supporting_passage": "官方護理衛教頁建議過重者慢慢減重，避免快速減肥或斷食；頁內固定水量及藥物門檻不採為本文通用醫囑。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接重讀臺北榮總護理衛教的症狀、治療及照護段落；將可用的漸進減重提醒與固定水量、藥物門檻分開判斷。"
+        },
+        {
+          "source_id": "risk_fda_allo_2023_20261122",
+          "title": "食品藥物管理署：秋季痛風易發作，正確治療才有解",
+          "url": "https://www.fda.gov.tw/tc/newsContent.aspx?cid=4&id=t622145",
+          "claim": "疑似痛風應儘速就醫；急性消炎止痛與長期降尿酸控制屬不同治療階段；生活調整不能代替醫囑用藥。",
+          "supporting_passage": "食藥署公告說明疑似關節腫痛應儘速就醫，並分別說明急性期處置、長期降尿酸治療及生活調整。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接重新開啟食藥署官方公告，核對發布及維護日期與急性／長期治療段落；公告內容不作個案處方。"
+        },
+        {
+          "source_id": "ch16_tw_gout_nhird_2015_20261123",
+          "title": "臺灣全國健保研究：痛風盛行率與發生率（2005至2010）",
+          "url": "https://link.springer.com/article/10.1186/s13075-015-0522-8",
+          "claim": "2010年痛風盛行率與新發診斷率的原始分子、分母、觀察期間及行政診斷定義。",
+          "supporting_passage": "研究納入2005至2010年間持續登錄者；2010年盛行率1,458,569/23,371,362=6.24%；新發病例56,595/20,677,590人年=2.74/1,000人年。病例為門診或急診醫師填報ICD-9-CM 274.x主要診斷；盛行病例回溯此前10年，新發病例排除此前10年診斷或降尿酸治療。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取Springer Nature開放全文的摘要、Methods與Results，核對2010年統計分子分母、連續投保母群、病例定義及十年回溯限制。"
+        },
+        {
+          "source_id": "ch16_mohw_water_advice_20261123",
+          "title": "國民健康署：慢性疾病患者的喝水量應詢問醫師",
+          "url": "https://www.mohw.gov.tw/cp-16-62954-1.html",
+          "claim": "有慢性腎臟病或慢性病者應依醫療人員個別建議調整飲水量，不把固定水量當作每位痛風患者的處方。",
+          "supporting_passage": "國健署說明飲水量受個人體質、體型、工作與環境影響，腎臟疾病患者應詢問主治醫師並按身體狀況調整。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接閱讀衛福部／國健署官方HTML中成人飲水建議與慢性疾病飲水量段落；該頁建檔及更新日為2021-08-27，未採其一般成人固定杯數當成痛風治療處方。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "next_gout_nutrition",
+          "reason": "臺北榮總營養PDF本輪直接讀取回應403且web閱讀器因檔案過大無法開啟；不以索引摘要或既有轉述當成本次實讀證據，並移除依賴該PDF的特定營養主張。其餘保留主張由ACR指引及食藥署資料支持。",
+          "prior_source_sha256": "a8a12df4019dfb5f34dc67999e2ad1f3c9ce1513eaf0f4be31dbc29afe659aec",
+          "replacement_ids": [
+            "ch16_acr_gout",
+            "risk_fda_allo_2023_20261122"
+          ],
+          "disposition": "replaced"
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "indicator": "痛風診斷盛行率",
+          "value": 6.24,
+          "unit": "%",
+          "period": "2010年（病例回溯至2000年中）",
+          "scope": "臺灣全國健保研究資料",
+          "population": "2005-01-01至2010-12-31持續登錄健保資料庫者；盛行率分母為2010-07-01在保受益人。",
+          "numerator": 1458569,
+          "denominator": 23371362,
+          "denominator_definition": "2010-07-01符合研究資格的健保受益人；分子為此前10年內至少一筆門診或急診醫師填報ICD-9-CM 274.x主要診斷者。",
+          "event_definition": "研究定義的痛風盛行病例；申報診斷記錄，非逐案臨床複核。",
+          "data_type": "全國性健保行政申報資料回溯分析；盛行率。",
+          "source_id": "ch16_tw_gout_nhird_2015_20261123",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": [
+            "觀察資料止於2010年，不能表示2026年盛行率。",
+            "病例以申報主診斷及10年回溯定義，受診斷、就醫與投保連續性影響。",
+            "盛行率不是飲食暴露後急性發作率，也不能轉換成個人單餐風險。"
+          ]
+        },
+        {
+          "indicator": "痛風新發診斷率",
+          "value": 2.74,
+          "unit": "每1,000人年",
+          "period": "2010年",
+          "scope": "臺灣全國健保研究資料",
+          "population": "2005-01-01至2010-12-31持續登錄健保資料庫者中，2010年符合研究風險集條件者。",
+          "numerator": 56595,
+          "denominator": 20677590,
+          "denominator_definition": "2010年無此前10年痛風診斷或降尿酸用藥紀錄者的風險人年；納入者須至少有此前一年登錄資料。",
+          "event_definition": "2010年首次符合研究定義的痛風診斷病例；醫師於門診或急診記錄ICD-9-CM 274.x主要診斷。",
+          "data_type": "全國性健保行政申報資料回溯分析；人年發生率／新發診斷率。",
+          "source_id": "ch16_tw_gout_nhird_2015_20261123",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": [
+            "研究的「新發」是10年無痛風或降尿酸治療紀錄後出現診斷，不一定等於真實發病日。",
+            "觀察資料止於2010年，不能外推成2026年發生率。",
+            "此人年率描述新發診斷，不是復發率或某餐後個人發作機率。"
+          ]
+        }
+      ],
+      "frequency_assessment": "臺灣全國健保申報研究可提供2010年痛風診斷盛行率與新發診斷率；兩者均是行政診斷頻率，不是2026年現況、臨床複核盛行率、急性復發率或單次餐飲暴露的個人機率。本次未找到臺灣研究估計一次特定飲食後的短期痛風發作風險。",
+      "taiwan_context": "臺灣日常聚餐、海鮮、肉類、酒精及含糖飲料情境與既有文章主題相符；新增全國健保研究的歷史疾病頻率，並明確分開疾病診斷率與單餐後個人發作機率。依食藥署說明分清急性就醫處置與長期降尿酸治療。",
+      "topic_fidelity_decision": "retain_original_reader_need_with_taiwan_context",
+      "changes": "新增台灣全國健保研究的2010年痛風診斷盛行率及新發診斷率，分列分子、分母、人年、病例定義與觀察限制；明確區別歷史疾病頻率與單餐後個人發作風險。重核ACR生活型態建議的證據確定性及台灣官方就醫／用藥訊息；臺北榮總營養PDF本輪無法直接讀取，退役該來源並移除依賴它的具體主張；將內部AI及專業審閱狀態保留在機器紀錄，不再置於讀者正文。 另以國健署官方飲水建議支持慢性腎臟病或心臟衰竭者依醫療團隊調整飲水量，不採固定公升數。",
+      "limits": [
+        "臺灣全國痛風頻率研究觀察期為2005至2010年；2010年盛行率採此前10年主要診斷，新發病例依此前10年無診斷／降尿酸用藥紀錄定義。不能作為2026年現況或真實發病日期。",
+        "健保申報診斷不是逐案臨床確認；不同就醫、登錄及診斷行為可能影響估計。",
+        "無臺灣單餐後個人短期發作機率可用，不以疾病盛行率、人年新發診斷率、案件數或國外相對效果推算。",
+        "ACR 2020是美國指引；其條件性建議和證據確定性不等於臺灣規則或個案處方。",
+        "臺北榮總營養PDF本輪直接存取403且web閱讀器拒絕大檔；已退役該來源，未使用其PDF作本文證據。護理衛教頁僅採循序減重及避免斷食，未採固定水量或舊藥物門檻。",
+        "AI來源核對並非醫療或藥事專業簽證；仍待風濕免疫科、藥師及營養師獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "scope": [
+          "風濕免疫科醫師",
+          "藥師",
+          "營養師"
+        ],
+        "status": "pending",
+        "reason": "本輪為AI輔助原始來源核對，尚未取得具名且具資格的獨立專業審閱。"
+      },
+      "unresolved_questions": [
+        "尚未找到能估計台灣一次特定飲食暴露後個人短期痛風發作機率的研究。",
+        "本次找到的台灣全國健保研究資料止於2010年；本輪未取得更新到2026年的同定義全國行政估計。",
+        "尚待風濕免疫科醫師、藥師及營養師具名獨立審閱。"
+      ],
+      "review_path": "localization/reviews/TW-16-010.json",
+      "article_path": "locales/zh-TW/book/ch16/TW-16-010.md",
+      "source_bundle_path": "localization/tw-edition/sources/ch16-gout-frequency-recheck-20261123.json",
+      "source_bundle_sha256": "28076909b09fcf75c0573ee356c40865c2f7d5fb3b5db61ca4891712a4f84ee0",
+      "source_reviewed_sha256": "3efa9cb5953095ac745ce28fa44c1703a97531eae2df7c56ab83b3a78fcc057c",
+      "register_status": "ai_source_rechecked_professional_pending"
     }
   ],
   "reader_copy_cleanups": [
