@@ -1,46 +1,85 @@
 {
   "id": "TW-13-028",
-  "reviewer": "ChatGPT（AI輔助逐主張閱讀公開來源及臺灣情境核對，非獨立專業簽證）",
+  "reviewer": "ChatGPT（2026-11-24 AI輔助逐主張核對台灣官方來源、統計口徑與緊急處置；非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-31",
-  "review_due_at": "2027-01-31",
+  "reviewed_at": "2026-11-24",
+  "review_due_at": "2027-02-24",
   "target_path": "locales/zh-TW/book/ch13/TW-13-028.md",
-  "target_sha256": "25a8c06ed1256ec49cc63363632738635e6b300236ef79f43fffb5a53bce58b5",
+  "target_sha256": "bf386fc4b290c42572350f133e6e163227981fd757e84c6844fa2f287b13552d",
+  "source_ids": [
+    "ch13_cold_vgh",
+    "ch13_cold_nfa",
+    "mountain_forest_signal_115",
+    "ch13_cold_cdc",
+    "ch13_cold_nfa_112"
+  ],
   "source_checks": [
     {
+      "source_id": "ch13_cold_vgh",
       "url": "https://ihealth.vghtpe.gov.tw/media/330",
-      "claim": "臺北榮總列低體溫症狀、乾衣避風保暖、輕柔移動與避免熱水浸泡及按摩。",
-      "supporting_passage": "臺北榮總列低體溫症狀、乾衣避風保暖、輕柔移動與避免熱水浸泡及按摩。（公開資料相關段落之編輯摘要，非逐字引文。）",
-      "accessed_at": "2026-10-31",
-      "retrieval_method": "2026-10-31實讀臺北榮總公開HTML；未採該頁固定回溫速度為民眾操作目標。"
+      "claim": "臺北榮總低體溫衛教列出避寒、除濕、保暖和輕柔移動原則；不可把固定回溫速度當民眾操作門檻。",
+      "supporting_passage": "臺北榮總低體溫照護衛教說明低體溫症狀及保暖原則；文章保留其來源限制，不以固定速度要求民眾回溫。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀臺北榮總健康e點通低體溫照護頁，核對低溫定義、症狀及保暖原則。"
     },
     {
+      "source_id": "ch13_cold_nfa",
       "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20218&code=list&flag=detail&ids=1468",
-      "claim": "消防署提醒高山低溫、強風、降雪和通訊風險，準備替換乾衣、防水層、保暖及定位通訊。",
-      "supporting_passage": "消防署提醒高山低溫、強風、降雪和通訊風險，準備替換乾衣、防水層、保暖及定位通訊。（公開資料相關段落之編輯摘要，非逐字引文。）",
-      "accessed_at": "2026-10-31",
-      "retrieval_method": "2026-10-31重新讀取消防署公開新聞正文；只用於臺灣高山暴露和裝備準備，不作病例頻率。"
+      "claim": "消防署提醒高山低溫、強風及降雪可能造成失溫，登山前應準備乾衣、防水與保暖裝備及通訊方式。",
+      "supporting_passage": "消防署高山低溫安全指引說明山區氣候及保暖、通訊裝備準備。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀內政部消防署高山低溫登山指引，核對失溫風險和行前裝備。"
     },
     {
+      "source_id": "mountain_forest_signal_115",
       "url": "https://www.forest.gov.tw/0004548/0078318",
-      "claim": "林保署公告112轉119須相容VoLTE手機及任何一家電信可用訊號；完全無訊號不能保證接通。",
-      "supporting_passage": "林保署公告112轉119須相容VoLTE手機及任何一家電信可用訊號；完全無訊號不能保證接通。（公開資料相關段落之編輯摘要，非逐字引文。）",
-      "accessed_at": "2026-10-31",
-      "retrieval_method": "2026-10-31實讀林業及自然保育署公告正文；沒有現場通訊測試。"
+      "claim": "林業及自然保育署說明山區通訊點、112所需VoLTE相容手機及任一可用電信訊號；實際通訊仍受地形、天候與電力影響。",
+      "supporting_passage": "林業及自然保育署山區通訊點說明112緊急通話的手機相容性和可用訊號條件。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀林業及自然保育署山區手機通訊點資料，核對其更新版本、VoLTE條件及訊號限制。"
     },
     {
+      "source_id": "ch13_cold_cdc",
       "url": "https://www.cdc.gov.tw/Category/ListContent/wL-8Abm9o5_5l4gSOR8M5g?uaid=_VBRPRbLJSqI9J9_wSjD2w",
-      "claim": "疾管署頁說中心體溫低於35℃為低體溫，濕冷、雨水或浸水可致散熱，症狀含顫抖、動作遲緩、虛弱、混亂和言語不清；頁面最後更新2012-10-01。",
-      "supporting_passage": "疾管署頁說中心體溫低於35℃為低體溫，濕冷、雨水或浸水可致散熱，症狀含顫抖、動作遲緩、虛弱、混亂和言語不清；頁面最後更新2012-10-01。（公開資料相關段落之編輯摘要，非逐字引文。）",
-      "accessed_at": "2026-10-31",
-      "retrieval_method": "2026-10-31實讀疾管署HTML正文及頁面更新日期；因內容年代較早，只採定義和症狀，與臺灣醫院及消防署來源交叉核對。"
+      "claim": "疾管署舊頁將中心體溫低於35℃列為低體溫並描述相關症狀；頁面最後更新2012-10-01，只採定義與症狀，不用於當前發生頻率或最新流程。",
+      "supporting_passage": "疾管署頁面列出低體溫定義和濕冷、顫抖、動作遲緩、虛弱及意識變化；頁面標示2012-10-01更新。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24重新讀取疾管署舊頁並確認其頁面日期；僅核對定義與症狀，明示時效限制。"
+    },
+    {
+      "source_id": "ch13_cold_nfa_112",
+      "url": "https://www.nfa.gov.tw/cht/index.php?article_id=31&code=list&flag=detail&ids=21",
+      "claim": "消防署說明112語音轉接119需要依提示按9，轉接較久；收訊良好時直接撥119較快。",
+      "supporting_passage": "消防署119／112常見問答說明收訊良好時直撥119，112須語音轉接並按9轉119。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀內政部消防署119、112常見問答正文。"
     }
   ],
-  "localization_changes": "以臺灣寒流、高山濕冷、雨淋、長者獨居與落水等情境重寫；加入疾管署低體溫定義和症狀，移除海外NHS來源，保留舊頁更新日期及沒有全國病例暴露分母的限制。",
-  "review_method": "逐主張實讀臺灣主管機關、公立醫院與原始官方研究／專業指引公開HTML或PDF；比對正文、來源範圍、適用年齡、手法差異及統計分母。沒有全國同定義病例或暴露分母時明列資料不足；未取得專家簽證不宣稱專業審查完成。",
+  "localization_changes": "補上山區119優先、特定情況112按9轉119且可能較慢的分流；保留全國失溫頻率資料不足及舊疾管署頁面限制。",
+  "review_method": "2026-11-24重讀正文及前次審閱，逐項核對本篇使用的來源、統計分母、求援次序和台灣情境。統計頁面無法直接讀取者明確記錄擷取限制，不以搜尋摘要冒充附件全文。",
   "limits": [
-    "目前沒有可反映全臺失溫病例與暴露母數的同一定義統計，不用寒流期間全部OHCA、一般山域事故或海外統計推算個人發生率。疾管署頁面最後更新日是2012年10月1日，本文只採其低體溫定義與症狀。不可用固定回溫速度、直接熱水浸泡、四肢按摩或粗暴搬動取代醫療處置；意識異常、嗜睡或呼吸不規則時立即打119。",
-    "獨立醫療、急救及相關專業審閱仍待取得；本紀錄為AI輔助公開來源與臺灣情境核對。"
+    "尚無查得同一病例定義、全國失溫病例數及暴露分母的資料；不以寒流期間全部OHCA、一般山域救援或海外統計推算個人發生率。疾管署頁面最後更新日為2012年10月1日，本文只採其低體溫定義與症狀。"
   ],
-  "source_reviewed_sha256": "25a8c06ed1256ec49cc63363632738635e6b300236ef79f43fffb5a53bce58b5"
+  "source_reviewed_sha256": "bf386fc4b290c42572350f133e6e163227981fd757e84c6844fa2f287b13552d",
+  "taiwan_context": "台灣濕冷、寒流、高山健行和山區通訊限制；先採避風、除濕、保暖和119求援，112僅作符合設備和訊號條件時的轉接備援。",
+  "frequency_assessment": "未查得同一病例定義、全國失溫病例數和暴露分母的資料；不以全部OHCA、一般山域救援或海外數據推算台灣個人風險。",
+  "statistics_assessed": [],
+  "unresolved_questions": [
+    "未找到可估算全台個人發生率的同定義母數；不得由行政事件計數推算個人風險。",
+    "尚未取得獨立專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。",
+    "status": "pending",
+    "scope": [
+      "急診或登山醫療專業人員",
+      "山域救援與到院前救護專業人員"
+    ]
+  },
+  "prior_review_sha256": "3e557fc8dea1d88c9596b47dd27fa165c93b9f1af9413bc574b957ba2915c05b",
+  "source_bundle_path": "localization/tw-edition/sources/ch13-co-fire-cold-snake-recheck-20261124.json",
+  "source_bundle_sha256": "d7c5701a98f12d055cb2dbebd7397c74e335fb8a52a61832839b5f8baf14a46b",
+  "review_path": "localization/reviews/TW-13-028.json"
 }
