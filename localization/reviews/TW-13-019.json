@@ -1,53 +1,87 @@
 {
   "id": "TW-13-019",
-  "reviewer": "ChatGPT（2026-10-30 AI輔助逐項對照消防、醫療及行政統計來源；非獨立醫療、消防、急救或統計專業簽證）",
+  "reviewer": "ChatGPT（2026-11-24 AI輔助逐主張核對台灣官方來源、統計口徑與緊急處置；非獨立專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-30",
-  "review_due_at": "2027-01-31",
+  "reviewed_at": "2026-11-24",
+  "review_due_at": "2027-02-24",
   "target_path": "locales/zh-TW/book/ch13/TW-13-019.md",
-  "target_sha256": "7e9ca5099a98507a9b2d55354f4af4c8ed243d048cb890b1be62471369744ab7",
-  "source_checks": [
-    {
-      "url": "https://119.tainan.gov.tw/cp.aspx?n=25534&s=17377",
-      "claim": "臺南市消防局說明同一環境多人頭痛、噁心等症狀時應警覺一氧化碳暴露，移往室外安全處並撥119。",
-      "supporting_passage": "消防局燃氣熱水器衛教說明一氧化碳可能無色無味，出現身體不適者應到通風處並求援。",
-      "accessed_at": "2026-10-30",
-      "retrieval_method": "2026-10-30直接讀取臺南市政府消防局官方網頁正文。"
-    },
-    {
-      "url": "https://ihealth.vghtpe.gov.tw/media/522",
-      "claim": "臺北榮總列出燃氣熱水器、木炭、內燃機廢氣等一氧化碳來源，說明症狀可能從頭暈噁心惡化至意識混亂、抽搐或昏迷，治療後也可能出現遲發神經症狀。",
-      "supporting_passage": "公立醫院護理衛教列出症狀分級、迅速移離暴露處、送醫及後續追蹤；症狀相似並不等於確診。",
-      "accessed_at": "2026-10-30",
-      "retrieval_method": "2026-10-30直接讀取臺北榮總護理部健康e點通可見全文。"
-    },
-    {
-      "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
-      "claim": "基隆市消防局2025年12月31日轉引消防署114年統計：全國一氧化碳事故22件、死亡5人、送醫59人；資料沒有個人、使用設備的家戶數或暴露時間分母。",
-      "supporting_passage": "地方消防局公告明示數字來源為消防署年度行政統計；事故件數、死亡人數和送醫人數的單位不同，不能互相換算或推論個人風險。",
-      "accessed_at": "2026-10-30",
-      "retrieval_method": "2026-10-30直接讀取基隆市政府消防局官方公告正文，並記錄其為轉引消防署統計。"
-    }
-  ],
-  "localization_changes": "更新消防署114年（2025）一氧化碳事故件數、死亡與送醫數，明列它們是不同統計單位且沒有個人或設備曝露分母；刪除正文末尾的編輯紀錄句，保留先撤離、119求援、施救者安全及遲發症狀追蹤指引。另將統計分母修正為台灣慣用的「使用設備的家戶數」。",
-  "review_method": "2026-10-30逐篇重讀臺南市消防局與臺北榮總正文，並重核地方消防局轉引的消防署2025行政統計；逐項核對症狀分流、撤離和求援順序、數字單位及分母限制。AI輔助來源再核對，不等於醫療、消防、急救或統計專業審閱。",
-  "limits": [
-    "消防署2025年全國事故統計由基隆市消防局轉引；無人口、使用設備的家戶數或暴露時數分母，不能估算個人發生率或事故致死率。消防事故數不涵蓋所有火場及其他暴露，醫院衛教也未提供可估算遲發神經病變比例的全國追蹤隊列。",
-    "2025事故數、死亡數與送醫數無個人或設備暴露分母，不能換算個人發生率、致死率或特定器具風險。",
-    "現有醫院衛教沒有全國同定義CO個案分母與後續追蹤隊列；遲發神經症狀須由醫療人員評估。",
-    "獨立急救、醫療、消防及統計專業審閱仍待取得。"
-  ],
-  "source_reviewed_sha256": "7e9ca5099a98507a9b2d55354f4af4c8ed243d048cb890b1be62471369744ab7",
-  "reader_copy_cleanup": {
-    "transform": "reader_copy_cleanup_v2",
-    "before_sha256": "e709e163be7c65db9b07ba7fb6372d5ea64740c0cb2f50d8ee68236e8130c9e3",
-    "after_sha256": "2d25af663a5605cd0f2f8f4e2cf92e5588dcb810067e4136f6b6974021929ed9",
-    "before_reader_sha256": "dea3e1370cf2d04f0cd7d5fca566aedd5d4af268aabd4355411073bea4305f51",
-    "after_reader_sha256": "9de13fcade2358d2dafe819ea5c35df59fe446aa0f216173cd609a84b6e0b33b"
-  },
+  "target_sha256": "1def4ed791ca54167807501c9d799d10320080b879493666e55ebeec1e9d601f",
   "source_ids": [
     "ch13_co_fire2026",
     "ch13_co_hospital",
     "tw_co_nfa_statistics_2025"
-  ]
+  ],
+  "source_checks": [
+    {
+      "source_id": "ch13_co_fire2026",
+      "url": "https://119.tainan.gov.tw/cp.aspx?n=25534&s=17377",
+      "claim": "同一環境多人頭痛、噁心或暈眩時，應先懷疑一氧化碳暴露，先到室外或安全通風處，再撥119；不要為開窗、關設備或拿物品折返。",
+      "supporting_passage": "臺南市消防局說明疑似一氧化碳暴露時應移至室外安全處並求援。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀臺南市政府消防局官方網頁正文，核對疑似暴露的症狀提示、撤離和求援順序。"
+    },
+    {
+      "source_id": "ch13_co_hospital",
+      "url": "https://ihealth.vghtpe.gov.tw/media/522",
+      "claim": "臺北榮總列出燃氣設備、木炭及車輛廢氣等暴露來源，並提醒可能出現遲發神經學症狀。",
+      "supporting_passage": "公立醫院衛教說明一氧化碳症狀、暴露處置、送醫及治療後神經學追蹤。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀臺北榮總健康e點通全文，核對暴露來源、症狀和遲發神經學風險。"
+    },
+    {
+      "source_id": "tw_co_nfa_statistics_2025",
+      "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
+      "claim": "消防署114年（2025）全國行政統計由基隆市消防局轉引，列一氧化碳事故22件、死亡5人、送醫59人；三項單位不同且沒有個人或設備暴露分母。",
+      "supporting_passage": "基隆市消防局公告標明轉引消防署114年統計，分列事故件數、死亡和送醫人數；不能據此計算個人發生率或致死率。",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀基隆市政府消防局官方公告，核對其轉引來源、統計期間、數值和單位。"
+    }
+  ],
+  "localization_changes": "重排一氧化碳應變，明確先離開疑似危害空間、到安全通風處再撥119；不得停留或折返操作設備、開窗、取物或接近昏迷者。",
+  "review_method": "2026-11-24重讀正文及前次審閱，逐項核對本篇使用的來源、統計分母、求援次序和台灣情境。統計頁面無法直接讀取者明確記錄擷取限制，不以搜尋摘要冒充附件全文。",
+  "limits": [
+    "消防署114年（2025）統計由基隆市消防局轉引；事故22件、死亡5人、送醫59人為不同單位，沒有全國人口、相關設備家戶數或暴露時數分母，不能換算個人發生率或事故致死率。",
+    "醫院衛教沒有全國同一定義一氧化碳中毒病例與後續追蹤隊列，不能由事故通報推估遲發神經症狀比例。"
+  ],
+  "source_reviewed_sha256": "1def4ed791ca54167807501c9d799d10320080b879493666e55ebeec1e9d601f",
+  "taiwan_context": "台灣冬季燃氣熱水器、室內燃燒和密閉車庫等暴露情境；以119與消防救援流程優先，避免民眾為關機或搬救昏迷者進入危險空間。",
+  "frequency_assessment": "一氧化碳事件統計只作為災害背景，撤離和求援必須先於查詢數字。",
+  "statistics_assessed": [
+    {
+      "topic": "一氧化碳中毒消防事故與傷亡",
+      "value": "22件事故；5人死亡；59人送醫",
+      "unit": "事故件數（件）、死亡人數（人）、送醫人數（人），不同統計單位",
+      "period": "2025年（民國114年）",
+      "scope": "臺灣全國",
+      "population": "消防署行政統計記錄的一氧化碳中毒事故及其死傷、送醫個案；非所有一氧化碳暴露者。",
+      "numerator": "22件事故、5人死亡、59人送醫",
+      "denominator": null,
+      "denominator_definition": "沒有全國人口、使用相關設備家戶數或暴露時數分母；事故、死亡及送醫的單位不同。",
+      "event_definition": "消防行政統計列報的一氧化碳中毒事故；死亡和送醫分別為個案人數。",
+      "data_type": "全國行政事故通報／消防統計，由基隆市消防局轉引；不是抽樣調查或暴露風險研究。",
+      "source_id": "tw_co_nfa_statistics_2025",
+      "accessed_at": "2026-11-24",
+      "checked_at": "2026-11-24",
+      "limitations": "缺少人口和設備暴露分母，事故件數不能換算個人發生率；死亡與送醫人數不能除以事故件數後稱為個案致死率或送醫率。資料不涵蓋全部可能暴露來源。"
+    }
+  ],
+  "unresolved_questions": [
+    "未找到可估算全台個人發生率的同定義母數；不得由行政事件計數推算個人風險。",
+    "尚未取得獨立專業審閱。"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。",
+    "status": "pending",
+    "scope": [
+      "急診或毒物專業醫師",
+      "消防與到院前救護專業人員",
+      "醫療統計專業人員"
+    ]
+  },
+  "prior_review_sha256": "6d30e64989ecf5baf512b1a25cd63a7d68e5bed2a5979bf7e0e816c662dc9e06",
+  "source_bundle_path": "localization/tw-edition/sources/ch13-co-fire-cold-snake-recheck-20261124.json",
+  "source_bundle_sha256": "d7c5701a98f12d055cb2dbebd7397c74e335fb8a52a61832839b5f8baf14a46b",
+  "review_path": "localization/reviews/TW-13-019.json"
 }

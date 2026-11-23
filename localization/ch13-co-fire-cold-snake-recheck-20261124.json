@@ -1,0 +1,630 @@
+{
+  "schema_version": 1,
+  "stage": "台灣緊急安全高風險內容實質再審：一氧化碳、火場逃生、失溫求援與蛇咬就醫",
+  "reviewed_at": "2026-11-24",
+  "review_due_at": "2027-02-24",
+  "baseline_main_sha": "0869a12e6566f65cbb13736152ca57581d309c6b",
+  "scope": "依本批次候選與緊急處置優先序，實質再審一氧化碳、火場逃生、失溫求援及蛇咬就醫四篇；不新增核心條目。",
+  "counts_before": {
+    "core_reviewed_entries": 351,
+    "runtime_items": 362,
+    "runtime_sources": 1520,
+    "source_registry": 1603,
+    "json_files_checked": 737,
+    "substantive_rechecks": 440,
+    "publication_ready": false,
+    "core_completed": 351,
+    "core_total": 765,
+    "unresolved_source_id_kinds": 100,
+    "unresolved_reference_occurrences": 239,
+    "coverage_json_files": 737,
+    "publication_completed_entries": 351,
+    "publication_total_entries": 765
+  },
+  "counts_after": {
+    "core_reviewed_entries": 351,
+    "runtime_items": 362,
+    "runtime_sources": 1521,
+    "source_registry": 1604,
+    "json_files_checked": 739,
+    "substantive_rechecks": 444,
+    "publication_ready": false,
+    "core_completed": 351,
+    "core_total": 765,
+    "unresolved_source_id_kinds": 100,
+    "unresolved_reference_occurrences": 239,
+    "coverage_json_files": 739,
+    "publication_completed_entries": 351,
+    "publication_total_entries": 765
+  },
+  "new_source_ids": [
+    "ch13_cold_nfa_112"
+  ],
+  "retired_from_items": [],
+  "source_bundle_path": "localization/tw-edition/sources/ch13-co-fire-cold-snake-recheck-20261124.json",
+  "source_bundle_sha256": "d7c5701a98f12d055cb2dbebd7397c74e335fb8a52a61832839b5f8baf14a46b",
+  "items": [
+    {
+      "id": "TW-13-019",
+      "title": "疑似一氧化碳中毒先撤離，安全地點立即撥119",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "0869a12e6566f65cbb13736152ca57581d309c6b",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "6d30e64989ecf5baf512b1a25cd63a7d68e5bed2a5979bf7e0e816c662dc9e06",
+      "before_sha256": "7e9ca5099a98507a9b2d55354f4af4c8ed243d048cb890b1be62471369744ab7",
+      "after_sha256": "1def4ed791ca54167807501c9d799d10320080b879493666e55ebeec1e9d601f",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-10-30",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "7e9ca5099a98507a9b2d55354f4af4c8ed243d048cb890b1be62471369744ab7",
+      "previous_body": "<!-- TW-ID: TW-13-019 -->\n\n# 疑似一氧化碳中毒先撤離，安全地點立即撥119\n\n## 適用情境與第一步\n\n臺灣冬季使用燃氣熱水器、室內燒木炭或讓汽車在密閉車庫運轉，都可能造成無色無臭的一氧化碳暴露。若同一空間多人頭痛、噁心、頭暈、無力、嗜睡，或警報器發出警示，應先懷疑環境危害，不要當成一般感冒繼續洗澡或休息。陽臺加裝窗戶、堆放衣物阻擋排氣，同樣可能增加風險。\n\n## 臺灣實作與下一步\n\n優先讓自己與能自行移動的人離開疑似危害空間，抵達室外或確實通風的安全處，再立即撥119說明疑似一氧化碳中毒、所在地址、暴露人數、有無意識或呼吸異常。只有在不增加暴露且操作十分安全時，才能停止燃氣設備或打開通風門窗；不能為了關瓦斯、取物品或拉出昏迷者而冒險重返可能積聚氣體的房間。讓救護人員配備安全設備進入、評估並協助送醫，即使離開後症狀改善，也應依醫師判斷接受觀察和追蹤。\n\n## 成本與可期待的效益\n\n第一時間撤離與求援不需購買特殊裝備。平時可請合格承裝業技術士檢查燃氣熱水器類型、排氣管、安裝位置及通風，必要時考量合格警報器、設備維護或改裝；費用依租屋及建物條件而異。及早停止暴露有助避免持續缺氧，但症狀減輕不代表完全康復。\n\n## 限制與常見誤解\n\n**救援優先與追蹤：**消防宣導的關、開、移、撥不能解讀成先進入危險房間操作設備。已離開者不要折返，仍在危險處且無法自行離開者讓配備適當裝備的救援人員處理。治療後若記憶、走路、情緒或日常功能變化，儘速回診，不因症狀曾改善而認定完全康復。\n\n**事件資料與限制：**消防署114年（2025）全國行政統計由基隆市消防局轉引，記錄一氧化碳中毒事故22件、5人死亡、59人送醫。這些分別是事故件數與傷亡人數，沒有全國人口、使用設備的家戶數或暴露時數分母，不能換算個人發生率或事故致死率，也不涵蓋所有火場及其他暴露來源。醫院衛教沒有提供全國同定義個案分母及後續追蹤隊列，不能以消防事故數推算遲發病變比例。\n\n一般家用血氧機的讀數正常不能排除一氧化碳中毒。屋外式熱水器若裝在室內或封閉陽臺，即使開一扇小窗也不代表安全，須請合格人員評估。不要用睡覺、喝水、泡澡或自行開車代替救護；不明氣體、密閉空間及尚未排除的火災危險都可能危害施救者，切勿自行進入。\n\n## 參考資料\n\n- [臺南市消防局：一氧化碳中毒症狀與處置](https://119.tainan.gov.tw/cp.aspx?n=25534&s=17377)：同一環境多人頭痛噁心應警覺一氧化碳暴露，移往室外安全處、停止暴露並撥119求援。\n- [臺北榮總：一氧化碳中毒照護](https://ihealth.vghtpe.gov.tw/media/522)：燃氣設備、木炭和車輛廢氣可造成一氧化碳中毒，部分患者可能出現遲發性神經學症狀。\n- [基隆市政府消防局：轉引消防署114年一氧化碳事故統計](https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html)：2025年全國事故22件、死亡5人、送醫59人；無人口或設備使用分母。\n",
+      "previous_source_ids": [
+        "ch13_co_fire2026",
+        "ch13_co_hospital",
+        "tw_co_nfa_statistics_2025"
+      ],
+      "previous_review_claims": [
+        "臺南市消防局說明同一環境多人頭痛、噁心等症狀時應警覺一氧化碳暴露，移往室外安全處並撥119。",
+        "臺北榮總列出燃氣熱水器、木炭、內燃機廢氣等一氧化碳來源，說明症狀可能從頭暈噁心惡化至意識混亂、抽搐或昏迷，治療後也可能出現遲發神經症狀。",
+        "基隆市消防局2025年12月31日轉引消防署114年統計：全國一氧化碳事故22件、死亡5人、送醫59人；資料沒有個人、使用設備的家戶數或暴露時間分母。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://119.tainan.gov.tw/cp.aspx?n=25534&s=17377",
+          "claim": "臺南市消防局說明同一環境多人頭痛、噁心等症狀時應警覺一氧化碳暴露，移往室外安全處並撥119。",
+          "supporting_passage": "消防局燃氣熱水器衛教說明一氧化碳可能無色無味，出現身體不適者應到通風處並求援。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接讀取臺南市政府消防局官方網頁正文。"
+        },
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/522",
+          "claim": "臺北榮總列出燃氣熱水器、木炭、內燃機廢氣等一氧化碳來源，說明症狀可能從頭暈噁心惡化至意識混亂、抽搐或昏迷，治療後也可能出現遲發神經症狀。",
+          "supporting_passage": "公立醫院護理衛教列出症狀分級、迅速移離暴露處、送醫及後續追蹤；症狀相似並不等於確診。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接讀取臺北榮總護理部健康e點通可見全文。"
+        },
+        {
+          "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
+          "claim": "基隆市消防局2025年12月31日轉引消防署114年統計：全國一氧化碳事故22件、死亡5人、送醫59人；資料沒有個人、使用設備的家戶數或暴露時間分母。",
+          "supporting_passage": "地方消防局公告明示數字來源為消防署年度行政統計；事故件數、死亡人數和送醫人數的單位不同，不能互相換算或推論個人風險。",
+          "accessed_at": "2026-10-30",
+          "retrieval_method": "2026-10-30直接讀取基隆市政府消防局官方公告正文，並記錄其為轉引消防署統計。"
+        }
+      ],
+      "source_ids": [
+        "ch13_co_fire2026",
+        "ch13_co_hospital",
+        "tw_co_nfa_statistics_2025"
+      ],
+      "new_source_ids": [],
+      "source_records_reused": [
+        "ch13_co_fire2026",
+        "ch13_co_hospital",
+        "tw_co_nfa_statistics_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_co_fire2026",
+          "url": "https://119.tainan.gov.tw/cp.aspx?n=25534&s=17377",
+          "claim": "同一環境多人頭痛、噁心或暈眩時，應先懷疑一氧化碳暴露，先到室外或安全通風處，再撥119；不要為開窗、關設備或拿物品折返。",
+          "supporting_passage": "臺南市消防局說明疑似一氧化碳暴露時應移至室外安全處並求援。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀臺南市政府消防局官方網頁正文，核對疑似暴露的症狀提示、撤離和求援順序。"
+        },
+        {
+          "source_id": "ch13_co_hospital",
+          "url": "https://ihealth.vghtpe.gov.tw/media/522",
+          "claim": "臺北榮總列出燃氣設備、木炭及車輛廢氣等暴露來源，並提醒可能出現遲發神經學症狀。",
+          "supporting_passage": "公立醫院衛教說明一氧化碳症狀、暴露處置、送醫及治療後神經學追蹤。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀臺北榮總健康e點通全文，核對暴露來源、症狀和遲發神經學風險。"
+        },
+        {
+          "source_id": "tw_co_nfa_statistics_2025",
+          "url": "https://www.klfd.klcg.gov.tw/tw/klfd1/2024-311282.html",
+          "claim": "消防署114年（2025）全國行政統計由基隆市消防局轉引，列一氧化碳事故22件、死亡5人、送醫59人；三項單位不同且沒有個人或設備暴露分母。",
+          "supporting_passage": "基隆市消防局公告標明轉引消防署114年統計，分列事故件數、死亡和送醫人數；不能據此計算個人發生率或致死率。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀基隆市政府消防局官方公告，核對其轉引來源、統計期間、數值和單位。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "1def4ed791ca54167807501c9d799d10320080b879493666e55ebeec1e9d601f",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [
+        {
+          "topic": "一氧化碳中毒消防事故與傷亡",
+          "value": "22件事故；5人死亡；59人送醫",
+          "unit": "事故件數（件）、死亡人數（人）、送醫人數（人），不同統計單位",
+          "period": "2025年（民國114年）",
+          "scope": "臺灣全國",
+          "population": "消防署行政統計記錄的一氧化碳中毒事故及其死傷、送醫個案；非所有一氧化碳暴露者。",
+          "numerator": "22件事故、5人死亡、59人送醫",
+          "denominator": null,
+          "denominator_definition": "沒有全國人口、使用相關設備家戶數或暴露時數分母；事故、死亡及送醫的單位不同。",
+          "event_definition": "消防行政統計列報的一氧化碳中毒事故；死亡和送醫分別為個案人數。",
+          "data_type": "全國行政事故通報／消防統計，由基隆市消防局轉引；不是抽樣調查或暴露風險研究。",
+          "source_id": "tw_co_nfa_statistics_2025",
+          "accessed_at": "2026-11-24",
+          "checked_at": "2026-11-24",
+          "limitations": "缺少人口和設備暴露分母，事故件數不能換算個人發生率；死亡與送醫人數不能除以事故件數後稱為個案致死率或送醫率。資料不涵蓋全部可能暴露來源。"
+        }
+      ],
+      "taiwan_context": "台灣冬季燃氣熱水器、室內燃燒和密閉車庫等暴露情境；以119與消防救援流程優先，避免民眾為關機或搬救昏迷者進入危險空間。",
+      "frequency_assessment": "一氧化碳事件統計只作為災害背景，撤離和求援必須先於查詢數字。",
+      "changes": "重排一氧化碳應變，明確先離開疑似危害空間、到安全通風處再撥119；不得停留或折返操作設備、開窗、取物或接近昏迷者。",
+      "limits": [
+        "消防署114年（2025）統計由基隆市消防局轉引；事故22件、死亡5人、送醫59人為不同單位，沒有全國人口、相關設備家戶數或暴露時數分母，不能換算個人發生率或事故致死率。",
+        "醫院衛教沒有全國同一定義一氧化碳中毒病例與後續追蹤隊列，不能由事故通報推估遲發神經症狀比例。"
+      ],
+      "unresolved_questions": [
+        "未找到可估算全台個人發生率的同定義母數；不得由行政事件計數推算個人風險。",
+        "尚未取得獨立專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。",
+        "status": "pending",
+        "scope": [
+          "急診或毒物專業醫師",
+          "消防與到院前救護專業人員",
+          "醫療統計專業人員"
+        ]
+      },
+      "review_path": "localization/reviews/TW-13-019.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-co-fire-cold-snake-recheck-20261124.json",
+      "reader_copy_cleanup_preserved": {
+        "transform": "reader_copy_cleanup_v2",
+        "before_sha256": "e709e163be7c65db9b07ba7fb6372d5ea64740c0cb2f50d8ee68236e8130c9e3",
+        "after_sha256": "2d25af663a5605cd0f2f8f4e2cf92e5588dcb810067e4136f6b6974021929ed9",
+        "before_reader_sha256": "dea3e1370cf2d04f0cd7d5fca566aedd5d4af268aabd4355411073bea4305f51",
+        "after_reader_sha256": "9de13fcade2358d2dafe819ea5c35df59fe446aa0f216173cd609a84b6e0b33b"
+      },
+      "source_bundle_sha256": "d7c5701a98f12d055cb2dbebd7397c74e335fb8a52a61832839b5f8baf14a46b",
+      "review_sha256": "f3f7cee6a550c9b6d42c7c4cc3f6796f4d75ba0e96d6e33967fb18c4e6d9c4b7"
+    },
+    {
+      "id": "TW-13-024",
+      "title": "火警時先看逃生路線有沒有煙，無路可走就關門報119",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "0869a12e6566f65cbb13736152ca57581d309c6b",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "6837deb0f2ce22befe41d36b001e7c84a5cf0dcfac9c96ed9e6e078f826a1a96",
+      "before_sha256": "020e9bf3f53bcf656a3d592de38ff041a2a1cddc5415c8f785da53212c26efbc",
+      "after_sha256": "aff7b25d1d8c4e8d59b85939d3b10173dc389070b8b5abfd11aca20857014e4e",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "020e9bf3f53bcf656a3d592de38ff041a2a1cddc5415c8f785da53212c26efbc",
+      "previous_body": "<!-- TW-ID: TW-13-024 -->\n\n# 火警時先看逃生路線有沒有煙，無路可走就關門報119\n\n## 先做什麼\n\n在家、公寓大樓、租屋處、辦公室或公共場所發現火警，先示警並打119，說清楚地址、樓層、火煙位置和有沒有人受困。不要為了拿財物、找毛巾或尋找防護裝備拖延。\n\n## 台灣住家與公共場所的做法\n\n如果門外和逃生路線沒有濃煙、沒有明顯高溫，而且仍可安全通行，走安全梯往下、往外離開，途中隨手關上身後的門；絕不搭電梯。進入餐廳、KTV、電影院、百貨公司等不熟悉的場所時，先看逃生圖，認出兩個不同方向的出口，並留意通道和安全門有沒有被堆物擋住。\n\n如果開門見煙，或原本路線已被濃煙阻斷，不要進入或硬闖。關上門，改走另一條仍安全的路線；若沒有安全路線，就退到未起火、能關門的相對安全空間，打119報出所在樓層、房間、窗戶或陽台位置及受困人數，留在室內等消防人員指示。不要躲浴室或廁所，也不要跳樓。\n\n## 住宅火災統計與平時準備\n\n內政部消防署彙整110至114年（2021至2025年）全國建築物火災共25,895件；獨立住宅占37.0%，集合住宅占34.6%。這些是消防機關記錄的火災件數與類型占比，沒有住宅戶數或居住時間分母，不能換算成單一住戶的發生機率，也不能用來比較不同建物的個人逃生成功率。\n\n平時花幾分鐘確認住家、租屋處和常去場所的逃生出口，保持走道與樓梯暢通，並和家人約定集合地點。住宅用火災警報器和依場所條件設置的消防設備可以爭取反應時間，記得定期測試；遇到火警時，先疏散和報案，不要為了滅火或搬物品延誤離開。\n\n## 常見錯誤\n\n低姿勢只能減少部分煙霧吸入，不能當成穿越濃煙的許可。濕毛巾不能阻隔一氧化碳，也不能取代關門避難或119求援。不要躲浴室、不要搭電梯、不要在濃煙中摸索，也不要因為看不到火焰就認為走道安全；火和熱可能在門後或其他樓層。\n\n## 參考資料\n\n- [內政部消防署：火場應變及逃生要訣](https://www.nfa.gov.tw/cht/index.php?article_id=20255&code=list&flag=detail&ids=1468)：無煙且安全時往下、往外逃；濃煙阻路時關門避難並打119。\n- [內政部消防署：進入公共場所先確認兩個方向的逃生出口](https://www.nfa.gov.tw/cht/index.php?article_id=21677&code=list&flag=detail&ids=1468)：先辨認兩方向出口，不能硬闖濃煙。\n- [消防署消防防災館：110至114年全國建築物火災統計](https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54)：建築物火災總數及住宅類型占比。\n",
+      "previous_source_ids": [
+        "ch13_fire_nfa2026",
+        "ch13_fire_nfa2",
+        "ch01_nfa_fire_2025"
+      ],
+      "previous_review_claims": [
+        "火場逃生應往下往外；若濃煙阻路，不硬闖，改至未起火的相對安全空間關門並打119。",
+        "公共場所應確認兩個不同方向出口；若兩條路線均受煙阻斷，關門避難並撥119。",
+        "消防署110至114年全國建築物火災25,895件；獨立住宅占37.0%、集合住宅占34.6%。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20255&code=list&flag=detail&ids=1468",
+          "claim": "火場逃生應往下往外；若濃煙阻路，不硬闖，改至未起火的相對安全空間關門並打119。",
+          "supporting_passage": "火場逃生應往下往外；若濃煙阻路，不硬闖，改至未起火的相對安全空間關門並打119。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀消防署2026-01-03發布的火場應變與逃生正文。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=21677&code=list&flag=detail&ids=1468",
+          "claim": "公共場所應確認兩個不同方向出口；若兩條路線均受煙阻斷，關門避難並撥119。",
+          "supporting_passage": "公共場所應確認兩個不同方向出口；若兩條路線均受煙阻斷，關門避難並撥119。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀消防署2026-09-05發布的公共場所逃生正文。"
+        },
+        {
+          "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+          "claim": "消防署110至114年全國建築物火災25,895件；獨立住宅占37.0%、集合住宅占34.6%。",
+          "supporting_passage": "消防署110至114年全國建築物火災25,895件；獨立住宅占37.0%、集合住宅占34.6%。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "官方頁直接開啟回覆403；2026-10-31讀取消防署官方搜尋索引提供的正文統計摘要。未下載頁面圖片或附件，未以總火災數換算住戶風險。"
+        }
+      ],
+      "source_ids": [
+        "ch13_fire_nfa2026",
+        "ch13_fire_nfa2",
+        "ch01_nfa_fire_2025"
+      ],
+      "new_source_ids": [],
+      "source_records_reused": [
+        "ch13_fire_nfa2026",
+        "ch13_fire_nfa2",
+        "ch01_nfa_fire_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_fire_nfa2026",
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20255&code=list&flag=detail&ids=1468",
+          "claim": "消防署火場指引建議確認逃生路線安全後往下、往外撤離；濃煙阻路時不要硬闖，關門並撥119。",
+          "supporting_passage": "消防署火場應變指引列出安全路線撤離、往下往外、濃煙阻路關門避難及119求援。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀內政部消防署於2026-01-03發布的火場應變及逃生正文，核對撤離和受困求援步驟。"
+        },
+        {
+          "source_id": "ch13_fire_nfa2",
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=21677&code=list&flag=detail&ids=1468",
+          "claim": "消防署建議進入公共場所先辨認不同方向的出口，遇濃煙不可硬闖。",
+          "supporting_passage": "消防署公共場所指引要求事先查看逃生圖、辨認兩方向出口，煙阻路時尋找安全替代路線或關門求救。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀內政部消防署於2026-09-05發布的公共場所出口指引正文。"
+        },
+        {
+          "source_id": "ch01_nfa_fire_2025",
+          "url": "https://www.tfdp.com.tw/cht/index.php?article_id=147&code=list&flag=detail&ids=54",
+          "claim": "消防署資料摘要顯示2021至2025年全國建築物火災共25,895件；獨立住宅占37.0%，集合住宅占34.6%。這是行政火災件數與類型占比，不是住宅戶別發生率。",
+          "supporting_passage": "消防署官方索引摘要列出110至114年建築物火災總件數及住宅類型比例；本次官方統計頁直接開啟回覆403，故保留讀取限制，不將數值換算為戶別風險。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接開啟消防署消防防災館統計頁回覆403；核對內政部消防署官方搜尋索引提供的期間、數字和類型摘要。未下載或讀取附件。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "aff7b25d1d8c4e8d59b85939d3b10173dc389070b8b5abfd11aca20857014e4e",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [
+        {
+          "topic": "全國建築物火災與住宅類型",
+          "value": "25,895件；獨立住宅占37.0%；集合住宅占34.6%",
+          "unit": "行政火災件數（件）與火災類型占比（%）",
+          "period": "2021至2025年（民國110至114年）",
+          "scope": "臺灣全國",
+          "population": "消防機關記錄的全國建築物火災事件；住宅比例以統計所列火災事件分類為範圍。",
+          "numerator": "25,895件建築物火災；獨立住宅與集合住宅類型比例分別37.0%及34.6%。",
+          "denominator": null,
+          "denominator_definition": "未提供住宅戶數、建物使用時間或居住人時分母；比例分母為官方統計中的建築物火災事件，不是全國住宅戶數。",
+          "event_definition": "官方建築物火災行政統計，2021至2025年累計。",
+          "data_type": "全國消防行政事件計數與事件分類比例；統計頁直接請求回覆403，本次只核對官方搜尋索引摘要，未讀附件。",
+          "source_id": "ch01_nfa_fire_2025",
+          "accessed_at": "2026-11-24",
+          "checked_at": "2026-11-24",
+          "limitations": "不能將火災件數或各類火災占比解讀成住戶發生率、個人風險或不同住宅的逃生成功率；原始統計頁本次無法直接讀取，數值來源限制已記錄。"
+        }
+      ],
+      "taiwan_context": "適用台灣公寓、租屋、集合住宅、辦公室及公共場所；以安全梯、兩方向出口、119和關門待援安排引導。",
+      "frequency_assessment": "消防機關建築火災數與住宅類型占比沒有住宅戶數或居住時間分母，不能換算住戶個人發生率。",
+      "changes": "明確以提醒並沿安全路線撤離為先；僅在不延誤撤離時由同伴代為報119，受困時關門後立即求援。",
+      "limits": [
+        "2021至2025年建築物火災共25,895件；獨立住宅占37.0%、集合住宅占34.6%。這是事件計數和事件類型占比，沒有住宅戶數或居住時間分母，不能換算單一住戶發生率。",
+        "火場狀況會快速改變；遇到煙、熱或不確定路線安全時不要進入，關門並撥119，依消防人員指示行動。"
+      ],
+      "unresolved_questions": [
+        "消防署建築火災統計頁本次直接請求回覆403；雖核對官方搜尋索引摘要，未讀取底層附件。",
+        "尚未取得獨立專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。",
+        "status": "pending",
+        "scope": [
+          "消防及防火避難專業人員",
+          "到院前救護專業人員"
+        ]
+      },
+      "review_path": "localization/reviews/TW-13-024.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-co-fire-cold-snake-recheck-20261124.json",
+      "reader_copy_cleanup_preserved": null,
+      "source_bundle_sha256": "d7c5701a98f12d055cb2dbebd7397c74e335fb8a52a61832839b5f8baf14a46b",
+      "review_sha256": "c0704ff589d4da186a6d36017a69edbb3d2aa50583fe663b6399d93b14565786"
+    },
+    {
+      "id": "TW-13-028",
+      "title": "疑似失溫先避風除濕、輕柔保暖；意識異常打119",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "0869a12e6566f65cbb13736152ca57581d309c6b",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "3e557fc8dea1d88c9596b47dd27fa165c93b9f1af9413bc574b957ba2915c05b",
+      "before_sha256": "25a8c06ed1256ec49cc63363632738635e6b300236ef79f43fffb5a53bce58b5",
+      "after_sha256": "bf386fc4b290c42572350f133e6e163227981fd757e84c6844fa2f287b13552d",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "25a8c06ed1256ec49cc63363632738635e6b300236ef79f43fffb5a53bce58b5",
+      "previous_body": "<!-- TW-ID: TW-13-028 -->\n\n# 疑似失溫先避風除濕、輕柔保暖；意識異常打119\n\n## 適用情境與第一步\n\n臺灣冬季寒流、高山健行、露營、淋雨或落水後，都可能因寒冷、風吹和衣物潮濕而失溫，不一定要在零度以下。長者獨居、幼兒、身體不適、飲酒或藥物影響者更要留意。若同伴持續發抖、動作變慢、虛弱、說話含糊、意識混亂或叫不太醒，先把低體溫列入可能原因，不要等到量出特定體溫才處理。\n\n## 臺灣實作與下一步\n\n先確認現場安全，將人移到避風、乾燥且較溫暖的地方；若仍在山區或水邊有立即危險，先移到可確認安全處。意識混亂、嗜睡、走不穩、呼吸變慢或不規則時，立即打119；手機在山區沒有一般訊號時，可在相容的4G VoLTE手機且有任一家電信訊號時試撥112，按9轉119，但完全無訊號不保證接通。\n\n動作輕柔地除去或隔開濕衣物，以乾衣、毯子或防風層包住身體，先保暖軀幹並隔開冰冷地面。使用暖暖包或熱水袋時以布隔開、避免燙傷；不要直接把人泡進熱水。只有完全清醒、能安全吞嚥且沒有反覆嘔吐的人，才可考慮溫熱、非酒精飲料。持續觀察呼吸；失去反應或沒有正常呼吸時，立即打119並依派遣員指示急救。\n\n## 成本與可期待的效益\n\n乾燥替換衣物、防風防水外套、保暖毯、帽子、手套和可聯絡求援的設備，可降低行程中濕冷暴露並協助保暖；購置成本依已有裝備和個人需求而異，裝備不能保證不失溫。臺灣目前沒有找到同一病例定義、全國失溫病例數與暴露分母的資料，因此不以寒流期間全部OHCA或山域救援案件代替失溫發生率。\n\n## 限制與常見誤解\n\n停止發抖不代表已好轉；發抖減少、嗜睡或意識變差可能代表狀況更嚴重。額溫、腋溫或手摸不能可靠排除低體溫。不要讓患者直接泡熱水、按摩四肢、用力拉扯搬動，或給意識不清者飲料、食物、酒或咖啡；不以每小時固定升溫度數作為民眾操作目標。失溫也可能與低血糖、感染、中風、藥物或其他急症混淆，交由119與醫療團隊評估。\n\n## 參考資料\n\n- [臺北榮總：低體溫之照護](https://ihealth.vghtpe.gov.tw/media/330)：列出臺灣低溫情境、症狀及避寒、除濕、保暖和輕柔移動等原則；不採其固定回溫速度作民眾操作目標。\n- [內政部消防署：低溫降雪風險升高，登山務必備齊關鍵裝備](https://www.nfa.gov.tw/cht/index.php?article_id=20218&code=list&flag=detail&ids=1468)：提醒高山低溫、強風、降雪、通訊和保暖準備。\n- [林業及自然保育署：山區手機可通訊點標示（更新至2026年2月）](https://www.forest.gov.tw/0004548/0078318)：說明112緊急通話所需的VoLTE裝置與可用電信訊號。\n- [疾管署：高溫與酷寒](https://www.cdc.gov.tw/Category/ListContent/wL-8Abm9o5_5l4gSOR8M5g?uaid=_VBRPRbLJSqI9J9_wSjD2w)：定義中心體溫低於35℃為低體溫，列出濕冷、發抖、動作遲鈍、虛弱與意識變化；頁面標示最後更新2012-10-01。\n",
+      "previous_source_ids": [
+        "ch13_cold_vgh",
+        "ch13_cold_nfa",
+        "mountain_forest_signal_115",
+        "ch13_cold_cdc"
+      ],
+      "previous_review_claims": [
+        "臺北榮總列低體溫症狀、乾衣避風保暖、輕柔移動與避免熱水浸泡及按摩。",
+        "消防署提醒高山低溫、強風、降雪和通訊風險，準備替換乾衣、防水層、保暖及定位通訊。",
+        "林保署公告112轉119須相容VoLTE手機及任何一家電信可用訊號；完全無訊號不能保證接通。",
+        "疾管署頁說中心體溫低於35℃為低體溫，濕冷、雨水或浸水可致散熱，症狀含顫抖、動作遲緩、虛弱、混亂和言語不清；頁面最後更新2012-10-01。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://ihealth.vghtpe.gov.tw/media/330",
+          "claim": "臺北榮總列低體溫症狀、乾衣避風保暖、輕柔移動與避免熱水浸泡及按摩。",
+          "supporting_passage": "臺北榮總列低體溫症狀、乾衣避風保暖、輕柔移動與避免熱水浸泡及按摩。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀臺北榮總公開HTML；未採該頁固定回溫速度為民眾操作目標。"
+        },
+        {
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20218&code=list&flag=detail&ids=1468",
+          "claim": "消防署提醒高山低溫、強風、降雪和通訊風險，準備替換乾衣、防水層、保暖及定位通訊。",
+          "supporting_passage": "消防署提醒高山低溫、強風、降雪和通訊風險，準備替換乾衣、防水層、保暖及定位通訊。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31重新讀取消防署公開新聞正文；只用於臺灣高山暴露和裝備準備，不作病例頻率。"
+        },
+        {
+          "url": "https://www.forest.gov.tw/0004548/0078318",
+          "claim": "林保署公告112轉119須相容VoLTE手機及任何一家電信可用訊號；完全無訊號不能保證接通。",
+          "supporting_passage": "林保署公告112轉119須相容VoLTE手機及任何一家電信可用訊號；完全無訊號不能保證接通。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀林業及自然保育署公告正文；沒有現場通訊測試。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Category/ListContent/wL-8Abm9o5_5l4gSOR8M5g?uaid=_VBRPRbLJSqI9J9_wSjD2w",
+          "claim": "疾管署頁說中心體溫低於35℃為低體溫，濕冷、雨水或浸水可致散熱，症狀含顫抖、動作遲緩、虛弱、混亂和言語不清；頁面最後更新2012-10-01。",
+          "supporting_passage": "疾管署頁說中心體溫低於35℃為低體溫，濕冷、雨水或浸水可致散熱，症狀含顫抖、動作遲緩、虛弱、混亂和言語不清；頁面最後更新2012-10-01。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀疾管署HTML正文及頁面更新日期；因內容年代較早，只採定義和症狀，與臺灣醫院及消防署來源交叉核對。"
+        }
+      ],
+      "source_ids": [
+        "ch13_cold_vgh",
+        "ch13_cold_nfa",
+        "mountain_forest_signal_115",
+        "ch13_cold_cdc",
+        "ch13_cold_nfa_112"
+      ],
+      "new_source_ids": [
+        "ch13_cold_nfa_112"
+      ],
+      "source_records_reused": [
+        "ch13_cold_vgh",
+        "ch13_cold_nfa",
+        "mountain_forest_signal_115",
+        "ch13_cold_cdc"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_cold_vgh",
+          "url": "https://ihealth.vghtpe.gov.tw/media/330",
+          "claim": "臺北榮總低體溫衛教列出避寒、除濕、保暖和輕柔移動原則；不可把固定回溫速度當民眾操作門檻。",
+          "supporting_passage": "臺北榮總低體溫照護衛教說明低體溫症狀及保暖原則；文章保留其來源限制，不以固定速度要求民眾回溫。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀臺北榮總健康e點通低體溫照護頁，核對低溫定義、症狀及保暖原則。"
+        },
+        {
+          "source_id": "ch13_cold_nfa",
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=20218&code=list&flag=detail&ids=1468",
+          "claim": "消防署提醒高山低溫、強風及降雪可能造成失溫，登山前應準備乾衣、防水與保暖裝備及通訊方式。",
+          "supporting_passage": "消防署高山低溫安全指引說明山區氣候及保暖、通訊裝備準備。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀內政部消防署高山低溫登山指引，核對失溫風險和行前裝備。"
+        },
+        {
+          "source_id": "mountain_forest_signal_115",
+          "url": "https://www.forest.gov.tw/0004548/0078318",
+          "claim": "林業及自然保育署說明山區通訊點、112所需VoLTE相容手機及任一可用電信訊號；實際通訊仍受地形、天候與電力影響。",
+          "supporting_passage": "林業及自然保育署山區通訊點說明112緊急通話的手機相容性和可用訊號條件。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀林業及自然保育署山區手機通訊點資料，核對其更新版本、VoLTE條件及訊號限制。"
+        },
+        {
+          "source_id": "ch13_cold_cdc",
+          "url": "https://www.cdc.gov.tw/Category/ListContent/wL-8Abm9o5_5l4gSOR8M5g?uaid=_VBRPRbLJSqI9J9_wSjD2w",
+          "claim": "疾管署舊頁將中心體溫低於35℃列為低體溫並描述相關症狀；頁面最後更新2012-10-01，只採定義與症狀，不用於當前發生頻率或最新流程。",
+          "supporting_passage": "疾管署頁面列出低體溫定義和濕冷、顫抖、動作遲緩、虛弱及意識變化；頁面標示2012-10-01更新。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24重新讀取疾管署舊頁並確認其頁面日期；僅核對定義與症狀，明示時效限制。"
+        },
+        {
+          "source_id": "ch13_cold_nfa_112",
+          "url": "https://www.nfa.gov.tw/cht/index.php?article_id=31&code=list&flag=detail&ids=21",
+          "claim": "消防署說明112語音轉接119需要依提示按9，轉接較久；收訊良好時直接撥119較快。",
+          "supporting_passage": "消防署119／112常見問答說明收訊良好時直撥119，112須語音轉接並按9轉119。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀內政部消防署119、112常見問答正文。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "bf386fc4b290c42572350f133e6e163227981fd757e84c6844fa2f287b13552d",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [],
+      "taiwan_context": "台灣濕冷、寒流、高山健行和山區通訊限制；先採避風、除濕、保暖和119求援，112僅作符合設備和訊號條件時的轉接備援。",
+      "frequency_assessment": "未查得同一病例定義、全國失溫病例數和暴露分母的資料；不以全部OHCA、一般山域救援或海外數據推算台灣個人風險。",
+      "changes": "補上山區119優先、特定情況112按9轉119且可能較慢的分流；保留全國失溫頻率資料不足及舊疾管署頁面限制。",
+      "limits": [
+        "尚無查得同一病例定義、全國失溫病例數及暴露分母的資料；不以寒流期間全部OHCA、一般山域救援或海外統計推算個人發生率。疾管署頁面最後更新日為2012年10月1日，本文只採其低體溫定義與症狀。"
+      ],
+      "unresolved_questions": [
+        "未找到可估算全台個人發生率的同定義母數；不得由行政事件計數推算個人風險。",
+        "尚未取得獨立專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。",
+        "status": "pending",
+        "scope": [
+          "急診或登山醫療專業人員",
+          "山域救援與到院前救護專業人員"
+        ]
+      },
+      "review_path": "localization/reviews/TW-13-028.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-co-fire-cold-snake-recheck-20261124.json",
+      "reader_copy_cleanup_preserved": null,
+      "source_bundle_sha256": "d7c5701a98f12d055cb2dbebd7397c74e335fb8a52a61832839b5f8baf14a46b",
+      "review_sha256": "74b104ae4831b34dd83a01c3c463a17c553d90fa348d7080d66bdd58d52fd5cf"
+    },
+    {
+      "id": "TW-13-029",
+      "title": "臺灣郊野遭蛇咬：保持冷靜、移除飾品並儘速就醫",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "0869a12e6566f65cbb13736152ca57581d309c6b",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "d1398dee1df93ea4955d6c7613ac64b3097303f316c5b9a457e2bc7b91a8ca1d",
+      "before_sha256": "ce596df5cb52cefd4f00321194fac7e57f565422e99f6a9f6371fc645257b9ae",
+      "after_sha256": "bb4d93764546ae98f38e265aac394b889534671a43f7e4da2f26cb5ce0e909a2",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "ce596df5cb52cefd4f00321194fac7e57f565422e99f6a9f6371fc645257b9ae",
+      "previous_body": "<!-- TW-ID: TW-13-029 -->\n\n# 臺灣郊野遭蛇咬：保持冷靜、移除飾品並儘速就醫\n\n## 適用情境與第一步\n\n在臺灣農田、草叢、山徑、溪邊或住家周遭被蛇咬，不確定蛇種時也先當作可能是毒蛇。立刻離開蛇所在位置，別抓蛇、別靠近拍照；儘快就醫評估。人在偏遠處、症狀快速惡化、呼吸困難、意識不清或無法安全移動時，立即打119並說明咬傷時間、部位、症狀和所在地。\n\n## 臺灣實作與下一步\n\n保持冷靜、減少走動，取下戒指、手錶、鞋子或可能被腫脹卡住的飾品。若安全可行，在不靠近蛇的情況下記下外觀或拍照，並告知醫療人員咬傷時間、位置及症狀；不為辨識蛇而延誤求醫。由同行者陪同就醫，不要獨自開車下山。\n\n疾管署「五要」包含傷口上緣包紮，但不熟悉包紮方式時先打119並依派遣或醫療人員指示；不可把它誤當成要勒到切斷血流的止血帶。抗蛇毒血清是醫師處方用藥，由醫療團隊依蛇種線索、症狀與檢查評估，不自行買藥或繞路尋找儲備院所。\n\n## 成本與可期待的效益\n\n疾管署分析2017至2021年健保資料，4,893名因蛇咬傷使用抗蛇毒血清者，平均每年約979人；其中9人死亡，論文列出的0.18%是這批血清使用者中的致死比例。這些資料來自接受治療者，不含全部蛇咬、未使用血清或未就醫的人，也沒有所有蛇咬暴露的分母；不能用來估個人遇到蛇咬或存活的機率。蛇咬後仍要立即由醫療人員評估，不要因統計數字看似低而等待。\n\n抗蛇毒血清儲備點頁面列出院所資訊，但不是即時庫存保證；緊急時由119或醫療團隊聯繫調度。平時穿包覆性鞋褲、避免徒手翻動草叢、石塊和木材，可減少接觸機會；實際就醫及健保費用依診療與個人資格而異。\n\n## 限制與常見誤解\n\n疾管署五不包括不割傷口、不用嘴吸毒、不冰敷、不飲酒或刺激性飲料、不拖延就醫。不要用電擊、偏方或緊緊綁住肢體；不要因咬痕不明顯或暫時不痛就排除蛇咬。2017至2021的9人死亡／4,893名血清使用者是歷史治療群體結果，不代表每位患者的預後，也不能套用到沒有使用血清的人。\n\n## 參考資料\n\n- [衛福部：毒蛇咬傷五要五不](https://www.mohw.gov.tw/cp-16-83220-1.html)：疾管署說明疑似毒蛇咬傷的就醫及五要五不原則。\n- [疾管署：抗蛇毒血清資訊及儲備點](https://www.cdc.gov.tw/Category/MPage/l_z6ZKErZJ063m6OV_8nXQ)：提供儲備院所查詢；名單更新不等於即時庫存。\n- [疾管署疫情報導原著：2017至2021年抗蛇毒血清使用情形](https://www.cdc.gov.tw/EpidemicTheme/Detail/zKNFqsVWxUoUqE6fyhmBNA?archiveId=Xu-aa4F7P4FvCh302lxKlA)：以健保資料分析4,893名血清使用者及其中9名死亡者；0.18%以該使用者群為分母。\n",
+      "previous_source_ids": [
+        "ch13_snake_mohw",
+        "ch13_snake_cdc",
+        "ch13_snake_cdc_epidemiology_2025"
+      ],
+      "previous_review_claims": [
+        "疾管署2025年公告五要五不，2017至2021年每年平均約979名使用抗蛇毒血清者；儲備點不是即時庫存。",
+        "疾管署抗蛇毒血清專區列出儲備資訊，清單不是即時庫存，急救時不能依網頁名單延誤轉送。",
+        "疾管署疫情報導原著以2017至2021年健保資料分析4,893名使用者，9人死亡，列致死率0.18%。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.mohw.gov.tw/cp-16-83220-1.html",
+          "claim": "疾管署2025年公告五要五不，2017至2021年每年平均約979名使用抗蛇毒血清者；儲備點不是即時庫存。",
+          "supporting_passage": "疾管署2025年公告五要五不，2017至2021年每年平均約979名使用抗蛇毒血清者；儲備點不是即時庫存。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀衛福部轉載疾管署公告及更新日期；統計只指血清使用者。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/Category/MPage/l_z6ZKErZJ063m6OV_8nXQ",
+          "claim": "疾管署抗蛇毒血清專區列出儲備資訊，清單不是即時庫存，急救時不能依網頁名單延誤轉送。",
+          "supporting_passage": "疾管署抗蛇毒血清專區列出儲備資訊，清單不是即時庫存，急救時不能依網頁名單延誤轉送。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31以官方HTTPS頁面讀取專區與更新標示；未逐家聯繫確認即時庫存。"
+        },
+        {
+          "url": "https://www.cdc.gov.tw/EpidemicTheme/Detail/zKNFqsVWxUoUqE6fyhmBNA?archiveId=Xu-aa4F7P4FvCh302lxKlA",
+          "claim": "疾管署疫情報導原著以2017至2021年健保資料分析4,893名使用者，9人死亡，列致死率0.18%。",
+          "supporting_passage": "疾管署疫情報導原著以2017至2021年健保資料分析4,893名使用者，9人死亡，列致死率0.18%。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀疾管署疫情報導摘要、DOI與研究期間；分母限於使用抗蛇毒血清者。"
+        }
+      ],
+      "source_ids": [
+        "ch13_snake_mohw",
+        "ch13_snake_cdc",
+        "ch13_snake_cdc_epidemiology_2025"
+      ],
+      "new_source_ids": [],
+      "source_records_reused": [
+        "ch13_snake_mohw",
+        "ch13_snake_cdc",
+        "ch13_snake_cdc_epidemiology_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_snake_mohw",
+          "url": "https://www.mohw.gov.tw/cp-16-83220-1.html",
+          "claim": "衛福部刊載疾管署蛇咬五要五不，包含儘速就醫、不切割傷口、不口吸毒液、不冰敷及避免不當緊縛。",
+          "supporting_passage": "衛福部官方刊載疾管署蛇咬傷處置五要五不原則。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀衛福部官方蛇咬傷指引，核對就醫與禁忌處置。"
+        },
+        {
+          "source_id": "ch13_snake_cdc",
+          "url": "https://www.cdc.gov.tw/Category/MPage/l_z6ZKErZJ063m6OV_8nXQ",
+          "claim": "疾管署抗蛇毒血清儲備資訊是定時彙整資料，不是即時庫存保證；須由同行者、119或醫療團隊確認接收安排。",
+          "supporting_passage": "疾管署資訊頁說明抗蛇毒血清儲備點及資料更新方式；不支持將名冊視為即時庫存。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀疾管署抗蛇毒血清資訊頁，核對儲備名冊與資料時效說明。"
+        },
+        {
+          "source_id": "ch13_snake_cdc_epidemiology_2025",
+          "url": "https://www.cdc.gov.tw/EpidemicTheme/Detail/zKNFqsVWxUoUqE6fyhmBNA?archiveId=Xu-aa4F7P4FvCh302lxKlA",
+          "claim": "疾管署2017至2021年健保資料研究包含4,893名使用抗蛇毒血清者，其中9人死亡；0.18%是該治療群體的死亡比例，不是全部蛇咬者死亡率或個人風險。",
+          "supporting_passage": "疾管署疫情報導原著列出2017至2021年健保分析的4,893名抗蛇毒血清使用者及9名死亡者，0.18%分母限血清使用者。",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀疾管署疫情報導研究摘要與方法描述，核對研究期間、健保對象及分子分母。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "bb4d93764546ae98f38e265aac394b889534671a43f7e4da2f26cb5ce0e909a2",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [
+        {
+          "topic": "接受抗蛇毒血清治療者死亡比例",
+          "value": "4,893名使用者中9人死亡（0.18%）",
+          "unit": "治療隊列人數與隊列內死亡比例",
+          "period": "2017至2021年",
+          "scope": "臺灣健保資料研究",
+          "population": "健保資料中因蛇咬傷而使用抗蛇毒血清的患者；不含未使用血清者及未就醫者。",
+          "numerator": 9,
+          "denominator": 4893,
+          "denominator_definition": "4,893名研究期間使用抗蛇毒血清的健保患者。",
+          "event_definition": "研究記錄的抗蛇毒血清使用患者死亡結局；0.18%為9/4,893。",
+          "data_type": "全國健保申報資料回溯研究，不是所有蛇咬通報或暴露監測。",
+          "source_id": "ch13_snake_cdc_epidemiology_2025",
+          "accessed_at": "2026-11-24",
+          "checked_at": "2026-11-24",
+          "limitations": "僅限接受血清治療者，不能代表全部蛇咬者或未治療患者，也不能換算被蛇咬機率、每次暴露死亡率或個人預後。"
+        }
+      ],
+      "taiwan_context": "台灣農田、草叢、山徑和住家周遭蛇咬；以119、急診評估及疾管署儲備院所資訊銜接，不讓民眾自行尋藥改變送醫路線。",
+      "frequency_assessment": "2017至2021年研究為健保抗蛇毒血清使用者隊列，不能代表所有蛇咬或沒有接受血清的患者。",
+      "changes": "說明疾管署抗蛇毒血清儲備名冊不是即時庫存；由同行者、119或醫療團隊電話確認接收安排，不因查名單或找藥延誤就醫。",
+      "limits": [
+        "2017至2021年健保研究包含4,893名使用抗蛇毒血清者，其中9人死亡；0.18%是該治療群體的研究死亡比例，不代表所有蛇咬者或個人預後。沒有全部蛇咬的暴露分母。疾管署儲備名冊不是即時庫存，應由同行者、119或醫療團隊協助確認轉送安排。"
+      ],
+      "unresolved_questions": [
+        "未找到可估算全台個人發生率的同定義母數；不得由行政事件計數推算個人風險。",
+        "尚未取得獨立專業審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "reason": "本輪為AI輔助來源與正文核對，未取得具名且具資格的獨立專業審閱。",
+        "status": "pending",
+        "scope": [
+          "急診或毒物專業醫師",
+          "到院前救護與抗蛇毒血清專業人員",
+          "醫療統計專業人員"
+        ]
+      },
+      "review_path": "localization/reviews/TW-13-029.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-co-fire-cold-snake-recheck-20261124.json",
+      "reader_copy_cleanup_preserved": null,
+      "source_bundle_sha256": "d7c5701a98f12d055cb2dbebd7397c74e335fb8a52a61832839b5f8baf14a46b",
+      "review_sha256": "2a6b8776399538260ad923a81cf8a7aaf3bae4330a1d7d19b96325ce32697831"
+    }
+  ],
+  "statistics_summary": "CO與火災均為行政事件數且缺個人暴露分母；失溫未找到全國同一定義病例與分母；蛇咬研究為抗蛇毒血清治療群體的0.18%死亡比例，不代表全部蛇咬。",
+  "publication_ready": false,
+  "professional_review_pending": true,
+  "unresolved_questions": [
+    "消防署建築物火災統計頁本次直接請求回覆403；僅核對官方搜尋索引摘要，未讀取附件。",
+    "尚未取得急救、消防、醫療及相關統計專業人員獨立審閱。"
+  ],
+  "risk_order": [
+    "TW-13-019",
+    "TW-13-024",
+    "TW-13-028",
+    "TW-13-029"
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "status": "pending",
+    "scopes": [
+      "到院前救護專業人員",
+      "到院前救護與抗蛇毒血清專業人員",
+      "山域救援與到院前救護專業人員",
+      "急診或毒物專業醫師",
+      "急診或登山醫療專業人員",
+      "消防及防火避難專業人員",
+      "消防與到院前救護專業人員",
+      "醫療統計專業人員"
+    ]
+  }
+}

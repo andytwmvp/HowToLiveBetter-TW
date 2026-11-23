@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-24",
+  "baseline_main_sha": "0869a12e6566f65cbb13736152ca57581d309c6b",
+  "sources": [
+    [
+      "ch13_cold_nfa_112",
+      "內政部消防署：119、112緊急電話常見問答",
+      "https://www.nfa.gov.tw/cht/index.php?article_id=31&code=list&flag=detail&ids=21",
+      "消防署說明112語音轉接119需依指示按9，轉接時間較久；收訊良好時建議直接撥119。"
+    ]
+  ],
+  "retrieval_notes": [
+    "消防署FAQ說明收訊良好時直撥119；112需語音轉接，並依指示按9轉119，較適合作為無法直撥119時的備援。"
+  ],
+  "updated_sources": []
+}

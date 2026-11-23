@@ -8141,7 +8141,7 @@
         "ch13_co_hospital",
         "tw_co_nfa_statistics_2025"
       ],
-      "verified_at": "2026-10-30",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "一氧化碳報警器響了，或者一屋子人同時頭痛惡心，先出門再打電話",
@@ -8252,7 +8252,7 @@
         "ch13_fire_nfa2",
         "ch01_nfa_fire_2025"
       ],
-      "verified_at": "2026-10-31",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "火災時貼地爬、摸門再開門、門燙就別開，走樓梯不坐電梯，出去了別回頭",
@@ -8343,9 +8343,10 @@
         "ch13_cold_vgh",
         "ch13_cold_nfa",
         "mountain_forest_signal_115",
-        "ch13_cold_cdc"
+        "ch13_cold_cdc",
+        "ch13_cold_nfa_112"
       ],
-      "verified_at": "2026-10-31",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "發抖、說話含糊、走路打晃是失溫，換掉溼衣、包起來，先暖軀幹，喝熱甜飲不喝酒",
@@ -8366,7 +8367,7 @@
         "ch13_snake_cdc",
         "ch13_snake_cdc_epidemiology_2025"
       ],
-      "verified_at": "2026-10-31",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "被蛇咬，坐下別動、摘掉戒指手錶、儘快送醫院打抗蛇毒血清，不切、不吸、不綁死",

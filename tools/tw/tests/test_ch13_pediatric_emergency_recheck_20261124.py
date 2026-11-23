@@ -166,8 +166,16 @@ class PediatricEmergencyRecheckTests(unittest.TestCase):
         self.assertIn("www.sem.org.tw", battery)
 
     def test_source_counts_and_current_coverage_are_consistent(self):
-        self.assertEqual(self.batch["counts_before"]["runtime_sources"], len(self.runtime["sources"]) - 4)
-        self.assertEqual(self.batch["counts_after"]["runtime_sources"], len(self.runtime["sources"]))
+        baseline_runtime = json.loads(at_revision(BASE, "localization/tw-edition/runtime.json"))
+        baseline_source_ids = {row["id"] for row in baseline_runtime["sources"]}
+        current_source_ids = set(self.sources)
+        self.assertEqual(self.batch["counts_before"]["runtime_sources"], len(baseline_source_ids))
+        self.assertEqual(
+            self.batch["counts_after"]["runtime_sources"],
+            len(baseline_source_ids) + len(NEW_SOURCE_IDS),
+        )
+        self.assertTrue(NEW_SOURCE_IDS.issubset(current_source_ids - baseline_source_ids))
+        self.assertGreaterEqual(len(current_source_ids), self.batch["counts_after"]["runtime_sources"])
         source_rows = {row[0]: row for row in self.bundle["sources"]}
         for sid in NEW_SOURCE_IDS:
             source = self.sources[sid]
