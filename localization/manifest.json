@@ -8297,9 +8297,10 @@
         "ch13_choke_tyfd_20260409",
         "ch13_choke_aha_adult_2025",
         "ch13_choke_aha_pediatric_2025",
-        "ch13_choke_mohw_death_2025"
+        "ch13_choke_mohw_death_2025",
+        "ch13_choke_ntpc_114_20261124"
       ],
-      "verified_at": "2026-10-31",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "有人噎住說不出話，1 歲以上的站到背後做 5 次拍背加 5 次腹部衝擊，倒下就做心肺復甦",
@@ -8690,10 +8691,11 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-043.md",
       "sources": [
         "ch13_infant_choke_tpe",
-        "ch13_infant_choke_faq_tpe",
-        "ch13_infant_peds_bls_aha_2025"
+        "ch13_infant_choke_faq_tpe_20261124",
+        "ch13_infant_peds_bls_aha_2025",
+        "ch13_choke_ntpc_114_20261124"
       ],
-      "verified_at": "2026-10-31",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "不滿 1 歲的嬰兒噎住哭不出聲，趴著拍背 5 下、翻過來按胸口 5 下，輪著做，別按肚子",
@@ -8715,7 +8717,7 @@
         "ch13_infant_peds_bls_aha_2025",
         "ch13_infant_cpr_lay_aha_2025"
       ],
-      "verified_at": "2026-10-31",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "不滿 1 歲的嬰兒沒反應、沒正常呼吸，開免提打 120，做嬰兒心肺復甦：按 30 下吹 2 口氣",
@@ -8733,11 +8735,12 @@
       "target_path": "locales/zh-TW/book/ch13/TW-13-045.md",
       "sources": [
         "ch13_battery_cch_20251209",
-        "ch13_battery_tsem_20241031",
+        "ch13_battery_tsem_canonical_20261124",
         "ch13_magnets_bsmi_20250402_20261103",
-        "ch13_pcc_poison_20261103"
+        "ch13_pcc_poison_20261103",
+        "ch13_battery_ncpc_20261124"
       ],
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "孩子吞了紐扣電池，或者吞了兩顆以上的強磁珠，立刻去有胃鏡的醫院急診，別等它自己拉出來、別催吐",

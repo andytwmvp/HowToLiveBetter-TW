@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "stage": "第13章兒少急救高風險歷史實質再審",
+  "reviewed_at": "2026-11-24",
+  "review_due_at": "2027-02-24",
+  "baseline_main_sha": "915ab7ac3c8eecba8221facfa182bdaf8f54f281",
+  "scope": [
+    "TW-13-026",
+    "TW-13-043",
+    "TW-13-044",
+    "TW-13-045"
+  ],
+  "counts_before": {
+    "core_reviewed_entries": 351,
+    "runtime_items": 362,
+    "runtime_sources": 1516,
+    "source_registry": 1599,
+    "json_files_checked": 735,
+    "substantive_rechecks": 436,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_reviewed_entries": 351,
+    "runtime_items": 362,
+    "runtime_sources": 1520,
+    "source_registry": 1603,
+    "json_files_checked": 737,
+    "substantive_rechecks": 440,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "ch13_choke_ntpc_114_20261124",
+    "ch13_infant_choke_faq_tpe_20261124",
+    "ch13_battery_ncpc_20261124",
+    "ch13_battery_tsem_canonical_20261124"
+  ],
+  "retired_from_items": {
+    "TW-13-043": [
+      "ch13_infant_choke_faq_tpe"
+    ],
+    "TW-13-045": [
+      "ch13_battery_tsem_20241031"
+    ]
+  },
+  "source_bundle_path": "localization/tw-edition/sources/ch13-pediatric-emergency-recheck-20261124.json",
+  "source_bundle_sha256": "94e8fa5cb9899c948ce03e533a61f8776c094acfb5a530e27f2503c4b7fb38c4",
+  "items": [
+    {
+      "id": "TW-13-026",
+      "title": "成人與一歲以上兒童嚴重哽塞，先打119並交替拍背、腹部推擠",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "915ab7ac3c8eecba8221facfa182bdaf8f54f281",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "a9dcf1e056f292c1e7d533d3b7b0beb906225a9e12a71aae44484602e09da66c",
+      "before_sha256": "bcbc3224e56da1898a5fcc40f7816ae070e1598e22e5928c51c7d23f8142738a",
+      "after_sha256": "f263773ee9064653568bbd67f321271c5737aa275ca13ca05878a12f773543b6",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "bcbc3224e56da1898a5fcc40f7816ae070e1598e22e5928c51c7d23f8142738a",
+      "previous_body": "<!-- TW-ID: TW-13-026 -->\n\n# 成人與一歲以上兒童嚴重哽塞，先打119並交替拍背、腹部推擠\n\n## 先分辨輕重並求援\n\n吃飯、吃糖果或小孩誤吞食物時，如果患者還能說話或有效咳嗽，鼓勵他繼續咳嗽，留在旁邊觀察，不要急著拍背、推肚子或灌水。若患者咳嗽微弱或無聲、無法說話或呼吸，立刻請旁人打119並開擴音；不要等異物自己排出才求援。\n\n## 成人、兒童及嬰兒的處理方式\n\n桃園市消防局已依2025年急救指引更新民眾版做法：患者清醒且嚴重哽塞時，讓他身體前傾，以掌根在兩側肩胛骨之間拍擊5次；異物沒有排出，再做5次腹部推擠。反覆交替，直到異物排出或患者失去反應。旁人負責打119，施救者不要因此停下已開始的急救。\n\n若患者是懷孕後期，或施救者無法環抱腹部，改為5次背部拍擊，再做5次胸部推擠，並依119派遣員指示和受訓方法繼續。不要為了找專用器材延誤急救。\n\n若患者失去反應，協助安全躺平，立刻告知119並依派遣員指示從胸部按壓開始CPR。每次打開口腔時，只取出看得見的異物；看不到就不要伸手指盲挖。患者恢復後若仍咳嗽、喘、胸痛或不舒服，交由救護人員評估。\n\n**未滿一歲嬰兒：**不能做腹部推擠。嚴重哽塞時立即請人打119；受過嬰兒急救訓練者依嬰兒程序交替背部拍擊與胸部推擠，並依派遣員指示處理。\n\n## 死因統計與平時準備\n\n衛生福利部2025年死因統計表列出，因食物吸入或吞入造成呼吸道阻塞（ICD-10 W79）死亡138人；因其他物體造成呼吸道阻塞（W80）死亡107人。這是死因統計中的死亡人數，不包括獲救或自行解除的哽塞，也沒有進食、吞嚥或異物暴露人次分母，不能當作哽塞事件總數或個人發生率。\n\n第一時間通報119和依訓練施救不需要購買特殊器材。照顧幼兒、長輩或吞嚥困難者的家人，可以參加合格急救課程，瞭解成人、兒童和嬰兒的不同方式；用餐時保持坐穩、食物切成適當大小，並依患者吞嚥能力調整質地。\n\n## 常見錯誤\n\n不要對仍能用力咳嗽的人直接做腹部推擠，不要倒吊、灌水或把手指伸進喉嚨盲挖。腹部推擠只適用於一歲以上的嚴重哽塞；孕婦或無法環抱腹部者使用胸部推擠。台灣各地公開教材更新時間可能不同；遇到緊急狀況先打119，依派遣員指示處理。\n\n## 參考資料\n\n- [桃園市消防局：異物梗塞之處理](https://www.tyfd.gov.tw/cht/index.php?act=article&article_id=199&code=detail&ids=43)：2026年4月更新，依2025年指引說明成人、兒童及嬰兒哽塞處理。\n- [美國心臟協會：2025成人基本救命術指引](https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support/)：成人輕度與嚴重哽塞、背部拍擊及腹部推擠、無反應後CPR等建議。\n- [美國心臟協會與美國兒科學會：2025兒童基本救命術指引](https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support)：兒童與嬰兒哽塞處置及不可盲目挖取異物的建議。\n- [衛生福利部：2025年死因統計資料](https://mohw.gov.tw/fp-7605-87721-2.html)：附表5按死因詳細分類統計的W79及W80死亡人數。\n",
+      "previous_source_ids": [
+        "ch13_choke_tyfd_20260409",
+        "ch13_choke_aha_adult_2025",
+        "ch13_choke_aha_pediatric_2025",
+        "ch13_choke_mohw_death_2025"
+      ],
+      "previous_review_claims": [
+        "桃園市消防局2026-04-09更新民眾指引，成人、兒童嚴重哽塞以5次背部拍擊、5次腹部推擠交替；嬰兒不能做腹部推擠。",
+        "成人嚴重哽塞交替5次背部拍擊與5次腹部推擠；特殊情況用胸部推擠；無反應後CPR、只取可見異物。",
+        "兒童嚴重哽塞交替背擊和腹部推擠；嬰兒使用背擊和胸部推擠；不能盲目以手指挖取。",
+        "2025死因統計附表5的W79死亡138人、W80死亡107人。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.tyfd.gov.tw/cht/index.php?act=article&article_id=199&code=detail&ids=43",
+          "claim": "桃園市消防局2026-04-09更新民眾指引，成人、兒童嚴重哽塞以5次背部拍擊、5次腹部推擠交替；嬰兒不能做腹部推擠。",
+          "supporting_passage": "桃園市消防局2026-04-09更新民眾指引，成人、兒童嚴重哽塞以5次背部拍擊、5次腹部推擠交替；嬰兒不能做腹部推擠。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀桃園市消防局公開頁面，核對其明列採用AHA 2025指引與年齡分流。"
+        },
+        {
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support/",
+          "claim": "成人嚴重哽塞交替5次背部拍擊與5次腹部推擠；特殊情況用胸部推擠；無反應後CPR、只取可見異物。",
+          "supporting_passage": "成人嚴重哽塞交替5次背部拍擊與5次腹部推擠；特殊情況用胸部推擠；無反應後CPR、只取可見異物。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀AHA 2025成人指引異物哽塞章節及特殊情況段落。"
+        },
+        {
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+          "claim": "兒童嚴重哽塞交替背擊和腹部推擠；嬰兒使用背擊和胸部推擠；不能盲目以手指挖取。",
+          "supporting_passage": "兒童嚴重哽塞交替背擊和腹部推擠；嬰兒使用背擊和胸部推擠；不能盲目以手指挖取。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接閱讀AHA/AAP 2025兒童指引第6.3節及建議文字。"
+        },
+        {
+          "url": "https://mohw.gov.tw/fp-7605-87721-2.html",
+          "claim": "2025死因統計附表5的W79死亡138人、W80死亡107人。",
+          "supporting_passage": "2025死因統計附表5的W79死亡138人、W80死亡107人。",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接下載衛福部官方2025死因統計xlsx並解析「附表5」代碼列；確認表列單位為死亡人數。"
+        }
+      ],
+      "source_ids": [
+        "ch13_choke_tyfd_20260409",
+        "ch13_choke_aha_adult_2025",
+        "ch13_choke_aha_pediatric_2025",
+        "ch13_choke_mohw_death_2025",
+        "ch13_choke_ntpc_114_20261124"
+      ],
+      "new_source_ids": [
+        "ch13_choke_ntpc_114_20261124"
+      ],
+      "source_records_reused": [
+        "ch13_choke_tyfd_20260409",
+        "ch13_choke_aha_adult_2025",
+        "ch13_choke_aha_pediatric_2025",
+        "ch13_choke_mohw_death_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_choke_tyfd_20260409",
+          "url": "https://www.tyfd.gov.tw/cht/index.php?act=article&article_id=199&code=detail&ids=43",
+          "claim": "桃園市消防局2026-04-09更新民眾指引，成人、兒童嚴重哽塞以5次背部拍擊、5次腹部推擠交替；嬰兒不能做腹部推擠。",
+          "supporting_passage": "更新至2026-04-09；依AHA 2025指引說明成人或1歲以上兒童5次背部拍擊加5次腹部推擠、嬰兒使用背部拍擊與胸部按壓，並區分仍可咳嗽與失去意識。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_choke_aha_adult_2025",
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-basic-life-support/",
+          "claim": "成人嚴重哽塞交替5次背部拍擊與5次腹部推擠；特殊情況用胸部推擠；無反應後CPR、只取可見異物。",
+          "supporting_passage": "成人輕度哽塞允許咳嗽並觀察；嚴重哽塞交替5次背部拍擊與5次腹部推擠；無反應後CPR、移除可見異物且不得盲挖；孕晚期或無法環抱腹部改胸部推擠。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_choke_aha_pediatric_2025",
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+          "claim": "兒童嚴重哽塞交替背擊和腹部推擠；嬰兒使用背擊和胸部推擠；不能盲目以手指挖取。",
+          "supporting_passage": "兒童輕度哽塞允許咳嗽並觀察；嚴重哽塞交替5次背部拍擊與5次腹部推擠；嬰兒交替5次背部拍擊與5次胸部推擠；無反應後CPR，不能盲挖。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_choke_mohw_death_2025",
+          "url": "https://mohw.gov.tw/fp-7605-87721-2.html",
+          "claim": "2025死因統計附表5的W79死亡138人、W80死亡107人。",
+          "supporting_passage": "衛福部2025年死因統計xlsx附表5列W79食物造成呼吸道阻塞死亡138人、W80其他物體造成呼吸道阻塞死亡107人；為死亡人數而非全部哽塞事件。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_choke_ntpc_114_20261124",
+          "url": "https://www.sw.ntpc.gov.tw/userfiles/1100500/files/114%E5%B9%B4%E5%85%92%E5%B0%91%E4%BA%8B%E6%95%85%E5%82%B7%E5%AE%B3%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E4%B8%8A%E7%B6%B2%E7%89%88.pdf",
+          "claim": "新北市114年度資料為單一縣市兒少行政通報24件，其中食物哽塞21件、誤吞異物2件、嗆奶1件；統計表另列死亡0人、受傷24人，年齡分組數是受傷人數，未滿2歲12人，不能辨別未滿一歲嬰兒，且沒有暴露分母。",
+          "supporting_passage": "新北市114年度兒少事故傷害報告第14至15頁：消防局通報兒少窒息事故24件，其中食物哽塞21件、誤吞異物2件、嗆奶1件；統計表列死亡0人、受傷24人，受傷年齡分組為未滿2歲12人、2至未滿6歲6人、6至未滿12歲6人、12至未滿18歲0人。件數與受傷人數是不同統計單位。資料為單一縣市兒少行政通報，事件定義較廣，沒有兒少人口或暴露分母，不能換算全國或未滿一歲嬰兒發生率。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀新北市社會局公開114年度PDF第14至15頁，區分事故件數、死亡與受傷人數，核對受傷年齡組及資料限制。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "f263773ee9064653568bbd67f321271c5737aa275ca13ca05878a12f773543b6",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [
+        {
+          "topic": "食物造成呼吸道阻塞死亡（ICD-10 W79）",
+          "value": 138,
+          "unit": "死亡人數（人）",
+          "period": "2025年（民國114年）",
+          "scope": "台灣全國",
+          "population": "死因登記為吸入及攝入食物導致呼吸道阻塞的死亡者",
+          "numerator": 138,
+          "denominator": null,
+          "denominator_definition": "官方死因表列死亡人數；未提供進食、吞嚥、異物暴露或全部哽塞事件分母。",
+          "event_definition": "ICD-10 W79，限死因登記死亡事件。",
+          "data_type": "全國行政死因登記統計，不是抽樣調查或通報總件數。",
+          "source_id": "ch13_choke_mohw_death_2025",
+          "accessed_at": "2026-11-24",
+          "checked_at": "2026-11-24",
+          "limitations": "不含獲救或自行解除事件；沒有暴露分母，不能估算哽塞發生率或個人風險。"
+        },
+        {
+          "topic": "其他物體造成呼吸道阻塞死亡（ICD-10 W80）",
+          "value": 107,
+          "unit": "死亡人數（人）",
+          "period": "2025年（民國114年）",
+          "scope": "台灣全國",
+          "population": "死因登記為吸入和食入其他物體所致呼吸道阻塞的死亡者",
+          "numerator": 107,
+          "denominator": null,
+          "denominator_definition": "官方死因表列死亡人數；未提供異物暴露或全部哽塞事件分母。",
+          "event_definition": "ICD-10 W80，限死因登記死亡事件。",
+          "data_type": "全國行政死因登記統計，不是抽樣調查或通報總件數。",
+          "source_id": "ch13_choke_mohw_death_2025",
+          "accessed_at": "2026-11-24",
+          "checked_at": "2026-11-24",
+          "limitations": "不含獲救或自行解除事件；不能當全部異物哽塞件數或個人發生率。"
+        },
+        {
+          "topic": "新北市兒少窒息事故消防通報",
+          "value": 24,
+          "unit": "行政通報事故件數（件）",
+          "period": "2025年（民國114年）",
+          "scope": "新北市",
+          "population": "消防局兒少窒息事故通報24件，其中食物哽塞21、誤吞異物2、嗆奶1；報告另列死亡0人、受傷24人，受傷年齡分組為未滿2歲12人、2至未滿6歲6人、6至未滿12歲6人、12至未滿18歲0人。",
+          "numerator": 24,
+          "denominator": null,
+          "denominator_definition": "報告未列新北市兒少人口、用餐／餵奶人次或暴露時間分母；事故件數與受傷年齡組人數分開記錄。",
+          "event_definition": "報告分類「窒息（呼吸的其他意外威脅、含異物梗塞）」；24為事故件數，食物哽塞21、誤吞異物2、嗆奶1；表列受傷24人、死亡0人，年齡分組為受傷人數。",
+          "data_type": "單一縣市消防行政事故通報；件數、死傷人數及受傷者年齡分組來自同一年度報告不同欄位。",
+          "source_id": "ch13_choke_ntpc_114_20261124",
+          "accessed_at": "2026-11-24",
+          "checked_at": "2026-11-24",
+          "limitations": "新北市報告的24是事故件數；年齡組數是受傷人數，兩者單位不同。未滿2歲組不能分離未滿一歲嬰兒；無人口或暴露分母，不可換算全國件數、發生率或個人機率。",
+          "related_injury_counts": {
+            "unit": "受傷人數（人）",
+            "under_2": 12,
+            "age_2_to_under_6": 6,
+            "age_6_to_under_12": 6,
+            "age_12_to_under_18": 0,
+            "deaths": 0
+          }
+        }
+      ],
+      "taiwan_context": "台灣家庭、餐廳及托育場所常見用餐與幼兒餵食；成人、年滿一歲兒童和未滿一歲嬰兒的處置不同，求援使用119並依地方派遣系統引導。",
+      "frequency_assessment": "台灣全國兒少案件或暴露分母不足，這筆地方資料不可推算全國或個人發生率。新北市114年度通報24件中食物哽塞21件、誤吞異物2件、嗆奶1件；另有受傷24人、死亡0人，受傷年齡組為未滿2歲12人、2至未滿6歲6人、6至未滿12歲6人、12至未滿18歲0人。年齡組代表受傷人數，不是事故件數。",
+      "changes": "重新核對成人、兒童與嬰兒哽塞處置，保留桃園市消防局與AHA 2025來源；解析衛福部2025死因統計附表5，新增新北市114年度兒少事故報告，區分全國死亡件數、地方行政事故件數與無暴露分母限制。 另依原報告表格區分24件事故、24名受傷者及其年齡組，將年齡計數單位更正為受傷人數。",
+      "limits": [
+        "成人與年滿一歲兒童才適用背部拍擊加腹部推擠；未滿一歲嬰兒改用背部拍擊與胸部推擠，孕婦或腹部無法環抱者改用胸部推擠。若仍能有效咳嗽，鼓勵繼續咳嗽；失去反應時依119指示開始CPR。",
+        "衛福部W79、W80為2025年全國死因死亡人數，不是全部哽塞件數；新北市24件為單一縣市兒少行政通報且事件定義較廣，兩者均無暴露分母，不估發生率或個人風險。",
+        "本文依公開急救指引逐主張核對，未取得獨立急救、兒科或醫療專業人員正式審閱；緊急時先打119並依派遣員指示。"
+      ],
+      "unresolved_questions": [
+        "新北市報告的窒息事故為行政通報口徑，沒有縣市兒少人口或食物、奶類暴露分母，不能估計發生率。",
+        "尚未取得急診、兒科、吞嚥照護或急救教育專業人員正式獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "急診醫學或急救教育專業人員",
+          "兒科或吞嚥照護專業人員"
+        ],
+        "reason": "AI輔助來源核對不能取代急救、兒科或相應醫療專業人士對讀者指引的正式審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-026.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-pediatric-emergency-recheck-20261124.json",
+      "source_bundle_sha256": "94e8fa5cb9899c948ce03e533a61f8776c094acfb5a530e27f2503c4b7fb38c4",
+      "reader_copy_cleanup_preserved": null,
+      "review_sha256": "65db44665047f006b852b50aa2f084afc58ae88775278c98ded2db77d9ae2ea1"
+    },
+    {
+      "id": "TW-13-043",
+      "title": "未滿一歲嬰兒嚴重哽塞：五次拍背、五次胸部推擠，立刻打119",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "915ab7ac3c8eecba8221facfa182bdaf8f54f281",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "d20968aa455daabbda84eefc928becfe7787683453c56ede9ad94ecaf9574fd8",
+      "before_sha256": "c55784d08d65768cd3d83f0e1bf213c7059bc7d5962a1a5478eda01e6e58c424",
+      "after_sha256": "b759cbe3124cf6437e9aafe5b08bdaa96954c12138f2bf4175d89a0286e45b8e",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "c55784d08d65768cd3d83f0e1bf213c7059bc7d5962a1a5478eda01e6e58c424",
+      "previous_body": "<!-- TW-ID: TW-13-043 -->\n\n# 未滿一歲嬰兒嚴重哽塞：五次拍背、五次胸部推擠，立刻打119\n\n## 適用情境與第一步\n\n未滿一歲嬰兒喝奶、吃副食品或玩耍時，若突然無法有效哭、咳或呼吸，或發不出聲音、嘴唇發紫，可能是嚴重哽塞。若寶寶仍能有力咳嗽、哭出聲並正常呼吸，先鼓勵咳嗽、密切觀察，不要拍打或把手伸進嘴裡挖。\n\n## 臺灣實作與下一步\n\n嚴重哽塞時，立刻請旁人打119並開擴音；若只有一個人且手機在旁，先打119聽派遣員指示並同時急救。小心托住嬰兒頭頸和下巴，讓臉朝下、頭低於身體，在兩側肩胛骨中間拍背5次；再小心翻成仰躺，保持頭低於身體，在胸骨下半部以掌根快速做5次胸部推擠，反覆5次拍背、5次胸部推擠，直到異物排出或救護人員接手。不要對嬰兒做腹部推擠。\n\n如果嬰兒失去反應，立刻放在堅硬平面，打119並依派遣員指示開始CPR；打開呼吸道時只取出看得到且容易拿到的異物，不檢查脈搏，也不盲目用手指挖。\n\n臺北市消防局目前公開的兩份資料都列五次拍背與五次胸部處置，但手部說明不一致：一份寫單掌，另一份寫兩指；AHA/AAP 2025指引建議嬰兒嚴重哽塞用掌根做胸部推擠，並不建議兩指法。本文依較新的2025指引描述掌根；在臺灣現場請先打119並聽派遣員即時引導，不要花時間搜尋影片。\n\n## 成本與可期待的效益\n\n嬰兒嚴重哽塞可迅速惡化，立即求援和依指示施救比尋找吸引器或等待器材重要。平時可參加含嬰兒急救的實作訓練，並確認住家或托嬰場所地址、119通報方式及可協助照護的人。目前沒有全國未滿一歲嬰兒哽塞事件數及暴露分母，不能估算發生率；不能用全體兒童事故死亡數代替。急救動作不能保證異物一定排出或不需後續醫療評估。\n\n## 限制與常見誤解\n\n本篇不適用於一歲以上兒童或剛出生的新生兒復甦。寶寶仍能有力咳嗽或哭時不要任意拍背；不可用成人哈姆立克法、盲挖、倒吊、搖晃或強迫喝水。五次胸部推擠是清醒嚴重哽塞的解除異物步驟，與失去反應後的CPR按壓不同。\n\n臺北市消防局兩份公開民眾資料對嬰兒胸部手法分別寫單掌與兩指；AHA/AAP 2025建議使用掌根，理由是兩指可能難以達到足夠深度。未查得臺灣中央主管機關已發布統一說明；實際急救時請立即打119，並依119派遣員即時指示處理。\n\n## 參考資料\n\n- [臺北市消防局：異物哽塞急救處置](https://www.119.gov.taipei/cp.aspx?n=0878BEC80AC87B33)：2026年更新頁列出嬰兒五次拍背及五次單掌胸部按壓。\n- [臺北市消防局：呼吸道哽塞急救常見問答](https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=C30134A2D4E0AA11&sms=87415A8B9CE81B16)：2026年9月更新、10月檢視頁仍列未滿一歲嬰兒拍背五次和胸骨下方兩指按壓五次，與新指引手法不同。\n- [AHA／AAP：2025年兒童基本救命術指引](https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support)：建議嬰兒嚴重哽塞五次拍背交替五次胸部推擠、採掌根，不做腹部推擠；失去反應轉CPR，只取可見異物。\n",
+      "previous_source_ids": [
+        "ch13_infant_choke_tpe",
+        "ch13_infant_choke_faq_tpe",
+        "ch13_infant_peds_bls_aha_2025"
+      ],
+      "previous_review_claims": [
+        "臺北市消防局異物哽塞頁寫未滿一歲嬰兒五次拍背及五次單掌胸部按壓，重複至排出或救護人員接手。",
+        "臺北市消防局FAQ同列五次拍背及胸骨下方兩指按壓五次，與其另一公開頁及AHA/AAP 2025手部建議不同。",
+        "AHA/AAP 2025建議嬰兒嚴重哽塞五次背擊交替五次胸部推擠，胸部推擠採掌根、不做腹部推擠；失去反應後CPR、只取可見異物且不盲挖。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://www.119.gov.taipei/cp.aspx?n=0878BEC80AC87B33",
+          "claim": "臺北市消防局異物哽塞頁寫未滿一歲嬰兒五次拍背及五次單掌胸部按壓，重複至排出或救護人員接手。",
+          "supporting_passage": "臺北市消防局異物哽塞頁寫未滿一歲嬰兒五次拍背及五次單掌胸部按壓，重複至排出或救護人員接手。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀臺北市消防局HTML正文及2026-09-29更新、2026-10-28檢視日期。"
+        },
+        {
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=C30134A2D4E0AA11&sms=87415A8B9CE81B16",
+          "claim": "臺北市消防局FAQ同列五次拍背及胸骨下方兩指按壓五次，與其另一公開頁及AHA/AAP 2025手部建議不同。",
+          "supporting_passage": "臺北市消防局FAQ同列五次拍背及胸骨下方兩指按壓五次，與其另一公開頁及AHA/AAP 2025手部建議不同。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀臺北市消防局FAQ與更新、檢視日期；保留兩頁公開資料對胸部手法的差異，不假稱已統一。"
+        },
+        {
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+          "claim": "AHA/AAP 2025建議嬰兒嚴重哽塞五次背擊交替五次胸部推擠，胸部推擠採掌根、不做腹部推擠；失去反應後CPR、只取可見異物且不盲挖。",
+          "supporting_passage": "AHA/AAP 2025建議嬰兒嚴重哽塞五次背擊交替五次胸部推擠，胸部推擠採掌根、不做腹部推擠；失去反應後CPR、只取可見異物且不盲挖。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀AHA/AAP 2025兒童基本救命術指引相關建議與支持段落；屬國際專業指引，不宣稱台灣已完成正式採納。"
+        }
+      ],
+      "source_ids": [
+        "ch13_infant_choke_tpe",
+        "ch13_infant_choke_faq_tpe_20261124",
+        "ch13_infant_peds_bls_aha_2025",
+        "ch13_choke_ntpc_114_20261124"
+      ],
+      "new_source_ids": [
+        "ch13_infant_choke_faq_tpe_20261124",
+        "ch13_choke_ntpc_114_20261124"
+      ],
+      "source_records_reused": [
+        "ch13_infant_choke_tpe",
+        "ch13_infant_peds_bls_aha_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_infant_choke_tpe",
+          "url": "https://www.119.gov.taipei/cp.aspx?n=0878BEC80AC87B33",
+          "claim": "臺北市消防局異物哽塞頁寫未滿一歲嬰兒五次拍背及五次單掌胸部按壓，重複至排出或救護人員接手。",
+          "supporting_passage": "未滿一歲嬰兒嚴重異物哽塞可交替五次背部拍擊及五次胸部按壓，應119求救，不使用成人腹部推擠。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_infant_choke_faq_tpe_20261124",
+          "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=C30134A2D4E0AA11&sms=87415A8B9CE81B16",
+          "claim": "臺北市消防局FAQ標示2026-11-12更新，仍列嬰兒五次拍背及兩指胸骨下方按壓；與該局處置頁單掌及AHA/AAP 2025掌根建議不同。",
+          "supporting_passage": "臺北市消防局FAQ標示2026-11-12更新；仍寫嬰兒五次拍背與五次胸骨下方兩指胸部按壓，與該局另一頁的單掌描述及AHA/AAP 2025掌根建議不一致。此頁作為地方教材差異證據，不作為本文採用兩指手法的依據。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀台北市消防局FAQ標示更新日期及嬰兒處置正文，並比對該局處置頁與AHA/AAP 2025指引。"
+        },
+        {
+          "source_id": "ch13_infant_peds_bls_aha_2025",
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+          "claim": "AHA/AAP 2025建議嬰兒嚴重哽塞五次背擊交替五次胸部推擠，胸部推擠採掌根、不做腹部推擠；失去反應後CPR、只取可見異物且不盲挖。",
+          "supporting_passage": "AHA及AAP 2025兒童基本救命術指引：嬰兒嚴重哽塞用五次背部拍擊交替五次胸部推擠、不做腹部推擠；無反應且呼吸異常立即啟動緊急醫療並開始CPR，只取可見異物、不盲目挖取；嬰兒CPR用單手掌根或雙拇指環抱，取消兩指胸外按壓。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_choke_ntpc_114_20261124",
+          "url": "https://www.sw.ntpc.gov.tw/userfiles/1100500/files/114%E5%B9%B4%E5%85%92%E5%B0%91%E4%BA%8B%E6%95%85%E5%82%B7%E5%AE%B3%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E4%B8%8A%E7%B6%B2%E7%89%88.pdf",
+          "claim": "新北市114年度資料為單一縣市兒少行政通報24件，其中食物哽塞21件、誤吞異物2件、嗆奶1件；統計表另列死亡0人、受傷24人，年齡分組數是受傷人數，未滿2歲12人，不能辨別未滿一歲嬰兒，且沒有暴露分母。",
+          "supporting_passage": "新北市114年度兒少事故傷害報告第14至15頁：消防局通報兒少窒息事故24件，其中食物哽塞21件、誤吞異物2件、嗆奶1件；統計表列死亡0人、受傷24人，受傷年齡分組為未滿2歲12人、2至未滿6歲6人、6至未滿12歲6人、12至未滿18歲0人。件數與受傷人數是不同統計單位。資料為單一縣市兒少行政通報，事件定義較廣，沒有兒少人口或暴露分母，不能換算全國或未滿一歲嬰兒發生率。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀新北市社會局公開114年度PDF第14至15頁，區分事故件數、死亡與受傷人數，核對受傷年齡組及資料限制。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch13_infant_choke_faq_tpe",
+          "replacement_ids": [
+            "ch13_infant_choke_faq_tpe_20261124"
+          ],
+          "reason": "以同一官方FAQ的2026-11-12更新版本重新核對；保留舊來源物件和歷史引用，不覆寫舊來源查閱日期。",
+          "prior_source_sha256": "44388d37a4c5f32411b87c238d875c72ba08d70cde6126bb40f4dcdbaf9dc4d3",
+          "disposition": "replaced"
+        }
+      ],
+      "source_reviewed_sha256": "b759cbe3124cf6437e9aafe5b08bdaa96954c12138f2bf4175d89a0286e45b8e",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [
+        {
+          "topic": "新北市兒少窒息事故及未滿2歲年齡組通報",
+          "value": 24,
+          "unit": "行政通報事故件數（件）",
+          "period": "2025年（民國114年）",
+          "scope": "新北市",
+          "population": "消防局兒少窒息事故通報24件，其中食物哽塞21、誤吞異物2、嗆奶1；報告另列死亡0人、受傷24人，受傷年齡分組為未滿2歲12人、2至未滿6歲6人、6至未滿12歲6人、12至未滿18歲0人。",
+          "numerator": 24,
+          "denominator": null,
+          "denominator_definition": "報告未列新北市兒少人口、用餐／餵奶人次或暴露時間分母；事故件數與受傷年齡組人數分開記錄。",
+          "event_definition": "報告分類「窒息（呼吸的其他意外威脅、含異物梗塞）」；24為事故件數，食物哽塞21、誤吞異物2、嗆奶1；表列受傷24人、死亡0人，年齡分組為受傷人數。",
+          "data_type": "單一縣市消防行政事故通報；件數、死傷人數及受傷者年齡分組來自同一年度報告不同欄位。",
+          "source_id": "ch13_choke_ntpc_114_20261124",
+          "accessed_at": "2026-11-24",
+          "checked_at": "2026-11-24",
+          "limitations": "新北市報告的24是事故件數；年齡組數是受傷人數，兩者單位不同。未滿2歲組不能分離未滿一歲嬰兒；無人口或暴露分母，不可換算全國件數、發生率或個人機率。",
+          "related_injury_counts": {
+            "unit": "受傷人數（人）",
+            "under_2": 12,
+            "age_2_to_under_6": 6,
+            "age_6_to_under_12": 6,
+            "age_12_to_under_18": 0,
+            "deaths": 0
+          }
+        }
+      ],
+      "taiwan_context": "台灣家庭餵奶、副食品與托嬰場所均可能遇到嬰兒嚴重哽塞；嬰兒不能使用成人腹部推擠，呼救需接上119派遣與在地救護。",
+      "frequency_assessment": "沒有查得全國未滿一歲嬰兒哽塞事件數與暴露分母。新北市114年度兒少窒息通報24件、其中受傷者未滿2歲12人，年齡表計的是受傷人數而非事故件數，但未滿2歲組無法單獨辨識嬰兒，且是單一縣市行政資料；不據此估算全國或個人發生率。",
+      "changes": "重讀台北消防局處置頁、2026-11-12更新FAQ及AHA/AAP 2025指引；更新FAQ版本來源，保留地方教材手法差異並依2025指引描述掌根。補入新北市未滿2歲分組不能辨識嬰兒及無全國暴露分母的限制。 依原報告表格釐清年齡分組屬受傷人數，不與24件事故通報混為同一單位。",
+      "limits": [
+        "只適用未滿一歲、清醒但無法有效哭、咳或呼吸的嚴重哽塞；一般咳嗽或哭聲有力時鼓勵咳嗽並觀察。不可做成人腹部推擠、盲目挖口、倒吊、搖晃或餵水；失去反應後改CPR。臺北市消防局2026年兩份公開資料對胸部手法不一致：處置頁寫單掌，11月12日更新FAQ仍列兩指；AHA/AAP 2025建議掌根。現場請立即打119並聽派遣員指示。",
+        "新北市114年度兒少報告的未滿2歲年齡組無法辨識未滿一歲嬰兒，且是單一縣市行政通報、沒有暴露分母，不能當全國或嬰兒發生率。",
+        "獨立醫療、急救及相關專業審閱仍待取得；本紀錄為AI輔助公開來源與台灣情境核對。"
+      ],
+      "unresolved_questions": [
+        "未取得全國未滿一歲嬰兒哽塞事件數及餵食／異物暴露分母；新北市報告年齡只列未滿2歲。",
+        "台北市消防局公開處置頁與FAQ手部指示仍不一致；尚未取得中央統一說明或相關專業人員正式獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "兒科急診或兒科醫師",
+          "急救教育或消防救護專業人員"
+        ],
+        "reason": "AI輔助來源核對不能取代嬰兒急救手法的正式專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-043.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-pediatric-emergency-recheck-20261124.json",
+      "source_bundle_sha256": "94e8fa5cb9899c948ce03e533a61f8776c094acfb5a530e27f2503c4b7fb38c4",
+      "reader_copy_cleanup_preserved": null,
+      "review_sha256": "c03325a9cde973ea4b390dd7d4a4b6390cfeea5322f4b0003bf2fdc774d40196"
+    },
+    {
+      "id": "TW-13-044",
+      "title": "嬰兒無反應且沒有正常呼吸：立即打119並開始CPR",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "915ab7ac3c8eecba8221facfa182bdaf8f54f281",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "e7dcee2cb76938576642f4309f2bc420ccf3732ee5d57107489e7aac98e5fbe0",
+      "before_sha256": "d5cb50e988b9599921f650acd22147d4b6ce2c922361563b8b7d367c0782a076",
+      "after_sha256": "cc91665ac0a990a13118a1c1915a27eb85ba7bc34adb8ab874934caba550bb86",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-10-31",
+      "prior_review_due_at": "2027-01-31",
+      "prior_source_reviewed_sha256": "d5cb50e988b9599921f650acd22147d4b6ce2c922361563b8b7d367c0782a076",
+      "previous_body": "<!-- TW-ID: TW-13-044 -->\n\n# 嬰兒無反應且沒有正常呼吸：立即打119並開始CPR\n\n## 適用情境與第一步\n\n未滿一歲嬰兒叫喚、輕拍肩膀或腳底仍沒有反應，且沒有正常呼吸或只有不規則喘息時，立即呼救；一般民眾不必摸脈搏來決定是否急救。若嬰兒仍有正常呼吸，先持續觀察並依119或醫療人員指示處理，不要把胸外按壓當成喚醒方式。\n\n## 臺灣實作與下一步\n\n手機在旁時，立刻打119、開擴音，說明是未滿一歲嬰兒無反應且沒有正常呼吸，依派遣員指示開始急救並保持通話。若有其他人，請一人負責通報和拿AED，另一人立即開始CPR；不要等救護車到場才開始。\n\n讓嬰兒仰躺在堅硬平面。依受訓方式或119指示，以雙拇指環抱胸部按壓，或在無法環抱時以單手掌根按壓胸骨；按壓速率每分鐘100至120次，深度約胸廓前後徑三分之一、約4公分，每次放鬆讓胸口回彈。單人且沒有進階呼吸道時，臺中榮總民眾教材採30次按壓、2次吹氣；若不會或不願吹氣，持續按壓並聽119指導。AHA/AAP 2025對兩名施救者的建議為15:2；兩人施救時依受訓內容和派遣員指示分工。\n\nAED一到就打開並照語音操作；有嬰兒或兒童貼片／能量衰減功能時優先使用。若只有成人貼片，依AED及119指示貼妥並避免兩片互相碰到，不要為尋找特殊貼片延誤急救。持續CPR至嬰兒恢復正常呼吸或救護人員接手。\n\n臺中榮總公開教材對獨自一人施救的文字建議先CPR約2分鐘再打119，但沒有說明手機就在手邊時是否也要等待。若手機能通話，本文建議立即打119開擴音，讓派遣員同步指導；若完全不能在原地通話，該院的兩分鐘建議只作無法立即求援時的參考，並非台灣全國統一流程。\n\n## 成本與可期待的效益\n\n急救不需等購買面罩或特殊AED才開始；家長、托嬰人員和照護者可事先練習嬰兒CPR、確認119報案地址與救護車動線。CPR與AED提供爭取救治時間的機會，但不能保證復甦或沒有後遺症。目前沒有與嬰兒相同母群及結果定義的全國院外心跳停止資料，也沒有嬰兒暴露母數；不以成人存活率或嬰兒猝死統計代替嬰兒OHCA發生率或存活率。\n\n## 限制與常見誤解\n\n本篇不適用剛出生新生兒在產房的復甦。不要花時間摸脈搏、等嘴唇變紫或找齊器材；不要用成人按壓深度壓嬰兒，也不要使用兩指胸外按壓。AHA/AAP 2025建議單手掌根或雙拇指環抱，按壓速率100至120次／分、深度約4公分；臺中榮總民眾版著重雙拇指環抱，兩名施救者的比例和獨自求援時序尚未查得台灣全國統一說明。現場優先打119並聽派遣員指導。\n\n## 參考資料\n\n- [臺中榮總：一歲以下嬰兒心肺復甦術（一般民眾版）](https://ihealth.vghtc.gov.tw/media/518)：2026年3月更新，說明一人CPR、30:2、按壓速率及約4公分深度。\n- [臺中榮總：嬰兒心肺復甦術影片文字說明](https://ihealth.vghtc.gov.tw/media/972)：2026年3月修訂文字寫明單人約先施作2分鐘CPR再求援；此處核對文字，沒有宣稱已觀看完整影片。\n- [AHA／AAP：2025年兒童基本救命術指引](https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support)：建議嬰兒CPR用單手掌根或雙拇指環抱、避免兩指按壓，按壓速率100至120次／分、深度約4公分。\n- [AHA／AAP：2025年兒童基本救命術民眾版流程圖（嬰兒至青春期）](https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Diagram-Ped-BLS-Lay-Rescuers-250121.pdf?sc_lang=en)：包含嬰兒，列出呼叫協助、立即CPR、30:2與AED貼片原則；將美國求援電話替換為臺灣119。\n",
+      "previous_source_ids": [
+        "ch13_infant_cpr_vghtc",
+        "ch13_infant_cpr_video_vghtc",
+        "ch13_infant_peds_bls_aha_2025",
+        "ch13_infant_cpr_lay_aha_2025"
+      ],
+      "previous_review_claims": [
+        "臺中榮總2026-03-12更新的一般民眾嬰兒CPR衛教列30:2、每分鐘100至120次及約4公分按壓深度。",
+        "臺中榮總2026-03-12更新影片文字說明含單人先CPR約2分鐘再求援的指示。",
+        "AHA/AAP 2025指引涵蓋嬰兒，建議單手掌根或雙拇指環抱、100至120次／分、深度約4公分，不用兩指法；可用30:2及雙人15:2。",
+        "AHA/AAP民眾版圖示涵蓋嬰兒，列呼救、立即CPR、30:2、使用AED及貼片安全原則；美國911依台灣制度轉為119。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/518",
+          "claim": "臺中榮總2026-03-12更新的一般民眾嬰兒CPR衛教列30:2、每分鐘100至120次及約4公分按壓深度。",
+          "supporting_passage": "臺中榮總2026-03-12更新的一般民眾嬰兒CPR衛教列30:2、每分鐘100至120次及約4公分按壓深度。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀臺中榮總公開HTML文字及修訂日期；沒有觀看該頁連結的影片。"
+        },
+        {
+          "url": "https://ihealth.vghtc.gov.tw/media/972",
+          "claim": "臺中榮總2026-03-12更新影片文字說明含單人先CPR約2分鐘再求援的指示。",
+          "supporting_passage": "臺中榮總2026-03-12更新影片文字說明含單人先CPR約2分鐘再求援的指示。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀影片說明頁可見文字及日期；只核對文字，不宣稱觀看完整影片，也記錄其未區分手機可用情況。"
+        },
+        {
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+          "claim": "AHA/AAP 2025指引涵蓋嬰兒，建議單手掌根或雙拇指環抱、100至120次／分、深度約4公分，不用兩指法；可用30:2及雙人15:2。",
+          "supporting_passage": "AHA/AAP 2025指引涵蓋嬰兒，建議單手掌根或雙拇指環抱、100至120次／分、深度約4公分，不用兩指法；可用30:2及雙人15:2。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31實讀AHA/AAP 2025公開指南相關建議段落；屬國際專業建議，不表示台灣已完成教材整合。"
+        },
+        {
+          "url": "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Diagram-Ped-BLS-Lay-Rescuers-250121.pdf?sc_lang=en",
+          "claim": "AHA/AAP民眾版圖示涵蓋嬰兒，列呼救、立即CPR、30:2、使用AED及貼片安全原則；美國911依台灣制度轉為119。",
+          "supporting_passage": "AHA/AAP民眾版圖示涵蓋嬰兒，列呼救、立即CPR、30:2、使用AED及貼片安全原則；美國911依台灣制度轉為119。（公開資料相關段落之編輯摘要，非逐字引文。）",
+          "accessed_at": "2026-10-31",
+          "retrieval_method": "2026-10-31直接讀取AHA/AAP 2025民眾流程圖PDF可擷取文字；未移植其美國電話號碼。"
+        }
+      ],
+      "source_ids": [
+        "ch13_infant_cpr_vghtc",
+        "ch13_infant_cpr_video_vghtc",
+        "ch13_infant_peds_bls_aha_2025",
+        "ch13_infant_cpr_lay_aha_2025"
+      ],
+      "new_source_ids": [],
+      "source_records_reused": [
+        "ch13_infant_cpr_vghtc",
+        "ch13_infant_cpr_video_vghtc",
+        "ch13_infant_peds_bls_aha_2025",
+        "ch13_infant_cpr_lay_aha_2025"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_infant_cpr_vghtc",
+          "url": "https://ihealth.vghtc.gov.tw/media/518",
+          "claim": "臺中榮總2026-03-12更新的一般民眾嬰兒CPR衛教列30:2、每分鐘100至120次及約4公分按壓深度。",
+          "supporting_passage": "2026年3月更新嬰兒CPR：沒有反應與正常呼吸時求助、30次壓胸與2次吹氣、胸深約4公分、速率每分鐘100至120次。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_infant_cpr_video_vghtc",
+          "url": "https://ihealth.vghtc.gov.tw/media/972",
+          "claim": "臺中榮總2026-03-12更新影片文字說明含單人先CPR約2分鐘再求援的指示。",
+          "supporting_passage": "2026年修訂衛教頁包含嬰兒CPR文字重點及無法立即求援時先操作約兩分鐘急救之教學；不聲稱檢視影片。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_infant_peds_bls_aha_2025",
+          "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+          "claim": "AHA/AAP 2025指引涵蓋嬰兒，建議單手掌根或雙拇指環抱、100至120次／分、深度約4公分，不用兩指法；可用30:2及雙人15:2。",
+          "supporting_passage": "AHA及AAP 2025兒童基本救命術指引：嬰兒嚴重哽塞用五次背部拍擊交替五次胸部推擠、不做腹部推擠；無反應且呼吸異常立即啟動緊急醫療並開始CPR，只取可見異物、不盲目挖取；嬰兒CPR用單手掌根或雙拇指環抱，取消兩指胸外按壓。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_infant_cpr_lay_aha_2025",
+          "url": "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Diagram-Ped-BLS-Lay-Rescuers-250121.pdf?sc_lang=en",
+          "claim": "AHA/AAP民眾版圖示涵蓋嬰兒，列呼救、立即CPR、30:2、使用AED及貼片安全原則；美國911依台灣制度轉為119。",
+          "supporting_passage": "AHA/AAP 2025民眾版流程圖包括嬰兒：呼叫協助、啟動緊急醫療、請人拿AED並立即CPR；30次胸部按壓後2次吹氣；嬰兒用單手掌根；有嬰兒／兒童貼片則使用，成人貼片須避免彼此接觸。美國求援電話不移植，本文改用臺灣119。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        }
+      ],
+      "retired_sources": [],
+      "source_reviewed_sha256": "cc91665ac0a990a13118a1c1915a27eb85ba7bc34adb8ab874934caba550bb86",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [],
+      "taiwan_context": "台灣住家、托嬰場所及公共空間的嬰兒院外急救需同步銜接119、AED取得與現場分工；地方衛教對單人求援時序可能不同。",
+      "frequency_assessment": "未查得可估算全國嬰兒院外心跳停止發生率或存活率、且同時具有嬰兒母群和暴露分母的資料；不以成人或嬰兒猝死統計換算。",
+      "changes": "重新核對臺中榮總衛教與AHA/AAP 2025兒童基本救命術；明確寫出兒童CPR優先含吹氣，單人30:2、雙人15:2，無法或不願吹氣時持續按壓仍優於不急救。保留手機可用時立即打119及地方教材兩分鐘文字的適用限制，並記錄流程圖標題與內文範圍差異。",
+      "limits": [
+        "適用一般民眾遇到未滿一歲嬰兒院外無反應且無正常呼吸，不適用剛出生的新生兒復甦。手機能通話時立即打119、開擴音，依派遣員指示開始急救；臺中榮總教材建議獨自一人先CPR約2分鐘再求援，但未說明手機可用時是否等待。AHA/AAP 2025建議單手掌根或雙拇指環抱，按壓速率100至120次／分、深度約4公分；兒童急救優先包含吹氣，無法或不願吹氣時胸部按壓仍優於不急救。沒有嬰兒暴露母數，不估發生率或存活率。",
+        "獨立兒科、急救或醫療專業審閱仍待取得；地方教材的單人求援時序未查得全國統一說明。"
+      ],
+      "unresolved_questions": [
+        "臺中榮總教材的單人先CPR兩分鐘再求援文字未說明手機可用時是否等待；尚無台灣全國統一民眾指示可解決該差異。",
+        "尚未取得兒科、急救教育或到院前救護專業人員正式獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "兒科醫師或兒科急診專業人員",
+          "急救教育或到院前救護專業人員"
+        ],
+        "reason": "AI輔助來源核對不能取代兒科CPR及119求援流程的正式專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-044.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-pediatric-emergency-recheck-20261124.json",
+      "source_bundle_sha256": "94e8fa5cb9899c948ce03e533a61f8776c094acfb5a530e27f2503c4b7fb38c4",
+      "reader_copy_cleanup_preserved": null,
+      "review_sha256": "545a034f1226412a03f4ab5241bbdbe8079d6f63ebf1d5c83cf77d1fbcafc7cc"
+    },
+    {
+      "id": "TW-13-045",
+      "title": "兒童疑似吞下鈕扣電池或強力磁鐵，立刻急診不要催吐",
+      "status": "ai_source_rechecked_professional_pending",
+      "prior_revision": "915ab7ac3c8eecba8221facfa182bdaf8f54f281",
+      "prior_review_kind": "review_file",
+      "prior_review_sha256": "4e39bd0cb6100d7b415cf3b64ba0618b4f4b143ff5e48eb8b2f2d58d04ebd52e",
+      "before_sha256": "46398527e49084c5f927e82721f1ab847f219a0487572faa427f6c7618d778ff",
+      "after_sha256": "e9bc924751a2c53ec75e26c535edcf3a94b91c9fb0f7ad0757e31582ab2fc484",
+      "reviewed_at": "2026-11-24",
+      "review_due_at": "2027-02-24",
+      "prior_reviewed_at": "2026-11-03",
+      "prior_review_due_at": "2027-02-03",
+      "prior_source_reviewed_sha256": "46398527e49084c5f927e82721f1ab847f219a0487572faa427f6c7618d778ff",
+      "previous_body": "<!-- TW-ID: TW-13-045 -->\n\n# 兒童疑似吞下鈕扣電池或強力磁鐵，立刻急診不要催吐\n\n## 適用情境與第一步\n\n孩子可能吞下鈕扣電池，或玩具、遙控器的電池突然少了一顆，即使看起來沒有症狀也要立即就醫評估。若懷疑吞下多顆強力磁鐵，或磁鐵與金屬物，亦應立刻到急診；鈕扣電池可能在短時間內造成食道嚴重灼傷，磁性玩具誤食也可能造成腸胃穿孔，不能當成一般小物件等候排出。\n\n## 臺灣實作與下一步\n\n若患者呼吸困難、吞嚥困難、失去反應、持續流口水或劇烈疼痛，撥119並說明疑似吞入的物品、時間與位置；其他疑似吞入情況也要立即前往急診，不要先在家觀察症狀或搜尋特定設備。不催吐、不挖喉嚨、不給瀉藥，也不要強迫吞食物與飲水。帶上商品外盒、同款電池或磁鐵照片，並記下可能的顆數與發現時間。途中可由同伴聯絡臺北榮總毒藥物防治諮詢中心24小時專線02-2871-7121或02-2875-7525分機85500詢問，但不要因此延後出發。\n\n台灣急診醫學會2024年的專業文章提到，蜂蜜在特定情況下可能作為暫時減傷措施，但一歲以下不適用，而且不能取代緊急胃鏡移除。是否適用須由毒藥物中心或急診人員依個案判斷；不要自行照網路劑量餵食，也不要為了採取暫時措施延誤就醫。\n\n## 成本與可期待的效益\n\n急診可依物品種類、吞入時間及位置安排影像檢查與後續處置；不是每個人都需要相同檢查或手術。費用依健保資格、檢查、治療及住院情況而異，無法用單一金額預先估算。平時把備用電池和小磁鐵放在幼兒拿不到、打不開的地方，選擇符合年齡標示的玩具，並固定電池蓋、清點小零件。\n\n## 限制與常見誤解\n\n鈕扣電池與多顆強力磁鐵造成的傷害不同；磁性玩具誤食也不能只按「吞下一枚小物」來處理。不要等到疼痛、嘔吐或排便才求醫。台灣醫院、急診及商品安全資料沒有提供全國同一定義的吞入事件數與兒童暴露分母，因此不能估算個人發生機率；風險後果足以支持疑似吞入後立即就醫。\n\n## 參考資料\n\n- [彰化基督教醫院毒藥物檢測暨防治中心：幼童誤吞鈕扣電池時的緊急處置](https://dpt.cch.org.tw/layout/layout_3/qa.aspx?ID=7327)：2025年12月9日更新的問答指出，疑似吞入鈕扣電池應立即就醫或撥119，不要等症狀或自行催吐，並盡量提供外包裝或型號。\n- [台灣急診醫學會：鈕扣電池誤食](https://tsem.azurewebsites.net/EJournal/Detail/648)：2024年10月31日刊登的專業文章說明鈕扣電池可能造成嚴重腐蝕傷害，急診移除優先；其中提及的暫時減傷措施不能取代胃鏡。\n- [經濟部標準檢驗局臺南分局：選用磁性玩具注意事項](https://www.bsmi.gov.tw/wSite/ct?ctNode=8024&mp=6&xItem=120586)：提醒磁性玩具誤食可能造成腸胃穿孔，選購時確認商品檢驗標識、年齡標示並避免幼兒接觸小型磁性零件。\n- [臺北榮總毒藥物防治諮詢中心：中毒處置](https://www.pcc-vghtpe.tw/active-detail1260.htm)：提供24小時毒物諮詢電話，可在不延誤急診的前提下詢問個案處置。\n\n緊急時依119派遣員及現場醫療人員指示處理。\n",
+      "previous_source_ids": [
+        "ch13_battery_cch_20251209",
+        "ch13_battery_tsem_20241031",
+        "ch13_magnets_bsmi_20250402_20261103",
+        "ch13_pcc_poison_20261103"
+      ],
+      "previous_review_claims": [
+        "彰基2025-12-09問答指出疑似吞下鈕扣電池要立即就醫或撥119，不要等症狀或自行催吐，並提供外包裝或同款型號。",
+        "台灣急診醫學會2024-10-31專業文章說明鈕扣電池可能造成嚴重腐蝕傷害，急診移除優先；在胃鏡暫不可用的特定情境曾討論蜂蜜等暫時減傷，但不能取代緊急胃鏡，且一歲以下不適用蜂蜜。",
+        "標準檢驗局提醒磁性玩具誤食可能造成腸胃穿孔，並建議確認檢驗標識、中文標示及適用年齡，避免幼兒接觸小型磁性零件。",
+        "臺北榮總毒藥物中心提供24小時諮詢電話02-2871-7121或02-2875-7525分機85500，可在不延誤急診的情況下詢問個案處置。"
+      ],
+      "prior_source_checks": [
+        {
+          "url": "https://dpt.cch.org.tw/layout/layout_3/qa.aspx?ID=7327",
+          "claim": "彰基2025-12-09問答指出疑似吞下鈕扣電池要立即就醫或撥119，不要等症狀或自行催吐，並提供外包裝或同款型號。",
+          "supporting_passage": "頁面第24至28行標示更新日期及答覆：鈕扣電池可短時間造成食道灼傷或穿孔，疑似吞下應立即就醫或119，不催吐、不等症狀，盡量提供外包裝或相同型號。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接閱讀彰化基督教醫院毒藥物中心公開問答，核對2025-12-09更新日期及鈕扣電池處置段落。"
+        },
+        {
+          "url": "https://tsem.azurewebsites.net/EJournal/Detail/648",
+          "claim": "台灣急診醫學會2024-10-31專業文章說明鈕扣電池可能造成嚴重腐蝕傷害，急診移除優先；在胃鏡暫不可用的特定情境曾討論蜂蜜等暫時減傷，但不能取代緊急胃鏡，且一歲以下不適用蜂蜜。",
+          "supporting_passage": "文章刊登日期2024-10-31；第150至158行說明腐蝕傷害、急診影像與移除、胃鏡為優先、蜂蜜等為無法立即胃鏡時的暫時措施、一歲以下不適用蜂蜜以及延遲併發症。正文不複製其劑量或臨床處置步驟。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接閱讀台灣急診醫學會公開通訊全文，核對日期及第150至158行；不把專業處置內容轉成個人處方。"
+        },
+        {
+          "url": "https://www.bsmi.gov.tw/wSite/ct?ctNode=8024&mp=6&xItem=120586",
+          "claim": "標準檢驗局提醒磁性玩具誤食可能造成腸胃穿孔，並建議確認檢驗標識、中文標示及適用年齡，避免幼兒接觸小型磁性零件。",
+          "supporting_passage": "標準檢驗局臺南分局2025-04-02頁面第92至102行記載國內外兒童誤食磁性玩具造成腸胃穿孔案例，並列出商品檢驗標識、中文標示與適齡選購注意事項。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接閱讀經濟部標準檢驗局臺南分局公開頁面，核對發布日期及磁性玩具風險與預防段落。"
+        },
+        {
+          "url": "https://www.pcc-vghtpe.tw/active-detail1260.htm",
+          "claim": "臺北榮總毒藥物中心提供24小時諮詢電話02-2871-7121或02-2875-7525分機85500，可在不延誤急診的情況下詢問個案處置。",
+          "supporting_passage": "頁面首段列明兩組24小時諮詢電話；鈕扣電池或磁鐵吞入的急診必要性另依彰基及台灣急診醫學會來源，電話諮詢不取代急診。",
+          "accessed_at": "2026-11-03",
+          "retrieval_method": "2026-11-03直接閱讀臺北榮總毒藥物防治諮詢中心公開HTML及24小時聯絡資訊。"
+        }
+      ],
+      "source_ids": [
+        "ch13_battery_cch_20251209",
+        "ch13_battery_tsem_canonical_20261124",
+        "ch13_magnets_bsmi_20250402_20261103",
+        "ch13_pcc_poison_20261103",
+        "ch13_battery_ncpc_20261124"
+      ],
+      "new_source_ids": [
+        "ch13_battery_tsem_canonical_20261124",
+        "ch13_battery_ncpc_20261124"
+      ],
+      "source_records_reused": [
+        "ch13_battery_cch_20251209",
+        "ch13_magnets_bsmi_20250402_20261103",
+        "ch13_pcc_poison_20261103"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch13_battery_cch_20251209",
+          "url": "https://dpt.cch.org.tw/layout/layout_3/qa.aspx?ID=7327",
+          "claim": "彰基2025-12-09問答指出疑似吞下鈕扣電池要立即就醫或撥119，不要等症狀或自行催吐，並提供外包裝或同款型號。",
+          "supporting_passage": "醫院問答指出疑似吞下鈕扣電池應立即就醫或撥119，不要等待症狀或自行催吐，並盡量提供外包裝或同款型號。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_battery_tsem_canonical_20261124",
+          "url": "https://www.sem.org.tw/EJournal/Detail/648",
+          "claim": "台灣急診醫學會2024-10-31文章說明鈕扣電池食道風險、影像定位及依位置、時間和症狀決定內視鏡或其他處置；蜂蜜僅是有限制的暫時措施。",
+          "supporting_passage": "台灣急診醫學會2024-10-31專業文章說明鈕扣電池食道嵌頓的緊急風險、以影像判斷位置，以及急診團隊依位置、時間和症狀決定內視鏡或其他處置；蜂蜜等暫時措施不能取代急診評估，且未滿一歲不適用蜂蜜。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀台灣急診醫學會官方現行主網文章全文，核對刊登日期、定位與個案處置脈絡、蜂蜜限制。"
+        },
+        {
+          "source_id": "ch13_magnets_bsmi_20250402_20261103",
+          "url": "https://www.bsmi.gov.tw/wSite/ct?ctNode=8024&mp=6&xItem=120586",
+          "claim": "標準檢驗局提醒磁性玩具誤食可能造成腸胃穿孔，並建議確認檢驗標識、中文標示及適用年齡，避免幼兒接觸小型磁性零件。",
+          "supporting_passage": "標準檢驗局臺南分局提醒磁性玩具誤食可能造成腸胃穿孔，並建議確認商品檢驗標識、中文標示及適用年齡，避免幼兒接觸小型磁性零件。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_pcc_poison_20261103",
+          "url": "https://www.pcc-vghtpe.tw/active-detail1260.htm",
+          "claim": "臺北榮總毒藥物中心提供24小時諮詢電話02-2871-7121或02-2875-7525分機85500，可在不延誤急診的情況下詢問個案處置。",
+          "supporting_passage": "頁面列出24小時諮詢電話02-2871-7121或02-2875-7525分機85500；昏迷、呼吸異常或抽搐應撥119，依接觸途徑處置，不催吐並記下暴露時間與症狀。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+        },
+        {
+          "source_id": "ch13_battery_ncpc_20261124",
+          "url": "https://www.poison.org/battery/guideline",
+          "claim": "美國毒物中心只在可能為鋰鈕扣電池、年滿1歲、吞入未超過12小時、能安全吞嚥且蜂蜜可立即取得時提出途中暫時措施；不延誤急診，非台灣通用標準。",
+          "supporting_passage": "美國毒物中心僅在可能為鋰鈕扣電池、兒童年滿12個月、吞入未超過12小時、能安全吞嚥且蜂蜜可立即取得等條件下，將蜂蜜列為途中暫時措施；不得延誤急診或取代電池定位及移除評估。這是美國毒物中心指引，不是台灣通用標準；本文不列劑量。（依公開來源相關段落整理，非逐字引文。）",
+          "accessed_at": "2026-11-24",
+          "retrieval_method": "2026-11-24直接閱讀美國National Capital Poison Center公開指引，核對電池類型、年齡、時間及不得延誤就醫條件；不採用劑量。"
+        }
+      ],
+      "retired_sources": [
+        {
+          "id": "ch13_battery_tsem_20241031",
+          "replacement_ids": [
+            "ch13_battery_tsem_canonical_20261124"
+          ],
+          "reason": "將同一台灣急診醫學會文章改連至官方現行主網www.sem.org.tw；保留舊Azure網址來源物件供歷史追溯。",
+          "prior_source_sha256": "89d85e5b515ecd51ec736a8a416d774b452a6b65ba696427acc208b342bcf7bf",
+          "disposition": "replaced"
+        }
+      ],
+      "source_reviewed_sha256": "e9bc924751a2c53ec75e26c535edcf3a94b91c9fb0f7ad0757e31582ab2fc484",
+      "legal_temporal_checks": [],
+      "statistics_assessed": [],
+      "taiwan_context": "幼兒家庭可能接觸鈕扣電池、遙控器電池及小型磁性玩具；台灣急診與毒物諮詢可透過119、急診和臺北榮總毒物中心銜接，外國蜂蜜建議不直接視為台灣標準。",
+      "frequency_assessment": "台灣未查得全國同一定義的鈕扣電池或磁性玩具吞入事件數與兒童暴露分母；不據零散病例或國外資料估算個人發生率。吞入鈕扣電池或多顆強力磁鐵可能造成嚴重傷害，仍須按症狀嚴重度與物品風險立即處理。",
+      "changes": "核對台灣急診醫學會官方現行文章與彰基問答；說明立即急診評估，由醫療團隊依X光位置、時間與症狀決定胃鏡或其他處置，避免暗示每顆電池都採同一方式。補充美國毒物中心蜂蜜建議的條件、年齡下限與不得延誤就醫；改用學會官方主網網址並保留舊來源歷史物件。",
+      "limits": [
+        "疑似吞入鈕扣電池或多顆強力磁鐵應立即急診評估；不要催吐、挖喉嚨或自行照網路劑量餵食。鈕扣電池是否緊急胃鏡或其他處置由醫療團隊依影像位置、吞入時間及症狀判斷；美國毒物中心的蜂蜜建議只限其列出的條件，不能延誤台灣急診。",
+        "台灣沒有全國同一定義的相關吞入事件數與暴露分母，不估個人機率；獨立兒科急診、毒物或醫療專業審閱仍待取得。"
+      ],
+      "unresolved_questions": [
+        "台灣急診醫學會文章涵蓋的個案處置仍須由急診團隊依電池位置和臨床狀況判斷；美國蜂蜜指引不是台灣通用流程。",
+        "尚未取得兒科急診或毒物專業人員正式獨立審閱。"
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "兒科急診或毒物專業醫師",
+          "兒童意外傷害與急救專業人員"
+        ],
+        "reason": "AI輔助來源核對不能取代鈕扣電池、磁鐵誤食及毒物處置的正式專業審閱。"
+      },
+      "review_path": "localization/reviews/TW-13-045.json",
+      "source_bundle_path": "localization/tw-edition/sources/ch13-pediatric-emergency-recheck-20261124.json",
+      "source_bundle_sha256": "94e8fa5cb9899c948ce03e533a61f8776c094acfb5a530e27f2503c4b7fb38c4",
+      "reader_copy_cleanup_preserved": null,
+      "review_sha256": "ca30bbd50932b9b97569e02e6d3943bc69bed081fd0bc6dc60456877fa1e751f"
+    }
+  ],
+  "statistics_summary": {
+    "taiwan_national_death_counts": {
+      "W79": 138,
+      "W80": 107,
+      "year": 2025,
+      "unit": "死因登記死亡人數",
+      "denominator": null
+    },
+    "new_taipei_child_administrative_cases": {
+      "total": 24,
+      "food_choking": 21,
+      "foreign_body_ingestion": 2,
+      "milk_aspiration": 1,
+      "year": 2025,
+      "scope": "新北市兒少行政通報",
+      "denominator": null,
+      "deaths": 0,
+      "injuries": 24,
+      "injured_by_age": {
+        "unit": "受傷人數（人）",
+        "under_2": 12,
+        "age_2_to_under_6": 6,
+        "age_6_to_under_12": 6,
+        "age_12_to_under_18": 0
+      }
+    },
+    "national_infant_choking_rate": "資料不足，不估算"
+  },
+  "publication_ready": false,
+  "professional_review_pending": true,
+  "unresolved_questions": [
+    "新北市報告的窒息事故為行政通報口徑，沒有縣市兒少人口或食物、奶類暴露分母，不能估計發生率。",
+    "尚未取得急診、兒科、吞嚥照護或急救教育專業人員正式獨立審閱。",
+    "未取得全國未滿一歲嬰兒哽塞事件數及餵食／異物暴露分母；新北市報告年齡只列未滿2歲。",
+    "台北市消防局公開處置頁與FAQ手部指示仍不一致；尚未取得中央統一說明或相關專業人員正式獨立審閱。",
+    "臺中榮總教材的單人先CPR兩分鐘再求援文字未說明手機可用時是否等待；尚無台灣全國統一民眾指示可解決該差異。",
+    "尚未取得兒科、急救教育或到院前救護專業人員正式獨立審閱。",
+    "台灣急診醫學會文章涵蓋的個案處置仍須由急診團隊依電池位置和臨床狀況判斷；美國蜂蜜指引不是台灣通用流程。",
+    "尚未取得兒科急診或毒物專業人員正式獨立審閱。"
+  ]
+}

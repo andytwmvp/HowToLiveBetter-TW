@@ -1,12 +1,63 @@
 {
   "id": "TW-13-044",
-  "reviewer": "ChatGPT（AI輔助逐主張閱讀公開來源及臺灣情境核對，非獨立專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐主張閱讀公開來源與台灣情境核對，非獨立醫療、急救或毒物專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-31",
-  "review_due_at": "2027-01-31",
+  "reviewed_at": "2026-11-24",
+  "review_due_at": "2027-02-24",
   "target_path": "locales/zh-TW/book/ch13/TW-13-044.md",
-  "target_sha256": "d5cb50e988b9599921f650acd22147d4b6ce2c922361563b8b7d367c0782a076",
+  "target_sha256": "cc91665ac0a990a13118a1c1915a27eb85ba7bc34adb8ab874934caba550bb86",
   "source_checks": [
+    {
+      "source_id": "ch13_infant_cpr_vghtc",
+      "url": "https://ihealth.vghtc.gov.tw/media/518",
+      "claim": "臺中榮總2026-03-12更新的一般民眾嬰兒CPR衛教列30:2、每分鐘100至120次及約4公分按壓深度。",
+      "supporting_passage": "2026年3月更新嬰兒CPR：沒有反應與正常呼吸時求助、30次壓胸與2次吹氣、胸深約4公分、速率每分鐘100至120次。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+    },
+    {
+      "source_id": "ch13_infant_cpr_video_vghtc",
+      "url": "https://ihealth.vghtc.gov.tw/media/972",
+      "claim": "臺中榮總2026-03-12更新影片文字說明含單人先CPR約2分鐘再求援的指示。",
+      "supporting_passage": "2026年修訂衛教頁包含嬰兒CPR文字重點及無法立即求援時先操作約兩分鐘急救之教學；不聲稱檢視影片。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+    },
+    {
+      "source_id": "ch13_infant_peds_bls_aha_2025",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+      "claim": "AHA/AAP 2025指引涵蓋嬰兒，建議單手掌根或雙拇指環抱、100至120次／分、深度約4公分，不用兩指法；可用30:2及雙人15:2。",
+      "supporting_passage": "AHA及AAP 2025兒童基本救命術指引：嬰兒嚴重哽塞用五次背部拍擊交替五次胸部推擠、不做腹部推擠；無反應且呼吸異常立即啟動緊急醫療並開始CPR，只取可見異物、不盲目挖取；嬰兒CPR用單手掌根或雙拇指環抱，取消兩指胸外按壓。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+    },
+    {
+      "source_id": "ch13_infant_cpr_lay_aha_2025",
+      "url": "https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Diagram-Ped-BLS-Lay-Rescuers-250121.pdf?sc_lang=en",
+      "claim": "AHA/AAP民眾版圖示涵蓋嬰兒，列呼救、立即CPR、30:2、使用AED及貼片安全原則；美國911依台灣制度轉為119。",
+      "supporting_passage": "AHA/AAP 2025民眾版流程圖包括嬰兒：呼叫協助、啟動緊急醫療、請人拿AED並立即CPR；30次胸部按壓後2次吹氣；嬰兒用單手掌根；有嬰兒／兒童貼片則使用，成人貼片須避免彼此接觸。美國求援電話不移植，本文改用臺灣119。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+    }
+  ],
+  "localization_changes": "重新核對臺中榮總衛教與AHA/AAP 2025兒童基本救命術；明確寫出兒童CPR優先含吹氣，單人30:2、雙人15:2，無法或不願吹氣時持續按壓仍優於不急救。保留手機可用時立即打119及地方教材兩分鐘文字的適用限制，並記錄流程圖標題與內文範圍差異。",
+  "review_method": "逐條重讀原作主題、現行正文、前次審閱與來源對應；實讀台灣消防、醫療機構、主管機關統計及國際專業指引原文，核對適用年齡、處置順序、來源更新日期、統計單位與分母。外國指引僅作證據和適用條件參考，不改作台灣制度；未取得正式專業審閱時保留待審。",
+  "limits": [
+    "適用一般民眾遇到未滿一歲嬰兒院外無反應且無正常呼吸，不適用剛出生的新生兒復甦。手機能通話時立即打119、開擴音，依派遣員指示開始急救；臺中榮總教材建議獨自一人先CPR約2分鐘再求援，但未說明手機可用時是否等待。AHA/AAP 2025建議單手掌根或雙拇指環抱，按壓速率100至120次／分、深度約4公分；兒童急救優先包含吹氣，無法或不願吹氣時胸部按壓仍優於不急救。沒有嬰兒暴露母數，不估發生率或存活率。",
+    "獨立兒科、急救或醫療專業審閱仍待取得；地方教材的單人求援時序未查得全國統一說明。"
+  ],
+  "source_reviewed_sha256": "cc91665ac0a990a13118a1c1915a27eb85ba7bc34adb8ab874934caba550bb86",
+  "source_ids": [
+    "ch13_infant_cpr_vghtc",
+    "ch13_infant_cpr_video_vghtc",
+    "ch13_infant_peds_bls_aha_2025",
+    "ch13_infant_cpr_lay_aha_2025"
+  ],
+  "prior_revision": "915ab7ac3c8eecba8221facfa182bdaf8f54f281",
+  "before_sha256": "d5cb50e988b9599921f650acd22147d4b6ce2c922361563b8b7d367c0782a076",
+  "after_sha256": "cc91665ac0a990a13118a1c1915a27eb85ba7bc34adb8ab874934caba550bb86",
+  "prior_review_sha256": "e7dcee2cb76938576642f4309f2bc420ccf3732ee5d57107489e7aac98e5fbe0",
+  "prior_source_checks": [
     {
       "url": "https://ihealth.vghtc.gov.tw/media/518",
       "claim": "臺中榮總2026-03-12更新的一般民眾嬰兒CPR衛教列30:2、每分鐘100至120次及約4公分按壓深度。",
@@ -36,11 +87,33 @@
       "retrieval_method": "2026-10-31直接讀取AHA/AAP 2025民眾流程圖PDF可擷取文字；未移植其美國電話號碼。"
     }
   ],
-  "localization_changes": "按台灣119與臺中榮總2026民眾衛教重寫立即求援、嬰兒CPR及單人情境；以AHA/AAP 2025更新兩指法、按壓深度與速率、按壓手法、兩人比例及AED貼片，明記地方教材時序差異。",
-  "review_method": "逐主張實讀臺灣主管機關、公立醫院與原始官方研究／專業指引公開HTML或PDF；比對正文、來源範圍、適用年齡、手法差異及統計分母。沒有全國同定義病例或暴露分母時明列資料不足；未取得專家簽證不宣稱專業審查完成。",
-  "limits": [
-    "適用一般民眾遇到未滿一歲嬰兒院外無反應且無正常呼吸，不適用剛出生的新生兒復甦。手機能通話時立即打119、開擴音，依派遣員指示開始急救；臺中榮總教材建議獨自一人先CPR約2分鐘再求援，但沒有說明手機可用時是否等待。AHA/AAP 2025建議單手掌根或雙拇指環抱，按壓速率100至120次／分、深度約4公分。目前沒有與嬰兒相同母群及結果定義的全國院外心跳停止資料，也沒有嬰兒暴露母數，不估發生率或存活率。",
-    "獨立醫療、急救及相關專業審閱仍待取得；本紀錄為AI輔助公開來源與臺灣情境核對。"
+  "source_bundle_path": "localization/tw-edition/sources/ch13-pediatric-emergency-recheck-20261124.json",
+  "source_bundle_sha256": "94e8fa5cb9899c948ce03e533a61f8776c094acfb5a530e27f2503c4b7fb38c4",
+  "source_records_reused": [
+    "ch13_infant_cpr_vghtc",
+    "ch13_infant_cpr_video_vghtc",
+    "ch13_infant_peds_bls_aha_2025",
+    "ch13_infant_cpr_lay_aha_2025"
   ],
-  "source_reviewed_sha256": "d5cb50e988b9599921f650acd22147d4b6ce2c922361563b8b7d367c0782a076"
+  "retired_sources": [],
+  "statistics_assessed": [],
+  "frequency_assessment": "未查得可估算全國嬰兒院外心跳停止發生率或存活率、且同時具有嬰兒母群和暴露分母的資料；不以成人或嬰兒猝死統計換算。",
+  "taiwan_context": "台灣住家、托嬰場所及公共空間的嬰兒院外急救需同步銜接119、AED取得與現場分工；地方衛教對單人求援時序可能不同。",
+  "changes": "重新核對臺中榮總衛教與AHA/AAP 2025兒童基本救命術；明確寫出兒童CPR優先含吹氣，單人30:2、雙人15:2，無法或不願吹氣時持續按壓仍優於不急救。保留手機可用時立即打119及地方教材兩分鐘文字的適用限制，並記錄流程圖標題與內文範圍差異。",
+  "legal_temporal_checks": [],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": [
+      "兒科醫師或兒科急診專業人員",
+      "急救教育或到院前救護專業人員"
+    ],
+    "reason": "AI輔助來源核對不能取代兒科CPR及119求援流程的正式專業審閱。"
+  },
+  "unresolved_questions": [
+    "臺中榮總教材的單人先CPR兩分鐘再求援文字未說明手機可用時是否等待；尚無台灣全國統一民眾指示可解決該差異。",
+    "尚未取得兒科、急救教育或到院前救護專業人員正式獨立審閱。"
+  ],
+  "new_source_ids": [],
+  "reader_copy_cleanup_preserved": null
 }

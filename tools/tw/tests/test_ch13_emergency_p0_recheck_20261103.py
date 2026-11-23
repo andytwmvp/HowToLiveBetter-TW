@@ -51,6 +51,14 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
             cwd=ROOT,
         ))
         cls.batch_runtime_items = {item["id"]: item for item in batch_runtime["items"]}
+        cls.batch_runtime_sources = {source["id"]: source for source in batch_runtime["sources"]}
+        cls.batch_manifest_items = {
+            entry["id"]: entry
+            for entry in json.loads(subprocess.check_output(
+                ["git", "show", f"{cls.followup['prior_revision']}:localization/manifest.json"],
+                cwd=ROOT,
+            ))["entries"]
+        }
 
     def test_batch_records_append_actual_body_and_review_hash_edges(self):
         self.assertEqual(self.batch["baseline_main_sha"], BASE)
@@ -71,8 +79,19 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
 
         for item_id in ITEM_IDS:
             with self.subTest(item_id=item_id):
-                item = self.runtime_items[item_id]
+                # TW-13-045 received a later substantive recheck. Validate the
+                # November 3 edge against its immutable snapshot instead of
+                # incorrectly requiring its current body and review to remain
+                # frozen at that earlier version.
+                historical_item = item_id == "TW-13-045"
+                item = self.batch_runtime_items[item_id] if historical_item else self.runtime_items[item_id]
                 review = self.reviews[item_id]
+                manifest_item = self.batch_manifest_items[item_id] if historical_item else self.manifest_items[item_id]
+                if historical_item:
+                    review = json.loads(subprocess.check_output(
+                        ["git", "show", f"{self.followup['prior_revision']}:localization/reviews/{item_id}.json"],
+                        cwd=ROOT,
+                    ))
                 batch_record = self.batch_items[item_id]
                 history = [
                     row for row in self.register["substantive_rechecks"]
@@ -87,8 +106,10 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
                 self.assertEqual(review["review_due_at"], record["review_due_at"])
 
                 body_path = ROOT / item["target_path"]
-                body = body_path.read_text(encoding="utf-8")
-                body_sha = hashlib.sha256(body_path.read_bytes()).hexdigest()
+                body = item["body"] if historical_item else body_path.read_text(encoding="utf-8")
+                body_sha = hashlib.sha256(body.encode("utf-8")).hexdigest()
+                if not historical_item:
+                    body_sha = hashlib.sha256(body_path.read_bytes()).hexdigest()
                 self.assertEqual(body, item["body"])
                 self.assertEqual(
                     hashlib.sha256(self.batch_runtime_items[item_id]["body"].encode("utf-8")).hexdigest(),
@@ -96,12 +117,13 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
                 )
                 self.assertEqual(body_sha, record["after_sha256"])
                 self.assertEqual(body_sha, review["target_sha256"])
-                self.assertEqual(self.manifest_items[item_id]["target_path"], item["target_path"])
-                self.assertEqual(self.manifest_items[item_id]["status"], "verified")
+                self.assertEqual(manifest_item["target_path"], item["target_path"])
+                self.assertEqual(manifest_item["status"], "verified")
 
                 current_source_ids = set(record["source_ids"])
                 review_urls = {source["url"] for source in review["source_checks"]}
-                runtime_urls = {self.runtime_sources[source_id]["url"] for source_id in current_source_ids}
+                source_catalog = self.batch_runtime_sources if historical_item else self.runtime_sources
+                runtime_urls = {source_catalog[source_id]["url"] for source_id in current_source_ids}
                 body_urls = set(re.findall(r"\]\((https?://[^)]+)\)", body))
                 self.assertEqual(review_urls, runtime_urls)
                 self.assertEqual(body_urls, runtime_urls)
@@ -112,7 +134,8 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
                     r"(?:批次摘要|PR\s*#\d+|CI\s*(?:成功|通過)|(?:本次|本輪).{0,16}(?:AI|審查|再審|核對))",
                 )
 
-                validate_recheck_history(ROOT, record, item)
+                if not historical_item:
+                    validate_recheck_history(ROOT, record, item)
 
     def test_postictal_followup_preserves_the_november_3_review_edge(self):
         item = self.runtime_items["TW-13-016"]
@@ -256,7 +279,8 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
         self.assertIn("即使看起來沒有症狀", bodies["TW-13-045"])
         self.assertIn("不催吐", bodies["TW-13-045"])
         self.assertIn("一歲以下不適用", bodies["TW-13-045"])
-        self.assertIn("不能取代緊急胃鏡移除", bodies["TW-13-045"])
+        self.assertIn("不能取代急診評估", bodies["TW-13-045"])
+        self.assertIn("不能為了準備蜂蜜而延誤出發", bodies["TW-13-045"])
         self.assertFalse(publication_report()["publication_ready"])
 
 

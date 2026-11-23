@@ -1,12 +1,64 @@
 {
   "id": "TW-13-043",
-  "reviewer": "ChatGPT（AI輔助逐主張閱讀公開來源及臺灣情境核對，非獨立專業簽證）",
+  "reviewer": "ChatGPT（AI輔助逐主張閱讀公開來源與台灣情境核對，非獨立醫療、急救或毒物專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-31",
-  "review_due_at": "2027-01-31",
+  "reviewed_at": "2026-11-24",
+  "review_due_at": "2027-02-24",
   "target_path": "locales/zh-TW/book/ch13/TW-13-043.md",
-  "target_sha256": "c55784d08d65768cd3d83f0e1bf213c7059bc7d5962a1a5478eda01e6e58c424",
+  "target_sha256": "b759cbe3124cf6437e9aafe5b08bdaa96954c12138f2bf4175d89a0286e45b8e",
   "source_checks": [
+    {
+      "source_id": "ch13_infant_choke_tpe",
+      "url": "https://www.119.gov.taipei/cp.aspx?n=0878BEC80AC87B33",
+      "claim": "臺北市消防局異物哽塞頁寫未滿一歲嬰兒五次拍背及五次單掌胸部按壓，重複至排出或救護人員接手。",
+      "supporting_passage": "未滿一歲嬰兒嚴重異物哽塞可交替五次背部拍擊及五次胸部按壓，應119求救，不使用成人腹部推擠。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+    },
+    {
+      "source_id": "ch13_infant_choke_faq_tpe_20261124",
+      "url": "https://www.119.gov.taipei/News_Content.aspx?n=6EEFD6ACA51B8E33&s=C30134A2D4E0AA11&sms=87415A8B9CE81B16",
+      "claim": "臺北市消防局FAQ標示2026-11-12更新，仍列嬰兒五次拍背及兩指胸骨下方按壓；與該局處置頁單掌及AHA/AAP 2025掌根建議不同。",
+      "supporting_passage": "臺北市消防局FAQ標示2026-11-12更新；仍寫嬰兒五次拍背與五次胸骨下方兩指胸部按壓，與該局另一頁的單掌描述及AHA/AAP 2025掌根建議不一致。此頁作為地方教材差異證據，不作為本文採用兩指手法的依據。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀台北市消防局FAQ標示更新日期及嬰兒處置正文，並比對該局處置頁與AHA/AAP 2025指引。"
+    },
+    {
+      "source_id": "ch13_infant_peds_bls_aha_2025",
+      "url": "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support",
+      "claim": "AHA/AAP 2025建議嬰兒嚴重哽塞五次背擊交替五次胸部推擠，胸部推擠採掌根、不做腹部推擠；失去反應後CPR、只取可見異物且不盲挖。",
+      "supporting_passage": "AHA及AAP 2025兒童基本救命術指引：嬰兒嚴重哽塞用五次背部拍擊交替五次胸部推擠、不做腹部推擠；無反應且呼吸異常立即啟動緊急醫療並開始CPR，只取可見異物、不盲目挖取；嬰兒CPR用單手掌根或雙拇指環抱，取消兩指胸外按壓。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀來源公開頁面或附件，對照本篇明確引用的處置、統計或限制主張；歷史來源未重新使用者不列入本次來源清單。"
+    },
+    {
+      "source_id": "ch13_choke_ntpc_114_20261124",
+      "url": "https://www.sw.ntpc.gov.tw/userfiles/1100500/files/114%E5%B9%B4%E5%85%92%E5%B0%91%E4%BA%8B%E6%95%85%E5%82%B7%E5%AE%B3%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E4%B8%8A%E7%B6%B2%E7%89%88.pdf",
+      "claim": "新北市114年度資料為單一縣市兒少行政通報24件，其中食物哽塞21件、誤吞異物2件、嗆奶1件；統計表另列死亡0人、受傷24人，年齡分組數是受傷人數，未滿2歲12人，不能辨別未滿一歲嬰兒，且沒有暴露分母。",
+      "supporting_passage": "新北市114年度兒少事故傷害報告第14至15頁：消防局通報兒少窒息事故24件，其中食物哽塞21件、誤吞異物2件、嗆奶1件；統計表列死亡0人、受傷24人，受傷年齡分組為未滿2歲12人、2至未滿6歲6人、6至未滿12歲6人、12至未滿18歲0人。件數與受傷人數是不同統計單位。資料為單一縣市兒少行政通報，事件定義較廣，沒有兒少人口或暴露分母，不能換算全國或未滿一歲嬰兒發生率。（依公開來源相關段落整理，非逐字引文。）",
+      "accessed_at": "2026-11-24",
+      "retrieval_method": "2026-11-24直接閱讀新北市社會局公開114年度PDF第14至15頁，區分事故件數、死亡與受傷人數，核對受傷年齡組及資料限制。"
+    }
+  ],
+  "localization_changes": "重讀台北消防局處置頁、2026-11-12更新FAQ及AHA/AAP 2025指引；更新FAQ版本來源，保留地方教材手法差異並依2025指引描述掌根。補入新北市未滿2歲分組不能辨識嬰兒及無全國暴露分母的限制。 依原報告表格釐清年齡分組屬受傷人數，不與24件事故通報混為同一單位。",
+  "review_method": "逐條重讀原作主題、現行正文、前次審閱與來源對應；實讀台灣消防、醫療機構、主管機關統計及國際專業指引原文，核對適用年齡、處置順序、來源更新日期、統計單位與分母。外國指引僅作證據和適用條件參考，不改作台灣制度；未取得正式專業審閱時保留待審。",
+  "limits": [
+    "只適用未滿一歲、清醒但無法有效哭、咳或呼吸的嚴重哽塞；一般咳嗽或哭聲有力時鼓勵咳嗽並觀察。不可做成人腹部推擠、盲目挖口、倒吊、搖晃或餵水；失去反應後改CPR。臺北市消防局2026年兩份公開資料對胸部手法不一致：處置頁寫單掌，11月12日更新FAQ仍列兩指；AHA/AAP 2025建議掌根。現場請立即打119並聽派遣員指示。",
+    "新北市114年度兒少報告的未滿2歲年齡組無法辨識未滿一歲嬰兒，且是單一縣市行政通報、沒有暴露分母，不能當全國或嬰兒發生率。",
+    "獨立醫療、急救及相關專業審閱仍待取得；本紀錄為AI輔助公開來源與台灣情境核對。"
+  ],
+  "source_reviewed_sha256": "b759cbe3124cf6437e9aafe5b08bdaa96954c12138f2bf4175d89a0286e45b8e",
+  "source_ids": [
+    "ch13_infant_choke_tpe",
+    "ch13_infant_choke_faq_tpe_20261124",
+    "ch13_infant_peds_bls_aha_2025",
+    "ch13_choke_ntpc_114_20261124"
+  ],
+  "prior_revision": "915ab7ac3c8eecba8221facfa182bdaf8f54f281",
+  "before_sha256": "c55784d08d65768cd3d83f0e1bf213c7059bc7d5962a1a5478eda01e6e58c424",
+  "after_sha256": "b759cbe3124cf6437e9aafe5b08bdaa96954c12138f2bf4175d89a0286e45b8e",
+  "prior_review_sha256": "d20968aa455daabbda84eefc928becfe7787683453c56ede9ad94ecaf9574fd8",
+  "prior_source_checks": [
     {
       "url": "https://www.119.gov.taipei/cp.aspx?n=0878BEC80AC87B33",
       "claim": "臺北市消防局異物哽塞頁寫未滿一歲嬰兒五次拍背及五次單掌胸部按壓，重複至排出或救護人員接手。",
@@ -29,11 +81,70 @@
       "retrieval_method": "2026-10-31實讀AHA/AAP 2025兒童基本救命術指引相關建議與支持段落；屬國際專業指引，不宣稱台灣已完成正式採納。"
     }
   ],
-  "localization_changes": "更新未滿一歲嚴重哽塞5次拍背與5次胸部推擠；依AHA/AAP 2025列掌根技術、移除兩指法風險及不做腹部推擠，保留臺北市消防局2026兩頁手法差異及需依119即時指示的限制。",
-  "review_method": "逐主張實讀臺灣主管機關、公立醫院與原始官方研究／專業指引公開HTML或PDF；比對正文、來源範圍、適用年齡、手法差異及統計分母。沒有全國同定義病例或暴露分母時明列資料不足；未取得專家簽證不宣稱專業審查完成。",
-  "limits": [
-    "只適用未滿一歲、清醒但無法有效哭、咳或呼吸的嚴重哽塞；一般咳嗽或哭聲有力時鼓勵咳嗽並觀察。不可做成人腹部推擠、盲目挖口、倒吊、搖晃或餵水；失去反應後改CPR。臺北市消防局2026年兩份公開資料對胸部手法不一致：一頁寫單掌，另一FAQ仍列兩指；AHA/AAP 2025建議掌根。現場請立即打119並聽派遣員指示。",
-    "獨立醫療、急救及相關專業審閱仍待取得；本紀錄為AI輔助公開來源與臺灣情境核對。"
+  "source_bundle_path": "localization/tw-edition/sources/ch13-pediatric-emergency-recheck-20261124.json",
+  "source_bundle_sha256": "94e8fa5cb9899c948ce03e533a61f8776c094acfb5a530e27f2503c4b7fb38c4",
+  "source_records_reused": [
+    "ch13_infant_choke_tpe",
+    "ch13_infant_peds_bls_aha_2025"
   ],
-  "source_reviewed_sha256": "c55784d08d65768cd3d83f0e1bf213c7059bc7d5962a1a5478eda01e6e58c424"
+  "retired_sources": [
+    {
+      "id": "ch13_infant_choke_faq_tpe",
+      "replacement_ids": [
+        "ch13_infant_choke_faq_tpe_20261124"
+      ],
+      "reason": "以同一官方FAQ的2026-11-12更新版本重新核對；保留舊來源物件和歷史引用，不覆寫舊來源查閱日期。",
+      "prior_source_sha256": "44388d37a4c5f32411b87c238d875c72ba08d70cde6126bb40f4dcdbaf9dc4d3",
+      "disposition": "replaced"
+    }
+  ],
+  "statistics_assessed": [
+    {
+      "topic": "新北市兒少窒息事故及未滿2歲年齡組通報",
+      "value": 24,
+      "unit": "行政通報事故件數（件）",
+      "period": "2025年（民國114年）",
+      "scope": "新北市",
+      "population": "消防局兒少窒息事故通報24件，其中食物哽塞21、誤吞異物2、嗆奶1；報告另列死亡0人、受傷24人，受傷年齡分組為未滿2歲12人、2至未滿6歲6人、6至未滿12歲6人、12至未滿18歲0人。",
+      "numerator": 24,
+      "denominator": null,
+      "denominator_definition": "報告未列新北市兒少人口、用餐／餵奶人次或暴露時間分母；事故件數與受傷年齡組人數分開記錄。",
+      "event_definition": "報告分類「窒息（呼吸的其他意外威脅、含異物梗塞）」；24為事故件數，食物哽塞21、誤吞異物2、嗆奶1；表列受傷24人、死亡0人，年齡分組為受傷人數。",
+      "data_type": "單一縣市消防行政事故通報；件數、死傷人數及受傷者年齡分組來自同一年度報告不同欄位。",
+      "source_id": "ch13_choke_ntpc_114_20261124",
+      "accessed_at": "2026-11-24",
+      "checked_at": "2026-11-24",
+      "limitations": "新北市報告的24是事故件數；年齡組數是受傷人數，兩者單位不同。未滿2歲組不能分離未滿一歲嬰兒；無人口或暴露分母，不可換算全國件數、發生率或個人機率。",
+      "related_injury_counts": {
+        "unit": "受傷人數（人）",
+        "under_2": 12,
+        "age_2_to_under_6": 6,
+        "age_6_to_under_12": 6,
+        "age_12_to_under_18": 0,
+        "deaths": 0
+      }
+    }
+  ],
+  "frequency_assessment": "沒有查得全國未滿一歲嬰兒哽塞事件數與暴露分母。新北市114年度兒少窒息通報24件、其中受傷者未滿2歲12人，年齡表計的是受傷人數而非事故件數，但未滿2歲組無法單獨辨識嬰兒，且是單一縣市行政資料；不據此估算全國或個人發生率。",
+  "taiwan_context": "台灣家庭餵奶、副食品與托嬰場所均可能遇到嬰兒嚴重哽塞；嬰兒不能使用成人腹部推擠，呼救需接上119派遣與在地救護。",
+  "changes": "重讀台北消防局處置頁、2026-11-12更新FAQ及AHA/AAP 2025指引；更新FAQ版本來源，保留地方教材手法差異並依2025指引描述掌根。補入新北市未滿2歲分組不能辨識嬰兒及無全國暴露分母的限制。 依原報告表格釐清年齡分組屬受傷人數，不與24件事故通報混為同一單位。",
+  "legal_temporal_checks": [],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": [
+      "兒科急診或兒科醫師",
+      "急救教育或消防救護專業人員"
+    ],
+    "reason": "AI輔助來源核對不能取代嬰兒急救手法的正式專業審閱。"
+  },
+  "unresolved_questions": [
+    "未取得全國未滿一歲嬰兒哽塞事件數及餵食／異物暴露分母；新北市報告年齡只列未滿2歲。",
+    "台北市消防局公開處置頁與FAQ手部指示仍不一致；尚未取得中央統一說明或相關專業人員正式獨立審閱。"
+  ],
+  "new_source_ids": [
+    "ch13_infant_choke_faq_tpe_20261124",
+    "ch13_choke_ntpc_114_20261124"
+  ],
+  "reader_copy_cleanup_preserved": null
 }
