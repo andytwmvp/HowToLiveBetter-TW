@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "stage": "Chapters 16, 17 and 24 high-risk medical and eldercare historical substantive recheck",
+  "reviewed_at": "2026-11-23",
+  "baseline_main_sha": "61a680dd537da3e65d5a3381b7b7530f220fb1d9",
+  "scope": {
+    "new_core_ids": [],
+    "historical_core_ids": [
+      "TW-16-003",
+      "TW-17-012",
+      "TW-24-005",
+      "TW-24-012"
+    ],
+    "priority_order": [
+      "TW-16-003",
+      "TW-17-012",
+      "TW-24-005",
+      "TW-24-012"
+    ]
+  },
+  "counts_before": {
+    "core_reviewed_entries": 351,
+    "runtime_items": 362,
+    "runtime_sources": 1507,
+    "source_registry": 1590,
+    "json_files_checked": 731,
+    "substantive_rechecks": 431,
+    "publication_ready": false
+  },
+  "counts_after": {
+    "core_reviewed_entries": 351,
+    "runtime_items": 362,
+    "runtime_sources": 1514,
+    "source_registry": 1597,
+    "json_files_checked": 733,
+    "substantive_rechecks": 435,
+    "publication_ready": false
+  },
+  "new_source_ids": [
+    "tw16_hpa_bp_schedule_20261123",
+    "tw16_hpa_home_measurement_20261123",
+    "tw16_hpa_survey_method_20261123",
+    "tw17_leave_rule_history_20261123",
+    "tw24_implant_consent_template_20261123",
+    "tw24_medical_law_gazette_20261123",
+    "tw24_taiwan_implant_cohort_20261123"
+  ],
+  "retired_from_items": {
+    "TW-16-003": [
+      "ch16_hpa_722",
+      "ch16_ada_kidney",
+      "risk_bp_722"
+    ]
+  },
+  "source_bundle_path": "localization/tw-edition/sources/ch16-17-24-health-rights-recheck-20261123.json",
+  "source_bundle_sha256": "2d005202faa016e4cef211e7be66107ce580378ec245631f2f7b5ffec756c4b5",
+  "items": [
+    {
+      "id": "TW-16-003",
+      "path": "locales/zh-TW/book/ch16/TW-16-003.md",
+      "before_sha256": "3eff8be4c1e2d4ff2da687298f092f49eb5a2ac4aaa71b1b6f63b95d4292b963",
+      "after_sha256": "8241751c3d9b842914605faf3c280b8866da0b762afc2330369fb06166da3697",
+      "review_path": "localization/reviews/TW-16-003.json",
+      "review_sha256": "b89d17ad6118aa3df3dcd27d14dae3bc385bdee4b0eedb398e00d0caa1aa06ba",
+      "source_ids": [
+        "ch16_hpa_bp",
+        "tw16_hpa_bp_schedule_20261123",
+        "tw16_hpa_home_measurement_20261123",
+        "risk_bp_survey",
+        "tw16_hpa_survey_method_20261123"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch16_hpa_bp",
+          "title": "國健署：血壓控制住了能停藥嗎",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=4992&pid=19278",
+          "claim": "血壓控制良好或有低血壓時，先提供紀錄與醫師討論，不自行停藥。",
+          "supporting_passage": "國健署2025-07-24更新資料提醒，高血壓患者遵循醫師指示服藥，勿隨意停藥；可提供量測紀錄與醫師討論調整。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "本輪直接讀取國健署官方HTML；來源是藥物安全提醒，未用來支持新的頻率統計。"
+        },
+        {
+          "source_id": "tw16_hpa_bp_schedule_20261123",
+          "title": "國健署：企業設置血壓站與職場血壓管理",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20431",
+          "claim": "18歲以上成人每年至少一次居家722；已服用降血壓藥者建議回診前每3個月做一次。",
+          "supporting_passage": "國健署2026-10-27官方職場血壓管理頁明列18歲以上民眾每年至少進行一次722，服用降血壓藥物者建議每3個月於回診前執行一次。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接HTTP 200讀取國健署官方HTML完整內文、發布與更新日期；未以搜尋摘要代替。"
+        },
+        {
+          "source_id": "tw16_hpa_home_measurement_20261123",
+          "title": "國健署：成人預防保健服務照護流程與指導手冊",
+          "url": "https://health99.hpa.gov.tw/storage/pdf/materials/22360-4.pdf",
+          "claim": "722量測時段、早晚時間、服藥前安排、兩遍間隔、量前30分鐘避免刺激／運動、坐姿與休息。",
+          "supporting_passage": "國健署成人預防保健服務2025年照護手冊第八章血壓管理列：連續7日、起床一小時內早餐及服藥前、晚間睡前一小時內、每時段量兩遍且相隔1至2分鐘；量前避免抽菸／咖啡／運動30分鐘、休息5分鐘、坐有靠背椅、腳平放、手臂與心臟同高及不說話。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "web實讀國健署官方PDF的文字抽取內容；未宣稱本輪下載驗證PDF版面或逐頁人工核對。"
+        },
+        {
+          "source_id": "risk_bp_survey",
+          "title": "國健署：2020至2024國民營養健康調查三高摘要",
+          "url": "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20338",
+          "claim": "國健署公告2020至2024年調查摘要報告20歲以上民眾高血壓盛行率30.4%。",
+          "supporting_passage": "國健署2026-09-23官方新聞明列調查期間、20歲以上族群及30.4%盛行率；沒有列可核對的原始分子、分母或診斷門檻。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接HTTP 200實讀國健署官方HTML全文及頁面日期；未取得原始資料表，不反推分母或人數。"
+        },
+        {
+          "source_id": "tw16_hpa_survey_method_20261123",
+          "title": "國健署：國民營養健康調查方法與期間",
+          "url": "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=3998",
+          "claim": "官方調查規劃期間及2021疫情停辦、2022重設抽樣後改為2022至2025規劃。",
+          "supporting_passage": "國健署方法頁敘明2021至2024年原規劃、2021年5月停調、2022年以新抽樣設計重啟並改規劃2022至2025年。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接HTTP 200實讀國健署官方方法頁正文；未取個別受訪者原始資料。"
+        }
+      ],
+      "legal_temporal_checks": [],
+      "statistics_assessed": [
+        {
+          "topic": "20歲以上民眾高血壓盛行率",
+          "value": 30.4,
+          "unit": "%",
+          "period": "公告摘要稱2020至2024年",
+          "scope": "台灣全國調查摘要",
+          "population": "20歲以上民眾；國健署調查方法為全國代表性抽樣，但摘要未提供本項實際有效樣本數。",
+          "numerator": null,
+          "denominator": null,
+          "denominator_definition": "官方摘要未提供高血壓人數分子、有效樣本分母、權重或本項分析的排除流程；不能自行換算。",
+          "event_definition": "國健署公告所稱高血壓盛行；公告摘要未列本項使用的詳細血壓門檻或診斷演算法。",
+          "data_type": "國家營養健康調查摘要的盛行率估計，不是行政通報數。",
+          "source_id": "risk_bp_survey",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": "摘要的2020至2024期間標示與方法頁重設抽樣後的2022至2025規劃不完全一致，原始分子分母、權重與診斷門檻未列；不能視為新發率、個人機率或直接與不同波次比較。"
+        }
+      ],
+      "frequency_assessment": "國健署2026-09-23公告引用2020至2024年調查，20歲以上高血壓盛行率30.4%，但未公開可核對的分子／分母、權重與詳細定義；方法頁又記載第三波疫情中斷後重設抽樣並改規劃為2022至2025年。這是官方摘要統計的期間與方法限制，不推算個人機率或直接跨波比較。",
+      "taiwan_context": "台灣民眾可利用家用血壓計、回診紀錄及國健署成人預防保健資訊進行日常追蹤；服用降血壓藥者以回診前722紀錄供醫療團隊評估，不自行改藥或把血壓建議擴張成所有疾病固定檢驗週期。",
+      "new_source_ids": [
+        "tw16_hpa_bp_schedule_20261123",
+        "tw16_hpa_home_measurement_20261123",
+        "tw16_hpa_survey_method_20261123"
+      ],
+      "retired_sources": [
+        {
+          "id": "ch16_hpa_722",
+          "reason": "Replace the older general 722 page with the current schedule page and the directly relevant 2025 HPA measurement guidance; preserve the original source object.",
+          "prior_source_sha256": "3f825d9398ae78687117d5fae94586a2bf34850d5fe296c9b4de33e6bc177096",
+          "replacement_ids": [
+            "tw16_hpa_home_measurement_20261123"
+          ],
+          "disposition": "replaced"
+        },
+        {
+          "id": "ch16_ada_kidney",
+          "reason": "Kidney screening intervals are outside this blood-pressure monitoring article and remain covered by their own reviewed item; remove this unrelated source from the article without deleting its global record.",
+          "prior_source_sha256": "bd2829b4907ce4918ca61045d99bf16595109f3c76697319bc527b2965d8cdd0",
+          "replacement_ids": [],
+          "disposition": "claim_removed_from_scope"
+        },
+        {
+          "id": "risk_bp_722",
+          "reason": "Use the newer exact annual/quarterly schedule and directly relevant HPA measurement handbook; the 2026 general blood-pressure article is no longer needed in this item.",
+          "prior_source_sha256": "0cb71689936ae1a8603c490a5038c617c3eb58426624521ed8980d6a0ce73f02",
+          "replacement_ids": [
+            "tw16_hpa_home_measurement_20261123",
+            "tw16_hpa_bp_schedule_20261123"
+          ],
+          "disposition": "replaced"
+        }
+      ],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "心臟內科或家庭醫學科醫師",
+          "高血壓照護或藥事專業人員"
+        ],
+        "reason": "AI輔助來源核對不能取代醫療、法律或相應專業人士對讀者指引的正式審閱。"
+      },
+      "unresolved_questions": [
+        "國健署尚未在本次引用的公開摘要列出30.4%估計的原始分子、分母、權重與詳細判定門檻。",
+        "尚未取得心臟內科、家庭醫學科或血壓照護專業人員正式獨立審閱。"
+      ]
+    },
+    {
+      "id": "TW-17-012",
+      "path": "locales/zh-TW/book/ch17/TW-17-012.md",
+      "before_sha256": "146854183c0c499f73805504de5b657b642b9df6d5bdbd76d5239e8e2e05429f",
+      "after_sha256": "15fa1611ba95fadbb878ddf0adac6fbd2536544b5902d84ac71b27722dcb89ea",
+      "review_path": "localization/reviews/TW-17-012.json",
+      "review_sha256": "cf3477f7e7b9a8bac1d39999efa46e30fe0ef1794b63328ad8d6241cce8333df",
+      "source_ids": [
+        "ch17_familyleave",
+        "ch17_leavehours",
+        "ch17_ltc",
+        "next_care_leave_law",
+        "next_care_leave_rules",
+        "next_care_leave_order",
+        "tw17_leave_rule_history_20261123"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch17_familyleave",
+          "title": "勞動部：家庭照顧假適用條件",
+          "url": "https://www.mol.gov.tw/1607/28690/2282/2284/2320/7366/",
+          "claim": "家庭照顧假適用事由、每年7日併入事假、薪資依事假規定及雇主義務。",
+          "supporting_passage": "勞動部官方家庭照顧假問答更新日期為2026-07-30，說明家庭成員預防接種、嚴重疾病或重大事故等須本人照顧時可請，全年7日併入事假、薪資依事假規定。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取勞動部官方FAQ及對照性別平等工作法第20、21條；FAQ日期和各項事由分開核對。"
+        },
+        {
+          "source_id": "ch17_leavehours",
+          "title": "勞動部：115年家庭照顧假小時制問答",
+          "url": "https://www.mol.gov.tw/1607/28162/28166/28284/28294/84873/post",
+          "claim": "按小時請照顧家庭事假及2026家庭照顧假小時制、工時換算與選定限制。",
+          "supporting_passage": "勞動部官方問答說明2026-01-01起家庭照顧假可按小時申請，時數按每日正常工時乘7日換算，包含一般8小時56小時、特殊約定工時個別計算及選定後不得變更。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取勞動部官方Q&A指定題目；不把84條之1套用所有輪班者。"
+        },
+        {
+          "source_id": "ch17_ltc",
+          "title": "衛福部1966：申請長期照顧服務",
+          "url": "https://1966.gov.tw/LTC/cp-6533-70777-207.html",
+          "claim": "6個月以上長照需求可申請照管評估；資格、服務計畫及自付金額依評估與身分條件。",
+          "supporting_passage": "1966官方頁列長照需要者申請方式、照管中心評估及服務銜接；申請方式含1966。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取衛福部1966專區申請頁；未核定個案資格、地方等候時間或實際費用。"
+        },
+        {
+          "source_id": "next_care_leave_law",
+          "title": "性別平等工作法：家庭照顧假與不利處分",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014",
+          "claim": "現行性別平等工作法第20、21條家庭照顧假、薪資和不得不利處分規定。",
+          "supporting_passage": "全國法規資料庫現行條文第20條列家庭照顧假七日併入事假及薪資依事假；第21條規定不得拒絕並限制不利處分。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取全國法規資料庫現行法條；未將適用勞工規定套給特殊任用身分。"
+        },
+        {
+          "source_id": "next_care_leave_rules",
+          "title": "勞工請假規則：照顧家庭事假與全勤",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030006",
+          "claim": "現行勞工請假規則第7、9、10、12條：事假、照顧家人按小時、全勤和緊急代辦。",
+          "supporting_passage": "現行第7條全年事假14日、照顧家庭可選小時；第9條不得因照顧家庭事假影響全勤；第10條緊急事故可委託代辦；第12條列修正施行日期。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取全國法規資料庫現行條文與修正日；區分家庭照顧假與照顧家庭事假。"
+        },
+        {
+          "source_id": "next_care_leave_order",
+          "title": "勞動部：1140148574家庭照顧假小時令",
+          "url": "https://www.mol.gov.tw/media/sgpf3b3k/114-12-01-1140148574.pdf?mediaDL=true",
+          "claim": "家庭照顧假可按小時申請的發布與生效日期及選定規則。",
+          "supporting_passage": "勞動部2025-12-01發布解釋令，規定2026-01-01起得選定按小時請假；選定後不得變更。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取勞動部解釋令PDF文字；法規沿革另交叉核對發布和施行日期。"
+        },
+        {
+          "source_id": "tw17_leave_rule_history_20261123",
+          "title": "勞工請假規則沿革：修正條文及施行日期",
+          "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006",
+          "claim": "兩次勞工請假規則修法之條文範圍、發布日和施行日。",
+          "supporting_passage": "法規沿革分別列2025-12-09修正第7、9、12條及新增第9-1條、2026-01-01施行；2026-09-30修正第2、12條、2026-10-01施行。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取全國法規資料庫沿革及對照現行條文；不把更新日期泛化為整套假別權利變更。"
+        }
+      ],
+      "legal_temporal_checks": [
+        {
+          "law": "性別平等工作法",
+          "checked_at": "2026-11-23",
+          "relevant_provision_amendments": [],
+          "latest_law_version_context": "本輪實讀現行第20、21條；現行法規頁修正日期為2023-08-16。2026年11月育兒法案的三讀／政策規劃不納入長者家庭照顧假正文，也不當成現行長者照顧權利已變更。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014"
+          ]
+        },
+        {
+          "law": "勞工請假規則",
+          "checked_at": "2026-11-23",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第7、9、12條及新增第9-1條"
+              ],
+              "promulgated_at": "2025-12-09",
+              "effective_at": "2026-01-01",
+              "basis": "全國法規資料庫沿革明列修正發布日與施行日；本篇引用家庭照顧假小時制的事假條文。"
+            },
+            {
+              "provisions": [
+                "第2、12條"
+              ],
+              "promulgated_at": "2026-09-30",
+              "effective_at": "2026-10-01",
+              "basis": "最新沿革說明此次修正僅含第2、12條，不改變第7條所定照顧家庭事假或第9條全勤保障。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-23，本輪實讀現行第7、9、10、12條及沿革；不得把2026-09-30全規則修正日期泛化為家庭照顧假額度在該日變更。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030006",
+            "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006"
+          ]
+        }
+      ],
+      "statistics_assessed": [],
+      "frequency_assessment": "沒有同時按全台受僱人口、統計期間及請假事由計算的家庭照顧假使用率資料。老人或失能人口、長照服務量與個人會請家庭照顧假的機率不是同一事件，不能換算。",
+      "taiwan_context": "台灣適用勞動法令的受僱者，可能同時面臨家屬急診／住院、排班工作、家庭照顧假時數及長照服務銜接；請假資格與長照評估分開處理，依工作地主管機關和所在地長期照顧管理中心辦理。",
+      "new_source_ids": [
+        "tw17_leave_rule_history_20261123"
+      ],
+      "retired_sources": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "勞動法或性別平等工作法律專業人員",
+          "長期照顧管理或家庭照顧實務人員"
+        ],
+        "reason": "AI輔助來源核對不能取代醫療、法律或相應專業人士對讀者指引的正式審閱。"
+      },
+      "unresolved_questions": [
+        "尚無可按全台受僱人口、請假期間與家庭照顧事由計算的實際使用率。",
+        "尚未取得勞動法／性別平等工作法專業人士及長照實務人員正式獨立審閱。"
+      ]
+    },
+    {
+      "id": "TW-24-005",
+      "path": "locales/zh-TW/book/ch24/TW-24-005.md",
+      "before_sha256": "c89de8a6434232b4ae71c5f26cd8cedd09595e813d999d485f9d0cc3fa58136a",
+      "after_sha256": "d8265e2e338312b7e3b6f1e5ba0e6de5ede4b217044021a735a9555d4a556ae5",
+      "review_path": "localization/reviews/TW-24-005.json",
+      "review_sha256": "491a3ad7d3ecae4f676e0c482f39d2098c77c3e78edb6d9246f3c70c21a8a97e",
+      "source_ids": [
+        "ch24_medlaw",
+        "tw24_medical_law_gazette_20261123",
+        "ch24_records",
+        "rights_records_hospital"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch24_medlaw",
+          "title": "醫療法（第21、22、60、61、63、64、71至74條）",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+          "claim": "《醫療法》第71、73、74條分別保障病歷複製、轉診摘要與同意後院所間商洽，不代表全院資料自動流通。",
+          "supporting_passage": "現行第71條規定病歷複製本及必要中文摘要；第73條規範轉診病歷摘要；第74條規範依照護需要取得同意後向原診治院所商洽資料。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取全國法規資料庫現行醫療法相關條文與整體修正資訊；逐條區別權利內容。"
+        },
+        {
+          "source_id": "tw24_medical_law_gazette_20261123",
+          "title": "總統府公報：2026年9月23日醫療法增修公布全文",
+          "url": "https://www.president.gov.tw/Page/294/50409",
+          "claim": "2026-09-23醫療法修正新增／修正條文清單及其對第71、73、74條的界線。",
+          "supporting_passage": "總統府公報全文列此次修正第24、49、50、53、72、84、88、106、107條並新增第100-1、114-1條，未列第71、73、74條；醫療法第123條現行規定自公布日施行。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取總統府公報頁與所連公布法律PDF；未將修法日期錯當為個別病歷條文修正日期。"
+        },
+        {
+          "source_id": "ch24_records",
+          "title": "健保署：健康存摺友善服務",
+          "url": "https://www.nhi.gov.tw/ch/cp-18142-1c2b7-3946-1.html",
+          "claim": "健康存摺顯示特約院所上傳的部分就醫、用藥、檢驗及影像／病理資料，非完整原始病歷。",
+          "supporting_passage": "健保署健康存摺官方服務說明列可使用的友善服務與部分查詢資料；各院所病歷仍由各院所保存。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "本輪官方頁直接開啟受限；依先前已實讀的健保署服務主文並確認現行入口，沒有登入個人帳戶或檢視任何人的資料。"
+        },
+        {
+          "source_id": "rights_records_hospital",
+          "title": "屏東榮總：病歷資料暨影像光碟複製申請",
+          "url": "https://www.ptvgh.gov.tw/cp.aspx?n=B9FBA0F1B6997228",
+          "claim": "屏東榮總公開病歷及影像複製申請方式、身分／委託、費用及取件要求，是單院例子。",
+          "supporting_passage": "屏東榮總官方頁列病歷與影像申請方式、所需身分／委託文件、費用和領取流程；不能外推到其他院所。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接HTTP 200讀取屏東榮總官方HTML；未實際提出申請或推定全台費用標準。"
+        }
+      ],
+      "legal_temporal_checks": [
+        {
+          "law": "醫療法",
+          "checked_at": "2026-11-23",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+              ],
+              "promulgated_at": "2026-09-23",
+              "effective_at": "2026-09-23",
+              "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+            "https://www.president.gov.tw/Page/294/50409"
+          ]
+        }
+      ],
+      "statistics_assessed": [],
+      "frequency_assessment": "沒有以全台病人為分母、定義一致的病歷缺漏、交接錯誤或重複檢查發生率。健康存摺使用量、資料下載量或單院病歷申請量不是個人資料遺漏機率。",
+      "taiwan_context": "台灣病歷由各醫療機構分別製作及保管；重大診療、跨院轉診、出院交接或第二意見時，民眾可向各相關院所逐家確認申請項目、代理文件、費用和取件方式，不能把健保健康存摺當作跨院完整病歷交換服務。",
+      "new_source_ids": [
+        "tw24_medical_law_gazette_20261123"
+      ],
+      "retired_sources": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "醫療法與病人權益法律專業人員",
+          "醫療紀錄管理或醫療資訊專業人員"
+        ],
+        "reason": "AI輔助來源核對不能取代醫療、法律或相應專業人士對讀者指引的正式審閱。"
+      },
+      "unresolved_questions": [
+        "各醫療機構的病歷檔案格式、收費、處理時間和代理證明仍須向該院所逐家確認。",
+        "尚未取得醫療法／病人權益及病歷管理專業人士正式獨立審閱。"
+      ]
+    },
+    {
+      "id": "TW-24-012",
+      "path": "locales/zh-TW/book/ch24/TW-24-012.md",
+      "before_sha256": "0c687b53b7acf704429788afaecbd4adf6e1e0ba6bde5c9c01d768d985dc771a",
+      "after_sha256": "5394e1b5f5b263091e45e97663122c5d7e36c31c513bb823d954c4b677df5b54",
+      "review_path": "localization/reviews/TW-24-012.json",
+      "review_sha256": "392cc79cc5f59ea4f8e36ba9efa3dea18791ca6bd0040e904e8d492ce6647128",
+      "source_ids": [
+        "ch24_medlaw",
+        "access_dental",
+        "tw24_implant_consent_template_20261123",
+        "ch24_selfpay_compare_tool_20261123",
+        "ch24_selfpay_compare_guide_20261123",
+        "access_implant_care",
+        "tw24_taiwan_implant_cohort_20261123"
+      ],
+      "source_checks": [
+        {
+          "source_id": "ch24_medlaw",
+          "title": "醫療法（第21、22、60、61、63、64、71至74條）",
+          "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+          "claim": "醫療法第21、22條收費及收據規則、手術麻醉同意相關規定。",
+          "supporting_passage": "現行醫療法第21、22條及手術麻醉告知同意條款分別規範所在地核定收費、事先告知、收據和醫療說明／同意。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取全國法規資料庫現行條文及總統府公報；不將不同自費品項或特材規則混為一談。"
+        },
+        {
+          "source_id": "access_dental",
+          "title": "口腔健康司：人工植牙專區",
+          "url": "https://dep.mohw.gov.tw/DOOH/cp-6496-1931-124.html",
+          "claim": "人工植牙費用應按所在地核定標準並事先告知；可查地方收費資訊及手術麻醉同意。",
+          "supporting_passage": "口腔健康司人工植牙專區主文於2026-06-02更新，頁面於2026-11-19更新，說明地方收費核定、事前告知、正式收據及手術麻醉同意。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取衛福部口腔健康司官方HTML；區分主文更新日和頁面維護日期。"
+        },
+        {
+          "source_id": "tw24_implant_consent_template_20261123",
+          "title": "衛福部：人工植牙手術說明書範本",
+          "url": "https://www.mohw.gov.tw/dl-100663-d18306b9-233e-4812-be5b-7ebc7405170a.html",
+          "claim": "衛福部人工植牙手術說明書範本中的國外五年植體留存率約80至90%，但範本未列該數字原始研究、地區和母數。",
+          "supporting_passage": "範本第5節列約5年後植體仍存在率80%至90%；該表單未提供原研究書目、樣本、追蹤分母或估算方式。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "web直接讀取衛福部官方兩頁PDF內容；只報告範本實際載明內容與可見限制，不把它當台灣研究。"
+        },
+        {
+          "source_id": "ch24_selfpay_compare_tool_20261123",
+          "title": "健保署：自付差額醫材比價查詢",
+          "url": "https://info.nhi.gov.tw/INAE2000/INAE2011S01?type=app",
+          "claim": "健保署比價網的查詢欄位是特定醫材及院所上傳資料，不等於植牙全案報價。",
+          "supporting_passage": "健保署比價入口及官方搜尋索引列出醫材、縣市、院所類型／名稱等查詢欄位；本輪沒有取得可讀查詢結果或個別院所價格。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "確認健保署官方入口及索引欄位；直接開啟無可讀正文，未實際查詢產品或院所。"
+        },
+        {
+          "source_id": "ch24_selfpay_compare_guide_20261123",
+          "title": "健保署：自費醫材比價網資料與使用說明",
+          "url": "https://www.nhi.gov.tw/ch/cp-1351-7b192-3255-1.html",
+          "claim": "比價網院所上傳自費醫材價格僅供比較，不等於整個療程價格或給付承諾。",
+          "supporting_passage": "健保署官方使用說明表示資料由醫療院所自主上傳，供民眾比較特定醫材並與醫師討論；查詢結果供選用參考。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取健保署官方使用說明HTML；與比價工具入口分開說明。"
+        },
+        {
+          "source_id": "access_implant_care",
+          "title": "臺北榮總：人工植牙之照護",
+          "url": "https://ihealth.vghtpe.gov.tw/media/467",
+          "claim": "植牙術前評估、藥物告知、異常出血／疼痛／發燒及術後回診照護。",
+          "supporting_passage": "台北榮總官方衛教列術前全身與口腔評估、藥物交代、術後警訊和清潔追蹤；是院所衛教，不是全國成功率。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取台北榮總官方衛教HTML；不把單一院所醫療流程當法定全台流程。"
+        },
+        {
+          "source_id": "tw24_taiwan_implant_cohort_20261123",
+          "title": "台灣植體研究：單一牙周診所28年回溯性世代研究",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12947611/",
+          "claim": "台灣單一牙周診所685顆／199名成人、特定Straumann組織水平植體及排除條件；28年Kaplan–Meier估計的存活／成功率。",
+          "supporting_passage": "研究全文第2.1、2.4、3.1、3.5節列出台灣成人與特定Straumann植體納入條件、排除條件、Kaplan–Meier分析、平均8.34植體年追蹤，以及達5、10、15、20、28年追蹤的植體數428、246、136、53、1顆。",
+          "accessed_at": "2026-11-23",
+          "retrieval_method": "直接讀取PubMed摘要，並由DOI連至Wiley開放全文核對研究方法與結果；未以搜尋摘要代替全文。"
+        }
+      ],
+      "legal_temporal_checks": [
+        {
+          "law": "醫療法",
+          "checked_at": "2026-11-23",
+          "relevant_provision_amendments": [
+            {
+              "provisions": [
+                "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+              ],
+              "promulgated_at": "2026-09-23",
+              "effective_at": "2026-09-23",
+              "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+            }
+          ],
+          "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+          "sources": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+            "https://www.president.gov.tw/Page/294/50409"
+          ]
+        }
+      ],
+      "statistics_assessed": [
+        {
+          "topic": "植體層級28年累積存活率",
+          "value": 92.58,
+          "unit": "% cumulative Kaplan–Meier estimate, implant level",
+          "period": "28年估計；植體置入於1996至2024年間",
+          "scope": "台北單一牙周診所",
+          "population": "199名台灣成年人接受685顆該診所特定Straumann組織水平植體；排除重度吸菸、糖化血色素高於8%的糖尿病患者及其他植體系統。",
+          "numerator": null,
+          "denominator": null,
+          "denominator_definition": "時間至事件Kaplan–Meier估計，風險集合依追蹤時間改變，非固定粗分子／分母；研究納入總數為685顆植體。",
+          "event_definition": "存活定義為植體仍存在且具臨床功能；事件為植體流失。",
+          "data_type": "台灣單一診所回溯性世代研究；植體層級時間至事件累積估計。",
+          "source_id": "tw24_taiwan_implant_cohort_20261123",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": "不是全國代表樣本；特定診所、牙周照護、植體系統與排除條件限制外推。28年仍在追蹤的風險集合分母不能由初始685顆取代；不是個人預後或所有植牙系統的保證。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+        },
+        {
+          "topic": "病人層級28年累積存活率",
+          "value": 81.38,
+          "unit": "% cumulative Kaplan–Meier estimate, patient level",
+          "period": "28年估計；病人植體置入於1996至2024年間",
+          "scope": "台北單一牙周診所",
+          "population": "199名台灣成年人；每位病人可能有多顆植體，分析單位為病人，不與685顆植體的分析單位互換。",
+          "numerator": null,
+          "denominator": null,
+          "denominator_definition": "Kaplan–Meier時間至事件估計，風險集合隨追蹤時間改變；初始病人數199不是28年固定分母。",
+          "event_definition": "病人層級的植體存活分析；研究依病人承受的植體事件估計，不等於每一顆植體的存活比例。",
+          "data_type": "台灣單一診所回溯性世代研究；病人層級累積存活估計。",
+          "source_id": "tw24_taiwan_implant_cohort_20261123",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": "病人層級值不是植體層級值；單一診所、選定植體系統與排除條件限制外推，不能推算個人機率。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+        },
+        {
+          "topic": "植體層級28年累積成功率",
+          "value": 71.0,
+          "unit": "% cumulative Kaplan–Meier estimate, implant level",
+          "period": "28年估計；植體置入於1996至2024年間",
+          "scope": "台北單一牙周診所",
+          "population": "同研究685顆特定組織水平植體；研究使用特定Straumann系統並排除特定高風險族群。",
+          "numerator": null,
+          "denominator": null,
+          "denominator_definition": "Kaplan–Meier估計且風險集合隨時間改變，不能由685顆初始植體直接還原28年分母。",
+          "event_definition": "研究把探診深度≥5毫米定義為植體周圍疾病；成功率以未發生植體周圍疾病及植體流失計。",
+          "data_type": "台灣單一診所回溯性世代研究；植體層級累積成功估計。",
+          "source_id": "tw24_taiwan_implant_cohort_20261123",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": "成功與存活是不同結局；成功定義採單一研究操作方式，非所有研究共用標準，且樣本及估計值不能全國化。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+        },
+        {
+          "topic": "病人層級28年累積成功率",
+          "value": 38.02,
+          "unit": "% cumulative Kaplan–Meier estimate, patient level",
+          "period": "28年估計；病人植體置入於1996至2024年間",
+          "scope": "台北單一牙周診所",
+          "population": "同研究199名台灣成人，分析單位為病人；每位病人可能有多顆植體。",
+          "numerator": null,
+          "denominator": null,
+          "denominator_definition": "病人層級Kaplan–Meier估計，風險集合隨時間改變；199人不是28年固定分母。",
+          "event_definition": "依研究定義，植體周圍疾病或植體流失影響病人層級成功結局。",
+          "data_type": "台灣單一診所回溯性世代研究；病人層級累積成功估計。",
+          "source_id": "tw24_taiwan_implant_cohort_20261123",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": "不是植體層級成功率；單一診所、特定系統和納入排除條件限制外推，不能推算個人機率。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+        },
+        {
+          "topic": "人工植牙手術說明書範本引用的國外五年植體留存率",
+          "value": "80至90",
+          "unit": "% still-present rate as described in the template",
+          "period": "術後約5年",
+          "scope": "來源範本所引海外追蹤；國家／地區未列",
+          "population": "範本未交代原研究受試者、植體系統、樣本數或追蹤流失。",
+          "numerator": null,
+          "denominator": null,
+          "denominator_definition": "官方手術說明書範本未列原始研究、分子、分母或統計方法。",
+          "event_definition": "範本措辭為植體使用5年後仍存在，不能等同成功率或無併發症。",
+          "data_type": "官方知情同意範本引用的未附原始研究之海外數值，不是台灣全國調查。",
+          "source_id": "tw24_implant_consent_template_20261123",
+          "accessed_at": "2026-11-23",
+          "checked_at": "2026-11-23",
+          "limitations": "數字在衛福部範本中但未附原研究和母數，族群及系統不明；只記錄範本文字，不用於台灣個人預後。"
+        }
+      ],
+      "frequency_assessment": "目前沒有可代表全台、以一致追蹤期間和定義計算的植牙存活、成功或併發症發生率。2026年台灣單一牙周診所研究平均追蹤8.34植體年，達28年追蹤的植體僅1顆；Kaplan–Meier尾端估計不代表全台族群或一般個人的長期機率。",
+      "taiwan_context": "台灣植牙屬需個別評估的高額自費療程之一，院所收費標準依所在地核定規定，費用與後續維護應在治療前逐項確認。健保署比價入口提供院所上傳的特定醫材價格，不能代替完整植牙計畫或地方全案報價。",
+      "new_source_ids": [
+        "tw24_implant_consent_template_20261123",
+        "tw24_taiwan_implant_cohort_20261123"
+      ],
+      "retired_sources": [],
+      "professional_review": {
+        "required": true,
+        "obtained": false,
+        "needed": [
+          "牙周病或植牙專科牙醫師",
+          "醫療消費與病人權益專業人員"
+        ],
+        "reason": "AI輔助來源核對不能取代醫療、法律或相應專業人士對讀者指引的正式審閱。"
+      },
+      "unresolved_questions": [
+        "目前沒有全國代表性、定義與追蹤期間一致的台灣植牙存活／成功／併發症統計。",
+        "尚未取得植牙／牙周專科醫師及醫療消費權益專業人員正式獨立審閱。"
+      ]
+    }
+  ],
+  "statistics_summary": {
+    "TW-16-003": "30.4%為公告摘要所稱20歲以上盛行率，無分子分母；與方法頁2022至2025新規劃期間標示不一致。",
+    "TW-17-012": "無可用的全台家庭照顧假使用率分母。",
+    "TW-24-005": "無全台同定義病歷缺漏／重複檢查率。",
+    "TW-24-012": "台北單一牙周診所特定植體Kaplan–Meier估計；平均追蹤8.34植體年，達28年追蹤僅1顆；不作全台／個人預測。"
+  },
+  "publication_ready": false,
+  "professional_review_pending": true,
+  "unresolved_questions": [
+    "國健署尚未在本次引用的公開摘要列出30.4%估計的原始分子、分母、權重與詳細判定門檻。",
+    "尚未取得心臟內科、家庭醫學科或血壓照護專業人員正式獨立審閱。",
+    "尚無可按全台受僱人口、請假期間與家庭照顧事由計算的實際使用率。",
+    "尚未取得勞動法／性別平等工作法專業人士及長照實務人員正式獨立審閱。",
+    "各醫療機構的病歷檔案格式、收費、處理時間和代理證明仍須向該院所逐家確認。",
+    "尚未取得醫療法／病人權益及病歷管理專業人士正式獨立審閱。",
+    "目前沒有全國代表性、定義與追蹤期間一致的台灣植牙存活／成功／併發症統計。",
+    "尚未取得植牙／牙周專科醫師及醫療消費權益專業人員正式獨立審閱。"
+  ],
+  "legal_temporal_checks": [
+    {
+      "law": "性別平等工作法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [],
+      "latest_law_version_context": "本輪實讀現行第20、21條；現行法規頁修正日期為2023-08-16。2026年11月育兒法案的三讀／政策規劃不納入長者家庭照顧假正文，也不當成現行長者照顧權利已變更。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014"
+      ]
+    },
+    {
+      "law": "勞工請假規則",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第7、9、12條及新增第9-1條"
+          ],
+          "promulgated_at": "2025-12-09",
+          "effective_at": "2026-01-01",
+          "basis": "全國法規資料庫沿革明列修正發布日與施行日；本篇引用家庭照顧假小時制的事假條文。"
+        },
+        {
+          "provisions": [
+            "第2、12條"
+          ],
+          "promulgated_at": "2026-09-30",
+          "effective_at": "2026-10-01",
+          "basis": "最新沿革說明此次修正僅含第2、12條，不改變第7條所定照顧家庭事假或第9條全勤保障。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，本輪實讀現行第7、9、10、12條及沿革；不得把2026-09-30全規則修正日期泛化為家庭照顧假額度在該日變更。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030006",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006"
+      ]
+    },
+    {
+      "law": "醫療法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+          ],
+          "promulgated_at": "2026-09-23",
+          "effective_at": "2026-09-23",
+          "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://www.president.gov.tw/Page/294/50409"
+      ]
+    },
+    {
+      "law": "醫療法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+          ],
+          "promulgated_at": "2026-09-23",
+          "effective_at": "2026-09-23",
+          "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://www.president.gov.tw/Page/294/50409"
+      ]
+    }
+  ]
+}

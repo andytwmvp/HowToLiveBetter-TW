@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-23",
+  "baseline_main_sha": "61a680dd537da3e65d5a3381b7b7530f220fb1d9",
+  "sources": [
+    [
+      "tw16_hpa_bp_schedule_20261123",
+      "國健署：企業設置血壓站與職場血壓管理",
+      "https://www.hpa.gov.tw/Pages/Detail.aspx?nodeid=5020&pid=20431",
+      "國健署建議18歲以上民眾每年至少執行一次居家722；已服用降血壓藥者可於回診前每3個月執行一次，供醫師評估控制狀況。頁面於2026-10-27發布／更新。"
+    ],
+    [
+      "tw16_hpa_home_measurement_20261123",
+      "國健署：成人預防保健服務照護流程與指導手冊",
+      "https://health99.hpa.gov.tw/storage/pdf/materials/22360-4.pdf",
+      "國健署2025年照護流程與指導手冊血壓管理章：722的量測時段、早餐及服藥前安排、每次間隔、量前避免刺激與運動、坐姿及休息方法。來源為官方PDF文字，未宣稱本輪下載或檢查PDF版面。"
+    ],
+    [
+      "tw16_hpa_survey_method_20261123",
+      "國健署：國民營養健康調查方法與期間",
+      "https://www.hpa.gov.tw/Pages/List.aspx?nodeid=3998",
+      "方法頁稱第三波原規劃2021至2024年、2021年5月因疫情停止、2022年重設抽樣並重新啟動，後改規劃為2022至2025年；調查採多階段分層集束抽樣並排除特定未成年／懷孕／機構族群。"
+    ],
+    [
+      "tw17_leave_rule_history_20261123",
+      "勞工請假規則沿革：修正條文及施行日期",
+      "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006",
+      "法規沿革列2025-12-09修正第7、9、12條及新增第9-1條、2026-01-01施行；另列2026-09-30修正第2、12條、2026-10-01施行。"
+    ],
+    [
+      "tw24_medical_law_gazette_20261123",
+      "總統府公報：2026年9月23日醫療法增修公布全文",
+      "https://www.president.gov.tw/Page/294/50409",
+      "總統府公報列明2026-09-23公布增修條文為第24、49、50、53、72、84、88、106、107條，增訂第100-1、114-1條；本次未修正第71、73、74條。"
+    ],
+    [
+      "tw24_implant_consent_template_20261123",
+      "衛福部：人工植牙手術說明書範本",
+      "https://www.mohw.gov.tw/dl-100663-d18306b9-233e-4812-be5b-7ebc7405170a.html",
+      "衛福部人工植牙手術說明書範本列出約5年後植體仍存在80%至90%的國外數字，但範本未列該估計的原始研究、地區、樣本數或計算方式；不能當成台灣或個人預測。"
+    ],
+    [
+      "tw24_taiwan_implant_cohort_20261123",
+      "台灣植體研究：單一牙周診所28年回溯性世代研究",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12947611/",
+      "台灣單一牙周診所回溯性研究：685顆Straumann組織水平植體、199名台灣成人、1996至2024年置入；平均追蹤8.34植體年，達5、10、15、20、28年追蹤的植體數分別為428、246、136、53、1顆；以Kaplan–Meier估計植體／病人層級存活率與成功率，並列納入排除條件及定義。"
+    ]
+  ],
+  "legal_temporal_checks": [
+    {
+      "law": "性別平等工作法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [],
+      "latest_law_version_context": "本輪實讀現行第20、21條；現行法規頁修正日期為2023-08-16。2026年11月育兒法案的三讀／政策規劃不納入長者家庭照顧假正文，也不當成現行長者照顧權利已變更。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014"
+      ]
+    },
+    {
+      "law": "勞工請假規則",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第7、9、12條及新增第9-1條"
+          ],
+          "promulgated_at": "2025-12-09",
+          "effective_at": "2026-01-01",
+          "basis": "全國法規資料庫沿革明列修正發布日與施行日；本篇引用家庭照顧假小時制的事假條文。"
+        },
+        {
+          "provisions": [
+            "第2、12條"
+          ],
+          "promulgated_at": "2026-09-30",
+          "effective_at": "2026-10-01",
+          "basis": "最新沿革說明此次修正僅含第2、12條，不改變第7條所定照顧家庭事假或第9條全勤保障。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，本輪實讀現行第7、9、10、12條及沿革；不得把2026-09-30全規則修正日期泛化為家庭照顧假額度在該日變更。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030006",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006"
+      ]
+    },
+    {
+      "law": "醫療法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+          ],
+          "promulgated_at": "2026-09-23",
+          "effective_at": "2026-09-23",
+          "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://www.president.gov.tw/Page/294/50409"
+      ]
+    },
+    {
+      "law": "醫療法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+          ],
+          "promulgated_at": "2026-09-23",
+          "effective_at": "2026-09-23",
+          "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://www.president.gov.tw/Page/294/50409"
+      ]
+    }
+  ]
+}

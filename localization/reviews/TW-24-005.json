@@ -1,12 +1,76 @@
 {
   "id": "TW-24-005",
-  "reviewer": "ChatGPT（AI輔助官方資料核對；非獨立醫師、藥師、法律或醫療專業簽證）",
+  "reviewer": "ChatGPT（AI輔助台灣原始來源與制度核對，非正式醫療、法律或其他專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-21",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-23",
+  "review_due_at": "2027-02-23",
   "target_path": "locales/zh-TW/book/ch24/TW-24-005.md",
-  "target_sha256": "c89de8a6434232b4ae71c5f26cd8cedd09595e813d999d485f9d0cc3fa58136a",
+  "target_sha256": "d8265e2e338312b7e3b6f1e5ba0e6de5ede4b217044021a735a9555d4a556ae5",
   "source_checks": [
+    {
+      "source_id": "ch24_medlaw",
+      "title": "醫療法（第21、22、60、61、63、64、71至74條）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+      "claim": "《醫療法》第71、73、74條分別保障病歷複製、轉診摘要與同意後院所間商洽，不代表全院資料自動流通。",
+      "supporting_passage": "現行第71條規定病歷複製本及必要中文摘要；第73條規範轉診病歷摘要；第74條規範依照護需要取得同意後向原診治院所商洽資料。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取全國法規資料庫現行醫療法相關條文與整體修正資訊；逐條區別權利內容。"
+    },
+    {
+      "source_id": "tw24_medical_law_gazette_20261123",
+      "title": "總統府公報：2026年9月23日醫療法增修公布全文",
+      "url": "https://www.president.gov.tw/Page/294/50409",
+      "claim": "2026-09-23醫療法修正新增／修正條文清單及其對第71、73、74條的界線。",
+      "supporting_passage": "總統府公報全文列此次修正第24、49、50、53、72、84、88、106、107條並新增第100-1、114-1條，未列第71、73、74條；醫療法第123條現行規定自公布日施行。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取總統府公報頁與所連公布法律PDF；未將修法日期錯當為個別病歷條文修正日期。"
+    },
+    {
+      "source_id": "ch24_records",
+      "title": "健保署：健康存摺友善服務",
+      "url": "https://www.nhi.gov.tw/ch/cp-18142-1c2b7-3946-1.html",
+      "claim": "健康存摺顯示特約院所上傳的部分就醫、用藥、檢驗及影像／病理資料，非完整原始病歷。",
+      "supporting_passage": "健保署健康存摺官方服務說明列可使用的友善服務與部分查詢資料；各院所病歷仍由各院所保存。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "本輪官方頁直接開啟受限；依先前已實讀的健保署服務主文並確認現行入口，沒有登入個人帳戶或檢視任何人的資料。"
+    },
+    {
+      "source_id": "rights_records_hospital",
+      "title": "屏東榮總：病歷資料暨影像光碟複製申請",
+      "url": "https://www.ptvgh.gov.tw/cp.aspx?n=B9FBA0F1B6997228",
+      "claim": "屏東榮總公開病歷及影像複製申請方式、身分／委託、費用及取件要求，是單院例子。",
+      "supporting_passage": "屏東榮總官方頁列病歷與影像申請方式、所需身分／委託文件、費用和領取流程；不能外推到其他院所。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接HTTP 200讀取屏東榮總官方HTML；未實際提出申請或推定全台費用標準。"
+    }
+  ],
+  "localization_changes": "補明《醫療法》第71條本人向形成病歷的院所申請複製本及必要中文摘要、費用由本人負擔；區分第73條轉診摘要與第74條經同意商洽，避免讀者誤以為健康存摺會自動串接各院完整資料。以屏東榮總申請流程示範但明確限定為單院實例，加入總統府2026-09-23公報條文範圍，避免把該次修法誤稱為第71、73、74條改動。",
+  "review_method": "直接核對現行法條、總統府公報及院所官方申請流程；分清法律權利、系統上傳資料和個別院所行政流程，未代任何人登入或申請病歷。",
+  "limits": [
+    "健康存摺僅有院所上傳的部分資料，不等於每家院所完整病歷；申請他人病歷須有病人授權或符合法定身分，醫療團隊仍可能依病況重新檢查。",
+    "沒有全台同一定義病歷缺漏或重複檢查發生率；不由健保服務使用量推個人機率。",
+    "法律規定不等於已實際申請成功；各院所文件、影像格式、代理權限和費用依個案與院所流程確認。",
+    "本次審閱為AI輔助原始來源核對，未取得對應專業人士獨立審閱。"
+  ],
+  "source_reviewed_sha256": "d8265e2e338312b7e3b6f1e5ba0e6de5ede4b217044021a735a9555d4a556ae5",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "dec67b932d9be35d4a76fca366be3f02c8ff4a938696ec2bd289da6a8fba80aa",
+    "after_sha256": "c89de8a6434232b4ae71c5f26cd8cedd09595e813d999d485f9d0cc3fa58136a",
+    "before_reader_sha256": "409ebc0d2995102855038cec72e1a1e92e1b2029520df71aadc535af9f9f6ec9",
+    "after_reader_sha256": "06371040d8a356092daeed1f2e8d305745a9408debff48f14fba70a46c426be3"
+  },
+  "source_ids": [
+    "ch24_medlaw",
+    "tw24_medical_law_gazette_20261123",
+    "ch24_records",
+    "rights_records_hospital"
+  ],
+  "prior_revision": "61a680dd537da3e65d5a3381b7b7530f220fb1d9",
+  "before_sha256": "c89de8a6434232b4ae71c5f26cd8cedd09595e813d999d485f9d0cc3fa58136a",
+  "after_sha256": "d8265e2e338312b7e3b6f1e5ba0e6de5ede4b217044021a735a9555d4a556ae5",
+  "prior_review_sha256": "65e4c15886e40ce1e6373bdbb5b7c8bdacc46658d9762ff0409f948c7f7214b7",
+  "prior_source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
       "claim": "TW-24-005：急救與能力轉診、收費明細、同意緊急例外及病歷複製／交接，分別對應條文。",
@@ -29,17 +93,56 @@
       "retrieval_method": "本輪取得範圍：直接HTML200實讀申請方式、身分／委託、費用及取件；單院範例，非全臺固定價格、時程或線上均可郵寄。"
     }
   ],
-  "localization_changes": "危急症狀先119或立即告知醫護，不為等紙本病歷、影像光碟或健康存摺登入而延誤。穩定後，重大診療前後整理病史、過敏、所有處方與非處方用藥、手術及檢查日期，帶給醫療團隊核對，不能自行看報告調藥或下診斷。\n\n跨院轉診、第二意見、出院交接或申請給付時，先問接收院所或機關真正需要哪些日期、部位、影像及文件，避免只拿手機截圖卻缺可判讀的原始資料。\n\n健康存摺可查特約院所上傳的就醫、用藥、檢驗及影像／病理報告等資料，供整理趨勢；不是所有院所完整原始病歷，也不保證即時。看不到不代表沒做過或沒有疾病，有疑義向原院所核對，不讓陌生代辦取得登入憑證。\n\n依醫療法第71條，向原診治院所申請病歷複製本，必要時中文摘要，不得無故拖延或拒絕，費用由病人負擔。列明就醫期間與項目、確認是否另需手術／麻醉紀錄、檢驗、病理及可供接收院所使用的影像檔；報告文字與影像檔不是同一項。轉診依第73條應提供摘要；院所間按第74條商洽資料也需適當同意與流程。",
-  "review_method": "AI實讀現行法規HTML、官方服務主文及作業原則PDF文字，按具體主張核對；非個案或專業簽證。",
-  "limits": [
-    "不是每個影像與檢驗結果都會同步於健康存摺；申請他人資料需要身分與法定權限。醫療紀錄能協助溝通，但不能自行據此判定診斷。",
-    "研究、醫療與保險個案依主治醫師、健保署或地方主管機關當期規則核定；2026年後新規需重新確認。",
-    "AI輔助逐條官方來源實質核對，非醫師、社工、勞保／健保審查機關或律師專業簽證；個案仍待專業與主管機關判定。",
-    "本輪未取得全臺同定義延誤、爭議、資料缺漏或申請核准機率；行政件數不能代替個人發生率。",
-    "法規整編截止2026-10-08，之後公報與地方細則未逐一全核；沒有實際救治、調閱病歷、申請或核付。"
+  "source_bundle_path": "localization/tw-edition/sources/ch16-17-24-health-rights-recheck-20261123.json",
+  "source_bundle_sha256": "2d005202faa016e4cef211e7be66107ce580378ec245631f2f7b5ffec756c4b5",
+  "source_records_reused": [
+    "ch24_medlaw",
+    "ch24_records",
+    "rights_records_hospital"
   ],
-  "source_reviewed_sha256": "dec67b932d9be35d4a76fca366be3f02c8ff4a938696ec2bd289da6a8fba80aa",
-  "reader_copy_cleanup": {
+  "retired_sources": [],
+  "statistics_assessed": [],
+  "frequency_assessment": "沒有以全台病人為分母、定義一致的病歷缺漏、交接錯誤或重複檢查發生率。健康存摺使用量、資料下載量或單院病歷申請量不是個人資料遺漏機率。",
+  "taiwan_context": "台灣病歷由各醫療機構分別製作及保管；重大診療、跨院轉診、出院交接或第二意見時，民眾可向各相關院所逐家確認申請項目、代理文件、費用和取件方式，不能把健保健康存摺當作跨院完整病歷交換服務。",
+  "changes": "補明《醫療法》第71條本人向形成病歷的院所申請複製本及必要中文摘要、費用由本人負擔；區分第73條轉診摘要與第74條經同意商洽，避免讀者誤以為健康存摺會自動串接各院完整資料。以屏東榮總申請流程示範但明確限定為單院實例，加入總統府2026-09-23公報條文範圍，避免把該次修法誤稱為第71、73、74條改動。",
+  "legal_temporal_checks": [
+    {
+      "law": "醫療法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+          ],
+          "promulgated_at": "2026-09-23",
+          "effective_at": "2026-09-23",
+          "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://www.president.gov.tw/Page/294/50409"
+      ]
+    }
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": [
+      "醫療法與病人權益法律專業人員",
+      "醫療紀錄管理或醫療資訊專業人員"
+    ],
+    "reason": "AI輔助來源核對不能取代醫療、法律或相應專業人士對讀者指引的正式審閱。"
+  },
+  "unresolved_questions": [
+    "各醫療機構的病歷檔案格式、收費、處理時間和代理證明仍須向該院所逐家確認。",
+    "尚未取得醫療法／病人權益及病歷管理專業人士正式獨立審閱。"
+  ],
+  "new_source_ids": [
+    "tw24_medical_law_gazette_20261123"
+  ],
+  "reader_copy_cleanup_preserved": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "dec67b932d9be35d4a76fca366be3f02c8ff4a938696ec2bd289da6a8fba80aa",
     "after_sha256": "c89de8a6434232b4ae71c5f26cd8cedd09595e813d999d485f9d0cc3fa58136a",

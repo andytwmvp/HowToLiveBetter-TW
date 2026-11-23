@@ -28,7 +28,7 @@ def check_medical_access_recheck_browser(page, context, url, review):
         button = page.locator('#TW-24-006 .seg button.yes')
         button.click()
         assert button.get_attribute('aria-pressed') == 'true'
-        for key, text in (('TW-24-006','調解程序不收費'), ('TW-24-010','到宅鑑定'), ('TW-24-012','書面全案報價'), ('TW-24-002','不是總帳單')):
+        for key, text in (('TW-24-006','調解程序不收費'), ('TW-24-010','到宅鑑定'), ('TW-24-012','要求書面列出全案費用'), ('TW-24-002','不是總帳單')):
             page.locator('#q').fill(text)
             article = page.locator('#'+key)
             assert article.count() == 1, (key, text)

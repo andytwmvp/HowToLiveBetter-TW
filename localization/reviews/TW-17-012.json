@@ -1,12 +1,106 @@
 {
   "id": "TW-17-012",
-  "reviewer": "ChatGPT（AI輔助臺灣官方法規與服務資料核對，非獨立醫師、律師、社工或金融專業簽證）",
+  "reviewer": "ChatGPT（AI輔助台灣原始來源與制度核對，非正式醫療、法律或其他專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-20",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-23",
+  "review_due_at": "2027-02-23",
   "target_path": "locales/zh-TW/book/ch17/TW-17-012.md",
-  "target_sha256": "146854183c0c499f73805504de5b657b642b9df6d5bdbd76d5239e8e2e05429f",
+  "target_sha256": "15fa1611ba95fadbb878ddf0adac6fbd2536544b5902d84ac71b27722dcb89ea",
   "source_checks": [
+    {
+      "source_id": "ch17_familyleave",
+      "title": "勞動部：家庭照顧假適用條件",
+      "url": "https://www.mol.gov.tw/1607/28690/2282/2284/2320/7366/",
+      "claim": "家庭照顧假適用事由、每年7日併入事假、薪資依事假規定及雇主義務。",
+      "supporting_passage": "勞動部官方家庭照顧假問答更新日期為2026-07-30，說明家庭成員預防接種、嚴重疾病或重大事故等須本人照顧時可請，全年7日併入事假、薪資依事假規定。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取勞動部官方FAQ及對照性別平等工作法第20、21條；FAQ日期和各項事由分開核對。"
+    },
+    {
+      "source_id": "ch17_leavehours",
+      "title": "勞動部：115年家庭照顧假小時制問答",
+      "url": "https://www.mol.gov.tw/1607/28162/28166/28284/28294/84873/post",
+      "claim": "按小時請照顧家庭事假及2026家庭照顧假小時制、工時換算與選定限制。",
+      "supporting_passage": "勞動部官方問答說明2026-01-01起家庭照顧假可按小時申請，時數按每日正常工時乘7日換算，包含一般8小時56小時、特殊約定工時個別計算及選定後不得變更。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取勞動部官方Q&A指定題目；不把84條之1套用所有輪班者。"
+    },
+    {
+      "source_id": "ch17_ltc",
+      "title": "衛福部1966：申請長期照顧服務",
+      "url": "https://1966.gov.tw/LTC/cp-6533-70777-207.html",
+      "claim": "6個月以上長照需求可申請照管評估；資格、服務計畫及自付金額依評估與身分條件。",
+      "supporting_passage": "1966官方頁列長照需要者申請方式、照管中心評估及服務銜接；申請方式含1966。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取衛福部1966專區申請頁；未核定個案資格、地方等候時間或實際費用。"
+    },
+    {
+      "source_id": "next_care_leave_law",
+      "title": "性別平等工作法：家庭照顧假與不利處分",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014",
+      "claim": "現行性別平等工作法第20、21條家庭照顧假、薪資和不得不利處分規定。",
+      "supporting_passage": "全國法規資料庫現行條文第20條列家庭照顧假七日併入事假及薪資依事假；第21條規定不得拒絕並限制不利處分。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取全國法規資料庫現行法條；未將適用勞工規定套給特殊任用身分。"
+    },
+    {
+      "source_id": "next_care_leave_rules",
+      "title": "勞工請假規則：照顧家庭事假與全勤",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030006",
+      "claim": "現行勞工請假規則第7、9、10、12條：事假、照顧家人按小時、全勤和緊急代辦。",
+      "supporting_passage": "現行第7條全年事假14日、照顧家庭可選小時；第9條不得因照顧家庭事假影響全勤；第10條緊急事故可委託代辦；第12條列修正施行日期。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取全國法規資料庫現行條文與修正日；區分家庭照顧假與照顧家庭事假。"
+    },
+    {
+      "source_id": "next_care_leave_order",
+      "title": "勞動部：1140148574家庭照顧假小時令",
+      "url": "https://www.mol.gov.tw/media/sgpf3b3k/114-12-01-1140148574.pdf?mediaDL=true",
+      "claim": "家庭照顧假可按小時申請的發布與生效日期及選定規則。",
+      "supporting_passage": "勞動部2025-12-01發布解釋令，規定2026-01-01起得選定按小時請假；選定後不得變更。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取勞動部解釋令PDF文字；法規沿革另交叉核對發布和施行日期。"
+    },
+    {
+      "source_id": "tw17_leave_rule_history_20261123",
+      "title": "勞工請假規則沿革：修正條文及施行日期",
+      "url": "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006",
+      "claim": "兩次勞工請假規則修法之條文範圍、發布日和施行日。",
+      "supporting_passage": "法規沿革分別列2025-12-09修正第7、9、12條及新增第9-1條、2026-01-01施行；2026-09-30修正第2、12條、2026-10-01施行。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取全國法規資料庫沿革及對照現行條文；不把更新日期泛化為整套假別權利變更。"
+    }
+  ],
+  "localization_changes": "重新核對家庭照顧假適用事由、每年7日併事假、薪資、全勤保障與照顧家庭事假按小時請假規則；更正原稿把2026-09-30勞工請假規則修正日期泛化為家庭照顧假變更的風險，精確列出2025-12-09及2026-09-30兩次修法的條文範圍和施行日。正文移除與長者照顧無直接關係的育兒修法背景，只保留勞工權益、1966申請及資料不足說明。",
+  "review_method": "實讀現行法條、勞動部FAQ與解釋令、法規沿革和衛福部1966申請流程；將發布日與施行日分開記錄，AI核對不構成法律意見或主管機關核定。",
+  "limits": [
+    "家庭照顧假額度與適用對象依現行法規；特殊任用身分或團體協約可能另有規定。長照資格需另行評估，不能保證立即安排服務。",
+    "家庭照顧假實際使用率沒有適用的全國分母；不能用老年人口或長照人次推估個人請假機率。",
+    "公務、教育、軍職或其他特殊身分須另核其任用規範；本篇主要說明適用勞動法令的受僱者。",
+    "本次審閱為AI輔助原始來源核對，未取得對應專業人士獨立審閱。"
+  ],
+  "source_reviewed_sha256": "15fa1611ba95fadbb878ddf0adac6fbd2536544b5902d84ac71b27722dcb89ea",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "73fad114a684b845bd948c605d193c83f98a5596093711a49fe3c3be3539ab2b",
+    "after_sha256": "146854183c0c499f73805504de5b657b642b9df6d5bdbd76d5239e8e2e05429f",
+    "before_reader_sha256": "18b67c4c8a7b2baeb675d9513d8fd87b3d1ef6e1d64e598076b8df02e1597edf",
+    "after_reader_sha256": "ea4c1d1232f7976e791a5840df9427024de53c3cb8166fef2657e19f7f0eba8e"
+  },
+  "source_ids": [
+    "ch17_familyleave",
+    "ch17_leavehours",
+    "ch17_ltc",
+    "next_care_leave_law",
+    "next_care_leave_rules",
+    "next_care_leave_order",
+    "tw17_leave_rule_history_20261123"
+  ],
+  "prior_revision": "61a680dd537da3e65d5a3381b7b7530f220fb1d9",
+  "before_sha256": "146854183c0c499f73805504de5b657b642b9df6d5bdbd76d5239e8e2e05429f",
+  "after_sha256": "15fa1611ba95fadbb878ddf0adac6fbd2536544b5902d84ac71b27722dcb89ea",
+  "prior_review_sha256": "80091cb408af2e0593c7c30e5835ec2e9c697a5fcbfc44a8b58b71e1f2f9fbc1",
+  "prior_source_checks": [
     {
       "url": "https://www.mol.gov.tw/1607/28690/2282/2284/2320/7366/",
       "claim": "TW-17-012：七日併事假、不限獨生子女、原則無薪與全勤考績保障。",
@@ -50,17 +144,76 @@
       "retrieval_method": "本輪取得範圍：檢索實讀官方一頁令文字：2025-12-01發布、2026-01-01生效，小時單位選定不得變更；工時例外另核勞動部Q&A，不當所有人56小時。"
     }
   ],
-  "localization_changes": "本輪依臺灣實際風險逐段再審：長輩突發意識改變、呼吸困難或疑似中風先119，不等主管核假或長照評估。穩定後安排照顧、聯絡雇主及保留必要證明；緊急事故可依請假規則委託他人代辦，不為等正式診斷書延誤救援。\n\n本篇以適用勞動法令的受僱者為主。家庭照顧假不限獨生子女；因家庭成員預防接種、嚴重疾病或其他重大事故須親自照顧時才適用，非所有陪診、家務自動符合。公務、教育、軍職或其他特殊身分請向人事核對專門規範。",
-  "review_method": "AI對照原始研究摘要／官方登錄、臺灣官方衛教、現行法規與問答；非專業簽證。",
-  "limits": [
-    "雇主不得因依法請家庭照顧假而視為缺勤影響全勤獎金或考績；但法令所定請假天數不表示必然有帶薪長照假。公務人員或有團體協約者可能另有規定，不能把私部門勞工的時數套用所有職種。",
-    "與公部門、金融及醫療機構實際辦理時須再確認最新資格、費用及地方法規；不因取得工程CI綠燈就視為專業簽證。",
-    "僱主不得因依法請家庭照顧假而視為缺勤影響全勤獎金或考績；但法令所定請假天數不表示必然有帶薪長照假。公務人員或有團體協約者可能另有規定，不能把私部門勞工的時數套用所有職種。",
-    "AI輔助來源實質再核對，非醫療、復健、營養或法律專業簽證；仍待相應專業審查。",
-    "未取得全文或附件的來源逐項記明，不以存活估計、行政件數或海外相對效果換算臺灣個人機率；費用與資格須個案核定。"
+  "source_bundle_path": "localization/tw-edition/sources/ch16-17-24-health-rights-recheck-20261123.json",
+  "source_bundle_sha256": "2d005202faa016e4cef211e7be66107ce580378ec245631f2f7b5ffec756c4b5",
+  "source_records_reused": [
+    "ch17_familyleave",
+    "ch17_leavehours",
+    "ch17_ltc",
+    "next_care_leave_law",
+    "next_care_leave_rules",
+    "next_care_leave_order"
   ],
-  "source_reviewed_sha256": "73fad114a684b845bd948c605d193c83f98a5596093711a49fe3c3be3539ab2b",
-  "reader_copy_cleanup": {
+  "retired_sources": [],
+  "statistics_assessed": [],
+  "frequency_assessment": "沒有同時按全台受僱人口、統計期間及請假事由計算的家庭照顧假使用率資料。老人或失能人口、長照服務量與個人會請家庭照顧假的機率不是同一事件，不能換算。",
+  "taiwan_context": "台灣適用勞動法令的受僱者，可能同時面臨家屬急診／住院、排班工作、家庭照顧假時數及長照服務銜接；請假資格與長照評估分開處理，依工作地主管機關和所在地長期照顧管理中心辦理。",
+  "changes": "重新核對家庭照顧假適用事由、每年7日併事假、薪資、全勤保障與照顧家庭事假按小時請假規則；更正原稿把2026-09-30勞工請假規則修正日期泛化為家庭照顧假變更的風險，精確列出2025-12-09及2026-09-30兩次修法的條文範圍和施行日。正文移除與長者照顧無直接關係的育兒修法背景，只保留勞工權益、1966申請及資料不足說明。",
+  "legal_temporal_checks": [
+    {
+      "law": "性別平等工作法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [],
+      "latest_law_version_context": "本輪實讀現行第20、21條；現行法規頁修正日期為2023-08-16。2026年11月育兒法案的三讀／政策規劃不納入長者家庭照顧假正文，也不當成現行長者照顧權利已變更。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030014"
+      ]
+    },
+    {
+      "law": "勞工請假規則",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第7、9、12條及新增第9-1條"
+          ],
+          "promulgated_at": "2025-12-09",
+          "effective_at": "2026-01-01",
+          "basis": "全國法規資料庫沿革明列修正發布日與施行日；本篇引用家庭照顧假小時制的事假條文。"
+        },
+        {
+          "provisions": [
+            "第2、12條"
+          ],
+          "promulgated_at": "2026-09-30",
+          "effective_at": "2026-10-01",
+          "basis": "最新沿革說明此次修正僅含第2、12條，不改變第7條所定照顧家庭事假或第9條全勤保障。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，本輪實讀現行第7、9、10、12條及沿革；不得把2026-09-30全規則修正日期泛化為家庭照顧假額度在該日變更。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0030006",
+        "https://law.moj.gov.tw/LawClass/LawHistory.aspx?pcode=N0030006"
+      ]
+    }
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": [
+      "勞動法或性別平等工作法律專業人員",
+      "長期照顧管理或家庭照顧實務人員"
+    ],
+    "reason": "AI輔助來源核對不能取代醫療、法律或相應專業人士對讀者指引的正式審閱。"
+  },
+  "unresolved_questions": [
+    "尚無可按全台受僱人口、請假期間與家庭照顧事由計算的實際使用率。",
+    "尚未取得勞動法／性別平等工作法專業人士及長照實務人員正式獨立審閱。"
+  ],
+  "new_source_ids": [
+    "tw17_leave_rule_history_20261123"
+  ],
+  "reader_copy_cleanup_preserved": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "73fad114a684b845bd948c605d193c83f98a5596093711a49fe3c3be3539ab2b",
     "after_sha256": "146854183c0c499f73805504de5b657b642b9df6d5bdbd76d5239e8e2e05429f",

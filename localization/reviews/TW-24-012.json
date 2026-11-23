@@ -1,12 +1,106 @@
 {
   "id": "TW-24-012",
-  "reviewer": "ChatGPT（AI輔助官方資料核對；非獨立醫師、藥師、法律或醫療專業簽證）",
+  "reviewer": "ChatGPT（AI輔助台灣原始來源與制度核對，非正式醫療、法律或其他專業簽證）",
   "jurisdiction": "TW",
-  "reviewed_at": "2026-10-21",
-  "review_due_at": "2026-12-31",
+  "reviewed_at": "2026-11-23",
+  "review_due_at": "2027-02-23",
   "target_path": "locales/zh-TW/book/ch24/TW-24-012.md",
-  "target_sha256": "0c687b53b7acf704429788afaecbd4adf6e1e0ba6bde5c9c01d768d985dc771a",
+  "target_sha256": "5394e1b5f5b263091e45e97663122c5d7e36c31c513bb823d954c4b677df5b54",
   "source_checks": [
+    {
+      "source_id": "ch24_medlaw",
+      "title": "醫療法（第21、22、60、61、63、64、71至74條）",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+      "claim": "醫療法第21、22條收費及收據規則、手術麻醉同意相關規定。",
+      "supporting_passage": "現行醫療法第21、22條及手術麻醉告知同意條款分別規範所在地核定收費、事先告知、收據和醫療說明／同意。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取全國法規資料庫現行條文及總統府公報；不將不同自費品項或特材規則混為一談。"
+    },
+    {
+      "source_id": "access_dental",
+      "title": "口腔健康司：人工植牙專區",
+      "url": "https://dep.mohw.gov.tw/DOOH/cp-6496-1931-124.html",
+      "claim": "人工植牙費用應按所在地核定標準並事先告知；可查地方收費資訊及手術麻醉同意。",
+      "supporting_passage": "口腔健康司人工植牙專區主文於2026-06-02更新，頁面於2026-11-19更新，說明地方收費核定、事前告知、正式收據及手術麻醉同意。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取衛福部口腔健康司官方HTML；區分主文更新日和頁面維護日期。"
+    },
+    {
+      "source_id": "tw24_implant_consent_template_20261123",
+      "title": "衛福部：人工植牙手術說明書範本",
+      "url": "https://www.mohw.gov.tw/dl-100663-d18306b9-233e-4812-be5b-7ebc7405170a.html",
+      "claim": "衛福部人工植牙手術說明書範本中的國外五年植體留存率約80至90%，但範本未列該數字原始研究、地區和母數。",
+      "supporting_passage": "範本第5節列約5年後植體仍存在率80%至90%；該表單未提供原研究書目、樣本、追蹤分母或估算方式。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "web直接讀取衛福部官方兩頁PDF內容；只報告範本實際載明內容與可見限制，不把它當台灣研究。"
+    },
+    {
+      "source_id": "ch24_selfpay_compare_tool_20261123",
+      "title": "健保署：自付差額醫材比價查詢",
+      "url": "https://info.nhi.gov.tw/INAE2000/INAE2011S01?type=app",
+      "claim": "健保署比價網的查詢欄位是特定醫材及院所上傳資料，不等於植牙全案報價。",
+      "supporting_passage": "健保署比價入口及官方搜尋索引列出醫材、縣市、院所類型／名稱等查詢欄位；本輪沒有取得可讀查詢結果或個別院所價格。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "確認健保署官方入口及索引欄位；直接開啟無可讀正文，未實際查詢產品或院所。"
+    },
+    {
+      "source_id": "ch24_selfpay_compare_guide_20261123",
+      "title": "健保署：自費醫材比價網資料與使用說明",
+      "url": "https://www.nhi.gov.tw/ch/cp-1351-7b192-3255-1.html",
+      "claim": "比價網院所上傳自費醫材價格僅供比較，不等於整個療程價格或給付承諾。",
+      "supporting_passage": "健保署官方使用說明表示資料由醫療院所自主上傳，供民眾比較特定醫材並與醫師討論；查詢結果供選用參考。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取健保署官方使用說明HTML；與比價工具入口分開說明。"
+    },
+    {
+      "source_id": "access_implant_care",
+      "title": "臺北榮總：人工植牙之照護",
+      "url": "https://ihealth.vghtpe.gov.tw/media/467",
+      "claim": "植牙術前評估、藥物告知、異常出血／疼痛／發燒及術後回診照護。",
+      "supporting_passage": "台北榮總官方衛教列術前全身與口腔評估、藥物交代、術後警訊和清潔追蹤；是院所衛教，不是全國成功率。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取台北榮總官方衛教HTML；不把單一院所醫療流程當法定全台流程。"
+    },
+    {
+      "source_id": "tw24_taiwan_implant_cohort_20261123",
+      "title": "台灣植體研究：單一牙周診所28年回溯性世代研究",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12947611/",
+      "claim": "台灣單一牙周診所685顆／199名成人、特定Straumann組織水平植體及排除條件；28年Kaplan–Meier估計的存活／成功率。",
+      "supporting_passage": "研究全文第2.1、2.4、3.1、3.5節列出台灣成人與特定Straumann植體納入條件、排除條件、Kaplan–Meier分析、平均8.34植體年追蹤，以及達5、10、15、20、28年追蹤的植體數428、246、136、53、1顆。",
+      "accessed_at": "2026-11-23",
+      "retrieval_method": "直接讀取PubMed摘要，並由DOI連至Wiley開放全文核對研究方法與結果；未以搜尋摘要代替全文。"
+    }
+  ],
+  "localization_changes": "重新核對自費諮詢、地方收費與特材查詢入口，移除正文中僅有範本或未附研究方法支持的普遍化暗示。新增一項台灣單一牙周診所28年回溯研究，分開呈現植體／病人層級和存活／成功定義，記錄排除條件、Kaplan–Meier估計及平均追蹤期與各時間點追蹤植體數；衛福部範本的海外5年80至90%數字明確標為未附原始研究的方法資訊，不能預測個人療效。",
+  "review_method": "直接核對現行醫療法、口腔健康司與健保署說明、衛福部手術說明書範本，以及經PubMed摘要與DOI連結查閱的台灣原始開放研究全文；分開記錄估計對象、分析單位、研究定義、平均追蹤期與28年尾端追蹤數。",
+  "limits": [
+    "健保署自付差額醫材比價查詢不是植牙全療程報價，也不代表治療由健保給付；療程適合度與個別預後由牙醫依病況評估。",
+    "台灣28年數字來自台北單一牙周診所和特定植體，採Kaplan–Meier估計；研究平均追蹤8.34植體年，達28年追蹤的植體僅1顆，故28年尾端估計的直接追蹤資料很少，不能換算成全台比例或個人保證。",
+    "衛福部範本列的海外五年留存率沒有附原研究和母數，不能用來預測個人療效。",
+    "本次審閱為AI輔助原始來源核對，未取得對應專業人士獨立審閱。"
+  ],
+  "source_reviewed_sha256": "5394e1b5f5b263091e45e97663122c5d7e36c31c513bb823d954c4b677df5b54",
+  "reader_copy_cleanup": {
+    "transform": "reader_copy_cleanup_v2",
+    "before_sha256": "5ca0208e71247988a22dd88c0f7661af682ecea4f6f3798ec620f13576545345",
+    "after_sha256": "0c687b53b7acf704429788afaecbd4adf6e1e0ba6bde5c9c01d768d985dc771a",
+    "before_reader_sha256": "7ae6b19d14df3aca3242f049f3fc0b5fb577627ea33afa63e47df89fd6195ce0",
+    "after_reader_sha256": "e6a89db779f26c2f09b992b147cbcce037b61b0513c6fd2fada9bad1688aa650"
+  },
+  "source_ids": [
+    "ch24_medlaw",
+    "access_dental",
+    "tw24_implant_consent_template_20261123",
+    "ch24_selfpay_compare_tool_20261123",
+    "ch24_selfpay_compare_guide_20261123",
+    "access_implant_care",
+    "tw24_taiwan_implant_cohort_20261123"
+  ],
+  "prior_revision": "61a680dd537da3e65d5a3381b7b7530f220fb1d9",
+  "before_sha256": "0c687b53b7acf704429788afaecbd4adf6e1e0ba6bde5c9c01d768d985dc771a",
+  "after_sha256": "5394e1b5f5b263091e45e97663122c5d7e36c31c513bb823d954c4b677df5b54",
+  "prior_review_sha256": "0683f83cf1e524931cc02f780fd828d4ae372d9b851612428f9ee2c16f3d2249",
+  "prior_source_checks": [
     {
       "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
       "claim": "TW-24-012：費用標準與收據、危急病人處置、醫療告知同意、病歷複製及轉診原則依不同條文判斷。",
@@ -29,18 +123,145 @@
       "retrieval_method": "2026-10-21實讀官方HTML主文或現行法規條文；未讀附件不當全文證據。"
     }
   ],
-  "localization_changes": "持續治療優先，補現行申請、費用與期限例外，區分行政件數與發生率；要求書面全案報價：評估與影像、手術、植體、基台與牙冠、麻醉、可能補骨、臨時假牙及後續維護，逐項註明是否另計、何種情況追加及如何再告知；另問中途轉院、停止治療、重做與退費如何計算。保固須讀清範圍、期間、排除條件及診所停止服務的處理，不把終身保固當不會失敗。\n\n口腔健康司說明植牙醫療收費依醫療法第21、22條及所在地核定標準，並須事先告知與正式收據；手術與麻醉同意須有醫療說明，費用簽名不能取代風險、替代方案與術後照護告知。健保自付差額特材與全額自費植牙是不同項目，不因能查特材價格就認定全案植牙價格或給付，也不把特材兩日前說明規則套成所有植牙統一等待期。\n\n按醫囑清潔、回診與用藥，避免菸與檳榔；不因已付款或沒有疼痛就停止維護。遇收費疑義先持明細向院方核對，再洽院所所在地衛生局；療效與責任爭議另循醫療爭議途徑，不能預設一定退全額。",
-  "review_method": "逐條實讀臺灣官方法規與服務主文，核對情境、程序例外及統計分母；保留未讀附件和專業待審限制。",
-  "limits": [
-    "健保署醫材比價功能主要呈現特定院所上傳的品項，不能視為所有植牙完整套餐價。醫療適應性、咬合與長期預後仍由牙醫師個別評估。",
-    "研究、醫療與保險個案依主治醫師、健保署或地方主管機關當期規則核定；2026年後新規需重新確認。",
-    "AI輔助逐條實讀來源，非醫師、牙醫、社工或律師專業簽證；個案資格、療程、期限與核付待專業確認。",
-    "未取得同定義全臺過失、核准、植牙失敗或錯收發生率；行政件數與國際結果不能當臺灣個人機率。",
-    "法規庫整編截止2026-10-08，之後公報與全部地方規定未全核；未實際申請、就醫、調解、調閱個資或核付。",
-    "ch24_materials實際URL主文不支持原植牙特材主張，已從本篇退役；原來源物件不改寫、非新增失效網址。"
+  "source_bundle_path": "localization/tw-edition/sources/ch16-17-24-health-rights-recheck-20261123.json",
+  "source_bundle_sha256": "2d005202faa016e4cef211e7be66107ce580378ec245631f2f7b5ffec756c4b5",
+  "source_records_reused": [
+    "ch24_medlaw",
+    "access_dental",
+    "ch24_selfpay_compare_tool_20261123",
+    "ch24_selfpay_compare_guide_20261123",
+    "access_implant_care"
   ],
-  "source_reviewed_sha256": "5ca0208e71247988a22dd88c0f7661af682ecea4f6f3798ec620f13576545345",
-  "reader_copy_cleanup": {
+  "retired_sources": [],
+  "statistics_assessed": [
+    {
+      "topic": "植體層級28年累積存活率",
+      "value": 92.58,
+      "unit": "% cumulative Kaplan–Meier estimate, implant level",
+      "period": "28年估計；植體置入於1996至2024年間",
+      "scope": "台北單一牙周診所",
+      "population": "199名台灣成年人接受685顆該診所特定Straumann組織水平植體；排除重度吸菸、糖化血色素高於8%的糖尿病患者及其他植體系統。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "時間至事件Kaplan–Meier估計，風險集合依追蹤時間改變，非固定粗分子／分母；研究納入總數為685顆植體。",
+      "event_definition": "存活定義為植體仍存在且具臨床功能；事件為植體流失。",
+      "data_type": "台灣單一診所回溯性世代研究；植體層級時間至事件累積估計。",
+      "source_id": "tw24_taiwan_implant_cohort_20261123",
+      "accessed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "limitations": "不是全國代表樣本；特定診所、牙周照護、植體系統與排除條件限制外推。28年仍在追蹤的風險集合分母不能由初始685顆取代；不是個人預後或所有植牙系統的保證。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+    },
+    {
+      "topic": "病人層級28年累積存活率",
+      "value": 81.38,
+      "unit": "% cumulative Kaplan–Meier estimate, patient level",
+      "period": "28年估計；病人植體置入於1996至2024年間",
+      "scope": "台北單一牙周診所",
+      "population": "199名台灣成年人；每位病人可能有多顆植體，分析單位為病人，不與685顆植體的分析單位互換。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "Kaplan–Meier時間至事件估計，風險集合隨追蹤時間改變；初始病人數199不是28年固定分母。",
+      "event_definition": "病人層級的植體存活分析；研究依病人承受的植體事件估計，不等於每一顆植體的存活比例。",
+      "data_type": "台灣單一診所回溯性世代研究；病人層級累積存活估計。",
+      "source_id": "tw24_taiwan_implant_cohort_20261123",
+      "accessed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "limitations": "病人層級值不是植體層級值；單一診所、選定植體系統與排除條件限制外推，不能推算個人機率。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+    },
+    {
+      "topic": "植體層級28年累積成功率",
+      "value": 71.0,
+      "unit": "% cumulative Kaplan–Meier estimate, implant level",
+      "period": "28年估計；植體置入於1996至2024年間",
+      "scope": "台北單一牙周診所",
+      "population": "同研究685顆特定組織水平植體；研究使用特定Straumann系統並排除特定高風險族群。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "Kaplan–Meier估計且風險集合隨時間改變，不能由685顆初始植體直接還原28年分母。",
+      "event_definition": "研究把探診深度≥5毫米定義為植體周圍疾病；成功率以未發生植體周圍疾病及植體流失計。",
+      "data_type": "台灣單一診所回溯性世代研究；植體層級累積成功估計。",
+      "source_id": "tw24_taiwan_implant_cohort_20261123",
+      "accessed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "limitations": "成功與存活是不同結局；成功定義採單一研究操作方式，非所有研究共用標準，且樣本及估計值不能全國化。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+    },
+    {
+      "topic": "病人層級28年累積成功率",
+      "value": 38.02,
+      "unit": "% cumulative Kaplan–Meier estimate, patient level",
+      "period": "28年估計；病人植體置入於1996至2024年間",
+      "scope": "台北單一牙周診所",
+      "population": "同研究199名台灣成人，分析單位為病人；每位病人可能有多顆植體。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "病人層級Kaplan–Meier估計，風險集合隨時間改變；199人不是28年固定分母。",
+      "event_definition": "依研究定義，植體周圍疾病或植體流失影響病人層級成功結局。",
+      "data_type": "台灣單一診所回溯性世代研究；病人層級累積成功估計。",
+      "source_id": "tw24_taiwan_implant_cohort_20261123",
+      "accessed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "limitations": "不是植體層級成功率；單一診所、特定系統和納入排除條件限制外推，不能推算個人機率。 研究平均追蹤8.34植體年；達5、10、15、20及28年追蹤的植體數分別為428、246、136、53、1顆，28年追蹤尾端直接資料稀少。"
+    },
+    {
+      "topic": "人工植牙手術說明書範本引用的國外五年植體留存率",
+      "value": "80至90",
+      "unit": "% still-present rate as described in the template",
+      "period": "術後約5年",
+      "scope": "來源範本所引海外追蹤；國家／地區未列",
+      "population": "範本未交代原研究受試者、植體系統、樣本數或追蹤流失。",
+      "numerator": null,
+      "denominator": null,
+      "denominator_definition": "官方手術說明書範本未列原始研究、分子、分母或統計方法。",
+      "event_definition": "範本措辭為植體使用5年後仍存在，不能等同成功率或無併發症。",
+      "data_type": "官方知情同意範本引用的未附原始研究之海外數值，不是台灣全國調查。",
+      "source_id": "tw24_implant_consent_template_20261123",
+      "accessed_at": "2026-11-23",
+      "checked_at": "2026-11-23",
+      "limitations": "數字在衛福部範本中但未附原研究和母數，族群及系統不明；只記錄範本文字，不用於台灣個人預後。"
+    }
+  ],
+  "frequency_assessment": "目前沒有可代表全台、以一致追蹤期間和定義計算的植牙存活、成功或併發症發生率。2026年台灣單一牙周診所研究平均追蹤8.34植體年，達28年追蹤的植體僅1顆；Kaplan–Meier尾端估計不代表全台族群或一般個人的長期機率。",
+  "taiwan_context": "台灣植牙屬需個別評估的高額自費療程之一，院所收費標準依所在地核定規定，費用與後續維護應在治療前逐項確認。健保署比價入口提供院所上傳的特定醫材價格，不能代替完整植牙計畫或地方全案報價。",
+  "changes": "重新核對自費諮詢、地方收費與特材查詢入口，移除正文中僅有範本或未附研究方法支持的普遍化暗示。新增一項台灣單一牙周診所28年回溯研究，分開呈現植體／病人層級和存活／成功定義，並記錄排除條件及Kaplan–Meier估計限制；衛福部範本的海外5年80至90%數字明確標為未附原始研究的方法資訊，不能預測個人療效。",
+  "legal_temporal_checks": [
+    {
+      "law": "醫療法",
+      "checked_at": "2026-11-23",
+      "relevant_provision_amendments": [
+        {
+          "provisions": [
+            "第24、49、50、53、72、84、88、106、107條；增訂第100-1、114-1條"
+          ],
+          "promulgated_at": "2026-09-23",
+          "effective_at": "2026-09-23",
+          "basis": "總統府公報列出本次修正條文；依現行醫療法第123條，自公布日施行。這次沒有修正第21、22、71、73、74條。"
+        }
+      ],
+      "latest_law_version_context": "截至2026-11-23，醫療法最新整體修正公布日為2026-09-23；病歷複製、轉診摘要與院所間經同意商洽分別核對現行第71、73、74條，未將同日公布誤稱為這三條本身的修正。",
+      "sources": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=L0020021",
+        "https://www.president.gov.tw/Page/294/50409"
+      ]
+    }
+  ],
+  "professional_review": {
+    "required": true,
+    "obtained": false,
+    "needed": [
+      "牙周病或植牙專科牙醫師",
+      "醫療消費與病人權益專業人員"
+    ],
+    "reason": "AI輔助來源核對不能取代醫療、法律或相應專業人士對讀者指引的正式審閱。"
+  },
+  "unresolved_questions": [
+    "目前沒有全國代表性、定義與追蹤期間一致的台灣植牙存活／成功／併發症統計。",
+    "尚未取得植牙／牙周專科醫師及醫療消費權益專業人員正式獨立審閱。"
+  ],
+  "new_source_ids": [
+    "tw24_implant_consent_template_20261123",
+    "tw24_taiwan_implant_cohort_20261123"
+  ],
+  "reader_copy_cleanup_preserved": {
     "transform": "reader_copy_cleanup_v2",
     "before_sha256": "5ca0208e71247988a22dd88c0f7661af682ecea4f6f3798ec620f13576545345",
     "after_sha256": "0c687b53b7acf704429788afaecbd4adf6e1e0ba6bde5c9c01d768d985dc771a",

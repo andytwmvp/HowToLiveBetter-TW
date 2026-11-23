@@ -79,7 +79,14 @@ class Chapter20InfantProductsPublicationTests(unittest.TestCase):
             self.assertEqual((current["status"], current["treatment"], current["verified_at"]), ("verified", "taiwan_independent_rewrite", DATE))
             self.assertEqual((current["upstream_commit"], current["upstream_text_sha256"]), (old["upstream_commit"], old["upstream_text_sha256"]))
             self.assertEqual((current["target_path"], current["sources"]), (spec["path"], spec["sources"]))
-        self.assertEqual(self.register, self.base_register, "首次發布不應改動歷史實質再審登錄")
+        for key, baseline_value in self.base_register.items():
+            if key == "substantive_rechecks":
+                self.assertEqual(
+                    self.register[key][:len(baseline_value)], baseline_value,
+                    "首次發布不可改寫或刪除既有實質再審歷史",
+                )
+            else:
+                self.assertEqual(self.register[key], baseline_value, f"首次發布不應改動歷史登錄欄位：{key}")
         base_ids = [row["id"] for row in self.base_runtime["items"]]
         current_ids = [row["id"] for row in self.runtime["items"]]
         self.assertEqual([key for key in current_ids if key in set(base_ids)], base_ids)

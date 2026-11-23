@@ -17,8 +17,10 @@ class MedicalRightsRecheckTests(unittest.TestCase):
   for s in old['sources']:self.assertEqual(s,sources[s['id']])
  def test_emergency_and_consent_boundaries(self):
   b={i['id']:i['body'] for i in validate_runtime()['items']}
-  for k in IDS:self.assertLess(b[k].index('119'),b[k].index('事件頻率'))
-  terms={'TW-24-008':['不等於所有費用全面免費','貸款不是免還補助','先急救再轉診','申請期限'],'TW-24-015':['前二日','說明書一式兩份','另說明費用','同意書兩份','不簽空白','不能把兩日內告知規定套用到所有病房'],'TW-24-009':['症狀固定','強制納保單位','雇主不協助可自行送件','不擴張為任何未加保者','同次同醫師併行治療'],'TW-24-005':['報告文字與影像檔不是同一項','家屬身分不自動等於','不等全套齊全才就醫','不代表沒做過']}
+  for k in IDS:
+   marker='目前沒有具一致定義' if k=='TW-24-005' else '事件頻率'
+   self.assertLess(b[k].index('119'),b[k].index(marker))
+  terms={'TW-24-008':['不等於所有費用全面免費','貸款不是免還補助','先急救再轉診','申請期限'],'TW-24-015':['前二日','說明書一式兩份','另說明費用','同意書兩份','不簽空白','不能把兩日內告知規定套用到所有病房'],'TW-24-009':['症狀固定','強制納保單位','雇主不協助可自行送件','不擴張為任何未加保者','同次同醫師併行治療'],'TW-24-005':['檢驗報告文字與可供判讀的原始影像是不同資料','家屬身分不當然代表可取得全部病歷','不必等全套資料齊全才就醫','查不到不代表沒做過']}
   for k,ts in terms.items():
    for t in ts:self.assertIn(t,b[k])
  def test_procedures_are_not_population_statistics(self):
