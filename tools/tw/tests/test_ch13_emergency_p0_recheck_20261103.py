@@ -79,11 +79,11 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
 
         for item_id in ITEM_IDS:
             with self.subTest(item_id=item_id):
-                # TW-13-045 received a later substantive recheck. Validate the
-                # November 3 edge against its immutable snapshot instead of
-                # incorrectly requiring its current body and review to remain
+                # TW-13-045 and TW-13-015 received later substantive rechecks.
+                # Validate the November 3 edge against its immutable snapshot
+                # instead of requiring current bodies and reviews to remain
                 # frozen at that earlier version.
-                historical_item = item_id == "TW-13-045"
+                historical_item = item_id in {"TW-13-045", "TW-13-015"}
                 item = self.batch_runtime_items[item_id] if historical_item else self.runtime_items[item_id]
                 review = self.reviews[item_id]
                 manifest_item = self.batch_manifest_items[item_id] if historical_item else self.manifest_items[item_id]
@@ -219,13 +219,20 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
             self.assertRegex(record["frequency_assessment"], r"(?:沒有提供|未列出|未提供|沒有全國)")
 
     def test_allergy_product_cost_and_guideline_pagination_are_scoped(self):
-        body = self.runtime_items["TW-13-015"]["body"]
+        # This assertion describes the November 3 review and must remain tied
+        # to that historical runtime/review snapshot after later rechecks.
+        item = self.batch_runtime_items["TW-13-015"]
+        body = item["body"]
+        review = json.loads(subprocess.check_output(
+            ["git", "show", f"{self.followup['prior_revision']}:localization/reviews/TW-13-015.json"],
+            cwd=ROOT,
+        ))
         self.assertIn("艾筆腎上腺素注射筆0.3毫克／次", body)
         self.assertIn("列為處方藥", body)
         self.assertIn("沒有列出目前供貨、價格或健保給付資訊", body)
         self.assertIn("台灣全國嚴重過敏反應發生率", self.batch_items["TW-13-015"]["frequency_assessment"])
         self.assertEqual(
-            set(self.runtime_items["TW-13-015"]["source_ids"]),
+            set(item["source_ids"]),
             {
                 "ch13_ana_taaaci_2024",
                 "ch13_ana_nfa_20260430",
@@ -234,7 +241,7 @@ class Chapter13EmergencyP0RecheckTests(unittest.TestCase):
             },
         )
         taaaci = next(
-            row for row in self.reviews["TW-13-015"]["source_checks"]
+            row for row in review["source_checks"]
             if "taaaci.org.tw" in row["url"]
         )
         self.assertIn("印刷頁碼第7至8頁", taaaci["supporting_passage"])
