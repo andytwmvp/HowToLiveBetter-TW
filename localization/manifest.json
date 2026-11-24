@@ -8051,9 +8051,11 @@
         "ch13_ana_taaaci_2024",
         "ch13_ana_cch_anaphylaxis_20221026",
         "ch13_ana_nfa_20260430",
-        "ch13_ana_viatris_epipen_20261103"
+        "ch13_ana_incidence_nhi_2001_2013_20261124",
+        "ch13_ana_ascia_positioning_202604_20261124",
+        "ch13_ana_tsem_position_20230430_20261124"
       ],
-      "verified_at": "2026-11-03",
+      "verified_at": "2026-11-24",
       "upstream_path_uri": "book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md",
       "display_path": "book/13-緊急情況.md",
       "source_title_zh_tw": "突然全身起疹、喘不上氣或者發暈，按過敏性休克處理，立刻叫 120 並說清楚",

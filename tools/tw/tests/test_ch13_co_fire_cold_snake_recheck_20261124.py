@@ -84,8 +84,12 @@ class COFireColdSnakeRecheckTests(unittest.TestCase):
         self.assertEqual(after["source_registry"], before["source_registry"] + len(NEW_SOURCE_IDS))
         self.assertEqual(after["coverage_json_files"], before["coverage_json_files"] + 2)
         self.assertEqual(after["substantive_rechecks"], before["substantive_rechecks"] + len(IDS))
-        self.assertEqual(coverage["registry_sources"], after["source_registry"])
-        self.assertEqual(coverage["json_files_checked"], after["coverage_json_files"])
+        # This historical batch predates later source registrations. Its
+        # immutable count remains valid, while live coverage may have grown.
+        self.assertGreaterEqual(coverage["registry_sources"], after["source_registry"])
+        # Later batches add evidence JSON files; retain this batch's historical
+        # count while allowing the current repository coverage to increase.
+        self.assertGreaterEqual(coverage["json_files_checked"], after["coverage_json_files"])
         self.assertFalse(coverage["publication_ready"])
         self.assertFalse(self.batch["publication_ready"])
         self.assertTrue(self.batch["professional_review"]["required"])
